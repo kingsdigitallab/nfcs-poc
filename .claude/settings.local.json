@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npx tsc:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5174/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:5174/llds-proxy/rest/items?expand=metadata&limit=1\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:5174/ads-proxy/oai/archives?verb=ListRecords&metadataPrefix=oai_dc\")",
+      "Bash(curl -sL -o /dev/null -w \"%{http_code} %{url_effective}\" \"http://localhost:5174/ads-proxy/oai/archives?verb=ListRecords&metadataPrefix=oai_dc\")",
+      "Bash(curl -sL \"http://localhost:5174/ads-proxy/oai/archives?verb=ListRecords&metadataPrefix=oai_dc\")",
+      "Bash(netstat -ano)",
+      "Bash(xargs -I{} taskkill //PID {} //F)",
+      "Bash(npm run:*)",
+      "Bash(curl -s \"http://localhost:5174/ads-proxy/oai/archives/?verb=ListRecords&metadataPrefix=oai_dc\")",
+      "Bash(curl -s \"https://archaeologydataservice.ac.uk/oai/archives/?verb=ListRecords&metadataPrefix=oai_dc\")",
+      "Bash(curl -sv \"https://archaeologydataservice.ac.uk/oai/archives/?verb=Identify\")",
+      "Bash(curl -s \"https://archaeologydataservice.ac.uk/oai/archives/?verb=Identify\")",
+      "Bash(curl -sv \"https://archaeologydataservice.ac.uk/oai/archives?verb=Identify\")",
+      "Bash(curl -sL \"https://archaeologydataservice.ac.uk/oai/archives/?verb=Identify\" -H \"Accept: application/xml, text/xml, */*\")",
+      "Bash(curl -sL \"https://archaeologydataservice.ac.uk/oai/archives/\" --data \"verb=Identify\")",
+      "Bash(curl -sL \"https://archaeologydataservice.ac.uk/oai/archives/?verb=ListSets\")",
+      "Bash(curl -sL \"https://archaeologydataservice.ac.uk/oai/archives/request?verb=Identify\")",
+      "Bash(curl -sL \"https://archaeologydataservice.ac.uk/oai/archives/\")",
+      "Bash(curl -sL \"https://archaeologydataservice.ac.uk/oai/archives/listMetadataFormats.html\")",
+      "Bash(curl -s -X POST \"https://archaeologydataservice.ac.uk/oai/archives/OAIHandler\" -d \"verb=Identify\")",
+      "Bash(curl -s -X POST \"https://archaeologydataservice.ac.uk/oai/archives/OAIHandler\" -d \"verb=ListRecords&metadataPrefix=oai_dc\")",
+      "Bash(curl -sv -X POST \"https://archaeologydataservice.ac.uk/oai/archives/OAIHandler\" -d \"verb=Identify\")",
+      "Bash(curl -s \"http://localhost:5174/ads-proxy/data-catalogue-api/api/search?q=Stonehenge&size=2\")",
+      "Bash(gh auth:*)",
+      "Bash(git config:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
