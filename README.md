@@ -75,6 +75,7 @@ nfcs-poc/
 | Source | **GBIFSearchNode** | Searches the [GBIF Occurrence API](https://www.gbif.org/developer/occurrence). Returns biodiversity specimen and observation records. No proxy needed. |
 | Source | **LLDSSearchNode** | Searches the [Literary and Linguistic Data Service](https://llds.ling-phil.ox.ac.uk/) via DSpace REST. Results are filtered client-side. Uses a localStorage cache with a 24-hour TTL and a "use cache" toggle for resilience during outages. |
 | Source | **ADSSearchNode** | Searches the [Archaeology Data Service](https://archaeologydataservice.ac.uk/) Data Catalogue API. Returns archaeological datasets with spatial and temporal coverage. |
+| Source | **MDSSearchNode** | Scrapes [museumdata.uk](https://museumdata.uk/) search results (no public JSON API). Results are capped at 200 per search. An amber ⚠ badge appears when the total exceeds the cap. |
 | Output | **TableOutputNode** | Displays results in a paginated table. Accepts connections from multiple source nodes and merges their records. Double-click to expand to a full-screen panel. |
 | Output | **JSONOutputNode** | Displays the raw normalised records as syntax-highlighted JSON. Double-click to expand. |
 
@@ -119,6 +120,17 @@ The **▶▶ Run All** button in the top bar discovers all runnable nodes (GBIF,
 
 ---
 
+### Example 5 — Museum Data Service search
+
+1. Drag an **MDSSearchNode** onto the canvas
+2. Type a search term (e.g. `Roman coin`) into the `q` field and set `limit` to `50`
+3. Connect its output to a **TableOutputNode**
+4. Click **▶ Run** — the node fetches museumdata.uk in two steps: first to read the total hit count, then to retrieve all records at once
+5. If the total exceeds your limit or the 200-record cap, the status badge turns amber: `⚠ 50 of 312 (capped)`
+6. The `_source` column shows `mds`; the `mds.*` namespace in the JSON output contains the full field map (condition, materials, dimensions, provenance, etc.)
+
+---
+
 ### Example 4 — Expanding a table for full-screen browsing
 
 1. Run a workflow that produces table results
@@ -137,6 +149,7 @@ GBIF has permissive CORS headers so the browser can fetch it directly. LLDS and 
 |--------|--------|
 | `/llds-proxy/...` | `https://llds.ling-phil.ox.ac.uk/llds/...` |
 | `/ads-proxy/...` | `https://archaeologydataservice.ac.uk/...` |
+| `/mds-proxy/...` | `https://museumdata.uk/...` |
 
 This proxy is **development-only**. For a production deployment you would replace these with a lightweight server-side proxy (a Cloudflare Worker, a single Express route, or similar).
 

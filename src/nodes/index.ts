@@ -1,15 +1,17 @@
 import { ParamNode } from './ParamNode'
 import { GBIFSearchNode } from './GBIFSearchNode'
 import { LLDSSearchNode } from './LLDSSearchNode'
-import { ADSSearchNode } from './ADSSearchNode'
+import { ADSSearchNode }  from './ADSSearchNode'
+import { MDSSearchNode }  from './MDSSearchNode'
 import { TableOutputNode } from './TableOutputNode'
-import { JSONOutputNode } from './JSONOutputNode'
+import { JSONOutputNode }  from './JSONOutputNode'
 
 export const nodeTypes = {
   param:       ParamNode,
   gbifSearch:  GBIFSearchNode,
   lldsSearch:  LLDSSearchNode,
   adsSearch:   ADSSearchNode,
+  mdsSearch:   MDSSearchNode,
   tableOutput: TableOutputNode,
   jsonOutput:  JSONOutputNode,
 }

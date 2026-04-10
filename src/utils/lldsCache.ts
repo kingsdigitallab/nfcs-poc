@@ -8,7 +8,7 @@
  * Cache is keyed by a version string so schema changes auto-invalidate it.
  */
 
-const CACHE_KEY = 'idah_llds_items_v1'
+const CACHE_KEY = 'idah_llds_items_v2'
 const CACHE_MAX_AGE_MS = 24 * 60 * 60 * 1000  // refresh after 24 h if service is up
 
 export interface DSpaceMetadata {

@@ -10,7 +10,8 @@
 import type { Node, Edge } from '@xyflow/react'
 import { runGBIFNode } from './runGBIFNode'
 import { runLLDSNode } from './runLLDSNode'
-import { runADSNode } from './runADSNode'
+import { runADSNode }  from './runADSNode'
+import { runMDSNode }  from './runMDSNode'
 
 /**
  * Common signature for every node runner.
@@ -31,5 +32,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   gbifSearch: runGBIFNode,
   lldsSearch: runLLDSNode,
   adsSearch:  runADSNode,
+  mdsSearch:  runMDSNode,
   // normalize: runNormalizeNode,
 }

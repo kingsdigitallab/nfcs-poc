@@ -67,7 +67,10 @@ export interface UnifiedRecord {
   gbif?: Record<string, unknown>
   /** Full raw LLDS DSpace item (id, handle, metadata array) */
   llds?: Record<string, unknown>
-  // ads?: Record<string, unknown>
+  /** ADS Data Catalogue namespace (temporal, country, allSpatial, …) */
+  ads?: Record<string, unknown>
+  /** Museum Data Service namespace (collection, material, place, …) */
+  mds?: Record<string, unknown>
   // ckan?: Record<string, unknown>
   // europeana?: Record<string, unknown>
 }

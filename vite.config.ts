@@ -21,6 +21,14 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: path => path.replace(/^\/ads-proxy/, ''),
       },
+      // Proxy /mds-proxy/* → https://museumdata.uk/*
+      // museumdata.uk does not send permissive CORS headers, so we proxy it
+      // server-side from the Vite dev server.
+      '/mds-proxy': {
+        target: 'https://museumdata.uk',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/mds-proxy/, ''),
+      },
     },
   },
   plugins: [react()],
