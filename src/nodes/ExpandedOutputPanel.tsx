@@ -8,6 +8,8 @@
 import { useState } from 'react'
 import { Panel, useNodes } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
+import { isReconciledValue } from '../utils/reconciliationService'
+import { ReconciledPill }    from './ReconciledCell'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 interface Props {
@@ -26,7 +28,8 @@ function allFlatColumns(records: UnifiedRecord[]): string[] {
   const keys = new Set<string>()
   for (const r of records) {
     for (const [k, v] of Object.entries(r)) {
-      if (v === null || typeof v !== 'object' || Array.isArray(v)) keys.add(k)
+      if (v === null) continue
+      if (typeof v !== 'object' || Array.isArray(v) || isReconciledValue(v)) keys.add(k)
     }
   }
   const ordered = DEFAULT_COLS.filter(c => keys.has(c))
@@ -158,11 +161,17 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
               <tbody>
                 {pageRows.map((rec, i) => (
                   <tr key={rec.id} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
-                    {columns.map(col => (
-                      <td key={col} style={panelTd}>
-                        {fmt(rec[col as keyof UnifiedRecord])}
-                      </td>
-                    ))}
+                    {columns.map(col => {
+                      const val = rec[col as keyof UnifiedRecord]
+                      return (
+                        <td key={col} style={panelTd}>
+                          {isReconciledValue(val)
+                            ? <ReconciledPill value={val} />
+                            : fmt(val)
+                          }
+                        </td>
+                      )
+                    })}
                   </tr>
                 ))}
               </tbody>

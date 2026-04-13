@@ -63,6 +63,19 @@ export function authoritiesForField(fieldName: string): AuthorityConfig[] {
   return FIELD_AUTHORITY_MAP[fieldName] ?? FIELD_AUTHORITY_MAP.default
 }
 
+/**
+ * Type guard: returns true when a record field value is a ReconciliationResult
+ * (i.e. a `${fieldName}_reconciled` key written by ReconciliationNode).
+ */
+export function isReconciledValue(v: unknown): v is ReconciliationResult {
+  return (
+    typeof v === 'object' && v !== null &&
+    'status' in v &&
+    ((v as ReconciliationResult).status === 'resolved' ||
+     (v as ReconciliationResult).status === 'review')
+  )
+}
+
 // ─── output type ─────────────────────────────────────────────────────────────
 
 export interface ReconciliationResult {

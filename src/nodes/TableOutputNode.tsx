@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
-import type { ReconciliationResult } from '../utils/reconciliationService'
+import { isReconciledValue } from '../utils/reconciliationService'
+import { ReconciledPill }    from './ReconciledCell'
 
 export interface TableOutputNodeData {
   [key: string]: unknown
@@ -28,14 +29,6 @@ const DEFAULT_COLS = [
 ] as const
 
 const PAGE_SIZE = 25
-
-function isReconciledValue(v: unknown): v is ReconciliationResult {
-  return (
-    typeof v === 'object' && v !== null &&
-    'status' in v &&
-    ((v as ReconciliationResult).status === 'resolved' || (v as ReconciliationResult).status === 'review')
-  )
-}
 
 /**
  * All displayable (flat) columns across records.
@@ -63,50 +56,6 @@ function fmt(val: unknown): string {
   if (val === null || val === undefined) return '—'
   if (Array.isArray(val)) return val.join(', ')
   return String(val)
-}
-
-// ─── reconciled cell renderer ─────────────────────────────────────────────────
-
-function ReconciledPill({ value }: { value: ReconciliationResult }) {
-  const resolved = value.status === 'resolved'
-  const bg     = resolved ? '#dcfce7' : '#fef9c3'
-  const border = resolved ? '#86efac' : '#fde68a'
-  const color  = resolved ? '#15803d' : '#92400e'
-  const label  = value.label ?? value.qid ?? '?'
-  const pct    = Math.round(value.confidence * 100)
-  const showLabel = label !== value.qid
-
-  return (
-    <span style={{
-      display:      'inline-flex',
-      alignItems:   'center',
-      gap:          4,
-      background:   bg,
-      border:       `1px solid ${border}`,
-      borderRadius: 10,
-      padding:      '1px 6px',
-      fontSize:     10,
-      fontWeight:   600,
-      color,
-      whiteSpace:   'nowrap',
-    }}>
-      {value.qid ? (
-        <a
-          href={`https://www.wikidata.org/wiki/${value.qid}`}
-          target="_blank"
-          rel="noreferrer"
-          style={{ color, textDecoration: 'none' }}
-          onClick={e => e.stopPropagation()}
-          className="nodrag"
-        >
-          {value.qid}
-        </a>
-      ) : null}
-      {value.qid && showLabel ? <span style={{ opacity: 0.75 }}>·</span> : null}
-      {showLabel ? <span>{label}</span> : null}
-      <span style={{ opacity: 0.6, fontSize: 9 }}>{pct}%</span>
-    </span>
-  )
 }
 
 interface TableProps {

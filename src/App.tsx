@@ -21,6 +21,7 @@ import type { LLDSSearchNodeData }        from './nodes/LLDSSearchNode'
 import type { ADSSearchNodeData }         from './nodes/ADSSearchNode'
 import type { MDSSearchNodeData }         from './nodes/MDSSearchNode'
 import type { ReconciliationNodeData }    from './nodes/ReconciliationNode'
+import type { ExportNodeData }            from './nodes/ExportNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -35,6 +36,7 @@ type AppNode =
   | Node<ADSSearchNodeData>
   | Node<MDSSearchNodeData>
   | Node<ReconciliationNodeData>
+  | Node<ExportNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -92,6 +94,10 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       reviewCount:         0,
     } satisfies ReconciliationNodeData,
   }),
+  export: pos => ({
+    id: newId('export'), type: 'export', position: pos,
+    data: { format: 'csv' } satisfies ExportNodeData,
+  }),
   tableOutput: pos => ({
     id: newId('table'), type: 'tableOutput', position: pos,
     data: {},
@@ -120,6 +126,7 @@ const SIDEBAR_ITEMS = [
   { type: 'mdsSearch',      label: 'MDSSearchNode',      sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Source' },
   { type: 'reconciliation', label: 'ReconciliationNode', sub: 'Wikidata field reconciler',  color: '#7c3aed', group: 'Process' },
   { type: 'tableOutput',    label: 'TableOutputNode',    sub: 'Paginated results table',    color: '#0d9488', group: 'Output' },
+  { type: 'export',         label: 'ExportNode',         sub: 'CSV / JSON / GeoJSON',       color: '#b45309', group: 'Output' },
   { type: 'mapOutput',      label: 'MapOutputNode',      sub: 'Geo map (lat/lon records)',  color: '#14532d', group: 'Output' },
   { type: 'timelineOutput', label: 'TimelineOutputNode', sub: 'Year-resolution timeline',   color: '#1e293b', group: 'Output' },
   { type: 'jsonOutput',  label: 'JSONOutputNode',   sub: 'Formatted JSON viewer',     color: '#6d28d9', group: 'Output' },

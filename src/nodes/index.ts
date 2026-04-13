@@ -4,10 +4,11 @@ import { LLDSSearchNode } from './LLDSSearchNode'
 import { ADSSearchNode }  from './ADSSearchNode'
 import { MDSSearchNode }  from './MDSSearchNode'
 import { ReconciliationNode } from './ReconciliationNode'
-import { TableOutputNode } from './TableOutputNode'
-import { JSONOutputNode }  from './JSONOutputNode'
+import { TableOutputNode }    from './TableOutputNode'
+import { JSONOutputNode }     from './JSONOutputNode'
 import { MapOutputNode }      from './MapOutputNode'
 import { TimelineOutputNode } from './TimelineOutputNode'
+import { ExportNode }         from './ExportNode'
 
 export const nodeTypes = {
   param:          ParamNode,
@@ -20,4 +21,5 @@ export const nodeTypes = {
   jsonOutput:     JSONOutputNode,
   mapOutput:      MapOutputNode,
   timelineOutput: TimelineOutputNode,
+  export:         ExportNode,
 }
