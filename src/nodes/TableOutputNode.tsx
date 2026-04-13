@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
+import type { ReconciliationResult } from '../utils/reconciliationService'
 import { isReconciledValue } from '../utils/reconciliationService'
 import { renderCell }        from './ReconciledCell'
 
@@ -54,14 +55,15 @@ function allFlatColumns(records: UnifiedRecord[]): string[] {
 
 
 interface TableProps {
-  records: UnifiedRecord[]
-  columns: string[]
-  page: number
+  records:  UnifiedRecord[]
+  columns:  string[]
+  page:     number
   pageSize: number
   compact?: boolean
+  onSelectCandidate?: (recordId: string, col: string, result: ReconciliationResult) => void
 }
 
-function RecordTable({ records, columns, page, pageSize, compact = false }: TableProps) {
+function RecordTable({ records, columns, page, pageSize, compact = false, onSelectCandidate }: TableProps) {
   const start = page * pageSize
   const rows = records.slice(start, start + pageSize)
   const fs = compact ? 11 : 12
@@ -83,9 +85,12 @@ function RecordTable({ records, columns, page, pageSize, compact = false }: Tabl
           <tr key={rec.id} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
             {columns.map(col => {
               const val = rec[col as keyof UnifiedRecord]
+              const handleSelect = onSelectCandidate
+                ? (result: ReconciliationResult) => onSelectCandidate(rec.id, col, result)
+                : undefined
               return (
                 <td key={col} style={{ ...tdStyle, padding: pad }}>
-                  {renderCell(val)}
+                  {renderCell(val, handleSelect)}
                 </td>
               )
             })}
@@ -96,36 +101,64 @@ function RecordTable({ records, columns, page, pageSize, compact = false }: Tabl
   )
 }
 
-export function TableOutputNode({ id }: NodeProps) {
+export function TableOutputNode({ id, data }: NodeProps) {
   const { records, count, status, connected, sourceCount } = useUpstreamRecords(id)
   const { updateNodeData } = useReactFlow()
-  const [page, setPage] = useState(0)
+  const [page,    setPage]    = useState(0)
   const [showAll, setShowAll] = useState(false)
+
+  // Selections live in node data so ExpandedOutputPanel can share them.
+  // Key = `${recordId}::${colName}`, value = the chosen ReconciliationResult.
+  const selections = ((data as Record<string, unknown>).selections ?? {}) as Record<string, ReconciliationResult>
+
+  // Overlay user selections onto upstream records
+  const effectiveRecords = useMemo<UnifiedRecord[] | null>(() => {
+    if (!records) return null
+    if (Object.keys(selections).length === 0) return records
+    return records.map(rec => {
+      const patch: Record<string, unknown> = {}
+      for (const [key, result] of Object.entries(selections)) {
+        const sep = key.indexOf('::')
+        if (sep === -1) continue
+        const recId = key.slice(0, sep)
+        const col   = key.slice(sep + 2)
+        if (rec.id === recId) patch[col] = result
+      }
+      return Object.keys(patch).length > 0 ? { ...rec, ...patch } as UnifiedRecord : rec
+    })
+  }, [records, selections])
+
+  function handleSelectCandidate(recordId: string, col: string, result: ReconciliationResult) {
+    updateNodeData(id, {
+      selections: { ...selections, [`${recordId}::${col}`]: result },
+    })
+  }
 
   // ── pass-through output ───────────────────────────────────────────────────
   // Sync merged records into this node's own data so downstream nodes
   // (e.g. MapOutputNode) can read them via useUpstreamRecords.
-  // We compare by record IDs + status to break the reactivity loop that would
-  // otherwise occur because useNodes() fires on every updateNodeData call.
+  // Key includes selection state so downstream sees user overrides.
   const prevKeyRef = useRef('')
   useEffect(() => {
-    const key = `${status}:${(records ?? []).map(r => r.id).join('\n')}`
+    const selKey = Object.entries(selections).map(([k, v]) => `${k}=${v.qid}`).join(',')
+    const key = `${status}:${selKey}:${(effectiveRecords ?? []).map(r => r.id).join('\n')}`
     if (key === prevKeyRef.current) return
     prevKeyRef.current = key
     updateNodeData(id, {
-      results: records ?? [],
-      count:   records?.length ?? 0,
+      results: effectiveRecords ?? [],
+      count:   effectiveRecords?.length ?? 0,
       status,
     })
-  }, [records, status, id, updateNodeData])
+  }, [effectiveRecords, selections, status, id, updateNodeData])
 
-  const columns = records
+  const columns = effectiveRecords
     ? showAll
-      ? allFlatColumns(records)
-      : DEFAULT_COLS.filter(c => records.some(r => r[c] != null))
+      ? allFlatColumns(effectiveRecords)
+      : DEFAULT_COLS.filter(c => effectiveRecords.some(r => r[c] != null))
     : []
 
-  const totalPages = records ? Math.ceil(records.length / PAGE_SIZE) : 0
+  const totalPages = effectiveRecords ? Math.ceil(effectiveRecords.length / PAGE_SIZE) : 0
+  const selectionCount = Object.keys(selections).length
 
   return (
     <div style={styles.card}>
@@ -134,10 +167,15 @@ export function TableOutputNode({ id }: NodeProps) {
 
       <div style={styles.header}>
         <span style={styles.title}>Table Output</span>
-        {connected && records && (
+        {connected && effectiveRecords && (
           <span style={styles.badge}>
-            {records.length}{count > records.length ? ` / ${count.toLocaleString()} total` : ''} rows
+            {effectiveRecords.length}{count > effectiveRecords.length ? ` / ${count.toLocaleString()} total` : ''} rows
             {sourceCount > 1 ? ` · ${sourceCount} sources` : ''}
+          </span>
+        )}
+        {selectionCount > 0 && (
+          <span style={{ ...styles.badge, color: '#fde68a' }}>
+            {selectionCount} override{selectionCount !== 1 ? 's' : ''}
           </span>
         )}
         {connected && status === 'loading' && (
@@ -151,15 +189,15 @@ export function TableOutputNode({ id }: NodeProps) {
         </div>
       )}
 
-      {connected && !records && status !== 'loading' && (
+      {connected && !effectiveRecords && status !== 'loading' && (
         <div style={styles.placeholder}>Run the upstream node to see results</div>
       )}
 
-      {connected && records && records.length === 0 && (
+      {connected && effectiveRecords && effectiveRecords.length === 0 && (
         <div style={styles.placeholder}>Query returned 0 results</div>
       )}
 
-      {connected && records && records.length > 0 && (
+      {connected && effectiveRecords && effectiveRecords.length > 0 && (
         <>
           <div style={styles.toolbar}>
             <label style={styles.toggleLabel} className="nodrag">
@@ -176,11 +214,12 @@ export function TableOutputNode({ id }: NodeProps) {
 
           <div style={styles.tableWrap} className="nodrag nowheel">
             <RecordTable
-              records={records}
+              records={effectiveRecords}
               columns={columns}
               page={page}
               pageSize={PAGE_SIZE}
               compact
+              onSelectCandidate={handleSelectCandidate}
             />
           </div>
 

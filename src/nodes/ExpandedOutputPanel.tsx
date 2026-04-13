@@ -5,9 +5,10 @@
  * Triggered by double-clicking a TableOutputNode or JSONOutputNode.
  * Shows the full dataset: paginated table or complete JSON.
  */
-import { useState } from 'react'
-import { Panel, useNodes } from '@xyflow/react'
+import { useState, useMemo } from 'react'
+import { Panel, useNodes, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
+import type { ReconciliationResult } from '../utils/reconciliationService'
 import { isReconciledValue } from '../utils/reconciliationService'
 import { renderCell }        from './ReconciledCell'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
@@ -57,6 +58,7 @@ function highlight(json: string): string {
 
 export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
   const allNodes = useNodes()
+  const { updateNodeData } = useReactFlow()
   const node = allNodes.find(n => n.id === nodeId)
   const { records, count } = useUpstreamRecords(nodeId)
   const [page, setPage] = useState(0)
@@ -66,11 +68,39 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
   const isTable = node.type === 'tableOutput'
   const accentColor = isTable ? '#0d9488' : '#6d28d9'
 
-  const columns = records
-    ? showAll ? allFlatColumns(records) : DEFAULT_COLS.filter(c => records.some(r => r[c] != null))
+  // Read user-overridden selections from the table node's own data (shared with TableOutputNode)
+  const selections = ((node.data as Record<string, unknown>).selections ?? {}) as Record<string, ReconciliationResult>
+
+  // Apply selections to upstream records (same logic as TableOutputNode)
+  const effectiveRecords = useMemo<UnifiedRecord[] | null>(() => {
+    if (!records) return null
+    if (Object.keys(selections).length === 0) return records
+    return records.map(rec => {
+      const patch: Record<string, unknown> = {}
+      for (const [key, result] of Object.entries(selections)) {
+        const sep = key.indexOf('::')
+        if (sep === -1) continue
+        const recId = key.slice(0, sep)
+        const col   = key.slice(sep + 2)
+        if (rec.id === recId) patch[col] = result
+      }
+      return Object.keys(patch).length > 0 ? { ...rec, ...patch } as UnifiedRecord : rec
+    })
+  }, [records, selections])
+
+  // Write selections back to the table node's data so TableOutputNode stays in sync
+  function handleSelectCandidate(recordId: string, col: string, result: ReconciliationResult) {
+    updateNodeData(nodeId, {
+      selections: { ...selections, [`${recordId}::${col}`]: result },
+    })
+  }
+
+  const displayRecords = isTable ? effectiveRecords : records
+  const columns = displayRecords
+    ? showAll ? allFlatColumns(displayRecords) : DEFAULT_COLS.filter(c => displayRecords.some(r => r[c] != null))
     : []
-  const totalPages = records ? Math.ceil(records.length / PAGE_SIZE) : 0
-  const pageRows = records ? records.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE) : []
+  const totalPages = displayRecords ? Math.ceil(displayRecords.length / PAGE_SIZE) : 0
+  const pageRows = displayRecords ? displayRecords.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE) : []
 
   return (
     <Panel
@@ -100,9 +130,14 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
         <span style={{ color: '#fff', fontWeight: 700, fontSize: 13 }}>
           {isTable ? 'Table Output' : 'JSON Output'} — expanded
         </span>
-        {records && (
+        {displayRecords && (
           <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: 11 }}>
-            {records.length} fetched / {count.toLocaleString()} total
+            {displayRecords.length} fetched / {count.toLocaleString()} total
+          </span>
+        )}
+        {isTable && Object.keys(selections).length > 0 && (
+          <span style={{ color: '#fde68a', fontSize: 11, fontWeight: 600 }}>
+            {Object.keys(selections).length} override{Object.keys(selections).length !== 1 ? 's' : ''}
           </span>
         )}
         <div style={{ flex: 1 }} />
@@ -123,14 +158,14 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
       </div>
 
       {/* No data */}
-      {!records && (
+      {!displayRecords && (
         <div style={{ padding: 24, color: '#9ca3af', textAlign: 'center', fontSize: 13 }}>
           Run the upstream node to see results
         </div>
       )}
 
       {/* Table view */}
-      {records && isTable && (
+      {displayRecords && isTable && (
         <>
           <div style={{
             display: 'flex', alignItems: 'center', gap: 12,
@@ -158,9 +193,11 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
                   <tr key={rec.id} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
                     {columns.map(col => {
                       const val = rec[col as keyof UnifiedRecord]
+                      const handleSelect = (result: ReconciliationResult) =>
+                        handleSelectCandidate(rec.id, col, result)
                       return (
                         <td key={col} style={panelTd}>
-                          {renderCell(val)}
+                          {renderCell(val, handleSelect)}
                         </td>
                       )
                     })}
@@ -185,7 +222,7 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
       )}
 
       {/* JSON view */}
-      {records && !isTable && (
+      {displayRecords && !isTable && (
         <div style={{ overflow: 'auto', flex: 1 }}>
           <pre
             style={{
@@ -196,7 +233,7 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
               whiteSpace: 'pre',
             }}
             // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: highlight(JSON.stringify(records, null, 2)) }}
+            dangerouslySetInnerHTML={{ __html: highlight(JSON.stringify(displayRecords, null, 2)) }}
           />
         </div>
       )}

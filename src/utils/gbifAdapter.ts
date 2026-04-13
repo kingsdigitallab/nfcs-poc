@@ -7,6 +7,13 @@ import type { UnifiedRecord } from '../types/UnifiedRecord'
 interface GBIFOccurrence {
   key?: number
   scientificName?: string
+  kingdom?: string
+  phylum?: string
+  class?: string
+  order?: string
+  family?: string
+  genus?: string
+  species?: string
   country?: string
   eventDate?: string
   decimalLatitude?: number
@@ -40,6 +47,13 @@ export function adaptGBIFResponse(response: GBIFSearchResponse): UnifiedRecord[]
 
     // Biodiversity-specific
     scientificName: hit.scientificName,
+    kingdom: hit.kingdom,
+    phylum: hit.phylum,
+    class: hit.class,
+    order: hit.order,
+    family: hit.family,
+    genus: hit.genus,
+    species: hit.species,
     country: hit.country,
     eventDate: hit.eventDate,
     decimalLatitude: hit.decimalLatitude ?? null,

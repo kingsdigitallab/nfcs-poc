@@ -9,6 +9,8 @@
  *   • null / undefined      → em dash
  *   • everything else       → String(val)
  */
+import { useState }                  from 'react'
+import { createPortal }              from 'react-dom'
 import type { ReconciliationResult } from '../utils/reconciliationService'
 import { isReconciledValue }         from '../utils/reconciliationService'
 
@@ -81,11 +83,131 @@ export function ReconciledPill({ value }: { value: ReconciliationResult }) {
   )
 }
 
+// ─── candidate picker pill ─────────────────────────────────────────────────────
+
+/**
+ * Like ReconciledPill but, when multiple candidates exist, shows a popover
+ * on click so the user can choose a different match.
+ */
+export function SelectableReconciledPill({
+  value,
+  onSelect,
+}: {
+  value:    ReconciliationResult
+  onSelect: (result: ReconciliationResult) => void
+}) {
+  const [open, setOpen] = useState(false)
+  const [pos,  setPos]  = useState({ x: 0, y: 0 })
+
+  const hasChoices = value.candidates.length > 1
+
+  function handleClick(e: React.MouseEvent) {
+    e.stopPropagation()
+    if (!hasChoices) return
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect()
+    setPos({ x: rect.left, y: rect.bottom + 4 })
+    setOpen(o => !o)
+  }
+
+  function pick(c: ReconciliationResult['candidates'][number]) {
+    onSelect({
+      ...value,
+      qid:        c.qid,
+      label:      c.label,
+      description: null,
+      confidence: c.score,
+      status:     'resolved',
+    })
+    setOpen(false)
+  }
+
+  return (
+    <>
+      <span
+        onClick={handleClick}
+        style={{ cursor: hasChoices ? 'pointer' : 'default', display: 'inline-flex', alignItems: 'center', gap: 2 }}
+        title={hasChoices ? 'Click to choose from candidates' : undefined}
+        className="nodrag"
+      >
+        <ReconciledPill value={value} />
+        {hasChoices && (
+          <span style={{ fontSize: 9, opacity: 0.6, lineHeight: 1 }}>▾</span>
+        )}
+      </span>
+
+      {open && createPortal(
+        <>
+          {/* backdrop */}
+          <div
+            style={{ position: 'fixed', inset: 0, zIndex: 9998 }}
+            onClick={() => setOpen(false)}
+          />
+          {/* popover */}
+          <div style={{
+            position:     'fixed',
+            top:          pos.y,
+            left:         pos.x,
+            zIndex:       9999,
+            background:   '#fff',
+            border:       '1px solid #e5e7eb',
+            borderRadius: 6,
+            boxShadow:    '0 4px 16px rgba(0,0,0,0.15)',
+            minWidth:     240,
+            overflow:     'hidden',
+          }}>
+            <div style={{ fontSize: 10, color: '#6b7280', padding: '5px 10px', borderBottom: '1px solid #f3f4f6', fontWeight: 600 }}>
+              Choose reconciliation match
+            </div>
+            {value.candidates.map(c => {
+              const active = c.qid === value.qid
+              return (
+                <button
+                  key={c.qid}
+                  onClick={e => { e.stopPropagation(); pick(c) }}
+                  style={{
+                    display:    'flex',
+                    width:      '100%',
+                    alignItems: 'center',
+                    gap:        6,
+                    padding:    '6px 10px',
+                    background: active ? '#f0fdf4' : 'transparent',
+                    border:     'none',
+                    borderBottom: '1px solid #f9fafb',
+                    cursor:     'pointer',
+                    textAlign:  'left',
+                    fontSize:   11,
+                  }}
+                >
+                  <span style={{ flexShrink: 0, width: 8, height: 8, borderRadius: '50%', background: active ? '#22c55e' : '#d1d5db' }} />
+                  <span style={{ fontWeight: 600, color: '#111827', flexGrow: 1 }}>{c.label}</span>
+                  <span style={{ color: '#9ca3af', fontSize: 10, flexShrink: 0 }}>{c.qid}</span>
+                  <span style={{ color: '#6b7280', fontSize: 10, flexShrink: 0, marginLeft: 4 }}>
+                    {Math.round(c.score * 100)}%
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+        </>,
+        document.body,
+      )}
+    </>
+  )
+}
+
 // ─── universal cell renderer ───────────────────────────────────────────────────
 
-export function renderCell(val: unknown): React.ReactNode {
-  // Reconciled object → pill
-  if (isReconciledValue(val)) return <ReconciledPill value={val} />
+export function renderCell(
+  val: unknown,
+  onSelectReconciled?: (result: ReconciliationResult) => void,
+): React.ReactNode {
+  // Reconciled object → selectable pill (if handler provided) or plain pill
+  if (isReconciledValue(val)) {
+    if (onSelectReconciled && val.candidates.length > 1) {
+      return <SelectableReconciledPill value={val} onSelect={onSelectReconciled} />
+    }
+    return <ReconciledPill value={val} />
+  }
 
   // URL string → external link
   if (isUrl(val)) return <ExternalLink href={val} />

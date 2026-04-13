@@ -52,9 +52,29 @@ export interface UnifiedRecord {
   /** Format, e.g. "text/plain" */
   format?: string
 
+  // ── Geography / place (ADS, GBIF) ───────────────────────────────────────────
+  /** Human-readable place name for the primary spatial coverage */
+  spatialCoverage?: string
+  /** ISO 3166 country name(s) */
+  country?: string | string[]
+
+  // ── Temporal coverage (ADS) ──────────────────────────────────────────────────
+  /** Earliest date of temporal coverage (ISO 8601 or year string) */
+  periodStart?: string
+  /** Latest date of temporal coverage */
+  periodEnd?: string
+  /** Named period label, e.g. "Iron Age", "Medieval" */
+  periodName?: string | string[]
+
   // ── Biodiversity-specific (GBIF) ────────────────────────────────────────────
   scientificName?: string
-  country?: string
+  kingdom?: string
+  phylum?: string
+  class?: string
+  order?: string
+  family?: string
+  genus?: string
+  species?: string
   eventDate?: string
   decimalLatitude?: number | null
   decimalLongitude?: number | null
