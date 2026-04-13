@@ -3,7 +3,8 @@ import { GBIFSearchNode } from './GBIFSearchNode'
 import { LLDSSearchNode } from './LLDSSearchNode'
 import { ADSSearchNode }  from './ADSSearchNode'
 import { MDSSearchNode }  from './MDSSearchNode'
-import { ReconciliationNode } from './ReconciliationNode'
+import { ReconciliationNode }    from './ReconciliationNode'
+import { FilterTransformNode }  from './FilterTransformNode'
 import { TableOutputNode }    from './TableOutputNode'
 import { JSONOutputNode }     from './JSONOutputNode'
 import { MapOutputNode }      from './MapOutputNode'
@@ -16,7 +17,8 @@ export const nodeTypes = {
   lldsSearch:     LLDSSearchNode,
   adsSearch:      ADSSearchNode,
   mdsSearch:      MDSSearchNode,
-  reconciliation: ReconciliationNode,
+  reconciliation:  ReconciliationNode,
+  filterTransform: FilterTransformNode,
   tableOutput:    TableOutputNode,
   jsonOutput:     JSONOutputNode,
   mapOutput:      MapOutputNode,

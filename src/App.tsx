@@ -21,6 +21,7 @@ import type { LLDSSearchNodeData }        from './nodes/LLDSSearchNode'
 import type { ADSSearchNodeData }         from './nodes/ADSSearchNode'
 import type { MDSSearchNodeData }         from './nodes/MDSSearchNode'
 import type { ReconciliationNodeData }    from './nodes/ReconciliationNode'
+import type { FilterTransformNodeData }   from './nodes/FilterTransformNode'
 import type { ExportNodeData }            from './nodes/ExportNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
@@ -36,6 +37,7 @@ type AppNode =
   | Node<ADSSearchNodeData>
   | Node<MDSSearchNodeData>
   | Node<ReconciliationNodeData>
+  | Node<FilterTransformNodeData>
   | Node<ExportNodeData>
   | Node<OutputNodeData>
 
@@ -79,6 +81,20 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       status: 'idle', statusMessage: '', results: undefined, count: 0,
       _capped: false, _total: 0,
     } satisfies MDSSearchNodeData,
+  }),
+  filterTransform: pos => ({
+    id: newId('ft'), type: 'filterTransform', position: pos,
+    data: {
+      mode:             'filter',
+      filterCombinator: 'AND',
+      filterOps:        [],
+      transformOps:     [],
+      status:           'idle',
+      statusMessage:    '',
+      results:          undefined,
+      inputCount:       0,
+      outputCount:      0,
+    } satisfies FilterTransformNodeData,
   }),
   reconciliation: pos => ({
     id: newId('recon'), type: 'reconciliation', position: pos,
@@ -124,7 +140,8 @@ const SIDEBAR_ITEMS = [
   { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Source' },
   { type: 'adsSearch',   label: 'ADSSearchNode',    sub: 'Archaeology Data Service',  color: '#7c2d12', group: 'Source' },
   { type: 'mdsSearch',      label: 'MDSSearchNode',      sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Source' },
-  { type: 'reconciliation', label: 'ReconciliationNode', sub: 'Wikidata field reconciler',  color: '#7c3aed', group: 'Process' },
+  { type: 'filterTransform', label: 'FilterTransformNode', sub: 'Filter + transform records', color: '#4f46e5', group: 'Process' },
+  { type: 'reconciliation',  label: 'ReconciliationNode',  sub: 'Wikidata field reconciler',  color: '#7c3aed', group: 'Process' },
   { type: 'tableOutput',    label: 'TableOutputNode',    sub: 'Paginated results table',    color: '#0d9488', group: 'Output' },
   { type: 'export',         label: 'ExportNode',         sub: 'CSV / JSON / GeoJSON',       color: '#b45309', group: 'Output' },
   { type: 'mapOutput',      label: 'MapOutputNode',      sub: 'Geo map (lat/lon records)',  color: '#14532d', group: 'Output' },

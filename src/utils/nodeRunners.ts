@@ -13,6 +13,7 @@ import { runLLDSNode }            from './runLLDSNode'
 import { runADSNode }             from './runADSNode'
 import { runMDSNode }             from './runMDSNode'
 import { runReconciliationNode }  from './runReconciliationNode'
+import { runFilterTransformNode } from './runFilterTransformNode'
 
 /**
  * Common signature for every node runner.
@@ -34,5 +35,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   lldsSearch: runLLDSNode,
   adsSearch:  runADSNode,
   mdsSearch:       runMDSNode,
-  reconciliation:  runReconciliationNode,
+  reconciliation:   runReconciliationNode,
+  filterTransform:  runFilterTransformNode,
 }
