@@ -18,10 +18,16 @@
  * leave mouse events alone so Leaflet's pan and scroll-zoom work normally.
  */
 
-import { useEffect, useRef, useMemo } from 'react'
+import { useEffect, useRef, useMemo, useState } from 'react'
 import { Handle, Position, NodeProps } from '@xyflow/react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+// @ts-ignore
+import 'leaflet.markercluster'
+// @ts-ignore
+import 'leaflet.markercluster/dist/MarkerCluster.css'
+// @ts-ignore
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 
 // ─── source colour palette ────────────────────────────────────────────────────
@@ -54,10 +60,12 @@ const MAP_H = 300
 
 export function MapOutputNode({ id }: NodeProps) {
   const { records, connected, status, sourceCount } = useUpstreamRecords(id)
+  const [clusteringEnabled, setClusteringEnabled] = useState(true)
 
   const mapDivRef     = useRef<HTMLDivElement>(null)
   const mapRef        = useRef<L.Map | null>(null)
   const layerGroupRef = useRef<L.LayerGroup | null>(null)
+  const clusterGroupRef = useRef<any>(null)  // L.MarkerClusterGroup from leaflet.markercluster
   const prevKeyRef    = useRef('')
 
   // ── legend data (render-time, not in effect) ───────────────────────────────
@@ -90,35 +98,45 @@ export function MapOutputNode({ id }: NodeProps) {
       maxZoom: 19,
     }).addTo(map)
 
-    mapRef.current        = map
+    mapRef.current = map
+    // Initialize cluster group (will be toggled on/off via clustering state)
+    const clusterGroup = (L as any).markerClusterGroup()
+    clusterGroupRef.current = clusterGroup
     layerGroupRef.current = L.layerGroup().addTo(map)
 
     return () => {
       map.remove()
       mapRef.current        = null
       layerGroupRef.current = null
+      clusterGroupRef.current = null
     }
   }, [])
 
-  // ── rebuild markers when records change ────────────────────────────────────
+  // ── rebuild markers when records or clustering toggle changes ──────────────
   useEffect(() => {
     const map   = mapRef.current
-    const layer = layerGroupRef.current
-    if (!map || !layer) return
+    const regularLayer = layerGroupRef.current
+    const clusterGroup = clusterGroupRef.current
+    if (!map || !regularLayer || !clusterGroup) return
 
     const mappable = (records ?? []).filter(
       r => r.decimalLatitude != null && r.decimalLongitude != null,
     )
 
-    // Bail out early if the set of mapped points hasn't actually changed
+    // Track the key for debugging (removed early return — let React handle optimization via dependencies)
     const key = mappable
       .map(r => `${r.id}:${r.decimalLatitude},${r.decimalLongitude}`)
       .join('|')
-    if (key === prevKeyRef.current) return
     prevKeyRef.current = key
 
-    layer.clearLayers()
+    // Clear both layers
+    regularLayer.clearLayers()
+    clusterGroup.clearLayers()
+
     if (mappable.length === 0) return
+
+    // Choose which layer to add markers to based on clustering state
+    const targetLayer = clusteringEnabled ? clusterGroup : regularLayer
 
     const bounds: L.LatLngTuple[] = []
 
@@ -159,9 +177,16 @@ export function MapOutputNode({ id }: NodeProps) {
         fillOpacity: 0.85,
       })
         .bindPopup(popup, { maxWidth: 300 })
-        .addTo(layer)
+        .addTo(targetLayer)
 
       bounds.push([lat, lng])
+    }
+
+    // Add cluster group to map if clustering is enabled
+    if (clusteringEnabled && !map.hasLayer(clusterGroup)) {
+      map.addLayer(clusterGroup)
+    } else if (!clusteringEnabled && map.hasLayer(clusterGroup)) {
+      map.removeLayer(clusterGroup)
     }
 
     if (bounds.length > 0) {
@@ -171,7 +196,7 @@ export function MapOutputNode({ id }: NodeProps) {
         // fitBounds can throw on degenerate bounds — ignore
       }
     }
-  }, [records])
+  }, [records, clusteringEnabled])
 
   // ── status text shown in the header ───────────────────────────────────────
   const headerNote = !connected
@@ -193,6 +218,21 @@ export function MapOutputNode({ id }: NodeProps) {
         <span style={styles.title}>Map Output</span>
         <span style={styles.badge}>{headerNote}</span>
       </div>
+
+      {/* Controls */}
+      {mappableCount > 0 && (
+        <div style={styles.controls}>
+          <label style={styles.clusterToggle}>
+            <input
+              type="checkbox"
+              checked={clusteringEnabled}
+              onChange={(e) => setClusteringEnabled(e.target.checked)}
+              style={styles.checkbox}
+            />
+            <span>Clustering</span>
+          </label>
+        </div>
+      )}
 
       {/* Leaflet map — nodrag + nowheel prevent RF from consuming map events */}
       <div
@@ -278,5 +318,27 @@ const styles = {
     background: HEADER_COLOR,
     border:     '2px solid #fff',
     boxShadow:  `0 0 0 1px ${HEADER_COLOR}`,
+  },
+  controls: {
+    display:    'flex',
+    alignItems: 'center',
+    gap:        8,
+    padding:    '6px 10px',
+    background: '#f3f4f6',
+    borderTop:  '1px solid #e5e7eb',
+    fontSize:   11,
+  },
+  clusterToggle: {
+    display:    'flex',
+    alignItems: 'center',
+    gap:        5,
+    cursor:     'pointer' as const,
+    color:      '#374151',
+    userSelect: 'none' as const,
+  },
+  checkbox: {
+    cursor: 'pointer' as const,
+    width:  14,
+    height: 14,
   },
 }

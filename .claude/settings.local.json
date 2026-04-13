@@ -30,18 +30,11 @@
       "Bash(git config:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m ':*)",
-      "Bash(git remote:*)",
-      "Bash(npm --version)",
-      "Bash(curl -s \"http://localhost:5174/\" -o /dev/null -w \"%{http_code}\")",
-      "Bash(echo \"EXIT:$?\")",
       "Bash(npm install:*)",
-      "Bash(git -C C:\\\\Users\\\\neil_\\\\Repos\\\\nfcs-poc diff HEAD --stat)",
-      "Bash(git -C C:\\\\Users\\\\neil_\\\\Repos\\\\nfcs-poc log --oneline -5)",
-      "Bash(echo \"EXIT: $?\")",
+      "Bash(curl -s http://localhost:5174/)",
       "Bash(git checkout:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git merge:*)",
+      "Bash(git stash:*)"
     ]
   }
 }
