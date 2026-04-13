@@ -3,7 +3,7 @@ import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { isReconciledValue } from '../utils/reconciliationService'
-import { ReconciledPill }    from './ReconciledCell'
+import { renderCell }        from './ReconciledCell'
 
 export interface TableOutputNodeData {
   [key: string]: unknown
@@ -52,11 +52,6 @@ function allFlatColumns(records: UnifiedRecord[]): string[] {
   return [...ordered, ...extras]
 }
 
-function fmt(val: unknown): string {
-  if (val === null || val === undefined) return '—'
-  if (Array.isArray(val)) return val.join(', ')
-  return String(val)
-}
 
 interface TableProps {
   records: UnifiedRecord[]
@@ -90,10 +85,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false }: Tabl
               const val = rec[col as keyof UnifiedRecord]
               return (
                 <td key={col} style={{ ...tdStyle, padding: pad }}>
-                  {isReconciledValue(val)
-                    ? <ReconciledPill value={val} />
-                    : fmt(val)
-                  }
+                  {renderCell(val)}
                 </td>
               )
             })}
