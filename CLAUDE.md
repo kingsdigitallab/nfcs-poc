@@ -4,344 +4,425 @@ A node-based visual workflow editor for federating UK Arts & Humanities research
 
 ## Tech Stack
 
-- **Frontend only** (no backend for now): React + TypeScript + Vite
-- **Node editor**: `@xyflow/react` (v12+). Import from `@xyflow/react`, NOT `reactflow` or `react-flow-renderer`.
+- **Frontend only** (no backend): React 19 + TypeScript + Vite
+- **Node editor**: `@xyflow/react` (v12+). Import ONLY from `@xyflow/react`, NOT `reactflow` or `react-flow-renderer`.
 - **No Service Worker**. Do not register any SW. No PWA plugin. No workbox.
-- **Dev server port**: 5174 (not default 5173, to avoid conflicts). Set in `vite.config.ts`:
-  ```ts
-  export default defineConfig({
-    server: { port: 5174 },
-    plugins: [react()]
-  })
-  ```
-- API calls happen **client-side** via `fetch()` directly from the browser. GBIF has permissive CORS headers so no proxy is needed. Services without permissive CORS (LLDS, ADS) are routed through **Vite dev proxy** rules in `vite.config.ts`. In production these would be replaced by a real lightweight proxy (e.g. a Cloudflare Worker or a single Express route per service).
+- **Dev server port**: 5174 (fixed). Set in `vite.config.ts`.
+- API calls happen **client-side** via `fetch()`. GBIF has permissive CORS. All other services (LLDS, ADS, MDS, Wikidata reconcile) are routed through **Vite dev proxy** rules in `vite.config.ts`.
 
 ## Development Philosophy
 
 - **One increment at a time.** Each increment must be testable before moving to the next.
-- **Console.log is the first output.** Before building UI for results, log them to the browser console so we can verify the API call works.
+- **Console.log is the first output.** Before building UI for results, log them to the browser console.
 - **No premature abstraction.** Don't build a generic adapter/orchestrator system until we have 2+ working data sources. Start concrete.
 
 ---
 
-## GBIF API Reference (primary data source for MVP)
+## Vite Proxy Rules (vite.config.ts)
+
+All four proxies are live. Use the proxy path prefix in all frontend fetch calls:
+
+| Prefix | Target | Reason |
+|--------|--------|--------|
+| `/llds-proxy/*` | `https://llds.ling-phil.ox.ac.uk/llds/*` | No CORS |
+| `/ads-proxy/*` | `https://archaeologydataservice.ac.uk/*` | No CORS |
+| `/mds-proxy/*` | `https://museumdata.uk/*` | No CORS |
+| `/reconcile-proxy/*` | `https://wikidata.reconci.link/*` | 307 redirect strips CORS headers in browser |
+
+The reconcile proxy is especially important: `wikidata.reconci.link` returns a 307 that strips CORS headers in the browser. The Vite proxy sidesteps the redirect entirely.
+
+---
+
+## Current Project Structure
+
+```
+nfcs-poc/
+├── CLAUDE.md
+├── README.md
+├── package.json
+├── vite.config.ts          # Dev server + all four CORS proxy rules
+├── tsconfig.json
+├── index.html
+└── src/
+    ├── main.tsx
+    ├── App.tsx              # Canvas, sidebar, Run All button, node factories, debug panel
+    ├── index.css
+    ├── types/
+    │   └── UnifiedRecord.ts       # Canonical cross-service record type
+    ├── hooks/
+    │   └── useUpstreamRecords.ts  # Reactive multi-source merge hook
+    ├── nodes/
+    │   ├── index.ts               # nodeTypes registry for React Flow
+    │   ├── ParamNode.tsx          # Text / Integer value node
+    │   ├── GBIFSearchNode.tsx     # GBIF Occurrence API
+    │   ├── LLDSSearchNode.tsx     # LLDS DSpace REST (with cache fallback)
+    │   ├── ADSSearchNode.tsx      # ADS Data Catalogue API
+    │   ├── MDSSearchNode.tsx      # Museum Data Service (HTML scraper)
+    │   ├── FilterTransformNode.tsx # Filter/transform processing node
+    │   ├── ReconciliationNode.tsx  # Wikidata reconciliation node
+    │   ├── ReconciledCell.tsx      # Shared universal cell renderer (see below)
+    │   ├── TableOutputNode.tsx     # Paginated table output
+    │   ├── JSONOutputNode.tsx      # Syntax-highlighted JSON viewer
+    │   ├── MapOutputNode.tsx       # Leaflet map (lat/lon records)
+    │   ├── TimelineOutputNode.tsx  # SVG horizontal timeline
+    │   ├── ExportNode.tsx          # CSV / JSON / GeoJSON download
+    │   └── ExpandedOutputPanel.tsx # Full-screen panel (double-click Table/JSON)
+    └── utils/
+        ├── gbif.ts                 # buildGBIFUrl() + fetchGBIF()
+        ├── gbifAdapter.ts          # GBIFSearchResponse → UnifiedRecord[]
+        ├── lldsCache.ts            # localStorage cache helpers
+        ├── llds.ts                 # LLDS fetch helpers
+        ├── lldsAdapter.ts          # DSpaceItem → UnifiedRecord
+        ├── adsAdapter.ts           # ADS JSON → UnifiedRecord
+        ├── mds.ts                  # MDS fetch helpers
+        ├── mdsAdapter.ts           # MDS HTML → UnifiedRecord
+        ├── reconciliationService.ts # W3C Reconciliation API client + types
+        ├── filterTransformUtils.ts  # Pure filter/transform functions
+        ├── exportUtils.ts           # CSV / JSON / GeoJSON serialisers + download
+        ├── runGBIFNode.ts           # NodeRunner for gbifSearch
+        ├── runLLDSNode.ts           # NodeRunner for lldsSearch
+        ├── runADSNode.ts            # NodeRunner for adsSearch
+        ├── runMDSNode.ts            # NodeRunner for mdsSearch
+        ├── runReconciliationNode.ts # NodeRunner for reconciliation
+        ├── runFilterTransformNode.ts # NodeRunner for filterTransform
+        ├── nodeRunners.ts           # Registry: nodeType → NodeRunner
+        └── runWorkflow.ts           # Topological executor (Kahn's algorithm)
+```
+
+---
+
+## Node Types (all implemented and registered)
+
+### Input
+| Node type key | Component | Description |
+|---------------|-----------|-------------|
+| `param` | `ParamNode` | Holds a Text or Integer value; connects to search node input handles |
+
+### Source
+| Node type key | Component | Service | CORS |
+|---------------|-----------|---------|------|
+| `gbifSearch` | `GBIFSearchNode` | GBIF Occurrence API | Permissive (direct fetch) |
+| `lldsSearch` | `LLDSSearchNode` | LLDS DSpace REST | `/llds-proxy` |
+| `adsSearch` | `ADSSearchNode` | ADS Data Catalogue API | `/ads-proxy` |
+| `mdsSearch` | `MDSSearchNode` | museumdata.uk (HTML scraper) | `/mds-proxy` |
+
+### Process
+| Node type key | Component | Description |
+|---------------|-----------|-------------|
+| `filterTransform` | `FilterTransformNode` | Filter + transform records. Indigo `#4f46e5` header. |
+| `reconciliation` | `ReconciliationNode` | Wikidata field reconciler. Violet `#7c3aed` header. |
+
+### Output
+| Node type key | Component | Description |
+|---------------|-----------|-------------|
+| `tableOutput` | `TableOutputNode` | Paginated table. Teal `#0d9488` header. Double-click to expand. Pass-through output handle (`id="results"`, `top: 13`). |
+| `jsonOutput` | `JSONOutputNode` | Syntax-highlighted JSON viewer. Double-click to expand. |
+| `mapOutput` | `MapOutputNode` | Leaflet map. Plots records with `decimalLatitude`/`decimalLongitude`. |
+| `timelineOutput` | `TimelineOutputNode` | SVG timeline. Handles ISO dates, bare years, BCE dates (`-1199`). |
+| `export` | `ExportNode` | Downloads CSV / JSON / GeoJSON. Amber `#b45309` header. |
+
+---
+
+## Registration Checklist (when adding a new runnable node)
+
+1. Create `src/utils/run<Name>Node.ts` conforming to `NodeRunner` signature.
+2. Import and add one line to `src/utils/nodeRunners.ts`.
+3. Create `src/nodes/<Name>Node.tsx`.
+4. Import and add one line to `src/nodes/index.ts`.
+5. Add factory function to `NODE_DEFAULTS` in `src/App.tsx`.
+6. Add sidebar entry to `SIDEBAR_ITEMS` in `src/App.tsx`.
+7. Add typed data interface import + union to `AppNode` in `src/App.tsx`.
+8. If service lacks permissive CORS, add proxy rule to `vite.config.ts`.
+
+---
+
+## Data Flow & Adapter Contract
+
+- All adapters must return `UnifiedRecord[]` — output nodes never touch raw API responses.
+- Service-specific fields live under a namespace: `record.gbif.*`, `record.llds.*`, `record.ads.*`, `record.mds.*`.
+- After reconciliation, records gain `${fieldName}_reconciled` keys (see `ReconciliationResult` type).
+- `useUpstreamRecords(nodeId)` merges `data.results` from **all** edges with `targetHandle === 'data'`, enabling multi-source aggregation automatically.
+
+### NodeRunner contract
+
+```typescript
+export type NodeRunner = (
+  nodeId: string,
+  getNodes: () => Node[],
+  edges: Edge[],
+  updateNodeData: (id: string, data: Record<string, unknown>) => void,
+) => Promise<void>
+```
+
+**Runners must NEVER throw.** They own their error handling and must always call `updateNodeData` to leave the node in a terminal status (`'success'` | `'cached'` | `'error'`) before returning. `runWorkflow.ts` will catch any rogue throws and mark the node as errored, but do not rely on this.
+
+### Execution model
+
+- **▶ Run** on individual source/process nodes — standalone execution.
+- **▶▶ Run All** in top bar — `runWorkflow()` discovers all runnable nodes, builds topological order via Kahn's algorithm, executes source nodes in parallel first, then each processing layer in dependency order.
+
+---
+
+## UnifiedRecord Schema
+
+```typescript
+interface UnifiedRecord {
+  id: string              // globally unique, service-prefixed: "gbif:12345", "ads:1862953"
+  _source?:    string     // "gbif" | "llds" | "ads" | "mds"
+  _sourceId?:  string | number
+  _sourceUrl?: string     // link back to native UI
+  _pid?:       string     // DOI, Handle, ARK
+  _cached?:    boolean    // true when served from localStorage cache
+
+  title?:       string
+  description?: string
+  creator?:     string | string[]
+  date?:        string
+  subject?:     string | string[]
+  language?:    string
+  type?:        string
+  format?:      string
+
+  // GBIF-specific
+  scientificName?, country?, eventDate?
+  decimalLatitude?, decimalLongitude?  // used by MapOutputNode
+  basisOfRecord?, institutionCode?, datasetName?
+
+  // Service namespace objects (excluded from column detection)
+  gbif?: Record<string, unknown>
+  llds?: Record<string, unknown>
+  ads?:  Record<string, unknown>
+  mds?:  Record<string, unknown>
+
+  // Added by ReconciliationNode — detected by isReconciledValue()
+  [fieldName_reconciled]: ReconciliationResult | null
+}
+```
+
+---
+
+## ReconciledCell.tsx — Universal Cell Renderer
+
+**Location**: `src/nodes/ReconciledCell.tsx`
+
+This is the single source of truth for rendering any table cell value. Import `renderCell` from here; do NOT write local `fmt()` functions or local reconciled-pill logic in output nodes.
+
+```typescript
+// Priority order:
+export function renderCell(val: unknown): React.ReactNode {
+  if (isReconciledValue(val)) return <ReconciledPill value={val} />  // green/amber QID pill
+  if (isUrl(val)) return <ExternalLink href={val} />                  // clickable <a>
+  if (Array.isArray(val)) { ... }                                     // comma-joined; URLs become links
+  if (val === null || val === undefined) return '—'
+  return String(val)
+}
+```
+
+- `isUrl()`: detects `http://` or `https://` strings
+- `ExternalLink`: `<a target="_blank" rel="noreferrer">` with `title` attribute and `onClick` stopPropagation
+- `ReconciledPill`: green (`resolved`, confidence ≥ threshold) or amber (`review`) badge with clickable QID link to `wikidata.org`
+- `isReconciledValue()`: **imported from `reconciliationService.ts`**, not redefined here
+
+---
+
+## reconciliationService.ts — Key Exports
+
+**Location**: `src/utils/reconciliationService.ts`
+
+| Export | Purpose |
+|--------|---------|
+| `isReconciledValue(v)` | Type guard — canonical location, imported everywhere |
+| `ReconciliationResult` | Interface for `*_reconciled` field values |
+| `AuthorityConfig` | Interface for reconciliation authority descriptors |
+| `FIELD_AUTHORITY_MAP` | Record mapping field names to `AuthorityConfig[]` |
+| `authoritiesForField(fieldName)` | Returns authority list for a field (falls back to `default`) |
+| `candidateFields(record)` | Derives reconcilable field names from a sample record |
+| `reconcileField(records, fieldName, authority, threshold)` | Batched POST to Wikidata Reconciliation API |
+
+Important constants:
+- `RECONCILE_API = '/reconcile-proxy/en/api'` — uses Vite proxy, not direct URL
+- `MAX_BATCH = 200` — unique values cap per POST
+- `TIMEOUT_MS = 20_000`
+
+Shared authority groups (to avoid duplication in `FIELD_AUTHORITY_MAP`):
+- `PLACE_AUTHORITIES` — Wikidata Places (Q618123) + GeoNames (coming soon)
+- `TAXON_AUTHORITIES` — Wikidata Taxa (Q16521)
+- `ITEM_AUTHORITIES` — Wikidata Items (no type filter)
+
+---
+
+## FilterTransformNode Types
+
+**Location**: `src/nodes/FilterTransformNode.tsx` (exported types consumed by `filterTransformUtils.ts`)
+
+```typescript
+type FilterOperator = 'contains' | 'equals' | 'startsWith' | 'isEmpty' | 'isNotEmpty' | 'greaterThan' | 'lessThan'
+interface FilterOp   { id: string; field: string; operator: FilterOperator; value: string }
+
+// TransformOp is a discriminated union — never partially merge/update; always replace the whole op
+type TransformOp =
+  | { type: 'rename';    id: string; field: string; newName: string; dropOriginal: boolean }
+  | { type: 'extract';   id: string; field: string; newField: string; useRegex: boolean; regex: string; start: string; end: string }
+  | { type: 'concat';    id: string; field1: string; field2: string; separator: string; newField: string }
+  | { type: 'lowercase'; id: string; field: string }
+  | { type: 'uppercase'; id: string; field: string }
+  | { type: 'truncate';  id: string; field: string; maxLen: string }
+
+type FTMode = 'filter' | 'transform' | 'both'
+interface FilterTransformNodeData {
+  mode: FTMode
+  filterCombinator: 'AND' | 'OR'
+  filterOps:    FilterOp[]
+  transformOps: TransformOp[]
+  status: string; statusMessage: string
+  results?: UnifiedRecord[]; inputCount: number; outputCount: number
+}
+```
+
+**CRITICAL**: When changing a `TransformOp`'s `type`, replace the entire op object (preserve only `id`). Do NOT merge/patch — the discriminated union fields will collide.
+
+---
+
+## Column Detection in Table Views
+
+Both `TableOutputNode` and `ExpandedOutputPanel` use `allFlatColumns()`:
+
+```typescript
+function allFlatColumns(records: UnifiedRecord[]): string[] {
+  const keys = new Set<string>()
+  for (const r of records) {
+    for (const [k, v] of Object.entries(r)) {
+      if (v === null) continue
+      // Include: primitives, arrays, and ReconciliationResult objects
+      // Exclude: namespace objects (gbif, llds, ads, mds)
+      if (typeof v !== 'object' || Array.isArray(v) || isReconciledValue(v)) keys.add(k)
+    }
+  }
+  const ordered = DEFAULT_COLS.filter(c => keys.has(c))
+  const extras  = [...keys].filter(k => !DEFAULT_COLS.includes(k)).sort()
+  return [...ordered, ...extras]
+}
+```
+
+The `isReconciledValue(v)` check is essential — without it, `*_reconciled` keys (which are objects) are excluded from column detection.
+
+---
+
+## TableOutputNode Pass-Through
+
+`TableOutputNode` has both an input handle (`id="data"`, left) and a **pass-through output handle** (`id="results"`, right, positioned at `top: 13` to align with the header). This lets downstream nodes (MapOutputNode, TimelineOutputNode, ExportNode) read the merged/processed records from a table node rather than directly from source nodes.
+
+Loop prevention: uses `useRef` comparing a string key of `${status}:${recordIds}` before calling `updateNodeData` — prevents infinite render loops since `useNodes()` fires on every `updateNodeData` call.
+
+---
+
+## ExportNode
+
+**Location**: `src/nodes/ExportNode.tsx` + `src/utils/exportUtils.ts`
+
+Formats: `csv`, `json`, `geojson`. Files named `nfcs-export-YYYY-MM-DD.{ext}`.
+
+`exportUtils.ts` key functions:
+- `flattenRecord(record)` — expands `*_reconciled` objects to `_qid`, `_label`, `_confidence`, `_status` columns; drops namespace objects (`gbif`, `llds`, `ads`, `mds`)
+- `toCSV(records)` — flat table with proper comma/quote escaping
+- `toJSON(records)` — full record graph, pretty-printed
+- `toGeoJSON(records)` — `FeatureCollection` of records with `decimalLatitude` + `decimalLongitude` only
+
+---
+
+## GBIF API Reference
 
 **Base URL**: `https://api.gbif.org/v1`
-**Auth**: None required. CORS: permissive (browser fetch works directly).
-**Docs**: https://techdocs.gbif.org/en/openapi/
+**Auth**: None. **CORS**: Permissive (direct browser fetch).
 
 ### Occurrence Search
 `GET /occurrence/search`
 
 | Param | Type | Description |
 |-------|------|-------------|
-| `q` | string | Free text search across all fields |
+| `q` | string | Free text search |
 | `scientificName` | string | Scientific name filter |
-| `country` | string | ISO 3166-1 alpha-2 country code (e.g. `GB`) |
-| `year` | string | Single year or range: `1990` or `1990,2000` |
-| `basisOfRecord` | string | `PRESERVED_SPECIMEN`, `HUMAN_OBSERVATION`, `FOSSIL_SPECIMEN`, etc. |
-| `geometry` | string | WKT geometry for spatial filter |
-| `datasetKey` | string | Filter by dataset UUID |
-| `limit` | int | Results per page (max 300, default 20) |
+| `country` | string | ISO 3166-1 alpha-2 (e.g. `GB`) |
+| `year` | string | Single year or range: `1990,2000` |
+| `limit` | int | Max 300, default 20 |
 | `offset` | int | Pagination offset |
 | `hasCoordinate` | bool | Only records with lat/lon |
 
-**Response** (JSON):
-```json
-{
-  "offset": 0,
-  "limit": 20,
-  "count": 54321,
-  "results": [
-    {
-      "key": 12345,
-      "scientificName": "Quercus robur L.",
-      "decimalLatitude": 51.75,
-      "decimalLongitude": -1.25,
-      "country": "GB",
-      "eventDate": "2019-06-15",
-      "basisOfRecord": "PRESERVED_SPECIMEN",
-      "institutionCode": "NHM",
-      "datasetKey": "...",
-      "species": "Quercus robur",
-      "genus": "Quercus",
-      "family": "Fagaceae"
-    }
-  ]
-}
-```
+Response shape: `{ offset, limit, count, results: [{key, scientificName, decimalLatitude, decimalLongitude, country, eventDate, basisOfRecord, institutionCode, ...}] }`
 
-### Species Match
-`GET /species/match?name={name}`
-
-Returns best match with `usageKey` (GBIF taxon ID), `scientificName`, `rank`, `confidence`, `status`.
-
-### NHM Dataset Key
-To filter GBIF results to NHM specimens only: `datasetKey=7e380070-f762-11e1-a439-00145eb45e9a`
+NHM dataset key: `7e380070-f762-11e1-a439-00145eb45e9a`
 
 ---
 
-## ADS Data Catalogue API Reference (Archaeology Data Service)
+## ADS Data Catalogue API Reference
 
-**Base URL**: `https://archaeologydataservice.ac.uk/data-catalogue-api/api`
-**Auth**: None. **CORS**: No permissive headers — uses Vite dev proxy.
+**Base URL (via proxy)**: `/ads-proxy/data-catalogue-api/api/search`
+**Auth**: None.
 
-Dev proxy rule in `vite.config.ts`:
-```ts
-'/ads-proxy': {
-  target: 'https://archaeologydataservice.ac.uk',
-  changeOrigin: true,
-  rewrite: (path) => path.replace(/^\/ads-proxy/, ''),
-}
+`GET /search?q={query}&size={size}&from={offset}`
+
+Response: `{ total: { value }, hits: [{ id, data: { title, description, creator[], spatial[], temporal[], nativeSubject[], derivedSubject[], country[], originalId, issued, language, resourceType } }] }`
+
+Record link: `https://archaeologydataservice.ac.uk/archsearch/record?titleId={originalId}`
+
+UnifiedRecord mapping:
 ```
-Use `/ads-proxy/data-catalogue-api/api/search` in frontend code.
-
-### Search
-`GET /search?q={query}`
-
-| Param | Type | Description |
-|-------|------|-------------|
-| `q` | string | Free text search |
-| `size` | int | Results per page (default 20) |
-| `from` | int | Pagination offset |
-
-**Response** (JSON):
-```json
-{
-  "total": { "value": 29, "relation": "eq" },
-  "hits": [
-    {
-      "id": "hash_string",
-      "data": {
-        "title": { "text": "STIFFKEY", "language": "en" },
-        "description": { "text": "...", "language": "en" },
-        "creator": [{ "name": "Historic England" }],
-        "spatial": [{ "placeName": "England, NORFOLK, NORTH NORFOLK, STIFFKEY", "geopoint": { "lat": 52.94, "lon": 0.92 } }],
-        "temporal": [{ "from": "-1199", "periodName": "late bronze age", "until": "-0699" }],
-        "nativeSubject": [{ "prefLabel": "geophysical survey" }],
-        "derivedSubject": [{ "prefLabel": "pits (earthworks)", "source": "Getty AAT" }],
-        "country": [{ "id": "http://www.wikidata.org/entity/Q21", "name": "England" }],
-        "originalId": "1862953",
-        "issued": "2020-06-08",
-        "language": "en",
-        "resourceType": "dataset"
-      }
-    }
-  ]
-}
-```
-
-Record links resolve via `originalId`:
-`https://archaeologydataservice.ac.uk/archsearch/record?titleId={originalId}`
-
-### UnifiedRecord mapping for ADS
-```
-_source:         "ads"
-_sourceId:       hit.data.originalId
-_sourceUrl:      https://archaeologydataservice.ac.uk/archsearch/record?titleId={originalId}
-title:           hit.data.title.text
-description:     hit.data.description.text
-creator:         hit.data.creator[].name (array)
-date:            hit.data.issued
-subject:         merged nativeSubject[].prefLabel + derivedSubject[].prefLabel
-language:        hit.data.language
-type:            hit.data.resourceType
-decimalLatitude: hit.data.spatial[0].geopoint.lat
-decimalLongitude:hit.data.spatial[0].geopoint.lon
-spatialCoverage: hit.data.spatial[0].placeName
-ads:             { temporal, country, allSpatial, id } — full namespace fields
+_source: "ads", _sourceId: data.originalId
+title: data.title.text, description: data.description.text
+creator: data.creator[].name (array)
+date: data.issued, subject: nativeSubject + derivedSubject prefLabels
+decimalLatitude/Longitude: data.spatial[0].geopoint.lat/lon
+spatialCoverage: data.spatial[0].placeName
+ads: { temporal, country, allSpatial, id }
 ```
 
 ---
 
-## ADS OAI-PMH Reference (Archaeology Data Service)
-
-**Protocol**: OAI-PMH 2.0 (returns XML, not JSON)
-**Auth**: None. **CORS**: Unlikely to be permissive — will need a Vite dev proxy like LLDS.
-
-Three separate endpoints, one per collection:
-- Archives: `https://archaeologydataservice.ac.uk/oai/archives`
-- Library: `https://archaeologydataservice.ac.uk/oai/library`
-- OASIS: `https://archaeologydataservice.ac.uk/oai/oasis`
-
-Dev proxy rule in `vite.config.ts`:
-```ts
-'/ads-proxy': {
-  target: 'https://archaeologydataservice.ac.uk',
-  changeOrigin: true,
-  rewrite: (path) => path.replace(/^\/ads-proxy/, ''),
-}
-```
-Use `/ads-proxy/oai/archives` etc. in the frontend code.
-
-### Servlet path
-The OAI-PMH servlet is at `{base}/OAIHandler` and requires **POST** with `application/x-www-form-urlencoded` body. A GET to `{base}` redirects to an HTML landing page — do not use GET.
-
-Example: `POST https://archaeologydataservice.ac.uk/oai/archives/OAIHandler` with body `verb=ListRecords&metadataPrefix=oai_dc`
-
-### ListRecords
-`POST {base}/OAIHandler` with body `verb=ListRecords&metadataPrefix=oai_dc`
-
-Optional body params: `from` (YYYY-MM-DD), `until` (YYYY-MM-DD), `set` (sub-collection).
-
-**No keyword search exists in OAI-PMH.** To search, harvest a batch of records and filter client-side.
-
-Response is XML. Each record contains Dublin Core metadata:
-```xml
-<record>
-  <header>
-    <identifier>oai:archaeologydataservice.ac.uk:archives/1234</identifier>
-    <datestamp>2024-01-15</datestamp>
-  </header>
-  <metadata>
-    <oai_dc:dc>
-      <dc:title>Excavations at Stonehenge</dc:title>
-      <dc:creator>Smith, J.</dc:creator>
-      <dc:subject>Archaeology</dc:subject>
-      <dc:description>Report on excavations...</dc:description>
-      <dc:date>2023</dc:date>
-      <dc:identifier>https://doi.org/10.5284/...</dc:identifier>
-      <dc:coverage>Wiltshire</dc:coverage>
-      <dc:language>en</dc:language>
-    </oai_dc:dc>
-  </metadata>
-</record>
-```
-
-Use `getElementsByTagNameNS('http://purl.org/dc/elements/1.1/', 'title')` etc. for namespace-safe extraction via `DOMParser` in the browser.
-
-### Resumption tokens
-Large result sets are paginated. The response includes:
-```xml
-<resumptionToken>token_string_here</resumptionToken>
-```
-Fetch next page: `GET {base}?verb=ListRecords&resumptionToken=token_string_here`
-
-Implement a `maxPages` cap (default 3) to prevent runaway harvesting.
-
-### UnifiedRecord mapping for ADS
-```
-_source:    "ads"
-_sourceId:  <header><identifier> text content
-_sourceUrl: first http/https value in <dc:identifier> elements
-_pid:       first https://doi.org value in <dc:identifier> elements
-title:      <dc:title>
-description:<dc:description>
-creator:    all <dc:creator> values as array
-date:       <dc:date>
-subject:    all <dc:subject> values as array
-language:   <dc:language>
-type:       <dc:type>
-format:     <dc:format>
-ads:        { endpoint, identifier, coverage, rights, … } — full raw fields
-```
-
----
-
-## LLDS DSpace Reference (Literary and Linguistic Data Service)
-
-**Protocol**: DSpace REST API (returns JSON)
-**Auth**: None. **CORS**: No permissive headers — uses Vite dev proxy.
-
-Dev proxy rule in `vite.config.ts`:
-```ts
-'/llds-proxy': {
-  target: 'https://llds.ling-phil.ox.ac.uk',
-  changeOrigin: true,
-  rewrite: path => path.replace(/^\/llds-proxy/, '/llds'),
-}
-```
+## LLDS DSpace Reference
 
 **Base URL (via proxy)**: `/llds-proxy/rest`
-
-### Items endpoint
 `GET /llds-proxy/rest/items?expand=metadata&limit={limit}`
 
-Returns all items with Dublin Core metadata arrays. No server-side keyword search — filter client-side against `dc.title`, `dc.description`, and `dc.subject`.
+Returns items with `metadata: [{key, value, language}]` arrays. No server-side search — filter client-side against `dc.title`, `dc.description`, `dc.subject`.
 
-Each item's metadata is an array of `{"key": "dc.title", "value": "...", "language": "..."}` objects.
-
-**Reliability note**: LLDS has experienced multi-week outages. The adapter wraps the fetch in a 15-second timeout and falls back to a localStorage cache on any failure. The node exposes a "use cache" checkbox (default on) to control this.
+**Reliability**: Wraps fetch in 15s timeout; falls back to localStorage cache. Node exposes "use cache" checkbox (default on).
 
 ---
 
-## Node Types (implemented)
+## MDS (museumdata.uk) Reference
 
-### Source Nodes
-| Node | Service | Auth | CORS |
-|------|---------|------|------|
-| `GBIFSearchNode` | GBIF Occurrence API | None | Permissive |
-| `LLDSSearchNode` | LLDS DSpace REST | None | Via proxy |
-| `ADSSearchNode` | ADS Data Catalogue API | None | Via proxy |
+**Base URL (via proxy)**: `/mds-proxy`
 
-### Output Nodes
-| Node | Behaviour |
-|------|-----------|
-| `TableOutputNode` | Paginated table, auto-detects columns, supports multiple input sources merged |
-| `JSONOutputNode` | Syntax-highlighted JSON viewer, preview/show-all toggle |
-
-### Input Nodes
-| Node | Behaviour |
-|------|-----------|
-| `ParamNode` | Holds a Text or Integer value, connects to source node input handles |
+Two-step HTML scraper: probe for total count, then retrieve all records. Capped at 200 records; amber ⚠ badge when total exceeds cap.
 
 ---
 
-## Data Flow & Adapter Contract
+## Wikidata Reconciliation API
 
-All adapters (`gbifAdapter.ts`, `lldsAdapter.ts`, `adsAdapter.ts`) must return `UnifiedRecord[]`.
-Output nodes **only** consume `UnifiedRecord[]` — they never handle raw API responses.
-Service-specific fields live under a namespace: `record.gbif.*`, `record.llds.*`, `record.ads.*`.
+**Endpoint (via proxy)**: `/reconcile-proxy/en/api`
+**Protocol**: W3C Reconciliation API v0.2 — `POST` with `application/x-www-form-urlencoded`, body: `queries=<JSON>`
 
-The `useUpstreamRecords` hook merges records from **all** edges connected to an output node's
-`data` input handle, enabling multi-source tables automatically.
-
-### Execution model
-- **Run All** button in the top bar calls `runWorkflow()` which executes all runnable nodes
-  in topological order (source nodes first, processing nodes after their deps).
-- Each source node also has its own **Run** button for standalone execution.
-- Node runners are registered in `src/utils/nodeRunners.ts` — the only file to update when
-  adding a new runnable node type.
-
----
-
-## Project Structure
-
-```
-nfcs-poc/
-├── CLAUDE.md
-├── package.json
-├── vite.config.ts          # Dev server + CORS proxy rules for LLDS, ADS
-├── tsconfig.json
-├── index.html
-└── src/
-    ├── main.tsx
-    ├── App.tsx              # Canvas, sidebar, Run All button, node factories
-    ├── index.css
-    ├── types/
-    │   └── UnifiedRecord.ts # Canonical cross-service record type
-    ├── hooks/
-    │   └── useUpstreamRecords.ts  # Reactive multi-source data hook
-    ├── nodes/
-    │   ├── index.ts               # nodeTypes registry for React Flow
-    │   ├── ParamNode.tsx
-    │   ├── GBIFSearchNode.tsx
-    │   ├── LLDSSearchNode.tsx
-    │   ├── ADSSearchNode.tsx
-    │   ├── TableOutputNode.tsx
-    │   ├── JSONOutputNode.tsx
-    │   └── ExpandedOutputPanel.tsx
-    └── utils/
-        ├── gbif.ts           # buildGBIFUrl() + fetchGBIF()
-        ├── gbifAdapter.ts    # GBIFSearchResponse → UnifiedRecord[]
-        ├── lldsCache.ts      # localStorage cache helpers
-        ├── lldsAdapter.ts    # DSpaceItem → UnifiedRecord
-        ├── runLLDSNode.ts    # NodeRunner for lldsSearch
-        ├── adsAdapter.ts     # ADS Data Catalogue JSON → UnifiedRecord
-        ├── runADSNode.ts     # NodeRunner for adsSearch
-        ├── runGBIFNode.ts    # NodeRunner for gbifSearch
-        ├── nodeRunners.ts    # Registry: nodeType → NodeRunner
-        └── runWorkflow.ts    # Topological executor
+Query JSON shape:
+```json
+{
+  "q0": { "query": "Quercus robur", "type": "Q16521", "limit": 3 },
+  "q1": { "query": "Homo sapiens",  "type": "Q16521", "limit": 3 }
+}
 ```
 
-Single Vite project. No monorepo. No backend. No Docker.
+Response: `{ "q0": { "result": [{ "id": "Q23571040", "name": "Quercus robur", "score": 92, "match": true }] } }`
+
+Scores are 0–100 from the API; normalised to 0–1 in `reconcileField()`.
+
+---
+
+## Known Architectural Decisions & Gotchas
+
+1. **`isReconciledValue` lives in `reconciliationService.ts`** — do not redefine it elsewhere.
+2. **`renderCell` lives in `ReconciledCell.tsx`** — do not write local `fmt()` functions in output nodes.
+3. **`RECONCILE_API` uses proxy path** — never change this to a direct `https://` URL.
+4. **TransformOp type changes require full op replacement** — discriminated union; partial merge corrupts the object.
+5. **TableOutputNode loop prevention** — `useRef` key comparison before `updateNodeData`; do not remove this.
+6. **`allFlatColumns` must include `isReconciledValue` check** — without it, `*_reconciled` columns disappear.
+7. **MDS is capped at 200** — by design; amber badge warns users.
+8. **`useUpstreamRecords` merges by `targetHandle === 'data'`** — output handle id is `results` for pass-through.
