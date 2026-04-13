@@ -22,12 +22,19 @@ export default defineConfig({
         rewrite: path => path.replace(/^\/ads-proxy/, ''),
       },
       // Proxy /mds-proxy/* → https://museumdata.uk/*
-      // museumdata.uk does not send permissive CORS headers, so we proxy it
-      // server-side from the Vite dev server.
       '/mds-proxy': {
         target: 'https://museumdata.uk',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/mds-proxy/, ''),
+      },
+      // Proxy /reconcile-proxy/* → https://wikidata.reconci.link/*
+      // Despite the W3C Reconciliation API spec requiring CORS, reconci.link
+      // returns a 307 redirect that strips CORS headers in the browser.
+      // Routing through Vite avoids the redirect entirely.
+      '/reconcile-proxy': {
+        target: 'https://wikidata.reconci.link',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/reconcile-proxy/, ''),
       },
     },
   },

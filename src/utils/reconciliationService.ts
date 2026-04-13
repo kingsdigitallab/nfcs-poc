@@ -110,7 +110,7 @@ export function candidateFields(record: Record<string, unknown>): string[] {
 
 // ─── reconciliation API ───────────────────────────────────────────────────────
 
-const RECONCILE_API = 'https://wikidata.reconci.link/en/api'
+const RECONCILE_API = '/reconcile-proxy/en/api'
 const TIMEOUT_MS    = 20_000
 /** Maximum unique values sent per POST — avoids oversized request bodies. */
 const MAX_BATCH     = 200
