@@ -8,10 +8,11 @@
  *   3. App.tsx and runWorkflow.ts require no changes.
  */
 import type { Node, Edge } from '@xyflow/react'
-import { runGBIFNode } from './runGBIFNode'
-import { runLLDSNode } from './runLLDSNode'
-import { runADSNode }  from './runADSNode'
-import { runMDSNode }  from './runMDSNode'
+import { runGBIFNode }            from './runGBIFNode'
+import { runLLDSNode }            from './runLLDSNode'
+import { runADSNode }             from './runADSNode'
+import { runMDSNode }             from './runMDSNode'
+import { runReconciliationNode }  from './runReconciliationNode'
 
 /**
  * Common signature for every node runner.
@@ -32,6 +33,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   gbifSearch: runGBIFNode,
   lldsSearch: runLLDSNode,
   adsSearch:  runADSNode,
-  mdsSearch:  runMDSNode,
-  // normalize: runNormalizeNode,
+  mdsSearch:       runMDSNode,
+  reconciliation:  runReconciliationNode,
 }

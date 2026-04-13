@@ -17,9 +17,10 @@ import { nodeTypes } from './nodes'
 import { ExpandedOutputPanel } from './nodes/ExpandedOutputPanel'
 import { runWorkflow } from './utils/runWorkflow'
 import type { UnifiedRecord } from './types/UnifiedRecord'
-import type { LLDSSearchNodeData } from './nodes/LLDSSearchNode'
-import type { ADSSearchNodeData }  from './nodes/ADSSearchNode'
-import type { MDSSearchNodeData }  from './nodes/MDSSearchNode'
+import type { LLDSSearchNodeData }        from './nodes/LLDSSearchNode'
+import type { ADSSearchNodeData }         from './nodes/ADSSearchNode'
+import type { MDSSearchNodeData }         from './nodes/MDSSearchNode'
+import type { ReconciliationNodeData }    from './nodes/ReconciliationNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -33,6 +34,7 @@ type AppNode =
   | Node<LLDSSearchNodeData>
   | Node<ADSSearchNodeData>
   | Node<MDSSearchNodeData>
+  | Node<ReconciliationNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -76,6 +78,20 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       _capped: false, _total: 0,
     } satisfies MDSSearchNodeData,
   }),
+  reconciliation: pos => ({
+    id: newId('recon'), type: 'reconciliation', position: pos,
+    data: {
+      selectedField:       '',
+      selectedAuthority:   '',
+      confidenceThreshold: 0.8,
+      status:              'idle',
+      statusMessage:       '',
+      results:             undefined,
+      count:               0,
+      resolvedCount:       0,
+      reviewCount:         0,
+    } satisfies ReconciliationNodeData,
+  }),
   tableOutput: pos => ({
     id: newId('table'), type: 'tableOutput', position: pos,
     data: {},
@@ -101,8 +117,9 @@ const SIDEBAR_ITEMS = [
   { type: 'gbifSearch',  label: 'GBIFSearchNode',   sub: 'GBIF occurrence search',    color: '#0f4c81', group: 'Source' },
   { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Source' },
   { type: 'adsSearch',   label: 'ADSSearchNode',    sub: 'Archaeology Data Service',  color: '#7c2d12', group: 'Source' },
-  { type: 'mdsSearch',   label: 'MDSSearchNode',    sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Source' },
-  { type: 'tableOutput', label: 'TableOutputNode',  sub: 'Paginated results table',   color: '#0d9488', group: 'Output' },
+  { type: 'mdsSearch',      label: 'MDSSearchNode',      sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Source' },
+  { type: 'reconciliation', label: 'ReconciliationNode', sub: 'Wikidata field reconciler',  color: '#7c3aed', group: 'Process' },
+  { type: 'tableOutput',    label: 'TableOutputNode',    sub: 'Paginated results table',    color: '#0d9488', group: 'Output' },
   { type: 'mapOutput',      label: 'MapOutputNode',      sub: 'Geo map (lat/lon records)',  color: '#14532d', group: 'Output' },
   { type: 'timelineOutput', label: 'TimelineOutputNode', sub: 'Year-resolution timeline',   color: '#1e293b', group: 'Output' },
   { type: 'jsonOutput',  label: 'JSONOutputNode',   sub: 'Formatted JSON viewer',     color: '#6d28d9', group: 'Output' },
@@ -179,7 +196,7 @@ export default function App() {
       <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
         {/* Sidebar */}
         <div style={sidebarStyle}>
-          {(['Input', 'Source', 'Output'] as const).map(group => {
+          {(['Input', 'Source', 'Process', 'Output'] as const).map(group => {
             const items = SIDEBAR_ITEMS.filter(i => i.group === group)
             return (
               <div key={group}>
