@@ -84,6 +84,10 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('json'), type: 'jsonOutput', position: pos,
     data: {},
   }),
+  mapOutput: pos => ({
+    id: newId('map'), type: 'mapOutput', position: pos,
+    data: {},
+  }),
 }
 
 // ─── sidebar definition ───────────────────────────────────────────────────────
@@ -95,6 +99,7 @@ const SIDEBAR_ITEMS = [
   { type: 'adsSearch',   label: 'ADSSearchNode',    sub: 'Archaeology Data Service',  color: '#7c2d12', group: 'Source' },
   { type: 'mdsSearch',   label: 'MDSSearchNode',    sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Source' },
   { type: 'tableOutput', label: 'TableOutputNode',  sub: 'Paginated results table',   color: '#0d9488', group: 'Output' },
+  { type: 'mapOutput',   label: 'MapOutputNode',    sub: 'Geo map (lat/lon records)',  color: '#14532d', group: 'Output' },
   { type: 'jsonOutput',  label: 'JSONOutputNode',   sub: 'Formatted JSON viewer',     color: '#6d28d9', group: 'Output' },
 ]
 

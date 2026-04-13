@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Handle, Position, NodeProps } from '@xyflow/react'
+import { useState, useEffect, useRef } from 'react'
+import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
@@ -96,8 +96,26 @@ function RecordTable({ records, columns, page, pageSize, compact = false }: Tabl
 
 export function TableOutputNode({ id }: NodeProps) {
   const { records, count, status, connected, sourceCount } = useUpstreamRecords(id)
+  const { updateNodeData } = useReactFlow()
   const [page, setPage] = useState(0)
   const [showAll, setShowAll] = useState(false)
+
+  // ── pass-through output ───────────────────────────────────────────────────
+  // Sync merged records into this node's own data so downstream nodes
+  // (e.g. MapOutputNode) can read them via useUpstreamRecords.
+  // We compare by record IDs + status to break the reactivity loop that would
+  // otherwise occur because useNodes() fires on every updateNodeData call.
+  const prevKeyRef = useRef('')
+  useEffect(() => {
+    const key = `${status}:${(records ?? []).map(r => r.id).join('\n')}`
+    if (key === prevKeyRef.current) return
+    prevKeyRef.current = key
+    updateNodeData(id, {
+      results: records ?? [],
+      count:   records?.length ?? 0,
+      status,
+    })
+  }, [records, status, id, updateNodeData])
 
   const columns = records
     ? showAll
@@ -109,7 +127,8 @@ export function TableOutputNode({ id }: NodeProps) {
 
   return (
     <div style={styles.card}>
-      <Handle type="target" position={Position.Left} id="data" style={styles.inputHandle} />
+      <Handle type="target" position={Position.Left}  id="data"    style={styles.inputHandle} />
+      <Handle type="source" position={Position.Right} id="results" style={styles.outputHandle} />
 
       <div style={styles.header}>
         <span style={styles.title}>Table Output</span>
@@ -265,11 +284,20 @@ const styles = {
     color: '#6b7280',
   },
   inputHandle: {
-    width: 10,
-    height: 10,
+    width:     10,
+    height:    10,
     background: '#0d9488',
-    border: '2px solid #fff',
+    border:    '2px solid #fff',
     boxShadow: '0 0 0 1px #0d9488',
+  },
+  // Pass-through output — positioned at the top-right to align with the header
+  outputHandle: {
+    width:     10,
+    height:    10,
+    background: '#0d9488',
+    border:    '2px solid #fff',
+    boxShadow: '0 0 0 1px #0d9488',
+    top:       13,
   },
 }
 
