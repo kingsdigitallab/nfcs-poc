@@ -56,7 +56,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   lldsSearch: pos => ({
     id: newId('llds'), type: 'lldsSearch', position: pos,
     data: {
-      inlineQuery: '', language: '', inlineLimit: '20',
+      inlineQuery: '', inlineLimit: '20',
       useCache: true,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies LLDSSearchNodeData,

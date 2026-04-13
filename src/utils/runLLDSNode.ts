@@ -1,55 +1,33 @@
-import type { Node, Edge } from '@xyflow/react'
-import { loadCache, saveCache, isCacheStale, type DSpaceItem } from './lldsCache'
-import { adaptLLDSItem, matchesQuery, matchesLanguage } from './lldsAdapter'
+/**
+ * runLLDSNode.ts — NodeRunner for LLDSSearchNode.
+ *
+ * Fetches LLDS via the HTML scraper (llds.ts) rather than the DSpace REST API,
+ * which proved unreliable (XML vs JSON content negotiation issues, schema
+ * mismatches). Falls back to a localStorage cache on any failure.
+ *
+ * Runners MUST NOT throw. Own all error handling.
+ */
+
+import type { Node, Edge }       from '@xyflow/react'
+import type { NodeRunner }        from './nodeRunners'
+import { fetchLLDSRecords }       from './llds'
+import { adaptLLDSRecords }       from './lldsAdapter'
+import { loadCache, saveCache, isCacheStale } from './lldsCache'
 import type { LLDSSearchNodeData } from '../nodes/LLDSSearchNode'
 
-// In dev, requests are routed through the Vite proxy (vite.config.ts) which
-// forwards them server-side — no CORS header needed.
-// In production, replace with a real proxy URL (e.g. '/api/llds-proxy').
-const LLDS_REST = '/llds-proxy/rest'
-const FETCH_TIMEOUT_MS = 15_000
-// Fetch more than the user limit since we filter client-side
-const CLIENT_FILTER_MULTIPLIER = 10
-const MAX_FETCH = 200
-
-/**
- * Attempt a live fetch from LLDS DSpace REST API.
- * On any failure (CORS, timeout, 5xx, network error), throw so the caller
- * can fall back to cache.
- *
- * Note: if LLDS does not send CORS headers, the browser will block this
- * request. Treat that as an outage — cache kicks in.
- */
-async function fetchLiveItems(fetchLimit: number): Promise<DSpaceItem[]> {
-  const url = `${LLDS_REST}/items?expand=metadata&limit=${fetchLimit}`
-  const controller = new AbortController()
-  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS)
-  try {
-    const res = await fetch(url, {
-      signal: controller.signal,
-      headers: { Accept: 'application/json' },
-    })
-    if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
-    return (await res.json()) as DSpaceItem[]
-  } finally {
-    clearTimeout(timer)
-  }
-}
-
-export async function runLLDSNode(
-  nodeId: string,
-  getNodes: () => Node[],
-  edges: Edge[],
-  updateNodeData: (id: string, data: Record<string, unknown>) => void,
-): Promise<void> {
+export const runLLDSNode: NodeRunner = async (
+  nodeId,
+  getNodes,
+  edges,
+  updateNodeData,
+) => {
   const nodes = getNodes()
-  const node = nodes.find(n => n.id === nodeId)
+  const node  = nodes.find(n => n.id === nodeId)
   if (!node) return
+
   const d = node.data as LLDSSearchNodeData
 
-  updateNodeData(nodeId, { status: 'loading', statusMessage: 'Loading…', results: undefined, count: 0 })
-
-  // Resolve param values — handle-connected ParamNode wins over inline field
+  // Resolve wired-or-inline params
   const resolve = (handleId: string, dataKey: keyof LLDSSearchNodeData): string => {
     const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
     if (edge) {
@@ -59,63 +37,81 @@ export async function runLLDSNode(
     return (d[dataKey] as string | undefined) ?? ''
   }
 
-  const query    = resolve('query', 'inlineQuery')
+  const query    = resolve('query', 'inlineQuery').trim()
   const rawLimit = parseInt(resolve('limit', 'inlineLimit') || '20', 10)
-  const limit    = isNaN(rawLimit) || rawLimit < 1 ? 20 : rawLimit
-  const language = (d.language as string | undefined) ?? ''
-
-  const fetchLimit = Math.min(limit * CLIENT_FILTER_MULTIPLIER, MAX_FETCH)
-  // useCache defaults to true if not set (e.g. nodes created before this field existed)
+  const limit    = isNaN(rawLimit) || rawLimit < 1 ? 20 : Math.min(rawLimit, 50)
   const useCache = (d.useCache as boolean | undefined) ?? true
 
-  let rawItems: DSpaceItem[]
-  let fromCache = false
+  if (!query) {
+    updateNodeData(nodeId, {
+      status:        'error',
+      statusMessage: '✗ query is required',
+      results:       undefined,
+      count:         0,
+    })
+    return
+  }
+
+  updateNodeData(nodeId, {
+    status:        'loading',
+    statusMessage: 'Fetching…',
+    results:       undefined,
+    count:         0,
+  })
 
   const cache = loadCache()
 
   try {
     if (useCache && cache && !isCacheStale(cache)) {
-      // Fresh cache available and the user hasn't asked to bypass it
       console.log('[LLDS] using fresh cache from', new Date(cache.ts).toISOString())
-      rawItems = cache.items
-      fromCache = true
-    } else {
-      if (!useCache) console.log('[LLDS] cache bypassed — fetching live')
-      rawItems = await fetchLiveItems(fetchLimit)
-      saveCache(rawItems)
-      console.log(`[LLDS] fetched ${rawItems.length} items live`)
+      const records = adaptLLDSRecords(cache.items).map(r => ({ ...r, _cached: true }))
+      updateNodeData(nodeId, {
+        status:        'cached',
+        statusMessage: `📦 ${records.length} results (cached)`,
+        results:       records,
+        count:         records.length,
+      })
+      return
     }
+
+    if (!useCache) console.log('[LLDS] cache bypassed — fetching live')
+
+    const { records: raws, total, capped } = await fetchLLDSRecords(query, limit)
+    saveCache(raws)
+
+    const records = adaptLLDSRecords(raws)
+    const msg = capped
+      ? `⚠ ${records.length} of ${total.toLocaleString()} (capped)`
+      : `✓ ${records.length} of ${total.toLocaleString()}`
+
+    console.log(`[LLDS] ${msg}`, records[0])
+
+    updateNodeData(nodeId, {
+      status:        'success',
+      statusMessage: msg,
+      results:       records,
+      count:         records.length,
+    })
   } catch (err) {
+    // On any error fall back to whatever is in cache (even if stale)
     if (cache) {
       console.warn('[LLDS] live fetch failed, falling back to cache:', err)
-      rawItems = cache.items
-      fromCache = true
+      const records = adaptLLDSRecords(cache.items).map(r => ({ ...r, _cached: true }))
+      updateNodeData(nodeId, {
+        status:        'cached',
+        statusMessage: `📦 ${records.length} results (cached — service unavailable)`,
+        results:       records,
+        count:         records.length,
+      })
     } else {
       const msg = err instanceof Error ? err.message : String(err)
       console.error('[LLDS] no cache available after fetch failure:', msg)
       updateNodeData(nodeId, {
-        status: 'error',
+        status:        'error',
         statusMessage: `✗ ${msg}`,
-        results: undefined,
-        count: 0,
+        results:       undefined,
+        count:         0,
       })
-      return
     }
   }
-
-  // Map to UnifiedRecord then apply client-side filters
-  let records = rawItems.map(item => adaptLLDSItem(item, fromCache))
-  records = records.filter(r => matchesQuery(r, query) && matchesLanguage(r, language))
-  records = records.slice(0, limit)
-
-  console.log(`[LLDS] ${fromCache ? '(cached) ' : ''}query="${query}" lang="${language}" → ${records.length} records`)
-
-  updateNodeData(nodeId, {
-    status: fromCache ? 'cached' : 'success',
-    statusMessage: fromCache
-      ? `📦 ${records.length} results (cached)`
-      : `✓ ${records.length} results`,
-    results: records,
-    count: records.length,
-  })
 }

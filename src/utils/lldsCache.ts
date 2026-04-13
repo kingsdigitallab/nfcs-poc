@@ -1,32 +1,22 @@
 /**
- * localStorage cache for LLDS DSpace items.
+ * localStorage cache for LLDS scraped records.
  *
  * LLDS has experienced multi-week outages. On any fetch failure (CORS, timeout,
- * 5xx, network error) we serve the last successful response from cache and mark
- * all records with _cached: true so the UI can surface that clearly.
+ * network error) we serve the last successful scrape from cache and mark all
+ * records with _cached: true so the UI can surface that clearly.
  *
  * Cache is keyed by a version string so schema changes auto-invalidate it.
+ * v3 — switched storage from DSpace REST JSON items to LLDSRawRecord (HTML scrape).
  */
 
-const CACHE_KEY = 'idah_llds_items_v2'
-const CACHE_MAX_AGE_MS = 24 * 60 * 60 * 1000  // refresh after 24 h if service is up
+import type { LLDSRawRecord } from './llds'
 
-export interface DSpaceMetadata {
-  key: string
-  value: string
-  language: string
-}
-
-export interface DSpaceItem {
-  id: number
-  handle: string
-  metadata: DSpaceMetadata[]
-  [key: string]: unknown
-}
+const CACHE_KEY        = 'idah_llds_items_v3'
+const CACHE_MAX_AGE_MS = 24 * 60 * 60 * 1000   // refresh after 24 h if service is up
 
 interface CacheEntry {
-  ts: number
-  items: DSpaceItem[]
+  ts:    number
+  items: LLDSRawRecord[]
 }
 
 export function loadCache(): CacheEntry | null {
@@ -38,7 +28,7 @@ export function loadCache(): CacheEntry | null {
   }
 }
 
-export function saveCache(items: DSpaceItem[]): void {
+export function saveCache(items: LLDSRawRecord[]): void {
   try {
     const entry: CacheEntry = { ts: Date.now(), items }
     localStorage.setItem(CACHE_KEY, JSON.stringify(entry))
