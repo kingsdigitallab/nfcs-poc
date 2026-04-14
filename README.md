@@ -4,6 +4,8 @@ A node-based visual workflow editor for federating UK Arts & Humanities research
 
 Drag nodes onto a canvas, connect them in any order, and run federated searches across multiple heritage data services simultaneously. Records from different services are normalised to a common schema, can be filtered and transformed, reconciled against Wikidata authorities, and exported as CSV, JSON, or GeoJSON.
 
+![iDAH Federation Workflow PoC — multi-source workflow canvas](images/NFCS_poc.png)
+
 ---
 
 ## Prerequisites
