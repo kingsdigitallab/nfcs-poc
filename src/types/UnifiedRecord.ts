@@ -51,6 +51,8 @@ export interface UnifiedRecord {
   type?: string
   /** Format, e.g. "text/plain" */
   format?: string
+  /** Collection name — MDS and other cultural-heritage sources */
+  collection?: string
 
   // ── Geography / place (ADS, GBIF) ───────────────────────────────────────────
   /** Human-readable place name for the primary spatial coverage */

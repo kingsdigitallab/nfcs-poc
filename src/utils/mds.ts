@@ -87,28 +87,49 @@ function extractTotal(doc: Document): number {
 }
 
 /**
- * Walk every <div> inside `container` that directly contains both a <dt> and
- * a <dd> child, and accumulate label→value pairs in `fields`.
+ * Walk `container` collecting all dt→dd pairs in two structural patterns:
+ *
+ * Pattern A — <div><dt>…</dt><dd>…</dd></div>  (MDS summary + category sections)
+ *   Captures every <dd> sibling of the <dt> within the same <div>.
+ *
+ * Pattern B — <dl><dt>…</dt><dd>…</dd></dl>  (dt/dd as direct <dl> children)
+ *   Streams direct children of each <dl>; a <div> child resets the label context
+ *   so it is never double-counted with Pattern A.
  *
  * Labels are normalised by stripping trailing colons and whitespace.
  * Repeated labels (e.g. multiple "Content - concept" divs) produce arrays.
  * Exact duplicate values for the same label are suppressed.
  */
 function collectFields(container: Element, fields: Record<string, string[]>): void {
-  const divs = container.querySelectorAll('div')
-  for (const div of divs) {
-    // :scope > dt / :scope > dd matches only DIRECT children, preventing
-    // double-counting from nested structures.
-    const dt = div.querySelector(':scope > dt')
-    const dd = div.querySelector(':scope > dd')
-    if (!dt || !dd) continue
-
-    const label = (dt.textContent ?? '').replace(/:\s*$/, '').trim()
-    const value = (dd.textContent ?? '').trim()
-    if (!label || !value) continue
-
+  function addValue(label: string, value: string): void {
+    if (!label || !value) return
     if (!fields[label]) fields[label] = []
     if (!fields[label].includes(value)) fields[label].push(value)
+  }
+
+  // Pattern A: <div><dt>…</dt><dd>…</dd>…</div>
+  for (const div of container.querySelectorAll('div')) {
+    const dt = div.querySelector(':scope > dt')
+    if (!dt) continue
+    const label = (dt.textContent ?? '').replace(/:\s*$/, '').trim()
+    for (const dd of div.querySelectorAll(':scope > dd')) {
+      addValue(label, (dd.textContent ?? '').trim())
+    }
+  }
+
+  // Pattern B: <dl><dt>…</dt><dd>…</dd></dl> — direct dl children, no wrapping div
+  for (const dl of container.querySelectorAll('dl')) {
+    let currentLabel: string | null = null
+    for (const child of dl.children) {
+      if (child.tagName === 'DT') {
+        currentLabel = (child.textContent ?? '').replace(/:\s*$/, '').trim() || null
+      } else if (child.tagName === 'DD' && currentLabel) {
+        addValue(currentLabel, (child.textContent ?? '').trim())
+      } else {
+        // <div> or other non-dt/dd child — handled by Pattern A; reset label context
+        currentLabel = null
+      }
+    }
   }
 }
 
