@@ -36,6 +36,14 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: path => path.replace(/^\/reconcile-proxy/, ''),
       },
+      // Proxy /ollama/* → http://localhost:11434/*
+      // Ollama runs locally; this avoids CORS issues when the browser makes
+      // requests to a different port.
+      '/ollama': {
+        target: 'http://localhost:11434',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/ollama/, ''),
+      },
     },
   },
   plugins: [react()],

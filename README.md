@@ -2,7 +2,7 @@
 
 A node-based visual workflow editor for federating UK Arts & Humanities research data services. Built as part of the UKRI/AHRC Federation of Compute and Infrastructures programme.
 
-Drag nodes onto a canvas, connect them in any order, and run federated searches across multiple heritage data services simultaneously. Records from different services are normalised to a common schema, can be filtered and transformed, reconciled against Wikidata authorities, and exported as CSV, JSON, or GeoJSON.
+Drag nodes onto a canvas, connect them in any order, and run federated searches across multiple heritage data services simultaneously. Records from different services are normalised to a common schema, can be filtered and transformed, reconciled against Wikidata authorities, and exported as CSV, JSON, or GeoJSON. Local document folders can be analysed with a locally-running LLM via Ollama.
 
 ![iDAH Federation Workflow PoC — multi-source workflow canvas](images/NFCS_poc.png)
 
@@ -12,7 +12,8 @@ Drag nodes onto a canvas, connect them in any order, and run federated searches 
 
 - **Node.js** v18 or later ([nodejs.org](https://nodejs.org))
 - **npm** v9 or later (bundled with Node)
-- A modern browser (Chrome, Firefox, Edge)
+- A modern browser — Chrome or Edge 86+ required for the **LocalFolderSourceNode** (File System Access API); all other nodes work in Firefox too
+- **[Ollama](https://ollama.com/)** running locally on port 11434 — required only for **OllamaNode**
 
 ---
 
@@ -46,9 +47,10 @@ The sidebar groups nodes into four categories. Drag any node onto the canvas to 
 | Node | Service | Notes |
 |------|---------|-------|
 | **GBIFSearchNode** | [GBIF Occurrence API](https://www.gbif.org/developer/occurrence) | Biodiversity specimens and observations. Direct browser fetch (permissive CORS). Inline fields: free-text `q`, `scientificName`, `country`, `year`, `limit`. |
-| **LLDSSearchNode** | [Literary & Linguistic Data Service](https://llds.ling-phil.ox.ac.uk/) | HTML scraper of the DSpace discover page. Results filtered client-side. Uses a 24-hour localStorage cache; a **Use cache** toggle controls fallback during outages. |
+| **LLDSSearchNode** | [Literary & Linguistic Data Service](https://llds.ling-phil.ox.ac.uk/) | DSpace REST API. Results filtered client-side. Uses a 24-hour localStorage cache; a **Use cache** toggle controls fallback during outages. |
 | **ADSSearchNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Data Catalogue API. Returns archaeological datasets with spatial/temporal coverage. Routed through the Vite proxy. |
 | **MDSSearchNode** | [museumdata.uk](https://museumdata.uk/) | HTML scraper (no public JSON API). Two-step fetch: probe for total, then retrieve all. Capped at 200 records; amber ⚠ badge when the total exceeds the cap. |
+| **LocalFolderSourceNode** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction via pdfjs-dist), XML/TEI, plain text, and images. Emits `FileRecord[]` downstream. Requires Chrome or Edge 86+. |
 
 ### Process
 
@@ -57,7 +59,9 @@ Process nodes sit between source nodes and output nodes. They read upstream `res
 | Node | Description |
 |------|-------------|
 | **FilterTransformNode** | Filters records by condition and/or mutates field values. See [Filter / Transform](#filter--transform) below. |
+| **SpatialFilterNode** | Draws a bounding box on an interactive map; filters upstream records to those within the bbox. Only records with `decimalLatitude` / `decimalLongitude` are kept. |
 | **ReconciliationNode** | Reconciles a chosen field against a Wikidata authority. See [Reconciliation](#reconciliation) below. |
+| **OllamaNode** | Sends each upstream record to a locally-running [Ollama](https://ollama.com/) instance and enriches the record with the model's response. See [Local LLM analysis](#local-llm-analysis) below. |
 
 ### Output
 
@@ -76,20 +80,25 @@ Process nodes sit between source nodes and output nodes. They read upstream `res
 ```
 ParamNode ─┐
            ▼
-  GBIFSearchNode ──────────────────────────────────┐
-  LLDSSearchNode ──────────────────────────────────┤
-  ADSSearchNode  ──┐                               │
-  MDSSearchNode  ──┤                               │
-                   ▼                               │
-         FilterTransformNode ─────────────────────┤
-                   │                               │
-                   ▼                               │
-         ReconciliationNode  ─────────────────────┤
-                                                   ▼
-                                          TableOutputNode ──► ExportNode
-                                          JSONOutputNode
-                                          MapOutputNode
-                                          TimelineOutputNode
+  GBIFSearchNode ──────────────────────────────────────┐
+  LLDSSearchNode ──────────────────────────────────────┤
+  ADSSearchNode  ──┐                                   │
+  MDSSearchNode  ──┤                                   │
+                   ▼                                   │
+         FilterTransformNode ───────────────────────── ┤
+                   │                                   │
+                   ▼                                   │
+         SpatialFilterNode   ───────────────────────── ┤
+                   │                                   │
+                   ▼                                   │
+         ReconciliationNode  ───────────────────────── ┤
+                                                       ▼
+  LocalFolderSourceNode ──► OllamaNode ────────────────┤
+                                                       ▼
+                                              TableOutputNode ──► ExportNode
+                                              JSONOutputNode
+                                              MapOutputNode
+                                              TimelineOutputNode
 ```
 
 All nodes expose a **`data` input handle** (left) and a **`results` output handle** (right). You can chain them in any order and branch to multiple output nodes simultaneously.
@@ -102,6 +111,8 @@ The `useUpstreamRecords` hook merges records from **all** edges connected to a n
 
 - **▶ Run** (on individual source/process nodes) — execute that node only.
 - **▶▶ Run All** (top bar) — discovers every runnable node, builds a topological order using Kahn's algorithm, and executes nodes wave-by-wave: all source nodes in parallel first, then each processing layer in dependency order. If one node errors, the rest continue.
+
+> **LocalFolderSourceNode** and **OllamaNode** are not included in Run All. Folder selection requires a direct user gesture; Ollama processing is streaming and user-initiated. Run these nodes manually before clicking Run All for the rest of the pipeline.
 
 ---
 
@@ -137,6 +148,8 @@ mds.*    — MDS field map (condition, materials, dimensions, provenance, …)
 
 After reconciliation, records also carry `${fieldName}_reconciled` keys (see below).
 
+**Note:** `LocalFolderSourceNode` emits `FileRecord[]` rather than `UnifiedRecord[]`. `FileRecord` is a parallel type with fields `id`, `filename`, `path`, `contentType`, `content`, `mimeType`, `sizeBytes`, `sourceFolder`. These records flow through `OllamaNode` and are rendered correctly by `TableOutputNode` via dynamic column detection.
+
 ---
 
 ## Filter / Transform
@@ -150,7 +163,7 @@ Add one or more filter rows. Each row specifies:
 - **Operator** — `contains`, `=`, `starts with`, `>`, `<`, `is empty`, `not empty`
 - **Value** — text or number (hidden for `is empty` / `not empty`)
 
-Multiple rows are combined with an **AND / OR** toggle. Clicking the pill between rows (or the badge in the section header) switches the combinator for all rows.
+Multiple rows are combined with an **AND / OR** toggle.
 
 ### Transform mode
 
@@ -159,7 +172,7 @@ Add one or more transform operations applied in order:
 | Operation | What it does |
 |-----------|--------------|
 | **Rename field** | Copies a field to a new key. Optional **drop** checkbox removes the original. |
-| **Lowercase / Uppercase** | In-place case conversion. Array values (`creator`, `subject`) are converted element-by-element. |
+| **Lowercase / Uppercase** | In-place case conversion. Array values are converted element-by-element. |
 | **Truncate** | Trims a field to a maximum character length and appends `…`. |
 | **Extract** | Slices a substring by start/end index, or captures a regex match (group 1 if present). Writes to a new field. |
 | **Concatenate** | Merges two fields into a new key with a configurable separator. |
@@ -167,8 +180,6 @@ Add one or more transform operations applied in order:
 ### Both mode
 
 Filter runs first, then transforms are applied to the reduced set.
-
-After running, the footer shows **N in → N out** so you can immediately see how many records were retained.
 
 ---
 
@@ -178,37 +189,65 @@ After running, the footer shows **N in → N out** so you can immediately see ho
 
 1. Connect an upstream node to the `data` handle.
 2. Select the **field** to reconcile (dropdown populated from the first upstream record).
-3. Select the **authority** — options depend on the field:
+3. Select the **authority**:
 
 | Field | Authorities |
 |-------|-------------|
-| `creator` | Wikidata People (Q5), VIAF *(coming soon)* |
-| `country`, `spatialCoverage` | Wikidata Places (Q618123), GeoNames *(coming soon)* |
+| `creator` | Wikidata People (Q5) |
+| `country`, `spatialCoverage` | Wikidata Places (Q618123) |
 | `scientificName`, `species`, `genus` | Wikidata Taxa (Q16521) |
 | `subject`, `title` | Wikidata Items |
 | `institutionCode` | Wikidata Organisations (Q43229) |
 | *(any other field)* | Wikidata Items |
 
-4. Set the **confidence threshold** (0.5–1.0, default 0.8). Records whose top candidate scores above the threshold are marked `resolved`; others are marked `review` but still passed through.
-5. Click **▶ Reconcile**. Unique field values are batched into a single API call (capped at 200 values).
+4. Set the **confidence threshold** (0.5–1.0, default 0.8).
+5. Click **▶ Reconcile**.
 
-Each augmented record gains a `${fieldName}_reconciled` key with this shape:
+Each augmented record gains a `${fieldName}_reconciled` key. In **TableOutputNode**, reconciled cells render as coloured pills — green (resolved, confidence ≥ threshold) or amber (below threshold, flagged for review). The QID is a clickable link to `wikidata.org`.
 
-```json
-{
-  "qid":         "Q23571040",
-  "label":       "Quercus robur",
-  "description": "species of flowering plant",
-  "confidence":  0.92,
-  "status":      "resolved",
-  "candidates":  [{ "qid": "Q23571040", "label": "Quercus robur", "score": 0.92 }, …],
-  "authority":   "wikidata-taxon"
-}
-```
+---
 
-In **TableOutputNode** and the expanded panel, reconciled cells render as coloured pills:
-- 🟢 **Green** — resolved (confidence ≥ threshold). The QID is a clickable link to `wikidata.org`.
-- 🟡 **Amber** — below threshold, flagged for review.
+## Local LLM analysis
+
+**OllamaNode** sends each upstream record to a locally-running [Ollama](https://ollama.com/) instance and enriches the record with the model's response.
+
+### Setup
+
+1. Install and start Ollama: `ollama serve`
+2. Pull a model: e.g. `ollama pull llama3.2` or `ollama pull gemma3:4b`
+3. The node auto-fetches available models on load and populates the dropdown.
+
+### Configuration
+
+| Setting | Description |
+|---------|-------------|
+| **Model** | Dropdown of models available in your local Ollama instance. |
+| **Vision model** | Checkbox — tick this if your model supports image inputs (e.g. `gemma3:4b`, `llava`). Models whose names contain `llava`, `vision`, `bakllava`, `moondream`, or `cogvlm` are auto-detected and pre-ticked. |
+| **System prompt** | Instruction context sent before the user message. |
+| **Prompt template** | User message with `{{fieldName}}` placeholders. Click **▼ fields** to see available substitution tokens from the first upstream record. |
+| **Temp** | Temperature slider (0.0–1.0). |
+| **Tokens** | Maximum tokens to generate. |
+
+### Image handling
+
+When **Vision model** is checked and an upstream record has `contentType === 'image'`, the base64 image data is sent via the Ollama `images` array on the message — not as text in the prompt. The `{{content}}` placeholder is replaced with an empty string in that case so the prompt stays clean.
+
+For non-vision models, image records will be processed with only the text portion of the prompt.
+
+### Output fields added to each record
+
+| Field | Content |
+|-------|---------|
+| `ollamaModel` | Model name used |
+| `ollamaPrompt` | Rendered prompt (after `{{field}}` substitution) |
+| `ollamaResponse` | Full model response text |
+| `ollamaProcessedAt` | ISO 8601 timestamp |
+
+Processing is sequential per record to respect Ollama's single-connection preference. A live streaming preview shows the current file name and rolling token output.
+
+### "📄 Doc Analysis" template
+
+Click **📄 Doc Analysis** in the top bar to add a pre-wired `LocalFolderSourceNode → OllamaNode → TableOutputNode` pipeline with appropriate default prompts.
 
 ---
 
@@ -218,26 +257,25 @@ In **TableOutputNode** and the expanded panel, reconciled cells render as colour
 
 | Format | Description |
 |--------|-------------|
-| **CSV** | Flat table, one row per record. `*_reconciled` objects are expanded to `_qid`, `_label`, `_confidence`, `_status` columns. Namespace objects (`gbif`, `llds`, `ads`, `mds`) are excluded. Values containing commas or quotes are properly escaped. |
-| **JSON** | Full record graph as a pretty-printed JSON array, including all namespace fields and reconciled objects verbatim. |
-| **GeoJSON** | `FeatureCollection` of records that have both `decimalLatitude` and `decimalLongitude`. Properties are flattened the same way as CSV. The node shows *N mappable / M total* before you download. |
+| **CSV** | Flat table, one row per record. `*_reconciled` objects are expanded to `_qid`, `_label`, `_confidence`, `_status` columns. Namespace objects (`gbif`, `llds`, `ads`, `mds`) are excluded. |
+| **JSON** | Full record graph as a pretty-printed JSON array. |
+| **GeoJSON** | `FeatureCollection` of records that have both `decimalLatitude` and `decimalLongitude`. |
 
-Files are named `nfcs-export-YYYY-MM-DD.{ext}`. A **✓ saved** badge confirms each download.
+Files are named `nfcs-export-YYYY-MM-DD.{ext}`.
 
 ---
 
 ## CORS and the dev proxy
 
-GBIF and the Wikidata reconciliation endpoint have permissive CORS headers. The other services do not; the Vite dev server proxies those requests server-side:
+| Prefix | Target | Reason |
+|--------|--------|--------|
+| `/llds-proxy/…` | `https://llds.ling-phil.ox.ac.uk/llds/…` | No CORS |
+| `/ads-proxy/…` | `https://archaeologydataservice.ac.uk/…` | No CORS |
+| `/mds-proxy/…` | `https://museumdata.uk/…` | No CORS |
+| `/reconcile-proxy/…` | `https://wikidata.reconci.link/…` | 307 redirect strips CORS headers in browser |
+| `/ollama/…` | `http://localhost:11434/…` | Avoids cross-port CORS for local Ollama |
 
-| Prefix | Target |
-|--------|--------|
-| `/llds-proxy/…` | `https://llds.ling-phil.ox.ac.uk/llds/…` |
-| `/ads-proxy/…` | `https://archaeologydataservice.ac.uk/…` |
-| `/mds-proxy/…` | `https://museumdata.uk/…` |
-| `/reconcile-proxy/…` | `https://wikidata.reconci.link/…` |
-
-> **Production note:** This proxy is development-only. For a deployed instance, replace each rule with a lightweight server-side proxy — a Cloudflare Worker, a single Express route, or equivalent.
+> **Production note:** This proxy is development-only. For a deployed instance, replace each rule with a lightweight server-side proxy.
 
 ---
 
@@ -248,37 +286,27 @@ GBIF and the Wikidata reconciliation endpoint have permissive CORS headers. The 
 1. Drag a **GBIFSearchNode** and an **ADSSearchNode** onto the canvas.
 2. Type `Stonehenge` into the inline query fields on both.
 3. Drag a **TableOutputNode** and connect both search node outputs to its input.
-4. Click **▶▶ Run All**. Both searches run in parallel; the table shows merged results with a `_source` column identifying each origin.
+4. Click **▶▶ Run All**.
+
+### Local document analysis
+
+1. Click **📄 Doc Analysis** in the top bar to load the template.
+2. Click **📂 Pick Folder** on the **LocalFolderSourceNode** and select a folder of PDFs, TEI-XML files, or images.
+3. On the **OllamaNode**, select your model and tick **Vision model** if using images.
+4. Click **▶ Run** on the OllamaNode. Each file is processed in sequence with a live streaming preview.
+5. Results appear in the **TableOutputNode** with `ollamaResponse` as a column.
+
+### Spatial filter + map
+
+1. Run any source node.
+2. Connect to a **SpatialFilterNode** and draw a bounding box over the region of interest.
+3. Connect its output to a **MapOutputNode**. Only records inside the bbox are plotted.
 
 ### Species reconciliation workflow
 
-1. Run a **GBIFSearchNode** to get occurrence records.
-2. Connect to a **ReconciliationNode**. Select field `scientificName`, authority `Wikidata Taxa`.
-3. Connect the reconciliation node's output to a **TableOutputNode**. The `scientificName_reconciled` column shows green QID pills for high-confidence matches.
-4. Connect an **ExportNode** set to **GeoJSON** to download mappable reconciled records.
-
-### Filter then map
-
-1. Run any source node to get records.
-2. Connect to a **FilterTransformNode** in Filter mode. Add a row: `country` → `=` → `GB`.
-3. Connect the filter node's output to a **MapOutputNode**. Only UK records appear on the map.
-
-### Building a complete pipeline
-
-```
-GBIFSearchNode
-      │
-      ▼
-FilterTransformNode  (filter: country = GB)
-      │
-      ▼
-ReconciliationNode   (reconcile: scientificName → Wikidata Taxa)
-      │
-      ├──► TableOutputNode  (browse + expand)
-      ├──► MapOutputNode    (spatial view)
-      ├──► TimelineOutputNode (temporal view)
-      └──► ExportNode       (CSV download)
-```
+1. Run a **GBIFSearchNode**.
+2. Connect to a **ReconciliationNode** — field `scientificName`, authority `Wikidata Taxa`.
+3. Connect to **TableOutputNode** and **ExportNode** (GeoJSON) for download.
 
 ---
 
@@ -286,61 +314,52 @@ ReconciliationNode   (reconcile: scientificName → Wikidata Taxa)
 
 ```
 nfcs-poc/
-├── CLAUDE.md                   # API references and architecture notes (dev only)
+├── CLAUDE.md                   # Architecture notes and API references (dev only)
 ├── vite.config.ts              # Dev server + CORS proxy rules
 └── src/
-    ├── App.tsx                 # Canvas, sidebar, Run All button, node factories
+    ├── App.tsx                 # Canvas, sidebar, Run All, node factories, templates
     ├── types/
     │   └── UnifiedRecord.ts    # Canonical cross-service record type
     ├── hooks/
     │   └── useUpstreamRecords.ts   # Reactive multi-source merge hook
-    ├── nodes/                  # React Flow node components
-    │   ├── index.ts            # nodeTypes registry
+    ├── nodes/
+    │   ├── index.ts                # nodeTypes registry
     │   ├── ParamNode.tsx
     │   ├── GBIFSearchNode.tsx
     │   ├── LLDSSearchNode.tsx
     │   ├── ADSSearchNode.tsx
     │   ├── MDSSearchNode.tsx
+    │   ├── LocalFolderSourceNode.tsx   # File System Access API source
     │   ├── FilterTransformNode.tsx
+    │   ├── SpatialFilterNode.tsx       # Leaflet bbox filter
     │   ├── ReconciliationNode.tsx
-    │   ├── ReconciledCell.tsx      # Shared QID pill component
+    │   ├── OllamaNode.tsx              # Local LLM transform
+    │   ├── ReconciledCell.tsx          # Shared QID pill component
     │   ├── TableOutputNode.tsx
     │   ├── JSONOutputNode.tsx
     │   ├── MapOutputNode.tsx
     │   ├── TimelineOutputNode.tsx
     │   ├── ExportNode.tsx
     │   └── ExpandedOutputPanel.tsx
-    └── utils/                  # Adapters, runners, pure utilities
+    └── utils/
+        ├── fileReaders.ts              # PDF/XML/text/image extraction (FileRecord)
         ├── gbifAdapter.ts
         ├── lldsAdapter.ts / lldsCache.ts
         ├── adsAdapter.ts
         ├── mdsAdapter.ts
         ├── reconciliationService.ts    # W3C Reconciliation API client
-        ├── filterTransformUtils.ts     # Pure filter/transform functions
-        ├── exportUtils.ts              # CSV / JSON / GeoJSON serialisers
+        ├── filterTransformUtils.ts
+        ├── exportUtils.ts
         ├── runGBIFNode.ts
         ├── runLLDSNode.ts
         ├── runADSNode.ts
         ├── runMDSNode.ts
         ├── runReconciliationNode.ts
         ├── runFilterTransformNode.ts
+        ├── runSpatialFilterNode.ts
         ├── nodeRunners.ts              # Registry: node type → runner
         └── runWorkflow.ts              # Topological executor (Kahn's algorithm)
 ```
-
----
-
-## Adding a new data source
-
-1. Create `src/utils/<service>Adapter.ts` — maps the raw API response to `UnifiedRecord[]`.
-2. Create `src/utils/run<Service>Node.ts` — fetches the API, calls the adapter, conforms to the `NodeRunner` signature. Must never throw.
-3. Create `src/nodes/<Service>SearchNode.tsx` — React Flow node component.
-4. Register in `src/utils/nodeRunners.ts` — one line.
-5. Register in `src/nodes/index.ts` — one line.
-6. Add factory + sidebar entry in `src/App.tsx`.
-7. If the service lacks permissive CORS headers, add a proxy rule to `vite.config.ts`.
-
-All existing output nodes require **no changes** — they consume `UnifiedRecord[]` regardless of source.
 
 ---
 
@@ -351,6 +370,8 @@ All existing output nodes require **no changes** — they consume `UnifiedRecord
 | [Vite](https://vitejs.dev/) | Dev server, bundler, CORS proxy |
 | [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) | UI framework |
 | [@xyflow/react v12](https://reactflow.dev/) | Node-based canvas |
-| [Leaflet](https://leafletjs.com/) | Map rendering in MapOutputNode |
+| [Leaflet](https://leafletjs.com/) | Map rendering (MapOutputNode, SpatialFilterNode) |
+| [pdfjs-dist](https://mozilla.github.io/pdf.js/) | Client-side PDF text extraction (LocalFolderSourceNode) |
+| [Ollama](https://ollama.com/) | Local LLM inference (external, not bundled) |
 
 No backend. No database. No authentication. All API calls are made directly from the browser (or via the Vite dev proxy for services without permissive CORS).

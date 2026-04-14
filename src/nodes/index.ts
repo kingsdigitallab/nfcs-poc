@@ -1,3 +1,5 @@
+import { LocalFolderSourceNode } from './LocalFolderSourceNode'
+import { OllamaNode }            from './OllamaNode'
 import { ParamNode } from './ParamNode'
 import { GBIFSearchNode } from './GBIFSearchNode'
 import { LLDSSearchNode } from './LLDSSearchNode'
@@ -5,6 +7,7 @@ import { ADSSearchNode }  from './ADSSearchNode'
 import { MDSSearchNode }  from './MDSSearchNode'
 import { ReconciliationNode }    from './ReconciliationNode'
 import { FilterTransformNode }  from './FilterTransformNode'
+import { SpatialFilterNode }    from './SpatialFilterNode'
 import { TableOutputNode }    from './TableOutputNode'
 import { JSONOutputNode }     from './JSONOutputNode'
 import { MapOutputNode }      from './MapOutputNode'
@@ -12,13 +15,16 @@ import { TimelineOutputNode } from './TimelineOutputNode'
 import { ExportNode }         from './ExportNode'
 
 export const nodeTypes = {
-  param:          ParamNode,
+  param:             ParamNode,
+  localFolderSource: LocalFolderSourceNode,
+  ollamaNode:        OllamaNode,
   gbifSearch:     GBIFSearchNode,
   lldsSearch:     LLDSSearchNode,
   adsSearch:      ADSSearchNode,
   mdsSearch:      MDSSearchNode,
   reconciliation:  ReconciliationNode,
   filterTransform: FilterTransformNode,
+  spatialFilter:  SpatialFilterNode,
   tableOutput:    TableOutputNode,
   jsonOutput:     JSONOutputNode,
   mapOutput:      MapOutputNode,

@@ -14,6 +14,7 @@ import { runADSNode }             from './runADSNode'
 import { runMDSNode }             from './runMDSNode'
 import { runReconciliationNode }  from './runReconciliationNode'
 import { runFilterTransformNode } from './runFilterTransformNode'
+import { runSpatialFilterNode }   from './runSpatialFilterNode'
 
 /**
  * Common signature for every node runner.
@@ -37,4 +38,5 @@ export const nodeRunners: Record<string, NodeRunner> = {
   mdsSearch:       runMDSNode,
   reconciliation:   runReconciliationNode,
   filterTransform:  runFilterTransformNode,
+  spatialFilter:   runSpatialFilterNode,
 }

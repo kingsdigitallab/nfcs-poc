@@ -8,6 +8,7 @@ import {
   useNodesState,
   useEdgesState,
   type Connection,
+  type Edge,
   type Node,
   type XYPosition,
   type ReactFlowInstance,
@@ -17,11 +18,14 @@ import { nodeTypes } from './nodes'
 import { ExpandedOutputPanel } from './nodes/ExpandedOutputPanel'
 import { runWorkflow } from './utils/runWorkflow'
 import type { UnifiedRecord } from './types/UnifiedRecord'
+import type { LocalFolderSourceNodeData } from './nodes/LocalFolderSourceNode'
+import type { OllamaNodeData }            from './nodes/OllamaNode'
 import type { LLDSSearchNodeData }        from './nodes/LLDSSearchNode'
 import type { ADSSearchNodeData }         from './nodes/ADSSearchNode'
 import type { MDSSearchNodeData }         from './nodes/MDSSearchNode'
 import type { ReconciliationNodeData }    from './nodes/ReconciliationNode'
 import type { FilterTransformNodeData }   from './nodes/FilterTransformNode'
+import type { SpatialFilterNodeData }     from './nodes/SpatialFilterNode'
 import type { ExportNodeData }            from './nodes/ExportNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
@@ -33,11 +37,14 @@ interface OutputNodeData { [k: string]: unknown }
 type AppNode =
   | Node<ParamNodeData>
   | Node<SearchNodeData>
+  | Node<LocalFolderSourceNodeData>
+  | Node<OllamaNodeData>
   | Node<LLDSSearchNodeData>
   | Node<ADSSearchNodeData>
   | Node<MDSSearchNodeData>
   | Node<ReconciliationNodeData>
   | Node<FilterTransformNodeData>
+  | Node<SpatialFilterNodeData>
   | Node<ExportNodeData>
   | Node<OutputNodeData>
 
@@ -82,6 +89,34 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       _capped: false, _total: 0,
     } satisfies MDSSearchNodeData,
   }),
+  localFolderSource: pos => ({
+    id: newId('folder'), type: 'localFolderSource', position: pos,
+    data: {
+      fileTypes:     ['pdf', 'xml', 'text', 'image'],
+      maxFiles:      50,
+      folderName:    '',
+      status:        'idle',
+      statusMessage: '',
+      results:       undefined,
+      count:         0,
+    } satisfies LocalFolderSourceNodeData,
+  }),
+  ollamaNode: pos => ({
+    id: newId('ollama'), type: 'ollamaNode', position: pos,
+    data: {
+      model:               '',
+      visionOverride:      false,
+      systemPrompt:        'You are a research assistant helping to analyse humanities research documents and data.',
+      userPromptTemplate:  'Summarise the key themes and subjects in 3-4 sentences:\n\n{{content}}',
+      temperature:         0.7,
+      maxTokens:           1024,
+      status:              'idle',
+      statusMessage:       '',
+      results:             undefined,
+      inputCount:          0,
+      outputCount:         0,
+    } satisfies OllamaNodeData,
+  }),
   filterTransform: pos => ({
     id: newId('ft'), type: 'filterTransform', position: pos,
     data: {
@@ -95,6 +130,17 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       inputCount:       0,
       outputCount:      0,
     } satisfies FilterTransformNodeData,
+  }),
+  spatialFilter: pos => ({
+    id: newId('sf'), type: 'spatialFilter', position: pos,
+    data: {
+      bbox:           null,
+      status:         'idle',
+      statusMessage:  '',
+      results:        undefined,
+      inputCount:     0,
+      outputCount:    0,
+    } satisfies SpatialFilterNodeData,
   }),
   reconciliation: pos => ({
     id: newId('recon'), type: 'reconciliation', position: pos,
@@ -136,11 +182,14 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
 
 const SIDEBAR_ITEMS = [
   { type: 'param',       label: 'ParamNode',        sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },
+  { type: 'localFolderSource', label: 'LocalFolderSource', sub: 'Read files from local folder', color: '#14532d', group: 'Source' },
   { type: 'gbifSearch',  label: 'GBIFSearchNode',   sub: 'GBIF occurrence search',    color: '#0f4c81', group: 'Source' },
   { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Source' },
   { type: 'adsSearch',   label: 'ADSSearchNode',    sub: 'Archaeology Data Service',  color: '#7c2d12', group: 'Source' },
   { type: 'mdsSearch',      label: 'MDSSearchNode',      sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Source' },
+  { type: 'ollamaNode',      label: 'OllamaNode',          sub: 'Local LLM via Ollama',      color: '#312e81', group: 'Process' },
   { type: 'filterTransform', label: 'FilterTransformNode', sub: 'Filter + transform records', color: '#4f46e5', group: 'Process' },
+  { type: 'spatialFilter',   label: 'Spatial Filter',      sub: 'Draw bounding box to filter by location', color: '#0891b2', group: 'Process' },
   { type: 'reconciliation',  label: 'ReconciliationNode',  sub: 'Wikidata field reconciler',  color: '#7c3aed', group: 'Process' },
   { type: 'tableOutput',    label: 'TableOutputNode',    sub: 'Paginated results table',    color: '#0d9488', group: 'Output' },
   { type: 'export',         label: 'ExportNode',         sub: 'CSV / JSON / GeoJSON',       color: '#b45309', group: 'Output' },
@@ -153,11 +202,25 @@ const SIDEBAR_ITEMS = [
 
 export default function App() {
   const [nodes, setNodes, onNodesChange] = useNodesState<AppNode>([])
-  const [edges, setEdges, onEdgesChange] = useEdgesState([])
+  const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([])
   const reactFlowWrapper = useRef<HTMLDivElement>(null)
   const [rfInstance, setRfInstance] = useState<ReactFlowInstance | null>(null)
   const [runningAll, setRunningAll] = useState(false)
   const [expandedNodeId, setExpandedNodeId] = useState<string | null>(null)
+
+  const handleLoadTemplate = useCallback(() => {
+    const base = { x: 100, y: 160 }
+    const folder = NODE_DEFAULTS.localFolderSource({ x: base.x, y: base.y })
+    const ollama = NODE_DEFAULTS.ollamaNode({ x: base.x + 320, y: base.y })
+    const table  = { id: newId('table'), type: 'tableOutput', position: { x: base.x + 660, y: base.y }, data: {} }
+
+    setNodes(nds => [...nds, folder, ollama, table])
+    setEdges(eds => [
+      ...eds,
+      { id: `e-${folder.id}-${ollama.id}`, source: folder.id, sourceHandle: 'results', target: ollama.id, targetHandle: 'data' },
+      { id: `e-${ollama.id}-${table.id}`,  source: ollama.id, sourceHandle: 'results', target: table.id,  targetHandle: 'data' },
+    ])
+  }, [setNodes, setEdges])
 
   const handleRunAll = useCallback(async () => {
     if (!rfInstance) return
@@ -208,6 +271,13 @@ export default function App() {
         <span style={{ fontWeight: 700, fontSize: 14, color: '#1e3a5f' }}>iDAH Federation PoC</span>
         <span style={{ fontSize: 11, color: '#6b7280' }}>Increment 4 — Multi-source workflow</span>
         <div style={{ flex: 1 }} />
+        <button
+          style={templateBtnStyle}
+          onClick={handleLoadTemplate}
+          title="Load: LocalFolder → Ollama → Table"
+        >
+          📄 Doc Analysis
+        </button>
         <button
           style={{ ...runAllBtnStyle, opacity: runningAll ? 0.6 : 1 }}
           onClick={handleRunAll}
@@ -319,6 +389,11 @@ function DebugPanel({ nodes }: { nodes: AppNode[] }) {
 const topBarStyle: React.CSSProperties = {
   height: 40, background: '#fff', borderBottom: '1px solid #e5e7eb',
   display: 'flex', alignItems: 'center', gap: 16, padding: '0 16px', flexShrink: 0,
+}
+
+const templateBtnStyle: React.CSSProperties = {
+  background: '#f3f4f6', color: '#374151', border: '1px solid #d1d5db', borderRadius: 6,
+  padding: '5px 12px', fontSize: 12, fontWeight: 600, cursor: 'pointer',
 }
 
 const runAllBtnStyle: React.CSSProperties = {

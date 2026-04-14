@@ -20,7 +20,7 @@ A node-based visual workflow editor for federating UK Arts & Humanities research
 
 ## Vite Proxy Rules (vite.config.ts)
 
-All four proxies are live. Use the proxy path prefix in all frontend fetch calls:
+All five proxies are live. Use the proxy path prefix in all frontend fetch calls:
 
 | Prefix | Target | Reason |
 |--------|--------|--------|
@@ -28,6 +28,7 @@ All four proxies are live. Use the proxy path prefix in all frontend fetch calls
 | `/ads-proxy/*` | `https://archaeologydataservice.ac.uk/*` | No CORS |
 | `/mds-proxy/*` | `https://museumdata.uk/*` | No CORS |
 | `/reconcile-proxy/*` | `https://wikidata.reconci.link/*` | 307 redirect strips CORS headers in browser |
+| `/ollama/*` | `http://localhost:11434/*` | Avoids cross-port CORS for local Ollama |
 
 The reconcile proxy is especially important: `wikidata.reconci.link` returns a 307 that strips CORS headers in the browser. The Vite proxy sidesteps the redirect entirely.
 
@@ -40,12 +41,13 @@ nfcs-poc/
 ├── CLAUDE.md
 ├── README.md
 ├── package.json
-├── vite.config.ts          # Dev server + all four CORS proxy rules
+├── vite.config.ts          # Dev server + all five CORS proxy rules
 ├── tsconfig.json
+├── tsconfig.app.json       # lib includes DOM.AsyncIterable (File System Access API)
 ├── index.html
 └── src/
     ├── main.tsx
-    ├── App.tsx              # Canvas, sidebar, Run All button, node factories, debug panel
+    ├── App.tsx              # Canvas, sidebar, Run All button, node factories, templates, debug panel
     ├── index.css
     ├── types/
     │   └── UnifiedRecord.ts       # Canonical cross-service record type
@@ -58,8 +60,11 @@ nfcs-poc/
     │   ├── LLDSSearchNode.tsx     # LLDS DSpace REST (with cache fallback)
     │   ├── ADSSearchNode.tsx      # ADS Data Catalogue API
     │   ├── MDSSearchNode.tsx      # Museum Data Service (HTML scraper)
+    │   ├── LocalFolderSourceNode.tsx # File System Access API + fileReaders.ts
     │   ├── FilterTransformNode.tsx # Filter/transform processing node
+    │   ├── SpatialFilterNode.tsx   # Leaflet bbox draw → filter by lat/lon
     │   ├── ReconciliationNode.tsx  # Wikidata reconciliation node
+    │   ├── OllamaNode.tsx          # Local LLM via Ollama (streaming /api/chat)
     │   ├── ReconciledCell.tsx      # Shared universal cell renderer (see below)
     │   ├── TableOutputNode.tsx     # Paginated table output
     │   ├── JSONOutputNode.tsx      # Syntax-highlighted JSON viewer
@@ -68,6 +73,7 @@ nfcs-poc/
     │   ├── ExportNode.tsx          # CSV / JSON / GeoJSON download
     │   └── ExpandedOutputPanel.tsx # Full-screen panel (double-click Table/JSON)
     └── utils/
+        ├── fileReaders.ts          # FileRecord type + PDF/XML/text/image extraction
         ├── gbif.ts                 # buildGBIFUrl() + fetchGBIF()
         ├── gbifAdapter.ts          # GBIFSearchResponse → UnifiedRecord[]
         ├── lldsCache.ts            # localStorage cache helpers
@@ -85,6 +91,7 @@ nfcs-poc/
         ├── runMDSNode.ts            # NodeRunner for mdsSearch
         ├── runReconciliationNode.ts # NodeRunner for reconciliation
         ├── runFilterTransformNode.ts # NodeRunner for filterTransform
+        ├── runSpatialFilterNode.ts  # NodeRunner for spatialFilter
         ├── nodeRunners.ts           # Registry: nodeType → NodeRunner
         └── runWorkflow.ts           # Topological executor (Kahn's algorithm)
 ```
@@ -105,12 +112,15 @@ nfcs-poc/
 | `lldsSearch` | `LLDSSearchNode` | LLDS DSpace REST | `/llds-proxy` |
 | `adsSearch` | `ADSSearchNode` | ADS Data Catalogue API | `/ads-proxy` |
 | `mdsSearch` | `MDSSearchNode` | museumdata.uk (HTML scraper) | `/mds-proxy` |
+| `localFolderSource` | `LocalFolderSourceNode` | Local filesystem via File System Access API | n/a — no runner; folder pick is a user gesture |
 
 ### Process
 | Node type key | Component | Description |
 |---------------|-----------|-------------|
 | `filterTransform` | `FilterTransformNode` | Filter + transform records. Indigo `#4f46e5` header. |
+| `spatialFilter` | `SpatialFilterNode` | Leaflet map with draw tool; keeps records within the drawn bbox. Cyan `#0891b2` header. |
 | `reconciliation` | `ReconciliationNode` | Wikidata field reconciler. Violet `#7c3aed` header. |
+| `ollamaNode` | `OllamaNode` | Streaming local LLM via Ollama `/api/chat`. Deep indigo `#312e81` header. No runner — streaming requires component-level state. |
 
 ### Output
 | Node type key | Component | Description |
@@ -133,6 +143,8 @@ nfcs-poc/
 6. Add sidebar entry to `SIDEBAR_ITEMS` in `src/App.tsx`.
 7. Add typed data interface import + union to `AppNode` in `src/App.tsx`.
 8. If service lacks permissive CORS, add proxy rule to `vite.config.ts`.
+
+**Exception — nodes that cannot use a runner:** Some nodes must handle their own async logic in the component because they require direct user gestures (File System Access API) or maintain streaming state. These nodes skip steps 1–2 and are not included in `nodeRunners`. They are therefore excluded from **Run All**. Currently: `localFolderSource`, `ollamaNode`.
 
 ---
 
@@ -416,6 +428,57 @@ Scores are 0–100 from the API; normalised to 0–1 in `reconcileField()`.
 
 ---
 
+## FileRecord — Local File Type
+
+**Location**: `src/utils/fileReaders.ts`
+
+A parallel type to `UnifiedRecord` used exclusively by `LocalFolderSourceNode` and `OllamaNode`. Not merged into `UnifiedRecord` — kept separate so the type contract remains clean.
+
+```typescript
+export interface FileRecord {
+  id: string            // crypto.randomUUID()
+  filename: string
+  path: string          // relative path within selected folder
+  contentType: 'text' | 'xml' | 'pdf_text' | 'image'
+  content: string       // extracted text, or base64 data URL for images
+  mimeType: string
+  sizeBytes: number
+  sourceFolder: string  // folder name from directory handle
+}
+```
+
+Key exports:
+- `extractFileContent(file, relativePath, folderName)` — dispatches by extension: `.txt/.md/.csv/.tsv` → `text`; `.xml/.html/.tei/.tei.xml` → `xml`; `.pdf` → `pdf_text` via pdfjs-dist; `.jpg/.png/.tiff/.webp` → `image` (base64 data URL)
+- `scanDirectory(dirHandle, types, max)` — non-recursive iteration; `types` is an array of label strings (`'pdf'`, `'xml'`, `'text'`, `'image'`)
+- pdfjs worker is loaded from CDN: `https://unpkg.com/pdfjs-dist@{version}/build/pdf.worker.min.mjs` — avoids Vite bundler issues. Do not change this to a local import.
+- `DOM.AsyncIterable` must be in `tsconfig.app.json` `lib` array for `for await...of` on `dirHandle.entries()`.
+
+`TableOutputNode` renders `FileRecord` columns correctly via `allFlatColumns` (dynamic key enumeration). The `content` field for images is a long base64 string — it appears in the table but is truncated by cell overflow.
+
+---
+
+## OllamaNode — Local LLM
+
+**Location**: `src/nodes/OllamaNode.tsx`
+
+**Ollama API used**: `POST /ollama/api/chat` (via Vite proxy → `http://localhost:11434/api/chat`)
+
+Model discovery: `GET /ollama/api/tags` on component mount → `response.models[].name` → dropdown.
+
+Vision model detection: checks model name for `llava`, `vision`, `bakllava`, `moondream`, `cogvlm`. User can override with the **Vision model** checkbox (`visionOverride` in node data). The checkbox state takes precedence over name-based detection.
+
+**Image handling (critical):**
+- When `isVisionModel` is true AND a record has `contentType === 'image'`, the base64 data is stripped of its data URL prefix and sent as `images: [base64]` on the Ollama message object.
+- `{{content}}` in the prompt template is replaced with `''` (empty string) for image records — do NOT pass the raw data URL as text; it is a multi-MB blob the model cannot interpret as text.
+
+**Streaming:** Uses `stream: true` on `/api/chat`. Reads the response body as a `ReadableStream`, decodes newline-delimited JSON chunks, accumulates `chunk.message.content` deltas. Live preview shows the last 200 chars of the accumulation.
+
+**Not in `nodeRunners`** — streaming requires component-level state; cannot be called from the topological executor.
+
+Output fields added to each record: `ollamaModel`, `ollamaPrompt`, `ollamaResponse`, `ollamaProcessedAt`.
+
+---
+
 ## Known Architectural Decisions & Gotchas
 
 1. **`isReconciledValue` lives in `reconciliationService.ts`** — do not redefine it elsewhere.
@@ -426,3 +489,6 @@ Scores are 0–100 from the API; normalised to 0–1 in `reconcileField()`.
 6. **`allFlatColumns` must include `isReconciledValue` check** — without it, `*_reconciled` columns disappear.
 7. **MDS is capped at 200** — by design; amber badge warns users.
 8. **`useUpstreamRecords` merges by `targetHandle === 'data'`** — output handle id is `results` for pass-through.
+9. **`LocalFolderSourceNode` stores `dirHandle` in a `useRef`** — not in node data (not serialisable). Re-scan reuses the ref. The handle is lost on page refresh; user must pick again.
+10. **OllamaNode image prompt** — never put a raw base64 data URL into `{{content}}`; always blank it for image records and use the `images` field instead. See OllamaNode section above.
+11. **pdfjs-dist worker must stay on CDN** — importing the worker locally causes Vite bundler/worker thread issues. The `workerSrc` string in `fileReaders.ts` uses `pdfjsLib.version` to stay in sync with the installed package version.
