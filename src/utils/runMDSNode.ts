@@ -5,11 +5,11 @@
  * terminal status ('success' | 'error') before returning.
  */
 
-import type { Node, Edge } from '@xyflow/react'
 import type { NodeRunner }  from './nodeRunners'
 import { fetchMDSRecords }  from './mds'
 import { adaptMDSRecords }  from './mdsAdapter'
 import type { MDSSearchNodeData } from '../nodes/MDSSearchNode'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 export const runMDSNode: NodeRunner = async (
   nodeId,
@@ -23,7 +23,6 @@ export const runMDSNode: NodeRunner = async (
 
   const d = node.data as MDSSearchNodeData
 
-  // Resolve wired-or-inline params (ParamNode connection wins over inline field)
   const resolve = (handleId: string, dataKey: keyof MDSSearchNodeData): string => {
     const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
     if (edge) {
@@ -41,16 +40,15 @@ export const runMDSNode: NodeRunner = async (
     updateNodeData(nodeId, {
       status:        'error',
       statusMessage: '✗ query is required',
-      results:       undefined,
       count:         0,
     })
     return
   }
 
+  clearNodeResults(nodeId)
   updateNodeData(nodeId, {
     status:        'loading',
     statusMessage: 'Fetching…',
-    results:       undefined,
     count:         0,
     _capped:       false,
     _total:        0,
@@ -66,13 +64,14 @@ export const runMDSNode: NodeRunner = async (
 
     console.log(`[MDS] ${msg}`, records[0])
 
+    const version = setNodeResults(nodeId, records as Record<string, unknown>[])
     updateNodeData(nodeId, {
-      status:        'success',
-      statusMessage: msg,
-      results:       records,
-      count:         records.length,
-      _capped:       capped,
-      _total:        total,
+      status:         'success',
+      statusMessage:  msg,
+      count:          records.length,
+      _capped:        capped,
+      _total:         total,
+      resultsVersion: version,
     })
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err)
@@ -80,7 +79,6 @@ export const runMDSNode: NodeRunner = async (
     updateNodeData(nodeId, {
       status:        'error',
       statusMessage: `✗ ${msg}`,
-      results:       undefined,
       count:         0,
     })
   }

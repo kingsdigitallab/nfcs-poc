@@ -20,6 +20,9 @@ import { runWorkflow } from './utils/runWorkflow'
 import type { UnifiedRecord } from './types/UnifiedRecord'
 import type { LocalFolderSourceNodeData } from './nodes/LocalFolderSourceNode'
 import type { OllamaNodeData }            from './nodes/OllamaNode'
+import type { OllamaFieldNodeData }       from './nodes/OllamaFieldNode'
+import type { URLFetchNodeData }          from './nodes/URLFetchNode'
+import type { HTMLSectionNodeData }       from './nodes/HTMLSectionNode'
 import type { LLDSSearchNodeData }        from './nodes/LLDSSearchNode'
 import type { ADSSearchNodeData }         from './nodes/ADSSearchNode'
 import type { MDSSearchNodeData }         from './nodes/MDSSearchNode'
@@ -39,6 +42,9 @@ type AppNode =
   | Node<SearchNodeData>
   | Node<LocalFolderSourceNodeData>
   | Node<OllamaNodeData>
+  | Node<OllamaFieldNodeData>
+  | Node<URLFetchNodeData>
+  | Node<HTMLSectionNodeData>
   | Node<LLDSSearchNodeData>
   | Node<ADSSearchNodeData>
   | Node<MDSSearchNodeData>
@@ -77,7 +83,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   adsSearch: pos => ({
     id: newId('ads'), type: 'adsSearch', position: pos,
     data: {
-      inlineQuery: '', inlineLimit: '20',
+      inlineQuery: '', inlineLimit: '20', fetchAll: false,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies ADSSearchNodeData,
   }),
@@ -116,6 +122,51 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       inputCount:          0,
       outputCount:         0,
     } satisfies OllamaNodeData,
+  }),
+  ollamaField: pos => ({
+    id: newId('ollamaField'), type: 'ollamaField', position: pos,
+    data: {
+      model:               '',
+      selectedField:       '',
+      mode:                'per-record',
+      systemPrompt:        'You are a research assistant helping to analyse humanities research data.',
+      userPromptTemplate:  'Summarise the following in 2–3 sentences:\n\n{{value}}',
+      temperature:         0.7,
+      maxTokens:           1024,
+      status:              'idle',
+      statusMessage:       '',
+      results:             undefined,
+      inputCount:          0,
+      outputCount:         0,
+    } satisfies OllamaFieldNodeData,
+  }),
+  urlFetch: pos => ({
+    id: newId('urlFetch'), type: 'urlFetch', position: pos,
+    data: {
+      urlField:      '_sourceUrl',
+      stripHtml:     true,
+      maxLength:     8000,
+      timeoutSecs:   10,
+      renderJs:      false,
+      waitStrategy:  'networkidle2',
+      status:        'idle',
+      statusMessage: '',
+      results:       undefined,
+      inputCount:    0,
+      outputCount:   0,
+    } satisfies URLFetchNodeData,
+  }),
+  htmlSection: pos => ({
+    id: newId('htmlSection'), type: 'htmlSection', position: pos,
+    data: {
+      selector:      'main, article',
+      separator:     '\n\n',
+      maxLength:     8000,
+      status:        'idle',
+      statusMessage: '',
+      inputCount:    0,
+      outputCount:   0,
+    } satisfies HTMLSectionNodeData,
   }),
   filterTransform: pos => ({
     id: newId('ft'), type: 'filterTransform', position: pos,
@@ -176,6 +227,10 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('timeline'), type: 'timelineOutput', position: pos,
     data: {},
   }),
+  ollamaOutput: pos => ({
+    id: newId('ollamaOut'), type: 'ollamaOutput', position: pos,
+    data: {},
+  }),
 }
 
 // ─── sidebar definition ───────────────────────────────────────────────────────
@@ -187,7 +242,10 @@ const SIDEBAR_ITEMS = [
   { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Source' },
   { type: 'adsSearch',   label: 'ADSSearchNode',    sub: 'Archaeology Data Service',  color: '#7c2d12', group: 'Source' },
   { type: 'mdsSearch',      label: 'MDSSearchNode',      sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Source' },
-  { type: 'ollamaNode',      label: 'OllamaNode',          sub: 'Local LLM via Ollama',      color: '#312e81', group: 'Process' },
+  { type: 'ollamaNode',      label: 'OllamaNode',          sub: 'Local LLM — file/content records', color: '#312e81', group: 'Process' },
+  { type: 'ollamaField',    label: 'OllamaFieldNode',     sub: 'LLM inference on a chosen field',  color: '#1e1b4b', group: 'Process' },
+  { type: 'urlFetch',       label: 'URLFetchNode',        sub: 'Fetch URL content into records',   color: '#0c4a6e', group: 'Process' },
+  { type: 'htmlSection',   label: 'HTMLSectionNode',     sub: 'Extract page section by CSS selector', color: '#065f46', group: 'Process' },
   { type: 'filterTransform', label: 'FilterTransformNode', sub: 'Filter + transform records', color: '#4f46e5', group: 'Process' },
   { type: 'spatialFilter',   label: 'Spatial Filter',      sub: 'Draw bounding box to filter by location', color: '#0891b2', group: 'Process' },
   { type: 'reconciliation',  label: 'ReconciliationNode',  sub: 'Wikidata field reconciler',  color: '#7c3aed', group: 'Process' },
@@ -195,7 +253,8 @@ const SIDEBAR_ITEMS = [
   { type: 'export',         label: 'ExportNode',         sub: 'CSV / JSON / GeoJSON',       color: '#b45309', group: 'Output' },
   { type: 'mapOutput',      label: 'MapOutputNode',      sub: 'Geo map (lat/lon records)',  color: '#14532d', group: 'Output' },
   { type: 'timelineOutput', label: 'TimelineOutputNode', sub: 'Year-resolution timeline',   color: '#1e293b', group: 'Output' },
-  { type: 'jsonOutput',  label: 'JSONOutputNode',   sub: 'Formatted JSON viewer',     color: '#6d28d9', group: 'Output' },
+  { type: 'jsonOutput',    label: 'JSONOutputNode',   sub: 'Formatted JSON viewer',       color: '#6d28d9', group: 'Output' },
+  { type: 'ollamaOutput', label: 'OllamaOutputNode', sub: 'Display Ollama inference text', color: '#0f172a', group: 'Output' },
 ]
 
 // ─── App ──────────────────────────────────────────────────────────────────────
@@ -207,6 +266,7 @@ export default function App() {
   const [rfInstance, setRfInstance] = useState<ReactFlowInstance | null>(null)
   const [runningAll, setRunningAll] = useState(false)
   const [expandedNodeId, setExpandedNodeId] = useState<string | null>(null)
+  const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set())
 
   const handleLoadTemplate = useCallback(() => {
     const base = { x: 100, y: 160 }
@@ -291,11 +351,23 @@ export default function App() {
         {/* Sidebar */}
         <div style={sidebarStyle}>
           {(['Input', 'Source', 'Process', 'Output'] as const).map(group => {
-            const items = SIDEBAR_ITEMS.filter(i => i.group === group)
+            const items      = SIDEBAR_ITEMS.filter(i => i.group === group)
+            const isCollapsed = collapsedGroups.has(group)
+            const toggleGroup = () => setCollapsedGroups(prev => {
+              const next = new Set(prev)
+              next.has(group) ? next.delete(group) : next.add(group)
+              return next
+            })
             return (
               <div key={group}>
-                <div style={sidebarHeading}>{group}</div>
-                {items.map(item => (
+                <div
+                  style={{ ...sidebarHeading, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+                  onClick={toggleGroup}
+                >
+                  <span>{group}</span>
+                  <span style={{ fontSize: 9, color: '#d1d5db' }}>{isCollapsed ? '▶' : '▼'}</span>
+                </div>
+                {!isCollapsed && items.map(item => (
                   <div
                     key={item.type}
                     style={sidebarItemStyle}
@@ -404,6 +476,7 @@ const runAllBtnStyle: React.CSSProperties = {
 const sidebarStyle: React.CSSProperties = {
   width: 184, background: '#fff', borderRight: '1px solid #e5e7eb',
   display: 'flex', flexDirection: 'column', padding: '12px 8px', gap: 6, flexShrink: 0,
+  overflowY: 'auto',
 }
 
 const sidebarHeading: React.CSSProperties = {

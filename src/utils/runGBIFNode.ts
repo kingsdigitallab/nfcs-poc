@@ -2,6 +2,7 @@ import type { Node, Edge } from '@xyflow/react'
 import { fetchGBIF } from './gbif'
 import { adaptGBIFResponse, type GBIFSearchResponse } from './gbifAdapter'
 import type { GBIFSearchNodeData } from '../nodes/GBIFSearchNode'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 export async function runGBIFNode(
   nodeId: string,
@@ -14,7 +15,8 @@ export async function runGBIFNode(
   if (!node) return
   const d = node.data as GBIFSearchNodeData
 
-  updateNodeData(nodeId, { status: 'loading', statusMessage: 'Loading…', results: undefined, count: 0 })
+  clearNodeResults(nodeId)
+  updateNodeData(nodeId, { status: 'loading', statusMessage: 'Loading…', count: 0 })
 
   try {
     const resolve = (handleId: string, dataKey: keyof GBIFSearchNodeData): string => {
@@ -35,23 +37,22 @@ export async function runGBIFNode(
     }
 
     const raw = await fetchGBIF(params) as GBIFSearchResponse
-    // Adapter is the ONLY place that parses raw GBIF JSON
     const results = adaptGBIFResponse(raw)
 
+    const version = setNodeResults(nodeId, results as Record<string, unknown>[])
     updateNodeData(nodeId, {
-      status: 'success',
-      statusMessage: `✓ ${raw.count.toLocaleString()} results`,
-      results,
-      count: raw.count,
+      status:         'success',
+      statusMessage:  `✓ ${raw.count.toLocaleString()} results`,
+      count:          raw.count,
+      resultsVersion: version,
     })
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err)
     console.error('[GBIF] error', msg)
     updateNodeData(nodeId, {
-      status: 'error',
+      status:        'error',
       statusMessage: `✗ ${msg}`,
-      results: undefined,
-      count: 0,
+      count:         0,
     })
   }
 }

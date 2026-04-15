@@ -13,6 +13,7 @@
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
+import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 export interface OllamaNodeData {
@@ -113,8 +114,9 @@ export function OllamaNode({ id, data }: NodeProps) {
     const inputEdges = allEdges.filter(e => e.target === id && e.targetHandle === 'data')
     const out: Record<string, unknown>[] = []
     for (const edge of inputEdges) {
-      const src = allNodes.find(n => n.id === edge.source)
-      const recs = (src?.data as Record<string, unknown>)?.results as Record<string, unknown>[] | undefined
+      const src  = allNodes.find(n => n.id === edge.source)
+      if (!src) continue
+      const recs = getNodeResults(src.id)
       if (recs) out.push(...recs)
     }
     return out
@@ -158,10 +160,10 @@ export function OllamaNode({ id, data }: NodeProps) {
     abortRef.current = new AbortController()
     const { signal } = abortRef.current
 
+    clearNodeResults(id)
     updateNodeData(id, {
       status:        'running',
       statusMessage: `Processing 0/${upstreamRecords.length}…`,
-      results:       undefined,
       inputCount:    upstreamRecords.length,
       outputCount:   0,
     })
@@ -280,22 +282,23 @@ export function OllamaNode({ id, data }: NodeProps) {
       setLiveTokens('')
       setLiveProgress('')
 
+      const version = setNodeResults(id, enriched)
       updateNodeData(id, {
-        status:        'success',
-        statusMessage: `✓ ${enriched.length} records processed`,
-        results:       enriched,
-        inputCount:    upstreamRecords.length,
-        outputCount:   enriched.length,
+        status:         'success',
+        statusMessage:  `✓ ${enriched.length} records processed`,
+        inputCount:     upstreamRecords.length,
+        outputCount:    enriched.length,
+        resultsVersion: version,
       })
     } catch (err) {
       if ((err as { name?: string }).name === 'AbortError') {
         setLiveFile('')
         setLiveTokens('')
         setLiveProgress('')
+        if (enriched.length > 0) setNodeResults(id, enriched)
         updateNodeData(id, {
           status:        'idle',
           statusMessage: 'Cancelled',
-          results:       enriched.length > 0 ? enriched : undefined,
           outputCount:   enriched.length,
         })
         return
@@ -305,10 +308,10 @@ export function OllamaNode({ id, data }: NodeProps) {
       setLiveFile('')
       setLiveTokens('')
       setLiveProgress('')
+      if (enriched.length > 0) setNodeResults(id, enriched)
       updateNodeData(id, {
         status:        'error',
         statusMessage: `✗ ${msg}`,
-        results:       enriched.length > 0 ? enriched : undefined,
         outputCount:   enriched.length,
       })
     }

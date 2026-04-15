@@ -8,6 +8,7 @@ export type ADSStatus = 'idle' | 'loading' | 'success' | 'error'
 export interface ADSSearchNodeData {
   inlineQuery: string
   inlineLimit: string
+  fetchAll: boolean
   status: ADSStatus
   statusMessage: string
   results: UnifiedRecord[] | undefined
@@ -46,6 +47,7 @@ export function ADSSearchNode({ id, data }: NodeProps) {
   const { updateNodeData, getNodes, getEdges: getEdgesSnap } = useReactFlow()
   const liveEdges = useEdges()
   const d = data as ADSSearchNodeData
+  const fetchAll = d.fetchAll ?? false
 
   const isConnected = useCallback(
     (handleId: string) => liveEdges.some(e => e.target === id && e.targetHandle === handleId),
@@ -89,22 +91,39 @@ export function ADSSearchNode({ id, data }: NodeProps) {
 
       {/* Body */}
       <div style={styles.body}>
-        {PARAMS.map(({ handleId, dataKey, label, placeholder }) => (
-          <div key={handleId} style={styles.row}>
-            <span style={styles.paramLabel}>{label}</span>
-            {isConnected(handleId) ? (
-              <span style={styles.connectedBadge}>↔ wired</span>
-            ) : (
-              <input
-                style={styles.inlineInput}
-                value={(d[dataKey] as string | undefined) ?? ''}
-                onChange={e => updateNodeData(id, { [dataKey]: e.target.value })}
-                placeholder={placeholder}
-                className="nodrag"
-              />
-            )}
-          </div>
-        ))}
+        {PARAMS.map(({ handleId, dataKey, label, placeholder }) => {
+          const isLimit = handleId === 'limit'
+          const disabled = isLimit && fetchAll
+          return (
+            <div key={handleId} style={styles.row}>
+              <span style={styles.paramLabel}>{label}</span>
+              {isConnected(handleId) ? (
+                <span style={styles.connectedBadge}>↔ wired</span>
+              ) : disabled ? (
+                <span style={styles.disabledHint}>all results</span>
+              ) : (
+                <input
+                  style={styles.inlineInput}
+                  value={(d[dataKey] as string | undefined) ?? ''}
+                  onChange={e => updateNodeData(id, { [dataKey]: e.target.value })}
+                  placeholder={placeholder}
+                  className="nodrag"
+                />
+              )}
+            </div>
+          )
+        })}
+
+        {/* Fetch all toggle */}
+        <label style={styles.checkLabel} className="nodrag">
+          <input
+            type="checkbox"
+            checked={fetchAll}
+            onChange={e => updateNodeData(id, { fetchAll: e.target.checked })}
+            style={{ marginRight: 5 }}
+          />
+          Fetch all results
+        </label>
       </div>
 
       {/* Footer */}
@@ -202,6 +221,20 @@ const styles = {
     fontSize: 10,
     color: '#3b82f6',
     fontStyle: 'italic' as const,
+  },
+  disabledHint: {
+    fontSize: 10,
+    color: '#9ca3af',
+    fontStyle: 'italic' as const,
+  },
+  checkLabel: {
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: 11,
+    color: '#374151',
+    cursor: 'pointer',
+    userSelect: 'none' as const,
+    paddingTop: 2,
   },
   inputHandle: {
     width: 8,

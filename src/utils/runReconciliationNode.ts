@@ -1,12 +1,9 @@
 /**
  * runReconciliationNode.ts — NodeRunner for ReconciliationNode.
  *
- * Processing nodes sit between source and output nodes in the workflow.
- * They read upstream `data.results`, transform the records, and write
- * augmented records back to their own `data.results` so downstream output
- * nodes (Table, Map, Timeline, JSON) can read them via useUpstreamRecords.
- *
- * Runners MUST NOT throw. Own all error handling.
+ * Reads upstream records from the out-of-band resultsStore, reconciles the
+ * chosen field against a Wikidata authority, and writes augmented records back
+ * to the store. Runners MUST NOT throw.
  */
 
 import type { NodeRunner } from './nodeRunners'
@@ -17,6 +14,7 @@ import {
   type AuthorityConfig,
 } from './reconciliationService'
 import type { ReconciliationNodeData } from '../nodes/ReconciliationNode'
+import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 export const runReconciliationNode: NodeRunner = async (
   nodeId,
@@ -30,8 +28,8 @@ export const runReconciliationNode: NodeRunner = async (
 
   const d = node.data as ReconciliationNodeData
 
-  const fieldName  = d.selectedField
-  const threshold  = d.confidenceThreshold ?? 0.8
+  const fieldName = d.selectedField
+  const threshold = d.confidenceThreshold ?? 0.8
 
   if (!fieldName) {
     updateNodeData(nodeId, {
@@ -41,26 +39,26 @@ export const runReconciliationNode: NodeRunner = async (
     return
   }
 
-  // ── Collect upstream records (same logic as useUpstreamRecords hook) ───────
+  // Collect upstream records from the out-of-band store
   const inputEdges = edges.filter(e => e.target === nodeId && e.targetHandle === 'data')
   const upstream: UnifiedRecord[] = []
   for (const edge of inputEdges) {
     const src  = nodes.find(n => n.id === edge.source)
-    const recs = (src?.data as { results?: UnifiedRecord[] })?.results
+    if (!src) continue
+    const recs = getNodeResults(src.id) as UnifiedRecord[] | undefined
     if (recs) upstream.push(...recs)
   }
 
   if (upstream.length === 0) {
+    clearNodeResults(nodeId)
     updateNodeData(nodeId, {
       status:        'error',
       statusMessage: '✗ No upstream records',
-      results:       [],
       count:         0,
     })
     return
   }
 
-  // Resolve authority config from stored value
   const authorities    = authoritiesForField(fieldName)
   const authorityValue = d.selectedAuthority || authorities[0]?.value
   const authority: AuthorityConfig = authorities.find(a => a.value === authorityValue)
@@ -74,10 +72,10 @@ export const runReconciliationNode: NodeRunner = async (
     return
   }
 
+  clearNodeResults(nodeId)
   updateNodeData(nodeId, {
     status:        'loading',
     statusMessage: `Reconciling ${upstream.length} records…`,
-    results:       undefined,
     count:         0,
     resolvedCount: 0,
     reviewCount:   0,
@@ -86,7 +84,6 @@ export const runReconciliationNode: NodeRunner = async (
   try {
     const augmented = await reconcileField(upstream, fieldName, authority, threshold)
 
-    // Tally resolved vs review
     const reconciledKey = `${fieldName}_reconciled`
     let resolved = 0, review = 0
     for (const r of augmented as unknown as Record<string, unknown>[]) {
@@ -97,13 +94,14 @@ export const runReconciliationNode: NodeRunner = async (
 
     console.log(`[Reconciliation] ${fieldName} → ${authority.label}: ${resolved} resolved, ${review} for review`)
 
+    const version = setNodeResults(nodeId, augmented as unknown as Record<string, unknown>[])
     updateNodeData(nodeId, {
-      status:        'success',
-      statusMessage: `✓ ${resolved} resolved · ${review} for review`,
-      results:       augmented,
-      count:         augmented.length,
-      resolvedCount: resolved,
-      reviewCount:   review,
+      status:         'success',
+      statusMessage:  `✓ ${resolved} resolved · ${review} for review`,
+      count:          augmented.length,
+      resolvedCount:  resolved,
+      reviewCount:    review,
+      resultsVersion: version,
     })
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err)
@@ -111,7 +109,6 @@ export const runReconciliationNode: NodeRunner = async (
     updateNodeData(nodeId, {
       status:        'error',
       statusMessage: `✗ ${msg}`,
-      results:       undefined,
       count:         0,
       resolvedCount: 0,
       reviewCount:   0,

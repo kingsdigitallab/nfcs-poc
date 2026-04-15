@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
 import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
+import { setNodeResults } from '../store/resultsStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { ReconciliationResult } from '../utils/reconciliationService'
@@ -138,16 +139,22 @@ export function TableOutputNode({ id, data }: NodeProps) {
   // Sync merged records into this node's own data so downstream nodes
   // (e.g. MapOutputNode) can read them via useUpstreamRecords.
   // Key includes selection state so downstream sees user overrides.
-  const prevKeyRef = useRef('')
+  // Pass-through: write merged records to the out-of-band store so downstream
+  // nodes (Map, Timeline, Export) can read them. Uses a cheap fingerprint
+  // instead of joining all IDs — avoids O(n) string creation on every render.
+  const prevFingerprintRef = useRef('')
   useEffect(() => {
+    const recs   = effectiveRecords ?? []
     const selKey = Object.entries(selections).map(([k, v]) => `${k}=${v.qid}`).join(',')
-    const key = `${status}:${selKey}:${(effectiveRecords ?? []).map(r => r.id).join('\n')}`
-    if (key === prevKeyRef.current) return
-    prevKeyRef.current = key
+    const fp     = `${status}:${selKey}:${recs.length}:${recs[0]?.id ?? ''}:${recs[recs.length - 1]?.id ?? ''}`
+    if (fp === prevFingerprintRef.current) return
+    prevFingerprintRef.current = fp
+
+    const version = setNodeResults(id, recs as Record<string, unknown>[])
     updateNodeData(id, {
-      results: effectiveRecords ?? [],
-      count:   effectiveRecords?.length ?? 0,
+      count:          recs.length,
       status,
+      resultsVersion: version,
     })
   }, [effectiveRecords, selections, status, id, updateNodeData])
 

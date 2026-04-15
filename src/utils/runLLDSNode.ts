@@ -8,12 +8,12 @@
  * Runners MUST NOT throw. Own all error handling.
  */
 
-import type { Node, Edge }       from '@xyflow/react'
 import type { NodeRunner }        from './nodeRunners'
 import { fetchLLDSRecords }       from './llds'
 import { adaptLLDSRecords }       from './lldsAdapter'
 import { loadCache, saveCache, isCacheStale } from './lldsCache'
 import type { LLDSSearchNodeData } from '../nodes/LLDSSearchNode'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 export const runLLDSNode: NodeRunner = async (
   nodeId,
@@ -27,7 +27,6 @@ export const runLLDSNode: NodeRunner = async (
 
   const d = node.data as LLDSSearchNodeData
 
-  // Resolve wired-or-inline params
   const resolve = (handleId: string, dataKey: keyof LLDSSearchNodeData): string => {
     const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
     if (edge) {
@@ -46,18 +45,13 @@ export const runLLDSNode: NodeRunner = async (
     updateNodeData(nodeId, {
       status:        'error',
       statusMessage: '✗ query is required',
-      results:       undefined,
       count:         0,
     })
     return
   }
 
-  updateNodeData(nodeId, {
-    status:        'loading',
-    statusMessage: 'Fetching…',
-    results:       undefined,
-    count:         0,
-  })
+  clearNodeResults(nodeId)
+  updateNodeData(nodeId, { status: 'loading', statusMessage: 'Fetching…', count: 0 })
 
   const cache = loadCache()
 
@@ -65,11 +59,12 @@ export const runLLDSNode: NodeRunner = async (
     if (useCache && cache && !isCacheStale(cache)) {
       console.log('[LLDS] using fresh cache from', new Date(cache.ts).toISOString())
       const records = adaptLLDSRecords(cache.items).map(r => ({ ...r, _cached: true }))
+      const version = setNodeResults(nodeId, records as Record<string, unknown>[])
       updateNodeData(nodeId, {
-        status:        'cached',
-        statusMessage: `📦 ${records.length} results (cached)`,
-        results:       records,
-        count:         records.length,
+        status:         'cached',
+        statusMessage:  `📦 ${records.length} results (cached)`,
+        count:          records.length,
+        resultsVersion: version,
       })
       return
     }
@@ -86,22 +81,23 @@ export const runLLDSNode: NodeRunner = async (
 
     console.log(`[LLDS] ${msg}`, records[0])
 
+    const version = setNodeResults(nodeId, records as Record<string, unknown>[])
     updateNodeData(nodeId, {
-      status:        'success',
-      statusMessage: msg,
-      results:       records,
-      count:         records.length,
+      status:         'success',
+      statusMessage:  msg,
+      count:          records.length,
+      resultsVersion: version,
     })
   } catch (err) {
-    // On any error fall back to whatever is in cache (even if stale)
     if (cache) {
       console.warn('[LLDS] live fetch failed, falling back to cache:', err)
       const records = adaptLLDSRecords(cache.items).map(r => ({ ...r, _cached: true }))
+      const version = setNodeResults(nodeId, records as Record<string, unknown>[])
       updateNodeData(nodeId, {
-        status:        'cached',
-        statusMessage: `📦 ${records.length} results (cached — service unavailable)`,
-        results:       records,
-        count:         records.length,
+        status:         'cached',
+        statusMessage:  `📦 ${records.length} results (cached — service unavailable)`,
+        count:          records.length,
+        resultsVersion: version,
       })
     } else {
       const msg = err instanceof Error ? err.message : String(err)
@@ -109,7 +105,6 @@ export const runLLDSNode: NodeRunner = async (
       updateNodeData(nodeId, {
         status:        'error',
         statusMessage: `✗ ${msg}`,
-        results:       undefined,
         count:         0,
       })
     }

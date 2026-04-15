@@ -2,22 +2,20 @@
  * Reads and merges UnifiedRecord[] from ALL upstream nodes connected to the
  * 'data' input handle of the given node.
  *
- * Supporting multiple sources (e.g. GBIFSearchNode + LLDSSearchNode both wired
- * to the same TableOutputNode) is handled here automatically — output nodes
- * need no knowledge of how many sources feed them.
- *
- * Reactivity: both useNodes() and useEdges() re-render this hook's consumer
- * whenever any node data or edge changes, so output nodes update automatically
- * when an upstream node finishes running.
+ * Records are stored out-of-band in resultsStore (not in React Flow node data)
+ * to keep React Flow state small. useNodes() still provides the reactivity
+ * signal — when any upstream node calls updateNodeData (with a new
+ * resultsVersion), this hook re-runs and reads fresh records from the store.
  */
 import { useNodes, useEdges } from '@xyflow/react'
+import { getNodeResults } from '../store/resultsStore'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export interface UpstreamData {
   records: UnifiedRecord[] | undefined
   /** Sum of count fields from all connected sources */
   count: number
-  /** 'loading' if any source is loading; 'success' / 'cached' if all done; 'idle' otherwise */
+  /** 'loading' if any source is loading; 'success'/'cached' if all done; 'idle' otherwise */
   status: string
   /** True if at least one edge is connected */
   connected: boolean
@@ -46,9 +44,10 @@ export function useUpstreamRecords(nodeId: string): UpstreamData {
     const d = src.data as Record<string, unknown>
 
     if (d.status === 'loading') anyLoading = true
-    if (d.status === 'success' || d.status === 'cached') anySuccess = true
+    if (d.status === 'success' || d.status === 'cached' || d.status === 'ready') anySuccess = true
 
-    const recs = d.results as UnifiedRecord[] | undefined
+    // Read records from the out-of-band store (not from node data)
+    const recs = getNodeResults(src.id) as UnifiedRecord[] | undefined
     if (recs) merged.push(...recs)
     totalCount += (d.count as number | undefined) ?? 0
   }
@@ -56,10 +55,10 @@ export function useUpstreamRecords(nodeId: string): UpstreamData {
   const status = anyLoading ? 'loading' : anySuccess ? 'success' : 'idle'
 
   return {
-    records: merged.length > 0 ? merged : undefined,
-    count: totalCount,
+    records:     merged.length > 0 ? merged : undefined,
+    count:       totalCount,
     status,
-    connected: true,
+    connected:   true,
     sourceCount: inputEdges.length,
   }
 }

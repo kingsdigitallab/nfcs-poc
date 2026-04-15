@@ -13,6 +13,7 @@
 import { useState, useCallback, useRef } from 'react'
 import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
 import { scanDirectory, TYPE_LABEL_MAP, type FileRecord } from '../utils/fileReaders'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 // ── Node data (persisted in React Flow node state) ────────────────────────────
 
@@ -62,11 +63,11 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
     const fileTypes = (d.fileTypes as string[] | undefined) ?? Object.keys(TYPE_LABEL_MAP)
     const maxFiles  = Number(d.maxFiles) || 50
 
+    clearNodeResults(id)
     updateNodeData(id, {
       status:        'scanning',
       statusMessage: 'Scanning…',
       folderName:    handle.name,
-      results:       undefined,
       count:         0,
     })
     setScanSummary('')
@@ -87,12 +88,13 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
       setScanSummary(summary)
       console.log(`[LocalFolder] scanned ${handle.name}: found ${totalFound}, loaded ${files.length}, skipped ${skipped}`)
 
+      const version = setNodeResults(id, files as unknown as Record<string, unknown>[])
       updateNodeData(id, {
-        status:        'ready',
-        statusMessage: `✓ ${files.length} files`,
-        folderName:    handle.name,
-        results:       files,
-        count:         files.length,
+        status:         'ready',
+        statusMessage:  `✓ ${files.length} files`,
+        folderName:     handle.name,
+        count:          files.length,
+        resultsVersion: version,
       })
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err)

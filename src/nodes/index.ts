@@ -1,5 +1,7 @@
 import { LocalFolderSourceNode } from './LocalFolderSourceNode'
 import { OllamaNode }            from './OllamaNode'
+import { OllamaFieldNode }       from './OllamaFieldNode'
+import { URLFetchNode }          from './URLFetchNode'
 import { ParamNode } from './ParamNode'
 import { GBIFSearchNode } from './GBIFSearchNode'
 import { LLDSSearchNode } from './LLDSSearchNode'
@@ -13,11 +15,15 @@ import { JSONOutputNode }     from './JSONOutputNode'
 import { MapOutputNode }      from './MapOutputNode'
 import { TimelineOutputNode } from './TimelineOutputNode'
 import { ExportNode }         from './ExportNode'
+import { OllamaOutputNode }   from './OllamaOutputNode'
+import { HTMLSectionNode }    from './HTMLSectionNode'
 
 export const nodeTypes = {
   param:             ParamNode,
   localFolderSource: LocalFolderSourceNode,
   ollamaNode:        OllamaNode,
+  ollamaField:       OllamaFieldNode,
+  urlFetch:          URLFetchNode,
   gbifSearch:     GBIFSearchNode,
   lldsSearch:     LLDSSearchNode,
   adsSearch:      ADSSearchNode,
@@ -30,4 +36,6 @@ export const nodeTypes = {
   mapOutput:      MapOutputNode,
   timelineOutput: TimelineOutputNode,
   export:         ExportNode,
+  ollamaOutput:   OllamaOutputNode,
+  htmlSection:    HTMLSectionNode,
 }

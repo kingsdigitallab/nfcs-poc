@@ -1,14 +1,16 @@
 /**
  * runFilterTransformNode.ts — NodeRunner for FilterTransformNode.
  *
- * Reads upstream records, applies filter and/or transform operations in order,
- * and writes the result to its own data.results so downstream nodes can read it.
+ * Reads upstream records from the out-of-band resultsStore (not node data),
+ * applies filter and/or transform operations, and writes results back to the
+ * store so downstream nodes can read them.
  */
 
 import type { NodeRunner } from './nodeRunners'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { FilterTransformNodeData } from '../nodes/FilterTransformNode'
 import { applyFilters, applyTransforms } from './filterTransformUtils'
+import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 export const runFilterTransformNode: NodeRunner = async (
   nodeId,
@@ -22,20 +24,21 @@ export const runFilterTransformNode: NodeRunner = async (
 
   const d = node.data as FilterTransformNodeData
 
-  // ── collect upstream records ───────────────────────────────────────────────
+  // Collect upstream records from the out-of-band store
   const inputEdges = edges.filter(e => e.target === nodeId && e.targetHandle === 'data')
   const upstream: UnifiedRecord[] = []
   for (const edge of inputEdges) {
     const src  = nodes.find(n => n.id === edge.source)
-    const recs = (src?.data as { results?: UnifiedRecord[] })?.results
+    if (!src) continue
+    const recs = getNodeResults(src.id) as UnifiedRecord[] | undefined
     if (recs) upstream.push(...recs)
   }
 
   if (upstream.length === 0) {
+    clearNodeResults(nodeId)
     updateNodeData(nodeId, {
       status:        'error',
       statusMessage: '✗ No upstream records',
-      results:       [],
       inputCount:    0,
       outputCount:   0,
     })
@@ -52,20 +55,21 @@ export const runFilterTransformNode: NodeRunner = async (
       result = applyTransforms(result, d.transformOps ?? [])
     }
 
+    const version = setNodeResults(nodeId, result as Record<string, unknown>[])
     updateNodeData(nodeId, {
-      status:        'success',
-      statusMessage: `✓ ${upstream.length} → ${result.length}`,
-      results:       result,
-      inputCount:    upstream.length,
-      outputCount:   result.length,
+      status:         'success',
+      statusMessage:  `✓ ${upstream.length} → ${result.length}`,
+      inputCount:     upstream.length,
+      outputCount:    result.length,
+      resultsVersion: version,
     })
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err)
     console.error('[FilterTransform] error', msg)
+    clearNodeResults(nodeId)
     updateNodeData(nodeId, {
       status:        'error',
       statusMessage: `✗ ${msg}`,
-      results:       undefined,
       inputCount:    upstream.length,
       outputCount:   0,
     })
