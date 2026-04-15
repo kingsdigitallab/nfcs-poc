@@ -20,7 +20,7 @@ A node-based visual workflow editor for federating UK Arts & Humanities research
 
 ## Vite Proxy Rules (vite.config.ts)
 
-All five proxies are live. Use the proxy path prefix in all frontend fetch calls:
+All proxies are live. Use the proxy path prefix in all frontend fetch calls:
 
 | Prefix | Target | Reason |
 |--------|--------|--------|
@@ -29,8 +29,25 @@ All five proxies are live. Use the proxy path prefix in all frontend fetch calls
 | `/mds-proxy/*` | `https://museumdata.uk/*` | No CORS |
 | `/reconcile-proxy/*` | `https://wikidata.reconci.link/*` | 307 redirect strips CORS headers in browser |
 | `/ollama/*` | `http://localhost:11434/*` | Avoids cross-port CORS for local Ollama |
+| `/url-proxy?url=<encoded>` | *any* URL | Vite middleware (not a proxy rule); see below |
 
 The reconcile proxy is especially important: `wikidata.reconci.link` returns a 307 that strips CORS headers in the browser. The Vite proxy sidesteps the redirect entirely.
+
+### /url-proxy middleware
+
+Implemented as a custom Vite plugin in `vite.config.ts` (`configureServer` hook). Handles GET requests to `/url-proxy?url=<encoded>[&js=true][&wait=<strategy>]` entirely on the Node.js side.
+
+- **Simple path** (`js` absent or `false`): uses Node 18+ `fetch()` with a 30s timeout and a browser-like UA.
+- **JS-render path** (`js=true`): launches a Puppeteer headless Chrome instance (singleton, auto-reset on disconnect), opens the URL in a new page, waits for the chosen load event, and returns `page.content()`.
+
+Puppeteer singleton details:
+- First request launches the browser; subsequent requests reuse it.
+- `browser.on('disconnected')` clears the singleton so the next request re-launches cleanly.
+- Request interception aborts `image`, `font`, and `media` resource types to reduce load time and prevent Chrome OOM.
+- Realistic Chrome 124 desktop UA avoids bot-detection connection resets.
+- Fatal error patterns (`Connection closed`, `Target closed`, `Session closed`, `Protocol error`) reset the singleton and return 502. Non-fatal navigation errors (e.g. `ERR_ABORTED` after content was delivered) are logged but ignored; `page.content()` is still attempted.
+
+Wait strategies (passed via `&wait=`): `networkidle2` (default), `networkidle0`, `domcontentloaded`.
 
 ---
 
@@ -41,30 +58,36 @@ nfcs-poc/
 ├── CLAUDE.md
 ├── README.md
 ├── package.json
-├── vite.config.ts          # Dev server + all five CORS proxy rules
+├── vite.config.ts          # Dev server + all CORS proxy rules + url-proxy middleware
 ├── tsconfig.json
 ├── tsconfig.app.json       # lib includes DOM.AsyncIterable (File System Access API)
 ├── index.html
 └── src/
     ├── main.tsx
-    ├── App.tsx              # Canvas, sidebar, Run All button, node factories, templates, debug panel
+    ├── App.tsx              # Canvas, sidebar (collapsible groups), Run All, node factories, templates, debug panel
     ├── index.css
     ├── types/
     │   └── UnifiedRecord.ts       # Canonical cross-service record type
+    ├── store/
+    │   └── resultsStore.ts        # Out-of-band record store (module-level Map + version counter)
     ├── hooks/
-    │   └── useUpstreamRecords.ts  # Reactive multi-source merge hook
+    │   └── useUpstreamRecords.ts  # Reactive multi-source merge hook (reads from resultsStore)
     ├── nodes/
     │   ├── index.ts               # nodeTypes registry for React Flow
     │   ├── ParamNode.tsx          # Text / Integer value node
     │   ├── GBIFSearchNode.tsx     # GBIF Occurrence API
     │   ├── LLDSSearchNode.tsx     # LLDS DSpace REST (with cache fallback)
-    │   ├── ADSSearchNode.tsx      # ADS Data Catalogue API
+    │   ├── ADSSearchNode.tsx      # ADS Data Catalogue API (with fetchAll pagination)
     │   ├── MDSSearchNode.tsx      # Museum Data Service (HTML scraper)
     │   ├── LocalFolderSourceNode.tsx # File System Access API + fileReaders.ts
     │   ├── FilterTransformNode.tsx # Filter/transform processing node
     │   ├── SpatialFilterNode.tsx   # Leaflet bbox draw → filter by lat/lon
     │   ├── ReconciliationNode.tsx  # Wikidata reconciliation node
     │   ├── OllamaNode.tsx          # Local LLM via Ollama (streaming /api/chat)
+    │   ├── OllamaFieldNode.tsx     # LLM inference on a single chosen field (per-record or aggregate)
+    │   ├── OllamaOutputNode.tsx    # Display-only node for Ollama inference text
+    │   ├── URLFetchNode.tsx        # Fetch URL field content; stores fetchedContent + fetchedHtml
+    │   ├── HTMLSectionNode.tsx     # CSS selector extraction from fetchedHtml with structure picker
     │   ├── ReconciledCell.tsx      # Shared universal cell renderer (see below)
     │   ├── TableOutputNode.tsx     # Paginated table output
     │   ├── JSONOutputNode.tsx      # Syntax-highlighted JSON viewer
@@ -87,11 +110,12 @@ nfcs-poc/
         ├── exportUtils.ts           # CSV / JSON / GeoJSON serialisers + download
         ├── runGBIFNode.ts           # NodeRunner for gbifSearch
         ├── runLLDSNode.ts           # NodeRunner for lldsSearch
-        ├── runADSNode.ts            # NodeRunner for adsSearch
+        ├── runADSNode.ts            # NodeRunner for adsSearch (with fetchAll pagination)
         ├── runMDSNode.ts            # NodeRunner for mdsSearch
         ├── runReconciliationNode.ts # NodeRunner for reconciliation
         ├── runFilterTransformNode.ts # NodeRunner for filterTransform
         ├── runSpatialFilterNode.ts  # NodeRunner for spatialFilter
+        ├── runHTMLSectionNode.ts    # NodeRunner for htmlSection
         ├── nodeRunners.ts           # Registry: nodeType → NodeRunner
         └── runWorkflow.ts           # Topological executor (Kahn's algorithm)
 ```
@@ -121,6 +145,9 @@ nfcs-poc/
 | `spatialFilter` | `SpatialFilterNode` | Leaflet map with draw tool; keeps records within the drawn bbox. Cyan `#0891b2` header. |
 | `reconciliation` | `ReconciliationNode` | Wikidata field reconciler. Violet `#7c3aed` header. |
 | `ollamaNode` | `OllamaNode` | Streaming local LLM via Ollama `/api/chat`. Deep indigo `#312e81` header. No runner — streaming requires component-level state. |
+| `ollamaField` | `OllamaFieldNode` | LLM inference on a single chosen field. Per-record or aggregate mode. Dark indigo `#1e1b4b` header. No runner — component-driven. |
+| `urlFetch` | `URLFetchNode` | Follows a URL field in each record, fetches via `/url-proxy`, adds `fetchedContent` (plain text) and `fetchedHtml` (cleaned body HTML). Dark sky `#0c4a6e` header. No runner — component-driven. |
+| `htmlSection` | `HTMLSectionNode` | Extracts a CSS-selector-targeted section from `fetchedHtml`; overwrites `fetchedContent`. Structural picker shows headings/landmarks. Dark green `#065f46` header. Has runner. |
 
 ### Output
 | Node type key | Component | Description |
@@ -130,6 +157,7 @@ nfcs-poc/
 | `mapOutput` | `MapOutputNode` | Leaflet map. Plots records with `decimalLatitude`/`decimalLongitude`. |
 | `timelineOutput` | `TimelineOutputNode` | SVG timeline. Handles ISO dates, bare years, BCE dates (`-1199`). |
 | `export` | `ExportNode` | Downloads CSV / JSON / GeoJSON. Amber `#b45309` header. |
+| `ollamaOutput` | `OllamaOutputNode` | Card list of Ollama inference text. Reads `ollamaResponse` from upstream. Near-black `#0f172a` header. |
 
 ---
 
@@ -144,7 +172,41 @@ nfcs-poc/
 7. Add typed data interface import + union to `AppNode` in `src/App.tsx`.
 8. If service lacks permissive CORS, add proxy rule to `vite.config.ts`.
 
-**Exception — nodes that cannot use a runner:** Some nodes must handle their own async logic in the component because they require direct user gestures (File System Access API) or maintain streaming state. These nodes skip steps 1–2 and are not included in `nodeRunners`. They are therefore excluded from **Run All**. Currently: `localFolderSource`, `ollamaNode`.
+**Exception — nodes that cannot use a runner:** Some nodes must handle their own async logic in the component because they require direct user gestures (File System Access API), maintain streaming state, or manage their own abort/cancel lifecycle. These nodes skip steps 1–2 and are not included in `nodeRunners`. They are therefore excluded from **Run All**. Currently: `localFolderSource`, `ollamaNode`, `ollamaField`, `urlFetch`.
+
+---
+
+## Results Store (out-of-band record store)
+
+**Location**: `src/store/resultsStore.ts`
+
+Large record arrays must NOT be stored in React Flow node data (`updateNodeData`). Storing them there causes every `useNodes()` subscriber to re-render on every update — O(n) re-renders with large result sets causes severe UI sluggishness.
+
+Instead, all runners and component-driven nodes write records to a module-level `Map`:
+
+```typescript
+const _store = new Map<string, Record<string, unknown>[]>()
+let _version = 0
+
+export function setNodeResults(nodeId: string, records: AnyRecord[]): number {
+  _store.set(nodeId, records)
+  return ++_version          // monotonically increasing version number
+}
+export function getNodeResults(nodeId: string): AnyRecord[] | undefined {
+  return _store.get(nodeId)
+}
+export function clearNodeResults(nodeId: string): void {
+  _store.delete(nodeId)
+}
+```
+
+**Reactivity signal**: runners call `updateNodeData(id, { ..., resultsVersion: version })` after `setNodeResults`. This puts only a small integer into React Flow state, triggering a minimal re-render. `useUpstreamRecords` reads `resultsVersion` from node data purely as a signal, then calls `getNodeResults(src.id)` for the actual records.
+
+**Rules:**
+- Always call `clearNodeResults(nodeId)` at the start of a run, before any async work.
+- Always call `setNodeResults(nodeId, records)` and capture the returned version.
+- Always pass `resultsVersion` to `updateNodeData` so downstream hooks react.
+- Never put `results: [...]` arrays into `updateNodeData` calls.
 
 ---
 
@@ -153,7 +215,8 @@ nfcs-poc/
 - All adapters must return `UnifiedRecord[]` — output nodes never touch raw API responses.
 - Service-specific fields live under a namespace: `record.gbif.*`, `record.llds.*`, `record.ads.*`, `record.mds.*`.
 - After reconciliation, records gain `${fieldName}_reconciled` keys (see `ReconciliationResult` type).
-- `useUpstreamRecords(nodeId)` merges `data.results` from **all** edges with `targetHandle === 'data'`, enabling multi-source aggregation automatically.
+- `useUpstreamRecords(nodeId)` merges records from **all** edges with `targetHandle === 'data'` by reading from `resultsStore`, enabling multi-source aggregation automatically.
+- Records added by `URLFetchNode` gain `fetchedContent` (plain text) and `fetchedHtml` (cleaned body HTML). These are the inputs for `HTMLSectionNode` and `OllamaFieldNode`.
 
 ### NodeRunner contract
 
@@ -205,6 +268,19 @@ interface UnifiedRecord {
   llds?: Record<string, unknown>
   ads?:  Record<string, unknown>
   mds?:  Record<string, unknown>
+
+  // Added by URLFetchNode
+  fetchedUrl?:     string   // the URL that was fetched
+  fetchedContent?: string   // plain text extracted from page body
+  fetchedHtml?:    string   // cleaned body HTML (noise elements removed); input for HTMLSectionNode
+  fetchStatus?:    string   // 'ok' | 'no-url' | 'error: <msg>'
+  fetchedAt?:      string   // ISO timestamp
+
+  // Added by HTMLSectionNode (overwrites fetchedContent)
+  htmlSelector?: string     // CSS selector used, for provenance
+
+  // Added by OllamaNode / OllamaFieldNode
+  ollamaModel?, ollamaPrompt?, ollamaResponse?, ollamaProcessedAt?
 
   // Added by ReconciliationNode — detected by isReconciledValue()
   [fieldName_reconciled]: ReconciliationResult | null
@@ -287,7 +363,7 @@ interface FilterTransformNodeData {
   filterOps:    FilterOp[]
   transformOps: TransformOp[]
   status: string; statusMessage: string
-  results?: UnifiedRecord[]; inputCount: number; outputCount: number
+  inputCount: number; outputCount: number
 }
 ```
 
@@ -324,7 +400,94 @@ The `isReconciledValue(v)` check is essential — without it, `*_reconciled` key
 
 `TableOutputNode` has both an input handle (`id="data"`, left) and a **pass-through output handle** (`id="results"`, right, positioned at `top: 13` to align with the header). This lets downstream nodes (MapOutputNode, TimelineOutputNode, ExportNode) read the merged/processed records from a table node rather than directly from source nodes.
 
-Loop prevention: uses `useRef` comparing a string key of `${status}:${recordIds}` before calling `updateNodeData` — prevents infinite render loops since `useNodes()` fires on every `updateNodeData` call.
+Loop prevention: uses `useRef` comparing an O(1) fingerprint string `${status}:${selKey}:${recs.length}:${recs[0]?.id}:${recs[recs.length-1]?.id}` before calling `updateNodeData` — prevents infinite render loops since `useNodes()` fires on every `updateNodeData` call.
+
+---
+
+## OllamaFieldNode
+
+**Location**: `src/nodes/OllamaFieldNode.tsx`
+
+Sends a chosen field from upstream records to a local Ollama model. Two modes:
+
+- **Per-record**: each record's field value is sent individually; the response is stored as `ollamaResponse` on that record.
+- **Aggregate**: all field values from all records are sent as a single prompt; the response is stored on a single synthetic record.
+
+Field picker: auto-populated from primitive (non-object, non-array) fields of the first upstream record.
+
+Template variables:
+- `{{value}}` — the field value for the current record (per-record mode)
+- `{{field}}` — the field name
+- `{{count}}` — number of records (aggregate mode)
+- `{{values}}` — newline-joined list of all values (aggregate mode)
+
+Header `#1e1b4b`. **Not in `nodeRunners`** — component-driven with its own Run button.
+
+Output fields: `ollamaModel`, `ollamaPrompt`, `ollamaResponse`, `ollamaProcessedAt`, `ollamaMode`.
+
+---
+
+## URLFetchNode
+
+**Location**: `src/nodes/URLFetchNode.tsx`
+
+Follows a URL field in each upstream record, fetches the page via `/url-proxy`, and enriches each record with:
+
+- `fetchedUrl` — the URL requested
+- `fetchedContent` — plain text extracted from the cleaned page body
+- `fetchedHtml` — cleaned body HTML (noise selectors removed: `script, style, nav, footer, header, aside, noscript, iframe, [aria-hidden="true"]`); input for `HTMLSectionNode`
+- `fetchStatus` — `'ok'` | `'no-url'` | `'error: <message>'`
+- `fetchedAt` — ISO timestamp
+
+URL field auto-detection: scans the first upstream record for fields whose name matches `/url|link|href|uri|pid/i` or whose value starts with `http://` / `https://`.
+
+Options:
+- **Strip HTML**: always on for HTML responses; produces `fetchedContent` from `body.textContent`
+- **Wait for JS rendering**: sends `&js=true` to the proxy, triggering the Puppeteer path
+- **Wait for** (when JS on): `networkidle2` / `networkidle0` / `domcontentloaded`
+- **Max chars**: truncates `fetchedContent` (default 8000)
+- **Timeout**: per-URL timeout in seconds (simple path only; JS path uses browser 45s hard limit)
+
+Header `#0c4a6e`. **Not in `nodeRunners`** — component-driven. Has cancel support via `AbortController`.
+
+---
+
+## HTMLSectionNode
+
+**Location**: `src/nodes/HTMLSectionNode.tsx` + `src/utils/runHTMLSectionNode.ts`
+
+Reads `fetchedHtml` from upstream records, applies a CSS selector via `DOMParser.querySelectorAll`, joins matched elements' `textContent`, and **overwrites `fetchedContent`** on each record with the extracted section text.
+
+Also adds `htmlSelector` to each record for provenance.
+
+UI features:
+- **Selector field** — any valid CSS selector (default `main, article`)
+- **▼ Pick from page structure** — button toggles a structural analysis pane. Analyses the first upstream record's `fetchedHtml` and surfaces clickable elements:
+  - Semantic landmarks: `main`, `article`, `[role="main"]`
+  - Named sections/divs: `section#id`, `div#id`, `article#id`
+  - Headings: `h1`, `h2`, `h3` (up to 20 total items shown)
+- **Live preview** — shows the first 300 chars of what the current selector would extract from the first record (updates reactively as selector changes)
+- **Separator** — how to join multiple matched elements: `\n\n` / `\n` / ` | ` / space
+- **Max chars** — truncation limit (default 8000)
+
+Has a NodeRunner (`htmlSection` in `nodeRunners.ts`). Included in **Run All**.
+
+Header `#065f46`.
+
+---
+
+## OllamaOutputNode
+
+**Location**: `src/nodes/OllamaOutputNode.tsx`
+
+Pure display node for Ollama inference output. Reads `ollamaResponse` from upstream records via `useUpstreamRecords`. Renders a scrollable card list where each card shows:
+- Record identifier (title, filename, or id)
+- Aggregate pill when `ollamaMode === 'aggregate'`
+- The full `ollamaResponse` text (expand/collapse per card)
+- Copy button per card
+- Copy-all button in header
+
+Header `#0f172a`. No pass-through output handle. No runner.
 
 ---
 
@@ -372,6 +535,13 @@ NHM dataset key: `7e380070-f762-11e1-a439-00145eb45e9a`
 **Auth**: None.
 
 `GET /search?q={query}&size={size}&from={offset}`
+
+**Hard server-side limit**: 50 records per request. `size` values above 50 are silently capped.
+
+**Fetch All pagination** (`fetchAll: true` checkbox in UI):
+1. Probe: `size=1` → get `total.value`
+2. Loop: `size=50&from=0`, `size=50&from=50`, … until all pages fetched
+3. Status messages: `"Probing total…"` → `"Page N of M (X fetched)…"` → `"✓ X of Y"`
 
 Response: `{ total: { value }, hits: [{ id, data: { title, description, creator[], spatial[], temporal[], nativeSubject[], derivedSubject[], country[], originalId, issued, language, resourceType } }] }`
 
@@ -479,16 +649,26 @@ Output fields added to each record: `ollamaModel`, `ollamaPrompt`, `ollamaRespon
 
 ---
 
+## Sidebar
+
+Groups: **Input**, **Source**, **Process**, **Output**. Each group heading is a clickable toggle — click to collapse/expand. State lives in `useState` (resets on page refresh). Sidebar has `overflowY: auto` to scroll when fully expanded.
+
+---
+
 ## Known Architectural Decisions & Gotchas
 
 1. **`isReconciledValue` lives in `reconciliationService.ts`** — do not redefine it elsewhere.
 2. **`renderCell` lives in `ReconciledCell.tsx`** — do not write local `fmt()` functions in output nodes.
 3. **`RECONCILE_API` uses proxy path** — never change this to a direct `https://` URL.
 4. **TransformOp type changes require full op replacement** — discriminated union; partial merge corrupts the object.
-5. **TableOutputNode loop prevention** — `useRef` key comparison before `updateNodeData`; do not remove this.
+5. **TableOutputNode loop prevention** — `useRef` fingerprint comparison before `updateNodeData`; do not remove this.
 6. **`allFlatColumns` must include `isReconciledValue` check** — without it, `*_reconciled` columns disappear.
 7. **MDS is capped at 200** — by design; amber badge warns users.
 8. **`useUpstreamRecords` merges by `targetHandle === 'data'`** — output handle id is `results` for pass-through.
 9. **`LocalFolderSourceNode` stores `dirHandle` in a `useRef`** — not in node data (not serialisable). Re-scan reuses the ref. The handle is lost on page refresh; user must pick again.
 10. **OllamaNode image prompt** — never put a raw base64 data URL into `{{content}}`; always blank it for image records and use the `images` field instead. See OllamaNode section above.
 11. **pdfjs-dist worker must stay on CDN** — importing the worker locally causes Vite bundler/worker thread issues. The `workerSrc` string in `fileReaders.ts` uses `pdfjsLib.version` to stay in sync with the installed package version.
+12. **Never store record arrays in React Flow node data** — use `setNodeResults` / `getNodeResults` from `resultsStore.ts`. Storing arrays in `updateNodeData` triggers O(n) re-renders across all `useNodes()` subscribers.
+13. **ADS hard limit is 50 per request** — the server silently caps `size` at 50 regardless of what you pass. Use the `fetchAll` pagination loop for complete result sets.
+14. **`fetchedHtml` is the cleaned body, not the raw response** — `URLFetchNode` removes noise selectors before storing. `HTMLSectionNode` reads `fetchedHtml`, not the original HTML. Do not pass raw responses through.
+15. **Puppeteer singleton resets on `disconnected`** — the `_browserPromise` variable is set to `null` in the `disconnected` handler so the next `/url-proxy?js=true` request gets a fresh browser. Do not remove this handler.
