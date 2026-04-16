@@ -64,7 +64,7 @@ nfcs-poc/
 ├── index.html
 └── src/
     ├── main.tsx
-    ├── App.tsx              # Canvas, sidebar (collapsible groups), Run All, node factories, templates, debug panel
+    ├── App.tsx              # Canvas, sidebar (collapsible groups), Run All, node factories, save/load
     ├── index.css
     ├── types/
     │   └── UnifiedRecord.ts       # Canonical cross-service record type
@@ -94,6 +94,9 @@ nfcs-poc/
     │   ├── MapOutputNode.tsx       # Leaflet map (lat/lon records)
     │   ├── TimelineOutputNode.tsx  # SVG horizontal timeline
     │   ├── ExportNode.tsx          # CSV / JSON / GeoJSON download
+    │   ├── OllamaOutputNode.tsx    # Card list of Ollama inference text
+    │   ├── QuickViewNode.tsx       # Full field inspector — no truncation, record navigation
+    │   ├── CommentNode.tsx         # Canvas annotation label — resizable, no connectors
     │   └── ExpandedOutputPanel.tsx # Full-screen panel (double-click Table/JSON)
     └── utils/
         ├── fileReaders.ts          # FileRecord type + PDF/XML/text/image extraction
@@ -108,6 +111,8 @@ nfcs-poc/
         ├── reconciliationService.ts # W3C Reconciliation API client + types
         ├── filterTransformUtils.ts  # Pure filter/transform functions
         ├── exportUtils.ts           # CSV / JSON / GeoJSON serialisers + download
+        ├── nodeIdCounter.ts         # newId(prefix) + bumpCounterPast(ids[]) — extracted from App.tsx
+        ├── workflowIO.ts            # downloadWorkflow() + parseWorkflowFile() + hydrateNodes()
         ├── runGBIFNode.ts           # NodeRunner for gbifSearch
         ├── runLLDSNode.ts           # NodeRunner for lldsSearch
         ├── runADSNode.ts            # NodeRunner for adsSearch (with fetchAll pagination)
@@ -116,6 +121,9 @@ nfcs-poc/
         ├── runFilterTransformNode.ts # NodeRunner for filterTransform
         ├── runSpatialFilterNode.ts  # NodeRunner for spatialFilter
         ├── runHTMLSectionNode.ts    # NodeRunner for htmlSection
+        ├── runURLFetchNode.ts       # NodeRunner for urlFetch
+        ├── runOllamaNode.ts         # NodeRunner for ollamaNode (streaming)
+        ├── runOllamaFieldNode.ts    # NodeRunner for ollamaField (streaming)
         ├── nodeRunners.ts           # Registry: nodeType → NodeRunner
         └── runWorkflow.ts           # Topological executor (Kahn's algorithm)
 ```
@@ -124,12 +132,17 @@ nfcs-poc/
 
 ## Node Types (all implemented and registered)
 
+### Canvas
+| Node type key | Component | Description |
+|---------------|-----------|-------------|
+| `comment` | `CommentNode` | Free-floating annotation label. No connectors. Resizable via `NodeResizer`. Amber style. |
+
 ### Input
 | Node type key | Component | Description |
 |---------------|-----------|-------------|
 | `param` | `ParamNode` | Holds a Text or Integer value; connects to search node input handles |
 
-### Source
+### Search
 | Node type key | Component | Service | CORS |
 |---------------|-----------|---------|------|
 | `gbifSearch` | `GBIFSearchNode` | GBIF Occurrence API | Permissive (direct fetch) |
@@ -144,9 +157,9 @@ nfcs-poc/
 | `filterTransform` | `FilterTransformNode` | Filter + transform records. Indigo `#4f46e5` header. |
 | `spatialFilter` | `SpatialFilterNode` | Leaflet map with draw tool; keeps records within the drawn bbox. Cyan `#0891b2` header. |
 | `reconciliation` | `ReconciliationNode` | Wikidata field reconciler. Violet `#7c3aed` header. |
-| `ollamaNode` | `OllamaNode` | Streaming local LLM via Ollama `/api/chat`. Deep indigo `#312e81` header. No runner — streaming requires component-level state. |
-| `ollamaField` | `OllamaFieldNode` | LLM inference on a single chosen field. Per-record or aggregate mode. Dark indigo `#1e1b4b` header. No runner — component-driven. |
-| `urlFetch` | `URLFetchNode` | Follows a URL field in each record, fetches via `/url-proxy`, adds `fetchedContent` (plain text) and `fetchedHtml` (cleaned body HTML). Dark sky `#0c4a6e` header. No runner — component-driven. |
+| `ollamaNode` | `OllamaNode` | Streaming local LLM via Ollama `/api/chat`. Deep indigo `#312e81` header. Has runner (`runOllamaNode`). |
+| `ollamaField` | `OllamaFieldNode` | LLM inference on a single chosen field. Per-record or aggregate mode. Dark indigo `#1e1b4b` header. Has runner (`runOllamaFieldNode`). |
+| `urlFetch` | `URLFetchNode` | Follows a URL field in each record, fetches via `/url-proxy`, adds `fetchedContent` (plain text) and `fetchedHtml` (cleaned body HTML). Dark sky `#0c4a6e` header. Has runner (`runURLFetchNode`). |
 | `htmlSection` | `HTMLSectionNode` | Extracts a CSS-selector-targeted section from `fetchedHtml`; overwrites `fetchedContent`. Structural picker shows headings/landmarks. Dark green `#065f46` header. Has runner. |
 
 ### Output
@@ -158,6 +171,7 @@ nfcs-poc/
 | `timelineOutput` | `TimelineOutputNode` | SVG timeline. Handles ISO dates, bare years, BCE dates (`-1199`). |
 | `export` | `ExportNode` | Downloads CSV / JSON / GeoJSON. Amber `#b45309` header. |
 | `ollamaOutput` | `OllamaOutputNode` | Card list of Ollama inference text. Reads `ollamaResponse` from upstream. Near-black `#0f172a` header. |
+| `quickView` | `QuickViewNode` | Full field inspector — no truncation, record navigation, copy button. Slate `#1e293b` header. No runner, no connectors. |
 
 ---
 
@@ -172,7 +186,41 @@ nfcs-poc/
 7. Add typed data interface import + union to `AppNode` in `src/App.tsx`.
 8. If service lacks permissive CORS, add proxy rule to `vite.config.ts`.
 
-**Exception — nodes that cannot use a runner:** Some nodes must handle their own async logic in the component because they require direct user gestures (File System Access API), maintain streaming state, or manage their own abort/cancel lifecycle. These nodes skip steps 1–2 and are not included in `nodeRunners`. They are therefore excluded from **Run All**. Currently: `localFolderSource`, `ollamaNode`, `ollamaField`, `urlFetch`.
+**Exception — nodes that cannot use a runner:** Some nodes must handle their own async logic in the component because they require direct user gestures (File System Access API). These nodes skip steps 1–2 and are not included in `nodeRunners`. They are therefore excluded from **Run All**. Currently: `localFolderSource` only.
+
+**Display-only / canvas nodes** (no data handles, no runner): `quickView`, `comment`. These skip steps 1–2 and also have no input/output handles. They are excluded from **Run All**.
+
+---
+
+## Workflow Save / Load
+
+**Location**: `src/utils/workflowIO.ts` + `src/utils/nodeIdCounter.ts`
+
+Workflows can be saved to and loaded from JSON files via the 💾 / 📂 buttons in the top bar.
+
+### Serialisation
+
+`downloadWorkflow(nodes, edges)` strips transient runtime fields before serialising:
+
+```typescript
+const TRANSIENT_FIELDS = new Set([
+  'results', 'status', 'statusMessage', 'count',
+  'inputCount', 'outputCount', 'resolvedCount', 'reviewCount',
+  'resultsVersion', '_capped', '_total', 'folderName',
+])
+```
+
+Only node configuration (field values, selectors, model names, etc.) and edge topology are persisted. Retrieved records are never saved.
+
+### Hydration
+
+`hydrateNodes(saved)` merges saved node data with `RUNTIME_DEFAULTS` (`status: 'idle'`, all counts 0) so nodes start in a clean state.
+
+### ID counter
+
+`src/utils/nodeIdCounter.ts` provides:
+- `newId(prefix)` — returns `"${prefix}-${counter++}"` — used in all node factory functions in `App.tsx`
+- `bumpCounterPast(ids[])` — called after loading a workflow to advance the counter past all loaded IDs, preventing ID collisions
 
 ---
 
@@ -230,6 +278,8 @@ export type NodeRunner = (
 ```
 
 **Runners must NEVER throw.** They own their error handling and must always call `updateNodeData` to leave the node in a terminal status (`'success'` | `'cached'` | `'error'`) before returning. `runWorkflow.ts` will catch any rogue throws and mark the node as errored, but do not rely on this.
+
+**Per-record error isolation**: runners for batch nodes (`runOllamaNode`, `runOllamaFieldNode`, `runURLFetchNode`) wrap each record's processing in an individual `try/catch`. A single failing record stores an error marker in its output field and the loop continues. `setNodeResults` is called after each record so partial results are preserved if the runner is interrupted.
 
 ### Execution model
 
@@ -421,7 +471,7 @@ Template variables:
 - `{{count}}` — number of records (aggregate mode)
 - `{{values}}` — newline-joined list of all values (aggregate mode)
 
-Header `#1e1b4b`. **Not in `nodeRunners`** — component-driven with its own Run button.
+Header `#1e1b4b`. Has runner (`runOllamaFieldNode`). Also has its own component-level Run button for interactive use.
 
 Output fields: `ollamaModel`, `ollamaPrompt`, `ollamaResponse`, `ollamaProcessedAt`, `ollamaMode`.
 
@@ -448,7 +498,7 @@ Options:
 - **Max chars**: truncates `fetchedContent` (default 8000)
 - **Timeout**: per-URL timeout in seconds (simple path only; JS path uses browser 45s hard limit)
 
-Header `#0c4a6e`. **Not in `nodeRunners`** — component-driven. Has cancel support via `AbortController`.
+Header `#0c4a6e`. Has runner (`runURLFetchNode`). Component-level cancel support via `AbortController`.
 
 ---
 
@@ -456,7 +506,7 @@ Header `#0c4a6e`. **Not in `nodeRunners`** — component-driven. Has cancel supp
 
 **Location**: `src/nodes/HTMLSectionNode.tsx` + `src/utils/runHTMLSectionNode.ts`
 
-Reads `fetchedHtml` from upstream records, applies a CSS selector via `DOMParser.querySelectorAll`, joins matched elements' `textContent`, and **overwrites `fetchedContent`** on each record with the extracted section text.
+Reads `fetchedHtml` from upstream records, applies a CSS selector via `DOMParser.querySelectorAll`, and **overwrites `fetchedContent`** on each record with the extracted section content.
 
 Also adds `htmlSelector` to each record for provenance.
 
@@ -466,7 +516,8 @@ UI features:
   - Semantic landmarks: `main`, `article`, `[role="main"]`
   - Named sections/divs: `section#id`, `div#id`, `article#id`
   - Headings: `h1`, `h2`, `h3` (up to 20 total items shown)
-- **Live preview** — shows the first 300 chars of what the current selector would extract from the first record (updates reactively as selector changes)
+- **Live preview** — shows the first 300 chars of what the current selector would extract from the first record (updates reactively as selector changes); labelled "HTML" or "text" depending on mode
+- **Preserve HTML structure** — checkbox (default off). When on, matched elements' `outerHTML` is used instead of `textContent`, preserving tags for downstream LLM or further parsing
 - **Separator** — how to join multiple matched elements: `\n\n` / `\n` / ` | ` / space
 - **Max chars** — truncation limit (default 8000)
 
@@ -488,6 +539,38 @@ Pure display node for Ollama inference output. Reads `ollamaResponse` from upstr
 - Copy-all button in header
 
 Header `#0f172a`. No pass-through output handle. No runner.
+
+---
+
+## QuickViewNode
+
+**Location**: `src/nodes/QuickViewNode.tsx`
+
+Full field inspector for a single record's field value — no truncation. Used to inspect long text fields such as `fetchedContent`, `ollamaResponse`, or `description`.
+
+- **Field picker** — dropdown populated from all keys across up to 20 upstream records
+- **Record navigation** — prev/next arrows; index clamped to `records.length - 1` to avoid out-of-bounds after upstream re-runs
+- **Value display** — full content in a scrollable `<pre>` block; objects/arrays formatted as JSON; reconciled values shown as label + QID
+- **Copy button** — copies the raw string value; shows "Copied!" for 1500 ms
+
+Header `#1e293b`. No connectors (no Handle components). No runner. Not included in **Run All**.
+
+---
+
+## CommentNode
+
+**Location**: `src/nodes/CommentNode.tsx`
+
+Free-floating canvas annotation with no input or output handles. Used to add labels, notes, or section headings to a workflow layout.
+
+- **Title** — single-line `<input>`, amber header strip (`#fef3c7`)
+- **Body** — multi-line `<textarea>` with `resize: none`; fills remaining height
+- **Resize** — `NodeResizer` from `@xyflow/react` visible when node is selected; amber handle/line style
+- Initial factory size: `{ width: 220, height: 120 }` set on the node `style` property
+- `spellCheck={false}` on both inputs
+- Both inputs carry `className="nodrag"` so text editing does not trigger canvas drag
+
+No runner. Not included in **Run All**.
 
 ---
 
@@ -641,9 +724,11 @@ Vision model detection: checks model name for `llava`, `vision`, `bakllava`, `mo
 - When `isVisionModel` is true AND a record has `contentType === 'image'`, the base64 data is stripped of its data URL prefix and sent as `images: [base64]` on the Ollama message object.
 - `{{content}}` in the prompt template is replaced with `''` (empty string) for image records — do NOT pass the raw data URL as text; it is a multi-MB blob the model cannot interpret as text.
 
-**Streaming:** Uses `stream: true` on `/api/chat`. Reads the response body as a `ReadableStream`, decodes newline-delimited JSON chunks, accumulates `chunk.message.content` deltas. Live preview shows the last 200 chars of the accumulation.
+**Streaming:** Uses `stream: true` on `/api/chat`. Reads the response body as a `ReadableStream`, decodes newline-delimited JSON chunks, accumulates `chunk.message.content` deltas. Returns when `chunk.done === true`. This ensures the model terminates naturally rather than generating exactly `num_predict` tokens.
 
-**Not in `nodeRunners`** — streaming requires component-level state; cannot be called from the topological executor.
+**Token input UX**: `maxTokens` uses local string state (`tokenInput`) with a blur-commit pattern. Do NOT initialise `useState` with a derived `const` that appears later in the same function — this causes a temporal dead zone crash. Always initialise from `d.maxTokens` directly: `useState(String((d.maxTokens as number | undefined) ?? 1024))`.
+
+Has runner (`runOllamaNode`). Component also has its own streaming Run button for interactive use.
 
 Output fields added to each record: `ollamaModel`, `ollamaPrompt`, `ollamaResponse`, `ollamaProcessedAt`.
 
@@ -651,7 +736,7 @@ Output fields added to each record: `ollamaModel`, `ollamaPrompt`, `ollamaRespon
 
 ## Sidebar
 
-Groups: **Input**, **Source**, **Process**, **Output**. Each group heading is a clickable toggle — click to collapse/expand. State lives in `useState` (resets on page refresh). Sidebar has `overflowY: auto` to scroll when fully expanded.
+Groups: **Canvas**, **Input**, **Search**, **Process**, **Output**. Each group heading is a clickable toggle — click to collapse/expand. State lives in `useState` (resets on page refresh). Default: Input and Canvas expanded; Search, Process, Output collapsed. Sidebar has `overflowY: auto` to scroll when fully expanded.
 
 ---
 
@@ -672,3 +757,7 @@ Groups: **Input**, **Source**, **Process**, **Output**. Each group heading is a 
 13. **ADS hard limit is 50 per request** — the server silently caps `size` at 50 regardless of what you pass. Use the `fetchAll` pagination loop for complete result sets.
 14. **`fetchedHtml` is the cleaned body, not the raw response** — `URLFetchNode` removes noise selectors before storing. `HTMLSectionNode` reads `fetchedHtml`, not the original HTML. Do not pass raw responses through.
 15. **Puppeteer singleton resets on `disconnected`** — the `_browserPromise` variable is set to `null` in the `disconnected` handler so the next `/url-proxy?js=true` request gets a fresh browser. Do not remove this handler.
+16. **Ollama token input temporal dead zone** — `useState(expr)` must not reference a `const` declared later in the same function scope. In OllamaNode and OllamaFieldNode, always initialise `tokenInput` state from `data.maxTokens` directly, and place any `useEffect` that syncs from derived consts *after* those consts are declared.
+17. **Ollama runners use `stream: true`** — this allows models to terminate naturally. `stream: false` causes generation of exactly `num_predict` tokens even when the model would otherwise stop, making execution time proportional to the token limit.
+18. **`newId` counter must be bumped after workflow load** — call `bumpCounterPast(loadedIds)` in the load handler so subsequently added nodes don't collide with loaded node IDs.
+19. **`CommentNode` initial size via `style`** — set `style: { width: 220, height: 120 }` on the node object in the factory (not in `data`). React Flow uses the `style` property to size nodes that use `NodeResizer`.

@@ -112,6 +112,7 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
   const [ollamaOk, setOllamaOk]         = useState<boolean | null>(null)
   const [liveTokens, setLiveTokens]     = useState('')
   const [liveProgress, setLiveProgress] = useState('')
+  const [tokenInput, setTokenInput]     = useState(String((d.maxTokens as number | undefined) ?? 1024))
   const abortRef = useRef<AbortController | null>(null)
 
   // ── Fetch available models on mount ──────────────────────────────────────────
@@ -166,6 +167,9 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
   const temperature    = (d.temperature ?? 0.7) as number
   const maxTokens      = (d.maxTokens ?? 1024) as number
   const isRunning      = d.status === 'running'
+
+  // Keep local token input in sync when node data changes externally (e.g. file load)
+  useEffect(() => { setTokenInput(String(maxTokens)) }, [maxTokens])
 
   // Auto-select first available field when records arrive
   useEffect(() => {
@@ -407,10 +411,22 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
         {/* Max tokens */}
         <div style={styles.row}>
           <span style={styles.label}>Tokens</span>
-          <input type="number" style={{ ...styles.input, width: 70 }} value={maxTokens}
-            min={64} max={8192}
-            onChange={e => updateNodeData(id, { maxTokens: parseInt(e.target.value, 10) || 1024 })}
-            className="nodrag" />
+          <input
+            type="text"
+            style={{ ...styles.input, width: 70 }}
+            value={tokenInput}
+            onChange={e => setTokenInput(e.target.value)}
+            onBlur={() => {
+              const n = parseInt(tokenInput, 10)
+              if (Number.isFinite(n)) {
+                updateNodeData(id, { maxTokens: n })
+              } else {
+                setTokenInput(String(maxTokens))
+              }
+            }}
+            placeholder="-1"
+            className="nodrag"
+          />
         </div>
 
         {/* Live streaming preview */}

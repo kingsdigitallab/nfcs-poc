@@ -17,6 +17,8 @@ import { TimelineOutputNode } from './TimelineOutputNode'
 import { ExportNode }         from './ExportNode'
 import { OllamaOutputNode }   from './OllamaOutputNode'
 import { HTMLSectionNode }    from './HTMLSectionNode'
+import { QuickViewNode }      from './QuickViewNode'
+import { CommentNode }        from './CommentNode'
 
 export const nodeTypes = {
   param:             ParamNode,
@@ -38,4 +40,6 @@ export const nodeTypes = {
   export:         ExportNode,
   ollamaOutput:   OllamaOutputNode,
   htmlSection:    HTMLSectionNode,
+  quickView:      QuickViewNode,
+  comment:        CommentNode,
 }

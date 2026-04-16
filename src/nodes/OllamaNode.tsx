@@ -78,6 +78,7 @@ export function OllamaNode({ id, data }: NodeProps) {
   const [liveTokens, setLiveTokens]     = useState<string>('')
   const [liveProgress, setLiveProgress] = useState<string>('')
   const [showFields, setShowFields]     = useState(false)
+  const [tokenInput, setTokenInput]     = useState(String((d.maxTokens as number | undefined) ?? 1024))
   const abortRef = useRef<AbortController | null>(null)
 
   // ── Fetch available models on mount ──────────────────────────────────────────
@@ -129,6 +130,9 @@ export function OllamaNode({ id, data }: NodeProps) {
   const promptTemplate  = d.userPromptTemplate ?? DEFAULT_PROMPT
   const temperature     = d.temperature ?? 0.7
   const maxTokens       = d.maxTokens   ?? 1024
+
+  // Keep local token input in sync when node data changes externally (e.g. file load)
+  useEffect(() => { setTokenInput(String(maxTokens)) }, [maxTokens])
 
   const visionByName   = VISION_MARKERS.some(v => selectedModel.toLowerCase().includes(v))
   const isVisionModel  = (d.visionOverride as boolean | undefined) ?? visionByName
@@ -467,12 +471,19 @@ export function OllamaNode({ id, data }: NodeProps) {
         <div style={styles.row}>
           <span style={styles.label}>Tokens</span>
           <input
-            type="number"
+            type="text"
             style={{ ...styles.input, width: 70 }}
-            value={maxTokens as number}
-            min={64}
-            max={8192}
-            onChange={e => updateNodeData(id, { maxTokens: parseInt(e.target.value, 10) || 1024 })}
+            value={tokenInput}
+            onChange={e => setTokenInput(e.target.value)}
+            onBlur={() => {
+              const n = parseInt(tokenInput, 10)
+              if (Number.isFinite(n)) {
+                updateNodeData(id, { maxTokens: n })
+              } else {
+                setTokenInput(String(maxTokens))
+              }
+            }}
+            placeholder="-1"
             className="nodrag"
           />
         </div>

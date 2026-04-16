@@ -2,7 +2,7 @@
 
 A node-based visual workflow editor for federating UK Arts & Humanities research data services. Built as part of the UKRI/AHRC Federation of Compute and Infrastructures programme.
 
-Drag nodes onto a canvas, connect them in any order, and run federated searches across multiple heritage data services simultaneously. Records from different services are normalised to a common schema, can be filtered and transformed, reconciled against Wikidata authorities, and exported as CSV, JSON, or GeoJSON. Local document folders can be analysed with a locally-running LLM via Ollama. Web pages can be fetched, sectioned, and passed to an LLM for targeted extraction.
+Drag nodes onto a canvas, connect them in any order, and run federated searches across multiple heritage data services simultaneously. Records from different services are normalised to a common schema, can be filtered and transformed, reconciled against Wikidata authorities, and exported as CSV, JSON, or GeoJSON. Local document folders can be analysed with a locally-running LLM via Ollama. Web pages can be fetched, sectioned, and passed to an LLM for targeted extraction. Workflows can be saved to disk and reloaded.
 
 ![iDAH Federation Workflow PoC — multi-source workflow canvas](images/NFCS_poc.png)
 
@@ -33,9 +33,25 @@ Open **http://localhost:5174** in your browser.
 
 ---
 
+## Saving and loading workflows
+
+Click **💾 Save** in the top bar to download the current canvas as a `workflow-YYYY-MM-DD.json` file. This captures every node's position and configuration — query fields, filter/transform rules, Ollama prompts and settings, spatial bounding boxes, selectors, and ParamNode values.
+
+Click **📂 Load** to restore a saved workflow. The canvas is replaced with the saved nodes and edges. All nodes start in an idle state with no results — run them again to repopulate data.
+
+> **Note:** `LocalFolderSourceNode` folder handles cannot be serialised. After loading a workflow containing one, click **📂 Pick Folder** again to re-select the folder.
+
+---
+
 ## Node types
 
-The sidebar groups nodes into four collapsible categories. Click a group heading to collapse or expand it. Drag any node onto the canvas to add it.
+The sidebar groups nodes into collapsible categories. Click a group heading to collapse or expand it. Drag any node onto the canvas to add it.
+
+### Canvas
+
+| Node | Description |
+|------|-------------|
+| **Comment** | A free-floating annotation label. Add a title and body text to document your workflow. No connectors. Select the node to reveal resize handles — drag any edge or corner to resize. |
 
 ### Input
 
@@ -43,7 +59,7 @@ The sidebar groups nodes into four collapsible categories. Click a group heading
 |------|-------------|
 | **ParamNode** | Holds a Text or Integer value. Connect its output handle to any search node input handle to inject a query parameter. |
 
-### Source
+### Search
 
 | Node | Service | Notes |
 |------|---------|-------|
@@ -62,21 +78,22 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 | **FilterTransformNode** | Filters records by condition and/or mutates field values. See [Filter / Transform](#filter--transform) below. |
 | **SpatialFilterNode** | Draws a bounding box on an interactive map; filters upstream records to those within the bbox. Only records with `decimalLatitude` / `decimalLongitude` are kept. |
 | **ReconciliationNode** | Reconciles a chosen field against a Wikidata authority. See [Reconciliation](#reconciliation) below. |
-| **OllamaNode** | Sends each upstream record to a locally-running [Ollama](https://ollama.com/) instance and enriches the record with the model's response. Supports vision models and streaming. See [Local LLM analysis](#local-llm-analysis) below. |
+| **OllamaNode** | Sends each upstream record to a locally-running [Ollama](https://ollama.com/) instance and enriches the record with the model's response. Supports vision models. See [Local LLM analysis](#local-llm-analysis) below. |
 | **OllamaFieldNode** | Sends a single chosen field to Ollama in **per-record** or **aggregate** mode. Lighter-weight than OllamaNode when you only need one field processed. |
 | **URLFetchNode** | Follows a URL field in each record, fetches the page (optionally via headless browser for JS-rendered pages), and adds `fetchedContent` (plain text) and `fetchedHtml` (structured HTML) to each record. |
-| **HTMLSectionNode** | Extracts a specific section from `fetchedHtml` using a CSS selector. A **structure picker** shows detected landmarks and headings from the first record so you can click to populate the selector without inspecting raw HTML. |
+| **HTMLSectionNode** | Extracts a specific section from `fetchedHtml` using a CSS selector. A **structure picker** shows detected landmarks and headings. Toggle **Preserve HTML structure** to write the matched element's raw HTML into `fetchedContent` instead of plain text — useful when passing structured markup to an LLM for extraction. |
 
 ### Output
 
 | Node | Description |
 |------|-------------|
-| **TableOutputNode** | Paginated table. Merges records from multiple upstream nodes automatically. Toggle **show all columns** to reveal service-specific fields. Pass-through output handle so it can chain into Map, Timeline, or Export nodes. Double-click to expand to a full-screen panel. |
-| **JSONOutputNode** | Syntax-highlighted JSON viewer. Shows the full normalised record graph including namespace fields. Double-click to expand. |
-| **MapOutputNode** | Leaflet map. Plots any record that has `decimalLatitude` and `decimalLongitude`. Each source service gets a distinct colour. Click a marker for a popup with title, date, and a link back to the source record. |
-| **TimelineOutputNode** | SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates (e.g. `-1199`). Each source gets a distinct marker shape. Hover a marker for details. Scrollable for wide date ranges. |
+| **QuickViewNode** | Inspect the full, untruncated value of any field across upstream records. Pick a field from the dropdown; navigate records with ‹ / › buttons. Copy button per record. Useful for reviewing long fields such as `fetchedContent` or `ollamaResponse`. |
+| **TableOutputNode** | Paginated table. Merges records from multiple upstream nodes automatically. Pass-through output handle so it can chain into Map, Timeline, or Export nodes. Double-click to expand to a full-screen panel. |
+| **JSONOutputNode** | Syntax-highlighted JSON viewer. Shows the full normalised record graph. Double-click to expand. |
+| **MapOutputNode** | Leaflet map. Plots any record that has `decimalLatitude` and `decimalLongitude`. Click a marker for a popup with title, date, and a link back to the source record. |
+| **TimelineOutputNode** | SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates (e.g. `-1199`). Hover a marker for details. |
 | **ExportNode** | Downloads the upstream records as **CSV**, **JSON**, or **GeoJSON**. See [Export](#export) below. |
-| **OllamaOutputNode** | Card-based display of Ollama inference text. Each record gets its own expandable card with a copy button. Useful when inference text is too long for the table view. |
+| **OllamaOutputNode** | Card-based display of Ollama inference text. Each record gets its own expandable card with a copy button. |
 
 ---
 
@@ -103,13 +120,14 @@ ParamNode ─┐
   [source] ──► URLFetchNode ──► HTMLSectionNode ──► OllamaFieldNode ──┤
                                                                ▼
                                                       TableOutputNode ──► ExportNode
+                                                      QuickViewNode
                                                       JSONOutputNode
                                                       MapOutputNode
                                                       TimelineOutputNode
                                                       OllamaOutputNode
 ```
 
-All nodes expose a **`data` input handle** (left) and a **`results` output handle** (right). You can chain them in any order and branch to multiple output nodes simultaneously.
+All data nodes expose a **`data` input handle** (left) and a **`results` output handle** (right). You can chain them in any order and branch to multiple output nodes simultaneously. Comment nodes have no handles.
 
 The `useUpstreamRecords` hook merges records from **all** edges connected to a node's input handle, so a single Table or Map node can aggregate several source nodes at once.
 
@@ -117,10 +135,12 @@ The `useUpstreamRecords` hook merges records from **all** edges connected to a n
 
 ## Execution model
 
-- **▶ Run** (on individual source/process nodes) — execute that node only.
-- **▶▶ Run All** (top bar) — discovers every runnable node, builds a topological order using Kahn's algorithm, and executes nodes wave-by-wave: all source nodes in parallel first, then each processing layer in dependency order. If one node errors, the rest continue.
+- **▶ Run** (on individual nodes) — execute that node only.
+- **▶▶ Run All** (top bar) — discovers every runnable node, builds a topological order using Kahn's algorithm, and executes nodes wave-by-wave: all source nodes in parallel first, then each processing layer in dependency order. If one node errors, downstream dependants are skipped but unrelated branches continue.
 
-> **Nodes excluded from Run All:** `LocalFolderSourceNode` (folder selection requires a user gesture), `OllamaNode` (streaming, user-initiated), `OllamaFieldNode` (component-driven), and `URLFetchNode` (component-driven with cancel support). Run these nodes manually before clicking Run All. `HTMLSectionNode` is included in Run All.
+All node types are included in Run All **except** `LocalFolderSourceNode` (folder selection requires a user gesture and cannot be automated). Run that node manually before clicking Run All.
+
+Per-record failures in Ollama nodes do not abort the batch — the error is stored as `ollamaResponse` on that record and processing continues with the next record.
 
 ---
 
@@ -236,21 +256,29 @@ Each augmented record gains a `${fieldName}_reconciled` key. In **TableOutputNod
 | Setting | Description |
 |---------|-------------|
 | **Model** | Dropdown of models available in your local Ollama instance. |
-| **Vision model** | Checkbox — tick this if your model supports image inputs (e.g. `gemma3:4b`, `llava`). Models whose names contain `llava`, `vision`, `bakllava`, `moondream`, or `cogvlm` are auto-detected and pre-ticked. |
+| **Vision model** | Checkbox — tick this if your model supports image inputs (e.g. `llava`). Models whose names contain `llava`, `vision`, `bakllava`, `moondream`, or `cogvlm` are auto-detected. |
 | **System prompt** | Instruction context sent before the user message. |
 | **Prompt template** | User message with `{{fieldName}}` placeholders. Click **▼ fields** to see available substitution tokens from the first upstream record. |
 | **Temp** | Temperature slider (0.0–1.0). |
-| **Tokens** | Maximum tokens to generate. |
+| **Tokens** | Maximum tokens to generate (`-1` for no limit). Clear the field and type a new value; the setting is committed when you leave the field. |
 
-Processing is sequential per record to respect Ollama's single-connection preference. A live streaming preview shows the current file name and rolling token output.
+Processing is sequential per record. Generation stops as soon as the model finishes naturally — the Tokens setting is a ceiling, not a target, so responses that terminate cleanly are not padded to the limit.
 
 ### OllamaFieldNode
 
-A lighter-weight alternative to OllamaNode when you only need to process a single field.
+A lighter-weight alternative when you only need to process a single field.
 
-**Per-record mode**: each record's chosen field value is sent individually; the response is stored as `ollamaResponse` on that record. Use template variable `{{value}}` for the field value.
+**Template variables:**
 
-**Aggregate mode**: all field values from all records are collected and sent in one prompt; the response is stored on a single synthetic output record. Use `{{values}}` (newline-joined list), `{{count}}` (number of records), `{{field}}` (field name).
+| Token | Value |
+|-------|-------|
+| `{{value}}` | The content of the selected field for this record |
+| `{{field}}` | The name of the selected field (e.g. `fetchedHtml`) |
+| `{{anyFieldName}}` | The value of any other field on the same record |
+
+**Per-record mode**: each record's chosen field value is sent individually; the response is stored as `ollamaResponse` on that record.
+
+**Aggregate mode**: all field values from all records are collected and sent in one prompt using `{{values}}` (newline-joined), `{{count}}` (number of records), and `{{field}}`.
 
 ---
 
@@ -264,27 +292,22 @@ Follows a URL field in each upstream record and fetches the page content, adding
 
 **Options:**
 - **URL field** — auto-detected from fields whose name contains `url`, `link`, `href`, `uri`, or `pid`, or whose value starts with `http`; falls back to a manual input.
-- **Wait for JS rendering** — uses a headless browser (Puppeteer) inside the Vite dev server to wait for JavaScript-rendered content before capturing the page. The first JS-render request launches the browser; subsequent requests reuse it.
+- **Wait for JS rendering** — uses a headless browser (Puppeteer) inside the Vite dev server. The first JS-render request launches the browser; subsequent requests reuse it.
 - **Wait for** — load event: `Network quiet (2 req)` (default), `Network fully idle`, or `DOM ready only`.
 - **Max chars** — truncation limit for `fetchedContent` (default 8 000).
 - **Timeout** — per-URL timeout in seconds (simple fetch path only).
 
 ### HTMLSectionNode
 
-Extracts a targeted section from `fetchedHtml` using a CSS selector, replacing `fetchedContent` with just the matched text. Connect URLFetchNode → HTMLSectionNode → OllamaFieldNode for precise targeted extraction.
+Extracts a targeted section from `fetchedHtml` using a CSS selector, writing the result into `fetchedContent`. Connect URLFetchNode → HTMLSectionNode → OllamaFieldNode for precise targeted extraction.
 
 **Workflow:**
 1. Connect URLFetchNode output to HTMLSectionNode input and run URLFetchNode.
 2. Click **▼ Pick from page structure** to see detected landmarks and headings from the first fetched record.
 3. Click any item to populate the selector, or type a custom CSS selector directly.
-4. The **live preview** shows what the selector would extract from the first record.
-5. Click **▶ Extract Sections**.
-
----
-
-## "📄 Doc Analysis" template
-
-Click **📄 Doc Analysis** in the top bar to add a pre-wired `LocalFolderSourceNode → OllamaNode → TableOutputNode` pipeline with appropriate default prompts.
+4. Toggle **Preserve HTML structure** if you need the raw HTML of the matched element (e.g. to pass a `<dl>` to an LLM for structured key/value extraction) rather than stripped plain text.
+5. The **live preview** shows what the selector would extract from the first record (labelled **HTML** or **text** depending on the mode).
+6. Click **▶ Extract Sections**.
 
 ---
 
@@ -328,19 +351,18 @@ Files are named `nfcs-export-YYYY-MM-DD.{ext}`.
 
 ### Local document analysis
 
-1. Click **📄 Doc Analysis** in the top bar to load the template.
-2. Click **📂 Pick Folder** on the **LocalFolderSourceNode** and select a folder of PDFs, TEI-XML files, or images.
-3. On the **OllamaNode**, select your model and tick **Vision model** if using images.
-4. Click **▶ Run** on the OllamaNode. Each file is processed in sequence with a live streaming preview.
-5. Results appear in the **TableOutputNode** with `ollamaResponse` as a column.
+1. Drag a **LocalFolderSourceNode** → **OllamaNode** → **TableOutputNode** onto the canvas and connect them.
+2. Click **📂 Pick Folder** on the LocalFolderSourceNode and select a folder of PDFs, TEI-XML files, or images.
+3. On the OllamaNode, select your model and tick **Vision model** if using images.
+4. Click **▶ Run** on the LocalFolderSourceNode, then **▶▶ Run All**.
 
 ### Web content extraction and LLM analysis
 
-1. Run a source node (e.g. ADS or GBIF) to get records with `_sourceUrl` fields.
-2. Add a **URLFetchNode**, connect the source output to its input, select the URL field, and click **▶ Fetch URLs**. Optionally enable **Wait for JS rendering** for dynamic pages.
-3. Add an **HTMLSectionNode**, connect URLFetchNode's output, and click **▼ Pick from page structure** to choose a content section. Click **▶ Extract Sections**.
-4. Add an **OllamaFieldNode**, connect HTMLSectionNode's output, select `fetchedContent` as the field, write a prompt, and click **▶ Run**.
-5. Connect to an **OllamaOutputNode** to read the responses in a card view, or to a **TableOutputNode** for the full record with `ollamaResponse` column.
+1. Run a source node (e.g. ADS or MDS) to get records with `_sourceUrl` fields.
+2. Add a **URLFetchNode**, connect the source output to its input, select the URL field, and click **▶ Fetch URLs**.
+3. Add an **HTMLSectionNode**, connect URLFetchNode's output, choose a CSS selector via the structure picker, and optionally enable **Preserve HTML structure** for markup-aware extraction. Click **▶ Extract Sections**.
+4. Add an **OllamaFieldNode**, connect HTMLSectionNode's output, select `fetchedContent`, write a prompt using `{{value}}` for the field content, and click **▶ Run**.
+5. Add a **QuickViewNode** connected to OllamaFieldNode to inspect individual responses in full, or a **TableOutputNode** for the complete record set.
 
 ### Spatial filter + map
 
@@ -363,7 +385,7 @@ nfcs-poc/
 ├── CLAUDE.md                   # Architecture notes and API references (dev only)
 ├── vite.config.ts              # Dev server + CORS proxy rules + /url-proxy middleware
 └── src/
-    ├── App.tsx                 # Canvas, collapsible sidebar, Run All, node factories, templates
+    ├── App.tsx                 # Canvas, collapsible sidebar, Run All, save/load, node factories
     ├── types/
     │   └── UnifiedRecord.ts    # Canonical cross-service record type
     ├── store/
@@ -373,6 +395,7 @@ nfcs-poc/
     ├── nodes/
     │   ├── index.ts                # nodeTypes registry
     │   ├── ParamNode.tsx
+    │   ├── CommentNode.tsx         # Canvas annotation label (no handles, resizable)
     │   ├── GBIFSearchNode.tsx
     │   ├── LLDSSearchNode.tsx
     │   ├── ADSSearchNode.tsx       # Includes fetchAll pagination
@@ -381,11 +404,12 @@ nfcs-poc/
     │   ├── FilterTransformNode.tsx
     │   ├── SpatialFilterNode.tsx       # Leaflet bbox filter
     │   ├── ReconciliationNode.tsx
-    │   ├── OllamaNode.tsx              # Local LLM transform (streaming)
+    │   ├── OllamaNode.tsx              # Local LLM transform
     │   ├── OllamaFieldNode.tsx         # Single-field LLM inference (per-record / aggregate)
     │   ├── OllamaOutputNode.tsx        # Card display for Ollama responses
     │   ├── URLFetchNode.tsx            # URL fetch + HTML cleaning
-    │   ├── HTMLSectionNode.tsx         # CSS selector section extraction with structure picker
+    │   ├── HTMLSectionNode.tsx         # CSS selector section extraction; text or HTML output
+    │   ├── QuickViewNode.tsx           # Full-value field inspector with record navigation
     │   ├── ReconciledCell.tsx          # Shared QID pill component
     │   ├── TableOutputNode.tsx
     │   ├── JSONOutputNode.tsx
@@ -394,6 +418,8 @@ nfcs-poc/
     │   ├── ExportNode.tsx
     │   └── ExpandedOutputPanel.tsx
     └── utils/
+        ├── nodeIdCounter.ts            # Shared ID counter; bumpCounterPast() used on workflow load
+        ├── workflowIO.ts               # Serialize/deserialize workflow to/from JSON
         ├── fileReaders.ts              # PDF/XML/text/image extraction (FileRecord)
         ├── gbifAdapter.ts
         ├── lldsAdapter.ts / lldsCache.ts
@@ -409,7 +435,10 @@ nfcs-poc/
         ├── runReconciliationNode.ts
         ├── runFilterTransformNode.ts
         ├── runSpatialFilterNode.ts
-        ├── runHTMLSectionNode.ts       # NodeRunner for htmlSection
+        ├── runHTMLSectionNode.ts
+        ├── runURLFetchNode.ts          # Runner for urlFetch
+        ├── runOllamaNode.ts            # Runner for ollamaNode
+        ├── runOllamaFieldNode.ts       # Runner for ollamaField
         ├── nodeRunners.ts              # Registry: node type → runner
         └── runWorkflow.ts              # Topological executor (Kahn's algorithm)
 ```

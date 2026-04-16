@@ -16,6 +16,9 @@ import { runReconciliationNode }  from './runReconciliationNode'
 import { runFilterTransformNode } from './runFilterTransformNode'
 import { runSpatialFilterNode }   from './runSpatialFilterNode'
 import { runHTMLSectionNode }     from './runHTMLSectionNode'
+import { runURLFetchNode }        from './runURLFetchNode'
+import { runOllamaNode }          from './runOllamaNode'
+import { runOllamaFieldNode }     from './runOllamaFieldNode'
 
 /**
  * Common signature for every node runner.
@@ -33,12 +36,15 @@ export type NodeRunner = (
 ) => Promise<void>
 
 export const nodeRunners: Record<string, NodeRunner> = {
-  gbifSearch: runGBIFNode,
-  lldsSearch: runLLDSNode,
-  adsSearch:  runADSNode,
+  gbifSearch:      runGBIFNode,
+  lldsSearch:      runLLDSNode,
+  adsSearch:       runADSNode,
   mdsSearch:       runMDSNode,
-  reconciliation:   runReconciliationNode,
-  filterTransform:  runFilterTransformNode,
+  reconciliation:  runReconciliationNode,
+  filterTransform: runFilterTransformNode,
   spatialFilter:   runSpatialFilterNode,
   htmlSection:     runHTMLSectionNode,
+  urlFetch:        runURLFetchNode,
+  ollamaNode:      runOllamaNode,
+  ollamaField:     runOllamaFieldNode,
 }

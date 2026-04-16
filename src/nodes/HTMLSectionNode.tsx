@@ -20,6 +20,7 @@ export interface HTMLSectionNodeData {
   selector: string
   separator: string
   maxLength: number
+  preserveHtml: boolean
   status: 'idle' | 'running' | 'success' | 'error'
   statusMessage: string
   inputCount: number
@@ -89,14 +90,25 @@ function analyseHtml(html: string): StructuralItem[] {
   }
 }
 
-// ── Text extraction from selector ─────────────────────────────────────────────
+// ── Extraction from selector ──────────────────────────────────────────────────
 
-function extractBySelector(html: string, selector: string, separator: string): string {
+function extractBySelector(
+  html: string,
+  selector: string,
+  separator: string,
+  preserveHtml: boolean,
+): string {
   try {
     const parser = new DOMParser()
     const doc    = parser.parseFromString(html, 'text/html')
     const els    = doc.querySelectorAll(selector)
     if (els.length === 0) return ''
+    if (preserveHtml) {
+      return Array.from(els)
+        .map(el => el.outerHTML)
+        .filter(Boolean)
+        .join(separator)
+    }
     return Array.from(els)
       .map(el => (el.textContent ?? '').replace(/\s+/g, ' ').trim())
       .filter(Boolean)
@@ -139,17 +151,18 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
 
   const structuralItems = useMemo(() => analyseHtml(firstHtml), [firstHtml])
 
-  const selector  = (d.selector  ?? 'main, article') as string
-  const separator = (d.separator ?? '\n\n')            as string
-  const maxLength = (d.maxLength ?? 8000)              as number
-  const isRunning = d.status === 'running'
+  const selector     = (d.selector     ?? 'main, article') as string
+  const separator    = (d.separator    ?? '\n\n')           as string
+  const maxLength    = (d.maxLength    ?? 8000)             as number
+  const preserveHtml = (d.preserveHtml ?? false)            as boolean
+  const isRunning    = d.status === 'running'
 
-  // Update live preview whenever selector or firstHtml changes
+  // Update live preview whenever selector, mode, or firstHtml changes
   const livePreview = useMemo(() => {
     if (!firstHtml || !selector) return ''
-    const text = extractBySelector(firstHtml, selector, separator)
-    return text.slice(0, 300) + (text.length > 300 ? '…' : '')
-  }, [firstHtml, selector, separator])
+    const result = extractBySelector(firstHtml, selector, separator, preserveHtml)
+    return result.slice(0, 300) + (result.length > 300 ? '…' : '')
+  }, [firstHtml, selector, separator, preserveHtml])
 
   // ── Run handler ──────────────────────────────────────────────────────────
   const handleRun = useCallback(async () => {
@@ -183,15 +196,15 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
         continue
       }
 
-      let text = extractBySelector(html, selector, separator)
-      if (!text) {
+      let extracted = extractBySelector(html, selector, separator, preserveHtml)
+      if (!extracted) {
         missCount++
         enriched.push({ ...record, fetchedContent: '', htmlSelector: selector })
         continue
       }
-      if (text.length > maxLength) text = text.slice(0, maxLength) + '…[truncated]'
+      if (extracted.length > maxLength) extracted = extracted.slice(0, maxLength) + '…[truncated]'
       hitCount++
-      enriched.push({ ...record, fetchedContent: text, htmlSelector: selector })
+      enriched.push({ ...record, fetchedContent: extracted, htmlSelector: selector })
     }
 
     if (signal.aborted) {
@@ -210,7 +223,7 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
       outputCount:    enriched.length,
       resultsVersion: version,
     })
-  }, [id, updateNodeData, upstreamRecords, selector, separator, maxLength])
+  }, [id, updateNodeData, upstreamRecords, selector, separator, maxLength, preserveHtml])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
@@ -241,6 +254,17 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
             className="nodrag"
           />
         </div>
+
+        {/* Preserve HTML toggle */}
+        <label style={styles.checkLabel} className="nodrag">
+          <input
+            type="checkbox"
+            checked={preserveHtml}
+            onChange={e => updateNodeData(id, { preserveHtml: e.target.checked })}
+            style={{ marginRight: 5 }}
+          />
+          Preserve HTML structure
+        </label>
 
         {/* Structural picker toggle */}
         {hasHtml && (
@@ -286,8 +310,15 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
         {/* Live preview */}
         {hasHtml && livePreview && (
           <div style={styles.preview} className="nodrag nowheel">
-            <div style={styles.previewLabel}>Preview (first record)</div>
-            <div style={styles.previewText}>{livePreview}</div>
+            <div style={styles.previewLabel}>
+              Preview (first record) — {preserveHtml ? 'HTML' : 'text'}
+            </div>
+            <div style={{
+              ...styles.previewText,
+              ...(preserveHtml ? { fontFamily: 'monospace', fontSize: 9, whiteSpace: 'pre-wrap' as const } : {}),
+            }}>
+              {livePreview}
+            </div>
           </div>
         )}
 
@@ -327,7 +358,7 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
         </div>
 
         <div style={styles.note}>
-          Overwrites <code style={styles.code}>fetchedContent</code> with text from
+          Overwrites <code style={styles.code}>fetchedContent</code> with {preserveHtml ? 'HTML' : 'text'} from
           matched elements. Adds <code style={styles.code}>htmlSelector</code> for provenance.
         </div>
       </div>
@@ -509,6 +540,14 @@ const styles = {
     border: '1px solid #fde68a',
     borderRadius: 4,
     padding: '4px 7px',
+  },
+  checkLabel: {
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: 11,
+    color: '#374151',
+    cursor: 'pointer',
+    userSelect: 'none' as const,
   },
   note: {
     fontSize: 10,

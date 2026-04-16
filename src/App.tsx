@@ -1,4 +1,6 @@
 import { useCallback, useRef, useState } from 'react'
+import { newId, bumpCounterPast } from './utils/nodeIdCounter'
+import { downloadWorkflow, parseWorkflowFile, hydrateNodes } from './utils/workflowIO'
 import {
   ReactFlow,
   Background,
@@ -30,6 +32,8 @@ import type { ReconciliationNodeData }    from './nodes/ReconciliationNode'
 import type { FilterTransformNodeData }   from './nodes/FilterTransformNode'
 import type { SpatialFilterNodeData }     from './nodes/SpatialFilterNode'
 import type { ExportNodeData }            from './nodes/ExportNode'
+import type { QuickViewNodeData }         from './nodes/QuickViewNode'
+import type { CommentNodeData }           from './nodes/CommentNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -52,12 +56,11 @@ type AppNode =
   | Node<FilterTransformNodeData>
   | Node<SpatialFilterNodeData>
   | Node<ExportNodeData>
+  | Node<QuickViewNodeData>
+  | Node<CommentNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
-
-let nodeIdCounter = 1
-function newId(prefix: string) { return `${prefix}-${nodeIdCounter++}` }
 
 const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   param: pos => ({
@@ -162,6 +165,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       selector:      'main, article',
       separator:     '\n\n',
       maxLength:     8000,
+      preserveHtml:  false,
       status:        'idle',
       statusMessage: '',
       inputCount:    0,
@@ -211,6 +215,15 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('export'), type: 'export', position: pos,
     data: { format: 'csv' } satisfies ExportNodeData,
   }),
+  quickView: pos => ({
+    id: newId('quickView'), type: 'quickView', position: pos,
+    data: { selectedField: '' } satisfies QuickViewNodeData,
+  }),
+  comment: pos => ({
+    id: newId('comment'), type: 'comment', position: pos,
+    data: { title: '', body: '' } satisfies CommentNodeData,
+    style: { width: 220, height: 120 },
+  }),
   tableOutput: pos => ({
     id: newId('table'), type: 'tableOutput', position: pos,
     data: {},
@@ -236,12 +249,13 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
 // ─── sidebar definition ───────────────────────────────────────────────────────
 
 const SIDEBAR_ITEMS = [
+  { type: 'comment',     label: 'Comment',           sub: 'Annotation label',          color: '#f59e0b', group: 'Canvas' },
   { type: 'param',       label: 'ParamNode',        sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },
-  { type: 'localFolderSource', label: 'LocalFolderSource', sub: 'Read files from local folder', color: '#14532d', group: 'Source' },
-  { type: 'gbifSearch',  label: 'GBIFSearchNode',   sub: 'GBIF occurrence search',    color: '#0f4c81', group: 'Source' },
-  { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Source' },
-  { type: 'adsSearch',   label: 'ADSSearchNode',    sub: 'Archaeology Data Service',  color: '#7c2d12', group: 'Source' },
-  { type: 'mdsSearch',      label: 'MDSSearchNode',      sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Source' },
+  { type: 'localFolderSource', label: 'LocalFolderSource', sub: 'Read files from local folder', color: '#14532d', group: 'Search' },
+  { type: 'gbifSearch',  label: 'GBIFSearchNode',   sub: 'GBIF occurrence search',    color: '#0f4c81', group: 'Search' },
+  { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Search' },
+  { type: 'adsSearch',   label: 'ADSSearchNode',    sub: 'Archaeology Data Service',  color: '#7c2d12', group: 'Search' },
+  { type: 'mdsSearch',      label: 'MDSSearchNode',      sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Search' },
   { type: 'ollamaNode',      label: 'OllamaNode',          sub: 'Local LLM — file/content records', color: '#312e81', group: 'Process' },
   { type: 'ollamaField',    label: 'OllamaFieldNode',     sub: 'LLM inference on a chosen field',  color: '#1e1b4b', group: 'Process' },
   { type: 'urlFetch',       label: 'URLFetchNode',        sub: 'Fetch URL content into records',   color: '#0c4a6e', group: 'Process' },
@@ -249,6 +263,7 @@ const SIDEBAR_ITEMS = [
   { type: 'filterTransform', label: 'FilterTransformNode', sub: 'Filter + transform records', color: '#4f46e5', group: 'Process' },
   { type: 'spatialFilter',   label: 'Spatial Filter',      sub: 'Draw bounding box to filter by location', color: '#0891b2', group: 'Process' },
   { type: 'reconciliation',  label: 'ReconciliationNode',  sub: 'Wikidata field reconciler',  color: '#7c3aed', group: 'Process' },
+  { type: 'quickView',      label: 'QuickViewNode',      sub: 'Inspect one field in full',  color: '#1e293b', group: 'Output' },
   { type: 'tableOutput',    label: 'TableOutputNode',    sub: 'Paginated results table',    color: '#0d9488', group: 'Output' },
   { type: 'export',         label: 'ExportNode',         sub: 'CSV / JSON / GeoJSON',       color: '#b45309', group: 'Output' },
   { type: 'mapOutput',      label: 'MapOutputNode',      sub: 'Geo map (lat/lon records)',  color: '#14532d', group: 'Output' },
@@ -263,24 +278,12 @@ export default function App() {
   const [nodes, setNodes, onNodesChange] = useNodesState<AppNode>([])
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([])
   const reactFlowWrapper = useRef<HTMLDivElement>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null)
   const [rfInstance, setRfInstance] = useState<ReactFlowInstance | null>(null)
+  const [loadError, setLoadError] = useState<string | null>(null)
   const [runningAll, setRunningAll] = useState(false)
   const [expandedNodeId, setExpandedNodeId] = useState<string | null>(null)
-  const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set())
-
-  const handleLoadTemplate = useCallback(() => {
-    const base = { x: 100, y: 160 }
-    const folder = NODE_DEFAULTS.localFolderSource({ x: base.x, y: base.y })
-    const ollama = NODE_DEFAULTS.ollamaNode({ x: base.x + 320, y: base.y })
-    const table  = { id: newId('table'), type: 'tableOutput', position: { x: base.x + 660, y: base.y }, data: {} }
-
-    setNodes(nds => [...nds, folder, ollama, table])
-    setEdges(eds => [
-      ...eds,
-      { id: `e-${folder.id}-${ollama.id}`, source: folder.id, sourceHandle: 'results', target: ollama.id, targetHandle: 'data' },
-      { id: `e-${ollama.id}-${table.id}`,  source: ollama.id, sourceHandle: 'results', target: table.id,  targetHandle: 'data' },
-    ])
-  }, [setNodes, setEdges])
+  const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set(['Search', 'Process', 'Output']))
 
   const handleRunAll = useCallback(async () => {
     if (!rfInstance) return
@@ -288,6 +291,31 @@ export default function App() {
     await runWorkflow(rfInstance.getNodes, rfInstance.getEdges(), rfInstance.updateNodeData)
     setRunningAll(false)
   }, [rfInstance])
+
+  const handleSave = useCallback(() => {
+    downloadWorkflow(nodes, edges)
+  }, [nodes, edges])
+
+  const handleLoadFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    // Reset input so the same file can be re-loaded if needed
+    e.target.value = ''
+    const reader = new FileReader()
+    reader.onload = ev => {
+      try {
+        const wf = parseWorkflowFile(ev.target?.result as string)
+        const hydrated = hydrateNodes(wf)
+        bumpCounterPast(hydrated.map(n => n.id))
+        setNodes(hydrated)
+        setEdges(wf.edges)
+        setLoadError(null)
+      } catch (err) {
+        setLoadError(err instanceof Error ? err.message : 'Failed to load workflow.')
+      }
+    }
+    reader.readAsText(file)
+  }, [setNodes, setEdges])
 
   const onConnect = useCallback(
     (connection: Connection) => setEdges(eds => addEdge(connection, eds)),
@@ -329,15 +357,34 @@ export default function App() {
       {/* Top bar */}
       <div style={topBarStyle}>
         <span style={{ fontWeight: 700, fontSize: 14, color: '#1e3a5f' }}>iDAH Federation PoC</span>
-        <span style={{ fontSize: 11, color: '#6b7280' }}>Increment 4 — Multi-source workflow</span>
         <div style={{ flex: 1 }} />
         <button
           style={templateBtnStyle}
-          onClick={handleLoadTemplate}
-          title="Load: LocalFolder → Ollama → Table"
+          onClick={handleSave}
+          title="Save workflow configuration to a JSON file"
+          disabled={nodes.length === 0}
         >
-          📄 Doc Analysis
+          💾 Save
         </button>
+        <button
+          style={templateBtnStyle}
+          onClick={() => fileInputRef.current?.click()}
+          title="Load workflow configuration from a JSON file"
+        >
+          📂 Load
+        </button>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".json,application/json"
+          style={{ display: 'none' }}
+          onChange={handleLoadFile}
+        />
+        {loadError && (
+          <span style={{ fontSize: 11, color: '#dc2626', maxWidth: 200 }} title={loadError}>
+            ⚠ {loadError}
+          </span>
+        )}
         <button
           style={{ ...runAllBtnStyle, opacity: runningAll ? 0.6 : 1 }}
           onClick={handleRunAll}
@@ -350,7 +397,7 @@ export default function App() {
       <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
         {/* Sidebar */}
         <div style={sidebarStyle}>
-          {(['Input', 'Source', 'Process', 'Output'] as const).map(group => {
+          {(['Canvas', 'Input', 'Search', 'Process', 'Output'] as const).map(group => {
             const items      = SIDEBAR_ITEMS.filter(i => i.group === group)
             const isCollapsed = collapsedGroups.has(group)
             const toggleGroup = () => setCollapsedGroups(prev => {
