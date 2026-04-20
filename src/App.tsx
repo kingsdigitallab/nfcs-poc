@@ -21,6 +21,7 @@ import { ExpandedOutputPanel } from './nodes/ExpandedOutputPanel'
 import { runWorkflow } from './utils/runWorkflow'
 import type { UnifiedRecord } from './types/UnifiedRecord'
 import type { LocalFolderSourceNodeData } from './nodes/LocalFolderSourceNode'
+import type { LocalFileSourceNodeData }   from './nodes/LocalFileSourceNode'
 import type { OllamaNodeData }            from './nodes/OllamaNode'
 import type { OllamaFieldNodeData }       from './nodes/OllamaFieldNode'
 import type { URLFetchNodeData }          from './nodes/URLFetchNode'
@@ -45,6 +46,7 @@ type AppNode =
   | Node<ParamNodeData>
   | Node<SearchNodeData>
   | Node<LocalFolderSourceNodeData>
+  | Node<LocalFileSourceNodeData>
   | Node<OllamaNodeData>
   | Node<OllamaFieldNodeData>
   | Node<URLFetchNodeData>
@@ -98,6 +100,19 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       _capped: false, _total: 0,
     } satisfies MDSSearchNodeData,
   }),
+  localFileSource: pos => ({
+    id: newId('csvfile'), type: 'localFileSource', position: pos,
+    data: {
+      delimiter:     'auto',
+      hasHeader:     true,
+      autoCast:      true,
+      fileName:      '',
+      status:        'idle',
+      statusMessage: '',
+      count:         0,
+      columnNames:   [],
+    } satisfies LocalFileSourceNodeData,
+  }),
   localFolderSource: pos => ({
     id: newId('folder'), type: 'localFolderSource', position: pos,
     data: {
@@ -108,6 +123,8 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       statusMessage: '',
       results:       undefined,
       count:         0,
+      gisLayers:     undefined,
+      gisCount:      0,
     } satisfies LocalFolderSourceNodeData,
   }),
   ollamaNode: pos => ({
@@ -251,6 +268,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
 const SIDEBAR_ITEMS = [
   { type: 'comment',     label: 'Comment',           sub: 'Annotation label',          color: '#f59e0b', group: 'Canvas' },
   { type: 'param',       label: 'ParamNode',        sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },
+  { type: 'localFileSource',   label: 'LocalFileSource',   sub: 'Parse a single CSV/TSV file',  color: '#0e7490', group: 'Search' },
   { type: 'localFolderSource', label: 'LocalFolderSource', sub: 'Read files from local folder', color: '#14532d', group: 'Search' },
   { type: 'gbifSearch',  label: 'GBIFSearchNode',   sub: 'GBIF occurrence search',    color: '#0f4c81', group: 'Search' },
   { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Search' },

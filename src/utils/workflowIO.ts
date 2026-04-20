@@ -36,7 +36,11 @@ const TRANSIENT_FIELDS = new Set([
   'resultsVersion',
   '_capped',
   '_total',
-  'folderName', // not serialisable — user must re-pick the folder
+  'folderName',  // not serialisable — user must re-pick the folder
+  'gisLayers',   // large binary-derived data — user must re-scan
+  'gisCount',
+  'fileName',    // not serialisable — user must re-pick the file
+  'columnNames', // derived at parse time
 ])
 
 function stripTransient(data: Record<string, unknown>): Record<string, unknown> {
