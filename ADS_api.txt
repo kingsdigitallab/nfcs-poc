@@ -1,0 +1,30 @@
+
+Basic search
+
+https://archaeologydataservice.ac.uk/data-catalogue-api/api/search?q=stonehenge&sort=_score&order=desc
+
+Search by Resource Type (ariadneSubject)
+
+https://archaeologydataservice.ac.uk/data-catalogue-api/api/search?q=stonehenge&ariadneSubject=Site%2Fmonument&sort=_score&order=desc
+
+Search bt Getty AAT Subject (derivedSubject)
+
+https://archaeologydataservice.ac.uk/data-catalogue-api/api/search?q=stonehenge&ariadneSubject=Site%2Fmonument&derivedSubject=barrows&sort=_score&order=desc
+
+
+Search by Country
+
+https://archaeologydataservice.ac.uk/data-catalogue-api/api/search?q=stonehenge&ariadneSubject=Site%2Fmonument&derivedSubject=barrows&country=England&sort=_score&order=desc
+
+Search by Original Subject (nativeSubject)
+
+https://archaeologydataservice.ac.uk/data-catalogue-api/api/search?q=stonehenge&ariadneSubject=Site%2Fmonument&derivedSubject=barrows&country=England&nativeSubject=bowl%20barrow&sort=_score&order=desc
+
+Search by Data Type (dataType)
+
+https://archaeologydataservice.ac.uk/data-catalogue-api/api/search?q=stonehenge&ariadneSubject=Site%2Fmonument&derivedSubject=barrows&country=England&nativeSubject=bowl%20barrow&dataType=Structured%20Data&sort=_score&order=desc
+
+
+Search by Dating (temporal)
+
+https://archaeologydataservice.ac.uk/data-catalogue-api/api/search?q=stonehenge&ariadneSubject=Site%2Fmonument&derivedSubject=barrows&country=England&nativeSubject=bowl%20barrow&dataType=Structured%20Data&temporal=bronze%20age&sort=_score&order=desc

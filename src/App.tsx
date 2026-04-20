@@ -27,7 +27,8 @@ import type { OllamaFieldNodeData }       from './nodes/OllamaFieldNode'
 import type { URLFetchNodeData }          from './nodes/URLFetchNode'
 import type { HTMLSectionNodeData }       from './nodes/HTMLSectionNode'
 import type { LLDSSearchNodeData }        from './nodes/LLDSSearchNode'
-import type { ADSSearchNodeData }         from './nodes/ADSSearchNode'
+import type { ADSSearchNodeData }             from './nodes/ADSSearchNode'
+import type { ADSSearchAdvancedNodeData }     from './nodes/ADSSearchAdvancedNode'
 import type { MDSSearchNodeData }         from './nodes/MDSSearchNode'
 import type { ReconciliationNodeData }    from './nodes/ReconciliationNode'
 import type { FilterTransformNodeData }   from './nodes/FilterTransformNode'
@@ -53,6 +54,7 @@ type AppNode =
   | Node<HTMLSectionNodeData>
   | Node<LLDSSearchNodeData>
   | Node<ADSSearchNodeData>
+  | Node<ADSSearchAdvancedNodeData>
   | Node<MDSSearchNodeData>
   | Node<ReconciliationNodeData>
   | Node<FilterTransformNodeData>
@@ -91,6 +93,16 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       inlineQuery: '', inlineLimit: '20', fetchAll: false,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies ADSSearchNodeData,
+  }),
+  adsSearchAdvanced: pos => ({
+    id: newId('ads'), type: 'adsSearchAdvanced', position: pos,
+    data: {
+      inlineQuery: '', inlineLimit: '20', fetchAll: false,
+      ariadneSubject: '', derivedSubject: '', nativeSubject: '',
+      country: '', dataType: '', temporal: '',
+      sort: '_score', order: 'desc',
+      status: 'idle', statusMessage: '', results: undefined, count: 0,
+    } satisfies ADSSearchAdvancedNodeData,
   }),
   mdsSearch: pos => ({
     id: newId('mds'), type: 'mdsSearch', position: pos,
@@ -272,7 +284,8 @@ const SIDEBAR_ITEMS = [
   { type: 'localFolderSource', label: 'LocalFolderSource', sub: 'Read files from local folder', color: '#14532d', group: 'Search' },
   { type: 'gbifSearch',  label: 'GBIFSearchNode',   sub: 'GBIF occurrence search',    color: '#0f4c81', group: 'Search' },
   { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Search' },
-  { type: 'adsSearch',   label: 'ADSSearchNode',    sub: 'Archaeology Data Service',  color: '#7c2d12', group: 'Search' },
+  { type: 'adsSearch',         label: 'ADSSearchNode',         sub: 'Archaeology Data Service',           color: '#7c2d12', group: 'Search' },
+  { type: 'adsSearchAdvanced', label: 'ADSSearchAdvancedNode', sub: 'ADS search with facet filters', color: '#78350f', group: 'Search' },
   { type: 'mdsSearch',      label: 'MDSSearchNode',      sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Search' },
   { type: 'ollamaNode',      label: 'OllamaNode',          sub: 'Local LLM — file/content records', color: '#312e81', group: 'Process' },
   { type: 'ollamaField',    label: 'OllamaFieldNode',     sub: 'LLM inference on a chosen field',  color: '#1e1b4b', group: 'Process' },

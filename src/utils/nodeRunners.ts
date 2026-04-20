@@ -11,6 +11,7 @@ import type { Node, Edge } from '@xyflow/react'
 import { runGBIFNode }            from './runGBIFNode'
 import { runLLDSNode }            from './runLLDSNode'
 import { runADSNode }             from './runADSNode'
+import { runADSAdvancedNode }    from './runADSAdvancedNode'
 import { runMDSNode }             from './runMDSNode'
 import { runReconciliationNode }  from './runReconciliationNode'
 import { runFilterTransformNode } from './runFilterTransformNode'
@@ -38,7 +39,8 @@ export type NodeRunner = (
 export const nodeRunners: Record<string, NodeRunner> = {
   gbifSearch:      runGBIFNode,
   lldsSearch:      runLLDSNode,
-  adsSearch:       runADSNode,
+  adsSearch:         runADSNode,
+  adsSearchAdvanced: runADSAdvancedNode,
   mdsSearch:       runMDSNode,
   reconciliation:  runReconciliationNode,
   filterTransform: runFilterTransformNode,
