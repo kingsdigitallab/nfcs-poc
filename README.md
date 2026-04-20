@@ -12,7 +12,7 @@ Drag nodes onto a canvas, connect them in any order, and run federated searches 
 
 - **Node.js** v18 or later ([nodejs.org](https://nodejs.org))
 - **npm** v9 or later (bundled with Node)
-- A modern browser — Chrome or Edge 86+ required for the **LocalFolderSourceNode** (File System Access API); all other nodes work in Firefox too
+- A modern browser — Chrome or Edge 86+ required for the **LocalFolderSourceNode** (File System Access API); all other nodes including **LocalFileSourceNode** work in Firefox too
 - **[Ollama](https://ollama.com/)** running locally on port 11434 — required only for Ollama nodes
 - **Puppeteer** (installed automatically via `npm install`) — required only for the **Wait for JS rendering** option in URLFetchNode; the headless browser runs inside the Vite dev server
 
@@ -39,7 +39,7 @@ Click **💾 Save** in the top bar to download the current canvas as a `workflow
 
 Click **📂 Load** to restore a saved workflow. The canvas is replaced with the saved nodes and edges. All nodes start in an idle state with no results — run them again to repopulate data.
 
-> **Note:** `LocalFolderSourceNode` folder handles cannot be serialised. After loading a workflow containing one, click **📂 Pick Folder** again to re-select the folder.
+> **Note:** `LocalFolderSourceNode` folder handles and `LocalFileSourceNode` file handles cannot be serialised. After loading a workflow containing either, re-select the folder or file manually.
 
 ---
 
@@ -66,8 +66,10 @@ The sidebar groups nodes into collapsible categories. Click a group heading to c
 | **GBIFSearchNode** | [GBIF Occurrence API](https://www.gbif.org/developer/occurrence) | Biodiversity specimens and observations. Direct browser fetch (permissive CORS). Inline fields: free-text `q`, `scientificName`, `country`, `year`, `limit`. |
 | **LLDSSearchNode** | [Literary & Linguistic Data Service](https://llds.ling-phil.ox.ac.uk/) | DSpace REST API. Results filtered client-side. Uses a 24-hour localStorage cache; a **Use cache** toggle controls fallback during outages. |
 | **ADSSearchNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Data Catalogue API. Returns archaeological datasets with spatial/temporal coverage. **Fetch all results** checkbox paginates automatically (50 records/request) to retrieve the complete result set. |
+| **ADSSearchAdvancedNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Extended ADS search with faceted filters. Expands on ADSSearchNode with a collapsible **Filters** panel providing dropdowns for: **Resource type** (`ariadneSubject` — 16 values including Site/monument, Artefact, Coin, Fieldwork), **Getty AAT subject** (`derivedSubject` — freetext with top-20 suggestions), **Native subject** (`nativeSubject` — freetext with suggestions), **Country** (20 values), **Data type** (Structured Data, Still Image, Text, Geospatial, etc.), and **Period** (`temporal` — 20 values from post medieval to palaeolithic). A badge shows how many filters are active; a **Clear all filters** button resets them. Same sort, order, limit, and fetchAll options as the basic node. |
 | **MDSSearchNode** | [museumdata.uk](https://museumdata.uk/) | HTML scraper (no public JSON API). Two-step fetch: probe for total, then retrieve all. Capped at 200 records; amber ⚠ badge when the total exceeds the cap. |
-| **LocalFolderSourceNode** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction via pdfjs-dist), XML/TEI, plain text, and images. Emits `FileRecord[]` downstream. Requires Chrome or Edge 86+. |
+| **LocalFileSourceNode** | Local filesystem | Parses a single CSV or TSV file selected via a standard file picker (works in all browsers). Auto-detects the delimiter from the file extension and content (tab, comma, semicolon, or pipe); manual override available. **First row is header** toggle (default on) — off generates `col1`, `col2`… names. **Cast numeric strings to numbers** toggle (default on) — converts values such as `"51.5074"` to `51.5074`, enabling downstream map and spatial filter nodes to work directly with coordinate columns. Shows a column name preview after parsing. |
+| **LocalFolderSourceNode** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction via pdfjs-dist), XML/TEI, plain text, and images. Also detects Shapefiles and GeoJSON files in the folder and exposes them via a dedicated **GIS handle** (bottom) — connect this to a MapOutputNode to overlay vector layers on the map. Emits `FileRecord[]` on the main output. Requires Chrome or Edge 86+. |
 
 ### Process
 
@@ -90,7 +92,7 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 | **QuickViewNode** | Inspect the full, untruncated value of any field across upstream records. Pick a field from the dropdown; navigate records with ‹ / › buttons. Copy button per record. Useful for reviewing long fields such as `fetchedContent` or `ollamaResponse`. |
 | **TableOutputNode** | Paginated table. Merges records from multiple upstream nodes automatically. Pass-through output handle so it can chain into Map, Timeline, or Export nodes. Double-click to expand to a full-screen panel. |
 | **JSONOutputNode** | Syntax-highlighted JSON viewer. Shows the full normalised record graph. Double-click to expand. |
-| **MapOutputNode** | Leaflet map. Plots any record that has `decimalLatitude` and `decimalLongitude`. Click a marker for a popup with title, date, and a link back to the source record. |
+| **MapOutputNode** | Leaflet map. Plots any record that has `decimalLatitude` and `decimalLongitude`. Click a marker for a popup with title, date, and a link back to the source record. Also accepts GIS vector layers via the **GIS handle** (connect from `LocalFolderSourceNode`'s bottom handle) and renders them as overlays alongside point data. |
 | **TimelineOutputNode** | SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates (e.g. `-1199`). Hover a marker for details. |
 | **ExportNode** | Downloads the upstream records as **CSV**, **JSON**, or **GeoJSON**. See [Export](#export) below. |
 | **OllamaOutputNode** | Card-based display of Ollama inference text. Each record gets its own expandable card with a copy button. |
@@ -102,27 +104,30 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 ```
 ParamNode ─┐
            ▼
-  GBIFSearchNode ──────────────────────────────────────────────┐
-  LLDSSearchNode ──────────────────────────────────────────────┤
-  ADSSearchNode  ──┐                                           │
-  MDSSearchNode  ──┤                                           │
-                   ▼                                           │
-         FilterTransformNode ──────────────────────────────────┤
-                   │                                           │
-                   ▼                                           │
-         SpatialFilterNode   ──────────────────────────────────┤
-                   │                                           │
-                   ▼                                           │
-         ReconciliationNode  ──────────────────────────────────┤
+  GBIFSearchNode       ────────────────────────────────────────┐
+  LLDSSearchNode       ────────────────────────────────────────┤
+  ADSSearchNode        ──┐                                     │
+  ADSSearchAdvancedNode ─┤                                     │
+  MDSSearchNode        ──┤                                     │
+  LocalFileSourceNode  ──┤                                     │
+                         ▼                                     │
+               FilterTransformNode ────────────────────────────┤
+                         │                                     │
+                         ▼                                     │
+               SpatialFilterNode   ────────────────────────────┤
+                         │                                     │
+                         ▼                                     │
+               ReconciliationNode  ────────────────────────────┤
                                                                │
-  LocalFolderSourceNode ──► OllamaNode ─────────────────────── ┤
-                                                               │
+  LocalFolderSourceNode ──► OllamaNode ──────────────────────── ┤
+           │ (GIS handle)                                      │
+           ▼                                                   │
   [source] ──► URLFetchNode ──► HTMLSectionNode ──► OllamaFieldNode ──┤
                                                                ▼
                                                       TableOutputNode ──► ExportNode
                                                       QuickViewNode
                                                       JSONOutputNode
-                                                      MapOutputNode
+                                                      MapOutputNode ◄── LocalFolderSourceNode (GIS)
                                                       TimelineOutputNode
                                                       OllamaOutputNode
 ```
@@ -138,7 +143,7 @@ The `useUpstreamRecords` hook merges records from **all** edges connected to a n
 - **▶ Run** (on individual nodes) — execute that node only.
 - **▶▶ Run All** (top bar) — discovers every runnable node, builds a topological order using Kahn's algorithm, and executes nodes wave-by-wave: all source nodes in parallel first, then each processing layer in dependency order. If one node errors, downstream dependants are skipped but unrelated branches continue.
 
-All node types are included in Run All **except** `LocalFolderSourceNode` (folder selection requires a user gesture and cannot be automated). Run that node manually before clicking Run All.
+All node types are included in Run All **except** `LocalFolderSourceNode` and `LocalFileSourceNode` (file/folder selection requires a user gesture and cannot be automated). Run those nodes manually before clicking Run All.
 
 Per-record failures in Ollama nodes do not abort the batch — the error is stored as `ollamaResponse` on that record and processing continues with the next record.
 
@@ -364,6 +369,21 @@ Files are named `nfcs-export-YYYY-MM-DD.{ext}`.
 4. Add an **OllamaFieldNode**, connect HTMLSectionNode's output, select `fetchedContent`, write a prompt using `{{value}}` for the field content, and click **▶ Run**.
 5. Add a **QuickViewNode** connected to OllamaFieldNode to inspect individual responses in full, or a **TableOutputNode** for the complete record set.
 
+### Parsing a CSV with coordinates
+
+1. Drag a **LocalFileSourceNode** onto the canvas.
+2. Ensure **Cast numeric strings to numbers** is ticked (default).
+3. Click **📂 Pick File** and select your CSV. The column names preview confirms the parse.
+4. Connect the output to a **MapOutputNode** — if your CSV has columns named `decimalLatitude` / `decimalLongitude` (or rename them first with a **FilterTransformNode**), points will appear immediately.
+
+### Advanced ADS faceted search
+
+1. Drag an **ADSSearchAdvancedNode** onto the canvas.
+2. Type a keyword query (e.g. `Hadrian`) or leave it blank for a browse.
+3. Click **▸ Filters** to expand the panel and select, e.g., **Resource type = Fieldwork report**, **Country = Scotland**, **Period = roman**.
+4. Optionally tick **Fetch all results** for a complete paginated result set.
+5. Click **▶ Run** and connect the output to a **TableOutputNode** or **MapOutputNode**.
+
 ### Spatial filter + map
 
 1. Run any source node.
@@ -398,9 +418,11 @@ nfcs-poc/
     │   ├── CommentNode.tsx         # Canvas annotation label (no handles, resizable)
     │   ├── GBIFSearchNode.tsx
     │   ├── LLDSSearchNode.tsx
-    │   ├── ADSSearchNode.tsx       # Includes fetchAll pagination
+    │   ├── ADSSearchNode.tsx           # Includes fetchAll pagination
+    │   ├── ADSSearchAdvancedNode.tsx   # ADS search with faceted filters
     │   ├── MDSSearchNode.tsx
-    │   ├── LocalFolderSourceNode.tsx   # File System Access API source
+    │   ├── LocalFileSourceNode.tsx     # Single CSV/TSV file picker with delimiter detection
+    │   ├── LocalFolderSourceNode.tsx   # File System Access API source + GIS layer output
     │   ├── FilterTransformNode.tsx
     │   ├── SpatialFilterNode.tsx       # Leaflet bbox filter
     │   ├── ReconciliationNode.tsx
@@ -421,6 +443,7 @@ nfcs-poc/
         ├── nodeIdCounter.ts            # Shared ID counter; bumpCounterPast() used on workflow load
         ├── workflowIO.ts               # Serialize/deserialize workflow to/from JSON
         ├── fileReaders.ts              # PDF/XML/text/image extraction (FileRecord)
+        ├── gisReaders.ts               # Shapefile + GeoJSON parsing via shpjs (GisLayer)
         ├── gbifAdapter.ts
         ├── lldsAdapter.ts / lldsCache.ts
         ├── adsAdapter.ts
@@ -431,6 +454,7 @@ nfcs-poc/
         ├── runGBIFNode.ts
         ├── runLLDSNode.ts
         ├── runADSNode.ts               # fetchAll pagination loop
+        ├── runADSAdvancedNode.ts        # Advanced ADS search with facet params
         ├── runMDSNode.ts
         ├── runReconciliationNode.ts
         ├── runFilterTransformNode.ts
@@ -454,6 +478,7 @@ nfcs-poc/
 | [@xyflow/react v12](https://reactflow.dev/) | Node-based canvas |
 | [Leaflet](https://leafletjs.com/) | Map rendering (MapOutputNode, SpatialFilterNode) |
 | [pdfjs-dist](https://mozilla.github.io/pdf.js/) | Client-side PDF text extraction (LocalFolderSourceNode) |
+| [shpjs](https://github.com/calvinmetcalf/shapefile-js) | Client-side Shapefile parsing for GIS layer support (LocalFolderSourceNode) |
 | [Puppeteer](https://pptr.dev/) | Headless browser for JS-rendered page fetching (URLFetchNode) |
 | [Ollama](https://ollama.com/) | Local LLM inference (external, not bundled) |
 
