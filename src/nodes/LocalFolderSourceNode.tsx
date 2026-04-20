@@ -2,17 +2,20 @@
  * LocalFolderSourceNode — source node that reads files from a user-selected
  * local folder via the File System Access API.
  *
- * Emits FileRecord[] on the output handle so downstream nodes (OllamaNode,
- * TableOutputNode, etc.) can read them via data.results.
+ * Emits FileRecord[] on the `results` output handle (right side) for
+ * downstream document-processing nodes.
  *
- * No upstream runner is registered for this node — folder selection requires
- * a direct user gesture and the results are pre-populated before any workflow
- * run.
+ * Emits GisLayer[] on the `gis` output handle (bottom) for MapOutputNode.
+ * GIS layers are stored directly in node data (not results store) since they
+ * are FeatureCollections, not record arrays.
+ *
+ * No runner is registered — folder selection requires a direct user gesture.
  */
 
 import { useState, useCallback, useRef } from 'react'
 import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
 import { scanDirectory, TYPE_LABEL_MAP, type FileRecord } from '../utils/fileReaders'
+import { scanGisFiles, type GisLayer } from '../utils/gisReaders'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 // ── Node data (persisted in React Flow node state) ────────────────────────────
@@ -25,6 +28,8 @@ export interface LocalFolderSourceNodeData {
   statusMessage: string
   results: FileRecord[] | undefined
   count: number
+  gisLayers: GisLayer[] | undefined
+  gisCount: number
   [key: string]: unknown
 }
 
@@ -55,7 +60,6 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
   const { updateNodeData } = useReactFlow()
   const d = data as LocalFolderSourceNodeData
 
-  // dirHandle is internal state — not serialisable into node data
   const dirHandleRef = useRef<FileSystemDirectoryHandle | null>(null)
   const [scanSummary, setScanSummary] = useState<string>('')
 
@@ -69,13 +73,18 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
       statusMessage: 'Scanning…',
       folderName:    handle.name,
       count:         0,
+      gisLayers:     undefined,
+      gisCount:      0,
     })
     setScanSummary('')
 
     try {
-      const { files, totalFound, skipped } = await scanDirectory(handle, fileTypes, maxFiles)
+      const [{ files, totalFound, skipped }, gisLayers] = await Promise.all([
+        scanDirectory(handle, fileTypes, maxFiles),
+        scanGisFiles(handle),
+      ])
 
-      // Build summary string like "12 files: 8 PDF, 3 XML, 1 image"
+      // Build summary string
       const typeCounts: Record<string, number> = {}
       for (const f of files) {
         typeCounts[f.contentType] = (typeCounts[f.contentType] ?? 0) + 1
@@ -83,18 +92,24 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
       const typeStr = Object.entries(typeCounts)
         .map(([t, n]) => `${n} ${t.replace('pdf_text', 'PDF').replace('xml', 'XML')}`)
         .join(', ')
-      const summary = `${files.length} file${files.length !== 1 ? 's' : ''}${typeStr ? `: ${typeStr}` : ''}${skipped ? ` (${skipped} skipped)` : ''}`
+
+      const gisSummary = gisLayers.length > 0
+        ? ` · ${gisLayers.length} GIS layer${gisLayers.length !== 1 ? 's' : ''}`
+        : ''
+      const summary = `${files.length} file${files.length !== 1 ? 's' : ''}${typeStr ? `: ${typeStr}` : ''}${skipped ? ` (${skipped} skipped)` : ''}${gisSummary}`
 
       setScanSummary(summary)
-      console.log(`[LocalFolder] scanned ${handle.name}: found ${totalFound}, loaded ${files.length}, skipped ${skipped}`)
+      console.log(`[LocalFolder] scanned ${handle.name}: found ${totalFound}, loaded ${files.length}, skipped ${skipped}, gisLayers ${gisLayers.length}`)
 
       const version = setNodeResults(id, files as unknown as Record<string, unknown>[])
       updateNodeData(id, {
         status:         'ready',
-        statusMessage:  `✓ ${files.length} files`,
+        statusMessage:  `✓ ${files.length} files${gisLayers.length > 0 ? ` · ${gisLayers.length} GIS` : ''}`,
         folderName:     handle.name,
         count:          files.length,
         resultsVersion: version,
+        gisLayers:      gisLayers.length > 0 ? gisLayers : undefined,
+        gisCount:       gisLayers.length,
       })
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err)
@@ -104,6 +119,8 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
         statusMessage: `✗ ${msg}`,
         results:       undefined,
         count:         0,
+        gisLayers:     undefined,
+        gisCount:      0,
       })
     }
   }, [id, updateNodeData, d.fileTypes, d.maxFiles])
@@ -117,7 +134,6 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
       dirHandleRef.current = handle
       await doScan(handle)
     } catch (err) {
-      // AbortError = user cancelled — reset to idle silently
       if ((err as { name?: string }).name === 'AbortError') {
         updateNodeData(id, { status: 'idle', statusMessage: '' })
         return
@@ -146,6 +162,8 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
   const maxFiles    = Number(d.maxFiles) || 50
   const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
   const count       = (d.count as number | undefined) ?? 0
+  const gisLayers   = (d.gisLayers as GisLayer[] | undefined) ?? []
+  const gisCount    = (d.gisCount as number | undefined) ?? 0
 
   return (
     <div style={{ ...styles.card, borderColor }}>
@@ -215,6 +233,32 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
             {scanSummary ? (
               <div style={styles.scanSummary}>{scanSummary}</div>
             ) : null}
+
+            {/* GIS layers list */}
+            {gisCount > 0 && gisLayers.length > 0 && (
+              <div style={styles.gisSection}>
+                <div style={styles.gisSectionLabel}>GIS layers ({gisCount})</div>
+                {gisLayers.map((layer, i) => (
+                  <div key={i} style={styles.gisLayerRow}>
+                    <span style={styles.gisIcon}>
+                      {layer.format === 'shapefile' ? '⬡' : '{}'}
+                    </span>
+                    <span style={styles.gisLayerName} title={layer.name}>
+                      {layer.name}
+                    </span>
+                    <span style={styles.gisFeatureCount}>{layer.featureCount} feat.</span>
+                    {layer.noPrj && (
+                      <span title="No .prj file found — coordinates assumed WGS84" style={styles.noPrjBadge}>
+                        no CRS
+                      </span>
+                    )}
+                  </div>
+                ))}
+                <div style={styles.gisHint}>
+                  Connect the GIS handle (bottom) to a Map Output node
+                </div>
+              </div>
+            )}
           </>
         )}
       </div>
@@ -246,12 +290,21 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
         )}
       </div>
 
-      {/* Right output handle */}
+      {/* Right output handle — document records */}
       <Handle
         type="source"
         position={Position.Right}
         id="results"
         style={styles.outputHandle}
+      />
+
+      {/* Bottom output handle — GIS layers → MapOutputNode */}
+      <Handle
+        type="source"
+        position={Position.Bottom}
+        id="gis"
+        style={styles.gisHandle}
+        title="GIS layers output"
       />
     </div>
   )
@@ -369,6 +422,65 @@ const styles = {
     fontStyle: 'italic' as const,
     lineHeight: 1.4,
   },
+  gisSection: {
+    marginTop: 4,
+    padding: '6px 8px',
+    background: '#eff6ff',
+    borderRadius: 4,
+    border: '1px solid #bfdbfe',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    gap: 3,
+  },
+  gisSectionLabel: {
+    fontSize: 10,
+    fontWeight: 700,
+    color: '#1d4ed8',
+    textTransform: 'uppercase' as const,
+    letterSpacing: '0.05em',
+    marginBottom: 2,
+  },
+  gisLayerRow: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 5,
+    fontSize: 11,
+    color: '#1e40af',
+  },
+  gisIcon: {
+    fontSize: 11,
+    flexShrink: 0,
+    width: 14,
+    textAlign: 'center' as const,
+  },
+  gisLayerName: {
+    flex: 1,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap' as const,
+    fontWeight: 600,
+  },
+  gisFeatureCount: {
+    fontSize: 10,
+    color: '#3b82f6',
+    flexShrink: 0,
+  },
+  noPrjBadge: {
+    fontSize: 9,
+    fontWeight: 700,
+    background: '#fef3c7',
+    color: '#b45309',
+    border: '1px solid #fcd34d',
+    borderRadius: 3,
+    padding: '0 4px',
+    flexShrink: 0,
+  },
+  gisHint: {
+    fontSize: 9,
+    color: '#6b7280',
+    fontStyle: 'italic' as const,
+    marginTop: 2,
+  },
   noApiWarning: {
     fontSize: 11,
     color: '#ef4444',
@@ -396,5 +508,12 @@ const styles = {
     background: '#22c55e',
     border: '2px solid #fff',
     boxShadow: '0 0 0 1px #22c55e',
+  },
+  gisHandle: {
+    width: 10,
+    height: 10,
+    background: '#3b82f6',
+    border: '2px solid #fff',
+    boxShadow: '0 0 0 1px #3b82f6',
   },
 }

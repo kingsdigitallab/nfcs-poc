@@ -1,4 +1,5 @@
 import { LocalFolderSourceNode } from './LocalFolderSourceNode'
+import { LocalFileSourceNode }   from './LocalFileSourceNode'
 import { OllamaNode }            from './OllamaNode'
 import { OllamaFieldNode }       from './OllamaFieldNode'
 import { URLFetchNode }          from './URLFetchNode'
@@ -23,6 +24,7 @@ import { CommentNode }        from './CommentNode'
 export const nodeTypes = {
   param:             ParamNode,
   localFolderSource: LocalFolderSourceNode,
+  localFileSource:   LocalFileSourceNode,
   ollamaNode:        OllamaNode,
   ollamaField:       OllamaFieldNode,
   urlFetch:          URLFetchNode,

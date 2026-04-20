@@ -19,7 +19,7 @@
  */
 
 import { useEffect, useRef, useMemo, useState } from 'react'
-import { Handle, Position, NodeProps } from '@xyflow/react'
+import { Handle, Position, NodeProps, useNodes, useEdges } from '@xyflow/react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 // @ts-ignore
@@ -29,6 +29,7 @@ import 'leaflet.markercluster/dist/MarkerCluster.css'
 // @ts-ignore
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
+import type { GisLayer } from '../utils/gisReaders'
 
 // ─── source colour palette ────────────────────────────────────────────────────
 
@@ -62,10 +63,23 @@ export function MapOutputNode({ id }: NodeProps) {
   const { records, connected, status, sourceCount } = useUpstreamRecords(id)
   const [clusteringEnabled, setClusteringEnabled] = useState(true)
 
+  // Read GIS layers from upstream nodes connected via the 'gis' handle
+  const allNodes = useNodes()
+  const allEdges = useEdges()
+  const gisLayers = useMemo<GisLayer[]>(() => {
+    const gisEdges = allEdges.filter(e => e.target === id && e.targetHandle === 'gis')
+    return gisEdges.flatMap(e => {
+      const src = allNodes.find(n => n.id === e.source)
+      return (src?.data?.gisLayers as GisLayer[] | undefined) ?? []
+    })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allEdges, allNodes, id])
+
   const mapDivRef     = useRef<HTMLDivElement>(null)
   const mapRef        = useRef<L.Map | null>(null)
   const layerGroupRef = useRef<L.LayerGroup | null>(null)
   const clusterGroupRef = useRef<any>(null)  // L.MarkerClusterGroup from leaflet.markercluster
+  const gisLayerGroupRef = useRef<L.LayerGroup | null>(null)
   const prevKeyRef    = useRef('')
 
   // ── legend data (render-time, not in effect) ───────────────────────────────
@@ -99,16 +113,17 @@ export function MapOutputNode({ id }: NodeProps) {
     }).addTo(map)
 
     mapRef.current = map
-    // Initialize cluster group (will be toggled on/off via clustering state)
     const clusterGroup = (L as any).markerClusterGroup()
     clusterGroupRef.current = clusterGroup
     layerGroupRef.current = L.layerGroup().addTo(map)
+    gisLayerGroupRef.current = L.layerGroup().addTo(map)
 
     return () => {
       map.remove()
-      mapRef.current        = null
-      layerGroupRef.current = null
+      mapRef.current         = null
+      layerGroupRef.current  = null
       clusterGroupRef.current = null
+      gisLayerGroupRef.current = null
     }
   }, [])
 
@@ -198,6 +213,56 @@ export function MapOutputNode({ id }: NodeProps) {
     }
   }, [records, clusteringEnabled])
 
+  // ── rebuild GIS overlay layers when gisLayers changes ─────────────────────
+  useEffect(() => {
+    const map = mapRef.current
+    const gisGroup = gisLayerGroupRef.current
+    if (!map || !gisGroup) return
+
+    gisGroup.clearLayers()
+    if (gisLayers.length === 0) return
+
+    const GIS_COLORS = ['#f97316', '#a855f7', '#06b6d4', '#ec4899', '#84cc16']
+
+    gisLayers.forEach((layer, idx) => {
+      const color = GIS_COLORS[idx % GIS_COLORS.length]
+      L.geoJSON(layer.geojson as Parameters<typeof L.geoJSON>[0], {
+        style: {
+          color,
+          weight: 2,
+          opacity: 0.8,
+          fillColor: color,
+          fillOpacity: 0.15,
+        },
+        pointToLayer: (_feature, latlng) =>
+          L.circleMarker(latlng, {
+            radius:      5,
+            color:       '#fff',
+            weight:      1,
+            fillColor:   color,
+            fillOpacity: 0.7,
+          }),
+        onEachFeature: (feature, leafletLayer) => {
+          if (!feature.properties) return
+          const props = feature.properties as Record<string, unknown>
+          const label = (props.name ?? props.NAME ?? props.label ?? props.LABEL ?? layer.name) as string
+          const rows = Object.entries(props)
+            .filter(([, v]) => v != null && v !== '')
+            .slice(0, 8)
+            .map(([k, v]) => `<tr><td style="font-weight:600;padding-right:6px;white-space:nowrap">${esc(k)}</td><td>${esc(String(v))}</td></tr>`)
+            .join('')
+          leafletLayer.bindPopup(
+            `<div style="font-family:system-ui,sans-serif;font-size:11px;min-width:160px">
+              <strong style="display:block;margin-bottom:4px;font-size:12px">${esc(String(label))}</strong>
+              ${rows ? `<table style="border-collapse:collapse">${rows}</table>` : ''}
+            </div>`,
+            { maxWidth: 280 },
+          )
+        },
+      }).addTo(gisGroup)
+    })
+  }, [gisLayers])
+
   // ── status text shown in the header ───────────────────────────────────────
   const headerNote = !connected
     ? 'Connect a search or table node'
@@ -209,9 +274,13 @@ export function MapOutputNode({ id }: NodeProps) {
           ? 'No mappable records (no coordinates)'
           : 'Run the upstream node'
 
+  const GIS_COLORS = ['#f97316', '#a855f7', '#06b6d4', '#ec4899', '#84cc16']
+
   return (
     <div style={styles.card}>
       <Handle type="target" position={Position.Left} id="data" style={styles.inputHandle} />
+      {/* Top input handle for GIS context layers */}
+      <Handle type="target" position={Position.Top} id="gis" style={styles.gisInputHandle} title="GIS layer input" />
 
       {/* Header */}
       <div style={styles.header}>
@@ -242,12 +311,19 @@ export function MapOutputNode({ id }: NodeProps) {
       />
 
       {/* Legend */}
-      {Object.keys(bySource).length > 0 && (
+      {(Object.keys(bySource).length > 0 || gisLayers.length > 0) && (
         <div style={styles.legend}>
           {Object.entries(bySource).map(([src, n]) => (
             <span key={src} style={styles.legendItem}>
               <span style={{ ...styles.legendDot, background: markerColor(src) }} />
               {src} ({n})
+            </span>
+          ))}
+          {gisLayers.map((layer, idx) => (
+            <span key={`gis-${idx}`} style={styles.legendItem}
+              title={layer.noPrj ? 'No .prj file — coordinates assumed WGS84. Add a .prj file alongside the .shp for automatic reprojection.' : undefined}>
+              <span style={{ ...styles.legendDot, background: GIS_COLORS[idx % GIS_COLORS.length], borderRadius: 2 }} />
+              {layer.name} ({layer.featureCount}){layer.noPrj ? ' ⚠' : ''}
             </span>
           ))}
         </div>
@@ -318,6 +394,13 @@ const styles = {
     background: HEADER_COLOR,
     border:     '2px solid #fff',
     boxShadow:  `0 0 0 1px ${HEADER_COLOR}`,
+  },
+  gisInputHandle: {
+    width:      10,
+    height:     10,
+    background: '#3b82f6',
+    border:     '2px solid #fff',
+    boxShadow:  '0 0 0 1px #3b82f6',
   },
   controls: {
     display:    'flex',
