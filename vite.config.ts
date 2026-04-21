@@ -134,6 +134,129 @@ async function fetchWithBrowser(
   }
 }
 
+// ── ADS Library search middleware ─────────────────────────────────────────────
+// Browser fetches GET /ads-library-search?q=<query>&size=<n>
+// The middleware does the two-step JSF session dance server-side:
+//   1. GET the search page to obtain JSESSIONID cookie + jakarta.faces.ViewState
+//   2. POST the search with those tokens
+//   3. Extract the CDATA HTML from the JSF partial-response XML
+//   4. Return the inner HTML so the browser can parse it with DOMParser
+
+const ADS_LIB_URL =
+  'https://archaeologydataservice.ac.uk/library/search/searchResults.xhtml'
+const ADS_LIB_UA =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0'
+
+async function adsLibrarySearchMiddleware(
+  req: IncomingMessage,
+  res: ServerResponse,
+  next: () => void,
+) {
+  if (!req.url?.startsWith('/ads-library-search')) { next(); return }
+
+  const parsed = new URL(req.url, 'http://localhost')
+  const query  = parsed.searchParams.get('q') ?? ''
+  const size   = parsed.searchParams.get('size') ?? '20'
+
+  try {
+    // Step 1 — GET the search page; extract session cookie + ViewState
+    console.log('[ads-library] GET', ADS_LIB_URL)
+    const getRes = await fetch(ADS_LIB_URL, {
+      headers: {
+        'User-Agent': ADS_LIB_UA,
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-GB,en;q=0.9',
+      },
+      signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
+      redirect: 'follow',
+    })
+    if (!getRes.ok) throw new Error(`GET ${getRes.status}: Cloudflare or server block`)
+
+    // Collect Set-Cookie headers (getSetCookie added in Node 18 undici)
+    const hdrs = getRes.headers as unknown as { getSetCookie?: () => string[] }
+    const rawCookies: string[] = hdrs.getSetCookie?.()
+      ?? (getRes.headers.get('set-cookie') ? [getRes.headers.get('set-cookie')!] : [])
+    const cookieStr = rawCookies
+      .filter(Boolean)
+      .map(c => c.split(';')[0].trim())
+      .join('; ')
+
+    const pageHtml = await getRes.text()
+
+    // Extract jakarta.faces.ViewState
+    const vsMatch =
+      /name="jakarta\.faces\.ViewState"[^>]*value="([^"]*)"/.exec(pageHtml) ??
+      /value="([^"]*)"[^>]*name="jakarta\.faces\.ViewState"/.exec(pageHtml)
+    if (!vsMatch) {
+      throw new Error('ViewState not found — the page may have been blocked by Cloudflare')
+    }
+    const viewState = vsMatch[1]
+
+    // Extract the submit-button component ID (j_idt44 or equivalent)
+    const btnMatch =
+      /id="(j_idt\d+)"[^>]*type="submit"/.exec(pageHtml) ??
+      /type="submit"[^>]*id="(j_idt\d+)"/.exec(pageHtml)
+    const btnId = btnMatch?.[1] ?? 'j_idt44'
+
+    console.log(`[ads-library] viewState ok, btnId=${btnId}`)
+
+    // Step 2 — POST the search
+    const body = new URLSearchParams({
+      'jakarta.faces.partial.ajax': 'true',
+      'jakarta.faces.source': btnId,
+      'jakarta.faces.partial.execute': '@all',
+      'jakarta.faces.partial.render': 'searchResultForm',
+      [btnId]: btnId,
+      'searchResultForm': 'searchResultForm',
+      'searchFieldSelector': '',
+      'searchText': query,
+      'perPage': size,
+      'sortBy': '',
+      'perPage2': size,
+      'jakarta.faces.ViewState': viewState,
+    })
+
+    console.log('[ads-library] POST q=', query, 'size=', size)
+    const postRes = await fetch(ADS_LIB_URL, {
+      method: 'POST',
+      headers: {
+        'User-Agent': ADS_LIB_UA,
+        'Accept': 'application/xml, text/xml, */*; q=0.01',
+        'Accept-Language': 'en-GB,en;q=0.9',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'Faces-Request': 'partial/ajax',
+        'X-Requested-With': 'XMLHttpRequest',
+        'Origin': 'https://archaeologydataservice.ac.uk',
+        'Referer': ADS_LIB_URL,
+        ...(cookieStr ? { Cookie: cookieStr } : {}),
+      },
+      body: body.toString(),
+      signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
+    })
+    if (!postRes.ok) throw new Error(`POST ${postRes.status}`)
+
+    const xmlText = await postRes.text()
+    console.log('[ads-library] response length:', xmlText.length)
+
+    // Extract CDATA HTML from JSF partial-response
+    // <update id="searchResultForm"><![CDATA[...HTML...]]></update>
+    const cdataMatch =
+      /<update[^>]*id="searchResultForm[^"]*"[^>]*><!\[CDATA\[([\s\S]*?)\]\]><\/update>/i.exec(xmlText)
+
+    const html = cdataMatch?.[1] ?? xmlText
+
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'text/html; charset=utf-8')
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.end(html)
+  } catch (err) {
+    if (!res.headersSent) {
+      res.statusCode = 502
+      res.end(`ADS Library proxy error: ${err instanceof Error ? err.message : String(err)}`)
+    }
+  }
+}
+
 // ── Generic URL proxy middleware ──────────────────────────────────────────────
 // Browser fetches /url-proxy?url=<encoded>[&js=true][&wait=networkidle0]
 // Vite handles it server-side, sidestepping CORS entirely.
@@ -216,6 +339,7 @@ export default defineConfig({
     {
       name: 'url-proxy',
       configureServer(server) {
+        server.middlewares.use(adsLibrarySearchMiddleware)
         server.middlewares.use(urlProxyMiddleware)
       },
     },

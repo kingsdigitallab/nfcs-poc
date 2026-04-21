@@ -12,6 +12,7 @@ import { runGBIFNode }            from './runGBIFNode'
 import { runLLDSNode }            from './runLLDSNode'
 import { runADSNode }             from './runADSNode'
 import { runADSAdvancedNode }    from './runADSAdvancedNode'
+import { runADSLibraryNode }     from './runADSLibraryNode'
 import { runMDSNode }             from './runMDSNode'
 import { runReconciliationNode }  from './runReconciliationNode'
 import { runFilterTransformNode } from './runFilterTransformNode'
@@ -41,6 +42,7 @@ export const nodeRunners: Record<string, NodeRunner> = {
   lldsSearch:      runLLDSNode,
   adsSearch:         runADSNode,
   adsSearchAdvanced: runADSAdvancedNode,
+  adsLibrarySearch:  runADSLibraryNode,
   mdsSearch:       runMDSNode,
   reconciliation:  runReconciliationNode,
   filterTransform: runFilterTransformNode,

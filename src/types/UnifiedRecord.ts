@@ -91,6 +91,8 @@ export interface UnifiedRecord {
   llds?: Record<string, unknown>
   /** ADS Data Catalogue namespace (temporal, country, allSpatial, …) */
   ads?: Record<string, unknown>
+  /** ADS Library catalogue namespace (fields by CSS class, divTexts, url) */
+  adsLibrary?: Record<string, unknown>
   /** Museum Data Service namespace (collection, material, place, …) */
   mds?: Record<string, unknown>
   // ckan?: Record<string, unknown>

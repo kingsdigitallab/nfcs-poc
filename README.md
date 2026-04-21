@@ -67,6 +67,7 @@ The sidebar groups nodes into collapsible categories. Click a group heading to c
 | **LLDSSearchNode** | [Literary & Linguistic Data Service](https://llds.ling-phil.ox.ac.uk/) | DSpace REST API. Results filtered client-side. Uses a 24-hour localStorage cache; a **Use cache** toggle controls fallback during outages. |
 | **ADSSearchNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Data Catalogue API. Returns archaeological datasets with spatial/temporal coverage. **Fetch all results** checkbox paginates automatically (50 records/request) to retrieve the complete result set. |
 | **ADSSearchAdvancedNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Extended ADS search with faceted filters. Expands on ADSSearchNode with a collapsible **Filters** panel providing dropdowns for: **Resource type** (`ariadneSubject` — 16 values including Site/monument, Artefact, Coin, Fieldwork), **Getty AAT subject** (`derivedSubject` — freetext with top-20 suggestions), **Native subject** (`nativeSubject` — freetext with suggestions), **Country** (20 values), **Data type** (Structured Data, Still Image, Text, Geospatial, etc.), and **Period** (`temporal` — 20 values from post medieval to palaeolithic). A badge shows how many filters are active; a **Clear all filters** button resets them. Same sort, order, limit, and fetchAll options as the basic node. |
+| **ADSLibraryNode** | [ADS Library catalogue](https://archaeologydataservice.ac.uk/library/) | Library catalogue search (books, journals, grey literature). Uses a server-side two-step Jakarta Faces session: the Vite middleware GETs the search page to obtain a `JSESSIONID` + `ViewState`, then POSTs the query and returns the CDATA HTML fragment for client-side parsing. Inline fields: `query`, `limit` (max 100). Returns `title`, `creator`, `date`, `type` (publication type from icon), `adsLibrary.parentTitle`, `adsLibrary.downloadUrl`. |
 | **MDSSearchNode** | [museumdata.uk](https://museumdata.uk/) | HTML scraper (no public JSON API). Two-step fetch: probe for total, then retrieve all. Capped at 200 records; amber ⚠ badge when the total exceeds the cap. |
 | **LocalFileSourceNode** | Local filesystem | Parses a single CSV or TSV file selected via a standard file picker (works in all browsers). Auto-detects the delimiter from the file extension and content (tab, comma, semicolon, or pipe); manual override available. **First row is header** toggle (default on) — off generates `col1`, `col2`… names. **Cast numeric strings to numbers** toggle (default on) — converts values such as `"51.5074"` to `51.5074`, enabling downstream map and spatial filter nodes to work directly with coordinate columns. Shows a column name preview after parsing. |
 | **LocalFolderSourceNode** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction via pdfjs-dist), XML/TEI, plain text, and images. Also detects Shapefiles and GeoJSON files in the folder and exposes them via a dedicated **GIS handle** (bottom) — connect this to a MapOutputNode to overlay vector layers on the map. Emits `FileRecord[]` on the main output. Requires Chrome or Edge 86+. |
@@ -90,7 +91,7 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 | Node | Description |
 |------|-------------|
 | **QuickViewNode** | Inspect the full, untruncated value of any field across upstream records. Pick a field from the dropdown; navigate records with ‹ / › buttons. Copy button per record. Useful for reviewing long fields such as `fetchedContent` or `ollamaResponse`. |
-| **TableOutputNode** | Paginated table. Merges records from multiple upstream nodes automatically. Pass-through output handle so it can chain into Map, Timeline, or Export nodes. Double-click to expand to a full-screen panel. |
+| **TableOutputNode** | Paginated table. Merges records from multiple upstream nodes automatically. Pass-through output handle so it can chain into Map, Timeline, or Export nodes. Double-click to expand to a full-screen panel. Toolbar has two column toggles: **show all columns** reveals every flat top-level field; **expand namespaces** (visible once show all is on) additionally flattens one level of service namespace objects into dot-notation columns (`adsLibrary.parentTitle`, `gbif.datasetKey`, etc.). |
 | **JSONOutputNode** | Syntax-highlighted JSON viewer. Shows the full normalised record graph. Double-click to expand. |
 | **MapOutputNode** | Leaflet map. Plots any record that has `decimalLatitude` and `decimalLongitude`. Click a marker for a popup with title, date, and a link back to the source record. Also accepts GIS vector layers via the **GIS handle** (connect from `LocalFolderSourceNode`'s bottom handle) and renders them as overlays alongside point data. |
 | **TimelineOutputNode** | SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates (e.g. `-1199`). Hover a marker for details. |
@@ -108,6 +109,7 @@ ParamNode ─┐
   LLDSSearchNode       ────────────────────────────────────────┤
   ADSSearchNode        ──┐                                     │
   ADSSearchAdvancedNode ─┤                                     │
+  ADSLibraryNode       ──┤                                     │
   MDSSearchNode        ──┤                                     │
   LocalFileSourceNode  ──┤                                     │
                          ▼                                     │
@@ -173,10 +175,11 @@ scientificName, country, eventDate          — GBIF-specific normalised fields
 decimalLatitude, decimalLongitude           — used by MapOutputNode
 basisOfRecord, institutionCode, datasetName — GBIF-specific
 
-gbif.*   — full raw GBIF occurrence object
-llds.*   — LLDS handle, branding, itemType
-ads.*    — ADS temporal, country, spatial, identifier namespace
-mds.*    — MDS field map (condition, materials, dimensions, provenance, …)
+gbif.*        — full raw GBIF occurrence object
+llds.*        — LLDS handle, branding, itemType
+ads.*         — ADS temporal, country, spatial, identifier namespace
+adsLibrary.*  — ADS Library catalogue: recordId, recordType, publicationType, parentTitle, publicationDate, authors, downloadUrl
+mds.*         — MDS field map (condition, materials, dimensions, provenance, …)
 
 fetchedUrl, fetchedContent, fetchedHtml, fetchStatus, fetchedAt  — added by URLFetchNode
 htmlSelector                                                      — added by HTMLSectionNode
@@ -296,7 +299,7 @@ Follows a URL field in each upstream record and fetches the page content, adding
 - `fetchedHtml` — the cleaned body HTML (noise elements removed: scripts, nav, footer, etc.)
 
 **Options:**
-- **URL field** — auto-detected from fields whose name contains `url`, `link`, `href`, `uri`, or `pid`, or whose value starts with `http`; falls back to a manual input.
+- **URL field** — auto-detected from fields whose name contains `url`, `link`, `href`, `uri`, or `pid`, or whose value starts with `http`. Also scans one level of service namespace objects so dot-notation fields like `adsLibrary.downloadUrl` appear in the picker. Falls back to a manual input.
 - **Wait for JS rendering** — uses a headless browser (Puppeteer) inside the Vite dev server. The first JS-render request launches the browser; subsequent requests reuse it.
 - **Wait for** — load event: `Network quiet (2 req)` (default), `Network fully idle`, or `DOM ready only`.
 - **Max chars** — truncation limit for `fetchedContent` (default 8 000).
@@ -339,6 +342,7 @@ Files are named `nfcs-export-YYYY-MM-DD.{ext}`.
 | `/mds-proxy/…` | `https://museumdata.uk/…` | No CORS |
 | `/reconcile-proxy/…` | `https://wikidata.reconci.link/…` | 307 redirect strips CORS headers in browser |
 | `/ollama/…` | `http://localhost:11434/…` | Avoids cross-port CORS for local Ollama |
+| `/ads-library-search?q=…` | `https://archaeologydataservice.ac.uk/library/…` | Vite middleware; two-step JSF session dance (GET ViewState → POST search) |
 | `/url-proxy?url=…` | *any URL* | Vite middleware; sidesteps CORS for arbitrary URL fetching |
 
 > **Production note:** This proxy is development-only. For a deployed instance, replace each rule with a lightweight server-side proxy.
@@ -420,6 +424,7 @@ nfcs-poc/
     │   ├── LLDSSearchNode.tsx
     │   ├── ADSSearchNode.tsx           # Includes fetchAll pagination
     │   ├── ADSSearchAdvancedNode.tsx   # ADS search with faceted filters
+    │   ├── ADSLibraryNode.tsx          # ADS Library catalogue search (JSF scraper)
     │   ├── MDSSearchNode.tsx
     │   ├── LocalFileSourceNode.tsx     # Single CSV/TSV file picker with delimiter detection
     │   ├── LocalFolderSourceNode.tsx   # File System Access API source + GIS layer output
@@ -447,6 +452,8 @@ nfcs-poc/
         ├── gbifAdapter.ts
         ├── lldsAdapter.ts / lldsCache.ts
         ├── adsAdapter.ts
+        ├── adsLibrary.ts               # ADS Library fetch + HTML parser
+        ├── adsLibraryAdapter.ts        # ADS Library → UnifiedRecord
         ├── mdsAdapter.ts
         ├── reconciliationService.ts    # W3C Reconciliation API client
         ├── filterTransformUtils.ts
@@ -455,6 +462,7 @@ nfcs-poc/
         ├── runLLDSNode.ts
         ├── runADSNode.ts               # fetchAll pagination loop
         ├── runADSAdvancedNode.ts        # Advanced ADS search with facet params
+        ├── runADSLibraryNode.ts         # ADS Library catalogue runner
         ├── runMDSNode.ts
         ├── runReconciliationNode.ts
         ├── runFilterTransformNode.ts

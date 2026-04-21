@@ -33,25 +33,44 @@ const DEFAULT_COLS = [
 const PAGE_SIZE = 25
 
 /**
- * All displayable (flat) columns across records.
- * Arrays count as flat (creator, subject). Nested objects (gbif:{}, llds:{})
- * are service namespaces and are excluded from column detection — except
- * *_reconciled objects which have their own dedicated renderer.
+ * All displayable columns across records.
+ * Arrays count as flat (creator, subject). Plain nested objects are service
+ * namespaces and excluded by default — except *_reconciled which has its own
+ * renderer. When expandNamespaces=true, namespace objects are one-level-flattened
+ * into dot-notation columns (e.g. "adsLibrary.detailProxy", "gbif.datasetKey").
  */
-function allFlatColumns(records: UnifiedRecord[]): string[] {
+function allFlatColumns(records: UnifiedRecord[], expandNamespaces = false): string[] {
   const keys = new Set<string>()
   for (const r of records) {
     for (const [k, v] of Object.entries(r)) {
-      if (v === null) continue
-      if (typeof v !== 'object' || Array.isArray(v) || isReconciledValue(v)) keys.add(k)
+      if (v === null || v === undefined) continue
+      if (typeof v !== 'object' || Array.isArray(v) || isReconciledValue(v)) {
+        keys.add(k)
+      } else if (expandNamespaces) {
+        for (const [subk, subv] of Object.entries(v as Record<string, unknown>)) {
+          if (subv !== null && subv !== undefined) keys.add(`${k}.${subk}`)
+        }
+      }
     }
   }
-  // Default cols first (preserving order), then any extras alphabetically
   const ordered = DEFAULT_COLS.filter(c => keys.has(c))
-  const extras = [...keys]
+  const extras  = [...keys]
     .filter(k => !(DEFAULT_COLS as readonly string[]).includes(k))
     .sort()
   return [...ordered, ...extras]
+}
+
+/** Resolve a plain or dot-notation column key against a record. */
+function getColValue(rec: UnifiedRecord, col: string): unknown {
+  const dot = col.indexOf('.')
+  if (dot === -1) return rec[col as keyof UnifiedRecord]
+  const ns    = col.slice(0, dot)
+  const key   = col.slice(dot + 1)
+  const nsObj = rec[ns as keyof UnifiedRecord]
+  if (nsObj && typeof nsObj === 'object' && !Array.isArray(nsObj)) {
+    return (nsObj as Record<string, unknown>)[key]
+  }
+  return undefined
 }
 
 
@@ -85,7 +104,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, onSele
         {rows.map((rec, i) => (
           <tr key={rec.id} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
             {columns.map(col => {
-              const val = rec[col as keyof UnifiedRecord]
+              const val = getColValue(rec, col)
               const handleSelect = onSelectCandidate
                 ? (result: ReconciliationResult) => onSelectCandidate(rec.id, col, result)
                 : undefined
@@ -105,8 +124,9 @@ function RecordTable({ records, columns, page, pageSize, compact = false, onSele
 export function TableOutputNode({ id, data }: NodeProps) {
   const { records, count, status, connected, sourceCount } = useUpstreamRecords(id)
   const { updateNodeData } = useReactFlow()
-  const [page,    setPage]    = useState(0)
-  const [showAll, setShowAll] = useState(false)
+  const [page,             setPage]             = useState(0)
+  const [showAll,          setShowAll]          = useState(false)
+  const [expandNamespaces, setExpandNamespaces] = useState(false)
 
   // Selections live in node data so ExpandedOutputPanel can share them.
   // Key = `${recordId}::${colName}`, value = the chosen ReconciliationResult.
@@ -160,7 +180,7 @@ export function TableOutputNode({ id, data }: NodeProps) {
 
   const columns = effectiveRecords
     ? showAll
-      ? allFlatColumns(effectiveRecords)
+      ? allFlatColumns(effectiveRecords, expandNamespaces)
       : DEFAULT_COLS.filter(c => effectiveRecords.some(r => r[c] != null))
     : []
 
@@ -207,15 +227,28 @@ export function TableOutputNode({ id, data }: NodeProps) {
       {connected && effectiveRecords && effectiveRecords.length > 0 && (
         <>
           <div style={styles.toolbar}>
-            <label style={styles.toggleLabel} className="nodrag">
-              <input
-                type="checkbox"
-                checked={showAll}
-                onChange={e => { setShowAll(e.target.checked); setPage(0) }}
-                className="nodrag"
-              />
-              {' '}show all columns
-            </label>
+            <div style={styles.toggleGroup}>
+              <label style={styles.toggleLabel} className="nodrag">
+                <input
+                  type="checkbox"
+                  checked={showAll}
+                  onChange={e => { setShowAll(e.target.checked); setPage(0) }}
+                  className="nodrag"
+                />
+                {' '}show all columns
+              </label>
+              {showAll && (
+                <label style={styles.toggleLabel} className="nodrag">
+                  <input
+                    type="checkbox"
+                    checked={expandNamespaces}
+                    onChange={e => setExpandNamespaces(e.target.checked)}
+                    className="nodrag"
+                  />
+                  {' '}expand namespaces
+                </label>
+              )}
+            </div>
             <span style={styles.colCount}>{columns.length} col{columns.length !== 1 ? 's' : ''}</span>
           </div>
 
@@ -292,6 +325,11 @@ const styles = {
     padding: '5px 10px',
     borderBottom: '1px solid #f0f0f0',
     background: '#f9fafb',
+  },
+  toggleGroup: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 12,
   },
   toggleLabel: {
     fontSize: 11,

@@ -86,17 +86,30 @@ export function URLFetchNode({ id, data }: NodeProps) {
   }, [allNodes, allEdges, id])
 
   // ── Detect URL-like fields from sample record ────────────────────────────────
+  // Scans top-level string fields AND one level of namespace objects so that
+  // fields like adsLibrary.detailProxy appear in the picker.
   const urlFields = useMemo<string[]>(() => {
     if (upstreamRecords.length === 0) return []
     const sample = upstreamRecords[0]
-    return Object.entries(sample)
-      .filter(([k, v]) => {
-        if (typeof v !== 'string') return false
-        if (/url|link|href|uri|pid/i.test(k)) return true
-        if (String(v).startsWith('http://') || String(v).startsWith('https://')) return true
-        return false
-      })
-      .map(([k]) => k)
+    const fields: string[] = []
+
+    function isUrlLike(key: string, val: unknown): boolean {
+      if (typeof val !== 'string') return false
+      if (/url|link|href|uri|pid/i.test(key)) return true
+      if (val.startsWith('http://') || val.startsWith('https://')) return true
+      return false
+    }
+
+    for (const [k, v] of Object.entries(sample)) {
+      if (isUrlLike(k, v)) {
+        fields.push(k)
+      } else if (v && typeof v === 'object' && !Array.isArray(v)) {
+        for (const [subk, subv] of Object.entries(v as Record<string, unknown>)) {
+          if (isUrlLike(subk, subv)) fields.push(`${k}.${subk}`)
+        }
+      }
+    }
+    return fields
   }, [upstreamRecords])
 
   const urlField     = (d.urlField || urlFields[0] || '_sourceUrl') as string
@@ -131,7 +144,19 @@ export function URLFetchNode({ id, data }: NodeProps) {
     for (let i = 0; i < upstreamRecords.length; i++) {
       if (signal.aborted) break
       const record = upstreamRecords[i]
-      const rawUrl = String(record[urlField] ?? '').trim()
+
+      // Resolve dot-notation field (e.g. "adsLibrary.detailProxy")
+      const rawUrl = (() => {
+        const dot = urlField.indexOf('.')
+        if (dot === -1) return String(record[urlField] ?? '').trim()
+        const ns  = urlField.slice(0, dot)
+        const key = urlField.slice(dot + 1)
+        const obj = record[ns]
+        if (obj && typeof obj === 'object' && !Array.isArray(obj)) {
+          return String((obj as Record<string, unknown>)[key] ?? '').trim()
+        }
+        return ''
+      })()
 
       setLiveProgress(`${i + 1} / ${upstreamRecords.length}`)
       updateNodeData(id, { statusMessage: `Fetching ${i + 1}/${upstreamRecords.length}…` })
