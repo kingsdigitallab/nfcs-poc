@@ -36,6 +36,8 @@ import type { SpatialFilterNodeData }     from './nodes/SpatialFilterNode'
 import type { ExportNodeData }            from './nodes/ExportNode'
 import type { QuickViewNodeData }         from './nodes/QuickViewNode'
 import type { CommentNodeData }           from './nodes/CommentNode'
+import type { MergeByQIDNodeData }        from './nodes/MergeByQIDNode'
+import type { WikidataEnrichNodeData }    from './nodes/WikidataEnrichNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -62,6 +64,8 @@ type AppNode =
   | Node<ExportNodeData>
   | Node<QuickViewNodeData>
   | Node<CommentNodeData>
+  | Node<MergeByQIDNodeData>
+  | Node<WikidataEnrichNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -254,6 +258,29 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     data: { title: '', body: '' } satisfies CommentNodeData,
     style: { width: 220, height: 120 },
   }),
+  mergeByQID: pos => ({
+    id: newId('merge'), type: 'mergeByQID', position: pos,
+    data: {
+      keepUnmatched:  false,
+      status:         'idle',
+      statusMessage:  '',
+      mergedCount:    0,
+      unmatchedCount: 0,
+      resultsVersion: 0,
+    } satisfies MergeByQIDNodeData,
+  }),
+  wikidataEnrich: pos => ({
+    id: newId('wdenrich'), type: 'wikidataEnrich', position: pos,
+    data: {
+      reconcileField:     '',
+      selectedProperties: [],
+      customProperties:   '',
+      status:             'idle',
+      statusMessage:      '',
+      count:              0,
+      resultsVersion:     0,
+    } satisfies WikidataEnrichNodeData,
+  }),
   tableOutput: pos => ({
     id: newId('table'), type: 'tableOutput', position: pos,
     data: {},
@@ -295,6 +322,8 @@ const SIDEBAR_ITEMS = [
   { type: 'filterTransform', label: 'FilterTransformNode', sub: 'Filter + transform records', color: '#4f46e5', group: 'Process' },
   { type: 'spatialFilter',   label: 'Spatial Filter',      sub: 'Draw bounding box to filter by location', color: '#0891b2', group: 'Process' },
   { type: 'reconciliation',  label: 'ReconciliationNode',  sub: 'Wikidata field reconciler',  color: '#7c3aed', group: 'Process' },
+  { type: 'wikidataEnrich', label: 'WikidataEnrichNode',  sub: 'Fetch Wikidata properties for QIDs', color: '#0369a1', group: 'Process' },
+  { type: 'mergeByQID',     label: 'MergeByQIDNode',      sub: 'Join records from multiple sources by shared QID', color: '#6b21a8', group: 'Process' },
   { type: 'quickView',      label: 'QuickViewNode',      sub: 'Inspect one field in full',  color: '#1e293b', group: 'Output' },
   { type: 'tableOutput',    label: 'TableOutputNode',    sub: 'Paginated results table',    color: '#0d9488', group: 'Output' },
   { type: 'export',         label: 'ExportNode',         sub: 'CSV / JSON / GeoJSON',       color: '#b45309', group: 'Output' },

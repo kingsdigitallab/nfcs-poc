@@ -20,6 +20,8 @@ import { runHTMLSectionNode }     from './runHTMLSectionNode'
 import { runURLFetchNode }        from './runURLFetchNode'
 import { runOllamaNode }          from './runOllamaNode'
 import { runOllamaFieldNode }     from './runOllamaFieldNode'
+import { runMergeByQIDNode }      from './runMergeByQIDNode'
+import { runWikidataEnrichNode }  from './runWikidataEnrichNode'
 
 /**
  * Common signature for every node runner.
@@ -49,4 +51,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   urlFetch:        runURLFetchNode,
   ollamaNode:      runOllamaNode,
   ollamaField:     runOllamaFieldNode,
+  mergeByQID:      runMergeByQIDNode,
+  wikidataEnrich:  runWikidataEnrichNode,
 }

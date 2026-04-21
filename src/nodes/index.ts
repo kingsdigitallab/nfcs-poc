@@ -21,6 +21,8 @@ import { OllamaOutputNode }   from './OllamaOutputNode'
 import { HTMLSectionNode }    from './HTMLSectionNode'
 import { QuickViewNode }      from './QuickViewNode'
 import { CommentNode }        from './CommentNode'
+import { MergeByQIDNode }     from './MergeByQIDNode'
+import { WikidataEnrichNode } from './WikidataEnrichNode'
 
 export const nodeTypes = {
   param:             ParamNode,
@@ -46,4 +48,6 @@ export const nodeTypes = {
   htmlSection:    HTMLSectionNode,
   quickView:      QuickViewNode,
   comment:        CommentNode,
+  mergeByQID:     MergeByQIDNode,
+  wikidataEnrich: WikidataEnrichNode,
 }
