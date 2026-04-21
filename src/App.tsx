@@ -27,7 +27,6 @@ import type { OllamaFieldNodeData }       from './nodes/OllamaFieldNode'
 import type { URLFetchNodeData }          from './nodes/URLFetchNode'
 import type { HTMLSectionNodeData }       from './nodes/HTMLSectionNode'
 import type { LLDSSearchNodeData }        from './nodes/LLDSSearchNode'
-import type { ADSSearchNodeData }             from './nodes/ADSSearchNode'
 import type { ADSSearchAdvancedNodeData }     from './nodes/ADSSearchAdvancedNode'
 import type { ADSLibraryNodeData }            from './nodes/ADSLibraryNode'
 import type { MDSSearchNodeData }         from './nodes/MDSSearchNode'
@@ -54,7 +53,6 @@ type AppNode =
   | Node<URLFetchNodeData>
   | Node<HTMLSectionNodeData>
   | Node<LLDSSearchNodeData>
-  | Node<ADSSearchNodeData>
   | Node<ADSSearchAdvancedNodeData>
   | Node<ADSLibraryNodeData>
   | Node<MDSSearchNodeData>
@@ -88,13 +86,6 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       useCache: true,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies LLDSSearchNodeData,
-  }),
-  adsSearch: pos => ({
-    id: newId('ads'), type: 'adsSearch', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20', fetchAll: false,
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-    } satisfies ADSSearchNodeData,
   }),
   adsLibrarySearch: pos => ({
     id: newId('adslib'), type: 'adsLibrarySearch', position: pos,
@@ -294,8 +285,7 @@ const SIDEBAR_ITEMS = [
   { type: 'localFolderSource', label: 'LocalFolderSource', sub: 'Read files from local folder', color: '#14532d', group: 'Search' },
   { type: 'gbifSearch',  label: 'GBIFSearchNode',   sub: 'GBIF occurrence search',    color: '#0f4c81', group: 'Search' },
   { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Search' },
-  { type: 'adsSearch',         label: 'ADSSearchNode',         sub: 'Archaeology Data Service',           color: '#7c2d12', group: 'Search' },
-  { type: 'adsSearchAdvanced', label: 'ADSSearchAdvancedNode', sub: 'ADS search with facet filters', color: '#78350f', group: 'Search' },
+  { type: 'adsSearchAdvanced', label: 'ADSSearchNode',          sub: 'Archaeology Data Service',      color: '#7c2d12', group: 'Search' },
   { type: 'adsLibrarySearch',  label: 'ADSLibraryNode',        sub: 'ADS Library catalogue',         color: '#1e3a5f', group: 'Search' },
   { type: 'mdsSearch',      label: 'MDSSearchNode',      sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Search' },
   { type: 'ollamaNode',      label: 'OllamaNode',          sub: 'Local LLM — file/content records', color: '#312e81', group: 'Process' },
@@ -522,7 +512,7 @@ function DebugPanel({ nodes }: { nodes: AppNode[] }) {
 
   const slim = nodes.map(n => {
     const d = n.data as Record<string, unknown>
-    const isSearchNode = n.type === 'gbifSearch' || n.type === 'lldsSearch' || n.type === 'adsSearch' || n.type === 'mdsSearch' || n.type === 'adsLibrarySearch'
+    const isSearchNode = n.type === 'gbifSearch' || n.type === 'lldsSearch' || n.type === 'adsSearchAdvanced' || n.type === 'mdsSearch' || n.type === 'adsLibrarySearch'
     if (isSearchNode && d.results) {
       const recs = d.results as UnifiedRecord[]
       return {

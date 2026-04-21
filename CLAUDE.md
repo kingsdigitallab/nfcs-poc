@@ -19,6 +19,7 @@ Node-based visual workflow editor for federating UK Arts & Humanities research d
 | `/reconcile-proxy/*` | `https://wikidata.reconci.link/*` (307 redirect strips CORS — proxy required) |
 | `/ollama/*` | `http://localhost:11434/*` |
 | `/url-proxy?url=<encoded>[&js=true][&wait=<strategy>]` | Custom Vite middleware (`configureServer`); simple path uses Node `fetch()`; `js=true` uses Puppeteer singleton (auto-reset on `disconnected`). Wait strategies: `networkidle2` (default), `networkidle0`, `domcontentloaded`. |
+| `/ads-library-search?q=<query>&size=<n>` | Custom Vite middleware; two-step JSF session (GET ViewState → POST search) for the ADS Library catalogue. Returns extracted CDATA HTML for client-side parsing. |
 
 ## Project Structure
 
@@ -55,7 +56,8 @@ src/
 |-----|-----------|------|
 | `gbifSearch` | `GBIFSearchNode` | Direct. `https://api.gbif.org/v1/occurrence/search`. Max 300/req. |
 | `lldsSearch` | `LLDSSearchNode` | `/llds-proxy/rest/items?expand=metadata`. No server search — filter client-side. 15s timeout → localStorage cache fallback. |
-| `adsSearch` | `ADSSearchNode` | `/ads-proxy/…/search?q=&size=&from=`. **Server hard-caps at 50**; use `fetchAll` loop. |
+| `adsSearchAdvanced` | `ADSSearchAdvancedNode` | `/ads-proxy/…/search`. **Server hard-caps at 50**; `fetchAll` loop. Facet filters: ariadneSubject, derivedSubject, nativeSubject, country, dataType, temporal. |
+| `adsLibrarySearch` | `ADSLibraryNode` | `/ads-library-search` Vite middleware. Two-step JSF: GET ViewState → POST query → parse CDATA HTML. Returns title, creator, date, publicationType, parentTitle, downloadUrl. |
 | `mdsSearch` | `MDSSearchNode` | `/mds-proxy`. Two-step HTML scraper. Capped at 200 (amber badge). |
 | `localFolderSource` | `LocalFolderSourceNode` | File System Access API — no runner (user gesture required). `dirHandle` in `useRef`, lost on refresh. |
 
@@ -67,13 +69,13 @@ src/
 | `reconciliation` | `ReconciliationNode` | `#7c3aed`. Uses `/reconcile-proxy/en/api`. Scores normalised 0–1. |
 | `ollamaNode` | `OllamaNode` | `#312e81`. `stream:true` on `/ollama/api/chat`. Vision: strip data URL prefix, use `images:[]` field, blank `{{content}}`. `tokenInput` state from `d.maxTokens` directly (TDZ gotcha). |
 | `ollamaField` | `OllamaFieldNode` | `#1e1b4b`. Per-record or aggregate mode. Templates: `{{value}}`, `{{field}}`, `{{count}}`, `{{values}}`. Same TDZ gotcha as OllamaNode. |
-| `urlFetch` | `URLFetchNode` | `#0c4a6e`. Adds `fetchedContent`, `fetchedHtml` (cleaned body), `fetchStatus`, `fetchedAt`. AbortController cancel. |
+| `urlFetch` | `URLFetchNode` | `#0c4a6e`. Adds `fetchedContent`, `fetchedHtml` (cleaned body), `fetchStatus`, `fetchedAt`. AbortController cancel. URL field picker scans namespace sub-objects; runner resolves dot-notation field paths (e.g. `adsLibrary.downloadUrl`). |
 | `htmlSection` | `HTMLSectionNode` | `#065f46`. CSS selector on `fetchedHtml` → overwrites `fetchedContent`. Adds `htmlSelector`. |
 
 ### Output
 | Key | Component | Notes |
 |-----|-----------|-------|
-| `tableOutput` | `TableOutputNode` | `#0d9488`. Pass-through output handle `id="results"` at `top:13`. Loop prevention via `useRef` fingerprint. Double-click expands. |
+| `tableOutput` | `TableOutputNode` | `#0d9488`. Pass-through output handle `id="results"` at `top:13`. Loop prevention via `useRef` fingerprint. Double-click expands. Toolbar: **show all columns** + **expand namespaces** (flattens one level of namespace objects into dot-notation cols). |
 | `jsonOutput` | `JSONOutputNode` | Double-click expands. |
 | `mapOutput` | `MapOutputNode` | Uses `decimalLatitude`/`decimalLongitude`. |
 | `timelineOutput` | `TimelineOutputNode` | ISO dates, bare years, BCE (`-1199`). |

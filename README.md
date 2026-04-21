@@ -65,8 +65,7 @@ The sidebar groups nodes into collapsible categories. Click a group heading to c
 |------|---------|-------|
 | **GBIFSearchNode** | [GBIF Occurrence API](https://www.gbif.org/developer/occurrence) | Biodiversity specimens and observations. Direct browser fetch (permissive CORS). Inline fields: free-text `q`, `scientificName`, `country`, `year`, `limit`. |
 | **LLDSSearchNode** | [Literary & Linguistic Data Service](https://llds.ling-phil.ox.ac.uk/) | DSpace REST API. Results filtered client-side. Uses a 24-hour localStorage cache; a **Use cache** toggle controls fallback during outages. |
-| **ADSSearchNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Data Catalogue API. Returns archaeological datasets with spatial/temporal coverage. **Fetch all results** checkbox paginates automatically (50 records/request) to retrieve the complete result set. |
-| **ADSSearchAdvancedNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Extended ADS search with faceted filters. Expands on ADSSearchNode with a collapsible **Filters** panel providing dropdowns for: **Resource type** (`ariadneSubject` — 16 values including Site/monument, Artefact, Coin, Fieldwork), **Getty AAT subject** (`derivedSubject` — freetext with top-20 suggestions), **Native subject** (`nativeSubject` — freetext with suggestions), **Country** (20 values), **Data type** (Structured Data, Still Image, Text, Geospatial, etc.), and **Period** (`temporal` — 20 values from post medieval to palaeolithic). A badge shows how many filters are active; a **Clear all filters** button resets them. Same sort, order, limit, and fetchAll options as the basic node. |
+| **ADSSearchNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Data Catalogue API with faceted filters. Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type** (16 values including Site/monument, Artefact, Fieldwork), **Getty AAT subject**, **Native subject**, **Country**, **Data type**, and **Period** (post-medieval to palaeolithic). A badge shows how many filters are active; **Clear all filters** resets them. |
 | **ADSLibraryNode** | [ADS Library catalogue](https://archaeologydataservice.ac.uk/library/) | Library catalogue search (books, journals, grey literature). Uses a server-side two-step Jakarta Faces session: the Vite middleware GETs the search page to obtain a `JSESSIONID` + `ViewState`, then POSTs the query and returns the CDATA HTML fragment for client-side parsing. Inline fields: `query`, `limit` (max 100). Returns `title`, `creator`, `date`, `type` (publication type from icon), `adsLibrary.parentTitle`, `adsLibrary.downloadUrl`. |
 | **MDSSearchNode** | [museumdata.uk](https://museumdata.uk/) | HTML scraper (no public JSON API). Two-step fetch: probe for total, then retrieve all. Capped at 200 records; amber ⚠ badge when the total exceeds the cap. |
 | **LocalFileSourceNode** | Local filesystem | Parses a single CSV or TSV file selected via a standard file picker (works in all browsers). Auto-detects the delimiter from the file extension and content (tab, comma, semicolon, or pipe); manual override available. **First row is header** toggle (default on) — off generates `col1`, `col2`… names. **Cast numeric strings to numbers** toggle (default on) — converts values such as `"51.5074"` to `51.5074`, enabling downstream map and spatial filter nodes to work directly with coordinate columns. Shows a column name preview after parsing. |
@@ -108,7 +107,6 @@ ParamNode ─┐
   GBIFSearchNode       ────────────────────────────────────────┐
   LLDSSearchNode       ────────────────────────────────────────┤
   ADSSearchNode        ──┐                                     │
-  ADSSearchAdvancedNode ─┤                                     │
   ADSLibraryNode       ──┤                                     │
   MDSSearchNode        ──┤                                     │
   LocalFileSourceNode  ──┤                                     │
@@ -422,8 +420,7 @@ nfcs-poc/
     │   ├── CommentNode.tsx         # Canvas annotation label (no handles, resizable)
     │   ├── GBIFSearchNode.tsx
     │   ├── LLDSSearchNode.tsx
-    │   ├── ADSSearchNode.tsx           # Includes fetchAll pagination
-    │   ├── ADSSearchAdvancedNode.tsx   # ADS search with faceted filters
+    │   ├── ADSSearchAdvancedNode.tsx   # ADS search with facets + fetchAll pagination
     │   ├── ADSLibraryNode.tsx          # ADS Library catalogue search (JSF scraper)
     │   ├── MDSSearchNode.tsx
     │   ├── LocalFileSourceNode.tsx     # Single CSV/TSV file picker with delimiter detection
@@ -460,8 +457,7 @@ nfcs-poc/
         ├── exportUtils.ts
         ├── runGBIFNode.ts
         ├── runLLDSNode.ts
-        ├── runADSNode.ts               # fetchAll pagination loop
-        ├── runADSAdvancedNode.ts        # Advanced ADS search with facet params
+        ├── runADSAdvancedNode.ts        # ADS search with facets + fetchAll pagination
         ├── runADSLibraryNode.ts         # ADS Library catalogue runner
         ├── runMDSNode.ts
         ├── runReconciliationNode.ts

@@ -10,7 +10,6 @@
 import type { Node, Edge } from '@xyflow/react'
 import { runGBIFNode }            from './runGBIFNode'
 import { runLLDSNode }            from './runLLDSNode'
-import { runADSNode }             from './runADSNode'
 import { runADSAdvancedNode }    from './runADSAdvancedNode'
 import { runADSLibraryNode }     from './runADSLibraryNode'
 import { runMDSNode }             from './runMDSNode'
@@ -40,7 +39,6 @@ export type NodeRunner = (
 export const nodeRunners: Record<string, NodeRunner> = {
   gbifSearch:      runGBIFNode,
   lldsSearch:      runLLDSNode,
-  adsSearch:         runADSNode,
   adsSearchAdvanced: runADSAdvancedNode,
   adsLibrarySearch:  runADSLibraryNode,
   mdsSearch:       runMDSNode,
