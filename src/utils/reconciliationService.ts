@@ -98,27 +98,42 @@ const EXCLUDE_FIELDS = new Set([
   '_capped', '_total', 'count', 'status', 'statusMessage',
   // numeric / coordinate fields
   'decimalLatitude', 'decimalLongitude',
-  // service namespace objects
-  'gbif', 'llds', 'ads', 'mds',
 ])
+
+// Namespace objects excluded from top-level fields but expanded when requested
+const NAMESPACE_KEYS = new Set(['gbif', 'llds', 'ads', 'mds', 'adsLibrary'])
 
 /**
  * Derive reconcilable field names from a sample record.
  * Excludes: known-metadata keys, numeric values, nested objects,
  * and previously-reconciled `*_reconciled` keys.
  */
-export function candidateFields(record: Record<string, unknown>): string[] {
-  return Object.keys(record).filter(k => {
+export function candidateFields(record: Record<string, unknown>, expandNamespaces = false): string[] {
+  const top = Object.keys(record).filter(k => {
     if (EXCLUDE_FIELDS.has(k))    return false
+    if (NAMESPACE_KEYS.has(k))    return false
     if (k.endsWith('_reconciled')) return false
     const v = record[k]
     if (v === null || v === undefined) return false
     if (typeof v === 'number')         return false
     if (typeof v === 'boolean')        return false
-    // Nested objects (namespace bags) — skip; arrays (creator, subject) are ok
+    // Nested objects (namespace bags) — expanded separately when requested
     if (typeof v === 'object' && !Array.isArray(v)) return false
     return true
   })
+  if (!expandNamespaces) return top
+  const nested: string[] = []
+  for (const k of Object.keys(record)) {
+    if (!NAMESPACE_KEYS.has(k)) continue
+    const v = record[k]
+    if (v && typeof v === 'object' && !Array.isArray(v)) {
+      for (const [subk, subv] of Object.entries(v as Record<string, unknown>)) {
+        if (subv == null) continue
+        nested.push(`${k}.${subk}`)
+      }
+    }
+  }
+  return [...top, ...nested]
 }
 
 // ─── reconciliation API ───────────────────────────────────────────────────────

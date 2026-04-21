@@ -65,7 +65,7 @@ The sidebar groups nodes into collapsible categories. Click a group heading to c
 |------|---------|-------|
 | **GBIFSearchNode** | [GBIF Occurrence API](https://www.gbif.org/developer/occurrence) | Biodiversity specimens and observations. Direct browser fetch (permissive CORS). Inline fields: free-text `q`, `scientificName`, `country`, `year`, `limit`. |
 | **LLDSSearchNode** | [Literary & Linguistic Data Service](https://llds.ling-phil.ox.ac.uk/) | DSpace REST API. Results filtered client-side. Uses a 24-hour localStorage cache; a **Use cache** toggle controls fallback during outages. |
-| **ADSSearchNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Data Catalogue API with faceted filters. Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type** (16 values including Site/monument, Artefact, Fieldwork), **Getty AAT subject**, **Native subject**, **Country**, **Data type**, and **Period** (post-medieval to palaeolithic). A badge shows how many filters are active; **Clear all filters** resets them. |
+| **ADSSearchAdvancedNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Data Catalogue API with faceted filters. Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type** (16 values including Site/monument, Artefact, Fieldwork), **Getty AAT subject**, **Native subject**, **Country**, **Data type**, and **Period** (post-medieval to palaeolithic). A badge shows how many filters are active; **Clear all filters** resets them. |
 | **ADSLibraryNode** | [ADS Library catalogue](https://archaeologydataservice.ac.uk/library/) | Library catalogue search (books, journals, grey literature). Uses a server-side two-step Jakarta Faces session: the Vite middleware GETs the search page to obtain a `JSESSIONID` + `ViewState`, then POSTs the query and returns the CDATA HTML fragment for client-side parsing. Inline fields: `query`, `limit` (max 100). Returns `title`, `creator`, `date`, `type` (publication type from icon), `adsLibrary.parentTitle`, `adsLibrary.downloadUrl`. |
 | **MDSSearchNode** | [museumdata.uk](https://museumdata.uk/) | HTML scraper (no public JSON API). Two-step fetch: probe for total, then retrieve all. Capped at 200 records; amber ⚠ badge when the total exceeds the cap. |
 | **LocalFileSourceNode** | Local filesystem | Parses a single CSV or TSV file selected via a standard file picker (works in all browsers). Auto-detects the delimiter from the file extension and content (tab, comma, semicolon, or pipe); manual override available. **First row is header** toggle (default on) — off generates `col1`, `col2`… names. **Cast numeric strings to numbers** toggle (default on) — converts values such as `"51.5074"` to `51.5074`, enabling downstream map and spatial filter nodes to work directly with coordinate columns. Shows a column name preview after parsing. |
@@ -106,7 +106,7 @@ ParamNode ─┐
            ▼
   GBIFSearchNode       ────────────────────────────────────────┐
   LLDSSearchNode       ────────────────────────────────────────┤
-  ADSSearchNode        ──┐                                     │
+  ADSSearchAdvancedNode ─┐                                     │
   ADSLibraryNode       ──┤                                     │
   MDSSearchNode        ──┤                                     │
   LocalFileSourceNode  ──┤                                     │
@@ -197,7 +197,7 @@ After reconciliation, records also carry `${fieldName}_reconciled` keys (see bel
 ### Filter mode
 
 Add one or more filter rows. Each row specifies:
-- **Field** — any string field from the upstream records
+- **Field** — any field from the upstream records, including dot-notation namespace fields (e.g. `gbif.stateProvince`, `adsLibrary.parentTitle`)
 - **Operator** — `contains`, `=`, `starts with`, `>`, `<`, `is empty`, `not empty`
 - **Value** — text or number (hidden for `is empty` / `not empty`)
 
@@ -205,7 +205,7 @@ Multiple rows are combined with an **AND / OR** toggle.
 
 ### Transform mode
 
-Add one or more transform operations applied in order:
+Add one or more transform operations applied in order. Field selectors include dot-notation namespace fields (e.g. `gbif.kingdom`):
 
 | Operation | What it does |
 |-----------|--------------|
@@ -351,7 +351,7 @@ Files are named `nfcs-export-YYYY-MM-DD.{ext}`.
 
 ### Federated search across two services
 
-1. Drag a **GBIFSearchNode** and an **ADSSearchNode** onto the canvas.
+1. Drag a **GBIFSearchNode** and an **ADSSearchAdvancedNode** onto the canvas.
 2. Type `Stonehenge` into the inline query fields on both.
 3. Drag a **TableOutputNode** and connect both search node outputs to its input.
 4. Click **▶▶ Run All**.

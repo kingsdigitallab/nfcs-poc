@@ -14,10 +14,23 @@ function toStr(val: unknown): string {
   return String(val)
 }
 
+function resolveField(record: Record<string, unknown>, field: string): unknown {
+  if (field.includes('.')) {
+    const dot = field.indexOf('.')
+    const ns  = field.slice(0, dot)
+    const key = field.slice(dot + 1)
+    const ns_val = record[ns]
+    if (ns_val && typeof ns_val === 'object' && !Array.isArray(ns_val))
+      return (ns_val as Record<string, unknown>)[key]
+    return undefined
+  }
+  return record[field]
+}
+
 // ─── filter ───────────────────────────────────────────────────────────────────
 
 export function matchFilter(record: UnifiedRecord, op: FilterOp): boolean {
-  const str = toStr((record as Record<string, unknown>)[op.field])
+  const str = toStr(resolveField(record as Record<string, unknown>, op.field))
   const num = parseFloat(str)
 
   switch (op.operator) {
@@ -55,14 +68,14 @@ export function applyTransform(
 
     case 'rename': {
       if (!op.field || !op.newName) return r
-      const out = { ...r, [op.newName]: r[op.field] }
+      const out = { ...r, [op.newName]: resolveField(r, op.field) }
       if (op.dropOriginal) delete out[op.field]
       return out
     }
 
     case 'extract': {
       if (!op.field) return r
-      const str = toStr(r[op.field])
+      const str = toStr(resolveField(r, op.field))
       let result: string
       if (op.useRegex && op.regex) {
         try {
@@ -78,8 +91,8 @@ export function applyTransform(
     }
 
     case 'concat': {
-      const v1  = toStr(r[op.field1])
-      const v2  = toStr(r[op.field2])
+      const v1  = toStr(resolveField(r, op.field1))
+      const v2  = toStr(resolveField(r, op.field2))
       const key = op.newField
         || [op.field1, op.field2].filter(Boolean).join('_')
         || 'concat'
@@ -88,7 +101,7 @@ export function applyTransform(
 
     case 'lowercase': {
       if (!op.field) return r
-      const raw = r[op.field]
+      const raw = resolveField(r, op.field)
       return { ...r, [op.field]: Array.isArray(raw)
         ? raw.map(v => String(v).toLowerCase())
         : toStr(raw).toLowerCase()
@@ -97,7 +110,7 @@ export function applyTransform(
 
     case 'uppercase': {
       if (!op.field) return r
-      const raw = r[op.field]
+      const raw = resolveField(r, op.field)
       return { ...r, [op.field]: Array.isArray(raw)
         ? raw.map(v => String(v).toUpperCase())
         : toStr(raw).toUpperCase()
@@ -107,7 +120,7 @@ export function applyTransform(
     case 'truncate': {
       if (!op.field) return r
       const maxLen = Math.max(1, parseInt(op.maxLen, 10) || 100)
-      const str = toStr(r[op.field])
+      const str = toStr(resolveField(r, op.field))
       return { ...r, [op.field]: str.length > maxLen ? `${str.slice(0, maxLen)}…` : str }
     }
 

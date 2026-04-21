@@ -329,7 +329,7 @@ export function FilterTransformNode({ id }: NodeProps) {
   }
 
   const fields = upstreamRecords?.[0]
-    ? candidateFields(upstreamRecords[0] as unknown as Record<string, unknown>)
+    ? candidateFields(upstreamRecords[0] as unknown as Record<string, unknown>, true)
     : []
 
   // ── op update helpers (read fresh from store each call) ───────────────────
