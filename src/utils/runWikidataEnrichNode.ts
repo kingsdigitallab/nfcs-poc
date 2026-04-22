@@ -8,9 +8,13 @@ import { fetchWikidataProperties, PROPERTY_FIELD_NAMES } from './wikidataApi'
 function getQID(record: UnifiedRecord, reconcileField: string): string | null {
   const r = record as Record<string, unknown>
   if (reconcileField) {
-    const val = r[reconcileField] as ReconciliationResult | null
-    return val?.qid ?? null
+    const val = r[reconcileField]
+    // _qid on merged records is a plain string; *_reconciled fields are objects
+    if (typeof val === 'string' && val.startsWith('Q')) return val
+    return (val as ReconciliationResult | null)?.qid ?? null
   }
+  // Auto-detect: prefer plain _qid, then fall back to first reconciled object
+  if (typeof r['_qid'] === 'string') return r['_qid'] as string
   for (const k of Object.keys(r)) {
     if (!k.endsWith('_reconciled')) continue
     const val = r[k] as ReconciliationResult | null

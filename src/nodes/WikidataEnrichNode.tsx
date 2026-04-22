@@ -36,9 +36,13 @@ export function WikidataEnrichNode({ id }: NodeProps) {
   // Collect *_reconciled field names from upstream records for the dropdown
   const reconciledFields: string[] = upstream?.length
     ? [...new Set(
-        upstream.flatMap(r =>
-          Object.keys(r as Record<string, unknown>).filter(k => k.endsWith('_reconciled')),
-        ),
+        upstream.flatMap(r => {
+          const keys = Object.keys(r as Record<string, unknown>)
+          const fields = keys.filter(k => k.endsWith('_reconciled'))
+          // _qid on merged records is a plain QID string — treat as valid source
+          if (keys.includes('_qid')) fields.unshift('_qid')
+          return fields
+        }),
       )]
     : []
 
