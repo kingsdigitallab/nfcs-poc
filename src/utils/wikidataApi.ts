@@ -115,7 +115,7 @@ function parseValue(dv: WDDatavalue): { raw: string; isQID: boolean } | null {
       if (v.precision === 10) return { raw: t.slice(0, 7), isQID: false }
       return { raw: t.slice(0, 4), isQID: false }
     }
-    case 'globe-coordinate': {
+    case 'globecoordinate': {
       const v = dv.value as { latitude: number; longitude: number }
       return { raw: `${v.latitude},${v.longitude}`, isQID: false }
     }
