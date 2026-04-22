@@ -80,6 +80,8 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 | **FilterTransformNode** | Filters records by condition and/or mutates field values. See [Filter / Transform](#filter--transform) below. |
 | **SpatialFilterNode** | Draws a bounding box on an interactive map; filters upstream records to those within the bbox. Only records with `decimalLatitude` / `decimalLongitude` are kept. |
 | **ReconciliationNode** | Reconciles a chosen field against a Wikidata authority. See [Reconciliation](#reconciliation) below. |
+| **WikidataEnrichNode** | Fetches selected Wikidata properties for any reconciled QID field and adds them as `wd_*` fields on each record. See [Wikidata enrichment and linking](#wikidata-enrichment-and-linking) below. |
+| **MergeByQIDNode** | Groups records from multiple upstream sources by shared Wikidata QID, producing one merged record per entity. See [Wikidata enrichment and linking](#wikidata-enrichment-and-linking) below. |
 | **OllamaNode** | Sends each upstream record to a locally-running [Ollama](https://ollama.com/) instance and enriches the record with the model's response. Supports vision models. See [Local LLM analysis](#local-llm-analysis) below. |
 | **OllamaFieldNode** | Sends a single chosen field to Ollama in **per-record** or **aggregate** mode. Lighter-weight than OllamaNode when you only need one field processed. |
 | **URLFetchNode** | Follows a URL field in each record, fetches the page (optionally via headless browser for JS-rendered pages), and adds `fetchedContent` (plain text) and `fetchedHtml` (structured HTML) to each record. |
@@ -242,6 +244,72 @@ Filter runs first, then transforms are applied to the reduced set.
 5. Click **▶ Reconcile**.
 
 Each augmented record gains a `${fieldName}_reconciled` key. In **TableOutputNode**, reconciled cells render as coloured pills — green (resolved, confidence ≥ threshold) or amber (below threshold, flagged for review). The QID is a clickable link to `wikidata.org`.
+
+---
+
+## Wikidata enrichment and linking
+
+### WikidataEnrichNode
+
+**WikidataEnrichNode** fetches structured properties from Wikidata for any reconciled field and appends them to each record as `wd_*` fields (e.g. `wd_IUCNStatus`, `wd_parentTaxon`, `wd_country`). It works directly against the Wikidata API — no proxy is required.
+
+#### Configuration
+
+1. Connect an upstream node whose records contain at least one `*_reconciled` field or a `_qid` field (produced by **MergeByQIDNode**).
+2. Select the **QID field** — the `*_reconciled` column whose QIDs should drive the lookup. Leave as `— auto-detect —` to use the first reconciled field found.
+3. Tick the properties you want to fetch, grouped by domain:
+
+| Group | Example properties |
+|-------|--------------------|
+| **General** | instance of, country, inception, official website, image |
+| **Taxon** | parent taxon, IUCN status, taxon rank, common name |
+| **Place** | coordinates, admin. territory, location |
+| **Person** | birth date, death date, birth place, occupation |
+| **Heritage** | material, heritage designation, has use |
+
+4. Optionally enter additional **custom P-IDs** (comma-separated, e.g. `P1566, P856`).
+5. Click **▶ Enrich**. `wikibase-item` values (linked entities) are resolved to their English labels in a second batch call.
+
+The enriched records pass through the standard output handle and work with all downstream nodes unchanged.
+
+#### Recommended workflow order
+
+> **Avoid enriching before merging.** If multiple source records share the same QID (e.g. ten GBIF occurrences all reconciled to the same species), WikidataEnrichNode will append identical `wd_*` fields to every one of them — correct but redundant. The recommended order is:
+>
+> `ReconciliationNode → MergeByQIDNode → WikidataEnrichNode`
+>
+> Because **MergeByQIDNode** collapses all records for a given QID into a single merged record first, enrichment is applied exactly once per Wikidata entity with no duplication.
+>
+> If you want the full set of individual source records enriched (rather than merged), apply WikidataEnrichNode directly after ReconciliationNode — just be aware that Wikidata property values will be repeated across records that share a QID.
+
+---
+
+### MergeByQIDNode
+
+**MergeByQIDNode** groups records from any number of upstream sources by shared Wikidata QID and emits one merged record per entity. This is the primary way to cross-link records from different services (or from reconciled local CSV files) through a common Wikidata authority.
+
+#### Output record structure
+
+Each merged record contains:
+
+| Field | Value |
+|-------|-------|
+| `id` | `merged:Q<id>` |
+| `_source` | `"merged"` |
+| `_qid` | The Wikidata QID (e.g. `Q12345`) |
+| `title` | English Wikidata label of the entity |
+| `_sourceUrl` | Link to the entity on `wikidata.org` |
+| `_sourceCount` | Number of source records merged |
+| `_sources` | Comma-separated list of contributing service names |
+| `<service>_<field>` | All non-metadata fields from each source record, prefixed by `_source` value (e.g. `gbif_scientificName`, `ads_title`) |
+
+If two records from the **same** source share a QID, the second is prefixed `<service>_1_<field>` to avoid collisions.
+
+**Keep unmatched records** — when ticked, records with no reconciled QID are passed through unchanged alongside the merged entities.
+
+#### Cross-service linking with local CSVs
+
+Local CSV files loaded via **LocalFileSourceNode** and reconciled via **ReconciliationNode** are treated identically to API sources. A reconciled `species` column in a CSV produces the same `*_reconciled` structure, so MergeByQIDNode can join CSV rows with GBIF or ADS records that share the same Wikidata entity.
 
 ---
 
