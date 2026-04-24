@@ -108,31 +108,39 @@ const NAMESPACE_KEYS = new Set(['gbif', 'llds', 'ads', 'mds', 'adsLibrary'])
  * Excludes: known-metadata keys, numeric values, nested objects,
  * and previously-reconciled `*_reconciled` keys.
  */
-export function candidateFields(record: Record<string, unknown>, expandNamespaces = false): string[] {
-  const top = Object.keys(record).filter(k => {
-    if (EXCLUDE_FIELDS.has(k))    return false
-    if (NAMESPACE_KEYS.has(k))    return false
-    if (k.endsWith('_reconciled')) return false
-    const v = record[k]
-    if (v === null || v === undefined) return false
-    if (typeof v === 'number')         return false
-    if (typeof v === 'boolean')        return false
-    // Nested objects (namespace bags) — expanded separately when requested
-    if (typeof v === 'object' && !Array.isArray(v)) return false
-    return true
-  })
-  if (!expandNamespaces) return top
-  const nested: string[] = []
-  for (const k of Object.keys(record)) {
-    if (!NAMESPACE_KEYS.has(k)) continue
-    const v = record[k]
-    if (v && typeof v === 'object' && !Array.isArray(v)) {
-      for (const [subk, subv] of Object.entries(v as Record<string, unknown>)) {
-        if (subv == null) continue
-        nested.push(`${k}.${subk}`)
+export function candidateFields(
+  records: Record<string, unknown> | Record<string, unknown>[],
+  expandNamespaces = false,
+): string[] {
+  const sample = (Array.isArray(records) ? records : [records]).slice(0, 50)
+
+  const top = new Set<string>()
+  const nested = new Set<string>()
+
+  for (const record of sample) {
+    for (const k of Object.keys(record)) {
+      if (EXCLUDE_FIELDS.has(k))     continue
+      if (k.endsWith('_reconciled')) continue
+      const v = record[k]
+      if (v === null || v === undefined) continue
+      if (typeof v === 'boolean')        continue
+
+      if (NAMESPACE_KEYS.has(k)) {
+        if (expandNamespaces && typeof v === 'object' && !Array.isArray(v)) {
+          for (const [subk, subv] of Object.entries(v as Record<string, unknown>)) {
+            if (subv == null) continue
+            nested.add(`${k}.${subk}`)
+          }
+        }
+        continue
       }
+
+      if (typeof v === 'number')                         continue
+      if (typeof v === 'object' && !Array.isArray(v))   continue
+      top.add(k)
     }
   }
+
   return [...top, ...nested]
 }
 

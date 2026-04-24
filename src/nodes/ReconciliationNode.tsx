@@ -81,9 +81,8 @@ export function ReconciliationNode({ id }: NodeProps) {
     ...nodeData,
   }
 
-  // Derive available fields from the first upstream record
-  const availableFields = upstreamRecords?.[0]
-    ? candidateFields(upstreamRecords[0] as unknown as Record<string, unknown>)
+  const availableFields = upstreamRecords?.length
+    ? candidateFields(upstreamRecords as unknown as Record<string, unknown>[])
     : []
 
   // When field changes, reset authority to first for that field

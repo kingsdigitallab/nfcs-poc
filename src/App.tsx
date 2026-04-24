@@ -38,6 +38,8 @@ import type { QuickViewNodeData }         from './nodes/QuickViewNode'
 import type { CommentNodeData }           from './nodes/CommentNode'
 import type { MergeByQIDNodeData }        from './nodes/MergeByQIDNode'
 import type { WikidataEnrichNodeData }    from './nodes/WikidataEnrichNode'
+import type { SaveSearchNodeData }        from './nodes/SaveSearchNode'
+import type { LoadSavedSearchNodeData }  from './nodes/LoadSavedSearchNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -66,6 +68,8 @@ type AppNode =
   | Node<CommentNodeData>
   | Node<MergeByQIDNodeData>
   | Node<WikidataEnrichNodeData>
+  | Node<SaveSearchNodeData>
+  | Node<LoadSavedSearchNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -281,6 +285,30 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       resultsVersion:     0,
     } satisfies WikidataEnrichNodeData,
   }),
+  saveSearch: pos => ({
+    id: newId('save'), type: 'saveSearch', position: pos,
+    data: {
+      status:        'idle',
+      statusMessage: '',
+      lastSavedFile: '',
+      lastSavedAt:   '',
+    } satisfies SaveSearchNodeData,
+  }),
+  loadSavedSearch: pos => ({
+    id: newId('load'), type: 'loadSavedSearch', position: pos,
+    data: {
+      status:        'idle',
+      statusMessage: '',
+      savedAt:       '',
+      sources:       [],
+      sourceCounts:  {},
+      recordCount:   0,
+      searchParams:  {},
+      hasEnvelope:   false,
+      count:         0,
+      resultsVersion: 0,
+    } satisfies LoadSavedSearchNodeData,
+  }),
   tableOutput: pos => ({
     id: newId('table'), type: 'tableOutput', position: pos,
     data: {},
@@ -314,7 +342,8 @@ const SIDEBAR_ITEMS = [
   { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Search' },
   { type: 'adsSearchAdvanced', label: 'ADSSearchNode',          sub: 'Archaeology Data Service',      color: '#7c2d12', group: 'Search' },
   { type: 'adsLibrarySearch',  label: 'ADSLibraryNode',        sub: 'ADS Library catalogue',         color: '#1e3a5f', group: 'Search' },
-  { type: 'mdsSearch',      label: 'MDSSearchNode',      sub: 'Museum Data Service',        color: '#1e3a8a', group: 'Search' },
+  { type: 'mdsSearch',         label: 'MDSSearchNode',      sub: 'Museum Data Service',            color: '#1e3a8a', group: 'Search' },
+  { type: 'loadSavedSearch',  label: 'LoadSavedSearch',   sub: 'Replay a .nfcs.json saved search', color: '#4c1d95', group: 'Search' },
   { type: 'ollamaNode',      label: 'OllamaNode',          sub: 'Local LLM — file/content records', color: '#312e81', group: 'Process' },
   { type: 'ollamaField',    label: 'OllamaFieldNode',     sub: 'LLM inference on a chosen field',  color: '#1e1b4b', group: 'Process' },
   { type: 'urlFetch',       label: 'URLFetchNode',        sub: 'Fetch URL content into records',   color: '#0c4a6e', group: 'Process' },
@@ -326,6 +355,7 @@ const SIDEBAR_ITEMS = [
   { type: 'mergeByQID',     label: 'MergeByQIDNode',      sub: 'Join records from multiple sources by shared QID', color: '#6b21a8', group: 'Process' },
   { type: 'quickView',      label: 'QuickViewNode',      sub: 'Inspect one field in full',  color: '#1e293b', group: 'Output' },
   { type: 'tableOutput',    label: 'TableOutputNode',    sub: 'Paginated results table',    color: '#0d9488', group: 'Output' },
+  { type: 'saveSearch',     label: 'SaveSearch',         sub: 'Save records + metadata to .nfcs.json', color: '#1b4332', group: 'Output' },
   { type: 'export',         label: 'ExportNode',         sub: 'CSV / JSON / GeoJSON',       color: '#b45309', group: 'Output' },
   { type: 'mapOutput',      label: 'MapOutputNode',      sub: 'Geo map (lat/lon records)',  color: '#14532d', group: 'Output' },
   { type: 'timelineOutput', label: 'TimelineOutputNode', sub: 'Year-resolution timeline',   color: '#1e293b', group: 'Output' },

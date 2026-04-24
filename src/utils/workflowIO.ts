@@ -43,7 +43,7 @@ const TRANSIENT_FIELDS = new Set([
   'columnNames', // derived at parse time
 ])
 
-function stripTransient(data: Record<string, unknown>): Record<string, unknown> {
+export function stripTransient(data: Record<string, unknown>): Record<string, unknown> {
   const out: Record<string, unknown> = {}
   for (const [k, v] of Object.entries(data)) {
     if (!TRANSIENT_FIELDS.has(k)) out[k] = v

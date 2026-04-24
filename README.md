@@ -12,7 +12,7 @@ Drag nodes onto a canvas, connect them in any order, and run federated searches 
 
 - **Node.js** v18 or later ([nodejs.org](https://nodejs.org))
 - **npm** v9 or later (bundled with Node)
-- A modern browser — Chrome or Edge 86+ required for the **LocalFolderSourceNode** (File System Access API); all other nodes including **LocalFileSourceNode** work in Firefox too
+- A modern browser — Chrome or Edge 86+ required for the **LocalFolderSourceNode** (File System Access API) and for the native save dialog in **SaveSearchNode** (falls back to an automatic download on Firefox); all other nodes work in Firefox too
 - **[Ollama](https://ollama.com/)** running locally on port 11434 — required only for Ollama nodes
 - **Puppeteer** (installed automatically via `npm install`) — required only for the **Wait for JS rendering** option in URLFetchNode; the headless browser runs inside the Vite dev server
 
@@ -68,6 +68,7 @@ The sidebar groups nodes into collapsible categories. Click a group heading to c
 | **ADSSearchAdvancedNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Data Catalogue API with faceted filters. Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type** (16 values including Site/monument, Artefact, Fieldwork), **Getty AAT subject**, **Native subject**, **Country**, **Data type**, and **Period** (post-medieval to palaeolithic). A badge shows how many filters are active; **Clear all filters** resets them. |
 | **ADSLibraryNode** | [ADS Library catalogue](https://archaeologydataservice.ac.uk/library/) | Library catalogue search (books, journals, grey literature). Uses a server-side two-step Jakarta Faces session: the Vite middleware GETs the search page to obtain a `JSESSIONID` + `ViewState`, then POSTs the query and returns the CDATA HTML fragment for client-side parsing. Inline fields: `query`, `limit` (max 100). Returns `title`, `creator`, `date`, `type` (publication type from icon), `adsLibrary.parentTitle`, `adsLibrary.downloadUrl`. |
 | **MDSSearchNode** | [museumdata.uk](https://museumdata.uk/) | HTML scraper (no public JSON API). Two-step fetch: probe for total, then retrieve all. Capped at 200 records; amber ⚠ badge when the total exceeds the cap. |
+| **LoadSavedSearchNode** | Local filesystem | Loads a `.nfcs.json` file saved by **SaveSearchNode**, or any raw `UnifiedRecord[]` JSON array exported by **ExportNode**. After loading, displays full provenance metadata: saved date/time, source breakdown with per-service record counts, and the original search parameters in a collapsible panel. Metadata is persisted in the workflow file — re-opening the workflow shows the provenance panel even before the file is reloaded. Works in all browsers. |
 | **LocalFileSourceNode** | Local filesystem | Parses a single CSV or TSV file selected via a standard file picker (works in all browsers). Auto-detects the delimiter from the file extension and content (tab, comma, semicolon, or pipe); manual override available. **First row is header** toggle (default on) — off generates `col1`, `col2`… names. **Cast numeric strings to numbers** toggle (default on) — converts values such as `"51.5074"` to `51.5074`, enabling downstream map and spatial filter nodes to work directly with coordinate columns. Shows a column name preview after parsing. |
 | **LocalFolderSourceNode** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction via pdfjs-dist), XML/TEI, plain text, and images. Also detects Shapefiles and GeoJSON files in the folder and exposes them via a dedicated **GIS handle** (bottom) — connect this to a MapOutputNode to overlay vector layers on the map. Emits `FileRecord[]` on the main output. Requires Chrome or Edge 86+. |
 
@@ -91,6 +92,7 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 
 | Node | Description |
 |------|-------------|
+| **SaveSearchNode** | Serialises upstream records with a metadata envelope to a `.nfcs.json` file. Shows a live preview of the record count, per-source breakdown, and auto-suggested filename (e.g. `gbif-ads-2026-04-24.nfcs.json`). On Chrome/Edge, opens a native **Save As…** dialog so you can choose the save location and edit the filename before committing. On Firefox, the file downloads automatically. The envelope captures: saved date/time, source names and per-source record counts, and the original search parameters from all upstream source nodes. See [Saved search caching](#saved-search-caching). |
 | **QuickViewNode** | Inspect the full, untruncated value of any field across upstream records. Pick a field from the dropdown; navigate records with ‹ / › buttons. Copy button per record. Useful for reviewing long fields such as `fetchedContent` or `ollamaResponse`. |
 | **TableOutputNode** | Paginated table. Merges records from multiple upstream nodes automatically. Pass-through output handle so it can chain into Map, Timeline, or Export nodes. Double-click to expand to a full-screen panel. Toolbar has two column toggles: **show all columns** reveals every flat top-level field; **expand namespaces** (visible once show all is on) additionally flattens one level of service namespace objects into dot-notation columns (`adsLibrary.parentTitle`, `gbif.datasetKey`, etc.). |
 | **JSONOutputNode** | Syntax-highlighted JSON viewer. Shows the full normalised record graph. Double-click to expand. |
@@ -106,32 +108,34 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 ```
 ParamNode ─┐
            ▼
-  GBIFSearchNode       ────────────────────────────────────────┐
-  LLDSSearchNode       ────────────────────────────────────────┤
-  ADSSearchAdvancedNode ─┐                                     │
-  ADSLibraryNode       ──┤                                     │
-  MDSSearchNode        ──┤                                     │
-  LocalFileSourceNode  ──┤                                     │
-                         ▼                                     │
+  GBIFSearchNode        ───────────────────────────────────────┐
+  LLDSSearchNode        ───────────────────────────────────────┤
+  ADSSearchAdvancedNode ──┐                                    │
+  ADSLibraryNode        ──┤                                    │
+  MDSSearchNode         ──┤                                    │
+  LocalFileSourceNode   ──┤                                    │
+  LoadSavedSearchNode   ──┤                                    │
+                          ▼                                    │
                FilterTransformNode ────────────────────────────┤
-                         │                                     │
-                         ▼                                     │
+                          │                                    │
+                          ▼                                    │
                SpatialFilterNode   ────────────────────────────┤
-                         │                                     │
-                         ▼                                     │
+                          │                                    │
+                          ▼                                    │
                ReconciliationNode  ────────────────────────────┤
                                                                │
-  LocalFolderSourceNode ──► OllamaNode ──────────────────────── ┤
+  LocalFolderSourceNode ──► OllamaNode ─────────────────────── ┤
            │ (GIS handle)                                      │
            ▼                                                   │
   [source] ──► URLFetchNode ──► HTMLSectionNode ──► OllamaFieldNode ──┤
                                                                ▼
                                                       TableOutputNode ──► ExportNode
-                                                      QuickViewNode
-                                                      JSONOutputNode
+                                                      QuickViewNode              │
+                                                      JSONOutputNode             ▼
                                                       MapOutputNode ◄── LocalFolderSourceNode (GIS)
                                                       TimelineOutputNode
                                                       OllamaOutputNode
+                                                      SaveSearchNode  ◄── (any data-handle source)
 ```
 
 All data nodes expose a **`data` input handle** (left) and a **`results` output handle** (right). You can chain them in any order and branch to multiple output nodes simultaneously. Comment nodes have no handles.
@@ -399,6 +403,59 @@ Files are named `nfcs-export-YYYY-MM-DD.{ext}`.
 
 ---
 
+## Saved search caching
+
+**SaveSearchNode** and **LoadSavedSearchNode** work as a pair to cache search results and reproduce consistent data across sessions without re-querying live services.
+
+### File format
+
+Saved files use a `.nfcs.json` envelope that wraps the record array:
+
+```json
+{
+  "_nfcs": {
+    "version": 1,
+    "savedAt": "2026-04-24T14:32:00.000Z",
+    "sources": ["ads", "gbif"],
+    "sourceCounts": { "ads": 47, "gbif": 23 },
+    "recordCount": 70,
+    "searchParams": {
+      "gbifSearch::gbif-1": { "q": "Quercus", "country": "GB", "limit": "100" },
+      "adsSearchAdvanced::ads-1": { "query": "oak", "country": "GB" }
+    }
+  },
+  "records": [ ...UnifiedRecord[]... ]
+}
+```
+
+`searchParams` captures the configuration of every source node that fed into the saved result — keyed by node type and ID, with transient runtime fields (status, count, etc.) stripped. This gives a complete audit trail: what was searched for, on which services, with which parameters.
+
+### Saving
+
+1. Run your search and process pipeline as normal.
+2. Drag a **SaveSearchNode** onto the canvas and connect it to any node that exposes a `data` handle.
+3. The node shows a live preview: total record count, per-source chips, and the auto-suggested filename derived from the source names and today's date.
+4. Click **💾 Save As…** (Chrome/Edge) to choose the save location and confirm the filename in a native OS dialog, or **💾 Save** (Firefox) to download directly.
+
+The filename is pre-populated as `{sources}-{date}.nfcs.json`, e.g. `gbif-ads-2026-04-24.nfcs.json`.
+
+### Loading
+
+1. Drag a **LoadSavedSearchNode** onto the canvas.
+2. Click **📂 Load File** and select a `.nfcs.json` file (or any raw `UnifiedRecord[]` JSON exported by **ExportNode**).
+3. If the file has an `_nfcs` envelope, the metadata panel displays: saved date/time, source chips with per-service record counts, number of records (loaded / not yet loaded), and a collapsible **Search parameters** section showing the original query fields.
+4. Connect the output handle to any downstream node (FilterTransformNode, TableOutputNode, etc.) and continue processing.
+
+### Workflow persistence
+
+The metadata fields (`savedAt`, `sources`, `searchParams`, etc.) are stored in the workflow file alongside the node configuration. If you save and reload the workflow, the LoadSavedSearchNode shows the full provenance panel immediately — before you re-pick the file — with a nudge that the records need to be restored. This makes the workflow self-documenting: opening it shows what search produced each result set, even with no records currently loaded.
+
+### Compatibility with ExportNode JSON
+
+Any JSON file produced by **ExportNode** (format: JSON) contains a plain `UnifiedRecord[]` array and can be loaded directly into LoadSavedSearchNode. It will display as *"N records — no metadata (raw export)"* since there is no `_nfcs` envelope. Use SaveSearchNode instead of ExportNode when provenance and reproducibility matter.
+
+---
+
 ## CORS and the dev proxy
 
 | Prefix | Target | Reason |
@@ -477,7 +534,8 @@ nfcs-poc/
 └── src/
     ├── App.tsx                 # Canvas, collapsible sidebar, Run All, save/load, node factories
     ├── types/
-    │   └── UnifiedRecord.ts    # Canonical cross-service record type
+    │   ├── UnifiedRecord.ts    # Canonical cross-service record type
+    │   └── savedSearch.ts      # NfcsSavedSearch envelope type + isNfcsSavedSearch guard
     ├── store/
     │   └── resultsStore.ts     # Out-of-band record store (avoids React Flow state bloat)
     ├── hooks/
@@ -508,6 +566,8 @@ nfcs-poc/
     │   ├── MapOutputNode.tsx
     │   ├── TimelineOutputNode.tsx
     │   ├── ExportNode.tsx
+    │   ├── SaveSearchNode.tsx          # Save records + metadata envelope to .nfcs.json
+    │   ├── LoadSavedSearchNode.tsx     # Load .nfcs.json and display provenance metadata
     │   └── ExpandedOutputPanel.tsx
     └── utils/
         ├── nodeIdCounter.ts            # Shared ID counter; bumpCounterPast() used on workflow load
