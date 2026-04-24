@@ -40,6 +40,8 @@ import type { MergeByQIDNodeData }        from './nodes/MergeByQIDNode'
 import type { WikidataEnrichNodeData }    from './nodes/WikidataEnrichNode'
 import type { SaveSearchNodeData }        from './nodes/SaveSearchNode'
 import type { LoadSavedSearchNodeData }  from './nodes/LoadSavedSearchNode'
+import type { XMLSectionNodeData }       from './nodes/XMLSectionNode'
+import type { ImageViewNodeData }        from './nodes/ImageViewNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -70,6 +72,8 @@ type AppNode =
   | Node<WikidataEnrichNodeData>
   | Node<SaveSearchNodeData>
   | Node<LoadSavedSearchNodeData>
+  | Node<XMLSectionNodeData>
+  | Node<ImageViewNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -124,6 +128,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   localFileSource: pos => ({
     id: newId('csvfile'), type: 'localFileSource', position: pos,
     data: {
+      fileMode:      'csv',
       delimiter:     'auto',
       hasHeader:     true,
       autoCast:      true,
@@ -144,6 +149,10 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       statusMessage: '',
       results:       undefined,
       count:         0,
+      pdfCount:      0,
+      xmlCount:      0,
+      textCount:     0,
+      imageCount:    0,
       gisLayers:     undefined,
       gisCount:      0,
     } satisfies LocalFolderSourceNodeData,
@@ -309,6 +318,29 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       resultsVersion: 0,
     } satisfies LoadSavedSearchNodeData,
   }),
+  xmlSection: pos => ({
+    id: newId('xml'), type: 'xmlSection', position: pos,
+    data: {
+      xpath:         '',
+      outputMode:    'text',
+      maxLength:     8000,
+      status:        'idle',
+      statusMessage: '',
+      inputCount:    0,
+      outputCount:   0,
+    } satisfies XMLSectionNodeData,
+  }),
+  imageView: pos => ({
+    id: newId('imgview'), type: 'imageView', position: pos,
+    data: {
+      mode: 'iiif',
+      selectedField: '',
+      imageDirectUrl: '',
+      // Wellcome Collection — Edward Topsell, The History of Four-Footed Beasts (1658)
+      manifestUrl: 'https://iiif.wellcomecollection.org/presentation/b18035723',
+    } satisfies ImageViewNodeData,
+    style: { width: 400, height: 480 },
+  }),
   tableOutput: pos => ({
     id: newId('table'), type: 'tableOutput', position: pos,
     data: {},
@@ -336,7 +368,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
 const SIDEBAR_ITEMS = [
   { type: 'comment',     label: 'Comment',           sub: 'Annotation label',          color: '#f59e0b', group: 'Canvas' },
   { type: 'param',       label: 'ParamNode',        sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },
-  { type: 'localFileSource',   label: 'LocalFileSource',   sub: 'Parse a single CSV/TSV file',  color: '#0e7490', group: 'Search' },
+  { type: 'localFileSource',   label: 'LocalFileSource',   sub: 'Single CSV, XML or image file', color: '#0e7490', group: 'Search' },
   { type: 'localFolderSource', label: 'LocalFolderSource', sub: 'Read files from local folder', color: '#14532d', group: 'Search' },
   { type: 'gbifSearch',  label: 'GBIFSearchNode',   sub: 'GBIF occurrence search',    color: '#0f4c81', group: 'Search' },
   { type: 'lldsSearch',  label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',    color: '#92400e', group: 'Search' },
@@ -348,12 +380,14 @@ const SIDEBAR_ITEMS = [
   { type: 'ollamaField',    label: 'OllamaFieldNode',     sub: 'LLM inference on a chosen field',  color: '#1e1b4b', group: 'Process' },
   { type: 'urlFetch',       label: 'URLFetchNode',        sub: 'Fetch URL content into records',   color: '#0c4a6e', group: 'Process' },
   { type: 'htmlSection',   label: 'HTMLSectionNode',     sub: 'Extract page section by CSS selector', color: '#065f46', group: 'Process' },
+  { type: 'xmlSection',    label: 'XMLSectionNode',      sub: 'Extract XML content by XPath',         color: '#44403c', group: 'Process' },
   { type: 'filterTransform', label: 'FilterTransformNode', sub: 'Filter + transform records', color: '#4f46e5', group: 'Process' },
   { type: 'spatialFilter',   label: 'Spatial Filter',      sub: 'Draw bounding box to filter by location', color: '#0891b2', group: 'Process' },
   { type: 'reconciliation',  label: 'ReconciliationNode',  sub: 'Wikidata field reconciler',  color: '#7c3aed', group: 'Process' },
   { type: 'wikidataEnrich', label: 'WikidataEnrichNode',  sub: 'Fetch Wikidata properties for QIDs', color: '#0369a1', group: 'Process' },
   { type: 'mergeByQID',     label: 'MergeByQIDNode',      sub: 'Join records from multiple sources by shared QID', color: '#6b21a8', group: 'Process' },
   { type: 'quickView',      label: 'QuickViewNode',      sub: 'Inspect one field in full',  color: '#1e293b', group: 'Output' },
+  { type: 'imageView',      label: 'ImageViewNode',      sub: 'Image + IIIF manifest viewer', color: '#1c3144', group: 'Output' },
   { type: 'tableOutput',    label: 'TableOutputNode',    sub: 'Paginated results table',    color: '#0d9488', group: 'Output' },
   { type: 'saveSearch',     label: 'SaveSearch',         sub: 'Save records + metadata to .nfcs.json', color: '#1b4332', group: 'Output' },
   { type: 'export',         label: 'ExportNode',         sub: 'CSV / JSON / GeoJSON',       color: '#b45309', group: 'Output' },

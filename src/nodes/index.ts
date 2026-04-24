@@ -25,6 +25,8 @@ import { MergeByQIDNode }        from './MergeByQIDNode'
 import { WikidataEnrichNode }    from './WikidataEnrichNode'
 import { SaveSearchNode }        from './SaveSearchNode'
 import { LoadSavedSearchNode }   from './LoadSavedSearchNode'
+import { XMLSectionNode }        from './XMLSectionNode'
+import { ImageViewNode }         from './ImageViewNode'
 
 export const nodeTypes = {
   param:             ParamNode,
@@ -54,4 +56,6 @@ export const nodeTypes = {
   wikidataEnrich:   WikidataEnrichNode,
   saveSearch:       SaveSearchNode,
   loadSavedSearch:  LoadSavedSearchNode,
+  xmlSection:       XMLSectionNode,
+  imageView:        ImageViewNode,
 }

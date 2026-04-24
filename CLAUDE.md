@@ -59,7 +59,8 @@ src/
 | `adsSearchAdvanced` | `ADSSearchAdvancedNode` | `/ads-proxy/…/search`. **Server hard-caps at 50**; `fetchAll` loop. Facet filters: ariadneSubject, derivedSubject, nativeSubject, country, dataType, temporal. |
 | `adsLibrarySearch` | `ADSLibraryNode` | `/ads-library-search` Vite middleware. Two-step JSF: GET ViewState → POST query → parse CDATA HTML. Returns title, creator, date, publicationType, parentTitle, downloadUrl. |
 | `mdsSearch` | `MDSSearchNode` | `/mds-proxy`. Two-step HTML scraper. Capped at 200 (amber badge). |
-| `localFolderSource` | `LocalFolderSourceNode` | File System Access API — no runner (user gesture required). `dirHandle` in `useRef`, lost on refresh. |
+| `localFolderSource` | `LocalFolderSourceNode` | File System Access API — no runner (user gesture required). `dirHandle` in `useRef`, lost on refresh. 5 typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`; partitioned store keys `${id}:pdf` etc. |
+| `localFileSource` | `LocalFileSourceNode` | No runner. `fileMode: 'csv' \| 'xml' \| 'image'`. CSV → column-keyed rows; xml/image → single `FileRecord` via `extractFileContent`. |
 
 ### Process
 | Key | Component | Header |
@@ -71,6 +72,7 @@ src/
 | `ollamaField` | `OllamaFieldNode` | `#1e1b4b`. Per-record or aggregate mode. Templates: `{{value}}`, `{{field}}`, `{{count}}`, `{{values}}`. Same TDZ gotcha as OllamaNode. |
 | `urlFetch` | `URLFetchNode` | `#0c4a6e`. Adds `fetchedContent`, `fetchedHtml` (cleaned body), `fetchStatus`, `fetchedAt`. AbortController cancel. URL field picker scans namespace sub-objects; runner resolves dot-notation field paths (e.g. `adsLibrary.downloadUrl`). |
 | `htmlSection` | `HTMLSectionNode` | `#065f46`. CSS selector on `fetchedHtml` → overwrites `fetchedContent`. Adds `htmlSelector`. |
+| `xmlSection` | `XMLSectionNode` | `#44403c`. XPath on `content` field (XML text) → writes `xmlContent`. Schema inspector + live preview. Strips default namespace before XPath eval. Adds `xmlXPath`. |
 
 ### Output
 | Key | Component | Notes |
@@ -81,7 +83,8 @@ src/
 | `timelineOutput` | `TimelineOutputNode` | ISO dates, bare years, BCE (`-1199`). |
 | `export` | `ExportNode` | `#b45309`. CSV/JSON/GeoJSON. `flattenRecord` expands `*_reconciled` to `_qid/_label/_confidence/_status` cols. |
 | `ollamaOutput` | `OllamaOutputNode` | `#0f172a`. Reads `ollamaResponse`. No pass-through. |
-| `quickView` | `QuickViewNode` | `#1e293b`. No handles, no runner. Full-value inspector with record nav. |
+| `quickView` | `QuickViewNode` | `#1e293b`. No runner. Field inspector: paginates CSV/TSV (50 rows/page), truncates plain text at 50k chars. Redirects image data URLs to ImageViewNode. |
+| `imageView` | `ImageViewNode` | `#1c3144`. No runner. `NodeResizer`. Two modes: **Images** (field picker for upstream records OR `imageDirectUrl` for a public URL — direct URL overrides field, suppresses record nav) and **IIIF** (v2/v3 manifest, zoom-tiered IIIF Image API requests, info.json for dimensions). Info panel: IIIF manifest metadata + image info; Images: EXIF parsed inline from first 64 KB of JPEG data URLs. |
 
 ## Registration Checklist (new runnable node)
 
@@ -94,7 +97,7 @@ src/
 7. Data interface + union in `AppNode` (`App.tsx`)
 8. Proxy rule in `vite.config.ts` if needed
 
-**Exceptions:** `localFolderSource` (user gesture) skips 1–2. `quickView`, `comment` (display-only) skip 1–2 and have no handles.
+**Exceptions:** `localFolderSource` (user gesture) skips 1–2. `quickView`, `imageView`, `comment` (display-only) skip 1–2 and have no handles.
 
 ## Results Store — CRITICAL
 
@@ -134,7 +137,9 @@ type NodeRunner = (
 - **`isReconciledValue`** in `reconciliationService.ts` — sole location. Do not redefine.
 - **`allFlatColumns`** in `TableOutputNode` — must include `isReconciledValue(v)` check or `*_reconciled` columns vanish.
 - **`newId(prefix)`** / **`bumpCounterPast(ids[])`** in `nodeIdCounter.ts` — call `bumpCounterPast` after workflow load.
-- **`TRANSIENT_FIELDS`** in `workflowIO.ts` strips `results`, `status`, counts, `resultsVersion`, `_capped`, `_total`, `folderName` before save.
+- **`TRANSIENT_FIELDS`** in `workflowIO.ts` strips `results`, `status`, counts, `resultsVersion`, `_capped`, `_total`, `folderName`, `pdfCount/xmlCount/textCount/imageCount` before save.
+- **`collectUpstreamRecords(nodeId, edges)`** in `upstreamRecords.ts` — shared utility used by all process runners. TYPED_HANDLES (`pdf`, `xml`, `text`, `image`) use partitioned store keys `${sourceId}:${handle}`; all others use plain `sourceId`.
+- **`useUpstreamRecords(nodeId)`** hook — same TYPED_HANDLES logic for reactivity; uses `${type}Count` key from node data.
 
 ## Architectural Gotchas
 
@@ -152,3 +157,7 @@ type NodeRunner = (
 12. `bumpCounterPast(loadedIds)` after workflow load — prevents ID collisions.
 13. `CommentNode` size via `style: {width, height}` on node object, not `data`.
 14. `fetchedHtml` is cleaned body HTML — `HTMLSectionNode` reads this, not raw response.
+15. `XMLSectionNode` strips default XML namespace (`xmlns="..."`) before `DOMParser`/`document.evaluate` — required for XPath to work on namespaced documents.
+16. `LocalFolderSourceNode` handle positions (top: 70/94/118/142/166) are fixed — the Outputs section must remain FIRST in the body with consistent heights, or handles misalign.
+17. `LocalFolderSourceNode` typed store partitions: clear all 5 keys (`id`, `id:pdf`, `id:xml`, `id:text`, `id:image`) on re-scan.
+18. `upstreamRecords.ts` `TYPED_HANDLES = Set(['pdf','xml','text','image'])` — `results` and `data` are NOT in this set, so they fall through to plain `sourceId` lookup.

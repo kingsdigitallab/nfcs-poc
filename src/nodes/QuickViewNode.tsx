@@ -12,10 +12,31 @@ import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { isReconciledValue } from '../utils/reconciliationService'
 
 const HEADER_COLOR = '#1e293b'
+const ROWS_PER_PAGE = 50
+const TEXT_LIMIT = 50_000
 
 export interface QuickViewNodeData {
   selectedField: string
   [key: string]: unknown
+}
+
+function isImageDataUrl(val: unknown): boolean {
+  return typeof val === 'string' && val.startsWith('data:image/')
+}
+
+function detectTabular(val: string): 'tsv' | 'csv' | null {
+  const lines = val.split('\n').filter(l => l.trim())
+  if (lines.length < 2) return null
+  const sample = lines.slice(0, 6)
+  const tabCounts = sample.map(l => (l.match(/\t/g) || []).length)
+  if (tabCounts[0] > 0 && tabCounts.every(c => c === tabCounts[0])) return 'tsv'
+  const commaCounts = sample.map(l => (l.match(/,/g) || []).length)
+  if (commaCounts[0] > 0 && commaCounts.every(c => c === commaCounts[0])) return 'csv'
+  return null
+}
+
+function parseTabularRows(val: string, delim: string): string[][] {
+  return val.split('\n').filter(l => l.trim()).map(l => l.split(delim))
 }
 
 function formatValue(val: unknown): string {
@@ -35,14 +56,13 @@ export function QuickViewNode({ id, data }: NodeProps) {
   const d = data as QuickViewNodeData
 
   const [recordIndex, setRecordIndex] = useState(0)
+  const [tabularPage, setTabularPage] = useState(0)
   const [copied, setCopied] = useState(false)
 
-  // Derive available fields from all records (not just the first, so fields
-  // that only appear on later records are still discoverable)
   const availableFields = useMemo<string[]>(() => {
     if (!records || records.length === 0) return []
     const keys = new Set<string>()
-    for (const r of records.slice(0, 20)) { // sample up to 20 records
+    for (const r of records.slice(0, 20)) {
       for (const k of Object.keys(r as Record<string, unknown>)) {
         keys.add(k)
       }
@@ -52,15 +72,25 @@ export function QuickViewNode({ id, data }: NodeProps) {
 
   const selectedField = d.selectedField || availableFields[0] || ''
 
-  // Clamp index when records change
   const safeIndex = records && records.length > 0
     ? Math.min(recordIndex, records.length - 1)
     : 0
 
   const currentRecord = records?.[safeIndex] as Record<string, unknown> | undefined
-  const fieldValue    = currentRecord ? formatValue(currentRecord[selectedField]) : ''
+  const rawFieldValue = currentRecord ? currentRecord[selectedField] : undefined
+  const isImage = isImageDataUrl(rawFieldValue)
+  const fieldValue = rawFieldValue != null && !isImage ? formatValue(rawFieldValue) : ''
 
-  // Record identifier for the sub-heading
+  const tabularType = useMemo(() => {
+    if (!fieldValue || fieldValue.length < 20) return null
+    return detectTabular(fieldValue)
+  }, [fieldValue])
+
+  const tabularRows = useMemo(() => {
+    if (!tabularType) return null
+    return parseTabularRows(fieldValue, tabularType === 'tsv' ? '\t' : ',')
+  }, [fieldValue, tabularType])
+
   const recordLabel = currentRecord
     ? String(
         (currentRecord.title as string | undefined) ||
@@ -89,7 +119,7 @@ export function QuickViewNode({ id, data }: NodeProps) {
           <div style={styles.navGroup}>
             <button
               style={styles.navBtn}
-              onClick={() => setRecordIndex(i => Math.max(0, i - 1))}
+              onClick={() => { setRecordIndex(i => Math.max(0, i - 1)); setTabularPage(0) }}
               disabled={safeIndex === 0}
               className="nodrag"
               title="Previous record"
@@ -101,7 +131,7 @@ export function QuickViewNode({ id, data }: NodeProps) {
             </span>
             <button
               style={styles.navBtn}
-              onClick={() => setRecordIndex(i => Math.min(records.length - 1, i + 1))}
+              onClick={() => { setRecordIndex(i => Math.min(records.length - 1, i + 1)); setTabularPage(0) }}
               disabled={safeIndex === records.length - 1}
               className="nodrag"
               title="Next record"
@@ -121,6 +151,7 @@ export function QuickViewNode({ id, data }: NodeProps) {
             onChange={e => {
               updateNodeData(id, { selectedField: e.target.value })
               setRecordIndex(0)
+              setTabularPage(0)
             }}
             className="nodrag"
           >
@@ -159,9 +190,53 @@ export function QuickViewNode({ id, data }: NodeProps) {
         <div style={styles.placeholder}>Run the upstream node to see results</div>
       ) : !selectedField ? (
         <div style={styles.placeholder}>No fields available</div>
-      ) : (
+      ) : isImage ? (
+        <div style={styles.placeholder}>
+          Image data — use an <strong>ImageViewNode</strong> to display it
+        </div>
+      ) : tabularRows ? (() => {
+        const header = tabularRows[0] ?? []
+        const dataRows = tabularRows.slice(1)
+        const pageStart = tabularPage * ROWS_PER_PAGE
+        const pageRows = dataRows.slice(pageStart, pageStart + ROWS_PER_PAGE)
+        const totalPages = Math.ceil(dataRows.length / ROWS_PER_PAGE)
+        return (
+          <div style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden', flex: 1 }}>
+            <div style={styles.contentWrap} className="nodrag nowheel">
+              <table style={styles.table}>
+                <thead>
+                  <tr>{header.map((h, i) => <th key={i} style={styles.th}>{h}</th>)}</tr>
+                </thead>
+                <tbody>
+                  {pageRows.map((row, ri) => (
+                    <tr key={ri} style={ri % 2 === 1 ? { background: '#f8fafc' } : undefined}>
+                      {row.map((cell, ci) => <td key={ci} style={styles.td}>{cell}</td>)}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {totalPages > 1 && (
+              <div style={styles.pageBar} className="nodrag">
+                <button style={styles.pageBtn} onClick={() => setTabularPage(p => Math.max(0, p - 1))} disabled={tabularPage === 0}>‹</button>
+                <span style={styles.pageLabel}>
+                  Rows {pageStart + 1}–{Math.min(pageStart + ROWS_PER_PAGE, dataRows.length)} of {dataRows.length}
+                </span>
+                <button style={styles.pageBtn} onClick={() => setTabularPage(p => Math.min(totalPages - 1, p + 1))} disabled={tabularPage === totalPages - 1}>›</button>
+              </div>
+            )}
+          </div>
+        )
+      })() : (
         <div style={styles.contentWrap} className="nodrag nowheel">
-          <pre style={styles.content}>{fieldValue}</pre>
+          <pre style={styles.content}>
+            {fieldValue.length > TEXT_LIMIT ? fieldValue.slice(0, TEXT_LIMIT) : fieldValue}
+          </pre>
+          {fieldValue.length > TEXT_LIMIT && (
+            <div style={styles.truncNotice}>
+              Showing first {TEXT_LIMIT.toLocaleString()} of {fieldValue.length.toLocaleString()} chars — copy for full value
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -286,6 +361,68 @@ const styles = {
     fontSize:   11,
     fontStyle:  'italic' as const,
     textAlign:  'center' as const,
+  },
+  truncNotice: {
+    padding:    '4px 12px 8px',
+    color:      '#9ca3af',
+    fontSize:   10,
+    fontStyle:  'italic' as const,
+    borderTop:  '1px solid #f1f5f9',
+  },
+  table: {
+    borderCollapse: 'collapse' as const,
+    width:          '100%',
+    fontSize:       10,
+    fontFamily:     "'Consolas', 'Menlo', monospace",
+  },
+  th: {
+    padding:        '3px 6px',
+    background:     '#f1f5f9',
+    borderBottom:   '1px solid #d1d5db',
+    fontWeight:     700,
+    textAlign:      'left' as const,
+    whiteSpace:     'nowrap' as const,
+    position:       'sticky' as const,
+    top:            0,
+    color:          '#374151',
+  },
+  td: {
+    padding:        '2px 6px',
+    borderBottom:   '1px solid #f1f5f9',
+    color:          '#111827',
+    maxWidth:       180,
+    overflow:       'hidden',
+    textOverflow:   'ellipsis',
+    whiteSpace:     'nowrap' as const,
+  },
+  pageBar: {
+    display:        'flex',
+    alignItems:     'center',
+    justifyContent: 'center',
+    gap:            6,
+    padding:        '4px 10px',
+    borderTop:      '1px solid #f1f5f9',
+    flexShrink:     0,
+  },
+  pageBtn: {
+    background:     '#374151',
+    color:          '#fff',
+    border:         'none',
+    borderRadius:   3,
+    width:          20,
+    height:         20,
+    fontSize:       13,
+    cursor:         'pointer',
+    display:        'flex',
+    alignItems:     'center',
+    justifyContent: 'center',
+    padding:        0,
+    fontWeight:     700,
+  },
+  pageLabel: {
+    fontSize:       10,
+    color:          '#6b7280',
+    fontFamily:     'monospace',
   },
   inputHandle: {
     width:     10,
