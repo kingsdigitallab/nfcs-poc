@@ -3,6 +3,7 @@ import { fetchADSLibraryRecords }       from './adsLibrary'
 import { adaptADSLibraryRecords }       from './adsLibraryAdapter'
 import type { ADSLibraryNodeData }      from '../nodes/ADSLibraryNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { addCitation } from './citationUtils'
 
 export const runADSLibraryNode: NodeRunner = async (
   nodeId,
@@ -49,13 +50,19 @@ export const runADSLibraryNode: NodeRunner = async (
 
   try {
     const { records: raws, total, capped } = await fetchADSLibraryRecords(query, limit)
-    const records = adaptADSLibraryRecords(raws)
+    const records = addCitation(adaptADSLibraryRecords(raws) as Record<string, unknown>[], {
+      service:    'ADS Library',
+      serviceUrl: 'https://archaeologydataservice.ac.uk/library',
+      publisher:  'Archaeology Data Service Library',
+      accessDate: new Date().toISOString(),
+      query,
+    })
 
     const msg = capped
       ? `⚠ ${records.length} of ${total.toLocaleString()} (capped)`
       : `✓ ${records.length}${total > records.length ? ` of ${total.toLocaleString()}` : ''}`
 
-    const version = setNodeResults(nodeId, records as Record<string, unknown>[])
+    const version = setNodeResults(nodeId, records)
     updateNodeData(nodeId, {
       status:         'success',
       statusMessage:  msg,

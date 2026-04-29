@@ -19,6 +19,23 @@ export interface UnifiedRecord {
   /** Globally unique id — service-prefixed, e.g. "gbif:12345" or "llds:20.500.14106/1234" */
   id: string
 
+  // ── Citation metadata ───────────────────────────────────────────────────────
+  /** Populated by source runners; consumed by CitationNode and ExportNode. */
+  _citation?: {
+    service: string
+    serviceUrl: string
+    accessDate: string
+    publisher?: string
+    licence?: string
+    query?: string
+    recordId?: string
+    title?: string
+    url?: string
+    pid?: string
+    creator?: string | string[]
+    date?: string
+  }
+
   // ── Provenance ──────────────────────────────────────────────────────────────
   /** Source service identifier, e.g. "gbif" | "llds" | "ads" */
   _source?: string
@@ -95,6 +112,7 @@ export interface UnifiedRecord {
   adsLibrary?: Record<string, unknown>
   /** Museum Data Service namespace (collection, material, place, …) */
   mds?: Record<string, unknown>
+  /** Europeana namespace (provider, dataProvider, rights, thumbnail, shownAt, completeness) */
+  europeana?: Record<string, unknown>
   // ckan?: Record<string, unknown>
-  // europeana?: Record<string, unknown>
 }

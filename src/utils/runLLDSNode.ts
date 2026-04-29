@@ -14,6 +14,7 @@ import { adaptLLDSRecords }       from './lldsAdapter'
 import { loadCache, saveCache, isCacheStale } from './lldsCache'
 import type { LLDSSearchNodeData } from '../nodes/LLDSSearchNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { addCitation } from './citationUtils'
 
 export const runLLDSNode: NodeRunner = async (
   nodeId,
@@ -53,13 +54,24 @@ export const runLLDSNode: NodeRunner = async (
   clearNodeResults(nodeId)
   updateNodeData(nodeId, { status: 'loading', statusMessage: 'Fetching…', count: 0 })
 
-  const cache = loadCache()
+  const cache      = loadCache()
+  const accessDate = new Date().toISOString()
+  const citationBase = {
+    service:    'LLDS',
+    serviceUrl: 'https://llds.ling-phil.ox.ac.uk',
+    publisher:  'Linguistic Linked Data Service',
+    accessDate,
+    query,
+  }
 
   try {
     if (useCache && cache && !isCacheStale(cache)) {
       console.log('[LLDS] using fresh cache from', new Date(cache.ts).toISOString())
-      const records = adaptLLDSRecords(cache.items).map(r => ({ ...r, _cached: true }))
-      const version = setNodeResults(nodeId, records as Record<string, unknown>[])
+      const records = addCitation(
+        adaptLLDSRecords(cache.items).map(r => ({ ...r, _cached: true })) as Record<string, unknown>[],
+        citationBase,
+      )
+      const version = setNodeResults(nodeId, records)
       updateNodeData(nodeId, {
         status:         'cached',
         statusMessage:  `📦 ${records.length} results (cached)`,
@@ -74,14 +86,14 @@ export const runLLDSNode: NodeRunner = async (
     const { records: raws, total, capped } = await fetchLLDSRecords(query, limit)
     saveCache(raws)
 
-    const records = adaptLLDSRecords(raws)
+    const records = addCitation(adaptLLDSRecords(raws) as Record<string, unknown>[], citationBase)
     const msg = capped
       ? `⚠ ${records.length} of ${total.toLocaleString()} (capped)`
       : `✓ ${records.length} of ${total.toLocaleString()}`
 
     console.log(`[LLDS] ${msg}`, records[0])
 
-    const version = setNodeResults(nodeId, records as Record<string, unknown>[])
+    const version = setNodeResults(nodeId, records)
     updateNodeData(nodeId, {
       status:         'success',
       statusMessage:  msg,
@@ -91,8 +103,11 @@ export const runLLDSNode: NodeRunner = async (
   } catch (err) {
     if (cache) {
       console.warn('[LLDS] live fetch failed, falling back to cache:', err)
-      const records = adaptLLDSRecords(cache.items).map(r => ({ ...r, _cached: true }))
-      const version = setNodeResults(nodeId, records as Record<string, unknown>[])
+      const records = addCitation(
+        adaptLLDSRecords(cache.items).map(r => ({ ...r, _cached: true })) as Record<string, unknown>[],
+        citationBase,
+      )
+      const version = setNodeResults(nodeId, records)
       updateNodeData(nodeId, {
         status:         'cached',
         statusMessage:  `📦 ${records.length} results (cached — service unavailable)`,

@@ -42,6 +42,9 @@ import type { SaveSearchNodeData }        from './nodes/SaveSearchNode'
 import type { LoadSavedSearchNodeData }  from './nodes/LoadSavedSearchNode'
 import type { XMLSectionNodeData }       from './nodes/XMLSectionNode'
 import type { ImageViewNodeData }        from './nodes/ImageViewNode'
+import type { CitationNodeData }           from './nodes/CitationNode'
+import type { EuropeanaSearchNodeData }   from './nodes/EuropeanaSearchNode'
+import type { FieldDistributionNodeData } from './nodes/FieldDistributionNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -74,6 +77,9 @@ type AppNode =
   | Node<LoadSavedSearchNodeData>
   | Node<XMLSectionNodeData>
   | Node<ImageViewNodeData>
+  | Node<CitationNodeData>
+  | Node<EuropeanaSearchNodeData>
+  | Node<FieldDistributionNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -361,6 +367,22 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('ollamaOut'), type: 'ollamaOutput', position: pos,
     data: {},
   }),
+  citation: pos => ({
+    id: newId('citation'), type: 'citation', position: pos,
+    data: {} satisfies CitationNodeData,
+  }),
+  europeanaSearch: pos => ({
+    id: newId('europeana'), type: 'europeanaSearch', position: pos,
+    data: {
+      apiKey: '', inlineQuery: '', inlineLimit: '20',
+      typeFilter: 'any', reusability: 'any', mediaOnly: false,
+      status: 'idle', statusMessage: '', count: 0,
+    } satisfies EuropeanaSearchNodeData,
+  }),
+  fieldDistribution: pos => ({
+    id: newId('fdist'), type: 'fieldDistribution', position: pos,
+    data: { selectedField: '', maxBars: 20, expandArrays: true } satisfies FieldDistributionNodeData,
+  }),
 }
 
 // ─── sidebar definition ───────────────────────────────────────────────────────
@@ -375,6 +397,7 @@ const SIDEBAR_ITEMS = [
   { type: 'adsSearchAdvanced', label: 'ADSSearchNode',          sub: 'Archaeology Data Service',      color: '#7c2d12', group: 'Search' },
   { type: 'adsLibrarySearch',  label: 'ADSLibraryNode',        sub: 'ADS Library catalogue',         color: '#1e3a5f', group: 'Search' },
   { type: 'mdsSearch',         label: 'MDSSearchNode',      sub: 'Museum Data Service',            color: '#1e3a8a', group: 'Search' },
+  { type: 'europeanaSearch',   label: 'EuropeanaSearch',    sub: 'Europeana cultural heritage aggregator', color: '#2563eb', group: 'Search' },
   { type: 'loadSavedSearch',  label: 'LoadSavedSearch',   sub: 'Replay a .nfcs.json saved search', color: '#4c1d95', group: 'Search' },
   { type: 'ollamaNode',      label: 'OllamaNode',          sub: 'Local LLM — file/content records', color: '#312e81', group: 'Process' },
   { type: 'ollamaField',    label: 'OllamaFieldNode',     sub: 'LLM inference on a chosen field',  color: '#1e1b4b', group: 'Process' },
@@ -386,6 +409,8 @@ const SIDEBAR_ITEMS = [
   { type: 'reconciliation',  label: 'ReconciliationNode',  sub: 'Wikidata field reconciler',  color: '#7c3aed', group: 'Process' },
   { type: 'wikidataEnrich', label: 'WikidataEnrichNode',  sub: 'Fetch Wikidata properties for QIDs', color: '#0369a1', group: 'Process' },
   { type: 'mergeByQID',     label: 'MergeByQIDNode',      sub: 'Join records from multiple sources by shared QID', color: '#6b21a8', group: 'Process' },
+  { type: 'fieldDistribution', label: 'FieldDistribution', sub: 'Bar chart of value frequencies for any field', color: '#047857', group: 'Output' },
+  { type: 'citation',          label: 'CitationNode',      sub: 'Data source citations for this workflow stage', color: '#78350f', group: 'Output' },
   { type: 'quickView',      label: 'QuickViewNode',      sub: 'Inspect one field in full',  color: '#1e293b', group: 'Output' },
   { type: 'imageView',      label: 'ImageViewNode',      sub: 'Image + IIIF manifest viewer', color: '#1c3144', group: 'Output' },
   { type: 'tableOutput',    label: 'TableOutputNode',    sub: 'Paginated results table',    color: '#0d9488', group: 'Output' },

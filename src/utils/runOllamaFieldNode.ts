@@ -4,32 +4,15 @@
  * Uses non-streaming mode (stream: false) since Run All has no live preview.
  */
 
-import type { Node, Edge } from '@xyflow/react'
 import type { NodeRunner } from './nodeRunners'
-import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { collectUpstreamRecords } from './upstreamRecords'
 
 const OLLAMA_CHAT = '/ollama/api/chat'
 
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'
 const DEFAULT_PROMPT_PER = 'Summarise the following in 2–3 sentences:\n\n{{value}}'
 const DEFAULT_PROMPT_AGG = 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}'
-
-function getUpstreamRecords(
-  nodeId: string,
-  getNodes: () => Node[],
-  edges: Edge[],
-): Record<string, unknown>[] {
-  const nodes = getNodes()
-  const inputEdges = edges.filter(e => e.target === nodeId && e.targetHandle === 'data')
-  const out: Record<string, unknown>[] = []
-  for (const edge of inputEdges) {
-    const src = nodes.find(n => n.id === edge.source)
-    if (!src) continue
-    const recs = getNodeResults(src.id)
-    if (recs) out.push(...recs)
-  }
-  return out
-}
 
 /**
  * Stream the Ollama chat response and return the accumulated text.
@@ -106,7 +89,7 @@ export const runOllamaFieldNode: NodeRunner = async (nodeId, getNodes, edges, up
     return
   }
 
-  const upstreamRecords = getUpstreamRecords(nodeId, getNodes, edges)
+  const upstreamRecords = collectUpstreamRecords(nodeId, edges)
   if (upstreamRecords.length === 0) {
     updateNodeData(nodeId, { status: 'error', statusMessage: '✗ No upstream records' })
     return
@@ -123,7 +106,10 @@ export const runOllamaFieldNode: NodeRunner = async (nodeId, getNodes, edges, up
   try {
     if (mode === 'aggregate') {
       const values = upstreamRecords
-        .map(r => String(r[selectedField] ?? '').trim())
+        .map(r => {
+          const v = r[selectedField]
+          return Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
+        })
         .filter(Boolean)
         .join('\n---\n')
 
@@ -166,7 +152,8 @@ export const runOllamaFieldNode: NodeRunner = async (nodeId, getNodes, edges, up
 
       for (let i = 0; i < upstreamRecords.length; i++) {
         const record = upstreamRecords[i]
-        const value  = String(record[selectedField] ?? '').trim()
+        const rawVal = record[selectedField]
+        const value  = Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()
 
         updateNodeData(nodeId, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 

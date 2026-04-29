@@ -1,0 +1,136 @@
+iDAH Federation Workflow PoC — Deployment Summary
+===================================================
+
+What the application is
+------------------------
+A browser-based, node-graph workflow editor that allows researchers to search,
+combine, filter, and export data from multiple UK Arts & Humanities data
+services. There is no database and no user accounts. All state lives in the
+browser session.
+
+
+Runtime stack
+-------------
+Layer                          Technology       Version
+------                         ----------       -------
+Language                       TypeScript       ~5.7
+UI framework                   React            19
+Build tool                     Vite             6
+Node runtime (server-side)     Node.js          18+ recommended
+Headless browser (optional)    Puppeteer/Chrome bundled via npm
+
+
+How the server works
+--------------------
+In development the app runs under `vite dev` on port 5174. This is NOT
+suitable for production. For a live deployment the correct approach is:
+
+1. Build the static assets:
+     npm run build
+   This produces a dist/ directory of plain HTML, CSS, and JavaScript.
+
+2. Serve the static assets from any web server (nginx, Apache, Caddy, etc.).
+
+3. Run a Node.js server-side process alongside it to handle the proxy routes
+   (see below). Vite's dev-server proxy and middleware cannot be used in
+   production; those routes must be replicated in a standalone Node server.
+
+
+Proxy routes that must be reproduced server-side
+-------------------------------------------------
+The browser cannot call most upstream APIs directly due to CORS restrictions.
+During development, Vite handles this transparently. In production a Node.js
+HTTP server (e.g. Express) must expose the same paths:
+
+Path prefix                  Proxied to                                         Purpose
+-----------                  ----------                                         -------
+/llds-proxy/*                https://llds.ling-phil.ox.ac.uk/llds/*            Linguistic Linked Data Service
+/ads-proxy/*                 https://archaeologydataservice.ac.uk/*             Archaeology Data Service search
+/mds-proxy/*                 https://museumdata.uk/*                            Museum Data Service
+/reconcile-proxy/*           https://wikidata.reconci.link/*                   Wikidata reconciliation (307 redirect strips CORS — proxy essential)
+/ollama/*                    http://localhost:11434/*                           Local Ollama LLM inference (see note below)
+/url-proxy?url=…             Arbitrary external URLs                            General web-fetch proxy (plain HTTP or headless-browser render)
+/ads-library-search?q=…      https://archaeologydataservice.ac.uk/library/…    ADS Library catalogue (two-step JSF session scrape — custom logic, not a simple proxy)
+
+GBIF (https://api.gbif.org) is the only external service called directly from
+the browser and requires no proxy.
+
+
+Puppeteer / headless Chromium requirement
+-----------------------------------------
+The /url-proxy route has an optional js=true mode that renders pages in a
+headless Chrome browser. This requires:
+
+- Puppeteer installed (npm install includes it as a dev dependency — it must
+  be promoted to a production dependency for a live deployment).
+- A Chromium-compatible binary available on the server. Puppeteer downloads
+  one automatically on npm install, but the OpenStack VM must allow execution
+  of untrusted binaries and have the required shared libraries (standard on
+  Ubuntu/Debian; --no-sandbox flag is already set in the code for
+  containerised environments).
+- Sufficient RAM — a headless Chromium instance uses ~150–300 MB.
+
+If the js=true fetch mode is not needed by workshop participants, Puppeteer
+can be omitted and the route can be simplified to plain HTTP fetch only.
+
+
+Ollama (AI inference)
+---------------------
+The /ollama proxy forwards to http://localhost:11434, which assumes an Ollama
+instance running on the same host. For a shared deployment this means either:
+
+- Running Ollama on the OpenStack VM itself and pulling the required models
+  (ollama pull <model>), or
+- Accepting that the Ollama-powered nodes (OllamaNode, OllamaFieldNode) will
+  not function in the deployed instance.
+
+Ollama is not a lightweight dependency — models are typically 4–40 GB on disk
+and require adequate RAM or a GPU for acceptable performance.
+
+
+File system access — the key deployment consideration
+-----------------------------------------------------
+Two features interact with the local file system:
+
+1. Save / load workflow files
+   Workflows are saved and loaded as JSON files via the browser's standard
+   file download / file open dialog. These work in any browser with no special
+   server support — no change needed.
+
+2. Local Folder Source node and Local File Source node
+   These use the browser's File System Access API
+   (window.showDirectoryPicker() / window.showOpenFilePicker()). This API is
+   built into modern desktop browsers (Chrome, Edge, Firefox 111+) and
+   requires no server involvement — files are read entirely client-side.
+   However:
+
+   - The API is only available in secure contexts (HTTPS or localhost). The
+     OpenStack deployment MUST be served over HTTPS; plain HTTP will cause
+     these nodes to fail silently.
+   - A TLS certificate is therefore required (Let's Encrypt / Certbot is the
+     easiest free option for a public-facing VM).
+   - No server-side file system access is involved — the browser reads files
+     directly from the workshop participant's own machine, which is
+     intentional.
+
+
+Deployment checklist
+--------------------
+[ ] OpenStack VM: Ubuntu 22.04 LTS or later recommended; 4 GB RAM minimum
+    (8 GB if running Ollama).
+[ ] Install Node.js 18+ (e.g. via nvm or NodeSource repo).
+[ ] Clone repository; run `npm install` then `npm run build`.
+[ ] Serve dist/ via nginx (or similar). Configure as a single-page app
+    (all routes → index.html).
+[ ] Implement a small Node.js/Express server to handle the proxy and
+    middleware routes listed above, or use nginx's proxy_pass for the simple
+    pass-through routes and a Node process only for /url-proxy and
+    /ads-library-search.
+[ ] Expose port 80/443 in the OpenStack security group.
+[ ] Obtain and configure a TLS certificate — HTTPS is required for the
+    file-picker nodes to work.
+[ ] If Ollama is needed: install Ollama, pull required models, ensure the
+    service is running on port 11434.
+[ ] If Puppeteer headless rendering is needed: install Chromium dependencies:
+      apt install -y libnss3 libatk-bridge2.0-0 libx11-xcb1 libxcomposite1 \
+                     libxdamage1 libxrandr2 libgbm1 libasound2

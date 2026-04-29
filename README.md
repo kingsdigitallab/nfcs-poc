@@ -68,6 +68,7 @@ The sidebar groups nodes into collapsible categories. Click a group heading to c
 | **ADSSearchAdvancedNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Data Catalogue API with faceted filters. Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type** (16 values including Site/monument, Artefact, Fieldwork), **Getty AAT subject**, **Native subject**, **Country**, **Data type**, and **Period** (post-medieval to palaeolithic). A badge shows how many filters are active; **Clear all filters** resets them. |
 | **ADSLibraryNode** | [ADS Library catalogue](https://archaeologydataservice.ac.uk/library/) | Library catalogue search (books, journals, grey literature). Uses a server-side two-step Jakarta Faces session: the Vite middleware GETs the search page to obtain a `JSESSIONID` + `ViewState`, then POSTs the query and returns the CDATA HTML fragment for client-side parsing. Inline fields: `query`, `limit` (max 100). Returns `title`, `creator`, `date`, `type` (publication type from icon), `adsLibrary.parentTitle`, `adsLibrary.downloadUrl`. |
 | **MDSSearchNode** | [museumdata.uk](https://museumdata.uk/) | HTML scraper (no public JSON API). Two-step fetch: probe for total, then retrieve all. Capped at 200 records; amber ⚠ badge when the total exceeds the cap. |
+| **EuropeanaSearchNode** | [Europeana](https://www.europeana.eu/) | Europeana cultural heritage aggregator — the primary pan-European portal covering museums, galleries, libraries and archives. Direct browser fetch (permissive CORS). Requires a free API key from [apis.europeana.eu](https://apis.europeana.eu/apikey). Inline fields: `query`, `limit` (max 100), both wirable from ParamNode. Filters: **Type** (IMAGE / TEXT / VIDEO / SOUND / 3D), **Reusability** (open / restricted / permission required), and a **media only** checkbox to restrict to items with thumbnails. Records include `title`, `creator`, `date`, `subject`, `country`, `type`, `language`, a direct link to the Europeana record (`_sourceUrl`), and a `europeana` namespace object with `thumbnail`, `shownAt` (original institution URL), `rights`, `provider`, `dataProvider`, and `completeness`. Citation metadata is stamped on every record. |
 | **LoadSavedSearchNode** | Local filesystem | Loads a `.nfcs.json` file saved by **SaveSearchNode**, or any raw `UnifiedRecord[]` JSON array exported by **ExportNode**. After loading, displays full provenance metadata: saved date/time, source breakdown with per-service record counts, and the original search parameters in a collapsible panel. Metadata is persisted in the workflow file — re-opening the workflow shows the provenance panel even before the file is reloaded. Works in all browsers. |
 | **LocalFileSourceNode** | Local filesystem | Parses a single CSV or TSV file selected via a standard file picker (works in all browsers). Auto-detects the delimiter from the file extension and content (tab, comma, semicolon, or pipe); manual override available. **First row is header** toggle (default on) — off generates `col1`, `col2`… names. **Cast numeric strings to numbers** toggle (default on) — converts values such as `"51.5074"` to `51.5074`, enabling downstream map and spatial filter nodes to work directly with coordinate columns. Shows a column name preview after parsing. |
 | **LocalFolderSourceNode** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction via pdfjs-dist), XML/TEI, plain text, and images. Also detects Shapefiles and GeoJSON files in the folder and exposes them via a dedicated **GIS handle** (bottom) — connect this to a MapOutputNode to overlay vector layers on the map. Emits `FileRecord[]` on the main output. Requires Chrome or Edge 86+. |
@@ -87,6 +88,7 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 | **OllamaFieldNode** | Sends a single chosen field to Ollama in **per-record** or **aggregate** mode. Lighter-weight than OllamaNode when you only need one field processed. |
 | **URLFetchNode** | Follows a URL field in each record, fetches the page (optionally via headless browser for JS-rendered pages), and adds `fetchedContent` (plain text) and `fetchedHtml` (structured HTML) to each record. |
 | **HTMLSectionNode** | Extracts a specific section from `fetchedHtml` using a CSS selector. A **structure picker** shows detected landmarks and headings. Toggle **Preserve HTML structure** to write the matched element's raw HTML into `fetchedContent` instead of plain text — useful when passing structured markup to an LLM for extraction. |
+| **XMLSectionNode** | Evaluates an XPath expression against the `content` field of upstream records (typically XML or TEI documents from LocalFolderSourceNode). A **schema inspector** panel shows the element tree of the first record; click any element to build the XPath. A live preview shows the extracted value. Strips default XML namespaces before evaluation so XPath works on namespaced documents without prefix declarations. Writes the result to `xmlContent`. |
 
 ### Output
 
@@ -98,7 +100,9 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 | **TableOutputNode** | Paginated table. Merges records from multiple upstream nodes automatically. Pass-through output handle so it can chain into Map, Timeline, or Export nodes. Double-click to expand to a full-screen panel. Toolbar has two column toggles: **show all columns** reveals every flat top-level field; **expand namespaces** (visible once show all is on) additionally flattens one level of service namespace objects into dot-notation columns (`adsLibrary.parentTitle`, `gbif.datasetKey`, etc.). |
 | **JSONOutputNode** | Syntax-highlighted JSON viewer. Shows the full normalised record graph. Double-click to expand. |
 | **MapOutputNode** | Leaflet map. Plots any record that has `decimalLatitude` and `decimalLongitude`. Click a marker for a popup with title, date, and a link back to the source record. Also accepts GIS vector layers via the **GIS handle** (connect from `LocalFolderSourceNode`'s bottom handle) and renders them as overlays alongside point data. |
-| **TimelineOutputNode** | SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates (e.g. `-1199`). Hover a marker for details. |
+| **TimelineOutputNode** | SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates (e.g. `-1199`). Hover a marker for a popup with title, source, date, and a clickable **View record** link. |
+| **FieldDistributionNode** | Bar chart of value frequencies for any field in upstream records. Pick a field from the dropdown — array-valued fields (`subject`, `country`, `creator`) are expanded so each element is tallied individually (toggle **expand arrays** to disable). Bars are sorted by count descending and capped at a configurable **Top N** (default 20). Displays count and percentage on each bar, plus a summary of total distinct values and total occurrences. Useful for exploring categorical distributions: type, country, language, subject, `_source`, etc. No runner; updates live as upstream records change. |
+| **CitationNode** | Paginated bibliography of individual records, drawn from `_citation` metadata stamped by source runners. Each entry shows service badge, title (linked to the record), creator(s), date, persistent identifier or direct URL, access date, and licence. Supports **Copy all** and **Download .txt** for the full bibliography. Records from GBIF, ADS, LLDS, MDS, ADS Library, and Europeana carry citation metadata automatically; records from local files or saved searches do not. |
 | **ExportNode** | Downloads the upstream records as **CSV**, **JSON**, or **GeoJSON**. See [Export](#export) below. |
 | **OllamaOutputNode** | Card-based display of Ollama inference text. Each record gets its own expandable card with a copy button. |
 
@@ -114,6 +118,7 @@ ParamNode ─┐
   ADSSearchAdvancedNode ──┐                                    │
   ADSLibraryNode        ──┤                                    │
   MDSSearchNode         ──┤                                    │
+  EuropeanaSearchNode   ──┤                                    │
   LocalFileSourceNode   ──┤                                    │
   LoadSavedSearchNode   ──┤                                    │
                           ▼                                    │
@@ -129,11 +134,13 @@ ParamNode ─┐
            │ (GIS handle)                                      │
            ▼                                                   │
   [source] ──► URLFetchNode ──► HTMLSectionNode ──► OllamaFieldNode ──┤
+               [source] ──► XMLSectionNode ──────────────────── ┤
                                                                ▼
                                                       TableOutputNode ──► ExportNode
-                                                      QuickViewNode              │
-                                                      JSONOutputNode             ▼
-                                                      MapOutputNode ◄── LocalFolderSourceNode (GIS)
+                                                      FieldDistributionNode      │
+                                                      CitationNode               ▼
+                                                      QuickViewNode   MapOutputNode ◄── LocalFolderSourceNode (GIS)
+                                                      JSONOutputNode
                                                       TimelineOutputNode
                                                       OllamaOutputNode
                                                       SaveSearchNode  ◄── (any data-handle source)
@@ -161,12 +168,13 @@ Per-record failures in Ollama nodes do not abort the batch — the error is stor
 Every adapter maps its raw API response to `UnifiedRecord` before writing to the canvas. Output nodes consume only `UnifiedRecord[]` — they never touch raw responses.
 
 ```
-id            — globally unique, service-prefixed: "gbif:12345", "ads:1862953"
-_source       — service identifier: "gbif" | "llds" | "ads" | "mds"
+id            — globally unique, service-prefixed: "gbif:12345", "ads:1862953", "europeana:/92062/…"
+_source       — service identifier: "gbif" | "llds" | "ads" | "mds" | "europeana"
 _sourceId     — native record ID within the service
 _sourceUrl    — link back to the record in the service's own UI
 _pid          — persistent identifier (DOI, Handle, ARK) when available
 _cached       — true when served from localStorage cache
+_citation     — citation metadata stamped by source runners (see Citation below)
 
 title         — best available display title
 description   — abstract or description
@@ -174,7 +182,7 @@ creator       — author(s) — string or string[]
 date          — publication or event date
 subject       — subject keywords — string or string[]
 language      — language code, e.g. "en"
-type          — resource type, e.g. "Dataset", "Text"
+type          — resource type, e.g. "Dataset", "Text", "IMAGE"
 
 scientificName, country, eventDate          — GBIF-specific normalised fields
 decimalLatitude, decimalLongitude           — used by MapOutputNode
@@ -185,13 +193,35 @@ llds.*        — LLDS handle, branding, itemType
 ads.*         — ADS temporal, country, spatial, identifier namespace
 adsLibrary.*  — ADS Library catalogue: recordId, recordType, publicationType, parentTitle, publicationDate, authors, downloadUrl
 mds.*         — MDS field map (condition, materials, dimensions, provenance, …)
+europeana.*   — provider, dataProvider, rights, thumbnail, shownAt (original institution URL), completeness
 
 fetchedUrl, fetchedContent, fetchedHtml, fetchStatus, fetchedAt  — added by URLFetchNode
 htmlSelector                                                      — added by HTMLSectionNode
+xmlContent, xmlXPath                                              — added by XMLSectionNode
 ollamaModel, ollamaPrompt, ollamaResponse, ollamaProcessedAt      — added by OllamaNode / OllamaFieldNode
 ```
 
 After reconciliation, records also carry `${fieldName}_reconciled` keys (see below).
+
+### Citation metadata
+
+Every record retrieved from a live data service carries a `_citation` object stamped by its runner:
+
+```
+_citation.service     — service name, e.g. "GBIF", "ADS", "Europeana"
+_citation.serviceUrl  — canonical homepage of the service
+_citation.publisher   — institutional publisher
+_citation.query       — the search query used to retrieve this record
+_citation.accessDate  — ISO 8601 timestamp of when the node was run
+_citation.title       — record title
+_citation.creator     — author(s)
+_citation.date        — publication / event date
+_citation.url         — direct link to this record
+_citation.pid         — persistent identifier (DOI, Handle, ARK) when available
+_citation.licence     — data licence declared by the service
+```
+
+Connect a **CitationNode** anywhere in your workflow to see a per-record bibliography drawn from this metadata. Use **Copy all** or **Download .txt** to export a formatted reference list. Citation metadata is persisted in saved workflow files, so provenance is retained even after reloading.
 
 **Note:** `LocalFolderSourceNode` emits `FileRecord[]` rather than `UnifiedRecord[]`. `FileRecord` is a parallel type with fields `id`, `filename`, `path`, `contentType`, `content`, `mimeType`, `sizeBytes`, `sourceFolder`. These records flow through `OllamaNode` and are rendered correctly by `TableOutputNode` via dynamic column detection.
 
@@ -550,29 +580,38 @@ nfcs-poc/
     │   ├── ADSSearchAdvancedNode.tsx   # ADS search with facets + fetchAll pagination
     │   ├── ADSLibraryNode.tsx          # ADS Library catalogue search (JSF scraper)
     │   ├── MDSSearchNode.tsx
+    │   ├── EuropeanaSearchNode.tsx     # Europeana cultural heritage aggregator
     │   ├── LocalFileSourceNode.tsx     # Single CSV/TSV file picker with delimiter detection
     │   ├── LocalFolderSourceNode.tsx   # File System Access API source + GIS layer output
+    │   ├── SaveSearchNode.tsx          # Save records + metadata envelope to .nfcs.json
+    │   ├── LoadSavedSearchNode.tsx     # Load .nfcs.json and display provenance metadata
     │   ├── FilterTransformNode.tsx
     │   ├── SpatialFilterNode.tsx       # Leaflet bbox filter
     │   ├── ReconciliationNode.tsx
-    │   ├── OllamaNode.tsx              # Local LLM transform
+    │   ├── WikidataEnrichNode.tsx      # Fetch Wikidata properties for reconciled QIDs
+    │   ├── MergeByQIDNode.tsx          # Group/merge records by shared Wikidata QID
+    │   ├── OllamaNode.tsx              # Local LLM transform (per-record, vision-capable)
     │   ├── OllamaFieldNode.tsx         # Single-field LLM inference (per-record / aggregate)
     │   ├── OllamaOutputNode.tsx        # Card display for Ollama responses
-    │   ├── URLFetchNode.tsx            # URL fetch + HTML cleaning
+    │   ├── URLFetchNode.tsx            # URL fetch + HTML cleaning (+ Puppeteer JS rendering)
     │   ├── HTMLSectionNode.tsx         # CSS selector section extraction; text or HTML output
-    │   ├── QuickViewNode.tsx           # Full-value field inspector with record navigation
+    │   ├── XMLSectionNode.tsx          # XPath extraction on XML/TEI content field
     │   ├── ReconciledCell.tsx          # Shared QID pill component
+    │   ├── QuickViewNode.tsx           # Full-value field inspector with record navigation
+    │   ├── ImageViewNode.tsx           # Resizable image viewer; IIIF v2/v3 + data URLs
     │   ├── TableOutputNode.tsx
     │   ├── JSONOutputNode.tsx
     │   ├── MapOutputNode.tsx
     │   ├── TimelineOutputNode.tsx
+    │   ├── FieldDistributionNode.tsx   # Bar chart of value frequencies for any field
+    │   ├── CitationNode.tsx            # Per-record bibliography drawn from _citation metadata
     │   ├── ExportNode.tsx
-    │   ├── SaveSearchNode.tsx          # Save records + metadata envelope to .nfcs.json
-    │   ├── LoadSavedSearchNode.tsx     # Load .nfcs.json and display provenance metadata
     │   └── ExpandedOutputPanel.tsx
     └── utils/
         ├── nodeIdCounter.ts            # Shared ID counter; bumpCounterPast() used on workflow load
         ├── workflowIO.ts               # Serialize/deserialize workflow to/from JSON
+        ├── upstreamRecords.ts          # collectUpstreamRecords() shared by all process runners
+        ├── citationUtils.ts            # addCitation(), formatRecordCitation(), formatAllCitations()
         ├── fileReaders.ts              # PDF/XML/text/image extraction (FileRecord)
         ├── gisReaders.ts               # Shapefile + GeoJSON parsing via shpjs (GisLayer)
         ├── gbifAdapter.ts
@@ -581,6 +620,8 @@ nfcs-poc/
         ├── adsLibrary.ts               # ADS Library fetch + HTML parser
         ├── adsLibraryAdapter.ts        # ADS Library → UnifiedRecord
         ├── mdsAdapter.ts
+        ├── europeanaAdapter.ts         # Europeana API response → UnifiedRecord
+        ├── wikidataApi.ts              # Wikidata SPARQL/API helpers (label lookup, property fetch)
         ├── reconciliationService.ts    # W3C Reconciliation API client
         ├── filterTransformUtils.ts
         ├── exportUtils.ts
@@ -589,13 +630,17 @@ nfcs-poc/
         ├── runADSAdvancedNode.ts        # ADS search with facets + fetchAll pagination
         ├── runADSLibraryNode.ts         # ADS Library catalogue runner
         ├── runMDSNode.ts
+        ├── runEuropeanaNode.ts          # Europeana search runner
         ├── runReconciliationNode.ts
+        ├── runWikidataEnrichNode.ts     # Wikidata property enrichment runner
+        ├── runMergeByQIDNode.ts         # QID-based merge runner
         ├── runFilterTransformNode.ts
         ├── runSpatialFilterNode.ts
         ├── runHTMLSectionNode.ts
-        ├── runURLFetchNode.ts          # Runner for urlFetch
-        ├── runOllamaNode.ts            # Runner for ollamaNode
-        ├── runOllamaFieldNode.ts       # Runner for ollamaField
+        ├── runXMLSectionNode.ts         # XPath extraction runner
+        ├── runURLFetchNode.ts           # Runner for urlFetch
+        ├── runOllamaNode.ts             # Runner for ollamaNode
+        ├── runOllamaFieldNode.ts        # Runner for ollamaField
         ├── nodeRunners.ts              # Registry: node type → runner
         └── runWorkflow.ts              # Topological executor (Kahn's algorithm)
 ```

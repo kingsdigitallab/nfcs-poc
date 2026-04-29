@@ -1,7 +1,8 @@
 import type { Node, Edge } from '@xyflow/react'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { SpatialFilterNodeData } from '../nodes/SpatialFilterNode'
-import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { collectUpstreamRecords } from './upstreamRecords'
 
 export const runSpatialFilterNode = async (
   nodeId: string,
@@ -16,15 +17,7 @@ export const runSpatialFilterNode = async (
   try {
     const bbox = data?.bbox
 
-    // Collect upstream records from the out-of-band store
-    const inputEdges = edges.filter(e => e.target === nodeId && e.targetHandle === 'data')
-    const upstream: UnifiedRecord[] = []
-    for (const e of inputEdges) {
-      const src  = nodes.find(n => n.id === e.source)
-      if (!src) continue
-      const recs = getNodeResults(src.id) as UnifiedRecord[] | undefined
-      if (recs) upstream.push(...recs)
-    }
+    const upstream = collectUpstreamRecords(nodeId, edges) as UnifiedRecord[]
 
     if (!bbox) {
       // Pass through unchanged when no bbox is drawn

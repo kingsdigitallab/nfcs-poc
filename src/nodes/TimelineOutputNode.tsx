@@ -17,7 +17,7 @@
  * Hovering a marker shows a popup with title, source, date and a record link.
  */
 
-import { useState, useMemo, useRef } from 'react'
+import { useState, useMemo, useRef, useCallback } from 'react'
 import { Handle, Position, NodeProps } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
@@ -158,8 +158,20 @@ interface HoverState {
 
 export function TimelineOutputNode({ id }: NodeProps) {
   const { records, connected, status, sourceCount } = useUpstreamRecords(id)
-  const [hovered, setHovered]   = useState<HoverState | null>(null)
-  const scrollRef = useRef<HTMLDivElement>(null)
+  const [hovered, setHovered]    = useState<HoverState | null>(null)
+  const scrollRef                = useRef<HTMLDivElement>(null)
+  const dismissTimer             = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const scheduleHide = useCallback(() => {
+    dismissTimer.current = setTimeout(() => setHovered(null), 180)
+  }, [])
+
+  const cancelHide = useCallback(() => {
+    if (dismissTimer.current) {
+      clearTimeout(dismissTimer.current)
+      dismissTimer.current = null
+    }
+  }, [])
 
   // ── derive timeline items & metrics ───────────────────────────────────────
   const { items, minYear, maxYear, yearMap, bySource, noDateCount } = useMemo(() => {
@@ -245,7 +257,7 @@ export function TimelineOutputNode({ id }: NodeProps) {
         ref={scrollRef}
         className="nodrag nowheel"
         style={styles.scrollContainer}
-        onMouseLeave={() => setHovered(null)}
+        onMouseLeave={() => { cancelHide(); setHovered(null) }}
       >
         <svg width={svgW} height={svgH} style={{ display: 'block' }}>
 
@@ -284,8 +296,8 @@ export function TimelineOutputNode({ id }: NodeProps) {
                   shape={shp}
                   cx={x} cy={y} r={DOT_R}
                   color={clr}
-                  onMouseEnter={() => setHovered({ record: item.record, svgX: x, svgY: y })}
-                  onMouseLeave={() => setHovered(null)}
+                  onMouseEnter={() => { cancelHide(); setHovered({ record: item.record, svgX: x, svgY: y }) }}
+                  onMouseLeave={scheduleHide}
                 />
               )
             })
@@ -318,7 +330,11 @@ export function TimelineOutputNode({ id }: NodeProps) {
           const date       = r.date ?? r.eventDate ?? ''
           const glyph      = SHAPE_GLYPHS[sourceShape(r._source)] ?? '●'
           return (
-            <div style={{ ...styles.tooltip, left: tipLeft, top: tipTop }}>
+            <div
+              style={{ ...styles.tooltip, left: tipLeft, top: tipTop }}
+              onMouseEnter={cancelHide}
+              onMouseLeave={scheduleHide}
+            >
               <div style={styles.tooltipTitle}>{title}{title.length >= 60 ? '…' : ''}</div>
               <div style={styles.tooltipMeta}>
                 <span style={{ color: sourceColor(r._source) }}>{glyph} {r._source ?? ''}</span>
@@ -412,10 +428,10 @@ const styles = {
     padding:      '7px 10px',
     fontSize:     11,
     maxWidth:     220,
-    pointerEvents:'none' as const,
     zIndex:       10,
     boxShadow:    '0 2px 8px rgba(0,0,0,0.25)',
     lineHeight:   1.4,
+    cursor:       'default',
   },
   tooltipTitle: {
     fontWeight: 600,

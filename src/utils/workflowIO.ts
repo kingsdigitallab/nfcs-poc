@@ -41,6 +41,10 @@ const TRANSIENT_FIELDS = new Set([
   'gisCount',
   'fileName',    // not serialisable — user must re-pick the file
   'columnNames', // derived at parse time
+  'pdfCount',
+  'xmlCount',
+  'textCount',
+  'imageCount',
 ])
 
 export function stripTransient(data: Record<string, unknown>): Record<string, unknown> {
@@ -97,10 +101,13 @@ export function parseWorkflowFile(json: string): WorkflowFile {
   } catch {
     throw new Error('File is not valid JSON.')
   }
+  const p = parsed as Record<string, unknown>
+  const hasVersion = 'version' in p
   if (
     typeof parsed !== 'object' ||
     parsed === null ||
-    (parsed as Record<string, unknown>).version !== 1
+    !Array.isArray(p.nodes) ||
+    (hasVersion && p.version !== 1)
   ) {
     throw new Error('Not a recognised workflow file (expected version: 1).')
   }

@@ -1,7 +1,8 @@
 import type { NodeRunner } from './nodeRunners'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { ReconciliationResult } from './reconciliationService'
-import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { collectUpstreamRecords } from './upstreamRecords'
 import type { WikidataEnrichNodeData } from '../nodes/WikidataEnrichNode'
 import { fetchWikidataProperties, PROPERTY_FIELD_NAMES } from './wikidataApi'
 
@@ -39,14 +40,7 @@ export const runWikidataEnrichNode: NodeRunner = async (
   updateNodeData(nodeId, { status: 'loading', statusMessage: 'Fetching from Wikidata…', count: 0 })
 
   try {
-    const inputEdges = edges.filter(e => e.target === nodeId && e.targetHandle === 'data')
-    const allRecords: UnifiedRecord[] = []
-    for (const edge of inputEdges) {
-      const src = nodes.find(n => n.id === edge.source)
-      if (!src) continue
-      const recs = getNodeResults(src.id) as UnifiedRecord[] | undefined
-      if (recs) allRecords.push(...recs)
-    }
+    const allRecords = collectUpstreamRecords(nodeId, edges) as UnifiedRecord[]
 
     if (allRecords.length === 0) {
       updateNodeData(nodeId, { status: 'error', statusMessage: '✗ No upstream records', count: 0 })

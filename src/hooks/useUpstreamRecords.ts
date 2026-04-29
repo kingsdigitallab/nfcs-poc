@@ -9,6 +9,7 @@
  */
 import { useNodes, useEdges } from '@xyflow/react'
 import { getNodeResults } from '../store/resultsStore'
+import { TYPED_HANDLES } from '../utils/upstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export interface UpstreamData {
@@ -46,10 +47,14 @@ export function useUpstreamRecords(nodeId: string): UpstreamData {
     if (d.status === 'loading') anyLoading = true
     if (d.status === 'success' || d.status === 'cached' || d.status === 'ready') anySuccess = true
 
-    // Read records from the out-of-band store (not from node data)
-    const recs = getNodeResults(src.id) as UnifiedRecord[] | undefined
+    // Read records from the out-of-band store. Typed handles (pdf/xml/text/image)
+    // use a partitioned key so each type can be wired independently.
+    const sh       = edge.sourceHandle
+    const storeKey = sh && TYPED_HANDLES.has(sh) ? `${src.id}:${sh}` : src.id
+    const countKey = sh && TYPED_HANDLES.has(sh) ? `${sh}Count` : 'count'
+    const recs = getNodeResults(storeKey) as UnifiedRecord[] | undefined
     if (recs) merged.push(...recs)
-    totalCount += (d.count as number | undefined) ?? 0
+    totalCount += (d[countKey] as number | undefined) ?? (d.count as number | undefined) ?? 0
   }
 
   const status = anyLoading ? 'loading' : anySuccess ? 'success' : 'idle'

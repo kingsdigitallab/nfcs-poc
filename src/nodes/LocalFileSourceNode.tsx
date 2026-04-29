@@ -1,10 +1,10 @@
 /**
- * LocalFileSourceNode — source node that reads a single CSV or TSV file
- * selected via a standard <input type="file"> element.
+ * LocalFileSourceNode — source node that reads a single local file.
  *
- * Supports delimiter auto-detection (by extension and content sniffing),
- * optional header row, and auto-casting of numeric strings to numbers
- * (useful for geographic coordinates stored as text).
+ * Supports three modes:
+ *   csv  — CSV/TSV parsed into column-keyed records
+ *   xml  — Raw XML/HTML text passed as a FileRecord (for XMLSectionNode / Ollama)
+ *   image — Image read as base64 data URL for vision models
  *
  * No runner registered — file selection requires a direct user gesture.
  */
@@ -12,10 +12,12 @@
 import { useRef, useCallback } from 'react'
 import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { extractFileContent } from '../utils/fileReaders'
 
 // ── Node data ─────────────────────────────────────────────────────────────────
 
 export interface LocalFileSourceNodeData {
+  fileMode: 'csv' | 'xml' | 'image'
   delimiter: 'auto' | ',' | '\t' | ';' | '|'
   hasHeader: boolean
   autoCast: boolean
@@ -33,6 +35,12 @@ export interface LocalFileSourceNodeData {
 const HEADER_COLOR = '#0e7490'
 const BTN_COLOR    = '#0891b2'
 
+const MODE_OPTIONS = [
+  { value: 'csv',   label: 'CSV / TSV' },
+  { value: 'xml',   label: 'XML / HTML' },
+  { value: 'image', label: 'Image' },
+]
+
 const DELIMITER_OPTIONS = [
   { value: 'auto', label: 'Auto-detect' },
   { value: ',',    label: 'Comma (CSV)' },
@@ -40,6 +48,12 @@ const DELIMITER_OPTIONS = [
   { value: ';',    label: 'Semicolon' },
   { value: '|',    label: 'Pipe' },
 ]
+
+const ACCEPT: Record<string, string> = {
+  csv:   '.csv,.tsv,.txt',
+  xml:   '.xml,.html,.tei,.tei.xml',
+  image: '.jpg,.jpeg,.png,.tiff,.tif,.webp',
+}
 
 const STATUS_BORDER: Record<string, string> = {
   idle:    '#d1d5db',
@@ -125,6 +139,16 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
   const d = data as LocalFileSourceNodeData
   const fileInputRef = useRef<HTMLInputElement>(null)
 
+  const fileMode  = (d.fileMode  as string | undefined) ?? 'csv'
+  const delimiter = (d.delimiter as string | undefined) ?? 'auto'
+  const hasHeader = (d.hasHeader as boolean | undefined) ?? true
+  const autoCast  = (d.autoCast  as boolean | undefined) ?? true
+  const status      = (d.status      as string   | undefined) ?? 'idle'
+  const fileName    = (d.fileName    as string   | undefined) ?? ''
+  const count       = (d.count       as number   | undefined) ?? 0
+  const columnNames = (d.columnNames as string[] | undefined) ?? []
+  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+
   const handleFileChange = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
@@ -132,31 +156,44 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
     clearNodeResults(id)
     updateNodeData(id, {
       status: 'loading',
-      statusMessage: 'Parsing…',
+      statusMessage: 'Reading…',
       fileName: file.name,
       count: 0,
       columnNames: [],
     })
 
     try {
-      const text = await file.text()
-      const { records, columns } = parseDelimited(
-        text,
-        d.delimiter ?? 'auto',
-        d.hasHeader ?? true,
-        d.autoCast  ?? true,
-        file.name,
-      )
-
-      const version = setNodeResults(id, records)
-      updateNodeData(id, {
-        status:         'ready',
-        statusMessage:  `✓ ${records.length} rows`,
-        fileName:       file.name,
-        count:          records.length,
-        columnNames:    columns,
-        resultsVersion: version,
-      })
+      if (fileMode === 'csv') {
+        const text = await file.text()
+        const { records, columns } = parseDelimited(
+          text,
+          delimiter,
+          hasHeader,
+          autoCast,
+          file.name,
+        )
+        const version = setNodeResults(id, records)
+        updateNodeData(id, {
+          status:         'ready',
+          statusMessage:  `✓ ${records.length} rows`,
+          fileName:       file.name,
+          count:          records.length,
+          columnNames:    columns,
+          resultsVersion: version,
+        })
+      } else {
+        const record = await extractFileContent(file, file.name, '')
+        if (!record) throw new Error('Unsupported file type')
+        const version = setNodeResults(id, [record as unknown as Record<string, unknown>])
+        updateNodeData(id, {
+          status:         'ready',
+          statusMessage:  `✓ ${record.contentType} loaded`,
+          fileName:       file.name,
+          count:          1,
+          columnNames:    [],
+          resultsVersion: version,
+        })
+      }
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err)
       updateNodeData(id, {
@@ -167,31 +204,18 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
       })
     }
 
-    // Reset so the same file can be re-picked after config changes
     if (fileInputRef.current) fileInputRef.current.value = ''
-  }, [id, updateNodeData, d.delimiter, d.hasHeader, d.autoCast])
+  }, [id, updateNodeData, fileMode, delimiter, hasHeader, autoCast])
 
   const handlePickFile = useCallback(() => {
     fileInputRef.current?.click()
   }, [])
 
-  // Re-parse the last file with updated settings (not possible — no file handle retained).
-  // The user must re-pick; we just surface settings changes visually.
-
-  const status      = (d.status      as string   | undefined) ?? 'idle'
-  const fileName    = (d.fileName    as string   | undefined) ?? ''
-  const count       = (d.count       as number   | undefined) ?? 0
-  const columnNames = (d.columnNames as string[] | undefined) ?? []
-  const delimiter   = (d.delimiter   as string   | undefined) ?? 'auto'
-  const hasHeader   = (d.hasHeader   as boolean  | undefined) ?? true
-  const autoCast    = (d.autoCast    as boolean  | undefined) ?? true
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
-
   return (
     <div style={{ ...styles.card, borderColor }}>
       {/* Header */}
       <div style={styles.header}>
-        <span style={styles.headerTitle}>Local File (CSV/TSV)</span>
+        <span style={styles.headerTitle}>Local File</span>
         {d.statusMessage ? (
           <span style={styles.headerStatus}>{d.statusMessage as string}</span>
         ) : null}
@@ -199,54 +223,75 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
 
       {/* Body */}
       <div style={styles.body}>
-        {/* Delimiter */}
+        {/* File mode */}
         <div style={styles.row}>
-          <span style={styles.label}>Delimiter</span>
+          <span style={styles.label}>Mode</span>
           <select
             style={styles.select}
-            value={delimiter}
-            onChange={e => updateNodeData(id, { delimiter: e.target.value })}
+            value={fileMode}
+            onChange={e => updateNodeData(id, { fileMode: e.target.value, count: 0, columnNames: [], fileName: '', status: 'idle', statusMessage: '' })}
             className="nodrag"
           >
-            {DELIMITER_OPTIONS.map(o => (
+            {MODE_OPTIONS.map(o => (
               <option key={o.value} value={o.value}>{o.label}</option>
             ))}
           </select>
         </div>
 
-        {/* Header row */}
-        <label style={styles.checkLabel} className="nodrag">
-          <input
-            type="checkbox"
-            checked={hasHeader}
-            onChange={e => updateNodeData(id, { hasHeader: e.target.checked })}
-            style={{ marginRight: 4 }}
-          />
-          First row is header
-        </label>
-
-        {/* Auto-cast */}
-        <label style={styles.checkLabel} className="nodrag">
-          <input
-            type="checkbox"
-            checked={autoCast}
-            onChange={e => updateNodeData(id, { autoCast: e.target.checked })}
-            style={{ marginRight: 4 }}
-          />
-          Cast numeric strings to numbers
-        </label>
+        {/* CSV-only options */}
+        {fileMode === 'csv' && (
+          <>
+            <div style={styles.row}>
+              <span style={styles.label}>Delimiter</span>
+              <select
+                style={styles.select}
+                value={delimiter}
+                onChange={e => updateNodeData(id, { delimiter: e.target.value })}
+                className="nodrag"
+              >
+                {DELIMITER_OPTIONS.map(o => (
+                  <option key={o.value} value={o.value}>{o.label}</option>
+                ))}
+              </select>
+            </div>
+            <label style={styles.checkLabel} className="nodrag">
+              <input
+                type="checkbox"
+                checked={hasHeader}
+                onChange={e => updateNodeData(id, { hasHeader: e.target.checked })}
+                style={{ marginRight: 4 }}
+              />
+              First row is header
+            </label>
+            <label style={styles.checkLabel} className="nodrag">
+              <input
+                type="checkbox"
+                checked={autoCast}
+                onChange={e => updateNodeData(id, { autoCast: e.target.checked })}
+                style={{ marginRight: 4 }}
+              />
+              Cast numeric strings to numbers
+            </label>
+          </>
+        )}
 
         {/* File info */}
         {fileName ? (
           <div style={styles.fileInfo}>
-            <span style={styles.fileIcon}>📄</span>
+            <span style={styles.fileIcon}>
+              {fileMode === 'image' ? '🖼️' : fileMode === 'xml' ? '📋' : '📄'}
+            </span>
             <span style={styles.fileName} title={fileName}>{fileName}</span>
-            {count > 0 && <span style={styles.countBadge}>{count} rows</span>}
+            {count > 0 && (
+              <span style={styles.countBadge}>
+                {fileMode === 'csv' ? `${count} rows` : fileMode}
+              </span>
+            )}
           </div>
         ) : null}
 
-        {/* Column preview */}
-        {columnNames.length > 0 && (
+        {/* Column preview (CSV only) */}
+        {fileMode === 'csv' && columnNames.length > 0 && (
           <div style={styles.colPreview}>
             <span style={styles.colPreviewLabel}>Columns: </span>
             <span style={styles.colPreviewNames}>
@@ -269,7 +314,7 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
           disabled={status === 'loading'}
           className="nodrag"
         >
-          {status === 'loading' ? 'Parsing…' : '📂 Pick File'}
+          {status === 'loading' ? 'Reading…' : '📂 Pick File'}
         </button>
       </div>
 
@@ -277,7 +322,7 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
       <input
         ref={fileInputRef}
         type="file"
-        accept=".csv,.tsv,.txt"
+        accept={ACCEPT[fileMode] ?? '*'}
         style={{ display: 'none' }}
         onChange={handleFileChange}
         className="nodrag"

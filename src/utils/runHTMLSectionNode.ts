@@ -8,7 +8,8 @@
 
 import type { Node, Edge } from '@xyflow/react'
 import type { NodeRunner } from './nodeRunners'
-import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { collectUpstreamRecords } from './upstreamRecords'
 
 function extractBySelector(
   html: string,
@@ -52,15 +53,7 @@ export const runHTMLSectionNode: NodeRunner = async (
   const maxLength    = (d.maxLength    as number)  ?? 8000
   const preserveHtml = (d.preserveHtml as boolean) ?? false
 
-  // Gather upstream records
-  const inputEdges = edges.filter(e => e.target === nodeId && e.targetHandle === 'data')
-  const upstream: Record<string, unknown>[] = []
-  for (const edge of inputEdges) {
-    const src  = nodes.find(n => n.id === edge.source)
-    if (!src) continue
-    const recs = getNodeResults(src.id)
-    if (recs) upstream.push(...recs)
-  }
+  const upstream = collectUpstreamRecords(nodeId, edges)
 
   if (upstream.length === 0) {
     updateNodeData(nodeId, { status: 'error', statusMessage: '✗ No upstream records' })

@@ -1,6 +1,6 @@
-import type { Node, Edge } from '@xyflow/react'
 import type { NodeRunner } from './nodeRunners'
-import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { collectUpstreamRecords } from './upstreamRecords'
 
 const NOISE_SELECTORS = 'script, style, nav, footer, header, aside, noscript, iframe, [aria-hidden="true"]'
 
@@ -18,23 +18,6 @@ function processHtml(html: string): { text: string; bodyHtml: string } {
   }
 }
 
-function getUpstreamRecords(
-  nodeId: string,
-  getNodes: () => Node[],
-  edges: Edge[],
-): Record<string, unknown>[] {
-  const nodes = getNodes()
-  const inputEdges = edges.filter(e => e.target === nodeId && e.targetHandle === 'data')
-  const out: Record<string, unknown>[] = []
-  for (const edge of inputEdges) {
-    const src = nodes.find(n => n.id === edge.source)
-    if (!src) continue
-    const recs = getNodeResults(src.id)
-    if (recs) out.push(...recs)
-  }
-  return out
-}
-
 export const runURLFetchNode: NodeRunner = async (nodeId, getNodes, edges, updateNodeData) => {
   const nodes = getNodes()
   const node  = nodes.find(n => n.id === nodeId)
@@ -47,7 +30,7 @@ export const runURLFetchNode: NodeRunner = async (nodeId, getNodes, edges, updat
   const renderJs     = (d.renderJs  as boolean | undefined) ?? false
   const waitStrategy = (d.waitStrategy as string | undefined) ?? 'networkidle2'
 
-  const upstreamRecords = getUpstreamRecords(nodeId, getNodes, edges)
+  const upstreamRecords = collectUpstreamRecords(nodeId, edges)
 
   if (upstreamRecords.length === 0) {
     updateNodeData(nodeId, { status: 'error', statusMessage: '✗ No upstream records' })

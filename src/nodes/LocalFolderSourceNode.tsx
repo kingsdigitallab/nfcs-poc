@@ -2,12 +2,14 @@
  * LocalFolderSourceNode — source node that reads files from a user-selected
  * local folder via the File System Access API.
  *
- * Emits FileRecord[] on the `results` output handle (right side) for
- * downstream document-processing nodes.
+ * Output handles (right side, fixed positions):
+ *   results — all file records
+ *   pdf     — PDF text records only
+ *   xml     — XML/TEI records only
+ *   text    — plain-text records only
+ *   image   — image records only
  *
- * Emits GisLayer[] on the `gis` output handle (bottom) for MapOutputNode.
- * GIS layers are stored directly in node data (not results store) since they
- * are FeatureCollections, not record arrays.
+ * GIS layers are emitted on the bottom handle for MapOutputNode.
  *
  * No runner is registered — folder selection requires a direct user gesture.
  */
@@ -28,6 +30,10 @@ export interface LocalFolderSourceNodeData {
   statusMessage: string
   results: FileRecord[] | undefined
   count: number
+  pdfCount: number
+  xmlCount: number
+  textCount: number
+  imageCount: number
   gisLayers: GisLayer[] | undefined
   gisCount: number
   [key: string]: unknown
@@ -43,6 +49,15 @@ const FILE_TYPE_OPTIONS = [
   { key: 'xml',   label: 'XML / TEI' },
   { key: 'text',  label: 'Text' },
   { key: 'image', label: 'Images' },
+]
+
+// Fixed handle positions (px from top of card) — must match the output rows in the body
+const OUTPUT_HANDLES = [
+  { id: 'results', label: 'All',   color: '#6b7280', top: 70  },
+  { id: 'pdf',     label: 'PDF',   color: '#dc2626', top: 94  },
+  { id: 'xml',     label: 'XML',   color: '#d97706', top: 118 },
+  { id: 'text',    label: 'Text',  color: '#16a34a', top: 142 },
+  { id: 'image',   label: 'Image', color: '#2563eb', top: 166 },
 ]
 
 const STATUS_BORDER: Record<string, string> = {
@@ -68,11 +83,20 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
     const maxFiles  = Number(d.maxFiles) || 50
 
     clearNodeResults(id)
+    clearNodeResults(`${id}:pdf`)
+    clearNodeResults(`${id}:xml`)
+    clearNodeResults(`${id}:text`)
+    clearNodeResults(`${id}:image`)
+
     updateNodeData(id, {
       status:        'scanning',
       statusMessage: 'Scanning…',
       folderName:    handle.name,
       count:         0,
+      pdfCount:      0,
+      xmlCount:      0,
+      textCount:     0,
+      imageCount:    0,
       gisLayers:     undefined,
       gisCount:      0,
     })
@@ -84,7 +108,11 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
         scanGisFiles(handle),
       ])
 
-      // Build summary string
+      const pdfs   = files.filter(f => f.contentType === 'pdf_text')
+      const xmls   = files.filter(f => f.contentType === 'xml')
+      const texts  = files.filter(f => f.contentType === 'text')
+      const images = files.filter(f => f.contentType === 'image')
+
       const typeCounts: Record<string, number> = {}
       for (const f of files) {
         typeCounts[f.contentType] = (typeCounts[f.contentType] ?? 0) + 1
@@ -102,11 +130,20 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
       console.log(`[LocalFolder] scanned ${handle.name}: found ${totalFound}, loaded ${files.length}, skipped ${skipped}, gisLayers ${gisLayers.length}`)
 
       const version = setNodeResults(id, files as unknown as Record<string, unknown>[])
+      setNodeResults(`${id}:pdf`,   pdfs   as unknown as Record<string, unknown>[])
+      setNodeResults(`${id}:xml`,   xmls   as unknown as Record<string, unknown>[])
+      setNodeResults(`${id}:text`,  texts  as unknown as Record<string, unknown>[])
+      setNodeResults(`${id}:image`, images as unknown as Record<string, unknown>[])
+
       updateNodeData(id, {
         status:         'ready',
         statusMessage:  `✓ ${files.length} files${gisLayers.length > 0 ? ` · ${gisLayers.length} GIS` : ''}`,
         folderName:     handle.name,
         count:          files.length,
+        pdfCount:       pdfs.length,
+        xmlCount:       xmls.length,
+        textCount:      texts.length,
+        imageCount:     images.length,
         resultsVersion: version,
         gisLayers:      gisLayers.length > 0 ? gisLayers : undefined,
         gisCount:       gisLayers.length,
@@ -119,6 +156,10 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
         statusMessage: `✗ ${msg}`,
         results:       undefined,
         count:         0,
+        pdfCount:      0,
+        xmlCount:      0,
+        textCount:     0,
+        imageCount:    0,
         gisLayers:     undefined,
         gisCount:      0,
       })
@@ -156,14 +197,26 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
     updateNodeData(id, { fileTypes: next })
   }, [id, updateNodeData, d.fileTypes])
 
-  const status      = (d.status as string | undefined) ?? 'idle'
-  const folderName  = (d.folderName as string | undefined) ?? ''
-  const fileTypes   = (d.fileTypes as string[] | undefined) ?? Object.keys(TYPE_LABEL_MAP)
-  const maxFiles    = Number(d.maxFiles) || 50
+  const status     = (d.status     as string   | undefined) ?? 'idle'
+  const folderName = (d.folderName as string   | undefined) ?? ''
+  const fileTypes  = (d.fileTypes  as string[] | undefined) ?? Object.keys(TYPE_LABEL_MAP)
+  const maxFiles   = Number(d.maxFiles) || 50
   const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
-  const count       = (d.count as number | undefined) ?? 0
-  const gisLayers   = (d.gisLayers as GisLayer[] | undefined) ?? []
-  const gisCount    = (d.gisCount as number | undefined) ?? 0
+  const count      = (d.count      as number | undefined) ?? 0
+  const pdfCount   = (d.pdfCount   as number | undefined) ?? 0
+  const xmlCount   = (d.xmlCount   as number | undefined) ?? 0
+  const textCount  = (d.textCount  as number | undefined) ?? 0
+  const imageCount = (d.imageCount as number | undefined) ?? 0
+  const gisLayers  = (d.gisLayers  as GisLayer[] | undefined) ?? []
+  const gisCount   = (d.gisCount   as number | undefined) ?? 0
+
+  const typedCounts: Record<string, number> = {
+    results: count,
+    pdf:     pdfCount,
+    xml:     xmlCount,
+    text:    textCount,
+    image:   imageCount,
+  }
 
   return (
     <div style={{ ...styles.card, borderColor }}>
@@ -182,10 +235,23 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
 
       {/* Body */}
       <div style={styles.body}>
+        {/* ── Outputs section (FIRST — keeps handle positions deterministic) ── */}
+        <div style={styles.outputsSection}>
+          <div style={styles.outputsSectionLabel}>Outputs</div>
+          {OUTPUT_HANDLES.map(h => (
+            <div key={h.id} style={styles.outputRow}>
+              <span style={{ ...styles.outputLabel, color: h.color }}>{h.label}</span>
+              {typedCounts[h.id] > 0 && (
+                <span style={{ ...styles.outputBadge, background: h.color }}>
+                  {typedCounts[h.id]}
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
+
         {!HAS_API ? (
-          <div style={styles.noApiWarning}>
-            Requires Chrome or Edge 86+
-          </div>
+          <div style={styles.noApiWarning}>Requires Chrome or Edge 86+</div>
         ) : (
           <>
             {/* File type checkboxes */}
@@ -290,13 +356,24 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
         )}
       </div>
 
-      {/* Right output handle — document records */}
-      <Handle
-        type="source"
-        position={Position.Right}
-        id="results"
-        style={styles.outputHandle}
-      />
+      {/* Right output handles — one per type at fixed vertical positions */}
+      {OUTPUT_HANDLES.map(h => (
+        <Handle
+          key={h.id}
+          type="source"
+          position={Position.Right}
+          id={h.id}
+          style={{
+            top: h.top,
+            width: 10,
+            height: 10,
+            background: h.color,
+            border: '2px solid #fff',
+            boxShadow: `0 0 0 1px ${h.color}`,
+          }}
+          title={h.label}
+        />
+      ))}
 
       {/* Bottom output handle — GIS layers → MapOutputNode */}
       <Handle
@@ -339,10 +416,48 @@ const styles = {
     flexShrink: 0,
   },
   body: {
-    padding: '10px 12px 6px',
+    padding: '8px 12px 6px',
     display: 'flex',
     flexDirection: 'column' as const,
     gap: 6,
+  },
+  // Outputs section — MUST be first in body; height locks handle positions
+  outputsSection: {
+    display: 'flex',
+    flexDirection: 'column' as const,
+    gap: 0,
+    marginBottom: 4,
+    paddingRight: 16,
+  },
+  outputsSectionLabel: {
+    fontSize: 10,
+    fontWeight: 700,
+    color: '#9ca3af',
+    textTransform: 'uppercase' as const,
+    letterSpacing: '0.05em',
+    height: 18,
+    display: 'flex',
+    alignItems: 'center',
+  },
+  outputRow: {
+    height: 24,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 6,
+  },
+  outputLabel: {
+    fontSize: 11,
+    fontWeight: 600,
+    fontFamily: 'monospace',
+  },
+  outputBadge: {
+    fontSize: 10,
+    fontWeight: 700,
+    color: '#fff',
+    borderRadius: 10,
+    padding: '1px 6px',
+    flexShrink: 0,
   },
   sectionLabel: {
     fontSize: 10,
@@ -501,13 +616,6 @@ const styles = {
     fontSize: 11,
     fontWeight: 600,
     cursor: 'pointer',
-  },
-  outputHandle: {
-    width: 10,
-    height: 10,
-    background: '#22c55e',
-    border: '2px solid #fff',
-    boxShadow: '0 0 0 1px #22c55e',
   },
   gisHandle: {
     width: 10,

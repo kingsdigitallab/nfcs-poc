@@ -3,6 +3,7 @@ import { fetchGBIF } from './gbif'
 import { adaptGBIFResponse, type GBIFSearchResponse } from './gbifAdapter'
 import type { GBIFSearchNodeData } from '../nodes/GBIFSearchNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { addCitation } from './citationUtils'
 
 export async function runGBIFNode(
   nodeId: string,
@@ -37,9 +38,20 @@ export async function runGBIFNode(
     }
 
     const raw = await fetchGBIF(params) as GBIFSearchResponse
-    const results = adaptGBIFResponse(raw)
+    const queryStr = Object.entries(params)
+      .filter(([k, v]) => k !== 'limit' && v)
+      .map(([k, v]) => `${k}:${v}`)
+      .join(', ')
+    const results = addCitation(adaptGBIFResponse(raw) as Record<string, unknown>[], {
+      service:    'GBIF',
+      serviceUrl: 'https://www.gbif.org',
+      publisher:  'Global Biodiversity Information Facility',
+      licence:    'Various open licences (CC BY 4.0)',
+      query:      queryStr,
+      accessDate: new Date().toISOString(),
+    })
 
-    const version = setNodeResults(nodeId, results as Record<string, unknown>[])
+    const version = setNodeResults(nodeId, results)
     updateNodeData(nodeId, {
       status:         'success',
       statusMessage:  `✓ ${raw.count.toLocaleString()} results`,

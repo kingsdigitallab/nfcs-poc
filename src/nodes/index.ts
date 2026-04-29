@@ -27,6 +27,9 @@ import { SaveSearchNode }        from './SaveSearchNode'
 import { LoadSavedSearchNode }   from './LoadSavedSearchNode'
 import { XMLSectionNode }        from './XMLSectionNode'
 import { ImageViewNode }         from './ImageViewNode'
+import { CitationNode }             from './CitationNode'
+import { EuropeanaSearchNode }     from './EuropeanaSearchNode'
+import { FieldDistributionNode }   from './FieldDistributionNode'
 
 export const nodeTypes = {
   param:             ParamNode,
@@ -58,4 +61,7 @@ export const nodeTypes = {
   loadSavedSearch:  LoadSavedSearchNode,
   xmlSection:       XMLSectionNode,
   imageView:        ImageViewNode,
+  citation:           CitationNode,
+  europeanaSearch:    EuropeanaSearchNode,
+  fieldDistribution:  FieldDistributionNode,
 }

@@ -149,12 +149,14 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
     return out
   }, [allNodes, allEdges, id])
 
-  // ── Derive primitive fields from upstream sample ──────────────────────────────
+  // ── Derive usable fields from upstream sample ────────────────────────────────
+  // Arrays are included — they are joined with '; ' before sending to Ollama.
+  // Plain objects (namespace sub-objects, _citation, reconciled values) are excluded.
   const availableFields = useMemo<string[]>(() => {
     if (upstreamRecords.length === 0) return []
     const sample = upstreamRecords[0]
     return Object.entries(sample)
-      .filter(([, v]) => v !== null && v !== undefined && typeof v !== 'object')
+      .filter(([, v]) => v !== null && v !== undefined && (typeof v !== 'object' || Array.isArray(v)))
       .map(([k]) => k)
   }, [upstreamRecords])
 
@@ -207,7 +209,10 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
     try {
       if (mode === 'aggregate') {
         const values = upstreamRecords
-          .map(r => String(r[selectedField] ?? '').trim())
+          .map(r => {
+            const v = r[selectedField]
+            return Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
+          })
           .filter(Boolean)
           .join('\n---\n')
 
@@ -255,7 +260,8 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
         for (let i = 0; i < upstreamRecords.length; i++) {
           if (signal.aborted) break
           const record = upstreamRecords[i]
-          const value  = String(record[selectedField] ?? '').trim()
+          const rawVal = record[selectedField]
+          const value  = Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()
 
           setLiveProgress(`${i + 1} / ${upstreamRecords.length}`)
           updateNodeData(id, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })

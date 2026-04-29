@@ -2,6 +2,7 @@ import type { Node, Edge } from '@xyflow/react'
 import { adaptADSResponse, type ADSSearchResponse } from './adsAdapter'
 import type { ADSSearchAdvancedNodeData } from '../nodes/ADSSearchAdvancedNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { addCitation } from './citationUtils'
 
 const ADS_SEARCH      = '/ads-proxy/data-catalogue-api/api/search'
 const PAGE_SIZE       = 50
@@ -74,6 +75,18 @@ export async function runADSAdvancedNode(
   const rawLimit  = parseInt((limitSrc?.data as { value?: string } | undefined)?.value ?? d.inlineLimit ?? '20', 10)
   const limit     = isNaN(rawLimit) || rawLimit < 1 ? 20 : Math.min(rawLimit, PAGE_SIZE)
 
+  const accessDate   = new Date().toISOString()
+  const citationBase = {
+    service:    'ADS',
+    serviceUrl: 'https://archaeologydataservice.ac.uk',
+    publisher:  'Archaeology Data Service',
+    accessDate,
+    query: Object.entries(baseParams)
+      .filter(([k, v]) => !['sort', 'order', 'size', 'from'].includes(k) && v)
+      .map(([k, v]) => `${k}:${v}`)
+      .join(', '),
+  }
+
   try {
     if (fetchAll) {
       updateNodeData(nodeId, { statusMessage: 'Probing total…' })
@@ -100,7 +113,8 @@ export async function runADSAdvancedNode(
         if (batch.length < PAGE_SIZE) break
       }
 
-      const version = setNodeResults(nodeId, allRecords as Record<string, unknown>[])
+      const citedRecords = addCitation(allRecords as Record<string, unknown>[], citationBase)
+      const version = setNodeResults(nodeId, citedRecords)
       updateNodeData(nodeId, {
         status: 'success',
         statusMessage: `✓ ${allRecords.length.toLocaleString()} of ${total.toLocaleString()}`,
@@ -109,9 +123,9 @@ export async function runADSAdvancedNode(
       })
     } else {
       const response = await fetchADS({ ...baseParams, size: String(limit), from: '0' })
-      const results  = adaptADSResponse(response)
+      const results  = addCitation(adaptADSResponse(response) as Record<string, unknown>[], citationBase)
       const total    = response.total?.value ?? results.length
-      const version  = setNodeResults(nodeId, results as Record<string, unknown>[])
+      const version  = setNodeResults(nodeId, results)
       updateNodeData(nodeId, {
         status: 'success',
         statusMessage: `✓ ${results.length} of ${total.toLocaleString()}`,

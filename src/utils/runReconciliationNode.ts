@@ -14,7 +14,8 @@ import {
   type AuthorityConfig,
 } from './reconciliationService'
 import type { ReconciliationNodeData } from '../nodes/ReconciliationNode'
-import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { collectUpstreamRecords } from './upstreamRecords'
 
 export const runReconciliationNode: NodeRunner = async (
   nodeId,
@@ -39,15 +40,7 @@ export const runReconciliationNode: NodeRunner = async (
     return
   }
 
-  // Collect upstream records from the out-of-band store
-  const inputEdges = edges.filter(e => e.target === nodeId && e.targetHandle === 'data')
-  const upstream: UnifiedRecord[] = []
-  for (const edge of inputEdges) {
-    const src  = nodes.find(n => n.id === edge.source)
-    if (!src) continue
-    const recs = getNodeResults(src.id) as UnifiedRecord[] | undefined
-    if (recs) upstream.push(...recs)
-  }
+  const upstream = collectUpstreamRecords(nodeId, edges) as UnifiedRecord[]
 
   if (upstream.length === 0) {
     clearNodeResults(nodeId)

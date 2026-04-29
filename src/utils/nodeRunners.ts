@@ -22,6 +22,8 @@ import { runOllamaNode }          from './runOllamaNode'
 import { runOllamaFieldNode }     from './runOllamaFieldNode'
 import { runMergeByQIDNode }      from './runMergeByQIDNode'
 import { runWikidataEnrichNode }  from './runWikidataEnrichNode'
+import { runXMLSectionNode }      from './runXMLSectionNode'
+import { runEuropeanaNode }       from './runEuropeanaNode'
 
 /**
  * Common signature for every node runner.
@@ -53,4 +55,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   ollamaField:     runOllamaFieldNode,
   mergeByQID:      runMergeByQIDNode,
   wikidataEnrich:  runWikidataEnrichNode,
+  xmlSection:        runXMLSectionNode,
+  europeanaSearch:   runEuropeanaNode,
 }

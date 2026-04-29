@@ -8,29 +8,12 @@
  * record so nothing is lost if the run is interrupted.
  */
 
-import type { Node, Edge } from '@xyflow/react'
 import type { NodeRunner } from './nodeRunners'
-import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { collectUpstreamRecords } from './upstreamRecords'
 
 const OLLAMA_CHAT    = '/ollama/api/chat'
 const VISION_MARKERS = ['llava', 'vision', 'bakllava', 'moondream', 'cogvlm']
-
-function getUpstreamRecords(
-  nodeId: string,
-  getNodes: () => Node[],
-  edges: Edge[],
-): Record<string, unknown>[] {
-  const nodes = getNodes()
-  const inputEdges = edges.filter(e => e.target === nodeId && e.targetHandle === 'data')
-  const out: Record<string, unknown>[] = []
-  for (const edge of inputEdges) {
-    const src = nodes.find(n => n.id === edge.source)
-    if (!src) continue
-    const recs = getNodeResults(src.id)
-    if (recs) out.push(...recs)
-  }
-  return out
-}
 
 function renderTemplate(template: string, record: Record<string, unknown>): string {
   return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
@@ -121,7 +104,7 @@ export const runOllamaNode: NodeRunner = async (nodeId, getNodes, edges, updateN
     return
   }
 
-  const upstreamRecords = getUpstreamRecords(nodeId, getNodes, edges)
+  const upstreamRecords = collectUpstreamRecords(nodeId, edges)
   if (upstreamRecords.length === 0) {
     updateNodeData(nodeId, { status: 'error', statusMessage: '✗ No upstream records' })
     return

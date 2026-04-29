@@ -10,6 +10,7 @@ import { fetchMDSRecords }  from './mds'
 import { adaptMDSRecords }  from './mdsAdapter'
 import type { MDSSearchNodeData } from '../nodes/MDSSearchNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { addCitation } from './citationUtils'
 
 export const runMDSNode: NodeRunner = async (
   nodeId,
@@ -56,7 +57,13 @@ export const runMDSNode: NodeRunner = async (
 
   try {
     const { records: raws, total, capped } = await fetchMDSRecords(query, limit)
-    const records = adaptMDSRecords(raws)
+    const records = addCitation(adaptMDSRecords(raws) as Record<string, unknown>[], {
+      service:    'MDS',
+      serviceUrl: 'https://museumdata.uk',
+      publisher:  'Museum Data Service',
+      accessDate: new Date().toISOString(),
+      query,
+    })
 
     const msg = capped
       ? `⚠ ${records.length} of ${total.toLocaleString()} (capped)`
@@ -64,7 +71,7 @@ export const runMDSNode: NodeRunner = async (
 
     console.log(`[MDS] ${msg}`, records[0])
 
-    const version = setNodeResults(nodeId, records as Record<string, unknown>[])
+    const version = setNodeResults(nodeId, records)
     updateNodeData(nodeId, {
       status:         'success',
       statusMessage:  msg,
