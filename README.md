@@ -63,15 +63,16 @@ The sidebar groups nodes into collapsible categories. Click a group heading to c
 
 | Node | Service | Notes |
 |------|---------|-------|
+| **ARIADNESearch** | [ARIADNE Infrastructure Portal](https://portal.ariadne-infrastructure.eu/) | Pan-European archaeology data aggregator covering 40+ institutions across 23 countries. Direct browser fetch (permissive CORS — no proxy required). Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type**, **Getty AAT subject**, **Native subject**, **Country** (30+ values across Europe and beyond), **Data type**, **Period**, and **Contributor** (filter to a specific partner institution, e.g. "Archaeology Data Service" to retrieve ADS records). Citation metadata is stamped on every record. Records include an `ariadne.*` namespace with temporal, spatial, subject, and contributor detail. |
 | **GBIFSearchNode** | [GBIF Occurrence API](https://www.gbif.org/developer/occurrence) | Biodiversity specimens and observations. Direct browser fetch (permissive CORS). Inline fields: free-text `q`, `scientificName`, `country`, `year`, `limit`. |
 | **LLDSSearchNode** | [Literary & Linguistic Data Service](https://llds.ling-phil.ox.ac.uk/) | DSpace REST API. Results filtered client-side. Uses a 24-hour localStorage cache; a **Use cache** toggle controls fallback during outages. |
-| **ADSSearchAdvancedNode** | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | Data Catalogue API with faceted filters. Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type** (16 values including Site/monument, Artefact, Fieldwork), **Getty AAT subject**, **Native subject**, **Country**, **Data type**, and **Period** (post-medieval to palaeolithic). A badge shows how many filters are active; **Clear all filters** resets them. |
-| **ADSLibraryNode** | [ADS Library catalogue](https://archaeologydataservice.ac.uk/library/) | Library catalogue search (books, journals, grey literature). Uses a server-side two-step Jakarta Faces session: the Vite middleware GETs the search page to obtain a `JSESSIONID` + `ViewState`, then POSTs the query and returns the CDATA HTML fragment for client-side parsing. Inline fields: `query`, `limit` (max 100). Returns `title`, `creator`, `date`, `type` (publication type from icon), `adsLibrary.parentTitle`, `adsLibrary.downloadUrl`. |
 | **MDSSearchNode** | [museumdata.uk](https://museumdata.uk/) | HTML scraper (no public JSON API). Two-step fetch: probe for total, then retrieve all. Capped at 200 records; amber ⚠ badge when the total exceeds the cap. |
 | **EuropeanaSearchNode** | [Europeana](https://www.europeana.eu/) | Europeana cultural heritage aggregator — the primary pan-European portal covering museums, galleries, libraries and archives. Direct browser fetch (permissive CORS). Requires a free API key from [apis.europeana.eu](https://apis.europeana.eu/apikey). Inline fields: `query`, `limit` (up to 1,000 records via cursor-based pagination, 100 per request), both wirable from ParamNode. Filters: **Type** (IMAGE / TEXT / VIDEO / SOUND / 3D), **Reusability** (open / restricted / permission required), and a **media only** checkbox to restrict to items with thumbnails. Records include `title`, `creator`, `date`, `subject`, `country`, `type`, `language`, a direct link to the Europeana record (`_sourceUrl`), and a `europeana` namespace object with `thumbnail`, `shownAt` (original institution URL), `rights`, `provider`, `dataProvider`, and `completeness`. Citation metadata is stamped on every record. |
 | **LoadSavedSearchNode** | Local filesystem | Loads a `.nfcs.json` file saved by **SaveSearchNode**, or any raw `UnifiedRecord[]` JSON array exported by **ExportNode**. After loading, displays full provenance metadata: saved date/time, source breakdown with per-service record counts, and the original search parameters in a collapsible panel. Metadata is persisted in the workflow file — re-opening the workflow shows the provenance panel even before the file is reloaded. Works in all browsers. |
 | **LocalFileSourceNode** | Local filesystem | Parses a single CSV or TSV file selected via a standard file picker (works in all browsers). Auto-detects the delimiter from the file extension and content (tab, comma, semicolon, or pipe); manual override available. **First row is header** toggle (default on) — off generates `col1`, `col2`… names. **Cast numeric strings to numbers** toggle (default on) — converts values such as `"51.5074"` to `51.5074`, enabling downstream map and spatial filter nodes to work directly with coordinate columns. Shows a column name preview after parsing. |
 | **LocalFolderSourceNode** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction via pdfjs-dist), XML/TEI, plain text, and images. Also detects Shapefiles and GeoJSON files in the folder and exposes them via a dedicated **GIS handle** (bottom) — connect this to a MapOutputNode to overlay vector layers on the map. Emits `FileRecord[]` on the main output. Requires Chrome or Edge 86+. |
+| ~~**ADSSearchAdvancedNode**~~ *(deprecated)* | [Archaeology Data Service](https://archaeologydataservice.ac.uk/) | **Currently unavailable** — the ADS data catalogue API is blocked by Cloudflare bot protection. Use **ARIADNESearch** with `Contributor = Archaeology Data Service` to retrieve ADS records via the ARIADNE portal. |
+| ~~**ADSLibraryNode**~~ *(deprecated)* | [ADS Library catalogue](https://archaeologydataservice.ac.uk/library/) | **Currently unavailable** — the ADS library search page is also blocked by Cloudflare. No equivalent in ARIADNE. |
 
 ### Process
 
@@ -95,14 +96,14 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 
 | Node | Description |
 |------|-------------|
-| **SaveSearchNode** | Serialises upstream records with a metadata envelope to a `.nfcs.json` file. Shows a live preview of the record count, per-source breakdown, and auto-suggested filename (e.g. `gbif-ads-2026-04-24.nfcs.json`). On Chrome/Edge, opens a native **Save As…** dialog so you can choose the save location and edit the filename before committing. On Firefox, the file downloads automatically. The envelope captures: saved date/time, source names and per-source record counts, and the original search parameters from all upstream source nodes. See [Saved search caching](#saved-search-caching). |
+| **SaveSearchNode** | Serialises upstream records with a metadata envelope to a `.nfcs.json` file. Shows a live preview of the record count, per-source breakdown, and auto-suggested filename (e.g. `gbif-ariadne-2026-04-30.nfcs.json`). On Chrome/Edge, opens a native **Save As…** dialog so you can choose the save location and edit the filename before committing. On Firefox, the file downloads automatically. The envelope captures: saved date/time, source names and per-source record counts, and the original search parameters from all upstream source nodes. See [Saved search caching](#saved-search-caching). |
 | **QuickViewNode** | Inspect the full, untruncated value of any field across upstream records. Pick a field from the dropdown; navigate records with ‹ / › buttons. Copy button per record. CSV/TSV values are paginated (50 rows per page). Large plain-text values are truncated at 50 000 chars. Image data URLs are redirected to ImageViewNode. |
 | **ImageViewNode** | Resizable image viewer with two modes. **Images mode** — field picker for upstream records containing image data URLs or HTTP image URLs; a second **URL** row accepts any public image URL directly (overrides the field picker when set). **IIIF mode** — accepts a IIIF Presentation API v2 or v3 manifest URL (pre-loaded with a Wellcome Collection example); navigates canvases with ‹ / › buttons. Requests are served at zoom-tiered resolutions via the IIIF Image API (`!600,600` → `!1200,1200` → `!2400,2400` → `max`) to avoid fetching full-resolution masters unnecessarily. Data URL images are canvas-downsampled to ≤ 1 200 px before display. The **ℹ Info** toggle reveals: IIIF manifest metadata (title, date, attribution, provider, rights, full pixel dimensions from `info.json`, tile size, compliance profile) or local image metadata (pixel dimensions, estimated file size, EXIF — make/model, date, exposure, f-number, ISO, GPS — parsed inline from the first 64 KB of JPEG files without external libraries). |
-| **TableOutputNode** | Paginated table. Merges records from multiple upstream nodes automatically. Pass-through output handle so it can chain into Map, Timeline, or Export nodes. Double-click to expand to a full-screen panel. Toolbar has two column toggles: **show all columns** reveals every flat top-level field; **expand namespaces** (visible once show all is on) additionally flattens one level of service namespace objects into dot-notation columns (`adsLibrary.parentTitle`, `gbif.datasetKey`, etc.). |
+| **TableOutputNode** | Paginated table. Merges records from multiple upstream nodes automatically. Pass-through output handle so it can chain into Map, Timeline, or Export nodes. Double-click to expand to a full-screen panel. Toolbar has two column toggles: **show all columns** reveals every flat top-level field; **expand namespaces** (visible once show all is on) additionally flattens one level of service namespace objects into dot-notation columns (`ariadne.contributor`, `gbif.datasetKey`, etc.). |
 | **JSONOutputNode** | Syntax-highlighted JSON viewer. Shows the full normalised record graph. Double-click to expand. |
 | **MapOutputNode** | Leaflet map. Plots any record that has `decimalLatitude` and `decimalLongitude`. Click a marker for a popup with title, date, and a link back to the source record. Also accepts GIS vector layers via the **GIS handle** (connect from `LocalFolderSourceNode`'s bottom handle) and renders them as overlays alongside point data. |
 | **TimelineOutputNode** | SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates (e.g. `-1199`). Hover a marker for a popup with title, source, date, and a clickable **View record** link. Drag any edge or corner to resize (min 300 px, max 1 600 px). Toggle **⇤⇥ Fit** to compress the full date range into the visible width with no horizontal scroll; untoggle to switch to a fixed-scale layout with scroll. |
-| **CitationNode** | Paginated bibliography of individual records, drawn from `_citation` metadata stamped by source runners. Each entry shows service badge, title (linked to the record), creator(s), date, persistent identifier or direct URL, access date, and licence. Supports **Copy all** and **Download .txt** for the full bibliography. Records from GBIF, ADS, LLDS, MDS, ADS Library, and Europeana carry citation metadata automatically; records from local files or saved searches do not. |
+| **CitationNode** | Paginated bibliography of individual records, drawn from `_citation` metadata stamped by source runners. Each entry shows service badge, title (linked to the record), creator(s), date, persistent identifier or direct URL, access date, and licence. Supports **Copy all** and **Download .txt** for the full bibliography. Records from GBIF, ARIADNE, LLDS, MDS, and Europeana carry citation metadata automatically; records from local files or saved searches do not. |
 | **ExportNode** | Downloads the upstream records as **CSV**, **JSON**, or **GeoJSON**. See [Export](#export) below. |
 | **OllamaOutputNode** | Card-based display of Ollama inference text. Each record gets its own expandable card with a copy button. |
 
@@ -113,14 +114,13 @@ Process nodes sit between source nodes and output nodes. They read upstream reco
 ```
 ParamNode ─┐
            ▼
-  GBIFSearchNode        ───────────────────────────────────────┐
-  LLDSSearchNode        ───────────────────────────────────────┤
-  ADSSearchAdvancedNode ──┐                                    │
-  ADSLibraryNode        ──┤                                    │
-  MDSSearchNode         ──┤                                    │
-  EuropeanaSearchNode   ──┤                                    │
-  LocalFileSourceNode   ──┤                                    │
-  LoadSavedSearchNode   ──┤                                    │
+  ARIADNESearch          ───────────────────────────────────────┐
+  GBIFSearchNode         ───────────────────────────────────────┤
+  LLDSSearchNode         ───────────────────────────────────────┤
+  MDSSearchNode          ───────────────────────────────────────┤
+  EuropeanaSearchNode    ───────────────────────────────────────┤
+  LocalFileSourceNode    ───────────────────────────────────────┤
+  LoadSavedSearchNode    ───────────────────────────────────────┤
                           ▼                                    │
                FilterTransformNode ────────────────────────────┤
                           │                                    │
@@ -170,8 +170,8 @@ Per-record failures in Ollama nodes do not abort the batch — the error is stor
 Every adapter maps its raw API response to `UnifiedRecord` before writing to the canvas. Output nodes consume only `UnifiedRecord[]` — they never touch raw responses.
 
 ```
-id            — globally unique, service-prefixed: "gbif:12345", "ads:1862953", "europeana:/92062/…"
-_source       — service identifier: "gbif" | "llds" | "ads" | "mds" | "europeana"
+id            — globally unique, service-prefixed: "gbif:12345", "ariadne:<hash>", "europeana:/92062/…"
+_source       — service identifier: "gbif" | "llds" | "ariadne" | "mds" | "europeana"
 _sourceId     — native record ID within the service
 _sourceUrl    — link back to the record in the service's own UI
 _pid          — persistent identifier (DOI, Handle, ARK) when available
@@ -190,10 +190,14 @@ scientificName, country, eventDate          — GBIF-specific normalised fields
 decimalLatitude, decimalLongitude           — used by MapOutputNode
 basisOfRecord, institutionCode, datasetName — GBIF-specific
 
+periodStart, periodEnd, periodName          — temporal coverage (ARIADNE)
+spatialCoverage                             — primary place name (ARIADNE)
+
 gbif.*        — full raw GBIF occurrence object
 llds.*        — LLDS handle, branding, itemType
-ads.*         — ADS temporal, country, spatial, identifier namespace
-adsLibrary.*  — ADS Library catalogue: recordId, recordType, publicationType, parentTitle, publicationDate, authors, downloadUrl
+ariadne.*     — ARIADNE temporal, country, spatial, contributor, ariadneSubject, derivedSubject, nativeSubject, identifier, nativePeriod
+ads.*         — ADS Data Catalogue namespace (deprecated; present on records loaded from saved searches)
+adsLibrary.*  — ADS Library namespace (deprecated; present on records loaded from saved searches)
 mds.*         — MDS field map (condition, materials, dimensions, provenance, …)
 europeana.*   — provider, dataProvider, rights, thumbnail, shownAt (original institution URL), completeness
 
@@ -210,7 +214,7 @@ After reconciliation, records also carry `${fieldName}_reconciled` keys (see bel
 Every record retrieved from a live data service carries a `_citation` object stamped by its runner:
 
 ```
-_citation.service     — service name, e.g. "GBIF", "ADS", "Europeana"
+_citation.service     — service name, e.g. "GBIF", "ARIADNE", "Europeana"
 _citation.serviceUrl  — canonical homepage of the service
 _citation.publisher   — institutional publisher
 _citation.query       — the search query used to retrieve this record
@@ -236,7 +240,7 @@ Connect a **CitationNode** anywhere in your workflow to see a per-record bibliog
 ### Filter mode
 
 Add one or more filter rows. Each row specifies:
-- **Field** — any field from the upstream records, including dot-notation namespace fields (e.g. `gbif.stateProvince`, `adsLibrary.parentTitle`)
+- **Field** — any field from the upstream records, including dot-notation namespace fields (e.g. `gbif.stateProvince`, `ariadne.contributor`)
 - **Operator** — `contains`, `=`, `starts with`, `>`, `<`, `is empty`, `not empty`
 - **Value** — text or number (hidden for `is empty` / `not empty`)
 
@@ -338,7 +342,7 @@ Each merged record contains:
 | `_sourceUrl` | Link to the entity on `wikidata.org` |
 | `_sourceCount` | Number of source records merged |
 | `_sources` | Comma-separated list of contributing service names |
-| `<service>_<field>` | All non-metadata fields from each source record, prefixed by `_source` value (e.g. `gbif_scientificName`, `ads_title`) |
+| `<service>_<field>` | All non-metadata fields from each source record, prefixed by `_source` value (e.g. `gbif_scientificName`, `ariadne_title`) |
 
 If two records from the **same** source share a QID, the second is prefixed `<service>_1_<field>` to avoid collisions.
 
@@ -346,7 +350,7 @@ If two records from the **same** source share a QID, the second is prefixed `<se
 
 #### Cross-service linking with local CSVs
 
-Local CSV files loaded via **LocalFileSourceNode** and reconciled via **ReconciliationNode** are treated identically to API sources. A reconciled `species` column in a CSV produces the same `*_reconciled` structure, so MergeByQIDNode can join CSV rows with GBIF or ADS records that share the same Wikidata entity.
+Local CSV files loaded via **LocalFileSourceNode** and reconciled via **ReconciliationNode** are treated identically to API sources. A reconciled `species` column in a CSV produces the same `*_reconciled` structure, so MergeByQIDNode can join CSV rows with GBIF or ARIADNE records that share the same Wikidata entity.
 
 ---
 
@@ -402,7 +406,7 @@ Follows a URL field in each upstream record and fetches the page content, adding
 - `fetchedHtml` — the cleaned body HTML (noise elements removed: scripts, nav, footer, etc.)
 
 **Options:**
-- **URL field** — auto-detected from fields whose name contains `url`, `link`, `href`, `uri`, or `pid`, or whose value starts with `http`. Also scans one level of service namespace objects so dot-notation fields like `adsLibrary.downloadUrl` appear in the picker. Falls back to a manual input.
+- **URL field** — auto-detected from fields whose name contains `url`, `link`, `href`, `uri`, or `pid`, or whose value starts with `http`. Also scans one level of service namespace objects so dot-notation fields like `ariadne.identifier` appear in the picker. Falls back to a manual input.
 - **Wait for JS rendering** — uses a headless browser (Puppeteer) inside the Vite dev server. The first JS-render request launches the browser; subsequent requests reuse it.
 - **Wait for** — load event: `Network quiet (2 req)` (default), `Network fully idle`, or `DOM ready only`.
 - **Max chars** — truncation limit for `fetchedContent` (default 8 000).
@@ -428,7 +432,7 @@ Extracts a targeted section from `fetchedHtml` using a CSS selector, writing the
 
 | Format | Description |
 |--------|-------------|
-| **CSV** | Flat table, one row per record. `*_reconciled` objects are expanded to `_qid`, `_label`, `_confidence`, `_status` columns. Namespace objects (`gbif`, `llds`, `ads`, `mds`) are excluded. |
+| **CSV** | Flat table, one row per record. `*_reconciled` objects are expanded to `_qid`, `_label`, `_confidence`, `_status` columns. Namespace objects (`gbif`, `llds`, `ariadne`, `mds`) are excluded. |
 | **JSON** | Full record graph as a pretty-printed JSON array. |
 | **GeoJSON** | `FeatureCollection` of records that have both `decimalLatitude` and `decimalLongitude`. |
 
@@ -448,13 +452,13 @@ Saved files use a `.nfcs.json` envelope that wraps the record array:
 {
   "_nfcs": {
     "version": 1,
-    "savedAt": "2026-04-24T14:32:00.000Z",
-    "sources": ["ads", "gbif"],
-    "sourceCounts": { "ads": 47, "gbif": 23 },
+    "savedAt": "2026-04-30T14:32:00.000Z",
+    "sources": ["ariadne", "gbif"],
+    "sourceCounts": { "ariadne": 47, "gbif": 23 },
     "recordCount": 70,
     "searchParams": {
-      "gbifSearch::gbif-1": { "q": "Quercus", "country": "GB", "limit": "100" },
-      "adsSearchAdvanced::ads-1": { "query": "oak", "country": "GB" }
+      "ariadneSearch::ariadne-1": { "q": "Stonehenge", "country": "England" },
+      "gbifSearch::gbif-1": { "q": "Quercus", "country": "GB", "limit": "100" }
     }
   },
   "records": [ ...UnifiedRecord[]... ]
@@ -470,7 +474,7 @@ Saved files use a `.nfcs.json` envelope that wraps the record array:
 3. The node shows a live preview: total record count, per-source chips, and the auto-suggested filename derived from the source names and today's date.
 4. Click **💾 Save As…** (Chrome/Edge) to choose the save location and confirm the filename in a native OS dialog, or **💾 Save** (Firefox) to download directly.
 
-The filename is pre-populated as `{sources}-{date}.nfcs.json`, e.g. `gbif-ads-2026-04-24.nfcs.json`.
+The filename is pre-populated as `{sources}-{date}.nfcs.json`, e.g. `ariadne-gbif-2026-04-30.nfcs.json`.
 
 ### Loading
 
@@ -494,11 +498,11 @@ Any JSON file produced by **ExportNode** (format: JSON) contains a plain `Unifie
 | Prefix | Target | Reason |
 |--------|--------|--------|
 | `/llds-proxy/…` | `https://llds.ling-phil.ox.ac.uk/llds/…` | No CORS |
-| `/ads-proxy/…` | `https://archaeologydataservice.ac.uk/…` | No CORS |
+| `/ads-proxy/…` | `https://archaeologydataservice.ac.uk/…` | No CORS (nodes deprecated — ADS now blocks programmatic requests) |
 | `/mds-proxy/…` | `https://museumdata.uk/…` | No CORS |
 | `/reconcile-proxy/…` | `https://wikidata.reconci.link/…` | 307 redirect strips CORS headers in browser |
 | `/ollama/…` | `http://localhost:11434/…` | Avoids cross-port CORS for local Ollama |
-| `/ads-library-search?q=…` | `https://archaeologydataservice.ac.uk/library/…` | Vite middleware; two-step JSF session dance (GET ViewState → POST search) |
+| `/ads-library-search?q=…` | `https://archaeologydataservice.ac.uk/library/…` | Vite middleware; two-step JSF session dance (deprecated — blocked by Cloudflare) |
 | `/url-proxy?url=…` | *any URL* | Vite middleware; sidesteps CORS for arbitrary URL fetching |
 
 > **Production note:** This proxy is development-only. For a deployed instance, replace each rule with a lightweight server-side proxy.
@@ -509,7 +513,7 @@ Any JSON file produced by **ExportNode** (format: JSON) contains a plain `Unifie
 
 ### Federated search across two services
 
-1. Drag a **GBIFSearchNode** and an **ADSSearchAdvancedNode** onto the canvas.
+1. Drag an **ARIADNESearch** and a **GBIFSearchNode** onto the canvas.
 2. Type `Stonehenge` into the inline query fields on both.
 3. Drag a **TableOutputNode** and connect both search node outputs to its input.
 4. Click **▶▶ Run All**.
@@ -523,7 +527,7 @@ Any JSON file produced by **ExportNode** (format: JSON) contains a plain `Unifie
 
 ### Web content extraction and LLM analysis
 
-1. Run a source node (e.g. ADS or MDS) to get records with `_sourceUrl` fields.
+1. Run a source node (e.g. ARIADNE or MDS) to get records with `_sourceUrl` fields.
 2. Add a **URLFetchNode**, connect the source output to its input, select the URL field, and click **▶ Fetch URLs**.
 3. Add an **HTMLSectionNode**, connect URLFetchNode's output, choose a CSS selector via the structure picker, and optionally enable **Preserve HTML structure** for markup-aware extraction. Click **▶ Extract Sections**.
 4. Add an **OllamaFieldNode**, connect HTMLSectionNode's output, select `fetchedContent`, write a prompt using `{{value}}` for the field content, and click **▶ Run**.
@@ -536,13 +540,14 @@ Any JSON file produced by **ExportNode** (format: JSON) contains a plain `Unifie
 3. Click **📂 Pick File** and select your CSV. The column names preview confirms the parse.
 4. Connect the output to a **MapOutputNode** — if your CSV has columns named `decimalLatitude` / `decimalLongitude` (or rename them first with a **FilterTransformNode**), points will appear immediately.
 
-### Advanced ADS faceted search
+### ARIADNE faceted search
 
-1. Drag an **ADSSearchAdvancedNode** onto the canvas.
+1. Drag an **ARIADNESearch** node onto the canvas.
 2. Type a keyword query (e.g. `Hadrian`) or leave it blank for a browse.
 3. Click **▸ Filters** to expand the panel and select, e.g., **Resource type = Fieldwork report**, **Country = Scotland**, **Period = roman**.
-4. Optionally tick **Fetch all results** for a complete paginated result set.
-5. Click **▶ Run** and connect the output to a **TableOutputNode** or **MapOutputNode**.
+4. To restrict to ADS records specifically, set **Contributor = Archaeology Data Service**.
+5. Optionally tick **Fetch all results** for a complete paginated result set.
+6. Click **▶ Run** and connect the output to a **TableOutputNode** or **MapOutputNode**.
 
 ### Spatial filter + map
 
@@ -577,10 +582,11 @@ nfcs-poc/
     │   ├── index.ts                # nodeTypes registry
     │   ├── ParamNode.tsx
     │   ├── CommentNode.tsx         # Canvas annotation label (no handles, resizable)
+    │   ├── ARIADNESearchNode.tsx   # ARIADNE pan-European archaeology portal
     │   ├── GBIFSearchNode.tsx
     │   ├── LLDSSearchNode.tsx
-    │   ├── ADSSearchAdvancedNode.tsx   # ADS search with facets + fetchAll pagination
-    │   ├── ADSLibraryNode.tsx          # ADS Library catalogue search (JSF scraper)
+    │   ├── ADSSearchAdvancedNode.tsx   # (deprecated — ADS blocked by Cloudflare)
+    │   ├── ADSLibraryNode.tsx          # (deprecated — ADS blocked by Cloudflare)
     │   ├── MDSSearchNode.tsx
     │   ├── EuropeanaSearchNode.tsx     # Europeana cultural heritage aggregator
     │   ├── LocalFileSourceNode.tsx     # Single CSV/TSV file picker with delimiter detection
@@ -616,33 +622,35 @@ nfcs-poc/
         ├── citationUtils.ts            # addCitation(), formatRecordCitation(), formatAllCitations()
         ├── fileReaders.ts              # PDF/XML/text/image extraction (FileRecord)
         ├── gisReaders.ts               # Shapefile + GeoJSON parsing via shpjs (GisLayer)
+        ├── ariadneAdapter.ts           # ARIADNE API response → UnifiedRecord
         ├── gbifAdapter.ts
         ├── lldsAdapter.ts / lldsCache.ts
-        ├── adsAdapter.ts
-        ├── adsLibrary.ts               # ADS Library fetch + HTML parser
-        ├── adsLibraryAdapter.ts        # ADS Library → UnifiedRecord
+        ├── adsAdapter.ts               # (deprecated)
+        ├── adsLibrary.ts               # (deprecated)
+        ├── adsLibraryAdapter.ts        # (deprecated)
         ├── mdsAdapter.ts
         ├── europeanaAdapter.ts         # Europeana API response → UnifiedRecord
         ├── wikidataApi.ts              # Wikidata SPARQL/API helpers (label lookup, property fetch)
         ├── reconciliationService.ts    # W3C Reconciliation API client
         ├── filterTransformUtils.ts
         ├── exportUtils.ts
+        ├── runARIADNENode.ts           # ARIADNE search runner
         ├── runGBIFNode.ts
         ├── runLLDSNode.ts
-        ├── runADSAdvancedNode.ts        # ADS search with facets + fetchAll pagination
-        ├── runADSLibraryNode.ts         # ADS Library catalogue runner
+        ├── runADSAdvancedNode.ts       # (deprecated)
+        ├── runADSLibraryNode.ts        # (deprecated)
         ├── runMDSNode.ts
-        ├── runEuropeanaNode.ts          # Europeana search runner
+        ├── runEuropeanaNode.ts         # Europeana search runner
         ├── runReconciliationNode.ts
-        ├── runWikidataEnrichNode.ts     # Wikidata property enrichment runner
-        ├── runMergeByQIDNode.ts         # QID-based merge runner
+        ├── runWikidataEnrichNode.ts    # Wikidata property enrichment runner
+        ├── runMergeByQIDNode.ts        # QID-based merge runner
         ├── runFilterTransformNode.ts
         ├── runSpatialFilterNode.ts
         ├── runHTMLSectionNode.ts
-        ├── runXMLSectionNode.ts         # XPath extraction runner
-        ├── runURLFetchNode.ts           # Runner for urlFetch
-        ├── runOllamaNode.ts             # Runner for ollamaNode
-        ├── runOllamaFieldNode.ts        # Runner for ollamaField
+        ├── runXMLSectionNode.ts        # XPath extraction runner
+        ├── runURLFetchNode.ts          # Runner for urlFetch
+        ├── runOllamaNode.ts            # Runner for ollamaNode
+        ├── runOllamaFieldNode.ts       # Runner for ollamaField
         ├── nodeRunners.ts              # Registry: node type → runner
         └── runWorkflow.ts              # Topological executor (Kahn's algorithm)
 ```

@@ -43,6 +43,8 @@ const FATAL_PATTERNS = ['Connection closed', 'Target closed', 'Session closed', 
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let _browserPromise: Promise<any> | null = null
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let _adsPagePromise: Promise<any> | null = null
 
 async function getOrLaunchBrowser() {
   if (!_browserPromise) {
@@ -65,6 +67,7 @@ async function getOrLaunchBrowser() {
       browser.on('disconnected', () => {
         console.warn('[url-proxy] Headless browser disconnected — will relaunch on next request')
         _browserPromise = null
+        _adsPagePromise = null
       })
       console.log('[url-proxy] Headless browser ready.')
       return browser
@@ -257,6 +260,78 @@ async function adsLibrarySearchMiddleware(
   }
 }
 
+// ── ADS Data Catalogue API proxy (Cloudflare bypass via Puppeteer) ────────────
+// ADS now requires a real-browser Cloudflare session for their REST API.
+// We keep a long-lived Puppeteer page that has navigated to the ADS site once
+// (establishing cf_clearance), then serve all API calls via page.evaluate(fetch)
+// from within that browser context. The page is shared across paginated requests
+// so only the first call in a fetchAll loop pays the warm-up cost.
+
+const ADS_CAT_ORIGIN  = 'https://archaeologydataservice.ac.uk'
+const ADS_CAT_API     = `${ADS_CAT_ORIGIN}/data-catalogue-api/api/search`
+const ADS_CAT_WARMUP  = `${ADS_CAT_ORIGIN}/data-catalogue/`
+
+async function getOrWarmADSPage() {
+  if (!_adsPagePromise) {
+    _adsPagePromise = (async () => {
+      const browser = await getOrLaunchBrowser()
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const page: any = await browser.newPage()
+      await page.setUserAgent(DESKTOP_UA)
+      await page.setDefaultNavigationTimeout(BROWSER_TIMEOUT_MS)
+      await page.setRequestInterception(true)
+      page.on('request', (req: { resourceType: () => string; abort: () => void; continue: () => void }) => {
+        const t = req.resourceType()
+        if (t === 'image' || t === 'font' || t === 'media') req.abort()
+        else req.continue()
+      })
+      console.log('[ads-catalogue] Warming Puppeteer page for Cloudflare session…')
+      await page.goto(ADS_CAT_WARMUP, { waitUntil: 'networkidle2' })
+      console.log('[ads-catalogue] Page warmed.')
+      return page
+    })()
+  }
+  return _adsPagePromise
+}
+
+async function adsCatalogueSearchMiddleware(
+  req: IncomingMessage,
+  res: ServerResponse,
+  next: () => void,
+) {
+  if (!req.url?.startsWith('/ads-catalogue-search')) { next(); return }
+
+  const parsed = new URL(req.url, 'http://localhost')
+  const qs     = parsed.searchParams.toString()
+  const apiUrl = `${ADS_CAT_API}?${qs}`
+
+  ;(async () => {
+    try {
+      const page = await getOrWarmADSPage()
+      const result: { status: number; body: string } = await page.evaluate(async (url: string) => {
+        const r = await fetch(url, { headers: { Accept: 'application/json' } })
+        return { status: r.status, body: await r.text() }
+      }, apiUrl)
+
+      if (result.status === 403) {
+        _adsPagePromise = null
+        throw new Error('Cloudflare session expired (403) — will re-warm on next request')
+      }
+
+      res.statusCode = result.status
+      res.setHeader('Content-Type', 'application/json')
+      res.setHeader('Access-Control-Allow-Origin', '*')
+      res.end(result.body)
+    } catch (err) {
+      _adsPagePromise = null
+      if (!res.headersSent) {
+        res.statusCode = 502
+        res.end(`ADS catalogue proxy error: ${err instanceof Error ? err.message : String(err)}`)
+      }
+    }
+  })()
+}
+
 // ── Generic URL proxy middleware ──────────────────────────────────────────────
 // Browser fetches /url-proxy?url=<encoded>[&js=true][&wait=networkidle0]
 // Vite handles it server-side, sidestepping CORS entirely.
@@ -313,6 +388,11 @@ export default defineConfig({
         target: 'https://archaeologydataservice.ac.uk',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/ads-proxy/, ''),
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Referer': 'https://archaeologydataservice.ac.uk/',
+          'Accept': 'application/json, text/plain, */*',
+        },
       },
       // Proxy /mds-proxy/* → https://museumdata.uk/*
       '/mds-proxy': {
@@ -340,6 +420,7 @@ export default defineConfig({
       name: 'url-proxy',
       configureServer(server) {
         server.middlewares.use(adsLibrarySearchMiddleware)
+        server.middlewares.use(adsCatalogueSearchMiddleware)
         server.middlewares.use(urlProxyMiddleware)
       },
     },

@@ -24,6 +24,7 @@ import { runMergeByQIDNode }      from './runMergeByQIDNode'
 import { runWikidataEnrichNode }  from './runWikidataEnrichNode'
 import { runXMLSectionNode }      from './runXMLSectionNode'
 import { runEuropeanaNode }       from './runEuropeanaNode'
+import { runARIADNENode }         from './runARIADNENode'
 
 /**
  * Common signature for every node runner.
@@ -57,4 +58,5 @@ export const nodeRunners: Record<string, NodeRunner> = {
   wikidataEnrich:  runWikidataEnrichNode,
   xmlSection:        runXMLSectionNode,
   europeanaSearch:   runEuropeanaNode,
+  ariadneSearch:     runARIADNENode,
 }

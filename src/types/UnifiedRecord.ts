@@ -114,5 +114,7 @@ export interface UnifiedRecord {
   mds?: Record<string, unknown>
   /** Europeana namespace (provider, dataProvider, rights, thumbnail, shownAt, completeness) */
   europeana?: Record<string, unknown>
+  /** ARIADNE portal namespace (temporal, country, allSpatial, contributor, ariadneSubject, …) */
+  ariadne?: Record<string, unknown>
   // ckan?: Record<string, unknown>
 }

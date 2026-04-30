@@ -44,6 +44,7 @@ import type { XMLSectionNodeData }       from './nodes/XMLSectionNode'
 import type { ImageViewNodeData }        from './nodes/ImageViewNode'
 import type { CitationNodeData }           from './nodes/CitationNode'
 import type { EuropeanaSearchNodeData }    from './nodes/EuropeanaSearchNode'
+import type { ARIADNESearchNodeData }      from './nodes/ARIADNESearchNode'
 import type { FieldDistributionNodeData }  from './nodes/FieldDistributionNode'
 import type { TimelineOutputNodeData }     from './nodes/TimelineOutputNode'
 
@@ -80,6 +81,7 @@ type AppNode =
   | Node<ImageViewNodeData>
   | Node<CitationNodeData>
   | Node<EuropeanaSearchNodeData>
+  | Node<ARIADNESearchNodeData>
   | Node<FieldDistributionNodeData>
   | Node<TimelineOutputNodeData>
   | Node<OutputNodeData>
@@ -124,6 +126,16 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       sort: '_score', order: 'desc',
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies ADSSearchAdvancedNodeData,
+  }),
+  ariadneSearch: pos => ({
+    id: newId('ariadne'), type: 'ariadneSearch', position: pos,
+    data: {
+      inlineQuery: '', inlineLimit: '20', fetchAll: false,
+      ariadneSubject: '', derivedSubject: '', nativeSubject: '',
+      country: '', dataType: '', temporal: '', contributor: '',
+      sort: '_score', order: 'desc',
+      status: 'idle', statusMessage: '', results: undefined, count: 0,
+    } satisfies ARIADNESearchNodeData,
   }),
   mdsSearch: pos => ({
     id: newId('mds'), type: 'mdsSearch', position: pos,
@@ -396,8 +408,9 @@ const SIDEBAR_ITEMS = [
   // ── Input ───────────────────────────────────────────────────────────────────
   { type: 'param',       label: 'ParamNode',         sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },
   // ── Search (alphabetical) ────────────────────────────────────────────────────
-  { type: 'adsLibrarySearch',  label: 'ADSLibraryNode',   sub: 'ADS Library catalogue',                   color: '#1e3a5f', group: 'Search' },
-  { type: 'adsSearchAdvanced', label: 'ADSSearchNode',    sub: 'Archaeology Data Service',                color: '#7c2d12', group: 'Search' },
+  { type: 'adsLibrarySearch',  label: 'ADSLibraryNode',   sub: 'ADS Library catalogue',                   color: '#1e3a5f', group: 'Search', deprecated: true },
+  { type: 'adsSearchAdvanced', label: 'ADSSearchNode',    sub: 'Archaeology Data Service',                color: '#7c2d12', group: 'Search', deprecated: true },
+  { type: 'ariadneSearch',    label: 'ARIADNESearch',    sub: 'ARIADNE pan-European archaeology portal',  color: '#164e63', group: 'Search' },
   { type: 'europeanaSearch',   label: 'EuropeanaSearch',  sub: 'Europeana cultural heritage aggregator',  color: '#2563eb', group: 'Search' },
   { type: 'gbifSearch',        label: 'GBIFSearchNode',   sub: 'GBIF occurrence search',                  color: '#0f4c81', group: 'Search' },
   { type: 'lldsSearch',        label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',                  color: '#92400e', group: 'Search' },
@@ -575,13 +588,17 @@ export default function App() {
                 {!isCollapsed && items.map(item => (
                   <div
                     key={item.type}
-                    style={sidebarItemStyle}
+                    style={{ ...sidebarItemStyle, opacity: item.deprecated ? 0.55 : 1 }}
                     draggable
                     onDragStart={e => e.dataTransfer.setData('application/reactflow', item.type)}
+                    title={item.deprecated ? 'Deprecated — service currently unavailable' : undefined}
                   >
                     <div style={{ ...sidebarDot, background: item.color }} />
                     <div>
-                      <div style={{ fontWeight: 600, fontSize: 12 }}>{item.label}</div>
+                      <div style={{ fontWeight: 600, fontSize: 12, textDecoration: item.deprecated ? 'line-through' : 'none', color: item.deprecated ? '#9ca3af' : undefined }}>
+                        {item.label}
+                        {item.deprecated && <span style={{ marginLeft: 5, fontSize: 9, fontWeight: 700, color: '#ef4444', textDecoration: 'none', verticalAlign: 'middle' }}>DEPRECATED</span>}
+                      </div>
                       <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 2 }}>{item.sub}</div>
                     </div>
                   </div>
@@ -638,7 +655,7 @@ function DebugPanel({ nodes }: { nodes: AppNode[] }) {
 
   const slim = nodes.map(n => {
     const d = n.data as Record<string, unknown>
-    const isSearchNode = n.type === 'gbifSearch' || n.type === 'lldsSearch' || n.type === 'adsSearchAdvanced' || n.type === 'mdsSearch' || n.type === 'adsLibrarySearch'
+    const isSearchNode = n.type === 'gbifSearch' || n.type === 'lldsSearch' || n.type === 'adsSearchAdvanced' || n.type === 'mdsSearch' || n.type === 'adsLibrarySearch' || n.type === 'ariadneSearch'
     if (isSearchNode && d.results) {
       const recs = d.results as UnifiedRecord[]
       return {

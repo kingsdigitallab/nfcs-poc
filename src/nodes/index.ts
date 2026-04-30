@@ -30,6 +30,7 @@ import { ImageViewNode }         from './ImageViewNode'
 import { CitationNode }             from './CitationNode'
 import { EuropeanaSearchNode }     from './EuropeanaSearchNode'
 import { FieldDistributionNode }   from './FieldDistributionNode'
+import { ARIADNESearchNode }       from './ARIADNESearchNode'
 
 export const nodeTypes = {
   param:             ParamNode,
@@ -64,4 +65,5 @@ export const nodeTypes = {
   citation:           CitationNode,
   europeanaSearch:    EuropeanaSearchNode,
   fieldDistribution:  FieldDistributionNode,
+  ariadneSearch:      ARIADNESearchNode,
 }
