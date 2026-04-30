@@ -7,7 +7,7 @@
  * exploration: type, country, subject, _source, language, etc.
  */
 
-import { useMemo, useEffect, useRef } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
@@ -121,6 +121,8 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
     updateNodeData(id, { filteredValues: next })
   }
 
+  const [hoveredBar, setHoveredBar] = useState<string | null>(null)
+
   const outputCount = (d.outputCount as number | undefined) ?? recs.length
   const anySelected = filteredValues.length > 0
   const maxCount    = bars[0]?.[1] ?? 1
@@ -185,51 +187,78 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
           </label>
         </div>
 
-        {/* Bar chart — click a bar to toggle filter */}
+        {/* Bar chart — click a bar to toggle filter, hover to preview action */}
         {bars.length > 0 && (
-          <div className="nodrag nowheel" style={styles.chartWrap}>
-            <svg width={SVG_W} height={svgH} style={{ display: 'block', overflow: 'visible' }}>
-              {bars.map(([label, count], i) => {
-                const y         = i * (BAR_H + BAR_GAP) + 3
-                const barW      = Math.max(2, (count / maxCount) * BAR_AREA)
-                const pct       = totalValues > 0 ? Math.round((count / totalValues) * 100) : 0
-                const isSelected = filteredValues.includes(label)
-                const fillColor  = anySelected
-                  ? (isSelected ? BAR_ACTIVE : BAR_DIM)
-                  : BAR_COLOR
-                const textColor  = isSelected ? '#047857' : '#374151'
-                return (
-                  <g
-                    key={label}
-                    onClick={() => toggleValue(label)}
-                    style={{ cursor: 'pointer' }}
-                  >
-                    {/* Wide transparent hit area */}
-                    <rect x={0} y={y - 1} width={SVG_W} height={BAR_H + 2} fill="transparent" />
-                    <text
-                      x={LABEL_W - 5}
-                      y={y + BAR_H * 0.72}
-                      textAnchor="end"
-                      fontSize={9}
-                      fill={textColor}
-                      fontWeight={isSelected ? 700 : 400}
-                      style={{ fontFamily: 'monospace' }}
+          <>
+            <div className="nodrag nowheel" style={styles.chartWrap}>
+              <svg width={SVG_W} height={svgH} style={{ display: 'block', overflow: 'visible' }}>
+                {bars.map(([label, count], i) => {
+                  const y          = i * (BAR_H + BAR_GAP) + 3
+                  const barW       = Math.max(2, (count / maxCount) * BAR_AREA)
+                  const pct        = totalValues > 0 ? Math.round((count / totalValues) * 100) : 0
+                  const isSelected = filteredValues.includes(label)
+                  const isHovered  = hoveredBar === label
+                  // Hovered bar always shows at full brightness regardless of dim state
+                  const fillColor  = isHovered
+                    ? (isSelected ? BAR_ACTIVE : BAR_COLOR)
+                    : anySelected
+                      ? (isSelected ? BAR_ACTIVE : BAR_DIM)
+                      : BAR_COLOR
+                  const textColor  = (isSelected || isHovered) ? '#047857' : '#374151'
+                  return (
+                    <g
+                      key={label}
+                      onClick={() => toggleValue(label)}
+                      onMouseEnter={() => setHoveredBar(label)}
+                      onMouseLeave={() => setHoveredBar(null)}
+                      style={{ cursor: 'pointer' }}
                     >
-                      {label.length > 16 ? label.slice(0, 15) + '…' : label}
-                    </text>
-                    <rect x={LABEL_W} y={y} width={barW} height={BAR_H} fill={fillColor} rx={2} />
-                    {isSelected && (
-                      <rect x={LABEL_W} y={y} width={barW} height={BAR_H} fill="none"
-                        stroke="#047857" strokeWidth={1} rx={2} />
-                    )}
-                    <text x={LABEL_W + barW + 4} y={y + BAR_H * 0.72} fontSize={9} fill="#6b7280">
-                      {count} <tspan fill="#9ca3af">({pct}%)</tspan>
-                    </text>
-                  </g>
-                )
-              })}
-            </svg>
-          </div>
+                      {/* Row background on hover — rendered first so it sits behind everything */}
+                      {isHovered && (
+                        <rect x={1} y={y - 2} width={SVG_W - 2} height={BAR_H + 4}
+                          fill="#ecfdf5" rx={3} />
+                      )}
+                      {/* Wide transparent hit area */}
+                      <rect x={0} y={y - 1} width={SVG_W} height={BAR_H + 2} fill="transparent" />
+                      <text
+                        x={LABEL_W - 5}
+                        y={y + BAR_H * 0.72}
+                        textAnchor="end"
+                        fontSize={9}
+                        fill={textColor}
+                        fontWeight={(isSelected || isHovered) ? 700 : 400}
+                        style={{ fontFamily: 'monospace' }}
+                      >
+                        {label.length > 16 ? label.slice(0, 15) + '…' : label}
+                      </text>
+                      <rect x={LABEL_W} y={y} width={barW} height={BAR_H} fill={fillColor} rx={2} />
+                      {(isSelected || isHovered) && (
+                        <rect x={LABEL_W} y={y} width={barW} height={BAR_H} fill="none"
+                          stroke={isSelected ? '#047857' : '#6ee7b7'}
+                          strokeWidth={isHovered ? 1.5 : 1} rx={2} />
+                      )}
+                      <text x={LABEL_W + barW + 4} y={y + BAR_H * 0.72} fontSize={9} fill="#6b7280">
+                        {count} <tspan fill="#9ca3af">({pct}%)</tspan>
+                      </text>
+                    </g>
+                  )
+                })}
+              </svg>
+            </div>
+
+            {/* Hover hint — space always reserved to prevent layout jitter */}
+            <div style={{
+              ...styles.hintLine,
+              visibility: hoveredBar ? 'visible' : 'hidden',
+            }}>
+              {hoveredBar
+                ? filteredValues.includes(hoveredBar)
+                  ? `↩ click to deselect "${hoveredBar.length > 22 ? hoveredBar.slice(0, 21) + '…' : hoveredBar}"`
+                  : `↓ click to filter by "${hoveredBar.length > 20 ? hoveredBar.slice(0, 19) + '…' : hoveredBar}"`
+                : ''
+              }
+            </div>
+          </>
         )}
 
         {/* Filter status bar */}
@@ -398,5 +427,15 @@ const styles = {
     fontSize:     10,
     cursor:       'pointer',
     padding:      '0 2px',
+  },
+  hintLine: {
+    fontSize:    9,
+    color:       '#059669',
+    fontStyle:   'italic',
+    height:      13,
+    lineHeight:  '13px',
+    overflow:    'hidden',
+    whiteSpace:  'nowrap' as const,
+    marginTop:   -2,
   },
 }

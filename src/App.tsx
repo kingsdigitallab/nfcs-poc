@@ -403,6 +403,7 @@ const SIDEBAR_ITEMS = [
   { type: 'localFolderSource', label: 'LocalFolderSource',sub: 'Read files from local folder',            color: '#14532d', group: 'Search' },
   { type: 'mdsSearch',         label: 'MDSSearchNode',    sub: 'Museum Data Service',                     color: '#1e3a8a', group: 'Search' },
   // ── Process (alphabetical) ───────────────────────────────────────────────────
+  { type: 'fieldDistribution', label: 'FieldDistribution',   sub: 'Faceted bar chart — click bars to filter',      color: '#047857', group: 'Process' },
   { type: 'filterTransform',   label: 'FilterTransformNode', sub: 'Filter + transform records',                    color: '#4f46e5', group: 'Process' },
   { type: 'htmlSection',       label: 'HTMLSectionNode',     sub: 'Extract page section by CSS selector',          color: '#065f46', group: 'Process' },
   { type: 'mergeByQID',        label: 'MergeByQIDNode',      sub: 'Join records from multiple sources by QID',     color: '#6b21a8', group: 'Process' },
@@ -416,7 +417,6 @@ const SIDEBAR_ITEMS = [
   // ── Output (alphabetical) ────────────────────────────────────────────────────
   { type: 'citation',          label: 'CitationNode',        sub: 'Data source citations for this workflow stage', color: '#78350f', group: 'Output' },
   { type: 'export',            label: 'ExportNode',          sub: 'CSV / JSON / GeoJSON',                          color: '#b45309', group: 'Output' },
-  { type: 'fieldDistribution', label: 'FieldDistribution',   sub: 'Bar chart + filter — click bars to select',     color: '#047857', group: 'Output' },
   { type: 'imageView',         label: 'ImageViewNode',       sub: 'Image + IIIF manifest viewer',                  color: '#1c3144', group: 'Output' },
   { type: 'jsonOutput',        label: 'JSONOutputNode',      sub: 'Formatted JSON viewer',                         color: '#6d28d9', group: 'Output' },
   { type: 'mapOutput',         label: 'MapOutputNode',       sub: 'Geo map (lat/lon records)',                      color: '#14532d', group: 'Output' },
