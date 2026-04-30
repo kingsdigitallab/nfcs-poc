@@ -1,11 +1,16 @@
 import type { Node, Edge } from '@xyflow/react'
-import { adaptEuropeanaResponse, type EuropeanaSearchResponse } from './europeanaAdapter'
+import {
+  adaptEuropeanaResponse,
+  type EuropeanaSearchResponse,
+  type EuropeanaItem,
+} from './europeanaAdapter'
 import type { EuropeanaSearchNodeData } from '../nodes/EuropeanaSearchNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { addCitation } from './citationUtils'
 
 const EUROPEANA_API = 'https://api.europeana.eu/record/v2/search.json'
-const MAX_ROWS      = 100
+const PAGE_SIZE     = 100   // Europeana hard cap per request
+const MAX_TOTAL     = 1000  // Practical ceiling — avoids runaway requests
 
 export async function runEuropeanaNode(
   nodeId: string,
@@ -29,8 +34,8 @@ export async function runEuropeanaNode(
 
   const apiKey = (d.apiKey as string | undefined)?.trim() ?? ''
   const query  = resolve('query', 'inlineQuery').trim()
-  const rows   = Math.min(
-    MAX_ROWS,
+  const limit  = Math.min(
+    MAX_TOTAL,
     Math.max(1, parseInt(resolve('limit', 'inlineLimit') || '20', 10) || 20),
   )
 
@@ -47,35 +52,56 @@ export async function runEuropeanaNode(
   updateNodeData(nodeId, { status: 'loading', statusMessage: 'Searching Europeana…', count: 0 })
 
   try {
-    const params = new URLSearchParams({
-      wskey:   apiKey,
-      query,
-      rows:    String(rows),
-      profile: 'rich',
-    })
+    const allItems: EuropeanaItem[] = []
+    let cursor       = '*'
+    let totalResults = 0
 
-    if (d.typeFilter && d.typeFilter !== 'any') params.set('qf', `TYPE:${d.typeFilter}`)
-    if (d.reusability && d.reusability !== 'any') params.set('reusability', d.reusability)
-    if (d.mediaOnly) params.set('media', 'true')
+    while (allItems.length < limit) {
+      const pageRows = Math.min(PAGE_SIZE, limit - allItems.length)
 
-    const res = await fetch(`${EUROPEANA_API}?${params}`, {
-      signal: AbortSignal.timeout(30_000),
-    })
+      const params = new URLSearchParams({
+        wskey:   apiKey,
+        query,
+        rows:    String(pageRows),
+        profile: 'rich',
+        cursor,
+      })
 
-    if (!res.ok) {
-      const body = await res.text().catch(() => '')
-      throw new Error(`HTTP ${res.status}${body ? ': ' + body.slice(0, 120) : ''}`)
+      if (d.typeFilter && d.typeFilter !== 'any') params.set('qf', `TYPE:${d.typeFilter}`)
+      if (d.reusability && d.reusability !== 'any') params.set('reusability', d.reusability)
+      if (d.mediaOnly) params.set('media', 'true')
+
+      const res = await fetch(`${EUROPEANA_API}?${params}`, {
+        signal: AbortSignal.timeout(30_000),
+      })
+
+      if (!res.ok) {
+        const body = await res.text().catch(() => '')
+        throw new Error(`HTTP ${res.status}${body ? ': ' + body.slice(0, 120) : ''}`)
+      }
+
+      const json = await res.json() as EuropeanaSearchResponse
+
+      if (!json.success) {
+        throw new Error(json.error ?? 'Europeana returned success:false')
+      }
+
+      totalResults = json.totalResults ?? totalResults
+      const items  = json.items ?? []
+      allItems.push(...items)
+
+      // Break conditions: no more pages, or result set exhausted, or no cursor
+      if (items.length < pageRows || !json.nextCursor || allItems.length >= limit) break
+
+      cursor = json.nextCursor
+
+      // Show progress while fetching subsequent pages
+      updateNodeData(nodeId, {
+        statusMessage: `Fetching… ${allItems.length} / ${Math.min(limit, totalResults).toLocaleString()}`,
+      })
     }
 
-    const json = await res.json() as EuropeanaSearchResponse
-
-    if (!json.success) {
-      throw new Error(json.error ?? 'Europeana returned success:false')
-    }
-
-    const items   = json.items ?? []
-    const total   = json.totalResults ?? items.length
-    const records = addCitation(adaptEuropeanaResponse(items) as Record<string, unknown>[], {
+    const records = addCitation(adaptEuropeanaResponse(allItems) as Record<string, unknown>[], {
       service:    'Europeana',
       serviceUrl: 'https://www.europeana.eu',
       publisher:  'Europeana Foundation',
@@ -83,18 +109,18 @@ export async function runEuropeanaNode(
       accessDate: new Date().toISOString(),
     })
 
-    const capped = items.length < total
-    const msg = capped
-      ? `⚠ ${items.length} of ${total.toLocaleString()} (capped at ${rows})`
-      : `✓ ${items.length} of ${total.toLocaleString()}`
+    const capped = allItems.length < totalResults
+    const msg    = capped
+      ? `⚠ ${allItems.length.toLocaleString()} of ${totalResults.toLocaleString()} (capped at ${limit})`
+      : `✓ ${allItems.length.toLocaleString()} of ${totalResults.toLocaleString()}`
 
     const version = setNodeResults(nodeId, records)
     updateNodeData(nodeId, {
       status:         'success',
       statusMessage:  msg,
-      count:          total,
+      count:          totalResults,
       _capped:        capped,
-      _total:         total,
+      _total:         totalResults,
       resultsVersion: version,
     })
   } catch (err) {

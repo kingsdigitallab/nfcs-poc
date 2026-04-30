@@ -21,7 +21,7 @@ const HEADER_COLOR = '#2563eb'
 
 const WIRABLE_ROWS = [
   { handleId: 'query', dataKey: 'inlineQuery', label: 'query', placeholder: 'search terms…' },
-  { handleId: 'limit', dataKey: 'inlineLimit', label: 'limit', placeholder: '20' },
+  { handleId: 'limit', dataKey: 'inlineLimit', label: 'limit', placeholder: '20  (max 1000)' },
 ] as const
 
 const HEADER_H    = 32

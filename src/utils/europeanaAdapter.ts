@@ -24,6 +24,7 @@ export interface EuropeanaSearchResponse {
   totalResults:   number
   itemsCount:     number
   items?:         EuropeanaItem[]
+  nextCursor?:    string   // cursor-based pagination token; absent on last page
   error?:         string
 }
 
