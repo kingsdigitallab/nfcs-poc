@@ -24,12 +24,15 @@ const WIRABLE_ROWS = [
   { handleId: 'limit', dataKey: 'inlineLimit', label: 'limit', placeholder: '20' },
 ] as const
 
-const HEADER_H = 32
-const BODY_PAD = 8
-const ROW_H    = 27
+const HEADER_H    = 32
+const BODY_PAD    = 8
+const ROW_H       = 27
+// Pixel height consumed by the non-wirable API key row + hint before the first
+// wirable row: apiKey row (22) + adjusted gap (3) + keyHint text (12) + gap (5)
+const PRE_WIRABLE = 42
 
 function handleTop(rowIndex: number) {
-  return HEADER_H + BODY_PAD + rowIndex * ROW_H + 11
+  return HEADER_H + BODY_PAD + PRE_WIRABLE + rowIndex * ROW_H + 11
 }
 
 const BORDER: Record<EuropeanaStatus, string> = {

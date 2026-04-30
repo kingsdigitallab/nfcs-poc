@@ -1,36 +1,37 @@
 /**
- * FieldDistributionNode — display-only bar chart of value frequencies for any
- * field in upstream records.
+ * FieldDistributionNode — bar chart of value frequencies for any upstream field.
  *
- * Array-valued fields (subject, country, creator, …) are expanded so each
- * element is counted individually. Bars are sorted by count descending and
- * capped at maxBars (default 20). Useful for categorical fields: type,
- * country, subject, _source, language, etc.
- *
- * No runner, no output handle.
+ * Click a bar to select that value as a filter. Selected values are passed to
+ * the results output handle so downstream nodes receive only matching records.
+ * When nothing is selected all records pass through. Useful for faceted
+ * exploration: type, country, subject, _source, language, etc.
  */
 
-import { useState, useMemo, useEffect } from 'react'
+import { useMemo, useEffect, useRef } from 'react'
 import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
-const HEADER_COLOR = '#047857'   // emerald-700
-const BAR_COLOR    = '#34d399'   // emerald-400
-const LABEL_W      = 108
-const BAR_AREA     = 130
-const COUNT_W      = 34
-const SVG_W        = LABEL_W + BAR_AREA + COUNT_W
-const BAR_H        = 14
-const BAR_GAP      = 4
+const HEADER_COLOR   = '#047857'   // emerald-700
+const BAR_COLOR      = '#34d399'   // emerald-400
+const BAR_ACTIVE     = '#059669'   // emerald-600 — selected
+const BAR_DIM        = '#a7f3d0'   // emerald-200 — non-selected when some selected
+const LABEL_W        = 108
+const BAR_AREA       = 130
+const COUNT_W        = 34
+const SVG_W          = LABEL_W + BAR_AREA + COUNT_W
+const BAR_H          = 14
+const BAR_GAP        = 4
 
 export interface FieldDistributionNodeData {
-  selectedField: string
-  maxBars:       number
-  expandArrays:  boolean
+  selectedField:  string
+  maxBars:        number
+  expandArrays:   boolean
+  filteredValues: string[]
   [key: string]: unknown
 }
 
-// Fields that are internal/structural and should not appear in picker by default
+// Fields that are internal/structural and should not appear in picker
 const HIDDEN_FIELDS = new Set([
   'resultsVersion', 'status', 'statusMessage', 'count', 'inputCount',
   'outputCount', '_capped', '_total',
@@ -43,13 +44,11 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
 
   const recs = (records ?? []) as Record<string, unknown>[]
 
-  // Derive available fields from the first record
   const availableFields = useMemo(() => {
     if (recs.length === 0) return []
     return Object.keys(recs[0]).filter(k => {
       if (HIDDEN_FIELDS.has(k)) return false
       const v = recs[0][k]
-      // Skip deeply-nested namespace objects (gbif, ads, llds…) but keep arrays + primitives
       if (v !== null && typeof v === 'object' && !Array.isArray(v)) return false
       return true
     })
@@ -58,6 +57,7 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
   const selectedField  = (d.selectedField as string) || availableFields[0] || ''
   const maxBars        = (d.maxBars as number)       || 20
   const expandArrays   = (d.expandArrays as boolean) ?? true
+  const filteredValues = (d.filteredValues as string[] | undefined) ?? []
 
   // Auto-select first field when records arrive
   useEffect(() => {
@@ -70,11 +70,9 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
   const { bars, totalValues, distinctValues } = useMemo(() => {
     const counts = new Map<string, number>()
     let totalValues = 0
-
     for (const r of recs) {
       const v = r[selectedField]
       if (v === null || v === undefined) continue
-
       const vals = (expandArrays && Array.isArray(v)) ? v : [v]
       for (const val of vals) {
         if (val === null || val === undefined || val === '') continue
@@ -83,21 +81,55 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
         totalValues++
       }
     }
-
     const sorted = Array.from(counts.entries()).sort((a, b) => b[1] - a[1])
-    return {
-      bars:           sorted.slice(0, maxBars),
-      totalValues,
-      distinctValues: counts.size,
-    }
+    return { bars: sorted.slice(0, maxBars), totalValues, distinctValues: counts.size }
   }, [recs, selectedField, maxBars, expandArrays])
 
-  const maxCount = bars[0]?.[1] ?? 1
-  const svgH     = bars.length > 0 ? bars.length * (BAR_H + BAR_GAP) + 6 : 0
+  // Reactively store filtered output so downstream nodes can read it
+  const prevFp = useRef('')
+  useEffect(() => {
+    const fp = `${recs.length}|${selectedField}|${expandArrays}|${JSON.stringify(filteredValues)}`
+    if (prevFp.current === fp) return
+    prevFp.current = fp
+
+    if (recs.length === 0) {
+      clearNodeResults(id)
+      updateNodeData(id, { resultsVersion: 0, outputCount: 0 })
+      return
+    }
+
+    const output: Record<string, unknown>[] = filteredValues.length === 0
+      ? recs
+      : recs.filter(r => {
+          const v = r[selectedField]
+          if (v === null || v === undefined) return false
+          const vals = (expandArrays && Array.isArray(v))
+            ? (v as unknown[]).map(String)
+            : [String(v)]
+          return vals.some(val => filteredValues.includes(val))
+        })
+
+    clearNodeResults(id)
+    const version = setNodeResults(id, output)
+    updateNodeData(id, { resultsVersion: version, outputCount: output.length })
+  }, [recs, selectedField, expandArrays, d.filteredValues, id, updateNodeData])  // eslint-disable-line react-hooks/exhaustive-deps
+
+  const toggleValue = (value: string) => {
+    const next = filteredValues.includes(value)
+      ? filteredValues.filter(v => v !== value)
+      : [...filteredValues, value]
+    updateNodeData(id, { filteredValues: next })
+  }
+
+  const outputCount = (d.outputCount as number | undefined) ?? recs.length
+  const anySelected = filteredValues.length > 0
+  const maxCount    = bars[0]?.[1] ?? 1
+  const svgH        = bars.length > 0 ? bars.length * (BAR_H + BAR_GAP) + 6 : 0
 
   return (
     <div style={styles.card}>
-      <Handle type="target" position={Position.Left} id="data" style={styles.inputHandle} />
+      <Handle type="target" position={Position.Left}  id="data"    style={styles.inputHandle} />
+      <Handle type="source" position={Position.Right} id="results" style={styles.outputHandle} />
 
       <div style={styles.header}>
         <span style={styles.headerTitle}>Field Distribution</span>
@@ -114,7 +146,7 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
             <select
               style={styles.select}
               value={selectedField}
-              onChange={e => updateNodeData(id, { selectedField: e.target.value })}
+              onChange={e => updateNodeData(id, { selectedField: e.target.value, filteredValues: [] })}
               className="nodrag"
             >
               {availableFields.map(f => (
@@ -153,45 +185,44 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
           </label>
         </div>
 
-        {/* Bar chart */}
+        {/* Bar chart — click a bar to toggle filter */}
         {bars.length > 0 && (
           <div className="nodrag nowheel" style={styles.chartWrap}>
             <svg width={SVG_W} height={svgH} style={{ display: 'block', overflow: 'visible' }}>
               {bars.map(([label, count], i) => {
-                const y    = i * (BAR_H + BAR_GAP) + 3
-                const barW = Math.max(2, (count / maxCount) * BAR_AREA)
-                const pct  = totalValues > 0 ? Math.round((count / totalValues) * 100) : 0
+                const y         = i * (BAR_H + BAR_GAP) + 3
+                const barW      = Math.max(2, (count / maxCount) * BAR_AREA)
+                const pct       = totalValues > 0 ? Math.round((count / totalValues) * 100) : 0
+                const isSelected = filteredValues.includes(label)
+                const fillColor  = anySelected
+                  ? (isSelected ? BAR_ACTIVE : BAR_DIM)
+                  : BAR_COLOR
+                const textColor  = isSelected ? '#047857' : '#374151'
                 return (
-                  <g key={label}>
-                    {/* Value label */}
+                  <g
+                    key={label}
+                    onClick={() => toggleValue(label)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    {/* Wide transparent hit area */}
+                    <rect x={0} y={y - 1} width={SVG_W} height={BAR_H + 2} fill="transparent" />
                     <text
                       x={LABEL_W - 5}
                       y={y + BAR_H * 0.72}
                       textAnchor="end"
                       fontSize={9}
-                      fill="#374151"
+                      fill={textColor}
+                      fontWeight={isSelected ? 700 : 400}
                       style={{ fontFamily: 'monospace' }}
                     >
                       {label.length > 16 ? label.slice(0, 15) + '…' : label}
                     </text>
-
-                    {/* Bar */}
-                    <rect
-                      x={LABEL_W}
-                      y={y}
-                      width={barW}
-                      height={BAR_H}
-                      fill={BAR_COLOR}
-                      rx={2}
-                    />
-
-                    {/* Count + % */}
-                    <text
-                      x={LABEL_W + barW + 4}
-                      y={y + BAR_H * 0.72}
-                      fontSize={9}
-                      fill="#6b7280"
-                    >
+                    <rect x={LABEL_W} y={y} width={barW} height={BAR_H} fill={fillColor} rx={2} />
+                    {isSelected && (
+                      <rect x={LABEL_W} y={y} width={barW} height={BAR_H} fill="none"
+                        stroke="#047857" strokeWidth={1} rx={2} />
+                    )}
+                    <text x={LABEL_W + barW + 4} y={y + BAR_H * 0.72} fontSize={9} fill="#6b7280">
                       {count} <tspan fill="#9ca3af">({pct}%)</tspan>
                     </text>
                   </g>
@@ -201,12 +232,31 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
           </div>
         )}
 
+        {/* Filter status bar */}
+        {anySelected && (
+          <div style={styles.filterBar}>
+            <span style={styles.filterLabel}>
+              ↓ {outputCount} record{outputCount !== 1 ? 's' : ''} match
+            </span>
+            <button
+              style={styles.clearBtn}
+              onClick={() => updateNodeData(id, { filteredValues: [] })}
+              className="nodrag"
+            >
+              ✕ clear
+            </button>
+          </div>
+        )}
+
         {/* Summary footer */}
         {recs.length > 0 && selectedField && (
           <div style={styles.summary}>
             {distinctValues} unique value{distinctValues !== 1 ? 's' : ''}
             {distinctValues > maxBars && ` — showing top ${maxBars}`}
-            {' · '}{totalValues} total occurrences
+            {' · '}{totalValues} total
+            {!anySelected && (
+              <span style={{ color: '#a7f3d0', marginLeft: 4 }}>· click a bar to filter</span>
+            )}
           </div>
         )}
 
@@ -318,5 +368,35 @@ const styles = {
     position:     'absolute' as const,
     left:         -5,
     borderRadius: '50%',
+  },
+  outputHandle: {
+    width:      10,
+    height:     10,
+    background: '#22c55e',
+    border:     '2px solid #fff',
+    boxShadow:  '0 0 0 1px #22c55e',
+  },
+  filterBar: {
+    display:        'flex',
+    alignItems:     'center',
+    justifyContent: 'space-between',
+    background:     '#ecfdf5',
+    border:         '1px solid #6ee7b7',
+    borderRadius:   4,
+    padding:        '3px 6px',
+    marginTop:      2,
+  },
+  filterLabel: {
+    fontSize:   10,
+    color:      '#047857',
+    fontWeight: 600,
+  },
+  clearBtn: {
+    background:   'none',
+    border:       'none',
+    color:        '#6b7280',
+    fontSize:     10,
+    cursor:       'pointer',
+    padding:      '0 2px',
   },
 }
