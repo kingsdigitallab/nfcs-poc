@@ -43,8 +43,9 @@ import type { LoadSavedSearchNodeData }  from './nodes/LoadSavedSearchNode'
 import type { XMLSectionNodeData }       from './nodes/XMLSectionNode'
 import type { ImageViewNodeData }        from './nodes/ImageViewNode'
 import type { CitationNodeData }           from './nodes/CitationNode'
-import type { EuropeanaSearchNodeData }   from './nodes/EuropeanaSearchNode'
-import type { FieldDistributionNodeData } from './nodes/FieldDistributionNode'
+import type { EuropeanaSearchNodeData }    from './nodes/EuropeanaSearchNode'
+import type { FieldDistributionNodeData }  from './nodes/FieldDistributionNode'
+import type { TimelineOutputNodeData }     from './nodes/TimelineOutputNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -80,6 +81,7 @@ type AppNode =
   | Node<CitationNodeData>
   | Node<EuropeanaSearchNodeData>
   | Node<FieldDistributionNodeData>
+  | Node<TimelineOutputNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -361,7 +363,8 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   timelineOutput: pos => ({
     id: newId('timeline'), type: 'timelineOutput', position: pos,
-    data: {},
+    data: { fitToRange: false } satisfies TimelineOutputNodeData,
+    style: { width: 520 },
   }),
   ollamaOutput: pos => ({
     id: newId('ollamaOut'), type: 'ollamaOutput', position: pos,

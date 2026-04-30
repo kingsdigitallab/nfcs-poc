@@ -1,42 +1,33 @@
 /**
  * TimelineOutputNode — SVG timeline visualising records at year resolution.
  *
- * Accepts connections from SearchNodes or TableOutputNode (same `data` handle
- * as Map, Table and JSON output nodes).
- *
- * Each record with a parseable date becomes a coloured, shaped marker:
- *   gbif  → green  circle   ●
- *   ads   → red    square   ■
- *   llds  → amber  triangle ▲
- *   mds   → blue   diamond  ◆
- *   other → indigo circle   ●
- *
- * Markers in the same year are stacked vertically (capped at MAX_STACK with
- * a "+N more" overflow label). The X-axis auto-scales to the data range with
- * smart tick spacing. The chart area scrolls horizontally for wide ranges.
- * Hovering a marker shows a popup with title, source, date and a record link.
+ * Drag the node edges to resize. Toggle "fit" in the header to compress the
+ * full date range into the visible width (no scroll) or restore auto-scale
+ * with horizontal scroll for large ranges.
  */
 
 import { useState, useMemo, useRef, useCallback } from 'react'
-import { Handle, Position, NodeProps } from '@xyflow/react'
+import { Handle, Position, NodeProps, NodeResizer, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 // ─── source appearance ────────────────────────────────────────────────────────
 
 const SOURCE_COLORS: Record<string, string> = {
-  gbif: '#16a34a',
-  ads:  '#c2410c',
-  llds: '#b45309',
-  mds:  '#1d4ed8',
+  gbif:      '#16a34a',
+  ads:       '#c2410c',
+  llds:      '#b45309',
+  mds:       '#1d4ed8',
+  europeana: '#2563eb',
 }
 const FALLBACK_COLOR = '#6366f1'
 
 const SOURCE_SHAPES: Record<string, string> = {
-  gbif: 'circle',
-  ads:  'square',
-  llds: 'triangle',
-  mds:  'diamond',
+  gbif:      'circle',
+  ads:       'square',
+  llds:      'triangle',
+  mds:       'diamond',
+  europeana: 'circle',
 }
 
 const SHAPE_GLYPHS: Record<string, string> = {
@@ -78,7 +69,6 @@ function Marker({ shape, cx, cy, r, color, onMouseEnter, onMouseLeave }: ShapePr
     return <rect {...common} x={cx - r} y={cy - r} width={r * 2} height={r * 2} />
   }
   if (shape === 'triangle') {
-    // Points up
     const pts = `${cx},${cy - r}  ${cx + r * 1.1},${cy + r}  ${cx - r * 1.1},${cy + r}`
     return <polygon {...common} points={pts} />
   }
@@ -86,50 +76,35 @@ function Marker({ shape, cx, cy, r, color, onMouseEnter, onMouseLeave }: ShapePr
     const pts = `${cx},${cy - r * 1.2}  ${cx + r},${cy}  ${cx},${cy + r * 1.2}  ${cx - r},${cy}`
     return <polygon {...common} points={pts} />
   }
-  // default: circle (gbif + unknown)
   return <circle {...common} cx={cx} cy={cy} r={r} />
 }
 
 // ─── date → year ──────────────────────────────────────────────────────────────
 
-/**
- * Extract a 4-digit (or more) year from a date string.
- * Handles: "2019-06-15", "1655", "50 BCE", "-1199" (ADS format), "1600-1699"
- */
 function toYear(dateStr: string | undefined | null): number | null {
   if (!dateStr) return null
   const s = String(dateStr).trim()
-
-  // Bare negative number — ADS uses "-1199" for 1199 BCE
   if (/^-\d+$/.test(s)) return parseInt(s, 10)
-
-  // BCE / BC keyword
   const bce = /(\d+)\s*(?:BCE|B\.C\.E\.?|BC|B\.C\.)/i.exec(s)
   if (bce) return -parseInt(bce[1], 10)
-
-  // 4-digit year (anywhere in the string, e.g. "2019-06-15" or "ca. 1850")
   const m = /\b(\d{4})\b/.exec(s)
   if (m) {
     const n = parseInt(m[1], 10)
-    // Sanity-check: 0–2200 CE only (avoids matching milliseconds etc.)
     if (n >= 0 && n <= 2200) return n
   }
-
-  // 3-digit years (edge case: 800, 950 …)
   const m3 = /\b(\d{3})\b/.exec(s)
   if (m3) return parseInt(m3[1], 10)
-
   return null
 }
 
 // ─── tick helper ─────────────────────────────────────────────────────────────
 
 function smartTicks(min: number, max: number, targetCount: number): number[] {
-  const range = Math.max(max - min, 1)
-  const raw   = range / targetCount
-  const nice  = [1, 2, 5, 10, 25, 50, 100, 200, 500, 1000, 2000, 5000]
+  const range    = Math.max(max - min, 1)
+  const raw      = range / targetCount
+  const nice     = [1, 2, 5, 10, 25, 50, 100, 200, 500, 1000, 2000, 5000]
   const interval = nice.find(i => i >= raw) ?? 5000
-  const start = Math.ceil(min / interval) * interval
+  const start    = Math.ceil(min / interval) * interval
   const ticks: number[] = []
   for (let t = start; t <= max + 1; t += interval) ticks.push(t)
   return ticks
@@ -137,30 +112,40 @@ function smartTicks(min: number, max: number, targetCount: number): number[] {
 
 // ─── layout constants ─────────────────────────────────────────────────────────
 
-const NODE_W     = 520
+const DEFAULT_W  = 520
 const PAD_L      = 14
 const PAD_R      = 20
 const PAD_TOP    = 10
-const PAD_BOT    = 26    // room for year labels
+const PAD_BOT    = 26
 const DOT_R      = 5
-const DOT_GAP    = 13    // centre-to-centre spacing when stacked
-const MAX_STACK  = 10    // dots shown before "+N more"
+const DOT_GAP    = 13
+const MAX_STACK  = 10
+
+// ─── data type ────────────────────────────────────────────────────────────────
+
+export interface TimelineOutputNodeData {
+  fitToRange: boolean
+  [key: string]: unknown
+}
 
 // ─── component ────────────────────────────────────────────────────────────────
 
 interface HoverState {
   record: UnifiedRecord
-  /** x position within the SVG (unscrolled) */
   svgX:   number
-  /** y position within the SVG */
   svgY:   number
 }
 
-export function TimelineOutputNode({ id }: NodeProps) {
+export function TimelineOutputNode({ id, data, width: measuredWidth }: NodeProps) {
+  const { updateNodeData }                       = useReactFlow()
   const { records, connected, status, sourceCount } = useUpstreamRecords(id)
-  const [hovered, setHovered]    = useState<HoverState | null>(null)
-  const scrollRef                = useRef<HTMLDivElement>(null)
-  const dismissTimer             = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const [hovered, setHovered]                    = useState<HoverState | null>(null)
+  const scrollRef                                = useRef<HTMLDivElement>(null)
+  const dismissTimer                             = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const fitToRange = (data.fitToRange as boolean | undefined) ?? false
+  // measuredWidth is set by xyflow once the node DOM is measured; fall back to default
+  const nodeWidth  = measuredWidth ?? DEFAULT_W
 
   const scheduleHide = useCallback(() => {
     dismissTimer.current = setTimeout(() => setHovered(null), 180)
@@ -177,7 +162,7 @@ export function TimelineOutputNode({ id }: NodeProps) {
   const { items, minYear, maxYear, yearMap, bySource, noDateCount } = useMemo(() => {
     const items:    { record: UnifiedRecord; year: number }[] = []
     const bySource: Record<string, number>                   = {}
-    let   noDateCount = 0
+    let noDateCount = 0
 
     for (const r of records ?? []) {
       const year = toYear(r.date) ?? toYear(r.eventDate)
@@ -189,11 +174,10 @@ export function TimelineOutputNode({ id }: NodeProps) {
 
     items.sort((a, b) => a.year - b.year)
 
-    const years    = items.map(i => i.year)
-    const minYear  = years.length ? Math.min(...years) : new Date().getFullYear() - 10
-    const maxYear  = years.length ? Math.max(...years) : new Date().getFullYear()
+    const years   = items.map(i => i.year)
+    const minYear = years.length ? Math.min(...years) : new Date().getFullYear() - 10
+    const maxYear = years.length ? Math.max(...years) : new Date().getFullYear()
 
-    // Group by year for stacking
     const yearMap = new Map<number, typeof items>()
     for (const item of items) {
       if (!yearMap.has(item.year)) yearMap.set(item.year, [])
@@ -204,59 +188,94 @@ export function TimelineOutputNode({ id }: NodeProps) {
   }, [records])
 
   // ── SVG geometry ──────────────────────────────────────────────────────────
-  const yearRange  = Math.max(maxYear - minYear, 1)
+  const yearRange = Math.max(maxYear - minYear, 1)
 
-  // Scale: wider when range is small, narrower when huge
-  const pxPerYear  = yearRange <= 30  ? 14
-                   : yearRange <= 100 ? 6
-                   : yearRange <= 300 ? 3
-                   : yearRange <= 800 ? 2
-                   : 1
+  // Auto-scale: px per year chosen so the timeline is legible without scrolling
+  // for small ranges, and compressed for large ones.
+  const autoPxPerYear = yearRange <= 30  ? 14
+                      : yearRange <= 100 ? 6
+                      : yearRange <= 300 ? 3
+                      : yearRange <= 800 ? 2
+                      : 1
 
-  const svgW       = Math.max(NODE_W - 20, yearRange * pxPerYear + PAD_L + PAD_R)
+  const plotW = nodeWidth - 20   // subtract card left+right padding equivalent
 
-  const maxStack   = Math.max(0, ...Array.from(yearMap.values()).map(v => v.length))
-  const stackRows  = Math.min(maxStack, MAX_STACK)
-  const svgH       = PAD_TOP + stackRows * DOT_GAP + DOT_R * 2 + PAD_BOT
+  const svgW = fitToRange
+    // Fit mode: compress the whole range into the visible plot area (no scroll)
+    ? Math.max(plotW, PAD_L + PAD_R + 20)
+    // Auto mode: use pxPerYear; scroll if wider than the node
+    : Math.max(plotW, yearRange * autoPxPerYear + PAD_L + PAD_R)
 
-  const axisY      = svgH - PAD_BOT
+  // In fit mode derive pxPerYear from the available width
+  const pxPerYear = fitToRange
+    ? (svgW - PAD_L - PAD_R) / yearRange
+    : autoPxPerYear
+
+  const maxStack  = Math.max(0, ...Array.from(yearMap.values()).map(v => v.length))
+  const stackRows = Math.min(maxStack, MAX_STACK)
+  const svgH      = PAD_TOP + stackRows * DOT_GAP + DOT_R * 2 + PAD_BOT
+  const axisY     = svgH - PAD_BOT
 
   function yearToX(year: number): number {
     return PAD_L + ((year - minYear) / yearRange) * (svgW - PAD_L - PAD_R)
   }
 
   const ticks = useMemo(
-    () => smartTicks(minYear, maxYear, Math.min(8, Math.max(2, Math.floor((svgW - PAD_L - PAD_R) / 65)))),
+    () => smartTicks(
+      minYear, maxYear,
+      Math.min(8, Math.max(2, Math.floor((svgW - PAD_L - PAD_R) / 65))),
+    ),
     [minYear, maxYear, svgW],
   )
 
   // ── header text ───────────────────────────────────────────────────────────
   const uniqueYears = new Set(items.map(i => i.year)).size
-  const headerNote = !connected
+  const headerNote  = !connected
     ? 'Connect a search or table node'
     : status === 'loading'
       ? 'Loading…'
       : items.length > 0
         ? `${items.length} item${items.length !== 1 ? 's' : ''} · ${uniqueYears} year${uniqueYears !== 1 ? 's' : ''}${noDateCount > 0 ? ` (${noDateCount} undated)` : ''}`
         : records
-          ? `No items with parseable dates${noDateCount > 0 ? ` (${noDateCount} undated)` : ''}`
+          ? `No parseable dates${noDateCount > 0 ? ` (${noDateCount} undated)` : ''}`
           : 'Run the upstream node'
 
   return (
-    <div style={{ ...styles.card, width: NODE_W }}>
+    <div style={{ ...styles.card, width: '100%', minWidth: 300 }}>
+      <NodeResizer minWidth={300} maxWidth={1600} minHeight={60} />
       <Handle type="target" position={Position.Left} id="data" style={styles.inputHandle} />
 
       {/* ── Header ── */}
       <div style={styles.header}>
         <span style={styles.title}>Timeline Output</span>
-        <span style={styles.badge}>{headerNote}</span>
+        <div style={styles.headerRight}>
+          <button
+            style={{
+              ...styles.fitBtn,
+              background:   fitToRange ? '#3b82f6' : 'rgba(255,255,255,0.12)',
+              borderColor:  fitToRange ? '#3b82f6' : 'rgba(255,255,255,0.25)',
+              color:        fitToRange ? '#fff'    : '#94a3b8',
+            }}
+            onClick={() => updateNodeData(id, { fitToRange: !fitToRange })}
+            className="nodrag"
+            title={fitToRange
+              ? 'Fit to range: ON — click to restore auto-scale with scroll'
+              : 'Click to compress full date range into visible width (no scroll)'}
+          >
+            ⇤⇥ fit
+          </button>
+          <span style={styles.badge}>{headerNote}</span>
+        </div>
       </div>
 
-      {/* ── Chart (horizontally scrollable) ── */}
+      {/* ── Chart (horizontally scrollable in auto mode) ── */}
       <div
         ref={scrollRef}
         className="nodrag nowheel"
-        style={styles.scrollContainer}
+        style={{
+          ...styles.scrollContainer,
+          overflowX: fitToRange ? 'hidden' : 'auto',
+        }}
         onMouseLeave={() => { cancelHide(); setHovered(null) }}
       >
         <svg width={svgW} height={svgH} style={{ display: 'block' }}>
@@ -285,11 +304,9 @@ export function TimelineOutputNode({ id }: NodeProps) {
           {Array.from(yearMap.entries()).map(([year, yearItems]) => {
             const x = Math.round(yearToX(year))
             return yearItems.slice(0, MAX_STACK).map((item, stackIdx) => {
-              // Stack from the axis upward
               const y   = axisY - DOT_R - stackIdx * DOT_GAP
               const clr = sourceColor(item.record._source)
               const shp = sourceShape(item.record._source)
-
               return (
                 <Marker
                   key={item.record.id}
@@ -318,12 +335,12 @@ export function TimelineOutputNode({ id }: NodeProps) {
             })}
         </svg>
 
-        {/* Hover tooltip (absolutely positioned within scroll container) */}
+        {/* Hover tooltip */}
         {hovered && (() => {
           const scrollLeft = scrollRef.current?.scrollLeft ?? 0
+          const visibleW   = scrollRef.current?.clientWidth ?? plotW
           const visibleX   = hovered.svgX - scrollLeft
-          // Clamp so it stays within the visible scroll window width
-          const tipLeft    = Math.max(4, Math.min(visibleX + 10, (NODE_W - 24) - 220))
+          const tipLeft    = Math.max(4, Math.min(visibleX + 10, visibleW - 224))
           const tipTop     = Math.max(4, hovered.svgY - 72)
           const r          = hovered.record
           const title      = (r.title ?? r.scientificName ?? '(no title)').slice(0, 60)
@@ -381,7 +398,7 @@ export function TimelineOutputNode({ id }: NodeProps) {
 
 // ─── styles ───────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#1e293b'   // slate-900 — neutral, distinct from all other nodes
+const HEADER_COLOR = '#1e293b'
 
 const styles = {
   card: {
@@ -393,11 +410,18 @@ const styles = {
   },
   header: {
     background:     HEADER_COLOR,
-    padding:        '6px 10px',
+    padding:        '5px 8px 5px 10px',
     display:        'flex',
     alignItems:     'center',
     justifyContent: 'space-between',
     gap:            8,
+  },
+  headerRight: {
+    display:    'flex',
+    alignItems: 'center',
+    gap:        8,
+    minWidth:   0,
+    overflow:   'hidden',
   },
   title: {
     color:      '#fff',
@@ -413,8 +437,17 @@ const styles = {
     textOverflow: 'ellipsis',
     whiteSpace:   'nowrap' as const,
   },
+  fitBtn: {
+    fontSize:     9,
+    fontWeight:   700,
+    border:       '1px solid',
+    borderRadius: 3,
+    padding:      '2px 6px',
+    cursor:       'pointer',
+    flexShrink:   0,
+    letterSpacing: '0.02em',
+  },
   scrollContainer: {
-    overflowX:  'auto'     as const,
     overflowY:  'hidden'   as const,
     position:   'relative' as const,
     background: '#f8fafc',
@@ -434,22 +467,22 @@ const styles = {
     cursor:       'default',
   },
   tooltipTitle: {
-    fontWeight: 600,
-    fontSize:   11,
+    fontWeight:   600,
+    fontSize:     11,
     marginBottom: 3,
-    color: '#f8fafc',
+    color:        '#f8fafc',
   },
   tooltipMeta: {
     fontSize: 10,
     color:    '#94a3b8',
   },
   tooltipLink: {
-    display:    'block',
-    marginTop:  5,
-    fontSize:   10,
-    color:      '#34d399',
+    display:        'block',
+    marginTop:      5,
+    fontSize:       10,
+    color:          '#34d399',
     textDecoration: 'none' as const,
-    pointerEvents: 'auto' as const,
+    pointerEvents:  'auto' as const,
   },
   legend: {
     display:    'flex',
