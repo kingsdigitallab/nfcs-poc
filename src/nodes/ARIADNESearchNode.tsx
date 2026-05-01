@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
-import { runARIADNENode } from '../utils/runARIADNENode'
+import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
@@ -127,7 +127,7 @@ export function ARIADNESearchNode({ id, data }: NodeProps) {
   )
 
   const handleRun = useCallback(
-    () => runARIADNENode(id, getNodes, getEdgesSnap(), updateNodeData),
+    () => nodeRunners.ariadneSearch(id, getNodes, getEdgesSnap(), updateNodeData),
     [id, updateNodeData, getNodes, getEdgesSnap],
   )
 

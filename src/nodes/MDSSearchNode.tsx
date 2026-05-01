@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
-import { runMDSNode } from '../utils/runMDSNode'
+import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
@@ -63,7 +63,7 @@ export function MDSSearchNode({ id, data }: NodeProps) {
   )
 
   const handleRun = useCallback(
-    () => runMDSNode(id, getNodes, getEdgesSnap(), updateNodeData),
+    () => nodeRunners.mdsSearch(id, getNodes, getEdgesSnap(), updateNodeData),
     [id, updateNodeData, getNodes, getEdgesSnap],
   )
 

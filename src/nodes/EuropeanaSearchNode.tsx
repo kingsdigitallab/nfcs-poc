@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
-import { runEuropeanaNode } from '../utils/runEuropeanaNode'
+import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 
 export type EuropeanaStatus = 'idle' | 'loading' | 'success' | 'error'
@@ -53,7 +53,7 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
     liveEdges.some(e => e.target === id && e.targetHandle === handleId)
 
   const handleRun = useCallback(
-    () => runEuropeanaNode(id, getNodes, snap(), updateNodeData),
+    () => nodeRunners.europeanaSearch(id, getNodes, snap(), updateNodeData),
     [id, updateNodeData, getNodes, snap],
   )
 

@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
-import { runLLDSNode } from '../utils/runLLDSNode'
+import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
@@ -61,7 +61,7 @@ export function LLDSSearchNode({ id, data }: NodeProps) {
   )
 
   const handleRun = useCallback(
-    () => runLLDSNode(id, getNodes, getEdgesSnap(), updateNodeData),
+    () => nodeRunners.lldsSearch(id, getNodes, getEdgesSnap(), updateNodeData),
     [id, updateNodeData, getNodes, getEdgesSnap],
   )
 
