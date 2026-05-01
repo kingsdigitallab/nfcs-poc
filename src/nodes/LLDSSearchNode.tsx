@@ -1,6 +1,7 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { runLLDSNode } from '../utils/runLLDSNode'
+import { downloadAsFixture, fixtureFilename } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type LLDSStatus = 'idle' | 'loading' | 'success' | 'cached' | 'error'
@@ -15,6 +16,7 @@ export interface LLDSSearchNodeData {
   statusMessage: string
   results:       UnifiedRecord[] | undefined
   count:         number
+  useFixture?:   boolean
   [key: string]: unknown
 }
 
@@ -119,28 +121,41 @@ export function LLDSSearchNode({ id, data }: NodeProps) {
 
       {/* Footer */}
       <div style={styles.footer}>
-        <label
-          style={styles.cacheToggle}
-          className="nodrag"
-          title="Reuse the locally cached result if less than 24 h old. Uncheck to force a live request."
-        >
-          <input
-            type="checkbox"
-            checked={d.useCache ?? true}
-            onChange={e => updateNodeData(id, { useCache: e.target.checked })}
+        <div style={styles.fixtureControls}>
+          <label
+            style={styles.cacheToggle}
             className="nodrag"
-          />
-          <span style={{ color: (d.useCache ?? true) ? '#92400e' : '#6b7280' }}>
-            {status === 'cached' ? '📦 cached' : 'use cache'}
-          </span>
-        </label>
+            title="Reuse the locally cached result if less than 24 h old. Uncheck to force a live request."
+          >
+            <input
+              type="checkbox"
+              checked={d.useCache ?? true}
+              onChange={e => updateNodeData(id, { useCache: e.target.checked })}
+              className="nodrag"
+            />
+            <span style={{ color: (d.useCache ?? true) ? '#92400e' : '#6b7280' }}>
+              {status === 'cached' ? '📦 cached' : 'use cache'}
+            </span>
+          </label>
+          <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
+            <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
+            <span style={{ color: d.useFixture ? '#92400e' : '#9ca3af' }}>📦</span>
+          </label>
+          {(status === 'success' || status === 'cached') && (
+            <button style={styles.fixtureSaveBtn} className="nodrag"
+              title={`Download fixture: ${fixtureFilename('lldsSearch', String(d.inlineQuery ?? ''))}`}
+              onClick={() => downloadAsFixture(id, 'lldsSearch', String(d.inlineQuery ?? ''))}>
+              💾
+            </button>
+          )}
+        </div>
         <button
           style={{ ...styles.runBtn, opacity: status === 'loading' ? 0.6 : 1 }}
           onClick={handleRun}
           disabled={status === 'loading'}
           className="nodrag"
         >
-          {status === 'loading' ? 'Running…' : '▶  Run'}
+          {status === 'loading' ? 'Running…' : d.useFixture ? '▶ Load fixture' : '▶  Run'}
         </button>
       </div>
 
@@ -240,9 +255,12 @@ const styles = {
     padding:        '6px 10px 8px',
     display:        'flex',
     alignItems:     'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     gap:            8,
   },
+  fixtureControls: { display: 'flex', alignItems: 'center', gap: 6 },
+  fixtureToggle: { display: 'flex', alignItems: 'center', gap: 3, cursor: 'pointer', userSelect: 'none' as const, fontSize: 13 },
+  fixtureSaveBtn: { background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: 13, color: '#6b7280', lineHeight: 1 },
   cacheToggle: {
     display:    'flex',
     alignItems: 'center',

@@ -25,6 +25,7 @@ import { runWikidataEnrichNode }  from './runWikidataEnrichNode'
 import { runXMLSectionNode }      from './runXMLSectionNode'
 import { runEuropeanaNode }       from './runEuropeanaNode'
 import { runARIADNENode }         from './runARIADNENode'
+import { withFixture }            from './fixtureUtils'
 
 /**
  * Common signature for every node runner.
@@ -42,21 +43,21 @@ export type NodeRunner = (
 ) => Promise<void>
 
 export const nodeRunners: Record<string, NodeRunner> = {
-  gbifSearch:      runGBIFNode,
-  lldsSearch:      runLLDSNode,
+  gbifSearch:        withFixture('gbifSearch',      runGBIFNode),
+  lldsSearch:        withFixture('lldsSearch',      runLLDSNode),
+  mdsSearch:         withFixture('mdsSearch',       runMDSNode),
+  europeanaSearch:   withFixture('europeanaSearch', runEuropeanaNode),
+  ariadneSearch:     withFixture('ariadneSearch',   runARIADNENode),
   adsSearchAdvanced: runADSAdvancedNode,
   adsLibrarySearch:  runADSLibraryNode,
-  mdsSearch:       runMDSNode,
-  reconciliation:  runReconciliationNode,
-  filterTransform: runFilterTransformNode,
-  spatialFilter:   runSpatialFilterNode,
-  htmlSection:     runHTMLSectionNode,
-  urlFetch:        runURLFetchNode,
-  ollamaNode:      runOllamaNode,
-  ollamaField:     runOllamaFieldNode,
-  mergeByQID:      runMergeByQIDNode,
-  wikidataEnrich:  runWikidataEnrichNode,
+  reconciliation:    runReconciliationNode,
+  filterTransform:   runFilterTransformNode,
+  spatialFilter:     runSpatialFilterNode,
+  htmlSection:       runHTMLSectionNode,
+  urlFetch:          runURLFetchNode,
+  ollamaNode:        runOllamaNode,
+  ollamaField:       runOllamaFieldNode,
+  mergeByQID:        runMergeByQIDNode,
+  wikidataEnrich:    runWikidataEnrichNode,
   xmlSection:        runXMLSectionNode,
-  europeanaSearch:   runEuropeanaNode,
-  ariadneSearch:     runARIADNENode,
 }

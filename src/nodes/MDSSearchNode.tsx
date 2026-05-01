@@ -1,6 +1,7 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { runMDSNode } from '../utils/runMDSNode'
+import { downloadAsFixture, fixtureFilename } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type MDSStatus = 'idle' | 'loading' | 'success' | 'error'
@@ -14,6 +15,7 @@ export interface MDSSearchNodeData {
   count:         number
   _capped:       boolean
   _total:        number
+  useFixture?:   boolean
   [key: string]: unknown
 }
 
@@ -121,14 +123,27 @@ export function MDSSearchNode({ id, data }: NodeProps) {
 
       {/* Footer */}
       <div style={styles.footer}>
-        <span style={styles.caption}>Scrapes museumdata.uk — not a formal API</span>
+        <div style={styles.fixtureControls}>
+          <span style={styles.caption}>Scrapes museumdata.uk — not a formal API</span>
+          <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
+            <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
+            <span style={{ color: d.useFixture ? '#1e3a8a' : '#9ca3af' }}>📦</span>
+          </label>
+          {(status === 'success' || status === 'cached') && (
+            <button style={styles.fixtureSaveBtn} className="nodrag"
+              title={`Download fixture: ${fixtureFilename('mdsSearch', String(d.inlineQuery ?? ''))}`}
+              onClick={() => downloadAsFixture(id, 'mdsSearch', String(d.inlineQuery ?? ''))}>
+              💾
+            </button>
+          )}
+        </div>
         <button
           style={{ ...styles.runBtn, opacity: status === 'loading' ? 0.6 : 1 }}
           onClick={handleRun}
           disabled={status === 'loading'}
           className="nodrag"
         >
-          {status === 'loading' ? 'Running…' : '▶  Run'}
+          {status === 'loading' ? 'Running…' : d.useFixture ? '▶ Load fixture' : '▶  Run'}
         </button>
       </div>
 
@@ -238,8 +253,11 @@ const styles = {
     color:      '#9ca3af',
     fontStyle:  'italic' as const,
     lineHeight: 1.3,
-    maxWidth:   130,
+    maxWidth:   120,
   },
+  fixtureControls: { display: 'flex', alignItems: 'center', gap: 6, flex: 1 },
+  fixtureToggle: { display: 'flex', alignItems: 'center', gap: 3, cursor: 'pointer', userSelect: 'none' as const, fontSize: 13 },
+  fixtureSaveBtn: { background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: 13, color: '#6b7280', lineHeight: 1 },
   runBtn: {
     background:   RUN_BTN_COLOR,
     color:        '#fff',

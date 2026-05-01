@@ -1,6 +1,7 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { runEuropeanaNode } from '../utils/runEuropeanaNode'
+import { downloadAsFixture, fixtureFilename } from '../utils/fixtureUtils'
 
 export type EuropeanaStatus = 'idle' | 'loading' | 'success' | 'error'
 
@@ -13,7 +14,8 @@ export interface EuropeanaSearchNodeData {
   mediaOnly:   boolean
   status:      EuropeanaStatus
   statusMessage: string
-  count:       number
+  count:        number
+  useFixture?:  boolean
   [key: string]: unknown
 }
 
@@ -172,11 +174,24 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
       </div>
 
       <div style={styles.footer}>
-        {d.count ? (
-          <span style={styles.countBadge}>
-            {(d.count as number).toLocaleString()} total
-          </span>
-        ) : null}
+        <div style={styles.fixtureControls}>
+          {d.count ? (
+            <span style={styles.countBadge}>
+              {(d.count as number).toLocaleString()} total
+            </span>
+          ) : null}
+          <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
+            <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
+            <span style={{ color: d.useFixture ? HEADER_COLOR : '#9ca3af' }}>📦</span>
+          </label>
+          {(d.status === 'success' || d.status === 'cached') && (
+            <button style={styles.fixtureSaveBtn} className="nodrag"
+              title={`Download fixture: ${fixtureFilename('europeanaSearch', String(d.inlineQuery ?? ''))}`}
+              onClick={() => downloadAsFixture(id, 'europeanaSearch', String(d.inlineQuery ?? ''))}>
+              💾
+            </button>
+          )}
+        </div>
         <button
           style={{
             ...styles.runBtn,
@@ -186,7 +201,7 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
           disabled={d.status === 'loading'}
           className="nodrag"
         >
-          {d.status === 'loading' ? 'Searching…' : '▶ Run'}
+          {d.status === 'loading' ? 'Searching…' : d.useFixture ? '▶ Load fixture' : '▶ Run'}
         </button>
       </div>
 
@@ -286,14 +301,16 @@ const styles = {
     padding:        '5px 10px 8px',
     display:        'flex',
     alignItems:     'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     gap:            8,
   },
   countBadge: {
     fontSize:  10,
     color:     '#6b7280',
-    flexGrow:  1,
   },
+  fixtureControls: { display: 'flex', alignItems: 'center', gap: 6, flex: 1 },
+  fixtureToggle: { display: 'flex', alignItems: 'center', gap: 3, cursor: 'pointer', userSelect: 'none' as const, fontSize: 13 },
+  fixtureSaveBtn: { background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: 13, color: '#6b7280', lineHeight: 1 },
   runBtn: {
     background:   HEADER_COLOR,
     color:        '#fff',
