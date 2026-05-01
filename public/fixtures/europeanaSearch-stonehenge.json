@@ -1,0 +1,731 @@
+[
+  {
+    "id": "europeana:/2024919/c126",
+    "_source": "europeana",
+    "_sourceId": "/2024919/c126",
+    "_sourceUrl": "https://www.europeana.eu/item/2024919/c126?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "-",
+    "creator": [
+      "Nerbini Publishing House"
+    ],
+    "description": "-",
+    "date": "1934",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Italy"
+    ],
+    "europeana": {
+      "provider": [
+        "PHOTOCONSORTIUM"
+      ],
+      "dataProvider": [
+        "Promoter Digital Gallery"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdigitalgallery.promoter.it%2Ffiles%2Foriginal%2F9075bb41fad658d9b68c77710ad7b12b.jpg&type=IMAGE",
+      "shownAt": "https://digitalgallery.promoter.it/items/show/4083",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2024919/c126",
+      "title": "-",
+      "url": "https://www.europeana.eu/item/2024919/c126?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Nerbini Publishing House"
+      ],
+      "date": "1934"
+    }
+  },
+  {
+    "id": "europeana:/954/Culturalia_f636197c_7d9f_4aeb_995c_af3c4f423267",
+    "_source": "europeana",
+    "_sourceId": "/954/Culturalia_f636197c_7d9f_4aeb_995c_af3c4f423267",
+    "_sourceUrl": "https://www.europeana.eu/item/954/Culturalia_f636197c_7d9f_4aeb_995c_af3c4f423267?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Essai de synthèse de l'histoire de l'humanité. [Tome] I Histoire ancienne. Eseu de sinteză a istoriei omenirii. Volumul I. Istoria antică",
+    "creator": [
+      "Iorga, Nicolae",
+      "http://www.wikidata.org/entity/Q313581"
+    ],
+    "description": "Lucrarea conține o sinteză a istoriei universale de la origini până la sfârșitul antichității. Conține o schiță cu Nicolae Iorga.",
+    "date": "1926",
+    "type": "TEXT",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "Bucharest Metropolitan Library"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2FB-BMB%2F2021%2FBinareMonografii%2F_ECultura_Monografii_2%2FIorga_N_Essai_de_synthese_de_l_humanite_vol_1_Histoire_ancienne_1926_logo.jpg&type=TEXT",
+      "shownAt": "https://culturalia.ro/entities/f636197c-7d9f-4aeb-995c-af3c4f423267/view",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/954/Culturalia_f636197c_7d9f_4aeb_995c_af3c4f423267",
+      "title": "Essai de synthèse de l'histoire de l'humanité. [Tome] I Histoire ancienne. Eseu de sinteză a istoriei omenirii. Volumul I. Istoria antică",
+      "url": "https://www.europeana.eu/item/954/Culturalia_f636197c_7d9f_4aeb_995c_af3c4f423267?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Iorga, Nicolae",
+        "http://www.wikidata.org/entity/Q313581"
+      ],
+      "date": "1926"
+    }
+  },
+  {
+    "id": "europeana:/1361/BOTANYXLX1243619",
+    "_source": "europeana",
+    "_sourceId": "/1361/BOTANYXLX1243619",
+    "_sourceUrl": "https://www.europeana.eu/item/1361/BOTANYXLX1243619?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Dichelachne crinita (L.f.) Hook.f.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1243619%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1243619",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/1361/BOTANYXLX1243619",
+      "title": "Dichelachne crinita (L.f.) Hook.f.",
+      "url": "https://www.europeana.eu/item/1361/BOTANYXLX1243619?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/2058632/d8188d1d_b1b5_8466_0f41_f7e4ae3a8ee4_media_b6a512cb_06af_3066_9c92_b9e96a9e3681",
+    "_source": "europeana",
+    "_sourceId": "/2058632/d8188d1d_b1b5_8466_0f41_f7e4ae3a8ee4_media_b6a512cb_06af_3066_9c92_b9e96a9e3681",
+    "_sourceUrl": "https://www.europeana.eu/item/2058632/d8188d1d_b1b5_8466_0f41_f7e4ae3a8ee4_media_b6a512cb_06af_3066_9c92_b9e96a9e3681?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Kunstwerk, bijgenaamd Stonehenge. Op een heuvel - restant van een viaduct - naast de autoweg bij kruispunt Haarlemmerweg en Australiëhavenweg",
+    "creator": [
+      "As, B. (Bert) van"
+    ],
+    "description": "Kunstwerk, bijgenaamd Stonehenge. Op een heuvel - restant van een viaduct - naast de autoweg bij kruispunt Haarlemmerweg en Australiëhavenweg",
+    "type": "IMAGE",
+    "language": "nl",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "Cultural Heritage Agency of the Netherlands"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fimages.memorix.nl%2Frce%2Fthumb%2Ffullsize%2Fb6a512cb-06af-3066-9c92-b9e96a9e3681.jpg&type=IMAGE",
+      "shownAt": "http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/d8188d1d-b1b5-8466-0f41-f7e4ae3a8ee4/media/b6a512cb-06af-3066-9c92-b9e96a9e3681",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2058632/d8188d1d_b1b5_8466_0f41_f7e4ae3a8ee4_media_b6a512cb_06af_3066_9c92_b9e96a9e3681",
+      "title": "Kunstwerk, bijgenaamd Stonehenge. Op een heuvel - restant van een viaduct - naast de autoweg bij kruispunt Haarlemmerweg en Australiëhavenweg",
+      "url": "https://www.europeana.eu/item/2058632/d8188d1d_b1b5_8466_0f41_f7e4ae3a8ee4_media_b6a512cb_06af_3066_9c92_b9e96a9e3681?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "As, B. (Bert) van"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/2058632/fe48ba4b_3407_4559_e649_7c6ea3a61387_media_fff3ef86_0322_0d6f_ee80_e26942b3857c",
+    "_source": "europeana",
+    "_sourceId": "/2058632/fe48ba4b_3407_4559_e649_7c6ea3a61387_media_fff3ef86_0322_0d6f_ee80_e26942b3857c",
+    "_sourceUrl": "https://www.europeana.eu/item/2058632/fe48ba4b_3407_4559_e649_7c6ea3a61387_media_fff3ef86_0322_0d6f_ee80_e26942b3857c?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Kunstwerk, bijgenaamd Stonehenge. Op een heuvel - restant van een viaduct - naast de autoweg bij kruispunt Haarlemmerweg en Australiëhavenweg",
+    "creator": [
+      "As, B. (Bert) van"
+    ],
+    "description": "Kunstwerk, bijgenaamd Stonehenge. Op een heuvel - restant van een viaduct - naast de autoweg bij kruispunt Haarlemmerweg en Australiëhavenweg",
+    "type": "IMAGE",
+    "language": "nl",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "Cultural Heritage Agency of the Netherlands"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fimages.memorix.nl%2Frce%2Fthumb%2Ffullsize%2Ffff3ef86-0322-0d6f-ee80-e26942b3857c.jpg&type=IMAGE",
+      "shownAt": "http://beeldbank.cultureelerfgoed.nl/alle-afbeeldingen/detail/fe48ba4b-3407-4559-e649-7c6ea3a61387/media/fff3ef86-0322-0d6f-ee80-e26942b3857c",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2058632/fe48ba4b_3407_4559_e649_7c6ea3a61387_media_fff3ef86_0322_0d6f_ee80_e26942b3857c",
+      "title": "Kunstwerk, bijgenaamd Stonehenge. Op een heuvel - restant van een viaduct - naast de autoweg bij kruispunt Haarlemmerweg en Australiëhavenweg",
+      "url": "https://www.europeana.eu/item/2058632/fe48ba4b_3407_4559_e649_7c6ea3a61387_media_fff3ef86_0322_0d6f_ee80_e26942b3857c?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "As, B. (Bert) van"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/2020601/https___1914_1918_europeana_eu_contributions_3473",
+    "_source": "europeana",
+    "_sourceId": "/2020601/https___1914_1918_europeana_eu_contributions_3473",
+    "_sourceUrl": "https://www.europeana.eu/item/2020601/https___1914_1918_europeana_eu_contributions_3473?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "SS Henry Forbes Lancelot Knowles RFA",
+    "description": "Lieutentant Henry Forbes Lancelot Knowles RFA, known as Lance. 27th Reserve Battalion  Royal Field Artillery. Joined army and sent to Salisbury for training, letters would suggest that he was quite naive about warfare. Very interesting letter to him from his mother about the  RMS Leinster Mail Boat  torpedoed and sunk en route from Dublin to Holyhead with great loss of life.",
+    "date": "1916",
+    "type": "TEXT",
+    "language": "mul",
+    "country": [
+      "Europe"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana 1914-1918"
+      ],
+      "dataProvider": [
+        "Europeana 1914-1918"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Frhus-209.man.poznan.pl%2Ffcgi-bin%2Fiipsrv.fcgi%3FIIIF%3D11%2F5%2F%2F2020601%2Fhttps___1914_1918_europeana_eu_contributions_3473%2F3473.46906.original_Page0000.tif%2Ffull%2Ffull%2F0%2Fdefault.jpg&type=TEXT",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2020601/https___1914_1918_europeana_eu_contributions_3473",
+      "title": "SS Henry Forbes Lancelot Knowles RFA",
+      "url": "https://www.europeana.eu/item/2020601/https___1914_1918_europeana_eu_contributions_3473?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1916"
+    }
+  },
+  {
+    "id": "europeana:/882/NHMUKXBOTXBM001164639",
+    "_source": "europeana",
+    "_sourceId": "/882/NHMUKXBOTXBM001164639",
+    "_sourceUrl": "https://www.europeana.eu/item/882/NHMUKXBOTXBM001164639?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Neotinea ustulata (L.) R.M.Bateman, Pridgeon & M.W.Chase",
+    "date": "1880",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "The Trustees of the Natural History Museum, London"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdata.nhm.ac.uk%2Fmedia%2F15d31219-6848-4d12-bffa-1f20d94ae9f3&type=IMAGE",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/882/NHMUKXBOTXBM001164639",
+      "title": "Neotinea ustulata (L.) R.M.Bateman, Pridgeon & M.W.Chase",
+      "url": "https://www.europeana.eu/item/882/NHMUKXBOTXBM001164639?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1880"
+    }
+  },
+  {
+    "id": "europeana:/882/NHMUKXBOTXBM001216008",
+    "_source": "europeana",
+    "_sourceId": "/882/NHMUKXBOTXBM001216008",
+    "_sourceUrl": "https://www.europeana.eu/item/882/NHMUKXBOTXBM001216008?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Hildenbrandia rivularis (Liebmann) Agardh",
+    "date": "2012",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "The Trustees of the Natural History Museum, London"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdata.nhm.ac.uk%2Fmedia%2F1dab7320-7c49-49a9-988b-15594b839b2f&type=IMAGE",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/882/NHMUKXBOTXBM001216008",
+      "title": "Hildenbrandia rivularis (Liebmann) Agardh",
+      "url": "https://www.europeana.eu/item/882/NHMUKXBOTXBM001216008?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "2012"
+    }
+  },
+  {
+    "id": "europeana:/872/NHMUKXPALXPBXVX665",
+    "_source": "europeana",
+    "_sourceId": "/872/NHMUKXPALXPBXVX665",
+    "_sourceUrl": "https://www.europeana.eu/item/872/NHMUKXPALXPBXVX665?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Plantae",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "The Trustees of the Natural History Museum, London"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdata.nhm.ac.uk%2Fmedia%2Fb6d538b2-442c-4ffc-b695-f1e85b268ea1&type=IMAGE",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/872/NHMUKXPALXPBXVX665",
+      "title": "Plantae",
+      "url": "https://www.europeana.eu/item/872/NHMUKXPALXPBXVX665?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/840/NHMUKXBOTXBM001138759",
+    "_source": "europeana",
+    "_sourceId": "/840/NHMUKXBOTXBM001138759",
+    "_sourceUrl": "https://www.europeana.eu/item/840/NHMUKXBOTXBM001138759?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Neotinea ustulata (L.) R.M.Bateman, Pridgeon & M.W.Chase",
+    "date": "1858",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "The Trustees of the Natural History Museum, London"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdata.nhm.ac.uk%2Fmedia%2F24eb4598-0b7a-4d7f-aef6-c5d4167cc431&type=IMAGE",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/840/NHMUKXBOTXBM001138759",
+      "title": "Neotinea ustulata (L.) R.M.Bateman, Pridgeon & M.W.Chase",
+      "url": "https://www.europeana.eu/item/840/NHMUKXBOTXBM001138759?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1858"
+    }
+  },
+  {
+    "id": "europeana:/2020702/raa_fmi_10110201340001",
+    "_source": "europeana",
+    "_sourceId": "/2020702/raa_fmi_10110201340001",
+    "_sourceUrl": "https://www.europeana.eu/item/2020702/raa_fmi_10110201340001?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Samlingsplats",
+    "description": "Område,13x8,3 m (NNV-SSÖ), begränsat av vallar i ÖNÖ och VSV. Vallarna är 0,5-0,8 m br och intill 0,4 m h. I mitten av området ärett stenfundament murat, täckt av en stenhäll. I SSÖ delen av området är två små resta stenar med en lös, flat sten över. Nära dessastenar är en sten på vilken lagts en annan sten. Anläggningen äruppförd av och används som samlingsplats för en sammanslutning, som är intresserade av Stonehenge och druidernas kult. Det är uppbyggt år 1960.\n\nOBS. Fritexterna är inte kvalitetssäkrade. Information kan saknas eller vara felaktig.",
+    "type": "TEXT",
+    "language": "sv",
+    "country": [
+      "Sweden"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "Swedish National Heritage Board"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.fmis.raa.se%2Ffmis%2Fbilder%2F12%2F1273%2F1102%2Fdokument%2F1102-0134-01-D.jpg&type=TEXT",
+      "shownAt": "http://www.fmis.raa.se/cocoon/fornsok/search.html?tab=3&page=1&objektid=10110201340001",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2020702/raa_fmi_10110201340001",
+      "title": "Samlingsplats",
+      "url": "https://www.europeana.eu/item/2020702/raa_fmi_10110201340001?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/2048128/697565",
+    "_source": "europeana",
+    "_sourceId": "/2048128/697565",
+    "_sourceUrl": "https://www.europeana.eu/item/2048128/697565?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Az idő nyomában Stonehenge-től napjainkig - publikált sajtótermék",
+    "description": "Romany Society for General and Cultural Education (Pécs) 28 October 2003, Published press product.",
+    "type": "TEXT",
+    "language": "hu",
+    "country": [
+      "Hungary"
+    ],
+    "europeana": {
+      "provider": [
+        "Forum Hungaricum Non-profit Ltd."
+      ],
+      "dataProvider": [
+        "Csorba Győző Library - Pécs"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmandadb.hu%2Fmandadb%2Fwebimage%2F7%2F8%2F0%2F3%2F9%2F5%2Fwimage%2Flead_kkua_00061.jpg&type=TEXT",
+      "shownAt": "https://mandadb.hu/tetel/697565/Az_ido_nyomaban_Stonehengetol_napjainkig__publikalt_sajtotermek",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2048128/697565",
+      "title": "Az idő nyomában Stonehenge-től napjainkig - publikált sajtótermék",
+      "url": "https://www.europeana.eu/item/2048128/697565?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/2059209/3779_11163809596_1a86ef7899_o_jpg",
+    "_source": "europeana",
+    "_sourceId": "/2059209/3779_11163809596_1a86ef7899_o_jpg",
+    "_sourceUrl": "https://www.europeana.eu/item/2059209/3779_11163809596_1a86ef7899_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Stonehenge from \"Dictionnaire des sciences anthropologiques ... publié sous la direction de A. Bertillon, Coudereau, A. Hovelacque, Issaurat [and others], etc\".",
+    "description": "This image has been taken from scan 001040 from \"Dictionnaire des sciences anthropologiques ... publié sous la direction de A. Bertillon, Coudereau, A. Hovelacque, Issaurat [and others], etc\". The title and subject terms of this image have been generated from tags, created by users of the British Library's flickr photostream.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Sounds"
+      ],
+      "dataProvider": [
+        "The British Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Ffarm4.staticflickr.com%2F3779%2F11163809596_1a86ef7899_o.jpg&type=IMAGE",
+      "shownAt": "https://flickr.com/photos/britishlibrary/11163809596",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2059209/3779_11163809596_1a86ef7899_o_jpg",
+      "title": "Stonehenge from \"Dictionnaire des sciences anthropologiques ... publié sous la direction de A. Bertillon, Coudereau, A. Hovelacque, Issaurat [and others], etc\".",
+      "url": "https://www.europeana.eu/item/2059209/3779_11163809596_1a86ef7899_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/2059209/5480_11307043746_03778f8651_o_jpg",
+    "_source": "europeana",
+    "_sourceId": "/2059209/5480_11307043746_03778f8651_o_jpg",
+    "_sourceUrl": "https://www.europeana.eu/item/2059209/5480_11307043746_03778f8651_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Stonehenge from \"[Our own country. Descriptive, historical, pictorial.]\".",
+    "description": "This image has been taken from scan 000029 from volume 01 of \"[Our own country. Descriptive, historical, pictorial.]\". The title and subject terms of this image have been generated from tags, created by users of the British Library's flickr photostream.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Sounds"
+      ],
+      "dataProvider": [
+        "The British Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Ffarm6.staticflickr.com%2F5480%2F11307043746_03778f8651_o.jpg&type=IMAGE",
+      "shownAt": "https://flickr.com/photos/britishlibrary/11307043746",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2059209/5480_11307043746_03778f8651_o_jpg",
+      "title": "Stonehenge from \"[Our own country. Descriptive, historical, pictorial.]\".",
+      "url": "https://www.europeana.eu/item/2059209/5480_11307043746_03778f8651_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/2059209/5526_11086280744_fca5e03e85_o_jpg",
+    "_source": "europeana",
+    "_sourceId": "/2059209/5526_11086280744_fca5e03e85_o_jpg",
+    "_sourceUrl": "https://www.europeana.eu/item/2059209/5526_11086280744_fca5e03e85_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "map from \"The Illustrated Guide to Old Sarum and Stonehenge with engravings\".",
+    "description": "This image has been taken from scan 000018 from \"The Illustrated Guide to Old Sarum and Stonehenge with engravings\". The title and subject terms of this image have been generated from tags, created by users of the British Library's flickr photostream.",
+    "date": "1868",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Sounds"
+      ],
+      "dataProvider": [
+        "The British Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Ffarm6.staticflickr.com%2F5526%2F11086280744_fca5e03e85_o.jpg&type=IMAGE",
+      "shownAt": "https://flickr.com/photos/britishlibrary/11086280744",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2059209/5526_11086280744_fca5e03e85_o_jpg",
+      "title": "map from \"The Illustrated Guide to Old Sarum and Stonehenge with engravings\".",
+      "url": "https://www.europeana.eu/item/2059209/5526_11086280744_fca5e03e85_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1868"
+    }
+  },
+  {
+    "id": "europeana:/2059209/5549_11188817635_c5f8ea7c0e_o_jpg",
+    "_source": "europeana",
+    "_sourceId": "/2059209/5549_11188817635_c5f8ea7c0e_o_jpg",
+    "_sourceUrl": "https://www.europeana.eu/item/2059209/5549_11188817635_c5f8ea7c0e_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "England from \"La création de l'homme et les premiers âges de l'humanité ... Ouvrage illustré, etc. [With a preface by C. Flammarion.]\".",
+    "description": "This image has been taken from scan 000521 from \"La création de l'homme et les premiers âges de l'humanité ... Ouvrage illustré, etc. [With a preface by C. Flammarion.]\". The title and subject terms of this image have been generated from tags, created by users of the British Library's flickr photostream.",
+    "date": "1887",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Sounds"
+      ],
+      "dataProvider": [
+        "The British Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Ffarm6.staticflickr.com%2F5549%2F11188817635_c5f8ea7c0e_o.jpg&type=IMAGE",
+      "shownAt": "https://flickr.com/photos/britishlibrary/11188817635",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2059209/5549_11188817635_c5f8ea7c0e_o_jpg",
+      "title": "England from \"La création de l'homme et les premiers âges de l'humanité ... Ouvrage illustré, etc. [With a preface by C. Flammarion.]\".",
+      "url": "https://www.europeana.eu/item/2059209/5549_11188817635_c5f8ea7c0e_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1887"
+    }
+  },
+  {
+    "id": "europeana:/2059209/7342_11277688713_7f4ea4a42b_o_jpg",
+    "_source": "europeana",
+    "_sourceId": "/2059209/7342_11277688713_7f4ea4a42b_o_jpg",
+    "_sourceUrl": "https://www.europeana.eu/item/2059209/7342_11277688713_7f4ea4a42b_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Stonehenge from \"Great Britain for Little Britons. A book for children, etc\".",
+    "description": "This image has been taken from scan 000170 from \"Great Britain for Little Britons. A book for children, etc\". The title and subject terms of this image have been generated from tags, created by users of the British Library's flickr photostream.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Sounds"
+      ],
+      "dataProvider": [
+        "The British Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Ffarm8.staticflickr.com%2F7342%2F11277688713_7f4ea4a42b_o.jpg&type=IMAGE",
+      "shownAt": "https://flickr.com/photos/britishlibrary/11277688713",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/2059209/7342_11277688713_7f4ea4a42b_o_jpg",
+      "title": "Stonehenge from \"Great Britain for Little Britons. A book for children, etc\".",
+      "url": "https://www.europeana.eu/item/2059209/7342_11277688713_7f4ea4a42b_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1356/BOTANYXLX3695658",
+    "_source": "europeana",
+    "_sourceId": "/1356/BOTANYXLX3695658",
+    "_sourceUrl": "https://www.europeana.eu/item/1356/BOTANYXLX3695658?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Cirsium acaule (L.) Scop.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.3695658%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.3695658",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/1356/BOTANYXLX3695658",
+      "title": "Cirsium acaule (L.) Scop.",
+      "url": "https://www.europeana.eu/item/1356/BOTANYXLX3695658?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1356/BOTANYXUX1439302",
+    "_source": "europeana",
+    "_sourceId": "/1356/BOTANYXUX1439302",
+    "_sourceUrl": "https://www.europeana.eu/item/1356/BOTANYXUX1439302?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Eugenia disticha (Sw.) DC.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1439302%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1439302",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/1356/BOTANYXUX1439302",
+      "title": "Eugenia disticha (Sw.) DC.",
+      "url": "https://www.europeana.eu/item/1356/BOTANYXUX1439302?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1324/BOTANYXUX1440743",
+    "_source": "europeana",
+    "_sourceId": "/1324/BOTANYXUX1440743",
+    "_sourceUrl": "https://www.europeana.eu/item/1324/BOTANYXUX1440743?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Calyptranthes chytraculia Sw.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1440743%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1440743",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-01T09:44:32.221Z",
+      "recordId": "europeana:/1324/BOTANYXUX1440743",
+      "title": "Calyptranthes chytraculia Sw.",
+      "url": "https://www.europeana.eu/item/1324/BOTANYXUX1440743?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  }
+]

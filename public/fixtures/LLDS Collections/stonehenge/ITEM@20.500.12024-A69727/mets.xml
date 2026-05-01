@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<mets ID="DSpace_ITEM_20.500.12024-A69727" OBJID="hdl:20.500.12024/A69727" TYPE="DSpace ITEM" PROFILE="http://www.dspace.org/schema/aip/mets_aip_1_0.xsd" xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd">
+ <metsHdr LASTMODDATE="2019-11-13T12:37:15">
+  <agent ROLE="CUSTODIAN" TYPE="OTHER" OTHERTYPE="DSpace Archive">
+   <name>20.500.12024/0</name>
+  </agent>
+  <agent ROLE="CREATOR" TYPE="OTHER" OTHERTYPE="DSpace Software">
+   <name>DSpace 5.11-SNAPSHOT</name>
+  </agent>
+ </metsHdr>
+ <dmdSec ID="dmdSec_1">
+  <mdWrap MDTYPE="MODS">
+   <xmlData xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-1.xsd"><mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-1.xsd">
+  <mods:name>
+    <mods:namePart>Text Creation Partnership,</mods:namePart>
+  </mods:name>
+  <mods:name>
+    <mods:role>
+      <mods:roleTerm type="text">author</mods:roleTerm>
+    </mods:role>
+    <mods:namePart>Charleton, Walter, 1619-1707.</mods:namePart>
+  </mods:name>
+  <mods:name>
+    <mods:role>
+      <mods:roleTerm type="text">author</mods:roleTerm>
+    </mods:role>
+    <mods:namePart>Howard, Robert, Sir, 1626-1698.</mods:namePart>
+  </mods:name>
+  <mods:name>
+    <mods:role>
+      <mods:roleTerm type="text">author</mods:roleTerm>
+    </mods:role>
+    <mods:namePart>Dryden, John, 1631-1700.</mods:namePart>
+  </mods:name>
+  <mods:extension>
+    <mods:ufal_meta key="dc.coverage.placeName">London</mods:ufal_meta>
+  </mods:extension>
+  <mods:extension>
+    <mods:dateAccessioned encoding="iso8601">2018-05-25</mods:dateAccessioned>
+  </mods:extension>
+  <mods:extension>
+    <mods:dateAccessioned encoding="iso8601">2019-11-09T21:32:11Z</mods:dateAccessioned>
+  </mods:extension>
+  <mods:extension>
+    <mods:dateAvailable encoding="iso8601">2019-11-09T21:32:11Z</mods:dateAvailable>
+  </mods:extension>
+  <mods:originInfo>
+    <mods:dateCreated encoding="iso8601">1663</mods:dateCreated>
+  </mods:originInfo>
+  <mods:originInfo>
+    <mods:dateIssued encoding="iso8601">2005-10</mods:dateIssued>
+  </mods:originInfo>
+  <mods:identifier>ota:A69727</mods:identifier>
+  <mods:relatedItem type="host">
+    <mods:part>
+      <mods:text>http://purl.ox.ac.uk/ota/A69727</mods:text>
+    </mods:part>
+  </mods:relatedItem>
+  <mods:identifier type="uri">http://hdl.handle.net/20.500.12024/A69727</mods:identifier>
+  <mods:abstract>A reply to Jones' "The most notable antiquity of Great Britain." Text preceded by two poems addressed to Charleton by Robert Howard and John Dryden, respectively. Reproduction of original in Yale University Library and Huntington Library.</mods:abstract>
+  <mods:extension>
+    <mods:ufal_meta key="dc.description.provenance">Made available in DSpace OTA Admin (ota-admin@maillist.ox.ac.uk) on 2019-11-09T21:32:11Z
+  Previous issue date: 2005-10No. of bitstreams: 7
+dublin_core.xml: 2936 bytes, checksum: 5a2c3e736875329757366c8c02ec3221 (MD5)
+metadata_local.xml: 319 bytes, checksum: 4ec8e9c0a9f1069fa51254298d8ac340 (MD5)
+headerA69727.xml: 9436 bytes, checksum: 1599921c3e34291daa086e5c4e268392 (MD5)
+A69727.epub: 87391 bytes, checksum: 8d5eb76add2c80906c77f50109e56cc4 (MD5)
+A69727.html: 216054 bytes, checksum: 43d3e022bb815f5878d2b564eb7122c4 (MD5)
+A69727.samuels.tsv: 2056084 bytes, checksum: 2ee5a251325aad50fb8551bf2264c6f1 (MD5)
+A69727.xml: 215733 bytes, checksum: 0ca6925e390c6801fcafcbb499260493 (MD5)</mods:ufal_meta>
+  </mods:extension>
+  <mods:physicalDescription>
+    <mods:extent>Approx. 175 KB of XML-encoded text transcribed from 44 1-bit group-IV TIFF page images.</mods:extent>
+  </mods:physicalDescription>
+  <mods:physicalDescription>
+    <mods:form>Digital bitstream</mods:form>
+  </mods:physicalDescription>
+  <mods:physicalDescription>
+    <mods:internetMediaType>text/xml</mods:internetMediaType>
+  </mods:physicalDescription>
+  <mods:language>
+    <mods:languageTerm>English</mods:languageTerm>
+  </mods:language>
+  <mods:language>
+    <mods:languageTerm authority="rfc3066">eng</mods:languageTerm>
+  </mods:language>
+  <mods:originInfo>
+    <mods:publisher>University of Oxford</mods:publisher>
+  </mods:originInfo>
+  <mods:relatedItem type="otherFormat">https://data.historicaltexts.jisc.ac.uk/view?pubId=eebo-ocm11699908e</mods:relatedItem>
+  <mods:relatedItem type="host">EEBO-TCP (Phase 1)</mods:relatedItem>
+  <mods:accessCondition type="useAndReproduction">This keyboarded and encoded edition of the work described above is co-owned by the institutions providing financial support to the Early English Books Online Text Creation Partnership. This Phase I text is available for reuse, according to the terms of Creative Commons 0 1.0 Universal. The text can be copied, modified, distributed and performed, even for commercial purposes, all without asking permission.</mods:accessCondition>
+  <mods:accessCondition xmlns:xlink="http://www.w3.org/1999/xlink" xlink:simpleLink="http://creativecommons.org/publicdomain/zero/1.0/">http://creativecommons.org/publicdomain/zero/1.0/</mods:accessCondition>
+  <mods:extension>
+    <mods:ufal_meta key="dc.rights.label">PUB</mods:ufal_meta>
+  </mods:extension>
+  <mods:subject authority="lcsh">
+    <mods:topic>Jones, Inigo, 1573-1652. --  Most notable antiquity of Great Britain.</mods:topic>
+  </mods:subject>
+  <mods:subject authority="lcsh">
+    <mods:topic>Stonehenge (England)</mods:topic>
+  </mods:subject>
+  <mods:titleInfo>
+    <mods:title>Chorea gigantum, or, The most famous antiquity of Great-Britan [sic], vulgarly called Stone-Heng, standing on Salisbury Plain, restored to the Danes by Walter Charleton ...</mods:title>
+  </mods:titleInfo>
+  <mods:genre>Text</mods:genre>
+  <mods:extension>
+    <mods:ufal_meta key="local.has.files">yes</mods:ufal_meta>
+  </mods:extension>
+  <mods:extension>
+    <mods:ufal_meta key="local.branding">Oxford Text Archive</mods:ufal_meta>
+  </mods:extension>
+  <mods:extension>
+    <mods:ufal_meta key="local.files.size">2575262</mods:ufal_meta>
+  </mods:extension>
+  <mods:extension>
+    <mods:ufal_meta key="local.files.count">4</mods:ufal_meta>
+  </mods:extension>
+  <mods:extension>
+    <mods:ufal_meta key="local.identifier.stc">Wing C3666</mods:ufal_meta>
+  </mods:extension>
+  <mods:extension>
+    <mods:ufal_meta key="local.identifier.stc">ESTC R13338</mods:ufal_meta>
+  </mods:extension>
+  <mods:extension>
+    <mods:ufal_meta key="otaterms.date.range">1600-1699</mods:ufal_meta>
+  </mods:extension>
+</mods:mods></xmlData>
+  </mdWrap>
+ </dmdSec>
+ <dmdSec ID="dmdSec_2">
+  <mdWrap MDTYPE="OTHER" OTHERMDTYPE="DIM">
+   <xmlData xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"><dim:dim xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" dspaceType="ITEM">
+  <dim:field mdschema="dc" element="contributor" lang="">Text Creation Partnership,</dim:field>
+  <dim:field mdschema="dc" element="contributor" qualifier="author" lang="">Charleton, Walter, 1619-1707.</dim:field>
+  <dim:field mdschema="dc" element="contributor" qualifier="author" lang="">Howard, Robert, Sir, 1626-1698.</dim:field>
+  <dim:field mdschema="dc" element="contributor" qualifier="author" lang="">Dryden, John, 1631-1700.</dim:field>
+  <dim:field mdschema="dc" element="coverage" qualifier="placeName" lang="">London</dim:field>
+  <dim:field mdschema="dc" element="date" qualifier="accessioned" lang="">2018-05-25</dim:field>
+  <dim:field mdschema="dc" element="date" qualifier="accessioned">2019-11-09T21:32:11Z</dim:field>
+  <dim:field mdschema="dc" element="date" qualifier="available">2019-11-09T21:32:11Z</dim:field>
+  <dim:field mdschema="dc" element="date" qualifier="created" lang="">1663</dim:field>
+  <dim:field mdschema="dc" element="date" qualifier="issued" lang="">2005-10</dim:field>
+  <dim:field mdschema="dc" element="identifier" lang="">ota:A69727</dim:field>
+  <dim:field mdschema="dc" element="identifier" qualifier="citation" lang="">http://purl.ox.ac.uk/ota/A69727</dim:field>
+  <dim:field mdschema="dc" element="identifier" qualifier="uri">http://hdl.handle.net/20.500.12024/A69727</dim:field>
+  <dim:field mdschema="dc" element="description" qualifier="abstract" lang="">A reply to Jones' "The most notable antiquity of Great Britain." Text preceded by two poems addressed to Charleton by Robert Howard and John Dryden, respectively. Reproduction of original in Yale University Library and Huntington Library.</dim:field>
+  <dim:field mdschema="dc" element="description" qualifier="provenance" lang="en">Made available in DSpace OTA Admin (ota-admin@maillist.ox.ac.uk) on 2019-11-09T21:32:11Z
+  Previous issue date: 2005-10No. of bitstreams: 7
+dublin_core.xml: 2936 bytes, checksum: 5a2c3e736875329757366c8c02ec3221 (MD5)
+metadata_local.xml: 319 bytes, checksum: 4ec8e9c0a9f1069fa51254298d8ac340 (MD5)
+headerA69727.xml: 9436 bytes, checksum: 1599921c3e34291daa086e5c4e268392 (MD5)
+A69727.epub: 87391 bytes, checksum: 8d5eb76add2c80906c77f50109e56cc4 (MD5)
+A69727.html: 216054 bytes, checksum: 43d3e022bb815f5878d2b564eb7122c4 (MD5)
+A69727.samuels.tsv: 2056084 bytes, checksum: 2ee5a251325aad50fb8551bf2264c6f1 (MD5)
+A69727.xml: 215733 bytes, checksum: 0ca6925e390c6801fcafcbb499260493 (MD5)</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="extent" lang="">Approx. 175 KB of XML-encoded text transcribed from 44 1-bit group-IV TIFF page images.</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="medium" lang="">Digital bitstream</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="mimetype" lang="">text/xml</dim:field>
+  <dim:field mdschema="dc" element="language" lang="">English</dim:field>
+  <dim:field mdschema="dc" element="language" qualifier="iso" lang="">eng</dim:field>
+  <dim:field mdschema="dc" element="publisher" lang="">University of Oxford</dim:field>
+  <dim:field mdschema="dc" element="relation" qualifier="isformatof" lang="">https://data.historicaltexts.jisc.ac.uk/view?pubId=eebo-ocm11699908e</dim:field>
+  <dim:field mdschema="dc" element="relation" qualifier="ispartof" lang="">EEBO-TCP (Phase 1)</dim:field>
+  <dim:field mdschema="dc" element="rights" lang="">This keyboarded and encoded edition of the work described above is co-owned by the institutions providing financial support to the Early English Books Online Text Creation Partnership. This Phase I text is available for reuse, according to the terms of Creative Commons 0 1.0 Universal. The text can be copied, modified, distributed and performed, even for commercial purposes, all without asking permission.</dim:field>
+  <dim:field mdschema="dc" element="rights" qualifier="uri" lang="">http://creativecommons.org/publicdomain/zero/1.0/</dim:field>
+  <dim:field mdschema="dc" element="rights" qualifier="label" lang="">PUB</dim:field>
+  <dim:field mdschema="dc" element="subject" qualifier="lcsh" lang="">Jones, Inigo, 1573-1652. --  Most notable antiquity of Great Britain.</dim:field>
+  <dim:field mdschema="dc" element="subject" qualifier="lcsh" lang="">Stonehenge (England)</dim:field>
+  <dim:field mdschema="dc" element="title" lang="">Chorea gigantum, or, The most famous antiquity of Great-Britan [sic], vulgarly called Stone-Heng, standing on Salisbury Plain, restored to the Danes by Walter Charleton ...</dim:field>
+  <dim:field mdschema="dc" element="type" lang="">Text</dim:field>
+  <dim:field mdschema="local" element="has" qualifier="files" lang="*">yes</dim:field>
+  <dim:field mdschema="local" element="branding">Oxford Text Archive</dim:field>
+  <dim:field mdschema="local" element="files" qualifier="size" lang="*">2575262</dim:field>
+  <dim:field mdschema="local" element="files" qualifier="count" lang="*">4</dim:field>
+  <dim:field mdschema="local" element="identifier" qualifier="stc" lang="">Wing C3666</dim:field>
+  <dim:field mdschema="local" element="identifier" qualifier="stc" lang="">ESTC R13338</dim:field>
+  <dim:field mdschema="otaterms" element="date" qualifier="range" lang="">1600-1699</dim:field>
+</dim:dim></xmlData>
+  </mdWrap>
+ </dmdSec>
+ <amdSec ID="amd_3">
+  <rightsMD ID="rightsMD_9">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="METSRIGHTS">
+    <xmlData xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" xsi:schemaLocation="http://cosimo.stanford.edu/sdr/metsrights/ http://cosimo.stanford.edu/sdr/metsrights.xsd"><rights:RightsDeclarationMD xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" RIGHTSCATEGORY="LICENSED">
+  <rights:Context in-effect="true" CONTEXTCLASS="GENERAL PUBLIC">
+    <rights:Permissions DISCOVER="true" DISPLAY="true" MODIFY="false" DELETE="false" />
+  </rights:Context>
+</rights:RightsDeclarationMD></xmlData>
+   </mdWrap>
+  </rightsMD>
+  <sourceMD ID="sourceMD_10">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="AIP-TECHMD">
+    <xmlData xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"><dim:dim xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" dspaceType="ITEM">
+  <dim:field mdschema="dc" element="creator">ota-admin@maillist.ox.ac.uk</dim:field>
+  <dim:field mdschema="dc" element="identifier" qualifier="uri">hdl:20.500.12024/A69727</dim:field>
+  <dim:field mdschema="dc" element="relation" qualifier="isPartOf">hdl:20.500.12024/5</dim:field>
+</dim:dim></xmlData>
+   </mdWrap>
+  </sourceMD>
+ </amdSec>
+ <amdSec ID="amd_13">
+  <rightsMD ID="rightsMD_19">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="METSRIGHTS">
+    <xmlData xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" xsi:schemaLocation="http://cosimo.stanford.edu/sdr/metsrights/ http://cosimo.stanford.edu/sdr/metsrights.xsd"><rights:RightsDeclarationMD xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" RIGHTSCATEGORY="LICENSED">
+  <rights:Context in-effect="true" CONTEXTCLASS="GENERAL PUBLIC">
+    <rights:Permissions DISCOVER="true" DISPLAY="true" MODIFY="false" DELETE="false" />
+  </rights:Context>
+</rights:RightsDeclarationMD></xmlData>
+   </mdWrap>
+  </rightsMD>
+ </amdSec>
+ <amdSec ID="amd_21">
+  <techMD ID="techMD_22">
+   <mdWrap MDTYPE="PREMIS">
+    <xmlData xmlns:premis="http://www.loc.gov/standards/premis" xsi:schemaLocation="http://www.loc.gov/standards/premis http://www.loc.gov/standards/premis/PREMIS-v1-0.xsd"><premis:premis xmlns:premis="http://www.loc.gov/standards/premis">
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>URL</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/20.500.12024%2FA69727/1/dublin_core.xml</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCategory>File</premis:objectCategory>
+    <premis:objectCharacteristics>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+        <premis:messageDigest>5a2c3e736875329757366c8c02ec3221</premis:messageDigest>
+      </premis:fixity>
+      <premis:size>2936</premis:size>
+      <premis:format>
+        <premis:formatDesignation>
+          <premis:formatName>text/xml</premis:formatName>
+        </premis:formatDesignation>
+      </premis:format>
+    </premis:objectCharacteristics>
+    <premis:originalName>dublin_core.xml</premis:originalName>
+  </premis:object>
+</premis:premis></xmlData>
+   </mdWrap>
+  </techMD>
+  <rightsMD ID="rightsMD_27">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="METSRIGHTS">
+    <xmlData xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" xsi:schemaLocation="http://cosimo.stanford.edu/sdr/metsrights/ http://cosimo.stanford.edu/sdr/metsrights.xsd"><rights:RightsDeclarationMD xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" RIGHTSCATEGORY="LICENSED">
+  <rights:Context in-effect="true" CONTEXTCLASS="GENERAL PUBLIC">
+    <rights:Permissions DISCOVER="true" DISPLAY="true" MODIFY="false" DELETE="false" />
+  </rights:Context>
+</rights:RightsDeclarationMD></xmlData>
+   </mdWrap>
+  </rightsMD>
+  <sourceMD ID="sourceMD_28">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="AIP-TECHMD">
+    <xmlData xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"><dim:dim xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" dspaceType="BITSTREAM">
+  <dim:field mdschema="dc" element="title">dublin_core.xml</dim:field>
+  <dim:field mdschema="dc" element="description">Dublin Core metadata, generated by crosswalk from the TEI header</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="medium">XML</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="mimetype">text/xml</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="supportlevel">KNOWN</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="internal">false</dim:field>
+</dim:dim></xmlData>
+   </mdWrap>
+  </sourceMD>
+ </amdSec>
+ <amdSec ID="amd_29">
+  <techMD ID="techMD_30">
+   <mdWrap MDTYPE="PREMIS">
+    <xmlData xmlns:premis="http://www.loc.gov/standards/premis" xsi:schemaLocation="http://www.loc.gov/standards/premis http://www.loc.gov/standards/premis/PREMIS-v1-0.xsd"><premis:premis xmlns:premis="http://www.loc.gov/standards/premis">
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>URL</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/20.500.12024%2FA69727/2/metadata_local.xml</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCategory>File</premis:objectCategory>
+    <premis:objectCharacteristics>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+        <premis:messageDigest>4ec8e9c0a9f1069fa51254298d8ac340</premis:messageDigest>
+      </premis:fixity>
+      <premis:size>319</premis:size>
+      <premis:format>
+        <premis:formatDesignation>
+          <premis:formatName>text/xml</premis:formatName>
+        </premis:formatDesignation>
+      </premis:format>
+    </premis:objectCharacteristics>
+    <premis:originalName>metadata_local.xml</premis:originalName>
+  </premis:object>
+</premis:premis></xmlData>
+   </mdWrap>
+  </techMD>
+  <rightsMD ID="rightsMD_35">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="METSRIGHTS">
+    <xmlData xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" xsi:schemaLocation="http://cosimo.stanford.edu/sdr/metsrights/ http://cosimo.stanford.edu/sdr/metsrights.xsd"><rights:RightsDeclarationMD xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" RIGHTSCATEGORY="LICENSED">
+  <rights:Context in-effect="true" CONTEXTCLASS="GENERAL PUBLIC">
+    <rights:Permissions DISCOVER="true" DISPLAY="true" MODIFY="false" DELETE="false" />
+  </rights:Context>
+</rights:RightsDeclarationMD></xmlData>
+   </mdWrap>
+  </rightsMD>
+  <sourceMD ID="sourceMD_36">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="AIP-TECHMD">
+    <xmlData xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"><dim:dim xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" dspaceType="BITSTREAM">
+  <dim:field mdschema="dc" element="title">metadata_local.xml</dim:field>
+  <dim:field mdschema="dc" element="description">Local metadata, generated by crosswalk from the TEI header</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="medium">XML</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="mimetype">text/xml</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="supportlevel">KNOWN</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="internal">false</dim:field>
+</dim:dim></xmlData>
+   </mdWrap>
+  </sourceMD>
+ </amdSec>
+ <amdSec ID="amd_37">
+  <techMD ID="techMD_38">
+   <mdWrap MDTYPE="PREMIS">
+    <xmlData xmlns:premis="http://www.loc.gov/standards/premis" xsi:schemaLocation="http://www.loc.gov/standards/premis http://www.loc.gov/standards/premis/PREMIS-v1-0.xsd"><premis:premis xmlns:premis="http://www.loc.gov/standards/premis">
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>URL</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/20.500.12024%2FA69727/3/headerA69727.xml</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCategory>File</premis:objectCategory>
+    <premis:objectCharacteristics>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+        <premis:messageDigest>1599921c3e34291daa086e5c4e268392</premis:messageDigest>
+      </premis:fixity>
+      <premis:size>9436</premis:size>
+      <premis:format>
+        <premis:formatDesignation>
+          <premis:formatName>text/xml</premis:formatName>
+        </premis:formatDesignation>
+      </premis:format>
+    </premis:objectCharacteristics>
+    <premis:originalName>headerA69727.xml</premis:originalName>
+  </premis:object>
+</premis:premis></xmlData>
+   </mdWrap>
+  </techMD>
+  <rightsMD ID="rightsMD_43">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="METSRIGHTS">
+    <xmlData xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" xsi:schemaLocation="http://cosimo.stanford.edu/sdr/metsrights/ http://cosimo.stanford.edu/sdr/metsrights.xsd"><rights:RightsDeclarationMD xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" RIGHTSCATEGORY="LICENSED">
+  <rights:Context in-effect="true" CONTEXTCLASS="GENERAL PUBLIC">
+    <rights:Permissions DISCOVER="true" DISPLAY="true" MODIFY="false" DELETE="false" />
+  </rights:Context>
+</rights:RightsDeclarationMD></xmlData>
+   </mdWrap>
+  </rightsMD>
+  <sourceMD ID="sourceMD_44">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="AIP-TECHMD">
+    <xmlData xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"><dim:dim xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" dspaceType="BITSTREAM">
+  <dim:field mdschema="dc" element="title">headerA69727.xml</dim:field>
+  <dim:field mdschema="dc" element="description">OTA metadata with local modifications</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="medium">XML</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="mimetype">text/xml</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="supportlevel">KNOWN</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="internal">false</dim:field>
+</dim:dim></xmlData>
+   </mdWrap>
+  </sourceMD>
+ </amdSec>
+ <amdSec ID="amd_45">
+  <rightsMD ID="rightsMD_51">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="METSRIGHTS">
+    <xmlData xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" xsi:schemaLocation="http://cosimo.stanford.edu/sdr/metsrights/ http://cosimo.stanford.edu/sdr/metsrights.xsd"><rights:RightsDeclarationMD xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" RIGHTSCATEGORY="LICENSED">
+  <rights:Context in-effect="true" CONTEXTCLASS="GENERAL PUBLIC">
+    <rights:Permissions DISCOVER="true" DISPLAY="true" MODIFY="false" DELETE="false" />
+  </rights:Context>
+</rights:RightsDeclarationMD></xmlData>
+   </mdWrap>
+  </rightsMD>
+ </amdSec>
+ <amdSec ID="amd_54">
+  <techMD ID="techMD_55">
+   <mdWrap MDTYPE="PREMIS">
+    <xmlData xmlns:premis="http://www.loc.gov/standards/premis" xsi:schemaLocation="http://www.loc.gov/standards/premis http://www.loc.gov/standards/premis/PREMIS-v1-0.xsd"><premis:premis xmlns:premis="http://www.loc.gov/standards/premis">
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>URL</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/20.500.12024%2FA69727/4/A69727.epub</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCategory>File</premis:objectCategory>
+    <premis:objectCharacteristics>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+        <premis:messageDigest>8d5eb76add2c80906c77f50109e56cc4</premis:messageDigest>
+      </premis:fixity>
+      <premis:size>87391</premis:size>
+      <premis:format>
+        <premis:formatDesignation>
+          <premis:formatName>application/octet-stream</premis:formatName>
+        </premis:formatDesignation>
+      </premis:format>
+    </premis:objectCharacteristics>
+    <premis:originalName>A69727.epub</premis:originalName>
+  </premis:object>
+</premis:premis></xmlData>
+   </mdWrap>
+  </techMD>
+  <rightsMD ID="rightsMD_60">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="METSRIGHTS">
+    <xmlData xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" xsi:schemaLocation="http://cosimo.stanford.edu/sdr/metsrights/ http://cosimo.stanford.edu/sdr/metsrights.xsd"><rights:RightsDeclarationMD xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" RIGHTSCATEGORY="LICENSED">
+  <rights:Context in-effect="true" CONTEXTCLASS="GENERAL PUBLIC">
+    <rights:Permissions DISCOVER="true" DISPLAY="true" MODIFY="false" DELETE="false" />
+  </rights:Context>
+</rights:RightsDeclarationMD></xmlData>
+   </mdWrap>
+  </rightsMD>
+  <sourceMD ID="sourceMD_61">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="AIP-TECHMD">
+    <xmlData xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"><dim:dim xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" dspaceType="BITSTREAM">
+  <dim:field mdschema="dc" element="title">A69727.epub</dim:field>
+  <dim:field mdschema="dc" element="description">Version of the work for e-book readers in the EPUB format</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="medium">Unknown</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="mimetype">application/octet-stream</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="supportlevel">UNKNOWN</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="internal">false</dim:field>
+</dim:dim></xmlData>
+   </mdWrap>
+  </sourceMD>
+ </amdSec>
+ <amdSec ID="amd_63">
+  <techMD ID="techMD_64">
+   <mdWrap MDTYPE="PREMIS">
+    <xmlData xmlns:premis="http://www.loc.gov/standards/premis" xsi:schemaLocation="http://www.loc.gov/standards/premis http://www.loc.gov/standards/premis/PREMIS-v1-0.xsd"><premis:premis xmlns:premis="http://www.loc.gov/standards/premis">
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>URL</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/20.500.12024%2FA69727/5/A69727.html</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCategory>File</premis:objectCategory>
+    <premis:objectCharacteristics>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+        <premis:messageDigest>43d3e022bb815f5878d2b564eb7122c4</premis:messageDigest>
+      </premis:fixity>
+      <premis:size>216054</premis:size>
+      <premis:format>
+        <premis:formatDesignation>
+          <premis:formatName>text/html</premis:formatName>
+        </premis:formatDesignation>
+      </premis:format>
+    </premis:objectCharacteristics>
+    <premis:originalName>A69727.html</premis:originalName>
+  </premis:object>
+</premis:premis></xmlData>
+   </mdWrap>
+  </techMD>
+  <rightsMD ID="rightsMD_69">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="METSRIGHTS">
+    <xmlData xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" xsi:schemaLocation="http://cosimo.stanford.edu/sdr/metsrights/ http://cosimo.stanford.edu/sdr/metsrights.xsd"><rights:RightsDeclarationMD xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" RIGHTSCATEGORY="LICENSED">
+  <rights:Context in-effect="true" CONTEXTCLASS="GENERAL PUBLIC">
+    <rights:Permissions DISCOVER="true" DISPLAY="true" MODIFY="false" DELETE="false" />
+  </rights:Context>
+</rights:RightsDeclarationMD></xmlData>
+   </mdWrap>
+  </rightsMD>
+  <sourceMD ID="sourceMD_70">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="AIP-TECHMD">
+    <xmlData xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"><dim:dim xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" dspaceType="BITSTREAM">
+  <dim:field mdschema="dc" element="title">A69727.html</dim:field>
+  <dim:field mdschema="dc" element="description">Version of the work for web browsers</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="medium">HTML</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="mimetype">text/html</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="supportlevel">KNOWN</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="internal">false</dim:field>
+</dim:dim></xmlData>
+   </mdWrap>
+  </sourceMD>
+ </amdSec>
+ <amdSec ID="amd_72">
+  <techMD ID="techMD_73">
+   <mdWrap MDTYPE="PREMIS">
+    <xmlData xmlns:premis="http://www.loc.gov/standards/premis" xsi:schemaLocation="http://www.loc.gov/standards/premis http://www.loc.gov/standards/premis/PREMIS-v1-0.xsd"><premis:premis xmlns:premis="http://www.loc.gov/standards/premis">
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>URL</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/20.500.12024%2FA69727/6/A69727.samuels.tsv</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCategory>File</premis:objectCategory>
+    <premis:objectCharacteristics>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+        <premis:messageDigest>2ee5a251325aad50fb8551bf2264c6f1</premis:messageDigest>
+      </premis:fixity>
+      <premis:size>2056084</premis:size>
+      <premis:format>
+        <premis:formatDesignation>
+          <premis:formatName>application/octet-stream</premis:formatName>
+        </premis:formatDesignation>
+      </premis:format>
+    </premis:objectCharacteristics>
+    <premis:originalName>A69727.samuels.tsv</premis:originalName>
+  </premis:object>
+</premis:premis></xmlData>
+   </mdWrap>
+  </techMD>
+  <rightsMD ID="rightsMD_78">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="METSRIGHTS">
+    <xmlData xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" xsi:schemaLocation="http://cosimo.stanford.edu/sdr/metsrights/ http://cosimo.stanford.edu/sdr/metsrights.xsd"><rights:RightsDeclarationMD xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" RIGHTSCATEGORY="LICENSED">
+  <rights:Context in-effect="true" CONTEXTCLASS="GENERAL PUBLIC">
+    <rights:Permissions DISCOVER="true" DISPLAY="true" MODIFY="false" DELETE="false" />
+  </rights:Context>
+</rights:RightsDeclarationMD></xmlData>
+   </mdWrap>
+  </rightsMD>
+  <sourceMD ID="sourceMD_79">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="AIP-TECHMD">
+    <xmlData xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"><dim:dim xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" dspaceType="BITSTREAM">
+  <dim:field mdschema="dc" element="title">A69727.samuels.tsv</dim:field>
+  <dim:field mdschema="dc" element="description">Version of the work with linguistic annotation added, in one-word-per-line format, from the SAMUELS project</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="medium">Unknown</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="mimetype">application/octet-stream</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="supportlevel">UNKNOWN</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="internal">false</dim:field>
+</dim:dim></xmlData>
+   </mdWrap>
+  </sourceMD>
+ </amdSec>
+ <amdSec ID="amd_81">
+  <techMD ID="techMD_82">
+   <mdWrap MDTYPE="PREMIS">
+    <xmlData xmlns:premis="http://www.loc.gov/standards/premis" xsi:schemaLocation="http://www.loc.gov/standards/premis http://www.loc.gov/standards/premis/PREMIS-v1-0.xsd"><premis:premis xmlns:premis="http://www.loc.gov/standards/premis">
+  <premis:object>
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>URL</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>https://ota.bodleian.ox.ac.uk/repository/xmlui/bitstream/20.500.12024%2FA69727/7/A69727.xml</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:objectCategory>File</premis:objectCategory>
+    <premis:objectCharacteristics>
+      <premis:fixity>
+        <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+        <premis:messageDigest>0ca6925e390c6801fcafcbb499260493</premis:messageDigest>
+      </premis:fixity>
+      <premis:size>215733</premis:size>
+      <premis:format>
+        <premis:formatDesignation>
+          <premis:formatName>text/xml</premis:formatName>
+        </premis:formatDesignation>
+      </premis:format>
+    </premis:objectCharacteristics>
+    <premis:originalName>A69727.xml</premis:originalName>
+  </premis:object>
+</premis:premis></xmlData>
+   </mdWrap>
+  </techMD>
+  <rightsMD ID="rightsMD_87">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="METSRIGHTS">
+    <xmlData xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" xsi:schemaLocation="http://cosimo.stanford.edu/sdr/metsrights/ http://cosimo.stanford.edu/sdr/metsrights.xsd"><rights:RightsDeclarationMD xmlns:rights="http://cosimo.stanford.edu/sdr/metsrights/" RIGHTSCATEGORY="LICENSED">
+  <rights:Context in-effect="true" CONTEXTCLASS="GENERAL PUBLIC">
+    <rights:Permissions DISCOVER="true" DISPLAY="true" MODIFY="false" DELETE="false" />
+  </rights:Context>
+</rights:RightsDeclarationMD></xmlData>
+   </mdWrap>
+  </rightsMD>
+  <sourceMD ID="sourceMD_88">
+   <mdWrap MDTYPE="OTHER" OTHERMDTYPE="AIP-TECHMD">
+    <xmlData xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"><dim:dim xmlns:dim="http://www.dspace.org/xmlns/dspace/dim" dspaceType="BITSTREAM">
+  <dim:field mdschema="dc" element="title">A69727.xml</dim:field>
+  <dim:field mdschema="dc" element="description">Version of the work in the original source TEI XML file produced from the Text Creation Partnership version</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="medium">XML</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="mimetype">text/xml</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="supportlevel">KNOWN</dim:field>
+  <dim:field mdschema="dc" element="format" qualifier="internal">false</dim:field>
+</dim:dim></xmlData>
+   </mdWrap>
+  </sourceMD>
+ </amdSec>
+ <fileSec>
+  <fileGrp ADMID="amd_13" USE="METADATA">
+   <file ID="bitstream_1" MIMETYPE="text/xml" SEQ="1" SIZE="2936" CHECKSUM="5a2c3e736875329757366c8c02ec3221" CHECKSUMTYPE="MD5" ADMID="amd_21" GROUPID="GROUP_bitstream_1">
+    <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="bitstream_944421.xml"/>
+   </file>
+   <file ID="bitstream_2" MIMETYPE="text/xml" SEQ="2" SIZE="319" CHECKSUM="4ec8e9c0a9f1069fa51254298d8ac340" CHECKSUMTYPE="MD5" ADMID="amd_29" GROUPID="GROUP_bitstream_2">
+    <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="bitstream_944422.xml"/>
+   </file>
+   <file ID="bitstream_3" MIMETYPE="text/xml" SEQ="3" SIZE="9436" CHECKSUM="1599921c3e34291daa086e5c4e268392" CHECKSUMTYPE="MD5" ADMID="amd_37" GROUPID="GROUP_bitstream_3">
+    <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="bitstream_944423.xml"/>
+   </file>
+  </fileGrp>
+  <fileGrp ADMID="amd_45" USE="ORIGINAL">
+   <file ID="bitstream_4" MIMETYPE="application/octet-stream" SEQ="4" SIZE="87391" CHECKSUM="8d5eb76add2c80906c77f50109e56cc4" CHECKSUMTYPE="MD5" ADMID="amd_54" GROUPID="GROUP_bitstream_4">
+    <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="bitstream_944424"/>
+   </file>
+   <file ID="bitstream_5" MIMETYPE="text/html" SEQ="5" SIZE="216054" CHECKSUM="43d3e022bb815f5878d2b564eb7122c4" CHECKSUMTYPE="MD5" ADMID="amd_63" GROUPID="GROUP_bitstream_5">
+    <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="bitstream_944425.htm"/>
+   </file>
+   <file ID="bitstream_6" MIMETYPE="application/octet-stream" SEQ="6" SIZE="2056084" CHECKSUM="2ee5a251325aad50fb8551bf2264c6f1" CHECKSUMTYPE="MD5" ADMID="amd_72" GROUPID="GROUP_bitstream_6">
+    <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="bitstream_944426"/>
+   </file>
+   <file ID="bitstream_7" MIMETYPE="text/xml" SEQ="7" SIZE="215733" CHECKSUM="0ca6925e390c6801fcafcbb499260493" CHECKSUMTYPE="MD5" ADMID="amd_81" GROUPID="GROUP_bitstream_7">
+    <FLocat LOCTYPE="URL" xlink:type="simple" xlink:href="bitstream_944427.xml"/>
+   </file>
+  </fileGrp>
+ </fileSec>
+ <structMap ID="struct_11" LABEL="DSpace Object" TYPE="LOGICAL">
+  <div ID="div_12" DMDID="dmdSec_1 dmdSec_2" ADMID="amd_3" TYPE="DSpace Object Contents">
+   <fptr FILEID="bitstream_7"/>
+   <div ID="div_53" TYPE="DSpace BITSTREAM">
+    <fptr FILEID="bitstream_4"/>
+   </div>
+   <div ID="div_62" TYPE="DSpace BITSTREAM">
+    <fptr FILEID="bitstream_5"/>
+   </div>
+   <div ID="div_71" TYPE="DSpace BITSTREAM">
+    <fptr FILEID="bitstream_6"/>
+   </div>
+   <div ID="div_80" TYPE="DSpace BITSTREAM">
+    <fptr FILEID="bitstream_7"/>
+   </div>
+  </div>
+ </structMap>
+ <structMap ID="struct_89" LABEL="Parent" TYPE="LOGICAL">
+  <div ID="div_90" LABEL="Parent of this DSpace Object" TYPE="AIP Parent Link">
+   <mptr ID="mptr_91" LOCTYPE="HANDLE" xlink:type="simple" xlink:href="20.500.12024/5"/>
+  </div>
+ </structMap>
+</mets>

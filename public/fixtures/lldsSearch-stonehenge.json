@@ -1,0 +1,78 @@
+[
+  {
+    "id": "llds:20.500.14106/A47049",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A47049",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A47049",
+    "_pid": "https://hdl.handle.net/20.500.14106/A47049",
+    "title": "The most notable antiquity of Great Britain, vulgarly called Stone-Heng on Salisbvry plain restored by Inigo Jones ...",
+    "description": "Edited by John Webb.  Cf. DNB, v. 30, p. 114. Reproduction of original in Huntington Library.",
+    "creator": [
+      "Jones, Inigo, 1573-1652.",
+      "Webb, John, 1611-1672."
+    ],
+    "date": "1655",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A47049",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-05-01T09:44:31.991Z",
+      "query": "stonehenge",
+      "recordId": "llds:20.500.14106/A47049",
+      "title": "The most notable antiquity of Great Britain, vulgarly called Stone-Heng on Salisbvry plain restored by Inigo Jones ...",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A47049",
+      "pid": "https://hdl.handle.net/20.500.14106/A47049",
+      "creator": [
+        "Jones, Inigo, 1573-1652.",
+        "Webb, John, 1611-1672."
+      ],
+      "date": "1655"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A69727",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A69727",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A69727",
+    "_pid": "https://hdl.handle.net/20.500.14106/A69727",
+    "title": "Chorea gigantum, or, The most famous antiquity of Great-Britan [sic], vulgarly called Stone-Heng, standing on Salisbury Plain, restored to the Danes by Walter Charleton ...",
+    "description": "A reply to Jones' \"The most notable antiquity of Great Britain.\" Text preceded by two poems addressed to Charleton by Robert Howard and John Dryden, respectively. Reproduction of original in Yale University Library and ...",
+    "creator": [
+      "Charleton, Walter, 1619-1707.",
+      "Howard, Robert, Sir, 1626-1698.",
+      "Dryden, John, 1631-1700."
+    ],
+    "date": "1663",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A69727",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-05-01T09:44:31.991Z",
+      "query": "stonehenge",
+      "recordId": "llds:20.500.14106/A69727",
+      "title": "Chorea gigantum, or, The most famous antiquity of Great-Britan [sic], vulgarly called Stone-Heng, standing on Salisbury Plain, restored to the Danes by Walter Charleton ...",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A69727",
+      "pid": "https://hdl.handle.net/20.500.14106/A69727",
+      "creator": [
+        "Charleton, Walter, 1619-1707.",
+        "Howard, Robert, Sir, 1626-1698.",
+        "Dryden, John, 1631-1700."
+      ],
+      "date": "1663"
+    }
+  }
+]

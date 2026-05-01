@@ -1,0 +1,1909 @@
+[
+  {
+    "id": "mds:c88d08df-1704-35df-be21-43024cec8954",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.13621.1",
+    "_sourceUrl": "https://museumdata.uk/objects/c88d08df-1704-35df-be21-43024cec8954",
+    "title": "Bishop Wordsworth,Tracts, Vol 1",
+    "description": "Bishop Wordsworth,Tracts, Vol 1, being 20 tracts and sermons by Bishop John Wordsworth, 1886-1904",
+    "creator": "Wordsworth, John",
+    "subject": [
+      "book",
+      "book",
+      "Religion",
+      "Sermons"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "c88d08df-1704-35df-be21-43024cec8954",
+      "objectNumber": "DZSWS:Book.13621.1",
+      "dimensions": [
+        "height",
+        "width",
+        "190 mm",
+        "135 mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Bishop Wordsworth,Tracts, Vol 1"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "Bishop Wordsworth,Tracts, Vol 1, being 20 tracts and sermons by Bishop John Wordsworth, 1886-1904"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Content - concept": [
+          "Religion",
+          "Sermons"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "190 mm",
+          "135 mm"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object component name": [
+          "edition"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.13621.1"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production person": [
+          "Wordsworth, John"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:c88d08df-1704-35df-be21-43024cec8954",
+      "title": "Bishop Wordsworth,Tracts, Vol 1",
+      "url": "https://museumdata.uk/objects/c88d08df-1704-35df-be21-43024cec8954",
+      "creator": "Wordsworth, John"
+    }
+  },
+  {
+    "id": "mds:130da6e2-ac60-38cd-9ea7-69bc1168f1f1",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.13621.2",
+    "_sourceUrl": "https://museumdata.uk/objects/130da6e2-ac60-38cd-9ea7-69bc1168f1f1",
+    "title": "Bishop Wordsworth,Tracts, Vol 2",
+    "description": "Bishop Wordsworth,Tracts, Vol 2, being 21 tracts and sermons by Bishop John Wordsworth, 1886-1906",
+    "creator": "Wordsworth, John",
+    "subject": [
+      "book",
+      "book",
+      "Religion",
+      "Sermons"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "130da6e2-ac60-38cd-9ea7-69bc1168f1f1",
+      "objectNumber": "DZSWS:Book.13621.2",
+      "dimensions": [
+        "height",
+        "width",
+        "227 mm",
+        "150 mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Bishop Wordsworth,Tracts, Vol 2"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "Bishop Wordsworth,Tracts, Vol 2, being 21 tracts and sermons by Bishop John Wordsworth, 1886-1906"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Content - concept": [
+          "Religion",
+          "Sermons"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "227 mm",
+          "150 mm"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object component name": [
+          "edition"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.13621.2"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production person": [
+          "Wordsworth, John"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:130da6e2-ac60-38cd-9ea7-69bc1168f1f1",
+      "title": "Bishop Wordsworth,Tracts, Vol 2",
+      "url": "https://museumdata.uk/objects/130da6e2-ac60-38cd-9ea7-69bc1168f1f1",
+      "creator": "Wordsworth, John"
+    }
+  },
+  {
+    "id": "mds:238ba9cf-808b-3a45-b475-bab73c38eeb9",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.13621.3",
+    "_sourceUrl": "https://museumdata.uk/objects/238ba9cf-808b-3a45-b475-bab73c38eeb9",
+    "title": "Bishop Wordsworth,Tracts, Vol 3",
+    "description": "Bishop Wordsworth,Tracts, Vol 3, being 13 tracts and sermons by Bishop John Wordsworth, 1886-1908",
+    "creator": "Wordsworth, John",
+    "subject": [
+      "book",
+      "book",
+      "Religion",
+      "Sermons"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "238ba9cf-808b-3a45-b475-bab73c38eeb9",
+      "objectNumber": "DZSWS:Book.13621.3",
+      "dimensions": [
+        "height",
+        "width",
+        "227 mm",
+        "150 mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Bishop Wordsworth,Tracts, Vol 3"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "Bishop Wordsworth,Tracts, Vol 3, being 13 tracts and sermons by Bishop John Wordsworth, 1886-1908"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Content - concept": [
+          "Religion",
+          "Sermons"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "227 mm",
+          "150 mm"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object component name": [
+          "edition"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.13621.3"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production person": [
+          "Wordsworth, John"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:238ba9cf-808b-3a45-b475-bab73c38eeb9",
+      "title": "Bishop Wordsworth,Tracts, Vol 3",
+      "url": "https://museumdata.uk/objects/238ba9cf-808b-3a45-b475-bab73c38eeb9",
+      "creator": "Wordsworth, John"
+    }
+  },
+  {
+    "id": "mds:57fbfbc0-bf80-34e2-8549-2f339cf6d084",
+    "_source": "mds",
+    "_sourceId": "object-110004144",
+    "_sourceUrl": "https://museumdata.uk/objects/57fbfbc0-bf80-34e2-8549-2f339cf6d084",
+    "title": "William Wordsworth: manuscript poem - \"The poet and the caged turtledove\"",
+    "creator": [
+      "Wordsworth, William",
+      "Wordsworth, Gordon G."
+    ],
+    "date": "1832",
+    "subject": [
+      "Gen/W/Wordsworth/1",
+      "Gen/W/Wordsworth/1"
+    ],
+    "type": "Museum object",
+    "collection": "Fitzwilliam Museum",
+    "mds": {
+      "uuid": "57fbfbc0-bf80-34e2-8549-2f339cf6d084",
+      "objectNumber": "object-110004144",
+      "personAssociation": [
+        "reference"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "William Wordsworth: manuscript poem - \"The poet and the caged turtledove\""
+        ],
+        "Object name(s)": [
+          "Gen/W/Wordsworth/1"
+        ],
+        "Collection": [
+          "Fitzwilliam Museum"
+        ],
+        "Content - person": [
+          "Cockerell, Sydney C."
+        ],
+        "Person's association": [
+          "reference"
+        ],
+        "Object name": [
+          "Gen/W/Wordsworth/1"
+        ],
+        "Object number": [
+          "Gen/W/Wordsworth/1"
+        ],
+        "Date - earliest / single": [
+          "1832"
+        ],
+        "Date - latest": [
+          "1920"
+        ],
+        "Object production person": [
+          "Wordsworth, William",
+          "Wordsworth, Gordon G."
+        ],
+        "Other number": [
+          "Gen/W/Wordsworth/1",
+          "110004144",
+          "https://data.fitzmuseum.cam.ac.uk/id/object/110004144"
+        ],
+        "Other number type": [
+          "accession number",
+          "priref",
+          "uri"
+        ],
+        "Text": [
+          "https://data.fitzmuseum.cam.ac.uk/id/object/110004144"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:57fbfbc0-bf80-34e2-8549-2f339cf6d084",
+      "title": "William Wordsworth: manuscript poem - \"The poet and the caged turtledove\"",
+      "url": "https://museumdata.uk/objects/57fbfbc0-bf80-34e2-8549-2f339cf6d084",
+      "creator": [
+        "Wordsworth, William",
+        "Wordsworth, Gordon G."
+      ],
+      "date": "1832"
+    }
+  },
+  {
+    "id": "mds:e0aa6bda-4998-378f-98ef-ca2b904fcc94",
+    "_source": "mds",
+    "_sourceId": "co8907781",
+    "_sourceUrl": "https://museumdata.uk/objects/e0aa6bda-4998-378f-98ef-ca2b904fcc94",
+    "title": "Digital Audio Tape 'G. W. Wordsworth'",
+    "description": "From paper in box: Worked as a driver of steal, electric and diesel, in York / 05/08/1997, G. W. Wordsworth interviewed by B. Lee / No NAROH recording with G. W. Wordsworth",
+    "creator": "National Railway Museum",
+    "date": "1997",
+    "subject": [
+      "dat; dat",
+      "dat; dat"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "e0aa6bda-4998-378f-98ef-ca2b904fcc94",
+      "objectNumber": "co8907781",
+      "material": [
+        "plastic (unidentified)",
+        "metal (unknown)"
+      ],
+      "place": [
+        "United Kingdom"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "46.99",
+        "18.5",
+        "53.34",
+        "21",
+        "20",
+        "50.8"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Digital Audio Tape 'G. W. Wordsworth'"
+        ],
+        "Object name(s)": [
+          "dat; dat"
+        ],
+        "Brief description": [
+          "From paper in box: Worked as a driver of steal, electric and diesel, in York / 05/08/1997, G. W. Wordsworth interviewed by B. Lee / No NAROH recording with G. W. Wordsworth"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "in",
+          "IN"
+        ],
+        "Dimension value": [
+          "46.99",
+          "18.5",
+          "53.34",
+          "21",
+          "20",
+          "50.8"
+        ],
+        "Material": [
+          "plastic (unidentified)",
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "dat; dat"
+        ],
+        "Date - earliest / single": [
+          "1997"
+        ],
+        "Date - latest": [
+          "1997"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "National Railway Museum"
+        ],
+        "Object production place": [
+          "United Kingdom"
+        ],
+        "Other number": [
+          "2022-916",
+          "TEMP0105419"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "NRM - Corporate Archive"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:e0aa6bda-4998-378f-98ef-ca2b904fcc94",
+      "title": "Digital Audio Tape 'G. W. Wordsworth'",
+      "url": "https://museumdata.uk/objects/e0aa6bda-4998-378f-98ef-ca2b904fcc94",
+      "creator": "National Railway Museum",
+      "date": "1997"
+    }
+  },
+  {
+    "id": "mds:2353156c-ef61-3b97-969b-36657f67443c",
+    "_source": "mds",
+    "_sourceId": "co483315",
+    "_sourceUrl": "https://museumdata.uk/objects/2353156c-ef61-3b97-969b-36657f67443c",
+    "title": "the poet william wordsworth was born & educated in lakeland",
+    "description": "Print. William Wordsworth against a Lake District background.  Text:\"The Poet William Wordsworth was born & educated in Lakeland, where he lived most of his life.  Its fine scenery inspired him to write much of his greatest work. (1770-1850)\"   c.1955. British Railways (London Midland Region) History Series.",
+    "creator": "Sawyer, Bill",
+    "date": "1955",
+    "subject": [
+      "poster; poster",
+      "poster; poster"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "2353156c-ef61-3b97-969b-36657f67443c",
+      "objectNumber": "co483315",
+      "dimensions": [
+        "height",
+        "width",
+        "10 1/4",
+        "260",
+        "20 1/16",
+        "510"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "the poet william wordsworth was born & educated in lakeland"
+        ],
+        "Object name(s)": [
+          "poster; poster"
+        ],
+        "Brief description": [
+          "Print. William Wordsworth against a Lake District background.  Text:\"The Poet William Wordsworth was born & educated in Lakeland, where he lived most of his life.  Its fine scenery inspired him to write much of his greatest work. (1770-1850)\"   c.1955. British Railways (London Midland Region) History Series."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "10 1/4",
+          "260",
+          "20 1/16",
+          "510"
+        ],
+        "Object name": [
+          "poster; poster"
+        ],
+        "Date - earliest / single": [
+          "1955"
+        ],
+        "Date - latest": [
+          "1955"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Sawyer, Bill"
+        ],
+        "Other number": [
+          "1998-11734"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Railway Posters, Notices & Handbills"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:2353156c-ef61-3b97-969b-36657f67443c",
+      "title": "the poet william wordsworth was born & educated in lakeland",
+      "url": "https://museumdata.uk/objects/2353156c-ef61-3b97-969b-36657f67443c",
+      "creator": "Sawyer, Bill",
+      "date": "1955"
+    }
+  },
+  {
+    "id": "mds:d7c1c9b8-d92f-3158-8821-3368fcc4bd88",
+    "_source": "mds",
+    "_sourceId": "SSL-LCL-3967",
+    "_sourceUrl": "https://museumdata.uk/objects/d7c1c9b8-d92f-3158-8821-3368fcc4bd88",
+    "title": "MDS Record 7",
+    "description": "review in Guardian of Kingdoms of Elfin by Christopher Wordsworth",
+    "subject": [
+      "review in Guardian of Kingdoms of Elfin by Christopher Wordsworth; photocopied newspaper cutting",
+      "review in Guardian of Kingdoms of Elfin by Christopher Wordsworth; photocopied newspaper cutting",
+      "Kingdoms of Elfin",
+      "reviews",
+      "criticism",
+      "Christopher Wordsworth"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "d7c1c9b8-d92f-3158-8821-3368fcc4bd88",
+      "objectNumber": "SSL-LCL-3967",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "review in Guardian of Kingdoms of Elfin by Christopher Wordsworth; photocopied newspaper cutting"
+        ],
+        "Brief description": [
+          "review in Guardian of Kingdoms of Elfin by Christopher Wordsworth"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Kingdoms of Elfin",
+          "reviews",
+          "criticism",
+          "Christopher Wordsworth"
+        ],
+        "Associated date": [
+          "06/01/1977"
+        ],
+        "Associated person": [
+          "STW"
+        ],
+        "Object name": [
+          "review in Guardian of Kingdoms of Elfin by Christopher Wordsworth; photocopied newspaper cutting"
+        ],
+        "Object number": [
+          "STW.2012.125.0898"
+        ],
+        "Responsible department/section": [
+          "Literature-STW"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:d7c1c9b8-d92f-3158-8821-3368fcc4bd88",
+      "title": "MDS Record 7",
+      "url": "https://museumdata.uk/objects/d7c1c9b8-d92f-3158-8821-3368fcc4bd88"
+    }
+  },
+  {
+    "id": "mds:8c619145-86ea-337e-89dc-a76000769ee2",
+    "_source": "mds",
+    "_sourceId": "800455",
+    "_sourceUrl": "https://museumdata.uk/objects/8c619145-86ea-337e-89dc-a76000769ee2",
+    "title": "Wordsworth in the Alps",
+    "description": "Wordsworth in the Alps",
+    "creator": "Peter Reddick",
+    "date": "2001",
+    "subject": [
+      "visual representation > print",
+      "visual representation > print"
+    ],
+    "type": "Museum object",
+    "collection": "Ashmolean Museum",
+    "mds": {
+      "uuid": "8c619145-86ea-337e-89dc-a76000769ee2",
+      "objectNumber": "800455",
+      "place": [
+        "Europe"
+      ],
+      "inscriptionContent": "8/50 Wordsworth in the Alps Peter Reddick '01 / for Sheila, below image in graphite",
+      "personAssociation": [
+        "printmaker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Wordsworth in the Alps"
+        ],
+        "Object name(s)": [
+          "visual representation > print"
+        ],
+        "Brief description": [
+          "Wordsworth in the Alps"
+        ],
+        "Collection": [
+          "Ashmolean Museum"
+        ],
+        "Associated place": [
+          "Europe"
+        ],
+        "Place association": [
+          "place of creation"
+        ],
+        "Inscription content": [
+          "8/50 Wordsworth in the Alps Peter Reddick '01 / for Sheila, below image in graphite"
+        ],
+        "Object name": [
+          "visual representation > print"
+        ],
+        "Object number": [
+          "WA2016.86.228"
+        ],
+        "Object production date": [
+          "2001"
+        ],
+        "Date - association": [
+          "date of creation"
+        ],
+        "Date - earliest / single": [
+          "2001"
+        ],
+        "Object production person": [
+          "Peter Reddick"
+        ],
+        "Person's association": [
+          "printmaker"
+        ],
+        "Person's birth date": [
+          "1924 - 2010"
+        ],
+        "Responsible department/section": [
+          "Western Art"
+        ],
+        "Right holder": [
+          "the artist's estate"
+        ],
+        "Text": [
+          "https://collections.ashmolean.org/object/800455"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:8c619145-86ea-337e-89dc-a76000769ee2",
+      "title": "Wordsworth in the Alps",
+      "url": "https://museumdata.uk/objects/8c619145-86ea-337e-89dc-a76000769ee2",
+      "creator": "Peter Reddick",
+      "date": "2001"
+    }
+  },
+  {
+    "id": "mds:41d44954-b5bc-3347-ba53-db1a970de6b1",
+    "_source": "mds",
+    "_sourceId": "co8560588",
+    "_sourceUrl": "https://museumdata.uk/objects/41d44954-b5bc-3347-ba53-db1a970de6b1",
+    "title": "Richard Wordsworth in 'The Curse of the Werewolf'",
+    "description": "Gelatin silver reference print of Richard Wordsworth in full make-up as the Beggar in 'The Curse of the Werewolf' (1961).",
+    "date": "1961",
+    "subject": [
+      "photograph; gelatin silver print; photograph; gelatin silver print",
+      "photograph; gelatin silver print; photograph; gelatin silver print"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "41d44954-b5bc-3347-ba53-db1a970de6b1",
+      "objectNumber": "co8560588",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Richard Wordsworth in 'The Curse of the Werewolf'"
+        ],
+        "Object name(s)": [
+          "photograph; gelatin silver print; photograph; gelatin silver print"
+        ],
+        "Brief description": [
+          "Gelatin silver reference print of Richard Wordsworth in full make-up as the Beggar in 'The Curse of the Werewolf' (1961)."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "National Media Museum, Bradford"
+        ],
+        "Object name": [
+          "photograph; gelatin silver print; photograph; gelatin silver print"
+        ],
+        "Date - earliest / single": [
+          "1961"
+        ],
+        "Date - latest": [
+          "1961"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "2000-5000/380"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Cinematography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:41d44954-b5bc-3347-ba53-db1a970de6b1",
+      "title": "Richard Wordsworth in 'The Curse of the Werewolf'",
+      "url": "https://museumdata.uk/objects/41d44954-b5bc-3347-ba53-db1a970de6b1",
+      "date": "1961"
+    }
+  },
+  {
+    "id": "mds:d46e5ba9-1d8a-3039-aacb-0f561f076435",
+    "_source": "mds",
+    "_sourceId": "724961",
+    "_sourceUrl": "https://museumdata.uk/objects/d46e5ba9-1d8a-3039-aacb-0f561f076435",
+    "title": "Bust of William Wordsworth (1770-1850)",
+    "description": "Bust of William Wordsworth (1770-1850)",
+    "creator": "Sir Francis Legatt Chantrey",
+    "date": "1820 - 1821",
+    "subject": [
+      "sculpture",
+      "sculpture"
+    ],
+    "type": "Museum object",
+    "collection": "Ashmolean Museum",
+    "mds": {
+      "uuid": "d46e5ba9-1d8a-3039-aacb-0f561f076435",
+      "objectNumber": "724961",
+      "place": [
+        "Europe > United Kingdom > England"
+      ],
+      "personAssociation": [
+        "subject",
+        "sculptor"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Bust of William Wordsworth (1770-1850)"
+        ],
+        "Object name(s)": [
+          "sculpture"
+        ],
+        "Brief description": [
+          "Bust of William Wordsworth (1770-1850)"
+        ],
+        "Collection": [
+          "Ashmolean Museum"
+        ],
+        "Associated person": [
+          "William Wordsworth"
+        ],
+        "Person's association": [
+          "subject",
+          "sculptor"
+        ],
+        "Person's birth date": [
+          "1770 - 1850",
+          "1781 - 1841"
+        ],
+        "Associated place": [
+          "Europe > United Kingdom > England"
+        ],
+        "Place association": [
+          "place of creation"
+        ],
+        "Object name": [
+          "sculpture"
+        ],
+        "Object number": [
+          "WA1842.121"
+        ],
+        "Object production date": [
+          "1820 - 1821"
+        ],
+        "Date - association": [
+          "date of creation"
+        ],
+        "Date - earliest / single": [
+          "1820"
+        ],
+        "Date - latest": [
+          "1821"
+        ],
+        "Object production person": [
+          "Sir Francis Legatt Chantrey"
+        ],
+        "Responsible department/section": [
+          "Western Art"
+        ],
+        "Text": [
+          "https://collections.ashmolean.org/object/724961"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:d46e5ba9-1d8a-3039-aacb-0f561f076435",
+      "title": "Bust of William Wordsworth (1770-1850)",
+      "url": "https://museumdata.uk/objects/d46e5ba9-1d8a-3039-aacb-0f561f076435",
+      "creator": "Sir Francis Legatt Chantrey",
+      "date": "1820 - 1821"
+    }
+  },
+  {
+    "id": "mds:3f371b78-2ff3-3843-87ad-386831143c40",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.18600.4",
+    "_sourceUrl": "https://museumdata.uk/objects/3f371b78-2ff3-3843-87ad-386831143c40",
+    "title": "Wordsworth on Salisbury Plain",
+    "description": "Wordsworth on Salisbury Plain/Cooper, Howard/The Hatcher Review No 47/Autumn 1998",
+    "creator": [
+      "Cooper, Howard",
+      "The Hatcher Review"
+    ],
+    "date": "1998",
+    "subject": [
+      "journal article",
+      "journal article",
+      "local history",
+      "biography",
+      "maps",
+      "fiction",
+      "poetry"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "3f371b78-2ff3-3843-87ad-386831143c40",
+      "objectNumber": "DZSWS:Book.18600.4",
+      "place": [
+        "Salisbury Plain",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width"
+      ],
+      "objectHistory": "journal article about William Wordsworth",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Wordsworth on Salisbury Plain"
+        ],
+        "Object name(s)": [
+          "journal article"
+        ],
+        "Brief description": [
+          "Wordsworth on Salisbury Plain/Cooper, Howard/The Hatcher Review No 47/Autumn 1998"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "local history",
+          "biography",
+          "maps",
+          "fiction",
+          "poetry"
+        ],
+        "Content - place": [
+          "Salisbury Plain",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "210",
+          "149"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "journal article about William Wordsworth"
+        ],
+        "Object name": [
+          "journal article"
+        ],
+        "Object number": [
+          "DZSWS:Book.18600.4"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "1998"
+        ],
+        "Object production organisation": [
+          "The Hatcher Review"
+        ],
+        "Organisation's function": [
+          "publisher"
+        ],
+        "Object production person": [
+          "Cooper, Howard"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Other number": [
+          "ISSN 0309 5118"
+        ],
+        "Other number type": [
+          "ISBN"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:3f371b78-2ff3-3843-87ad-386831143c40",
+      "title": "Wordsworth on Salisbury Plain",
+      "url": "https://museumdata.uk/objects/3f371b78-2ff3-3843-87ad-386831143c40",
+      "creator": [
+        "Cooper, Howard",
+        "The Hatcher Review"
+      ],
+      "date": "1998"
+    }
+  },
+  {
+    "id": "mds:69431ea3-bc88-3ee4-bc15-e72fd1c2fc24",
+    "_source": "mds",
+    "_sourceId": "co8560310",
+    "_sourceUrl": "https://museumdata.uk/objects/69431ea3-bc88-3ee4-bc15-e72fd1c2fc24",
+    "title": "Richard Wordsworth in 'The Curse of the Werewolf'",
+    "description": "A reference photograph of Richard Wordsworth in full make-up as the Beggar in 'The Curse of the Werewolf' (1961), taken by an unknown photographer in 1960.",
+    "date": "1960",
+    "subject": [
+      "photograph; gelatin silver print; photograph; gelatin silver print",
+      "photograph; gelatin silver print; photograph; gelatin silver print"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "69431ea3-bc88-3ee4-bc15-e72fd1c2fc24",
+      "objectNumber": "co8560310",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Richard Wordsworth in 'The Curse of the Werewolf'"
+        ],
+        "Object name(s)": [
+          "photograph; gelatin silver print; photograph; gelatin silver print"
+        ],
+        "Brief description": [
+          "A reference photograph of Richard Wordsworth in full make-up as the Beggar in 'The Curse of the Werewolf' (1961), taken by an unknown photographer in 1960."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "National Media Museum, Bradford"
+        ],
+        "Object name": [
+          "photograph; gelatin silver print; photograph; gelatin silver print"
+        ],
+        "Date - earliest / single": [
+          "1960"
+        ],
+        "Date - latest": [
+          "1960"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "2000-5000/123"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Cinematography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:69431ea3-bc88-3ee4-bc15-e72fd1c2fc24",
+      "title": "Richard Wordsworth in 'The Curse of the Werewolf'",
+      "url": "https://museumdata.uk/objects/69431ea3-bc88-3ee4-bc15-e72fd1c2fc24",
+      "date": "1960"
+    }
+  },
+  {
+    "id": "mds:b4a3c885-75ab-34f3-907f-2fb87b58d50d",
+    "_source": "mds",
+    "_sourceId": "259155",
+    "_sourceUrl": "https://museumdata.uk/objects/b4a3c885-75ab-34f3-907f-2fb87b58d50d",
+    "title": "William Wordsworth",
+    "description": "This object is not on display.\n\nInscription\n\nlower right stamp  Exeter Public Library\n\nlabel  Hand written by BR Haydon Wordsworth. ------? I cut out by J.G. Beaumont, when I was going to (have?) a bust of him.",
+    "creator": "Sir George Beaumont  (1753-1827) (artist)",
+    "date": "1810 to 1840",
+    "subject": [
+      "silhouette drawing; William Wordsworth",
+      "silhouette drawing; William Wordsworth",
+      "Literary",
+      "Portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Royal Albert Memorial Museum & Art Gallery",
+    "mds": {
+      "uuid": "b4a3c885-75ab-34f3-907f-2fb87b58d50d",
+      "objectNumber": "259155",
+      "material": [
+        "charcoal  on paper"
+      ],
+      "dimensions": [
+        "paper H 478 at highest point mm",
+        "paper length 260 at widest point mm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "William Wordsworth"
+        ],
+        "Object name(s)": [
+          "silhouette drawing; William Wordsworth"
+        ],
+        "Brief description": [
+          "This object is not on display.\n\nInscription\n\nlower right stamp  Exeter Public Library\n\nlabel  Hand written by BR Haydon Wordsworth. ------? I cut out by J.G. Beaumont, when I was going to (have?) a bust of him."
+        ],
+        "Collection": [
+          "Royal Albert Memorial Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Literary",
+          "Portrait"
+        ],
+        "Current location": [
+          "Not on display"
+        ],
+        "Dimension": [
+          "paper H 478 at highest point mm",
+          "paper length 260 at widest point mm"
+        ],
+        "Material": [
+          "charcoal  on paper"
+        ],
+        "Object name": [
+          "silhouette drawing; William Wordsworth"
+        ],
+        "Object number": [
+          "104/1978/54"
+        ],
+        "Object production date": [
+          "1810 to 1840"
+        ],
+        "Date - period": [
+          "Regency (1811-1820)",
+          "Victorian (1837-1901)"
+        ],
+        "Object production person": [
+          "Sir George Beaumont  (1753-1827) (artist)"
+        ],
+        "Reproduction number": [
+          "104-1978-54.jpg"
+        ],
+        "Responsible department/section": [
+          "Fine Art",
+          "Drawings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:b4a3c885-75ab-34f3-907f-2fb87b58d50d",
+      "title": "William Wordsworth",
+      "url": "https://museumdata.uk/objects/b4a3c885-75ab-34f3-907f-2fb87b58d50d",
+      "creator": "Sir George Beaumont  (1753-1827) (artist)",
+      "date": "1810 to 1840"
+    }
+  },
+  {
+    "id": "mds:1ae56323-3f70-3e24-8d35-77abc5eca164",
+    "_source": "mds",
+    "_sourceId": "BLDIDNA004892",
+    "_sourceUrl": "https://museumdata.uk/objects/1ae56323-3f70-3e24-8d35-77abc5eca164",
+    "title": "\"Wm. Wordsworth\"",
+    "description": "William Wordsworth; 3/4 length; landscape through arch on left. Bound in C68/1 (grangerised edition of Byron's \"English Bards and Scotch Reviewers\").",
+    "creator": [
+      "Moon/F.G.",
+      "McInnes/Edward",
+      "Gillies/Margaret (Miss)"
+    ],
+    "date": "6.8.1841",
+    "subject": [
+      "portraits; print",
+      "portraits; print (stipple engraving)",
+      "3.14 Wordsworth/William"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "1ae56323-3f70-3e24-8d35-77abc5eca164",
+      "objectNumber": "BLDIDNA004892",
+      "place": [
+        "20 Threadneedle St., London"
+      ],
+      "dimensions": [
+        "9 5/8 x 7 1/2ins"
+      ],
+      "personAssociation": [
+        "Publisher",
+        "Engraver",
+        "Artist"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "\"Wm. Wordsworth\""
+        ],
+        "Object name(s)": [
+          "portraits; print"
+        ],
+        "Brief description": [
+          "William Wordsworth; 3/4 length; landscape through arch on left. Bound in C68/1 (grangerised edition of Byron's \"English Bards and Scotch Reviewers\")."
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Acquisition date": [
+          "1937"
+        ],
+        "Acquisition method": [
+          "Bequest"
+        ],
+        "Acquisition source": [
+          "Roe/Herbert C."
+        ],
+        "Associated concept": [
+          "3.14 Wordsworth/William"
+        ],
+        "Dimension": [
+          "9 5/8 x 7 1/2ins"
+        ],
+        "Object name": [
+          "portraits; print (stipple engraving)"
+        ],
+        "Object number": [
+          "RB C68/1/93"
+        ],
+        "Object production date": [
+          "6.8.1841"
+        ],
+        "Date - association": [
+          "Published by"
+        ],
+        "Object production person": [
+          "Moon/F.G.",
+          "McInnes/Edward",
+          "Gillies/Margaret (Miss)"
+        ],
+        "Person's association": [
+          "Publisher",
+          "Engraver",
+          "Artist"
+        ],
+        "Person's occupation": [
+          "Published by",
+          "by",
+          "after"
+        ],
+        "Object production place": [
+          "20 Threadneedle St., London"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:1ae56323-3f70-3e24-8d35-77abc5eca164",
+      "title": "\"Wm. Wordsworth\"",
+      "url": "https://museumdata.uk/objects/1ae56323-3f70-3e24-8d35-77abc5eca164",
+      "creator": [
+        "Moon/F.G.",
+        "McInnes/Edward",
+        "Gillies/Margaret (Miss)"
+      ],
+      "date": "6.8.1841"
+    }
+  },
+  {
+    "id": "mds:33bdae1b-4f99-350d-aae2-30cdb63f2c3d",
+    "_source": "mds",
+    "_sourceId": "co521345",
+    "_sourceUrl": "https://museumdata.uk/objects/33bdae1b-4f99-350d-aae2-30cdb63f2c3d",
+    "title": "LNWR - A Tour in Wordsworth Country",
+    "description": "Travel Guide, London & North Western Railway, \"A Tour in The Wordsworth Country\", 1909, places to visit with map, 20 pages, soft cover.",
+    "creator": "London & North Western Railway; McCorquodale & Co Ltd",
+    "date": "1909",
+    "subject": [
+      "travel guide; travel guide",
+      "travel guide; travel guide",
+      "guidebook"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "33bdae1b-4f99-350d-aae2-30cdb63f2c3d",
+      "objectNumber": "co521345",
+      "material": [
+        "paper (fibre product)"
+      ],
+      "place": [
+        "London, England"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "7 1/16",
+        "180",
+        "4 15/16",
+        "125"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "LNWR - A Tour in Wordsworth Country"
+        ],
+        "Object name(s)": [
+          "travel guide; travel guide"
+        ],
+        "Brief description": [
+          "Travel Guide, London & North Western Railway, \"A Tour in The Wordsworth Country\", 1909, places to visit with map, 20 pages, soft cover."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "guidebook"
+        ],
+        "Credit line": [
+          "British Rail, Clapham"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "7 1/16",
+          "180",
+          "4 15/16",
+          "125"
+        ],
+        "Material": [
+          "paper (fibre product)"
+        ],
+        "Object name": [
+          "travel guide; travel guide"
+        ],
+        "Date - earliest / single": [
+          "1909"
+        ],
+        "Date - latest": [
+          "1909"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "London & North Western Railway; McCorquodale & Co Ltd"
+        ],
+        "Object production place": [
+          "London, England"
+        ],
+        "Other number": [
+          "1999-8049",
+          "3811/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "Clapham number"
+        ],
+        "Responsible department/section": [
+          "NRM - Documents"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:33bdae1b-4f99-350d-aae2-30cdb63f2c3d",
+      "title": "LNWR - A Tour in Wordsworth Country",
+      "url": "https://museumdata.uk/objects/33bdae1b-4f99-350d-aae2-30cdb63f2c3d",
+      "creator": "London & North Western Railway; McCorquodale & Co Ltd",
+      "date": "1909"
+    }
+  },
+  {
+    "id": "mds:ea1005a2-a217-36cf-b303-73709e1e0515",
+    "_source": "mds",
+    "_sourceId": "173649",
+    "_sourceUrl": "https://museumdata.uk/objects/ea1005a2-a217-36cf-b303-73709e1e0515",
+    "title": "Portrait of W. Wordsworth",
+    "description": "Portrait of W. Wordsworth",
+    "creator": "Charles Wilkin",
+    "date": "1765 - 1814",
+    "subject": [
+      "visual representation > print",
+      "visual representation > print"
+    ],
+    "type": "Museum object",
+    "collection": "Ashmolean Museum",
+    "mds": {
+      "uuid": "ea1005a2-a217-36cf-b303-73709e1e0515",
+      "objectNumber": "173649",
+      "place": [
+        "Europe"
+      ],
+      "personAssociation": [
+        "printmaker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Portrait of W. Wordsworth"
+        ],
+        "Object name(s)": [
+          "visual representation > print"
+        ],
+        "Brief description": [
+          "Portrait of W. Wordsworth"
+        ],
+        "Collection": [
+          "Ashmolean Museum"
+        ],
+        "Associated place": [
+          "Europe"
+        ],
+        "Place association": [
+          "place of creation"
+        ],
+        "Object name": [
+          "visual representation > print"
+        ],
+        "Object number": [
+          "WAHP9553"
+        ],
+        "Object production date": [
+          "1765 - 1814"
+        ],
+        "Date - association": [
+          "date of creation"
+        ],
+        "Date - earliest / single": [
+          "1765"
+        ],
+        "Date - latest": [
+          "1814"
+        ],
+        "Object production person": [
+          "Charles Wilkin"
+        ],
+        "Person's association": [
+          "printmaker"
+        ],
+        "Person's birth date": [
+          "1750 - 1814"
+        ],
+        "Responsible department/section": [
+          "Western Art"
+        ],
+        "Text": [
+          "https://collections.ashmolean.org/object/173649"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:ea1005a2-a217-36cf-b303-73709e1e0515",
+      "title": "Portrait of W. Wordsworth",
+      "url": "https://museumdata.uk/objects/ea1005a2-a217-36cf-b303-73709e1e0515",
+      "creator": "Charles Wilkin",
+      "date": "1765 - 1814"
+    }
+  },
+  {
+    "id": "mds:e3204eab-fe98-3d3e-8933-6d45f71d70a0",
+    "_source": "mds",
+    "_sourceId": "BUDEX:2015.46.42",
+    "_sourceUrl": "https://museumdata.uk/objects/e3204eab-fe98-3d3e-8933-6d45f71d70a0",
+    "title": "Dorothy Wordsworth",
+    "description": "handwritten account in lined green covered book",
+    "creator": "Sims, Bernice, May",
+    "subject": [
+      "book; memoire",
+      "book; memoire"
+    ],
+    "type": "Museum object",
+    "collection": "The Castle Heritage Centre",
+    "mds": {
+      "uuid": "e3204eab-fe98-3d3e-8933-6d45f71d70a0",
+      "objectNumber": "BUDEX:2015.46.42",
+      "dimensions": [
+        "height x width",
+        "width",
+        "33x20.5cm"
+      ],
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Dorothy Wordsworth"
+        ],
+        "Object name(s)": [
+          "book; memoire"
+        ],
+        "Brief description": [
+          "handwritten account in lined green covered book",
+          "large rectangular soft covered book with green cover and lined pages written by Bernice May Sims (nee Tape) ofSalisbury Diosesan Training College about Dorothy Wordsworth"
+        ],
+        "Collection": [
+          "The Castle Heritage Centre"
+        ],
+        "Dimension": [
+          "height x width",
+          "width"
+        ],
+        "Dimension value": [
+          "33x20.5cm"
+        ],
+        "Object component name": [
+          "number of pages"
+        ],
+        "Object name": [
+          "book; memoire"
+        ],
+        "Object number": [
+          "BUDEX:2015.46.42"
+        ],
+        "Object production person": [
+          "Sims, Bernice, May"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Physical description": [
+          "handwritten account in lined green covered book"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:e3204eab-fe98-3d3e-8933-6d45f71d70a0",
+      "title": "Dorothy Wordsworth",
+      "url": "https://museumdata.uk/objects/e3204eab-fe98-3d3e-8933-6d45f71d70a0",
+      "creator": "Sims, Bernice, May"
+    }
+  },
+  {
+    "id": "mds:74be89bd-f8bf-3048-a805-83b4ddec64fe",
+    "_source": "mds",
+    "_sourceId": "BLDIDNA004569",
+    "_sourceUrl": "https://museumdata.uk/objects/74be89bd-f8bf-3048-a805-83b4ddec64fe",
+    "title": "\"William Wordsworth\"",
+    "description": "Mounted in RB C55; apparently after the 1832 mezzotint by James Bromley after W. Boxall.",
+    "creator": [
+      "Cochran/John",
+      "Boxall/William"
+    ],
+    "subject": [
+      "portraits * Byron; print",
+      "portraits * Byron; print (stipple engraving)",
+      "3.14 Wordsworth/William"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "74be89bd-f8bf-3048-a805-83b4ddec64fe",
+      "objectNumber": "BLDIDNA004569",
+      "personAssociation": [
+        "Engraver",
+        "Artist"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "\"William Wordsworth\""
+        ],
+        "Object name(s)": [
+          "portraits * Byron; print"
+        ],
+        "Brief description": [
+          "Mounted in RB C55; apparently after the 1832 mezzotint by James Bromley after W. Boxall."
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Acquisition date": [
+          "1937"
+        ],
+        "Acquisition method": [
+          "Bequest"
+        ],
+        "Acquisition source": [
+          "Roe/Herbert C."
+        ],
+        "Associated concept": [
+          "3.14 Wordsworth/William"
+        ],
+        "Object name": [
+          "portraits * Byron; print (stipple engraving)"
+        ],
+        "Object number": [
+          "RB C55/70"
+        ],
+        "Object production person": [
+          "Cochran/John",
+          "Boxall/William"
+        ],
+        "Person's association": [
+          "Engraver",
+          "Artist"
+        ],
+        "Person's occupation": [
+          "by",
+          "after"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:74be89bd-f8bf-3048-a805-83b4ddec64fe",
+      "title": "\"William Wordsworth\"",
+      "url": "https://museumdata.uk/objects/74be89bd-f8bf-3048-a805-83b4ddec64fe",
+      "creator": [
+        "Cochran/John",
+        "Boxall/William"
+      ]
+    }
+  },
+  {
+    "id": "mds:0149da9e-a5ef-320c-b013-52acfc848a90",
+    "_source": "mds",
+    "_sourceId": "197243",
+    "_sourceUrl": "https://museumdata.uk/objects/0149da9e-a5ef-320c-b013-52acfc848a90",
+    "title": "Portrait of W. Wordsworth",
+    "description": "Portrait of W. Wordsworth",
+    "creator": "John Cochran",
+    "date": "1846",
+    "subject": [
+      "visual representation > print",
+      "visual representation > print"
+    ],
+    "type": "Museum object",
+    "collection": "Ashmolean Museum",
+    "mds": {
+      "uuid": "0149da9e-a5ef-320c-b013-52acfc848a90",
+      "objectNumber": "197243",
+      "place": [
+        "Europe"
+      ],
+      "personAssociation": [
+        "printmaker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Portrait of W. Wordsworth"
+        ],
+        "Object name(s)": [
+          "visual representation > print"
+        ],
+        "Brief description": [
+          "Portrait of W. Wordsworth"
+        ],
+        "Collection": [
+          "Ashmolean Museum"
+        ],
+        "Associated place": [
+          "Europe"
+        ],
+        "Place association": [
+          "place of creation"
+        ],
+        "Object name": [
+          "visual representation > print"
+        ],
+        "Object number": [
+          "WAHP33298"
+        ],
+        "Object production date": [
+          "1846"
+        ],
+        "Date - association": [
+          "date of creation"
+        ],
+        "Date - earliest / single": [
+          "1846"
+        ],
+        "Object production person": [
+          "John Cochran"
+        ],
+        "Person's association": [
+          "printmaker"
+        ],
+        "Person's birth date": [
+          "1803 - 1865"
+        ],
+        "Responsible department/section": [
+          "Western Art"
+        ],
+        "Text": [
+          "https://collections.ashmolean.org/object/197243"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:0149da9e-a5ef-320c-b013-52acfc848a90",
+      "title": "Portrait of W. Wordsworth",
+      "url": "https://museumdata.uk/objects/0149da9e-a5ef-320c-b013-52acfc848a90",
+      "creator": "John Cochran",
+      "date": "1846"
+    }
+  },
+  {
+    "id": "mds:8241bb5a-5609-3851-b929-278931f3656b",
+    "_source": "mds",
+    "_sourceId": "197236",
+    "_sourceUrl": "https://museumdata.uk/objects/8241bb5a-5609-3851-b929-278931f3656b",
+    "title": "Portrait of W. Wordsworth",
+    "description": "Portrait of W. Wordsworth",
+    "creator": "Francis Croll",
+    "date": "1827 - 1854",
+    "subject": [
+      "visual representation > print",
+      "visual representation > print"
+    ],
+    "type": "Museum object",
+    "collection": "Ashmolean Museum",
+    "mds": {
+      "uuid": "8241bb5a-5609-3851-b929-278931f3656b",
+      "objectNumber": "197236",
+      "place": [
+        "Europe"
+      ],
+      "personAssociation": [
+        "printmaker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Portrait of W. Wordsworth"
+        ],
+        "Object name(s)": [
+          "visual representation > print"
+        ],
+        "Brief description": [
+          "Portrait of W. Wordsworth"
+        ],
+        "Collection": [
+          "Ashmolean Museum"
+        ],
+        "Associated place": [
+          "Europe"
+        ],
+        "Place association": [
+          "place of creation"
+        ],
+        "Object name": [
+          "visual representation > print"
+        ],
+        "Object number": [
+          "WAHP33291"
+        ],
+        "Object production date": [
+          "1827 - 1854"
+        ],
+        "Date - association": [
+          "date of creation"
+        ],
+        "Date - earliest / single": [
+          "1827"
+        ],
+        "Date - latest": [
+          "1854"
+        ],
+        "Object production person": [
+          "Francis Croll"
+        ],
+        "Person's association": [
+          "printmaker"
+        ],
+        "Person's birth date": [
+          "1827 - 1854"
+        ],
+        "Responsible department/section": [
+          "Western Art"
+        ],
+        "Text": [
+          "https://collections.ashmolean.org/object/197236"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T10:03:19.425Z",
+      "query": "wordsworth",
+      "recordId": "mds:8241bb5a-5609-3851-b929-278931f3656b",
+      "title": "Portrait of W. Wordsworth",
+      "url": "https://museumdata.uk/objects/8241bb5a-5609-3851-b929-278931f3656b",
+      "creator": "Francis Croll",
+      "date": "1827 - 1854"
+    }
+  }
+]

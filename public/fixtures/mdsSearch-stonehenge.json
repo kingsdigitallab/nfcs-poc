@@ -1,0 +1,2150 @@
+[
+  {
+    "id": "mds:022e3e5b-701b-3b58-be3e-3dc00d97f2d3",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7007.1",
+    "_sourceUrl": "https://museumdata.uk/objects/022e3e5b-701b-3b58-be3e-3dc00d97f2d3",
+    "title": "Stonehenge",
+    "description": "Black and white photograph of Stonehenge (one of set of 6) - titled \"Stonehenge\"",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "022e3e5b-701b-3b58-be3e-3dc00d97f2d3",
+      "objectNumber": "DZSWS:2022.7007.1",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "55mm",
+        "83mm"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge\"",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of Stonehenge (one of set of 6) - titled \"Stonehenge\"",
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "55mm",
+          "83mm"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7007.1"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:022e3e5b-701b-3b58-be3e-3dc00d97f2d3",
+      "title": "Stonehenge",
+      "url": "https://museumdata.uk/objects/022e3e5b-701b-3b58-be3e-3dc00d97f2d3"
+    }
+  },
+  {
+    "id": "mds:822a4191-0ee5-367f-9539-a05c96ee022e",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7007.6",
+    "_sourceUrl": "https://museumdata.uk/objects/822a4191-0ee5-367f-9539-a05c96ee022e",
+    "title": "Stonehenge",
+    "description": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge.\"",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "822a4191-0ee5-367f-9539-a05c96ee022e",
+      "objectNumber": "DZSWS:2022.7007.6",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "55",
+        "83"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge.\"",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge.\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "55",
+          "83"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge.\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7007.6"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge.\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:822a4191-0ee5-367f-9539-a05c96ee022e",
+      "title": "Stonehenge",
+      "url": "https://museumdata.uk/objects/822a4191-0ee5-367f-9539-a05c96ee022e"
+    }
+  },
+  {
+    "id": "mds:571f411e-b4f1-3f6c-84e2-c1c904070cfe",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7007.4",
+    "_sourceUrl": "https://museumdata.uk/objects/571f411e-b4f1-3f6c-84e2-c1c904070cfe",
+    "title": "Stonehenge. General View",
+    "description": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge. General View\"",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "571f411e-b4f1-3f6c-84e2-c1c904070cfe",
+      "objectNumber": "DZSWS:2022.7007.4",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "55",
+        "83"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge. General View\"",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge. General View"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge. General View\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "55",
+          "83"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge. General View\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7007.4"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge. General View\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:571f411e-b4f1-3f6c-84e2-c1c904070cfe",
+      "title": "Stonehenge. General View",
+      "url": "https://museumdata.uk/objects/571f411e-b4f1-3f6c-84e2-c1c904070cfe"
+    }
+  },
+  {
+    "id": "mds:17927a0c-b975-31f4-8a15-1771ea6b793a",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7007.3",
+    "_sourceUrl": "https://museumdata.uk/objects/17927a0c-b975-31f4-8a15-1771ea6b793a",
+    "title": "Stonehenge, showing Altar Stone",
+    "description": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge, showing Altar Stone\"",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "17927a0c-b975-31f4-8a15-1771ea6b793a",
+      "objectNumber": "DZSWS:2022.7007.3",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "55",
+        "83"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge, showing Altar Stone\"",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge, showing Altar Stone"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge, showing Altar Stone\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "55",
+          "83"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge, showing Altar Stone\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7007.3"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge, showing Altar Stone\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:17927a0c-b975-31f4-8a15-1771ea6b793a",
+      "title": "Stonehenge, showing Altar Stone",
+      "url": "https://museumdata.uk/objects/17927a0c-b975-31f4-8a15-1771ea6b793a"
+    }
+  },
+  {
+    "id": "mds:e9688df5-f5e1-3126-9543-64820ac11565",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7008.5",
+    "_sourceUrl": "https://museumdata.uk/objects/e9688df5-f5e1-3126-9543-64820ac11565",
+    "title": "Stonehenge trilithons looking north",
+    "description": "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons looking north\"",
+    "creator": "Scott, Walter",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "e9688df5-f5e1-3126-9543-64820ac11565",
+      "objectNumber": "DZSWS:2022.7008.5",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "62",
+        "87"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons looking north\"",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge trilithons looking north"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons looking north\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "62",
+          "87"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons looking north\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7008.5"
+        ],
+        "Object production person": [
+          "Scott, Walter"
+        ],
+        "Person's address": [
+          "North Parade, Bradford"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons looking north\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:e9688df5-f5e1-3126-9543-64820ac11565",
+      "title": "Stonehenge trilithons looking north",
+      "url": "https://museumdata.uk/objects/e9688df5-f5e1-3126-9543-64820ac11565",
+      "creator": "Scott, Walter"
+    }
+  },
+  {
+    "id": "mds:15babf1b-ad20-3dfe-8f8c-055b71b71a39",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7008.4",
+    "_sourceUrl": "https://museumdata.uk/objects/15babf1b-ad20-3dfe-8f8c-055b71b71a39",
+    "title": "Stonehenge from the East",
+    "description": "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge from the East\"",
+    "creator": "Scott, Walter",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "15babf1b-ad20-3dfe-8f8c-055b71b71a39",
+      "objectNumber": "DZSWS:2022.7008.4",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "62",
+        "87"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge from the East\"",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge from the East"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge from the East\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "62",
+          "87"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge from the East\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7008.4"
+        ],
+        "Object production person": [
+          "Scott, Walter"
+        ],
+        "Person's address": [
+          "North Parade, Bradford"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge from the East\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:15babf1b-ad20-3dfe-8f8c-055b71b71a39",
+      "title": "Stonehenge from the East",
+      "url": "https://museumdata.uk/objects/15babf1b-ad20-3dfe-8f8c-055b71b71a39",
+      "creator": "Scott, Walter"
+    }
+  },
+  {
+    "id": "mds:2ce4d8e3-7ebc-3c66-9309-3145404ea2f1",
+    "_source": "mds",
+    "_sourceId": "DZSWS:MSS.4548",
+    "_sourceUrl": "https://museumdata.uk/objects/2ce4d8e3-7ebc-3c66-9309-3145404ea2f1",
+    "title": "Save Stonehenge World Heritage Site",
+    "description": "Save Stonehenge World Heritage Site sign the petition/Stonehenge Alliance/circa 2015",
+    "creator": "Stonehenge Alliance",
+    "date": "2015",
+    "subject": [
+      "leaflets",
+      "leaflets",
+      "local history",
+      "archaeology",
+      "protest"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "2ce4d8e3-7ebc-3c66-9309-3145404ea2f1",
+      "objectNumber": "DZSWS:MSS.4548",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "210mm",
+        "150mm"
+      ],
+      "objectHistory": "campaign leaflet by Stonehenge Alliance to try and stop the Stonehenge Tunnel being built through the World Heritage Site.  Call out to sign the 38 Degrees (UK)petition ‘Save Stonehenge World Heritage Site’:",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Save Stonehenge World Heritage Site"
+        ],
+        "Object name(s)": [
+          "leaflets"
+        ],
+        "Brief description": [
+          "Save Stonehenge World Heritage Site sign the petition/Stonehenge Alliance/circa 2015"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Comments": [
+          "https://stonehengealliance.org.uk/"
+        ],
+        "Content - concept": [
+          "local history",
+          "archaeology",
+          "protest"
+        ],
+        "Content - date": [
+          "20th century"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "210mm",
+          "150mm"
+        ],
+        "Object component name": [
+          "edition"
+        ],
+        "Object history note": [
+          "campaign leaflet by Stonehenge Alliance to try and stop the Stonehenge Tunnel being built through the World Heritage Site.  Call out to sign the 38 Degrees (UK)petition ‘Save Stonehenge World Heritage Site’:"
+        ],
+        "Object name": [
+          "leaflets"
+        ],
+        "Object number": [
+          "DZSWS:MSS.4548"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Date - earliest / single": [
+          "2015"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "Stonehenge Alliance"
+        ],
+        "Organisation's function": [
+          "publisher"
+        ],
+        "Related object number": [
+          "DZSWS:MSS.4407.2"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:2ce4d8e3-7ebc-3c66-9309-3145404ea2f1",
+      "title": "Save Stonehenge World Heritage Site",
+      "url": "https://museumdata.uk/objects/2ce4d8e3-7ebc-3c66-9309-3145404ea2f1",
+      "creator": "Stonehenge Alliance",
+      "date": "2015"
+    }
+  },
+  {
+    "id": "mds:d6f158bf-c830-3057-9453-34cf797e1d8e",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7008.3",
+    "_sourceUrl": "https://museumdata.uk/objects/d6f158bf-c830-3057-9453-34cf797e1d8e",
+    "title": "Stonehenge Hele Stone",
+    "description": "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge Hele Stone\"",
+    "creator": "Scott, Walter",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "d6f158bf-c830-3057-9453-34cf797e1d8e",
+      "objectNumber": "DZSWS:2022.7008.3",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "62",
+        "87"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge Hele Stone\"",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge Hele Stone"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge Hele Stone\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "62",
+          "87"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge Hele Stone\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7008.3"
+        ],
+        "Object production person": [
+          "Scott, Walter"
+        ],
+        "Person's address": [
+          "North Parade, Bradford"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge Hele Stone\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:d6f158bf-c830-3057-9453-34cf797e1d8e",
+      "title": "Stonehenge Hele Stone",
+      "url": "https://museumdata.uk/objects/d6f158bf-c830-3057-9453-34cf797e1d8e",
+      "creator": "Scott, Walter"
+    }
+  },
+  {
+    "id": "mds:8d470e4f-4b6c-36c8-88ee-1c478999a0b3",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7008.2",
+    "_sourceUrl": "https://museumdata.uk/objects/8d470e4f-4b6c-36c8-88ee-1c478999a0b3",
+    "title": "Stonehenge trilithons",
+    "description": "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons\"",
+    "creator": "Scott, Walter",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "8d470e4f-4b6c-36c8-88ee-1c478999a0b3",
+      "objectNumber": "DZSWS:2022.7008.2",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "62",
+        "87"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons\"",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge trilithons"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "62",
+          "87"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7008.2"
+        ],
+        "Object production person": [
+          "Scott, Walter"
+        ],
+        "Person's address": [
+          "North Parade, Bradford"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:8d470e4f-4b6c-36c8-88ee-1c478999a0b3",
+      "title": "Stonehenge trilithons",
+      "url": "https://museumdata.uk/objects/8d470e4f-4b6c-36c8-88ee-1c478999a0b3",
+      "creator": "Scott, Walter"
+    }
+  },
+  {
+    "id": "mds:73ebcd84-3e46-376a-b7dc-272d18ab76f0",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7007.2",
+    "_sourceUrl": "https://museumdata.uk/objects/73ebcd84-3e46-376a-b7dc-272d18ab76f0",
+    "title": "Stonehenge, showing Slaughter Stone",
+    "description": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge, showing Slaughter Stone\"",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "73ebcd84-3e46-376a-b7dc-272d18ab76f0",
+      "objectNumber": "DZSWS:2022.7007.2",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "55",
+        "83"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge, showing Slaughter Stone\"",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge, showing Slaughter Stone"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge, showing Slaughter Stone\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "55",
+          "83"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge, showing Slaughter Stone\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7007.2"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge, showing Slaughter Stone\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:73ebcd84-3e46-376a-b7dc-272d18ab76f0",
+      "title": "Stonehenge, showing Slaughter Stone",
+      "url": "https://museumdata.uk/objects/73ebcd84-3e46-376a-b7dc-272d18ab76f0"
+    }
+  },
+  {
+    "id": "mds:3ea25854-c5a2-3a4e-b6fc-2a571823992a",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7008.1",
+    "_sourceUrl": "https://museumdata.uk/objects/3ea25854-c5a2-3a4e-b6fc-2a571823992a",
+    "title": "Stonehenge trilithons from interior",
+    "description": "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons from interior\"",
+    "creator": "Scott, Walter",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "3ea25854-c5a2-3a4e-b6fc-2a571823992a",
+      "objectNumber": "DZSWS:2022.7008.1",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "62",
+        "87"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons from [cannot decipher]\"",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge trilithons from interior"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons from interior\"",
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons from [cannot decipher]\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "62",
+          "87"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons from [cannot decipher]\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7008.1"
+        ],
+        "Object production person": [
+          "Scott, Walter"
+        ],
+        "Person's address": [
+          "North Parade, Bradford"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 5) - titled \"Stonehenge trilithons from [cannot decipher]\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:3ea25854-c5a2-3a4e-b6fc-2a571823992a",
+      "title": "Stonehenge trilithons from interior",
+      "url": "https://museumdata.uk/objects/3ea25854-c5a2-3a4e-b6fc-2a571823992a",
+      "creator": "Scott, Walter"
+    }
+  },
+  {
+    "id": "mds:328a2122-5254-3e6c-b462-8f0e1daa4cb9",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2022.7007.5",
+    "_sourceUrl": "https://museumdata.uk/objects/328a2122-5254-3e6c-b462-8f0e1daa4cb9",
+    "title": "Stonehenge. Hele Stone and Slaughter Stone",
+    "description": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge. Hele Stone and Slaughter Stone\"",
+    "subject": [
+      "photograph",
+      "photograph",
+      "stonehenge",
+      "stone circles",
+      "world heritage sites"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "328a2122-5254-3e6c-b462-8f0e1daa4cb9",
+      "objectNumber": "DZSWS:2022.7007.5",
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "55",
+        "83"
+      ],
+      "objectHistory": "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge. Hele Stone and Slaughter Stone\"",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge. Hele Stone and Slaughter Stone"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge. Hele Stone and Slaughter Stone\""
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "stonehenge",
+          "stone circles",
+          "world heritage sites"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "55",
+          "83"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge. Hele Stone and Slaughter Stone\""
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2022.7007.5"
+        ],
+        "Physical description": [
+          "Black and white photograph of stonehenge (one of set of 6) - titled \"Stonehenge. Hele Stone and Slaughter Stone\""
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:328a2122-5254-3e6c-b462-8f0e1daa4cb9",
+      "title": "Stonehenge. Hele Stone and Slaughter Stone",
+      "url": "https://museumdata.uk/objects/328a2122-5254-3e6c-b462-8f0e1daa4cb9"
+    }
+  },
+  {
+    "id": "mds:f7780893-bee6-3211-81cc-6036e6dc3a41",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.16533",
+    "_sourceUrl": "https://museumdata.uk/objects/f7780893-bee6-3211-81cc-6036e6dc3a41",
+    "title": "Stonehenge World Heritage Site Landscape Project: Stonehenge Aerodrome and the Stonehenge Landscape",
+    "description": "Stonehenge World Heritage Site Landscape Project: Stonehenge Aerodrome and the Stonehenge Landscape/Barber, Martyn/English Heritage/2014/English Heritage Research Report Series No 7-2014",
+    "creator": [
+      "Barber, Martyn",
+      "English Heritage"
+    ],
+    "date": "2014",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "monuments",
+      "stone circles",
+      "landscape",
+      "airfields",
+      "Royal Air Force"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "f7780893-bee6-3211-81cc-6036e6dc3a41",
+      "objectNumber": "DZSWS:Book.16533",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "excellent",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge World Heritage Site Landscape Project: Stonehenge Aerodrome and the Stonehenge Landscape"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "Stonehenge World Heritage Site Landscape Project: Stonehenge Aerodrome and the Stonehenge Landscape/Barber, Martyn/English Heritage/2014/English Heritage Research Report Series No 7-2014",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "excellent"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "monuments",
+          "stone circles",
+          "landscape",
+          "airfields",
+          "Royal Air Force"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "297",
+          "210"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.16533"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "2014"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "English Heritage"
+        ],
+        "Organisation's function": [
+          "publisher",
+          "printer"
+        ],
+        "Object production person": [
+          "Barber, Martyn"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Other number": [
+          "ISBN 978 1 84802 348 2",
+          "ISSN 2046-9799"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:f7780893-bee6-3211-81cc-6036e6dc3a41",
+      "title": "Stonehenge World Heritage Site Landscape Project: Stonehenge Aerodrome and the Stonehenge Landscape",
+      "url": "https://museumdata.uk/objects/f7780893-bee6-3211-81cc-6036e6dc3a41",
+      "creator": [
+        "Barber, Martyn",
+        "English Heritage"
+      ],
+      "date": "2014"
+    }
+  },
+  {
+    "id": "mds:cf89de2d-66c9-3b0a-8e27-9b7b15ba4455",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2013.45",
+    "_sourceUrl": "https://museumdata.uk/objects/cf89de2d-66c9-3b0a-8e27-9b7b15ba4455",
+    "title": "MDS Record 14",
+    "description": "Complementary gift bag given to invitees at the Private View of the Opening of the new Visitor Centre at Stonehenge, 16 December 2013. Included inside the jute bag with transfer print of a Stonehenge trilithon is a Stonehenge snowfall Christmas bauble; Stonehenge guidebook produced by English Heritage; hardback book entitled A YEAR AT STONEHENGE by James O. Davies; Exhibition booklet entitled SET IN STONE? HOW OUR ANCESTORS SAW STONEHENGE written by Susan Greaney; Stonehenge welcome map; selection of postcards and a lunch menu.",
+    "subject": [
+      "collection",
+      "collection",
+      "events"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "cf89de2d-66c9-3b0a-8e27-9b7b15ba4455",
+      "objectNumber": "DZSWS:2013.45",
+      "numberOfObjects": "4",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "collection"
+        ],
+        "Brief description": [
+          "Complementary gift bag given to invitees at the Private View of the Opening of the new Visitor Centre at Stonehenge, 16 December 2013. Included inside the jute bag with transfer print of a Stonehenge trilithon is a Stonehenge snowfall Christmas bauble; Stonehenge guidebook produced by English Heritage; hardback book entitled A YEAR AT STONEHENGE by James O. Davies; Exhibition booklet entitled SET IN STONE? HOW OUR ANCESTORS SAW STONEHENGE written by Susan Greaney; Stonehenge welcome map; selection of postcards and a lunch menu."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "events"
+        ],
+        "Number of objects": [
+          "4"
+        ],
+        "Object name": [
+          "collection"
+        ],
+        "Object number": [
+          "DZSWS:2013.45"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:cf89de2d-66c9-3b0a-8e27-9b7b15ba4455",
+      "title": "MDS Record 14",
+      "url": "https://museumdata.uk/objects/cf89de2d-66c9-3b0a-8e27-9b7b15ba4455"
+    }
+  },
+  {
+    "id": "mds:2390a2d3-e312-3f50-9e2c-9d55d563cd54",
+    "_source": "mds",
+    "_sourceId": "SBYEB:EB7",
+    "_sourceUrl": "https://museumdata.uk/objects/2390a2d3-e312-3f50-9e2c-9d55d563cd54",
+    "title": "Stonehenge Bottom",
+    "description": "oil painting, Stonehenge Bottom, showing view of Stonehenge by Edgar Barclay, late 19th century",
+    "creator": "Barclay, Edgar",
+    "subject": [
+      "painting",
+      "painting"
+    ],
+    "type": "Museum object",
+    "collection": "The Young Gallery",
+    "mds": {
+      "uuid": "2390a2d3-e312-3f50-9e2c-9d55d563cd54",
+      "objectNumber": "SBYEB:EB7",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge Bottom"
+        ],
+        "Object name(s)": [
+          "painting"
+        ],
+        "Brief description": [
+          "oil painting, Stonehenge Bottom, showing view of Stonehenge by Edgar Barclay, late 19th century"
+        ],
+        "Collection": [
+          "The Young Gallery"
+        ],
+        "Object name": [
+          "painting"
+        ],
+        "Object number": [
+          "SBYEB:EB7"
+        ],
+        "Object production person": [
+          "Barclay, Edgar"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:2390a2d3-e312-3f50-9e2c-9d55d563cd54",
+      "title": "Stonehenge Bottom",
+      "url": "https://museumdata.uk/objects/2390a2d3-e312-3f50-9e2c-9d55d563cd54",
+      "creator": "Barclay, Edgar"
+    }
+  },
+  {
+    "id": "mds:ecf04f66-ebaf-3338-ade9-ec1167a85972",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2020.16",
+    "_sourceUrl": "https://museumdata.uk/objects/ecf04f66-ebaf-3338-ade9-ec1167a85972",
+    "title": "MDS Record 16",
+    "description": "Paper bag. ENGLISH HERITAGE / STONEHENGE. From the Stonehenge Visitor Centre shop. Includes items sold there in 2019. A Stonehenge 2020 calendar; a wooden ruler measuring 20cm showing the chronology of Stonehenge 3000 - 1700 BC; Black ceramic coffee mug with the transfer print STONEHENGE ROCKS.",
+    "subject": [
+      "souvenir",
+      "souvenir",
+      "memorabilia",
+      "stonehenge"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "ecf04f66-ebaf-3338-ade9-ec1167a85972",
+      "objectNumber": "DZSWS:2020.16",
+      "condition": "good",
+      "numberOfObjects": "4",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "souvenir"
+        ],
+        "Brief description": [
+          "Paper bag. ENGLISH HERITAGE / STONEHENGE. From the Stonehenge Visitor Centre shop. Includes items sold there in 2019. A Stonehenge 2020 calendar; a wooden ruler measuring 20cm showing the chronology of Stonehenge 3000 - 1700 BC; Black ceramic coffee mug with the transfer print STONEHENGE ROCKS."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "memorabilia",
+          "stonehenge"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Number of objects": [
+          "4"
+        ],
+        "Object name": [
+          "souvenir"
+        ],
+        "Object number": [
+          "DZSWS:2020.16"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:ecf04f66-ebaf-3338-ade9-ec1167a85972",
+      "title": "MDS Record 16",
+      "url": "https://museumdata.uk/objects/ecf04f66-ebaf-3338-ade9-ec1167a85972"
+    }
+  },
+  {
+    "id": "mds:12a00e6f-2227-306a-a465-cdea85c850d0",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1986.7229",
+    "_sourceUrl": "https://museumdata.uk/objects/12a00e6f-2227-306a-a465-cdea85c850d0",
+    "title": "Barrow near Fargo, Stonehenge, left of Road from Stonehenge to Rollestone.",
+    "description": "1 photograph, a barrow near Stonehenge, left of the Stonehenge to Rollestone road, Amesbury, Wiltshire, 1860 = 1923",
+    "creator": "Goddard, E H",
+    "subject": [
+      "barrow; excavation; pit; photograph; Gelatine POP print",
+      "barrow; excavation; pit; photograph; Gelatine POP print",
+      "environment",
+      "buildings",
+      "archaeology",
+      "bronze age"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "12a00e6f-2227-306a-a465-cdea85c850d0",
+      "objectNumber": "DZSWS:1986.7229",
+      "material": [
+        "photographic paper"
+      ],
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "93",
+        "117"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "compiler"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Barrow near Fargo, Stonehenge, left of Road from Stonehenge to Rollestone."
+        ],
+        "Object name(s)": [
+          "barrow; excavation; pit; photograph; Gelatine POP print"
+        ],
+        "Brief description": [
+          "1 photograph, a barrow near Stonehenge, left of the Stonehenge to Rollestone road, Amesbury, Wiltshire, 1860 = 1923"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "environment",
+          "buildings",
+          "archaeology",
+          "bronze age"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - note": [
+          "written below the photograph is: Barrow nr Fargo, Stonehenge, left Road from Stonehenge to Rollestone."
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "barrow"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "93",
+          "117"
+        ],
+        "Material": [
+          "photographic paper"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "barrow; excavation; pit; photograph; Gelatine POP print"
+        ],
+        "Object number": [
+          "DZSWS:1986.7229"
+        ],
+        "Object production person": [
+          "Goddard, E H"
+        ],
+        "Person's association": [
+          "compiler"
+        ],
+        "Person's biographical note": [
+          "album assembled by E H Goddard"
+        ],
+        "User's reference": [
+          "Album AA"
+        ],
+        "Reference author / editor": [
+          "Goddard, E H"
+        ],
+        "Reference note": [
+          "page 77"
+        ],
+        "Reference publication date": [
+          "28.3.1923"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:12a00e6f-2227-306a-a465-cdea85c850d0",
+      "title": "Barrow near Fargo, Stonehenge, left of Road from Stonehenge to Rollestone.",
+      "url": "https://museumdata.uk/objects/12a00e6f-2227-306a-a465-cdea85c850d0",
+      "creator": "Goddard, E H"
+    }
+  },
+  {
+    "id": "mds:78154b48-6e77-3f0c-89fe-4c7168a201ab",
+    "_source": "mds",
+    "_sourceId": "SBYEB:EB16",
+    "_sourceUrl": "https://museumdata.uk/objects/78154b48-6e77-3f0c-89fe-4c7168a201ab",
+    "title": "Stonehenge at Sunrise",
+    "description": "oil painting, Stonehenge at Sunrise, showing view of Stonehenge by Edgar Barclay, late 19th century",
+    "creator": "Barclay, Edgar",
+    "subject": [
+      "painting",
+      "painting"
+    ],
+    "type": "Museum object",
+    "collection": "The Young Gallery",
+    "mds": {
+      "uuid": "78154b48-6e77-3f0c-89fe-4c7168a201ab",
+      "objectNumber": "SBYEB:EB16",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge at Sunrise"
+        ],
+        "Object name(s)": [
+          "painting"
+        ],
+        "Brief description": [
+          "oil painting, Stonehenge at Sunrise, showing view of Stonehenge by Edgar Barclay, late 19th century"
+        ],
+        "Collection": [
+          "The Young Gallery"
+        ],
+        "Object name": [
+          "painting"
+        ],
+        "Object number": [
+          "SBYEB:EB16"
+        ],
+        "Object production person": [
+          "Barclay, Edgar"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:78154b48-6e77-3f0c-89fe-4c7168a201ab",
+      "title": "Stonehenge at Sunrise",
+      "url": "https://museumdata.uk/objects/78154b48-6e77-3f0c-89fe-4c7168a201ab",
+      "creator": "Barclay, Edgar"
+    }
+  },
+  {
+    "id": "mds:9cae9f39-138c-3814-bf46-4168b5f01bb2",
+    "_source": "mds",
+    "_sourceId": "O65621",
+    "_sourceUrl": "https://museumdata.uk/objects/9cae9f39-138c-3814-bf46-4168b5f01bb2",
+    "title": "Stonehenge and its environs: monuments and land use.",
+    "creator": [
+      "ROYAL COMMISSION ON HISTORICAL MONUMENTS (ENGLAND)",
+      "University Press"
+    ],
+    "date": "1979",
+    "subject": [
+      "Book",
+      "Book",
+      "Archaeology: Great Britain: Stonehenge",
+      "Stonehenge",
+      "Ancient monuments: Stonehenge"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "9cae9f39-138c-3814-bf46-4168b5f01bb2",
+      "objectNumber": "O65621",
+      "place": [
+        "Edinburgh"
+      ],
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "37",
+        "28"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge and its environs: monuments and land use."
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Archaeology: Great Britain: Stonehenge",
+          "Stonehenge",
+          "Ancient monuments: Stonehenge"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "37",
+          "28"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "L.1980.81"
+        ],
+        "Object production date": [
+          "1979"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production organisation": [
+          "University Press"
+        ],
+        "Organisation's association": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "ROYAL COMMISSION ON HISTORICAL MONUMENTS (ENGLAND)"
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Object production place": [
+          "Edinburgh"
+        ],
+        "Place association": [
+          "Published"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:9cae9f39-138c-3814-bf46-4168b5f01bb2",
+      "title": "Stonehenge and its environs: monuments and land use.",
+      "url": "https://museumdata.uk/objects/9cae9f39-138c-3814-bf46-4168b5f01bb2",
+      "creator": [
+        "ROYAL COMMISSION ON HISTORICAL MONUMENTS (ENGLAND)",
+        "University Press"
+      ],
+      "date": "1979"
+    }
+  },
+  {
+    "id": "mds:7b3bde5e-dc3f-344f-bcb1-875e82a91009",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2005.53",
+    "_sourceUrl": "https://museumdata.uk/objects/7b3bde5e-dc3f-344f-bcb1-875e82a91009",
+    "title": "MDS Record 20",
+    "description": "1 Stonehenge medallion made of nickel silver depicting a view of stonehenge on one side and a plan of stonehenge on the other, in its original box. Issued by the Tower Mint.",
+    "creator": "The Tower Mint",
+    "subject": [
+      "medallion",
+      "medallion",
+      "archaeology",
+      "neolithic"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "7b3bde5e-dc3f-344f-bcb1-875e82a91009",
+      "objectNumber": "DZSWS:2005.53",
+      "material": [
+        "metal",
+        "silver nickel"
+      ],
+      "place": [
+        "33 Royal Mint Street",
+        "London"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "diameter",
+        "44"
+      ],
+      "numberOfObjects": "1",
+      "inscriptionContent": "view of Stonehenge with STONEHENGE beneath",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medallion"
+        ],
+        "Brief description": [
+          "1 Stonehenge medallion made of nickel silver depicting a view of stonehenge on one side and a plan of stonehenge on the other, in its original box. Issued by the Tower Mint."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "neolithic"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Dimension": [
+          "diameter"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "44"
+        ],
+        "Inscription content": [
+          "view of Stonehenge with STONEHENGE beneath",
+          "plan of Stonehenge with the individual features labelled"
+        ],
+        "Material": [
+          "metal",
+          "silver nickel"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "medallion"
+        ],
+        "Object number": [
+          "DZSWS:2005.53"
+        ],
+        "Object production organisation": [
+          "The Tower Mint"
+        ],
+        "Organisation's address": [
+          "33 Royal Mint Street, London"
+        ],
+        "Object production place": [
+          "33 Royal Mint Street",
+          "London"
+        ],
+        "Place status": [
+          "Street"
+        ],
+        "Technique": [
+          "issued"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:44:32.552Z",
+      "query": "stonehenge",
+      "recordId": "mds:7b3bde5e-dc3f-344f-bcb1-875e82a91009",
+      "title": "MDS Record 20",
+      "url": "https://museumdata.uk/objects/7b3bde5e-dc3f-344f-bcb1-875e82a91009",
+      "creator": "The Tower Mint"
+    }
+  }
+]

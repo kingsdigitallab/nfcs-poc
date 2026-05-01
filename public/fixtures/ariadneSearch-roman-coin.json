@@ -1,0 +1,2250 @@
+[
+  {
+    "id": "ariadne:5e329353ec774e0d20d883e1d06b072bedf83ea97a3aeebb3ff5253a5b22a925",
+    "_source": "ariadne",
+    "_sourceId": "1075146",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/5e329353ec774e0d20d883e1d06b072bedf83ea97a3aeebb3ff5253a5b22a925",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "ARDLEIGH, TENDRING, ESSEX, ENGLAND",
+    "decimalLatitude": 51.921191,
+    "decimalLongitude": 0.981522,
+    "periodStart": "43",
+    "periodEnd": "410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "5e329353ec774e0d20d883e1d06b072bedf83ea97a3aeebb3ff5253a5b22a925",
+      "temporal": [
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "ARDLEIGH, TENDRING, ESSEX, ENGLAND",
+          "geopoint": {
+            "lat": 51.921191,
+            "lon": 0.981522
+          },
+          "centroid": {
+            "lat": 51.921191,
+            "lon": 0.981522
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "ARDLEIGH, TENDRING, ESSEX, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F7581BEB-702A-3BB9-9C06-22C441B5A00D",
+      "otherId": [
+        "Depositor ID: TM 02 NE 2",
+        "NMR_NATINV-386152"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "roman"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:5e329353ec774e0d20d883e1d06b072bedf83ea97a3aeebb3ff5253a5b22a925",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/5e329353ec774e0d20d883e1d06b072bedf83ea97a3aeebb3ff5253a5b22a925",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:ad790fd79b2d8015372138d15a2fdd6fe2d3a96e2384dd4fa8366162e5bce3b7",
+    "_source": "ariadne",
+    "_sourceId": "1075110",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ad790fd79b2d8015372138d15a2fdd6fe2d3a96e2384dd4fa8366162e5bce3b7",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WEST MERSEA, COLCHESTER, ENGLAND, ESSEX",
+    "decimalLatitude": 51.779293,
+    "decimalLongitude": 0.904866,
+    "periodStart": "43",
+    "periodEnd": "410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "ad790fd79b2d8015372138d15a2fdd6fe2d3a96e2384dd4fa8366162e5bce3b7",
+      "temporal": [
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "WEST MERSEA, COLCHESTER, ENGLAND, ESSEX",
+          "geopoint": {
+            "lat": 51.779293,
+            "lon": 0.904866
+          },
+          "centroid": {
+            "lat": 51.779293,
+            "lon": 0.904866
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "WEST MERSEA, COLCHESTER, ENGLAND, ESSEX"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/B45FE4B3-CB6B-3E35-8583-02BE9E33DF69",
+      "otherId": [
+        "Depositor ID: TM 01 SW 7",
+        "NMR_NATINV-386086"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "roman"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:ad790fd79b2d8015372138d15a2fdd6fe2d3a96e2384dd4fa8366162e5bce3b7",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ad790fd79b2d8015372138d15a2fdd6fe2d3a96e2384dd4fa8366162e5bce3b7",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:c1f35b8b83f9d90879c2a1d20a27bdc912fba17e1345170aa23ba5b2aafb91c6",
+    "_source": "ariadne",
+    "_sourceId": "1010237",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/c1f35b8b83f9d90879c2a1d20a27bdc912fba17e1345170aa23ba5b2aafb91c6",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "THORNAGE, NORTH NORFOLK, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.881899,
+    "decimalLongitude": 1.047056,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "c1f35b8b83f9d90879c2a1d20a27bdc912fba17e1345170aa23ba5b2aafb91c6",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "THORNAGE, NORTH NORFOLK, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.881899,
+            "lon": 1.047056
+          },
+          "centroid": {
+            "lat": 52.881899,
+            "lon": 1.047056
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "THORNAGE, NORTH NORFOLK, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/B55E555A-3944-3B19-8EFB-32B73F7A4431",
+      "otherId": [
+        "Depositor ID: TG 03 NE 9",
+        "NMR_NATINV-131038"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:c1f35b8b83f9d90879c2a1d20a27bdc912fba17e1345170aa23ba5b2aafb91c6",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/c1f35b8b83f9d90879c2a1d20a27bdc912fba17e1345170aa23ba5b2aafb91c6",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:8c230ce67dd4bc30d3aeb5073f25478fd606f32a8b79138151398385b683b6bf",
+    "_source": "ariadne",
+    "_sourceId": "1010858",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/8c230ce67dd4bc30d3aeb5073f25478fd606f32a8b79138151398385b683b6bf",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "THORPE ST ANDREW, BROADLAND, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.628389,
+    "decimalLongitude": 1.359779,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "8c230ce67dd4bc30d3aeb5073f25478fd606f32a8b79138151398385b683b6bf",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "THORPE ST ANDREW, BROADLAND, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.628389,
+            "lon": 1.359779
+          },
+          "centroid": {
+            "lat": 52.628389,
+            "lon": 1.359779
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "THORPE ST ANDREW, BROADLAND, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/FC7BC322-C220-3025-88EE-0B56E5E3BC9C",
+      "otherId": [
+        "Depositor ID: TG 20 NE 42",
+        "NMR_NATINV-132228"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:8c230ce67dd4bc30d3aeb5073f25478fd606f32a8b79138151398385b683b6bf",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/8c230ce67dd4bc30d3aeb5073f25478fd606f32a8b79138151398385b683b6bf",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:f870e0aa302b30bbe80c8fa912e98cbeb3b15fec1993749d5ad01857449f2615",
+    "_source": "ariadne",
+    "_sourceId": "1008120",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/f870e0aa302b30bbe80c8fa912e98cbeb3b15fec1993749d5ad01857449f2615",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "RIPPLE, MALVERN HILLS, HEREFORD AND WORCESTER, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.052874,
+    "decimalLongitude": -2.183627,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "f870e0aa302b30bbe80c8fa912e98cbeb3b15fec1993749d5ad01857449f2615",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "RIPPLE, MALVERN HILLS, HEREFORD AND WORCESTER, ENGLAND",
+          "geopoint": {
+            "lat": 52.052874,
+            "lon": -2.183627
+          },
+          "centroid": {
+            "lat": 52.052874,
+            "lon": -2.183627
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "RIPPLE, MALVERN HILLS, HEREFORD AND WORCESTER, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/663F2C50-1DF8-39FE-8C94-6225B624DA2A",
+      "otherId": [
+        "Depositor ID: SO 83 NE 4",
+        "NMR_NATINV-115732"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:f870e0aa302b30bbe80c8fa912e98cbeb3b15fec1993749d5ad01857449f2615",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/f870e0aa302b30bbe80c8fa912e98cbeb3b15fec1993749d5ad01857449f2615",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:0c5cab475302588cbe106ddd47ab5b7c2914163b9bbd0b43db351bf91c39f9f1",
+    "_source": "ariadne",
+    "_sourceId": "1010465",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0c5cab475302588cbe106ddd47ab5b7c2914163b9bbd0b43db351bf91c39f9f1",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "NORWICH, NORWICH, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.631355,
+    "decimalLongitude": 1.251052,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "0c5cab475302588cbe106ddd47ab5b7c2914163b9bbd0b43db351bf91c39f9f1",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "NORWICH, NORWICH, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.631355,
+            "lon": 1.251052
+          },
+          "centroid": {
+            "lat": 52.631355,
+            "lon": 1.251052
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "NORWICH, NORWICH, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/790FD541-146C-3EC6-A9F9-01E9294495D4",
+      "otherId": [
+        "Depositor ID: TG 10 NE 83",
+        "NMR_NATINV-131449"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:0c5cab475302588cbe106ddd47ab5b7c2914163b9bbd0b43db351bf91c39f9f1",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0c5cab475302588cbe106ddd47ab5b7c2914163b9bbd0b43db351bf91c39f9f1",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:fa0747920a80bfc6255f86a76cc5fb235b03641fd2bb1e2374daa0cc86fd92fd",
+    "_source": "ariadne",
+    "_sourceId": "1010505",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/fa0747920a80bfc6255f86a76cc5fb235b03641fd2bb1e2374daa0cc86fd92fd",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HETHERSETT, SOUTH NORFOLK, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.597006,
+    "decimalLongitude": 1.174944,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "fa0747920a80bfc6255f86a76cc5fb235b03641fd2bb1e2374daa0cc86fd92fd",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HETHERSETT, SOUTH NORFOLK, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.597006,
+            "lon": 1.174944
+          },
+          "centroid": {
+            "lat": 52.597006,
+            "lon": 1.174944
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "HETHERSETT, SOUTH NORFOLK, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/1890DEC6-38C5-3540-974A-96A3B3DA8E3B",
+      "otherId": [
+        "Depositor ID: TG 10 SE 16",
+        "NMR_NATINV-131537"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:fa0747920a80bfc6255f86a76cc5fb235b03641fd2bb1e2374daa0cc86fd92fd",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/fa0747920a80bfc6255f86a76cc5fb235b03641fd2bb1e2374daa0cc86fd92fd",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:da592eba69a155e6a8c4ab577cb3263ce48adc05162f1a4b0b9b09521e089f13",
+    "_source": "ariadne",
+    "_sourceId": "1010593",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/da592eba69a155e6a8c4ab577cb3263ce48adc05162f1a4b0b9b09521e089f13",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "COSTESSEY, SOUTH NORFOLK, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.647169,
+    "decimalLongitude": 1.222205,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "da592eba69a155e6a8c4ab577cb3263ce48adc05162f1a4b0b9b09521e089f13",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "COSTESSEY, SOUTH NORFOLK, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.647169,
+            "lon": 1.222205
+          },
+          "centroid": {
+            "lat": 52.647169,
+            "lon": 1.222205
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "COSTESSEY, SOUTH NORFOLK, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/59A4956A-C25D-3B5B-A0C6-575B2536802D",
+      "otherId": [
+        "Depositor ID: TG 11 SE 15",
+        "NMR_NATINV-131703"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:da592eba69a155e6a8c4ab577cb3263ce48adc05162f1a4b0b9b09521e089f13",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/da592eba69a155e6a8c4ab577cb3263ce48adc05162f1a4b0b9b09521e089f13",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:5177b1c52f43a19c40d3237c37d6e1c441bf05970f920f531ba822d0a15a7e8f",
+    "_source": "ariadne",
+    "_sourceId": "1010595",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/5177b1c52f43a19c40d3237c37d6e1c441bf05970f920f531ba822d0a15a7e8f",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "TAVERHAM, BROADLAND, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.682502,
+    "decimalLongitude": 1.206307,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "5177b1c52f43a19c40d3237c37d6e1c441bf05970f920f531ba822d0a15a7e8f",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "TAVERHAM, BROADLAND, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.682502,
+            "lon": 1.206307
+          },
+          "centroid": {
+            "lat": 52.682502,
+            "lon": 1.206307
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "TAVERHAM, BROADLAND, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/8EF96CD5-1005-3599-A2C6-87FDAB971ABC",
+      "otherId": [
+        "Depositor ID: TG 11 SE 17",
+        "NMR_NATINV-131705"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:5177b1c52f43a19c40d3237c37d6e1c441bf05970f920f531ba822d0a15a7e8f",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/5177b1c52f43a19c40d3237c37d6e1c441bf05970f920f531ba822d0a15a7e8f",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:9b93b91ba7c906d7bb8d0bff69eb45f47539c2e44b93e961b7005e3b21a4ab49",
+    "_source": "ariadne",
+    "_sourceId": "1011410",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/9b93b91ba7c906d7bb8d0bff69eb45f47539c2e44b93e961b7005e3b21a4ab49",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "COLTISHALL, BROADLAND, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.729772,
+    "decimalLongitude": 1.36565,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "9b93b91ba7c906d7bb8d0bff69eb45f47539c2e44b93e961b7005e3b21a4ab49",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "COLTISHALL, BROADLAND, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.729772,
+            "lon": 1.36565
+          },
+          "centroid": {
+            "lat": 52.729772,
+            "lon": 1.36565
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "COLTISHALL, BROADLAND, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/45303381-257B-3BBA-9500-7D61C100918C",
+      "otherId": [
+        "Depositor ID: TG 22 SE 7",
+        "NMR_NATINV-133084"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:9b93b91ba7c906d7bb8d0bff69eb45f47539c2e44b93e961b7005e3b21a4ab49",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/9b93b91ba7c906d7bb8d0bff69eb45f47539c2e44b93e961b7005e3b21a4ab49",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:2ae280c635c19a20092f684c37cc62c46906a0d59f5ea1b85094e5130890722b",
+    "_source": "ariadne",
+    "_sourceId": "1012063",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2ae280c635c19a20092f684c37cc62c46906a0d59f5ea1b85094e5130890722b",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "ROCKLAND ST MARY, SOUTH NORFOLK, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.586939,
+    "decimalLongitude": 1.40608,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "2ae280c635c19a20092f684c37cc62c46906a0d59f5ea1b85094e5130890722b",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "ROCKLAND ST MARY, SOUTH NORFOLK, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.586939,
+            "lon": 1.40608
+          },
+          "centroid": {
+            "lat": 52.586939,
+            "lon": 1.40608
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "ROCKLAND ST MARY, SOUTH NORFOLK, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/4544AB51-DC5A-30D2-A7A3-10D22FDEC5A6",
+      "otherId": [
+        "Depositor ID: TG 30 SW 17",
+        "NMR_NATINV-133433"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:2ae280c635c19a20092f684c37cc62c46906a0d59f5ea1b85094e5130890722b",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2ae280c635c19a20092f684c37cc62c46906a0d59f5ea1b85094e5130890722b",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:c7be86cd58ea8caa044d17676491bd8bcb28e5a7e435452b5d456b5a50f10c24",
+    "_source": "ariadne",
+    "_sourceId": "1010011",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/c7be86cd58ea8caa044d17676491bd8bcb28e5a7e435452b5d456b5a50f10c24",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WHINBURGH AND WESTFIELD, BRECKLAND, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.641373,
+    "decimalLongitude": 0.956371,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "c7be86cd58ea8caa044d17676491bd8bcb28e5a7e435452b5d456b5a50f10c24",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WHINBURGH AND WESTFIELD, BRECKLAND, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.641373,
+            "lon": 0.956371
+          },
+          "centroid": {
+            "lat": 52.641373,
+            "lon": 0.956371
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "WHINBURGH AND WESTFIELD, BRECKLAND, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/E713981B-314C-33C6-866A-4B4D654DAA2C",
+      "otherId": [
+        "Depositor ID: TG 00 NW 19",
+        "NMR_NATINV-130563"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:c7be86cd58ea8caa044d17676491bd8bcb28e5a7e435452b5d456b5a50f10c24",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/c7be86cd58ea8caa044d17676491bd8bcb28e5a7e435452b5d456b5a50f10c24",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:f62660e336aaf90428d4d48709108ed9fe7664fa1b349f76369a9d1d25f28b41",
+    "_source": "ariadne",
+    "_sourceId": "1010057",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/f62660e336aaf90428d4d48709108ed9fe7664fa1b349f76369a9d1d25f28b41",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "LYNG, BRECKLAND, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.714463,
+    "decimalLongitude": 1.094164,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "f62660e336aaf90428d4d48709108ed9fe7664fa1b349f76369a9d1d25f28b41",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "LYNG, BRECKLAND, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.714463,
+            "lon": 1.094164
+          },
+          "centroid": {
+            "lat": 52.714463,
+            "lon": 1.094164
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "LYNG, BRECKLAND, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/52B4E28C-76FE-37F8-837A-6D4F95F3EB8A",
+      "otherId": [
+        "Depositor ID: TG 01 NE 5",
+        "NMR_NATINV-130648"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:f62660e336aaf90428d4d48709108ed9fe7664fa1b349f76369a9d1d25f28b41",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/f62660e336aaf90428d4d48709108ed9fe7664fa1b349f76369a9d1d25f28b41",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:866d79c914c39cca514c28d45df8e93960335e320c43aa590246aa99a4d0bae2",
+    "_source": "ariadne",
+    "_sourceId": "1010658",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/866d79c914c39cca514c28d45df8e93960335e320c43aa590246aa99a4d0bae2",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "SWANNINGTON, BROADLAND, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.735922,
+    "decimalLongitude": 1.173332,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "866d79c914c39cca514c28d45df8e93960335e320c43aa590246aa99a4d0bae2",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "SWANNINGTON, BROADLAND, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.735922,
+            "lon": 1.173332
+          },
+          "centroid": {
+            "lat": 52.735922,
+            "lon": 1.173332
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "SWANNINGTON, BROADLAND, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/AA1D5692-9BC5-3D2B-ABF5-1E17519EB545",
+      "otherId": [
+        "Depositor ID: TG 12 SW 8",
+        "NMR_NATINV-131918"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:866d79c914c39cca514c28d45df8e93960335e320c43aa590246aa99a4d0bae2",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/866d79c914c39cca514c28d45df8e93960335e320c43aa590246aa99a4d0bae2",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:a27187ff3e02049d78fae394878dc98fb177098e95f7ec0349c331e2639394cd",
+    "_source": "ariadne",
+    "_sourceId": "1010597",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/a27187ff3e02049d78fae394878dc98fb177098e95f7ec0349c331e2639394cd",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "COSTESSEY, SOUTH NORFOLK, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.651235,
+    "decimalLongitude": 1.228124,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "a27187ff3e02049d78fae394878dc98fb177098e95f7ec0349c331e2639394cd",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "COSTESSEY, SOUTH NORFOLK, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.651235,
+            "lon": 1.228124
+          },
+          "centroid": {
+            "lat": 52.651235,
+            "lon": 1.228124
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "COSTESSEY, SOUTH NORFOLK, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/01C3A3E6-83D3-3E42-9CDE-ED02BA2B3247",
+      "otherId": [
+        "Depositor ID: TG 11 SE 19",
+        "NMR_NATINV-131707"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:a27187ff3e02049d78fae394878dc98fb177098e95f7ec0349c331e2639394cd",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/a27187ff3e02049d78fae394878dc98fb177098e95f7ec0349c331e2639394cd",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:398beb6e89f50d74a06ef00b5584a0c4001c315e72a2eda25151831932b0d2e9",
+    "_source": "ariadne",
+    "_sourceId": "1010598",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/398beb6e89f50d74a06ef00b5584a0c4001c315e72a2eda25151831932b0d2e9",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "COSTESSEY, SOUTH NORFOLK, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.647462,
+    "decimalLongitude": 1.237755,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "398beb6e89f50d74a06ef00b5584a0c4001c315e72a2eda25151831932b0d2e9",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "COSTESSEY, SOUTH NORFOLK, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.647462,
+            "lon": 1.237755
+          },
+          "centroid": {
+            "lat": 52.647462,
+            "lon": 1.237755
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "COSTESSEY, SOUTH NORFOLK, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/0D52EF1E-0275-3CB6-ACDB-8FEE847BA12B",
+      "otherId": [
+        "Depositor ID: TG 11 SE 20",
+        "NMR_NATINV-131708"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:398beb6e89f50d74a06ef00b5584a0c4001c315e72a2eda25151831932b0d2e9",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/398beb6e89f50d74a06ef00b5584a0c4001c315e72a2eda25151831932b0d2e9",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:fe2308b859e99b7ce944f6a3d801c4590af65ab833670c2e05ad25d9db3ff821",
+    "_source": "ariadne",
+    "_sourceId": "1010600",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/fe2308b859e99b7ce944f6a3d801c4590af65ab833670c2e05ad25d9db3ff821",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HELLESDON, BROADLAND, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.655256,
+    "decimalLongitude": 1.248685,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "fe2308b859e99b7ce944f6a3d801c4590af65ab833670c2e05ad25d9db3ff821",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HELLESDON, BROADLAND, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.655256,
+            "lon": 1.248685
+          },
+          "centroid": {
+            "lat": 52.655256,
+            "lon": 1.248685
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "HELLESDON, BROADLAND, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/8F6CFB07-F332-3FA1-A0F6-7E184D441F64",
+      "otherId": [
+        "Depositor ID: TG 11 SE 22",
+        "NMR_NATINV-131710"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:fe2308b859e99b7ce944f6a3d801c4590af65ab833670c2e05ad25d9db3ff821",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/fe2308b859e99b7ce944f6a3d801c4590af65ab833670c2e05ad25d9db3ff821",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:8a8c0322edda90b59beceef7394df1c07e293510b7331378ead5c7a485712cd7",
+    "_source": "ariadne",
+    "_sourceId": "1010599",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/8a8c0322edda90b59beceef7394df1c07e293510b7331378ead5c7a485712cd7",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HELLESDON, BROADLAND, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.663294,
+    "decimalLongitude": 1.250761,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "8a8c0322edda90b59beceef7394df1c07e293510b7331378ead5c7a485712cd7",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HELLESDON, BROADLAND, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.663294,
+            "lon": 1.250761
+          },
+          "centroid": {
+            "lat": 52.663294,
+            "lon": 1.250761
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "HELLESDON, BROADLAND, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/D7FC799E-3F13-34A7-AA86-EFC3F276B344",
+      "otherId": [
+        "Depositor ID: TG 11 SE 21",
+        "NMR_NATINV-131709"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:8a8c0322edda90b59beceef7394df1c07e293510b7331378ead5c7a485712cd7",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/8a8c0322edda90b59beceef7394df1c07e293510b7331378ead5c7a485712cd7",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:20f8b47a3da678299a08d849e58f8e163c2fb7316bf9e8e1c346778da0ef0ff9",
+    "_source": "ariadne",
+    "_sourceId": "1011274",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/20f8b47a3da678299a08d849e58f8e163c2fb7316bf9e8e1c346778da0ef0ff9",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BROADLAND, NORFOLK, ENGLAND, COLTISHALL",
+    "country": "England",
+    "decimalLatitude": 52.726566,
+    "decimalLongitude": 1.361402,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "20f8b47a3da678299a08d849e58f8e163c2fb7316bf9e8e1c346778da0ef0ff9",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BROADLAND, NORFOLK, ENGLAND, COLTISHALL",
+          "geopoint": {
+            "lat": 52.726566,
+            "lon": 1.361402
+          },
+          "centroid": {
+            "lat": 52.726566,
+            "lon": 1.361402
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "BROADLAND, NORFOLK, ENGLAND, COLTISHALL"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/831D9AC7-0CC9-3CD7-90C2-9B2DCCC214D5",
+      "otherId": [
+        "Depositor ID: TG 21 NE 7",
+        "NMR_NATINV-132862"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:20f8b47a3da678299a08d849e58f8e163c2fb7316bf9e8e1c346778da0ef0ff9",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/20f8b47a3da678299a08d849e58f8e163c2fb7316bf9e8e1c346778da0ef0ff9",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:3209e14fbff5f77716fda3861168fd92f81b2ee71025d81e98d5524022e3daac",
+    "_source": "ariadne",
+    "_sourceId": "1011339",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/3209e14fbff5f77716fda3861168fd92f81b2ee71025d81e98d5524022e3daac",
+    "title": "Roman coin",
+    "description": "Roman coin",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "coin",
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BROADLAND, NORFOLK, ENGLAND, HELLESDON",
+    "country": "England",
+    "decimalLatitude": 52.645228,
+    "decimalLongitude": 1.279439,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "3209e14fbff5f77716fda3861168fd92f81b2ee71025d81e98d5524022e3daac",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BROADLAND, NORFOLK, ENGLAND, HELLESDON",
+          "geopoint": {
+            "lat": 52.645228,
+            "lon": 1.279439
+          },
+          "centroid": {
+            "lat": 52.645228,
+            "lon": 1.279439
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "BROADLAND, NORFOLK, ENGLAND, HELLESDON"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coin",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COIN"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/221EB011-8BBC-3016-89B2-39D908DE11B7",
+      "otherId": [
+        "Depositor ID: TG 21 SW 17",
+        "NMR_NATINV-132966"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T09:46:11.897Z",
+      "query": "q:roman coin",
+      "recordId": "ariadne:3209e14fbff5f77716fda3861168fd92f81b2ee71025d81e98d5524022e3daac",
+      "title": "Roman coin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/3209e14fbff5f77716fda3861168fd92f81b2ee71025d81e98d5524022e3daac",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  }
+]

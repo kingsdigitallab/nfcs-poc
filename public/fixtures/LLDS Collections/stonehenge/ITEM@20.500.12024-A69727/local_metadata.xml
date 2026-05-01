@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dublin_core xmlns="http://www.tei-c.org/ns/1.0" schema="local">
+   <dcvalue element="has" qualifier="files">true</dcvalue>
+   <dcvalue element="identifier" qualifier="stc">Wing C3666</dcvalue>
+   <dcvalue element="identifier" qualifier="stc">ESTC R13338</dcvalue>
+</dublin_core>

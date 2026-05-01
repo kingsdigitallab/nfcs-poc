@@ -1,0 +1,4459 @@
+[
+  {
+    "id": "gbif:1055920660",
+    "_source": "gbif",
+    "_sourceId": 1055920660,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1055920660",
+    "country": "United Kingdom of Great Britain and Northern Ireland",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "basisOfRecord": "FOSSIL_SPECIMEN",
+    "institutionCode": "NHMUK",
+    "gbif": {
+      "key": 1055920660,
+      "datasetKey": "7e380070-f762-11e1-a439-00145eb45e9a",
+      "publishingOrgKey": "19456090-b49a-11d8-abeb-b8a03c50a862",
+      "networkKeys": [
+        "17abcf75-2f1e-46dd-bf75-a5b21dd02655",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "60277b56-f762-11e1-a439-00145eb45e9a",
+      "hostingOrganizationKey": "19456090-b49a-11d8-abeb-b8a03c50a862",
+      "publishingCountry": "GB",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-17T20:19:48.626+00:00",
+      "lastParsed": "2026-04-24T01:10:47.284+00:00",
+      "crawlId": 485,
+      "extensions": {},
+      "basisOfRecord": "FOSSIL_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "continent": "EUROPE",
+      "stateProvince": "England",
+      "gadm": {},
+      "higherGeography": "Europe; United Kingdom; England",
+      "issues": [
+        "TAXON_MATCH_NONE",
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH"
+      ],
+      "modified": "2021-01-14T10:42:41.000+00:00",
+      "lastInterpreted": "2026-04-24T01:10:47.284+00:00",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "2042435"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "1d808a7c-1f9e-4379-9616-edb749ecf10e",
+      "isInCluster": false,
+      "otherCatalogNumbers": "NHMUK:ecatalogue:2042435",
+      "dnaSequenceID": [],
+      "countryCode": "GB",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "EUROPE",
+      "country": "United Kingdom of Great Britain and Northern Ireland",
+      "publishedByGbifRegion": "EUROPE",
+      "http://unknown.org/conceptualSchema": "http://bnhm.berkeley.edu/DwC/bnhm_dc2_schema.xsd",
+      "identifier": "2042435",
+      "catalogNumber": "PM MS 565",
+      "http://unknown.org/crawl_attempt": "485",
+      "institutionCode": "NHMUK",
+      "http://unknown.org/maxSearchResponseRecords": "10000",
+      "dynamicProperties": "{\"subDepartment\": \"Micropalaeontology\", \"created\": \"1998-02-06T00:00:00+00:00\", \"determinationNames\": null, \"gbifID\": \"1055920660\", \"gbifIssue\": \"MODIFIED_DATE_INVALID | TAXON_MATCH_NONE | INSTITUTION_MATCH_FUZZY | INSTITUTION_COLLECTION_MISMATCH\", \"associatedMediaCount\": null, \"barcode\": null, \"preservative\": null, \"determinationFiledAs\": null, \"project\": null, \"donorName\": null, \"collectionKind\": null, \"registrationCode\": null, \"chronostratigraphy\": null, \"kindOfCollection\": null, \"kindOfObject\": null, \"lithostratigraphy\": null, \"catalogueDescription\": \"Miospore samples, Stonehenge 1987, samples MS1, MS3, MS4.\", \"expedition\": null, \"collectionName\": null, \"plantDescription\": null, \"vessel\": null, \"clutchSize\": null, \"exsiccata\": null, \"setMark\": null, \"exsiccataNumber\": null, \"currentScientificName\": null, \"suborder\": null, \"superfamily\": null, \"subfamily\": null, \"partType\": null, \"populationCode\": null, \"observedWeight\": null, \"preparationType\": null, \"resuspendedIn\": null, \"extractionMethod\": null, \"totalVolume\": null, \"mine\": null, \"mineralComplex\": null}",
+      "locality": "Stonehenge, Stonehenge",
+      "collectionCode": "PAL",
+      "gbifID": "1055920660",
+      "occurrenceID": "850ad040-2ae4-4cdc-aa3b-2c992fd397cb",
+      "http://unknown.org/code": "NHMUK"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:1055920660",
+      "url": "https://www.gbif.org/occurrence/1055920660"
+    }
+  },
+  {
+    "id": "gbif:1056386497",
+    "_source": "gbif",
+    "_sourceId": 1056386497,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1056386497",
+    "country": "United Kingdom of Great Britain and Northern Ireland",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "basisOfRecord": "FOSSIL_SPECIMEN",
+    "institutionCode": "NHMUK",
+    "gbif": {
+      "key": 1056386497,
+      "datasetKey": "7e380070-f762-11e1-a439-00145eb45e9a",
+      "publishingOrgKey": "19456090-b49a-11d8-abeb-b8a03c50a862",
+      "networkKeys": [
+        "17abcf75-2f1e-46dd-bf75-a5b21dd02655",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "60277b56-f762-11e1-a439-00145eb45e9a",
+      "hostingOrganizationKey": "19456090-b49a-11d8-abeb-b8a03c50a862",
+      "publishingCountry": "GB",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-17T20:19:48.626+00:00",
+      "lastParsed": "2026-04-24T00:33:38.010+00:00",
+      "crawlId": 485,
+      "extensions": {},
+      "basisOfRecord": "FOSSIL_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "continent": "EUROPE",
+      "stateProvince": "England",
+      "gadm": {},
+      "higherGeography": "Europe; United Kingdom; England",
+      "issues": [
+        "TAXON_MATCH_NONE",
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH"
+      ],
+      "modified": "2021-01-14T10:42:40.000+00:00",
+      "lastInterpreted": "2026-04-24T00:33:38.010+00:00",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "2042414"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "1d808a7c-1f9e-4379-9616-edb749ecf10e",
+      "isInCluster": false,
+      "otherCatalogNumbers": "NHMUK:ecatalogue:2042414",
+      "dnaSequenceID": [],
+      "countryCode": "GB",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "EUROPE",
+      "country": "United Kingdom of Great Britain and Northern Ireland",
+      "publishedByGbifRegion": "EUROPE",
+      "http://unknown.org/conceptualSchema": "http://bnhm.berkeley.edu/DwC/bnhm_dc2_schema.xsd",
+      "identifier": "2042414",
+      "catalogNumber": "PM MS 566",
+      "http://unknown.org/crawl_attempt": "485",
+      "institutionCode": "NHMUK",
+      "http://unknown.org/maxSearchResponseRecords": "10000",
+      "dynamicProperties": "{\"subDepartment\": \"Micropalaeontology\", \"created\": \"1998-02-06T00:00:00+00:00\", \"determinationNames\": null, \"gbifID\": \"1056386497\", \"gbifIssue\": \"MODIFIED_DATE_INVALID | TAXON_MATCH_NONE | INSTITUTION_MATCH_FUZZY | INSTITUTION_COLLECTION_MISMATCH\", \"associatedMediaCount\": null, \"barcode\": null, \"preservative\": null, \"determinationFiledAs\": null, \"project\": null, \"donorName\": null, \"collectionKind\": null, \"registrationCode\": null, \"chronostratigraphy\": null, \"kindOfCollection\": null, \"kindOfObject\": null, \"lithostratigraphy\": null, \"catalogueDescription\": \"Miospore samples, Stonehenge 1989, MS1, MS4.\", \"expedition\": null, \"collectionName\": null, \"plantDescription\": null, \"vessel\": null, \"clutchSize\": null, \"exsiccata\": null, \"setMark\": null, \"exsiccataNumber\": null, \"currentScientificName\": null, \"suborder\": null, \"superfamily\": null, \"subfamily\": null, \"partType\": null, \"populationCode\": null, \"observedWeight\": null, \"preparationType\": null, \"resuspendedIn\": null, \"extractionMethod\": null, \"totalVolume\": null, \"mine\": null, \"mineralComplex\": null}",
+      "locality": "Stonehenge, Stonehenge",
+      "collectionCode": "PAL",
+      "gbifID": "1056386497",
+      "occurrenceID": "98918bb9-75bb-4fa8-bfd6-35c4fefda3e7",
+      "http://unknown.org/code": "NHMUK"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:1056386497",
+      "url": "https://www.gbif.org/occurrence/1056386497"
+    }
+  },
+  {
+    "id": "gbif:1229867048",
+    "_source": "gbif",
+    "_sourceId": 1229867048,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1229867048",
+    "title": "Sphyraena acutipinnis Day, 1876",
+    "date": "2009-05-06T08:20Z",
+    "scientificName": "Sphyraena acutipinnis Day, 1876",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "order": "Perciformes",
+    "family": "Sphyraenidae",
+    "genus": "Sphyraena",
+    "species": "Sphyraena acutipinnis",
+    "country": "Thailand",
+    "eventDate": "2009-05-06T08:20Z",
+    "decimalLatitude": 8.57878,
+    "decimalLongitude": 97.6277,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "institutionCode": "Diveboard",
+    "datasetName": "Diveboard - Scuba diving citizen science",
+    "gbif": {
+      "key": 1229867048,
+      "datasetKey": "66f6192f-6cc0-45fd-a2d1-e76f5ae3eab2",
+      "publishingOrgKey": "1989b627-2a61-44db-83e4-392efc5da0a9",
+      "installationKey": "49a3c55e-5701-41a5-9a22-d9d4b79c23fa",
+      "hostingOrganizationKey": "1989b627-2a61-44db-83e4-392efc5da0a9",
+      "publishingCountry": "FR",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-17T19:18:17.765+00:00",
+      "lastParsed": "2026-04-27T19:49:10.704+00:00",
+      "crawlId": 337,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "4Z2KX",
+            "name": "Sphyraena acutipinnis Day, 1876",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Day, 1876",
+            "genericName": "Sphyraena",
+            "specificEpithet": "acutipinnis",
+            "formattedName": "<i>Sphyraena</i> <i>acutipinnis</i> Day, 1876"
+          },
+          "acceptedUsage": {
+            "key": "4Z2KX",
+            "name": "Sphyraena acutipinnis Day, 1876",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Day, 1876",
+            "genericName": "Sphyraena",
+            "specificEpithet": "acutipinnis",
+            "formattedName": "<i>Sphyraena</i> <i>acutipinnis</i> Day, 1876"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "8VR36",
+              "name": "Actinopterygii",
+              "rank": "GIGACLASS"
+            },
+            {
+              "key": "KTWM8",
+              "name": "Actinopteri",
+              "rank": "SUPERCLASS"
+            },
+            {
+              "key": "8V4VD",
+              "name": "Teleostei",
+              "rank": "CLASS"
+            },
+            {
+              "key": "PC",
+              "name": "Perciformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "KVMBP",
+              "name": "Percoidei",
+              "rank": "SUBORDER"
+            },
+            {
+              "key": "KVTVN",
+              "name": "Sphyraenidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "KVTVD",
+              "name": "Sphyraena",
+              "rank": "GENUS"
+            },
+            {
+              "key": "4Z2KX",
+              "name": "Sphyraena acutipinnis",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": [
+            "TAXON_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2394243",
+            "name": "Sphyraena acutipinnis Day, 1876",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Day, 1876",
+            "genericName": "Sphyraena",
+            "specificEpithet": "acutipinnis",
+            "formattedName": "<i>Sphyraena</i> <i>acutipinnis</i> Day, 1876"
+          },
+          "acceptedUsage": {
+            "key": "2394243",
+            "name": "Sphyraena acutipinnis Day, 1876",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Day, 1876",
+            "genericName": "Sphyraena",
+            "specificEpithet": "acutipinnis",
+            "formattedName": "<i>Sphyraena</i> <i>acutipinnis</i> Day, 1876"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "587",
+              "name": "Perciformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5069",
+              "name": "Sphyraenidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2369201",
+              "name": "Sphyraena",
+              "rank": "GENUS"
+            },
+            {
+              "key": "2394243",
+              "name": "Sphyraena acutipinnis",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": [
+            "TAXON_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 2394243,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "orderKey": 587,
+      "familyKey": 5069,
+      "genusKey": 2369201,
+      "speciesKey": 2394243,
+      "acceptedTaxonKey": 2394243,
+      "scientificName": "Sphyraena acutipinnis Day, 1876",
+      "scientificNameAuthorship": "Day, 1876",
+      "acceptedScientificName": "Sphyraena acutipinnis Day, 1876",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Perciformes",
+      "family": "Sphyraenidae",
+      "genus": "Sphyraena",
+      "species": "Sphyraena acutipinnis",
+      "genericName": "Sphyraena",
+      "specificEpithet": "acutipinnis",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "LC",
+      "dateIdentified": "2009-05-06T00:00:00",
+      "decimalLatitude": 8.57878,
+      "decimalLongitude": 97.6277,
+      "coordinateUncertaintyInMeters": 100,
+      "elevation": 0,
+      "elevationAccuracy": 0,
+      "depth": 12.5,
+      "depthAccuracy": 12.5,
+      "continent": "ASIA",
+      "gadm": {},
+      "waterBody": "Andaman Sea",
+      "year": 2009,
+      "month": 5,
+      "day": 6,
+      "eventDate": "2009-05-06T08:20Z",
+      "startDayOfYear": 126,
+      "endDayOfYear": 126,
+      "issues": [
+        "COORDINATE_REPROJECTION_SUSPICIOUS",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "modified": "2016-03-01T16:34:03.000+00:00",
+      "lastInterpreted": "2026-04-27T19:49:10.704+00:00",
+      "references": "https://www.diveboard.com/chris-dot-loizou/D2NbIs5",
+      "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "diveboard:293130_224442_0"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "https://ipt.diveboard.com/resource.do?r=diveboard-occurrences",
+      "datasetName": "Diveboard - Scuba diving citizen science",
+      "recordedBy": "Chris.Loizou",
+      "identifiedBy": "Chris.Loizou",
+      "samplingProtocol": "citizen science scuba dive observation",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "TH",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "ASIA",
+      "country": "Thailand",
+      "publishedByGbifRegion": "EUROPE",
+      "rightsHolder": "Diveboard",
+      "identifier": "diveboard:293130_224442_0",
+      "http://unknown.org/crawl_attempt": "515",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge",
+      "verbatimLocality": "Stonehenge, Similan Islands",
+      "collectionCode": "Diveboard",
+      "gbifID": "1229867048",
+      "occurrenceID": "diveboard:293130_224442_0",
+      "type": "Event",
+      "taxonID": "http://eol.org/pages/224442",
+      "catalogNumber": "diveboard:293130_224442_0",
+      "institutionCode": "Diveboard",
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "ownerInstitutionCode": "Diveboard",
+      "nameAccordingTo": "EOL",
+      "occurrenceRemarks": "Non validated citizen science record",
+      "georeferenceSources": "Google Maps"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:1229867048",
+      "title": "Sphyraena acutipinnis Day, 1876",
+      "url": "https://www.gbif.org/occurrence/1229867048",
+      "date": "2009-05-06T08:20Z"
+    }
+  },
+  {
+    "id": "gbif:857009222",
+    "_source": "gbif",
+    "_sourceId": 857009222,
+    "_sourceUrl": "https://www.gbif.org/occurrence/857009222",
+    "title": "Hippocampus kuda Bleeker, 1852",
+    "date": "2011-01-21T13:00Z",
+    "scientificName": "Hippocampus kuda Bleeker, 1852",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "order": "Syngnathiformes",
+    "family": "Syngnathidae",
+    "genus": "Hippocampus",
+    "species": "Hippocampus kuda",
+    "country": "Thailand",
+    "eventDate": "2011-01-21T13:00Z",
+    "decimalLatitude": 6.4874,
+    "decimalLongitude": 99.3332,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "institutionCode": "Diveboard",
+    "datasetName": "Diveboard - Scuba diving citizen science",
+    "gbif": {
+      "key": 857009222,
+      "datasetKey": "66f6192f-6cc0-45fd-a2d1-e76f5ae3eab2",
+      "publishingOrgKey": "1989b627-2a61-44db-83e4-392efc5da0a9",
+      "installationKey": "49a3c55e-5701-41a5-9a22-d9d4b79c23fa",
+      "hostingOrganizationKey": "1989b627-2a61-44db-83e4-392efc5da0a9",
+      "publishingCountry": "FR",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-17T19:18:17.765+00:00",
+      "lastParsed": "2026-04-27T19:49:20.892+00:00",
+      "crawlId": 337,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "3LZMR",
+            "name": "Hippocampus kuda Bleeker, 1852",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Bleeker, 1852",
+            "genericName": "Hippocampus",
+            "specificEpithet": "kuda",
+            "formattedName": "<i>Hippocampus</i> <i>kuda</i> Bleeker, 1852"
+          },
+          "acceptedUsage": {
+            "key": "3LZMR",
+            "name": "Hippocampus kuda Bleeker, 1852",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Bleeker, 1852",
+            "genericName": "Hippocampus",
+            "specificEpithet": "kuda",
+            "formattedName": "<i>Hippocampus</i> <i>kuda</i> Bleeker, 1852"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "8VR36",
+              "name": "Actinopterygii",
+              "rank": "GIGACLASS"
+            },
+            {
+              "key": "KTWM8",
+              "name": "Actinopteri",
+              "rank": "SUPERCLASS"
+            },
+            {
+              "key": "8V4VD",
+              "name": "Teleostei",
+              "rank": "CLASS"
+            },
+            {
+              "key": "46T",
+              "name": "Syngnathiformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "KVWGT",
+              "name": "Syngnathidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "KVK73",
+              "name": "Nerophinae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "KVFWZ",
+              "name": "Hippocampus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "3LZMR",
+              "name": "Hippocampus kuda",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "VU",
+          "issues": [
+            "TAXON_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "5201037",
+            "name": "Hippocampus kuda Bleeker, 1852",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Bleeker, 1852",
+            "genericName": "Hippocampus",
+            "specificEpithet": "kuda",
+            "formattedName": "<i>Hippocampus</i> <i>kuda</i> Bleeker, 1852"
+          },
+          "acceptedUsage": {
+            "key": "5201037",
+            "name": "Hippocampus kuda Bleeker, 1852",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Bleeker, 1852",
+            "genericName": "Hippocampus",
+            "specificEpithet": "kuda",
+            "formattedName": "<i>Hippocampus</i> <i>kuda</i> Bleeker, 1852"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "773",
+              "name": "Syngnathiformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5901",
+              "name": "Syngnathidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "8156547",
+              "name": "Hippocampus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "5201037",
+              "name": "Hippocampus kuda",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "VU",
+          "issues": [
+            "TAXON_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 5201037,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "orderKey": 773,
+      "familyKey": 5901,
+      "genusKey": 8156547,
+      "speciesKey": 5201037,
+      "acceptedTaxonKey": 5201037,
+      "scientificName": "Hippocampus kuda Bleeker, 1852",
+      "scientificNameAuthorship": "Bleeker, 1852",
+      "acceptedScientificName": "Hippocampus kuda Bleeker, 1852",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Syngnathiformes",
+      "family": "Syngnathidae",
+      "genus": "Hippocampus",
+      "species": "Hippocampus kuda",
+      "genericName": "Hippocampus",
+      "specificEpithet": "kuda",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "VU",
+      "dateIdentified": "2011-01-21T00:00:00",
+      "decimalLatitude": 6.4874,
+      "decimalLongitude": 99.3332,
+      "coordinateUncertaintyInMeters": 100,
+      "elevation": 0,
+      "elevationAccuracy": 0,
+      "depth": 9,
+      "depthAccuracy": 9,
+      "continent": "ASIA",
+      "gadm": {
+        "level0": {
+          "gid": "THA",
+          "name": "Thailand"
+        },
+        "level1": {
+          "gid": "THA.61_1",
+          "name": "Satun"
+        },
+        "level2": {
+          "gid": "THA.61.5_1",
+          "name": "Muang Satun"
+        },
+        "level3": {
+          "gid": "THA.61.5.7_1",
+          "name": "Ko Sarai"
+        }
+      },
+      "waterBody": "Andaman Sea",
+      "year": 2011,
+      "month": 1,
+      "day": 21,
+      "eventDate": "2011-01-21T13:00Z",
+      "startDayOfYear": 21,
+      "endDayOfYear": 21,
+      "issues": [
+        "COORDINATE_REPROJECTION_SUSPICIOUS",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "modified": "2015-04-29T13:03:28.000+00:00",
+      "lastInterpreted": "2026-04-27T19:49:20.892+00:00",
+      "references": "https://www.diveboard.com/axel/D4dyHhY",
+      "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "diveboard:42019_218966_0"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "https://ipt.diveboard.com/resource.do?r=diveboard-occurrences",
+      "datasetName": "Diveboard - Scuba diving citizen science",
+      "recordedBy": "Axel",
+      "identifiedBy": "Axel",
+      "samplingProtocol": "citizen science scuba dive observation",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "TH",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "ASIA",
+      "country": "Thailand",
+      "publishedByGbifRegion": "EUROPE",
+      "rightsHolder": "Diveboard",
+      "identifier": "diveboard:42019_218966_0",
+      "http://unknown.org/crawl_attempt": "515",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge",
+      "verbatimLocality": "Stonehenge, Koh Lipe",
+      "collectionCode": "Diveboard",
+      "gbifID": "857009222",
+      "occurrenceID": "diveboard:42019_218966_0",
+      "type": "Event",
+      "taxonID": "http://eol.org/pages/218966",
+      "catalogNumber": "diveboard:42019_218966_0",
+      "institutionCode": "Diveboard",
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "ownerInstitutionCode": "Diveboard",
+      "nameAccordingTo": "EOL",
+      "occurrenceRemarks": "Non validated citizen science record",
+      "georeferenceSources": "Google Maps"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:857009222",
+      "title": "Hippocampus kuda Bleeker, 1852",
+      "url": "https://www.gbif.org/occurrence/857009222",
+      "date": "2011-01-21T13:00Z"
+    }
+  },
+  {
+    "id": "gbif:1144974604",
+    "_source": "gbif",
+    "_sourceId": 1144974604,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1144974604",
+    "title": "Amphiprion akindynos Allen, 1972",
+    "date": "2015-10-06T13:53Z",
+    "scientificName": "Amphiprion akindynos Allen, 1972",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "order": "Perciformes",
+    "family": "Pomacentridae",
+    "genus": "Amphiprion",
+    "species": "Amphiprion akindynos",
+    "country": "Australia",
+    "eventDate": "2015-10-06T13:53Z",
+    "decimalLatitude": -16.0213,
+    "decimalLongitude": 145.835,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "institutionCode": "Diveboard",
+    "datasetName": "Diveboard - Scuba diving citizen science",
+    "gbif": {
+      "key": 1144974604,
+      "datasetKey": "66f6192f-6cc0-45fd-a2d1-e76f5ae3eab2",
+      "publishingOrgKey": "1989b627-2a61-44db-83e4-392efc5da0a9",
+      "installationKey": "49a3c55e-5701-41a5-9a22-d9d4b79c23fa",
+      "hostingOrganizationKey": "1989b627-2a61-44db-83e4-392efc5da0a9",
+      "publishingCountry": "FR",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-17T19:18:17.765+00:00",
+      "lastParsed": "2026-04-27T19:49:15.571+00:00",
+      "crawlId": 337,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "D54P",
+            "name": "Amphiprion akindynos Allen, 1972",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Allen, 1972",
+            "genericName": "Amphiprion",
+            "specificEpithet": "akindynos",
+            "formattedName": "<i>Amphiprion</i> <i>akindynos</i> Allen, 1972"
+          },
+          "acceptedUsage": {
+            "key": "D54P",
+            "name": "Amphiprion akindynos Allen, 1972",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Allen, 1972",
+            "genericName": "Amphiprion",
+            "specificEpithet": "akindynos",
+            "formattedName": "<i>Amphiprion</i> <i>akindynos</i> Allen, 1972"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "8VR36",
+              "name": "Actinopterygii",
+              "rank": "GIGACLASS"
+            },
+            {
+              "key": "KTWM8",
+              "name": "Actinopteri",
+              "rank": "SUPERCLASS"
+            },
+            {
+              "key": "8V4VD",
+              "name": "Teleostei",
+              "rank": "CLASS"
+            },
+            {
+              "key": "PC",
+              "name": "Perciformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "KVMJ7",
+              "name": "Pomacentridae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "KTXKJ",
+              "name": "Amphiprioninae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "KTXKG",
+              "name": "Amphiprion",
+              "rank": "GENUS"
+            },
+            {
+              "key": "D54P",
+              "name": "Amphiprion akindynos",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": [
+            "TAXON_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "5212068",
+            "name": "Amphiprion akindynos Allen, 1972",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Allen, 1972",
+            "genericName": "Amphiprion",
+            "specificEpithet": "akindynos",
+            "formattedName": "<i>Amphiprion</i> <i>akindynos</i> Allen, 1972"
+          },
+          "acceptedUsage": {
+            "key": "5212068",
+            "name": "Amphiprion akindynos Allen, 1972",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Allen, 1972",
+            "genericName": "Amphiprion",
+            "specificEpithet": "akindynos",
+            "formattedName": "<i>Amphiprion</i> <i>akindynos</i> Allen, 1972"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "587",
+              "name": "Perciformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4499",
+              "name": "Pomacentridae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2357171",
+              "name": "Amphiprion",
+              "rank": "GENUS"
+            },
+            {
+              "key": "5212068",
+              "name": "Amphiprion akindynos",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": [
+            "TAXON_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 5212068,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "orderKey": 587,
+      "familyKey": 4499,
+      "genusKey": 2357171,
+      "speciesKey": 5212068,
+      "acceptedTaxonKey": 5212068,
+      "scientificName": "Amphiprion akindynos Allen, 1972",
+      "scientificNameAuthorship": "Allen, 1972",
+      "acceptedScientificName": "Amphiprion akindynos Allen, 1972",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Perciformes",
+      "family": "Pomacentridae",
+      "genus": "Amphiprion",
+      "species": "Amphiprion akindynos",
+      "genericName": "Amphiprion",
+      "specificEpithet": "akindynos",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "LC",
+      "dateIdentified": "2015-10-06T00:00:00",
+      "decimalLatitude": -16.0213,
+      "decimalLongitude": 145.835,
+      "coordinateUncertaintyInMeters": 100,
+      "elevation": 0,
+      "elevationAccuracy": 0,
+      "depth": 4.25,
+      "depthAccuracy": 4.25,
+      "gadm": {},
+      "waterBody": "Great Barrier Reef",
+      "year": 2015,
+      "month": 10,
+      "day": 6,
+      "eventDate": "2015-10-06T13:53Z",
+      "startDayOfYear": 279,
+      "endDayOfYear": 279,
+      "issues": [
+        "COORDINATE_REPROJECTION_SUSPICIOUS",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "modified": "2015-10-13T15:28:10.000+00:00",
+      "lastInterpreted": "2026-04-27T19:49:15.571+00:00",
+      "references": "https://www.diveboard.com/shinichiro.suzuki/DWbkJb",
+      "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "diveboard:271083_1012103_0"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "https://ipt.diveboard.com/resource.do?r=diveboard-occurrences",
+      "datasetName": "Diveboard - Scuba diving citizen science",
+      "recordedBy": "Shin'ichiro Suzuki",
+      "identifiedBy": "Shin'ichiro Suzuki",
+      "samplingProtocol": "citizen science scuba dive observation",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "AU",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "OCEANIA",
+      "country": "Australia",
+      "publishedByGbifRegion": "EUROPE",
+      "rightsHolder": "Diveboard",
+      "identifier": "diveboard:271083_1012103_0",
+      "http://unknown.org/crawl_attempt": "515",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "New Stonehenge",
+      "verbatimLocality": "New Stonehenge, Agincourt Reef 3",
+      "collectionCode": "Diveboard",
+      "gbifID": "1144974604",
+      "occurrenceID": "diveboard:271083_1012103_0",
+      "type": "Event",
+      "taxonID": "http://eol.org/pages/1012103",
+      "catalogNumber": "diveboard:271083_1012103_0",
+      "institutionCode": "Diveboard",
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "ownerInstitutionCode": "Diveboard",
+      "nameAccordingTo": "EOL",
+      "occurrenceRemarks": "Non validated citizen science record",
+      "georeferenceSources": "Google Maps"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:1144974604",
+      "title": "Amphiprion akindynos Allen, 1972",
+      "url": "https://www.gbif.org/occurrence/1144974604",
+      "date": "2015-10-06T13:53Z"
+    }
+  },
+  {
+    "id": "gbif:3311799026",
+    "_source": "gbif",
+    "_sourceId": 3311799026,
+    "_sourceUrl": "https://www.gbif.org/occurrence/3311799026",
+    "title": "Animalia",
+    "date": "2015-03-29",
+    "scientificName": "Animalia",
+    "kingdom": "Animalia",
+    "country": "South Africa",
+    "eventDate": "2015-03-29",
+    "decimalLatitude": -34.0466,
+    "decimalLongitude": 18.3062,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "gbif": {
+      "key": 3311799026,
+      "datasetKey": "0b1150c9-dfa8-4904-8bc5-b79b4e1930e6",
+      "publishingOrgKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "installationKey": "5a18cf7d-c259-47a4-a3ab-5c3a4024bd2e",
+      "hostingOrganizationKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "publishingCountry": "ZA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-20T18:50:52.850+00:00",
+      "lastParsed": "2026-04-24T08:27:02.496+00:00",
+      "crawlId": 236,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "668282c7-8d71-4c2b-b9ba-f9ab705c88d5": {
+          "usage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "H6Z",
+              "name": "Biota",
+              "rank": "UNRANKED"
+            },
+            {
+              "key": "5LK",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        }
+      },
+      "taxonKey": 1,
+      "kingdomKey": 1,
+      "acceptedTaxonKey": 1,
+      "scientificName": "Animalia",
+      "acceptedScientificName": "Animalia",
+      "kingdom": "Animalia",
+      "taxonRank": "KINGDOM",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2015-04-02T00:00:00",
+      "decimalLatitude": -34.0466,
+      "decimalLongitude": 18.3062,
+      "continent": "AFRICA",
+      "gadm": {},
+      "year": 2015,
+      "month": 3,
+      "day": 29,
+      "eventDate": "2015-03-29",
+      "startDayOfYear": 88,
+      "endDayOfYear": 88,
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_MATCH_HIGHERRANK"
+      ],
+      "lastInterpreted": "2026-04-24T08:27:02.496+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:FBIP:SANBI:iSpot:655325"
+        }
+      ],
+      "media": [
+        {
+          "references": "http://www.ispotnature.org/node/655325"
+        }
+      ],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "SeaKeys",
+      "recordedBy": "Pbsouthwood",
+      "identifiedBy": "Pbsouthwood",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "ZA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "AFRICA",
+      "country": "South Africa",
+      "publishedByGbifRegion": "AFRICA",
+      "identifier": "urn:catalog:FBIP:SANBI:iSpot:655325",
+      "recordNumber": "655325",
+      "habitat": "Marine Benthic",
+      "institutionID": "SANBI",
+      "http://unknown.org/crawl_attempt": "237",
+      "municipality": "City of Cape Town",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge Reef",
+      "gbifID": "3311799026",
+      "occurrenceID": "urn:catalog:FBIP:SANBI:iSpot:655325",
+      "http://unknown.org/crawlerDwcaCacheTime": "2021-06-29T18:32:03Z",
+      "http://unknown.org/orphanEndpoint": "http://ipt.sanbi.org.za/iptsanbi/archive.do?r=sink_seakeys_sanbi_ispot-citizenscience_2013_v1",
+      "identificationRemarks": "Plocamium sp. at Stonehenge Reef",
+      "collectionID": "iSpot"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:3311799026",
+      "title": "Animalia",
+      "url": "https://www.gbif.org/occurrence/3311799026",
+      "date": "2015-03-29"
+    }
+  },
+  {
+    "id": "gbif:3311799039",
+    "_source": "gbif",
+    "_sourceId": 3311799039,
+    "_sourceUrl": "https://www.gbif.org/occurrence/3311799039",
+    "title": "Animalia",
+    "date": "2015-03-29",
+    "scientificName": "Animalia",
+    "kingdom": "Animalia",
+    "country": "South Africa",
+    "eventDate": "2015-03-29",
+    "decimalLatitude": -34.0466,
+    "decimalLongitude": 18.3062,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "gbif": {
+      "key": 3311799039,
+      "datasetKey": "0b1150c9-dfa8-4904-8bc5-b79b4e1930e6",
+      "publishingOrgKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "installationKey": "5a18cf7d-c259-47a4-a3ab-5c3a4024bd2e",
+      "hostingOrganizationKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "publishingCountry": "ZA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-20T18:50:52.850+00:00",
+      "lastParsed": "2026-04-24T08:26:56.135+00:00",
+      "crawlId": 236,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "668282c7-8d71-4c2b-b9ba-f9ab705c88d5": {
+          "usage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "H6Z",
+              "name": "Biota",
+              "rank": "UNRANKED"
+            },
+            {
+              "key": "5LK",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        }
+      },
+      "taxonKey": 1,
+      "kingdomKey": 1,
+      "acceptedTaxonKey": 1,
+      "scientificName": "Animalia",
+      "acceptedScientificName": "Animalia",
+      "kingdom": "Animalia",
+      "taxonRank": "KINGDOM",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2015-04-02T00:00:00",
+      "decimalLatitude": -34.0466,
+      "decimalLongitude": 18.3062,
+      "continent": "AFRICA",
+      "gadm": {},
+      "year": 2015,
+      "month": 3,
+      "day": 29,
+      "eventDate": "2015-03-29",
+      "startDayOfYear": 88,
+      "endDayOfYear": 88,
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_MATCH_HIGHERRANK"
+      ],
+      "lastInterpreted": "2026-04-24T08:26:56.135+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:FBIP:SANBI:iSpot:655334"
+        }
+      ],
+      "media": [
+        {
+          "references": "http://www.ispotnature.org/node/655334"
+        }
+      ],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "SeaKeys",
+      "recordedBy": "Pbsouthwood",
+      "identifiedBy": "Pbsouthwood",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "ZA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "AFRICA",
+      "country": "South Africa",
+      "publishedByGbifRegion": "AFRICA",
+      "identifier": "urn:catalog:FBIP:SANBI:iSpot:655334",
+      "recordNumber": "655334",
+      "habitat": "Marine Benthic",
+      "institutionID": "SANBI",
+      "http://unknown.org/crawl_attempt": "237",
+      "municipality": "City of Cape Town",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge Reef",
+      "gbifID": "3311799039",
+      "occurrenceID": "urn:catalog:FBIP:SANBI:iSpot:655334",
+      "http://unknown.org/crawlerDwcaCacheTime": "2021-06-29T18:32:03Z",
+      "http://unknown.org/orphanEndpoint": "http://ipt.sanbi.org.za/iptsanbi/archive.do?r=sink_seakeys_sanbi_ispot-citizenscience_2013_v1",
+      "identificationRemarks": "Veined oil-weed at Stonehenge Reef",
+      "collectionID": "iSpot"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:3311799039",
+      "title": "Animalia",
+      "url": "https://www.gbif.org/occurrence/3311799039",
+      "date": "2015-03-29"
+    }
+  },
+  {
+    "id": "gbif:3311799048",
+    "_source": "gbif",
+    "_sourceId": 3311799048,
+    "_sourceUrl": "https://www.gbif.org/occurrence/3311799048",
+    "title": "Animalia",
+    "date": "2015-03-29",
+    "scientificName": "Animalia",
+    "kingdom": "Animalia",
+    "country": "South Africa",
+    "eventDate": "2015-03-29",
+    "decimalLatitude": -34.0466,
+    "decimalLongitude": 18.3062,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "gbif": {
+      "key": 3311799048,
+      "datasetKey": "0b1150c9-dfa8-4904-8bc5-b79b4e1930e6",
+      "publishingOrgKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "installationKey": "5a18cf7d-c259-47a4-a3ab-5c3a4024bd2e",
+      "hostingOrganizationKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "publishingCountry": "ZA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-20T18:50:52.850+00:00",
+      "lastParsed": "2026-04-24T08:27:04.787+00:00",
+      "crawlId": 236,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "668282c7-8d71-4c2b-b9ba-f9ab705c88d5": {
+          "usage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "H6Z",
+              "name": "Biota",
+              "rank": "UNRANKED"
+            },
+            {
+              "key": "5LK",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        }
+      },
+      "taxonKey": 1,
+      "kingdomKey": 1,
+      "acceptedTaxonKey": 1,
+      "scientificName": "Animalia",
+      "acceptedScientificName": "Animalia",
+      "kingdom": "Animalia",
+      "taxonRank": "KINGDOM",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2015-04-02T00:00:00",
+      "decimalLatitude": -34.0466,
+      "decimalLongitude": 18.3062,
+      "continent": "AFRICA",
+      "gadm": {},
+      "year": 2015,
+      "month": 3,
+      "day": 29,
+      "eventDate": "2015-03-29",
+      "startDayOfYear": 88,
+      "endDayOfYear": 88,
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_MATCH_HIGHERRANK"
+      ],
+      "lastInterpreted": "2026-04-24T08:27:04.787+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:FBIP:SANBI:iSpot:655330"
+        }
+      ],
+      "media": [
+        {
+          "references": "http://www.ispotnature.org/node/655330"
+        }
+      ],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "SeaKeys",
+      "recordedBy": "Pbsouthwood",
+      "identifiedBy": "Pbsouthwood",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "ZA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "AFRICA",
+      "country": "South Africa",
+      "publishedByGbifRegion": "AFRICA",
+      "identifier": "urn:catalog:FBIP:SANBI:iSpot:655330",
+      "recordNumber": "655330",
+      "habitat": "Marine Benthic",
+      "institutionID": "SANBI",
+      "http://unknown.org/crawl_attempt": "237",
+      "municipality": "City of Cape Town",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge Reef",
+      "gbifID": "3311799048",
+      "occurrenceID": "urn:catalog:FBIP:SANBI:iSpot:655330",
+      "http://unknown.org/crawlerDwcaCacheTime": "2021-06-29T18:32:03Z",
+      "http://unknown.org/orphanEndpoint": "http://ipt.sanbi.org.za/iptsanbi/archive.do?r=sink_seakeys_sanbi_ispot-citizenscience_2013_v1",
+      "identificationRemarks": "Plocamium sp. at Stonehenge Reef",
+      "collectionID": "iSpot"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:3311799048",
+      "title": "Animalia",
+      "url": "https://www.gbif.org/occurrence/3311799048",
+      "date": "2015-03-29"
+    }
+  },
+  {
+    "id": "gbif:1229867027",
+    "_source": "gbif",
+    "_sourceId": 1229867027,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1229867027",
+    "title": "Platax teira (Forsskål, 1775)",
+    "date": "2009-05-06T08:20Z",
+    "scientificName": "Platax teira (Forsskål, 1775)",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "order": "Perciformes",
+    "family": "Ephippidae",
+    "genus": "Platax",
+    "species": "Platax teira",
+    "country": "Thailand",
+    "eventDate": "2009-05-06T08:20Z",
+    "decimalLatitude": 8.57878,
+    "decimalLongitude": 97.6277,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "institutionCode": "Diveboard",
+    "datasetName": "Diveboard - Scuba diving citizen science",
+    "gbif": {
+      "key": 1229867027,
+      "datasetKey": "66f6192f-6cc0-45fd-a2d1-e76f5ae3eab2",
+      "publishingOrgKey": "1989b627-2a61-44db-83e4-392efc5da0a9",
+      "installationKey": "49a3c55e-5701-41a5-9a22-d9d4b79c23fa",
+      "hostingOrganizationKey": "1989b627-2a61-44db-83e4-392efc5da0a9",
+      "publishingCountry": "FR",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-17T19:18:17.765+00:00",
+      "lastParsed": "2026-04-27T19:49:19.163+00:00",
+      "crawlId": 337,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "4JN64",
+            "name": "Platax teira (Forsskål, 1775)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Forsskål, 1775)",
+            "genericName": "Platax",
+            "specificEpithet": "teira",
+            "formattedName": "<i>Platax</i> <i>teira</i> (Forsskål, 1775)"
+          },
+          "acceptedUsage": {
+            "key": "4JN64",
+            "name": "Platax teira (Forsskål, 1775)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Forsskål, 1775)",
+            "genericName": "Platax",
+            "specificEpithet": "teira",
+            "formattedName": "<i>Platax</i> <i>teira</i> (Forsskål, 1775)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "8VR36",
+              "name": "Actinopterygii",
+              "rank": "GIGACLASS"
+            },
+            {
+              "key": "KTWM8",
+              "name": "Actinopteri",
+              "rank": "SUPERCLASS"
+            },
+            {
+              "key": "8V4VD",
+              "name": "Teleostei",
+              "rank": "CLASS"
+            },
+            {
+              "key": "KTZYT",
+              "name": "Acanthuriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "KV76X",
+              "name": "Ephippidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "KVPRF",
+              "name": "Platax",
+              "rank": "GENUS"
+            },
+            {
+              "key": "4JN64",
+              "name": "Platax teira",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": [
+            "TAXON_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2394312",
+            "name": "Platax teira (Forsskål, 1775)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Forsskål, 1775)",
+            "genericName": "Platax",
+            "specificEpithet": "teira",
+            "formattedName": "<i>Platax</i> <i>teira</i> (Forsskål, 1775)"
+          },
+          "acceptedUsage": {
+            "key": "2394312",
+            "name": "Platax teira (Forsskål, 1775)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Forsskål, 1775)",
+            "genericName": "Platax",
+            "specificEpithet": "teira",
+            "formattedName": "<i>Platax</i> <i>teira</i> (Forsskål, 1775)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "587",
+              "name": "Perciformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4271",
+              "name": "Ephippidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2370014",
+              "name": "Platax",
+              "rank": "GENUS"
+            },
+            {
+              "key": "2394312",
+              "name": "Platax teira",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": [
+            "TAXON_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 2394312,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "orderKey": 587,
+      "familyKey": 4271,
+      "genusKey": 2370014,
+      "speciesKey": 2394312,
+      "acceptedTaxonKey": 2394312,
+      "scientificName": "Platax teira (Forsskål, 1775)",
+      "scientificNameAuthorship": "(Forsskål, 1775)",
+      "acceptedScientificName": "Platax teira (Forsskål, 1775)",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Perciformes",
+      "family": "Ephippidae",
+      "genus": "Platax",
+      "species": "Platax teira",
+      "genericName": "Platax",
+      "specificEpithet": "teira",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "LC",
+      "dateIdentified": "2009-05-06T00:00:00",
+      "decimalLatitude": 8.57878,
+      "decimalLongitude": 97.6277,
+      "coordinateUncertaintyInMeters": 100,
+      "elevation": 0,
+      "elevationAccuracy": 0,
+      "depth": 12.5,
+      "depthAccuracy": 12.5,
+      "continent": "ASIA",
+      "gadm": {},
+      "waterBody": "Andaman Sea",
+      "year": 2009,
+      "month": 5,
+      "day": 6,
+      "eventDate": "2009-05-06T08:20Z",
+      "startDayOfYear": 126,
+      "endDayOfYear": 126,
+      "issues": [
+        "COORDINATE_REPROJECTION_SUSPICIOUS",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "modified": "2016-03-01T16:34:03.000+00:00",
+      "lastInterpreted": "2026-04-27T19:49:19.163+00:00",
+      "references": "https://www.diveboard.com/chris-dot-loizou/D2NbIs5",
+      "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "diveboard:293130_992651_0"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "https://ipt.diveboard.com/resource.do?r=diveboard-occurrences",
+      "datasetName": "Diveboard - Scuba diving citizen science",
+      "recordedBy": "Chris.Loizou",
+      "identifiedBy": "Chris.Loizou",
+      "samplingProtocol": "citizen science scuba dive observation",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "TH",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "ASIA",
+      "country": "Thailand",
+      "publishedByGbifRegion": "EUROPE",
+      "rightsHolder": "Diveboard",
+      "identifier": "diveboard:293130_992651_0",
+      "http://unknown.org/crawl_attempt": "515",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge",
+      "verbatimLocality": "Stonehenge, Similan Islands",
+      "collectionCode": "Diveboard",
+      "gbifID": "1229867027",
+      "occurrenceID": "diveboard:293130_992651_0",
+      "type": "Event",
+      "taxonID": "http://eol.org/pages/992651",
+      "catalogNumber": "diveboard:293130_992651_0",
+      "institutionCode": "Diveboard",
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "ownerInstitutionCode": "Diveboard",
+      "nameAccordingTo": "EOL",
+      "occurrenceRemarks": "Non validated citizen science record",
+      "georeferenceSources": "Google Maps"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:1229867027",
+      "title": "Platax teira (Forsskål, 1775)",
+      "url": "https://www.gbif.org/occurrence/1229867027",
+      "date": "2009-05-06T08:20Z"
+    }
+  },
+  {
+    "id": "gbif:1229867029",
+    "_source": "gbif",
+    "_sourceId": 1229867029,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1229867029",
+    "title": "Alectis ciliaris (Bloch, 1787)",
+    "date": "2009-05-06T08:20Z",
+    "scientificName": "Alectis ciliaris (Bloch, 1787)",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "order": "Perciformes",
+    "family": "Carangidae",
+    "genus": "Alectis",
+    "species": "Alectis ciliaris",
+    "country": "Thailand",
+    "eventDate": "2009-05-06T08:20Z",
+    "decimalLatitude": 8.57878,
+    "decimalLongitude": 97.6277,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "institutionCode": "Diveboard",
+    "datasetName": "Diveboard - Scuba diving citizen science",
+    "gbif": {
+      "key": 1229867029,
+      "datasetKey": "66f6192f-6cc0-45fd-a2d1-e76f5ae3eab2",
+      "publishingOrgKey": "1989b627-2a61-44db-83e4-392efc5da0a9",
+      "installationKey": "49a3c55e-5701-41a5-9a22-d9d4b79c23fa",
+      "hostingOrganizationKey": "1989b627-2a61-44db-83e4-392efc5da0a9",
+      "publishingCountry": "FR",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-17T19:18:17.765+00:00",
+      "lastParsed": "2026-04-27T19:48:49.160+00:00",
+      "crawlId": 337,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "BLPJ",
+            "name": "Alectis ciliaris (Bloch, 1787)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Bloch, 1787)",
+            "genericName": "Alectis",
+            "specificEpithet": "ciliaris",
+            "formattedName": "<i>Alectis</i> <i>ciliaris</i> (Bloch, 1787)"
+          },
+          "acceptedUsage": {
+            "key": "BLPJ",
+            "name": "Alectis ciliaris (Bloch, 1787)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Bloch, 1787)",
+            "genericName": "Alectis",
+            "specificEpithet": "ciliaris",
+            "formattedName": "<i>Alectis</i> <i>ciliaris</i> (Bloch, 1787)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "8VR36",
+              "name": "Actinopterygii",
+              "rank": "GIGACLASS"
+            },
+            {
+              "key": "KTWM8",
+              "name": "Actinopteri",
+              "rank": "SUPERCLASS"
+            },
+            {
+              "key": "8V4VD",
+              "name": "Teleostei",
+              "rank": "CLASS"
+            },
+            {
+              "key": "KV3K4",
+              "name": "Carangiformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "KV2D7",
+              "name": "Carangidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "KTWZC",
+              "name": "Alectis",
+              "rank": "GENUS"
+            },
+            {
+              "key": "BLPJ",
+              "name": "Alectis ciliaris",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": [
+            "TAXON_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2390537",
+            "name": "Alectis ciliaris (Bloch, 1787)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Bloch, 1787)",
+            "genericName": "Alectis",
+            "specificEpithet": "ciliaris",
+            "formattedName": "<i>Alectis</i> <i>ciliaris</i> (Bloch, 1787)"
+          },
+          "acceptedUsage": {
+            "key": "2390537",
+            "name": "Alectis ciliaris (Bloch, 1787)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Bloch, 1787)",
+            "genericName": "Alectis",
+            "specificEpithet": "ciliaris",
+            "formattedName": "<i>Alectis</i> <i>ciliaris</i> (Bloch, 1787)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "587",
+              "name": "Perciformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4253",
+              "name": "Carangidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2390536",
+              "name": "Alectis",
+              "rank": "GENUS"
+            },
+            {
+              "key": "2390537",
+              "name": "Alectis ciliaris",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": [
+            "TAXON_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 2390537,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "orderKey": 587,
+      "familyKey": 4253,
+      "genusKey": 2390536,
+      "speciesKey": 2390537,
+      "acceptedTaxonKey": 2390537,
+      "scientificName": "Alectis ciliaris (Bloch, 1787)",
+      "scientificNameAuthorship": "(Bloch, 1787)",
+      "acceptedScientificName": "Alectis ciliaris (Bloch, 1787)",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Perciformes",
+      "family": "Carangidae",
+      "genus": "Alectis",
+      "species": "Alectis ciliaris",
+      "genericName": "Alectis",
+      "specificEpithet": "ciliaris",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "LC",
+      "dateIdentified": "2009-05-06T00:00:00",
+      "decimalLatitude": 8.57878,
+      "decimalLongitude": 97.6277,
+      "coordinateUncertaintyInMeters": 100,
+      "elevation": 0,
+      "elevationAccuracy": 0,
+      "depth": 12.5,
+      "depthAccuracy": 12.5,
+      "continent": "ASIA",
+      "gadm": {},
+      "waterBody": "Andaman Sea",
+      "year": 2009,
+      "month": 5,
+      "day": 6,
+      "eventDate": "2009-05-06T08:20Z",
+      "startDayOfYear": 126,
+      "endDayOfYear": 126,
+      "issues": [
+        "COORDINATE_REPROJECTION_SUSPICIOUS",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "modified": "2016-03-01T16:34:03.000+00:00",
+      "lastInterpreted": "2026-04-27T19:48:49.160+00:00",
+      "references": "https://www.diveboard.com/chris-dot-loizou/D2NbIs5",
+      "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "diveboard:293130_213780_0"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "https://ipt.diveboard.com/resource.do?r=diveboard-occurrences",
+      "datasetName": "Diveboard - Scuba diving citizen science",
+      "recordedBy": "Chris.Loizou",
+      "identifiedBy": "Chris.Loizou",
+      "samplingProtocol": "citizen science scuba dive observation",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "TH",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "ASIA",
+      "country": "Thailand",
+      "publishedByGbifRegion": "EUROPE",
+      "rightsHolder": "Diveboard",
+      "identifier": "diveboard:293130_213780_0",
+      "http://unknown.org/crawl_attempt": "515",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge",
+      "verbatimLocality": "Stonehenge, Similan Islands",
+      "collectionCode": "Diveboard",
+      "gbifID": "1229867029",
+      "occurrenceID": "diveboard:293130_213780_0",
+      "type": "Event",
+      "taxonID": "http://eol.org/pages/213780",
+      "catalogNumber": "diveboard:293130_213780_0",
+      "institutionCode": "Diveboard",
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "ownerInstitutionCode": "Diveboard",
+      "nameAccordingTo": "EOL",
+      "occurrenceRemarks": "Non validated citizen science record",
+      "georeferenceSources": "Google Maps"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:1229867029",
+      "title": "Alectis ciliaris (Bloch, 1787)",
+      "url": "https://www.gbif.org/occurrence/1229867029",
+      "date": "2009-05-06T08:20Z"
+    }
+  },
+  {
+    "id": "gbif:3311796011",
+    "_source": "gbif",
+    "_sourceId": 3311796011,
+    "_sourceUrl": "https://www.gbif.org/occurrence/3311796011",
+    "title": "Animalia",
+    "date": "2014-12-07",
+    "scientificName": "Animalia",
+    "kingdom": "Animalia",
+    "country": "South Africa",
+    "eventDate": "2014-12-07",
+    "decimalLatitude": -34.0432,
+    "decimalLongitude": 18.3035,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "gbif": {
+      "key": 3311796011,
+      "datasetKey": "0b1150c9-dfa8-4904-8bc5-b79b4e1930e6",
+      "publishingOrgKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "installationKey": "5a18cf7d-c259-47a4-a3ab-5c3a4024bd2e",
+      "hostingOrganizationKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "publishingCountry": "ZA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-20T18:50:52.850+00:00",
+      "lastParsed": "2026-04-24T08:27:04.273+00:00",
+      "crawlId": 236,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "668282c7-8d71-4c2b-b9ba-f9ab705c88d5": {
+          "usage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "H6Z",
+              "name": "Biota",
+              "rank": "UNRANKED"
+            },
+            {
+              "key": "5LK",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        }
+      },
+      "taxonKey": 1,
+      "kingdomKey": 1,
+      "acceptedTaxonKey": 1,
+      "scientificName": "Animalia",
+      "acceptedScientificName": "Animalia",
+      "kingdom": "Animalia",
+      "taxonRank": "KINGDOM",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2015-01-18T00:00:00",
+      "decimalLatitude": -34.0432,
+      "decimalLongitude": 18.3035,
+      "continent": "AFRICA",
+      "gadm": {},
+      "year": 2014,
+      "month": 12,
+      "day": 7,
+      "eventDate": "2014-12-07",
+      "startDayOfYear": 341,
+      "endDayOfYear": 341,
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_MATCH_HIGHERRANK"
+      ],
+      "lastInterpreted": "2026-04-24T08:27:04.273+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:FBIP:SANBI:iSpot:634782"
+        }
+      ],
+      "media": [
+        {
+          "references": "http://www.ispotnature.org/node/634782"
+        }
+      ],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "SeaKeys",
+      "recordedBy": "Pbsouthwood",
+      "identifiedBy": "Pbsouthwood",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "ZA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "AFRICA",
+      "country": "South Africa",
+      "publishedByGbifRegion": "AFRICA",
+      "identifier": "urn:catalog:FBIP:SANBI:iSpot:634782",
+      "recordNumber": "634782",
+      "habitat": "Marine Benthic",
+      "institutionID": "SANBI",
+      "http://unknown.org/crawl_attempt": "237",
+      "municipality": "City of Cape Town",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge Coral Pinnacle",
+      "gbifID": "3311796011",
+      "occurrenceID": "urn:catalog:FBIP:SANBI:iSpot:634782",
+      "http://unknown.org/crawlerDwcaCacheTime": "2021-06-29T18:32:03Z",
+      "http://unknown.org/orphanEndpoint": "http://ipt.sanbi.org.za/iptsanbi/archive.do?r=sink_seakeys_sanbi_ispot-citizenscience_2013_v1",
+      "identificationRemarks": "Polyopes constrictus? at Stonehenge Coral Pinnacle",
+      "collectionID": "iSpot"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:3311796011",
+      "title": "Animalia",
+      "url": "https://www.gbif.org/occurrence/3311796011",
+      "date": "2014-12-07"
+    }
+  },
+  {
+    "id": "gbif:1061085955",
+    "_source": "gbif",
+    "_sourceId": 1061085955,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1061085955",
+    "title": "Plantae",
+    "scientificName": "Plantae",
+    "kingdom": "Plantae",
+    "country": "United States of America",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "basisOfRecord": "FOSSIL_SPECIMEN",
+    "institutionCode": "UCMP",
+    "gbif": {
+      "key": 1061085955,
+      "datasetKey": "58d0f326-2e85-4d0a-a744-571461220f00",
+      "publishingOrgKey": "0dc9c7a0-b5c6-11d9-a0b8-b8a03c50a862",
+      "networkKeys": [
+        "68e8e67a-43e6-44a3-8817-dc0e6b70f973",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "92d2fa2a-f305-4bb1-9fe6-fa762d6ebb69",
+      "hostingOrganizationKey": "0dc9c7a0-b5c6-11d9-a0b8-b8a03c50a862",
+      "publishingCountry": "US",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-30T10:04:15.931+00:00",
+      "lastParsed": "2026-04-30T10:45:04.522+00:00",
+      "crawlId": 630,
+      "extensions": {},
+      "basisOfRecord": "FOSSIL_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "P",
+            "name": "Plantae",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Plantae</i>"
+          },
+          "acceptedUsage": {
+            "key": "P",
+            "name": "Plantae",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Plantae</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "P",
+              "name": "Plantae",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "6",
+            "name": "Plantae",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Plantae</i>"
+          },
+          "acceptedUsage": {
+            "key": "6",
+            "name": "Plantae",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Plantae</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "6",
+              "name": "Plantae",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": []
+        }
+      },
+      "taxonKey": 6,
+      "kingdomKey": 6,
+      "acceptedTaxonKey": 6,
+      "scientificName": "Plantae",
+      "acceptedScientificName": "Plantae",
+      "kingdom": "Plantae",
+      "taxonRank": "KINGDOM",
+      "taxonomicStatus": "ACCEPTED",
+      "continent": "NORTH_AMERICA",
+      "stateProvince": "Pennsylvania",
+      "gadm": {},
+      "issues": [
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH"
+      ],
+      "modified": "2004-02-23T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-30T10:45:04.522+00:00",
+      "references": "http://ucmpdb.berkeley.edu/cgi/ucmp_query2?spec_id=P146564&one=T",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:UCMP:P:146564"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "65f33221-f9bb-4ab1-a46d-15014a5393bc",
+      "isInCluster": false,
+      "earliestPeriodOrLowestSystem": "Ordovician",
+      "latestPeriodOrHighestSystem": "Ordovician",
+      "formation": "Stonehenge",
+      "recordedBy": "Traverse, A.",
+      "preparations": "Ichnofossil resembling algae",
+      "dnaSequenceID": [],
+      "countryCode": "US",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "NORTH_AMERICA",
+      "country": "United States of America",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "geologicalContextID": "PA1033",
+      "identifier": "urn:catalog:UCMP:P:146564",
+      "informationWithheld": "Location data available to qualified researchers on request.",
+      "nomenclaturalCode": "ICBN",
+      "verbatimEventDate": "1990 Jul 20",
+      "http://unknown.org/crawl_attempt": "631",
+      "county": "Centre County",
+      "locality": "State College-Circleville Rd.",
+      "collectionCode": "P",
+      "gbifID": "1061085955",
+      "occurrenceID": "urn:catalog:UCMP:P:146564",
+      "catalogNumber": "146564",
+      "institutionCode": "UCMP",
+      "locationID": "PA1033",
+      "accessRights": "http://vertnet.org/resources/norms.html"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:1061085955",
+      "title": "Plantae",
+      "url": "https://www.gbif.org/occurrence/1061085955"
+    }
+  },
+  {
+    "id": "gbif:3311796017",
+    "_source": "gbif",
+    "_sourceId": 3311796017,
+    "_sourceUrl": "https://www.gbif.org/occurrence/3311796017",
+    "title": "Animalia",
+    "date": "2014-12-07",
+    "scientificName": "Animalia",
+    "kingdom": "Animalia",
+    "country": "South Africa",
+    "eventDate": "2014-12-07",
+    "decimalLatitude": -34.0432,
+    "decimalLongitude": 18.3035,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "gbif": {
+      "key": 3311796017,
+      "datasetKey": "0b1150c9-dfa8-4904-8bc5-b79b4e1930e6",
+      "publishingOrgKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "installationKey": "5a18cf7d-c259-47a4-a3ab-5c3a4024bd2e",
+      "hostingOrganizationKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "publishingCountry": "ZA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-20T18:50:52.850+00:00",
+      "lastParsed": "2026-04-24T08:27:03.223+00:00",
+      "crawlId": 236,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "668282c7-8d71-4c2b-b9ba-f9ab705c88d5": {
+          "usage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "H6Z",
+              "name": "Biota",
+              "rank": "UNRANKED"
+            },
+            {
+              "key": "5LK",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        }
+      },
+      "taxonKey": 1,
+      "kingdomKey": 1,
+      "acceptedTaxonKey": 1,
+      "scientificName": "Animalia",
+      "acceptedScientificName": "Animalia",
+      "kingdom": "Animalia",
+      "taxonRank": "KINGDOM",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2015-01-18T00:00:00",
+      "decimalLatitude": -34.0432,
+      "decimalLongitude": 18.3035,
+      "continent": "AFRICA",
+      "gadm": {},
+      "year": 2014,
+      "month": 12,
+      "day": 7,
+      "eventDate": "2014-12-07",
+      "startDayOfYear": 341,
+      "endDayOfYear": 341,
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_MATCH_HIGHERRANK"
+      ],
+      "lastInterpreted": "2026-04-24T08:27:03.223+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:FBIP:SANBI:iSpot:634785"
+        }
+      ],
+      "media": [
+        {
+          "references": "http://www.ispotnature.org/node/634785"
+        }
+      ],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "SeaKeys",
+      "recordedBy": "Pbsouthwood",
+      "identifiedBy": "Pbsouthwood",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "ZA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "AFRICA",
+      "country": "South Africa",
+      "publishedByGbifRegion": "AFRICA",
+      "identifier": "urn:catalog:FBIP:SANBI:iSpot:634785",
+      "recordNumber": "634785",
+      "habitat": "Marine Benthic",
+      "institutionID": "SANBI",
+      "http://unknown.org/crawl_attempt": "237",
+      "municipality": "City of Cape Town",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge Coral Pinnacle",
+      "gbifID": "3311796017",
+      "occurrenceID": "urn:catalog:FBIP:SANBI:iSpot:634785",
+      "http://unknown.org/crawlerDwcaCacheTime": "2021-06-29T18:32:03Z",
+      "http://unknown.org/orphanEndpoint": "http://ipt.sanbi.org.za/iptsanbi/archive.do?r=sink_seakeys_sanbi_ispot-citizenscience_2013_v1",
+      "identificationRemarks": "Plocamium at Stonehenge Coral Pinnacle",
+      "collectionID": "iSpot"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:3311796017",
+      "title": "Animalia",
+      "url": "https://www.gbif.org/occurrence/3311796017",
+      "date": "2014-12-07"
+    }
+  },
+  {
+    "id": "gbif:3311799049",
+    "_source": "gbif",
+    "_sourceId": 3311799049,
+    "_sourceUrl": "https://www.gbif.org/occurrence/3311799049",
+    "title": "Animalia",
+    "date": "2013-04-13",
+    "scientificName": "Animalia",
+    "kingdom": "Animalia",
+    "country": "South Africa",
+    "eventDate": "2013-04-13",
+    "decimalLatitude": -34.0466,
+    "decimalLongitude": 18.3062,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "gbif": {
+      "key": 3311799049,
+      "datasetKey": "0b1150c9-dfa8-4904-8bc5-b79b4e1930e6",
+      "publishingOrgKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "installationKey": "5a18cf7d-c259-47a4-a3ab-5c3a4024bd2e",
+      "hostingOrganizationKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "publishingCountry": "ZA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-20T18:50:52.850+00:00",
+      "lastParsed": "2026-04-24T08:26:46.870+00:00",
+      "crawlId": 236,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "N",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "1",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "668282c7-8d71-4c2b-b9ba-f9ab705c88d5": {
+          "usage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "acceptedUsage": {
+            "key": "5LK",
+            "name": "Animalia",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Animalia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "H6Z",
+              "name": "Biota",
+              "rank": "UNRANKED"
+            },
+            {
+              "key": "5LK",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        }
+      },
+      "taxonKey": 1,
+      "kingdomKey": 1,
+      "acceptedTaxonKey": 1,
+      "scientificName": "Animalia",
+      "acceptedScientificName": "Animalia",
+      "kingdom": "Animalia",
+      "taxonRank": "KINGDOM",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2015-04-02T00:00:00",
+      "decimalLatitude": -34.0466,
+      "decimalLongitude": 18.3062,
+      "continent": "AFRICA",
+      "gadm": {},
+      "year": 2013,
+      "month": 4,
+      "day": 13,
+      "eventDate": "2013-04-13",
+      "startDayOfYear": 103,
+      "endDayOfYear": 103,
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_MATCH_HIGHERRANK"
+      ],
+      "lastInterpreted": "2026-04-24T08:26:46.870+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:FBIP:SANBI:iSpot:655333"
+        }
+      ],
+      "media": [
+        {
+          "references": "http://www.ispotnature.org/node/655333"
+        }
+      ],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "SeaKeys",
+      "recordedBy": "Pbsouthwood",
+      "identifiedBy": "Pbsouthwood",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "ZA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "AFRICA",
+      "country": "South Africa",
+      "publishedByGbifRegion": "AFRICA",
+      "identifier": "urn:catalog:FBIP:SANBI:iSpot:655333",
+      "recordNumber": "655333",
+      "habitat": "Marine Benthic",
+      "institutionID": "SANBI",
+      "http://unknown.org/crawl_attempt": "237",
+      "municipality": "City of Cape Town",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge Reef",
+      "gbifID": "3311799049",
+      "occurrenceID": "urn:catalog:FBIP:SANBI:iSpot:655333",
+      "http://unknown.org/crawlerDwcaCacheTime": "2021-06-29T18:32:03Z",
+      "http://unknown.org/orphanEndpoint": "http://ipt.sanbi.org.za/iptsanbi/archive.do?r=sink_seakeys_sanbi_ispot-citizenscience_2013_v1",
+      "identificationRemarks": "Plocamium sp. at Stonehenge Reef",
+      "collectionID": "iSpot"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:3311799049",
+      "title": "Animalia",
+      "url": "https://www.gbif.org/occurrence/3311799049",
+      "date": "2013-04-13"
+    }
+  },
+  {
+    "id": "gbif:3311793434",
+    "_source": "gbif",
+    "_sourceId": 3311793434,
+    "_sourceUrl": "https://www.gbif.org/occurrence/3311793434",
+    "title": "Janolus Bergh, 1884",
+    "date": "2015-03-29",
+    "scientificName": "Janolus Bergh, 1884",
+    "kingdom": "Animalia",
+    "phylum": "Mollusca",
+    "class": "Gastropoda",
+    "order": "Nudibranchia",
+    "family": "Janolidae",
+    "genus": "Janolus",
+    "country": "South Africa",
+    "eventDate": "2015-03-29",
+    "decimalLatitude": -34.0466,
+    "decimalLongitude": 18.3062,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "gbif": {
+      "key": 3311793434,
+      "datasetKey": "0b1150c9-dfa8-4904-8bc5-b79b4e1930e6",
+      "publishingOrgKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "installationKey": "5a18cf7d-c259-47a4-a3ab-5c3a4024bd2e",
+      "hostingOrganizationKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "publishingCountry": "ZA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-20T18:50:52.850+00:00",
+      "lastParsed": "2026-04-24T08:27:00.886+00:00",
+      "crawlId": 236,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "7P63N",
+            "name": "Janolus Bergh, 1884",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Bergh, 1884",
+            "formattedName": "<i>Janolus</i> Bergh, 1884"
+          },
+          "acceptedUsage": {
+            "key": "7P63N",
+            "name": "Janolus Bergh, 1884",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Bergh, 1884",
+            "formattedName": "<i>Janolus</i> Bergh, 1884"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "M2L",
+              "name": "Mollusca",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "7NF3Y",
+              "name": "Gastropoda",
+              "rank": "CLASS"
+            },
+            {
+              "key": "7NVXJ",
+              "name": "Heterobranchia",
+              "rank": "SUBCLASS"
+            },
+            {
+              "key": "CFV7Q",
+              "name": "Euthyneura",
+              "rank": "INFRACLASS"
+            },
+            {
+              "key": "7VBDQ",
+              "name": "Ringipleura",
+              "rank": "SUBTERCLASS"
+            },
+            {
+              "key": "7NVY3",
+              "name": "Nudipleura",
+              "rank": "SUPERORDER"
+            },
+            {
+              "key": "7NFD5",
+              "name": "Nudibranchia",
+              "rank": "ORDER"
+            },
+            {
+              "key": "V4W8Z",
+              "name": "Janolina",
+              "rank": "SUBORDER"
+            },
+            {
+              "key": "7NGWW",
+              "name": "Proctonotoidea",
+              "rank": "SUPERFAMILY"
+            },
+            {
+              "key": "7NJ29",
+              "name": "Janolidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "7P63N",
+              "name": "Janolus",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2291874",
+            "name": "Janolus Bergh, 1884",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Bergh, 1884",
+            "formattedName": "<i>Janolus</i> Bergh, 1884"
+          },
+          "acceptedUsage": {
+            "key": "2291874",
+            "name": "Janolus Bergh, 1884",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Bergh, 1884",
+            "formattedName": "<i>Janolus</i> Bergh, 1884"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "52",
+              "name": "Mollusca",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "225",
+              "name": "Gastropoda",
+              "rank": "CLASS"
+            },
+            {
+              "key": "980",
+              "name": "Nudibranchia",
+              "rank": "ORDER"
+            },
+            {
+              "key": "2643",
+              "name": "Janolidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2291874",
+              "name": "Janolus",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": []
+        },
+        "668282c7-8d71-4c2b-b9ba-f9ab705c88d5": {
+          "usage": {
+            "key": "7P9Z",
+            "name": "Nudibranchia",
+            "rank": "ORDER",
+            "formattedName": "<i>Nudibranchia</i>"
+          },
+          "acceptedUsage": {
+            "key": "7P9Z",
+            "name": "Nudibranchia",
+            "rank": "ORDER",
+            "formattedName": "<i>Nudibranchia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "H6Z",
+              "name": "Biota",
+              "rank": "UNRANKED"
+            },
+            {
+              "key": "5LK",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "3WSP",
+              "name": "Mollusca",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "384W",
+              "name": "Gastropoda",
+              "rank": "CLASS"
+            },
+            {
+              "key": "7P9Z",
+              "name": "Nudibranchia",
+              "rank": "ORDER"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        }
+      },
+      "taxonKey": 2291874,
+      "kingdomKey": 1,
+      "phylumKey": 52,
+      "classKey": 225,
+      "orderKey": 980,
+      "familyKey": 2643,
+      "genusKey": 2291874,
+      "acceptedTaxonKey": 2291874,
+      "scientificName": "Janolus Bergh, 1884",
+      "scientificNameAuthorship": "Bergh, 1884",
+      "acceptedScientificName": "Janolus Bergh, 1884",
+      "kingdom": "Animalia",
+      "phylum": "Mollusca",
+      "order": "Nudibranchia",
+      "family": "Janolidae",
+      "genus": "Janolus",
+      "taxonRank": "GENUS",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2015-04-01T00:00:00",
+      "decimalLatitude": -34.0466,
+      "decimalLongitude": 18.3062,
+      "continent": "AFRICA",
+      "gadm": {},
+      "year": 2015,
+      "month": 3,
+      "day": 29,
+      "eventDate": "2015-03-29",
+      "startDayOfYear": 88,
+      "endDayOfYear": 88,
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES"
+      ],
+      "lastInterpreted": "2026-04-24T08:27:00.886+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:FBIP:SANBI:iSpot:655028"
+        }
+      ],
+      "media": [
+        {
+          "references": "http://www.ispotnature.org/node/655028"
+        }
+      ],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "SeaKeys",
+      "recordedBy": "Pbsouthwood",
+      "identifiedBy": "Pbsouthwood",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Gastropoda",
+      "countryCode": "ZA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "AFRICA",
+      "country": "South Africa",
+      "publishedByGbifRegion": "AFRICA",
+      "identifier": "urn:catalog:FBIP:SANBI:iSpot:655028",
+      "recordNumber": "655028",
+      "habitat": "Marine Benthic",
+      "institutionID": "SANBI",
+      "http://unknown.org/crawl_attempt": "237",
+      "municipality": "City of Cape Town",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge Reef",
+      "gbifID": "3311793434",
+      "occurrenceID": "urn:catalog:FBIP:SANBI:iSpot:655028",
+      "http://unknown.org/crawlerDwcaCacheTime": "2021-06-29T18:32:03Z",
+      "http://unknown.org/orphanEndpoint": "http://ipt.sanbi.org.za/iptsanbi/archive.do?r=sink_seakeys_sanbi_ispot-citizenscience_2013_v1",
+      "identificationRemarks": "Silvertip nudibranchs at Stonehenge Reef",
+      "collectionID": "iSpot"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:3311793434",
+      "title": "Janolus Bergh, 1884",
+      "url": "https://www.gbif.org/occurrence/3311793434",
+      "date": "2015-03-29"
+    }
+  },
+  {
+    "id": "gbif:3311796868",
+    "_source": "gbif",
+    "_sourceId": 3311796868,
+    "_sourceUrl": "https://www.gbif.org/occurrence/3311796868",
+    "title": "Clytia Lamouroux, 1812",
+    "date": "2014-12-07",
+    "scientificName": "Clytia Lamouroux, 1812",
+    "kingdom": "Animalia",
+    "phylum": "Cnidaria",
+    "class": "Hydrozoa",
+    "order": "Leptothecata",
+    "family": "Campanulariidae",
+    "genus": "Clytia",
+    "country": "South Africa",
+    "eventDate": "2014-12-07",
+    "decimalLatitude": -34.0432,
+    "decimalLongitude": 18.3035,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "gbif": {
+      "key": 3311796868,
+      "datasetKey": "0b1150c9-dfa8-4904-8bc5-b79b4e1930e6",
+      "publishingOrgKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "installationKey": "5a18cf7d-c259-47a4-a3ab-5c3a4024bd2e",
+      "hostingOrganizationKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "publishingCountry": "ZA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-20T18:50:52.850+00:00",
+      "lastParsed": "2026-04-24T08:26:55.328+00:00",
+      "crawlId": 236,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "7NT6M",
+            "name": "Clytia Lamouroux, 1812",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Lamouroux, 1812",
+            "formattedName": "<i>Clytia</i> Lamouroux, 1812"
+          },
+          "acceptedUsage": {
+            "key": "7NT6M",
+            "name": "Clytia Lamouroux, 1812",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Lamouroux, 1812",
+            "formattedName": "<i>Clytia</i> Lamouroux, 1812"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CN2",
+              "name": "Cnidaria",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "B8V3X",
+              "name": "Hydrozoa",
+              "rank": "CLASS"
+            },
+            {
+              "key": "7NF5F",
+              "name": "Hydroidolina",
+              "rank": "SUBCLASS"
+            },
+            {
+              "key": "7NG7R",
+              "name": "Leptothecata",
+              "rank": "ORDER"
+            },
+            {
+              "key": "7NG9Z",
+              "name": "Campanulariidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "7NT6M",
+              "name": "Clytia",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2268167",
+            "name": "Clytia Lamouroux, 1812",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Lamouroux, 1812",
+            "formattedName": "<i>Clytia</i> Lamouroux, 1812"
+          },
+          "acceptedUsage": {
+            "key": "2268167",
+            "name": "Clytia Lamouroux, 1812",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Lamouroux, 1812",
+            "formattedName": "<i>Clytia</i> Lamouroux, 1812"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "43",
+              "name": "Cnidaria",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "205",
+              "name": "Hydrozoa",
+              "rank": "CLASS"
+            },
+            {
+              "key": "712",
+              "name": "Leptothecata",
+              "rank": "ORDER"
+            },
+            {
+              "key": "8168",
+              "name": "Campanulariidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2268167",
+              "name": "Clytia",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": []
+        },
+        "668282c7-8d71-4c2b-b9ba-f9ab705c88d5": {
+          "usage": {
+            "key": "W37",
+            "name": "Clytia",
+            "rank": "GENUS",
+            "formattedName": "<i>Clytia</i>"
+          },
+          "acceptedUsage": {
+            "key": "W37",
+            "name": "Clytia",
+            "rank": "GENUS",
+            "formattedName": "<i>Clytia</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "H6Z",
+              "name": "Biota",
+              "rank": "UNRANKED"
+            },
+            {
+              "key": "5LK",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "HGL",
+              "name": "Cnidaria",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "3J8N",
+              "name": "Hydrozoa",
+              "rank": "CLASS"
+            },
+            {
+              "key": "43FV",
+              "name": "Leptothecata",
+              "rank": "ORDER"
+            },
+            {
+              "key": "H3H",
+              "name": "Campanulariidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "W37",
+              "name": "Clytia",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": []
+        }
+      },
+      "taxonKey": 2268167,
+      "kingdomKey": 1,
+      "phylumKey": 43,
+      "classKey": 205,
+      "orderKey": 712,
+      "familyKey": 8168,
+      "genusKey": 2268167,
+      "acceptedTaxonKey": 2268167,
+      "scientificName": "Clytia Lamouroux, 1812",
+      "scientificNameAuthorship": "Lamouroux, 1812",
+      "acceptedScientificName": "Clytia Lamouroux, 1812",
+      "kingdom": "Animalia",
+      "phylum": "Cnidaria",
+      "order": "Leptothecata",
+      "family": "Campanulariidae",
+      "genus": "Clytia",
+      "taxonRank": "GENUS",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2015-01-17T00:00:00",
+      "decimalLatitude": -34.0432,
+      "decimalLongitude": 18.3035,
+      "continent": "AFRICA",
+      "gadm": {},
+      "year": 2014,
+      "month": 12,
+      "day": 7,
+      "eventDate": "2014-12-07",
+      "startDayOfYear": 341,
+      "endDayOfYear": 341,
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES"
+      ],
+      "lastInterpreted": "2026-04-24T08:26:55.328+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:FBIP:SANBI:iSpot:634621"
+        }
+      ],
+      "media": [
+        {
+          "references": "http://www.ispotnature.org/node/634621"
+        }
+      ],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "SeaKeys",
+      "recordedBy": "Pbsouthwood",
+      "identifiedBy": "Pbsouthwood",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Hydrozoa",
+      "countryCode": "ZA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "AFRICA",
+      "country": "South Africa",
+      "publishedByGbifRegion": "AFRICA",
+      "identifier": "urn:catalog:FBIP:SANBI:iSpot:634621",
+      "recordNumber": "634621",
+      "habitat": "Marine Benthic",
+      "institutionID": "SANBI",
+      "http://unknown.org/crawl_attempt": "237",
+      "municipality": "City of Cape Town",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge Coral Pinnacle",
+      "gbifID": "3311796868",
+      "occurrenceID": "urn:catalog:FBIP:SANBI:iSpot:634621",
+      "http://unknown.org/crawlerDwcaCacheTime": "2021-06-29T18:32:03Z",
+      "http://unknown.org/orphanEndpoint": "http://ipt.sanbi.org.za/iptsanbi/archive.do?r=sink_seakeys_sanbi_ispot-citizenscience_2013_v1",
+      "identificationRemarks": "Clytia at Stonehenge Coral Pinnacle",
+      "collectionID": "iSpot"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:3311796868",
+      "title": "Clytia Lamouroux, 1812",
+      "url": "https://www.gbif.org/occurrence/3311796868",
+      "date": "2014-12-07"
+    }
+  },
+  {
+    "id": "gbif:1061085971",
+    "_source": "gbif",
+    "_sourceId": 1061085971,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1061085971",
+    "title": "Plantae",
+    "scientificName": "Plantae",
+    "kingdom": "Plantae",
+    "country": "United States of America",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "basisOfRecord": "FOSSIL_SPECIMEN",
+    "institutionCode": "UCMP",
+    "gbif": {
+      "key": 1061085971,
+      "datasetKey": "58d0f326-2e85-4d0a-a744-571461220f00",
+      "publishingOrgKey": "0dc9c7a0-b5c6-11d9-a0b8-b8a03c50a862",
+      "networkKeys": [
+        "68e8e67a-43e6-44a3-8817-dc0e6b70f973",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "92d2fa2a-f305-4bb1-9fe6-fa762d6ebb69",
+      "hostingOrganizationKey": "0dc9c7a0-b5c6-11d9-a0b8-b8a03c50a862",
+      "publishingCountry": "US",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-30T10:04:15.931+00:00",
+      "lastParsed": "2026-04-30T10:45:14.904+00:00",
+      "crawlId": 630,
+      "extensions": {},
+      "basisOfRecord": "FOSSIL_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "P",
+            "name": "Plantae",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Plantae</i>"
+          },
+          "acceptedUsage": {
+            "key": "P",
+            "name": "Plantae",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Plantae</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "P",
+              "name": "Plantae",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "6",
+            "name": "Plantae",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Plantae</i>"
+          },
+          "acceptedUsage": {
+            "key": "6",
+            "name": "Plantae",
+            "rank": "KINGDOM",
+            "formattedName": "<i>Plantae</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "6",
+              "name": "Plantae",
+              "rank": "KINGDOM"
+            }
+          ],
+          "issues": []
+        }
+      },
+      "taxonKey": 6,
+      "kingdomKey": 6,
+      "acceptedTaxonKey": 6,
+      "scientificName": "Plantae",
+      "acceptedScientificName": "Plantae",
+      "kingdom": "Plantae",
+      "taxonRank": "KINGDOM",
+      "taxonomicStatus": "ACCEPTED",
+      "continent": "NORTH_AMERICA",
+      "stateProvince": "Pennsylvania",
+      "gadm": {},
+      "issues": [
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH"
+      ],
+      "modified": "2004-02-23T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-30T10:45:14.904+00:00",
+      "references": "http://ucmpdb.berkeley.edu/cgi/ucmp_query2?spec_id=P146563&one=T",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:UCMP:P:146563"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "65f33221-f9bb-4ab1-a46d-15014a5393bc",
+      "isInCluster": false,
+      "earliestPeriodOrLowestSystem": "Ordovician",
+      "latestPeriodOrHighestSystem": "Ordovician",
+      "formation": "Stonehenge",
+      "recordedBy": "Traverse, A.",
+      "preparations": "Ichnofossil resembling algae",
+      "dnaSequenceID": [],
+      "countryCode": "US",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "NORTH_AMERICA",
+      "country": "United States of America",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "geologicalContextID": "PA1033",
+      "identifier": "urn:catalog:UCMP:P:146563",
+      "informationWithheld": "Location data available to qualified researchers on request.",
+      "nomenclaturalCode": "ICBN",
+      "verbatimEventDate": "1990 Jul 20",
+      "http://unknown.org/crawl_attempt": "631",
+      "county": "Centre County",
+      "locality": "State College-Circleville Rd.",
+      "collectionCode": "P",
+      "gbifID": "1061085971",
+      "occurrenceID": "urn:catalog:UCMP:P:146563",
+      "catalogNumber": "146563",
+      "institutionCode": "UCMP",
+      "locationID": "PA1033",
+      "accessRights": "http://vertnet.org/resources/norms.html"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:1061085971",
+      "title": "Plantae",
+      "url": "https://www.gbif.org/occurrence/1061085971"
+    }
+  },
+  {
+    "id": "gbif:3311796361",
+    "_source": "gbif",
+    "_sourceId": 3311796361,
+    "_sourceUrl": "https://www.gbif.org/occurrence/3311796361",
+    "title": "Grateloupia",
+    "date": "2014-12-07",
+    "scientificName": "Grateloupia",
+    "kingdom": "Animalia",
+    "phylum": "Mollusca",
+    "class": "Bivalvia",
+    "order": "Venerida",
+    "family": "Veneridae",
+    "genus": "Gratelupia",
+    "country": "South Africa",
+    "eventDate": "2014-12-07",
+    "decimalLatitude": -34.0432,
+    "decimalLongitude": 18.3035,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "gbif": {
+      "key": 3311796361,
+      "datasetKey": "0b1150c9-dfa8-4904-8bc5-b79b4e1930e6",
+      "publishingOrgKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "installationKey": "5a18cf7d-c259-47a4-a3ab-5c3a4024bd2e",
+      "hostingOrganizationKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "publishingCountry": "ZA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-20T18:50:52.850+00:00",
+      "lastParsed": "2026-04-24T08:27:04.537+00:00",
+      "crawlId": 236,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "C4YT5",
+            "name": "Grateloupia",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "formattedName": "<i>Grateloupia</i>"
+          },
+          "acceptedUsage": {
+            "key": "KZ8ST",
+            "name": "Gratelupia Des Moulins, 1828",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Des Moulins, 1828",
+            "formattedName": "<i>Gratelupia</i> Des Moulins, 1828"
+          },
+          "taxonomicStatus": "SYNONYM",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "M2L",
+              "name": "Mollusca",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "7NF3C",
+              "name": "Bivalvia",
+              "rank": "CLASS"
+            },
+            {
+              "key": "7NVXG",
+              "name": "Autobranchia",
+              "rank": "SUBCLASS"
+            },
+            {
+              "key": "7NVXR",
+              "name": "Heteroconchia",
+              "rank": "INFRACLASS"
+            },
+            {
+              "key": "7VBDP",
+              "name": "Euheterodonta",
+              "rank": "SUBTERCLASS"
+            },
+            {
+              "key": "7NVY2",
+              "name": "Imparidentia",
+              "rank": "SUPERORDER"
+            },
+            {
+              "key": "7NGCF",
+              "name": "Venerida",
+              "rank": "ORDER"
+            },
+            {
+              "key": "7NFRT",
+              "name": "Veneroidea",
+              "rank": "SUPERFAMILY"
+            },
+            {
+              "key": "7NLJB",
+              "name": "Veneridae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "8HFY7",
+              "name": "Meretricinae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "KZ8ST",
+              "name": "Gratelupia",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "8493505",
+            "name": "Grateloupia",
+            "rank": "GENUS",
+            "formattedName": "<i>Grateloupia</i>"
+          },
+          "acceptedUsage": {
+            "key": "4585615",
+            "name": "Gratelupia Desmoulins, 1828",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Desmoulins, 1828",
+            "formattedName": "<i>Gratelupia</i> Desmoulins, 1828"
+          },
+          "taxonomicStatus": "SYNONYM",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "52",
+              "name": "Mollusca",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "137",
+              "name": "Bivalvia",
+              "rank": "CLASS"
+            },
+            {
+              "key": "9310756",
+              "name": "Venerida",
+              "rank": "ORDER"
+            },
+            {
+              "key": "3445",
+              "name": "Veneridae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "4585615",
+              "name": "Gratelupia",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "668282c7-8d71-4c2b-b9ba-f9ab705c88d5": {
+          "usage": {
+            "key": "5J89",
+            "name": "Veneridae",
+            "rank": "FAMILY",
+            "formattedName": "<i>Veneridae</i>"
+          },
+          "acceptedUsage": {
+            "key": "5J89",
+            "name": "Veneridae",
+            "rank": "FAMILY",
+            "formattedName": "<i>Veneridae</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "H6Z",
+              "name": "Biota",
+              "rank": "UNRANKED"
+            },
+            {
+              "key": "5LK",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "3WSP",
+              "name": "Mollusca",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "FTR",
+              "name": "Bivalvia",
+              "rank": "CLASS"
+            },
+            {
+              "key": "5J88",
+              "name": "Venerida",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5J89",
+              "name": "Veneridae",
+              "rank": "FAMILY"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        }
+      },
+      "taxonKey": 8493505,
+      "kingdomKey": 1,
+      "phylumKey": 52,
+      "classKey": 137,
+      "orderKey": 9310756,
+      "familyKey": 3445,
+      "genusKey": 4585615,
+      "acceptedTaxonKey": 4585615,
+      "scientificName": "Grateloupia",
+      "acceptedScientificName": "Gratelupia Desmoulins, 1828",
+      "kingdom": "Animalia",
+      "phylum": "Mollusca",
+      "order": "Venerida",
+      "family": "Veneridae",
+      "genus": "Gratelupia",
+      "taxonRank": "GENUS",
+      "taxonomicStatus": "SYNONYM",
+      "dateIdentified": "2015-01-18T00:00:00",
+      "decimalLatitude": -34.0432,
+      "decimalLongitude": 18.3035,
+      "continent": "AFRICA",
+      "gadm": {},
+      "year": 2014,
+      "month": 12,
+      "day": 7,
+      "eventDate": "2014-12-07",
+      "startDayOfYear": 341,
+      "endDayOfYear": 341,
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_MATCH_HIGHERRANK"
+      ],
+      "lastInterpreted": "2026-04-24T08:27:04.537+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:FBIP:SANBI:iSpot:634731"
+        }
+      ],
+      "media": [
+        {
+          "references": "http://www.ispotnature.org/node/634731"
+        }
+      ],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "SeaKeys",
+      "recordedBy": "Pbsouthwood",
+      "identifiedBy": "Pbsouthwood",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Bivalvia",
+      "countryCode": "ZA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "AFRICA",
+      "country": "South Africa",
+      "publishedByGbifRegion": "AFRICA",
+      "identifier": "urn:catalog:FBIP:SANBI:iSpot:634731",
+      "recordNumber": "634731",
+      "habitat": "Marine Benthic",
+      "institutionID": "SANBI",
+      "http://unknown.org/crawl_attempt": "237",
+      "municipality": "City of Cape Town",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge Coral Pinnacle",
+      "gbifID": "3311796361",
+      "occurrenceID": "urn:catalog:FBIP:SANBI:iSpot:634731",
+      "http://unknown.org/crawlerDwcaCacheTime": "2021-06-29T18:32:03Z",
+      "http://unknown.org/orphanEndpoint": "http://ipt.sanbi.org.za/iptsanbi/archive.do?r=sink_seakeys_sanbi_ispot-citizenscience_2013_v1",
+      "identificationRemarks": "Rippled ribbonweed at Stonehenge Coral Pinnacle",
+      "collectionID": "iSpot"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:3311796361",
+      "title": "Grateloupia",
+      "url": "https://www.gbif.org/occurrence/3311796361",
+      "date": "2014-12-07"
+    }
+  },
+  {
+    "id": "gbif:3311805900",
+    "_source": "gbif",
+    "_sourceId": 3311805900,
+    "_sourceUrl": "https://www.gbif.org/occurrence/3311805900",
+    "title": "Anthostella Carlgren, 1938",
+    "date": "2012-03-25",
+    "scientificName": "Anthostella Carlgren, 1938",
+    "kingdom": "Animalia",
+    "phylum": "Cnidaria",
+    "class": "Anthozoa",
+    "order": "Actiniaria",
+    "family": "Actiniidae",
+    "genus": "Anthostella",
+    "country": "South Africa",
+    "eventDate": "2012-03-25",
+    "decimalLatitude": -34.0347,
+    "decimalLongitude": 18.1433,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "gbif": {
+      "key": 3311805900,
+      "datasetKey": "0b1150c9-dfa8-4904-8bc5-b79b4e1930e6",
+      "publishingOrgKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "installationKey": "5a18cf7d-c259-47a4-a3ab-5c3a4024bd2e",
+      "hostingOrganizationKey": "c5f7ef70-e233-11d9-a4d6-b8a03c50a862",
+      "publishingCountry": "ZA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-20T18:50:52.850+00:00",
+      "lastParsed": "2026-04-24T08:27:01.396+00:00",
+      "crawlId": 236,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "7NP8Y",
+            "name": "Anthostella Carlgren, 1938",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Carlgren, 1938",
+            "formattedName": "<i>Anthostella</i> Carlgren, 1938"
+          },
+          "acceptedUsage": {
+            "key": "7NP8Y",
+            "name": "Anthostella Carlgren, 1938",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Carlgren, 1938",
+            "formattedName": "<i>Anthostella</i> Carlgren, 1938"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CN2",
+              "name": "Cnidaria",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "7S",
+              "name": "Anthozoa",
+              "rank": "CLASS"
+            },
+            {
+              "key": "7NF5D",
+              "name": "Hexacorallia",
+              "rank": "SUBCLASS"
+            },
+            {
+              "key": "B8TX9",
+              "name": "Actiniaria",
+              "rank": "ORDER"
+            },
+            {
+              "key": "8475W",
+              "name": "Enthemonae",
+              "rank": "SUBORDER"
+            },
+            {
+              "key": "7NGFT",
+              "name": "Actinioidea",
+              "rank": "SUPERFAMILY"
+            },
+            {
+              "key": "7NFTC",
+              "name": "Actiniidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "7NP8Y",
+              "name": "Anthostella",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2256681",
+            "name": "Anthostella Carlgren, 1938",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Carlgren, 1938",
+            "formattedName": "<i>Anthostella</i> Carlgren, 1938"
+          },
+          "acceptedUsage": {
+            "key": "2256681",
+            "name": "Anthostella Carlgren, 1938",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Carlgren, 1938",
+            "formattedName": "<i>Anthostella</i> Carlgren, 1938"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "43",
+              "name": "Cnidaria",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "206",
+              "name": "Anthozoa",
+              "rank": "CLASS"
+            },
+            {
+              "key": "705",
+              "name": "Actiniaria",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5688",
+              "name": "Actiniidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2256681",
+              "name": "Anthostella",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": []
+        },
+        "668282c7-8d71-4c2b-b9ba-f9ab705c88d5": {
+          "usage": {
+            "key": "B28",
+            "name": "Anthostella",
+            "rank": "GENUS",
+            "formattedName": "<i>Anthostella</i>"
+          },
+          "acceptedUsage": {
+            "key": "B28",
+            "name": "Anthostella",
+            "rank": "GENUS",
+            "formattedName": "<i>Anthostella</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "H6Z",
+              "name": "Biota",
+              "rank": "UNRANKED"
+            },
+            {
+              "key": "5LK",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "HGL",
+              "name": "Cnidaria",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "B3M",
+              "name": "Anthozoa",
+              "rank": "CLASS"
+            },
+            {
+              "key": "5C",
+              "name": "Actiniaria",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5H",
+              "name": "Actiniidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "B28",
+              "name": "Anthostella",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": []
+        }
+      },
+      "taxonKey": 2256681,
+      "kingdomKey": 1,
+      "phylumKey": 43,
+      "classKey": 206,
+      "orderKey": 705,
+      "familyKey": 5688,
+      "genusKey": 2256681,
+      "acceptedTaxonKey": 2256681,
+      "scientificName": "Anthostella Carlgren, 1938",
+      "scientificNameAuthorship": "Carlgren, 1938",
+      "acceptedScientificName": "Anthostella Carlgren, 1938",
+      "kingdom": "Animalia",
+      "phylum": "Cnidaria",
+      "order": "Actiniaria",
+      "family": "Actiniidae",
+      "genus": "Anthostella",
+      "taxonRank": "GENUS",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2015-03-12T00:00:00",
+      "decimalLatitude": -34.0347,
+      "decimalLongitude": 18.1433,
+      "gadm": {},
+      "year": 2012,
+      "month": 3,
+      "day": 25,
+      "eventDate": "2012-03-25",
+      "startDayOfYear": 85,
+      "endDayOfYear": 85,
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84"
+      ],
+      "lastInterpreted": "2026-04-24T08:27:01.396+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:FBIP:SANBI:iSpot:648866"
+        }
+      ],
+      "media": [
+        {
+          "references": "http://www.ispotnature.org/node/648866"
+        }
+      ],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetID": "SeaKeys",
+      "recordedBy": "MatthewMelidonis",
+      "identifiedBy": "Pbsouthwood",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Anthozoa",
+      "countryCode": "ZA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "AFRICA",
+      "country": "South Africa",
+      "publishedByGbifRegion": "AFRICA",
+      "identifier": "urn:catalog:FBIP:SANBI:iSpot:648866",
+      "recordNumber": "648866",
+      "habitat": "Marine Benthic",
+      "institutionID": "SANBI",
+      "http://unknown.org/crawl_attempt": "237",
+      "municipality": "City of Cape Town",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Stonehenge",
+      "gbifID": "3311805900",
+      "occurrenceID": "urn:catalog:FBIP:SANBI:iSpot:648866",
+      "http://unknown.org/crawlerDwcaCacheTime": "2021-06-29T18:32:03Z",
+      "http://unknown.org/orphanEndpoint": "http://ipt.sanbi.org.za/iptsanbi/archive.do?r=sink_seakeys_sanbi_ispot-citizenscience_2013_v1",
+      "identificationRemarks": "Dwarf spotted anemone at Stonehenge",
+      "collectionID": "iSpot"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:3311805900",
+      "title": "Anthostella Carlgren, 1938",
+      "url": "https://www.gbif.org/occurrence/3311805900",
+      "date": "2012-03-25"
+    }
+  },
+  {
+    "id": "gbif:1698168135",
+    "_source": "gbif",
+    "_sourceId": 1698168135,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1698168135",
+    "country": "United States of America",
+    "decimalLatitude": 39.633331,
+    "decimalLongitude": -77.816666,
+    "basisOfRecord": "MATERIAL_CITATION",
+    "institutionCode": "PBDB",
+    "datasetName": "\"Bellefontia Fauna,\" Stonehenge Ls. zones A-D, L.Ord.",
+    "gbif": {
+      "key": 1698168135,
+      "datasetKey": "bb5b30b4-827e-4d5e-a86a-825d65cb6583",
+      "publishingOrgKey": "b711353c-44d7-4e8b-90c5-16fea0d247e0",
+      "networkKeys": [
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "a957a663-2f17-415f-b1c8-5cf6398df8ed",
+      "hostingOrganizationKey": "2053a639-84c3-4be5-b8bc-96b6d88a976c",
+      "publishingCountry": "US",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-16T08:40:57.419+00:00",
+      "lastParsed": "2026-04-24T04:03:17.830+00:00",
+      "crawlId": 386,
+      "projectId": "PBDB",
+      "extensions": {},
+      "basisOfRecord": "MATERIAL_CITATION",
+      "occurrenceStatus": "PRESENT",
+      "decimalLatitude": 39.633331,
+      "decimalLongitude": -77.816666,
+      "coordinatePrecision": 0.0166667,
+      "continent": "NORTH_AMERICA",
+      "stateProvince": "Maryland",
+      "gadm": {
+        "level0": {
+          "gid": "USA",
+          "name": "United States"
+        },
+        "level1": {
+          "gid": "USA.21_1",
+          "name": "Maryland"
+        },
+        "level2": {
+          "gid": "USA.21.21_1",
+          "name": "Washington"
+        }
+      },
+      "higherGeography": "US|MARYLAND",
+      "issues": [
+        "TAXON_MATCH_NONE",
+        "INSTITUTION_MATCH_NONE"
+      ],
+      "modified": "2017-10-27T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-24T04:03:17.830+00:00",
+      "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "pbdb:occ:2373"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetName": "\"Bellefontia Fauna,\" Stonehenge Ls. zones A-D, L.Ord.",
+      "formation": "Stonehenge Limestone",
+      "recordedBy": "Sando",
+      "samplingProtocol": "general faunal/floral",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "countryCode": "US",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "NORTH_AMERICA",
+      "country": "United States of America",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "identifier": "pbdb:occ:2373",
+      "http://unknown.org/crawl_attempt": "392",
+      "georeferenceVerificationStatus": "requires verification",
+      "namePublishedInYear": "1957",
+      "georeferenceRemarks": "based on political unit",
+      "associatedReferences": "W. J. Sando. 1957. Beekmantown Group (Lower Ordovician) of Maryland. Geological Society of America Memoir 68:1-159",
+      "lithostratigraphicTerms": "stratigraphic comments:\"Zones A-D. Lower Canadian\" | lithology1:\"limestone\"",
+      "verbatimLocality": "US | Maryland",
+      "language": "en",
+      "collectionCode": "274",
+      "gbifID": "1698168135",
+      "occurrenceID": "pbdb:occ:2373",
+      "type": "Text",
+      "taxonID": "0",
+      "previousIdentifications": "Lytospira sp.",
+      "institutionCode": "PBDB",
+      "identificationQualifier": "sp.",
+      "accessRights": "http://vertnet.org/resources/norms.html",
+      "higherClassification": "|  |  |  |",
+      "verbatimTaxonRank": "genus",
+      "collectionID": "274",
+      "identificationID": "15554"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:stonehenge",
+      "accessDate": "2026-05-01T09:44:32.270Z",
+      "recordId": "gbif:1698168135",
+      "url": "https://www.gbif.org/occurrence/1698168135"
+    }
+  }
+]

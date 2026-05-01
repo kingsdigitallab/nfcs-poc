@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dublin_core xmlns="http://www.tei-c.org/ns/1.0" schema="dc">
+   <dcvalue element="contributor" qualifier="author">Charleton, Walter, 1619-1707.</dcvalue>
+   <dcvalue element="contributor" qualifier="author">Howard, Robert, Sir, 1626-1698.</dcvalue>
+   <dcvalue element="contributor" qualifier="author">Dryden, John, 1631-1700.</dcvalue>
+   <dcvalue element="contributor">Text Creation Partnership,</dcvalue>
+   <dcvalue element="coverage" qualifier="placeName">London</dcvalue>
+   <dcvalue element="date" qualifier="created">1663</dcvalue>
+   <dcvalue element="date" qualifier="issued">2005-10</dcvalue>
+   <dcvalue element="date" qualifier="accessioned">2018-05-25</dcvalue>
+   <dcvalue element="description" qualifier="abstract">A reply to Jones' "The most notable antiquity of Great Britain." Text preceded by two poems addressed to Charleton by Robert Howard and John Dryden, respectively. Reproduction of original in Yale University Library and Huntington Library. </dcvalue>
+   <dcvalue element="format" qualifier="mimetype">text/xml</dcvalue>
+   <dcvalue element="format" qualifier="medium">Digital bitstream</dcvalue>
+   <dcvalue element="format" qualifier="extent">Approx. 175 KB of XML-encoded text transcribed from 44 1-bit group-IV TIFF page images.</dcvalue>
+   <dcvalue element="identifier">ota:A69727</dcvalue>
+   <dcvalue element="identifier" qualifier="citation">http://purl.ox.ac.uk/ota/A69727</dcvalue>
+   <dcvalue element="language" qualifier="iso">eng</dcvalue>
+   <dcvalue element="language">English</dcvalue>
+   <dcvalue element="publisher">University of Oxford</dcvalue>
+   <dcvalue element="relation" qualifier="isformatof">https://data.historicaltexts.jisc.ac.uk/view?pubId=eebo-ocm11699908e</dcvalue>
+   <dcvalue element="relation" qualifier="ispartof">EEBO-TCP (Phase 1)</dcvalue>
+   <dcvalue element="rights" qualifier="label">PUB</dcvalue>
+   <dcvalue element="rights" qualifier="uri">http://creativecommons.org/publicdomain/zero/1.0/</dcvalue>
+   <dcvalue element="rights">This keyboarded and encoded edition of the work described above is co-owned by the institutions providing financial support to the Early English Books Online Text Creation Partnership. This Phase I text is available for reuse, according to the terms of Creative Commons 0 1.0 Universal. The text can be copied, modified, distributed and performed, even for commercial purposes, all without asking permission.</dcvalue>
+   <dcvalue element="subject" qualifier="lcsh">Jones, Inigo, 1573-1652. --  Most notable antiquity of Great Britain.</dcvalue>
+   <dcvalue element="subject" qualifier="lcsh">Stonehenge (England)</dcvalue>
+   <dcvalue element="title">Chorea gigantum, or, The most famous antiquity of Great-Britan [sic], vulgarly called Stone-Heng, standing on Salisbury Plain, restored to the Danes by Walter Charleton ...</dcvalue>
+   <dcvalue element="type">Text</dcvalue>
+</dublin_core>

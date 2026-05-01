@@ -1,0 +1,1382 @@
+[
+  {
+    "id": "mds:4bc5539a-344d-372c-afec-54ecd2cbe188",
+    "_source": "mds",
+    "_sourceId": "co8643437",
+    "_sourceUrl": "https://museumdata.uk/objects/4bc5539a-344d-372c-afec-54ecd2cbe188",
+    "title": "Roman Consular Denarius coin (Ancient Roman)",
+    "description": "Coin. Silver; Roman consular denarius. Obv., head of Roma; rev. Victory in a chariot. Diam. 11/16 inch. 5s. 6d. V&A no. 6687-57.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "4bc5539a-344d-372c-afec-54ecd2cbe188",
+      "objectNumber": "co8643437",
+      "material": [
+        "silver (metal)"
+      ],
+      "dimensions": [
+        "diameter",
+        "11/16",
+        "17.4625"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Roman Consular Denarius coin (Ancient Roman)"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin. Silver; Roman consular denarius. Obv., head of Roma; rev. Victory in a chariot. Diam. 11/16 inch. 5s. 6d. V&A no. 6687-57."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "diameter"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "11/16",
+          "17.4625"
+        ],
+        "Material": [
+          "silver (metal)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/219",
+          "6687-57"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:4bc5539a-344d-372c-afec-54ecd2cbe188",
+      "title": "Roman Consular Denarius coin (Ancient Roman)",
+      "url": "https://museumdata.uk/objects/4bc5539a-344d-372c-afec-54ecd2cbe188"
+    }
+  },
+  {
+    "id": "mds:40718c5f-3021-300c-b53b-79915b0da883",
+    "_source": "mds",
+    "_sourceId": "co8643435",
+    "_sourceUrl": "https://museumdata.uk/objects/40718c5f-3021-300c-b53b-79915b0da883",
+    "title": "Roman Consular Denarius coin (Ancient Roman)",
+    "description": "Coin. Silver ; Roman consular denarius. Obv., head of Apollo to the right :rev., an altar with a lyre suspended on each side, inscribed PVTEAL. SCRIBON. Diam. 0.75 inch. 5s. 6d. V&A no. 6685-57.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "40718c5f-3021-300c-b53b-79915b0da883",
+      "objectNumber": "co8643435",
+      "material": [
+        "silver (metal)"
+      ],
+      "dimensions": [
+        "diameter",
+        "3/4",
+        "19.05"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Roman Consular Denarius coin (Ancient Roman)"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin. Silver ; Roman consular denarius. Obv., head of Apollo to the right :rev., an altar with a lyre suspended on each side, inscribed PVTEAL. SCRIBON. Diam. 0.75 inch. 5s. 6d. V&A no. 6685-57."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "diameter"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "3/4",
+          "19.05"
+        ],
+        "Material": [
+          "silver (metal)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/217",
+          "6685-57"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:40718c5f-3021-300c-b53b-79915b0da883",
+      "title": "Roman Consular Denarius coin (Ancient Roman)",
+      "url": "https://museumdata.uk/objects/40718c5f-3021-300c-b53b-79915b0da883"
+    }
+  },
+  {
+    "id": "mds:b7a44a07-02e7-30b4-bd2e-adc9f7cc3e23",
+    "_source": "mds",
+    "_sourceId": "co8006966",
+    "_sourceUrl": "https://museumdata.uk/objects/b7a44a07-02e7-30b4-bd2e-adc9f7cc3e23",
+    "title": "Roman coin, Domitian",
+    "description": "One of seven Roman bronze coins, Domitian A.D.81-96.",
+    "date": "81",
+    "subject": [
+      "coins; coins",
+      "coins; coins"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "b7a44a07-02e7-30b4-bd2e-adc9f7cc3e23",
+      "objectNumber": "co8006966",
+      "material": [
+        "bronze",
+        "complete"
+      ],
+      "place": [
+        "Europe"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Roman coin, Domitian"
+        ],
+        "Object name(s)": [
+          "coins; coins"
+        ],
+        "Brief description": [
+          "One of seven Roman bronze coins, Domitian A.D.81-96."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Stevens's Auction Rooms Ltd."
+        ],
+        "Material": [
+          "bronze",
+          "complete"
+        ],
+        "Object name": [
+          "coins; coins"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Date - earliest / single": [
+          "81"
+        ],
+        "Date - latest": [
+          "96"
+        ],
+        "Object production place": [
+          "Europe"
+        ],
+        "Other number": [
+          "1936-340/1"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Weighing & Measuring"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:b7a44a07-02e7-30b4-bd2e-adc9f7cc3e23",
+      "title": "Roman coin, Domitian",
+      "url": "https://museumdata.uk/objects/b7a44a07-02e7-30b4-bd2e-adc9f7cc3e23",
+      "date": "81"
+    }
+  },
+  {
+    "id": "mds:334e6335-194f-3ed0-b241-48de64eb2fc6",
+    "_source": "mds",
+    "_sourceId": "L.N370.1996.0.0",
+    "_sourceUrl": "https://museumdata.uk/objects/334e6335-194f-3ed0-b241-48de64eb2fc6",
+    "title": "Roman copper alloy coins from Leicester Castle (1949)",
+    "subject": [
+      "Roman coin, Roman copper alloy coins from Leicester Castle",
+      "Roman coin, Roman copper alloy coins from Leicester Castle (1949)"
+    ],
+    "type": "Museum object",
+    "collection": "Leicester Museums and Galleries",
+    "mds": {
+      "uuid": "334e6335-194f-3ed0-b241-48de64eb2fc6",
+      "objectNumber": "L.N370.1996.0.0",
+      "material": [
+        "copper alloy"
+      ],
+      "numberOfObjects": "3",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Roman copper alloy coins from Leicester Castle (1949)"
+        ],
+        "Object name(s)": [
+          "Roman coin, Roman copper alloy coins from Leicester Castle"
+        ],
+        "Collection": [
+          "Leicester Museums and Galleries"
+        ],
+        "Material": [
+          "copper alloy"
+        ],
+        "Number of objects": [
+          "3"
+        ],
+        "Object name": [
+          "Roman coin, Roman copper alloy coins from Leicester Castle (1949)"
+        ],
+        "Object number": [
+          "L.N370.1996.0.0"
+        ],
+        "Object status": [
+          "PERMANENT COLLECTION"
+        ],
+        "Responsible department/section": [
+          "NUMISMATICS"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:334e6335-194f-3ed0-b241-48de64eb2fc6",
+      "title": "Roman copper alloy coins from Leicester Castle (1949)",
+      "url": "https://museumdata.uk/objects/334e6335-194f-3ed0-b241-48de64eb2fc6"
+    }
+  },
+  {
+    "id": "mds:2c18a8c5-a279-359e-b3c6-a3bf060321c2",
+    "_source": "mds",
+    "_sourceId": "co8006968",
+    "_sourceUrl": "https://museumdata.uk/objects/2c18a8c5-a279-359e-b3c6-a3bf060321c2",
+    "title": "Roman coin, Probus",
+    "description": "One of seven Roman bronze coins, Probus A.D. 276-282.",
+    "date": "276",
+    "subject": [
+      "coins; coins",
+      "coins; coins"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "2c18a8c5-a279-359e-b3c6-a3bf060321c2",
+      "objectNumber": "co8006968",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "place": [
+        "Europe"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Roman coin, Probus"
+        ],
+        "Object name(s)": [
+          "coins; coins"
+        ],
+        "Brief description": [
+          "One of seven Roman bronze coins, Probus A.D. 276-282."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Stevens's Auction Rooms Ltd."
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coins; coins"
+        ],
+        "Date - earliest / single": [
+          "276"
+        ],
+        "Date - latest": [
+          "252",
+          "282"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production place": [
+          "Europe"
+        ],
+        "Other number": [
+          "1936-340/3"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Weighing & Measuring"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:2c18a8c5-a279-359e-b3c6-a3bf060321c2",
+      "title": "Roman coin, Probus",
+      "url": "https://museumdata.uk/objects/2c18a8c5-a279-359e-b3c6-a3bf060321c2",
+      "date": "276"
+    }
+  },
+  {
+    "id": "mds:69bdfe56-f72a-3a46-a9fe-40c2278ebcc7",
+    "_source": "mds",
+    "_sourceId": "Lynn_collections-54571",
+    "_sourceUrl": "https://museumdata.uk/objects/69bdfe56-f72a-3a46-a9fe-40c2278ebcc7",
+    "title": "MDS Record 6",
+    "description": "Six Roman coins",
+    "subject": [
+      "roman coins; coin",
+      "roman coins; coin",
+      "archaeology",
+      "currency",
+      "NR Numismatics - Roman coins"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "69bdfe56-f72a-3a46-a9fe-40c2278ebcc7",
+      "objectNumber": "Lynn_collections-54571",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "roman coins; coin"
+        ],
+        "Brief description": [
+          "Six Roman coins"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "20.9.1937"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "currency",
+          "NR Numismatics - Roman coins"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "roman coins; coin"
+        ],
+        "Object number": [
+          "KILLM : 1937.151"
+        ],
+        "Responsible department/section": [
+          "Lynn Museum"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:69bdfe56-f72a-3a46-a9fe-40c2278ebcc7",
+      "title": "MDS Record 6",
+      "url": "https://museumdata.uk/objects/69bdfe56-f72a-3a46-a9fe-40c2278ebcc7"
+    }
+  },
+  {
+    "id": "mds:00c233ab-9199-3099-92ba-3d1e1b363890",
+    "_source": "mds",
+    "_sourceId": "co8643638",
+    "_sourceUrl": "https://museumdata.uk/objects/00c233ab-9199-3099-92ba-3d1e1b363890",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Badly defaced. ROMAN. Given by Mrs. Glinn. V&A no. 699–1906. Originally catalogued with V&A no. 699–1906 to 705–1906.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "00c233ab-9199-3099-92ba-3d1e1b363890",
+      "objectNumber": "co8643638",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Badly defaced. ROMAN. Given by Mrs. Glinn. V&A no. 699–1906. Originally catalogued with V&A no. 699–1906 to 705–1906."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/421",
+          "699-1906"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:00c233ab-9199-3099-92ba-3d1e1b363890",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/00c233ab-9199-3099-92ba-3d1e1b363890"
+    }
+  },
+  {
+    "id": "mds:5c275e13-8bd9-30c6-9f05-0c3145a1463b",
+    "_source": "mds",
+    "_sourceId": "co8643590",
+    "_sourceUrl": "https://museumdata.uk/objects/5c275e13-8bd9-30c6-9f05-0c3145a1463b",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Badly damaged and defaced. ROMAN. Given by Mrs. Glinn. V&A no. 236-1907. Originally catalogued with 235-1907 to 238a-1907.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "5c275e13-8bd9-30c6-9f05-0c3145a1463b",
+      "objectNumber": "co8643590",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Badly damaged and defaced. ROMAN. Given by Mrs. Glinn. V&A no. 236-1907. Originally catalogued with 235-1907 to 238a-1907."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/373",
+          "236-1907"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:5c275e13-8bd9-30c6-9f05-0c3145a1463b",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/5c275e13-8bd9-30c6-9f05-0c3145a1463b"
+    }
+  },
+  {
+    "id": "mds:6810c42f-030b-35f8-b892-72f06792fa34",
+    "_source": "mds",
+    "_sourceId": "co8643597",
+    "_sourceUrl": "https://museumdata.uk/objects/6810c42f-030b-35f8-b892-72f06792fa34",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Badly damaged and defaced. ROMAN. Given by Mrs. Glinn. V&A no. 237-1907. Originally catalogued with 235-1907 to 238a-1907.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "6810c42f-030b-35f8-b892-72f06792fa34",
+      "objectNumber": "co8643597",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Badly damaged and defaced. ROMAN. Given by Mrs. Glinn. V&A no. 237-1907. Originally catalogued with 235-1907 to 238a-1907."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/374",
+          "237-1907"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:6810c42f-030b-35f8-b892-72f06792fa34",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/6810c42f-030b-35f8-b892-72f06792fa34"
+    }
+  },
+  {
+    "id": "mds:2f2d7812-c332-3b94-bd44-ee9c5e9430be",
+    "_source": "mds",
+    "_sourceId": "co8643645",
+    "_sourceUrl": "https://museumdata.uk/objects/2f2d7812-c332-3b94-bd44-ee9c5e9430be",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Badly defaced. ROMAN. Given by Mrs. Glinn. V&A no. 705–1906. Originally catalogued with V&A no. 699–1906 to 705–1906.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "2f2d7812-c332-3b94-bd44-ee9c5e9430be",
+      "objectNumber": "co8643645",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Badly defaced. ROMAN. Given by Mrs. Glinn. V&A no. 705–1906. Originally catalogued with V&A no. 699–1906 to 705–1906."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/427",
+          "705-1906"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:2f2d7812-c332-3b94-bd44-ee9c5e9430be",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/2f2d7812-c332-3b94-bd44-ee9c5e9430be"
+    }
+  },
+  {
+    "id": "mds:647f66f1-7faa-36c3-a240-10c4510717a5",
+    "_source": "mds",
+    "_sourceId": "co8643595",
+    "_sourceUrl": "https://museumdata.uk/objects/647f66f1-7faa-36c3-a240-10c4510717a5",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Badly damaged and defaced. ROMAN. Given by Mrs. Glinn. V&A no. 238A-1907. Originally catalogued with 235-1907 to 238a-1907.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "647f66f1-7faa-36c3-a240-10c4510717a5",
+      "objectNumber": "co8643595",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Badly damaged and defaced. ROMAN. Given by Mrs. Glinn. V&A no. 238A-1907. Originally catalogued with 235-1907 to 238a-1907."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/376",
+          "238A-1907"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:647f66f1-7faa-36c3-a240-10c4510717a5",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/647f66f1-7faa-36c3-a240-10c4510717a5"
+    }
+  },
+  {
+    "id": "mds:0c93e36b-8886-3ccf-8a62-91a78574464d",
+    "_source": "mds",
+    "_sourceId": "co8643639",
+    "_sourceUrl": "https://museumdata.uk/objects/0c93e36b-8886-3ccf-8a62-91a78574464d",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Badly defaced. ROMAN. Given by Mrs. Glinn. V&A no. 703–1906. Originally catalogued with V&A no. 699–1906 to 705–1906.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "0c93e36b-8886-3ccf-8a62-91a78574464d",
+      "objectNumber": "co8643639",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Badly defaced. ROMAN. Given by Mrs. Glinn. V&A no. 703–1906. Originally catalogued with V&A no. 699–1906 to 705–1906."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/425",
+          "703-1906"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:0c93e36b-8886-3ccf-8a62-91a78574464d",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/0c93e36b-8886-3ccf-8a62-91a78574464d"
+    }
+  },
+  {
+    "id": "mds:6a9480ec-3ae1-3e0f-9a3e-bd095783b11c",
+    "_source": "mds",
+    "_sourceId": "co8643641",
+    "_sourceUrl": "https://museumdata.uk/objects/6a9480ec-3ae1-3e0f-9a3e-bd095783b11c",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Badly defaced. ROMAN. Given by Mrs. Glinn. V&A no. 700–1906. Originally catalogued with V&A no. 699–1906 to 705–1906.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "6a9480ec-3ae1-3e0f-9a3e-bd095783b11c",
+      "objectNumber": "co8643641",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Badly defaced. ROMAN. Given by Mrs. Glinn. V&A no. 700–1906. Originally catalogued with V&A no. 699–1906 to 705–1906."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/422",
+          "700-1906"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:6a9480ec-3ae1-3e0f-9a3e-bd095783b11c",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/6a9480ec-3ae1-3e0f-9a3e-bd095783b11c"
+    }
+  },
+  {
+    "id": "mds:3b3992de-e1a3-3d54-ba5f-ee5682eae172",
+    "_source": "mds",
+    "_sourceId": "co8643642",
+    "_sourceUrl": "https://museumdata.uk/objects/3b3992de-e1a3-3d54-ba5f-ee5682eae172",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Badly defaced. ROMAN. Given by Mrs. Glinn. V&A no. 704–1906. Originally catalogued with V&A no. 699–1906 to 705–1906.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "3b3992de-e1a3-3d54-ba5f-ee5682eae172",
+      "objectNumber": "co8643642",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Badly defaced. ROMAN. Given by Mrs. Glinn. V&A no. 704–1906. Originally catalogued with V&A no. 699–1906 to 705–1906."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/426",
+          "704-1906"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:3b3992de-e1a3-3d54-ba5f-ee5682eae172",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/3b3992de-e1a3-3d54-ba5f-ee5682eae172"
+    }
+  },
+  {
+    "id": "mds:06c93c46-66d1-3571-bfa2-65905c7a2691",
+    "_source": "mds",
+    "_sourceId": "co8643587",
+    "_sourceUrl": "https://museumdata.uk/objects/06c93c46-66d1-3571-bfa2-65905c7a2691",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Badly damaged and defaced. ROMAN. Given by Mrs. Glinn. V&A no. 235-1907. Originally catalogued with 235-1907 to 238a-1907.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "06c93c46-66d1-3571-bfa2-65905c7a2691",
+      "objectNumber": "co8643587",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Badly damaged and defaced. ROMAN. Given by Mrs. Glinn. V&A no. 235-1907. Originally catalogued with 235-1907 to 238a-1907."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/372",
+          "235-1907"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:06c93c46-66d1-3571-bfa2-65905c7a2691",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/06c93c46-66d1-3571-bfa2-65905c7a2691"
+    }
+  },
+  {
+    "id": "mds:c26dd28e-c5d9-3b05-85c8-890ebd8ae29f",
+    "_source": "mds",
+    "_sourceId": "co8643586",
+    "_sourceUrl": "https://museumdata.uk/objects/c26dd28e-c5d9-3b05-85c8-890ebd8ae29f",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Badly damaged and defaced. ROMAN. Given by Mrs. Glinn. V&A no. 238-1907. Originally catalogued with 235-1907 to 238a-1907.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "c26dd28e-c5d9-3b05-85c8-890ebd8ae29f",
+      "objectNumber": "co8643586",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Badly damaged and defaced. ROMAN. Given by Mrs. Glinn. V&A no. 238-1907. Originally catalogued with 235-1907 to 238a-1907."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/375",
+          "238-1907"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:c26dd28e-c5d9-3b05-85c8-890ebd8ae29f",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/c26dd28e-c5d9-3b05-85c8-890ebd8ae29f"
+    }
+  },
+  {
+    "id": "mds:f4f9beb0-fd1d-3a5a-bd0e-0f766878d989",
+    "_source": "mds",
+    "_sourceId": "co8643677",
+    "_sourceUrl": "https://museumdata.uk/objects/f4f9beb0-fd1d-3a5a-bd0e-0f766878d989",
+    "title": "Bronze Roman Coin",
+    "description": "Coin, bronze. Roman. Badly defaced. Given by Mrs. Glinn. V&A no. 897-1906. Originally catalogued with V&A no. 897-1906 to 897C-1906.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "f4f9beb0-fd1d-3a5a-bd0e-0f766878d989",
+      "objectNumber": "co8643677",
+      "material": [
+        "bronze (copper, tin alloy)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bronze Roman Coin"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, bronze. Roman. Badly defaced. Given by Mrs. Glinn. V&A no. 897-1906. Originally catalogued with V&A no. 897-1906 to 897C-1906."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "bronze (copper, tin alloy)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/459",
+          "897-1906"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:f4f9beb0-fd1d-3a5a-bd0e-0f766878d989",
+      "title": "Bronze Roman Coin",
+      "url": "https://museumdata.uk/objects/f4f9beb0-fd1d-3a5a-bd0e-0f766878d989"
+    }
+  },
+  {
+    "id": "mds:4580646c-0799-3fbf-a3e4-da746bf3736d",
+    "_source": "mds",
+    "_sourceId": "co8643440",
+    "_sourceUrl": "https://museumdata.uk/objects/4580646c-0799-3fbf-a3e4-da746bf3736d",
+    "title": "Roman Consular Denarius coin (Ancient Roman)",
+    "description": "Coin. Silver; Roman consular denarius. Obv., head of Roma; rev., Castor and Pollux on horseback; inscribed Q.MARC.ROMA. Diam. 0.75 inch. 3s. 6d. V&A no. 6688-57.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "4580646c-0799-3fbf-a3e4-da746bf3736d",
+      "objectNumber": "co8643440",
+      "material": [
+        "silver (metal)"
+      ],
+      "dimensions": [
+        "diameter",
+        "3/4",
+        "19.05"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Roman Consular Denarius coin (Ancient Roman)"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin. Silver; Roman consular denarius. Obv., head of Roma; rev., Castor and Pollux on horseback; inscribed Q.MARC.ROMA. Diam. 0.75 inch. 3s. 6d. V&A no. 6688-57."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "diameter"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "3/4",
+          "19.05"
+        ],
+        "Material": [
+          "silver (metal)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/220",
+          "6688-57"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:4580646c-0799-3fbf-a3e4-da746bf3736d",
+      "title": "Roman Consular Denarius coin (Ancient Roman)",
+      "url": "https://museumdata.uk/objects/4580646c-0799-3fbf-a3e4-da746bf3736d"
+    }
+  },
+  {
+    "id": "mds:c6e82024-82e5-33cd-a2b9-bdcea2ac79b4",
+    "_source": "mds",
+    "_sourceId": "co8643430",
+    "_sourceUrl": "https://museumdata.uk/objects/c6e82024-82e5-33cd-a2b9-bdcea2ac79b4",
+    "title": "Roman Consular Denarius coin (Ancient Roman)",
+    "description": "Coin, Silver; Roman consular denarius. Obv., helmeted head of Minerva or Roma ; rev., Castor and Pollux on horseback. Diam. 0.75 inch. 5s. 6d. V&A no. 6682-57.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "c6e82024-82e5-33cd-a2b9-bdcea2ac79b4",
+      "objectNumber": "co8643430",
+      "material": [
+        "silver (metal)"
+      ],
+      "dimensions": [
+        "diameter",
+        "3/4",
+        "19.05"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Roman Consular Denarius coin (Ancient Roman)"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin, Silver; Roman consular denarius. Obv., helmeted head of Minerva or Roma ; rev., Castor and Pollux on horseback. Diam. 0.75 inch. 5s. 6d. V&A no. 6682-57."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "diameter"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "3/4",
+          "19.05"
+        ],
+        "Material": [
+          "silver (metal)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/214",
+          "6682-57"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:c6e82024-82e5-33cd-a2b9-bdcea2ac79b4",
+      "title": "Roman Consular Denarius coin (Ancient Roman)",
+      "url": "https://museumdata.uk/objects/c6e82024-82e5-33cd-a2b9-bdcea2ac79b4"
+    }
+  },
+  {
+    "id": "mds:a7d0747f-c00d-3e59-a8f2-4c3a07510baa",
+    "_source": "mds",
+    "_sourceId": "co8643432",
+    "_sourceUrl": "https://museumdata.uk/objects/a7d0747f-c00d-3e59-a8f2-4c3a07510baa",
+    "title": "Roman Consular Denarius coin (Ancient Roman)",
+    "description": "Coin. Silver ; Roman consular denarius. Obv., head of Apollo; rev., an eagle standing on a thunderbolt, inscribed Q. CASSIVS. Diam. 0.75 inch. V&A no. 6681-57.",
+    "subject": [
+      "coin; coin",
+      "coin; coin"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "a7d0747f-c00d-3e59-a8f2-4c3a07510baa",
+      "objectNumber": "co8643432",
+      "material": [
+        "silver (metal)"
+      ],
+      "dimensions": [
+        "diameter",
+        "3/4",
+        "19.05"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Roman Consular Denarius coin (Ancient Roman)"
+        ],
+        "Object name(s)": [
+          "coin; coin"
+        ],
+        "Brief description": [
+          "Coin. Silver ; Roman consular denarius. Obv., head of Apollo; rev., an eagle standing on a thunderbolt, inscribed Q. CASSIVS. Diam. 0.75 inch. V&A no. 6681-57."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "diameter"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "3/4",
+          "19.05"
+        ],
+        "Material": [
+          "silver (metal)"
+        ],
+        "Object name": [
+          "coin; coin"
+        ],
+        "Other number": [
+          "1947-2/213",
+          "6681-57"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Coins, Medals & Tokens"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-01T09:46:12.690Z",
+      "query": "roman coin",
+      "recordId": "mds:a7d0747f-c00d-3e59-a8f2-4c3a07510baa",
+      "title": "Roman Consular Denarius coin (Ancient Roman)",
+      "url": "https://museumdata.uk/objects/a7d0747f-c00d-3e59-a8f2-4c3a07510baa"
+    }
+  }
+]

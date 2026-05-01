@@ -1,0 +1,2390 @@
+[
+  {
+    "id": "ariadne:210396912c47fddf792d304b2f84e14d579f9746f2c8820189fecc263f5e9826",
+    "_source": "ariadne",
+    "_sourceId": "1123435",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/210396912c47fddf792d304b2f84e14d579f9746f2c8820189fecc263f5e9826",
+    "title": "WORDSWORTH MUSEUM",
+    "description": "Mid to late C17th house, now the Wordsworth Museum",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "extant building",
+      "house",
+      "museum",
+      "houses",
+      "museums buildings by subject"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "LAKES, SOUTH LAKELAND, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.453085,
+    "decimalLongitude": -3.014989,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "210396912c47fddf792d304b2f84e14d579f9746f2c8820189fecc263f5e9826",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "LAKES, SOUTH LAKELAND, CUMBRIA, ENGLAND",
+          "geopoint": {
+            "lat": 54.453085,
+            "lon": -3.014989
+          },
+          "centroid": {
+            "lat": 54.453085,
+            "lon": -3.014989
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "LAKES, SOUTH LAKELAND, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "extant building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXTANT%20BUILDING"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        },
+        {
+          "prefLabel": "museum",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "museums buildings by subject",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300169788",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/A77396A7-B41C-309C-92C6-0E90B9A9A288",
+      "otherId": [
+        "Depositor ID: NY 30 NW 54",
+        "NMR_NATINV-510421"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:210396912c47fddf792d304b2f84e14d579f9746f2c8820189fecc263f5e9826",
+      "title": "WORDSWORTH MUSEUM",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/210396912c47fddf792d304b2f84e14d579f9746f2c8820189fecc263f5e9826",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:9a2aa66f10d791e6d1424bf9e20d9b761723fca2925e8078db598b5b32424ca2",
+    "_source": "ariadne",
+    "_sourceId": "970841",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/9a2aa66f10d791e6d1424bf9e20d9b761723fca2925e8078db598b5b32424ca2",
+    "title": "Wordsworth House 1745",
+    "description": "Wordsworth House 1745",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "historical site",
+      "house",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "COCKERMOUTH, ALLERDALE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.663548,
+    "decimalLongitude": -3.36663,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "9a2aa66f10d791e6d1424bf9e20d9b761723fca2925e8078db598b5b32424ca2",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "COCKERMOUTH, ALLERDALE, CUMBRIA, ENGLAND",
+          "geopoint": {
+            "lat": 54.663548,
+            "lon": -3.36663
+          },
+          "centroid": {
+            "lat": 54.663548,
+            "lon": -3.36663
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "COCKERMOUTH, ALLERDALE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "historical site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HISTORICAL%20SITE"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/FEC60405-8390-3CBA-B88D-354A3995BCDA",
+      "otherId": [
+        "Depositor ID: NY 13 SW 14",
+        "NMR_NATINV-9497"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:9a2aa66f10d791e6d1424bf9e20d9b761723fca2925e8078db598b5b32424ca2",
+      "title": "Wordsworth House 1745",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/9a2aa66f10d791e6d1424bf9e20d9b761723fca2925e8078db598b5b32424ca2",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:776817373c15afabe67f7cc5eadfe067edaf48a931a809e1fa7cea80233bf285",
+    "_source": "ariadne",
+    "_sourceId": "1123425",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/776817373c15afabe67f7cc5eadfe067edaf48a931a809e1fa7cea80233bf285",
+    "title": "WORDSWORTH GRAVES",
+    "description": "Twelve 19th century graves in the grounds of the Church of St Oswald. They are of Wordsworths and Quillinans, with headstones and enclosing iron railings at south-east corner of churchyard.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "gravestone",
+      "tombstones (sepulchral monuments)",
+      "grave markers"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "LAKES, SOUTH LAKELAND, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.457159,
+    "decimalLongitude": -3.022186,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "776817373c15afabe67f7cc5eadfe067edaf48a931a809e1fa7cea80233bf285",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "LAKES, SOUTH LAKELAND, CUMBRIA, ENGLAND",
+          "geopoint": {
+            "lat": 54.457159,
+            "lon": -3.022186
+          },
+          "centroid": {
+            "lat": 54.457159,
+            "lon": -3.022186
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "LAKES, SOUTH LAKELAND, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "gravestone",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GRAVESTONE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "tombstones (sepulchral monuments)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005923",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "grave markers",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391176",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/A57E4B82-A4C5-3A34-8C32-B34BDC03D313",
+      "otherId": [
+        "Depositor ID: NY 30 NW 65",
+        "NMR_NATINV-510407"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:776817373c15afabe67f7cc5eadfe067edaf48a931a809e1fa7cea80233bf285",
+      "title": "WORDSWORTH GRAVES",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/776817373c15afabe67f7cc5eadfe067edaf48a931a809e1fa7cea80233bf285",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:9329eb6629cc96d2006868a2cb036afc8327d3f9b542d70fbf235f8fe9ededda",
+    "_source": "ariadne",
+    "_sourceId": "1123566",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/9329eb6629cc96d2006868a2cb036afc8327d3f9b542d70fbf235f8fe9ededda",
+    "title": "WORDSWORTH COTTAGE",
+    "description": "A white-washed stone rubble house, built in 1670, with a flag roof. It has two low storeys and a modern addition.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "extant building",
+      "house",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "PATTERDALE, EDEN, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.53576,
+    "decimalLongitude": -2.927852,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "9329eb6629cc96d2006868a2cb036afc8327d3f9b542d70fbf235f8fe9ededda",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "PATTERDALE, EDEN, CUMBRIA, ENGLAND",
+          "geopoint": {
+            "lat": 54.53576,
+            "lon": -2.927852
+          },
+          "centroid": {
+            "lat": 54.53576,
+            "lon": -2.927852
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "PATTERDALE, EDEN, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "extant building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXTANT%20BUILDING"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/EE26ADDC-4721-360F-B5BF-C8AFD57CA4C4",
+      "otherId": [
+        "Depositor ID: NY 31 NE 36",
+        "NMR_NATINV-510629"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:9329eb6629cc96d2006868a2cb036afc8327d3f9b542d70fbf235f8fe9ededda",
+      "title": "WORDSWORTH COTTAGE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/9329eb6629cc96d2006868a2cb036afc8327d3f9b542d70fbf235f8fe9ededda",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:350495cfd9a90267ed1bcdfa6acf42a13edf78a8b95ccf24fd26f86cab3e688b",
+    "_source": "ariadne",
+    "_sourceId": "3514956",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/350495cfd9a90267ed1bcdfa6acf42a13edf78a8b95ccf24fd26f86cab3e688b",
+    "title": "BISHOP WORDSWORTH GRAMMAR SCHOOL",
+    "description": "Site code: BWS14. Archaeology Wales undertook a watching brief during the groundworks associated with the erection of a new food technology structure to the north of the dining hall of Bishop Wordsworth Grammar School in Salisbury. The assessment area is located within the school grounds close to the site of Salisbury Cathedral. Information from OASIS Online Form.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "cathedral precinct",
+      "geophysical survey",
+      "ridge tile",
+      "roof tile",
+      "sherd",
+      "not provided",
+      "roofing tile",
+      "ridge tile",
+      "holy precincts"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, SALISBURY",
+    "country": "England",
+    "decimalLatitude": 51.064281,
+    "decimalLongitude": -1.793637,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": [
+      "medieval",
+      "post medieval"
+    ],
+    "ariadne": {
+      "elasticId": "350495cfd9a90267ed1bcdfa6acf42a13edf78a8b95ccf24fd26f86cab3e688b",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, SALISBURY",
+          "geopoint": {
+            "lat": 51.064281,
+            "lon": -1.793637
+          },
+          "centroid": {
+            "lat": 51.064281,
+            "lon": -1.793637
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, SALISBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cathedral precinct",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CATHEDRAL%20PRECINCT"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "ridge tile",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RIDGE%20TILE"
+        },
+        {
+          "prefLabel": "roof tile",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROOF%20TILE"
+        },
+        {
+          "prefLabel": "sherd",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SHERD"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "roofing tile",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300010699",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "ridge tile",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300010715",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "holy precincts",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300387001",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/EB3E3818-92D1-3FBB-8F0A-8C0FB1B2B1CA",
+      "otherId": [
+        "Associated ID: OASIS ID: archaeol26-244162",
+        "Depositor ID: 1615706",
+        "EHNMR-1615706"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "medieval",
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:350495cfd9a90267ed1bcdfa6acf42a13edf78a8b95ccf24fd26f86cab3e688b",
+      "title": "BISHOP WORDSWORTH GRAMMAR SCHOOL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/350495cfd9a90267ed1bcdfa6acf42a13edf78a8b95ccf24fd26f86cab3e688b",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:8b100fbe2700cd96bd9ec80e99674e6852448b940ab2ba9a2ac4152ac8395e7d",
+    "_source": "ariadne",
+    "_sourceId": "2885357",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/8b100fbe2700cd96bd9ec80e99674e6852448b940ab2ba9a2ac4152ac8395e7d",
+    "title": "Wordsworth Street Axe Find",
+    "description": "<b>Stone axe find of Neolithic date.</b><br /><br />A polished stone axe found, 18 in deep, in a field now covered by Wordsworth Street.  Found 1890 by Mr A Hutchinson who lived at Jubilee Terrace, Evenwood, Co Durham in 1937.  Present whereabouts unknown (S1361).    See article on polished stone axes in the 1937 volume of C&WAAS (S2048 p. 153-154).    Axe of Neolithic date recorded as of a \"Cumbrian\" type. Noted in a survey of Lake District stone axes throughout northern England (S2213, p. 27).<br /><br />Monument Type: Monument",
+    "creator": "Lake District National Park Authority",
+    "date": "2011-02-22",
+    "subject": [
+      "findspot",
+      "archaeological sites"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, Cumbria, Keswick, Allerdale, Keswick",
+    "country": "England",
+    "decimalLatitude": 54.600387,
+    "decimalLongitude": -3.128569,
+    "periodStart": "-3999",
+    "periodEnd": "-2199",
+    "periodName": "neolithic",
+    "ariadne": {
+      "elasticId": "8b100fbe2700cd96bd9ec80e99674e6852448b940ab2ba9a2ac4152ac8395e7d",
+      "temporal": [
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, Cumbria, Keswick, Allerdale, Keswick",
+          "geopoint": {
+            "lat": 54.600387,
+            "lon": -3.128569
+          },
+          "centroid": {
+            "lat": 54.600387,
+            "lon": -3.128569
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, Cumbria, Keswick, Allerdale, Keswick"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Lake District National Park Authority",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Lake%20District%20National%20Park%20Authority"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Lake District National Park Authority",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/01CB3C9E-7F02-3332-BFEF-BE6B3885F05B",
+      "otherId": [
+        "Depositor ID: 1122",
+        "LDNPHER11-1122"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/855634FC-AA21-3FFA-BD71-DC60699FC7E4"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:8b100fbe2700cd96bd9ec80e99674e6852448b940ab2ba9a2ac4152ac8395e7d",
+      "title": "Wordsworth Street Axe Find",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/8b100fbe2700cd96bd9ec80e99674e6852448b940ab2ba9a2ac4152ac8395e7d",
+      "creator": "Lake District National Park Authority",
+      "date": "2011-02-22"
+    }
+  },
+  {
+    "id": "ariadne:90923a39e2888ad4990713e6ae1cd6d83d41fd07b63791c38cedf48baecaba36",
+    "_source": "ariadne",
+    "_sourceId": "1916418",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/90923a39e2888ad4990713e6ae1cd6d83d41fd07b63791c38cedf48baecaba36",
+    "title": "1 WORDSWORTH STREET",
+    "description": "Information from the Survey of Medieval Ceramic Studies.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "not provided"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, LINCOLNSHIRE, LINCOLN, LINCOLN",
+    "country": "England",
+    "decimalLatitude": 53.226887,
+    "decimalLongitude": -0.546807,
+    "ariadne": {
+      "elasticId": "90923a39e2888ad4990713e6ae1cd6d83d41fd07b63791c38cedf48baecaba36",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, LINCOLNSHIRE, LINCOLN, LINCOLN",
+          "geopoint": {
+            "lat": 53.226887,
+            "lon": -0.546807
+          },
+          "centroid": {
+            "lat": 53.226887,
+            "lon": -0.546807
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, LINCOLNSHIRE, LINCOLN, LINCOLN"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/9570875A-2B58-3A84-BA38-8E8E102D15C5",
+      "otherId": [
+        "Depositor ID: 1044897",
+        "EHNMR-1044897"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:90923a39e2888ad4990713e6ae1cd6d83d41fd07b63791c38cedf48baecaba36",
+      "title": "1 WORDSWORTH STREET",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/90923a39e2888ad4990713e6ae1cd6d83d41fd07b63791c38cedf48baecaba36",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:64ea10e2c2f82bac08a437c479e375beabc160a0ac62eb9368c1480c4e77f524",
+    "_source": "ariadne",
+    "_sourceId": "1819401",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/64ea10e2c2f82bac08a437c479e375beabc160a0ac62eb9368c1480c4e77f524",
+    "title": "WORDSWORTH HOUSE, COCKERMOUTH",
+    "description": "No Description",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "site",
+      "not provided"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, CUMBRIA, ALLERDALE, COCKERMOUTH",
+    "country": "England",
+    "decimalLatitude": 54.664454,
+    "decimalLongitude": -3.36604,
+    "ariadne": {
+      "elasticId": "64ea10e2c2f82bac08a437c479e375beabc160a0ac62eb9368c1480c4e77f524",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, CUMBRIA, ALLERDALE, COCKERMOUTH",
+          "geopoint": {
+            "lat": 54.664454,
+            "lon": -3.36604
+          },
+          "centroid": {
+            "lat": 54.664454,
+            "lon": -3.36604
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, CUMBRIA, ALLERDALE, COCKERMOUTH"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SITE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/6DCBEAFC-59BF-3F17-A49A-E00B0C4C4610",
+      "otherId": [
+        "Associated ID: AIP Record Number: H.16.A001",
+        "Depositor ID: 1404420",
+        "EHNMR-1404420"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "uncertain"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:64ea10e2c2f82bac08a437c479e375beabc160a0ac62eb9368c1480c4e77f524",
+      "title": "WORDSWORTH HOUSE, COCKERMOUTH",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/64ea10e2c2f82bac08a437c479e375beabc160a0ac62eb9368c1480c4e77f524",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:2c51ad804d2850b57013e12c972f5f67c14023676222cf1dba2c3c2de93bcf5f",
+    "_source": "ariadne",
+    "_sourceId": "1157924",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2c51ad804d2850b57013e12c972f5f67c14023676222cf1dba2c3c2de93bcf5f",
+    "title": "Bishop Wordsworth Grammar School, Salisbury, Wiltshire",
+    "description": "Archaeology Wales undertook a watching brief during the groundworks associated with the erection of a new food technology structure to the north of the dining hall of Bishop Wordsworth Grammar School in Salisbury. The assessment area is located within the school grounds close to the site of Salisbury Cathedral.",
+    "creator": "C Smith",
+    "date": "2018-02-09",
+    "subject": [
+      "cathedral",
+      "ridge tiles",
+      "roof tiles",
+      "sherd",
+      "watching brief",
+      "cathedrals (buildings)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Bishop Wordsworth Grammar School, Salisbury, SALISBURY, Wiltshire, Wiltshire, England",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": [
+      "medieval",
+      "post medieval"
+    ],
+    "ariadne": {
+      "elasticId": "2c51ad804d2850b57013e12c972f5f67c14023676222cf1dba2c3c2de93bcf5f",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Bishop Wordsworth Grammar School, Salisbury, SALISBURY, Wiltshire, Wiltshire, England"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.0648173526282,
+            "lon": -1.79503688998624
+          },
+          "centroid": {
+            "lat": 51.0648173526282,
+            "lon": -1.79503688998624
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Bishop Wordsworth Grammar School, Salisbury, SALISBURY, Wiltshire, Wiltshire, England",
+        "England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "C Smith",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/C%20Smith"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cathedral",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CATHEDRAL"
+        },
+        {
+          "prefLabel": "ridge tiles",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RIDGE%20TILES"
+        },
+        {
+          "prefLabel": "roof tiles",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROOF%20TILES"
+        },
+        {
+          "prefLabel": "sherd",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SHERD"
+        },
+        {
+          "prefLabel": "watching brief",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WATCHING%20BRIEF"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "cathedrals (buildings)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007501",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Archaeology Wales",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/DD2A2EA8-07F3-3EE9-B190-5EF356F63AF4",
+      "otherId": [
+        "OBIB Report 1263"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "medieval",
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:2c51ad804d2850b57013e12c972f5f67c14023676222cf1dba2c3c2de93bcf5f",
+      "title": "Bishop Wordsworth Grammar School, Salisbury, Wiltshire",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2c51ad804d2850b57013e12c972f5f67c14023676222cf1dba2c3c2de93bcf5f",
+      "creator": "C Smith",
+      "date": "2018-02-09"
+    }
+  },
+  {
+    "id": "ariadne:7251da6c089bcb8520dc8b76372da065b3b8a1987b1978cbe4388aa5ffc5b052",
+    "_source": "ariadne",
+    "_sourceId": "1903833",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/7251da6c089bcb8520dc8b76372da065b3b8a1987b1978cbe4388aa5ffc5b052",
+    "title": "LAND AT WORDSWORTH HOUSE",
+    "description": "Site code: WHC-A. Monitoring of repair works to the raised terrace walls at the northern end of the gardens following the 2009 floods. Information from OASIS Online Form.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "garden",
+      "geophysical survey",
+      "house",
+      "sherd",
+      "terrace",
+      "not provided",
+      "terraces (landscaped-site elements)",
+      "houses",
+      "gardens (open spaces)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, CUMBRIA, ALLERDALE, COCKERMOUTH",
+    "country": "England",
+    "decimalLatitude": 54.663538,
+    "decimalLongitude": -3.36756,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": [
+      "medieval",
+      "post medieval"
+    ],
+    "ariadne": {
+      "elasticId": "7251da6c089bcb8520dc8b76372da065b3b8a1987b1978cbe4388aa5ffc5b052",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, CUMBRIA, ALLERDALE, COCKERMOUTH",
+          "geopoint": {
+            "lat": 54.663538,
+            "lon": -3.36756
+          },
+          "centroid": {
+            "lat": 54.663538,
+            "lon": -3.36756
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, CUMBRIA, ALLERDALE, COCKERMOUTH"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GARDEN"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        },
+        {
+          "prefLabel": "sherd",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SHERD"
+        },
+        {
+          "prefLabel": "terrace",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TERRACE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "terraces (landscaped-site elements)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004182",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "gardens (open spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008090",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/2FB30E27-268A-3090-A282-2765C301B89E",
+      "otherId": [
+        "Associated ID: AIP Record Number: E.16.2962",
+        "Associated ID: OASIS ID: northpen3-78488",
+        "Depositor ID: 1519901",
+        "EHNMR-1519901"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "medieval",
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:7251da6c089bcb8520dc8b76372da065b3b8a1987b1978cbe4388aa5ffc5b052",
+      "title": "LAND AT WORDSWORTH HOUSE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/7251da6c089bcb8520dc8b76372da065b3b8a1987b1978cbe4388aa5ffc5b052",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:6489de9b7baa391bddc5286f707daaec027298458c8774d21ff3edfce142ed8b",
+    "_source": "ariadne",
+    "_sourceId": "1830733",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/6489de9b7baa391bddc5286f707daaec027298458c8774d21ff3edfce142ed8b",
+    "title": "WORDSWORTH HOUSE: REAR GARDEN",
+    "description": "Four trenches excavated over suggested garden features, demonstrating they were of geological origin.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "site",
+      "not provided"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, CUMBRIA, ALLERDALE, COCKERMOUTH",
+    "country": "England",
+    "decimalLatitude": 54.66359,
+    "decimalLongitude": -3.36291,
+    "ariadne": {
+      "elasticId": "6489de9b7baa391bddc5286f707daaec027298458c8774d21ff3edfce142ed8b",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, CUMBRIA, ALLERDALE, COCKERMOUTH",
+          "geopoint": {
+            "lat": 54.66359,
+            "lon": -3.36291
+          },
+          "centroid": {
+            "lat": 54.66359,
+            "lon": -3.36291
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, CUMBRIA, ALLERDALE, COCKERMOUTH"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SITE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/9F6798E2-34EF-323A-A91E-3A464DCBBCC2",
+      "otherId": [
+        "Associated ID: AIP Record Number: C.16.K010",
+        "Depositor ID: 1434032",
+        "EHNMR-1434032"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "uncertain"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:6489de9b7baa391bddc5286f707daaec027298458c8774d21ff3edfce142ed8b",
+      "title": "WORDSWORTH HOUSE: REAR GARDEN",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/6489de9b7baa391bddc5286f707daaec027298458c8774d21ff3edfce142ed8b",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:9af041560ea8e66bc374a727fe812ad884c0ba0c88ff2348ac9f4122192ecbcc",
+    "_source": "ariadne",
+    "_sourceId": "61911",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/9af041560ea8e66bc374a727fe812ad884c0ba0c88ff2348ac9f4122192ecbcc",
+    "title": "ASHBOURNE HOUSE, WORDSWORTH ROAD,SHIRLEY",
+    "creator": "Southern Archaeological Services",
+    "date": "2002-06-20",
+    "subject": [
+      "well",
+      "wells (structures)",
+      "water wells"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "ASHBOURNE HOUSE, WORDSWORTH ROAD,SHIRLEY, Southampton, Southampton, Hampshire, England",
+    "country": "England",
+    "decimalLatitude": 50.900069,
+    "decimalLongitude": -1.374015,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "9af041560ea8e66bc374a727fe812ad884c0ba0c88ff2348ac9f4122192ecbcc",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "ASHBOURNE HOUSE, WORDSWORTH ROAD,SHIRLEY, Southampton, Southampton, Hampshire, England",
+          "geopoint": {
+            "lat": 50.900069,
+            "lon": -1.374015
+          },
+          "centroid": {
+            "lat": 50.900069,
+            "lon": -1.374015
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "ASHBOURNE HOUSE, WORDSWORTH ROAD,SHIRLEY, Southampton, Southampton, Hampshire, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Southern Archaeological Services",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Southern%20Archaeological%20Services"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "well",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WELL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "wells (structures)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006207",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "water wells",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300152327",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/AD465E9D-1CAE-3475-9B41-962D56A292BD",
+      "otherId": [
+        "Associated ID: Site code: SOU517",
+        "Depositor ID: 3700",
+        "NMRMIC-3700"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F31C1473-3527-3C56-9801-F833D3C26A70"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:9af041560ea8e66bc374a727fe812ad884c0ba0c88ff2348ac9f4122192ecbcc",
+      "title": "ASHBOURNE HOUSE, WORDSWORTH ROAD,SHIRLEY",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/9af041560ea8e66bc374a727fe812ad884c0ba0c88ff2348ac9f4122192ecbcc",
+      "creator": "Southern Archaeological Services",
+      "date": "2002-06-20"
+    }
+  },
+  {
+    "id": "ariadne:5cce7e796f27db60e64a6cad529682189d2102a3a7c457d4be53732a70db57ba",
+    "_source": "ariadne",
+    "_sourceId": "1761494",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/5cce7e796f27db60e64a6cad529682189d2102a3a7c457d4be53732a70db57ba",
+    "title": "Wordsworth House, Main Street, Cockermouth",
+    "description": "Wordsworth House is a north country merchant's two storey stone houseo f modest proportions built in 1745. The poet William Wordsworth was obrn here in 1770. The house, acquired by the National Trust in 1938, contains an original staircase, panelling and fire-places. (PD Claris; 1986)<br />Although Cockermouth is noted throughout the workld as the birthplace of William Wordsworth, surprisingly little is known about hte fine Georgian house where he was born in April 1770. Besides his oft-quoted reminiscences of walking along the terrace at the bottom of the garden, there is surely much archival material concerning the house which still gatheres dust in public (Carlisle Records Office) and Private (Lowther MS) records.<br />Superficially, the detailing and design of the house fits the known fact (recorded on the sandstone lintel over hte back door) that the house was built in 1746 by the High Sheriff of Cumberland. The facade is topped by a moulded cornice (this and original guttering are carried around the house) and two rows of sash windows are broken at ground floor level by a projecting Tuscan proch. Inside, engaged composite columns flank the entry through from the hall to the stairs. The panelling and plasterwork is typical for a c1730-50 date. The greatest subject of decoration is the Dining Room ceiling on the ground floor, with its large central panel framed by 4 spandrel panels.<br />The plan form of the 1746 building is somewhat more elusive: two partition walls onthe first floor present problems of their own while the absence of any known invertories of the contents of the house make the task of detecting the original function of these rooms more difficult. <br />A stable and washhouse lie in a separate building attached to the E gable of Wordsworth's House.<br />one unusual feature worth mentioning is that there are no back stairs; the only possible site for these would have been rising from the cellars to the bedrooms above.<br />The garden stretching back towards the Derwent, rises to the terrace at the rear.<br />THE EARLIER HOUSE - The evidence at present available suggests that the High Sheriff's dwelling was converted from a seventeenth or early eighteenth century gentry house. The evidence for this is summarised below.<br />PLAN FORM - THe wall that axially divides the house is askew ( i.e. the E line of the wall is not properly aligned to the W line of the wall). There are traces of an earlier ciruit plan for door openings sealed off by panelling in 1746. At ground floor level one can see that this tone wall was cut back to provide a sufficiently wide opening for the door. In one of the bedrooms of the 1st floor, the brick fireplace is asymmetrically placed in the room, thus squeezing the window to the W into a tighter position than that on the E.<br />BUILDING MATERIALS - On the first floor only the E/W axial wall is continued up at attic level but here it can be seem that some early to mid 18th century bricks were used to complete the triangulation of the inner and outer gable walls and over one bedroom and the dressing room to make a closed truss wall. The main cross walls rise unbroken from the cellars, the W end of which was blocked off in the later 18th cnetury. It seems that the two storey cottage attached to the E gable wall would be of the same date.<br />CELLAR, STABLE / WASHHOUSE BLOCK and GARDEN DOORS. SASH WINDOWS to N ELEVATION - In the celalrs is one chamfered door architrave, very similar to a door in the garden. These doors, the other doors in the garden, and the twin doors to the two storey cottage in the N elevation, are stylisticaly of early to mid 17th century date.<br />The garden doors themselves are built into brick walls. The E wall is the most interesting, for it is faced on the E with stone rubble but to the W with 2 1/4\" brick (4 courses rise 11 1/2\"). The W wall is built of 9\" X 4 1/2\" X 2 1/2\" brick, but for a brick wall of early to mid 17th centuty date one would expect the bricks to be longer and flatter: the only solution to this problem woudl be to project the date of teh door architraves forward to the late 17th or early 18th centuries...<br />On the N elevation are some 18th century sash windows with huge 2\" glazing bars. The windows are set back in shallow reveals and ahve chamfered or ovolo moulded sandstone architraves. They appear to be of a much earlier type than the sash windows along the facade, and the workmanship is of poorer quality (which is to be expected). It is therefore possible that these windows (which could be dated to around 1710-30) belonged to the earlier house.<br />LATER INSERTIONS<br />BRICK and LATH and PLASTER WALLS - These lie to the NW on teh first floor.<br />BRICK WALL - this could well date back to 1746 since these bricks are of the 3\" type, wider and shorter than the other 2 1/2\" bricks in the attic. The inclusions in the bricks also suggest that the caly was dug from different areas. These bricks do, however, amke up a wall which holds a scarfed tie beam supporting two E facing trusses: the principal rafters of these trusses actually join the tie beam between this wall and the stone wall adjoining the staircase. It is therefore possible that the roof trusses (of king post type with original carpenters' marks) post- date the insertion of this wall.<br />LATH and PLASTER WALL - It is difficult to date this portion, and indeed opposing arguements can be brought forth to support or refute any suggestion that it could be of a late date.<br />SUPPORT - The mouldings to the architrave of the door differs from other doors.<br />The dado rail in the passage formed by the partition is identical to the dado rail in the ground floor back passage. The ground floor dado actually covers a blocked doorway which once led into the cellar under the kitchen.<br />On the first floor it is probably that a door was inserted in the late 18th century. One door mirrors the postition of the blocked door and so probably dates from the earliest phase of the hosue. One would expect it to lead into a drawing room or bedroom instead of the bottom of a passage. This therefore makes it probable that the partition was a later insertion. IT is, however, possible that this partition was already installed at the time of Wordsworth's birth - local tradition, indeed, has it that this was his birthplace and nursery. THe installation of such a partition would surely not have been beyond the means of the poet's father, John (1741-1783) who was the Agent of Sir Jamer Lowther.<br />The neo-classical fireplace pediments date back to teh period 1770-80 and probably were inserted at the same time as the partition.<br />AGAINST - The moulding to the door is the same as that to the inner architraves of the two windows in the room, and with the exception of there being a cyma instead of an ovolo mouldedcentre step is identical to the other window architraves on the first and ground floors of the house. The partition wall is the only wall in the house not carried on below. One could simply argue that because it is nonstructural, and hence lath and plaster, there is no reason why it could not be original.<br />Late 18th century doors and 6 light horizontal sliding sash window to washhouse.<br />Victorian double hung sashes with cut back lugs inserted in two windows on ground floor.<br />CONCLUSION - There are two alternatives.<br />1) The first phase of building dates to the early 17th century. Dating from this period would be the 3 attic windows, the square headed, pointed and chamfered door architraves above mentioned.<br />2) The above mentioned phase dates to the early 18th cnetury (i.e. when the sash windows with the wide and crudely mitred glazing bars were fitted). Some doors on both floors would have certainly completed a typically early 18th century circuit plan. Another feature more usually found in early 18th cnetury contexts is the bolechain moulded fireplace on the first floor.<br />It is probable that the lath and plaster partition ia a later addition, but certainly not post-dating the late 18th century.<br />FRONT DOOR - tuscan porch; moulded sandstone arhitraves, cyna reversa moulding to edge of field.<br />BACK DOOR - Sandstone architrave. 6 panelled: ovolo & fillet moulded to raised field.<br />GROUND FLOOR <br />DINING / ASSEMBLY ROOM - <br />CEILING - The moulding sand the layout of the plaster ceiling - central decorative panels - are typical of mid-eighteenth plasterwork ceiligns: the motifs, such as the husk-chains, are typical of a c.1730-50 date.<br />CORNICE - Ionic; husk pendants between dentils.<br />FIREPLACE - Ovolo moulded edge to stepped architrave.<br />COMMON PARLOUR<br />CORNICE - Doric; rosette ornatment to face to meopes, anil motifs to soffit of mutules, and to soffit of corona between mutules.<br />PANELLED WALLS - Alcove with shell top.<br />FIREPLACE - Stepped architrave.<br />STEWARD / HOUSEKEEPER'S ROOM  - Neo classical pediment over original fireplace. Tiled surround to fireplace: mid 18th cnetury handpainted tiles: very pale blue tiles (near to off-white) are painted in light blue brushwork depicting two scenes, a man (dresses like a prince) being lowered on a rope from the parapet of a large house.<br />FIRST FLOOR - Moulded dado rail to each room.<br />DRAWING ROOM<br />CORNICE - Ionic: the soffit of each dentil is decorated with acanthus leaf motifs and between each dentil is a rosette. Scrolled pediments over spposing doors: same treatment as above to dentils. Central earthouche.<br />PANELLED WALLS - Panelling typical of 1720-50 period; the edges of each panel are ovolo moulded and then cyma moulded to a raised field. (The cyma moulding here bein gmore expensive than the usual flat planed rise to the field.<br />An elaborate neo-classical cornice surmounts the fireplace.<br />BEDROOM 1 - Neo-classical pediment over fireplace.<br />BEDROOM 2 - Fireplace - Stepped architrave<br />LANDING - Cornice: Ionic entablature, with rosettes between dentils. Plaster ceiling over staircase.<br />BEDROOM 3 - Elaborate neo-classical cornice over fireplace. Original fireplace has bolechion moulded architrave (early 18th century).<br />DRESSING ROOM - Art Nouveau (c1910) plasterwork to cornice over picture rail. Stepped architravbe to fireplace.<br />BEDROOM 4 - Neo-classical cornice over original fireplace: this has stepped architraves with a beaded arris.<br />Also associated with this house in an Old Coach House now a shop (20240*1) and a toilet block (20240*2).<br />(NT VBS Surveyor; 1983)",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": "merchants house",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, Cumbria, Allerdale, Cockermouth",
+    "country": "England",
+    "decimalLatitude": 54.663744,
+    "decimalLongitude": -3.366745,
+    "ariadne": {
+      "elasticId": "5cce7e796f27db60e64a6cad529682189d2102a3a7c457d4be53732a70db57ba",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, Cumbria, Allerdale, Cockermouth",
+          "geopoint": {
+            "lat": 54.663744,
+            "lon": -3.366745
+          },
+          "centroid": {
+            "lat": 54.663744,
+            "lon": -3.366745
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, Cumbria, Allerdale, Cockermouth"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "merchants house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MERCHANTS%20HOUSE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/88AA634B-5F3A-3491-9EEE-3DCA52C93386",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA121288",
+        "Depositor ID: 20240",
+        "NTSMR-MNA121288"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1540 - 1900"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:5cce7e796f27db60e64a6cad529682189d2102a3a7c457d4be53732a70db57ba",
+      "title": "Wordsworth House, Main Street, Cockermouth",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/5cce7e796f27db60e64a6cad529682189d2102a3a7c457d4be53732a70db57ba",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  },
+  {
+    "id": "ariadne:fc49b38b11473295d5578fff72792eaa8abbfe12de80fab66316276599ea50bd",
+    "_source": "ariadne",
+    "_sourceId": "1928573",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/fc49b38b11473295d5578fff72792eaa8abbfe12de80fab66316276599ea50bd",
+    "title": "FORMER BROWN'S FACTORY, WORDSWORTH YARD",
+    "description": "No Description",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "factory",
+      "geophysical survey",
+      "not provided",
+      "factories (structures)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WAKEFIELD, WAKEFIELD, PONTEFRACT",
+    "country": "England",
+    "decimalLatitude": 53.689547,
+    "decimalLongitude": -1.312428,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "fc49b38b11473295d5578fff72792eaa8abbfe12de80fab66316276599ea50bd",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WAKEFIELD, WAKEFIELD, PONTEFRACT",
+          "geopoint": {
+            "lat": 53.689547,
+            "lon": -1.312428
+          },
+          "centroid": {
+            "lat": 53.689547,
+            "lon": -1.312428
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WAKEFIELD, WAKEFIELD, PONTEFRACT"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "factory",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FACTORY"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "factories (structures)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006232",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/69545693-A988-30C8-9D07-56358533D118",
+      "otherId": [
+        "Associated ID: AIP Record Number: G.07.U049",
+        "Depositor ID: 1490944",
+        "EHNMR-1490944"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:fc49b38b11473295d5578fff72792eaa8abbfe12de80fab66316276599ea50bd",
+      "title": "FORMER BROWN'S FACTORY, WORDSWORTH YARD",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/fc49b38b11473295d5578fff72792eaa8abbfe12de80fab66316276599ea50bd",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:689dd8ef04ff3df256144ef2a37a8d3d001db30f61810fcaca988acf1d92cbc8",
+    "_source": "ariadne",
+    "_sourceId": "1759372",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/689dd8ef04ff3df256144ef2a37a8d3d001db30f61810fcaca988acf1d92cbc8",
+    "title": "Toilet Block, Wordsworth House, Cockermouth",
+    "description": "Formerly an outhouse beside the rear entrance. It was built beofre the brick garden wall as this is carried around the rear of the structure as an extra skin. It has been greatly altered and is now used as a toilet block.<br />WALLS - Appear to have been built of random rubble masonry and is now lime washed and rendered. The rear is not and has the brick garden wall as an outer skin.<br />ROOF - A mono pitched roof with decreasing tile sizes to the sandstone ridge. The interior of the roof can not be seen as there is a modern ceiling.<br />(NT VBS Surveyor; 1983)",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": [
+      "toilet",
+      "toilets (fixtures)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, Cumbria, Allerdale, Cockermouth",
+    "country": "England",
+    "decimalLatitude": 54.663538,
+    "decimalLongitude": -3.36756,
+    "ariadne": {
+      "elasticId": "689dd8ef04ff3df256144ef2a37a8d3d001db30f61810fcaca988acf1d92cbc8",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, Cumbria, Allerdale, Cockermouth",
+          "geopoint": {
+            "lat": 54.663538,
+            "lon": -3.36756
+          },
+          "centroid": {
+            "lat": 54.663538,
+            "lon": -3.36756
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, Cumbria, Allerdale, Cockermouth"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "toilet",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TOILET"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "toilets (fixtures)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300052638",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/AADCD659-FF90-3CF2-839D-CD2FB113B281",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA119150",
+        "Depositor ID: 25859",
+        "NTSMR-MNA119150"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1540 - 1900"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:689dd8ef04ff3df256144ef2a37a8d3d001db30f61810fcaca988acf1d92cbc8",
+      "title": "Toilet Block, Wordsworth House, Cockermouth",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/689dd8ef04ff3df256144ef2a37a8d3d001db30f61810fcaca988acf1d92cbc8",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  },
+  {
+    "id": "ariadne:a7d4ff10f25a7315ab2b51497bfb3c044f684c5b0e5b2227d276b51c88f4f972",
+    "_source": "ariadne",
+    "_sourceId": "1834063",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/a7d4ff10f25a7315ab2b51497bfb3c044f684c5b0e5b2227d276b51c88f4f972",
+    "title": "BISHOP WORDSWORTH SCHOOL, NEW SPORTS HALL",
+    "description": "Site code: 50595. Evaluation recorded a series of wall foundations interpreted as the remains of the Bishop's Stables built in 1843. No earlier deposits were recorded. Commissioned by Bishop Wordsworth's School.  NMR Microfilm Index; PRN:9427.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "stable",
+      "not provided"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, SALISBURY",
+    "country": "England",
+    "decimalLatitude": 51.063849,
+    "decimalLongitude": -1.793625,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "a7d4ff10f25a7315ab2b51497bfb3c044f684c5b0e5b2227d276b51c88f4f972",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, SALISBURY",
+          "geopoint": {
+            "lat": 51.063849,
+            "lon": -1.793625
+          },
+          "centroid": {
+            "lat": 51.063849,
+            "lon": -1.793625
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, SALISBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "stable",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STABLE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F080C26C-8F44-347C-A41C-A2F253245F69",
+      "otherId": [
+        "Associated ID: AIP Record Number: C.46.F005",
+        "Associated ID: RCHME Microfilm Index Number: 9427",
+        "Depositor ID: 1409574",
+        "EHNMR-1409574"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:a7d4ff10f25a7315ab2b51497bfb3c044f684c5b0e5b2227d276b51c88f4f972",
+      "title": "BISHOP WORDSWORTH SCHOOL, NEW SPORTS HALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/a7d4ff10f25a7315ab2b51497bfb3c044f684c5b0e5b2227d276b51c88f4f972",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:eefad844fe2ae539c25482f84acfd417fd3c584a8719d5cdcb706a7a8efc2716",
+    "_source": "ariadne",
+    "_sourceId": "1197545",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/eefad844fe2ae539c25482f84acfd417fd3c584a8719d5cdcb706a7a8efc2716",
+    "title": "Wordsworth Hotel, Main Street, Cockermouth: Historic Building Survey Level III",
+    "description": "A level III historic building survey of Wordsworth House in Cockermouth.",
+    "creator": "G Martin",
+    "date": "2022-08-03",
+    "subject": [
+      "building",
+      "building survey",
+      "post medieval building",
+      "buildings (structures)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "eefad844fe2ae539c25482f84acfd417fd3c584a8719d5cdcb706a7a8efc2716",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Cockermouth, Cumbria, Allerdale, England"
+        },
+        {
+          "geopoint": {
+            "lat": 54.6631753428707,
+            "lon": -3.36503229573569
+          },
+          "centroid": {
+            "lat": 54.6631753428707,
+            "lon": -3.36503229573569
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Cockermouth, Cumbria, Allerdale, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "G Martin",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/G%20Martin"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUILDING"
+        },
+        {
+          "prefLabel": "building survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUILDING%20SURVEY"
+        },
+        {
+          "prefLabel": "post medieval building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/POST%20MEDIEVAL%20BUILDING"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "buildings (structures)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004792",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Gerry Martin Associates Ltd",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/86C07336-24B5-33D6-9716-FF91D088CBC9",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:eefad844fe2ae539c25482f84acfd417fd3c584a8719d5cdcb706a7a8efc2716",
+      "title": "Wordsworth Hotel, Main Street, Cockermouth: Historic Building Survey Level III",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/eefad844fe2ae539c25482f84acfd417fd3c584a8719d5cdcb706a7a8efc2716",
+      "creator": "G Martin",
+      "date": "2022-08-03"
+    }
+  },
+  {
+    "id": "ariadne:beea6f40a5d0c92f4fbfccb707cb3b6f3c81f1dc519db1486cbcd55ee384ede3",
+    "_source": "ariadne",
+    "_sourceId": "1921919",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/beea6f40a5d0c92f4fbfccb707cb3b6f3c81f1dc519db1486cbcd55ee384ede3",
+    "title": "WORDSWORTH HOUSE: FRONT GARDEN AND REAR TERRACE",
+    "description": "Evaluation trenches were excavated to investigate the past garden layout. Recorded features incuded paths shown on the 1865 OS map, possible paved areas, a raised walkway to the rear of the privy garden and foundations of a small building.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "garden feature",
+      "geophysical survey",
+      "not provided",
+      "gardens (open spaces)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, CUMBRIA, ALLERDALE, COCKERMOUTH",
+    "country": "England",
+    "decimalLatitude": 54.663726,
+    "decimalLongitude": -3.366791,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "beea6f40a5d0c92f4fbfccb707cb3b6f3c81f1dc519db1486cbcd55ee384ede3",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, CUMBRIA, ALLERDALE, COCKERMOUTH",
+          "geopoint": {
+            "lat": 54.663726,
+            "lon": -3.366791
+          },
+          "centroid": {
+            "lat": 54.663726,
+            "lon": -3.366791
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, CUMBRIA, ALLERDALE, COCKERMOUTH"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "garden feature",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GARDEN%20FEATURE"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "gardens (open spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008090",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/0AA51D83-6560-3AFB-9226-9471D800BEF7",
+      "otherId": [
+        "Associated ID: AIP Record Number: E.16.P014",
+        "Associated ID: SMR Number (Cumbria): 2/03/1087",
+        "Depositor ID: 1472350",
+        "EHNMR-1472350"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:beea6f40a5d0c92f4fbfccb707cb3b6f3c81f1dc519db1486cbcd55ee384ede3",
+      "title": "WORDSWORTH HOUSE: FRONT GARDEN AND REAR TERRACE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/beea6f40a5d0c92f4fbfccb707cb3b6f3c81f1dc519db1486cbcd55ee384ede3",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:4b89c65a5929d5d13d3f554b212eb1f855478d8723296baf0b01343bee8e775b",
+    "_source": "ariadne",
+    "_sourceId": "1835736",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/4b89c65a5929d5d13d3f554b212eb1f855478d8723296baf0b01343bee8e775b",
+    "title": "ASHBOURNE HOUSE, WORDSWORTH ROAD (SOU 517/SAS3)",
+    "description": "Site code: SOU 517/SAS3. No archaeological features. NMRC Microfilm PRN: 3700",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "site",
+      "not provided"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, CITY OF SOUTHAMPTON, CITY OF SOUTHAMPTON, CITY OF SOUTHAMPTON",
+    "country": "England",
+    "decimalLatitude": 50.900025,
+    "decimalLongitude": -1.374229,
+    "ariadne": {
+      "elasticId": "4b89c65a5929d5d13d3f554b212eb1f855478d8723296baf0b01343bee8e775b",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, CITY OF SOUTHAMPTON, CITY OF SOUTHAMPTON, CITY OF SOUTHAMPTON",
+          "geopoint": {
+            "lat": 50.900025,
+            "lon": -1.374229
+          },
+          "centroid": {
+            "lat": 50.900025,
+            "lon": -1.374229
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, CITY OF SOUTHAMPTON, CITY OF SOUTHAMPTON, CITY OF SOUTHAMPTON"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SITE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/1C50C781-C92F-3693-A28A-399771C9698B",
+      "otherId": [
+        "Associated ID: AIP Record Number: E.24.0076",
+        "Depositor ID: 1056987",
+        "EHNMR-1056987"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "uncertain"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:4b89c65a5929d5d13d3f554b212eb1f855478d8723296baf0b01343bee8e775b",
+      "title": "ASHBOURNE HOUSE, WORDSWORTH ROAD (SOU 517/SAS3)",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/4b89c65a5929d5d13d3f554b212eb1f855478d8723296baf0b01343bee8e775b",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:1afa6ec98878dc6d3297b03117e4edb73f3b95b1a06902153689661daa5b516f",
+    "_source": "ariadne",
+    "_sourceId": "1123634",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/1afa6ec98878dc6d3297b03117e4edb73f3b95b1a06902153689661daa5b516f",
+    "title": "Archaeological Watching Brief at Wordsworth House, Cockermouth, Cumbria",
+    "description": "Watching Brief carried out during repair work to the raised terrace walls at the northern end of the gardens. Site overlooks the River Derwent and was badly dammaged during the November 2009 floods.",
+    "creator": "K Mounsey",
+    "date": "2016-11-28",
+    "subject": [
+      "18th century house/museum",
+      "early clay tobacco pipe bowls",
+      "house",
+      "medieval pottery",
+      "post medieval bottle glass",
+      "post medieval pottery",
+      "watching brief",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": [
+      "medieval",
+      "post medieval"
+    ],
+    "ariadne": {
+      "elasticId": "1afa6ec98878dc6d3297b03117e4edb73f3b95b1a06902153689661daa5b516f",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Wordsworth House, Cockermouth, COCKERMOUTH, Cumbria, Allerdale, England"
+        },
+        {
+          "geopoint": {
+            "lat": 54.6636348968334,
+            "lon": -3.36890827003738
+          },
+          "centroid": {
+            "lat": 54.6636348968334,
+            "lon": -3.36890827003738
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Wordsworth House, Cockermouth, COCKERMOUTH, Cumbria, Allerdale, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "K Mounsey",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/K%20Mounsey"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "18th century house/museum",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/18TH%20CENTURY%20HOUSE/MUSEUM"
+        },
+        {
+          "prefLabel": "early clay tobacco pipe bowls",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARLY%20CLAY%20TOBACCO%20PIPE%20BOWLS"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        },
+        {
+          "prefLabel": "medieval pottery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MEDIEVAL%20POTTERY"
+        },
+        {
+          "prefLabel": "post medieval bottle glass",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/POST%20MEDIEVAL%20BOTTLE%20GLASS"
+        },
+        {
+          "prefLabel": "post medieval pottery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/POST%20MEDIEVAL%20POTTERY"
+        },
+        {
+          "prefLabel": "watching brief",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WATCHING%20BRIEF"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "North Pennines Archaeology Ltd",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/183DBE2A-023F-3912-BAF5-ADCF6F7B796D",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "medieval",
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-01T10:03:25.131Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:1afa6ec98878dc6d3297b03117e4edb73f3b95b1a06902153689661daa5b516f",
+      "title": "Archaeological Watching Brief at Wordsworth House, Cockermouth, Cumbria",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/1afa6ec98878dc6d3297b03117e4edb73f3b95b1a06902153689661daa5b516f",
+      "creator": "K Mounsey",
+      "date": "2016-11-28"
+    }
+  }
+]

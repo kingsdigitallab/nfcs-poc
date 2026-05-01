@@ -1,0 +1,5702 @@
+[
+  {
+    "id": "gbif:45964927",
+    "_source": "gbif",
+    "_sourceId": 45964927,
+    "_sourceUrl": "https://www.gbif.org/occurrence/45964927",
+    "title": "Cardinalis cardinalis (Linnaeus, 1758)",
+    "date": "1998-12-15",
+    "scientificName": "Cardinalis cardinalis (Linnaeus, 1758)",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Aves",
+    "order": "Passeriformes",
+    "family": "Cardinalidae",
+    "genus": "Cardinalis",
+    "species": "Cardinalis cardinalis",
+    "country": "United States of America",
+    "eventDate": "1998-12-15",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "LSUMZ",
+    "gbif": {
+      "key": 45964927,
+      "datasetKey": "84829fe4-f762-11e1-a439-00145eb45e9a",
+      "publishingOrgKey": "c361e830-181e-11da-9544-b8a03c50a862",
+      "networkKeys": [
+        "68e8e67a-43e6-44a3-8817-dc0e6b70f973",
+        "8e30b684-6a54-4aba-aa73-66201c2c736e",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "a957a663-2f17-415f-b1c8-5cf6398df8ed",
+      "hostingOrganizationKey": "2053a639-84c3-4be5-b8bc-96b6d88a976c",
+      "publishingCountry": "US",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-18T01:47:09.076+00:00",
+      "lastParsed": "2026-04-24T11:30:18.190+00:00",
+      "crawlId": 381,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "sex": "Male",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "R56G",
+            "name": "Cardinalis cardinalis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Cardinalis",
+            "specificEpithet": "cardinalis",
+            "formattedName": "<i>Cardinalis</i> <i>cardinalis</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "R56G",
+            "name": "Cardinalis cardinalis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Cardinalis",
+            "specificEpithet": "cardinalis",
+            "formattedName": "<i>Cardinalis</i> <i>cardinalis</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "9CK8W",
+              "name": "Tetrapoda",
+              "rank": "MEGACLASS"
+            },
+            {
+              "key": "V2",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "3RL",
+              "name": "Passeriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "7QR",
+              "name": "Cardinalidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "62KGQ",
+              "name": "Cardinalis",
+              "rank": "GENUS"
+            },
+            {
+              "key": "R56G",
+              "name": "Cardinalis cardinalis",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2490384",
+            "name": "Cardinalis cardinalis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Cardinalis",
+            "specificEpithet": "cardinalis",
+            "formattedName": "<i>Cardinalis</i> <i>cardinalis</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "2490384",
+            "name": "Cardinalis cardinalis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Cardinalis",
+            "specificEpithet": "cardinalis",
+            "formattedName": "<i>Cardinalis</i> <i>cardinalis</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "212",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "729",
+              "name": "Passeriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "9285",
+              "name": "Cardinalidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "3241527",
+              "name": "Cardinalis",
+              "rank": "GENUS"
+            },
+            {
+              "key": "2490384",
+              "name": "Cardinalis cardinalis",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        }
+      },
+      "taxonKey": 2490384,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "classKey": 212,
+      "orderKey": 729,
+      "familyKey": 9285,
+      "genusKey": 3241527,
+      "speciesKey": 2490384,
+      "acceptedTaxonKey": 2490384,
+      "scientificName": "Cardinalis cardinalis (Linnaeus, 1758)",
+      "scientificNameAuthorship": "(Linnaeus, 1758)",
+      "acceptedScientificName": "Cardinalis cardinalis (Linnaeus, 1758)",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Passeriformes",
+      "family": "Cardinalidae",
+      "genus": "Cardinalis",
+      "species": "Cardinalis cardinalis",
+      "genericName": "Cardinalis",
+      "specificEpithet": "cardinalis",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "LC",
+      "continent": "NORTH_AMERICA",
+      "stateProvince": "Louisiana",
+      "gadm": {},
+      "higherGeography": "North America|United States of America|Louisiana|East Baton Rouge Parish",
+      "year": 1998,
+      "month": 12,
+      "day": 15,
+      "eventDate": "1998-12-15",
+      "startDayOfYear": 349,
+      "endDayOfYear": 349,
+      "issues": [],
+      "modified": "2021-11-02T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-24T11:30:18.190+00:00",
+      "references": "http://portal.vertnet.org/o/lsumz/birds?id=urn-catalog-lsumz-birds-166072",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:LSUMZ:Birds:166072"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "07bba8b3-fc1d-4983-b9de-39c13d9d1232",
+      "collectionKey": "373801bb-6750-4ec1-90e5-cc82fc2b767f",
+      "isInCluster": false,
+      "recordedBy": "Karen Fay",
+      "preparations": "Study Skin_Kazuya_Naoki_639",
+      "dnaSequenceID": [],
+      "class": "Aves",
+      "countryCode": "US",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "NORTH_AMERICA",
+      "country": "United States of America",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "identifier": "urn:catalog:LSUMZ:Birds:166072",
+      "nomenclaturalCode": "ICZN",
+      "institutionID": "http://grbio.org/cool/ew6z-dwdm",
+      "verbatimEventDate": "1998-12-15",
+      "http://unknown.org/crawl_attempt": "387",
+      "county": "East Baton Rouge",
+      "locality": "Baton Rouge, 732 Wordsworth Drive",
+      "verbatimLocality": "North America | United States of America | Louisiana | East Baton Rouge Parish | Baton Rouge, 732 Wordsworth Drive",
+      "language": "en",
+      "collectionCode": "Birds",
+      "gbifID": "45964927",
+      "occurrenceID": "urn:catalog:LSUMZ:Birds:166072",
+      "type": "PhysicalObject",
+      "http://unknown.org/code": "BirdDwC2",
+      "catalogNumber": "166072",
+      "institutionCode": "LSUMZ",
+      "bibliographicCitation": "urn:catalog:LSUMZ:Birds:166072. http://ipt.vertnet.org:8080/ipt/resource.do?r=lsumz_birds.",
+      "accessRights": "http://vertnet.org/resources/norms.html",
+      "higherClassification": "Aves | Passeriformes | Cardinalidae | Cardinalis"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:45964927",
+      "title": "Cardinalis cardinalis (Linnaeus, 1758)",
+      "url": "https://www.gbif.org/occurrence/45964927",
+      "date": "1998-12-15"
+    }
+  },
+  {
+    "id": "gbif:45965022",
+    "_source": "gbif",
+    "_sourceId": 45965022,
+    "_sourceUrl": "https://www.gbif.org/occurrence/45965022",
+    "title": "Spinus tristis (Linnaeus, 1758)",
+    "date": "1999-01-26",
+    "scientificName": "Spinus tristis (Linnaeus, 1758)",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Aves",
+    "order": "Passeriformes",
+    "family": "Fringillidae",
+    "genus": "Spinus",
+    "species": "Spinus tristis",
+    "country": "United States of America",
+    "eventDate": "1999-01-26",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "LSUMZ",
+    "gbif": {
+      "key": 45965022,
+      "datasetKey": "84829fe4-f762-11e1-a439-00145eb45e9a",
+      "publishingOrgKey": "c361e830-181e-11da-9544-b8a03c50a862",
+      "networkKeys": [
+        "68e8e67a-43e6-44a3-8817-dc0e6b70f973",
+        "8e30b684-6a54-4aba-aa73-66201c2c736e",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "a957a663-2f17-415f-b1c8-5cf6398df8ed",
+      "hostingOrganizationKey": "2053a639-84c3-4be5-b8bc-96b6d88a976c",
+      "publishingCountry": "US",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-18T01:47:09.076+00:00",
+      "lastParsed": "2026-04-24T11:30:01.859+00:00",
+      "crawlId": 381,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "sex": "Female",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "4Z662",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "4Z662",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "9CK8W",
+              "name": "Tetrapoda",
+              "rank": "MEGACLASS"
+            },
+            {
+              "key": "V2",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "3RL",
+              "name": "Passeriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "6244D",
+              "name": "Fringillidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "7L9G",
+              "name": "Spinus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "4Z662",
+              "name": "Spinus tristis",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "5231640",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "5231640",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "212",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "729",
+              "name": "Passeriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5242",
+              "name": "Fringillidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "8051475",
+              "name": "Spinus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "5231640",
+              "name": "Spinus tristis",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        }
+      },
+      "taxonKey": 5231640,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "classKey": 212,
+      "orderKey": 729,
+      "familyKey": 5242,
+      "genusKey": 8051475,
+      "speciesKey": 5231640,
+      "acceptedTaxonKey": 5231640,
+      "scientificName": "Spinus tristis (Linnaeus, 1758)",
+      "scientificNameAuthorship": "(Linnaeus, 1758)",
+      "acceptedScientificName": "Spinus tristis (Linnaeus, 1758)",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Passeriformes",
+      "family": "Fringillidae",
+      "genus": "Spinus",
+      "species": "Spinus tristis",
+      "genericName": "Spinus",
+      "specificEpithet": "tristis",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "LC",
+      "continent": "NORTH_AMERICA",
+      "stateProvince": "Louisiana",
+      "gadm": {},
+      "higherGeography": "North America|United States of America|Louisiana|East Baton Rouge Parish",
+      "year": 1999,
+      "month": 1,
+      "day": 26,
+      "eventDate": "1999-01-26",
+      "startDayOfYear": 26,
+      "endDayOfYear": 26,
+      "issues": [],
+      "modified": "2021-11-02T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-24T11:30:01.859+00:00",
+      "references": "http://portal.vertnet.org/o/lsumz/birds?id=urn-catalog-lsumz-birds-169539",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:LSUMZ:Birds:169539"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "07bba8b3-fc1d-4983-b9de-39c13d9d1232",
+      "collectionKey": "373801bb-6750-4ec1-90e5-cc82fc2b767f",
+      "isInCluster": false,
+      "recordedBy": "Karen Fay",
+      "preparations": "Skeleton_Kazuya_Naoki_695",
+      "dnaSequenceID": [],
+      "class": "Aves",
+      "countryCode": "US",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "NORTH_AMERICA",
+      "country": "United States of America",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "identifier": "urn:catalog:LSUMZ:Birds:169539",
+      "nomenclaturalCode": "ICZN",
+      "institutionID": "http://grbio.org/cool/ew6z-dwdm",
+      "verbatimEventDate": "1999-01-26",
+      "http://unknown.org/crawl_attempt": "387",
+      "county": "East Baton Rouge",
+      "locality": "Baton Rouge, 732 Wordsworth Drive",
+      "verbatimLocality": "North America | United States of America | Louisiana | East Baton Rouge Parish | Baton Rouge, 732 Wordsworth Drive",
+      "language": "en",
+      "collectionCode": "Birds",
+      "gbifID": "45965022",
+      "occurrenceID": "urn:catalog:LSUMZ:Birds:169539",
+      "type": "PhysicalObject",
+      "http://unknown.org/code": "BirdDwC2",
+      "catalogNumber": "169539",
+      "institutionCode": "LSUMZ",
+      "bibliographicCitation": "urn:catalog:LSUMZ:Birds:169539. http://ipt.vertnet.org:8080/ipt/resource.do?r=lsumz_birds.",
+      "accessRights": "http://vertnet.org/resources/norms.html",
+      "higherClassification": "Aves | Passeriformes | Fringillidae | Spinus"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:45965022",
+      "title": "Spinus tristis (Linnaeus, 1758)",
+      "url": "https://www.gbif.org/occurrence/45965022",
+      "date": "1999-01-26"
+    }
+  },
+  {
+    "id": "gbif:45935888",
+    "_source": "gbif",
+    "_sourceId": 45935888,
+    "_sourceUrl": "https://www.gbif.org/occurrence/45935888",
+    "title": "Archilochus colubris (Linnaeus, 1758)",
+    "date": "1998-08-23",
+    "scientificName": "Archilochus colubris (Linnaeus, 1758)",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Aves",
+    "order": "Apodiformes",
+    "family": "Trochilidae",
+    "genus": "Archilochus",
+    "species": "Archilochus colubris",
+    "country": "United States of America",
+    "eventDate": "1998-08-23",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "LSUMZ",
+    "gbif": {
+      "key": 45935888,
+      "datasetKey": "84829fe4-f762-11e1-a439-00145eb45e9a",
+      "publishingOrgKey": "c361e830-181e-11da-9544-b8a03c50a862",
+      "networkKeys": [
+        "68e8e67a-43e6-44a3-8817-dc0e6b70f973",
+        "8e30b684-6a54-4aba-aa73-66201c2c736e",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "a957a663-2f17-415f-b1c8-5cf6398df8ed",
+      "hostingOrganizationKey": "2053a639-84c3-4be5-b8bc-96b6d88a976c",
+      "publishingCountry": "US",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-18T01:47:09.076+00:00",
+      "lastParsed": "2026-04-24T11:29:53.563+00:00",
+      "crawlId": 381,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "sex": "Female",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "G96Z",
+            "name": "Archilochus colubris (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Archilochus",
+            "specificEpithet": "colubris",
+            "formattedName": "<i>Archilochus</i> <i>colubris</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "G96Z",
+            "name": "Archilochus colubris (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Archilochus",
+            "specificEpithet": "colubris",
+            "formattedName": "<i>Archilochus</i> <i>colubris</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "9CK8W",
+              "name": "Tetrapoda",
+              "rank": "MEGACLASS"
+            },
+            {
+              "key": "V2",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "Q9",
+              "name": "Apodiformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "HHZ",
+              "name": "Trochilidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "KGD",
+              "name": "Trochilinae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "325X",
+              "name": "Archilochus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "G96Z",
+              "name": "Archilochus colubris",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "5228514",
+            "name": "Archilochus colubris (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Archilochus",
+            "specificEpithet": "colubris",
+            "formattedName": "<i>Archilochus</i> <i>colubris</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "5228514",
+            "name": "Archilochus colubris (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Archilochus",
+            "specificEpithet": "colubris",
+            "formattedName": "<i>Archilochus</i> <i>colubris</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "212",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "1448",
+              "name": "Apodiformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5289",
+              "name": "Trochilidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2476402",
+              "name": "Archilochus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "5228514",
+              "name": "Archilochus colubris",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        }
+      },
+      "taxonKey": 5228514,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "classKey": 212,
+      "orderKey": 1448,
+      "familyKey": 5289,
+      "genusKey": 2476402,
+      "speciesKey": 5228514,
+      "acceptedTaxonKey": 5228514,
+      "scientificName": "Archilochus colubris (Linnaeus, 1758)",
+      "scientificNameAuthorship": "(Linnaeus, 1758)",
+      "acceptedScientificName": "Archilochus colubris (Linnaeus, 1758)",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Apodiformes",
+      "family": "Trochilidae",
+      "genus": "Archilochus",
+      "species": "Archilochus colubris",
+      "genericName": "Archilochus",
+      "specificEpithet": "colubris",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "LC",
+      "continent": "NORTH_AMERICA",
+      "stateProvince": "Louisiana",
+      "gadm": {},
+      "higherGeography": "North America|United States of America|Louisiana|East Baton Rouge Parish",
+      "year": 1998,
+      "month": 8,
+      "day": 23,
+      "eventDate": "1998-08-23",
+      "startDayOfYear": 235,
+      "endDayOfYear": 235,
+      "issues": [],
+      "modified": "2021-11-02T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-24T11:29:53.563+00:00",
+      "references": "http://portal.vertnet.org/o/lsumz/birds?id=urn-catalog-lsumz-birds-168228",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:LSUMZ:Birds:168228"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "07bba8b3-fc1d-4983-b9de-39c13d9d1232",
+      "collectionKey": "373801bb-6750-4ec1-90e5-cc82fc2b767f",
+      "isInCluster": false,
+      "recordedBy": "Karen Fay",
+      "preparations": "Skeleton_Kazuya_Naoki_702",
+      "dnaSequenceID": [],
+      "class": "Aves",
+      "countryCode": "US",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "NORTH_AMERICA",
+      "country": "United States of America",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "identifier": "urn:catalog:LSUMZ:Birds:168228",
+      "nomenclaturalCode": "ICZN",
+      "institutionID": "http://grbio.org/cool/ew6z-dwdm",
+      "verbatimEventDate": "1998-08-23",
+      "http://unknown.org/crawl_attempt": "387",
+      "county": "East Baton Rouge",
+      "locality": "Baton Rouge, 732 Wordsworth Drive",
+      "verbatimLocality": "North America | United States of America | Louisiana | East Baton Rouge Parish | Baton Rouge, 732 Wordsworth Drive",
+      "language": "en",
+      "collectionCode": "Birds",
+      "gbifID": "45935888",
+      "occurrenceID": "urn:catalog:LSUMZ:Birds:168228",
+      "type": "PhysicalObject",
+      "http://unknown.org/code": "BirdDwC2",
+      "catalogNumber": "168228",
+      "institutionCode": "LSUMZ",
+      "bibliographicCitation": "urn:catalog:LSUMZ:Birds:168228. http://ipt.vertnet.org:8080/ipt/resource.do?r=lsumz_birds.",
+      "accessRights": "http://vertnet.org/resources/norms.html",
+      "higherClassification": "Aves | Caprimulgiformes | Trochilidae | Archilochus"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:45935888",
+      "title": "Archilochus colubris (Linnaeus, 1758)",
+      "url": "https://www.gbif.org/occurrence/45935888",
+      "date": "1998-08-23"
+    }
+  },
+  {
+    "id": "gbif:45965021",
+    "_source": "gbif",
+    "_sourceId": 45965021,
+    "_sourceUrl": "https://www.gbif.org/occurrence/45965021",
+    "title": "Spinus tristis (Linnaeus, 1758)",
+    "date": "1999-01-26",
+    "scientificName": "Spinus tristis (Linnaeus, 1758)",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Aves",
+    "order": "Passeriformes",
+    "family": "Fringillidae",
+    "genus": "Spinus",
+    "species": "Spinus tristis",
+    "country": "United States of America",
+    "eventDate": "1999-01-26",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "LSUMZ",
+    "gbif": {
+      "key": 45965021,
+      "datasetKey": "84829fe4-f762-11e1-a439-00145eb45e9a",
+      "publishingOrgKey": "c361e830-181e-11da-9544-b8a03c50a862",
+      "networkKeys": [
+        "68e8e67a-43e6-44a3-8817-dc0e6b70f973",
+        "8e30b684-6a54-4aba-aa73-66201c2c736e",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "a957a663-2f17-415f-b1c8-5cf6398df8ed",
+      "hostingOrganizationKey": "2053a639-84c3-4be5-b8bc-96b6d88a976c",
+      "publishingCountry": "US",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-18T01:47:09.076+00:00",
+      "lastParsed": "2026-04-24T11:30:13.343+00:00",
+      "crawlId": 381,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "sex": "Female",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "4Z662",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "4Z662",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "9CK8W",
+              "name": "Tetrapoda",
+              "rank": "MEGACLASS"
+            },
+            {
+              "key": "V2",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "3RL",
+              "name": "Passeriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "6244D",
+              "name": "Fringillidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "7L9G",
+              "name": "Spinus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "4Z662",
+              "name": "Spinus tristis",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "5231640",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "5231640",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "212",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "729",
+              "name": "Passeriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5242",
+              "name": "Fringillidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "8051475",
+              "name": "Spinus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "5231640",
+              "name": "Spinus tristis",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        }
+      },
+      "taxonKey": 5231640,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "classKey": 212,
+      "orderKey": 729,
+      "familyKey": 5242,
+      "genusKey": 8051475,
+      "speciesKey": 5231640,
+      "acceptedTaxonKey": 5231640,
+      "scientificName": "Spinus tristis (Linnaeus, 1758)",
+      "scientificNameAuthorship": "(Linnaeus, 1758)",
+      "acceptedScientificName": "Spinus tristis (Linnaeus, 1758)",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Passeriformes",
+      "family": "Fringillidae",
+      "genus": "Spinus",
+      "species": "Spinus tristis",
+      "genericName": "Spinus",
+      "specificEpithet": "tristis",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "LC",
+      "continent": "NORTH_AMERICA",
+      "stateProvince": "Louisiana",
+      "gadm": {},
+      "higherGeography": "North America|United States of America|Louisiana|East Baton Rouge Parish",
+      "year": 1999,
+      "month": 1,
+      "day": 26,
+      "eventDate": "1999-01-26",
+      "startDayOfYear": 26,
+      "endDayOfYear": 26,
+      "issues": [],
+      "modified": "2021-11-02T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-24T11:30:13.343+00:00",
+      "references": "http://portal.vertnet.org/o/lsumz/birds?id=urn-catalog-lsumz-birds-169535",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:LSUMZ:Birds:169535"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "07bba8b3-fc1d-4983-b9de-39c13d9d1232",
+      "collectionKey": "373801bb-6750-4ec1-90e5-cc82fc2b767f",
+      "isInCluster": false,
+      "recordedBy": "Karen Fay",
+      "preparations": "Study Skin_Kazuya_Naoki_694",
+      "dnaSequenceID": [],
+      "class": "Aves",
+      "countryCode": "US",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "NORTH_AMERICA",
+      "country": "United States of America",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "identifier": "urn:catalog:LSUMZ:Birds:169535",
+      "nomenclaturalCode": "ICZN",
+      "institutionID": "http://grbio.org/cool/ew6z-dwdm",
+      "verbatimEventDate": "1999-01-26",
+      "http://unknown.org/crawl_attempt": "387",
+      "county": "East Baton Rouge",
+      "locality": "Baton Rouge, 732 Wordsworth Drive",
+      "verbatimLocality": "North America | United States of America | Louisiana | East Baton Rouge Parish | Baton Rouge, 732 Wordsworth Drive",
+      "language": "en",
+      "collectionCode": "Birds",
+      "gbifID": "45965021",
+      "occurrenceID": "urn:catalog:LSUMZ:Birds:169535",
+      "type": "PhysicalObject",
+      "http://unknown.org/code": "BirdDwC2",
+      "catalogNumber": "169535",
+      "institutionCode": "LSUMZ",
+      "bibliographicCitation": "urn:catalog:LSUMZ:Birds:169535. http://ipt.vertnet.org:8080/ipt/resource.do?r=lsumz_birds.",
+      "accessRights": "http://vertnet.org/resources/norms.html",
+      "higherClassification": "Aves | Passeriformes | Fringillidae | Spinus"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:45965021",
+      "title": "Spinus tristis (Linnaeus, 1758)",
+      "url": "https://www.gbif.org/occurrence/45965021",
+      "date": "1999-01-26"
+    }
+  },
+  {
+    "id": "gbif:45965020",
+    "_source": "gbif",
+    "_sourceId": 45965020,
+    "_sourceUrl": "https://www.gbif.org/occurrence/45965020",
+    "title": "Spinus tristis (Linnaeus, 1758)",
+    "date": "1999-01-26",
+    "scientificName": "Spinus tristis (Linnaeus, 1758)",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Aves",
+    "order": "Passeriformes",
+    "family": "Fringillidae",
+    "genus": "Spinus",
+    "species": "Spinus tristis",
+    "country": "United States of America",
+    "eventDate": "1999-01-26",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "LSUMZ",
+    "gbif": {
+      "key": 45965020,
+      "datasetKey": "84829fe4-f762-11e1-a439-00145eb45e9a",
+      "publishingOrgKey": "c361e830-181e-11da-9544-b8a03c50a862",
+      "networkKeys": [
+        "68e8e67a-43e6-44a3-8817-dc0e6b70f973",
+        "8e30b684-6a54-4aba-aa73-66201c2c736e",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "a957a663-2f17-415f-b1c8-5cf6398df8ed",
+      "hostingOrganizationKey": "2053a639-84c3-4be5-b8bc-96b6d88a976c",
+      "publishingCountry": "US",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-18T01:47:09.076+00:00",
+      "lastParsed": "2026-04-24T11:29:53.489+00:00",
+      "crawlId": 381,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "sex": "Male",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "4Z662",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "4Z662",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "9CK8W",
+              "name": "Tetrapoda",
+              "rank": "MEGACLASS"
+            },
+            {
+              "key": "V2",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "3RL",
+              "name": "Passeriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "6244D",
+              "name": "Fringillidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "7L9G",
+              "name": "Spinus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "4Z662",
+              "name": "Spinus tristis",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "5231640",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "5231640",
+            "name": "Spinus tristis (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Spinus",
+            "specificEpithet": "tristis",
+            "formattedName": "<i>Spinus</i> <i>tristis</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "212",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "729",
+              "name": "Passeriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5242",
+              "name": "Fringillidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "8051475",
+              "name": "Spinus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "5231640",
+              "name": "Spinus tristis",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        }
+      },
+      "taxonKey": 5231640,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "classKey": 212,
+      "orderKey": 729,
+      "familyKey": 5242,
+      "genusKey": 8051475,
+      "speciesKey": 5231640,
+      "acceptedTaxonKey": 5231640,
+      "scientificName": "Spinus tristis (Linnaeus, 1758)",
+      "scientificNameAuthorship": "(Linnaeus, 1758)",
+      "acceptedScientificName": "Spinus tristis (Linnaeus, 1758)",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Passeriformes",
+      "family": "Fringillidae",
+      "genus": "Spinus",
+      "species": "Spinus tristis",
+      "genericName": "Spinus",
+      "specificEpithet": "tristis",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "LC",
+      "continent": "NORTH_AMERICA",
+      "stateProvince": "Louisiana",
+      "gadm": {},
+      "higherGeography": "North America|United States of America|Louisiana|East Baton Rouge Parish",
+      "year": 1999,
+      "month": 1,
+      "day": 26,
+      "eventDate": "1999-01-26",
+      "startDayOfYear": 26,
+      "endDayOfYear": 26,
+      "issues": [],
+      "modified": "2021-11-02T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-24T11:29:53.489+00:00",
+      "references": "http://portal.vertnet.org/o/lsumz/birds?id=urn-catalog-lsumz-birds-169534",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:LSUMZ:Birds:169534"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "07bba8b3-fc1d-4983-b9de-39c13d9d1232",
+      "collectionKey": "373801bb-6750-4ec1-90e5-cc82fc2b767f",
+      "isInCluster": false,
+      "recordedBy": "Karen Fay",
+      "preparations": "Study Skin_Kazuya_Naoki_693",
+      "dnaSequenceID": [],
+      "class": "Aves",
+      "countryCode": "US",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "NORTH_AMERICA",
+      "country": "United States of America",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "identifier": "urn:catalog:LSUMZ:Birds:169534",
+      "nomenclaturalCode": "ICZN",
+      "institutionID": "http://grbio.org/cool/ew6z-dwdm",
+      "verbatimEventDate": "1999-01-26",
+      "http://unknown.org/crawl_attempt": "387",
+      "county": "East Baton Rouge",
+      "locality": "Baton Rouge, 732 Wordsworth Drive",
+      "verbatimLocality": "North America | United States of America | Louisiana | East Baton Rouge Parish | Baton Rouge, 732 Wordsworth Drive",
+      "language": "en",
+      "collectionCode": "Birds",
+      "gbifID": "45965020",
+      "occurrenceID": "urn:catalog:LSUMZ:Birds:169534",
+      "type": "PhysicalObject",
+      "http://unknown.org/code": "BirdDwC2",
+      "catalogNumber": "169534",
+      "institutionCode": "LSUMZ",
+      "bibliographicCitation": "urn:catalog:LSUMZ:Birds:169534. http://ipt.vertnet.org:8080/ipt/resource.do?r=lsumz_birds.",
+      "accessRights": "http://vertnet.org/resources/norms.html",
+      "higherClassification": "Aves | Passeriformes | Fringillidae | Spinus"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:45965020",
+      "title": "Spinus tristis (Linnaeus, 1758)",
+      "url": "https://www.gbif.org/occurrence/45965020",
+      "date": "1999-01-26"
+    }
+  },
+  {
+    "id": "gbif:6063340426",
+    "_source": "gbif",
+    "_sourceId": 6063340426,
+    "_sourceUrl": "https://www.gbif.org/occurrence/6063340426",
+    "title": "Bombus hypnorum (Linnaeus, 1758)",
+    "date": "2014-06-22",
+    "scientificName": "Bombus hypnorum (Linnaeus, 1758)",
+    "kingdom": "Animalia",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Hymenoptera",
+    "family": "Apidae",
+    "genus": "Bombus",
+    "species": "Bombus hypnorum",
+    "country": "United Kingdom of Great Britain and Northern Ireland",
+    "eventDate": "2014-06-22",
+    "decimalLatitude": 51.807799,
+    "decimalLongitude": -0.297117,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "datasetName": "Bee, wasp and ant records verified via iRecord",
+    "gbif": {
+      "key": 6063340426,
+      "datasetKey": "51b7fe74-b4d9-4027-bd75-8425bfcf5300",
+      "publishingOrgKey": "0c392aa0-a452-4254-be5c-e49dd60e9b02",
+      "installationKey": "99552c70-f762-11e1-a439-00145eb45e9a",
+      "hostingOrganizationKey": "07f617d0-c688-11d8-bf62-b8a03c50a862",
+      "publishingCountry": "GB",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-17T10:25:57.082+00:00",
+      "lastParsed": "2026-04-24T08:44:43.747+00:00",
+      "crawlId": 292,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "individualCount": 3,
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "MFL7",
+            "name": "Bombus hypnorum (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Bombus",
+            "specificEpithet": "hypnorum",
+            "formattedName": "<i>Bombus</i> <i>hypnorum</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "MFL7",
+            "name": "Bombus hypnorum (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Bombus",
+            "specificEpithet": "hypnorum",
+            "formattedName": "<i>Bombus</i> <i>hypnorum</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "RT",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "L2655",
+              "name": "Hexapoda",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "H6",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "HYM",
+              "name": "Hymenoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "KZPW7",
+              "name": "Apocrita",
+              "rank": "SUBORDER"
+            },
+            {
+              "key": "KZMNP",
+              "name": "Aculeata",
+              "rank": "INFRAORDER"
+            },
+            {
+              "key": "625GP",
+              "name": "Apoidea",
+              "rank": "SUPERFAMILY"
+            },
+            {
+              "key": "6KD",
+              "name": "Apidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "J5V",
+              "name": "Apinae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "KN5",
+              "name": "Bombini",
+              "rank": "TRIBE"
+            },
+            {
+              "key": "62H8K",
+              "name": "Bombus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "MFL7",
+              "name": "Bombus hypnorum",
+              "rank": "SPECIES"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND",
+            "TAXON_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "1340513",
+            "name": "Bombus hypnorum (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Bombus",
+            "specificEpithet": "hypnorum",
+            "formattedName": "<i>Bombus</i> <i>hypnorum</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "1340513",
+            "name": "Bombus hypnorum (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Bombus",
+            "specificEpithet": "hypnorum",
+            "formattedName": "<i>Bombus</i> <i>hypnorum</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "54",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "216",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "1457",
+              "name": "Hymenoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4334",
+              "name": "Apidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "1340278",
+              "name": "Bombus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "1340513",
+              "name": "Bombus hypnorum",
+              "rank": "SPECIES"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND",
+            "TAXON_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 1340513,
+      "kingdomKey": 1,
+      "phylumKey": 54,
+      "classKey": 216,
+      "orderKey": 1457,
+      "familyKey": 4334,
+      "genusKey": 1340278,
+      "speciesKey": 1340513,
+      "acceptedTaxonKey": 1340513,
+      "scientificName": "Bombus hypnorum (Linnaeus, 1758)",
+      "scientificNameAuthorship": "(Linnaeus, 1758)",
+      "acceptedScientificName": "Bombus hypnorum (Linnaeus, 1758)",
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "order": "Hymenoptera",
+      "family": "Apidae",
+      "genus": "Bombus",
+      "species": "Bombus hypnorum",
+      "genericName": "Bombus",
+      "specificEpithet": "hypnorum",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "decimalLatitude": 51.807799,
+      "decimalLongitude": -0.297117,
+      "coordinateUncertaintyInMeters": 707.1,
+      "continent": "EUROPE",
+      "stateProvince": "England",
+      "gadm": {
+        "level0": {
+          "gid": "GBR",
+          "name": "United Kingdom"
+        },
+        "level1": {
+          "gid": "GBR.1_1",
+          "name": "England"
+        },
+        "level2": {
+          "gid": "GBR.1.41_1",
+          "name": "Hertfordshire"
+        },
+        "level3": {
+          "gid": "GBR.1.41.6_1",
+          "name": "Saint Albans"
+        }
+      },
+      "year": 2014,
+      "month": 6,
+      "day": 22,
+      "eventDate": "2014-06-22",
+      "startDayOfYear": 173,
+      "endDayOfYear": 173,
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "lastInterpreted": "2026-04-24T08:44:43.747+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "053b3863-fda7-4718-a346-87aa9b5e3662"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetName": "Bee, wasp and ant records verified via iRecord",
+      "recordedBy": "Wordsworth, Grant",
+      "identifiedBy": "Grant Wordsworth",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Insecta",
+      "countryCode": "GB",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "EUROPE",
+      "country": "United Kingdom of Great Britain and Northern Ireland",
+      "publishedByGbifRegion": "EUROPE",
+      "rightsHolder": "Biological Records Centre",
+      "identifier": "053b3863-fda7-4718-a346-87aa9b5e3662",
+      "eventID": "526595",
+      "http://unknown.org/crawl_attempt": "294",
+      "http://unknown.org/taxonRankID": "7000",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Wheathampstead",
+      "identificationVerificationStatus": "Accepted",
+      "eventRemarks": "They were seen visiting various flowers  in the garden (including honeysuckle) and was made distinct from the usual bumble bees that we see by its colouring",
+      "collectionCode": "BWARS | Advanced Single Species Surveys",
+      "gbifID": "6063340426",
+      "occurrenceID": "053b3863-fda7-4718-a346-87aa9b5e3662",
+      "taxonID": "NHMSYS0000875564",
+      "vernacularName": "Tree Bumblebee",
+      "taxonConceptID": "NHMSYS0000875564"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:6063340426",
+      "title": "Bombus hypnorum (Linnaeus, 1758)",
+      "url": "https://www.gbif.org/occurrence/6063340426",
+      "date": "2014-06-22"
+    }
+  },
+  {
+    "id": "gbif:45967543",
+    "_source": "gbif",
+    "_sourceId": 45967543,
+    "_sourceUrl": "https://www.gbif.org/occurrence/45967543",
+    "title": "Haemorhous mexicanus (P.L.Statius Müller, 1776)",
+    "date": "1998-04-14",
+    "scientificName": "Haemorhous mexicanus (P.L.Statius Müller, 1776)",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Aves",
+    "order": "Passeriformes",
+    "family": "Fringillidae",
+    "genus": "Haemorhous",
+    "species": "Haemorhous mexicanus",
+    "country": "United States of America",
+    "eventDate": "1998-04-14",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "LSUMZ",
+    "gbif": {
+      "key": 45967543,
+      "datasetKey": "84829fe4-f762-11e1-a439-00145eb45e9a",
+      "publishingOrgKey": "c361e830-181e-11da-9544-b8a03c50a862",
+      "networkKeys": [
+        "68e8e67a-43e6-44a3-8817-dc0e6b70f973",
+        "8e30b684-6a54-4aba-aa73-66201c2c736e",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "a957a663-2f17-415f-b1c8-5cf6398df8ed",
+      "hostingOrganizationKey": "2053a639-84c3-4be5-b8bc-96b6d88a976c",
+      "publishingCountry": "US",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-18T01:47:09.076+00:00",
+      "lastParsed": "2026-04-24T11:30:13.739+00:00",
+      "crawlId": 381,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "sex": "Male",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "6L8DR",
+            "name": "Haemorhous mexicanus (P. L. Statius Müller, 1776)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(P. L. Statius Müller, 1776)",
+            "genericName": "Haemorhous",
+            "specificEpithet": "mexicanus",
+            "formattedName": "<i>Haemorhous</i> <i>mexicanus</i> (P. L. Statius Müller, 1776)"
+          },
+          "acceptedUsage": {
+            "key": "6L8DR",
+            "name": "Haemorhous mexicanus (P. L. Statius Müller, 1776)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(P. L. Statius Müller, 1776)",
+            "genericName": "Haemorhous",
+            "specificEpithet": "mexicanus",
+            "formattedName": "<i>Haemorhous</i> <i>mexicanus</i> (P. L. Statius Müller, 1776)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "9CK8W",
+              "name": "Tetrapoda",
+              "rank": "MEGACLASS"
+            },
+            {
+              "key": "V2",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "3RL",
+              "name": "Passeriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "6244D",
+              "name": "Fringillidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "4SJ3",
+              "name": "Haemorhous",
+              "rank": "GENUS"
+            },
+            {
+              "key": "6L8DR",
+              "name": "Haemorhous mexicanus",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "8323485",
+            "name": "Haemorhous mexicanus (P.L.Statius Müller, 1776)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(P.L.Statius Müller, 1776)",
+            "genericName": "Haemorhous",
+            "specificEpithet": "mexicanus",
+            "formattedName": "<i>Haemorhous</i> <i>mexicanus</i> (P.L.Statius Müller, 1776)"
+          },
+          "acceptedUsage": {
+            "key": "8323485",
+            "name": "Haemorhous mexicanus (P.L.Statius Müller, 1776)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(P.L.Statius Müller, 1776)",
+            "genericName": "Haemorhous",
+            "specificEpithet": "mexicanus",
+            "formattedName": "<i>Haemorhous</i> <i>mexicanus</i> (P.L.Statius Müller, 1776)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "212",
+              "name": "Aves",
+              "rank": "CLASS"
+            },
+            {
+              "key": "729",
+              "name": "Passeriformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5242",
+              "name": "Fringillidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "4844128",
+              "name": "Haemorhous",
+              "rank": "GENUS"
+            },
+            {
+              "key": "8323485",
+              "name": "Haemorhous mexicanus",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "LC",
+          "issues": []
+        }
+      },
+      "taxonKey": 8323485,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "classKey": 212,
+      "orderKey": 729,
+      "familyKey": 5242,
+      "genusKey": 4844128,
+      "speciesKey": 8323485,
+      "acceptedTaxonKey": 8323485,
+      "scientificName": "Haemorhous mexicanus (P.L.Statius Müller, 1776)",
+      "scientificNameAuthorship": "(P.L.Statius Müller, 1776)",
+      "acceptedScientificName": "Haemorhous mexicanus (P.L.Statius Müller, 1776)",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Passeriformes",
+      "family": "Fringillidae",
+      "genus": "Haemorhous",
+      "species": "Haemorhous mexicanus",
+      "genericName": "Haemorhous",
+      "specificEpithet": "mexicanus",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "LC",
+      "continent": "NORTH_AMERICA",
+      "stateProvince": "Louisiana",
+      "gadm": {},
+      "higherGeography": "North America|United States of America|Louisiana|East Baton Rouge Parish",
+      "year": 1998,
+      "month": 4,
+      "day": 14,
+      "eventDate": "1998-04-14",
+      "startDayOfYear": 104,
+      "endDayOfYear": 104,
+      "issues": [],
+      "modified": "2021-11-02T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-24T11:30:13.739+00:00",
+      "references": "http://portal.vertnet.org/o/lsumz/birds?id=urn-catalog-lsumz-birds-166107",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "urn:catalog:LSUMZ:Birds:166107"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "07bba8b3-fc1d-4983-b9de-39c13d9d1232",
+      "collectionKey": "373801bb-6750-4ec1-90e5-cc82fc2b767f",
+      "isInCluster": false,
+      "recordedBy": "Karen Fay",
+      "preparations": "Study Skin_Kazuya_Naoki_581",
+      "dnaSequenceID": [],
+      "class": "Aves",
+      "countryCode": "US",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "NORTH_AMERICA",
+      "country": "United States of America",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "identifier": "urn:catalog:LSUMZ:Birds:166107",
+      "nomenclaturalCode": "ICZN",
+      "institutionID": "http://grbio.org/cool/ew6z-dwdm",
+      "verbatimEventDate": "1998-04-14",
+      "http://unknown.org/crawl_attempt": "387",
+      "county": "East Baton Rouge",
+      "locality": "Baton Rouge, 732 Wordsworth Drive",
+      "verbatimLocality": "North America | United States of America | Louisiana | East Baton Rouge Parish | Baton Rouge, 732 Wordsworth Drive",
+      "language": "en",
+      "collectionCode": "Birds",
+      "gbifID": "45967543",
+      "occurrenceID": "urn:catalog:LSUMZ:Birds:166107",
+      "type": "PhysicalObject",
+      "http://unknown.org/code": "BirdDwC2",
+      "catalogNumber": "166107",
+      "institutionCode": "LSUMZ",
+      "bibliographicCitation": "urn:catalog:LSUMZ:Birds:166107. http://ipt.vertnet.org:8080/ipt/resource.do?r=lsumz_birds.",
+      "accessRights": "http://vertnet.org/resources/norms.html",
+      "higherClassification": "Aves | Passeriformes | Fringillidae | Haemorhous"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:45967543",
+      "title": "Haemorhous mexicanus (P.L.Statius Müller, 1776)",
+      "url": "https://www.gbif.org/occurrence/45967543",
+      "date": "1998-04-14"
+    }
+  },
+  {
+    "id": "gbif:1804432148",
+    "_source": "gbif",
+    "_sourceId": 1804432148,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1804432148",
+    "title": "Solidago lepida var. lepida",
+    "date": "1970-08-11",
+    "scientificName": "Solidago lepida var. lepida",
+    "kingdom": "Plantae",
+    "phylum": "Tracheophyta",
+    "class": "Magnoliopsida",
+    "order": "Asterales",
+    "family": "Asteraceae",
+    "genus": "Solidago",
+    "species": "Solidago lepida",
+    "country": "Canada",
+    "eventDate": "1970-08-11",
+    "decimalLatitude": 52.8820674,
+    "decimalLongitude": -106.5285779,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "CMN",
+    "datasetName": "Vascular Plant",
+    "gbif": {
+      "key": 1804432148,
+      "datasetKey": "1e61b812-b2ec-43d0-bdbb-8534a761f74c",
+      "publishingOrgKey": "a41250f0-7c3e-11d8-a19c-b8a03c50a862",
+      "installationKey": "1bd85d67-1c87-4591-988a-44ff22008d3e",
+      "hostingOrganizationKey": "a41250f0-7c3e-11d8-a19c-b8a03c50a862",
+      "publishingCountry": "CA",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-30T09:47:02.204+00:00",
+      "lastParsed": "2026-04-30T11:32:10.198+00:00",
+      "crawlId": 500,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "individualCount": 1,
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "D2YQW",
+            "name": "Solidago lepida var. lepida",
+            "rank": "VARIETY",
+            "code": "BOTANICAL",
+            "genericName": "Solidago",
+            "specificEpithet": "lepida",
+            "infraspecificEpithet": "lepida",
+            "formattedName": "<i>Solidago</i> <i>lepida</i> var. <i>lepida</i>"
+          },
+          "acceptedUsage": {
+            "key": "D2YQW",
+            "name": "Solidago lepida var. lepida",
+            "rank": "VARIETY",
+            "code": "BOTANICAL",
+            "genericName": "Solidago",
+            "specificEpithet": "lepida",
+            "infraspecificEpithet": "lepida",
+            "formattedName": "<i>Solidago</i> <i>lepida</i> var. <i>lepida</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "P",
+              "name": "Plantae",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CMQ8S",
+              "name": "Pteridobiotina",
+              "rank": "SUBKINGDOM"
+            },
+            {
+              "key": "TP",
+              "name": "Tracheophyta",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "MG",
+              "name": "Magnoliopsida",
+              "rank": "CLASS"
+            },
+            {
+              "key": "ST",
+              "name": "Asterales",
+              "rank": "ORDER"
+            },
+            {
+              "key": "622TP",
+              "name": "Asteraceae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "J6T",
+              "name": "Asteroideae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "KTZMX",
+              "name": "Astereae",
+              "rank": "TRIBE"
+            },
+            {
+              "key": "KVSK5",
+              "name": "Solidagininae",
+              "rank": "SUBTRIBE"
+            },
+            {
+              "key": "7JH2",
+              "name": "Solidago",
+              "rank": "GENUS"
+            },
+            {
+              "key": "4Y7CJ",
+              "name": "Solidago lepida",
+              "rank": "SPECIES"
+            },
+            {
+              "key": "D2YQW",
+              "name": "Solidago lepida lepida",
+              "rank": "VARIETY"
+            }
+          ],
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "7338928",
+            "name": "Solidago lepida var. lepida",
+            "rank": "VARIETY",
+            "genericName": "Solidago",
+            "specificEpithet": "lepida",
+            "infraspecificEpithet": "lepida",
+            "formattedName": "<i>Solidago</i> <i>lepida</i> var. <i>lepida</i>"
+          },
+          "acceptedUsage": {
+            "key": "6065181",
+            "name": "Solidago lepida DC.",
+            "rank": "SPECIES",
+            "authorship": "DC.",
+            "genericName": "Solidago",
+            "specificEpithet": "lepida",
+            "formattedName": "<i>Solidago</i> <i>lepida</i> DC."
+          },
+          "taxonomicStatus": "SYNONYM",
+          "classification": [
+            {
+              "key": "6",
+              "name": "Plantae",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "7707728",
+              "name": "Tracheophyta",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "220",
+              "name": "Magnoliopsida",
+              "rank": "CLASS"
+            },
+            {
+              "key": "414",
+              "name": "Asterales",
+              "rank": "ORDER"
+            },
+            {
+              "key": "3065",
+              "name": "Asteraceae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "5388868",
+              "name": "Solidago",
+              "rank": "GENUS"
+            },
+            {
+              "key": "6065181",
+              "name": "Solidago lepida",
+              "rank": "SPECIES"
+            }
+          ],
+          "issues": []
+        }
+      },
+      "taxonKey": 7338928,
+      "kingdomKey": 6,
+      "phylumKey": 7707728,
+      "classKey": 220,
+      "orderKey": 414,
+      "familyKey": 3065,
+      "genusKey": 5388868,
+      "speciesKey": 6065181,
+      "acceptedTaxonKey": 6065181,
+      "scientificName": "Solidago lepida var. lepida",
+      "acceptedScientificName": "Solidago lepida DC.",
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "order": "Asterales",
+      "family": "Asteraceae",
+      "genus": "Solidago",
+      "species": "Solidago lepida",
+      "genericName": "Solidago",
+      "specificEpithet": "lepida",
+      "infraspecificEpithet": "lepida",
+      "taxonRank": "VARIETY",
+      "taxonomicStatus": "SYNONYM",
+      "decimalLatitude": 52.8820674,
+      "decimalLongitude": -106.5285779,
+      "continent": "NORTH_AMERICA",
+      "stateProvince": "Saskatchewan (Prov.)",
+      "gadm": {
+        "level0": {
+          "gid": "CAN",
+          "name": "Canada"
+        },
+        "level1": {
+          "gid": "CAN.12_1",
+          "name": "Saskatchewan"
+        },
+        "level2": {
+          "gid": "CAN.12.7_1",
+          "name": "Division No. 16"
+        },
+        "level3": {
+          "gid": "CAN.12.7.7_1",
+          "name": "Blaine Lake No. 434"
+        }
+      },
+      "year": 1970,
+      "month": 8,
+      "day": 11,
+      "eventDate": "1970-08-11",
+      "startDayOfYear": 223,
+      "endDayOfYear": 223,
+      "issues": [
+        "COORDINATE_REPROJECTED",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+      ],
+      "modified": "2024-08-25T11:33:00.000+00:00",
+      "lastInterpreted": "2026-04-30T11:32:10.198+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "45fddbf8-01c7-1c74-19a2-348f426a877d"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "c146edb6-3a82-473c-b337-4acaa92f9513",
+      "collectionKey": "924bd09b-9cf4-42a5-8a09-b3e3ee0efd6f",
+      "isInCluster": false,
+      "datasetID": "https://doi.org/10.15468/88qq3e",
+      "datasetName": "Vascular Plant",
+      "recordedBy": "Harms, Vernon L.",
+      "preparations": "dry",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Magnoliopsida",
+      "countryCode": "CA",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "NORTH_AMERICA",
+      "country": "Canada",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "rightsHolder": "Canadian Museum of Nature",
+      "identifier": "45fddbf8-01c7-1c74-19a2-348f426a877d",
+      "recordNumber": "17006",
+      "institutionID": "http://biocol.org/urn:lsid:biocol.org:col:34935",
+      "verbatimEventDate": "1970-08-11",
+      "http://unknown.org/crawl_attempt": "500",
+      "municipality": "Wordsworth",
+      "locality": "Carleton Fort area, 4 mi. N & 1 mi. W of Carleton(2 mi. S of Wordsworth) T 45 N; R 4 W; (3rd M,) Sec 16.",
+      "collectionCode": "CAN",
+      "gbifID": "1804432148",
+      "occurrenceID": "45fddbf8-01c7-1c74-19a2-348f426a877d",
+      "catalogNumber": "CAN 364955",
+      "locationRemarks": "Shrubby prairie bluffs above N. Sask. River.",
+      "institutionCode": "CMN",
+      "locationID": "CAN 364955",
+      "bibliographicCitation": "Solidago lepida var. lepida (CAN 364955)",
+      "higherClassification": "Plantae | Tracheophyta | Magnoliopsida | Asteridae | Asterales | Asteraceae | Asteroideae | Solidago | variety lepida |",
+      "collectionID": "http://grbio.org/cool/4w1m-4a6d"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:1804432148",
+      "title": "Solidago lepida var. lepida",
+      "url": "https://www.gbif.org/occurrence/1804432148",
+      "date": "1970-08-11"
+    }
+  },
+  {
+    "id": "gbif:1317235108",
+    "_source": "gbif",
+    "_sourceId": 1317235108,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1317235108",
+    "title": "Balaenoptera Lacépède, 1804",
+    "scientificName": "Balaenoptera Lacépède, 1804",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Mammalia",
+    "order": "Cetacea",
+    "family": "Balaenopteridae",
+    "genus": "Balaenoptera",
+    "country": "Australia",
+    "decimalLatitude": -37.88,
+    "decimalLongitude": 147.85,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "NMV",
+    "datasetName": "NMNH Extant Biology",
+    "gbif": {
+      "key": 1317235108,
+      "datasetKey": "821cc27a-e3bb-4bc5-ac34-89ada245069d",
+      "publishingOrgKey": "bc092ff0-02e4-11dc-991f-b8a03c50a862",
+      "networkKeys": [
+        "68e8e67a-43e6-44a3-8817-dc0e6b70f973",
+        "99d66b6c-9087-452f-a9d4-f15f2c2d0e7e"
+      ],
+      "installationKey": "b2ff19b5-d74f-40d2-82f1-ec5db01e8e31",
+      "hostingOrganizationKey": "bc092ff0-02e4-11dc-991f-b8a03c50a862",
+      "publishingCountry": "US",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-16T13:58:17.734+00:00",
+      "lastParsed": "2026-04-23T23:54:02.481+00:00",
+      "crawlId": 502,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "individualCount": 1,
+      "occurrenceStatus": "PRESENT",
+      "sex": "Indeterminate",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "37H3",
+            "name": "Balaenoptera Lacépède, 1804",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Lacépède, 1804",
+            "formattedName": "<i>Balaenoptera</i> Lacépède, 1804"
+          },
+          "acceptedUsage": {
+            "key": "37H3",
+            "name": "Balaenoptera Lacépède, 1804",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Lacépède, 1804",
+            "formattedName": "<i>Balaenoptera</i> Lacépède, 1804"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "9CK8W",
+              "name": "Tetrapoda",
+              "rank": "MEGACLASS"
+            },
+            {
+              "key": "6224G",
+              "name": "Mammalia",
+              "rank": "CLASS"
+            },
+            {
+              "key": "6226C",
+              "name": "Theria",
+              "rank": "SUBCLASS"
+            },
+            {
+              "key": "LG",
+              "name": "Eutheria",
+              "rank": "INFRACLASS"
+            },
+            {
+              "key": "WP",
+              "name": "Cetacea",
+              "rank": "ORDER"
+            },
+            {
+              "key": "62396",
+              "name": "Mysticeti",
+              "rank": "SUBORDER"
+            },
+            {
+              "key": "722",
+              "name": "Balaenopteridae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "37H3",
+              "name": "Balaenoptera",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2440708",
+            "name": "Balaenoptera Lacépède, 1804",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Lacépède, 1804",
+            "formattedName": "<i>Balaenoptera</i> Lacépède, 1804"
+          },
+          "acceptedUsage": {
+            "key": "2440708",
+            "name": "Balaenoptera Lacépède, 1804",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Lacépède, 1804",
+            "formattedName": "<i>Balaenoptera</i> Lacépède, 1804"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "359",
+              "name": "Mammalia",
+              "rank": "CLASS"
+            },
+            {
+              "key": "733",
+              "name": "Cetacea",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5313",
+              "name": "Balaenopteridae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2440708",
+              "name": "Balaenoptera",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_MATCH_HIGHERRANK"
+          ]
+        }
+      },
+      "taxonKey": 2440708,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "classKey": 359,
+      "orderKey": 733,
+      "familyKey": 5313,
+      "genusKey": 2440708,
+      "acceptedTaxonKey": 2440708,
+      "scientificName": "Balaenoptera Lacépède, 1804",
+      "scientificNameAuthorship": "Lacépède, 1804",
+      "acceptedScientificName": "Balaenoptera Lacépède, 1804",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Cetacea",
+      "family": "Balaenopteridae",
+      "genus": "Balaenoptera",
+      "taxonRank": "GENUS",
+      "taxonomicStatus": "ACCEPTED",
+      "decimalLatitude": -37.88,
+      "decimalLongitude": 147.85,
+      "continent": "OCEANIA",
+      "stateProvince": "Victoria",
+      "gadm": {
+        "level0": {
+          "gid": "AUS",
+          "name": "Australia"
+        },
+        "level1": {
+          "gid": "AUS.10_1",
+          "name": "Victoria"
+        },
+        "level2": {
+          "gid": "AUS.10.19_1",
+          "name": "East Gippsland"
+        }
+      },
+      "higherGeography": "Australia, Australia, Victoria",
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "TAXON_MATCH_HIGHERRANK",
+        "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT",
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH"
+      ],
+      "modified": "2017-12-08T15:23:00.000+00:00",
+      "lastInterpreted": "2026-04-23T23:54:02.481+00:00",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "http://n2t.net/ark:/65665/3017191f1-c753-4b9a-846f-d48973a54637"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "22c8fe88-400b-4e8a-92cd-f1c76683f5ba",
+      "isInCluster": false,
+      "datasetName": "NMNH Extant Biology",
+      "recordedBy": "C. Wordsworth",
+      "preparations": "Partial Skeleton",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Mammalia",
+      "countryCode": "AU",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "OCEANIA",
+      "country": "Australia",
+      "publishedByGbifRegion": "NORTH_AMERICA",
+      "identifier": "http://n2t.net/ark:/65665/3017191f1-c753-4b9a-846f-d48973a54637",
+      "institutionID": "NMV",
+      "verbatimEventDate": "-- -- ----",
+      "http://unknown.org/crawl_attempt": "504",
+      "verbatimCoordinateSystem": "Degrees Minutes Seconds",
+      "locality": "Metung, Metung",
+      "collectionCode": "MAMM",
+      "gbifID": "1317235108",
+      "occurrenceID": "http://n2t.net/ark:/65665/3017191f1-c753-4b9a-846f-d48973a54637",
+      "catalogNumber": "NMV28285",
+      "institutionCode": "NMV",
+      "higherClassification": "Animalia, Chordata, Vertebrata, Mammalia, Eutheria, Cetacea, Mysticeti, Balaenopteridae",
+      "collectionID": "urn:uuid:59e56a59-8615-4e0c-841d-eb88f3876b22"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:1317235108",
+      "title": "Balaenoptera Lacépède, 1804",
+      "url": "https://www.gbif.org/occurrence/1317235108"
+    }
+  },
+  {
+    "id": "gbif:4893066042",
+    "_source": "gbif",
+    "_sourceId": 4893066042,
+    "_sourceUrl": "https://www.gbif.org/occurrence/4893066042",
+    "title": "Nesothrips Kirkaldy, 1907",
+    "date": "2000-02-22",
+    "scientificName": "Nesothrips Kirkaldy, 1907",
+    "kingdom": "Animalia",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Thysanoptera",
+    "family": "Phlaeothripidae",
+    "genus": "Nesothrips",
+    "country": "Australia",
+    "eventDate": "2000-02-22",
+    "decimalLatitude": -34.329,
+    "decimalLongitude": 148.2722,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "DPI",
+    "gbif": {
+      "key": 4893066042,
+      "datasetKey": "eeaf050f-23d0-4557-9084-ec545cd3d9a7",
+      "publishingOrgKey": "325c883e-46a7-4be3-9d77-7dde654fd1d3",
+      "installationKey": "19893c10-381e-4534-9bb8-6c37d03ad29e",
+      "hostingOrganizationKey": "3c5e4331-7f2f-4a8d-aa56-81ece7014fc8",
+      "publishingCountry": "AU",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-23T00:23:15.345+00:00",
+      "lastParsed": "2026-04-24T08:19:24.165+00:00",
+      "crawlId": 194,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "63LS",
+            "name": "Nesothrips Kirkaldy, 1907",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Kirkaldy, 1907",
+            "formattedName": "<i>Nesothrips</i> Kirkaldy, 1907"
+          },
+          "acceptedUsage": {
+            "key": "63LS",
+            "name": "Nesothrips Kirkaldy, 1907",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Kirkaldy, 1907",
+            "formattedName": "<i>Nesothrips</i> Kirkaldy, 1907"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "RT",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "L2655",
+              "name": "Hexapoda",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "H6",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "622VS",
+              "name": "Thysanoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "625XG",
+              "name": "Phlaeothripidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "JRB",
+              "name": "Idolothripinae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "63LS",
+              "name": "Nesothrips",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "1420804",
+            "name": "Nesothrips Kirkaldy, 1907",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Kirkaldy, 1907",
+            "formattedName": "<i>Nesothrips</i> Kirkaldy, 1907"
+          },
+          "acceptedUsage": {
+            "key": "1420804",
+            "name": "Nesothrips Kirkaldy, 1907",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Kirkaldy, 1907",
+            "formattedName": "<i>Nesothrips</i> Kirkaldy, 1907"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "54",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "216",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "1228",
+              "name": "Thysanoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4386",
+              "name": "Phlaeothripidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "1420804",
+              "name": "Nesothrips",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 1420804,
+      "kingdomKey": 1,
+      "phylumKey": 54,
+      "classKey": 216,
+      "orderKey": 1228,
+      "familyKey": 4386,
+      "genusKey": 1420804,
+      "acceptedTaxonKey": 1420804,
+      "scientificName": "Nesothrips Kirkaldy, 1907",
+      "scientificNameAuthorship": "Kirkaldy, 1907",
+      "acceptedScientificName": "Nesothrips Kirkaldy, 1907",
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "order": "Thysanoptera",
+      "family": "Phlaeothripidae",
+      "genus": "Nesothrips",
+      "taxonRank": "GENUS",
+      "taxonomicStatus": "ACCEPTED",
+      "decimalLatitude": -34.329,
+      "decimalLongitude": 148.2722,
+      "continent": "OCEANIA",
+      "stateProvince": "New South Wales",
+      "gadm": {
+        "level0": {
+          "gid": "AUS",
+          "name": "Australia"
+        },
+        "level1": {
+          "gid": "AUS.5_1",
+          "name": "New South Wales"
+        },
+        "level2": {
+          "gid": "AUS.5.153_1",
+          "name": "Young"
+        }
+      },
+      "year": 2000,
+      "month": 2,
+      "day": 22,
+      "eventDate": "2000-02-22",
+      "startDayOfYear": 53,
+      "endDayOfYear": 53,
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "INSTITUTION_MATCH_NONE"
+      ],
+      "modified": "2023-08-17T05:05:00.000+00:00",
+      "lastInterpreted": "2026-04-24T08:19:24.165+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "9e0c2536-a145-4199-bf17-1b38cc482961"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "recordedBy": "Eslick, Marion",
+      "identifiedBy": "Gillespie, Mr Peter Scott",
+      "preparations": "Slide",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Insecta",
+      "countryCode": "AU",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "OCEANIA",
+      "country": "Australia",
+      "publishedByGbifRegion": "OCEANIA",
+      "identifier": "9e0c2536-a145-4199-bf17-1b38cc482961",
+      "catalogNumber": "ASCT00014245B",
+      "http://unknown.org/crawl_attempt": "224",
+      "institutionCode": "DPI",
+      "http://unknown.org/taxonRankID": "6000",
+      "taxonConceptID": "https://biodiversity.org.au/afd/taxa/761902f6-d725-43b3-baa9-5c6076d9e0f0",
+      "verbatimCoordinateSystem": "decimal degrees",
+      "locality": "Sugarsun 108 Hardys Rd Young, property of Larry Wordsworth",
+      "collectionCode": "ASCU",
+      "gbifID": "4893066042",
+      "occurrenceID": "9e0c2536-a145-4199-bf17-1b38cc482961"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:4893066042",
+      "title": "Nesothrips Kirkaldy, 1907",
+      "url": "https://www.gbif.org/occurrence/4893066042",
+      "date": "2000-02-22"
+    }
+  },
+  {
+    "id": "gbif:4892835774",
+    "_source": "gbif",
+    "_sourceId": 4892835774,
+    "_sourceUrl": "https://www.gbif.org/occurrence/4892835774",
+    "title": "Typhlodromus doreenae Schicha, 1987",
+    "scientificName": "Typhlodromus doreenae Schicha, 1987",
+    "kingdom": "Animalia",
+    "phylum": "Arthropoda",
+    "class": "Arachnida",
+    "order": "Mesostigmata",
+    "family": "Phytoseiidae",
+    "genus": "Typhlodromus",
+    "species": "Typhlodromus doreenae",
+    "country": "Australia",
+    "decimalLatitude": -34.329,
+    "decimalLongitude": 148.2722,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "DPI",
+    "gbif": {
+      "key": 4892835774,
+      "datasetKey": "eeaf050f-23d0-4557-9084-ec545cd3d9a7",
+      "publishingOrgKey": "325c883e-46a7-4be3-9d77-7dde654fd1d3",
+      "installationKey": "19893c10-381e-4534-9bb8-6c37d03ad29e",
+      "hostingOrganizationKey": "3c5e4331-7f2f-4a8d-aa56-81ece7014fc8",
+      "publishingCountry": "AU",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-23T00:23:15.345+00:00",
+      "lastParsed": "2026-04-24T08:19:17.687+00:00",
+      "crawlId": 194,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "7DD2D",
+            "name": "Typhlodromus (Anthoseius) doreenae Schicha, 1987",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Schicha, 1987",
+            "genericName": "Typhlodromus",
+            "infragenericEpithet": "Anthoseius",
+            "specificEpithet": "doreenae",
+            "formattedName": "<i>Typhlodromus</i> (<i>Anthoseius</i>) <i>doreenae</i> Schicha, 1987"
+          },
+          "acceptedUsage": {
+            "key": "7DD2D",
+            "name": "Typhlodromus (Anthoseius) doreenae Schicha, 1987",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Schicha, 1987",
+            "genericName": "Typhlodromus",
+            "infragenericEpithet": "Anthoseius",
+            "specificEpithet": "doreenae",
+            "formattedName": "<i>Typhlodromus</i> (<i>Anthoseius</i>) <i>doreenae</i> Schicha, 1987"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "RT",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "KZWYC",
+              "name": "Chelicerata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "CCQKT",
+              "name": "Arachnida",
+              "rank": "CLASS"
+            },
+            {
+              "key": "LV",
+              "name": "Parasitiformes",
+              "rank": "SUPERORDER"
+            },
+            {
+              "key": "MS",
+              "name": "Mesostigmata",
+              "rank": "ORDER"
+            },
+            {
+              "key": "622WT",
+              "name": "Monogynaspida",
+              "rank": "SUBORDER"
+            },
+            {
+              "key": "4KQ",
+              "name": "Gamasina",
+              "rank": "INFRAORDER"
+            },
+            {
+              "key": "5HV",
+              "name": "Phytoseioidea",
+              "rank": "SUPERFAMILY"
+            },
+            {
+              "key": "625L5",
+              "name": "Phytoseiidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "848T",
+              "name": "Typhlodromus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "8BSV",
+              "name": "Anthoseius",
+              "rank": "SUBGENUS"
+            },
+            {
+              "key": "7DD2D",
+              "name": "Typhlodromus doreenae",
+              "rank": "SPECIES"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2186653",
+            "name": "Typhlodromus doreenae Schicha, 1987",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Schicha, 1987",
+            "genericName": "Typhlodromus",
+            "specificEpithet": "doreenae",
+            "formattedName": "<i>Typhlodromus</i> <i>doreenae</i> Schicha, 1987"
+          },
+          "acceptedUsage": {
+            "key": "2186653",
+            "name": "Typhlodromus doreenae Schicha, 1987",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Schicha, 1987",
+            "genericName": "Typhlodromus",
+            "specificEpithet": "doreenae",
+            "formattedName": "<i>Typhlodromus</i> <i>doreenae</i> Schicha, 1987"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "54",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "367",
+              "name": "Arachnida",
+              "rank": "CLASS"
+            },
+            {
+              "key": "1109",
+              "name": "Mesostigmata",
+              "rank": "ORDER"
+            },
+            {
+              "key": "3511",
+              "name": "Phytoseiidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2186588",
+              "name": "Typhlodromus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "2186653",
+              "name": "Typhlodromus doreenae",
+              "rank": "SPECIES"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 2186653,
+      "kingdomKey": 1,
+      "phylumKey": 54,
+      "classKey": 367,
+      "orderKey": 1109,
+      "familyKey": 3511,
+      "genusKey": 2186588,
+      "speciesKey": 2186653,
+      "acceptedTaxonKey": 2186653,
+      "scientificName": "Typhlodromus doreenae Schicha, 1987",
+      "scientificNameAuthorship": "Schicha, 1987",
+      "acceptedScientificName": "Typhlodromus doreenae Schicha, 1987",
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "order": "Mesostigmata",
+      "family": "Phytoseiidae",
+      "genus": "Typhlodromus",
+      "species": "Typhlodromus doreenae",
+      "genericName": "Typhlodromus",
+      "specificEpithet": "doreenae",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "decimalLatitude": -34.329,
+      "decimalLongitude": 148.2722,
+      "continent": "OCEANIA",
+      "stateProvince": "New South Wales",
+      "gadm": {
+        "level0": {
+          "gid": "AUS",
+          "name": "Australia"
+        },
+        "level1": {
+          "gid": "AUS.5_1",
+          "name": "New South Wales"
+        },
+        "level2": {
+          "gid": "AUS.5.153_1",
+          "name": "Young"
+        }
+      },
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "INSTITUTION_MATCH_NONE"
+      ],
+      "modified": "2022-10-17T23:17:00.000+00:00",
+      "lastInterpreted": "2026-04-24T08:19:17.687+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "7ef05d37-c562-46b0-b2b9-a148dfc4540a"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "recordedBy": "Eslick, Marion",
+      "preparations": "Slide",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Arachnida",
+      "countryCode": "AU",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "OCEANIA",
+      "country": "Australia",
+      "publishedByGbifRegion": "OCEANIA",
+      "identifier": "7ef05d37-c562-46b0-b2b9-a148dfc4540a",
+      "catalogNumber": "ASCT00023528",
+      "http://unknown.org/crawl_attempt": "224",
+      "institutionCode": "DPI",
+      "http://unknown.org/taxonRankID": "7000",
+      "taxonConceptID": "https://biodiversity.org.au/afd/taxa/c9e4edc5-939d-44bf-9b19-5a672a8613ed",
+      "verbatimCoordinateSystem": "decimal degrees",
+      "locality": "Sugarsun 108 Hardys Rd Young, property of Larry Wordsworth",
+      "http://unknown.org/species": "Typhlodromus doreenae",
+      "collectionCode": "ASCU",
+      "gbifID": "4892835774",
+      "occurrenceID": "7ef05d37-c562-46b0-b2b9-a148dfc4540a"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:4892835774",
+      "title": "Typhlodromus doreenae Schicha, 1987",
+      "url": "https://www.gbif.org/occurrence/4892835774"
+    }
+  },
+  {
+    "id": "gbif:4892953628",
+    "_source": "gbif",
+    "_sourceId": 4892953628,
+    "_sourceUrl": "https://www.gbif.org/occurrence/4892953628",
+    "title": "Bryobia rubrioculus (Scheuten, 1857)",
+    "scientificName": "Bryobia rubrioculus (Scheuten, 1857)",
+    "kingdom": "Animalia",
+    "phylum": "Arthropoda",
+    "class": "Arachnida",
+    "order": "Trombidiformes",
+    "family": "Tetranychidae",
+    "genus": "Bryobia",
+    "species": "Bryobia rubrioculus",
+    "country": "Australia",
+    "decimalLatitude": -34.329,
+    "decimalLongitude": 148.2722,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "DPI",
+    "gbif": {
+      "key": 4892953628,
+      "datasetKey": "eeaf050f-23d0-4557-9084-ec545cd3d9a7",
+      "publishingOrgKey": "325c883e-46a7-4be3-9d77-7dde654fd1d3",
+      "installationKey": "19893c10-381e-4534-9bb8-6c37d03ad29e",
+      "hostingOrganizationKey": "3c5e4331-7f2f-4a8d-aa56-81ece7014fc8",
+      "publishingCountry": "AU",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-23T00:23:15.345+00:00",
+      "lastParsed": "2026-04-24T08:19:28.863+00:00",
+      "crawlId": 194,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "NHK9",
+            "name": "Bryobia rubrioculus (Scheuten, 1857)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Scheuten, 1857)",
+            "genericName": "Bryobia",
+            "specificEpithet": "rubrioculus",
+            "formattedName": "<i>Bryobia</i> <i>rubrioculus</i> (Scheuten, 1857)"
+          },
+          "acceptedUsage": {
+            "key": "NHK9",
+            "name": "Bryobia rubrioculus (Scheuten, 1857)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Scheuten, 1857)",
+            "genericName": "Bryobia",
+            "specificEpithet": "rubrioculus",
+            "formattedName": "<i>Bryobia</i> <i>rubrioculus</i> (Scheuten, 1857)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "RT",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "KZWYC",
+              "name": "Chelicerata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "CCQKT",
+              "name": "Arachnida",
+              "rank": "CLASS"
+            },
+            {
+              "key": "LK",
+              "name": "Acariformes",
+              "rank": "SUPERORDER"
+            },
+            {
+              "key": "49Q",
+              "name": "Trombidiformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4F5",
+              "name": "Prostigmata",
+              "rank": "SUBORDER"
+            },
+            {
+              "key": "4K5",
+              "name": "Eleutherengona",
+              "rank": "INFRAORDER"
+            },
+            {
+              "key": "5QR",
+              "name": "Tetranychoidea",
+              "rank": "SUPERFAMILY"
+            },
+            {
+              "key": "H3V",
+              "name": "Tetranychidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "3DL3",
+              "name": "Bryobia",
+              "rank": "GENUS"
+            },
+            {
+              "key": "NHK9",
+              "name": "Bryobia rubrioculus",
+              "rank": "SPECIES"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2128801",
+            "name": "Bryobia rubrioculus (Scheuten, 1857)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Scheuten, 1857)",
+            "genericName": "Bryobia",
+            "specificEpithet": "rubrioculus",
+            "formattedName": "<i>Bryobia</i> <i>rubrioculus</i> (Scheuten, 1857)"
+          },
+          "acceptedUsage": {
+            "key": "2128801",
+            "name": "Bryobia rubrioculus (Scheuten, 1857)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Scheuten, 1857)",
+            "genericName": "Bryobia",
+            "specificEpithet": "rubrioculus",
+            "formattedName": "<i>Bryobia</i> <i>rubrioculus</i> (Scheuten, 1857)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "54",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "367",
+              "name": "Arachnida",
+              "rank": "CLASS"
+            },
+            {
+              "key": "543",
+              "name": "Trombidiformes",
+              "rank": "ORDER"
+            },
+            {
+              "key": "6057",
+              "name": "Tetranychidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2130084",
+              "name": "Bryobia",
+              "rank": "GENUS"
+            },
+            {
+              "key": "2128801",
+              "name": "Bryobia rubrioculus",
+              "rank": "SPECIES"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 2128801,
+      "kingdomKey": 1,
+      "phylumKey": 54,
+      "classKey": 367,
+      "orderKey": 543,
+      "familyKey": 6057,
+      "genusKey": 2130084,
+      "speciesKey": 2128801,
+      "acceptedTaxonKey": 2128801,
+      "scientificName": "Bryobia rubrioculus (Scheuten, 1857)",
+      "scientificNameAuthorship": "(Scheuten, 1857)",
+      "acceptedScientificName": "Bryobia rubrioculus (Scheuten, 1857)",
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "order": "Trombidiformes",
+      "family": "Tetranychidae",
+      "genus": "Bryobia",
+      "species": "Bryobia rubrioculus",
+      "genericName": "Bryobia",
+      "specificEpithet": "rubrioculus",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "decimalLatitude": -34.329,
+      "decimalLongitude": 148.2722,
+      "continent": "OCEANIA",
+      "stateProvince": "New South Wales",
+      "gadm": {
+        "level0": {
+          "gid": "AUS",
+          "name": "Australia"
+        },
+        "level1": {
+          "gid": "AUS.5_1",
+          "name": "New South Wales"
+        },
+        "level2": {
+          "gid": "AUS.5.153_1",
+          "name": "Young"
+        }
+      },
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "INSTITUTION_MATCH_NONE"
+      ],
+      "modified": "2023-08-29T05:01:00.000+00:00",
+      "lastInterpreted": "2026-04-24T08:19:28.863+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "d7bd4790-061f-418b-84f5-cdc8352e1d46"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "recordedBy": "Eslick, Marion",
+      "identifiedBy": "Knihinicki, Ms Danuta Krystyna",
+      "preparations": "Slide",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Arachnida",
+      "countryCode": "AU",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "OCEANIA",
+      "country": "Australia",
+      "publishedByGbifRegion": "OCEANIA",
+      "identifier": "d7bd4790-061f-418b-84f5-cdc8352e1d46",
+      "catalogNumber": "ASCT00014863B",
+      "http://unknown.org/crawl_attempt": "224",
+      "institutionCode": "DPI",
+      "http://unknown.org/taxonRankID": "7000",
+      "taxonConceptID": "https://biodiversity.org.au/afd/taxa/50264283-0185-441d-965e-08fe5a406d1b",
+      "verbatimCoordinateSystem": "decimal degrees",
+      "locality": "Sugarsun 108 Hardys Rd Young, property of Larry Wordsworth",
+      "http://unknown.org/species": "Bryobia rubrioculus",
+      "collectionCode": "ASCU",
+      "gbifID": "4892953628",
+      "occurrenceID": "d7bd4790-061f-418b-84f5-cdc8352e1d46"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:4892953628",
+      "title": "Bryobia rubrioculus (Scheuten, 1857)",
+      "url": "https://www.gbif.org/occurrence/4892953628"
+    }
+  },
+  {
+    "id": "gbif:4893037371",
+    "_source": "gbif",
+    "_sourceId": 4893037371,
+    "_sourceUrl": "https://www.gbif.org/occurrence/4893037371",
+    "title": "Nesothrips Kirkaldy, 1907",
+    "date": "2000-01-24",
+    "scientificName": "Nesothrips Kirkaldy, 1907",
+    "kingdom": "Animalia",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Thysanoptera",
+    "family": "Phlaeothripidae",
+    "genus": "Nesothrips",
+    "country": "Australia",
+    "eventDate": "2000-01-24",
+    "decimalLatitude": -34.329,
+    "decimalLongitude": 148.2722,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "DPI",
+    "gbif": {
+      "key": 4893037371,
+      "datasetKey": "eeaf050f-23d0-4557-9084-ec545cd3d9a7",
+      "publishingOrgKey": "325c883e-46a7-4be3-9d77-7dde654fd1d3",
+      "installationKey": "19893c10-381e-4534-9bb8-6c37d03ad29e",
+      "hostingOrganizationKey": "3c5e4331-7f2f-4a8d-aa56-81ece7014fc8",
+      "publishingCountry": "AU",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-23T00:23:15.345+00:00",
+      "lastParsed": "2026-04-24T08:19:27.040+00:00",
+      "crawlId": 194,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "63LS",
+            "name": "Nesothrips Kirkaldy, 1907",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Kirkaldy, 1907",
+            "formattedName": "<i>Nesothrips</i> Kirkaldy, 1907"
+          },
+          "acceptedUsage": {
+            "key": "63LS",
+            "name": "Nesothrips Kirkaldy, 1907",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Kirkaldy, 1907",
+            "formattedName": "<i>Nesothrips</i> Kirkaldy, 1907"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "RT",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "L2655",
+              "name": "Hexapoda",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "H6",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "622VS",
+              "name": "Thysanoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "625XG",
+              "name": "Phlaeothripidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "JRB",
+              "name": "Idolothripinae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "63LS",
+              "name": "Nesothrips",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "1420804",
+            "name": "Nesothrips Kirkaldy, 1907",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Kirkaldy, 1907",
+            "formattedName": "<i>Nesothrips</i> Kirkaldy, 1907"
+          },
+          "acceptedUsage": {
+            "key": "1420804",
+            "name": "Nesothrips Kirkaldy, 1907",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Kirkaldy, 1907",
+            "formattedName": "<i>Nesothrips</i> Kirkaldy, 1907"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "54",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "216",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "1228",
+              "name": "Thysanoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4386",
+              "name": "Phlaeothripidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "1420804",
+              "name": "Nesothrips",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 1420804,
+      "kingdomKey": 1,
+      "phylumKey": 54,
+      "classKey": 216,
+      "orderKey": 1228,
+      "familyKey": 4386,
+      "genusKey": 1420804,
+      "acceptedTaxonKey": 1420804,
+      "scientificName": "Nesothrips Kirkaldy, 1907",
+      "scientificNameAuthorship": "Kirkaldy, 1907",
+      "acceptedScientificName": "Nesothrips Kirkaldy, 1907",
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "order": "Thysanoptera",
+      "family": "Phlaeothripidae",
+      "genus": "Nesothrips",
+      "taxonRank": "GENUS",
+      "taxonomicStatus": "ACCEPTED",
+      "decimalLatitude": -34.329,
+      "decimalLongitude": 148.2722,
+      "continent": "OCEANIA",
+      "stateProvince": "New South Wales",
+      "gadm": {
+        "level0": {
+          "gid": "AUS",
+          "name": "Australia"
+        },
+        "level1": {
+          "gid": "AUS.5_1",
+          "name": "New South Wales"
+        },
+        "level2": {
+          "gid": "AUS.5.153_1",
+          "name": "Young"
+        }
+      },
+      "year": 2000,
+      "month": 1,
+      "day": 24,
+      "eventDate": "2000-01-24",
+      "startDayOfYear": 24,
+      "endDayOfYear": 24,
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "INSTITUTION_MATCH_NONE"
+      ],
+      "modified": "2022-10-18T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-24T08:19:27.040+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "c67d05ec-618e-4b66-835c-aed92624092e"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "recordedBy": "Eslick, Marion",
+      "identifiedBy": "Gillespie, Mr Peter Scott",
+      "preparations": "Slide",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Insecta",
+      "countryCode": "AU",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "OCEANIA",
+      "country": "Australia",
+      "publishedByGbifRegion": "OCEANIA",
+      "identifier": "c67d05ec-618e-4b66-835c-aed92624092e",
+      "catalogNumber": "ASCT00014362",
+      "http://unknown.org/crawl_attempt": "224",
+      "institutionCode": "DPI",
+      "http://unknown.org/taxonRankID": "6000",
+      "taxonConceptID": "https://biodiversity.org.au/afd/taxa/761902f6-d725-43b3-baa9-5c6076d9e0f0",
+      "verbatimCoordinateSystem": "decimal degrees",
+      "locality": "Sugarsun 108 Hardys Rd Young, property of Larry Wordsworth",
+      "collectionCode": "ASCU",
+      "gbifID": "4893037371",
+      "occurrenceID": "c67d05ec-618e-4b66-835c-aed92624092e"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:4893037371",
+      "title": "Nesothrips Kirkaldy, 1907",
+      "url": "https://www.gbif.org/occurrence/4893037371",
+      "date": "2000-01-24"
+    }
+  },
+  {
+    "id": "gbif:4893026845",
+    "_source": "gbif",
+    "_sourceId": 4893026845,
+    "_sourceUrl": "https://www.gbif.org/occurrence/4893026845",
+    "title": "Thripidae",
+    "date": "1999-11-30",
+    "scientificName": "Thripidae",
+    "kingdom": "Animalia",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Thysanoptera",
+    "family": "Thripidae",
+    "country": "Australia",
+    "eventDate": "1999-11-30",
+    "decimalLatitude": -34.329,
+    "decimalLongitude": 148.2722,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "DPI",
+    "gbif": {
+      "key": 4893026845,
+      "datasetKey": "eeaf050f-23d0-4557-9084-ec545cd3d9a7",
+      "publishingOrgKey": "325c883e-46a7-4be3-9d77-7dde654fd1d3",
+      "installationKey": "19893c10-381e-4534-9bb8-6c37d03ad29e",
+      "hostingOrganizationKey": "3c5e4331-7f2f-4a8d-aa56-81ece7014fc8",
+      "publishingCountry": "AU",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-23T00:23:15.345+00:00",
+      "lastParsed": "2026-04-24T08:19:13.422+00:00",
+      "crawlId": 194,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "626PS",
+            "name": "Thripidae Stephens, 1829",
+            "rank": "FAMILY",
+            "code": "ZOOLOGICAL",
+            "authorship": "Stephens, 1829",
+            "formattedName": "<i>Thripidae</i> Stephens, 1829"
+          },
+          "acceptedUsage": {
+            "key": "626PS",
+            "name": "Thripidae Stephens, 1829",
+            "rank": "FAMILY",
+            "code": "ZOOLOGICAL",
+            "authorship": "Stephens, 1829",
+            "formattedName": "<i>Thripidae</i> Stephens, 1829"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "RT",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "L2655",
+              "name": "Hexapoda",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "H6",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "622VS",
+              "name": "Thysanoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "626PS",
+              "name": "Thripidae",
+              "rank": "FAMILY"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "4387",
+            "name": "Thripidae",
+            "rank": "FAMILY",
+            "formattedName": "<i>Thripidae</i>"
+          },
+          "acceptedUsage": {
+            "key": "4387",
+            "name": "Thripidae",
+            "rank": "FAMILY",
+            "formattedName": "<i>Thripidae</i>"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "54",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "216",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "1228",
+              "name": "Thysanoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4387",
+              "name": "Thripidae",
+              "rank": "FAMILY"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 4387,
+      "kingdomKey": 1,
+      "phylumKey": 54,
+      "classKey": 216,
+      "orderKey": 1228,
+      "familyKey": 4387,
+      "acceptedTaxonKey": 4387,
+      "scientificName": "Thripidae",
+      "acceptedScientificName": "Thripidae",
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "order": "Thysanoptera",
+      "family": "Thripidae",
+      "taxonRank": "FAMILY",
+      "taxonomicStatus": "ACCEPTED",
+      "decimalLatitude": -34.329,
+      "decimalLongitude": 148.2722,
+      "continent": "OCEANIA",
+      "stateProvince": "New South Wales",
+      "gadm": {
+        "level0": {
+          "gid": "AUS",
+          "name": "Australia"
+        },
+        "level1": {
+          "gid": "AUS.5_1",
+          "name": "New South Wales"
+        },
+        "level2": {
+          "gid": "AUS.5.153_1",
+          "name": "Young"
+        }
+      },
+      "year": 1999,
+      "month": 11,
+      "day": 30,
+      "eventDate": "1999-11-30",
+      "startDayOfYear": 334,
+      "endDayOfYear": 334,
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "INSTITUTION_MATCH_NONE"
+      ],
+      "modified": "2022-10-17T23:59:00.000+00:00",
+      "lastInterpreted": "2026-04-24T08:19:13.422+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "5c46ee7b-b875-4175-a834-427b2ee0f9eb"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "recordedBy": "Eslick, Marion",
+      "identifiedBy": "Gillespie, Mr Peter Scott",
+      "preparations": "Slide",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Insecta",
+      "countryCode": "AU",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "OCEANIA",
+      "country": "Australia",
+      "publishedByGbifRegion": "OCEANIA",
+      "identifier": "5c46ee7b-b875-4175-a834-427b2ee0f9eb",
+      "catalogNumber": "ASCT00014340",
+      "http://unknown.org/crawl_attempt": "224",
+      "institutionCode": "DPI",
+      "http://unknown.org/taxonRankID": "5000",
+      "taxonConceptID": "https://biodiversity.org.au/afd/taxa/33584273-42a0-4f6f-8dbb-07cac35182d9",
+      "verbatimCoordinateSystem": "decimal degrees",
+      "locality": "Sugarsun 108 Hardys Rd Young, property of Larry Wordsworth",
+      "collectionCode": "ASCU",
+      "gbifID": "4893026845",
+      "occurrenceID": "5c46ee7b-b875-4175-a834-427b2ee0f9eb"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:4893026845",
+      "title": "Thripidae",
+      "url": "https://www.gbif.org/occurrence/4893026845",
+      "date": "1999-11-30"
+    }
+  },
+  {
+    "id": "gbif:2535211811",
+    "_source": "gbif",
+    "_sourceId": 2535211811,
+    "_sourceUrl": "https://www.gbif.org/occurrence/2535211811",
+    "title": "Erinaceus europaeus Linnaeus, 1758",
+    "date": "2019-04-19",
+    "scientificName": "Erinaceus europaeus Linnaeus, 1758",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Mammalia",
+    "order": "Erinaceomorpha",
+    "family": "Erinaceidae",
+    "genus": "Erinaceus",
+    "species": "Erinaceus europaeus",
+    "country": "United Kingdom of Great Britain and Northern Ireland",
+    "eventDate": "2019-04-19",
+    "decimalLatitude": 53.740203,
+    "decimalLongitude": -1.454943,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "datasetName": "Big Hedgehog Map records",
+    "gbif": {
+      "key": 2535211811,
+      "datasetKey": "cbde2a70-7a85-4370-b240-09e0738f76f9",
+      "publishingOrgKey": "c2866c8d-99ce-4aba-948b-cffd18adaffc",
+      "installationKey": "99552c70-f762-11e1-a439-00145eb45e9a",
+      "hostingOrganizationKey": "07f617d0-c688-11d8-bf62-b8a03c50a862",
+      "publishingCountry": "GB",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-16T10:03:03.469+00:00",
+      "lastParsed": "2026-04-23T22:59:56.131+00:00",
+      "crawlId": 406,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "3B2C2",
+            "name": "Erinaceus europaeus Linnaeus, 1758",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Linnaeus, 1758",
+            "genericName": "Erinaceus",
+            "specificEpithet": "europaeus",
+            "formattedName": "<i>Erinaceus</i> <i>europaeus</i> Linnaeus, 1758"
+          },
+          "acceptedUsage": {
+            "key": "3B2C2",
+            "name": "Erinaceus europaeus Linnaeus, 1758",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Linnaeus, 1758",
+            "genericName": "Erinaceus",
+            "specificEpithet": "europaeus",
+            "formattedName": "<i>Erinaceus</i> <i>europaeus</i> Linnaeus, 1758"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "9CK8W",
+              "name": "Tetrapoda",
+              "rank": "MEGACLASS"
+            },
+            {
+              "key": "6224G",
+              "name": "Mammalia",
+              "rank": "CLASS"
+            },
+            {
+              "key": "6226C",
+              "name": "Theria",
+              "rank": "SUBCLASS"
+            },
+            {
+              "key": "LG",
+              "name": "Eutheria",
+              "rank": "INFRACLASS"
+            },
+            {
+              "key": "CFSF7",
+              "name": "Eulipotyphla",
+              "rank": "ORDER"
+            },
+            {
+              "key": "623NY",
+              "name": "Erinaceidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "JJQ",
+              "name": "Erinaceinae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "62RKX",
+              "name": "Erinaceus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "3B2C2",
+              "name": "Erinaceus europaeus",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "NT",
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND",
+            "TAXON_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "5219616",
+            "name": "Erinaceus europaeus Linnaeus, 1758",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Linnaeus, 1758",
+            "genericName": "Erinaceus",
+            "specificEpithet": "europaeus",
+            "formattedName": "<i>Erinaceus</i> <i>europaeus</i> Linnaeus, 1758"
+          },
+          "acceptedUsage": {
+            "key": "5219616",
+            "name": "Erinaceus europaeus Linnaeus, 1758",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Linnaeus, 1758",
+            "genericName": "Erinaceus",
+            "specificEpithet": "europaeus",
+            "formattedName": "<i>Erinaceus</i> <i>europaeus</i> Linnaeus, 1758"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "359",
+              "name": "Mammalia",
+              "rank": "CLASS"
+            },
+            {
+              "key": "829",
+              "name": "Erinaceomorpha",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5722",
+              "name": "Erinaceidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "8216553",
+              "name": "Erinaceus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "5219616",
+              "name": "Erinaceus europaeus",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "NT",
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND",
+            "TAXON_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 5219616,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "classKey": 359,
+      "orderKey": 829,
+      "familyKey": 5722,
+      "genusKey": 8216553,
+      "speciesKey": 5219616,
+      "acceptedTaxonKey": 5219616,
+      "scientificName": "Erinaceus europaeus Linnaeus, 1758",
+      "scientificNameAuthorship": "Linnaeus, 1758",
+      "acceptedScientificName": "Erinaceus europaeus Linnaeus, 1758",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Erinaceomorpha",
+      "family": "Erinaceidae",
+      "genus": "Erinaceus",
+      "species": "Erinaceus europaeus",
+      "genericName": "Erinaceus",
+      "specificEpithet": "europaeus",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "NT",
+      "decimalLatitude": 53.740203,
+      "decimalLongitude": -1.454943,
+      "coordinateUncertaintyInMeters": 707.1,
+      "continent": "EUROPE",
+      "stateProvince": "England",
+      "gadm": {
+        "level0": {
+          "gid": "GBR",
+          "name": "United Kingdom"
+        },
+        "level1": {
+          "gid": "GBR.1_1",
+          "name": "England"
+        },
+        "level2": {
+          "gid": "GBR.1.49_1",
+          "name": "Leeds"
+        },
+        "level3": {
+          "gid": "GBR.1.49.1_1",
+          "name": "Leeds"
+        }
+      },
+      "year": 2019,
+      "month": 4,
+      "day": 19,
+      "eventDate": "2019-04-19",
+      "startDayOfYear": 109,
+      "endDayOfYear": 109,
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "lastInterpreted": "2026-04-23T22:59:56.131+00:00",
+      "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "dd9f73f7-25f3-41de-8eae-56b45a75808e"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetName": "Big Hedgehog Map records",
+      "recordedBy": "PTES Volunteer",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Mammalia",
+      "countryCode": "GB",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "EUROPE",
+      "country": "United Kingdom of Great Britain and Northern Ireland",
+      "publishedByGbifRegion": "EUROPE",
+      "rightsHolder": "People's Trust for Endangered Species",
+      "identifier": "dd9f73f7-25f3-41de-8eae-56b45a75808e",
+      "vernacularName": "Hedgehog",
+      "http://unknown.org/crawl_attempt": "407",
+      "http://unknown.org/taxonRankID": "7000",
+      "taxonConceptID": "NBNSYS0000005078",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Wordsworth Dr",
+      "identificationVerificationStatus": "Accepted - considered correct",
+      "gbifID": "2535211811",
+      "occurrenceID": "dd9f73f7-25f3-41de-8eae-56b45a75808e",
+      "taxonID": "NBNSYS0000005078"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:2535211811",
+      "title": "Erinaceus europaeus Linnaeus, 1758",
+      "url": "https://www.gbif.org/occurrence/2535211811",
+      "date": "2019-04-19"
+    }
+  },
+  {
+    "id": "gbif:1315602078",
+    "_source": "gbif",
+    "_sourceId": 1315602078,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1315602078",
+    "title": "Dieuches notatus (Dallas, 1852)",
+    "date": "1978-03-13",
+    "scientificName": "Dieuches notatus (Dallas, 1852)",
+    "kingdom": "Animalia",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Hemiptera",
+    "family": "Rhyparochromidae",
+    "genus": "Dieuches",
+    "species": "Dieuches notatus",
+    "country": "New Zealand",
+    "eventDate": "1978-03-13",
+    "decimalLatitude": -35.695333,
+    "decimalLongitude": 174.311183,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "New Zealand Arthropod Collection",
+    "gbif": {
+      "key": 1315602078,
+      "datasetKey": "6e4b215e-9019-4934-8433-65d80a35c230",
+      "publishingOrgKey": "6b2f029b-7823-4b84-9c30-31ff364238fe",
+      "installationKey": "79214403-ef01-4407-9b02-4439cd3b78e1",
+      "hostingOrganizationKey": "6b2f029b-7823-4b84-9c30-31ff364238fe",
+      "publishingCountry": "NZ",
+      "protocol": "EML",
+      "lastCrawled": "2026-04-30T10:02:01.426+00:00",
+      "lastParsed": "2026-04-30T10:28:57.426+00:00",
+      "crawlId": 670,
+      "extensions": {
+        "http://rs.tdwg.org/dwc/terms/Identification": [
+          {
+            "http://rs.tdwg.org/dwc/terms/family": "Rhyparochromidae",
+            "http://rs.tdwg.org/dwc/terms/scientificName": "Dieuches notatus (Dallas, 1852)",
+            "http://rs.tdwg.org/dwc/terms/kingdom": "Animalia",
+            "http://rs.tdwg.org/dwc/terms/taxonRank": "species",
+            "http://rs.tdwg.org/dwc/terms/specificEpithet": "notatus",
+            "http://rs.tdwg.org/dwc/terms/genus": "Dieuches",
+            "http://rs.tdwg.org/dwc/terms/order": "Hemiptera",
+            "http://rs.tdwg.org/dwc/terms/identifiedBy": "G. G.E. Scudder",
+            "http://rs.tdwg.org/dwc/terms/identificationID": "50219",
+            "http://rs.tdwg.org/dwc/terms/dateIdentified": "1983",
+            "http://rs.tdwg.org/dwc/terms/class": "Insecta",
+            "http://rs.tdwg.org/dwc/terms/phylum": "Arthropoda"
+          }
+        ]
+      },
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "362YH",
+            "name": "Dieuches notatus (Dallas, 1852)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Dallas, 1852)",
+            "genericName": "Dieuches",
+            "specificEpithet": "notatus",
+            "formattedName": "<i>Dieuches</i> <i>notatus</i> (Dallas, 1852)"
+          },
+          "acceptedUsage": {
+            "key": "362YH",
+            "name": "Dieuches notatus (Dallas, 1852)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Dallas, 1852)",
+            "genericName": "Dieuches",
+            "specificEpithet": "notatus",
+            "formattedName": "<i>Dieuches</i> <i>notatus</i> (Dallas, 1852)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "RT",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "L2655",
+              "name": "Hexapoda",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "H6",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "BXVWV",
+              "name": "Hemiptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "BXWCX",
+              "name": "Heteroptera",
+              "rank": "SUBORDER"
+            },
+            {
+              "key": "BXWDD",
+              "name": "Pentatomomorpha",
+              "rank": "INFRAORDER"
+            },
+            {
+              "key": "C7J7P",
+              "name": "Lygaeoidea",
+              "rank": "SUPERFAMILY"
+            },
+            {
+              "key": "C8BBC",
+              "name": "Rhyparochromidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "8NL2H",
+              "name": "Rhyparochrominae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "C8BBN",
+              "name": "Rhyparochromini",
+              "rank": "TRIBE"
+            },
+            {
+              "key": "8NQW8",
+              "name": "Dieuches",
+              "rank": "GENUS"
+            },
+            {
+              "key": "362YH",
+              "name": "Dieuches notatus",
+              "rank": "SPECIES"
+            }
+          ],
+          "issues": []
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "2008174",
+            "name": "Dieuches notatus (Dallas, 1852)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Dallas, 1852)",
+            "genericName": "Dieuches",
+            "specificEpithet": "notatus",
+            "formattedName": "<i>Dieuches</i> <i>notatus</i> (Dallas, 1852)"
+          },
+          "acceptedUsage": {
+            "key": "2008174",
+            "name": "Dieuches notatus (Dallas, 1852)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Dallas, 1852)",
+            "genericName": "Dieuches",
+            "specificEpithet": "notatus",
+            "formattedName": "<i>Dieuches</i> <i>notatus</i> (Dallas, 1852)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "54",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "216",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "809",
+              "name": "Hemiptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4326",
+              "name": "Rhyparochromidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "2008173",
+              "name": "Dieuches",
+              "rank": "GENUS"
+            },
+            {
+              "key": "2008174",
+              "name": "Dieuches notatus",
+              "rank": "SPECIES"
+            }
+          ],
+          "issues": []
+        }
+      },
+      "taxonKey": 2008174,
+      "kingdomKey": 1,
+      "phylumKey": 54,
+      "classKey": 216,
+      "orderKey": 809,
+      "familyKey": 4326,
+      "genusKey": 2008173,
+      "speciesKey": 2008174,
+      "acceptedTaxonKey": 2008174,
+      "scientificName": "Dieuches notatus (Dallas, 1852)",
+      "scientificNameAuthorship": "(Dallas, 1852)",
+      "acceptedScientificName": "Dieuches notatus (Dallas, 1852)",
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "order": "Hemiptera",
+      "family": "Rhyparochromidae",
+      "genus": "Dieuches",
+      "species": "Dieuches notatus",
+      "genericName": "Dieuches",
+      "specificEpithet": "notatus",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "1983-01-01T00:00:00",
+      "decimalLatitude": -35.695333,
+      "decimalLongitude": 174.311183,
+      "continent": "OCEANIA",
+      "gadm": {
+        "level0": {
+          "gid": "NZL",
+          "name": "New Zealand"
+        },
+        "level1": {
+          "gid": "NZL.11_1",
+          "name": "Northland"
+        },
+        "level2": {
+          "gid": "NZL.11.3_1",
+          "name": "Whangarei"
+        }
+      },
+      "year": 1978,
+      "month": 3,
+      "day": 13,
+      "eventDate": "1978-03-13",
+      "startDayOfYear": 72,
+      "endDayOfYear": 72,
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH"
+      ],
+      "modified": "2025-11-10T21:39:08.743+00:00",
+      "lastInterpreted": "2026-04-30T10:28:57.426+00:00",
+      "references": "https://scd.landcareresearch.co.nz/Specimen/NZAC04062873",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "275520D6-9B4D-487B-A311-0CC121AB1C80"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "institutionKey": "aad13c7e-bdd6-4507-a395-57fb22ab54ae",
+      "isInCluster": true,
+      "recordedBy": "Wordsworth",
+      "identifiedBy": "G. G.E. Scudder",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Insecta",
+      "countryCode": "NZ",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "OCEANIA",
+      "country": "New Zealand",
+      "publishedByGbifRegion": "OCEANIA",
+      "rightsHolder": "Manaaki Whenua - Landcare Research NZ Ltd.",
+      "identifier": "275520D6-9B4D-487B-A311-0CC121AB1C80",
+      "habitat": "ex Glashouse",
+      "verbatimEventDate": "13.3.78",
+      "http://unknown.org/crawl_attempt": "671",
+      "dynamicProperties": "[{\"local_contexts_project_id\":\"3428e926-12bb-490f-b565-79c98312458c\"}]",
+      "county": "Northland",
+      "verbatimLocality": "Whangarei, Kamo Rd",
+      "collectionCode": "NZAC",
+      "gbifID": "1315602078",
+      "occurrenceID": "275520D6-9B4D-487B-A311-0CC121AB1C80",
+      "catalogNumber": "NZAC04062873",
+      "institutionCode": "New Zealand Arthropod Collection",
+      "identificationID": "50219"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:1315602078",
+      "title": "Dieuches notatus (Dallas, 1852)",
+      "url": "https://www.gbif.org/occurrence/1315602078",
+      "date": "1978-03-13"
+    }
+  },
+  {
+    "id": "gbif:1555819375",
+    "_source": "gbif",
+    "_sourceId": 1555819375,
+    "_sourceUrl": "https://www.gbif.org/occurrence/1555819375",
+    "title": "Erinaceus europaeus Linnaeus, 1758",
+    "date": "2015-11-22",
+    "scientificName": "Erinaceus europaeus Linnaeus, 1758",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "class": "Mammalia",
+    "order": "Erinaceomorpha",
+    "family": "Erinaceidae",
+    "genus": "Erinaceus",
+    "species": "Erinaceus europaeus",
+    "country": "United Kingdom of Great Britain and Northern Ireland",
+    "eventDate": "2015-11-22",
+    "decimalLatitude": 53.003411,
+    "decimalLongitude": -1.146933,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "datasetName": "Big Hedgehog Map records",
+    "gbif": {
+      "key": 1555819375,
+      "datasetKey": "cbde2a70-7a85-4370-b240-09e0738f76f9",
+      "publishingOrgKey": "c2866c8d-99ce-4aba-948b-cffd18adaffc",
+      "installationKey": "99552c70-f762-11e1-a439-00145eb45e9a",
+      "hostingOrganizationKey": "07f617d0-c688-11d8-bf62-b8a03c50a862",
+      "publishingCountry": "GB",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-16T10:03:03.469+00:00",
+      "lastParsed": "2026-04-23T22:59:13.128+00:00",
+      "crawlId": 406,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "3B2C2",
+            "name": "Erinaceus europaeus Linnaeus, 1758",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Linnaeus, 1758",
+            "genericName": "Erinaceus",
+            "specificEpithet": "europaeus",
+            "formattedName": "<i>Erinaceus</i> <i>europaeus</i> Linnaeus, 1758"
+          },
+          "acceptedUsage": {
+            "key": "3B2C2",
+            "name": "Erinaceus europaeus Linnaeus, 1758",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Linnaeus, 1758",
+            "genericName": "Erinaceus",
+            "specificEpithet": "europaeus",
+            "formattedName": "<i>Erinaceus</i> <i>europaeus</i> Linnaeus, 1758"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "CH2",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "8V4V3",
+              "name": "Vertebrata",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "8V4V5",
+              "name": "Gnathostomata",
+              "rank": "INFRAPHYLUM"
+            },
+            {
+              "key": "8VVWB",
+              "name": "Osteichthyes",
+              "rank": "PARVPHYLUM"
+            },
+            {
+              "key": "9CK8W",
+              "name": "Tetrapoda",
+              "rank": "MEGACLASS"
+            },
+            {
+              "key": "6224G",
+              "name": "Mammalia",
+              "rank": "CLASS"
+            },
+            {
+              "key": "6226C",
+              "name": "Theria",
+              "rank": "SUBCLASS"
+            },
+            {
+              "key": "LG",
+              "name": "Eutheria",
+              "rank": "INFRACLASS"
+            },
+            {
+              "key": "CFSF7",
+              "name": "Eulipotyphla",
+              "rank": "ORDER"
+            },
+            {
+              "key": "623NY",
+              "name": "Erinaceidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "JJQ",
+              "name": "Erinaceinae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "62RKX",
+              "name": "Erinaceus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "3B2C2",
+              "name": "Erinaceus europaeus",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "NT",
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND",
+            "TAXON_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "5219616",
+            "name": "Erinaceus europaeus Linnaeus, 1758",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Linnaeus, 1758",
+            "genericName": "Erinaceus",
+            "specificEpithet": "europaeus",
+            "formattedName": "<i>Erinaceus</i> <i>europaeus</i> Linnaeus, 1758"
+          },
+          "acceptedUsage": {
+            "key": "5219616",
+            "name": "Erinaceus europaeus Linnaeus, 1758",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "Linnaeus, 1758",
+            "genericName": "Erinaceus",
+            "specificEpithet": "europaeus",
+            "formattedName": "<i>Erinaceus</i> <i>europaeus</i> Linnaeus, 1758"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "44",
+              "name": "Chordata",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "359",
+              "name": "Mammalia",
+              "rank": "CLASS"
+            },
+            {
+              "key": "829",
+              "name": "Erinaceomorpha",
+              "rank": "ORDER"
+            },
+            {
+              "key": "5722",
+              "name": "Erinaceidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "8216553",
+              "name": "Erinaceus",
+              "rank": "GENUS"
+            },
+            {
+              "key": "5219616",
+              "name": "Erinaceus europaeus",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "NT",
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND",
+            "TAXON_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 5219616,
+      "kingdomKey": 1,
+      "phylumKey": 44,
+      "classKey": 359,
+      "orderKey": 829,
+      "familyKey": 5722,
+      "genusKey": 8216553,
+      "speciesKey": 5219616,
+      "acceptedTaxonKey": 5219616,
+      "scientificName": "Erinaceus europaeus Linnaeus, 1758",
+      "scientificNameAuthorship": "Linnaeus, 1758",
+      "acceptedScientificName": "Erinaceus europaeus Linnaeus, 1758",
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "order": "Erinaceomorpha",
+      "family": "Erinaceidae",
+      "genus": "Erinaceus",
+      "species": "Erinaceus europaeus",
+      "genericName": "Erinaceus",
+      "specificEpithet": "europaeus",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "NT",
+      "decimalLatitude": 53.003411,
+      "decimalLongitude": -1.146933,
+      "coordinateUncertaintyInMeters": 707.1,
+      "continent": "EUROPE",
+      "stateProvince": "England",
+      "gadm": {
+        "level0": {
+          "gid": "GBR",
+          "name": "United Kingdom"
+        },
+        "level1": {
+          "gid": "GBR.1_1",
+          "name": "England"
+        },
+        "level2": {
+          "gid": "GBR.1.66_1",
+          "name": "Nottingham"
+        },
+        "level3": {
+          "gid": "GBR.1.66.1_1",
+          "name": "Nottingham"
+        }
+      },
+      "year": 2015,
+      "month": 11,
+      "day": 22,
+      "eventDate": "2015-11-22",
+      "startDayOfYear": 326,
+      "endDayOfYear": 326,
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "lastInterpreted": "2026-04-23T22:59:13.128+00:00",
+      "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "82ab320b-c870-46d3-8545-2764eaae2fe8"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetName": "Big Hedgehog Map records",
+      "recordedBy": "PTES Volunteer",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Mammalia",
+      "countryCode": "GB",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "EUROPE",
+      "country": "United Kingdom of Great Britain and Northern Ireland",
+      "publishedByGbifRegion": "EUROPE",
+      "rightsHolder": "People's Trust for Endangered Species",
+      "identifier": "82ab320b-c870-46d3-8545-2764eaae2fe8",
+      "vernacularName": "Hedgehog",
+      "http://unknown.org/crawl_attempt": "407",
+      "http://unknown.org/taxonRankID": "7000",
+      "taxonConceptID": "NBNSYS0000005078",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "Wordsworth Rd",
+      "identificationVerificationStatus": "Accepted - considered correct",
+      "gbifID": "1555819375",
+      "occurrenceID": "82ab320b-c870-46d3-8545-2764eaae2fe8",
+      "taxonID": "NBNSYS0000005078"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:1555819375",
+      "title": "Erinaceus europaeus Linnaeus, 1758",
+      "url": "https://www.gbif.org/occurrence/1555819375",
+      "date": "2015-11-22"
+    }
+  },
+  {
+    "id": "gbif:6061208454",
+    "_source": "gbif",
+    "_sourceId": 6061208454,
+    "_sourceUrl": "https://www.gbif.org/occurrence/6061208454",
+    "title": "Lampyris noctiluca (Linnaeus, 1758)",
+    "date": "2018-07-09",
+    "scientificName": "Lampyris noctiluca (Linnaeus, 1758)",
+    "kingdom": "Animalia",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Coleoptera",
+    "family": "Lampyridae",
+    "genus": "Lampyris",
+    "species": "Lampyris noctiluca",
+    "country": "United Kingdom of Great Britain and Northern Ireland",
+    "eventDate": "2018-07-09",
+    "decimalLatitude": 54.540251,
+    "decimalLongitude": -2.921158,
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "datasetName": "Soldier Beetles and Allies Recording Scheme - data verified via iRecord",
+    "gbif": {
+      "key": 6061208454,
+      "datasetKey": "97f3592b-08ab-4adb-85df-1fb3bee7e2d3",
+      "publishingOrgKey": "d0071a22-dbf0-4ac4-881c-088118c5b563",
+      "installationKey": "99552c70-f762-11e1-a439-00145eb45e9a",
+      "hostingOrganizationKey": "07f617d0-c688-11d8-bf62-b8a03c50a862",
+      "publishingCountry": "GB",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-17T10:23:26.305+00:00",
+      "lastParsed": "2026-04-24T04:19:50.536+00:00",
+      "crawlId": 270,
+      "extensions": {},
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "individualCount": 3,
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "3S647",
+            "name": "Lampyris noctiluca (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Lampyris",
+            "specificEpithet": "noctiluca",
+            "formattedName": "<i>Lampyris</i> <i>noctiluca</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "3S647",
+            "name": "Lampyris noctiluca (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Lampyris",
+            "specificEpithet": "noctiluca",
+            "formattedName": "<i>Lampyris</i> <i>noctiluca</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "RT",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "L2655",
+              "name": "Hexapoda",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "H6",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "C2L",
+              "name": "Coleoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "DDHNW",
+              "name": "Polyphaga",
+              "rank": "SUBORDER"
+            },
+            {
+              "key": "L233D",
+              "name": "Elateriformia",
+              "rank": "SERIES"
+            },
+            {
+              "key": "KV8MR",
+              "name": "Elateroidea",
+              "rank": "SUPERFAMILY"
+            },
+            {
+              "key": "BRN",
+              "name": "Lampyridae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "JSF",
+              "name": "Lampyrinae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "KXC",
+              "name": "Lampyrini",
+              "rank": "TRIBE"
+            },
+            {
+              "key": "639KM",
+              "name": "Lampyris",
+              "rank": "GENUS"
+            },
+            {
+              "key": "3S647",
+              "name": "Lampyris noctiluca",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "NT",
+          "issues": [
+            "TAXON_ID_NOT_FOUND",
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "5744295",
+            "name": "Lampyris noctiluca (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Lampyris",
+            "specificEpithet": "noctiluca",
+            "formattedName": "<i>Lampyris</i> <i>noctiluca</i> (Linnaeus, 1758)"
+          },
+          "acceptedUsage": {
+            "key": "5744295",
+            "name": "Lampyris noctiluca (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "code": "ZOOLOGICAL",
+            "authorship": "(Linnaeus, 1758)",
+            "genericName": "Lampyris",
+            "specificEpithet": "noctiluca",
+            "formattedName": "<i>Lampyris</i> <i>noctiluca</i> (Linnaeus, 1758)"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "54",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "216",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "1470",
+              "name": "Coleoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4737",
+              "name": "Lampyridae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "5431213",
+              "name": "Lampyris",
+              "rank": "GENUS"
+            },
+            {
+              "key": "5744295",
+              "name": "Lampyris noctiluca",
+              "rank": "SPECIES"
+            }
+          ],
+          "iucnRedListCategoryCode": "NT",
+          "issues": [
+            "TAXON_ID_NOT_FOUND",
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 5744295,
+      "kingdomKey": 1,
+      "phylumKey": 54,
+      "classKey": 216,
+      "orderKey": 1470,
+      "familyKey": 4737,
+      "genusKey": 5431213,
+      "speciesKey": 5744295,
+      "acceptedTaxonKey": 5744295,
+      "scientificName": "Lampyris noctiluca (Linnaeus, 1758)",
+      "scientificNameAuthorship": "(Linnaeus, 1758)",
+      "acceptedScientificName": "Lampyris noctiluca (Linnaeus, 1758)",
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "order": "Coleoptera",
+      "family": "Lampyridae",
+      "genus": "Lampyris",
+      "species": "Lampyris noctiluca",
+      "genericName": "Lampyris",
+      "specificEpithet": "noctiluca",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "iucnRedListCategory": "NT",
+      "decimalLatitude": 54.540251,
+      "decimalLongitude": -2.921158,
+      "coordinateUncertaintyInMeters": 707.1,
+      "continent": "EUROPE",
+      "stateProvince": "England",
+      "gadm": {
+        "level0": {
+          "gid": "GBR",
+          "name": "United Kingdom"
+        },
+        "level1": {
+          "gid": "GBR.1_1",
+          "name": "England"
+        },
+        "level2": {
+          "gid": "GBR.1.22_1",
+          "name": "Cumbria"
+        },
+        "level3": {
+          "gid": "GBR.1.22.1_1",
+          "name": "Allerdale"
+        }
+      },
+      "year": 2018,
+      "month": 7,
+      "day": 9,
+      "eventDate": "2018-07-09",
+      "startDayOfYear": 190,
+      "endDayOfYear": 190,
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "lastInterpreted": "2026-04-24T04:19:50.536+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "5e09431f-cc77-4ce2-afd3-a5c06d4f299d"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "datasetName": "Soldier Beetles and Allies Recording Scheme - data verified via iRecord",
+      "recordedBy": "William Fulton",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Insecta",
+      "countryCode": "GB",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "EUROPE",
+      "country": "United Kingdom of Great Britain and Northern Ireland",
+      "publishedByGbifRegion": "EUROPE",
+      "rightsHolder": "Soldier Beetles and Allies Recording Scheme, and Biological Records Centre",
+      "identifier": "5e09431f-cc77-4ce2-afd3-a5c06d4f299d",
+      "eventID": "3692159",
+      "http://unknown.org/crawl_attempt": "270",
+      "http://unknown.org/taxonRankID": "7000",
+      "http://unknown.org/status": "not_reviewed",
+      "locality": "!",
+      "identificationVerificationStatus": "Accepted - considered correct",
+      "eventRemarks": "My family and I have observed glow worms on this site for over sixty years. They are a regular feature of our holidays in Patterdale. Some years, we see very few, other years there are very many. Last night, my wife and i saw about ten, which , for us, is very poor!I was very interested in your site and the observations of Dorothy Wordsworth. Coincidently, this land used to be owned by William Wordsworth, but he never lived here. He and Dorothy stayed with friends in the area. He bought the land with the intention of building a house here, but never did so.I am happy to discuss this at any time. ",
+      "collectionCode": "iRecord | Glow-worms",
+      "gbifID": "6061208454",
+      "occurrenceID": "5e09431f-cc77-4ce2-afd3-a5c06d4f299d",
+      "taxonID": "NBNSYS0000010994",
+      "vernacularName": "Glow-worm",
+      "taxonConceptID": "NBNSYS0000010994"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:6061208454",
+      "title": "Lampyris noctiluca (Linnaeus, 1758)",
+      "url": "https://www.gbif.org/occurrence/6061208454",
+      "date": "2018-07-09"
+    }
+  },
+  {
+    "id": "gbif:4892939512",
+    "_source": "gbif",
+    "_sourceId": 4892939512,
+    "_sourceUrl": "https://www.gbif.org/occurrence/4892939512",
+    "title": "Desmothrips Hood, 1915",
+    "date": "1999-12-16",
+    "scientificName": "Desmothrips Hood, 1915",
+    "kingdom": "Animalia",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Thysanoptera",
+    "family": "Aeolothripidae",
+    "genus": "Desmothrips",
+    "country": "Australia",
+    "eventDate": "1999-12-16",
+    "decimalLatitude": -34.329,
+    "decimalLongitude": 148.2722,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "DPI",
+    "gbif": {
+      "key": 4892939512,
+      "datasetKey": "eeaf050f-23d0-4557-9084-ec545cd3d9a7",
+      "publishingOrgKey": "325c883e-46a7-4be3-9d77-7dde654fd1d3",
+      "installationKey": "19893c10-381e-4534-9bb8-6c37d03ad29e",
+      "hostingOrganizationKey": "3c5e4331-7f2f-4a8d-aa56-81ece7014fc8",
+      "publishingCountry": "AU",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-23T00:23:15.345+00:00",
+      "lastParsed": "2026-04-24T08:19:06.729+00:00",
+      "crawlId": 194,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "62PMC",
+            "name": "Desmothrips Hood, 1915",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Hood, 1915",
+            "formattedName": "<i>Desmothrips</i> Hood, 1915"
+          },
+          "acceptedUsage": {
+            "key": "62PMC",
+            "name": "Desmothrips Hood, 1915",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Hood, 1915",
+            "formattedName": "<i>Desmothrips</i> Hood, 1915"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "RT",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "L2655",
+              "name": "Hexapoda",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "H6",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "622VS",
+              "name": "Thysanoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "63P",
+              "name": "Aeolothripidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "62PMC",
+              "name": "Desmothrips",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "4801335",
+            "name": "Desmothrips Hood, 1915",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Hood, 1915",
+            "formattedName": "<i>Desmothrips</i> Hood, 1915"
+          },
+          "acceptedUsage": {
+            "key": "4801335",
+            "name": "Desmothrips Hood, 1915",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Hood, 1915",
+            "formattedName": "<i>Desmothrips</i> Hood, 1915"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "54",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "216",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "1228",
+              "name": "Thysanoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4383",
+              "name": "Aeolothripidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "4801335",
+              "name": "Desmothrips",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 4801335,
+      "kingdomKey": 1,
+      "phylumKey": 54,
+      "classKey": 216,
+      "orderKey": 1228,
+      "familyKey": 4383,
+      "genusKey": 4801335,
+      "acceptedTaxonKey": 4801335,
+      "scientificName": "Desmothrips Hood, 1915",
+      "scientificNameAuthorship": "Hood, 1915",
+      "acceptedScientificName": "Desmothrips Hood, 1915",
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "order": "Thysanoptera",
+      "family": "Aeolothripidae",
+      "genus": "Desmothrips",
+      "taxonRank": "GENUS",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2006-01-13T00:00:00",
+      "decimalLatitude": -34.329,
+      "decimalLongitude": 148.2722,
+      "continent": "OCEANIA",
+      "stateProvince": "New South Wales",
+      "gadm": {
+        "level0": {
+          "gid": "AUS",
+          "name": "Australia"
+        },
+        "level1": {
+          "gid": "AUS.5_1",
+          "name": "New South Wales"
+        },
+        "level2": {
+          "gid": "AUS.5.153_1",
+          "name": "Young"
+        }
+      },
+      "year": 1999,
+      "month": 12,
+      "day": 16,
+      "eventDate": "1999-12-16",
+      "startDayOfYear": 350,
+      "endDayOfYear": 350,
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "INSTITUTION_MATCH_NONE"
+      ],
+      "modified": "2023-08-17T04:15:00.000+00:00",
+      "lastInterpreted": "2026-04-24T08:19:06.729+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "3648ae41-cc92-44e2-8984-c61f64d67cc4"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "recordedBy": "Eslick, Marion",
+      "identifiedBy": "Fletcher, Dr Murray John",
+      "preparations": "Slide",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Insecta",
+      "countryCode": "AU",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "OCEANIA",
+      "country": "Australia",
+      "publishedByGbifRegion": "OCEANIA",
+      "identifier": "3648ae41-cc92-44e2-8984-c61f64d67cc4",
+      "catalogNumber": "ASCT00013815A",
+      "http://unknown.org/crawl_attempt": "224",
+      "institutionCode": "DPI",
+      "http://unknown.org/taxonRankID": "6000",
+      "taxonConceptID": "https://biodiversity.org.au/afd/taxa/36da7600-2154-4ff2-9e9c-9994f1eb69bb",
+      "verbatimCoordinateSystem": "decimal degrees",
+      "locality": "Sugarsun 108 Hardys Rd Young, property of Larry Wordsworth",
+      "collectionCode": "ASCU",
+      "gbifID": "4892939512",
+      "occurrenceID": "3648ae41-cc92-44e2-8984-c61f64d67cc4"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:4892939512",
+      "title": "Desmothrips Hood, 1915",
+      "url": "https://www.gbif.org/occurrence/4892939512",
+      "date": "1999-12-16"
+    }
+  },
+  {
+    "id": "gbif:4893025936",
+    "_source": "gbif",
+    "_sourceId": 4893025936,
+    "_sourceUrl": "https://www.gbif.org/occurrence/4893025936",
+    "title": "Pseudanaphothrips Karny, 1921",
+    "date": "1999-11-16",
+    "scientificName": "Pseudanaphothrips Karny, 1921",
+    "kingdom": "Animalia",
+    "phylum": "Arthropoda",
+    "class": "Insecta",
+    "order": "Thysanoptera",
+    "family": "Thripidae",
+    "genus": "Pseudanaphothrips",
+    "country": "Australia",
+    "eventDate": "1999-11-16",
+    "decimalLatitude": -34.329,
+    "decimalLongitude": 148.2722,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "institutionCode": "DPI",
+    "gbif": {
+      "key": 4893025936,
+      "datasetKey": "eeaf050f-23d0-4557-9084-ec545cd3d9a7",
+      "publishingOrgKey": "325c883e-46a7-4be3-9d77-7dde654fd1d3",
+      "installationKey": "19893c10-381e-4534-9bb8-6c37d03ad29e",
+      "hostingOrganizationKey": "3c5e4331-7f2f-4a8d-aa56-81ece7014fc8",
+      "publishingCountry": "AU",
+      "protocol": "DWC_ARCHIVE",
+      "lastCrawled": "2026-04-23T00:23:15.345+00:00",
+      "lastParsed": "2026-04-24T08:19:02.517+00:00",
+      "crawlId": 194,
+      "extensions": {},
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "occurrenceStatus": "PRESENT",
+      "classifications": {
+        "7ddf754f-d193-4cc9-b351-99906754a03b": {
+          "usage": {
+            "key": "6YQB",
+            "name": "Pseudanaphothrips Karny, 1921",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Karny, 1921",
+            "formattedName": "<i>Pseudanaphothrips</i> Karny, 1921"
+          },
+          "acceptedUsage": {
+            "key": "6YQB",
+            "name": "Pseudanaphothrips Karny, 1921",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Karny, 1921",
+            "formattedName": "<i>Pseudanaphothrips</i> Karny, 1921"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "CS5HF",
+              "name": "Eukaryota",
+              "rank": "DOMAIN"
+            },
+            {
+              "key": "N",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "RT",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "L2655",
+              "name": "Hexapoda",
+              "rank": "SUBPHYLUM"
+            },
+            {
+              "key": "H6",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "622VS",
+              "name": "Thysanoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "626PS",
+              "name": "Thripidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "KFD",
+              "name": "Thripinae",
+              "rank": "SUBFAMILY"
+            },
+            {
+              "key": "6YQB",
+              "name": "Pseudanaphothrips",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        },
+        "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c": {
+          "usage": {
+            "key": "1420704",
+            "name": "Pseudanaphothrips Karny, 1921",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Karny, 1921",
+            "formattedName": "<i>Pseudanaphothrips</i> Karny, 1921"
+          },
+          "acceptedUsage": {
+            "key": "1420704",
+            "name": "Pseudanaphothrips Karny, 1921",
+            "rank": "GENUS",
+            "code": "ZOOLOGICAL",
+            "authorship": "Karny, 1921",
+            "formattedName": "<i>Pseudanaphothrips</i> Karny, 1921"
+          },
+          "taxonomicStatus": "ACCEPTED",
+          "classification": [
+            {
+              "key": "1",
+              "name": "Animalia",
+              "rank": "KINGDOM"
+            },
+            {
+              "key": "54",
+              "name": "Arthropoda",
+              "rank": "PHYLUM"
+            },
+            {
+              "key": "216",
+              "name": "Insecta",
+              "rank": "CLASS"
+            },
+            {
+              "key": "1228",
+              "name": "Thysanoptera",
+              "rank": "ORDER"
+            },
+            {
+              "key": "4387",
+              "name": "Thripidae",
+              "rank": "FAMILY"
+            },
+            {
+              "key": "1420704",
+              "name": "Pseudanaphothrips",
+              "rank": "GENUS"
+            }
+          ],
+          "issues": [
+            "TAXON_CONCEPT_ID_NOT_FOUND"
+          ]
+        }
+      },
+      "taxonKey": 1420704,
+      "kingdomKey": 1,
+      "phylumKey": 54,
+      "classKey": 216,
+      "orderKey": 1228,
+      "familyKey": 4387,
+      "genusKey": 1420704,
+      "acceptedTaxonKey": 1420704,
+      "scientificName": "Pseudanaphothrips Karny, 1921",
+      "scientificNameAuthorship": "Karny, 1921",
+      "acceptedScientificName": "Pseudanaphothrips Karny, 1921",
+      "kingdom": "Animalia",
+      "phylum": "Arthropoda",
+      "order": "Thysanoptera",
+      "family": "Thripidae",
+      "genus": "Pseudanaphothrips",
+      "taxonRank": "GENUS",
+      "taxonomicStatus": "ACCEPTED",
+      "dateIdentified": "2006-01-18T00:00:00",
+      "decimalLatitude": -34.329,
+      "decimalLongitude": 148.2722,
+      "continent": "OCEANIA",
+      "stateProvince": "New South Wales",
+      "gadm": {
+        "level0": {
+          "gid": "AUS",
+          "name": "Australia"
+        },
+        "level1": {
+          "gid": "AUS.5_1",
+          "name": "New South Wales"
+        },
+        "level2": {
+          "gid": "AUS.5.153_1",
+          "name": "Young"
+        }
+      },
+      "year": 1999,
+      "month": 11,
+      "day": 16,
+      "eventDate": "1999-11-16",
+      "startDayOfYear": 320,
+      "endDayOfYear": 320,
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "INSTITUTION_MATCH_NONE"
+      ],
+      "modified": "2022-10-18T00:00:00.000+00:00",
+      "lastInterpreted": "2026-04-24T08:19:02.517+00:00",
+      "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "isSequenced": false,
+      "identifiers": [
+        {
+          "identifier": "2b9a9102-b788-433e-91aa-3b7142366725"
+        }
+      ],
+      "media": [],
+      "facts": [],
+      "relations": [],
+      "isInCluster": false,
+      "recordedBy": "Eslick, Marion",
+      "identifiedBy": "Gillespie, Mr Peter Scott",
+      "preparations": "Slide",
+      "dnaSequenceID": [],
+      "geodeticDatum": "WGS84",
+      "class": "Insecta",
+      "countryCode": "AU",
+      "recordedByIDs": [],
+      "identifiedByIDs": [],
+      "gbifRegion": "OCEANIA",
+      "country": "Australia",
+      "publishedByGbifRegion": "OCEANIA",
+      "identifier": "2b9a9102-b788-433e-91aa-3b7142366725",
+      "catalogNumber": "ASCT00001429",
+      "http://unknown.org/crawl_attempt": "224",
+      "institutionCode": "DPI",
+      "http://unknown.org/taxonRankID": "6000",
+      "taxonConceptID": "https://biodiversity.org.au/afd/taxa/79681b93-6e89-41e9-b858-0a60c6f556be",
+      "verbatimCoordinateSystem": "decimal degrees",
+      "locality": "Sugarsun 108 Hardys Rd Young, property of Larry Wordsworth",
+      "collectionCode": "ASCU",
+      "gbifID": "4893025936",
+      "occurrenceID": "2b9a9102-b788-433e-91aa-3b7142366725"
+    },
+    "_citation": {
+      "service": "GBIF",
+      "serviceUrl": "https://www.gbif.org",
+      "publisher": "Global Biodiversity Information Facility",
+      "licence": "Various open licences (CC BY 4.0)",
+      "query": "q:wordsworth",
+      "accessDate": "2026-05-01T10:03:19.924Z",
+      "recordId": "gbif:4893025936",
+      "title": "Pseudanaphothrips Karny, 1921",
+      "url": "https://www.gbif.org/occurrence/4893025936",
+      "date": "1999-11-16"
+    }
+  }
+]

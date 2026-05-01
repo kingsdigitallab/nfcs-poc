@@ -1,0 +1,776 @@
+[
+  {
+    "id": "europeana:/2059209/data_sounds_11275459174",
+    "_source": "europeana",
+    "_sourceId": "/2059209/data_sounds_11275459174",
+    "_sourceUrl": "https://www.europeana.eu/item/2059209/data_sounds_11275459174?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Image from page 109 of Jacob's Ladder. [Short stories, etc., in prose and verse.] ... With musical illustrations by A. H. Brown",
+    "description": "This image is from a selection of images that have either been tagged as musical content, or are taken from books which are musical in nature. They were digitised as part of the Microsoft books project, a collaboration between Microsoft and the British Library. Some of these images have been tagged by users of the image sharing site, flickr.",
+    "date": "1880",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Sounds"
+      ],
+      "dataProvider": [
+        "The British Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Ffarm6.staticflickr.com%2F5496%2F11275459174_3ff44c36a9_o.jpg&type=IMAGE",
+      "shownAt": "https://www.flickr.com/photos/britishlibrary/11275459174",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/2059209/data_sounds_11275459174",
+      "title": "Image from page 109 of Jacob's Ladder. [Short stories, etc., in prose and verse.] ... With musical illustrations by A. H. Brown",
+      "url": "https://www.europeana.eu/item/2059209/data_sounds_11275459174?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1880"
+    }
+  },
+  {
+    "id": "europeana:/866/https___hispana_mcu_es_lod_oai_prensahistorica_mcu_es_1026754_ent0",
+    "_source": "europeana",
+    "_sourceId": "/866/https___hispana_mcu_es_lod_oai_prensahistorica_mcu_es_1026754_ent0",
+    "_sourceUrl": "https://www.europeana.eu/item/866/https___hispana_mcu_es_lod_oai_prensahistorica_mcu_es_1026754_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Hitchcock and Wordsworth: “Frenzy” (1972) and “The Prelude” (1804)",
+    "creator": [
+      "https://hispana.mcu.es/lod/oai:prensahistorica.mcu.es:1026754#ent3"
+    ],
+    "description": "Digital copy. Spain: Ministry of Culture and Sport. General Branch of Library Cooperation",
+    "date": "2003",
+    "type": "TEXT",
+    "language": "es",
+    "country": [
+      "Spain"
+    ],
+    "europeana": {
+      "provider": [
+        "Hispana"
+      ],
+      "dataProvider": [
+        "Virtual Library of Historical Press"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fprensahistorica.mcu.es%2Fi18n%2Fcatalogo_imagenes%2Fimagen_id.do%3FidImagen%3D2005093771%26formato%3Djpg%26anchoMaximo%3D2400&type=TEXT",
+      "shownAt": "https://prensahistorica.mcu.es/es/consulta/registro.do?id=1026754",
+      "completeness": 8
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/866/https___hispana_mcu_es_lod_oai_prensahistorica_mcu_es_1026754_ent0",
+      "title": "Hitchcock and Wordsworth: “Frenzy” (1972) and “The Prelude” (1804)",
+      "url": "https://www.europeana.eu/item/866/https___hispana_mcu_es_lod_oai_prensahistorica_mcu_es_1026754_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "https://hispana.mcu.es/lod/oai:prensahistorica.mcu.es:1026754#ent3"
+      ],
+      "date": "2003"
+    }
+  },
+  {
+    "id": "europeana:/840/NHMUKXZOOX1884X2X6X7",
+    "_source": "europeana",
+    "_sourceId": "/840/NHMUKXZOOX1884X2X6X7",
+    "_sourceUrl": "https://www.europeana.eu/item/840/NHMUKXZOOX1884X2X6X7?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Centroscymnus macracanthus Regan, 1906",
+    "description": "HOLOTYPE",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "The Trustees of the Natural History Museum, London"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdata.nhm.ac.uk%2Fmedia%2F3db922a2-1501-4566-a589-52efb8d4dead&type=IMAGE",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/840/NHMUKXZOOX1884X2X6X7",
+      "title": "Centroscymnus macracanthus Regan, 1906",
+      "url": "https://www.europeana.eu/item/840/NHMUKXZOOX1884X2X6X7?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/2024903/photography_ProvidedCHO_KU_Leuven_9982506620101488",
+    "_source": "europeana",
+    "_sourceId": "/2024903/photography_ProvidedCHO_KU_Leuven_9982506620101488",
+    "_sourceUrl": "https://www.europeana.eu/item/2024903/photography_ProvidedCHO_KU_Leuven_9982506620101488?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "William Wordworth",
+    "creator": [
+      "P. Degobert"
+    ],
+    "description": "Artist name difficult to read. Inscriptions and textual elements: [J.Lamal f ?] / 1844. Inscriptions and textual elements: GALERIE DES CONTEMPORAINS ILLUSTRES. Inscriptions and textual elements: Lith. Royale P. Degobert. Inscriptions and textual elements: WILLIAM WORDSWORTH. Inscriptions and textual elements: Publié par Chs. Hen, à Bruxelles. probably illustration from: de Loménie, Louis, Galerie des contemporains illustrés.",
+    "date": "1844",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Belgium"
+    ],
+    "europeana": {
+      "provider": [
+        "PHOTOCONSORTIUM"
+      ],
+      "dataProvider": [
+        "Catholic University of Leuven"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Flib.is%2FIE4820098%2Fstream%3Fquality%3DLOW&type=IMAGE",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/2024903/photography_ProvidedCHO_KU_Leuven_9982506620101488",
+      "title": "William Wordworth",
+      "url": "https://www.europeana.eu/item/2024903/photography_ProvidedCHO_KU_Leuven_9982506620101488?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "P. Degobert"
+      ],
+      "date": "1844"
+    }
+  },
+  {
+    "id": "europeana:/2024903/photography_ProvidedCHO_KU_Leuven_9983449210101488",
+    "_source": "europeana",
+    "_sourceId": "/2024903/photography_ProvidedCHO_KU_Leuven_9983449210101488",
+    "_sourceUrl": "https://www.europeana.eu/item/2024903/photography_ProvidedCHO_KU_Leuven_9983449210101488?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "William Wordsworth",
+    "creator": [
+      "Richard Carruthers",
+      "Henry Meyer"
+    ],
+    "description": "Inscriptions and textual elements: R. Carruthers Pinx.t. Inscriptions and textual elements: Henry Meyer Sculp.t. Inscriptions and textual elements: WILLIAM WORDSWORTH, ESQ.R.",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Belgium"
+    ],
+    "europeana": {
+      "provider": [
+        "PHOTOCONSORTIUM"
+      ],
+      "dataProvider": [
+        "Catholic University of Leuven"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Flib.is%2FIE4820203%2Fstream%3Fquality%3DLOW&type=IMAGE",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/2024903/photography_ProvidedCHO_KU_Leuven_9983449210101488",
+      "title": "William Wordsworth",
+      "url": "https://www.europeana.eu/item/2024903/photography_ProvidedCHO_KU_Leuven_9983449210101488?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Richard Carruthers",
+        "Henry Meyer"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/2024903/photography_ProvidedCHO_KU_Leuven_9983530000101488",
+    "_source": "europeana",
+    "_sourceId": "/2024903/photography_ProvidedCHO_KU_Leuven_9983530000101488",
+    "_sourceUrl": "https://www.europeana.eu/item/2024903/photography_ProvidedCHO_KU_Leuven_9983530000101488?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Wm Wordsworth",
+    "creator": [
+      "Daniel Maclise",
+      "http://data.europeana.eu/agent/63815"
+    ],
+    "description": "Opschriften en tekstuele elementen: Alfred Croquis delt,,. Opschriften en tekstuele elementen: WmWordsworth [signatuur]. Opschriften en tekstuele elementen: AUTHOR OF \"THE EXCURSION\". Opschriften en tekstuele elementen: Published by James Fraser, 215, Regent Street, London.",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Belgium"
+    ],
+    "europeana": {
+      "provider": [
+        "PHOTOCONSORTIUM"
+      ],
+      "dataProvider": [
+        "Catholic University of Leuven"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Flib.is%2FIE4828382%2Fstream%3Fquality%3DLOW&type=IMAGE",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/2024903/photography_ProvidedCHO_KU_Leuven_9983530000101488",
+      "title": "Wm Wordsworth",
+      "url": "https://www.europeana.eu/item/2024903/photography_ProvidedCHO_KU_Leuven_9983530000101488?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Daniel Maclise",
+        "http://data.europeana.eu/agent/63815"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/2024903/photography_ProvidedCHO_KU_Leuven_9992114879901488",
+    "_source": "europeana",
+    "_sourceId": "/2024903/photography_ProvidedCHO_KU_Leuven_9992114879901488",
+    "_sourceUrl": "https://www.europeana.eu/item/2024903/photography_ProvidedCHO_KU_Leuven_9992114879901488?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "London. Hampstead Garden Suburb. Wordsworth Walk",
+    "creator": [
+      "Raymond Unwin",
+      "Barry Parker",
+      "Raphaël Verwilghen"
+    ],
+    "description": "KU Leuven. Glass slides landscape, architecture and design. Université de Louvain, between 1839 and 1939. Photographer unknown. Added information on slide. Art movement/Style: Arts and Crafts movement. Creation/Construction: 1906. Current location: United Kingdom, London. EuroPhot. Art History. 20th century. Architecture. Street. EuroPhot. Art history. 20th century. Architecture. Street. EuroPhot. Social history. 20th century. Architecture. Street. EuroPhot. Social history. 20th century. Architecture. Street.",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Belgium"
+    ],
+    "europeana": {
+      "provider": [
+        "PHOTOCONSORTIUM"
+      ],
+      "dataProvider": [
+        "Catholic University of Leuven"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Flib.is%2FIE2419528%2Fstream%3Fquality%3DLOW&type=IMAGE",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/2024903/photography_ProvidedCHO_KU_Leuven_9992114879901488",
+      "title": "London. Hampstead Garden Suburb. Wordsworth Walk",
+      "url": "https://www.europeana.eu/item/2024903/photography_ProvidedCHO_KU_Leuven_9992114879901488?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Raymond Unwin",
+        "Barry Parker",
+        "Raphaël Verwilghen"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/1472/_c506860fc07ca3211449",
+    "_source": "europeana",
+    "_sourceId": "/1472/_c506860fc07ca3211449",
+    "_sourceUrl": "https://www.europeana.eu/item/1472/_c506860fc07ca3211449?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Artistic Conceptualization of Power in William Wordsworth’s Poetry",
+    "creator": [
+      "Romanyshyn, Nataliia",
+      "https://orcid.org/0000-0001-5918-5423 0000-0001-5918-5423"
+    ],
+    "description": "Academic Journal of Modern Philology jest czasopismem naukowym wydawanym co roku przez Komisję Nauk Filologicznych Polskiej Akademii Nauk, oddział we Wrocławiu oraz Kolegium Międzyobszarowych Studiów Indywidualnych, Uniwersytet Wrocławski. Czasopismo znajduje się na liście czasopism punktowanych Ministerstwa Nauki i Szkolnictwa Wyższego (liczba przyznanych punktów: 70). Artykuły publikowane w AJMP poruszają tematykę związaną głównie z dziedziną nauk humanistycznych i społecznych obejmując obszary dyscyplin takich jak: językoznawstwo ogólne, historyczne, antropologiczne, literaturoznawstwo czy studia porównawcze. Każdy artykuł poddawany jest recenzji przez dwóch recenzentów. Recenzja przebiega anonimowo, tj. recenzenci nie znają tożsamości autora, natomiast autor nie zna tożsamości recenzenta. Artykuły publikowane są głównie w językach: angielskim, niemieckim, francuskim oraz polskim.",
+    "date": "2022",
+    "type": "TEXT",
+    "language": "pl",
+    "country": [
+      "Poland"
+    ],
+    "europeana": {
+      "provider": [
+        "Digital Libraries Federation"
+      ],
+      "dataProvider": [
+        "Repository of University of Wroclaw"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Frepozytorium.uni.wroc.pl%2FContent%2F136133%2FPDF%2F11_Romanyshyn.pdf&type=TEXT",
+      "shownAt": "http://fbc.pionier.net.pl/id/c506860fc07ca3211449",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/1472/_c506860fc07ca3211449",
+      "title": "Artistic Conceptualization of Power in William Wordsworth’s Poetry",
+      "url": "https://www.europeana.eu/item/1472/_c506860fc07ca3211449?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Romanyshyn, Nataliia",
+        "https://orcid.org/0000-0001-5918-5423 0000-0001-5918-5423"
+      ],
+      "date": "2022"
+    }
+  },
+  {
+    "id": "europeana:/2059209/3788_11283664794_b58d29a586_o_jpg",
+    "_source": "europeana",
+    "_sourceId": "/2059209/3788_11283664794_b58d29a586_o_jpg",
+    "_sourceUrl": "https://www.europeana.eu/item/2059209/3788_11283664794_b58d29a586_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "William Wordsworth from \"[Cassell's Library of English Literature. Selected, edited and arranged by H. M. ... Illustrated.]\".",
+    "description": "This image has been taken from scan 000392 from volume 05 of \"[Cassell's Library of English Literature. Selected, edited and arranged by H. M. ... Illustrated.]\". The title and subject terms of this image have been generated from tags, created by users of the British Library's flickr photostream.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Sounds"
+      ],
+      "dataProvider": [
+        "The British Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Ffarm4.staticflickr.com%2F3788%2F11283664794_b58d29a586_o.jpg&type=IMAGE",
+      "shownAt": "https://flickr.com/photos/britishlibrary/11283664794",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/2059209/3788_11283664794_b58d29a586_o_jpg",
+      "title": "William Wordsworth from \"[Cassell's Library of English Literature. Selected, edited and arranged by H. M. ... Illustrated.]\".",
+      "url": "https://www.europeana.eu/item/2059209/3788_11283664794_b58d29a586_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/2059209/7452_11147133025_79aef31b91_o_jpg",
+    "_source": "europeana",
+    "_sourceId": "/2059209/7452_11147133025_79aef31b91_o_jpg",
+    "_sourceUrl": "https://www.europeana.eu/item/2059209/7452_11147133025_79aef31b91_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "poem from \"The poetical works of William Wordsworth, etc\".",
+    "description": "This image has been taken from scan 000023 from \"The poetical works of William Wordsworth, etc\". The title and subject terms of this image have been generated from tags, created by users of the British Library's flickr photostream.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Sounds"
+      ],
+      "dataProvider": [
+        "The British Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Ffarm8.staticflickr.com%2F7452%2F11147133025_79aef31b91_o.jpg&type=IMAGE",
+      "shownAt": "https://flickr.com/photos/britishlibrary/11147133025",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/2059209/7452_11147133025_79aef31b91_o_jpg",
+      "title": "poem from \"The poetical works of William Wordsworth, etc\".",
+      "url": "https://www.europeana.eu/item/2059209/7452_11147133025_79aef31b91_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/206/item_VWY2VGJHMFXD6SU5DZJHJ4S5VBUXAK7U",
+    "_source": "europeana",
+    "_sourceId": "/206/item_VWY2VGJHMFXD6SU5DZJHJ4S5VBUXAK7U",
+    "_sourceUrl": "https://www.europeana.eu/item/206/item_VWY2VGJHMFXD6SU5DZJHJ4S5VBUXAK7U?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Salvam fac reginam imperatricem",
+    "description": "Bildunterschrift: Window studies. \"The heaven laugh with you in your jubilee!\" - Wordsworth",
+    "type": "IMAGE",
+    "language": "de",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "German Digital Library"
+      ],
+      "dataProvider": [
+        "Heidelberg University Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fheidicon.ub.uni-heidelberg.de%2Fapi%2Fv1%2Fobjects%2Fuuid%2F7b1fbcab-1370-4187-a7be-f4b58007a226%2Ffile%2Fid%2F343869%2Ffile_version%2Fname%2Fhuge%2Fdisposition%2Finline&type=IMAGE",
+      "shownAt": "https://heidicon.ub.uni-heidelberg.de/detail/871484",
+      "completeness": 8
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/206/item_VWY2VGJHMFXD6SU5DZJHJ4S5VBUXAK7U",
+      "title": "Salvam fac reginam imperatricem",
+      "url": "https://www.europeana.eu/item/206/item_VWY2VGJHMFXD6SU5DZJHJ4S5VBUXAK7U?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/779/_0210210487504",
+    "_source": "europeana",
+    "_sourceId": "/779/_0210210487504",
+    "_sourceUrl": "https://www.europeana.eu/item/779/_0210210487504?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Wordsworth: A Selection by W.E. Williams",
+    "type": "IMAGE",
+    "language": "no",
+    "country": [
+      "Norway"
+    ],
+    "europeana": {
+      "provider": [
+        "Arts and Culture Norway"
+      ],
+      "dataProvider": [
+        "Nynorsk Cultural Centre"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fpdms.dimu.org%2Fimage%2F0138XQWjkefr%3Fdimension%3D1200x1200&type=IMAGE",
+      "shownAt": "https://digitaltmuseum.org/0210210487504",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/779/_0210210487504",
+      "title": "Wordsworth: A Selection by W.E. Williams",
+      "url": "https://www.europeana.eu/item/779/_0210210487504?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/07931/diglit_gothein1893bd2",
+    "_source": "europeana",
+    "_sourceId": "/07931/diglit_gothein1893bd2",
+    "_sourceUrl": "https://www.europeana.eu/item/07931/diglit_gothein1893bd2?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "William Wordsworth: sein Leben, seine Werke, seine Zeitgenossen - 1893",
+    "description": "Shelfmark: Universitätsbibliothek Heidelberg, G 8299-3::1-2",
+    "date": "1893",
+    "type": "TEXT",
+    "language": "de",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "Heidelberg University Library"
+      ],
+      "dataProvider": [
+        "Heidelberg University Library"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/3.0/de/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fdiglit.ub.uni-heidelberg.de%2Fimage%2Fgothein1893bd2%2F0000a.jpg%2Ffull%2Ffull%2F0%2Fdefault.jpg&type=TEXT",
+      "shownAt": "http://digi.ub.uni-heidelberg.de/diglit/gothein1893bd2",
+      "completeness": 7
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/07931/diglit_gothein1893bd2",
+      "title": "William Wordsworth: sein Leben, seine Werke, seine Zeitgenossen - 1893",
+      "url": "https://www.europeana.eu/item/07931/diglit_gothein1893bd2?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1893"
+    }
+  },
+  {
+    "id": "europeana:/07931/diglit_gothein1893bd1",
+    "_source": "europeana",
+    "_sourceId": "/07931/diglit_gothein1893bd1",
+    "_sourceUrl": "https://www.europeana.eu/item/07931/diglit_gothein1893bd1?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "William Wordsworth: sein Leben, seine Werke, seine Zeitgenossen - 1893",
+    "description": "Shelfmark: Universitätsbibliothek Heidelberg, G 8299-3::1-2",
+    "date": "1893",
+    "type": "TEXT",
+    "language": "de",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "Heidelberg University Library"
+      ],
+      "dataProvider": [
+        "Heidelberg University Library"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/3.0/de/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fdiglit.ub.uni-heidelberg.de%2Fimage%2Fgothein1893bd1%2F0000a.jpg%2Ffull%2Ffull%2F0%2Fdefault.jpg&type=TEXT",
+      "shownAt": "http://digi.ub.uni-heidelberg.de/diglit/gothein1893bd1",
+      "completeness": 7
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/07931/diglit_gothein1893bd1",
+      "title": "William Wordsworth: sein Leben, seine Werke, seine Zeitgenossen - 1893",
+      "url": "https://www.europeana.eu/item/07931/diglit_gothein1893bd1?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1893"
+    }
+  },
+  {
+    "id": "europeana:/90402/RP_F_2001_7_361_1",
+    "_source": "europeana",
+    "_sourceId": "/90402/RP_F_2001_7_361_1",
+    "_sourceUrl": "https://www.europeana.eu/item/90402/RP_F_2001_7_361_1?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Rydal Mount, the residence of Wordsworth",
+    "type": "IMAGE",
+    "language": "nl",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "Rijksmuseum"
+      ],
+      "dataProvider": [
+        "Rijksmuseum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Flh3.googleusercontent.com%2FnCXJz-mHpQa-SjhFTIcfoo7jopNmSexO5d6g1Z7shcDL0-CvGHl6BPJvYsmO7N0OcvifGx_nA4ieGBoX9MhjdOapsX0%3Ds0&type=IMAGE",
+      "shownAt": "http://hdl.handle.net/10934/RM0001.COLLECT.635468",
+      "completeness": 8
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/90402/RP_F_2001_7_361_1",
+      "title": "Rydal Mount, the residence of Wordsworth",
+      "url": "https://www.europeana.eu/item/90402/RP_F_2001_7_361_1?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/90402/RP_F_2001_7_351_1",
+    "_source": "europeana",
+    "_sourceId": "/90402/RP_F_2001_7_351_1",
+    "_sourceUrl": "https://www.europeana.eu/item/90402/RP_F_2001_7_351_1?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Rydal Mount, the residence of Wordsworth",
+    "type": "IMAGE",
+    "language": "nl",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "Rijksmuseum"
+      ],
+      "dataProvider": [
+        "Rijksmuseum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Flh3.googleusercontent.com%2FJYILPbFiX9tOELH7jhQ5wTC25O1crF5s1SgStIwHysT_MkXZf8I2zMhjWdxo1H24vxV-3DUSyluJm4DL7sHY6Yo2EX9-%3Ds0&type=IMAGE",
+      "shownAt": "http://hdl.handle.net/10934/RM0001.COLLECT.635408",
+      "completeness": 8
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/90402/RP_F_2001_7_351_1",
+      "title": "Rydal Mount, the residence of Wordsworth",
+      "url": "https://www.europeana.eu/item/90402/RP_F_2001_7_351_1?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/08711/https___www_biodiversitylibrary_org_item_114932",
+    "_source": "europeana",
+    "_sourceId": "/08711/https___www_biodiversitylibrary_org_item_114932",
+    "_sourceUrl": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_114932?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "A complete guide to the English lakes",
+    "creator": [
+      "Martineau, Harriet, 1802-1876"
+    ],
+    "type": "TEXT",
+    "language": "en",
+    "country": [
+      "United States of America"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Cornell University Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpagethumb%2F37356486&type=TEXT",
+      "shownAt": "https://doi.org/10.5962/bhl.title.54348",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/08711/https___www_biodiversitylibrary_org_item_114932",
+      "title": "A complete guide to the English lakes",
+      "url": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_114932?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Martineau, Harriet, 1802-1876"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/08711/https___www_biodiversitylibrary_org_item_115658",
+    "_source": "europeana",
+    "_sourceId": "/08711/https___www_biodiversitylibrary_org_item_115658",
+    "_sourceUrl": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_115658?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "William Bartram, interpreter of the American landscape",
+    "creator": [
+      "Fagin, Nathan Bryllion, 1892-"
+    ],
+    "date": "1933",
+    "type": "TEXT",
+    "language": "en",
+    "country": [
+      "United States of America"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Cornell University Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpagethumb%2F37582364&type=TEXT",
+      "shownAt": "https://doi.org/10.5962/bhl.title.55027",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/08711/https___www_biodiversitylibrary_org_item_115658",
+      "title": "William Bartram, interpreter of the American landscape",
+      "url": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_115658?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Fagin, Nathan Bryllion, 1892-"
+      ],
+      "date": "1933"
+    }
+  },
+  {
+    "id": "europeana:/08711/https___www_biodiversitylibrary_org_item_59128",
+    "_source": "europeana",
+    "_sourceId": "/08711/https___www_biodiversitylibrary_org_item_59128",
+    "_sourceUrl": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_59128?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Flora of the Wordsworth country",
+    "creator": [
+      "Hayes, Thomas R."
+    ],
+    "date": "1899",
+    "type": "TEXT",
+    "language": "en",
+    "country": [
+      "United States of America"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "University of California Libraries"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpagethumb%2F17741642&type=TEXT",
+      "shownAt": "https://doi.org/10.5962/bhl.title.19356",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/08711/https___www_biodiversitylibrary_org_item_59128",
+      "title": "Flora of the Wordsworth country",
+      "url": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_59128?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Hayes, Thomas R."
+      ],
+      "date": "1899"
+    }
+  },
+  {
+    "id": "europeana:/08711/https___www_biodiversitylibrary_org_item_62250",
+    "_source": "europeana",
+    "_sourceId": "/08711/https___www_biodiversitylibrary_org_item_62250",
+    "_sourceUrl": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_62250?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "A complete guide to the English lakes",
+    "creator": [
+      "Martineau, Harriet, 1802-1876"
+    ],
+    "type": "TEXT",
+    "language": "en",
+    "country": [
+      "United States of America"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "University of California Libraries"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpagethumb%2F18799873&type=TEXT",
+      "shownAt": "https://doi.org/10.5962/bhl.title.54348",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "wordsworth",
+      "accessDate": "2026-05-01T10:03:18.869Z",
+      "recordId": "europeana:/08711/https___www_biodiversitylibrary_org_item_62250",
+      "title": "A complete guide to the English lakes",
+      "url": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_62250?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Martineau, Harriet, 1802-1876"
+      ]
+    }
+  }
+]
