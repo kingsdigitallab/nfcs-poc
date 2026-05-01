@@ -54,8 +54,15 @@ export function withFixture(nodeType: string, runner: NodeRunner): NodeRunner {
       return runner(nodeId, getNodes, edges, updateNodeData)
     }
 
-    // Determine query from whichever field this node type uses
-    const query = String(d.inlineQuery ?? d.inlineQ ?? 'default')
+    // Resolve query: prefer the wired upstream value (same pattern as all runners),
+    // fall back to whichever inline field this node type uses
+    const queryEdge = edges.find(
+      e => e.target === nodeId && (e.targetHandle === 'query' || e.targetHandle === 'q'),
+    )
+    const resolvedQuery = queryEdge
+      ? ((nodes.find(n => n.id === queryEdge.source)?.data as { value?: string } | undefined)?.value ?? '')
+      : String(d.inlineQuery ?? d.inlineQ ?? '')
+    const query = resolvedQuery.trim() || 'default'
     const filename = fixtureFilename(nodeType, query)
     const url = `/fixtures/${filename}`
 
