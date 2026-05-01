@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { runGBIFNode } from '../utils/runGBIFNode'
-import { downloadAsFixture, fixtureFilename } from '../utils/fixtureUtils'
+import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type RunStatus = 'idle' | 'loading' | 'success' | 'error'
@@ -127,8 +127,8 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
           </label>
           {(d.status === 'success' || d.status === 'cached') && (
             <button style={styles.fixtureSaveBtn} className="nodrag"
-              title={`Download fixture: ${fixtureFilename('gbifSearch', String(d.inlineQ ?? ''))}`}
-              onClick={() => downloadAsFixture(id, 'gbifSearch', String(d.inlineQ ?? ''))}>
+              title={`Download fixture: ${fixtureFilename('gbifSearch', resolveFixtureQuery(id, liveEdges, getNodes(), d as Record<string, unknown>))}`}
+              onClick={() => downloadAsFixture(id, 'gbifSearch', resolveFixtureQuery(id, liveEdges, getNodes(), d as Record<string, unknown>))}>
               💾
             </button>
           )}

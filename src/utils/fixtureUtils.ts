@@ -96,6 +96,25 @@ export function withFixture(nodeType: string, runner: NodeRunner): NodeRunner {
 }
 
 /**
+ * Resolves the effective query string for a node, checking wired edges first.
+ * Use this in node components to get the right filename for downloadAsFixture.
+ */
+export function resolveFixtureQuery(
+  nodeId: string,
+  edges: Edge[],
+  nodes: Node[],
+  d: Record<string, unknown>,
+): string {
+  const queryEdge = edges.find(
+    e => e.target === nodeId && (e.targetHandle === 'query' || e.targetHandle === 'q'),
+  )
+  const resolved = queryEdge
+    ? ((nodes.find(n => n.id === queryEdge.source)?.data as { value?: string } | undefined)?.value ?? '')
+    : String(d.inlineQuery ?? d.inlineQ ?? '')
+  return resolved.trim() || 'default'
+}
+
+/**
  * Downloads the current results for a node as a fixture JSON file.
  * The user commits the downloaded file to public/fixtures/.
  */

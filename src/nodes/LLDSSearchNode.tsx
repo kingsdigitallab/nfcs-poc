@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { runLLDSNode } from '../utils/runLLDSNode'
-import { downloadAsFixture, fixtureFilename } from '../utils/fixtureUtils'
+import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type LLDSStatus = 'idle' | 'loading' | 'success' | 'cached' | 'error'
@@ -143,8 +143,8 @@ export function LLDSSearchNode({ id, data }: NodeProps) {
           </label>
           {(status === 'success' || status === 'cached') && (
             <button style={styles.fixtureSaveBtn} className="nodrag"
-              title={`Download fixture: ${fixtureFilename('lldsSearch', String(d.inlineQuery ?? ''))}`}
-              onClick={() => downloadAsFixture(id, 'lldsSearch', String(d.inlineQuery ?? ''))}>
+              title={`Download fixture: ${fixtureFilename('lldsSearch', resolveFixtureQuery(id, liveEdges, getNodes(), d as Record<string, unknown>))}`}
+              onClick={() => downloadAsFixture(id, 'lldsSearch', resolveFixtureQuery(id, liveEdges, getNodes(), d as Record<string, unknown>))}>
               💾
             </button>
           )}

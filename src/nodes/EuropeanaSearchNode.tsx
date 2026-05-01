@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { runEuropeanaNode } from '../utils/runEuropeanaNode'
-import { downloadAsFixture, fixtureFilename } from '../utils/fixtureUtils'
+import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 
 export type EuropeanaStatus = 'idle' | 'loading' | 'success' | 'error'
 
@@ -186,8 +186,8 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
           </label>
           {(d.status === 'success' || d.status === 'cached') && (
             <button style={styles.fixtureSaveBtn} className="nodrag"
-              title={`Download fixture: ${fixtureFilename('europeanaSearch', String(d.inlineQuery ?? ''))}`}
-              onClick={() => downloadAsFixture(id, 'europeanaSearch', String(d.inlineQuery ?? ''))}>
+              title={`Download fixture: ${fixtureFilename('europeanaSearch', resolveFixtureQuery(id, liveEdges, getNodes(), d as Record<string, unknown>))}`}
+              onClick={() => downloadAsFixture(id, 'europeanaSearch', resolveFixtureQuery(id, liveEdges, getNodes(), d as Record<string, unknown>))}>
               💾
             </button>
           )}

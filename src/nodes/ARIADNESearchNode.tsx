@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { runARIADNENode } from '../utils/runARIADNENode'
-import { downloadAsFixture, fixtureFilename } from '../utils/fixtureUtils'
+import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type ARIADNEStatus = 'idle' | 'loading' | 'success' | 'error'
@@ -327,8 +327,8 @@ export function ARIADNESearchNode({ id, data }: NodeProps) {
           {(d.status === 'success' || d.status === 'cached') && (
             <button
               style={styles.fixtureSaveBtn} className="nodrag"
-              title={`Download fixture: ${fixtureFilename('ariadneSearch', String(d.inlineQuery ?? ''))}`}
-              onClick={() => downloadAsFixture(id, 'ariadneSearch', String(d.inlineQuery ?? ''))}
+              title={`Download fixture: ${fixtureFilename('ariadneSearch', resolveFixtureQuery(id, liveEdges, getNodes(), d as Record<string, unknown>))}`}
+              onClick={() => downloadAsFixture(id, 'ariadneSearch', resolveFixtureQuery(id, liveEdges, getNodes(), d as Record<string, unknown>))}
             >💾</button>
           )}
         </div>

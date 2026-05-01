@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { runMDSNode } from '../utils/runMDSNode'
-import { downloadAsFixture, fixtureFilename } from '../utils/fixtureUtils'
+import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type MDSStatus = 'idle' | 'loading' | 'success' | 'error'
@@ -131,8 +131,8 @@ export function MDSSearchNode({ id, data }: NodeProps) {
           </label>
           {(status === 'success' || status === 'cached') && (
             <button style={styles.fixtureSaveBtn} className="nodrag"
-              title={`Download fixture: ${fixtureFilename('mdsSearch', String(d.inlineQuery ?? ''))}`}
-              onClick={() => downloadAsFixture(id, 'mdsSearch', String(d.inlineQuery ?? ''))}>
+              title={`Download fixture: ${fixtureFilename('mdsSearch', resolveFixtureQuery(id, liveEdges, getNodes(), d as Record<string, unknown>))}`}
+              onClick={() => downloadAsFixture(id, 'mdsSearch', resolveFixtureQuery(id, liveEdges, getNodes(), d as Record<string, unknown>))}>
               💾
             </button>
           )}
