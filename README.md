@@ -61,6 +61,8 @@ The sidebar groups nodes into collapsible categories. Click a group heading to c
 
 ### Search
 
+All five active search nodes (ARIADNE, GBIF, LLDS, MDS, Europeana) share a **fixture mode** for offline and workshop use — see [Offline fixtures](#offline-fixtures) below.
+
 | Node | Service | Notes |
 |------|---------|-------|
 | **ARIADNESearch** | [ARIADNE Infrastructure Portal](https://portal.ariadne-infrastructure.eu/) | Pan-European archaeology data aggregator covering 40+ institutions across 23 countries. Direct browser fetch (permissive CORS — no proxy required). Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type**, **Getty AAT subject**, **Native subject**, **Country** (30+ values across Europe and beyond), **Data type**, **Period**, and **Contributor** (filter to a specific partner institution, e.g. "Archaeology Data Service" to retrieve ADS records). Citation metadata is stamped on every record. Records include an `ariadne.*` namespace with temporal, spatial, subject, and contributor detail. |
@@ -493,6 +495,42 @@ Any JSON file produced by **ExportNode** (format: JSON) contains a plain `Unifie
 
 ---
 
+## Offline fixtures
+
+Every active search node ships with a **fixture mode** so that workshop sessions and demos can run reliably even when live services are unavailable or inaccessible.
+
+### Controls (per search node)
+
+| Control | Location | Behaviour |
+|---------|----------|-----------|
+| **📦 toggle** | Node footer | When checked, clicking **▶ Load fixture** loads pre-baked results from `public/fixtures/` instead of calling the live API. The node reports `📦 N (fixture)` in the status badge. |
+| **💾 button** | Node footer — visible after a successful or cached live run | Downloads the current results as a `{nodeType}-{query}.json` file. Drop this file into `public/fixtures/` and commit it to make it available to everyone cloning the repo. |
+
+The fixture filename is derived from the search query — whether typed inline or wired from a ParamNode (e.g. `ariadneSearch-stonehenge.json`). Loading a fixture requires the query field to match the filename; mismatches produce a descriptive 404 error naming the expected file.
+
+### Bundled fixtures
+
+The repo ships with pre-baked results for three demonstration queries across all five active services:
+
+| Query | ARIADNE | GBIF | LLDS | MDS | Europeana |
+|-------|---------|------|------|-----|-----------|
+| `stonehenge` | ✓ | ✓ | ✓ | ✓ | ✓ |
+| `wordsworth` | ✓ | ✓ | — | ✓ | ✓ |
+| `roman coin` | ✓ | ✓ | — | ✓ | ✓ |
+
+These are snapshots captured from live services and are held for demonstration purposes only. See `public/fixtures/README.md` for full source citations and licence information.
+
+### LLDS collection samples
+
+`public/fixtures/LLDS Collections/` contains actual collection items retrieved from the [Oxford Text Archive](https://ota.bodleian.ox.ac.uk/) via LLDS — TEI-XML transcriptions, Dublin Core and METS metadata, EPUBs, and plain-text versions. Two topics are covered:
+
+- **Stonehenge** — Inigo Jones/John Webb (1655) and Walter Charleton (1663), EEBO-TCP Phase 1, CC0
+- **Wordsworth** — *The Excursion*, *The Prelude*, and *Lyrical Ballads*, Oxford Text Archive
+
+These files are intended for use with **LocalFolderSourceNode** at workshops. After cloning the repo, point the node's folder picker at the relevant subdirectory (e.g. `public/fixtures/LLDS Collections/stonehenge`) to ingest the texts as `FileRecord[]`.
+
+---
+
 ## CORS and the dev proxy
 
 | Prefix | Target | Reason |
@@ -549,6 +587,14 @@ Any JSON file produced by **ExportNode** (format: JSON) contains a plain `Unifie
 5. Optionally tick **Fetch all results** for a complete paginated result set.
 6. Click **▶ Run** and connect the output to a **TableOutputNode** or **MapOutputNode**.
 
+### Offline workshop demo
+
+1. On each search node, type a query matching a bundled fixture (e.g. `stonehenge`) and tick **📦**.
+2. Click **▶ Load fixture** — results load instantly from the repo with no network calls.
+3. For local text analysis, drag a **LocalFolderSourceNode** onto the canvas, click **📂 Pick Folder**, and navigate to `public/fixtures/LLDS Collections/stonehenge` in your local checkout.
+4. Connect the folder node's XML handle to an **XMLSectionNode** or its main output to an **OllamaNode** for LLM-assisted analysis.
+5. All fixture-backed results can flow into any downstream node (Table, Map, Timeline, Export) exactly as live results would.
+
 ### Spatial filter + map
 
 1. Run any source node.
@@ -569,6 +615,11 @@ Any JSON file produced by **ExportNode** (format: JSON) contains a plain `Unifie
 nfcs-poc/
 ├── CLAUDE.md                   # Architecture notes and API references (dev only)
 ├── vite.config.ts              # Dev server + CORS proxy rules + /url-proxy middleware
+├── public/
+│   └── fixtures/               # Pre-baked search results + sample collection material
+│       ├── README.md           # Source citations and demonstration-use notice
+│       ├── *.json              # Fixture files: {nodeType}-{query}.json
+│       └── LLDS Collections/   # Oxford Text Archive items (TEI-XML, EPUB, metadata)
 └── src/
     ├── App.tsx                 # Canvas, collapsible sidebar, Run All, save/load, node factories
     ├── types/
@@ -651,7 +702,8 @@ nfcs-poc/
         ├── runURLFetchNode.ts          # Runner for urlFetch
         ├── runOllamaNode.ts            # Runner for ollamaNode
         ├── runOllamaFieldNode.ts       # Runner for ollamaField
-        ├── nodeRunners.ts              # Registry: node type → runner
+        ├── fixtureUtils.ts             # withFixture HOF, resolveFixtureQuery, downloadAsFixture
+        ├── nodeRunners.ts              # Registry: node type → runner (active search runners wrapped with withFixture)
         └── runWorkflow.ts              # Topological executor (Kahn's algorithm)
 ```
 
