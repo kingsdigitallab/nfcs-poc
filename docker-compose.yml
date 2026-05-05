@@ -25,18 +25,19 @@ services:
               capabilities: [gpu]
     restart: unless-stopped
 
-  # Cloudflare quick tunnel — only starts when explicitly requested:
+  # Cloudflare named tunnel — only starts when explicitly requested:
   #   docker compose --profile tunnel up
   #
-  # No account or domain needed. A random *.trycloudflare.com URL is
-  # printed in the cloudflared container logs on startup:
-  #   docker compose logs cloudflared
-  #
-  # Note: the URL changes on every restart. For a permanent URL,
-  # switch to a named tunnel with a domain (see .env.example).
+  # Setup (one-time):
+  #   1. Go to Cloudflare dashboard → Networking → Tunnels → nfcs-workshop
+  #   2. Add a route: nfcs-workshop.field.works → http://app:3001
+  #   3. Copy the tunnel token into a .env file:
+  #        CLOUDFLARE_TUNNEL_TOKEN=<your-token>
   cloudflared:
     image: cloudflare/cloudflared:latest
-    command: tunnel --no-autoupdate --url http://app:3001
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
     depends_on:
       - app
     restart: unless-stopped
