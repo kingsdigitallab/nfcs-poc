@@ -25,21 +25,18 @@ services:
               capabilities: [gpu]
     restart: unless-stopped
 
-  # Cloudflare named tunnel — only starts when explicitly requested:
+  # Cloudflare quick tunnel — only starts when explicitly requested:
   #   docker compose --profile tunnel up
   #
-  # Setup (one-time):
-  #   1. Create a free Cloudflare account at cloudflare.com
-  #   2. Go to Zero Trust → Networks → Tunnels → Create a tunnel
-  #   3. Copy the tunnel token and add it to a .env file:
-  #        CLOUDFLARE_TUNNEL_TOKEN=<your-token>
-  #   4. In the tunnel dashboard, add a Public Hostname pointing to
-  #        http://app:3001
+  # No account or domain needed. A random *.trycloudflare.com URL is
+  # printed in the cloudflared container logs on startup:
+  #   docker compose logs cloudflared
+  #
+  # Note: the URL changes on every restart. For a permanent URL,
+  # switch to a named tunnel with a domain (see .env.example).
   cloudflared:
     image: cloudflare/cloudflared:latest
-    command: tunnel run
-    environment:
-      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+    command: tunnel --no-autoupdate --url http://app:3001
     depends_on:
       - app
     restart: unless-stopped
