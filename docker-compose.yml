@@ -1,0 +1,53 @@
+services:
+
+  app:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      # Points to the ollama service by its Docker Compose service name.
+      # Override with OLLAMA_HOST env var if Ollama is running elsewhere.
+      - OLLAMA_HOST=http://ollama:11434
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
+
+  # Cloudflare named tunnel — only starts when explicitly requested:
+  #   docker compose --profile tunnel up
+  #
+  # Setup (one-time):
+  #   1. Create a free Cloudflare account at cloudflare.com
+  #   2. Go to Zero Trust → Networks → Tunnels → Create a tunnel
+  #   3. Copy the tunnel token and add it to a .env file:
+  #        CLOUDFLARE_TUNNEL_TOKEN=<your-token>
+  #   4. In the tunnel dashboard, add a Public Hostname pointing to
+  #        http://app:3001
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      - app
+    restart: unless-stopped
+    profiles:
+      - tunnel
+
+volumes:
+  # Persists downloaded Ollama models across container restarts
+  ollama_data:

@@ -85,13 +85,20 @@ Cloudflare tunnel is live.
 
 ---
 
-## Open Questions (needed before coding the Compose file)
+## Host Machine (confirmed)
+
+| Detail | Value |
+|--------|-------|
+| **Primary target** | Internal server running Ubuntu (native Linux — straightforward GPU passthrough) |
+| **Development / test machine** | WSL2 on Windows 11, Ubuntu 22.04 |
+| **GPU** | NVIDIA RTX 4080 (CUDA) |
+| **Compose GPU config** | `driver: nvidia` + `nvidia-container-toolkit` required on both hosts |
+
+## Open Questions
 
 | Question | Why it matters |
 |----------|---------------|
-| **GPU vendor on host machine** (NVIDIA / AMD) | CUDA vs ROCm; different base image and runtime flags in Compose |
-| **OS on host machine** (Linux / Windows / Mac) | Windows needs WSL2 + nvidia-container-toolkit for GPU passthrough; Linux is straightforward |
-| **Docker already installed?** | If not, installation steps needed |
+| **Docker installed on Ubuntu server?** | If not, installation steps needed before first deploy |
 | **Outbound internet access from host?** | Required for Cloudflare Tunnel and for proxying external APIs |
 
 ---
