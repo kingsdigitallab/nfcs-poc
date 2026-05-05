@@ -299,12 +299,20 @@ function urlProxyMiddleware(req, res, next) {
 // ── Simple proxy routes ───────────────────────────────────────────────────────
 // Mounted at path prefix so Express strips the prefix before forwarding.
 // pathRewrite re-adds the correct upstream path segment where needed.
+//
+// Accept-Encoding is stripped from all outbound proxy requests to prevent
+// double-compression conflicts when Cloudflare processes responses from the
+// tunnel. Without this, Cloudflare decompresses/re-compresses gzip responses
+// in a way that corrupts content-length, causing the browser to abort.
+
+const stripEncoding = (proxyReq) => proxyReq.removeHeader('accept-encoding')
 
 app.use('/llds-proxy', createProxyMiddleware({
   target: 'https://llds.ling-phil.ox.ac.uk',
   changeOrigin: true,
   // /llds-proxy/rest/items → (prefix stripped) /rest/items → /llds/rest/items
   pathRewrite: { '^/': '/llds/' },
+  on: { proxyReq: stripEncoding },
 }))
 
 app.use('/ads-proxy', createProxyMiddleware({
@@ -312,6 +320,7 @@ app.use('/ads-proxy', createProxyMiddleware({
   changeOrigin: true,
   on: {
     proxyReq: (proxyReq) => {
+      stripEncoding(proxyReq)
       proxyReq.setHeader('User-Agent', DESKTOP_UA)
       proxyReq.setHeader('Referer', 'https://archaeologydataservice.ac.uk/')
       proxyReq.setHeader('Accept', 'application/json, text/plain, */*')
@@ -322,16 +331,19 @@ app.use('/ads-proxy', createProxyMiddleware({
 app.use('/mds-proxy', createProxyMiddleware({
   target: 'https://museumdata.uk',
   changeOrigin: true,
+  on: { proxyReq: stripEncoding },
 }))
 
 app.use('/reconcile-proxy', createProxyMiddleware({
   target: 'https://wikidata.reconci.link',
   changeOrigin: true,
+  on: { proxyReq: stripEncoding },
 }))
 
 app.use('/ollama', createProxyMiddleware({
   target: OLLAMA_HOST,
   changeOrigin: true,
+  on: { proxyReq: stripEncoding },
 }))
 
 // ── Custom middleware ─────────────────────────────────────────────────────────
