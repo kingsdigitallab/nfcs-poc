@@ -346,6 +346,13 @@ app.use('/ollama', createProxyMiddleware({
   on: { proxyReq: stripEncoding },
 }))
 
+app.use('/kcl-proxy', createProxyMiddleware({
+  target: 'https://api.ai.create.kcl.ac.uk',
+  changeOrigin: true,
+  pathRewrite: { '^/kcl-proxy': '' },
+  on: { proxyReq: stripEncoding },
+}))
+
 // ── Custom middleware ─────────────────────────────────────────────────────────
 
 app.use(adsLibrarySearchMiddleware)
