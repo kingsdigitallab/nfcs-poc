@@ -412,6 +412,12 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: path => path.replace(/^\/ollama/, ''),
       },
+      // Proxy /kcl-proxy/* → https://api.ai.create.kcl.ac.uk/*
+      '/kcl-proxy': {
+        target: 'https://api.ai.create.kcl.ac.uk',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/kcl-proxy/, ''),
+      },
     },
   },
   plugins: [

@@ -31,6 +31,9 @@ import { CitationNode }             from './CitationNode'
 import { EuropeanaSearchNode }     from './EuropeanaSearchNode'
 import { FieldDistributionNode }   from './FieldDistributionNode'
 import { ARIADNESearchNode }       from './ARIADNESearchNode'
+import { KCLNode }                  from './KCLNode'
+import { KCLFieldNode }             from './KCLFieldNode'
+import { KCLOutputNode }            from './KCLOutputNode'
 
 export const nodeTypes = {
   param:             ParamNode,
@@ -66,4 +69,7 @@ export const nodeTypes = {
   europeanaSearch:    EuropeanaSearchNode,
   fieldDistribution:  FieldDistributionNode,
   ariadneSearch:      ARIADNESearchNode,
+  kclNode:            KCLNode,
+  kclField:           KCLFieldNode,
+  kclOutput:          KCLOutputNode,
 }
