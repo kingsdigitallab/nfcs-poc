@@ -183,6 +183,47 @@ Models persist in the `ollama_data` Docker volume across restarts. Do not use
 
 ---
 
+## CPU-Only Deployment (No GPU)
+
+**Problem:** The `docker-compose.yml` includes a `deploy.resources.reservations` block for NVIDIA GPUs. On a CPU-only machine this causes the Ollama container to fail with a device reservation error.
+
+**Fix:** Remove the `deploy:` block entirely from the `ollama` service in `docker-compose.yml`. The current file on `deploy/express-server` already has this removed — the block is only needed when you have an NVIDIA GPU with `nvidia-container-toolkit` installed.
+
+**Performance note:** Ollama runs on CPU only. Use the smallest viable model to keep response times acceptable:
+- `qwen2:0.5b` — ~352 MB (fastest on CPU, good for demos)
+- `tinyllama` — ~637 MB
+- `gemma3:1b` — ~815 MB (slowest of these three on CPU)
+
+Pull after first `docker compose up`:
+```bash
+docker compose exec ollama ollama pull qwen2:0.5b
+```
+
+---
+
+## Disk Space on Small VMs (10 GB)
+
+A 10 GB root disk fills up quickly. Rough usage:
+- Docker base images + build layers: ~2–3 GB
+- Ollama image: ~1.5 GB
+- `qwen2:0.5b` model: ~352 MB
+- System + Docker overhead: ~2 GB
+- **Total: ~6–7 GB** — leaves ~3 GB headroom
+
+To check free space at any point:
+```bash
+df -h /
+```
+
+To prune dangling build cache after a successful build:
+```bash
+docker builder prune -f
+```
+
+Avoid `docker compose down --volumes` — this deletes the `ollama_data` volume and you will need to re-pull the model.
+
+---
+
 ## GPU Passthrough (NVIDIA)
 
 Requires `nvidia-container-toolkit` on the host:
@@ -201,24 +242,103 @@ leftover buildx symlinks may need fixing (see Docker Buildx section above).
 
 ---
 
+## Proxy Routes Aborting Through Cloudflare Tunnel (Compression Conflict)
+
+**Problem:** All proxy-backed nodes (MDS, LLDS, ADS, Reconciliation) failed with
+"signal is aborted without reason" through the named tunnel, while GBIF and ARIADNE
+(direct browser fetches, no proxy) worked fine. CORS was not the cause. The issue was
+Cloudflare decompressing and re-compressing gzip responses from upstream services, which
+corrupted `content-length` and caused the browser to abort.
+
+**Fix:** Strip `Accept-Encoding` from all outbound proxy requests so upstream services
+return uncompressed responses. In `server/index.mjs`:
+```js
+const stripEncoding = (proxyReq) => proxyReq.removeHeader('accept-encoding')
+// Applied via on: { proxyReq: stripEncoding } on every createProxyMiddleware call
+```
+This is already in place in the current codebase.
+
+---
+
+## package-lock.json Out of Sync in Docker
+
+**Problem:** Adding `express` and `http-proxy-middleware` to `package.json` without
+committing the updated `package-lock.json` caused `npm ci` to fail inside the Docker
+build:
+```
+npm error `npm ci` can only install packages when your package.json and package-lock.json
+are in sync.
+```
+
+**Fix:** Run `npm install` (not `npm ci`) on the host to regenerate `package-lock.json`,
+then commit both `package.json` and `package-lock.json`. Docker's `npm ci` requires the
+lock file to already match.
+
+---
+
+## .env File with CRLF Line Endings (Windows)
+
+**Problem:** Creating `.env` with `echo` in PowerShell or Windows `Set-Content` adds
+CRLF line endings (`\r\n`). Docker Compose reads the trailing `\r` as part of the value,
+making `CLOUDFLARE_TUNNEL_TOKEN` invalid.
+
+**Fix:** Use PowerShell `Set-Content` with `-NoNewline` and explicit `\n`:
+```powershell
+Set-Content -Path .env -Value "CLOUDFLARE_TUNNEL_TOKEN=<your-token>" -NoNewline
+```
+Or from within WSL:
+```bash
+printf 'CLOUDFLARE_TUNNEL_TOKEN=<your-token>\n' > .env
+```
+
+---
+
+## WSL / Docker DNS Resolver Failures After Restart
+
+**Problem:** After WSL restarts (or overnight), Docker's internal DNS (`127.0.0.11`) and
+WSL's `/etc/resolv.conf` become stale. The `cloudflared` container logs show:
+```
+dial udp: lookup <hostname>: server misbehaving
+```
+
+**Fix:** A full system reboot (not just WSL restart) reliably clears this. Longer-term,
+add external DNS to `/etc/docker/daemon.json`:
+```json
+{ "dns": ["1.1.1.1", "8.8.8.8"] }
+```
+Then `sudo systemctl restart docker`.
+
+---
+
 ## Quick Reference: Starting the Full Stack
 
 ```bash
-# First time only
+# First time only (Ubuntu 24 / cloud VM)
+sudo apt-get update
+sudo apt-get install -y docker.io docker-compose-plugin git
+sudo usermod -aG docker $USER
+newgrp docker   # or log out and back in
+
 git clone https://github.com/kingsdigitallab/nfcs-poc.git
 cd nfcs-poc
 git checkout deploy/express-server
-echo "CLOUDFLARE_TUNNEL_TOKEN=<token>" > .env
 
-# Start app + Ollama only (local testing)
-docker compose up --build
+# Create .env (Linux — no CRLF issues)
+printf 'CLOUDFLARE_TUNNEL_TOKEN=<your-token>\n' > .env
 
-# Pull a model (first time only)
-docker compose exec ollama ollama pull gemma3:1b
+# Start app + Ollama only (local testing, no tunnel)
+docker compose up --build -d
+
+# Pull smallest model for CPU-only (CPU-only VM)
+docker compose exec ollama ollama pull qwen2:0.5b
 
 # Start with public tunnel
-docker compose --profile tunnel up
+docker compose --profile tunnel up -d
 
 # Shut down tunnel after workshop
 docker compose --profile tunnel down
+
+# Check logs
+docker compose logs -f app
+docker compose logs -f cloudflared
 ```
