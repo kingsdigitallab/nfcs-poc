@@ -24,6 +24,8 @@ import type { LocalFolderSourceNodeData } from './nodes/LocalFolderSourceNode'
 import type { LocalFileSourceNodeData }   from './nodes/LocalFileSourceNode'
 import type { OllamaNodeData }            from './nodes/OllamaNode'
 import type { OllamaFieldNodeData }       from './nodes/OllamaFieldNode'
+import type { KCLNodeData }              from './nodes/KCLNode'
+import type { KCLFieldNodeData }         from './nodes/KCLFieldNode'
 import type { URLFetchNodeData }          from './nodes/URLFetchNode'
 import type { HTMLSectionNodeData }       from './nodes/HTMLSectionNode'
 import type { LLDSSearchNodeData }        from './nodes/LLDSSearchNode'
@@ -61,6 +63,8 @@ type AppNode =
   | Node<LocalFileSourceNodeData>
   | Node<OllamaNodeData>
   | Node<OllamaFieldNodeData>
+  | Node<KCLNodeData>
+  | Node<KCLFieldNodeData>
   | Node<URLFetchNodeData>
   | Node<HTMLSectionNodeData>
   | Node<LLDSSearchNodeData>
@@ -209,6 +213,44 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       inputCount:          0,
       outputCount:         0,
     } satisfies OllamaFieldNodeData,
+  }),
+  kclNode: pos => ({
+    id: newId('kcl'), type: 'kclNode', position: pos,
+    data: {
+      apiKey:              '',
+      model:               'arc:lite',
+      systemPrompt:        'You are a research assistant helping to analyse humanities research documents and data.',
+      userPromptTemplate:  'Summarise the key themes and subjects in 3-4 sentences:\n\n{{content}}',
+      temperature:         0.7,
+      maxTokens:           1024,
+      status:              'idle',
+      statusMessage:       '',
+      results:             undefined,
+      inputCount:          0,
+      outputCount:         0,
+    } satisfies KCLNodeData,
+  }),
+  kclField: pos => ({
+    id: newId('kclField'), type: 'kclField', position: pos,
+    data: {
+      apiKey:              '',
+      model:               'arc:lite',
+      selectedField:       '',
+      mode:                'per-record',
+      systemPrompt:        'You are a research assistant helping to analyse humanities research data.',
+      userPromptTemplate:  'Summarise the following in 2–3 sentences:\n\n{{value}}',
+      temperature:         0.7,
+      maxTokens:           1024,
+      status:              'idle',
+      statusMessage:       '',
+      results:             undefined,
+      inputCount:          0,
+      outputCount:         0,
+    } satisfies KCLFieldNodeData,
+  }),
+  kclOutput: pos => ({
+    id: newId('kclOut'), type: 'kclOutput', position: pos,
+    data: {},
   }),
   urlFetch: pos => ({
     id: newId('urlFetch'), type: 'urlFetch', position: pos,
@@ -423,6 +465,8 @@ const SIDEBAR_ITEMS = [
   { type: 'filterTransform',   label: 'FilterTransformNode', sub: 'Filter + transform records',                    color: '#4f46e5', group: 'Process' },
   { type: 'htmlSection',       label: 'HTMLSectionNode',     sub: 'Extract page section by CSS selector',          color: '#065f46', group: 'Process' },
   { type: 'mergeByQID',        label: 'MergeByQIDNode',      sub: 'Join records from multiple sources by QID',     color: '#6b21a8', group: 'Process' },
+  { type: 'kclField',          label: 'KCLFieldNode',        sub: 'KCL inference on a chosen field',               color: '#7f1d1d', group: 'Process' },
+  { type: 'kclNode',           label: 'KCLNode',             sub: 'KCL inference — file/content records',          color: '#881337', group: 'Process' },
   { type: 'ollamaField',       label: 'OllamaFieldNode',     sub: 'LLM inference on a chosen field',               color: '#1e1b4b', group: 'Process' },
   { type: 'ollamaNode',        label: 'OllamaNode',          sub: 'Local LLM — file/content records',              color: '#312e81', group: 'Process' },
   { type: 'reconciliation',    label: 'ReconciliationNode',  sub: 'Wikidata field reconciler',                     color: '#7c3aed', group: 'Process' },
@@ -436,6 +480,7 @@ const SIDEBAR_ITEMS = [
   { type: 'imageView',         label: 'ImageViewNode',       sub: 'Image + IIIF manifest viewer',                  color: '#1c3144', group: 'Output' },
   { type: 'jsonOutput',        label: 'JSONOutputNode',      sub: 'Formatted JSON viewer',                         color: '#6d28d9', group: 'Output' },
   { type: 'mapOutput',         label: 'MapOutputNode',       sub: 'Geo map (lat/lon records)',                      color: '#14532d', group: 'Output' },
+  { type: 'kclOutput',         label: 'KCLOutputNode',       sub: 'Display KCL inference text',                    color: '#3b0764', group: 'Output' },
   { type: 'ollamaOutput',      label: 'OllamaOutputNode',    sub: 'Display Ollama inference text',                 color: '#0f172a', group: 'Output' },
   { type: 'quickView',         label: 'QuickViewNode',       sub: 'Inspect one field in full',                     color: '#1e293b', group: 'Output' },
   { type: 'saveSearch',        label: 'SaveSearch',          sub: 'Save records + metadata to .nfcs.json',         color: '#1b4332', group: 'Output' },

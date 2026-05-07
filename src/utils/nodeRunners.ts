@@ -25,6 +25,8 @@ import { runWikidataEnrichNode }  from './runWikidataEnrichNode'
 import { runXMLSectionNode }      from './runXMLSectionNode'
 import { runEuropeanaNode }       from './runEuropeanaNode'
 import { runARIADNENode }         from './runARIADNENode'
+import { runKCLNode }             from './runKCLNode'
+import { runKCLFieldNode }        from './runKCLFieldNode'
 import { withFixture }            from './fixtureUtils'
 
 /**
@@ -57,6 +59,8 @@ export const nodeRunners: Record<string, NodeRunner> = {
   urlFetch:          runURLFetchNode,
   ollamaNode:        runOllamaNode,
   ollamaField:       runOllamaFieldNode,
+  kclNode:           runKCLNode,
+  kclField:          runKCLFieldNode,
   mergeByQID:        runMergeByQIDNode,
   wikidataEnrich:    runWikidataEnrichNode,
   xmlSection:        runXMLSectionNode,
