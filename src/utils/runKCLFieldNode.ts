@@ -76,8 +76,15 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
   const node  = nodes.find(n => n.id === nodeId)
   if (!node) return
 
-  const d              = node.data as Record<string, unknown>
-  const apiKey         = (d.apiKey         as string | undefined) ?? ''
+  const d = node.data as Record<string, unknown>
+
+  const resolveParam = (handleId: string, fallback: string): string => {
+    const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
+    if (edge) return (nodes.find(n => n.id === edge.source)?.data as { value?: string } | undefined)?.value ?? ''
+    return fallback
+  }
+
+  const apiKey         = resolveParam('apiKey', (d.apiKey as string | undefined) ?? '').trim()
   const model          = (d.model          as string | undefined) ?? ''
   const selectedField  = (d.selectedField  as string | undefined) ?? ''
   const mode           = (d.mode           as string | undefined) ?? 'per-record'

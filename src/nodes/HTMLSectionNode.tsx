@@ -14,6 +14,7 @@
 
 import { useState, useCallback, useMemo, useRef } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
+import { Readability } from '@mozilla/readability'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 export interface HTMLSectionNodeData {
@@ -21,6 +22,7 @@ export interface HTMLSectionNodeData {
   separator: string
   maxLength: number
   preserveHtml: boolean
+  extractSection: boolean
   status: 'idle' | 'running' | 'success' | 'error'
   statusMessage: string
   inputCount: number
@@ -53,38 +55,72 @@ function analyseHtml(html: string): StructuralItem[] {
     const parser = new DOMParser()
     const doc    = parser.parseFromString(html, 'text/html')
     const items: StructuralItem[] = []
+    const seenSelectors = new Set<string>()
 
-    const addEl = (el: Element, selector: string, label: string) => {
+    const tryAdd = (el: Element, selector: string, label: string) => {
+      if (seenSelectors.has(selector)) return
       const text = (el.textContent ?? '').replace(/\s+/g, ' ').trim().slice(0, 60)
       if (!text) return
+      try { if (doc.querySelectorAll(selector).length === 0) return } catch { return }
+      seenSelectors.add(selector)
       items.push({ selector, label, preview: text })
     }
 
-    // Semantic landmarks
-    const landmarks: Array<[string, string]> = [
-      ['main',    'main'],
-      ['article', 'article'],
-      ['[role="main"]', '[role="main"]'],
-    ]
-    for (const [sel, label] of landmarks) {
-      const el = doc.querySelector(sel)
-      if (el) addEl(el, sel, label)
+    // Walk up the DOM building a path selector using nth-child (per-parent index
+    // of all children regardless of tag) until the selector is unique or we hit
+    // an element with an ID. nth-child is used rather than nth-of-type because it
+    // reflects the element's true structural position in mixed-content containers.
+    const buildPathSelector = (el: Element): string | null => {
+      const parts: string[] = []
+      let cur: Element | null = el
+      while (cur && cur.tagName !== 'BODY' && cur.tagName !== 'HTML') {
+        const tag = cur.tagName.toLowerCase()
+        if (cur.id && /^[a-zA-Z][\w-]*$/.test(cur.id)) { parts.unshift(`#${cur.id}`); break }
+        const parent = cur.parentElement
+        if (parent) {
+          const idx = Array.from(parent.children).indexOf(cur) + 1
+          parts.unshift(`${tag}:nth-child(${idx})`)
+        } else {
+          parts.unshift(tag)
+        }
+        cur = cur.parentElement
+        if (parts.length >= 5) break
+        try { if (doc.querySelectorAll(parts.join(' > ')).length === 1) break } catch { break }
+      }
+      if (!parts.length) return null
+      const sel = parts.join(' > ')
+      try { return doc.querySelectorAll(sel).length > 0 ? sel : null } catch { return null }
     }
 
-    // Named sections: <section id>, <div id>, <article id>
+    // Semantic landmarks
+    for (const [sel, label] of [['main','main'],['article','article'],['[role="main"]','[role="main"]']] as [string,string][]) {
+      const el = doc.querySelector(sel)
+      if (el) tryAdd(el, sel, label)
+    }
+
+    // Named sections
     doc.querySelectorAll('section[id], article[id], div[id]').forEach(el => {
       const sel = `${el.tagName.toLowerCase()}#${el.id}`
-      addEl(el, sel, sel)
+      tryAdd(el, sel, sel)
     })
 
-    // Headings (h1–h3)
-    doc.querySelectorAll('h1, h2, h3').forEach((el, i) => {
-      const tag    = el.tagName.toLowerCase()
-      const nthSel = `${tag}:nth-of-type(${i + 1})`
-      addEl(el, nthSel, `${tag}: ${(el.textContent ?? '').trim().slice(0, 30)}`)
+    // Headings (h1–h3) — try nth-of-type first (works when headings are siblings);
+    // fall back to a path selector for the common SPA pattern where each heading
+    // lives in its own container div (making nth-of-type always 1 and non-unique).
+    const tagCounts: Record<string, number> = {}
+    doc.querySelectorAll('h1, h2, h3').forEach(el => {
+      const tag   = el.tagName.toLowerCase()
+      tagCounts[tag] = (tagCounts[tag] ?? 0) + 1
+      const label = `${tag}: ${(el.textContent ?? '').trim().slice(0, 30)}`
+      const nthSel = `${tag}:nth-of-type(${tagCounts[tag]})`
+      try {
+        if (doc.querySelectorAll(nthSel).length > 0) { tryAdd(el, nthSel, label); return }
+      } catch { /* fall through */ }
+      const pathSel = buildPathSelector(el)
+      if (pathSel) tryAdd(el, pathSel, label)
     })
 
-    return items.slice(0, 20)
+    return items.slice(0, 30)
   } catch {
     return []
   }
@@ -113,6 +149,60 @@ function extractBySelector(
       .map(el => (el.textContent ?? '').replace(/\s+/g, ' ').trim())
       .filter(Boolean)
       .join(separator)
+  } catch {
+    return ''
+  }
+}
+
+// ── Section-after-heading extraction ─────────────────────────────────────────
+// Finds the first element matching the selector (expected to be a heading),
+// then collects it plus all following siblings until the next heading of equal
+// or higher rank. Works best when the heading and its content are siblings
+// within the same parent container.
+
+function extractSectionFromHeading(
+  html: string,
+  selector: string,
+  separator: string,
+  preserveHtml: boolean,
+): string {
+  try {
+    const doc     = new DOMParser().parseFromString(html, 'text/html')
+    const heading = doc.querySelector(selector)
+    if (!heading) return ''
+
+    const level   = parseInt(heading.tagName[1]) || 0
+    const getText = (el: Element) =>
+      preserveHtml ? el.outerHTML : (el.textContent ?? '').replace(/\s+/g, ' ').trim()
+
+    const parts: string[] = [getText(heading)]
+    let sibling = heading.nextElementSibling
+    while (sibling) {
+      const tag = sibling.tagName.toLowerCase()
+      if (/^h[1-6]$/.test(tag) && parseInt(tag[1]) <= level) break
+      const content = getText(sibling)
+      if (content) parts.push(content)
+      sibling = sibling.nextElementSibling
+    }
+    return parts.filter(Boolean).join(separator)
+  } catch {
+    return ''
+  }
+}
+
+// ── Readability extraction ────────────────────────────────────────────────────
+// Uses Mozilla Readability (same algorithm as Firefox Reader Mode) to extract
+// the main article content from the page. Works best for editorial/article pages;
+// less reliable for data portals or heavily structured UIs.
+
+function extractReadability(html: string, preserveHtml: boolean): string {
+  try {
+    const doc     = new DOMParser().parseFromString(html, 'text/html')
+    const article = new Readability(doc).parse()
+    if (!article) return ''
+    return preserveHtml
+      ? (article.content ?? '')
+      : (article.textContent ?? '').replace(/\s+/g, ' ').trim()
   } catch {
     return ''
   }
@@ -151,18 +241,26 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
 
   const structuralItems = useMemo(() => analyseHtml(firstHtml), [firstHtml])
 
-  const selector     = (d.selector     ?? 'main, article') as string
-  const separator    = (d.separator    ?? '\n\n')           as string
-  const maxLength    = (d.maxLength    ?? 8000)             as number
-  const preserveHtml = (d.preserveHtml ?? false)            as boolean
-  const isRunning    = d.status === 'running'
+  const selector       = (d.selector       ?? 'main, article') as string
+  const separator      = (d.separator      ?? '\n\n')           as string
+  const maxLength      = (d.maxLength      ?? 8000)             as number
+  const preserveHtml   = (d.preserveHtml   ?? false)            as boolean
+  const extractSection = (d.extractSection ?? false)            as boolean
+  const isRunning      = d.status === 'running'
+  const isReadability  = selector === '@readability'
 
-  // Update live preview whenever selector, mode, or firstHtml changes
   const livePreview = useMemo(() => {
     if (!firstHtml || !selector) return ''
-    const result = extractBySelector(firstHtml, selector, separator, preserveHtml)
+    let result: string
+    if (isReadability) {
+      result = extractReadability(firstHtml, preserveHtml)
+    } else if (extractSection) {
+      result = extractSectionFromHeading(firstHtml, selector, separator, preserveHtml)
+    } else {
+      result = extractBySelector(firstHtml, selector, separator, preserveHtml)
+    }
     return result.slice(0, 300) + (result.length > 300 ? '…' : '')
-  }, [firstHtml, selector, separator, preserveHtml])
+  }, [firstHtml, selector, separator, preserveHtml, extractSection, isReadability])
 
   // ── Run handler ──────────────────────────────────────────────────────────
   const handleRun = useCallback(async () => {
@@ -196,7 +294,11 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
         continue
       }
 
-      let extracted = extractBySelector(html, selector, separator, preserveHtml)
+      let extracted = isReadability
+        ? extractReadability(html, preserveHtml)
+        : extractSection
+          ? extractSectionFromHeading(html, selector, separator, preserveHtml)
+          : extractBySelector(html, selector, separator, preserveHtml)
       if (!extracted) {
         missCount++
         enriched.push({ ...record, fetchedContent: '', htmlSelector: selector })
@@ -223,7 +325,7 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
       outputCount:    enriched.length,
       resultsVersion: version,
     })
-  }, [id, updateNodeData, upstreamRecords, selector, separator, maxLength, preserveHtml])
+  }, [id, updateNodeData, upstreamRecords, selector, separator, maxLength, preserveHtml, extractSection, isReadability])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
@@ -266,8 +368,30 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
           Preserve HTML structure
         </label>
 
+        {/* Readability preset */}
+        <button
+          style={isReadability ? styles.presetBtnActive : styles.presetBtn}
+          onClick={() => updateNodeData(id, { selector: isReadability ? 'main, article' : '@readability' })}
+          className="nodrag"
+        >
+          {isReadability ? '✦ Readability active — click to reset' : '✦ Use main content (Readability)'}
+        </button>
+
+        {/* Section extraction checkbox — only when using a CSS selector */}
+        {!isReadability && (
+          <label style={styles.checkLabel} className="nodrag">
+            <input
+              type="checkbox"
+              checked={extractSection}
+              onChange={e => updateNodeData(id, { extractSection: e.target.checked })}
+              style={{ marginRight: 5 }}
+            />
+            Extract heading + following content
+          </label>
+        )}
+
         {/* Structural picker toggle */}
-        {hasHtml && (
+        {hasHtml && !isReadability && (
           <button
             style={styles.pickerToggle}
             onClick={() => setShowPicker(v => !v)}
@@ -284,7 +408,7 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
         )}
 
         {/* Structural items */}
-        {showPicker && hasHtml && (
+        {showPicker && hasHtml && !isReadability && (
           <div style={styles.pickerList} className="nodrag nowheel">
             {structuralItems.length === 0 && (
               <div style={styles.pickerEmpty}>No named landmarks or headings found.</div>
@@ -324,7 +448,7 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
 
         {hasHtml && !livePreview && selector && (
           <div style={styles.noMatch}>
-            ⚠ Selector matches nothing in first record
+            {isReadability ? '⚠ No main article content detected' : '⚠ Selector matches nothing in first record'}
           </div>
         )}
 
@@ -467,6 +591,28 @@ const styles = {
     padding: '3px 8px',
     cursor: 'pointer',
     textAlign: 'left' as const,
+  },
+  presetBtn: {
+    fontSize: 10,
+    color: '#1e40af',
+    background: '#eff6ff',
+    border: '1px solid #bfdbfe',
+    borderRadius: 4,
+    padding: '3px 8px',
+    cursor: 'pointer',
+    textAlign: 'left' as const,
+    width: '100%',
+  },
+  presetBtnActive: {
+    fontSize: 10,
+    color: '#fff',
+    background: '#1d4ed8',
+    border: '1px solid #1d4ed8',
+    borderRadius: 4,
+    padding: '3px 8px',
+    cursor: 'pointer',
+    textAlign: 'left' as const,
+    width: '100%',
   },
   pickerList: {
     display: 'flex',

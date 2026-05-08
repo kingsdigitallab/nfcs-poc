@@ -45,6 +45,8 @@ const TRANSIENT_FIELDS = new Set([
   'xmlCount',
   'textCount',
   'imageCount',
+  'filterCount',
+  'totalCount',
 ])
 
 export function stripTransient(data: Record<string, unknown>): Record<string, unknown> {

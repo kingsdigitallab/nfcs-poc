@@ -61,7 +61,19 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
 
   return (
     <div style={{ ...styles.card, borderColor }}>
-      {/* Wirable input handles */}
+      {/* apiKey handle — aligned with the API key input row */}
+      <Handle
+        type="target"
+        position={Position.Left}
+        id="apiKey"
+        style={{
+          ...styles.inputHandle,
+          top: HEADER_H + BODY_PAD + 11,
+          background: isConnected('apiKey') ? '#3b82f6' : '#9ca3af',
+          boxShadow:  `0 0 0 1px ${isConnected('apiKey') ? '#3b82f6' : '#9ca3af'}`,
+        }}
+      />
+      {/* Wirable input handles for query / limit */}
       {WIRABLE_ROWS.map(({ handleId }, i) => (
         <Handle
           key={handleId}
@@ -90,11 +102,18 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
         <div style={styles.row}>
           <span style={styles.label}>API key</span>
           <input
-            style={{ ...styles.input, fontFamily: 'monospace', letterSpacing: '0.05em' }}
+            style={{
+              ...styles.input,
+              fontFamily: 'monospace',
+              letterSpacing: '0.05em',
+              background: isConnected('apiKey') ? '#eff6ff' : '#fff',
+              color:      isConnected('apiKey') ? '#1d4ed8' : '#111827',
+            }}
             type="text"
             value={(d.apiKey as string) || ''}
             onChange={e => updateNodeData(id, { apiKey: e.target.value })}
-            placeholder="your-api-key"
+            placeholder={isConnected('apiKey') ? '(from Param)' : 'your-api-key'}
+            readOnly={isConnected('apiKey')}
             className="nodrag"
           />
         </div>

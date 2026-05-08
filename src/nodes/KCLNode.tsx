@@ -23,12 +23,46 @@ export interface KCLNodeData {
   userPromptTemplate: string
   temperature: number
   maxTokens: number
+  visionMode: boolean
+  imageField: string   // specific field name, or '' for auto-detect
   status: 'idle' | 'running' | 'success' | 'error'
   statusMessage: string
   results: unknown[] | undefined
   inputCount: number
   outputCount: number
   [key: string]: unknown
+}
+
+type ContentPart =
+  | { type: 'text'; text: string }
+  | { type: 'image_url'; image_url: { url: string; format: string } }
+
+/** Build the user message content — plain string or multi-part array when a record has an image. */
+function buildUserContent(
+  textPrompt: string,
+  record: Record<string, unknown>,
+  imageField: string,
+): string | ContentPart[] {
+  let imageUrl: string | null = null
+  if (imageField) {
+    const val = record[imageField]
+    if (typeof val === 'string' && val.startsWith('data:image/')) imageUrl = val
+  } else {
+    if (record.contentType === 'image' && typeof record.content === 'string') {
+      imageUrl = record.content as string
+    } else {
+      for (const val of Object.values(record)) {
+        if (typeof val === 'string' && val.startsWith('data:image/')) { imageUrl = val; break }
+      }
+    }
+  }
+  if (!imageUrl) return textPrompt
+  const mimeMatch = /^data:(image\/[^;]+);base64,/.exec(imageUrl)
+  const format    = mimeMatch?.[1] ?? (record.mimeType as string | undefined) ?? 'image/jpeg'
+  return [
+    { type: 'text',      text:      textPrompt },
+    { type: 'image_url', image_url: { url: imageUrl, format } },
+  ]
 }
 
 // ── Constants ──────────────────────────────────────────────────────────────────
@@ -66,7 +100,7 @@ async function kclChat(
   apiKey: string,
   model: string,
   systemPrompt: string,
-  userPrompt: string,
+  userContent: string | ContentPart[],
   temperature: number,
   maxTokens: number,
   signal: AbortSignal,
@@ -85,7 +119,7 @@ async function kclChat(
       max_tokens:  maxTokens,
       messages: [
         { role: 'system', content: systemPrompt },
-        { role: 'user',   content: userPrompt },
+        { role: 'user',   content: userContent },
       ],
     }),
     signal,
@@ -143,10 +177,21 @@ export function KCLNode({ id, data }: NodeProps) {
   const [tokenInput, setTokenInput]     = useState(String((d.maxTokens as number | undefined) ?? 1024))
   const abortRef = useRef<AbortController | null>(null)
 
-  // ── Fetch available models on mount (or when apiKey is set) ─────────────────
+  // ── Resolve apiKey — inline field or connected Param node ───────────────────
+
+  const isApiKeyConnected = allEdges.some(e => e.target === id && e.targetHandle === 'apiKey')
+
+  const effectiveApiKey = useMemo(() => {
+    if (!isApiKeyConnected) return (d.apiKey as string | undefined) ?? ''
+    const edge = allEdges.find(e => e.target === id && e.targetHandle === 'apiKey')
+    if (!edge) return ''
+    return (allNodes.find(n => n.id === edge.source)?.data as { value?: string } | undefined)?.value ?? ''
+  }, [allEdges, allNodes, id, isApiKeyConnected, d.apiKey])
+
+  // ── Fetch available models on mount (or when effectiveApiKey changes) ────────
 
   useEffect(() => {
-    const key = d.apiKey
+    const key = effectiveApiKey
     if (!key) { setApiOk(false); return }
     let cancelled = false
     ;(async () => {
@@ -167,9 +212,8 @@ export function KCLNode({ id, data }: NodeProps) {
       }
     })()
     return () => { cancelled = true }
-  // Re-run when the key changes so model list refreshes after first entry.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id, d.apiKey])
+  }, [id, effectiveApiKey])
 
   // ── Upstream records ─────────────────────────────────────────────────────────
 
@@ -187,7 +231,7 @@ export function KCLNode({ id, data }: NodeProps) {
 
   // ── Derived state ─────────────────────────────────────────────────────────────
 
-  const apiKey         = (d.apiKey        ?? '') as string
+  const apiKey         = (d.apiKey        ?? '') as string  // raw inline value (for the input field)
   const selectedModel  = (d.model         ?? '') as string
   const systemPrompt   = (d.systemPrompt  ?? DEFAULT_SYSTEM) as string
   const promptTemplate = (d.userPromptTemplate ?? DEFAULT_PROMPT) as string
@@ -205,10 +249,22 @@ export function KCLNode({ id, data }: NodeProps) {
       })
     : []
 
+  // Fields in upstream records that contain image data URLs
+  const imageFields = useMemo<string[]>(() => {
+    if (!sampleRecord) return []
+    return Object.entries(sampleRecord)
+      .filter(([, v]) => typeof v === 'string' && (v as string).startsWith('data:image/'))
+      .map(([k]) => k)
+  }, [sampleRecord])
+
+  const hasImages    = imageFields.length > 0
+  const visionMode   = (d.visionMode  as boolean | undefined) ?? false
+  const imageField   = (d.imageField  as string  | undefined) ?? ''
+
   // ── Run handler ───────────────────────────────────────────────────────────────
 
   const handleRun = useCallback(async () => {
-    if (!apiKey) {
+    if (!effectiveApiKey) {
       updateNodeData(id, { status: 'error', statusMessage: '✗ API key required' })
       return
     }
@@ -247,14 +303,19 @@ export function KCLNode({ id, data }: NodeProps) {
         setLiveTokens('')
 
         const baseContent =
-          (record.content as string | undefined) ??
-          (record.description as string | undefined) ??
-          JSON.stringify(record)
+          visionMode
+            ? (record.description as string | undefined) ?? (record.title as string | undefined) ?? ''
+            : (record.content     as string | undefined) ??
+              (record.description as string | undefined) ??
+              JSON.stringify(record)
 
         const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
+        const userContent    = visionMode
+          ? buildUserContent(renderedPrompt, record, imageField)
+          : renderedPrompt
 
         const response = await kclChat(
-          apiKey, selectedModel, systemPrompt, renderedPrompt,
+          effectiveApiKey, selectedModel, systemPrompt, userContent,
           temperature, maxTokens, signal,
           tok => setLiveTokens(tok),
         )
@@ -298,19 +359,20 @@ export function KCLNode({ id, data }: NodeProps) {
       if (enriched.length > 0) setNodeResults(id, enriched)
       updateNodeData(id, { status: 'error', statusMessage: `✗ ${msg}`, outputCount: enriched.length })
     }
-  }, [id, updateNodeData, upstreamRecords, apiKey, selectedModel, systemPrompt, promptTemplate, temperature, maxTokens])
+  }, [id, updateNodeData, upstreamRecords, effectiveApiKey, selectedModel, systemPrompt, promptTemplate, temperature, maxTokens])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
   const status      = (d.status ?? 'idle') as string
   const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
 
-  const noKey    = !apiKey
+  const noKey    = !effectiveApiKey
   const canRun   = !noKey && !!selectedModel && !isRunning
 
   return (
     <div style={{ ...styles.card, borderColor }}>
-      <Handle type="target" position={Position.Left} id="data" style={{ ...styles.inputHandle, top: 16 }} />
+      <Handle type="target" position={Position.Left} id="data"   style={{ ...styles.inputHandle, top: 16 }} />
+      <Handle type="target" position={Position.Left} id="apiKey" style={{ ...styles.inputHandle, top: 53, background: isApiKeyConnected ? '#3b82f6' : '#be123c', boxShadow: `0 0 0 1px ${isApiKeyConnected ? '#3b82f6' : '#be123c'}` }} />
 
       {/* Header */}
       <div style={styles.header}>
@@ -337,21 +399,28 @@ export function KCLNode({ id, data }: NodeProps) {
         <div style={styles.row}>
           <span style={styles.label}>Key</span>
           <input
-            type={showKey ? 'text' : 'password'}
-            style={styles.input}
-            value={apiKey}
+            type={isApiKeyConnected ? 'text' : showKey ? 'text' : 'password'}
+            style={{
+              ...styles.input,
+              background: isApiKeyConnected ? '#eff6ff' : '#fff',
+              color:      isApiKeyConnected ? '#1d4ed8' : '#111827',
+            }}
+            value={isApiKeyConnected ? '' : apiKey}
             onChange={e => updateNodeData(id, { apiKey: e.target.value })}
-            placeholder="sk-…"
+            placeholder={isApiKeyConnected ? '(from Param)' : 'sk-…'}
+            readOnly={isApiKeyConnected}
             className="nodrag"
           />
-          <button
-            style={styles.eyeBtn}
-            onClick={() => setShowKey(v => !v)}
-            title={showKey ? 'Hide key' : 'Show key'}
-            className="nodrag"
-          >
-            {showKey ? '🙈' : '👁'}
-          </button>
+          {!isApiKeyConnected && (
+            <button
+              style={styles.eyeBtn}
+              onClick={() => setShowKey(v => !v)}
+              title={showKey ? 'Hide key' : 'Show key'}
+              className="nodrag"
+            >
+              {showKey ? '🙈' : '👁'}
+            </button>
+          )}
         </div>
 
         {/* Model */}
@@ -414,6 +483,39 @@ export function KCLNode({ id, data }: NodeProps) {
             className="nodrag"
           />
         </div>
+
+        {/* Vision mode — shown when upstream records contain image data */}
+        {(hasImages || visionMode) && (
+          <div style={styles.visionSection}>
+            <div style={styles.row}>
+              <span style={styles.label}>Vision</span>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 5, cursor: 'pointer', flex: 1 }} className="nodrag">
+                <input
+                  type="checkbox"
+                  checked={visionMode}
+                  onChange={e => updateNodeData(id, { visionMode: e.target.checked })}
+                />
+                <span style={{ fontSize: 11, color: '#6b7280' }}>
+                  {hasImages ? 'Include image with prompt' : 'Vision mode (no images detected)'}
+                </span>
+              </label>
+            </div>
+            {visionMode && imageFields.length > 1 && (
+              <div style={styles.row}>
+                <span style={styles.label}>Image</span>
+                <select
+                  style={styles.select}
+                  value={imageField}
+                  onChange={e => updateNodeData(id, { imageField: e.target.value })}
+                  className="nodrag"
+                >
+                  <option value="">auto-detect</option>
+                  {imageFields.map(f => <option key={f} value={f}>{f}</option>)}
+                </select>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Temperature */}
         <div style={styles.row}>
@@ -611,6 +713,15 @@ const styles = {
     color: '#6b7280',
     width: 28,
     textAlign: 'right' as const,
+  },
+  visionSection: {
+    background:   '#fdf4ff',
+    border:       '1px solid #e9d5ff',
+    borderRadius: 5,
+    padding:      '5px 8px',
+    display:      'flex',
+    flexDirection: 'column' as const,
+    gap:          5,
   },
   livePreview: {
     marginTop: 2,

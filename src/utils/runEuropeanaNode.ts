@@ -32,7 +32,7 @@ export async function runEuropeanaNode(
     return (d[dataKey] as string | undefined) ?? ''
   }
 
-  const apiKey = (d.apiKey as string | undefined)?.trim() ?? ''
+  const apiKey = resolve('apiKey', 'apiKey').trim()
   const query  = resolve('query', 'inlineQuery').trim()
   const limit  = Math.min(
     MAX_TOTAL,

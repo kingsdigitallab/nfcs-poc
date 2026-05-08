@@ -353,6 +353,13 @@ app.use('/kcl-proxy', createProxyMiddleware({
   on: { proxyReq: stripEncoding },
 }))
 
+app.use('/bodleian-proxy', createProxyMiddleware({
+  target: 'https://digital.bodleian.ox.ac.uk',
+  changeOrigin: true,
+  pathRewrite: { '^/bodleian-proxy': '' },
+  on: { proxyReq: stripEncoding },
+}))
+
 // ── Custom middleware ─────────────────────────────────────────────────────────
 
 app.use(adsLibrarySearchMiddleware)

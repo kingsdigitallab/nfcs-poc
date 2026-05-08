@@ -12,6 +12,10 @@ import { collectUpstreamRecords } from './upstreamRecords'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
+type ContentPart =
+  | { type: 'text'; text: string }
+  | { type: 'image_url'; image_url: { url: string; format: string } }
+
 function renderTemplate(template: string, record: Record<string, unknown>): string {
   return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
     const val = record[key]
@@ -21,11 +25,38 @@ function renderTemplate(template: string, record: Record<string, unknown>): stri
   })
 }
 
+function buildUserContent(
+  textPrompt: string,
+  record: Record<string, unknown>,
+  imageField: string,
+): string | ContentPart[] {
+  let imageUrl: string | null = null
+  if (imageField) {
+    const val = record[imageField]
+    if (typeof val === 'string' && val.startsWith('data:image/')) imageUrl = val
+  } else {
+    if (record.contentType === 'image' && typeof record.content === 'string') {
+      imageUrl = record.content as string
+    } else {
+      for (const val of Object.values(record)) {
+        if (typeof val === 'string' && val.startsWith('data:image/')) { imageUrl = val; break }
+      }
+    }
+  }
+  if (!imageUrl) return textPrompt
+  const mimeMatch = /^data:(image\/[^;]+);base64,/.exec(imageUrl)
+  const format    = mimeMatch?.[1] ?? (record.mimeType as string | undefined) ?? 'image/jpeg'
+  return [
+    { type: 'text',      text:      textPrompt },
+    { type: 'image_url', image_url: { url: imageUrl, format } },
+  ]
+}
+
 async function kclChat(
   apiKey: string,
   model: string,
   systemPrompt: string,
-  userPrompt: string,
+  userContent: string | ContentPart[],
   temperature: number,
   maxTokens: number,
 ): Promise<string> {
@@ -42,7 +73,7 @@ async function kclChat(
       max_tokens:  maxTokens,
       messages: [
         { role: 'system', content: systemPrompt },
-        { role: 'user',   content: userPrompt },
+        { role: 'user',   content: userContent },
       ],
     }),
     signal: AbortSignal.timeout(120_000),
@@ -84,13 +115,22 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
   const node  = nodes.find(n => n.id === nodeId)
   if (!node) return
 
-  const d              = node.data as Record<string, unknown>
-  const apiKey         = (d.apiKey         as string | undefined) ?? ''
+  const d = node.data as Record<string, unknown>
+
+  const resolveParam = (handleId: string, fallback: string): string => {
+    const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
+    if (edge) return (nodes.find(n => n.id === edge.source)?.data as { value?: string } | undefined)?.value ?? ''
+    return fallback
+  }
+
+  const apiKey         = resolveParam('apiKey', (d.apiKey as string | undefined) ?? '').trim()
   const model          = (d.model          as string | undefined) ?? ''
   const systemPrompt   = (d.systemPrompt   as string | undefined) ?? ''
   const promptTemplate = (d.userPromptTemplate as string | undefined) ?? '{{content}}'
   const temperature    = (d.temperature    as number | undefined) ?? 0.7
   const maxTokens      = (d.maxTokens      as number | undefined) ?? 1024
+  const visionMode     = (d.visionMode     as boolean | undefined) ?? false
+  const imageField     = (d.imageField     as string  | undefined) ?? ''
 
   if (!apiKey) {
     updateNodeData(nodeId, { status: 'error', statusMessage: '✗ No API key configured' })
@@ -122,16 +162,20 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
     const record = upstreamRecords[i]
     updateNodeData(nodeId, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
-    const baseContent =
-      (record.content     as string | undefined) ??
-      (record.description as string | undefined) ??
-      JSON.stringify(record)
+    const baseContent = visionMode
+      ? (record.description as string | undefined) ?? (record.title as string | undefined) ?? ''
+      : (record.content     as string | undefined) ??
+        (record.description as string | undefined) ??
+        JSON.stringify(record)
 
     const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
+    const userContent    = visionMode
+      ? buildUserContent(renderedPrompt, record, imageField)
+      : renderedPrompt
 
     let response: string
     try {
-      response = await kclChat(apiKey, model, systemPrompt, renderedPrompt, temperature, maxTokens)
+      response = await kclChat(apiKey, model, systemPrompt, userContent, temperature, maxTokens)
     } catch (err) {
       errCount++
       const msg = err instanceof Error ? err.message : String(err)
