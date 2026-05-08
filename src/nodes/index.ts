@@ -36,6 +36,7 @@ import { KCLNode }                  from './KCLNode'
 import { KCLFieldNode }             from './KCLFieldNode'
 import { KCLOutputNode }            from './KCLOutputNode'
 import { HTMLPreviewNode }          from './HTMLPreviewNode'
+import { DeduplicateNode }          from './DeduplicateNode'
 
 export const nodeTypes = {
   param:             ParamNode,
@@ -77,4 +78,5 @@ export const nodeTypes = {
   kclField:           KCLFieldNode,
   kclOutput:          KCLOutputNode,
   htmlPreview:        HTMLPreviewNode,
+  deduplicate:        DeduplicateNode,
 }

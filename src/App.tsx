@@ -40,6 +40,7 @@ import type { MDSSearchNodeData }         from './nodes/MDSSearchNode'
 import type { ReconciliationNodeData }    from './nodes/ReconciliationNode'
 import type { FilterTransformNodeData }   from './nodes/FilterTransformNode'
 import type { SpatialFilterNodeData }     from './nodes/SpatialFilterNode'
+import type { DeduplicateNodeData }       from './nodes/DeduplicateNode'
 import type { ExportNodeData }            from './nodes/ExportNode'
 import type { QuickViewNodeData }         from './nodes/QuickViewNode'
 import type { CommentNodeData }           from './nodes/CommentNode'
@@ -81,6 +82,7 @@ type AppNode =
   | Node<ReconciliationNodeData>
   | Node<FilterTransformNodeData>
   | Node<SpatialFilterNodeData>
+  | Node<DeduplicateNodeData>
   | Node<ExportNodeData>
   | Node<QuickViewNodeData>
   | Node<CommentNodeData>
@@ -333,6 +335,17 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       outputCount:    0,
     } satisfies SpatialFilterNodeData,
   }),
+  deduplicate: pos => ({
+    id: newId('dedup'), type: 'deduplicate', position: pos,
+    data: {
+      dedupeField:   'id',
+      status:        'idle',
+      statusMessage: '',
+      inputCount:    0,
+      outputCount:   0,
+      removedCount:  0,
+    } satisfies DeduplicateNodeData,
+  }),
   reconciliation: pos => ({
     id: newId('recon'), type: 'reconciliation', position: pos,
     data: {
@@ -500,6 +513,7 @@ const SIDEBAR_ITEMS = [
   { type: 'fieldDistribution', label: 'FieldDistribution',     sub: 'Faceted bar chart — click bars to filter', color: '#047857', group: 'Filters and Transforms' },
   { type: 'filterTransform',   label: 'FilterTransform',       sub: 'Filter + transform records',               color: '#4f46e5', group: 'Filters and Transforms' },
   { type: 'spatialFilter',     label: 'SpatialFilter',         sub: 'Draw bounding box to filter by location',  color: '#0891b2', group: 'Filters and Transforms' },
+  { type: 'deduplicate',       label: 'Deduplicate',           sub: 'Remove duplicate records by field value',  color: '#0f766e', group: 'Filters and Transforms' },
   // ── Extraction and Enrichment ────────────────────────────────────────────────
   { type: 'kclNode',           label: 'KingsInference',        sub: 'KCL inference — file/content records',    color: '#881337', group: 'Extraction and Enrichment' },
   { type: 'kclField',          label: 'KingsInferenceByField', sub: 'KCL inference on a chosen field',         color: '#7f1d1d', group: 'Extraction and Enrichment' },
