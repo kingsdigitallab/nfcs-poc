@@ -66,7 +66,7 @@ const DATA_SOURCES = new Set([
 const PROCESS_NODES = new Set([
   'filterTransform', 'spatialFilter', 'reconciliation',
   'urlFetch', 'htmlSection', 'xmlSection',
-  'wikidataEnrich', 'mergeByQID', 'htmlPreview',
+  'wikidataEnrich', 'mergeByQID', 'htmlPreview', 'deduplicate',
 ])
 
 const INFERENCE_NODES = new Set([
@@ -86,6 +86,7 @@ const OUTPUT_SUITE: Suggestion[] = [
 
 const ENRICH_SUITE: Suggestion[] = [
   { type: 'filterTransform',  label: 'FilterTransform',       sub: 'Filter + transform records',    color: '#4f46e5', targetHandle: 'data' },
+  { type: 'deduplicate',      label: 'Deduplicate',           sub: 'Remove duplicate records',      color: '#0f766e', targetHandle: 'data' },
   { type: 'kclNode',          label: 'KingsInference',        sub: 'KCL inference on records',      color: '#881337', targetHandle: 'data' },
   { type: 'kclField',         label: 'KingsInferenceByField', sub: 'KCL inference on a field',      color: '#7f1d1d', targetHandle: 'data' },
   { type: 'reconciliation',   label: 'Reconciliation',        sub: 'Wikidata entity matching',       color: '#7c3aed', targetHandle: 'data' },

@@ -30,6 +30,7 @@ import { runKCLFieldNode }        from './runKCLFieldNode'
 import { runBodleianSearchNode }  from './runBodleianSearchNode'
 import { runTimelineViewNode }    from './runTimelineViewNode'
 import { runImageViewNode }       from './runImageViewNode'
+import { runDeduplicateNode }     from './runDeduplicateNode'
 import { withFixture }            from './fixtureUtils'
 
 /**
@@ -71,5 +72,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   timelineView:      runTimelineViewNode,
   timelineOutput:    runTimelineViewNode,  // backward-compat alias
   imageView:         runImageViewNode,
+  deduplicate:       runDeduplicateNode,
 }
 

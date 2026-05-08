@@ -33,6 +33,7 @@ const TRANSIENT_FIELDS = new Set([
   'outputCount',
   'resolvedCount',
   'reviewCount',
+  'removedCount',
   'resultsVersion',
   '_capped',
   '_total',
