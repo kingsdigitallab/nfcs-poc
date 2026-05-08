@@ -98,6 +98,7 @@ const SUGGESTIONS: Record<string, Suggestion[]> = {
   process:    [...OUTPUT_SUITE, ...ENRICH_SUITE],
   passThrough: [
     { type: 'filterTransform',  label: 'FilterTransform',       sub: 'Filter + transform records', color: '#4f46e5', targetHandle: 'data' },
+    { type: 'deduplicate',      label: 'Deduplicate',           sub: 'Remove duplicate records',   color: '#0f766e', targetHandle: 'data' },
     { type: 'kclNode',          label: 'KingsInference',        sub: 'KCL inference on records',   color: '#881337', targetHandle: 'data' },
     { type: 'mapOutput',        label: 'MapOutput',             sub: 'Geo map (lat/lon)',           color: '#14532d', targetHandle: 'data' },
     { type: 'timelineView',     label: 'TimelineView',          sub: 'Year-resolution timeline',   color: '#1e293b', targetHandle: 'data' },
