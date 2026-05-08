@@ -1,8 +1,19 @@
 import { useCallback } from 'react'
 import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
 import { runDeduplicateNode } from '../utils/runDeduplicateNode'
-import { candidateFields } from '../utils/reconciliationService'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
+
+function allFlatFields(records: unknown[]): string[] {
+  const seen = new Set<string>()
+  for (const rec of (records as Record<string, unknown>[]).slice(0, 30)) {
+    for (const [k, v] of Object.entries(rec)) {
+      if (v == null) continue
+      if (typeof v === 'object' && !Array.isArray(v)) continue
+      seen.add(k)
+    }
+  }
+  return [...seen].sort()
+}
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -35,9 +46,7 @@ export function DeduplicateNode({ id }: NodeProps) {
     ...nodeData,
   }
 
-  const fields = upstreamRecords?.length
-    ? candidateFields(upstreamRecords as unknown as Record<string, unknown>[], true)
-    : []
+  const fields = upstreamRecords?.length ? allFlatFields(upstreamRecords) : []
 
   const handleRun = useCallback(
     () => runDeduplicateNode(id, getNodes, snap(), updateNodeData),
