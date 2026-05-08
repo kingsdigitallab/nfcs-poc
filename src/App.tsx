@@ -6,6 +6,7 @@ import {
   Background,
   Controls,
   MiniMap,
+  Panel,
   addEdge,
   useNodesState,
   useEdgesState,
@@ -14,10 +15,13 @@ import {
   type Node,
   type XYPosition,
   type ReactFlowInstance,
+  type FinalConnectionState,
 } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 import { nodeTypes } from './nodes'
 import { ExpandedOutputPanel } from './nodes/ExpandedOutputPanel'
+import { ChatSidebar } from './components/ChatSidebar'
+import { ConnectionSuggestions, HandlePicker, NODE_PARAM_HANDLES, type Suggestion } from './components/ConnectionSuggestions'
 import { runWorkflow } from './utils/runWorkflow'
 import type { UnifiedRecord } from './types/UnifiedRecord'
 import type { LocalFolderSourceNodeData } from './nodes/LocalFolderSourceNode'
@@ -26,6 +30,7 @@ import type { OllamaNodeData }            from './nodes/OllamaNode'
 import type { OllamaFieldNodeData }       from './nodes/OllamaFieldNode'
 import type { KCLNodeData }              from './nodes/KCLNode'
 import type { KCLFieldNodeData }         from './nodes/KCLFieldNode'
+import type { HTMLPreviewNodeData }      from './nodes/HTMLPreviewNode'
 import type { URLFetchNodeData }          from './nodes/URLFetchNode'
 import type { HTMLSectionNodeData }       from './nodes/HTMLSectionNode'
 import type { LLDSSearchNodeData }        from './nodes/LLDSSearchNode'
@@ -47,6 +52,7 @@ import type { ImageViewNodeData }        from './nodes/ImageViewNode'
 import type { CitationNodeData }           from './nodes/CitationNode'
 import type { EuropeanaSearchNodeData }    from './nodes/EuropeanaSearchNode'
 import type { ARIADNESearchNodeData }      from './nodes/ARIADNESearchNode'
+import type { BodleianSearchNodeData }     from './nodes/BodleianSearchNode'
 import type { FieldDistributionNodeData }  from './nodes/FieldDistributionNode'
 import type { TimelineOutputNodeData }     from './nodes/TimelineOutputNode'
 
@@ -65,6 +71,7 @@ type AppNode =
   | Node<OllamaFieldNodeData>
   | Node<KCLNodeData>
   | Node<KCLFieldNodeData>
+  | Node<HTMLPreviewNodeData>
   | Node<URLFetchNodeData>
   | Node<HTMLSectionNodeData>
   | Node<LLDSSearchNodeData>
@@ -86,6 +93,7 @@ type AppNode =
   | Node<CitationNodeData>
   | Node<EuropeanaSearchNodeData>
   | Node<ARIADNESearchNodeData>
+  | Node<BodleianSearchNodeData>
   | Node<FieldDistributionNodeData>
   | Node<TimelineOutputNodeData>
   | Node<OutputNodeData>
@@ -140,6 +148,14 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       sort: '_score', order: 'desc',
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies ARIADNESearchNodeData,
+  }),
+  bodleianSearch: pos => ({
+    id: newId('bodleian'), type: 'bodleianSearch', position: pos,
+    data: {
+      inlineQuery: '', inlineLimit: '20', fetchAll: false,
+      sort: 'relevance', objectType: '',
+      status: 'idle', statusMessage: '', results: undefined, count: 0,
+    } satisfies BodleianSearchNodeData,
   }),
   mdsSearch: pos => ({
     id: newId('mds'), type: 'mdsSearch', position: pos,
@@ -223,6 +239,8 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       userPromptTemplate:  'Summarise the key themes and subjects in 3-4 sentences:\n\n{{content}}',
       temperature:         0.7,
       maxTokens:           1024,
+      visionMode:          false,
+      imageField:          '',
       status:              'idle',
       statusMessage:       '',
       results:             undefined,
@@ -259,7 +277,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       stripHtml:     true,
       maxLength:     8000,
       timeoutSecs:   10,
-      renderJs:      false,
+      renderJs:      true,
       waitStrategy:  'networkidle2',
       status:        'idle',
       statusMessage: '',
@@ -271,15 +289,24 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   htmlSection: pos => ({
     id: newId('htmlSection'), type: 'htmlSection', position: pos,
     data: {
-      selector:      'main, article',
-      separator:     '\n\n',
-      maxLength:     8000,
-      preserveHtml:  false,
-      status:        'idle',
-      statusMessage: '',
-      inputCount:    0,
-      outputCount:   0,
+      selector:        'main, article',
+      separator:       '\n\n',
+      maxLength:       8000,
+      preserveHtml:    false,
+      extractSection:  false,
+      status:          'idle',
+      statusMessage:   '',
+      inputCount:      0,
+      outputCount:     0,
     } satisfies HTMLSectionNodeData,
+  }),
+  htmlPreview: pos => ({
+    id: newId('htmlPreview'), type: 'htmlPreview', position: pos,
+    style: { width: 460, height: 540 },
+    data: {
+      mode:     'captured',
+      urlField: '_sourceUrl',
+    } satisfies HTMLPreviewNodeData,
   }),
   filterTransform: pos => ({
     id: newId('ft'), type: 'filterTransform', position: pos,
@@ -398,8 +425,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       mode: 'iiif',
       selectedField: '',
       imageDirectUrl: '',
-      // Wellcome Collection — Edward Topsell, The History of Four-Footed Beasts (1658)
-      manifestUrl: 'https://iiif.wellcomecollection.org/presentation/b18035723',
+      manifestUrl: '',
     } satisfies ImageViewNodeData,
     style: { width: 400, height: 480 },
   }),
@@ -417,6 +443,11 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   timelineOutput: pos => ({
     id: newId('timeline'), type: 'timelineOutput', position: pos,
+    data: { fitToRange: false } satisfies TimelineOutputNodeData,
+    style: { width: 520 },
+  }),
+  timelineView: pos => ({
+    id: newId('timeline'), type: 'timelineView', position: pos,
     data: { fitToRange: false } satisfies TimelineOutputNodeData,
     style: { width: 520 },
   }),
@@ -448,44 +479,50 @@ const SIDEBAR_ITEMS = [
   // ── Canvas ──────────────────────────────────────────────────────────────────
   { type: 'comment',     label: 'Comment',           sub: 'Annotation label',          color: '#f59e0b', group: 'Canvas' },
   // ── Input ───────────────────────────────────────────────────────────────────
-  { type: 'param',       label: 'ParamNode',         sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },
-  // ── Search (alphabetical) ────────────────────────────────────────────────────
-  { type: 'adsLibrarySearch',  label: 'ADSLibraryNode',   sub: 'ADS Library catalogue',                   color: '#1e3a5f', group: 'Search', deprecated: true },
-  { type: 'adsSearchAdvanced', label: 'ADSSearchNode',    sub: 'Archaeology Data Service',                color: '#7c2d12', group: 'Search', deprecated: true },
-  { type: 'ariadneSearch',    label: 'ARIADNESearch',    sub: 'ARIADNE pan-European archaeology portal',  color: '#164e63', group: 'Search' },
-  { type: 'europeanaSearch',   label: 'EuropeanaSearch',  sub: 'Europeana cultural heritage aggregator',  color: '#2563eb', group: 'Search' },
-  { type: 'gbifSearch',        label: 'GBIFSearchNode',   sub: 'GBIF occurrence search',                  color: '#0f4c81', group: 'Search' },
-  { type: 'lldsSearch',        label: 'LLDSSearchNode',   sub: 'Lit. & Linguistic Data',                  color: '#92400e', group: 'Search' },
-  { type: 'loadSavedSearch',   label: 'LoadSavedSearch',  sub: 'Replay a .nfcs.json saved search',        color: '#4c1d95', group: 'Search' },
-  { type: 'localFileSource',   label: 'LocalFileSource',  sub: 'Single CSV, XML or image file',           color: '#0e7490', group: 'Search' },
-  { type: 'localFolderSource', label: 'LocalFolderSource',sub: 'Read files from local folder',            color: '#14532d', group: 'Search' },
-  { type: 'mdsSearch',         label: 'MDSSearchNode',    sub: 'Museum Data Service',                     color: '#1e3a8a', group: 'Search' },
-  // ── Process (alphabetical) ───────────────────────────────────────────────────
-  { type: 'fieldDistribution', label: 'FieldDistribution',   sub: 'Faceted bar chart — click bars to filter',      color: '#047857', group: 'Process' },
-  { type: 'filterTransform',   label: 'FilterTransformNode', sub: 'Filter + transform records',                    color: '#4f46e5', group: 'Process' },
-  { type: 'htmlSection',       label: 'HTMLSectionNode',     sub: 'Extract page section by CSS selector',          color: '#065f46', group: 'Process' },
-  { type: 'mergeByQID',        label: 'MergeByQIDNode',      sub: 'Join records from multiple sources by QID',     color: '#6b21a8', group: 'Process' },
-  { type: 'kclField',          label: 'KCLFieldNode',        sub: 'KCL inference on a chosen field',               color: '#7f1d1d', group: 'Process' },
-  { type: 'kclNode',           label: 'KCLNode',             sub: 'KCL inference — file/content records',          color: '#881337', group: 'Process' },
-  { type: 'ollamaField',       label: 'OllamaFieldNode',     sub: 'LLM inference on a chosen field',               color: '#1e1b4b', group: 'Process' },
-  { type: 'ollamaNode',        label: 'OllamaNode',          sub: 'Local LLM — file/content records',              color: '#312e81', group: 'Process' },
-  { type: 'reconciliation',    label: 'ReconciliationNode',  sub: 'Wikidata field reconciler',                     color: '#7c3aed', group: 'Process' },
-  { type: 'spatialFilter',     label: 'SpatialFilterNode',   sub: 'Draw bounding box to filter by location',       color: '#0891b2', group: 'Process' },
-  { type: 'urlFetch',          label: 'URLFetchNode',        sub: 'Fetch URL content into records',                color: '#0c4a6e', group: 'Process' },
-  { type: 'wikidataEnrich',    label: 'WikidataEnrichNode',  sub: 'Fetch Wikidata properties for QIDs',            color: '#0369a1', group: 'Process' },
-  { type: 'xmlSection',        label: 'XMLSectionNode',      sub: 'Extract XML content by XPath',                  color: '#44403c', group: 'Process' },
-  // ── Output (alphabetical) ────────────────────────────────────────────────────
-  { type: 'citation',          label: 'CitationNode',        sub: 'Data source citations for this workflow stage', color: '#78350f', group: 'Output' },
-  { type: 'export',            label: 'ExportNode',          sub: 'CSV / JSON / GeoJSON',                          color: '#b45309', group: 'Output' },
-  { type: 'imageView',         label: 'ImageViewNode',       sub: 'Image + IIIF manifest viewer',                  color: '#1c3144', group: 'Output' },
-  { type: 'jsonOutput',        label: 'JSONOutputNode',      sub: 'Formatted JSON viewer',                         color: '#6d28d9', group: 'Output' },
-  { type: 'mapOutput',         label: 'MapOutputNode',       sub: 'Geo map (lat/lon records)',                      color: '#14532d', group: 'Output' },
-  { type: 'kclOutput',         label: 'KCLOutputNode',       sub: 'Display KCL inference text',                    color: '#3b0764', group: 'Output' },
-  { type: 'ollamaOutput',      label: 'OllamaOutputNode',    sub: 'Display Ollama inference text',                 color: '#0f172a', group: 'Output' },
-  { type: 'quickView',         label: 'QuickViewNode',       sub: 'Inspect one field in full',                     color: '#1e293b', group: 'Output' },
-  { type: 'saveSearch',        label: 'SaveSearch',          sub: 'Save records + metadata to .nfcs.json',         color: '#1b4332', group: 'Output' },
-  { type: 'tableOutput',       label: 'TableOutputNode',     sub: 'Paginated results table',                       color: '#0d9488', group: 'Output' },
-  { type: 'timelineOutput',    label: 'TimelineOutputNode',  sub: 'Year-resolution timeline',                      color: '#1e293b', group: 'Output' },
+  { type: 'param',       label: 'Param',             sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },
+  // ── Inspection ───────────────────────────────────────────────────────────────
+  { type: 'quickView',         label: 'QuickView',             sub: 'Inspect one field in full',               color: '#1e293b', group: 'Inspection' },
+  { type: 'imageView',         label: 'ImageView',             sub: 'Image + IIIF manifest viewer',            color: '#1c3144', group: 'Inspection' },
+  { type: 'htmlPreview',       label: 'HTMLPreview',           sub: 'Browse captured HTML, click to capture CSS selectors', color: '#0c4a6e', group: 'Inspection' },
+  // ── Data Services ────────────────────────────────────────────────────────────
+  { type: 'ariadneSearch',     label: 'ARIADNESearch',         sub: 'ARIADNE pan-European archaeology portal',  color: '#164e63', group: 'Data Services' },
+  { type: 'bodleianSearch',   label: 'BodleianSearch',        sub: 'Bodleian Digital Collections (Oxford)',    color: '#003865', group: 'Data Services' },
+  { type: 'europeanaSearch',   label: 'EuropeanaSearch',       sub: 'Europeana cultural heritage aggregator',  color: '#2563eb', group: 'Data Services' },
+  { type: 'gbifSearch',        label: 'GBIFSearch',            sub: 'GBIF occurrence search',                  color: '#0f4c81', group: 'Data Services' },
+  { type: 'lldsSearch',        label: 'LLDSSearch',            sub: 'Lit. & Linguistic Data',                  color: '#92400e', group: 'Data Services' },
+  { type: 'mdsSearch',         label: 'MDSSearch',             sub: 'Museum Data Services',                     color: '#1e3a8a', group: 'Data Services' },
+  // ── Local Content ────────────────────────────────────────────────────────────
+  { type: 'localFileSource',   label: 'LocalFileSource',       sub: 'Single CSV, XML or image file',           color: '#0e7490', group: 'Local Content' },
+  { type: 'localFolderSource', label: 'LocalFolderSource',     sub: 'Read files from local folder',            color: '#14532d', group: 'Local Content' },
+  { type: 'loadSavedSearch',   label: 'LoadSavedSearch',       sub: 'Replay a .nfcs.json saved search',        color: '#4c1d95', group: 'Local Content' },
+  { type: 'saveSearch',        label: 'SaveSearch',            sub: 'Save records + metadata to .nfcs.json',   color: '#1b4332', group: 'Local Content' },
+  // ── Filters and Transforms ───────────────────────────────────────────────────
+  { type: 'fieldDistribution', label: 'FieldDistribution',     sub: 'Faceted bar chart — click bars to filter', color: '#047857', group: 'Filters and Transforms' },
+  { type: 'filterTransform',   label: 'FilterTransform',       sub: 'Filter + transform records',               color: '#4f46e5', group: 'Filters and Transforms' },
+  { type: 'spatialFilter',     label: 'SpatialFilter',         sub: 'Draw bounding box to filter by location',  color: '#0891b2', group: 'Filters and Transforms' },
+  // ── Extraction and Enrichment ────────────────────────────────────────────────
+  { type: 'kclNode',           label: 'KingsInference',        sub: 'KCL inference — file/content records',    color: '#881337', group: 'Extraction and Enrichment' },
+  { type: 'kclField',          label: 'KingsInferenceByField', sub: 'KCL inference on a chosen field',         color: '#7f1d1d', group: 'Extraction and Enrichment' },
+  { type: 'urlFetch',          label: 'URLContentFetch',       sub: 'Fetch URL content into records',          color: '#0c4a6e', group: 'Extraction and Enrichment' },
+  { type: 'htmlSection',       label: 'HTMLExtract',           sub: 'Extract page section by CSS selector',    color: '#065f46', group: 'Extraction and Enrichment' },
+  { type: 'reconciliation',    label: 'Reconciliation',        sub: 'Wikidata field reconciler',               color: '#7c3aed', group: 'Extraction and Enrichment' },
+  { type: 'wikidataEnrich',    label: 'WikidataEnrich',        sub: 'Fetch Wikidata properties for QIDs',      color: '#0369a1', group: 'Extraction and Enrichment' },
+  { type: 'mergeByQID',        label: 'MergeByQID',            sub: 'Join records from multiple sources by QID', color: '#6b21a8', group: 'Extraction and Enrichment' },
+  { type: 'xmlSection',        label: 'XMLExtract',            sub: 'Extract XML content by XPath',            color: '#44403c', group: 'Extraction and Enrichment' },
+  // ── Output ───────────────────────────────────────────────────────────────────
+  { type: 'citation',          label: 'Citation',              sub: 'Data source citations for this workflow stage', color: '#78350f', group: 'Output' },
+  { type: 'export',            label: 'Export',                sub: 'CSV / JSON / GeoJSON',                    color: '#b45309', group: 'Output' },
+  { type: 'jsonOutput',        label: 'JSONOutput',            sub: 'Formatted JSON viewer',                   color: '#6d28d9', group: 'Output' },
+  { type: 'kclOutput',         label: 'KingsInferenceOutput',  sub: 'Display KCL inference text',              color: '#3b0764', group: 'Output' },
+  { type: 'mapOutput',         label: 'MapOutput',             sub: 'Geo map (lat/lon records)',                color: '#14532d', group: 'Output' },
+  { type: 'tableOutput',       label: 'TableOutput',           sub: 'Paginated results table',                 color: '#0d9488', group: 'Output' },
+  { type: 'timelineView',      label: 'TimelineView',          sub: 'Filter records by date range + timeline',  color: '#1e293b', group: 'Filters and Transforms' },
+  // ── Hidden ───────────────────────────────────────────────────────────────────
+  { type: 'adsLibrarySearch',  label: 'ADSLibrary',            sub: 'ADS Library catalogue',                   color: '#1e3a5f', group: 'Output', hidden: true },
+  { type: 'adsSearchAdvanced', label: 'ADSSearch',             sub: 'Archaeology Data Services',                color: '#7c2d12', group: 'Output', hidden: true },
+  { type: 'ollamaNode',        label: 'Ollama',                sub: 'Local LLM — file/content records',        color: '#312e81', group: 'Output', hidden: true },
+  { type: 'ollamaField',       label: 'OllamaByField',         sub: 'LLM inference on a chosen field',        color: '#1e1b4b', group: 'Output', hidden: true },
+  { type: 'ollamaOutput',      label: 'OllamaOutput',          sub: 'Display Ollama inference text',           color: '#0f172a', group: 'Output', hidden: true },
 ]
 
 // ─── App ──────────────────────────────────────────────────────────────────────
@@ -499,7 +536,20 @@ export default function App() {
   const [loadError, setLoadError] = useState<string | null>(null)
   const [runningAll, setRunningAll] = useState(false)
   const [expandedNodeId, setExpandedNodeId] = useState<string | null>(null)
-  const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set(['Search', 'Process', 'Output']))
+  const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set(['Data Services', 'Local Content', 'Filters and Transforms', 'Extraction and Enrichment', 'Output']))
+  const [chatOpen, setChatOpen] = useState(false)
+
+  const [connMenu, setConnMenu] = useState<{
+    x: number; y: number
+    sourceNodeId: string; sourceNodeType: string; sourceHandleId: string | null
+  } | null>(null)
+
+  // Second-step handle picker (for param → multi-handle nodes)
+  const [handlePicker, setHandlePicker] = useState<{
+    x: number; y: number
+    pendingNodeType: string; pendingColor: string
+    sourceNodeId: string; sourceHandleId: string | null
+  } | null>(null)
 
   const handleRunAll = useCallback(async () => {
     if (!rfInstance) return
@@ -568,11 +618,110 @@ export default function App() {
     }
   }, [])
 
+  // ── Connection suggestions ─────────────────────────────────────────────────
+
+  const onConnectEnd = useCallback((event: MouseEvent | TouchEvent, state: FinalConnectionState) => {
+    if (!state.fromNode || state.toNode) return   // normal connection or no drag — nothing to do
+    const { clientX, clientY } = 'changedTouches' in event ? event.changedTouches[0] : event
+
+    if (state.fromHandle?.type === 'source') {
+      // Forward drag: output handle → empty canvas → show node suggestions
+      setConnMenu({
+        x: clientX, y: clientY,
+        sourceNodeId:   state.fromNode.id,
+        sourceNodeType: state.fromNode.type ?? '',
+        sourceHandleId: state.fromHandle?.id ?? null,
+      })
+      return
+    }
+
+    if (state.fromHandle?.type === 'target') {
+      // Reverse drag: input handle → empty canvas → auto-create a Param node
+      const handleId = state.fromHandle.id
+      if (!handleId || handleId === 'data' || handleId === 'results') return
+      if (!rfInstance) return
+      const position = rfInstance.screenToFlowPosition({ x: clientX - 20, y: clientY - 20 })
+      const newParam  = NODE_DEFAULTS['param'](position)
+      setNodes(prev => [...prev, newParam as AppNode])
+      setEdges(prev => addEdge({
+        id:           `e-${newParam.id}-${state.fromNode!.id}`,
+        source:       newParam.id,
+        target:       state.fromNode!.id,
+        targetHandle: handleId,
+      }, prev))
+    }
+  }, [rfInstance, setNodes, setEdges])
+
+  // Create node + edge immediately (used when targetHandle is already known)
+  const createNodeWithEdge = useCallback((
+    nodeType: string,
+    targetHandle: string,
+    x: number, y: number,
+    sourceNodeId: string,
+    sourceHandleId: string | null,
+  ) => {
+    if (!rfInstance) return
+    const factory = NODE_DEFAULTS[nodeType]
+    if (!factory) return
+    const position = rfInstance.screenToFlowPosition({ x: x + 20, y: y - 20 })
+    const newNode  = factory(position)
+    setNodes(prev => [...prev, newNode as AppNode])
+    setEdges(prev => addEdge({
+      id:           `e-${sourceNodeId}-${newNode.id}`,
+      source:       sourceNodeId,
+      sourceHandle: sourceHandleId ?? undefined,
+      target:       newNode.id,
+      targetHandle,
+    }, prev))
+  }, [rfInstance, setNodes, setEdges])
+
+  const handleSuggestionSelect = useCallback((s: Suggestion) => {
+    if (!connMenu) return
+
+    if (s.targetHandle !== null) {
+      // Direct connection — handle is unambiguous
+      createNodeWithEdge(s.type, s.targetHandle, connMenu.x, connMenu.y, connMenu.sourceNodeId, connMenu.sourceHandleId)
+      return
+    }
+
+    // Multiple handles available — show the handle picker as a second step
+    const handles = NODE_PARAM_HANDLES[s.type]
+    if (!handles || handles.length === 0) return
+    if (handles.length === 1) {
+      createNodeWithEdge(s.type, handles[0].id, connMenu.x, connMenu.y, connMenu.sourceNodeId, connMenu.sourceHandleId)
+      return
+    }
+    setHandlePicker({
+      x: connMenu.x, y: connMenu.y,
+      pendingNodeType:  s.type,
+      pendingColor:     s.color,
+      sourceNodeId:     connMenu.sourceNodeId,
+      sourceHandleId:   connMenu.sourceHandleId,
+    })
+  }, [connMenu, createNodeWithEdge])
+
+  const handlePickerSelect = useCallback((handleId: string) => {
+    if (!handlePicker) return
+    createNodeWithEdge(
+      handlePicker.pendingNodeType, handleId,
+      handlePicker.x, handlePicker.y,
+      handlePicker.sourceNodeId, handlePicker.sourceHandleId,
+    )
+    setHandlePicker(null)
+  }, [handlePicker, createNodeWithEdge])
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       {/* Top bar */}
       <div style={topBarStyle}>
-        <span style={{ fontWeight: 700, fontSize: 14, color: '#1e3a5f' }}>iDAH Federation PoC</span>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 1 }}>
+          <span style={{ fontSize: 13, color: '#1e3a5f', lineHeight: 1.2, letterSpacing: '-0.01em' }}>
+            <b>N</b>ational <b>F</b>ederated <b>C</b>ompute <b>S</b>ervices
+            {' – '}
+            <em style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontStyle: 'italic', fontWeight: 400 }}>Arts &amp; Humanities</em>
+          </span>
+          <span style={{ fontSize: 9, color: '#9ca3af', letterSpacing: '0.02em' }}>Proof of Concept. V2.0</span>
+        </div>
         <div style={{ flex: 1 }} />
         <button
           style={templateBtnStyle}
@@ -602,6 +751,13 @@ export default function App() {
           </span>
         )}
         <button
+          style={{ ...templateBtnStyle, background: chatOpen ? '#881337' : undefined, color: chatOpen ? '#fff' : undefined, borderColor: chatOpen ? '#881337' : undefined }}
+          onClick={() => setChatOpen(v => !v)}
+          title="Toggle KCL Assistant chat"
+        >
+          💬 Assistant
+        </button>
+        <button
           style={{ ...runAllBtnStyle, opacity: runningAll ? 0.6 : 1 }}
           onClick={handleRunAll}
           disabled={runningAll}
@@ -613,8 +769,8 @@ export default function App() {
       <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
         {/* Sidebar */}
         <div style={sidebarStyle}>
-          {(['Canvas', 'Input', 'Search', 'Process', 'Output'] as const).map(group => {
-            const items      = SIDEBAR_ITEMS.filter(i => i.group === group)
+          {(['Canvas', 'Input', 'Inspection', 'Data Services', 'Local Content', 'Filters and Transforms', 'Extraction and Enrichment', 'Output'] as const).map(group => {
+            const items      = SIDEBAR_ITEMS.filter(i => i.group === group && !i.hidden)
             const isCollapsed = collapsedGroups.has(group)
             const toggleGroup = () => setCollapsedGroups(prev => {
               const next = new Set(prev)
@@ -671,11 +827,15 @@ export default function App() {
               onDrop={onDrop}
               onDragOver={onDragOver}
               onNodeDoubleClick={onNodeDoubleClick}
+              onConnectEnd={onConnectEnd}
               fitView
             >
               <Background />
               <Controls />
               <MiniMap />
+              <Panel position="bottom-left" style={attributionStyle}>
+                Conceptualised by Neil Jakeman, King&#39;s Digital Lab
+              </Panel>
               {/* Expanded output panel — lives inside RF so it can use RF hooks */}
               {expandedNodeId && (
                 <ExpandedOutputPanel
@@ -688,7 +848,32 @@ export default function App() {
 
           <DebugPanel nodes={nodes} />
         </div>
+
+        {/* Right chat sidebar — outside ReactFlow so it doesn't scale with canvas zoom */}
+        <ChatSidebar isOpen={chatOpen} onToggle={() => setChatOpen(v => !v)} />
       </div>
+
+      {/* Connection suggestion popup — fixed-position so it's unaffected by canvas zoom */}
+      {connMenu && (
+        <ConnectionSuggestions
+          x={connMenu.x}
+          y={connMenu.y}
+          sourceNodeType={connMenu.sourceNodeType}
+          onSelect={handleSuggestionSelect}
+          onClose={() => setConnMenu(null)}
+        />
+      )}
+
+      {/* Secondary handle picker — shown when a param connects to a multi-handle node */}
+      {handlePicker && (
+        <HandlePicker
+          x={handlePicker.x}
+          y={handlePicker.y}
+          handles={NODE_PARAM_HANDLES[handlePicker.pendingNodeType] ?? []}
+          onSelect={handlePickerSelect}
+          onClose={() => setHandlePicker(null)}
+        />
+      )}
     </div>
   )
 }
@@ -724,6 +909,14 @@ function DebugPanel({ nodes }: { nodes: AppNode[] }) {
 }
 
 // ─── styles ───────────────────────────────────────────────────────────────────
+
+const attributionStyle: React.CSSProperties = {
+  background: 'rgba(255,255,255,0.75)', backdropFilter: 'blur(4px)',
+  border: '1px solid #e5e7eb', borderRadius: 4,
+  padding: '3px 8px', fontSize: 10, color: '#9ca3af',
+  fontFamily: 'inherit', letterSpacing: '0.01em',
+  pointerEvents: 'none',
+}
 
 const topBarStyle: React.CSSProperties = {
   height: 40, background: '#fff', borderBottom: '1px solid #e5e7eb',

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mozilla/readability": "^0.6.0",
     "@xyflow/react": "^12.3.6",
     "leaflet": "^1.9.4",
     "leaflet.markercluster": "^1.5.3",

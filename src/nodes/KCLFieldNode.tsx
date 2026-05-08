@@ -131,10 +131,21 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const [tokenInput, setTokenInput]     = useState(String((d.maxTokens as number | undefined) ?? 1024))
   const abortRef = useRef<AbortController | null>(null)
 
+  // ── Resolve apiKey — inline field or connected Param node ───────────────────
+
+  const isApiKeyConnected = allEdges.some(e => e.target === id && e.targetHandle === 'apiKey')
+
+  const effectiveApiKey = useMemo(() => {
+    if (!isApiKeyConnected) return (d.apiKey as string | undefined) ?? ''
+    const edge = allEdges.find(e => e.target === id && e.targetHandle === 'apiKey')
+    if (!edge) return ''
+    return (allNodes.find(n => n.id === edge.source)?.data as { value?: string } | undefined)?.value ?? ''
+  }, [allEdges, allNodes, id, isApiKeyConnected, d.apiKey])
+
   // ── Fetch available models ───────────────────────────────────────────────────
 
   useEffect(() => {
-    const key = d.apiKey
+    const key = effectiveApiKey
     if (!key) { setApiOk(false); return }
     let cancelled = false
     ;(async () => {
@@ -156,7 +167,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
     })()
     return () => { cancelled = true }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id, d.apiKey])
+  }, [id, effectiveApiKey])
 
   // ── Upstream records ─────────────────────────────────────────────────────────
 
@@ -204,7 +215,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   // ── Run handler ───────────────────────────────────────────────────────────────
 
   const handleRun = useCallback(async () => {
-    if (!apiKey) {
+    if (!effectiveApiKey) {
       updateNodeData(id, { status: 'error', statusMessage: '✗ API key required' })
       return
     }
@@ -252,7 +263,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           .replace(/\{\{count\}\}/g,  String(upstreamRecords.length))
 
         const response = await kclChat(
-          apiKey, selectedModel, systemPrompt, prompt,
+          effectiveApiKey, selectedModel, systemPrompt, prompt,
           temperature, maxTokens, signal,
           tok => setLiveTokens(tok),
         )
@@ -298,7 +309,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
             .replace(/\{\{(\w+)\}\}/g, (_, k: string) => String(record[k] ?? ''))
 
           const response = await kclChat(
-            apiKey, selectedModel, systemPrompt, prompt,
+            effectiveApiKey, selectedModel, systemPrompt, prompt,
             temperature, maxTokens, signal,
             tok => setLiveTokens(tok),
           )
@@ -335,17 +346,18 @@ export function KCLFieldNode({ id, data }: NodeProps) {
       const msg = err instanceof Error ? err.message : String(err)
       updateNodeData(id, { status: 'error', statusMessage: `✗ ${msg}` })
     }
-  }, [id, updateNodeData, upstreamRecords, apiKey, selectedModel, selectedField, mode, systemPrompt, promptTemplate, temperature, maxTokens])
+  }, [id, updateNodeData, upstreamRecords, effectiveApiKey, selectedModel, selectedField, mode, systemPrompt, promptTemplate, temperature, maxTokens])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
   const status      = (d.status ?? 'idle') as string
   const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
-  const canRun      = !!apiKey && !!selectedModel && !isRunning
+  const canRun      = !!effectiveApiKey && !!selectedModel && !isRunning
 
   return (
     <div style={{ ...styles.card, borderColor }}>
-      <Handle type="target" position={Position.Left} id="data" style={styles.inputHandle} />
+      <Handle type="target" position={Position.Left} id="data"   style={{ ...styles.inputHandle, top: 16 }} />
+      <Handle type="target" position={Position.Left} id="apiKey" style={{ ...styles.inputHandle, top: 53, background: isApiKeyConnected ? '#3b82f6' : '#be123c', boxShadow: `0 0 0 1px ${isApiKeyConnected ? '#3b82f6' : '#be123c'}` }} />
 
       {/* Header */}
       <div style={styles.header}>
@@ -355,10 +367,10 @@ export function KCLFieldNode({ id, data }: NodeProps) {
         ) : null}
       </div>
 
-      {!apiKey && (
+      {!effectiveApiKey && (
         <div style={styles.warnBanner}>⚠ Enter your KCL AI API key</div>
       )}
-      {apiKey && apiOk === false && (
+      {effectiveApiKey && apiOk === false && (
         <div style={styles.warnBanner}>⚠ Could not reach KCL API — check key or VPN</div>
       )}
 
@@ -367,16 +379,23 @@ export function KCLFieldNode({ id, data }: NodeProps) {
         <div style={styles.row}>
           <span style={styles.label}>Key</span>
           <input
-            type={showKey ? 'text' : 'password'}
-            style={styles.input}
-            value={apiKey}
+            type={isApiKeyConnected ? 'text' : showKey ? 'text' : 'password'}
+            style={{
+              ...styles.input,
+              background: isApiKeyConnected ? '#eff6ff' : '#fff',
+              color:      isApiKeyConnected ? '#1d4ed8' : '#111827',
+            }}
+            value={isApiKeyConnected ? '' : (d.apiKey as string | undefined) ?? ''}
             onChange={e => updateNodeData(id, { apiKey: e.target.value })}
-            placeholder="sk-…"
+            placeholder={isApiKeyConnected ? '(from Param)' : 'sk-…'}
+            readOnly={isApiKeyConnected}
             className="nodrag"
           />
-          <button style={styles.eyeBtn} onClick={() => setShowKey(v => !v)} title={showKey ? 'Hide' : 'Show'} className="nodrag">
-            {showKey ? '🙈' : '👁'}
-          </button>
+          {!isApiKeyConnected && (
+            <button style={styles.eyeBtn} onClick={() => setShowKey(v => !v)} title={showKey ? 'Hide' : 'Show'} className="nodrag">
+              {showKey ? '🙈' : '👁'}
+            </button>
+          )}
         </div>
 
         {/* Model */}

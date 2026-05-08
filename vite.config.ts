@@ -418,6 +418,12 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: path => path.replace(/^\/kcl-proxy/, ''),
       },
+      // Proxy /bodleian-proxy/* → https://digital.bodleian.ox.ac.uk/*
+      '/bodleian-proxy': {
+        target: 'https://digital.bodleian.ox.ac.uk',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/bodleian-proxy/, ''),
+      },
     },
   },
   plugins: [

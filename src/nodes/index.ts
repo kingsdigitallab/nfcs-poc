@@ -15,7 +15,7 @@ import { SpatialFilterNode }    from './SpatialFilterNode'
 import { TableOutputNode }    from './TableOutputNode'
 import { JSONOutputNode }     from './JSONOutputNode'
 import { MapOutputNode }      from './MapOutputNode'
-import { TimelineOutputNode } from './TimelineOutputNode'
+import { TimelineOutputNode, TimelineViewNode } from './TimelineOutputNode'
 import { ExportNode }         from './ExportNode'
 import { OllamaOutputNode }   from './OllamaOutputNode'
 import { HTMLSectionNode }    from './HTMLSectionNode'
@@ -31,9 +31,11 @@ import { CitationNode }             from './CitationNode'
 import { EuropeanaSearchNode }     from './EuropeanaSearchNode'
 import { FieldDistributionNode }   from './FieldDistributionNode'
 import { ARIADNESearchNode }       from './ARIADNESearchNode'
+import { BodleianSearchNode }      from './BodleianSearchNode'
 import { KCLNode }                  from './KCLNode'
 import { KCLFieldNode }             from './KCLFieldNode'
 import { KCLOutputNode }            from './KCLOutputNode'
+import { HTMLPreviewNode }          from './HTMLPreviewNode'
 
 export const nodeTypes = {
   param:             ParamNode,
@@ -54,6 +56,7 @@ export const nodeTypes = {
   jsonOutput:     JSONOutputNode,
   mapOutput:      MapOutputNode,
   timelineOutput: TimelineOutputNode,
+  timelineView:   TimelineViewNode,
   export:         ExportNode,
   ollamaOutput:   OllamaOutputNode,
   htmlSection:    HTMLSectionNode,
@@ -69,7 +72,9 @@ export const nodeTypes = {
   europeanaSearch:    EuropeanaSearchNode,
   fieldDistribution:  FieldDistributionNode,
   ariadneSearch:      ARIADNESearchNode,
+  bodleianSearch:     BodleianSearchNode,
   kclNode:            KCLNode,
   kclField:           KCLFieldNode,
   kclOutput:          KCLOutputNode,
+  htmlPreview:        HTMLPreviewNode,
 }

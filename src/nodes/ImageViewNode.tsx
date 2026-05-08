@@ -1,16 +1,38 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { Handle, Position, NodeProps, useReactFlow, NodeResizer } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
+import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
-const HEADER_COLOR = '#1c3144'
-const MAX_THUMB_DIM = 1200
+const HEADER_COLOR    = '#1c3144'
+const MAX_THUMB_DIM   = 1200
+const EXAMPLE_MANIFEST = 'https://iiif.wellcomecollection.org/presentation/b18035723'
 
 export interface ImageViewNodeData {
   mode: 'images' | 'iiif'
   selectedField: string
   manifestUrl: string
   imageDirectUrl: string  // Images mode: overrides field picker when set
+  imageCount?: number
+  iiifRegions?: IIIFRegion[]
   [key: string]: unknown
+}
+
+// ── Region annotator types ────────────────────────────────────────────────────
+
+interface IIIFRegion {
+  id: string
+  x: number   // normalized 0–1 fraction of canvas width
+  y: number   // normalized 0–1 fraction of canvas height
+  w: number
+  h: number
+  label: string
+}
+
+interface DrawBox {
+  startX: number
+  startY: number
+  curX: number
+  curY: number
 }
 
 // ── IIIF types ────────────────────────────────────────────────────────────────
@@ -203,6 +225,35 @@ async function fetchImageInfo(serviceUrl: string): Promise<IIIFImageInfo | null>
   }
 }
 
+// ── Region capture helpers ────────────────────────────────────────────────────
+
+function blobToDataUrl(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload  = () => resolve(reader.result as string)
+    reader.onerror = () => reject(reader.error)
+    reader.readAsDataURL(blob)
+  })
+}
+
+async function urlToBase64(url: string): Promise<string> {
+  try {
+    const r = await fetch(url, { signal: AbortSignal.timeout(20_000) })
+    if (!r.ok) throw new Error(`HTTP ${r.status}`)
+    return blobToDataUrl(await r.blob())
+  } catch {
+    const r = await fetch(`/url-proxy?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(20_000) })
+    if (!r.ok) throw new Error(`HTTP ${r.status}`)
+    return blobToDataUrl(await r.blob())
+  }
+}
+
+function normalizeBox(box: DrawBox): { x: number; y: number; w: number; h: number } {
+  const x = Math.min(box.startX, box.curX)
+  const y = Math.min(box.startY, box.curY)
+  return { x, y, w: Math.abs(box.curX - box.startX), h: Math.abs(box.curY - box.startY) }
+}
+
 // ── EXIF parser ───────────────────────────────────────────────────────────────
 // Minimal inline parser — no library dependency. Reads only the first 64 KB of
 // the JPEG (EXIF always sits in the APP1 segment near the start of the file).
@@ -301,6 +352,53 @@ function parseTiff(raw: Uint8Array, base: number): ExifData {
   return result
 }
 
+// ── Upstream IIIF manifest scanner ───────────────────────────────────────────
+// Inspects upstream records for any IIIF manifest URL so the node can offer
+// a picker instead of requiring the user to copy-paste URLs manually.
+
+interface ManifestEntry { url: string; label: string }
+
+function extractManifestEntries(records: Record<string, unknown>[]): ManifestEntry[] {
+  const seen    = new Set<string>()
+  const results: ManifestEntry[] = []
+
+  for (const rec of records) {
+    let url = ''
+
+    // 1. Named namespace — bodleian.manifest (and future services)
+    const ns = (rec.bodleian ?? rec.iiif) as Record<string, unknown> | undefined
+    if (typeof ns?.manifest === 'string' && ns.manifest) url = ns.manifest
+
+    // 2. Top-level field names
+    if (!url) {
+      for (const key of ['manifest', 'manifestUrl', 'iiifManifest', 'iiif']) {
+        const v = rec[key]
+        if (typeof v === 'string' && v) { url = v; break }
+      }
+    }
+
+    // 3. Any string field whose value looks like a IIIF manifest URL
+    if (!url) {
+      for (const val of Object.values(rec)) {
+        if (typeof val === 'string' && val.includes('/iiif/manifest/')) { url = val; break }
+      }
+    }
+
+    if (url && !seen.has(url)) {
+      seen.add(url)
+      const label = String(
+        rec.title ||
+        (ns as Record<string, unknown> | undefined)?.shelfmark ||
+        rec._id ||
+        url.split('/').filter(Boolean).at(-1),
+      )
+      results.push({ url, label })
+    }
+  }
+
+  return results.slice(0, 100)
+}
+
 // ── Downsampling hook ─────────────────────────────────────────────────────────
 
 function useDownsampledImage(src: string | null): {
@@ -364,12 +462,22 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const [manifestError,   setManError]   = useState('')
   const [localUrl,     setLocalUrl]     = useState(d.manifestUrl || '')
   const [imageInfo,    setImageInfo]    = useState<IIIFImageInfo | null>(null)
+  const [iiifRegions,  setIiifRegions]  = useState<IIIFRegion[]>(() => (d.iiifRegions as IIIFRegion[] | undefined) ?? [])
+  const [drawMode,     setDrawMode]     = useState(false)
+  const [drawBox,      setDrawBox]      = useState<DrawBox | null>(null)
+  const [capturing,    setCapturing]    = useState(false)
+  const svgRef = useRef<SVGSVGElement | null>(null)
 
   const availableFields = useMemo<string[]>(() => {
     if (!records?.length) return []
     const keys = new Set<string>()
     for (const r of records.slice(0, 20)) for (const k of Object.keys(r as Record<string, unknown>)) keys.add(k)
     return [...keys].sort()
+  }, [records])
+
+  const upstreamManifests = useMemo<ManifestEntry[]>(() => {
+    if (!records?.length) return []
+    return extractManifestEntries(records as Record<string, unknown>[])
   }, [records])
 
   const selectedField    = d.selectedField || availableFields[0] || ''
@@ -387,9 +495,14 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 
   const { thumb, thumbLoading, origWidth, origHeight } = useDownsampledImage(rawSrc)
 
+  const saveRegions = useCallback((regions: IIIFRegion[]) => {
+    setIiifRegions(regions)
+    updateNodeData(id, { iiifRegions: regions })
+  }, [id, updateNodeData])
+
   const loadManifest = useCallback(async (url: string) => {
     if (!url.trim()) return
-    setManLoading(true); setManError('')
+    setManLoading(true); setManError(''); setDrawMode(false); setDrawBox(null)
     try {
       const raw = await fetchManifest(url.trim())
       const { canvases: c, meta } = parseManifest(raw)
@@ -418,6 +531,79 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     fetchImageInfo(currentCanvas.serviceUrl).then(setImageInfo)
   }, [currentCanvas?.serviceUrl])
 
+  const captureAndSend = useCallback(async () => {
+    if (!currentCanvas) return
+    setCapturing(true)
+    clearNodeResults(id)
+    try {
+      const toCapture: IIIFRegion[] = iiifRegions.length > 0
+        ? iiifRegions
+        : [{ id: 'full', x: 0, y: 0, w: 1, h: 1, label: currentCanvas.label || 'Full canvas' }]
+      const recs: Record<string, unknown>[] = []
+      for (let i = 0; i < toCapture.length; i++) {
+        const region = toCapture[i]
+        const regionUrl = currentCanvas.serviceUrl
+          ? `${currentCanvas.serviceUrl}/pct:${(region.x*100).toFixed(1)},${(region.y*100).toFixed(1)},${(region.w*100).toFixed(1)},${(region.h*100).toFixed(1)}/!1024,1024/0/default.jpg`
+          : currentCanvas.directUrl
+        const dataUrl = await urlToBase64(regionUrl)
+        recs.push({
+          content:      dataUrl,
+          contentType:  'image',
+          mimeType:     'image/jpeg',
+          title:        region.label || `Region ${i + 1}`,
+          regionIndex:  i,
+          regionBounds: { x: region.x, y: region.y, w: region.w, h: region.h },
+          canvasLabel:  currentCanvas.label,
+          ...(manifestMeta ? { manifestTitle: manifestMeta.title, manifestProvider: manifestMeta.provider } : {}),
+          _source: 'imageView',
+          _id:     `${id}_region_${i}`,
+        })
+      }
+      const version = setNodeResults(id, recs)
+      updateNodeData(id, { resultsVersion: version, imageCount: recs.length })
+    } catch (err) {
+      console.error('IIIF capture failed:', err)
+      updateNodeData(id, { imageCount: 0 })
+    } finally {
+      setCapturing(false)
+    }
+  }, [currentCanvas, iiifRegions, id, manifestMeta, updateNodeData])
+
+  const getSvgCoords = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
+    const rect = svgRef.current!.getBoundingClientRect()
+    return {
+      x: Math.max(0, Math.min(1, (e.clientX - rect.left)  / rect.width)),
+      y: Math.max(0, Math.min(1, (e.clientY - rect.top) / rect.height)),
+    }
+  }, [])
+
+  const onSvgMouseDown = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
+    if (!drawMode) return
+    e.stopPropagation()
+    const { x, y } = getSvgCoords(e)
+    setDrawBox({ startX: x, startY: y, curX: x, curY: y })
+  }, [drawMode, getSvgCoords])
+
+  const onSvgMouseMove = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
+    if (!drawMode || !drawBox) return
+    e.stopPropagation()
+    const { x, y } = getSvgCoords(e)
+    setDrawBox(prev => prev ? { ...prev, curX: x, curY: y } : null)
+  }, [drawMode, drawBox, getSvgCoords])
+
+  const onSvgMouseUp = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
+    if (!drawMode) return
+    e.stopPropagation()
+    if (drawBox) {
+      const { x, y } = getSvgCoords(e)
+      const nb = normalizeBox({ ...drawBox, curX: x, curY: y })
+      if (nb.w > 0.02 && nb.h > 0.02) {
+        saveRegions([...iiifRegions, { id: `r${Date.now()}`, ...nb, label: `Region ${iiifRegions.length + 1}` }])
+      }
+    }
+    setDrawBox(null)
+  }, [drawMode, drawBox, getSvgCoords, iiifRegions, saveRegions])
+
   // Build display URL: for IIIF Image API services use a zoom-tiered size param
   // rather than /full/max — this is the key efficiency gain.
   const displaySrc = mode === 'iiif'
@@ -429,6 +615,37 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const displayLabel = mode === 'iiif'
     ? (currentCanvas?.label ?? '')
     : String(currentRecord.title || currentRecord.filename || currentRecord.id || `Record ${safeRecordIndex + 1}`)
+
+  // ── Write current image to results store ─────────────────────────────────────
+  // Images mode: reacts to rawSrc changing (field selection, record navigation)
+  useEffect(() => {
+    if (mode !== 'images') return
+    if (!rawSrc) {
+      clearNodeResults(id)
+      updateNodeData(id, { resultsVersion: 0, imageCount: 0 })
+      return
+    }
+    const mimeType = /^data:(image\/[^;]+)/.exec(rawSrc)?.[1] ?? 'image/jpeg'
+    const record: Record<string, unknown> = {
+      ...currentRecord,
+      content:     rawSrc,
+      contentType: 'image',
+      mimeType,
+      title:       displayLabel,
+      _source:     'imageView',
+    }
+    const version = setNodeResults(id, [record])
+    updateNodeData(id, { resultsVersion: version, imageCount: 1 })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [rawSrc, mode, id])
+
+  // IIIF mode: clear results on canvas navigation — capture is now explicit via Capture button
+  useEffect(() => {
+    if (mode !== 'iiif') return
+    clearNodeResults(id)
+    updateNodeData(id, { resultsVersion: 0, imageCount: 0 })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentCanvas, mode, id])
 
   function setMode(m: 'images' | 'iiif') { updateNodeData(id, { mode: m }); setZoom(1) }
 
@@ -449,7 +666,8 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
         handleStyle={{ background: HEADER_COLOR, borderColor: '#fff', width: 8, height: 8 }}
       />
       <div style={s.card}>
-        <Handle type="target" position={Position.Left} id="data" style={s.handle} />
+        <Handle type="target" position={Position.Left}  id="data"    style={s.handle} />
+        <Handle type="source" position={Position.Right} id="results" style={s.outputHandle} />
 
         {/* Header */}
         <div style={s.header}>
@@ -489,15 +707,85 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             </div>
           </div>
         ) : (
-          <div style={s.toolbar}>
-            <input style={s.urlInput} value={localUrl}
-              onChange={e => setLocalUrl(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && (updateNodeData(id, { manifestUrl: localUrl }), loadManifest(localUrl))}
-              placeholder="IIIF manifest URL…" className="nodrag" spellCheck={false} />
-            <button style={s.loadBtn}
-              onClick={() => { updateNodeData(id, { manifestUrl: localUrl }); loadManifest(localUrl) }}
-              disabled={manifestLoading || !localUrl.trim()} className="nodrag">
-              {manifestLoading ? '…' : 'Load'}
+          <div style={s.toolbarImages}>
+            {/* Upstream picker — only shown when upstream records have IIIF manifests */}
+            {upstreamManifests.length > 0 && (
+              <div style={s.toolbarRow}>
+                <span style={s.srcLabel}>From</span>
+                <select
+                  style={{ ...s.fieldSelect, fontFamily: 'inherit' }}
+                  value={upstreamManifests.some(m => m.url === localUrl) ? localUrl : ''}
+                  onChange={e => {
+                    const url = e.target.value
+                    if (!url) return
+                    setLocalUrl(url)
+                    updateNodeData(id, { manifestUrl: url })
+                    loadManifest(url)
+                  }}
+                  className="nodrag"
+                >
+                  <option value="">— select from upstream ({upstreamManifests.length}) —</option>
+                  {upstreamManifests.map((m, i) => (
+                    <option key={i} value={m.url}>{m.label}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+            {/* Manual URL input */}
+            <div style={s.toolbarRow}>
+              <input style={s.urlInput} value={localUrl}
+                onChange={e => setLocalUrl(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && (updateNodeData(id, { manifestUrl: localUrl }), loadManifest(localUrl))}
+                placeholder="IIIF manifest URL…" className="nodrag" spellCheck={false} />
+              <button style={s.loadBtn}
+                onClick={() => { updateNodeData(id, { manifestUrl: localUrl }); loadManifest(localUrl) }}
+                disabled={manifestLoading || !localUrl.trim()} className="nodrag">
+                {manifestLoading ? '…' : 'Load'}
+              </button>
+            </div>
+            {/* Example — demoted to an optional button */}
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <button
+                style={s.exampleBtn}
+                onClick={() => {
+                  setLocalUrl(EXAMPLE_MANIFEST)
+                  updateNodeData(id, { manifestUrl: EXAMPLE_MANIFEST })
+                  loadManifest(EXAMPLE_MANIFEST)
+                }}
+                className="nodrag"
+                title="Wellcome Collection — Edward Topsell, The History of Four-Footed Beasts (1658)"
+              >
+                Load example
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Region annotator toolbar — IIIF only */}
+        {mode === 'iiif' && canvases && (
+          <div style={s.regionBar} className="nodrag">
+            <button
+              style={{ ...s.regionBtn, ...(drawMode ? { background: '#f97316', color: '#fff', borderColor: '#f97316' } : {}) }}
+              onClick={() => { setDrawMode(v => !v); setDrawBox(null) }}
+            >
+              {drawMode ? '✎ Drawing…' : '+ Region'}
+            </button>
+            {iiifRegions.length > 0 && (
+              <span style={s.regionCount}>{iiifRegions.length} region{iiifRegions.length !== 1 ? 's' : ''}</span>
+            )}
+            <div style={{ flex: 1 }} />
+            {iiifRegions.length > 0 && (
+              <button style={{ ...s.regionBtn, color: '#9ca3af', fontSize: 9 }} onClick={() => saveRegions([])}>
+                Clear
+              </button>
+            )}
+            <button
+              style={{ ...s.regionBtn, background: HEADER_COLOR, color: '#fff', borderColor: HEADER_COLOR,
+                       opacity: (capturing || !currentCanvas) ? 0.6 : 1 }}
+              onClick={captureAndSend}
+              disabled={capturing || !currentCanvas}
+            >
+              {capturing ? 'Capturing…' : iiifRegions.length > 0 ? `Capture ${iiifRegions.length}` : 'Capture'}
             </button>
           </div>
         )}
@@ -522,7 +810,56 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             <div style={s.placeholder}>
               {mode === 'images'
                 ? (connected ? 'Select a field containing an image' : 'Connect a node to the input handle')
-                : 'Enter a IIIF manifest URL above'}
+                : (upstreamManifests.length > 0
+                    ? 'Select a record above, or enter a manifest URL'
+                    : 'Enter a IIIF manifest URL, or click Load example')}
+            </div>
+          ) : mode === 'iiif' ? (
+            <div style={{ position: 'relative', display: 'inline-block', lineHeight: 0, minWidth: 0 }}>
+              <img src={displaySrc} alt={displayLabel}
+                style={{ width: `${zoom * 100}%`, maxWidth: 'none', height: 'auto', display: 'block' }} />
+              <svg
+                ref={svgRef}
+                viewBox="0 0 1 1"
+                preserveAspectRatio="none"
+                className="nodrag nowheel"
+                style={{
+                  position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
+                  cursor: drawMode ? 'crosshair' : 'default',
+                  pointerEvents: (drawMode || iiifRegions.length > 0) ? 'auto' : 'none',
+                }}
+                onMouseDown={onSvgMouseDown}
+                onMouseMove={onSvgMouseMove}
+                onMouseUp={onSvgMouseUp}
+                onMouseLeave={() => drawBox && setDrawBox(null)}
+              >
+                {iiifRegions.map((r, idx) => (
+                  <g key={r.id}>
+                    <rect x={r.x} y={r.y} width={r.w} height={r.h}
+                      fill="rgba(59,130,246,0.15)" stroke="#3b82f6" strokeWidth={0.004} />
+                    <text x={r.x + 0.01} y={r.y + 0.045} fontSize="0.04" fill="#1d4ed8"
+                      style={{ pointerEvents: 'none', fontFamily: 'sans-serif', fontWeight: 700 }}>
+                      {r.label}
+                    </text>
+                    <g style={{ cursor: 'pointer' }}
+                      onClick={e => { e.stopPropagation(); saveRegions(iiifRegions.filter((_, j) => j !== idx)) }}>
+                      <rect x={r.x + r.w - 0.03} y={r.y} width={0.03} height={0.03}
+                        fill="#ef4444" rx={0.005} />
+                      <text x={r.x + r.w - 0.015} y={r.y + 0.022} textAnchor="middle"
+                        dominantBaseline="middle" fontSize="0.025" fill="white"
+                        style={{ pointerEvents: 'none', fontFamily: 'sans-serif' }}>×</text>
+                    </g>
+                  </g>
+                ))}
+                {drawBox && (() => {
+                  const nb = normalizeBox(drawBox)
+                  return (
+                    <rect x={nb.x} y={nb.y} width={nb.w} height={nb.h}
+                      fill="rgba(249,115,22,0.2)" stroke="#f97316"
+                      strokeWidth={0.005} strokeDasharray="0.02 0.01" />
+                  )
+                })()}
+              </svg>
             </div>
           ) : (
             <img src={displaySrc} alt={displayLabel}
@@ -630,9 +967,10 @@ const s = {
     borderRadius: 3, padding: '2px 8px', fontSize: 10, fontWeight: 600, cursor: 'pointer',
   },
   modeBtnActive: { background: 'rgba(255,255,255,0.25)', color: '#fff' },
-  toolbar: {
-    display: 'flex', alignItems: 'center', gap: 6, padding: '6px 10px',
-    borderBottom: '1px solid #f1f5f9', flexShrink: 0,
+  exampleBtn: {
+    background: 'transparent', color: '#9ca3af', border: '1px solid #e5e7eb',
+    borderRadius: 3, padding: '1px 8px', fontSize: 10, cursor: 'pointer',
+    fontStyle: 'italic' as const,
   },
   toolbarImages: {
     display: 'flex', flexDirection: 'column' as const, gap: 4, padding: '6px 10px',
@@ -711,8 +1049,23 @@ const s = {
   metaHint: {
     padding: '6px 10px', fontSize: 10, color: '#9ca3af', fontStyle: 'italic' as const,
   },
+  regionBar: {
+    display: 'flex', alignItems: 'center', gap: 6, padding: '4px 10px',
+    borderBottom: '1px solid #f1f5f9', flexShrink: 0, background: '#f8fafc',
+  },
+  regionBtn: {
+    background: 'transparent', color: '#374151', border: '1px solid #d1d5db',
+    borderRadius: 3, padding: '2px 8px', fontSize: 10, fontWeight: 600,
+    cursor: 'pointer', flexShrink: 0,
+  },
+  regionCount: { fontSize: 10, color: '#3b82f6', fontWeight: 700, fontFamily: 'monospace' },
   handle: {
     width: 10, height: 10, background: HEADER_COLOR,
     border: '2px solid #fff', boxShadow: `0 0 0 1px ${HEADER_COLOR}`,
+  },
+  outputHandle: {
+    width: 10, height: 10, background: '#22c55e',
+    border: '2px solid #fff', boxShadow: '0 0 0 1px #22c55e',
+    top: 16,
   },
 }

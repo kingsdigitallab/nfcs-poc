@@ -27,6 +27,9 @@ import { runEuropeanaNode }       from './runEuropeanaNode'
 import { runARIADNENode }         from './runARIADNENode'
 import { runKCLNode }             from './runKCLNode'
 import { runKCLFieldNode }        from './runKCLFieldNode'
+import { runBodleianSearchNode }  from './runBodleianSearchNode'
+import { runTimelineViewNode }    from './runTimelineViewNode'
+import { runImageViewNode }       from './runImageViewNode'
 import { withFixture }            from './fixtureUtils'
 
 /**
@@ -50,6 +53,7 @@ export const nodeRunners: Record<string, NodeRunner> = {
   mdsSearch:         withFixture('mdsSearch',       runMDSNode),
   europeanaSearch:   withFixture('europeanaSearch', runEuropeanaNode),
   ariadneSearch:     withFixture('ariadneSearch',   runARIADNENode),
+  bodleianSearch:    withFixture('bodleianSearch',  runBodleianSearchNode),
   adsSearchAdvanced: runADSAdvancedNode,
   adsLibrarySearch:  runADSLibraryNode,
   reconciliation:    runReconciliationNode,
@@ -64,4 +68,8 @@ export const nodeRunners: Record<string, NodeRunner> = {
   mergeByQID:        runMergeByQIDNode,
   wikidataEnrich:    runWikidataEnrichNode,
   xmlSection:        runXMLSectionNode,
+  timelineView:      runTimelineViewNode,
+  timelineOutput:    runTimelineViewNode,  // backward-compat alias
+  imageView:         runImageViewNode,
 }
+
