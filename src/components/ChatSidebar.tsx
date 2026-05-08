@@ -7,6 +7,9 @@ const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 
 const HEADER_COLOR = '#881337'
 
+// Bump this string whenever DEFAULT_SYSTEM changes — clears stale localStorage copies.
+const SYSTEM_VERSION = '2025-05-08-v1'
+
 const DEFAULT_SYSTEM = `You are the built-in assistant for the National Federated Compute Services – Arts & Humanities (NFCS-AH), Proof of Concept V2.0. This is a visual, node-based workflow editor for federating UK Arts & Humanities research data, built at King's Digital Lab for UKRI/AHRC.
 
 ## HOW THE APP WORKS
@@ -98,9 +101,13 @@ interface Props {
 // ── Component ──────────────────────────────────────────────────────────────────
 
 export function ChatSidebar({ isOpen, onToggle }: Props) {
-  const [apiKey, setApiKey]             = useState(() => localStorage.getItem('kcl_chat_apiKey') ?? '')
+  const [apiKey, setApiKey]             = useState('')
   const [model, setModel]               = useState(() => localStorage.getItem('kcl_chat_model') ?? '')
-  const [systemPrompt, setSystemPrompt] = useState(() => localStorage.getItem('kcl_chat_system') ?? DEFAULT_SYSTEM)
+  const [systemPrompt, setSystemPrompt] = useState(() => {
+    const storedVersion = localStorage.getItem('kcl_chat_system_version')
+    const stored        = localStorage.getItem('kcl_chat_system')
+    return (storedVersion === SYSTEM_VERSION && stored) ? stored : DEFAULT_SYSTEM
+  })
   const [temperature, setTemperature]   = useState(0.7)
   const [maxTokens, setMaxTokens]       = useState(16384)
   const [tokenInput, setTokenInput]     = useState('16384')
@@ -118,10 +125,12 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
   const streamingRef  = useRef('')
   const messagesEnd   = useRef<HTMLDivElement>(null)
 
-  // Persist config
-  useEffect(() => { localStorage.setItem('kcl_chat_apiKey', apiKey) }, [apiKey])
+  // Persist config (API key is intentionally not persisted)
   useEffect(() => { localStorage.setItem('kcl_chat_model', model) }, [model])
-  useEffect(() => { localStorage.setItem('kcl_chat_system', systemPrompt) }, [systemPrompt])
+  useEffect(() => {
+    localStorage.setItem('kcl_chat_system', systemPrompt)
+    localStorage.setItem('kcl_chat_system_version', SYSTEM_VERSION)
+  }, [systemPrompt])
 
   // Scroll to bottom
   useEffect(() => {
