@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
@@ -8,7 +10,7 @@ const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const HEADER_COLOR = '#881337'
 
 // Bump this string whenever DEFAULT_SYSTEM changes — clears stale localStorage copies.
-const SYSTEM_VERSION = '2025-05-08-v1'
+const SYSTEM_VERSION = '2026-05-11-v1'
 
 const DEFAULT_SYSTEM = `You are the built-in assistant for the National Federated Compute Services – Arts & Humanities (NFCS-AH), Proof of Concept V2.0. This is a visual, node-based workflow editor for federating UK Arts & Humanities research data, built at King's Digital Lab for UKRI/AHRC.
 
@@ -59,9 +61,9 @@ Records from every service are normalised to a shared **UnifiedRecord** schema b
 - **MergeByQID** — merges records from multiple upstream sources by shared Wikidata QID into one record per entity. Toggle Keep unmatched to pass through unreconciled records unchanged.
 
 **Output**
-- **TableOutput** — paginated table; merges multiple upstream nodes; pass-through results handle. Toolbar: *show all columns* + *expand namespaces* (flattens service namespace objects to dot-notation columns). Double-click to expand full-screen.
+- **TableOutput** — paginated table; merges multiple upstream nodes; pass-through results handle. Toolbar: *show all columns* + *expand namespaces* (flattens service namespace objects to dot-notation columns). **Page size** selector (10 / 25 / 50 / 100 rows). **Column sort** — click any column header to sort ascending, click again for descending, third click clears. **Text filter** — search box above the table filters across all fields (including namespace sub-objects) live as you type. Double-click to expand full-screen.
 - **JSONOutput** — syntax-highlighted JSON viewer. Double-click to expand.
-- **MapOutput** — Leaflet map using decimalLatitude/decimalLongitude. Also accepts GIS vector layers from LocalFolderSource's GIS handle.
+- **MapOutput** — Leaflet map using decimalLatitude/decimalLongitude. Integrated spatial bounding-box filter: click **Draw bbox**, drag on the map to define a region, then **Run ▶** — only records within the bbox are emitted. A coordinate summary shows N/S/E/W bounds; records outside the bbox are dimmed on the map. A green **results** output handle on the right edge pipes the filtered records to any downstream node (TableOutput, Export, TimelineView, etc.). Also accepts GIS vector layers from LocalFolderSource's GIS handle.
 - **Export** — CSV / JSON / GeoJSON download. *_reconciled objects are expanded to _qid/_label/_confidence/_status columns in CSV.
 - **KingsInferenceOutput** — card display of kclResponse values with copy buttons per card.
 - **Citation** — paginated bibliography from _citation metadata stamped by source runners. Copy all / Download .txt.
@@ -96,6 +98,55 @@ interface Message {
 interface Props {
   isOpen: boolean
   onToggle: () => void
+}
+
+// ── Markdown renderer ──────────────────────────────────────────────────────────
+
+function MdContent({ children }: { children: string }) {
+  return (
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      components={{
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        table: ({ node, ...p }) => <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: 11, margin: '6px 0', display: 'block', overflowX: 'auto' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        thead: ({ node, ...p }) => <thead style={{ background: '#f3f4f6' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        th:    ({ node, ...p }) => <th style={{ border: '1px solid #d1d5db', padding: '4px 8px', textAlign: 'left', fontWeight: 600, whiteSpace: 'nowrap' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        td:    ({ node, ...p }) => <td style={{ border: '1px solid #e5e7eb', padding: '4px 8px', verticalAlign: 'top' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        pre:   ({ node, ...p }) => <pre style={{ background: '#1e293b', color: '#e2e8f0', padding: '8px 10px', borderRadius: 6, overflowX: 'auto', fontSize: 10, lineHeight: 1.5, margin: '6px 0' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        code:  ({ node, className, children: c, ...p }) =>
+          className
+            ? <code className={className} {...p}>{c}</code>
+            : <code style={{ background: '#f3f4f6', padding: '1px 4px', borderRadius: 3, fontSize: '0.9em', fontFamily: 'monospace' }} {...p}>{c}</code>,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        p:     ({ node, ...p }) => <p style={{ margin: '4px 0' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        ul:    ({ node, ...p }) => <ul style={{ paddingLeft: 18, margin: '4px 0' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        ol:    ({ node, ...p }) => <ol style={{ paddingLeft: 18, margin: '4px 0' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        li:    ({ node, ...p }) => <li style={{ margin: '2px 0' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        h1:    ({ node, ...p }) => <h1 style={{ fontSize: 14, fontWeight: 700, margin: '10px 0 4px', color: '#111827' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        h2:    ({ node, ...p }) => <h2 style={{ fontSize: 13, fontWeight: 700, margin: '8px 0 4px', color: '#111827' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        h3:    ({ node, ...p }) => <h3 style={{ fontSize: 12, fontWeight: 700, margin: '6px 0 3px', color: '#374151' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        a:     ({ node, ...p }) => <a style={{ color: '#2563eb', textDecoration: 'underline' }} target="_blank" rel="noreferrer" {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        hr:    ({ node, ...p }) => <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb', margin: '8px 0' }} {...p} />,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        blockquote: ({ node, ...p }) => <blockquote style={{ borderLeft: '3px solid #d1d5db', paddingLeft: 10, margin: '4px 0', color: '#6b7280' }} {...p} />,
+      }}
+    >
+      {children}
+    </ReactMarkdown>
+  )
 }
 
 // ── Component ──────────────────────────────────────────────────────────────────
@@ -373,12 +424,13 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
                 </button>
               </div>
             )}
-            <div style={{
-              ...styles.bubbleText,
-              color: msg.error ? '#dc2626' : msg.role === 'user' ? '#fff' : '#111827',
-            }}>
-              {msg.content}
-            </div>
+            {msg.role === 'assistant' ? (
+              <div style={{ ...styles.bubbleText, color: msg.error ? '#dc2626' : '#111827' }}>
+                <MdContent>{msg.content}</MdContent>
+              </div>
+            ) : (
+              <div style={{ ...styles.bubbleText, color: '#fff' }}>{msg.content}</div>
+            )}
           </div>
         ))}
 
@@ -390,7 +442,8 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
               <button style={styles.copyBtn} onClick={handleCancel} title="Cancel generation">✕</button>
             </div>
             <div style={styles.bubbleText}>
-              {streaming}<span style={styles.cursor}>▋</span>
+              <MdContent>{streaming}</MdContent>
+              <span style={styles.cursor}>▋</span>
             </div>
           </div>
         )}
