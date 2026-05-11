@@ -535,9 +535,9 @@ const SIDEBAR_ITEMS = [
   { type: 'export',            label: 'Export',                sub: 'CSV / JSON / GeoJSON',                    color: '#b45309', group: 'Output' },
   { type: 'jsonOutput',        label: 'JSONOutput',            sub: 'Formatted JSON viewer',                   color: '#6d28d9', group: 'Output' },
   { type: 'kclOutput',         label: 'KingsInferenceOutput',  sub: 'Display KCL inference text',              color: '#3b0764', group: 'Output' },
-  { type: 'mapOutput',         label: 'MapOutput',             sub: 'Geo map (lat/lon records)',                color: '#14532d', group: 'Output' },
-  { type: 'tableOutput',       label: 'TableOutput',           sub: 'Paginated results table',                 color: '#0d9488', group: 'Output' },
-  { type: 'timelineView',      label: 'TimelineView',          sub: 'Filter records by date range + timeline',  color: '#1e293b', group: 'Filters and Transforms' },
+  { type: 'mapOutput',         label: 'MapOutput',             sub: 'Geo map (lat/lon records)',                color: '#14532d', group: 'Inspection' },
+  { type: 'tableOutput',       label: 'TableOutput',           sub: 'Paginated results table',                 color: '#0d9488', group: 'Inspection' },
+  { type: 'timelineView',      label: 'TimelineView',          sub: 'Filter records by date range + timeline',  color: '#1e293b', group: 'Inspection' },
   // ── Hidden ───────────────────────────────────────────────────────────────────
   { type: 'adsLibrarySearch',  label: 'ADSLibrary',            sub: 'ADS Library catalogue',                   color: '#1e3a5f', group: 'Output', hidden: true },
   { type: 'adsSearchAdvanced', label: 'ADSSearch',             sub: 'Archaeology Data Services',                color: '#7c2d12', group: 'Output', hidden: true },
