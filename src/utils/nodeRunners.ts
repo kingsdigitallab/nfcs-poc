@@ -33,6 +33,8 @@ import { runImageViewNode }       from './runImageViewNode'
 import { runDeduplicateNode }     from './runDeduplicateNode'
 import { runMapOutputNode }       from './runMapOutputNode'
 import { runSMGSearchNode }       from './runSMGSearchNode'
+import { runVASearchNode }        from './runVASearchNode'
+import { runGeocodingNode }       from './runGeocodingNode'
 import { withFixture }            from './fixtureUtils'
 
 /**
@@ -77,5 +79,7 @@ export const nodeRunners: Record<string, NodeRunner> = {
   deduplicate:       runDeduplicateNode,
   mapOutput:         runMapOutputNode,
   smgSearch:         withFixture('smgSearch', runSMGSearchNode),
+  vaSearch:          withFixture('vaSearch',  runVASearchNode),
+  geocoding:         runGeocodingNode,
 }
 

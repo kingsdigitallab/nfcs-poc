@@ -38,6 +38,8 @@ import { KCLOutputNode }            from './KCLOutputNode'
 import { HTMLPreviewNode }          from './HTMLPreviewNode'
 import { DeduplicateNode }          from './DeduplicateNode'
 import { SMGSearchNode }            from './SMGSearchNode'
+import { VASearchNode }             from './VASearchNode'
+import { GeocodingNode }            from './GeocodingNode'
 import { withDuplicate }            from './withDuplicate'
 
 export const nodeTypes = {
@@ -82,4 +84,6 @@ export const nodeTypes = {
   htmlPreview:       withDuplicate(HTMLPreviewNode),
   deduplicate:       withDuplicate(DeduplicateNode),
   smgSearch:         withDuplicate(SMGSearchNode),
+  vaSearch:          withDuplicate(VASearchNode),
+  geocoding:         withDuplicate(GeocodingNode),
 }

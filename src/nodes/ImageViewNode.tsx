@@ -149,7 +149,7 @@ function parseIIIFMeta(manifest: Record<string, unknown>, isV3: boolean): IIIFMe
   return { title, summary, attribution, rights, date, provider, metadata }
 }
 
-function parseManifest(manifest: Record<string, unknown>): { canvases: IIIFCanvas[]; meta: IIIFMeta } {
+function parseManifest(manifest: Record<string, unknown>, manifestUrl?: string): { canvases: IIIFCanvas[]; meta: IIIFMeta } {
   const ctx    = manifest['@context']
   const ctxArr = Array.isArray(ctx) ? ctx.map(String) : [String(ctx ?? '')]
   const isV3   = ctxArr.some(c => c.includes('presentation/3'))
@@ -185,8 +185,19 @@ function parseManifest(manifest: Record<string, unknown>): { canvases: IIIFCanva
       const images   = (canvas.images as Record<string, unknown>[]) ?? []
       const resource = images[0]?.resource as Record<string, unknown> | undefined
       if (!resource) return []
-      const serviceUrl = extractServiceBase(resource.service)
-      const directUrl  = String(resource['@id'] || resource.id || '')
+      let serviceUrl = extractServiceBase(resource.service)
+      let directUrl  = String(resource['@id'] || resource.id || '')
+      // Resolve relative resource URLs (e.g. SMG manifests use "/full/max/0/default.jpg")
+      if (directUrl.startsWith('/')) {
+        const canvasId = String(canvas['@id'] || '')
+        const base = canvasId
+          ? canvasId.replace(/\/canvas\/\d+$/, '')
+          : String(manifest['@id'] || manifestUrl || '').replace(/\/manifest$/, '')
+        if (base) {
+          if (!serviceUrl) serviceUrl = base
+          directUrl = base + directUrl
+        }
+      }
       return [{ label: String(canvas.label || `Canvas ${i + 1}`), serviceUrl, directUrl, width: canvas.width as number | undefined, height: canvas.height as number | undefined }]
     })
   }
@@ -365,8 +376,8 @@ function extractManifestEntries(records: Record<string, unknown>[]): ManifestEnt
   for (const rec of records) {
     let url = ''
 
-    // 1. Named namespace — bodleian.manifest (and future services)
-    const ns = (rec.bodleian ?? rec.iiif) as Record<string, unknown> | undefined
+    // 1. Named namespace — bodleian.manifest, smg.manifest, vam.manifest, and future services
+    const ns = (rec.bodleian ?? rec.smg ?? rec.vam ?? rec.iiif) as Record<string, unknown> | undefined
     if (typeof ns?.manifest === 'string' && ns.manifest) url = ns.manifest
 
     // 2. Top-level field names
@@ -505,7 +516,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     setManLoading(true); setManError(''); setDrawMode(false); setDrawBox(null)
     try {
       const raw = await fetchManifest(url.trim())
-      const { canvases: c, meta } = parseManifest(raw)
+      const { canvases: c, meta } = parseManifest(raw, url.trim())
       if (!c.length) throw new Error('No images found in manifest')
       setCanvases(c); setManifestMeta(meta); setCanvasIndex(0); setImageInfo(null)
     } catch (err) {

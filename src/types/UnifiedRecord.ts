@@ -116,5 +116,44 @@ export interface UnifiedRecord {
   europeana?: Record<string, unknown>
   /** ARIADNE portal namespace (temporal, country, allSpatial, contributor, ariadneSubject, …) */
   ariadne?: Record<string, unknown>
+  /** Science Museum Group namespace (museum, accessionNumber, manifest, thumbnail, …) */
+  smg?: Record<string, unknown>
+  /** Victoria and Albert Museum namespace (objectType, place, manifest, iiifImageBase, thumbnail, …) */
+  vam?: Record<string, unknown>
+
+  // ── Geocoding enrichment ────────────────────────────────────────────────────
+  /** Full geocoding result from GeocodingNode */
+  geocoding?: {
+    geocoded:            'auto' | 'native' | 'pending_review' | 'manual' | 'failed'
+    geocode_source?:     'tgn' | 'wikidata' | 'native'
+    geocode_uri?:        string
+    geocode_candidates?: GeoCandidate[]
+    place_raw?:          string
+    place_cleaned?:      string
+    confidence?:         number
+  }
+
   // ckan?: Record<string, unknown>
+}
+
+/** A single gazetteer candidate returned by TGN or Wikidata during geocoding. */
+export interface GeoCandidate {
+  source:       'tgn' | 'wikidata'
+  uri:          string
+  label:        string
+  lat:          number
+  lng:          number
+  placeType?:   string
+  parentLabel?: string
+  tgnUri?:      string   // cross-ref from Wikidata → TGN, used for corroboration scoring
+  score:        number   // final composite score [0–1]
+}
+
+/** A user-confirmed geocoding choice stored in node data for persistence. */
+export interface GeoConfirmed {
+  lat:    number
+  lng:    number
+  source: 'tgn' | 'wikidata'
+  uri:    string
+  label:  string
 }
