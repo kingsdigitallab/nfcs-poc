@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, createContext, useContext } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -102,6 +102,9 @@ interface Props {
 
 // ── Markdown renderer ──────────────────────────────────────────────────────────
 
+// Signals to the code component that it is nested inside a pre (block code).
+const InsidePre = createContext(false)
+
 function MdContent({ children }: { children: string }) {
   return (
     <ReactMarkdown
@@ -116,12 +119,22 @@ function MdContent({ children }: { children: string }) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         td:    ({ node, ...p }) => <td style={{ border: '1px solid #e5e7eb', padding: '4px 8px', verticalAlign: 'top' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        pre:   ({ node, ...p }) => <pre style={{ background: '#1e293b', color: '#e2e8f0', padding: '8px 10px', borderRadius: 6, overflowX: 'auto', fontSize: 10, lineHeight: 1.5, margin: '6px 0' }} {...p} />,
+        pre:   ({ node, ...p }) => (
+          <InsidePre.Provider value={true}>
+            <pre style={{ background: '#1e293b', color: '#e2e8f0', padding: '8px 10px', borderRadius: 6, overflowX: 'auto', fontSize: 10, lineHeight: 1.5, margin: '6px 0' }} {...p} />
+          </InsidePre.Provider>
+        ),
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        code:  ({ node, className, children: c, ...p }) =>
-          className
-            ? <code className={className} {...p}>{c}</code>
-            : <code style={{ background: '#f3f4f6', padding: '1px 4px', borderRadius: 3, fontSize: '0.9em', fontFamily: 'monospace' }} {...p}>{c}</code>,
+        code:  ({ node, className, children: c, ...p }) => {
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          const inPre = useContext(InsidePre)
+          if (inPre) {
+            // Block code — inherit dark pre colours; no extra background
+            return <code className={className} style={{ background: 'transparent', padding: 0, fontSize: 'inherit', fontFamily: 'monospace' }} {...p}>{c}</code>
+          }
+          // Inline code
+          return <code style={{ background: '#f3f4f6', padding: '1px 4px', borderRadius: 3, fontSize: '0.9em', fontFamily: 'monospace' }} {...p}>{c}</code>
+        },
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         p:     ({ node, ...p }) => <p style={{ margin: '4px 0' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
