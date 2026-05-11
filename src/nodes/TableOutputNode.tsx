@@ -30,7 +30,7 @@ const DEFAULT_COLS = [
   'institutionCode',
 ] as const
 
-const PAGE_SIZE = 25
+const PAGE_SIZES = [10, 25, 50, 100] as const
 
 /**
  * All displayable columns across records.
@@ -74,16 +74,29 @@ function getColValue(rec: UnifiedRecord, col: string): unknown {
 }
 
 
+function sortValue(rec: UnifiedRecord, col: string): string | number {
+  const v = getColValue(rec, col)
+  if (v === null || v === undefined) return '￿'   // sort nulls last
+  if (typeof v === 'number') return v
+  if (typeof v === 'boolean') return v ? 0 : 1
+  if (isReconciledValue(v)) return (v as ReconciliationResult).label ?? '￿'
+  if (Array.isArray(v)) return v.join(', ')
+  return String(v)
+}
+
 interface TableProps {
-  records:  UnifiedRecord[]
-  columns:  string[]
-  page:     number
-  pageSize: number
-  compact?: boolean
+  records:   UnifiedRecord[]
+  columns:   string[]
+  page:      number
+  pageSize:  number
+  compact?:  boolean
+  sortCol?:  string | null
+  sortDir?:  'asc' | 'desc'
+  onSort?:   (col: string) => void
   onSelectCandidate?: (recordId: string, col: string, result: ReconciliationResult) => void
 }
 
-function RecordTable({ records, columns, page, pageSize, compact = false, onSelectCandidate }: TableProps) {
+function RecordTable({ records, columns, page, pageSize, compact = false, sortCol, sortDir, onSort, onSelectCandidate }: TableProps) {
   const start = page * pageSize
   const rows = records.slice(start, start + pageSize)
   const fs = compact ? 11 : 12
@@ -93,11 +106,26 @@ function RecordTable({ records, columns, page, pageSize, compact = false, onSele
     <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: fs }}>
       <thead>
         <tr>
-          {columns.map(col => (
-            <th key={col} style={{ ...thStyle, padding: pad, whiteSpace: 'nowrap' }}>
-              {col}
-            </th>
-          ))}
+          {columns.map(col => {
+            const isActive = sortCol === col
+            return (
+              <th
+                key={col}
+                style={{
+                  ...thStyle, padding: pad, whiteSpace: 'nowrap',
+                  cursor: 'pointer', userSelect: 'none',
+                  background: isActive ? '#e5e7eb' : '#f3f4f6',
+                }}
+                onClick={() => onSort?.(col)}
+                title={`Sort by ${col}`}
+              >
+                {col}
+                <span style={{ marginLeft: 3, opacity: isActive ? 1 : 0.25, fontSize: '0.85em' }}>
+                  {isActive && sortDir === 'desc' ? '▼' : '▲'}
+                </span>
+              </th>
+            )
+          })}
         </tr>
       </thead>
       <tbody>
@@ -127,6 +155,9 @@ export function TableOutputNode({ id, data }: NodeProps) {
   const [page,             setPage]             = useState(0)
   const [showAll,          setShowAll]          = useState(false)
   const [expandNamespaces, setExpandNamespaces] = useState(false)
+  const [pageSize,         setPageSize]         = useState<number>(PAGE_SIZES[1])
+  const [sortCol,          setSortCol]          = useState<string | null>(null)
+  const [sortDir,          setSortDir]          = useState<'asc' | 'desc'>('asc')
 
   // Selections live in node data so ExpandedOutputPanel can share them.
   // Key = `${recordId}::${colName}`, value = the chosen ReconciliationResult.
@@ -153,6 +184,29 @@ export function TableOutputNode({ id, data }: NodeProps) {
     updateNodeData(id, {
       selections: { ...selections, [`${recordId}::${col}`]: result },
     })
+  }
+
+  const sortedRecords = useMemo<UnifiedRecord[] | null>(() => {
+    if (!effectiveRecords || !sortCol) return effectiveRecords
+    return [...effectiveRecords].sort((a, b) => {
+      const av = sortValue(a, sortCol)
+      const bv = sortValue(b, sortCol)
+      if (typeof av === 'number' && typeof bv === 'number') {
+        return sortDir === 'asc' ? av - bv : bv - av
+      }
+      const cmp = String(av).localeCompare(String(bv))
+      return sortDir === 'asc' ? cmp : -cmp
+    })
+  }, [effectiveRecords, sortCol, sortDir])
+
+  function handleColSort(col: string) {
+    if (sortCol === col) {
+      setSortDir(d => d === 'asc' ? 'desc' : 'asc')
+    } else {
+      setSortCol(col)
+      setSortDir('asc')
+    }
+    setPage(0)
   }
 
   // ── pass-through output ───────────────────────────────────────────────────
@@ -184,7 +238,8 @@ export function TableOutputNode({ id, data }: NodeProps) {
       : DEFAULT_COLS.filter(c => effectiveRecords.some(r => r[c] != null))
     : []
 
-  const totalPages = effectiveRecords ? Math.ceil(effectiveRecords.length / PAGE_SIZE) : 0
+  const displayRecords = sortedRecords ?? effectiveRecords
+  const totalPages = displayRecords ? Math.ceil(displayRecords.length / pageSize) : 0
   const selectionCount = Object.keys(selections).length
 
   return (
@@ -249,16 +304,32 @@ export function TableOutputNode({ id, data }: NodeProps) {
                 </label>
               )}
             </div>
-            <span style={styles.colCount}>{columns.length} col{columns.length !== 1 ? 's' : ''}</span>
+            <div style={styles.toggleGroup}>
+              <label style={{ ...styles.toggleLabel, gap: 4 }} className="nodrag">
+                Rows:
+                <select
+                  value={pageSize}
+                  onChange={e => { setPageSize(Number(e.target.value)); setPage(0) }}
+                  className="nodrag"
+                  style={styles.pageSizeSelect}
+                >
+                  {PAGE_SIZES.map(n => <option key={n} value={n}>{n}</option>)}
+                </select>
+              </label>
+              <span style={styles.colCount}>{columns.length} col{columns.length !== 1 ? 's' : ''}</span>
+            </div>
           </div>
 
           <div style={styles.tableWrap} className="nodrag nowheel">
             <RecordTable
-              records={effectiveRecords}
+              records={displayRecords!}
               columns={columns}
               page={page}
-              pageSize={PAGE_SIZE}
+              pageSize={pageSize}
               compact
+              sortCol={sortCol}
+              sortDir={sortDir}
+              onSort={handleColSort}
               onSelectCandidate={handleSelectCandidate}
             />
           </div>
@@ -342,6 +413,14 @@ const styles = {
   colCount: {
     fontSize: 10,
     color: '#9ca3af',
+  },
+  pageSizeSelect: {
+    fontSize:     11,
+    border:       '1px solid #d1d5db',
+    borderRadius: 3,
+    padding:      '0 2px',
+    background:   '#fff',
+    cursor:       'pointer' as const,
   },
   tableWrap: {
     overflowX: 'auto' as const,
