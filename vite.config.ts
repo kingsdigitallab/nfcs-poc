@@ -424,6 +424,16 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: path => path.replace(/^\/bodleian-proxy/, ''),
       },
+      // Proxy /smg-proxy/* → https://collection.sciencemuseumgroup.org.uk/*
+      '/smg-proxy': {
+        target: 'https://collection.sciencemuseumgroup.org.uk',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/smg-proxy/, ''),
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Referer': 'https://collection.sciencemuseumgroup.org.uk/',
+        },
+      },
     },
   },
   plugins: [

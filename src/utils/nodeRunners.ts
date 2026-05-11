@@ -32,6 +32,7 @@ import { runTimelineViewNode }    from './runTimelineViewNode'
 import { runImageViewNode }       from './runImageViewNode'
 import { runDeduplicateNode }     from './runDeduplicateNode'
 import { runMapOutputNode }       from './runMapOutputNode'
+import { runSMGSearchNode }       from './runSMGSearchNode'
 import { withFixture }            from './fixtureUtils'
 
 /**
@@ -75,5 +76,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   imageView:         runImageViewNode,
   deduplicate:       runDeduplicateNode,
   mapOutput:         runMapOutputNode,
+  smgSearch:         withFixture('smgSearch', runSMGSearchNode),
 }
 

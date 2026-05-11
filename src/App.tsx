@@ -57,6 +57,7 @@ import type { BodleianSearchNodeData }     from './nodes/BodleianSearchNode'
 import type { FieldDistributionNodeData }  from './nodes/FieldDistributionNode'
 import type { TimelineOutputNodeData }     from './nodes/TimelineOutputNode'
 import type { MapOutputNodeData }          from './nodes/MapOutputNode'
+import type { SMGSearchNodeData }          from './nodes/SMGSearchNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -100,6 +101,7 @@ type AppNode =
   | Node<FieldDistributionNodeData>
   | Node<TimelineOutputNodeData>
   | Node<MapOutputNodeData>
+  | Node<SMGSearchNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -160,6 +162,14 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       sort: 'relevance', objectType: '',
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies BodleianSearchNodeData,
+  }),
+  smgSearch: pos => ({
+    id: newId('smg'), type: 'smgSearch', position: pos,
+    data: {
+      inlineQuery: '', inlineLimit: '20', fetchAll: false,
+      museum: '', dateFrom: '', dateTo: '', searchType: 'objects',
+      status: 'idle', statusMessage: '', results: undefined, count: 0,
+    } satisfies SMGSearchNodeData,
   }),
   mdsSearch: pos => ({
     id: newId('mds'), type: 'mdsSearch', position: pos,
@@ -511,6 +521,7 @@ const SIDEBAR_ITEMS = [
   { type: 'gbifSearch',        label: 'GBIFSearch',            sub: 'GBIF occurrence search',                  color: '#0f4c81', group: 'Data Services' },
   { type: 'lldsSearch',        label: 'LLDSSearch',            sub: 'Lit. & Linguistic Data',                  color: '#92400e', group: 'Data Services' },
   { type: 'mdsSearch',         label: 'MDSSearch',             sub: 'Museum Data Services',                     color: '#1e3a8a', group: 'Data Services' },
+  { type: 'smgSearch',         label: 'SMGSearch',             sub: 'Science Museum Group collections',         color: '#701a75', group: 'Data Services' },
   // ── Local Content ────────────────────────────────────────────────────────────
   { type: 'localFileSource',   label: 'LocalFileSource',       sub: 'Single CSV, XML or image file',           color: '#0e7490', group: 'Local Content' },
   { type: 'localFolderSource', label: 'LocalFolderSource',     sub: 'Read files from local folder',            color: '#14532d', group: 'Local Content' },
