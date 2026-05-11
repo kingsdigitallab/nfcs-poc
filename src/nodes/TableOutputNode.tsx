@@ -158,6 +158,7 @@ export function TableOutputNode({ id, data }: NodeProps) {
   const [pageSize,         setPageSize]         = useState<number>(PAGE_SIZES[1])
   const [sortCol,          setSortCol]          = useState<string | null>(null)
   const [sortDir,          setSortDir]          = useState<'asc' | 'desc'>('asc')
+  const [filterText,       setFilterText]       = useState('')
 
   // Selections live in node data so ExpandedOutputPanel can share them.
   // Key = `${recordId}::${colName}`, value = the chosen ReconciliationResult.
@@ -186,9 +187,27 @@ export function TableOutputNode({ id, data }: NodeProps) {
     })
   }
 
+  const filteredRecords = useMemo<UnifiedRecord[] | null>(() => {
+    if (!effectiveRecords) return null
+    const q = filterText.trim().toLowerCase()
+    if (!q) return effectiveRecords
+    return effectiveRecords.filter(r =>
+      Object.values(r).some(v => {
+        if (v === null || v === undefined) return false
+        if (isReconciledValue(v)) return (v as ReconciliationResult).label?.toLowerCase().includes(q)
+        if (typeof v === 'object' && !Array.isArray(v)) {
+          return Object.values(v as Record<string, unknown>).some(
+            sv => sv != null && String(sv).toLowerCase().includes(q),
+          )
+        }
+        return String(v).toLowerCase().includes(q)
+      }),
+    )
+  }, [effectiveRecords, filterText])
+
   const sortedRecords = useMemo<UnifiedRecord[] | null>(() => {
-    if (!effectiveRecords || !sortCol) return effectiveRecords
-    return [...effectiveRecords].sort((a, b) => {
+    if (!filteredRecords || !sortCol) return filteredRecords
+    return [...filteredRecords].sort((a, b) => {
       const av = sortValue(a, sortCol)
       const bv = sortValue(b, sortCol)
       if (typeof av === 'number' && typeof bv === 'number') {
@@ -197,7 +216,7 @@ export function TableOutputNode({ id, data }: NodeProps) {
       const cmp = String(av).localeCompare(String(bv))
       return sortDir === 'asc' ? cmp : -cmp
     })
-  }, [effectiveRecords, sortCol, sortDir])
+  }, [filteredRecords, sortCol, sortDir])
 
   function handleColSort(col: string) {
     if (sortCol === col) {
@@ -320,6 +339,32 @@ export function TableOutputNode({ id, data }: NodeProps) {
             </div>
           </div>
 
+          <div style={styles.filterRow} className="nodrag">
+            <input
+              type="text"
+              placeholder="Filter rows…"
+              value={filterText}
+              onChange={e => { setFilterText(e.target.value); setPage(0) }}
+              style={styles.filterInput}
+              className="nodrag"
+            />
+            {filterText && (
+              <button
+                onClick={() => { setFilterText(''); setPage(0) }}
+                style={styles.filterClear}
+                className="nodrag"
+                title="Clear filter"
+              >
+                ×
+              </button>
+            )}
+            {filterText && filteredRecords != null && (
+              <span style={styles.filterCount}>
+                {filteredRecords.length} match{filteredRecords.length !== 1 ? 'es' : ''}
+              </span>
+            )}
+          </div>
+
           <div style={styles.tableWrap} className="nodrag nowheel">
             <RecordTable
               records={displayRecords!}
@@ -421,6 +466,37 @@ const styles = {
     padding:      '0 2px',
     background:   '#fff',
     cursor:       'pointer' as const,
+  },
+  filterRow: {
+    display:     'flex',
+    alignItems:  'center',
+    gap:         4,
+    padding:     '4px 8px',
+    borderBottom: '1px solid #f0f0f0',
+    background:  '#fff',
+  },
+  filterInput: {
+    flex:         1,
+    fontSize:     11,
+    border:       '1px solid #d1d5db',
+    borderRadius: 4,
+    padding:      '3px 7px',
+    outline:      'none',
+    color:        '#374151',
+  },
+  filterClear: {
+    border:       'none',
+    background:   'transparent',
+    cursor:       'pointer' as const,
+    fontSize:     15,
+    lineHeight:   1,
+    color:        '#9ca3af',
+    padding:      '0 2px',
+  },
+  filterCount: {
+    fontSize:   10,
+    color:      '#6b7280',
+    whiteSpace: 'nowrap' as const,
   },
   tableWrap: {
     overflowX: 'auto' as const,

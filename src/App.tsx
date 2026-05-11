@@ -849,6 +849,7 @@ export default function App() {
               onDragOver={onDragOver}
               onNodeDoubleClick={onNodeDoubleClick}
               onConnectEnd={onConnectEnd}
+              minZoom={0.1}
               fitView
             >
               <Background />
