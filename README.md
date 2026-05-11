@@ -94,7 +94,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 |------|-------------|
 | **FieldDistribution** | Faceted bar chart of value frequencies for any field. Click bars to toggle them as filters — matching records are emitted on the output handle and update live as upstream data changes. Array-valued fields (`subject`, `country`, `creator`) are expanded so each element is tallied individually. Bars sorted by count descending, capped at a configurable Top N. A status bar shows how many records match the current selection with a **✕ clear** button. |
 | **FilterTransform** | Filters records by condition and/or mutates field values. See [Filter / Transform](#filter--transform) below. |
-| **SpatialFilter** | Draws a bounding box on an interactive Leaflet map; filters upstream records to those within the bbox. |
+| **SpatialFilter** | Draws a bounding box on an interactive Leaflet map; filters upstream records to those within the bbox. Note: **MapOutput** also includes an integrated spatial bbox filter — for workflows where you want to visualise and filter in a single step, use MapOutput instead. |
 | **Deduplicate** | Removes duplicate records based on a chosen field value. First occurrence is kept; subsequent records sharing the same value for that field are discarded. Records missing the chosen field always pass through. The footer shows `N in → M unique (K removed)`. Useful when aggregating results from multiple search nodes that may return overlapping result sets. |
 | **TimelineView** | Resizable SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates. **Filter mode** — drag the date-range handles to restrict the visible window; records outside the range are suppressed on the output handle, making this a pass-through filter node as well as a visualisation. Toggle **⇤⇥ Fit** to compress the full date range into the visible width. Pass-through output handle connects to any downstream node (TableOutput, Export, etc.). |
 
@@ -119,8 +119,8 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **Export** | Downloads upstream records as **CSV**, **JSON**, or **GeoJSON**. `*_reconciled` objects are expanded to `_qid/_label/_confidence/_status` columns in CSV. |
 | **JSONOutput** | Syntax-highlighted JSON viewer. Double-click to expand to full-screen. |
 | **KingsInferenceOutput** | Card-based display of KCL inference responses. Each record gets an expandable card showing the response, model used, and processing timestamp. Copy button per card. |
-| **MapOutput** | Leaflet map. Plots records with `decimalLatitude`/`decimalLongitude`. Click a marker for a popup with title, date, and source link. Also accepts GIS vector layers via the GIS handle from LocalFolderSource. |
-| **TableOutput** | Paginated table. Merges records from multiple upstream nodes. Pass-through output handle for chaining to Map, Export, etc. Double-click to expand to full-screen. Toolbar: **show all columns** + **expand namespaces** (flattens service namespace objects into dot-notation columns). |
+| **MapOutput** | Leaflet map. Plots records with `decimalLatitude`/`decimalLongitude`. Click a marker for a popup with title, date, and source link. **Integrated spatial filter**: click **Draw bbox**, drag a bounding box on the map, then **Run ▶** — only records within the box are emitted; records outside are dimmed. A coordinate summary shows N/S/E/W bounds. A green **results** output handle pipes the filtered (or all) records to downstream nodes. Also accepts GIS vector layers via the GIS handle from LocalFolderSource. |
+| **TableOutput** | Paginated table. Merges records from multiple upstream nodes. Pass-through output handle for chaining to Map, Export, etc. Double-click to expand to full-screen. Toolbar: **show all columns** + **expand namespaces** (flattens service namespace objects into dot-notation columns). **Page size** selector (10 / 25 / 50 / 100 rows). **Column sort**: click any column header to sort ascending, click again for descending, third click clears the sort. **Text filter**: search box above the table filters across all fields (including namespace sub-objects) live as you type. |
 | **SaveSearch** | Serialises upstream records with a metadata envelope to a `.nfcs.json` file. Shows record count, per-source breakdown, and auto-suggested filename. Native **Save As…** dialog on Chrome/Edge; auto-download on Firefox. |
 
 ---
@@ -587,6 +587,7 @@ nfcs-poc/
 | [pdfjs-dist](https://mozilla.github.io/pdf.js/) | Client-side PDF text extraction |
 | [shpjs](https://github.com/calvinmetcalf/shapefile-js) | Client-side Shapefile parsing |
 | [Puppeteer](https://pptr.dev/) | Headless browser for JS-rendered page fetching |
+| [react-markdown](https://github.com/remarkjs/react-markdown) + [remark-gfm](https://github.com/remarkjs/remark-gfm) | Markdown + GFM table rendering in the KCL Assistant chat panel |
 | [Ollama](https://ollama.com/) | Local LLM inference (external; hidden from sidebar) |
 
 No backend. No database. No authentication. All API calls are made directly from the browser (or via the Vite dev proxy for services without permissive CORS). For deployed instances, see the `deploy/express-server` branch.
