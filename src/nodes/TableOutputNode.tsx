@@ -186,7 +186,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
       </thead>
       <tbody>
         {rows.map((rec, i) => (
-          <tr key={rec.id} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
+          <tr key={start + i} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
             {columns.map(col => {
               const val = getColValue(rec, col)
               const w   = colWidths[col] ?? DEFAULT_COL_W
