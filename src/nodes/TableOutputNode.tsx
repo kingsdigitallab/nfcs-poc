@@ -108,6 +108,9 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
         <tr>
           {columns.map(col => {
             const isActive = sortCol === col
+            const title = isActive
+              ? sortDir === 'asc' ? `Sorted A→Z — click for Z→A` : `Sorted Z→A — click to clear`
+              : `Sort by ${col}`
             return (
               <th
                 key={col}
@@ -117,12 +120,14 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
                   background: isActive ? '#e5e7eb' : '#f3f4f6',
                 }}
                 onClick={() => onSort?.(col)}
-                title={`Sort by ${col}`}
+                title={title}
               >
                 {col}
-                <span style={{ marginLeft: 3, opacity: isActive ? 1 : 0.25, fontSize: '0.85em' }}>
-                  {isActive && sortDir === 'desc' ? '▼' : '▲'}
-                </span>
+                {isActive && (
+                  <span style={{ marginLeft: 3, fontSize: '0.85em' }}>
+                    {sortDir === 'asc' ? '▲' : '▼'}
+                  </span>
+                )}
               </th>
             )
           })}
@@ -159,6 +164,8 @@ export function TableOutputNode({ id, data }: NodeProps) {
   const [sortCol,          setSortCol]          = useState<string | null>(null)
   const [sortDir,          setSortDir]          = useState<'asc' | 'desc'>('asc')
   const [filterText,       setFilterText]       = useState('')
+
+  const tableWrapRef = useRef<HTMLDivElement>(null)
 
   // Selections live in node data so ExpandedOutputPanel can share them.
   // Key = `${recordId}::${colName}`, value = the chosen ReconciliationResult.
@@ -220,7 +227,11 @@ export function TableOutputNode({ id, data }: NodeProps) {
 
   function handleColSort(col: string) {
     if (sortCol === col) {
-      setSortDir(d => d === 'asc' ? 'desc' : 'asc')
+      if (sortDir === 'asc') {
+        setSortDir('desc')
+      } else {
+        setSortCol(null)   // third click clears sort
+      }
     } else {
       setSortCol(col)
       setSortDir('asc')
@@ -250,6 +261,11 @@ export function TableOutputNode({ id, data }: NodeProps) {
       resultsVersion: version,
     })
   }, [effectiveRecords, selections, status, id, updateNodeData])
+
+  // Scroll the table back to the top whenever the page or sort changes
+  useEffect(() => {
+    tableWrapRef.current?.scrollTo({ top: 0 })
+  }, [page, sortCol, sortDir])
 
   const columns = effectiveRecords
     ? showAll
@@ -365,7 +381,7 @@ export function TableOutputNode({ id, data }: NodeProps) {
             )}
           </div>
 
-          <div style={styles.tableWrap} className="nodrag nowheel">
+          <div ref={tableWrapRef} style={styles.tableWrap} className="nodrag nowheel">
             <RecordTable
               records={displayRecords!}
               columns={columns}
