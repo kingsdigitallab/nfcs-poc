@@ -97,6 +97,7 @@ const SUGGESTIONS: Record<string, Suggestion[]> = {
   dataSource: [...OUTPUT_SUITE, ...ENRICH_SUITE],
   process:    [...OUTPUT_SUITE, ...ENRICH_SUITE],
   passThrough: [
+    { type: 'tableOutput',      label: 'TableOutput',           sub: 'Paginated results table',    color: '#0d9488', targetHandle: 'data' },
     { type: 'filterTransform',  label: 'FilterTransform',       sub: 'Filter + transform records', color: '#4f46e5', targetHandle: 'data' },
     { type: 'deduplicate',      label: 'Deduplicate',           sub: 'Remove duplicate records',   color: '#0f766e', targetHandle: 'data' },
     { type: 'kclNode',          label: 'KingsInference',        sub: 'KCL inference on records',   color: '#881337', targetHandle: 'data' },
