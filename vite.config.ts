@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import type { IncomingMessage, ServerResponse } from 'http'
@@ -374,6 +375,10 @@ function urlProxyMiddleware(
 // ── Vite config ───────────────────────────────────────────────────────────────
 
 export default defineConfig({
+  test: {
+    environment: 'jsdom',
+    include: ['src/**/*.test.ts'],
+  },
   server: {
     port: 5174,
     proxy: {
@@ -423,6 +428,34 @@ export default defineConfig({
         target: 'https://digital.bodleian.ox.ac.uk',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/bodleian-proxy/, ''),
+      },
+      // Proxy /smg-proxy/* → https://collection.sciencemuseumgroup.org.uk/*
+      '/smg-proxy': {
+        target: 'https://collection.sciencemuseumgroup.org.uk',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/smg-proxy/, ''),
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Referer': 'https://collection.sciencemuseumgroup.org.uk/',
+        },
+      },
+      // Proxy /vam-proxy/* → https://api.vam.ac.uk/*
+      '/vam-proxy': {
+        target: 'https://api.vam.ac.uk',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/vam-proxy/, ''),
+      },
+      // Proxy /tgn-proxy/* → https://vocab.getty.edu/* (linked data JSON + SPARQL)
+      '/tgn-proxy': {
+        target: 'https://vocab.getty.edu',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/tgn-proxy/, ''),
+      },
+      // Proxy /getty-search-proxy/* → https://www.getty.edu/* (TGNServlet name search)
+      '/getty-search-proxy': {
+        target: 'https://www.getty.edu',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/getty-search-proxy/, ''),
       },
     },
   },

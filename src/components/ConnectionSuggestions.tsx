@@ -53,6 +53,8 @@ export const NODE_PARAM_HANDLES: Record<string, ParamHandle[]> = {
   kclNode:        [{ id: 'apiKey', label: 'apiKey' }],
   kclField:       [{ id: 'apiKey', label: 'apiKey' }],
   bodleianSearch: [{ id: 'query', label: 'query' }, { id: 'limit', label: 'limit' }],
+  smgSearch:      [{ id: 'query', label: 'query' }, { id: 'limit', label: 'limit' }],
+  vaSearch:       [{ id: 'query', label: 'query' }, { id: 'limit', label: 'limit' }],
 }
 
 // ── Suggestion sets ────────────────────────────────────────────────────────────
@@ -60,13 +62,13 @@ export const NODE_PARAM_HANDLES: Record<string, ParamHandle[]> = {
 const DATA_SOURCES = new Set([
   'gbifSearch', 'lldsSearch', 'adsSearchAdvanced', 'adsLibrarySearch',
   'mdsSearch', 'europeanaSearch', 'ariadneSearch', 'bodleianSearch',
-  'localFolderSource', 'localFileSource', 'loadSavedSearch',
+  'smgSearch', 'vaSearch', 'localFolderSource', 'localFileSource', 'loadSavedSearch',
 ])
 
 const PROCESS_NODES = new Set([
   'filterTransform', 'spatialFilter', 'reconciliation',
   'urlFetch', 'htmlSection', 'xmlSection',
-  'wikidataEnrich', 'mergeByQID', 'htmlPreview', 'deduplicate',
+  'wikidataEnrich', 'mergeByQID', 'htmlPreview', 'deduplicate', 'geocoding',
 ])
 
 const INFERENCE_NODES = new Set([
@@ -123,6 +125,8 @@ const SUGGESTIONS: Record<string, Suggestion[]> = {
     { type: 'lldsSearch',       label: 'LLDSSearch',            sub: 'query / limit',               color: '#92400e', targetHandle: null },
     { type: 'mdsSearch',        label: 'MDSSearch',             sub: 'query / limit',               color: '#1e3a8a', targetHandle: null },
     { type: 'bodleianSearch',   label: 'BodleianSearch',        sub: 'query / limit',               color: '#003865', targetHandle: null },
+    { type: 'smgSearch',        label: 'SMGSearch',             sub: 'query / limit',               color: '#701a75', targetHandle: null },
+    { type: 'vaSearch',         label: 'VASearch',              sub: 'query / limit',               color: '#9f1239', targetHandle: null },
   ],
 }
 

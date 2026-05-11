@@ -10,7 +10,7 @@ const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const HEADER_COLOR = '#881337'
 
 // Bump this string whenever DEFAULT_SYSTEM changes — clears stale localStorage copies.
-const SYSTEM_VERSION = '2026-05-11-v1'
+const SYSTEM_VERSION = '2026-05-11-v2'
 
 const DEFAULT_SYSTEM = `You are the built-in assistant for the National Federated Compute Services – Arts & Humanities (NFCS-AH), Proof of Concept V2.0. This is a visual, node-based workflow editor for federating UK Arts & Humanities research data, built at King's Digital Lab for UKRI/AHRC.
 
@@ -38,6 +38,8 @@ Records from every service are normalised to a shared **UnifiedRecord** schema b
 - **GBIFSearch** — GBIF Occurrence API (biodiversity specimens/observations). Inline: q, scientificName, country, year, limit. Direct CORS fetch.
 - **LLDSSearch** — Literary & Linguistic Data Service (Oxford). Filtered client-side. 24-hour localStorage cache; toggle Use cache as a fallback during outages.
 - **MDSSearch** — museumdata.uk HTML scraper. Capped at 200 records; amber ⚠ badge when total exceeds cap.
+- **SMGSearch** — Science Museum Group digital collection. Records include \`smg.manifest\` (IIIF) — connect to ImageView for object browsing. Fixture mode supported.
+- **VASearch** — Victoria & Albert Museum collection (V&A API v2). Filters: images only, object type, year made from/to. Records include \`vam.manifest\`, \`vam.iiifImageBase\`, \`vam.thumbnail\`, \`vam.place\`, \`vam.objectType\`, \`vam.onDisplay\`.
 - **LocalFileSource** — parse a single CSV/TSV/XML/image file. Auto-detects delimiter. Cast numerics toggle for coordinate strings.
 - **LocalFolderSource** — batch-reads a folder (PDF, XML/TEI, plain text, images, Shapefiles, GeoJSON) via the File System Access API. Chrome/Edge 86+ only — does not work in Firefox. Five typed output handles: all results, pdf, xml, text, image, plus a GIS handle. The folder handle is lost on page refresh — user must re-pick after reload. **Run All skips this node** — run it manually first.
 - **LoadSavedSearch** — loads a .nfcs.json file from SaveSearch, or any raw JSON array from Export. Shows provenance metadata and per-source record counts.
@@ -59,6 +61,7 @@ Records from every service are normalised to a shared **UnifiedRecord** schema b
 - **Reconciliation** — reconciles a chosen field against a Wikidata authority via the W3C Reconciliation API. Augments records with \`\${fieldName}_reconciled\` keys (QID, label, confidence, status). In TableOutput: green pills = resolved (≥ threshold); amber = needs review. QIDs are clickable links to wikidata.org.
 - **WikidataEnrich** — fetches Wikidata properties for reconciled QID fields; appends \`wd_*\` fields. Works directly against Wikidata API — no proxy needed.
 - **MergeByQID** — merges records from multiple upstream sources by shared Wikidata QID into one record per entity. Toggle Keep unmatched to pass through unreconciled records unchanged.
+- **Geocoding** — enriches a chosen place-name field using Getty TGN (name search → Linked Art JSON coordinates) and Wikidata (wbsearchentities + P625). Scores candidates: Dice similarity × 0.5 + tier weight × 0.3 + corroboration × 0.2. Auto-resolves above threshold with ≥ 20% gap to second candidate; ambiguous results go to an inline review panel. Confirmed choices stored per node. Candidate lists cached 30 days in localStorage ("clear cache" button forces re-query). Adds \`decimalLatitude\`, \`decimalLongitude\`, and \`geocoding.*\` namespace. Connect output to MapOutput to plot results.
 
 **Output**
 - **TableOutput** — paginated table; merges multiple upstream nodes; pass-through results handle. Toolbar: *show all columns* + *expand namespaces* (flattens service namespace objects to dot-notation columns). **Page size** selector (10 / 25 / 50 / 100 rows). **Column sort** — click any column header to sort ascending, click again for descending, third click clears. **Text filter** — search box above the table filters across all fields (including namespace sub-objects) live as you type. Double-click to expand full-screen.
@@ -331,7 +334,7 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
     <div style={styles.sidebar}>
       {/* ── Header ── */}
       <div style={styles.header}>
-        <span style={styles.title}>KCL Assistant</span>
+        <span style={styles.title}>Node assistant</span>
         <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
           {apiOk === true && <span style={styles.dot} title="Connected" />}
           {apiOk === false && apiKey && <span style={{ ...styles.dot, background: '#ef4444' }} title="Cannot reach API" />}

@@ -48,6 +48,9 @@ const TRANSIENT_FIELDS = new Set([
   'imageCount',
   'filterCount',
   'totalCount',
+  'resolved',
+  'pending',
+  'failed',
 ])
 
 export function stripTransient(data: Record<string, unknown>): Record<string, unknown> {
