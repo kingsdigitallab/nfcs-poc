@@ -338,7 +338,7 @@ export function TableOutputNode({ id, data }: NodeProps) {
         <span style={styles.title}>Table Output</span>
         {connected && effectiveRecords && (
           <span style={styles.badge}>
-            {effectiveRecords.length}{count > effectiveRecords.length ? ` / ${count.toLocaleString()} total` : ''} rows
+            {effectiveRecords.length} rows
             {sourceCount > 1 ? ` · ${sourceCount} sources` : ''}
           </span>
         )}
