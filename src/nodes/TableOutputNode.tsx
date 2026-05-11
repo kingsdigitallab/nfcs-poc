@@ -96,38 +96,89 @@ interface TableProps {
   onSelectCandidate?: (recordId: string, col: string, result: ReconciliationResult) => void
 }
 
+const DEFAULT_COL_W = 140
+
 function RecordTable({ records, columns, page, pageSize, compact = false, sortCol, sortDir, onSort, onSelectCandidate }: TableProps) {
+  const [colWidths, setColWidths] = useState<Record<string, number>>({})
+  const resizingRef = useRef<{ col: string; startX: number; startW: number } | null>(null)
+  const listenersRef = useRef<{ move: (e: MouseEvent) => void; up: (e: MouseEvent) => void } | null>(null)
+
+  // Clean up document listeners if the component unmounts mid-drag
+  useEffect(() => () => {
+    if (listenersRef.current) {
+      document.removeEventListener('mousemove', listenersRef.current.move)
+      document.removeEventListener('mouseup',   listenersRef.current.up)
+      document.body.style.cursor = ''
+    }
+  }, [])
+
+  function startResize(e: React.MouseEvent, col: string) {
+    e.preventDefault()
+    e.stopPropagation()
+    const startW = colWidths[col] ?? DEFAULT_COL_W
+    resizingRef.current = { col, startX: e.clientX, startW }
+    document.body.style.cursor = 'col-resize'
+
+    const onMove = (mv: MouseEvent) => {
+      if (!resizingRef.current) return
+      const newW = Math.max(48, resizingRef.current.startW + (mv.clientX - resizingRef.current.startX))
+      setColWidths(prev => ({ ...prev, [resizingRef.current!.col]: newW }))
+    }
+    const onUp = () => {
+      resizingRef.current = null
+      listenersRef.current = null
+      document.body.style.cursor = ''
+      document.removeEventListener('mousemove', onMove)
+      document.removeEventListener('mouseup',   onUp)
+    }
+
+    listenersRef.current = { move: onMove, up: onUp }
+    document.addEventListener('mousemove', onMove)
+    document.addEventListener('mouseup',   onUp)
+  }
+
   const start = page * pageSize
-  const rows = records.slice(start, start + pageSize)
-  const fs = compact ? 11 : 12
-  const pad = compact ? '3px 6px' : '5px 8px'
+  const rows  = records.slice(start, start + pageSize)
+  const fs    = compact ? 11 : 12
+  const pad   = compact ? '3px 6px' : '5px 8px'
 
   return (
-    <table style={{ borderCollapse: 'collapse', width: '100%', fontSize: fs }}>
+    <table style={{ borderCollapse: 'collapse', tableLayout: 'fixed', width: 'max-content', minWidth: '100%', fontSize: fs }}>
       <thead>
         <tr>
           {columns.map(col => {
+            const w        = colWidths[col] ?? DEFAULT_COL_W
             const isActive = sortCol === col
-            const title = isActive
-              ? sortDir === 'asc' ? `Sorted A→Z — click for Z→A` : `Sorted Z→A — click to clear`
+            const title    = isActive
+              ? sortDir === 'asc' ? 'Sorted A→Z — click for Z→A' : 'Sorted Z→A — click to clear'
               : `Sort by ${col}`
             return (
               <th
                 key={col}
                 style={{
-                  ...thStyle, padding: pad, whiteSpace: 'nowrap',
+                  ...thStyle, padding: pad,
+                  width: w, minWidth: w, maxWidth: w,
                   cursor: 'pointer', userSelect: 'none',
                   background: isActive ? '#e5e7eb' : '#f3f4f6',
                 }}
                 onClick={() => onSort?.(col)}
                 title={title}
               >
-                {col}
-                {isActive && (
-                  <span style={{ marginLeft: 3, fontSize: '0.85em' }}>
-                    {sortDir === 'asc' ? '▲' : '▼'}
-                  </span>
-                )}
+                <span style={{ display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', paddingRight: 6 }}>
+                  {col}
+                  {isActive && (
+                    <span style={{ marginLeft: 3, fontSize: '0.85em' }}>
+                      {sortDir === 'asc' ? '▲' : '▼'}
+                    </span>
+                  )}
+                </span>
+                {/* Resize handle — stopPropagation prevents triggering the sort click */}
+                <div
+                  className="nodrag"
+                  style={resizeHandleStyle}
+                  onMouseDown={e => startResize(e, col)}
+                  title="Drag to resize"
+                />
               </th>
             )
           })}
@@ -138,11 +189,12 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
           <tr key={rec.id} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
             {columns.map(col => {
               const val = getColValue(rec, col)
+              const w   = colWidths[col] ?? DEFAULT_COL_W
               const handleSelect = onSelectCandidate
                 ? (result: ReconciliationResult) => onSelectCandidate(rec.id, col, result)
                 : undefined
               return (
-                <td key={col} style={{ ...tdStyle, padding: pad }}>
+                <td key={col} style={{ ...tdStyle, padding: pad, width: w, maxWidth: w }}>
                   {renderCell(val, handleSelect)}
                 </td>
               )
@@ -559,20 +611,33 @@ const styles = {
 }
 
 const thStyle: React.CSSProperties = {
-  background: '#f3f4f6',
+  background:   '#f3f4f6',
   borderBottom: '2px solid #e5e7eb',
-  textAlign: 'left',
-  fontWeight: 600,
-  color: '#374151',
-  position: 'sticky',
-  top: 0,
+  textAlign:    'left',
+  fontWeight:   600,
+  color:        '#374151',
+  position:     'sticky',
+  top:          0,
+  // zIndex required so sticky headers stay above tbody rows in the same
+  // stacking context — without it clicks on the header land on rows beneath
+  zIndex:       1,
+  overflow:     'hidden',
+}
+
+const resizeHandleStyle: React.CSSProperties = {
+  position:   'absolute',
+  right:      0,
+  top:        0,
+  bottom:     0,
+  width:      5,
+  cursor:     'col-resize',
+  background: 'transparent',
 }
 
 const tdStyle: React.CSSProperties = {
   borderBottom: '1px solid #f0f0f0',
-  color: '#4b5563',
-  maxWidth: 160,
-  overflow: 'hidden',
+  color:        '#4b5563',
+  overflow:     'hidden',
   textOverflow: 'ellipsis',
-  whiteSpace: 'nowrap',
+  whiteSpace:   'nowrap',
 }
