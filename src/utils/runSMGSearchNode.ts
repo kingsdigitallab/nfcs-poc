@@ -101,6 +101,7 @@ function adaptSMGRecord(raw: SMGRawRecord): UnifiedRecord {
       museum:          museumName || undefined,
       museumCode:      museumCode || undefined,
       accessionNumber,
+      manifest:        `https://collection.sciencemuseumgroup.org.uk/iiif/objects/${raw.id}`,
       categories:      subject.length > 0 ? subject : undefined,
       makingPlace:     creation?.place?.[0]?.summary?.title,
       thumbnail,
