@@ -1,25 +1,27 @@
 /**
- * MapOutputNode — renders a Leaflet map inside a React Flow node.
+ * MapOutputNode — Leaflet map with optional bounding-box spatial filter.
  *
- * Accepts connections from:
- *   - Any SearchNode (GBIF, ADS, LLDS, MDS) via the `data` input handle
- *   - TableOutputNode via its pass-through `results` output handle
+ * Input handles:
+ *   Left  `data` — any search / process node
+ *   Top   `gis`  — GIS layer overlays
  *
- * Records that carry decimalLatitude + decimalLongitude are plotted as
- * colour-coded CircleMarkers, one colour per _source. Clicking a marker
- * opens a popup with title, source badge, date, description snippet and a
- * "View record" link.
+ * Output handle:
+ *   Right `results` — filtered records (all records when no bbox drawn)
+ *
+ * Draw a bbox on the map, then click Run to apply the spatial filter and
+ * emit the filtered set through the `results` handle to downstream nodes
+ * (Table, Timeline, Export, etc.).  When no bbox is drawn, Run passes all
+ * upstream records through unchanged.
  *
  * Leaflet is used directly (vanilla JS) rather than via react-leaflet to
- * avoid React 19 compatibility concerns. The map DOM node is stable across
- * re-renders; only the marker layer is rebuilt when upstream records change.
- *
- * `className="nodrag nowheel"` on the map container tells React Flow to
- * leave mouse events alone so Leaflet's pan and scroll-zoom work normally.
+ * avoid React 19 compatibility concerns.
  */
 
-import { useEffect, useRef, useMemo, useState } from 'react'
-import { Handle, Position, NodeProps, useNodes, useEdges } from '@xyflow/react'
+import { useEffect, useRef, useMemo, useState, useCallback } from 'react'
+import {
+  Handle, Position, type NodeProps,
+  useNodes, useEdges, useReactFlow,
+} from '@xyflow/react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 // @ts-ignore
@@ -29,15 +31,26 @@ import 'leaflet.markercluster/dist/MarkerCluster.css'
 // @ts-ignore
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
+import { runMapOutputNode } from '../utils/runMapOutputNode'
 import type { GisLayer } from '../utils/gisReaders'
+
+// ─── data interface ───────────────────────────────────────────────────────────
+
+export interface MapOutputNodeData {
+  bbox:           { north: number; south: number; east: number; west: number } | null
+  inputCount:     number
+  outputCount:    number
+  resultsVersion: number
+  [key: string]: unknown
+}
 
 // ─── source colour palette ────────────────────────────────────────────────────
 
 const SOURCE_COLORS: Record<string, string> = {
-  gbif: '#16a34a',   // green
-  ads:  '#c2410c',   // orange-red
-  mds:  '#1d4ed8',   // blue
-  llds: '#b45309',   // amber
+  gbif: '#16a34a',
+  ads:  '#c2410c',
+  mds:  '#1d4ed8',
+  llds: '#b45309',
 }
 const FALLBACK_COLOR = '#6366f1'
 
@@ -45,7 +58,6 @@ function markerColor(source: string | undefined): string {
   return SOURCE_COLORS[source ?? ''] ?? FALLBACK_COLOR
 }
 
-// Simple HTML escaping for popup content built as a string
 function esc(s: string): string {
   return s
     .replace(/&/g, '&amp;')
@@ -62,27 +74,37 @@ const MAP_H = 300
 export function MapOutputNode({ id }: NodeProps) {
   const { records, connected, status, sourceCount } = useUpstreamRecords(id)
   const [clusteringEnabled, setClusteringEnabled] = useState(true)
+  const [isDrawing, setIsDrawing] = useState(false)
+  const [startLatLng, setStartLatLng] = useState<L.LatLng | null>(null)
 
-  // Read GIS layers from upstream nodes connected via the 'gis' handle
+  const { updateNodeData, getNodes, getEdges } = useReactFlow()
+
   const allNodes = useNodes()
   const allEdges = useEdges()
+
+  const nodeData = useMemo(
+    () => allNodes.find(n => n.id === id)?.data as MapOutputNodeData | undefined,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [allNodes, id],
+  )
+
   const gisLayers = useMemo<GisLayer[]>(() => {
     const gisEdges = allEdges.filter(e => e.target === id && e.targetHandle === 'gis')
     return gisEdges.flatMap(e => {
       const src = allNodes.find(n => n.id === e.source)
       return (src?.data?.gisLayers as GisLayer[] | undefined) ?? []
     })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allEdges, allNodes, id])
 
-  const mapDivRef     = useRef<HTMLDivElement>(null)
-  const mapRef        = useRef<L.Map | null>(null)
-  const layerGroupRef = useRef<L.LayerGroup | null>(null)
-  const clusterGroupRef = useRef<any>(null)  // L.MarkerClusterGroup from leaflet.markercluster
+  const mapDivRef       = useRef<HTMLDivElement>(null)
+  const mapRef          = useRef<L.Map | null>(null)
+  const layerGroupRef   = useRef<L.LayerGroup | null>(null)
+  const clusterGroupRef = useRef<any>(null)
   const gisLayerGroupRef = useRef<L.LayerGroup | null>(null)
-  const prevKeyRef    = useRef('')
+  const rectangleRef    = useRef<L.Rectangle | null>(null)
 
-  // ── legend data (render-time, not in effect) ───────────────────────────────
+  // ── legend data ────────────────────────────────────────────────────────────
   const { mappableCount, bySource } = useMemo(() => {
     const bySource: Record<string, number> = {}
     let mappableCount = 0
@@ -96,12 +118,12 @@ export function MapOutputNode({ id }: NodeProps) {
     return { mappableCount, bySource }
   }, [records])
 
-  // ── initialise Leaflet map once on mount ───────────────────────────────────
+  // ── init Leaflet map once ──────────────────────────────────────────────────
   useEffect(() => {
     if (!mapDivRef.current || mapRef.current) return
 
     const map = L.map(mapDivRef.current, {
-      center:      [54.0, -2.0],   // UK centroid
+      center:      [54.0, -2.0],
       zoom:        5,
       zoomControl: true,
     })
@@ -112,24 +134,23 @@ export function MapOutputNode({ id }: NodeProps) {
       maxZoom: 19,
     }).addTo(map)
 
-    mapRef.current = map
-    const clusterGroup = (L as any).markerClusterGroup()
-    clusterGroupRef.current = clusterGroup
-    layerGroupRef.current = L.layerGroup().addTo(map)
+    mapRef.current         = map
+    clusterGroupRef.current = (L as any).markerClusterGroup()
+    layerGroupRef.current   = L.layerGroup().addTo(map)
     gisLayerGroupRef.current = L.layerGroup().addTo(map)
 
     return () => {
       map.remove()
-      mapRef.current         = null
-      layerGroupRef.current  = null
+      mapRef.current          = null
+      layerGroupRef.current   = null
       clusterGroupRef.current = null
       gisLayerGroupRef.current = null
     }
   }, [])
 
-  // ── rebuild markers when records or clustering toggle changes ──────────────
+  // ── rebuild markers when records / clustering / bbox changes ───────────────
   useEffect(() => {
-    const map   = mapRef.current
+    const map          = mapRef.current
     const regularLayer = layerGroupRef.current
     const clusterGroup = clusterGroupRef.current
     if (!map || !regularLayer || !clusterGroup) return
@@ -138,27 +159,23 @@ export function MapOutputNode({ id }: NodeProps) {
       r => r.decimalLatitude != null && r.decimalLongitude != null,
     )
 
-    // Track the key for debugging (removed early return — let React handle optimization via dependencies)
-    const key = mappable
-      .map(r => `${r.id}:${r.decimalLatitude},${r.decimalLongitude}`)
-      .join('|')
-    prevKeyRef.current = key
-
-    // Clear both layers
     regularLayer.clearLayers()
     clusterGroup.clearLayers()
 
     if (mappable.length === 0) return
 
-    // Choose which layer to add markers to based on clustering state
+    const bbox        = nodeData?.bbox ?? null
     const targetLayer = clusteringEnabled ? clusterGroup : regularLayer
-
     const bounds: L.LatLngTuple[] = []
 
     for (const r of mappable) {
       const lat   = r.decimalLatitude  as number
       const lng   = r.decimalLongitude as number
       const color = markerColor(r._source)
+
+      const inBbox = bbox
+        ? lat >= bbox.south && lat <= bbox.north && lng >= bbox.west && lng <= bbox.east
+        : true
 
       const rawTitle = r.title ?? r.scientificName ?? '(no title)'
       const title    = rawTitle.length > 80 ? rawTitle.slice(0, 80) + '…' : rawTitle
@@ -167,21 +184,18 @@ export function MapOutputNode({ id }: NodeProps) {
 
       const popup = `
         <div style="font-family:system-ui,sans-serif;min-width:180px;max-width:260px">
-          <strong style="font-size:12px;line-height:1.4;display:block">
-            ${esc(title)}
-          </strong>
+          <strong style="font-size:12px;line-height:1.4;display:block">${esc(title)}</strong>
           <div style="margin-top:3px;font-size:11px;color:#6b7280;display:flex;align-items:center;gap:4px">
-            <span style="
-              display:inline-block;width:8px;height:8px;border-radius:50%;
-              background:${color};flex-shrink:0
-            "></span>
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${color};flex-shrink:0"></span>
             ${esc(r._source ?? '')}${r.date ? ` · ${esc(String(r.date))}` : ''}
           </div>
           ${desc ? `<div style="margin-top:5px;font-size:11px;color:#374151;line-height:1.4">${esc(desc)}</div>` : ''}
-          ${r._sourceUrl ? `<a href="${esc(r._sourceUrl)}" target="_blank" rel="noopener noreferrer"
-              style="display:inline-block;margin-top:6px;font-size:11px;color:#0d9488;text-decoration:none">
-              View record →
-            </a>` : ''}
+          ${r._sourceUrl
+            ? `<a href="${esc(r._sourceUrl)}" target="_blank" rel="noopener noreferrer"
+                style="display:inline-block;margin-top:6px;font-size:11px;color:#0d9488;text-decoration:none">
+                View record →
+               </a>`
+            : ''}
         </div>`
 
       L.circleMarker([lat, lng], {
@@ -189,7 +203,8 @@ export function MapOutputNode({ id }: NodeProps) {
         color:       '#fff',
         weight:      1.5,
         fillColor:   color,
-        fillOpacity: 0.85,
+        fillOpacity: inBbox ? 0.85 : 0.2,
+        opacity:     inBbox ? 1    : 0.35,
       })
         .bindPopup(popup, { maxWidth: 300 })
         .addTo(targetLayer)
@@ -197,7 +212,6 @@ export function MapOutputNode({ id }: NodeProps) {
       bounds.push([lat, lng])
     }
 
-    // Add cluster group to map if clustering is enabled
     if (clusteringEnabled && !map.hasLayer(clusterGroup)) {
       map.addLayer(clusterGroup)
     } else if (!clusteringEnabled && map.hasLayer(clusterGroup)) {
@@ -208,14 +222,39 @@ export function MapOutputNode({ id }: NodeProps) {
       try {
         map.fitBounds(L.latLngBounds(bounds), { padding: [24, 24], maxZoom: 12 })
       } catch {
-        // fitBounds can throw on degenerate bounds — ignore
+        // ignore degenerate bounds
       }
     }
-  }, [records, clusteringEnabled])
+  // nodeData?.bbox included so markers re-dim when bbox changes
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [records, clusteringEnabled, nodeData?.bbox])
 
-  // ── rebuild GIS overlay layers when gisLayers changes ─────────────────────
+  // ── render saved bbox rectangle on map ────────────────────────────────────
   useEffect(() => {
-    const map = mapRef.current
+    if (!mapRef.current) return
+
+    if (rectangleRef.current) {
+      rectangleRef.current.remove()
+      rectangleRef.current = null
+    }
+
+    const bbox = nodeData?.bbox
+    if (!bbox) return
+
+    const { north, south, east, west } = bbox
+    rectangleRef.current = L.rectangle([[south, west], [north, east]], {
+      color:       '#f59e0b',
+      weight:      2,
+      fillColor:   '#fbbf24',
+      fillOpacity: 0.12,
+      dashArray:   '6, 4',
+    }).addTo(mapRef.current)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [nodeData?.bbox])
+
+  // ── GIS overlay layers ─────────────────────────────────────────────────────
+  useEffect(() => {
+    const map      = mapRef.current
     const gisGroup = gisLayerGroupRef.current
     if (!map || !gisGroup) return
 
@@ -229,9 +268,9 @@ export function MapOutputNode({ id }: NodeProps) {
       L.geoJSON(layer.geojson as Parameters<typeof L.geoJSON>[0], {
         style: {
           color,
-          weight: 2,
-          opacity: 0.8,
-          fillColor: color,
+          weight:      2,
+          opacity:     0.8,
+          fillColor:   color,
           fillOpacity: 0.15,
         },
         pointToLayer: (_feature, latlng) =>
@@ -249,7 +288,9 @@ export function MapOutputNode({ id }: NodeProps) {
           const rows = Object.entries(props)
             .filter(([, v]) => v != null && v !== '')
             .slice(0, 8)
-            .map(([k, v]) => `<tr><td style="font-weight:600;padding-right:6px;white-space:nowrap">${esc(k)}</td><td>${esc(String(v))}</td></tr>`)
+            .map(([k, v]) =>
+              `<tr><td style="font-weight:600;padding-right:6px;white-space:nowrap">${esc(k)}</td><td>${esc(String(v))}</td></tr>`,
+            )
             .join('')
           leafletLayer.bindPopup(
             `<div style="font-family:system-ui,sans-serif;font-size:11px;min-width:160px">
@@ -263,24 +304,110 @@ export function MapOutputNode({ id }: NodeProps) {
     })
   }, [gisLayers])
 
-  // ── status text shown in the header ───────────────────────────────────────
+  // ── bbox draw interaction ──────────────────────────────────────────────────
+
+  const handleMapMouseDown = useCallback(
+    (e: L.LeafletMouseEvent) => {
+      if (!isDrawing) return
+      setStartLatLng(e.latlng)
+    },
+    [isDrawing],
+  )
+
+  const handleMapMouseMove = useCallback(
+    (e: L.LeafletMouseEvent) => {
+      if (!isDrawing || !startLatLng || !mapRef.current) return
+      if (rectangleRef.current) rectangleRef.current.remove()
+      rectangleRef.current = L.rectangle(
+        [[startLatLng.lat, startLatLng.lng], [e.latlng.lat, e.latlng.lng]],
+        { color: '#ef4444', weight: 2, fillColor: '#fca5a5', fillOpacity: 0.3 },
+      ).addTo(mapRef.current)
+    },
+    [isDrawing, startLatLng],
+  )
+
+  const handleMapMouseUp = useCallback(
+    (e: L.LeafletMouseEvent) => {
+      if (!isDrawing || !startLatLng) return
+      const bbox = {
+        north: Math.max(startLatLng.lat, e.latlng.lat),
+        south: Math.min(startLatLng.lat, e.latlng.lat),
+        east:  Math.max(startLatLng.lng, e.latlng.lng),
+        west:  Math.min(startLatLng.lng, e.latlng.lng),
+      }
+      // The saved-bbox effect will replace the red preview with the permanent rect
+      updateNodeData(id, { bbox })
+      setIsDrawing(false)
+      setStartLatLng(null)
+    },
+    [isDrawing, startLatLng, id, updateNodeData],
+  )
+
+  useEffect(() => {
+    const map = mapRef.current
+    const div = mapDivRef.current
+    if (!map || !div) return
+
+    if (isDrawing) {
+      map.dragging.disable()
+      map.on('mousedown', handleMapMouseDown)
+      map.on('mousemove', handleMapMouseMove)
+      map.on('mouseup',   handleMapMouseUp)
+      div.style.cursor = 'crosshair'
+
+      return () => {
+        map.off('mousedown', handleMapMouseDown)
+        map.off('mousemove', handleMapMouseMove)
+        map.off('mouseup',   handleMapMouseUp)
+        map.dragging.enable()
+        div.style.cursor = ''
+      }
+    } else {
+      div.style.cursor = ''
+    }
+  }, [isDrawing, handleMapMouseDown, handleMapMouseMove, handleMapMouseUp])
+
+  // ── run / clear ────────────────────────────────────────────────────────────
+
+  const handleRun = useCallback(
+    () => runMapOutputNode(id, getNodes, getEdges(), updateNodeData),
+    [id, getNodes, getEdges, updateNodeData],
+  )
+
+  const handleClear = useCallback(() => {
+    updateNodeData(id, { bbox: null, inputCount: 0, outputCount: 0 })
+    if (rectangleRef.current) {
+      rectangleRef.current.remove()
+      rectangleRef.current = null
+    }
+  }, [id, updateNodeData])
+
+  // ── header badge text ──────────────────────────────────────────────────────
+
+  const hasBbox    = !!nodeData?.bbox
+  const hasRunData = (nodeData?.inputCount ?? 0) > 0
+
   const headerNote = !connected
     ? 'Connect a search or table node'
     : status === 'loading'
       ? 'Loading…'
-      : mappableCount > 0
-        ? `${mappableCount} point${mappableCount !== 1 ? 's' : ''}${sourceCount > 1 ? ` · ${sourceCount} sources` : ''}`
-        : records
-          ? 'No mappable records (no coordinates)'
-          : 'Run the upstream node'
+      : hasRunData
+        ? hasBbox
+          ? `${nodeData!.outputCount} / ${nodeData!.inputCount} in bbox → downstream`
+          : `${nodeData!.outputCount} records → downstream`
+        : mappableCount > 0
+          ? `${mappableCount} point${mappableCount !== 1 ? 's' : ''}${sourceCount > 1 ? ` · ${sourceCount} sources` : ''}`
+          : records
+            ? 'No mappable records'
+            : 'Run the upstream node'
 
   const GIS_COLORS = ['#f97316', '#a855f7', '#06b6d4', '#ec4899', '#84cc16']
 
   return (
     <div style={styles.card}>
-      <Handle type="target" position={Position.Left} id="data" style={styles.inputHandle} />
-      {/* Top input handle for GIS context layers */}
-      <Handle type="target" position={Position.Top} id="gis" style={styles.gisInputHandle} title="GIS layer input" />
+      <Handle type="target" position={Position.Left}  id="data" style={styles.inputHandle} />
+      <Handle type="target" position={Position.Top}   id="gis"  style={styles.gisInputHandle} title="GIS layer input" />
+      <Handle type="source" position={Position.Right} id="results" style={styles.outputHandle} title="Filtered results output" />
 
       {/* Header */}
       <div style={styles.header}>
@@ -288,27 +415,65 @@ export function MapOutputNode({ id }: NodeProps) {
         <span style={styles.badge}>{headerNote}</span>
       </div>
 
-      {/* Controls */}
-      {mappableCount > 0 && (
-        <div style={styles.controls}>
-          <label style={styles.clusterToggle}>
-            <input
-              type="checkbox"
-              checked={clusteringEnabled}
-              onChange={(e) => setClusteringEnabled(e.target.checked)}
-              style={styles.checkbox}
-            />
-            <span>Clustering</span>
-          </label>
-        </div>
-      )}
-
       {/* Leaflet map — nodrag + nowheel prevent RF from consuming map events */}
       <div
         ref={mapDivRef}
         className="nodrag nowheel"
         style={{ width: MAP_W, height: MAP_H }}
       />
+
+      {/* Controls */}
+      <div style={styles.controls}>
+        <label style={styles.clusterToggle}>
+          <input
+            type="checkbox"
+            checked={clusteringEnabled}
+            onChange={(e) => setClusteringEnabled(e.target.checked)}
+            style={styles.checkbox}
+          />
+          <span>Cluster</span>
+        </label>
+
+        <div style={styles.separator} />
+
+        <button
+          className="nodrag"
+          onClick={() => setIsDrawing(d => !d)}
+          style={{ ...styles.btn, ...(isDrawing ? styles.btnCancel : styles.btnDraw) }}
+        >
+          {isDrawing ? 'Cancel' : 'Draw bbox'}
+        </button>
+
+        {hasBbox && (
+          <button className="nodrag" onClick={handleClear}
+            style={{ ...styles.btn, ...styles.btnClear }}>
+            Clear
+          </button>
+        )}
+
+        <button
+          className="nodrag"
+          onClick={handleRun}
+          disabled={!connected}
+          style={{ ...styles.btn, ...styles.btnRun, ...(!connected ? styles.btnDisabled : {}) }}
+        >
+          Run ▶
+        </button>
+
+        {hasRunData && hasBbox && (
+          <span style={styles.countBadge}>
+            {nodeData!.outputCount} / {nodeData!.inputCount}
+          </span>
+        )}
+      </div>
+
+      {/* Bbox coordinate summary */}
+      {hasBbox && (
+        <div style={styles.bboxInfo}>
+          N {nodeData!.bbox!.north.toFixed(2)}° · S {nodeData!.bbox!.south.toFixed(2)}° ·{' '}
+          E {nodeData!.bbox!.east.toFixed(2)}° · W {nodeData!.bbox!.west.toFixed(2)}°
+        </div>
+      )}
 
       {/* Legend */}
       {(Object.keys(bySource).length > 0 || gisLayers.length > 0) && (
@@ -321,7 +486,9 @@ export function MapOutputNode({ id }: NodeProps) {
           ))}
           {gisLayers.map((layer, idx) => (
             <span key={`gis-${idx}`} style={styles.legendItem}
-              title={layer.noPrj ? 'No .prj file — coordinates assumed WGS84. Add a .prj file alongside the .shp for automatic reprojection.' : undefined}>
+              title={layer.noPrj
+                ? 'No .prj file — coordinates assumed WGS84. Add a .prj file alongside the .shp for automatic reprojection.'
+                : undefined}>
               <span style={{ ...styles.legendDot, background: GIS_COLORS[idx % GIS_COLORS.length], borderRadius: 2 }} />
               {layer.name} ({layer.featureCount}){layer.noPrj ? ' ⚠' : ''}
             </span>
@@ -334,7 +501,7 @@ export function MapOutputNode({ id }: NodeProps) {
 
 // ─── styles ───────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#14532d'   // dark forest green — evokes maps/geography
+const HEADER_COLOR = '#14532d'
 
 const styles = {
   card: {
@@ -367,6 +534,56 @@ const styles = {
     textOverflow: 'ellipsis',
     whiteSpace:   'nowrap' as const,
   },
+  controls: {
+    display:    'flex',
+    alignItems: 'center',
+    flexWrap:   'wrap' as const,
+    gap:        6,
+    padding:    '5px 8px',
+    background: '#f3f4f6',
+    borderTop:  '1px solid #e5e7eb',
+    fontSize:   11,
+  },
+  clusterToggle: {
+    display:    'flex',
+    alignItems: 'center',
+    gap:        4,
+    cursor:     'pointer' as const,
+    color:      '#374151',
+    userSelect: 'none' as const,
+  },
+  checkbox: { cursor: 'pointer' as const, width: 13, height: 13 },
+  separator: { width: 1, height: 16, background: '#d1d5db' },
+  btn: {
+    padding:      '2px 8px',
+    borderRadius: 4,
+    border:       'none',
+    fontSize:     11,
+    fontWeight:   600,
+    cursor:       'pointer' as const,
+    lineHeight:   '18px',
+  },
+  btnDraw:     { background: '#3b82f6', color: '#fff' },
+  btnCancel:   { background: '#ef4444', color: '#fff' },
+  btnClear:    { background: '#e5e7eb', color: '#374151' },
+  btnRun:      { background: '#15803d', color: '#fff' },
+  btnDisabled: { opacity: 0.45, cursor: 'not-allowed' as const },
+  countBadge: {
+    fontSize:     10,
+    fontWeight:   700,
+    color:        '#374151',
+    background:   '#e5e7eb',
+    padding:      '1px 7px',
+    borderRadius: 10,
+    marginLeft:   'auto',
+  },
+  bboxInfo: {
+    fontSize:   10,
+    color:      '#6b7280',
+    padding:    '3px 10px',
+    background: '#fffbeb',
+    borderTop:  '1px solid #fde68a',
+  },
   legend: {
     display:    'flex',
     flexWrap:   'wrap' as const,
@@ -389,39 +606,24 @@ const styles = {
     flexShrink:   0,
   },
   inputHandle: {
-    width:      10,
-    height:     10,
+    width:     10,
+    height:    10,
     background: HEADER_COLOR,
-    border:     '2px solid #fff',
-    boxShadow:  `0 0 0 1px ${HEADER_COLOR}`,
+    border:    '2px solid #fff',
+    boxShadow: `0 0 0 1px ${HEADER_COLOR}`,
   },
   gisInputHandle: {
-    width:      10,
-    height:     10,
+    width:     10,
+    height:    10,
     background: '#3b82f6',
-    border:     '2px solid #fff',
-    boxShadow:  '0 0 0 1px #3b82f6',
+    border:    '2px solid #fff',
+    boxShadow: '0 0 0 1px #3b82f6',
   },
-  controls: {
-    display:    'flex',
-    alignItems: 'center',
-    gap:        8,
-    padding:    '6px 10px',
-    background: '#f3f4f6',
-    borderTop:  '1px solid #e5e7eb',
-    fontSize:   11,
-  },
-  clusterToggle: {
-    display:    'flex',
-    alignItems: 'center',
-    gap:        5,
-    cursor:     'pointer' as const,
-    color:      '#374151',
-    userSelect: 'none' as const,
-  },
-  checkbox: {
-    cursor: 'pointer' as const,
-    width:  14,
-    height: 14,
+  outputHandle: {
+    width:     10,
+    height:    10,
+    background: '#10b981',
+    border:    '2px solid #fff',
+    boxShadow: '0 0 0 1px #10b981',
   },
 }

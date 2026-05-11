@@ -31,6 +31,7 @@ import { runBodleianSearchNode }  from './runBodleianSearchNode'
 import { runTimelineViewNode }    from './runTimelineViewNode'
 import { runImageViewNode }       from './runImageViewNode'
 import { runDeduplicateNode }     from './runDeduplicateNode'
+import { runMapOutputNode }       from './runMapOutputNode'
 import { withFixture }            from './fixtureUtils'
 
 /**
@@ -73,5 +74,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   timelineOutput:    runTimelineViewNode,  // backward-compat alias
   imageView:         runImageViewNode,
   deduplicate:       runDeduplicateNode,
+  mapOutput:         runMapOutputNode,
 }
 

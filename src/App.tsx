@@ -56,6 +56,7 @@ import type { ARIADNESearchNodeData }      from './nodes/ARIADNESearchNode'
 import type { BodleianSearchNodeData }     from './nodes/BodleianSearchNode'
 import type { FieldDistributionNodeData }  from './nodes/FieldDistributionNode'
 import type { TimelineOutputNodeData }     from './nodes/TimelineOutputNode'
+import type { MapOutputNodeData }          from './nodes/MapOutputNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -98,6 +99,7 @@ type AppNode =
   | Node<BodleianSearchNodeData>
   | Node<FieldDistributionNodeData>
   | Node<TimelineOutputNodeData>
+  | Node<MapOutputNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -452,7 +454,12 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   mapOutput: pos => ({
     id: newId('map'), type: 'mapOutput', position: pos,
-    data: {},
+    data: {
+      bbox:           null,
+      inputCount:     0,
+      outputCount:    0,
+      resultsVersion: 0,
+    } satisfies MapOutputNodeData,
   }),
   timelineOutput: pos => ({
     id: newId('timeline'), type: 'timelineOutput', position: pos,
