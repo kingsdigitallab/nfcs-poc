@@ -19,7 +19,7 @@ async function fetchARIADNE(params: Record<string, string>): Promise<ARIADNESear
     const res = await fetch(url, { signal: controller.signal })
     if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
     const json = await res.json() as ARIADNESearchResponse
-    console.log(`[ARIADNE] from=${params.from ?? 0} total=${json.total?.value} hits=${json.hits?.length}`)
+    console.log(`[ARIADNE] page=${params.page ?? 1} size=${params.size} total=${json.total?.value} hits=${json.hits?.length}`)
     return json
   } finally {
     clearTimeout(timer)
@@ -80,7 +80,7 @@ export async function runARIADNENode(
   const limitEdge = edges.find(e => e.target === nodeId && e.targetHandle === 'limit')
   const limitSrc  = limitEdge ? nodes.find(n => n.id === limitEdge.source) : null
   const rawLimit  = parseInt((limitSrc?.data as { value?: string } | undefined)?.value ?? d.inlineLimit ?? '20', 10)
-  const limit     = isNaN(rawLimit) || rawLimit < 1 ? 20 : Math.min(rawLimit, PAGE_SIZE)
+  const limit     = isNaN(rawLimit) || rawLimit < 1 ? 20 : rawLimit
 
   const accessDate   = new Date().toISOString()
   const citationBase = {
@@ -89,57 +89,45 @@ export async function runARIADNENode(
     publisher:  'ARIADNE Research Infrastructure',
     accessDate,
     query: Object.entries(baseParams)
-      .filter(([k, v]) => !['sort', 'order', 'size', 'from'].includes(k) && v)
+      .filter(([k, v]) => !['sort', 'order', 'size', 'page'].includes(k) && v)
       .map(([k, v]) => `${k}:${v}`)
       .join(', '),
   }
 
-  try {
-    if (fetchAll) {
-      updateNodeData(nodeId, { statusMessage: 'Probing total…' })
-      const probe = await fetchARIADNE({ ...baseParams, size: '1', from: '0' })
-      const total = probe.total?.value ?? 0
+  // Shared paginator — fetches up to `maxRecords` using page=x&size=PAGE_SIZE (1-indexed pages)
+  async function fetchPages(maxRecords: number): Promise<{ records: ReturnType<typeof adaptARIADNEResponse>; total: number }> {
+    const probe     = await fetchARIADNE({ ...baseParams, size: '1', page: '1' })
+    const total     = probe.total?.value ?? 0
+    if (total === 0) return { records: [], total: 0 }
 
-      if (total === 0) {
-        const version = setNodeResults(nodeId, [])
-        updateNodeData(nodeId, { status: 'success', statusMessage: '✓ 0 results', count: 0, resultsVersion: version })
-        return
-      }
+    const needed    = Math.min(maxRecords, total)
+    const pageCount = Math.ceil(needed / PAGE_SIZE)
+    const allRecords: ReturnType<typeof adaptARIADNEResponse> = []
 
-      const pageCount  = Math.ceil(total / PAGE_SIZE)
-      const allRecords: ReturnType<typeof adaptARIADNEResponse> = []
-
-      for (let page = 0; page < pageCount; page++) {
-        const from = page * PAGE_SIZE
-        updateNodeData(nodeId, {
-          statusMessage: `Page ${page + 1}/${pageCount} (${allRecords.length} fetched)…`,
-        })
-        const response = await fetchARIADNE({ ...baseParams, size: String(PAGE_SIZE), from: String(from) })
-        const batch    = adaptARIADNEResponse(response)
-        allRecords.push(...batch)
-        if (batch.length < PAGE_SIZE) break
-      }
-
-      const citedRecords = addCitation(allRecords as Record<string, unknown>[], citationBase)
-      const version = setNodeResults(nodeId, citedRecords)
+    for (let p = 1; p <= pageCount; p++) {
       updateNodeData(nodeId, {
-        status: 'success',
-        statusMessage: `✓ ${allRecords.length.toLocaleString()} of ${total.toLocaleString()}`,
-        count: total,
-        resultsVersion: version,
+        statusMessage: `Page ${p}/${pageCount} (${allRecords.length} fetched)…`,
       })
-    } else {
-      const response = await fetchARIADNE({ ...baseParams, size: String(limit), from: '0' })
-      const results  = addCitation(adaptARIADNEResponse(response) as Record<string, unknown>[], citationBase)
-      const total    = response.total?.value ?? results.length
-      const version  = setNodeResults(nodeId, results)
-      updateNodeData(nodeId, {
-        status: 'success',
-        statusMessage: `✓ ${results.length} of ${total.toLocaleString()}`,
-        count: total,
-        resultsVersion: version,
-      })
+      const response = await fetchARIADNE({ ...baseParams, size: String(PAGE_SIZE), page: String(p) })
+      const batch    = adaptARIADNEResponse(response)
+      allRecords.push(...batch)
+      if (batch.length < PAGE_SIZE) break
     }
+
+    // Trim to the requested cap
+    return { records: allRecords.slice(0, needed), total }
+  }
+
+  try {
+    const { records, total } = await fetchPages(fetchAll ? Infinity : limit)
+    const citedRecords = addCitation(records as Record<string, unknown>[], citationBase)
+    const version      = setNodeResults(nodeId, citedRecords)
+    updateNodeData(nodeId, {
+      status:         'success',
+      statusMessage:  `✓ ${records.length.toLocaleString()} of ${total.toLocaleString()}`,
+      count:          total,
+      resultsVersion: version,
+    })
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err)
     console.error('[ARIADNE] error', msg)
