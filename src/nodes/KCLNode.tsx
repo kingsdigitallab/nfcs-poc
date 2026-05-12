@@ -440,7 +440,7 @@ export function KCLNode({ id, data }: NodeProps) {
               style={styles.input}
               value={selectedModel}
               onChange={e => updateNodeData(id, { model: e.target.value })}
-              placeholder="arc:lite"
+              placeholder="arc:nano"
               className="nodrag"
             />
           )}
