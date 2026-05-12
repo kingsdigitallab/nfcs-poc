@@ -33,8 +33,9 @@
  *      one page, then parse every <details class="object-overview">.
  */
 
-const MDS_SEARCH = '/mds-proxy/object-search/'
-const TIMEOUT_MS = 20_000
+const MDS_SEARCH   = '/mds-proxy/object-search/'
+const MDS_VIEW_MAX = 1000   // site hard limit for the ?view= parameter
+const TIMEOUT_MS   = 20_000
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -206,7 +207,7 @@ export async function fetchMDSRecords(
 
   console.log(`[MDS] total=${total}`)
 
-  const fetchCount = Math.min(total || 0, limit)
+  const fetchCount = Math.min(total || 0, limit, MDS_VIEW_MAX)
   const capped     = total > fetchCount
 
   if (fetchCount === 0) {
