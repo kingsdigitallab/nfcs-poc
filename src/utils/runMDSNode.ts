@@ -75,7 +75,7 @@ export const runMDSNode: NodeRunner = async (
     updateNodeData(nodeId, {
       status:         'success',
       statusMessage:  msg,
-      count:          records.length,
+      count:          total,
       _capped:        capped,
       _total:         total,
       resultsVersion: version,

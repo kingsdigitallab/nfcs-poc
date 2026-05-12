@@ -80,6 +80,7 @@ function adaptMember(member: BodleianMember): UnifiedRecord {
 
   return {
     _id:        uuid || url,
+    _source:    'bodleian',
     _sourceUrl: url,
     _service:   'bodleian',
     title,

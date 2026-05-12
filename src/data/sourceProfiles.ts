@@ -187,7 +187,7 @@ const profiles: SourceProfile[] = [
   },
 
   {
-    source: 'va',
+    source: 'vam',
     label: 'Victoria and Albert Museum',
     url: 'https://api.vam.ac.uk',
     coverage: 'V&A collection of art and design. 2.3M+ objects covering decorative arts, fashion, photography, textiles, furniture, ceramics, glass, and sculpture from worldwide cultures.',
