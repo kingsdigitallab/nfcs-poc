@@ -87,6 +87,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **LoadSavedSearch** | Local filesystem | Loads a `.nfcs.json` file saved by **SaveSearch**, or any raw `UnifiedRecord[]` JSON array exported by **Export**. Displays full provenance metadata: saved date/time, source breakdown with per-service record counts, and the original search parameters in a collapsible panel. |
 | **LocalFileSource** | Local filesystem | Parses a single CSV, TSV, XML, or image file selected via a standard file picker (all browsers). Auto-detects the delimiter. **Cast numeric strings to numbers** toggle converts coordinate strings to floats. |
 | **LocalFolderSource** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction), XML/TEI, plain text, images, Shapefiles, and GeoJSON. Five typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`, plus a **GIS handle** for Shapefile/GeoJSON layers. Requires Chrome or Edge 86+. |
+| **FrameSenseSource** | Local filesystem | Reads a folder pre-processed by the [FrameSense](https://github.com/kingsdigitallab/framesense) CLI and emits one record per shot. Each record carries the representative frame as an `imageDataUrl` (base64 JPEG), enabling direct vision inference via **KingsInference**. Existing FrameSense analysis (shot scale classifications from `scale_frames_sssabet`, VLM answers from `answer_frames_vlm`) is surfaced as `framesense.*` fields. See [FrameSense workflows](#framesense-workflows) below. |
 | ~~**ADSSearchAdvanced**~~ *(deprecated)* | Archaeology Data Service | **Currently unavailable** — blocked by Cloudflare. Use **ARIADNESearch** with `Contributor = Archaeology Data Service`. |
 | ~~**ADSLibrary**~~ *(deprecated)* | ADS Library catalogue | **Currently unavailable** — blocked by Cloudflare. |
 
@@ -253,6 +254,113 @@ Works identically but processes a single chosen field per record. **Per-record m
 ### Output
 
 Enriched records gain `kclResponse`, `kclModel`, `kclPrompt`, and `kclProcessedAt` fields. Connect a **KingsInferenceOutput** node to display responses as expandable cards, or pass to **TableOutput** or **Export**.
+
+---
+
+## FrameSense workflows
+
+[FrameSense](https://github.com/kingsdigitallab/framesense) is a Python CLI that pre-processes video collections into a structured folder hierarchy of shots and frames. This app reads a pre-processed collection — it does not process video itself.
+
+### Pre-processing (offline, outside this app)
+
+Run these FrameSense operators on your video collection:
+
+```bash
+python framesense.py make_shots_scenedetect   # auto-detect shot boundaries (PySceneDetect)
+python framesense.py make_frames_ffmpeg        # extract first, middle, last frame per shot
+python framesense.py scale_frames_sssabet      # optional: classify shot scale (ECU/CU/MS/FS/LS)
+```
+
+The resulting folder structure is:
+
+```
+<collection>/
+  <video>/
+    [<clip>/]
+      shots/
+        001/
+          middle.jpg      ← representative frame
+          frames.json     ← existing analysis (shotScale, VLM answers if run)
+```
+
+### Using FrameSenseSource in the workflow
+
+1. Drag **FrameSenseSource** onto the canvas.
+2. Choose a **Frame** filter — *Middle* (recommended, one image per shot) keeps memory usage low.
+3. Click **🎬 Pick Folder** and select the pre-processed collection root.
+4. The node scans recursively and emits one `UnifiedRecord` per shot, containing:
+   - `framesense.collection`, `framesense.video`, `framesense.clip`, `framesense.shot`
+   - `framesense.frameFile` — the file loaded (e.g. `middle.jpg`)
+   - `framesense.shotScale` — if `scale_frames_sssabet` was run (e.g. `MS`, `CU`)
+   - Any existing VLM answers already in `frames.json` as `framesense.<questionKey>`
+   - `imageDataUrl` — base64 JPEG of the frame
+
+**Run All skips FrameSenseSource** — it requires a user gesture. Pick the folder and click Re-scan manually before running downstream nodes.
+
+### Wiring for vision inference
+
+Connect `FrameSenseSource results` → `KingsInference data`. **KingsInference** auto-detects `imageDataUrl` and shows the **Vision** checkbox — tick it. The image is attached as a multipart message alongside your prompt; `{{imageDataUrl}}` does not need to appear in the template text.
+
+Recommended prompt for a quick functional test:
+
+**System:** `You are a film analyst. Be concise.`
+
+**Prompt:**
+```
+Describe this shot in one sentence. Note the apparent shot scale (extreme close-up,
+close-up, medium, full, or long shot) and what is depicted.
+```
+
+This is immediately verifiable: if `scale_frames_sssabet` pre-processing was run, compare the model's shot scale description against `framesense.shotScale` in TableOutput.
+
+For structured output suitable for downstream processing, use a JSON prompt:
+
+**Prompt:**
+```
+Analyse this frame. Respond in JSON with these keys:
+"description" (one sentence), "shot_scale" (one of: ECU, CU, MS, FS, LS),
+"setting" (interior/exterior/unclear), "people_visible" (true/false).
+```
+
+The `kclResponse` field then contains parseable JSON you can filter on or aggregate.
+
+### Aggregate summary with KingsInferenceByField
+
+After per-shot inference, wire a **KingsInferenceByField** node downstream in **aggregate** mode to summarise across a whole video:
+
+- **Field**: `kclResponse`
+- **Mode**: Aggregate
+
+**System:** `You are a film analyst helping to catalogue archival video footage for humanities research.`
+
+**Prompt:**
+```
+The following are shot-level analyses from a video, one per line. Each contains
+a description, shot scale, setting, and whether people are visible.
+
+{{values}}
+
+Write a short catalogue summary (3-5 sentences) covering: the overall subject and
+setting of the footage, the range of shot scales used, and whether people feature
+prominently. Then list 3-5 keywords suitable for archival indexing.
+```
+
+> **Tip — context window management**: if the collection is large, the concatenated shot analyses may approach the model's context limit. Use a **FilterTransform** node upstream of KingsInferenceByField to narrow records to a single `framesense.video` or `framesense.collection` before aggregating.
+
+### Recommended workflow
+
+```
+[FrameSenseSource]
+       ↓ results
+[FilterTransform]          ← optional: filter by framesense.shotScale or framesense.collection
+       ↓ results
+[KingsInference]           ← Vision on, per-shot question (JSON prompt recommended)
+       ↓ results
+[KingsInferenceByField]    ← aggregate mode, field: kclResponse, video summary
+       ↓ results
+[TableOutput]
+[Export]                   ← CSV/JSON for archival deposit
+```
 
 ---
 

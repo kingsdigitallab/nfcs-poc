@@ -40,6 +40,7 @@ import { DeduplicateNode }          from './DeduplicateNode'
 import { SMGSearchNode }            from './SMGSearchNode'
 import { VASearchNode }             from './VASearchNode'
 import { GeocodingNode }            from './GeocodingNode'
+import { FrameSenseSourceNode }     from './FrameSenseSourceNode'
 import { withDuplicate }            from './withDuplicate'
 
 export const nodeTypes = {
@@ -86,4 +87,5 @@ export const nodeTypes = {
   smgSearch:         withDuplicate(SMGSearchNode),
   vaSearch:          withDuplicate(VASearchNode),
   geocoding:         withDuplicate(GeocodingNode),
+  frameSenseSource:  withDuplicate(FrameSenseSourceNode),
 }
