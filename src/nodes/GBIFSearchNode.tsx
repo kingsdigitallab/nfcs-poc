@@ -18,6 +18,7 @@ export interface GBIFSearchNodeData {
   results: UnifiedRecord[] | undefined
   /** Total hits reported by the API (may exceed results.length due to pagination) */
   count:        number
+  fetchAll?:    boolean
   useFixture?:  boolean
   [key: string]: unknown
 }
@@ -121,6 +122,12 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
       {/* Footer */}
       <div style={styles.footer}>
         <div style={styles.fixtureControls}>
+          <label style={styles.fixtureToggle} className="nodrag"
+            title="Fetch all pages using offset pagination (max 100,000). API max 300/page.">
+            <input type="checkbox" checked={!!d.fetchAll}
+              onChange={e => updateNodeData(id, { fetchAll: e.target.checked })} className="nodrag" />
+            <span style={{ fontSize: 10, color: d.fetchAll ? '#0f4c81' : '#9ca3af', fontWeight: 600 }}>ALL</span>
+          </label>
           <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
             <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
             <span style={{ color: d.useFixture ? '#0f4c81' : '#9ca3af' }}>📦</span>

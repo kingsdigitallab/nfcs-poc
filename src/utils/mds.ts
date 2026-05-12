@@ -34,7 +34,6 @@
  */
 
 const MDS_SEARCH = '/mds-proxy/object-search/'
-const MDS_CAP    = 200
 const TIMEOUT_MS = 20_000
 
 // ─── types ────────────────────────────────────────────────────────────────────
@@ -195,7 +194,7 @@ export interface MDSFetchResult {
  * Fetch and parse MDS search results.
  *
  * @param query  Search string
- * @param limit  Maximum records requested by the user node (≤ MDS_CAP)
+ * @param limit  Maximum records requested by the user node
  */
 export async function fetchMDSRecords(
   query: string,
@@ -207,7 +206,7 @@ export async function fetchMDSRecords(
 
   console.log(`[MDS] total=${total}`)
 
-  const fetchCount = Math.min(total || 0, limit, MDS_CAP)
+  const fetchCount = Math.min(total || 0, limit)
   const capped     = total > fetchCount
 
   if (fetchCount === 0) {

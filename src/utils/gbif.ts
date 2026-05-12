@@ -1,4 +1,5 @@
-const BASE = 'https://api.gbif.org/v1'
+const BASE     = 'https://api.gbif.org/v1'
+const PAGE_SIZE = 300   // GBIF API maximum per request
 
 export interface GBIFParams {
   q?: string
@@ -6,6 +7,7 @@ export interface GBIFParams {
   country?: string
   year?: string
   limit?: string
+  offset?: string
 }
 
 export function buildGBIFUrl(params: GBIFParams): string {
@@ -29,3 +31,5 @@ export async function fetchGBIF(params: GBIFParams): Promise<unknown> {
   console.log(`[GBIF] response in ${ms}ms — count: ${(json as { count: number }).count}`, json)
   return json
 }
+
+export { PAGE_SIZE as GBIF_PAGE_SIZE }
