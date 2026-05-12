@@ -23,7 +23,10 @@ export type FilterOp =
   | 'in'
 
 export interface FilterCondition {
-  field: string
+  /** Single field path. Use `fields` instead for multi-field OR text searches. */
+  field?: string
+  /** Check multiple fields with OR logic — record passes if ANY field satisfies the condition. */
+  fields?: string[]
   op: FilterOp
   value?: unknown
   caseSensitive?: boolean
@@ -40,6 +43,8 @@ export interface SmartFilterNodeData {
   model: string
   nlQuery: string
   generatedFilter: SmartFilter | null
+  /** Per-condition disabled flags; index matches generatedFilter.conditions[i]. */
+  disabledConditions: boolean[]
   filterStatus: 'idle' | 'translating' | 'applied' | 'error'
   filterMessage: string
   matchCount: number
@@ -64,7 +69,7 @@ Response schema:
   "logic": "AND" | "OR",
   "conditions": [
     {
-      "field": "<dot.notation.path from the Available Fields list>",
+      "field": "<single dot.notation.path>",
       "op": "contains" | "notContains" | "equals" | "notEquals" | "startsWith" | "endsWith" | "gt" | "lt" | "gte" | "lte" | "exists" | "notExists" | "in",
       "value": <string, number, or string[] for 'in' op>,
       "caseSensitive": false
@@ -72,6 +77,16 @@ Response schema:
   ],
   "explanation": "<one plain-English sentence describing the filter>"
 }
+
+MULTI-FIELD OR — for keyword / phrase / topic searches, use "fields" (array) instead of "field":
+{
+  "fields": ["title", "description", "subject"],
+  "op": "contains",
+  "value": "barrow"
+}
+A record passes if ANY of the listed fields satisfies the condition.
+Use "fields" whenever the query is about what something IS ABOUT or MENTIONS (e.g. "with X", "about X", "mentioning X", "containing X").
+Use single "field" for attribute checks (coordinates present, date range, specific typed field).
 
 Operator rules:
 - exists / notExists: no value needed — checks whether the field is populated
@@ -135,10 +150,10 @@ function norm(val: unknown, cs: boolean): string {
   return cs ? s : s.toLowerCase()
 }
 
-function testCondition(record: Record<string, unknown>, c: FilterCondition): boolean {
-  const raw  = resolveField(record, c.field)
-  const cs   = c.caseSensitive ?? false
-  const cv   = c.value
+function testSingleField(record: Record<string, unknown>, field: string, c: FilterCondition): boolean {
+  const raw = resolveField(record, field)
+  const cs  = c.caseSensitive ?? false
+  const cv  = c.value
 
   const isEmpty = raw == null || raw === '' || (Array.isArray(raw) && (raw as unknown[]).length === 0)
 
@@ -147,22 +162,15 @@ function testCondition(record: Record<string, unknown>, c: FilterCondition): boo
     case 'notExists': return isEmpty
   }
 
-  // For array fields, test against each element
   const candidates: unknown[] = Array.isArray(raw) ? raw as unknown[] : [raw]
 
   switch (c.op) {
-    case 'equals':
-      return candidates.some(v => norm(v, cs) === norm(cv, cs))
-    case 'notEquals':
-      return candidates.every(v => norm(v, cs) !== norm(cv, cs))
-    case 'contains':
-      return candidates.some(v => norm(v, cs).includes(norm(cv as string, cs)))
-    case 'notContains':
-      return candidates.every(v => !norm(v, cs).includes(norm(cv as string, cs)))
-    case 'startsWith':
-      return candidates.some(v => norm(v, cs).startsWith(norm(cv as string, cs)))
-    case 'endsWith':
-      return candidates.some(v => norm(v, cs).endsWith(norm(cv as string, cs)))
+    case 'equals':     return candidates.some(v => norm(v, cs) === norm(cv, cs))
+    case 'notEquals':  return candidates.every(v => norm(v, cs) !== norm(cv, cs))
+    case 'contains':   return candidates.some(v => norm(v, cs).includes(norm(cv as string, cs)))
+    case 'notContains':return candidates.every(v => !norm(v, cs).includes(norm(cv as string, cs)))
+    case 'startsWith': return candidates.some(v => norm(v, cs).startsWith(norm(cv as string, cs)))
+    case 'endsWith':   return candidates.some(v => norm(v, cs).endsWith(norm(cv as string, cs)))
     case 'gt':  return candidates.some(v => Number(v) >  Number(cv))
     case 'lt':  return candidates.some(v => Number(v) <  Number(cv))
     case 'gte': return candidates.some(v => Number(v) >= Number(cv))
@@ -175,12 +183,25 @@ function testCondition(record: Record<string, unknown>, c: FilterCondition): boo
   }
 }
 
+function testCondition(record: Record<string, unknown>, c: FilterCondition): boolean {
+  const fieldsToCheck = c.fields ?? (c.field ? [c.field] : [])
+  if (fieldsToCheck.length === 0) return true
+  // For notContains / notEquals / notExists we need ALL fields to pass (AND semantics across fields)
+  const negativeOp = c.op === 'notContains' || c.op === 'notEquals' || c.op === 'notExists'
+  return negativeOp
+    ? fieldsToCheck.every(f => testSingleField(record, f, c))
+    : fieldsToCheck.some(f  => testSingleField(record, f, c))
+}
+
 function applySmartFilter(
   records: Record<string, unknown>[],
   filter: SmartFilter,
+  disabled: boolean[] = [],
 ): Record<string, unknown>[] {
+  const active = filter.conditions.filter((_, i) => !disabled[i])
+  if (active.length === 0) return records
   return records.filter(r => {
-    const results = filter.conditions.map(c => testCondition(r, c))
+    const results = active.map(c => testCondition(r, c))
     return filter.logic === 'AND' ? results.every(Boolean) : results.some(Boolean)
   })
 }
@@ -240,25 +261,52 @@ const OP_LABELS: Record<FilterOp, string> = {
   in: 'is one of',
 }
 
-function ConditionPill({ c, logic, first }: { c: FilterCondition; logic: 'AND' | 'OR'; first: boolean }) {
-  const hasValue = c.op !== 'exists' && c.op !== 'notExists'
-  const valueStr = Array.isArray(c.value)
+interface ConditionPillProps {
+  c: FilterCondition
+  logic: 'AND' | 'OR'
+  first: boolean
+  enabled: boolean
+  onToggle: () => void
+}
+
+function ConditionPill({ c, logic, first, enabled, onToggle }: ConditionPillProps) {
+  const hasValue  = c.op !== 'exists' && c.op !== 'notExists'
+  const valueStr  = Array.isArray(c.value)
     ? (c.value as string[]).map(v => `"${v}"`).join(', ')
     : c.value != null ? `"${c.value}"` : ''
+  const fieldDisplay = c.fields
+    ? c.fields.join(' | ')
+    : (c.field ?? '')
 
   return (
-    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 5, marginBottom: 4 }}>
+    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 5, marginBottom: 4, opacity: enabled ? 1 : 0.38 }}>
+      {/* Toggle */}
+      <button
+        onClick={onToggle}
+        title={enabled ? 'Disable this condition' : 'Enable this condition'}
+        style={{
+          width: 14, height: 14, borderRadius: 3, flexShrink: 0, marginTop: 3,
+          background: enabled ? '#3b82f6' : '#374151',
+          border: `1px solid ${enabled ? '#60a5fa' : '#4b5563'}`,
+          cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+        }}
+      >
+        {enabled && <span style={{ color: '#fff', fontSize: 9, lineHeight: 1 }}>✓</span>}
+      </button>
+
       <span style={{
-        fontSize: 9, fontWeight: 700, color: '#6b7280', minWidth: 26, marginTop: 2,
+        fontSize: 9, fontWeight: 700, color: '#6b7280', minWidth: 22, marginTop: 3,
         textTransform: 'uppercase', letterSpacing: '0.04em',
       }}>
         {first ? 'IF' : logic}
       </span>
+
       <div style={{
         flex: 1, background: '#1f2937', borderRadius: 4, padding: '3px 7px',
         fontSize: 10, color: '#e5e7eb', lineHeight: 1.5,
+        textDecoration: enabled ? 'none' : 'line-through',
       }}>
-        <span style={{ color: '#93c5fd', fontWeight: 600 }}>{c.field}</span>
+        <span style={{ color: '#93c5fd', fontWeight: 600 }}>{fieldDisplay}</span>
         {' '}
         <span style={{ color: '#fbbf24' }}>{OP_LABELS[c.op] ?? c.op}</span>
         {hasValue && <> <span style={{ color: '#86efac' }}>{valueStr}</span></>}
@@ -276,12 +324,14 @@ export function SmartFilterNode({ id, data }: NodeProps) {
   const { records: rawRecords, connected } = useUpstreamRecords(id)
   const records = rawRecords ?? []
 
-  // Apply filter reactively
-  const generatedFilter = d.generatedFilter as SmartFilter | null
+  const generatedFilter      = d.generatedFilter as SmartFilter | null
+  const disabledConditions   = (d.disabledConditions as boolean[] | undefined) ?? []
+
+  // Apply filter reactively — respects per-condition enabled state
   const filteredRecords = useMemo(() => {
     if (!generatedFilter || records.length === 0) return records
-    return applySmartFilter(records as Record<string, unknown>[], generatedFilter)
-  }, [records, generatedFilter])
+    return applySmartFilter(records as Record<string, unknown>[], generatedFilter, disabledConditions)
+  }, [records, generatedFilter, disabledConditions])
 
   // Fingerprint → update results store
   const prevFpRef = useRef('')
@@ -339,7 +389,7 @@ export function SmartFilterNode({ id, data }: NodeProps) {
     try {
       const fields  = discoverFields(records as Record<string, unknown>[])
       const filter  = await translateToFilter(apiKey, model, nlQuery.trim(), fields, ctrl.signal)
-      updateNodeData(id, { generatedFilter: filter, filterStatus: 'applied', filterMessage: '' })
+      updateNodeData(id, { generatedFilter: filter, disabledConditions: [], filterStatus: 'applied', filterMessage: '' })
     } catch (err) {
       if ((err as Error).name !== 'AbortError') {
         const msg = (err as Error).message
@@ -351,8 +401,14 @@ export function SmartFilterNode({ id, data }: NodeProps) {
     }
   }, [apiKey, model, nlQuery, records, id, updateNodeData])
 
+  const toggleCondition = useCallback((idx: number) => {
+    const next = [...disabledConditions]
+    next[idx] = !next[idx]
+    updateNodeData(id, { disabledConditions: next })
+  }, [disabledConditions, id, updateNodeData])
+
   const handleClear = useCallback(() => {
-    updateNodeData(id, { generatedFilter: null, filterStatus: 'idle', filterMessage: '', matchCount: 0 })
+    updateNodeData(id, { generatedFilter: null, disabledConditions: [], filterStatus: 'idle', filterMessage: '', matchCount: 0 })
     setErrorMsg('')
   }, [id, updateNodeData])
 
@@ -498,7 +554,14 @@ export function SmartFilterNode({ id, data }: NodeProps) {
             </div>
 
             {generatedFilter!.conditions.map((c, i) => (
-              <ConditionPill key={i} c={c} logic={generatedFilter!.logic} first={i === 0} />
+              <ConditionPill
+                key={i}
+                c={c}
+                logic={generatedFilter!.logic}
+                first={i === 0}
+                enabled={!disabledConditions[i]}
+                onToggle={() => toggleCondition(i)}
+              />
             ))}
 
             {/* Match bar */}
