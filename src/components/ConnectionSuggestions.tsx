@@ -75,7 +75,7 @@ const INFERENCE_NODES = new Set([
   'kclNode', 'kclField', 'ollamaNode', 'ollamaField',
 ])
 
-const PASS_THROUGH = new Set(['tableOutput', 'mapOutput', 'fieldDistribution', 'timelineView', 'imageView'])
+const PASS_THROUGH = new Set(['tableOutput', 'mapOutput', 'fieldDistribution', 'timelineView', 'imageView', 'sourceProfile'])
 
 const OUTPUT_SUITE: Suggestion[] = [
   { type: 'tableOutput',      label: 'TableOutput',           sub: 'Paginated results table',       color: '#0d9488', targetHandle: 'data' },
@@ -100,13 +100,15 @@ const SUGGESTIONS: Record<string, Suggestion[]> = {
   process:    [...OUTPUT_SUITE, ...ENRICH_SUITE],
   passThrough: [
     { type: 'tableOutput',      label: 'TableOutput',           sub: 'Paginated results table',    color: '#0d9488', targetHandle: 'data' },
-    { type: 'filterTransform',  label: 'FilterTransform',       sub: 'Filter + transform records', color: '#4f46e5', targetHandle: 'data' },
-    { type: 'deduplicate',      label: 'Deduplicate',           sub: 'Remove duplicate records',   color: '#0f766e', targetHandle: 'data' },
-    { type: 'kclNode',          label: 'KingsInference',        sub: 'KCL inference on records',   color: '#881337', targetHandle: 'data' },
     { type: 'mapOutput',        label: 'MapOutput',             sub: 'Geo map (lat/lon)',           color: '#14532d', targetHandle: 'data' },
     { type: 'timelineView',     label: 'TimelineView',          sub: 'Year-resolution timeline',   color: '#1e293b', targetHandle: 'data' },
-    { type: 'jsonOutput',       label: 'JSONOutput',            sub: 'Formatted JSON viewer',      color: '#6d28d9', targetHandle: 'data' },
+    { type: 'imageView',        label: 'ImageView',             sub: 'IIIF manifest viewer',       color: '#1c3144', targetHandle: 'data' },
     { type: 'export',           label: 'Export',                sub: 'CSV / JSON / GeoJSON',       color: '#b45309', targetHandle: 'data' },
+    { type: 'filterTransform',  label: 'FilterTransform',       sub: 'Filter + transform records', color: '#4f46e5', targetHandle: 'data' },
+    { type: 'deduplicate',      label: 'Deduplicate',           sub: 'Remove duplicate records',   color: '#0f766e', targetHandle: 'data' },
+    { type: 'kclField',         label: 'KingsInferenceByField', sub: 'KCL inference on a field',   color: '#7f1d1d', targetHandle: 'data' },
+    { type: 'kclNode',          label: 'KingsInference',        sub: 'KCL inference on records',   color: '#881337', targetHandle: 'data' },
+    { type: 'jsonOutput',       label: 'JSONOutput',            sub: 'Formatted JSON viewer',      color: '#6d28d9', targetHandle: 'data' },
   ],
   inference: [
     { type: 'kclOutput',        label: 'KingsInferenceOutput',  sub: 'Display inference responses', color: '#3b0764', targetHandle: 'data' },
