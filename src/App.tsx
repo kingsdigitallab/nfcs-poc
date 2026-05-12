@@ -116,6 +116,18 @@ type AppNode =
 
 // ─── node factories ───────────────────────────────────────────────────────────
 
+const KCL_API_KEY_NODES = new Set(['kclNode', 'kclField', 'sourceProfile', 'smartFilter'])
+
+function findSharedApiKey(nodes: Node[]): string {
+  for (const node of nodes) {
+    if (KCL_API_KEY_NODES.has(node.type ?? '')) {
+      const key = (node.data as { apiKey?: string }).apiKey ?? ''
+      if (key) return key
+    }
+  }
+  return ''
+}
+
 const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   param: pos => ({
     id: newId('param'), type: 'param', position: pos,
@@ -712,7 +724,14 @@ export default function App() {
         x: event.clientX - bounds.left,
         y: event.clientY - bounds.top,
       })
-      setNodes(nds => [...nds, factory(position)])
+      setNodes(nds => {
+        const newNode = factory(position) as AppNode
+        if (KCL_API_KEY_NODES.has(nodeType) && !(newNode.data as { apiKey?: string }).apiKey) {
+          const key = findSharedApiKey(nds)
+          if (key) (newNode.data as Record<string, unknown>).apiKey = key
+        }
+        return [...nds, newNode]
+      })
     },
     [rfInstance, setNodes],
   )
@@ -769,7 +788,11 @@ export default function App() {
     const factory = NODE_DEFAULTS[nodeType]
     if (!factory) return
     const position = rfInstance.screenToFlowPosition({ x: x + 20, y: y - 20 })
-    const newNode  = factory(position)
+    const newNode  = factory(position) as AppNode
+    if (KCL_API_KEY_NODES.has(nodeType) && !(newNode.data as { apiKey?: string }).apiKey) {
+      const key = findSharedApiKey(rfInstance.getNodes())
+      if (key) (newNode.data as Record<string, unknown>).apiKey = key
+    }
     setNodes(prev => [...prev, newNode as AppNode])
     setEdges(prev => addEdge({
       id:           `e-${sourceNodeId}-${newNode.id}`,
