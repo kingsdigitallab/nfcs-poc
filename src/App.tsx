@@ -61,6 +61,7 @@ import type { SMGSearchNodeData }          from './nodes/SMGSearchNode'
 import type { VASearchNodeData }           from './nodes/VASearchNode'
 import type { GeocodingNodeData }          from './nodes/GeocodingNode'
 import type { FrameSenseSourceNodeData }  from './nodes/FrameSenseSourceNode'
+import type { SourceProfileNodeData }    from './nodes/SourceProfileNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -108,6 +109,7 @@ type AppNode =
   | Node<VASearchNodeData>
   | Node<GeocodingNodeData>
   | Node<FrameSenseSourceNodeData>
+  | Node<SourceProfileNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -229,6 +231,17 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       frameFilter:     'middle',
       resultsVersion:  0,
     } satisfies FrameSenseSourceNodeData,
+  }),
+  sourceProfile: pos => ({
+    id: newId('profile'), type: 'sourceProfile', position: pos,
+    data: {
+      apiKey:          '',
+      model:           '',
+      researchQuestion:'',
+      narrative:       '',
+      narrativeStatus: 'idle',
+      resultsVersion:  0,
+    } satisfies SourceProfileNodeData,
   }),
   localFolderSource: pos => ({
     id: newId('folder'), type: 'localFolderSource', position: pos,
@@ -551,6 +564,7 @@ const SIDEBAR_ITEMS = [
   { type: 'quickView',         label: 'QuickView',             sub: 'Inspect one field in full',               color: '#1e293b', group: 'Inspection' },
   { type: 'imageView',         label: 'ImageView',             sub: 'Image + IIIF manifest viewer',            color: '#1c3144', group: 'Inspection' },
   { type: 'htmlPreview',       label: 'HTMLPreview',           sub: 'Browse captured HTML, click to capture CSS selectors', color: '#0c4a6e', group: 'Inspection' },
+  { type: 'sourceProfile',     label: 'SourceProfile',         sub: 'Schema, field stats, completeness + AI narrative', color: '#1f2937', group: 'Inspection' },
   // ── Data Services ────────────────────────────────────────────────────────────
   { type: 'ariadneSearch',     label: 'ARIADNESearch',         sub: 'ARIADNE pan-European archaeology portal',  color: '#164e63', group: 'Data Services' },
   { type: 'bodleianSearch',   label: 'BodleianSearch',        sub: 'Bodleian Digital Collections (Oxford)',    color: '#003865', group: 'Data Services' },
