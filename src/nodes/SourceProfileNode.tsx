@@ -5,9 +5,10 @@
  */
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
-import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
-import { setNodeResults } from '../store/resultsStore'
+import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
+import { setNodeResults, getNodeResults } from '../store/resultsStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
+import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { getSourceProfile, getAllProfiles } from '../data/sourceProfiles'
 import type { SourceProfile, FieldProfile } from '../data/sourceProfiles'
 
@@ -302,9 +303,29 @@ function buildNarrativePrompt(
 export function SourceProfileNode({ id, data }: NodeProps) {
   const { updateNodeData } = useReactFlow()
   const d = data as SourceProfileNodeData
+  const allNodes = useNodes()
+  const allEdges = useEdges()
 
-  const { records: rawRecords, count, connected } = useUpstreamRecords(id)
+  const { records: rawRecords, connected } = useUpstreamRecords(id)
   const records = rawRecords ?? []
+
+  // Per-source API total: read each upstream node's count directly so that
+  // multi-source connections each show their own X of Y, not the summed total.
+  const sourceCountMap = useMemo(() => {
+    const map = new Map<string, number>()
+    const inputEdges = allEdges.filter(e => e.target === id && e.targetHandle === 'data')
+    for (const edge of inputEdges) {
+      const node = allNodes.find(n => n.id === edge.source)
+      if (!node) continue
+      const nd = node.data as Record<string, unknown>
+      const nodeCount = (nd.count as number | undefined) ?? 0
+      const nodeRecords = getNodeResults(edge.source) as UnifiedRecord[] | undefined
+      if (!nodeRecords || nodeRecords.length === 0) continue
+      const src = nodeRecords[0]._source as string | undefined
+      if (src) map.set(src, nodeCount)
+    }
+    return map
+  }, [allNodes, allEdges, id])
 
   // Pass-through fingerprint
   const prevFingerprintRef = useRef('')
@@ -348,11 +369,10 @@ export function SourceProfileNode({ id, data }: NodeProps) {
         }
         return { field, rate, samples }
       })
-      // Completeness count: single source → use upstream count; multiple sources → record count only
-      const srcCount = sourcesDetected.length === 1 ? count : 0
+      const srcCount = sourceCountMap.get(source) ?? 0
       return [{ profile, sourceRecords, count: srcCount, fieldStats }]
     })
-  }, [sourcesDetected, records, count])
+  }, [sourcesDetected, records, sourceCountMap])
 
   // KCL state
   const [apiKey, setApiKey] = useState((d.apiKey as string) || '')
