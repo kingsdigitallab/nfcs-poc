@@ -482,7 +482,23 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const availableFields = useMemo<string[]>(() => {
     if (!records?.length) return []
     const keys = new Set<string>()
-    for (const r of records.slice(0, 20)) for (const k of Object.keys(r as Record<string, unknown>)) keys.add(k)
+    const IMAGE_KEYS = /thumb|image|url|src|href|photo|picture|preview|media|icon/i
+    for (const r of records.slice(0, 20)) {
+      const rec = r as Record<string, unknown>
+      for (const [k, v] of Object.entries(rec)) {
+        if (k.startsWith('_')) continue
+        keys.add(k)
+        // One level deep into namespace objects — expose dot-notation paths for
+        // fields that look like image URLs so they appear in the datalist
+        if (v != null && typeof v === 'object' && !Array.isArray(v)) {
+          for (const [nk, nv] of Object.entries(v as Record<string, unknown>)) {
+            if (IMAGE_KEYS.test(nk) && (typeof nv === 'string' || nv == null)) {
+              keys.add(`${k}.${nk}`)
+            }
+          }
+        }
+      }
+    }
     return [...keys].sort()
   }, [records])
 
@@ -495,9 +511,24 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const imageDirectUrl   = String(d.imageDirectUrl || '')
   const safeRecordIndex  = records?.length ? Math.min(recordIndex, records.length - 1) : 0
   const currentRecord    = (records?.[safeRecordIndex] ?? {}) as Record<string, unknown>
-  // Direct URL overrides field picker; field picker falls back to record value
+
+  // Resolve dot-notation field paths (e.g. europeana.thumbnail) from a record
+  function resolveFieldPath(rec: Record<string, unknown>, path: string): unknown {
+    const parts = path.split('.')
+    let val: unknown = rec
+    for (const part of parts) {
+      if (val == null || typeof val !== 'object') return undefined
+      val = (val as Record<string, unknown>)[part]
+    }
+    return val
+  }
+
+  // Direct URL overrides field picker; field picker supports dot-notation paths
   const rawSrc           = mode === 'images'
-    ? (imageDirectUrl || (typeof currentRecord[selectedField] === 'string' ? String(currentRecord[selectedField]) : null))
+    ? (imageDirectUrl || (() => {
+        const v = resolveFieldPath(currentRecord, selectedField)
+        return typeof v === 'string' && v ? v : null
+      })())
     : null
 
   const exifData    = useMemo(() => rawSrc ? parseJpegExif(rawSrc) : null, [rawSrc])
@@ -692,16 +723,27 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
         {/* Controls */}
         {mode === 'images' ? (
           <div style={s.toolbarImages}>
-            {/* Row 1: field picker for upstream records */}
+            {/* Row 1: field picker — datalist combobox allows freetyping dot-notation paths */}
             <div style={s.toolbarRow}>
               <span style={s.srcLabel}>Field</span>
-              {availableFields.length > 0
-                ? <select style={s.fieldSelect} value={selectedField}
+              {availableFields.length > 0 ? (
+                <>
+                  <input
+                    list={`imgfields-${id}`}
+                    style={s.fieldSelect}
+                    value={selectedField}
                     onChange={e => { updateNodeData(id, { selectedField: e.target.value }); setRecordIndex(0) }}
-                    className="nodrag">
-                    {availableFields.map(f => <option key={f} value={f}>{f}</option>)}
-                  </select>
-                : <span style={s.hint}>{connected ? 'Run upstream node first' : 'Connect a node'}</span>}
+                    placeholder="field or dot.path"
+                    className="nodrag"
+                    spellCheck={false}
+                  />
+                  <datalist id={`imgfields-${id}`}>
+                    {availableFields.map(f => <option key={f} value={f} />)}
+                  </datalist>
+                </>
+              ) : (
+                <span style={s.hint}>{connected ? 'Run upstream node first' : 'Connect a node'}</span>
+              )}
             </div>
             {/* Row 2: direct public URL (overrides field when set) */}
             <div style={s.toolbarRow}>
