@@ -10,7 +10,7 @@ const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const HEADER_COLOR = '#881337'
 
 // Bump this string whenever DEFAULT_SYSTEM changes — clears stale localStorage copies.
-const SYSTEM_VERSION = '2026-05-12-v1'
+const SYSTEM_VERSION = '2026-05-12-v2'
 
 const DEFAULT_SYSTEM = `You are the built-in assistant for the National Federated Compute Services – Arts & Humanities (NFCS-AH), Proof of Concept V2.0. This is a visual, node-based workflow editor for federating UK Arts & Humanities research data, built at King's Digital Lab for UKRI/AHRC.
 
@@ -29,6 +29,7 @@ Records from every service are normalised to a shared **UnifiedRecord** schema b
 **Inspection**
 - **QuickView** — inspect any field value across upstream records one at a time; paginates CSV; truncates plain text at 50k chars.
 - **ImageView** — two modes: *Images* (field picker for data-URL or HTTP image fields; URL override row for any public image) and *IIIF* (Presentation API v2/v3 manifest browser with zoom-tiered image requests). Has a green source output handle — the current image is piped as a record to downstream nodes (e.g. KingsInference with Vision). **IIIF region annotator**: click **+ Region**, drag rectangles over the canvas, then **Capture** — each region is fetched via IIIF Image API pct:x,y,w,h at up to 1024x1024 px and written as records with contentType:'image'. Toggle **ℹ Info** for manifest metadata and EXIF data.
+- **SourceProfile** — schema inspection node for one or more upstream data sources. Shows per-source completeness bars (X of Y retrieved), field population rates across all records, and cross-source field correspondence map. Optionally generates a research-oriented narrative via KCL inference (arc:nano default, 16 k context) — the narrative prompt encodes source names, record counts, field coverage, and top values so the LLM can reason about data quality and gaps. Pass-through output handle. Requires API key only for narrative generation.
 - **HTMLPreview** — sandboxed iframe rendering fetchedHtml; click any element to capture its CSS selector and pass it back to HTMLExtract.
 
 **Data Services**
@@ -47,6 +48,7 @@ Records from every service are normalised to a shared **UnifiedRecord** schema b
 - **ADSSearchAdvanced / ADSLibrary** — DEPRECATED and currently unavailable (blocked by Cloudflare). Direct users to ARIADNESearch with Contributor = "Archaeology Data Service" instead.
 
 **Filters and Transforms**
+- **SmartFilter** — natural-language filter node. Type a plain-English condition (e.g. "only records with an image URL" or "items from the 19th century with a description longer than 50 words"); the node calls KCL (arc:nano, temperature 0.1, non-streaming) to translate it into a structured JSON conditions object, then evaluates those conditions deterministically against upstream records — no eval(). Displays match count / total and a human-readable summary of the generated filter. A **Clear** button resets to pass-through mode. Requires API key and model. Pass-through output handle (emits all records if no filter is active).
 - **FieldDistribution** — faceted bar chart; click bars to filter records live; array fields (subject, country, creator) are expanded so each element is counted separately. Pass-through output handle.
 - **FilterTransform** — three modes: *Filter* (conditions with AND/OR; operators: contains, =, starts with, >, <, is empty, not empty), *Transform* (Rename, Lowercase, Uppercase, Truncate, Extract, Concatenate), *Both* (filter then transform). Dot-notation field paths work (e.g. \`ariadne.contributor\`).
 - **SpatialFilter** — draw a bounding box on a Leaflet map; filters records to those within the bbox using decimalLatitude/decimalLongitude.
@@ -75,7 +77,7 @@ Records from every service are normalised to a shared **UnifiedRecord** schema b
 
 ## KEY TIPS AND GOTCHAS
 
-- **Run All skips LocalFolderSource, LocalFileSource, and FrameSenseSource** — they require a user gesture. Run them manually before clicking Run All.
+- **Run All skips LocalFolderSource, LocalFileSource, and FrameSenseSource** — they require a user gesture. Run them manually before clicking Run All. **SmartFilter** with no filter active passes through records unchanged — safe to include in Run All pipelines before a filter is configured.
 - **Fixture mode** (📦 toggle on search nodes) loads pre-baked results from public/fixtures/ for offline/workshop use. Bundled fixtures: stonehenge, wordsworth, roman coin across ARIADNE/GBIF/LLDS/MDS/Europeana.
 - **Deduplication scenario**: multiple search nodes of the same service → Deduplicate (field: id) → TableOutput removes overlapping records.
 - **Recommended Wikidata order**: Reconciliation → MergeByQID → WikidataEnrich — merge first so enrichment runs once per entity, not once per record.
