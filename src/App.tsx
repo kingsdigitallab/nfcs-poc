@@ -60,6 +60,7 @@ import type { MapOutputNodeData }          from './nodes/MapOutputNode'
 import type { SMGSearchNodeData }          from './nodes/SMGSearchNode'
 import type { VASearchNodeData }           from './nodes/VASearchNode'
 import type { GeocodingNodeData }          from './nodes/GeocodingNode'
+import type { FrameSenseSourceNodeData }  from './nodes/FrameSenseSourceNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -106,6 +107,7 @@ type AppNode =
   | Node<SMGSearchNodeData>
   | Node<VASearchNodeData>
   | Node<GeocodingNodeData>
+  | Node<FrameSenseSourceNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -213,6 +215,20 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       count:         0,
       columnNames:   [],
     } satisfies LocalFileSourceNodeData,
+  }),
+  frameSenseSource: pos => ({
+    id: newId('framesense'), type: 'frameSenseSource', position: pos,
+    data: {
+      folderName:      '',
+      status:          'idle',
+      statusMessage:   '',
+      collectionCount: 0,
+      videoCount:      0,
+      shotCount:       0,
+      frameCount:      0,
+      frameFilter:     'middle',
+      resultsVersion:  0,
+    } satisfies FrameSenseSourceNodeData,
   }),
   localFolderSource: pos => ({
     id: newId('folder'), type: 'localFolderSource', position: pos,
@@ -546,6 +562,7 @@ const SIDEBAR_ITEMS = [
   { type: 'vaSearch',          label: 'VASearch',              sub: 'Victoria and Albert Museum collections',    color: '#9f1239', group: 'Data Services' },
   { type: 'geocoding',         label: 'Geocoding',             sub: 'TGN + Wikidata place enrichment',           color: '#065f46', group: 'Extraction and Enrichment' },
   // ── Local Content ────────────────────────────────────────────────────────────
+  { type: 'frameSenseSource',  label: 'FrameSenseSource',      sub: 'Load pre-processed FrameSense video shots', color: '#1c2a3a', group: 'Local Content' },
   { type: 'localFileSource',   label: 'LocalFileSource',       sub: 'Single CSV, XML or image file',           color: '#0e7490', group: 'Local Content' },
   { type: 'localFolderSource', label: 'LocalFolderSource',     sub: 'Read files from local folder',            color: '#14532d', group: 'Local Content' },
   { type: 'loadSavedSearch',   label: 'LoadSavedSearch',       sub: 'Replay a .nfcs.json saved search',        color: '#4c1d95', group: 'Local Content' },
