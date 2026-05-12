@@ -360,6 +360,40 @@ app.use('/bodleian-proxy', createProxyMiddleware({
   on: { proxyReq: stripEncoding },
 }))
 
+app.use('/smg-proxy', createProxyMiddleware({
+  target: 'https://collection.sciencemuseumgroup.org.uk',
+  changeOrigin: true,
+  pathRewrite: { '^/smg-proxy': '' },
+  on: {
+    proxyReq: (proxyReq) => {
+      stripEncoding(proxyReq)
+      proxyReq.setHeader('User-Agent', DESKTOP_UA)
+      proxyReq.setHeader('Referer', 'https://collection.sciencemuseumgroup.org.uk/')
+    },
+  },
+}))
+
+app.use('/vam-proxy', createProxyMiddleware({
+  target: 'https://api.vam.ac.uk',
+  changeOrigin: true,
+  pathRewrite: { '^/vam-proxy': '' },
+  on: { proxyReq: stripEncoding },
+}))
+
+app.use('/tgn-proxy', createProxyMiddleware({
+  target: 'https://vocab.getty.edu',
+  changeOrigin: true,
+  pathRewrite: { '^/tgn-proxy': '' },
+  on: { proxyReq: stripEncoding },
+}))
+
+app.use('/getty-search-proxy', createProxyMiddleware({
+  target: 'https://www.getty.edu',
+  changeOrigin: true,
+  pathRewrite: { '^/getty-search-proxy': '' },
+  on: { proxyReq: stripEncoding },
+}))
+
 // ── Custom middleware ─────────────────────────────────────────────────────────
 
 app.use(adsLibrarySearchMiddleware)
