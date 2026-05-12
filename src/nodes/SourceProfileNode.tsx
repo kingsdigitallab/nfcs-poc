@@ -303,7 +303,8 @@ export function SourceProfileNode({ id, data }: NodeProps) {
   const { updateNodeData } = useReactFlow()
   const d = data as SourceProfileNodeData
 
-  const { records, count, connected } = useUpstreamRecords(id)
+  const { records: rawRecords, count, connected } = useUpstreamRecords(id)
+  const records = rawRecords ?? []
 
   // Pass-through fingerprint
   const prevFingerprintRef = useRef('')
