@@ -62,6 +62,7 @@ import type { VASearchNodeData }           from './nodes/VASearchNode'
 import type { GeocodingNodeData }          from './nodes/GeocodingNode'
 import type { FrameSenseSourceNodeData }  from './nodes/FrameSenseSourceNode'
 import type { SourceProfileNodeData }    from './nodes/SourceProfileNode'
+import type { SmartFilterNodeData }      from './nodes/SmartFilterNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -110,6 +111,7 @@ type AppNode =
   | Node<GeocodingNodeData>
   | Node<FrameSenseSourceNodeData>
   | Node<SourceProfileNodeData>
+  | Node<SmartFilterNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -373,6 +375,20 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       urlField: '_sourceUrl',
     } satisfies HTMLPreviewNodeData,
   }),
+  smartFilter: pos => ({
+    id: newId('smartFilter'), type: 'smartFilter', position: pos,
+    data: {
+      apiKey:          '',
+      model:           'arc:nano',
+      nlQuery:         '',
+      generatedFilter: null,
+      filterStatus:    'idle',
+      filterMessage:   '',
+      matchCount:      0,
+      totalCount:      0,
+      resultsVersion:  0,
+    } satisfies SmartFilterNodeData,
+  }),
   filterTransform: pos => ({
     id: newId('ft'), type: 'filterTransform', position: pos,
     data: {
@@ -584,6 +600,7 @@ const SIDEBAR_ITEMS = [
   { type: 'saveSearch',        label: 'SaveSearch',            sub: 'Save records + metadata to .nfcs.json',   color: '#1b4332', group: 'Local Content' },
   // ── Filters and Transforms ───────────────────────────────────────────────────
   { type: 'fieldDistribution', label: 'FieldDistribution',     sub: 'Faceted bar chart — click bars to filter', color: '#047857', group: 'Filters and Transforms' },
+  { type: 'smartFilter',       label: 'SmartFilter',           sub: 'Natural language → filter records',         color: '#0f4c81', group: 'Filters and Transforms' },
   { type: 'filterTransform',   label: 'FilterTransform',       sub: 'Filter + transform records',               color: '#4f46e5', group: 'Filters and Transforms' },
   { type: 'spatialFilter',     label: 'SpatialFilter',         sub: 'Draw bounding box to filter by location',  color: '#0891b2', group: 'Filters and Transforms' },
   { type: 'deduplicate',       label: 'Deduplicate',           sub: 'Remove duplicate records by field value',  color: '#0f766e', group: 'Filters and Transforms' },

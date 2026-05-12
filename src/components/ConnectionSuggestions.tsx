@@ -66,7 +66,7 @@ const DATA_SOURCES = new Set([
 ])
 
 const PROCESS_NODES = new Set([
-  'filterTransform', 'spatialFilter', 'reconciliation',
+  'filterTransform', 'spatialFilter', 'smartFilter', 'reconciliation',
   'urlFetch', 'htmlSection', 'xmlSection',
   'wikidataEnrich', 'mergeByQID', 'htmlPreview', 'deduplicate', 'geocoding',
 ])
@@ -87,6 +87,7 @@ const OUTPUT_SUITE: Suggestion[] = [
 ]
 
 const ENRICH_SUITE: Suggestion[] = [
+  { type: 'smartFilter',      label: 'SmartFilter',           sub: 'Natural language filter',       color: '#0f4c81', targetHandle: 'data' },
   { type: 'filterTransform',  label: 'FilterTransform',       sub: 'Filter + transform records',    color: '#4f46e5', targetHandle: 'data' },
   { type: 'deduplicate',      label: 'Deduplicate',           sub: 'Remove duplicate records',      color: '#0f766e', targetHandle: 'data' },
   { type: 'kclNode',          label: 'KingsInference',        sub: 'KCL inference on records',      color: '#881337', targetHandle: 'data' },
