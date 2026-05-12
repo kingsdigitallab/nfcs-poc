@@ -236,10 +236,11 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('profile'), type: 'sourceProfile', position: pos,
     data: {
       apiKey:          '',
-      model:           '',
+      model:           'arc:nano',
       researchQuestion:'',
       narrative:       '',
       narrativeStatus: 'idle',
+      maxTokens:       16384,
       resultsVersion:  0,
     } satisfies SourceProfileNodeData,
   }),
@@ -298,7 +299,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('kcl'), type: 'kclNode', position: pos,
     data: {
       apiKey:              '',
-      model:               'arc:lite',
+      model:               'arc:nano',
       systemPrompt:        'You are a research assistant helping to analyse humanities research documents and data.',
       userPromptTemplate:  'Summarise the key themes and subjects in 3-4 sentences:\n\n{{content}}',
       temperature:         0.7,
@@ -316,7 +317,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('kclField'), type: 'kclField', position: pos,
     data: {
       apiKey:              '',
-      model:               'arc:lite',
+      model:               'arc:nano',
       selectedField:       '',
       mode:                'per-record',
       systemPrompt:        'You are a research assistant helping to analyse humanities research data.',

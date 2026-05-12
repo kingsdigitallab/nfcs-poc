@@ -409,7 +409,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           ) : (
             <input style={styles.input} value={selectedModel}
               onChange={e => updateNodeData(id, { model: e.target.value })}
-              placeholder="arc:lite" className="nodrag" />
+              placeholder="arc:nano" className="nodrag" />
           )}
         </div>
 

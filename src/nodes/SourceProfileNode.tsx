@@ -20,6 +20,7 @@ export interface SourceProfileNodeData {
   researchQuestion: string
   narrative: string
   narrativeStatus: 'idle' | 'running' | 'success' | 'error'
+  maxTokens: number
   resultsVersion: number
   [key: string]: unknown
 }
@@ -82,6 +83,7 @@ async function kclChat(
   apiKey: string,
   model: string,
   prompt: string,
+  maxTokens: number,
   signal: AbortSignal,
   onToken: (acc: string) => void,
 ): Promise<string> {
@@ -89,7 +91,7 @@ async function kclChat(
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
     body: JSON.stringify({
-      model, stream: true, temperature: 0.4, max_tokens: 800,
+      model, stream: true, temperature: 0.4, max_tokens: maxTokens,
       messages: [
         { role: 'system', content: 'You are a research assistant helping to assess the quality and coverage of federated cultural heritage datasets.' },
         { role: 'user', content: prompt },
@@ -99,6 +101,21 @@ async function kclChat(
   })
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
   if (!res.body) throw new Error('No response body')
+
+  // Some models return plain JSON even when stream:true is requested.
+  // Detect by Content-Type and fall back gracefully.
+  const ct = res.headers.get('content-type') ?? ''
+  if (!ct.includes('text/event-stream')) {
+    const json = await res.json() as {
+      choices?: Array<{ message?: { content?: string }; text?: string }>
+    }
+    const content =
+      json.choices?.[0]?.message?.content ??
+      json.choices?.[0]?.text ??
+      ''
+    onToken(content)
+    return content
+  }
 
   const reader = res.body.getReader()
   const decoder = new TextDecoder()
@@ -116,12 +133,16 @@ async function kclChat(
       const payload = trimmed.slice(5).trim()
       if (payload === '[DONE]') return accumulated
       try {
-        const chunk = JSON.parse(payload) as { choices?: Array<{ delta?: { content?: string } }> }
-        const content = chunk.choices?.[0]?.delta?.content
+        const chunk = JSON.parse(payload) as {
+          choices?: Array<{ delta?: { content?: string }; text?: string }>
+        }
+        // Support both delta.content (OpenAI style) and text (some compat APIs)
+        const content = chunk.choices?.[0]?.delta?.content ?? chunk.choices?.[0]?.text
         if (content) { accumulated += content; onToken(accumulated) }
-      } catch { /* skip malformed */ }
+      } catch { /* skip malformed chunk */ }
     }
   }
+  // Stream ended without [DONE] — return whatever was accumulated
   return accumulated
 }
 
@@ -437,9 +458,11 @@ export function SourceProfileNode({ id, data }: NodeProps) {
 
   // KCL state
   const [apiKey, setApiKey] = useState((d.apiKey as string) || '')
-  const [model, setModel] = useState((d.model as string) || '')
+  const [model, setModel] = useState((d.model as string) || 'arc:nano')
   const [models, setModels] = useState<string[]>([])
   const [showKey, setShowKey] = useState(false)
+  const [showAdvanced, setShowAdvanced] = useState(false)
+  const [maxTokens, setMaxTokens] = useState((d.maxTokens as number | undefined) ?? 16384)
   const [researchQ, setResearchQ] = useState((d.researchQuestion as string) || '')
   const [narrative, setNarrative] = useState((d.narrative as string) || '')
   const [generating, setGenerating] = useState(false)
@@ -455,6 +478,9 @@ export function SourceProfileNode({ id, data }: NodeProps) {
   const persistResearchQ = useCallback((v: string) => {
     setResearchQ(v); updateNodeData(id, { researchQuestion: v })
   }, [id, updateNodeData])
+  const persistMaxTokens = useCallback((v: number) => {
+    setMaxTokens(v); updateNodeData(id, { maxTokens: v })
+  }, [id, updateNodeData])
 
   // Fetch models when API key is set
   useEffect(() => {
@@ -464,7 +490,10 @@ export function SourceProfileNode({ id, data }: NodeProps) {
       .then((j: { data?: Array<{ id: string }> }) => {
         const ids = j.data?.map((m: { id: string }) => m.id) ?? []
         setModels(ids)
-        if (!model && ids.length > 0) persistModel(ids[0])
+        if (!model || model === 'arc:nano') {
+          const nano = ids.find(id => id === 'arc:nano') ?? ids[0]
+          if (nano) persistModel(nano)
+        }
       })
       .catch(() => { /* silently ignore */ })
   }, [apiKey]) // eslint-disable-line react-hooks/exhaustive-deps
@@ -479,7 +508,7 @@ export function SourceProfileNode({ id, data }: NodeProps) {
     updateNodeData(id, { narrativeStatus: 'running', narrative: '' })
     try {
       const prompt = buildNarrativePrompt(profileSections, researchQ)
-      const result = await kclChat(apiKey, model, prompt, ctrl.signal, (acc) => {
+      const result = await kclChat(apiKey, model, prompt, maxTokens, ctrl.signal, (acc) => {
         setNarrative(acc)
       })
       setNarrative(result)
@@ -493,12 +522,17 @@ export function SourceProfileNode({ id, data }: NodeProps) {
     } finally {
       setGenerating(false)
     }
-  }, [apiKey, model, profileSections, researchQ, id, updateNodeData])
+  }, [apiKey, model, maxTokens, profileSections, researchQ, id, updateNodeData])
 
   const handleStop = useCallback(() => {
     abortRef.current?.abort()
     setGenerating(false)
   }, [])
+
+  const handleClearNarrative = useCallback(() => {
+    setNarrative('')
+    updateNodeData(id, { narrative: '', narrativeStatus: 'idle' })
+  }, [id, updateNodeData])
 
   const allProfiles = useMemo(() => getAllProfiles(), [])
   const noSourceDetected = connected && records.length > 0 && sourcesDetected.length === 0
@@ -622,12 +656,12 @@ export function SourceProfileNode({ id, data }: NodeProps) {
                 {models.map(m => <option key={m} value={m}>{m}</option>)}
               </select>
             )}
-            {models.length === 0 && model && (
+            {models.length === 0 && (
               <input
                 type="text"
                 value={model}
                 onChange={e => persistModel(e.target.value)}
-                placeholder="Model name"
+                placeholder="arc:nano"
                 style={{
                   width: '100%', boxSizing: 'border-box', background: '#1f2937',
                   border: '1px solid #374151', borderRadius: 3,
@@ -636,7 +670,32 @@ export function SourceProfileNode({ id, data }: NodeProps) {
               />
             )}
 
-            {/* Generate / Stop buttons */}
+            {/* Advanced: max tokens */}
+            <button
+              onClick={() => setShowAdvanced(s => !s)}
+              style={{ fontSize: 9, color: '#4b5563', background: 'none', border: 'none', cursor: 'pointer', padding: '0 0 4px', display: 'block' }}
+            >
+              {showAdvanced ? '▲' : '▶'} Advanced
+            </button>
+            {showAdvanced && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
+                <label style={{ fontSize: 10, color: '#9ca3af', whiteSpace: 'nowrap' }}>Max tokens</label>
+                <input
+                  type="number"
+                  value={maxTokens}
+                  min={512}
+                  max={131072}
+                  step={1024}
+                  onChange={e => persistMaxTokens(Number(e.target.value))}
+                  style={{
+                    flex: 1, background: '#1f2937', border: '1px solid #374151', borderRadius: 3,
+                    color: '#f9fafb', fontSize: 10, padding: '3px 6px',
+                  }}
+                />
+              </div>
+            )}
+
+            {/* Generate / Stop / Clear buttons */}
             <div style={{ display: 'flex', gap: 4, marginBottom: 6 }}>
               <button
                 onClick={handleGenerate}
@@ -655,6 +714,15 @@ export function SourceProfileNode({ id, data }: NodeProps) {
                   style={{ background: '#7f1d1d', color: '#fca5a5', border: 'none', borderRadius: 3, fontSize: 11, padding: '4px 8px', cursor: 'pointer' }}
                 >
                   Stop
+                </button>
+              )}
+              {narrative && !generating && (
+                <button
+                  onClick={handleClearNarrative}
+                  style={{ background: '#374151', color: '#9ca3af', border: 'none', borderRadius: 3, fontSize: 11, padding: '4px 8px', cursor: 'pointer' }}
+                  title="Clear narrative"
+                >
+                  ✕
                 </button>
               )}
             </div>
