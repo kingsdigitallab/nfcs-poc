@@ -507,7 +507,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     return extractManifestEntries(records as Record<string, unknown>[])
   }, [records])
 
-  const selectedField    = d.selectedField || availableFields[0] || ''
+  const selectedField    = (d.selectedField as string | undefined) ?? ''
   const imageDirectUrl   = String(d.imageDirectUrl || '')
   const safeRecordIndex  = records?.length ? Math.min(recordIndex, records.length - 1) : 0
   const currentRecord    = (records?.[safeRecordIndex] ?? {}) as Record<string, unknown>
@@ -733,7 +733,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
                     style={s.fieldSelect}
                     value={selectedField}
                     onChange={e => { updateNodeData(id, { selectedField: e.target.value }); setRecordIndex(0) }}
-                    placeholder="field or dot.path"
+                    placeholder="Start typing field name to select…"
                     className="nodrag"
                     spellCheck={false}
                   />
