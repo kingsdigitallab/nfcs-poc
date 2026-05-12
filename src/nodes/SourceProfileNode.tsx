@@ -298,6 +298,67 @@ function buildNarrativePrompt(
   return lines.join('\n')
 }
 
+// ── Suggested connections ─────────────────────────────────────────────────────
+
+interface Suggestion { node: string; reason: string; color: string }
+
+function SuggestedConnections({ records }: { records: Record<string, unknown>[] }) {
+  const suggestions = useMemo((): Suggestion[] => {
+    const out: Suggestion[] = []
+    const first = records[0] ?? {}
+
+    // TableOutput — always useful
+    out.push({ node: 'TableOutput', reason: 'browse and filter all records', color: '#0d9488' })
+
+    // MapOutput — if coordinates are populated
+    const hasCoords = records.some(r => r.decimalLatitude != null && r.decimalLongitude != null)
+    if (hasCoords) out.push({ node: 'MapOutput', reason: 'plot records by lat/lon', color: '#14532d' })
+
+    // TimelineView — if date field is populated
+    const hasDates = records.some(r => r.date != null && r.date !== '')
+    if (hasDates) out.push({ node: 'TimelineView', reason: 'filter by date range', color: '#1e293b' })
+
+    // ImageView (IIIF) — if any manifest field is detected
+    const iiifKeys = ['bodleian.manifest', 'smg.manifest', 'vam.manifest', 'europeana.edmIsShownBy']
+    const hasIIIF = iiifKeys.some(k => records.some(r => resolveField(r as Record<string, unknown>, k) != null))
+    if (hasIIIF) out.push({ node: 'ImageView', reason: 'IIIF manifest viewer', color: '#1c3144' })
+
+    // Export — if there are any records to save
+    out.push({ node: 'Export', reason: 'download as CSV / JSON / GeoJSON', color: '#b45309' })
+
+    // KCLField — if there are text-rich fields worth summarising
+    const hasText = records.some(r => typeof r.description === 'string' && (r.description as string).length > 80)
+    if (hasText) out.push({ node: 'KingsInferenceByField', reason: 'run AI analysis on description field', color: '#7f1d1d' })
+
+    return out
+  }, [records])
+
+  return (
+    <div style={{ borderTop: '1px solid #374151', marginTop: 10, paddingTop: 8, marginBottom: 2 }}>
+      <div style={{ fontSize: 10, color: '#6b7280', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>
+        Connect output to
+      </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
+        {suggestions.map(s => (
+          <div
+            key={s.node}
+            title={s.reason}
+            style={{
+              background: s.color, color: '#f9fafb', fontSize: 10, fontWeight: 600,
+              padding: '2px 7px', borderRadius: 10, cursor: 'default',
+            }}
+          >
+            {s.node}
+          </div>
+        ))}
+      </div>
+      <div style={{ fontSize: 9, color: '#4b5563', marginTop: 4 }}>
+        Hover a chip for details. Drag from the output handle on the right.
+      </div>
+    </div>
+  )
+}
+
 // ── Main component ────────────────────────────────────────────────────────────
 
 export function SourceProfileNode({ id, data }: NodeProps) {
@@ -504,6 +565,11 @@ export function SourceProfileNode({ id, data }: NodeProps) {
             <span style={{ color: '#6b7280' }}>Available: {allProfiles.map(p => p.source).join(', ')}</span>
           </div>
         ))}
+
+        {/* Suggested downstream connections */}
+        {records.length > 0 && (
+          <SuggestedConnections records={records} />
+        )}
 
         {/* KCL narrative section */}
         {profileSections.length > 0 && (
