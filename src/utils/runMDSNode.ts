@@ -35,7 +35,7 @@ export const runMDSNode: NodeRunner = async (
 
   const query    = resolve('query', 'inlineQuery').trim()
   const rawLimit = parseInt(resolve('limit', 'inlineLimit') || '20', 10)
-  const limit    = isNaN(rawLimit) || rawLimit < 1 ? 20 : Math.min(rawLimit, 200)
+  const limit    = isNaN(rawLimit) || rawLimit < 1 ? 20 : rawLimit
 
   if (!query) {
     updateNodeData(nodeId, {

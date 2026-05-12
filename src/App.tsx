@@ -138,6 +138,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     data: {
       inlineQ: '', inlineScientificName: '', inlineCountry: '',
       inlineYear: '', inlineLimit: '20',
+      fetchAll: false,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     },
   }),
