@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback, createContext, useContext } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { filterKCLModels } from '../utils/kclConfig'
+import { filterKCLModels, DEFAULT_KCL_API_KEY } from '../utils/kclConfig'
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
@@ -173,7 +173,7 @@ function MdContent({ children }: { children: string }) {
 // ── Component ──────────────────────────────────────────────────────────────────
 
 export function ChatSidebar({ isOpen, onToggle }: Props) {
-  const [apiKey, setApiKey]             = useState('')
+  const [apiKey, setApiKey]             = useState(DEFAULT_KCL_API_KEY)
   const [model, setModel]               = useState(() => localStorage.getItem('kcl_chat_model') ?? '')
   const [systemPrompt, setSystemPrompt] = useState(() => {
     const storedVersion = localStorage.getItem('kcl_chat_system_version')
