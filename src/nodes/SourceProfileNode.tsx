@@ -10,6 +10,7 @@ import { setNodeResults, getNodeResults } from '../store/resultsStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { getSourceProfile, getAllProfiles } from '../data/sourceProfiles'
+import { filterKCLModels } from '../utils/kclConfig'
 import type { SourceProfile, FieldProfile } from '../data/sourceProfiles'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
@@ -488,7 +489,7 @@ export function SourceProfileNode({ id, data }: NodeProps) {
     fetch(KCL_MODELS, { headers: { Authorization: `Bearer ${apiKey}` } })
       .then(r => r.json())
       .then((j: { data?: Array<{ id: string }> }) => {
-        const ids = j.data?.map((m: { id: string }) => m.id) ?? []
+        const ids = filterKCLModels(j.data?.map((m: { id: string }) => m.id) ?? [])
         setModels(ids)
         if (!model || model === 'arc:nano') {
           const nano = ids.find(id => id === 'arc:nano') ?? ids[0]

@@ -1,5 +1,6 @@
 import { useCallback, useRef, useState } from 'react'
 import { newId, bumpCounterPast } from './utils/nodeIdCounter'
+import { DEFAULT_KCL_API_KEY } from './utils/kclConfig'
 import { downloadWorkflow, parseWorkflowFile, hydrateNodes } from './utils/workflowIO'
 import {
   ReactFlow,
@@ -250,7 +251,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   sourceProfile: pos => ({
     id: newId('profile'), type: 'sourceProfile', position: pos,
     data: {
-      apiKey:          '',
+      apiKey:          DEFAULT_KCL_API_KEY,
       model:           'arc:nano',
       researchQuestion:'',
       narrative:       '',
@@ -313,7 +314,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   kclNode: pos => ({
     id: newId('kcl'), type: 'kclNode', position: pos,
     data: {
-      apiKey:              '',
+      apiKey:              DEFAULT_KCL_API_KEY,
       model:               'arc:nano',
       systemPrompt:        'You are a research assistant helping to analyse humanities research documents and data.',
       userPromptTemplate:  'Summarise the key themes and subjects in 3-4 sentences:\n\n{{content}}',
@@ -331,7 +332,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   kclField: pos => ({
     id: newId('kclField'), type: 'kclField', position: pos,
     data: {
-      apiKey:              '',
+      apiKey:              DEFAULT_KCL_API_KEY,
       model:               'arc:nano',
       selectedField:       '',
       mode:                'per-record',
@@ -391,7 +392,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   smartFilter: pos => ({
     id: newId('smartFilter'), type: 'smartFilter', position: pos,
     data: {
-      apiKey:          '',
+      apiKey:          DEFAULT_KCL_API_KEY,
       model:           'arc:nano',
       nlQuery:         '',
       generatedFilter:    null,
