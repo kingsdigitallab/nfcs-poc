@@ -11,6 +11,7 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { filterKCLModels } from '../utils/kclConfig'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -157,7 +158,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const json = await res.json() as { data?: Array<{ id: string }> }
         if (cancelled) return
-        const ids = (json.data ?? []).map(m => m.id).sort()
+        const ids = filterKCLModels((json.data ?? []).map(m => m.id)).sort()
         setModels(ids)
         setApiOk(true)
         if (!d.model && ids.length > 0) updateNodeData(id, { model: ids[0] })

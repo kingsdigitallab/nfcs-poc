@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback, createContext, useContext } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { filterKCLModels } from '../utils/kclConfig'
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
@@ -221,7 +222,7 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const json = await res.json() as { data?: Array<{ id: string }> }
         if (cancelled) return
-        const ids = (json.data ?? []).map(m => m.id).sort()
+        const ids = filterKCLModels((json.data ?? []).map(m => m.id)).sort()
         setModels(ids)
         setApiOk(true)
         setModel(prev => prev || ids.find(id => id === 'arc:lite') || ids[0] || '')

@@ -11,6 +11,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
 import { setNodeResults } from '../store/resultsStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
+import { filterKCLModels } from '../utils/kclConfig'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -368,7 +369,7 @@ export function SmartFilterNode({ id, data }: NodeProps) {
     fetch(KCL_MODELS, { headers: { Authorization: `Bearer ${apiKey}` } })
       .then(r => r.json())
       .then((j: { data?: Array<{ id: string }> }) => {
-        const ids = j.data?.map(m => m.id) ?? []
+        const ids = filterKCLModels(j.data?.map(m => m.id) ?? [])
         setModels(ids)
         if (ids.length > 0 && (!model || model === 'arc:nano')) {
           const nano = ids.find(id => id === 'arc:nano') ?? ids[0]
