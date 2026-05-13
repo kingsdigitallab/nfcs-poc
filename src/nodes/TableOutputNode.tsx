@@ -32,6 +32,15 @@ const DEFAULT_COLS = [
 
 const PAGE_SIZES = [10, 25, 50, 100] as const
 
+const CORE_UNIFIED_FIELDS = new Set([
+  'id', 'title', 'description', 'creator', 'date', 'subject', 'language',
+  'type', 'format', 'collection', 'spatialCoverage', 'country',
+  'periodStart', 'periodEnd', 'periodName',
+  'scientificName', 'kingdom', 'phylum', 'class', 'order', 'family',
+  'genus', 'species', 'eventDate', 'decimalLatitude', 'decimalLongitude',
+  'basisOfRecord', 'institutionCode', 'datasetName',
+])
+
 /**
  * All displayable columns across records.
  * Arrays count as flat (creator, subject). Plain nested objects are service
@@ -149,6 +158,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
           {columns.map(col => {
             const w        = colWidths[col] ?? DEFAULT_COL_W
             const isActive = sortCol === col
+            const isCore   = CORE_UNIFIED_FIELDS.has(col)
             const title    = isActive
               ? sortDir === 'asc' ? 'Sorted A→Z — click for Z→A' : 'Sorted Z→A — click to clear'
               : `Sort by ${col}`
@@ -159,19 +169,26 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
                   ...thStyle, padding: pad,
                   width: w, minWidth: w, maxWidth: w,
                   cursor: 'pointer', userSelect: 'none',
-                  background: isActive ? '#e5e7eb' : '#f3f4f6',
+                  background: isActive ? '#e5e7eb' : isCore ? '#f0fdf4' : '#f3f4f6',
                 }}
                 onClick={() => onSort?.(col)}
                 title={title}
               >
-                <span style={{ display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', paddingRight: 6 }}>
-                  {col}
-                  {isActive && (
-                    <span style={{ marginLeft: 3, fontSize: '0.85em' }}>
-                      {sortDir === 'asc' ? '▲' : '▼'}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 4, overflow: 'hidden' }}>
+                  <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flexShrink: 1, minWidth: 0 }}>
+                    {col}
+                    {isActive && (
+                      <span style={{ marginLeft: 3, fontSize: '0.85em' }}>
+                        {sortDir === 'asc' ? '▲' : '▼'}
+                      </span>
+                    )}
+                  </span>
+                  {isCore && (
+                    <span style={{ flexShrink: 0, fontSize: 9, lineHeight: 1.4, fontWeight: 600, background: '#bbf7d0', color: '#15803d', borderRadius: 3, padding: '1px 4px' }}>
+                      core
                     </span>
                   )}
-                </span>
+                </div>
                 {/* Resize handle — stopPropagation prevents triggering the sort click */}
                 <div
                   className="nodrag"
