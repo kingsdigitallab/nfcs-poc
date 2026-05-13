@@ -656,7 +656,7 @@ export default function App() {
   const [runningAll, setRunningAll] = useState(false)
   const [expandedNodeId, setExpandedNodeId] = useState<string | null>(null)
   const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set(['Data Services', 'Local Content', 'Filters and Transforms', 'Extraction and Enrichment', 'Output']))
-  const [chatOpen, setChatOpen] = useState(false)
+  const [chatOpen, setChatOpen] = useState(true)
 
   const [connMenu, setConnMenu] = useState<{
     x: number; y: number
