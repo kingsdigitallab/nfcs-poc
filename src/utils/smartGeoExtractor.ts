@@ -1,69 +1,99 @@
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const TIMEOUT_MS = 25_000
 
-// Fields never useful for place inference
+// Fields to always exclude
 const SKIP_FIELDS = new Set([
-  '_source', '_sourceId', '_sourceUrl', '_pid', '_cached', '_citation',
-  'decimalLatitude', 'decimalLongitude', 'id', 'resultsVersion',
+  'id', 'resultsVersion', 'fetchedContent', 'fetchedHtml',
+  'fetchStatus', 'fetchedAt', 'ollamaResponse',
 ])
 
-// Namespace blob keys — excluded from scanning by default
+// Namespace blob keys — excluded from scanning
 const NAMESPACE_KEYS = new Set([
   'gbif', 'llds', 'ads', 'adsLibrary', 'mds', 'europeana',
   'ariadne', 'smg', 'vam', 'geocoding',
 ])
 
-const SYSTEM_PROMPT = `You are a geographic entity extractor for cultural heritage museum and archive records.
-Given a set of field values from a single record, extract all geographic search terms that could be used to locate the record on a map.
+// Field name suffixes/patterns that carry no geographic signal
+const SKIP_NAME_RE = /(_id|url|uri|thumbnail|image|date|version|status|count|message|content|html|cached|pid|source)$/i
 
-Rules:
-1. Extract explicit place names: "Village in Norfolk" → ["Norfolk"]
-2. Convert adjectival/cultural forms to the proper geographic noun:
-   - "Scottish" → "Scotland"
-   - "Indian headdress" → "India"
-   - "Roman pottery" → "Rome"
-   - "Byzantine icon" → "Constantinople"
-   - "Aztec calendar" → "Mexico"
-   - "Viking brooch" → "Scandinavia"
-   - "Aboriginal bark painting" → "Australia"
-   - "Inuit carving" → "Arctic Canada"
-3. Accept partial or indirect references: "Made in the Low Countries" → ["Netherlands", "Belgium"]
-4. Named regions and historical territories are valid: "Mesopotamia", "Persia", "Anatolia"
-5. Return 1–5 terms, most specific and most likely first
-6. Exclude purely generic terms ("local", "regional", "foreign", "exotic", "unknown", "various")
-7. Exclude purely temporal terms (years, centuries) and purely material terms (bronze, clay, wood)
+// Highest-signal fields — sent first, within character budget
+const PRIORITY_FIELDS = [
+  'title', 'description', 'subject', 'spatialCoverage',
+  'country', 'collection', 'periodName', 'creator', 'type',
+]
 
-Return ONLY valid JSON in this exact format with no surrounding text:
-{"terms": ["term1", "term2"]}
+function isSkippable(key: string, value: unknown): boolean {
+  if (SKIP_FIELDS.has(key))      return true
+  if (NAMESPACE_KEYS.has(key))   return true
+  if (/^_/.test(key))            return true   // all internal _ prefixed fields
+  if (SKIP_NAME_RE.test(key))    return true
+  // Skip values that are plain URLs
+  if (typeof value === 'string' && /^https?:\/\//.test(value.trim())) return true
+  return false
+}
 
-If no geographic terms can be inferred, return: {"terms": []}`
-
-/** Collect all scannable text fields from a record. */
+/** Collect fields worth scanning, priority fields first. */
 export function collectScanFields(record: Record<string, unknown>): string[] {
-  return Object.keys(record).filter(k => {
-    if (SKIP_FIELDS.has(k) || NAMESPACE_KEYS.has(k)) return false
+  const priority: string[] = []
+  const rest: string[]     = []
+  for (const k of Object.keys(record)) {
     const v = record[k]
-    if (v === null || v === undefined) return false
-    return typeof v === 'string' || Array.isArray(v)
-  })
+    if (v === null || v === undefined) continue
+    if (isSkippable(k, v)) continue
+    if (typeof v !== 'string' && !Array.isArray(v)) continue
+    if (PRIORITY_FIELDS.includes(k)) priority.push(k)
+    else rest.push(k)
+  }
+  // Return priority fields in declared order, then everything else
+  return [
+    ...PRIORITY_FIELDS.filter(f => priority.includes(f)),
+    ...rest,
+  ]
 }
 
 function buildFieldText(record: Record<string, unknown>, fields: string[]): string {
   const lines: string[] = []
+  let budget = 600
   for (const field of fields) {
-    if (SKIP_FIELDS.has(field) || NAMESPACE_KEYS.has(field)) continue
+    if (budget <= 0) break
     const val = record[field]
     if (val === null || val === undefined || val === '') continue
-    const str = Array.isArray(val) ? (val as unknown[]).map(String).join('; ') : String(val)
-    const trimmed = str.trim()
-    if (trimmed) lines.push(`${field}: ${trimmed.slice(0, 300)}`)
+    const str = (Array.isArray(val) ? (val as unknown[]).map(String).join('; ') : String(val)).trim()
+    if (!str) continue
+    const line = `${field}: ${str.slice(0, Math.min(budget, 200))}`
+    lines.push(line)
+    budget -= line.length
   }
   return lines.join('\n')
 }
 
+// Lean prompt — fewer words means the reasoning model spends less time re-reading rules
+const SYSTEM_PROMPT = `Extract 1–3 place names from this museum/archive record for geocoding.
+
+- Institution names → their city: "Bodleian Library" → "Oxford", "V&A" → "London", "British Museum" → "London"
+- Adjective/cultural forms → proper nouns: "Scottish" → "Scotland", "Indian headdress" → "India", "Roman" → "Rome", "Byzantine" → "Constantinople"
+- The country field is a valid coarse fallback when no specific place is evident
+- Skip: years, centuries, people's names, raw materials (wood, bronze), generic words (local, foreign, unknown)
+
+Return ONLY valid JSON, nothing else: {"terms": ["most specific first", "broader fallback"]}
+No place found: {"terms": []}`
+
+function parseTerms(content: string): string[] {
+  try {
+    const match = content.match(/\{[\s\S]*?"terms"[\s\S]*?\}/)
+    if (!match) return []
+    const parsed = JSON.parse(match[0]) as { terms?: unknown }
+    if (!Array.isArray(parsed.terms)) return []
+    return (parsed.terms as unknown[])
+      .filter((t): t is string => typeof t === 'string' && t.trim().length > 1)
+      .map(t => t.trim())
+      .slice(0, 3)
+  } catch { return [] }
+}
+
 /**
  * Ask KCL to extract geographic search terms from one record's fields.
- * Returns up to 5 terms in descending specificity order.
+ * Falls back to the `country` field if the LLM returns nothing.
  */
 export async function extractPlaceTerms(
   record:  Record<string, unknown>,
@@ -72,14 +102,20 @@ export async function extractPlaceTerms(
   model:   string,
 ): Promise<string[]> {
   const fieldText = buildFieldText(record, fields)
-  if (!fieldText.trim()) return []
+
+  // Country fallback helper
+  const countryFallback = (): string[] => {
+    const c = record['country']
+    if (!c) return []
+    const s = (Array.isArray(c) ? (c as unknown[])[0] : c) as string
+    return s?.trim() ? [s.trim()] : []
+  }
+
+  if (!fieldText.trim()) return countryFallback()
 
   const res = await fetch(KCL_CHAT, {
     method:  'POST',
-    headers: {
-      'Content-Type':  'application/json',
-      'Authorization': `Bearer ${apiKey}`,
-    },
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
     body: JSON.stringify({
       model,
       stream:      false,
@@ -97,17 +133,7 @@ export async function extractPlaceTerms(
 
   const json    = await res.json() as { choices?: Array<{ message?: { content?: string } }> }
   const content = json.choices?.[0]?.message?.content?.trim() ?? ''
+  const terms   = parseTerms(content)
 
-  try {
-    const match = content.match(/\{[\s\S]*"terms"[\s\S]*\}/)
-    if (!match) return []
-    const parsed = JSON.parse(match[0]) as { terms?: unknown }
-    if (!Array.isArray(parsed.terms)) return []
-    return (parsed.terms as unknown[])
-      .filter((t): t is string => typeof t === 'string' && t.trim().length > 1)
-      .map(t => t.trim())
-      .slice(0, 5)
-  } catch {
-    return []
-  }
+  return terms.length > 0 ? terms : countryFallback()
 }
