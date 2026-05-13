@@ -27,10 +27,16 @@ export function scoreCandidates(
     raw.filter(c => c.source === 'tgn').map(c => c.uri),
   )
 
-  const tierWeight = (source: 'tgn' | 'wikidata'): number => {
-    if (domain === 'humanities') return source === 'tgn' ? 0.9 : 0.7
-    // Natural history: invert — Wikidata has broader contemporary coverage
-    return source === 'wikidata' ? 0.9 : 0.7
+  const tierWeight = (source: 'tgn' | 'wikidata' | 'nominatim'): number => {
+    if (domain === 'humanities') {
+      if (source === 'tgn')      return 0.9
+      if (source === 'wikidata') return 0.7
+      return 0.6  // nominatim
+    }
+    // Natural history: Wikidata has broader contemporary coverage
+    if (source === 'wikidata') return 0.9
+    if (source === 'nominatim') return 0.75
+    return 0.7  // tgn
   }
 
   const isCorroborated = (c: GeoCandidate): boolean => {

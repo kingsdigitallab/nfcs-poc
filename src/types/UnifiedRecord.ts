@@ -125,20 +125,21 @@ export interface UnifiedRecord {
   /** Full geocoding result from GeocodingNode */
   geocoding?: {
     geocoded:            'auto' | 'native' | 'pending_review' | 'manual' | 'failed'
-    geocode_source?:     'tgn' | 'wikidata' | 'native'
+    geocode_source?:     'tgn' | 'wikidata' | 'nominatim' | 'native'
     geocode_uri?:        string
     geocode_candidates?: GeoCandidate[]
     place_raw?:          string
     place_cleaned?:      string
+    place_terms?:        string[]   // all terms extracted by LLM (SmartGeocoder)
     confidence?:         number
   }
 
   // ckan?: Record<string, unknown>
 }
 
-/** A single gazetteer candidate returned by TGN or Wikidata during geocoding. */
+/** A single gazetteer candidate returned by TGN, Wikidata, or Nominatim during geocoding. */
 export interface GeoCandidate {
-  source:       'tgn' | 'wikidata'
+  source:       'tgn' | 'wikidata' | 'nominatim'
   uri:          string
   label:        string
   lat:          number
