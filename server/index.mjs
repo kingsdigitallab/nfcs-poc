@@ -394,6 +394,19 @@ app.use('/getty-search-proxy', createProxyMiddleware({
   on: { proxyReq: stripEncoding },
 }))
 
+app.use('/nominatim-proxy', createProxyMiddleware({
+  target: 'https://nominatim.openstreetmap.org',
+  changeOrigin: true,
+  pathRewrite: { '^/nominatim-proxy': '' },
+  on: {
+    proxyReq: (proxyReq) => {
+      stripEncoding(proxyReq)
+      proxyReq.setHeader('User-Agent', 'iDAH-Federation-PoC/1.0 (https://github.com/kingsdigitallab/nfcs-poc)')
+      proxyReq.setHeader('Accept-Language', 'en')
+    },
+  },
+}))
+
 // ── Custom middleware ─────────────────────────────────────────────────────────
 
 app.use(adsLibrarySearchMiddleware)
