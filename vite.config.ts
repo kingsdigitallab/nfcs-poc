@@ -457,6 +457,16 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: path => path.replace(/^\/getty-search-proxy/, ''),
       },
+      // Proxy /nominatim-proxy/* → https://nominatim.openstreetmap.org/*
+      '/nominatim-proxy': {
+        target: 'https://nominatim.openstreetmap.org',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/nominatim-proxy/, ''),
+        headers: {
+          'User-Agent': 'iDAH-Federation-PoC/1.0 (https://github.com/kingsdigitallab/nfcs-poc)',
+          'Accept-Language': 'en',
+        },
+      },
     },
   },
   plugins: [

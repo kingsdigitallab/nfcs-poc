@@ -40,6 +40,7 @@ import { DeduplicateNode }          from './DeduplicateNode'
 import { SMGSearchNode }            from './SMGSearchNode'
 import { VASearchNode }             from './VASearchNode'
 import { GeocodingNode }            from './GeocodingNode'
+import { SmartGeocoderNode }       from './SmartGeocoderNode'
 import { FrameSenseSourceNode }     from './FrameSenseSourceNode'
 import { SourceProfileNode }        from './SourceProfileNode'
 import { SmartFilterNode }          from './SmartFilterNode'
@@ -89,6 +90,7 @@ export const nodeTypes = {
   smgSearch:         withDuplicate(SMGSearchNode),
   vaSearch:          withDuplicate(VASearchNode),
   geocoding:         withDuplicate(GeocodingNode),
+  smartGeocoder:     withDuplicate(SmartGeocoderNode),
   frameSenseSource:  withDuplicate(FrameSenseSourceNode),
   sourceProfile:     withDuplicate(SourceProfileNode),
   smartFilter:       withDuplicate(SmartFilterNode),

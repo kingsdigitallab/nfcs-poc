@@ -35,6 +35,7 @@ import { runMapOutputNode }       from './runMapOutputNode'
 import { runSMGSearchNode }       from './runSMGSearchNode'
 import { runVASearchNode }        from './runVASearchNode'
 import { runGeocodingNode }       from './runGeocodingNode'
+import { runSmartGeocoderNode }  from './runSmartGeocoderNode'
 import { withFixture }            from './fixtureUtils'
 
 /**
@@ -81,5 +82,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   smgSearch:         withFixture('smgSearch', runSMGSearchNode),
   vaSearch:          withFixture('vaSearch',  runVASearchNode),
   geocoding:         runGeocodingNode,
+  smartGeocoder:     runSmartGeocoderNode,
 }
 

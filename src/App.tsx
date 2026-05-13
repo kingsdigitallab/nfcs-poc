@@ -64,6 +64,7 @@ import type { GeocodingNodeData }          from './nodes/GeocodingNode'
 import type { FrameSenseSourceNodeData }  from './nodes/FrameSenseSourceNode'
 import type { SourceProfileNodeData }    from './nodes/SourceProfileNode'
 import type { SmartFilterNodeData }      from './nodes/SmartFilterNode'
+import type { SmartGeocoderNodeData }   from './nodes/SmartGeocoderNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -113,11 +114,12 @@ type AppNode =
   | Node<FrameSenseSourceNodeData>
   | Node<SourceProfileNodeData>
   | Node<SmartFilterNodeData>
+  | Node<SmartGeocoderNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
 
-const KCL_API_KEY_NODES = new Set(['kclNode', 'kclField', 'sourceProfile', 'smartFilter'])
+const KCL_API_KEY_NODES = new Set(['kclNode', 'kclField', 'sourceProfile', 'smartFilter', 'smartGeocoder'])
 
 function findSharedApiKey(nodes: Node[]): string {
   for (const node of nodes) {
@@ -211,6 +213,24 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       confirmedChoices: {},
       status: 'idle', statusMessage: '', resolved: 0, pending: 0, failed: 0,
     } satisfies GeocodingNodeData,
+  }),
+  smartGeocoder: pos => ({
+    id: newId('sgeo'), type: 'smartGeocoder', position: pos,
+    data: {
+      apiKey:              DEFAULT_KCL_API_KEY,
+      model:               'arc:lite',
+      scanAllFields:       true,
+      selectedFields:      [],
+      confidenceThreshold: 0.6,
+      passNativeCoords:    true,
+      showReviewPanel:     true,
+      confirmedChoices:    {},
+      status:              'idle',
+      statusMessage:       '',
+      resolved:            0,
+      pending:             0,
+      failed:              0,
+    } satisfies SmartGeocoderNodeData,
   }),
   mdsSearch: pos => ({
     id: newId('mds'), type: 'mdsSearch', position: pos,
@@ -606,7 +626,8 @@ const SIDEBAR_ITEMS = [
   { type: 'mdsSearch',         label: 'MDSSearch',             sub: 'Museum Data Services',                     color: '#1e3a8a', group: 'Data Services' },
   { type: 'smgSearch',         label: 'SMGSearch',             sub: 'Science Museum Group collections',         color: '#701a75', group: 'Data Services' },
   { type: 'vaSearch',          label: 'VASearch',              sub: 'Victoria and Albert Museum collections',    color: '#9f1239', group: 'Data Services' },
-  { type: 'geocoding',         label: 'Geocoding',             sub: 'TGN + Wikidata place enrichment',           color: '#065f46', group: 'Extraction and Enrichment' },
+  { type: 'geocoding',         label: 'Geocoding',             sub: 'TGN + Wikidata place enrichment',                   color: '#065f46', group: 'Extraction and Enrichment' },
+  { type: 'smartGeocoder',    label: 'SmartGeocoder',         sub: 'LLM place extraction → Nominatim + TGN + Wikidata',  color: '#1e3a5f', group: 'Extraction and Enrichment' },
   // ── Local Content ────────────────────────────────────────────────────────────
   { type: 'frameSenseSource',  label: 'FrameSenseSource',      sub: 'Load pre-processed FrameSense video shots', color: '#1c2a3a', group: 'Local Content' },
   { type: 'localFileSource',   label: 'LocalFileSource',       sub: 'Single CSV, XML or image file',           color: '#0e7490', group: 'Local Content' },
