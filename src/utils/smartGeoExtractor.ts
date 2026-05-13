@@ -83,7 +83,7 @@ export async function extractPlaceTerms(
     body: JSON.stringify({
       model,
       stream:      false,
-      max_tokens:  120,
+      max_tokens:  2048,
       temperature: 0.1,
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
