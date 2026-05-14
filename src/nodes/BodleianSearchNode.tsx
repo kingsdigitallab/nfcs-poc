@@ -7,17 +7,22 @@ import type { UnifiedRecord } from '../types/UnifiedRecord'
 export type BodleianStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface BodleianSearchNodeData {
-  inlineQuery:    string
-  inlineLimit:    string
-  fetchAll:       boolean
-  sort:           string
-  objectType:     string
-  useFixture?:    boolean
-  status:         BodleianStatus
-  statusMessage:  string
-  results:        UnifiedRecord[] | undefined
-  count:          number
-  [key: string]:  unknown
+  inlineQuery:       string
+  inlineLimit:       string
+  fetchAll:          boolean
+  sort:              string
+  fqCompleteness?:   string   // '' | 'Yes' | 'No'
+  fqOrigins?:        string
+  fqLanguages?:      string
+  fqMusicalNotation?: string  // '' | 'Yes' | 'No'
+  fqDateFrom?:       string
+  fqDateTo?:         string
+  useFixture?:       boolean
+  status:            BodleianStatus
+  statusMessage:     string
+  results:           UnifiedRecord[] | undefined
+  count:             number
+  [key: string]:     unknown
 }
 
 // ── Options ───────────────────────────────────────────────────────────────────
@@ -30,12 +35,6 @@ const SORT_OPTIONS = [
   { value: 'published asc', label: 'Published ↑' },
 ]
 
-// Values match the Bodleian fq=type:"..." filter parameter
-const OBJECT_TYPE_OPTIONS = [
-  '', 'Manuscript', 'Printed Book', 'Map', 'Print', 'Drawing',
-  'Photograph', 'Archive', 'Broadside', 'Coin', 'Musical Score',
-]
-
 // ── Layout ────────────────────────────────────────────────────────────────────
 
 const HEADER_H = 32
@@ -43,7 +42,7 @@ const BODY_PAD = 8
 const ROW_H    = 27
 
 const WIRABLE_ROWS = [
-  { handleId: 'query', dataKey: 'inlineQuery', label: 'query', placeholder: 'e.g. Stonehenge', rowIndex: 0 },
+  { handleId: 'query', dataKey: 'inlineQuery', label: 'query', placeholder: 'e.g. psalter', rowIndex: 0 },
   { handleId: 'limit', dataKey: 'inlineLimit', label: 'limit', placeholder: '20',              rowIndex: 1 },
 ] as const
 
@@ -91,7 +90,8 @@ export function BodleianSearchNode({ id, data }: NodeProps) {
   const set = (key: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
     updateNodeData(id, { [key]: e.target.value })
 
-  const hasFilter = !!d.objectType
+  const hasFilter = !!(d.fqCompleteness || d.fqOrigins ||
+    d.fqLanguages || d.fqMusicalNotation || d.fqDateFrom || d.fqDateTo)
 
   return (
     <div style={{ ...styles.card, borderColor }}>
@@ -167,23 +167,58 @@ export function BodleianSearchNode({ id, data }: NodeProps) {
           className="nodrag"
         >
           {filtersOpen ? '▾' : '▸'} Filters
-          {hasFilter && <span style={styles.filterBadge}>1</span>}
+          {hasFilter && (
+            <span style={styles.filterBadge}>
+              {[d.fqCompleteness, d.fqOrigins,
+                d.fqLanguages, d.fqMusicalNotation, d.fqDateFrom || d.fqDateTo
+              ].filter(Boolean).length}
+            </span>
+          )}
         </button>
 
         {filtersOpen && (
           <div style={styles.filterSection}>
             <div style={styles.filterRow}>
-              <span style={styles.filterLabel}>Object type</span>
-              <select style={styles.select} value={d.objectType || ''} onChange={set('objectType')} className="nodrag">
-                {OBJECT_TYPE_OPTIONS.map(v => (
-                  <option key={v} value={v}>{v || '— any —'}</option>
-                ))}
+              <span style={styles.filterLabel}>Complete</span>
+              <select style={styles.select} value={d.fqCompleteness ?? ''} onChange={set('fqCompleteness')} className="nodrag">
+                <option value="">Any</option>
+                <option value="Yes">Fully digitised</option>
+                <option value="No">Partial only</option>
               </select>
+            </div>
+            <div style={styles.filterRow}>
+              <span style={styles.filterLabel}>Origins</span>
+              <input style={styles.filterInput} value={d.fqOrigins ?? ''} onChange={set('fqOrigins')}
+                placeholder="e.g. England, France" className="nodrag" />
+            </div>
+            <div style={styles.filterRow}>
+              <span style={styles.filterLabel}>Language</span>
+              <input style={styles.filterInput} value={d.fqLanguages ?? ''} onChange={set('fqLanguages')}
+                placeholder="e.g. Latin, Hebrew" className="nodrag" />
+            </div>
+            <div style={styles.filterRow}>
+              <span style={styles.filterLabel}>Music</span>
+              <select style={styles.select} value={d.fqMusicalNotation ?? ''} onChange={set('fqMusicalNotation')} className="nodrag">
+                <option value="">Any</option>
+                <option value="Yes">Has musical notation</option>
+                <option value="No">No musical notation</option>
+              </select>
+            </div>
+            <div style={styles.filterRow}>
+              <span style={styles.filterLabel}>Date from</span>
+              <input style={{ ...styles.filterInput, maxWidth: 70 }} value={d.fqDateFrom ?? ''} onChange={set('fqDateFrom')}
+                placeholder="e.g. 1200" className="nodrag" />
+              <span style={styles.filterLabel}>to</span>
+              <input style={{ ...styles.filterInput, maxWidth: 70 }} value={d.fqDateTo ?? ''} onChange={set('fqDateTo')}
+                placeholder="e.g. 1400" className="nodrag" />
             </div>
             {hasFilter && (
               <button
                 style={styles.clearBtn}
-                onClick={() => updateNodeData(id, { objectType: '' })}
+                onClick={() => updateNodeData(id, {
+                  fqCompleteness: '', fqOrigins: '',
+                  fqLanguages: '', fqMusicalNotation: '', fqDateFrom: '', fqDateTo: '',
+                })}
                 className="nodrag"
               >
                 ✕ Clear filters
@@ -372,6 +407,16 @@ const styles = {
     width:      74,
     flexShrink: 0,
     fontFamily: 'monospace',
+  },
+  filterInput: {
+    flex:         1,
+    fontSize:     10,
+    padding:      '2px 5px',
+    border:       '1px solid #d1d5db',
+    borderRadius: 4,
+    outline:      'none',
+    height:       20,
+    minWidth:     0,
   },
   clearBtn: {
     fontSize:   10,

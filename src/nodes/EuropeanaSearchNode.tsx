@@ -98,24 +98,19 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
       </div>
 
       <div style={styles.body}>
-        {/* API key */}
+        {/* API key — display-only; value injected at build time */}
         <div style={styles.row}>
           <span style={styles.label}>API key</span>
-          <input
-            style={{
-              ...styles.input,
-              fontFamily: 'monospace',
-              letterSpacing: '0.05em',
-              background: isConnected('apiKey') ? '#eff6ff' : '#fff',
-              color:      isConnected('apiKey') ? '#1d4ed8' : '#111827',
-            }}
-            type="text"
-            value={(d.apiKey as string) || ''}
-            onChange={e => updateNodeData(id, { apiKey: e.target.value })}
-            placeholder={isConnected('apiKey') ? '(from Param)' : 'your-api-key'}
-            readOnly={isConnected('apiKey')}
-            className="nodrag"
-          />
+          <span style={{
+            ...styles.input,
+            display:    'flex',
+            alignItems: 'center',
+            color:      isConnected('apiKey') ? '#1d4ed8' : d.apiKey ? '#15803d' : '#dc2626',
+            background: isConnected('apiKey') ? '#eff6ff' : d.apiKey ? '#f0fdf4' : '#fef2f2',
+            userSelect: 'none',
+          }}>
+            {isConnected('apiKey') ? '(from Param)' : d.apiKey ? '🔒 Configured' : '⚠ Not set'}
+          </span>
         </div>
         <div style={styles.keyHint}>
           No key? Register free at{' '}

@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react'
 import { newId, bumpCounterPast } from './utils/nodeIdCounter'
-import { DEFAULT_KCL_API_KEY } from './utils/kclConfig'
+import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from './utils/kclConfig'
 import { downloadWorkflow, parseWorkflowFile, hydrateNodes } from './utils/workflowIO'
 import {
   ReactFlow,
@@ -65,6 +65,7 @@ import type { FrameSenseSourceNodeData }  from './nodes/FrameSenseSourceNode'
 import type { SourceProfileNodeData }    from './nodes/SourceProfileNode'
 import type { SmartFilterNodeData }      from './nodes/SmartFilterNode'
 import type { SmartGeocoderNodeData }   from './nodes/SmartGeocoderNode'
+import type { QuickStartNodeData }      from './nodes/QuickStartNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -115,11 +116,12 @@ type AppNode =
   | Node<SourceProfileNodeData>
   | Node<SmartFilterNodeData>
   | Node<SmartGeocoderNodeData>
+  | Node<QuickStartNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
 
-const KCL_API_KEY_NODES = new Set(['kclNode', 'kclField', 'sourceProfile', 'smartFilter', 'smartGeocoder'])
+const KCL_API_KEY_NODES = new Set(['kclNode', 'kclField', 'sourceProfile', 'smartFilter', 'smartGeocoder', 'quickStart'])
 
 function findSharedApiKey(nodes: Node[]): string {
   for (const node of nodes) {
@@ -185,7 +187,9 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('bodleian'), type: 'bodleianSearch', position: pos,
     data: {
       inlineQuery: '', inlineLimit: '20', fetchAll: false,
-      sort: 'relevance', objectType: '',
+      sort: 'relevance',
+      fqCompleteness: '', fqOrigins: '', fqLanguages: '',
+      fqMusicalNotation: '', fqDateFrom: '', fqDateTo: '',
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies BodleianSearchNodeData,
   }),
@@ -594,7 +598,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   europeanaSearch: pos => ({
     id: newId('europeana'), type: 'europeanaSearch', position: pos,
     data: {
-      apiKey: '', inlineQuery: '', inlineLimit: '20',
+      apiKey: DEFAULT_EUROPEANA_API_KEY, inlineQuery: '', inlineLimit: '20',
       typeFilter: 'any', reusability: 'any', mediaOnly: false,
       status: 'idle', statusMessage: '', count: 0,
     } satisfies EuropeanaSearchNodeData,
@@ -603,12 +607,21 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('fdist'), type: 'fieldDistribution', position: pos,
     data: { selectedField: '', maxBars: 20, expandArrays: true, filteredValues: [] } satisfies FieldDistributionNodeData,
   }),
+  quickStart: pos => ({
+    id: newId('qs'), type: 'quickStart', position: pos,
+    data: {
+      apiKey: DEFAULT_KCL_API_KEY, model: 'arc:nexus',
+      researchQuestion: '', plan: null,
+      planStatus: 'idle', planMessage: '', instantiated: false,
+    } satisfies QuickStartNodeData,
+  }),
 }
 
 // ─── sidebar definition ───────────────────────────────────────────────────────
 
 const SIDEBAR_ITEMS = [
   // ── Canvas ──────────────────────────────────────────────────────────────────
+  { type: 'quickStart',  label: 'QuickStart',        sub: 'AI workflow planner — describe a question, auto-build a workflow', color: '#0c1445', group: 'Canvas' },
   { type: 'comment',     label: 'Comment',           sub: 'Annotation label',          color: '#f59e0b', group: 'Canvas' },
   // ── Input ───────────────────────────────────────────────────────────────────
   { type: 'param',       label: 'Param',             sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },

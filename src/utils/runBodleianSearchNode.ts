@@ -102,11 +102,11 @@ function adaptMember(member: BodleianMember): UnifiedRecord {
 
 // ── Fetch helper ──────────────────────────────────────────────────────────────
 
-async function fetchPage(q: string, page: number, sort: string, objectType: string): Promise<BodleianResponse> {
+async function fetchPage(q: string, page: number, sort: string, fqFilters: string[]): Promise<BodleianResponse> {
   const params = new URLSearchParams({ rows: String(PAGE_SIZE), page: String(page) })
-  if (q)                          params.set('q', q)
+  if (q)                            params.set('q', q)
   if (sort && sort !== 'relevance') params.set('sort', sort)
-  if (objectType)                 params.set('fq', `type:"${objectType}"`)
+  for (const fq of fqFilters)       params.append('fq', fq)
   const url        = `${BODLEIAN_SEARCH}?${params}`
   const controller = new AbortController()
   const timer      = setTimeout(() => controller.abort(), FETCH_TIMEOUT)
@@ -153,7 +153,19 @@ export async function runBodleianSearchNode(
   const limit      = isNaN(rawLimit) || rawLimit < 1 ? 20 : rawLimit
   const sort       = d.sort || 'relevance'
   const fetchAll   = d.fetchAll ?? false
-  const objectType = d.objectType ?? ''
+  const fqCompleteness  = d.fqCompleteness  ?? ''
+  const fqOrigins       = d.fqOrigins       ?? ''
+  const fqLanguages     = d.fqLanguages     ?? ''
+  const fqMusicalNotation = d.fqMusicalNotation ?? ''
+  const fqDateFrom      = d.fqDateFrom      ?? ''
+  const fqDateTo        = d.fqDateTo        ?? ''
+
+  const fqFilters: string[] = []
+  if (fqCompleteness)    fqFilters.push(`completeness:${fqCompleteness}`)
+  if (fqOrigins)         fqFilters.push(`origins:"${fqOrigins}"`)
+  if (fqLanguages)       fqFilters.push(`languages:"${fqLanguages}"`)
+  if (fqMusicalNotation) fqFilters.push(`has-musical-notation:${fqMusicalNotation}`)
+  if (fqDateFrom || fqDateTo) fqFilters.push(`date:[${fqDateFrom || '*'} TO ${fqDateTo || '*'}]`)
 
   const citationBase = {
     service:    'Bodleian Digital Collections',
@@ -164,7 +176,7 @@ export async function runBodleianSearchNode(
   }
 
   try {
-    const firstPage = await fetchPage(q, 1, sort, objectType)
+    const firstPage = await fetchPage(q, 1, sort, fqFilters)
     const total     = firstPage.totalItems ?? 0
 
     if (!firstPage.member?.length) {
@@ -179,7 +191,7 @@ export async function runBodleianSearchNode(
 
       for (let page = 2; page <= maxPage; page++) {
         updateNodeData(nodeId, { statusMessage: `Page ${page}/${maxPage} (${allRecords.length} fetched)…` })
-        const response = await fetchPage(q, page, sort, objectType)
+        const response = await fetchPage(q, page, sort, fqFilters)
         const batch    = (response.member ?? []).map(adaptMember)
         allRecords.push(...batch)
         if (batch.length < PAGE_SIZE || !response.view?.next) break
@@ -199,7 +211,7 @@ export async function runBodleianSearchNode(
       if (limit > PAGE_SIZE && firstPage.view?.next) {
         const pageCount = Math.min(Math.ceil(limit / PAGE_SIZE), MAX_PAGES)
         for (let page = 2; page <= pageCount; page++) {
-          const r     = await fetchPage(q, page, sort, objectType)
+          const r     = await fetchPage(q, page, sort, fqFilters)
           const batch = (r.member ?? []).map(adaptMember)
           allRecords.push(...batch)
           if (batch.length < PAGE_SIZE || !r.view?.next) break
