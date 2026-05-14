@@ -1,5 +1,10 @@
 # ── Stage 1: build React app ──────────────────────────────────────────────────
 FROM node:20-slim AS builder
+
+# Inject API key at build time — never stored in source control
+ARG VITE_KCL_API_KEY
+ENV VITE_KCL_API_KEY=$VITE_KCL_API_KEY
+
 WORKDIR /app
 
 COPY package*.json ./

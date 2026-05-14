@@ -458,10 +458,9 @@ export function SourceProfileNode({ id, data }: NodeProps) {
   }, [sourcesDetected, records, sourceCountMap])
 
   // KCL state
-  const [apiKey, setApiKey] = useState((d.apiKey as string) || '')
+  const apiKey = (d.apiKey as string) || ''
   const [model, setModel] = useState((d.model as string) || 'arc:nano')
   const [models, setModels] = useState<string[]>([])
-  const [showKey, setShowKey] = useState(false)
   const [showAdvanced, setShowAdvanced] = useState(false)
   const [maxTokens, setMaxTokens] = useState((d.maxTokens as number | undefined) ?? 16384)
   const [researchQ, setResearchQ] = useState((d.researchQuestion as string) || '')
@@ -470,9 +469,6 @@ export function SourceProfileNode({ id, data }: NodeProps) {
   const abortRef = useRef<AbortController | null>(null)
 
   // Persist KCL fields to node data
-  const persistApiKey = useCallback((v: string) => {
-    setApiKey(v); updateNodeData(id, { apiKey: v })
-  }, [id, updateNodeData])
   const persistModel = useCallback((v: string) => {
     setModel(v); updateNodeData(id, { model: v })
   }, [id, updateNodeData])
@@ -626,22 +622,12 @@ export function SourceProfileNode({ id, data }: NodeProps) {
               }}
             />
 
-            {/* API key */}
-            <div style={{ display: 'flex', gap: 4, alignItems: 'center', marginBottom: 4 }}>
-              <input
-                type={showKey ? 'text' : 'password'}
-                value={apiKey}
-                onChange={e => persistApiKey(e.target.value)}
-                placeholder="KCL API key"
-                style={{
-                  flex: 1, background: '#1f2937', border: '1px solid #374151', borderRadius: 3,
-                  color: '#f9fafb', fontSize: 10, padding: '3px 6px',
-                }}
-              />
-              <button
-                onClick={() => setShowKey(s => !s)}
-                style={{ fontSize: 10, color: '#9ca3af', background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px' }}
-              >{showKey ? '🙈' : '👁'}</button>
+            {/* API key — display-only, never shows the actual value */}
+            <div style={{ marginBottom: 4, fontSize: 10,
+              color: apiKey ? '#6ee7b7' : '#fca5a5',
+              userSelect: 'none',
+            }}>
+              {apiKey ? '🔒 API key configured' : '⚠ No API key — rebuild with VITE_KCL_API_KEY set'}
             </div>
 
             {/* Model picker */}

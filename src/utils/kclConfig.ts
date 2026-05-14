@@ -1,4 +1,4 @@
-export const DEFAULT_KCL_API_KEY = 'sk-C80102foRxkyBAtkrze6-Q'
+export const DEFAULT_KCL_API_KEY: string = import.meta.env.VITE_KCL_API_KEY ?? ''
 
 const ALLOWED_MODELS = new Set(['arc:nexus', 'arc:lite', 'arc:nano'])
 

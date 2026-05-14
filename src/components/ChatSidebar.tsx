@@ -173,7 +173,7 @@ function MdContent({ children }: { children: string }) {
 // ── Component ──────────────────────────────────────────────────────────────────
 
 export function ChatSidebar({ isOpen, onToggle }: Props) {
-  const [apiKey, setApiKey]             = useState(DEFAULT_KCL_API_KEY)
+  const apiKey                          = DEFAULT_KCL_API_KEY
   const [model, setModel]               = useState(() => localStorage.getItem('kcl_chat_model') ?? '')
   const [systemPrompt, setSystemPrompt] = useState(() => {
     const storedVersion = localStorage.getItem('kcl_chat_system_version')
@@ -189,7 +189,6 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
   const [isLoading, setIsLoading]       = useState(false)
   const [streaming, setStreaming]       = useState('')
   const [showSettings, setShowSettings] = useState(false)
-  const [showKey, setShowKey]           = useState(false)
   const [models, setModels]             = useState<string[]>([])
   const [apiOk, setApiOk]               = useState<boolean | null>(null)
 
@@ -231,7 +230,8 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
       }
     })()
     return () => { cancelled = true }
-  }, [apiKey])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const handleSend = useCallback(async () => {
     const text = inputText.trim()
@@ -352,27 +352,24 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
       {/* ── Settings panel ── */}
       {showSettings && (
         <div style={styles.settings}>
-          {/* API key */}
+          {/* API key — display-only, never shows the actual value */}
           <div style={styles.settingRow}>
             <label style={styles.label}>Key</label>
-            <input
-              type={showKey ? 'text' : 'password'}
-              style={{ ...styles.input, flex: 1 }}
-              value={apiKey}
-              onChange={e => setApiKey(e.target.value)}
-              placeholder="sk-…"
-            />
-            <button style={styles.eyeBtn} onClick={() => setShowKey(v => !v)}>
-              {showKey ? '🙈' : '👁'}
-            </button>
+            <span style={{ ...styles.input, flex: 1,
+              color: apiKey ? '#15803d' : '#dc2626',
+              background: apiKey ? '#f0fdf4' : '#fef2f2',
+              userSelect: 'none',
+            }}>
+              {apiKey ? '🔒 Configured' : '⚠ Not set'}
+            </span>
           </div>
-          {apiKey && (
-            <div style={{ fontSize: 10, color: apiOk ? '#16a34a' : '#dc2626', paddingLeft: 52, marginTop: -2, marginBottom: 2 }}>
-              {apiOk === null ? 'Checking…' : apiOk
-                ? `✓ Connected${models.length > 0 ? ` — ${models.length} models` : ''}`
-                : '✗ Cannot reach KCL API — check key or VPN'}
-            </div>
-          )}
+          <div style={{ fontSize: 10, color: apiOk ? '#16a34a' : '#dc2626', paddingLeft: 52, marginTop: -2, marginBottom: 2 }}>
+            {apiKey
+              ? (apiOk === null ? 'Checking…' : apiOk
+                  ? `✓ Connected${models.length > 0 ? ` — ${models.length} models` : ''}`
+                  : '✗ Cannot reach KCL API — check VPN connection')
+              : 'No API key — rebuild with VITE_KCL_API_KEY set'}
+          </div>
           {/* Model */}
           <div style={styles.settingRow}>
             <label style={styles.label}>Model</label>
