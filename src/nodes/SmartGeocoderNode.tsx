@@ -321,18 +321,18 @@ export function SmartGeocoderNode({ id, data }: NodeProps) {
 
       <div style={styles.body}>
 
-        {/* API key */}
+        {/* API key — display-only, never shows the actual value */}
         <div style={styles.row}>
           <span style={styles.label}>API key</span>
           <div style={{ flex: 1, display: 'flex', alignItems: 'center', gap: 4 }}>
-            <input
-              type="password"
-              style={{ ...styles.input, flex: 1 }}
-              value={(d.apiKey as string) ?? DEFAULT_KCL_API_KEY}
-              placeholder="sk-…"
-              onChange={e => updateNodeData(id, { apiKey: e.target.value })}
-              className="nodrag"
-            />
+            <span style={{
+              ...styles.input, flex: 1,
+              color: d.apiKey ? '#15803d' : '#dc2626',
+              background: d.apiKey ? '#f0fdf4' : '#fef2f2',
+              userSelect: 'none',
+            }}>
+              {d.apiKey ? '🔒 Configured' : '⚠ Not set'}
+            </span>
             {apiOk === true  && <span style={{ color: '#22c55e', fontSize: 13 }}>●</span>}
             {apiOk === false && <span style={{ color: '#ef4444', fontSize: 13 }}>●</span>}
           </div>
@@ -351,7 +351,7 @@ export function SmartGeocoderNode({ id, data }: NodeProps) {
               {models.map(m => <option key={m} value={m}>{m}</option>)}
             </select>
           ) : (
-            <span style={styles.hint}>{d.apiKey ? 'loading models…' : 'enter API key'}</span>
+            <span style={styles.hint}>{d.apiKey ? 'loading models…' : 'no API key'}</span>
           )}
         </div>
 
@@ -468,7 +468,7 @@ export function SmartGeocoderNode({ id, data }: NodeProps) {
           disabled={!canRun}
           onClick={handleRun}
           className="nodrag"
-          title={!d.apiKey ? 'Enter API key first' : !connected ? 'Connect upstream data' : ''}
+          title={!d.apiKey ? 'No API key configured' : !connected ? 'Connect upstream data' : ''}
         >
           {d.status === 'loading' ? 'Running…' : '▶  Run'}
         </button>

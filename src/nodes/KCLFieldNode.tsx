@@ -128,7 +128,6 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const [apiOk, setApiOk]               = useState<boolean | null>(null)
   const [liveTokens, setLiveTokens]     = useState('')
   const [liveProgress, setLiveProgress] = useState('')
-  const [showKey, setShowKey]           = useState(false)
   const [tokenInput, setTokenInput]     = useState(String((d.maxTokens as number | undefined) ?? 1024))
   const abortRef = useRef<AbortController | null>(null)
 
@@ -369,34 +368,25 @@ export function KCLFieldNode({ id, data }: NodeProps) {
       </div>
 
       {!effectiveApiKey && (
-        <div style={styles.warnBanner}>⚠ Enter your KCL AI API key</div>
+        <div style={styles.warnBanner}>⚠ No API key configured — rebuild with VITE_KCL_API_KEY set</div>
       )}
       {effectiveApiKey && apiOk === false && (
         <div style={styles.warnBanner}>⚠ Could not reach KCL API — check key or VPN</div>
       )}
 
       <div style={styles.body}>
-        {/* API key */}
+        {/* API key — display-only, never shows the actual value */}
         <div style={styles.row}>
           <span style={styles.label}>Key</span>
-          <input
-            type={isApiKeyConnected ? 'text' : showKey ? 'text' : 'password'}
-            style={{
-              ...styles.input,
-              background: isApiKeyConnected ? '#eff6ff' : '#fff',
-              color:      isApiKeyConnected ? '#1d4ed8' : '#111827',
-            }}
-            value={isApiKeyConnected ? '' : (d.apiKey as string | undefined) ?? ''}
-            onChange={e => updateNodeData(id, { apiKey: e.target.value })}
-            placeholder={isApiKeyConnected ? '(from Param)' : 'sk-…'}
-            readOnly={isApiKeyConnected}
-            className="nodrag"
-          />
-          {!isApiKeyConnected && (
-            <button style={styles.eyeBtn} onClick={() => setShowKey(v => !v)} title={showKey ? 'Hide' : 'Show'} className="nodrag">
-              {showKey ? '🙈' : '👁'}
-            </button>
-          )}
+          <span style={{
+            ...styles.input,
+            display: 'flex', alignItems: 'center',
+            color: isApiKeyConnected ? '#1d4ed8' : apiKey ? '#15803d' : '#dc2626',
+            background: isApiKeyConnected ? '#eff6ff' : apiKey ? '#f0fdf4' : '#fef2f2',
+            userSelect: 'none',
+          }}>
+            {isApiKeyConnected ? '(from Param)' : apiKey ? '🔒 Configured' : '⚠ Not set'}
+          </span>
         </div>
 
         {/* Model */}
