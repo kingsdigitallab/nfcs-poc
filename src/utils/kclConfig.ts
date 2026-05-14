@@ -1,4 +1,5 @@
-export const DEFAULT_KCL_API_KEY: string = import.meta.env.VITE_KCL_API_KEY ?? ''
+export const DEFAULT_KCL_API_KEY: string      = import.meta.env.VITE_KCL_API_KEY      ?? ''
+export const DEFAULT_EUROPEANA_API_KEY: string = import.meta.env.VITE_EUROPEANA_API_KEY ?? ''
 
 const ALLOWED_MODELS = new Set(['arc:nexus', 'arc:lite', 'arc:nano'])
 

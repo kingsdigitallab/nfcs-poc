@@ -44,6 +44,7 @@ import { SmartGeocoderNode }       from './SmartGeocoderNode'
 import { FrameSenseSourceNode }     from './FrameSenseSourceNode'
 import { SourceProfileNode }        from './SourceProfileNode'
 import { SmartFilterNode }          from './SmartFilterNode'
+import { QuickStartNode }           from './QuickStartNode'
 import { withDuplicate }            from './withDuplicate'
 
 export const nodeTypes = {
@@ -94,4 +95,5 @@ export const nodeTypes = {
   frameSenseSource:  withDuplicate(FrameSenseSourceNode),
   sourceProfile:     withDuplicate(SourceProfileNode),
   smartFilter:       withDuplicate(SmartFilterNode),
+  quickStart:        withDuplicate(QuickStartNode),
 }
