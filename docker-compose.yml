@@ -1,7 +1,10 @@
 services:
 
   app:
-    build: .
+    build:
+      context: .
+      args:
+        - VITE_KCL_API_KEY=${VITE_KCL_API_KEY}
     ports:
       - "3001:3001"
     environment:
