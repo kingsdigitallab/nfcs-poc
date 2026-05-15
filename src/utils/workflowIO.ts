@@ -3,7 +3,7 @@ import type { Edge, Node } from '@xyflow/react'
 // ─── Schema ──────────────────────────────────────────────────────────────────
 
 export interface WorkflowFile {
-  version: 1
+  version: 1 | 2
   savedAt: string
   nodes: SavedNode[]
   edges: Edge[]
@@ -13,7 +13,12 @@ interface SavedNode {
   id: string
   type: string
   position: { x: number; y: number }
+  width?: number
+  height?: number
   data: Record<string, unknown>
+  parentId?: string
+  extent?: unknown
+  style?: { width?: number; height?: number }
 }
 
 // ─── Serialisation ────────────────────────────────────────────────────────────
@@ -37,11 +42,11 @@ const TRANSIENT_FIELDS = new Set([
   'resultsVersion',
   '_capped',
   '_total',
-  'folderName',  // not serialisable — user must re-pick the folder
-  'gisLayers',   // large binary-derived data — user must re-scan
+  'folderName',  // not serialisable
+  'gisLayers',
   'gisCount',
-  'fileName',    // not serialisable — user must re-pick the file
-  'columnNames', // derived at parse time
+  'fileName',
+  'columnNames',
   'pdfCount',
   'xmlCount',
   'textCount',
@@ -51,6 +56,9 @@ const TRANSIENT_FIELDS = new Set([
   'resolved',
   'pending',
   'failed',
+  'childPositions',   // runtime-only
+  'proxyInCount',     // runtime-only
+  'proxyOutCount',    // runtime-only
 ])
 
 export function stripTransient(data: Record<string, unknown>): Record<string, unknown> {
@@ -63,14 +71,22 @@ export function stripTransient(data: Record<string, unknown>): Record<string, un
 
 export function downloadWorkflow(nodes: Node[], edges: Edge[]): void {
   const file: WorkflowFile = {
-    version: 1,
+    version: 2,
     savedAt: new Date().toISOString(),
-    nodes: nodes.map(n => ({
-      id: n.id,
-      type: n.type ?? '',
-      position: n.position,
-      data: stripTransient(n.data as Record<string, unknown>),
-    })),
+    nodes: nodes.map(n => {
+      const saved: SavedNode = {
+        id: n.id,
+        type: n.type ?? '',
+        position: n.position,
+        data: stripTransient(n.data as Record<string, unknown>),
+      }
+      if (n.width != null) saved.width = n.width
+      if (n.height != null) saved.height = n.height
+      if (n.parentId) saved.parentId = n.parentId
+      if (n.extent) saved.extent = n.extent
+      if (n.style) saved.style = n.style as { width?: number; height?: number }
+      return saved
+    }),
     edges,
   }
 
@@ -109,13 +125,8 @@ export function parseWorkflowFile(json: string): WorkflowFile {
   }
   const p = parsed as Record<string, unknown>
   const hasVersion = 'version' in p
-  if (
-    typeof parsed !== 'object' ||
-    parsed === null ||
-    !Array.isArray(p.nodes) ||
-    (hasVersion && p.version !== 1)
-  ) {
-    throw new Error('Not a recognised workflow file (expected version: 1).')
+  if (!hasVersion || (p.version !== 1 && p.version !== 2)) {
+    throw new Error('Not a recognised workflow file (expected version: 1 or 2).')
   }
   return parsed as WorkflowFile
 }
@@ -125,12 +136,35 @@ export function parseWorkflowFile(json: string): WorkflowFile {
  * defaults so every node starts idle with no stale result counts.
  */
 export function hydrateNodes(saved: WorkflowFile): Node[] {
-  return saved.nodes.map(n => ({
-    id: n.id,
-    type: n.type,
-    position: n.position,
-    // Runtime defaults first so saved config always wins, except we never
-    // restore the old status/counts.
-    data: { ...RUNTIME_DEFAULTS, ...n.data },
-  }))
+  // Find all collapsed group IDs so we can preserve child opacity when reloading
+  const collapsedParents = new Set(
+    saved.nodes
+      .filter(n => n.type === 'group' && (n.data as any).collapsed === true)
+      .map(n => n.id)
+  )
+
+  return saved.nodes.map(n => {
+    const node: Node = {
+      id: n.id,
+      type: n.type,
+      position: n.position,
+      data: { ...RUNTIME_DEFAULTS, ...n.data },
+    }
+    if (n.width != null) node.width = n.width
+    if (n.height != null) node.height = n.height
+    if (n.parentId) node.parentId = n.parentId
+    if (n.extent) node.extent = n.extent
+    if (n.style) {
+      const clean = { ...n.style }
+      // Only strip collapse-related styles if the parent is NOT collapsed.
+      // Children inside collapsed groups must keep opacity:0 on reload.
+      if (!collapsedParents.has(n.parentId ?? '')) {
+        if ('opacity' in clean) delete (clean as any).opacity
+        if ('pointerEvents' in clean) delete (clean as any).pointerEvents
+        if ('overflow' in clean) delete (clean as any).overflow
+      }
+      node.style = clean
+    }
+    return node
+  })
 }
