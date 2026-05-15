@@ -483,13 +483,21 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     if (!records?.length) return []
     const keys = new Set<string>()
     const IMAGE_KEYS = /thumb|image|url|src|href|photo|picture|preview|media|icon/i
-    for (const r of records.slice(0, 20)) {
+
+    // One representative record per _source ensures namespace fields from every
+    // connected data service appear in the picker, regardless of dataset sizes.
+    const seen = new Set<string>()
+    const representatives: typeof records = []
+    for (const r of records) {
+      const src = (r as Record<string, unknown>)._source as string | undefined ?? ''
+      if (!seen.has(src)) { seen.add(src); representatives.push(r) }
+    }
+
+    for (const r of representatives) {
       const rec = r as Record<string, unknown>
       for (const [k, v] of Object.entries(rec)) {
         if (k.startsWith('_')) continue
         keys.add(k)
-        // One level deep into namespace objects — expose dot-notation paths for
-        // fields that look like image URLs so they appear in the datalist
         if (v != null && typeof v === 'object' && !Array.isArray(v)) {
           for (const [nk, nv] of Object.entries(v as Record<string, unknown>)) {
             if (IMAGE_KEYS.test(nk) && (typeof nv === 'string' || nv == null)) {
