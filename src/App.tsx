@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { newId, bumpCounterPast } from './utils/nodeIdCounter'
 import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from './utils/kclConfig'
 import { downloadWorkflow, parseWorkflowFile, hydrateNodes } from './utils/workflowIO'
@@ -66,6 +66,7 @@ import type { SourceProfileNodeData }    from './nodes/SourceProfileNode'
 import type { SmartFilterNodeData }      from './nodes/SmartFilterNode'
 import type { SmartGeocoderNodeData }   from './nodes/SmartGeocoderNode'
 import type { QuickStartNodeData }      from './nodes/QuickStartNode'
+import type { GroupNodeData }           from './nodes/GroupNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -117,6 +118,7 @@ type AppNode =
   | Node<SmartFilterNodeData>
   | Node<SmartGeocoderNodeData>
   | Node<QuickStartNodeData>
+  | Node<GroupNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -615,6 +617,11 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       planStatus: 'idle', planMessage: '', instantiated: false,
     } satisfies QuickStartNodeData,
   }),
+  group: pos => ({
+    id: newId('group'), type: 'group', position: pos,
+    style: { width: 400, height: 300 },
+    data: { name: 'Group' },
+  }),
 }
 
 // ─── sidebar definition ───────────────────────────────────────────────────────
@@ -623,6 +630,7 @@ const SIDEBAR_ITEMS = [
   // ── Canvas ──────────────────────────────────────────────────────────────────
   { type: 'quickStart',  label: 'QuickStart',        sub: 'AI workflow planner — describe a question, auto-build a workflow', color: '#0c1445', group: 'Canvas' },
   { type: 'comment',     label: 'Comment',           sub: 'Annotation label',          color: '#f59e0b', group: 'Canvas' },
+  { type: 'group',       label: 'Group',             sub: 'Container for grouping nodes', color: '#3b82f6', group: 'Canvas' },
   // ── Input ───────────────────────────────────────────────────────────────────
   { type: 'param',       label: 'Param',             sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },
   // ── Inspection ───────────────────────────────────────────────────────────────
@@ -704,12 +712,137 @@ export default function App() {
     sourceNodeId: string; sourceHandleId: string | null
   } | null>(null)
 
+  // Auto-resize groups when children overflow their bounds
+  useEffect(() => {
+    const groups = nodes.filter(n => n.type === 'group')
+    if (groups.length === 0) return
+
+    const updated = nodes.map(node => {
+      if (node.type !== 'group') return node
+
+      const children = nodes.filter(n => n.parentId === node.id)
+      if (children.length === 0) return node
+
+      let maxX = 0, maxY = 0
+      for (const child of children) {
+        const cw = Number(child.measured?.width ?? (child as any).style?.width ?? 220)
+        const ch = Number(child.measured?.height ?? (child as any).style?.height ?? 100)
+        maxX = Math.max(maxX, child.position.x + cw)
+        maxY = Math.max(maxY, child.position.y + ch)
+      }
+
+      const padding = 30
+      const newW = Math.max(250, maxX + padding)
+      const newH = Math.max(120, maxY + padding)
+      const currentW = Number((node as any).style?.width ?? 0)
+      const currentH = Number((node as any).style?.height ?? 0)
+
+      if (newW > currentW || newH > currentH) {
+        return {
+          ...node,
+          style: {
+            ...((node as any).style ?? {}),
+            width: newW,
+            height: newH,
+          },
+        } as AppNode
+      }
+      return node
+    })
+
+    const changed = updated.some((n, i) => n !== nodes[i])
+    if (changed) setNodes(updated)
+  }, [nodes, setNodes])
+
   const handleRunAll = useCallback(async () => {
     if (!rfInstance) return
     setRunningAll(true)
     await runWorkflow(rfInstance.getNodes, rfInstance.getEdges(), rfInstance.updateNodeData)
     setRunningAll(false)
   }, [rfInstance])
+
+  const handleGroupSelected = useCallback(() => {
+    if (!rfInstance) return
+    const currentNodes = rfInstance.getNodes()
+    const selected = currentNodes.filter(n => n.selected && n.type !== 'group')
+    if (selected.length < 2) return
+
+    // Calculate bounding box with padding
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity
+    for (const n of selected) {
+      const w = (n as Node & { style?: { width?: number; height?: number } }).style?.width ?? 200
+      const h = (n as Node & { style?: { width?: number; height?: number } }).style?.height ?? 100
+      minX = Math.min(minX, n.position.x)
+      minY = Math.min(minY, n.position.y)
+      maxX = Math.max(maxX, n.position.x + w)
+      maxY = Math.max(maxY, n.position.y + h)
+    }
+    const padding = 20
+    const headerH = 35
+    const width  = maxX - minX + padding * 2
+    const height = maxY - minY + padding * 2 + headerH
+    const groupPos = { x: minX - padding, y: minY - padding - headerH }
+
+    // Count existing groups for naming
+    const existingNames = new Set(
+      currentNodes.filter(n => n.type === 'group').map(n => (n.data as { name?: string }).name ?? '')
+    )
+    let groupNumber = 1
+    while (existingNames.has(`Group ${groupNumber}`)) {
+      groupNumber++
+    }
+    const groupName = `Group ${groupNumber}`
+
+    const groupNode = {
+      id: newId('group'),
+      type: 'group',
+      position: groupPos,
+      style: { width, height },
+      data: { name: groupName },
+      selected: true,
+    } as AppNode
+
+    const updatedNodes = currentNodes.map(n => {
+      if (!n.selected || n.type === 'group') return n
+      return {
+        ...n,
+        parentId: groupNode.id,
+        position: {
+          x: n.position.x - groupPos.x,
+          y: n.position.y - groupPos.y,
+        },
+        extent: 'parent' as const,
+        selected: false,
+      }
+    })
+
+    // Parent must precede children in the array so React Flow resolves
+    // the parentId reference before rendering children.
+    setNodes([groupNode, ...updatedNodes])
+  }, [rfInstance, setNodes])
+
+  const handleUngroup = useCallback(() => {
+    if (!rfInstance) return
+    const currentNodes = rfInstance.getNodes()
+    const selectedGroup = currentNodes.find(n => n.selected && n.type === 'group')
+    if (!selectedGroup) return
+
+    const groupPos = selectedGroup.position
+    const updatedNodes = currentNodes.map(n => {
+      if (n.parentId !== selectedGroup.id) return n
+      return {
+        ...n,
+        parentId: undefined,
+        extent: undefined,
+        position: {
+          x: n.position.x + groupPos.x,
+          y: n.position.y + groupPos.y,
+        },
+      }
+    })
+
+    setNodes(updatedNodes.filter(n => n.id !== selectedGroup.id))
+  }, [rfInstance, setNodes])
 
   const handleSave = useCallback(() => {
     downloadWorkflow(nodes, edges)
@@ -909,6 +1042,37 @@ export default function App() {
           style={{ display: 'none' }}
           onChange={handleLoadFile}
         />
+        {(() => {
+          const selected = nodes.filter(n => n.selected && n.type !== 'group')
+          const groupSelected = nodes.find(n => n.selected && n.type === 'group')
+          return (
+            <>
+              {selected.length >= 2 && (
+                <button
+                  style={templateBtnStyle}
+                  onClick={handleGroupSelected}
+                  title={`Group ${selected.length} selected nodes`}
+                >
+                  📦 Group ({selected.length})
+                </button>
+              )}
+              {groupSelected && (
+                <button
+                  style={templateBtnStyle}
+                  onClick={handleUngroup}
+                  title={`Ungroup "${ (groupSelected.data as { name?: string }).name ?? 'Group' }"`}
+                >
+                  📤 Ungroup
+                </button>
+              )}
+              {selected.length > 0 && (
+                <span style={{ fontSize: 11, color: '#6b7280', marginRight: 4 }}>
+                  {selected.length} selected
+                </span>
+              )}
+            </>
+          )
+        })()}
         {loadError && (
           <span style={{ fontSize: 11, color: '#dc2626', maxWidth: 200 }} title={loadError}>
             ⚠ {loadError}
@@ -980,6 +1144,20 @@ export default function App() {
         {/* Canvas */}
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div ref={reactFlowWrapper} style={{ flex: 1 }}>
+            {/* Prominent yellow selection ring */}
+            <style>{`
+              .react-flow__node.selectable.selected {
+                box-shadow: 0 0 0 3px #f59e0b !important;
+                outline: none !important;
+              }
+              .react-flow__node-input.selectable.selected,
+              .react-flow__node-default.selectable.selected,
+              .react-flow__node-output.selectable.selected,
+              .react-flow__node-group.selectable.selected {
+                box-shadow: 0 0 0 3px #f59e0b !important;
+                outline: none !important;
+              }
+            `}</style>
             <ReactFlow
               nodes={nodes}
               edges={edges}
@@ -992,6 +1170,8 @@ export default function App() {
               onDragOver={onDragOver}
               onNodeDoubleClick={onNodeDoubleClick}
               onConnectEnd={onConnectEnd}
+              selectionOnDrag
+              multiSelectionKeyCode="Shift"
               minZoom={0.1}
               fitView
             >
