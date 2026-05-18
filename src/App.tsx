@@ -630,7 +630,6 @@ const SIDEBAR_ITEMS = [
   // ── Canvas ──────────────────────────────────────────────────────────────────
   { type: 'quickStart',  label: 'QuickStart',        sub: 'AI workflow planner — describe a question, auto-build a workflow', color: '#0c1445', group: 'Canvas' },
   { type: 'comment',     label: 'Comment',           sub: 'Annotation label',          color: '#f59e0b', group: 'Canvas' },
-  { type: 'group',       label: 'Group',             sub: 'Container for grouping nodes', color: '#3b82f6', group: 'Canvas' },
   // ── Input ───────────────────────────────────────────────────────────────────
   { type: 'param',       label: 'Param',             sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },
   // ── Inspection ───────────────────────────────────────────────────────────────
