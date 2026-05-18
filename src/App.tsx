@@ -24,6 +24,7 @@ import { ExpandedOutputPanel } from './nodes/ExpandedOutputPanel'
 import { ChatSidebar } from './components/ChatSidebar'
 import { ConnectionSuggestions, HandlePicker, NODE_PARAM_HANDLES, type Suggestion } from './components/ConnectionSuggestions'
 import { runWorkflow } from './utils/runWorkflow'
+import { invokeToggle } from './utils/groupToggleRegistry'
 import type { UnifiedRecord } from './types/UnifiedRecord'
 import type { LocalFolderSourceNodeData } from './nodes/LocalFolderSourceNode'
 import type { LocalFileSourceNodeData }   from './nodes/LocalFileSourceNode'
@@ -718,6 +719,7 @@ export default function App() {
 
     const updated = nodes.map(node => {
       if (node.type !== 'group') return node
+      if ((node.data as any).collapsed) return node
 
       const children = nodes.filter(n => n.parentId === node.id)
       if (children.length === 0) return node
@@ -825,6 +827,13 @@ export default function App() {
     const currentNodes = rfInstance.getNodes()
     const selectedGroup = currentNodes.find(n => n.selected && n.type === 'group')
     if (!selectedGroup) return
+
+    // Refuse to ungroup while collapsed — edges still point at proxy handles and
+    // would become orphaned when the group node is deleted.
+    if ((selectedGroup.data as any).collapsed) {
+      invokeToggle(selectedGroup.id)
+      return
+    }
 
     const groupPos = selectedGroup.position
     const updatedNodes = currentNodes.map(n => {
