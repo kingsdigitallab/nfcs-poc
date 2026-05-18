@@ -56,8 +56,11 @@ interface ProxyEdgeInfo {
 const BORDER_COLOR = '#3b82f6'
 const HEADER_BG    = '#3b82f6'
 
-const MAX_SLOTS = 8
+// Slot rendering: count is derived per-render from actual proxyEdges, so any
+// number of in/out edges renders correctly. The previous fixed cap of 8 caused
+// edges with slot >= 8 to reference unregistered handles and collapse to (0,0).
 const SLOT_STEP = 18  // vertical spacing between proxy dots
+const MIN_SLOTS = 1   // always reserve one row for visual consistency
 
 /* ─── Helpers ───────────────────────────────────────────────────────────── */
 
@@ -217,6 +220,11 @@ export function GroupNode({ id, data, selected }: NodeProps) {
                 ...n,
                 width: pillW,
                 height: pillH,
+                // Overwrite measured so RF doesn't keep the old (expanded)
+                // dimensions cached from NodeResizer. Without this, the outer
+                // wrapper visibly stays at the previous width/height even
+                // though style.width/height have been set to pillW/pillH.
+                measured: { width: pillW, height: pillH },
                 style: {
                   ...((n as any).style ?? {}),
                   width: pillW,
@@ -256,6 +264,7 @@ export function GroupNode({ id, data, selected }: NodeProps) {
         /* ═══ EXPANDING ════════════════════════════════════════════════ */
         const savedProxies = d.proxyEdges ?? []
         const proxyEdgeIds = new Set(savedProxies.map(p => p.edgeId))
+        const allNodeIds = new Set(getNodes().map(n => n.id))
 
         const updatedEdges = getEdges().map((ed: Edge) => {
           const sIn = cids.has(ed.source)
@@ -267,6 +276,14 @@ export function GroupNode({ id, data, selected }: NodeProps) {
           if (proxyEdgeIds.has(ed.id)) {
             const pr = savedProxies.find(p => p.edgeId === ed.id)
             if (!pr) return ed
+            // Safety: only restore edges that actually reference THIS group.
+            // Otherwise we would mutate the original-group's edges if this
+            // group was created by duplicating a collapsed group (the clone's
+            // proxyEdges array carries the source group's edge ids).
+            const belongsToThisGroup =
+              (pr.side === 'out' && ed.source === id) ||
+              (pr.side === 'in'  && ed.target === id)
+            if (!belongsToThisGroup) return ed
             const restored: any = { ...ed, hidden: false }
             if (pr.side === 'out') {
               restored.source = pr.originalSource
@@ -282,28 +299,35 @@ export function GroupNode({ id, data, selected }: NodeProps) {
           return ed
         })
 
-        // Remove any edges that still reference this group's proxy handles but were
-        // not covered by proxyEdges (stale refs from file corruption or accidental
-        // connections to hidden handles).
-        const cleanedEdges = updatedEdges.filter(
-          ed =>
-            !(ed.source === id && ed.sourceHandle?.startsWith('proxy-out-')) &&
-            !(ed.target === id && ed.targetHandle?.startsWith('proxy-in-')),
-        )
+        // Two-pass cleanup. First, remove edges that still reference this group's
+        // proxy handles but were not covered by proxyEdges (stale refs from file
+        // corruption or accidental connections to hidden handles). Second, drop
+        // any restored edge whose endpoints point at nodes that no longer exist
+        // — this happens when a child of a collapsed group is deleted directly
+        // (proxyEdges still names the deleted child as originalSource/Target).
+        const cleanedEdges = updatedEdges.filter(ed => {
+          if (ed.source === id && ed.sourceHandle?.startsWith('proxy-out-')) return false
+          if (ed.target === id && ed.targetHandle?.startsWith('proxy-in-')) return false
+          if (!allNodeIds.has(ed.source) || !allNodeIds.has(ed.target)) return false
+          return true
+        })
 
         setEdges(cleanedEdges)
 
+        const expW = d.originalWidth ?? currentW
+        const expH = d.originalHeight ?? currentH
         setNodes((prev: Node[]) =>
           prev.map((n: Node) => {
             if (n.id === id) {
               return {
                 ...n,
-                width: d.originalWidth ?? currentW,
-                height: d.originalHeight ?? currentH,
+                width: expW,
+                height: expH,
+                measured: { width: expW, height: expH },
                 style: {
                   ...((n as any).style ?? {}),
-                  width: d.originalWidth ?? currentW,
-                  height: d.originalHeight ?? currentH,
+                  width: expW,
+                  height: expH,
                   border: '2px dashed #3b82f6',
                   borderRadius: 10,
                 },
@@ -357,12 +381,55 @@ export function GroupNode({ id, data, selected }: NodeProps) {
     })
   }, [id, toggleCollapse])
 
+  /* ── Re-sync RF internals AFTER commit ────────────────────────────────
+   * The requestAnimationFrame call inside toggleCollapse can fire before
+   * React commits, leaving NodeResizer's cached measured dimensions in
+   * place (which is what made the wrapper visually stay at the old
+   * expanded size after collapse). Watching `collapsed` here guarantees
+   * the call lands post-commit. */
+  useEffect(() => {
+    updateInternals(id)
+  }, [id, collapsed, updateInternals])
+
+  /* ── Heal stale proxyEdges when a child has been deleted while collapsed
+   * Without this, an external edge that was routed to one of this group's
+   * proxy handles would survive (since it points at the group, not the
+   * child), and on expand the restore would write a deleted node id into
+   * source/target — producing a dangling edge that converges on (0,0).
+   * Here we proactively prune both the proxy edge and the proxyEdges
+   * entry the moment we detect a referenced child is gone. */
+  useEffect(() => {
+    if (!collapsed || !d.proxyEdges || d.proxyEdges.length === 0) return
+    const liveIds = new Set(allNodes.map(n => n.id))
+    const stale = d.proxyEdges.filter(p =>
+      (p.side === 'out' && !liveIds.has(p.originalSource)) ||
+      (p.side === 'in'  && !liveIds.has(p.originalTarget)),
+    )
+    if (stale.length === 0) return
+    const staleEdgeIds = new Set(stale.map(p => p.edgeId))
+    setEdges(prev => prev.filter(e => !staleEdgeIds.has(e.id)))
+    updateNodeData(id, {
+      proxyEdges: d.proxyEdges.filter(p => !staleEdgeIds.has(p.edgeId)),
+    })
+    // updateInternals so the now-empty slot disappears from the pill
+    updateInternals(id)
+  }, [collapsed, d.proxyEdges, allNodes, id, setEdges, updateNodeData, updateInternals])
+
   /* ── Pre-computed slot / label lookup for render ─────────────────────── */
   const labelFor = (edgeId: string) => proxyLabels[edgeId] ?? ''
 
   /* ── Render proxy handle slots (always in DOM for registration) ──────── */
+  const slotCount = useMemo(() => {
+    let maxIn = 0, maxOut = 0
+    for (const v of Object.values(slotData)) {
+      if (v.side === 'in') maxIn = Math.max(maxIn, v.slot + 1)
+      else                 maxOut = Math.max(maxOut, v.slot + 1)
+    }
+    return Math.max(maxIn, maxOut, MIN_SLOTS)
+  }, [slotData])
+
   const renderProxyHandles = () => {
-    return Array.from({ length: MAX_SLOTS }).map((_, i) => {
+    return Array.from({ length: slotCount }).map((_, i) => {
       const inEntry = Object.entries(slotData).find(
         ([, v]) => v.side === 'in' && v.slot === i
       )
