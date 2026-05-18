@@ -282,7 +282,16 @@ export function GroupNode({ id, data, selected }: NodeProps) {
           return ed
         })
 
-        setEdges(updatedEdges)
+        // Remove any edges that still reference this group's proxy handles but were
+        // not covered by proxyEdges (stale refs from file corruption or accidental
+        // connections to hidden handles).
+        const cleanedEdges = updatedEdges.filter(
+          ed =>
+            !(ed.source === id && ed.sourceHandle?.startsWith('proxy-out-')) &&
+            !(ed.target === id && ed.targetHandle?.startsWith('proxy-in-')),
+        )
+
+        setEdges(cleanedEdges)
 
         setNodes((prev: Node[]) =>
           prev.map((n: Node) => {
@@ -381,7 +390,7 @@ export function GroupNode({ id, data, selected }: NodeProps) {
               position={Position.Left}
               id={`proxy-in-${i}`}
               style={styles.proxyDot}
-              isConnectable={!collapsed}  // Disable connection suggestions when collapsed
+              isConnectable={false}
             />
             {collapsed && inEdgeId && (
               <span
@@ -414,7 +423,7 @@ export function GroupNode({ id, data, selected }: NodeProps) {
               position={Position.Right}
               id={`proxy-out-${i}`}
               style={styles.proxyDot}
-              isConnectable={!collapsed}
+              isConnectable={false}
             />
             {collapsed && outEdgeId && (
               <span

@@ -868,7 +868,20 @@ export default function App() {
         const hydrated = hydrateNodes(wf)
         bumpCounterPast(hydrated.map(n => n.id))
         setNodes(hydrated)
-        setEdges(wf.edges)
+        // Strip edges that reference proxy handles of expanded groups — these are
+        // stale refs left by incomplete collapse/expand cycles in a prior session.
+        const expandedGroupIds = new Set(
+          hydrated
+            .filter(n => n.type === 'group' && !(n.data as any).collapsed)
+            .map(n => n.id),
+        )
+        setEdges(
+          wf.edges.filter(
+            ed =>
+              !(ed.sourceHandle?.startsWith('proxy-out-') && expandedGroupIds.has(ed.source)) &&
+              !(ed.targetHandle?.startsWith('proxy-in-') && expandedGroupIds.has(ed.target)),
+          ),
+        )
         setLoadError(null)
       } catch (err) {
         setLoadError(err instanceof Error ? err.message : 'Failed to load workflow.')
