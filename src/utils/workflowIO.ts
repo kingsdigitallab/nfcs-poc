@@ -56,7 +56,6 @@ const TRANSIENT_FIELDS = new Set([
   'resolved',
   'pending',
   'failed',
-  'childPositions',   // runtime-only
   'proxyInCount',     // runtime-only
   'proxyOutCount',    // runtime-only
 ])
