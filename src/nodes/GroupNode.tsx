@@ -267,14 +267,16 @@ export function GroupNode({ id, data, selected }: NodeProps) {
           if (proxyEdgeIds.has(ed.id)) {
             const pr = savedProxies.find(p => p.edgeId === ed.id)
             if (!pr) return ed
-            return {
-              ...ed,
-              hidden: false,
-              source: pr.originalSource,
-              target: pr.originalTarget,
-              sourceHandle: pr.originalSourceHandle,
-              targetHandle: pr.originalTargetHandle,
-            } as Edge
+            const restored: any = { ...ed, hidden: false }
+            if (pr.side === 'out') {
+              restored.source = pr.originalSource
+              restored.sourceHandle = pr.originalSourceHandle
+            }
+            if (pr.side === 'in') {
+              restored.target = pr.originalTarget
+              restored.targetHandle = pr.originalTargetHandle
+            }
+            return restored as Edge
           }
 
           return ed
