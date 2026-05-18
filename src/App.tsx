@@ -23,6 +23,21 @@ import { nodeTypes } from './nodes'
 import { ExpandedOutputPanel } from './nodes/ExpandedOutputPanel'
 import { ChatSidebar } from './components/ChatSidebar'
 import { ConnectionSuggestions, HandlePicker, NODE_PARAM_HANDLES, type Suggestion } from './components/ConnectionSuggestions'
+
+/**
+ * Handle ids that must only ever carry ONE inbound connection. These are the
+ * scalar param-style inputs (query strings, limits, API keys) where two
+ * sources would race/overwrite each other. Plural inputs like `data` are
+ * intentionally excluded — they are designed to merge multiple upstreams.
+ *
+ * The set is derived from NODE_PARAM_HANDLES (every handle listed there is a
+ * single-value param input) plus the always-singular `apiKey` which can
+ * appear on additional node types in future.
+ */
+const SINGLETON_TARGET_HANDLES = new Set<string>([
+  'apiKey',
+  ...Object.values(NODE_PARAM_HANDLES).flatMap(hs => hs.map(h => h.id)),
+])
 import { runWorkflow } from './utils/runWorkflow'
 import { invokeToggle } from './utils/groupToggleRegistry'
 import type { UnifiedRecord } from './types/UnifiedRecord'
@@ -712,11 +727,17 @@ export default function App() {
     sourceNodeId: string; sourceHandleId: string | null
   } | null>(null)
 
-  // Auto-resize groups when children overflow their bounds
+  // Auto-resize groups to fit children. Bidirectional (grows AND shrinks) so
+  // that no stale dimensions linger across collapse/expand cycles. The previous
+  // grow-only behaviour meant a group resized larger by NodeResizer would stay
+  // large after expand, and the next collapse would briefly draw the old big
+  // outline before the pill size took effect.
+  // A 4px tolerance prevents setNodes/measured-resync feedback loops.
   useEffect(() => {
     const groups = nodes.filter(n => n.type === 'group')
     if (groups.length === 0) return
 
+    const TOLERANCE = 4
     const updated = nodes.map(node => {
       if (node.type !== 'group') return node
       if ((node.data as any).collapsed) return node
@@ -733,22 +754,24 @@ export default function App() {
       }
 
       const padding = 30
-      const newW = Math.max(250, maxX + padding)
-      const newH = Math.max(120, maxY + padding)
+      const targetW = Math.max(250, maxX + padding)
+      const targetH = Math.max(120, maxY + padding)
       const currentW = Number((node as any).style?.width ?? 0)
       const currentH = Number((node as any).style?.height ?? 0)
 
-      if (newW > currentW || newH > currentH) {
-        return {
-          ...node,
-          style: {
-            ...((node as any).style ?? {}),
-            width: newW,
-            height: newH,
-          },
-        } as AppNode
+      if (Math.abs(targetW - currentW) <= TOLERANCE && Math.abs(targetH - currentH) <= TOLERANCE) {
+        return node
       }
-      return node
+      return {
+        ...node,
+        width: targetW,
+        height: targetH,
+        style: {
+          ...((node as any).style ?? {}),
+          width: targetW,
+          height: targetH,
+        },
+      } as AppNode
     })
 
     const changed = updated.some((n, i) => n !== nodes[i])
@@ -891,7 +914,19 @@ export default function App() {
   }, [setNodes, setEdges])
 
   const onConnect = useCallback(
-    (connection: Connection) => setEdges(eds => addEdge(connection, eds)),
+    (connection: Connection) => setEdges(eds => {
+      // Singleton enforcement: if the target handle accepts only one inbound
+      // edge, drop any existing edge to (target, targetHandle) before adding.
+      const th = connection.targetHandle
+      const needsReplace =
+        th != null &&
+        SINGLETON_TARGET_HANDLES.has(th) &&
+        eds.some(e => e.target === connection.target && e.targetHandle === th)
+      const base = needsReplace
+        ? eds.filter(e => !(e.target === connection.target && e.targetHandle === th))
+        : eds
+      return addEdge(connection, base)
+    }),
     [setEdges],
   )
 
@@ -956,13 +991,19 @@ export default function App() {
       if (!rfInstance) return
       const position = rfInstance.screenToFlowPosition({ x: clientX - 20, y: clientY - 20 })
       const newParam  = NODE_DEFAULTS['param'](position)
+      const targetId  = state.fromNode!.id
       setNodes(prev => [...prev, newParam as AppNode])
-      setEdges(prev => addEdge({
-        id:           `e-${newParam.id}-${state.fromNode!.id}`,
-        source:       newParam.id,
-        target:       state.fromNode!.id,
-        targetHandle: handleId,
-      }, prev))
+      setEdges(prev => {
+        const base = SINGLETON_TARGET_HANDLES.has(handleId)
+          ? prev.filter(e => !(e.target === targetId && e.targetHandle === handleId))
+          : prev
+        return addEdge({
+          id:           `e-${newParam.id}-${targetId}`,
+          source:       newParam.id,
+          target:       targetId,
+          targetHandle: handleId,
+        }, base)
+      })
     }
   }, [rfInstance, setNodes, setEdges])
 

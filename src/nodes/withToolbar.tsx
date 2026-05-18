@@ -41,12 +41,27 @@ export function withToolbar(Wrapped: React.ComponentType<NodeProps>): React.Comp
           const groupId = newId('group')
           const idMap = new Map([[node.id, groupId]])
 
+          // Drop collapse-related fields from the clone. The original edge
+          // ids stored in proxyEdges would still point at the source group's
+          // edges, so leaving them in place can corrupt the original group
+          // the first time the clone is expanded.
+          const baseData = cloneData(node.data as object)
+          delete (baseData as Record<string, unknown>).collapsed
+          delete (baseData as Record<string, unknown>).proxyEdges
+          delete (baseData as Record<string, unknown>).childPositions
+
           const newGroup = {
             ...node,
             id: groupId,
             position: { x: node.position.x + 40, y: node.position.y + 40 },
             selected: true,
-            data: cloneData(node.data as object),
+            // Reset the visual pill state in case the source was collapsed
+            style: {
+              ...((node as any).style ?? {}),
+              border: '2px dashed #3b82f6',
+              borderRadius: 10,
+            },
+            data: baseData,
           }
 
           const clonedChildren = children.map(child => {
@@ -94,6 +109,40 @@ export function withToolbar(Wrapped: React.ComponentType<NodeProps>): React.Comp
 
     const handleDelete = (e: React.MouseEvent) => {
       e.stopPropagation()
+
+      // Groups need special handling. Direct deletion would either:
+      //  (a) orphan children (parentId pointing to a deleted node), or
+      //  (b) silently drop child work along with the group.
+      // Behaviour: while collapsed, expand first (matches handleUngroup).
+      // While expanded, unparent children (preserve them) before removing
+      // the group node itself.
+      if (isGroup) {
+        if (collapsed) {
+          invokeToggle(props.id)
+          return
+        }
+        const groupNode = getNodes().find(n => n.id === props.id)
+        if (!groupNode) return
+        const groupPos = groupNode.position
+        setNodes(prev =>
+          prev
+            .map(n => {
+              if (n.parentId !== props.id) return n
+              return {
+                ...n,
+                parentId: undefined,
+                extent: undefined,
+                position: {
+                  x: n.position.x + groupPos.x,
+                  y: n.position.y + groupPos.y,
+                },
+              }
+            })
+            .filter(n => n.id !== props.id),
+        )
+        return
+      }
+
       deleteElements({ nodes: [{ id: props.id }] })
     }
 
