@@ -667,7 +667,7 @@ const SIDEBAR_ITEMS = [
   { type: 'sourceProfile',     label: 'SourceProfile',         sub: 'Schema, field stats, completeness + AI narrative', color: '#1f2937', group: 'Inspection' },
   // ── Data Services ────────────────────────────────────────────────────────────
   { type: 'ariadneSearch',     label: 'ARIADNESearch',         sub: 'ARIADNE pan-European archaeology portal',  color: '#164e63', group: 'Data Services' },
-  { type: 'hsdsSearch',        label: 'HSDSSearch',            sub: 'Historic Environment Data Service',        color: '#134e4a', group: 'Data Services' },
+  { type: 'hsdsSearch',        label: 'HSDSSearch',            sub: 'Heritage Science Data Service',        color: '#134e4a', group: 'Data Services' },
   { type: 'bodleianSearch',   label: 'BodleianSearch',        sub: 'Bodleian Digital Collections (Oxford)',    color: '#003865', group: 'Data Services' },
   { type: 'europeanaSearch',   label: 'EuropeanaSearch',       sub: 'Europeana cultural heritage aggregator',  color: '#2563eb', group: 'Data Services' },
   { type: 'gbifSearch',        label: 'GBIFSearch',            sub: 'GBIF occurrence search',                  color: '#0f4c81', group: 'Data Services' },

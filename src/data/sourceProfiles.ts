@@ -267,7 +267,7 @@ const profiles: SourceProfile[] = [
 
   {
     source: 'hsds',
-    label: 'Historic Environment Data Service (HSDS)',
+    label: 'Heritage Science Data Service (HSDS)',
     url: 'https://hsds.ac.uk',
     coverage: 'UK historic environment data aggregator drawing from Historic England, Historic Environment Scotland (HES), Cadw (Wales), Northern Ireland Environment Agency, and other national bodies. Dataset-level metadata for archaeological sites, listed buildings, scheduled monuments, historic parks, maritime sites, and related resources.',
     researchUse: 'UK built and natural heritage discovery across all four nations in a single query. Shares the same ARIADNE-backbone schema — filter by Contributor to scope to a specific national body. Temporal and spatial coverage often well-documented. Best for: scheduled monuments, listed buildings, historic parks and gardens, UK maritime archaeology, cross-nation heritage comparison.',
