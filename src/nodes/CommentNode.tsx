@@ -30,6 +30,16 @@ export function CommentNode({ id, data, selected }: NodeProps) {
         handleStyle={{ background: BORDER_COLOR, borderColor: '#fff', width: 8, height: 8 }}
       />
       <div style={styles.card}>
+        <div style={styles.dragHandle} title="Drag to move">
+          <svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="6" cy="2" r="1.5" fill={BORDER_COLOR} />
+            <circle cx="12" cy="2" r="1.5" fill={BORDER_COLOR} />
+            <circle cx="18" cy="2" r="1.5" fill={BORDER_COLOR} />
+            <circle cx="6" cy="6" r="1.5" fill={BORDER_COLOR} />
+            <circle cx="12" cy="6" r="1.5" fill={BORDER_COLOR} />
+            <circle cx="18" cy="6" r="1.5" fill={BORDER_COLOR} />
+          </svg>
+        </div>
         <input
           style={styles.title}
           value={(d.title as string) ?? ''}
@@ -91,5 +101,18 @@ const styles = {
     width:       '100%',
     boxSizing:   'border-box' as const,
     fontFamily:  'inherit',
+  },
+  dragHandle: {
+    background:   HEADER_BG,
+    borderBottom: `1px solid ${BORDER_COLOR}`,
+    padding:      '4px 0',
+    display:      'flex',
+    justifyContent: 'center',
+    alignItems:   'center',
+    cursor:       'grab' as const,
+    flexShrink:   0,
+    userSelect:   'none' as const,
+    borderTopLeftRadius: 6,
+    borderTopRightRadius: 6,
   },
 }

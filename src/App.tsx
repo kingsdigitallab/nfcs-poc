@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { newId, bumpCounterPast } from './utils/nodeIdCounter'
 import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from './utils/kclConfig'
 import { downloadWorkflow, parseWorkflowFile, hydrateNodes } from './utils/workflowIO'
@@ -23,7 +23,23 @@ import { nodeTypes } from './nodes'
 import { ExpandedOutputPanel } from './nodes/ExpandedOutputPanel'
 import { ChatSidebar } from './components/ChatSidebar'
 import { ConnectionSuggestions, HandlePicker, NODE_PARAM_HANDLES, type Suggestion } from './components/ConnectionSuggestions'
+
+/**
+ * Handle ids that must only ever carry ONE inbound connection. These are the
+ * scalar param-style inputs (query strings, limits, API keys) where two
+ * sources would race/overwrite each other. Plural inputs like `data` are
+ * intentionally excluded — they are designed to merge multiple upstreams.
+ *
+ * The set is derived from NODE_PARAM_HANDLES (every handle listed there is a
+ * single-value param input) plus the always-singular `apiKey` which can
+ * appear on additional node types in future.
+ */
+const SINGLETON_TARGET_HANDLES = new Set<string>([
+  'apiKey',
+  ...Object.values(NODE_PARAM_HANDLES).flatMap(hs => hs.map(h => h.id)),
+])
 import { runWorkflow } from './utils/runWorkflow'
+import { invokeToggle } from './utils/groupToggleRegistry'
 import type { UnifiedRecord } from './types/UnifiedRecord'
 import type { LocalFolderSourceNodeData } from './nodes/LocalFolderSourceNode'
 import type { LocalFileSourceNodeData }   from './nodes/LocalFileSourceNode'
@@ -66,6 +82,7 @@ import type { SourceProfileNodeData }    from './nodes/SourceProfileNode'
 import type { SmartFilterNodeData }      from './nodes/SmartFilterNode'
 import type { SmartGeocoderNodeData }   from './nodes/SmartGeocoderNode'
 import type { QuickStartNodeData }      from './nodes/QuickStartNode'
+import type { GroupNodeData }           from './nodes/GroupNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -117,6 +134,7 @@ type AppNode =
   | Node<SmartFilterNodeData>
   | Node<SmartGeocoderNodeData>
   | Node<QuickStartNodeData>
+  | Node<GroupNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -615,6 +633,11 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       planStatus: 'idle', planMessage: '', instantiated: false,
     } satisfies QuickStartNodeData,
   }),
+  group: pos => ({
+    id: newId('group'), type: 'group', position: pos,
+    style: { width: 400, height: 300 },
+    data: { name: 'Group' },
+  }),
 }
 
 // ─── sidebar definition ───────────────────────────────────────────────────────
@@ -704,12 +727,153 @@ export default function App() {
     sourceNodeId: string; sourceHandleId: string | null
   } | null>(null)
 
+  // Auto-resize groups to fit children. Bidirectional (grows AND shrinks) so
+  // that no stale dimensions linger across collapse/expand cycles. The previous
+  // grow-only behaviour meant a group resized larger by NodeResizer would stay
+  // large after expand, and the next collapse would briefly draw the old big
+  // outline before the pill size took effect.
+  // A 4px tolerance prevents setNodes/measured-resync feedback loops.
+  useEffect(() => {
+    const groups = nodes.filter(n => n.type === 'group')
+    if (groups.length === 0) return
+
+    const TOLERANCE = 4
+    const updated = nodes.map(node => {
+      if (node.type !== 'group') return node
+      if ((node.data as any).collapsed) return node
+
+      const children = nodes.filter(n => n.parentId === node.id)
+      if (children.length === 0) return node
+
+      let maxX = 0, maxY = 0
+      for (const child of children) {
+        const cw = Number(child.measured?.width ?? (child as any).style?.width ?? 220)
+        const ch = Number(child.measured?.height ?? (child as any).style?.height ?? 100)
+        maxX = Math.max(maxX, child.position.x + cw)
+        maxY = Math.max(maxY, child.position.y + ch)
+      }
+
+      const padding = 30
+      const targetW = Math.max(250, maxX + padding)
+      const targetH = Math.max(120, maxY + padding)
+      const currentW = Number((node as any).style?.width ?? 0)
+      const currentH = Number((node as any).style?.height ?? 0)
+
+      if (Math.abs(targetW - currentW) <= TOLERANCE && Math.abs(targetH - currentH) <= TOLERANCE) {
+        return node
+      }
+      return {
+        ...node,
+        width: targetW,
+        height: targetH,
+        style: {
+          ...((node as any).style ?? {}),
+          width: targetW,
+          height: targetH,
+        },
+      } as AppNode
+    })
+
+    const changed = updated.some((n, i) => n !== nodes[i])
+    if (changed) setNodes(updated)
+  }, [nodes, setNodes])
+
   const handleRunAll = useCallback(async () => {
     if (!rfInstance) return
     setRunningAll(true)
     await runWorkflow(rfInstance.getNodes, rfInstance.getEdges(), rfInstance.updateNodeData)
     setRunningAll(false)
   }, [rfInstance])
+
+  const handleGroupSelected = useCallback(() => {
+    if (!rfInstance) return
+    const currentNodes = rfInstance.getNodes()
+    const selected = currentNodes.filter(n => n.selected && n.type !== 'group')
+    if (selected.length < 2) return
+
+    // Calculate bounding box with padding
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity
+    for (const n of selected) {
+      const w = (n as Node & { style?: { width?: number; height?: number } }).style?.width ?? 200
+      const h = (n as Node & { style?: { width?: number; height?: number } }).style?.height ?? 100
+      minX = Math.min(minX, n.position.x)
+      minY = Math.min(minY, n.position.y)
+      maxX = Math.max(maxX, n.position.x + w)
+      maxY = Math.max(maxY, n.position.y + h)
+    }
+    const padding = 20
+    const headerH = 35
+    const width  = maxX - minX + padding * 2
+    const height = maxY - minY + padding * 2 + headerH
+    const groupPos = { x: minX - padding, y: minY - padding - headerH }
+
+    // Count existing groups for naming
+    const existingNames = new Set(
+      currentNodes.filter(n => n.type === 'group').map(n => (n.data as { name?: string }).name ?? '')
+    )
+    let groupNumber = 1
+    while (existingNames.has(`Group ${groupNumber}`)) {
+      groupNumber++
+    }
+    const groupName = `Group ${groupNumber}`
+
+    const groupNode = {
+      id: newId('group'),
+      type: 'group',
+      position: groupPos,
+      style: { width, height },
+      data: { name: groupName },
+      selected: true,
+    } as AppNode
+
+    const updatedNodes = currentNodes.map(n => {
+      if (!n.selected || n.type === 'group') return n
+      return {
+        ...n,
+        parentId: groupNode.id,
+        position: {
+          x: n.position.x - groupPos.x,
+          y: n.position.y - groupPos.y,
+        },
+        extent: 'parent' as const,
+        selected: false,
+      }
+    })
+
+    // Parent must precede children in the array so React Flow resolves
+    // the parentId reference before rendering children.
+    setNodes([groupNode, ...updatedNodes])
+  }, [rfInstance, setNodes])
+
+  const handleUngroup = useCallback(() => {
+    if (!rfInstance) return
+    const currentNodes = rfInstance.getNodes()
+    const selectedGroup = currentNodes.find(n => n.selected && n.type === 'group')
+    if (!selectedGroup) return
+
+    // Refuse to ungroup while collapsed — edges still point at proxy handles and
+    // would become orphaned when the group node is deleted.
+    if ((selectedGroup.data as any).collapsed) {
+      invokeToggle(selectedGroup.id)
+      return
+    }
+
+    const groupPos = selectedGroup.position
+    const updatedNodes = currentNodes.map(n => {
+      if (n.parentId !== selectedGroup.id) return n
+      return {
+        ...n,
+        parentId: undefined,
+        extent: undefined,
+        position: {
+          x: n.position.x + groupPos.x,
+          y: n.position.y + groupPos.y,
+        },
+      }
+    })
+
+    setNodes(updatedNodes.filter(n => n.id !== selectedGroup.id))
+  }, [rfInstance, setNodes])
 
   const handleSave = useCallback(() => {
     downloadWorkflow(nodes, edges)
@@ -727,7 +891,20 @@ export default function App() {
         const hydrated = hydrateNodes(wf)
         bumpCounterPast(hydrated.map(n => n.id))
         setNodes(hydrated)
-        setEdges(wf.edges)
+        // Strip edges that reference proxy handles of expanded groups — these are
+        // stale refs left by incomplete collapse/expand cycles in a prior session.
+        const expandedGroupIds = new Set(
+          hydrated
+            .filter(n => n.type === 'group' && !(n.data as any).collapsed)
+            .map(n => n.id),
+        )
+        setEdges(
+          wf.edges.filter(
+            ed =>
+              !(ed.sourceHandle?.startsWith('proxy-out-') && expandedGroupIds.has(ed.source)) &&
+              !(ed.targetHandle?.startsWith('proxy-in-') && expandedGroupIds.has(ed.target)),
+          ),
+        )
         setLoadError(null)
       } catch (err) {
         setLoadError(err instanceof Error ? err.message : 'Failed to load workflow.')
@@ -737,7 +914,19 @@ export default function App() {
   }, [setNodes, setEdges])
 
   const onConnect = useCallback(
-    (connection: Connection) => setEdges(eds => addEdge(connection, eds)),
+    (connection: Connection) => setEdges(eds => {
+      // Singleton enforcement: if the target handle accepts only one inbound
+      // edge, drop any existing edge to (target, targetHandle) before adding.
+      const th = connection.targetHandle
+      const needsReplace =
+        th != null &&
+        SINGLETON_TARGET_HANDLES.has(th) &&
+        eds.some(e => e.target === connection.target && e.targetHandle === th)
+      const base = needsReplace
+        ? eds.filter(e => !(e.target === connection.target && e.targetHandle === th))
+        : eds
+      return addEdge(connection, base)
+    }),
     [setEdges],
   )
 
@@ -802,13 +991,19 @@ export default function App() {
       if (!rfInstance) return
       const position = rfInstance.screenToFlowPosition({ x: clientX - 20, y: clientY - 20 })
       const newParam  = NODE_DEFAULTS['param'](position)
+      const targetId  = state.fromNode!.id
       setNodes(prev => [...prev, newParam as AppNode])
-      setEdges(prev => addEdge({
-        id:           `e-${newParam.id}-${state.fromNode!.id}`,
-        source:       newParam.id,
-        target:       state.fromNode!.id,
-        targetHandle: handleId,
-      }, prev))
+      setEdges(prev => {
+        const base = SINGLETON_TARGET_HANDLES.has(handleId)
+          ? prev.filter(e => !(e.target === targetId && e.targetHandle === handleId))
+          : prev
+        return addEdge({
+          id:           `e-${newParam.id}-${targetId}`,
+          source:       newParam.id,
+          target:       targetId,
+          targetHandle: handleId,
+        }, base)
+      })
     }
   }, [rfInstance, setNodes, setEdges])
 
@@ -909,6 +1104,37 @@ export default function App() {
           style={{ display: 'none' }}
           onChange={handleLoadFile}
         />
+        {(() => {
+          const selected = nodes.filter(n => n.selected && n.type !== 'group')
+          const groupSelected = nodes.find(n => n.selected && n.type === 'group')
+          return (
+            <>
+              {selected.length >= 2 && (
+                <button
+                  style={templateBtnStyle}
+                  onClick={handleGroupSelected}
+                  title={`Group ${selected.length} selected nodes`}
+                >
+                  📦 Group ({selected.length})
+                </button>
+              )}
+              {groupSelected && (
+                <button
+                  style={templateBtnStyle}
+                  onClick={handleUngroup}
+                  title={`Ungroup "${ (groupSelected.data as { name?: string }).name ?? 'Group' }"`}
+                >
+                  📤 Ungroup
+                </button>
+              )}
+              {selected.length > 0 && (
+                <span style={{ fontSize: 11, color: '#6b7280', marginRight: 4 }}>
+                  {selected.length} selected
+                </span>
+              )}
+            </>
+          )
+        })()}
         {loadError && (
           <span style={{ fontSize: 11, color: '#dc2626', maxWidth: 200 }} title={loadError}>
             ⚠ {loadError}
@@ -980,6 +1206,20 @@ export default function App() {
         {/* Canvas */}
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div ref={reactFlowWrapper} style={{ flex: 1 }}>
+            {/* Prominent yellow selection ring */}
+            <style>{`
+              .react-flow__node.selectable.selected {
+                box-shadow: 0 0 0 3px #f59e0b !important;
+                outline: none !important;
+              }
+              .react-flow__node-input.selectable.selected,
+              .react-flow__node-default.selectable.selected,
+              .react-flow__node-output.selectable.selected,
+              .react-flow__node-group.selectable.selected {
+                box-shadow: 0 0 0 3px #f59e0b !important;
+                outline: none !important;
+              }
+            `}</style>
             <ReactFlow
               nodes={nodes}
               edges={edges}
@@ -992,6 +1232,8 @@ export default function App() {
               onDragOver={onDragOver}
               onNodeDoubleClick={onNodeDoubleClick}
               onConnectEnd={onConnectEnd}
+              selectionOnDrag
+              multiSelectionKeyCode="Shift"
               minZoom={0.1}
               fitView
             >
