@@ -457,6 +457,16 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: path => path.replace(/^\/getty-search-proxy/, ''),
       },
+      // Proxy /hsds-proxy/* → https://hsds.ac.uk/*
+      '/hsds-proxy': {
+        target: 'https://hsds.ac.uk',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/hsds-proxy/, ''),
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Accept': 'application/json, text/plain, */*',
+        },
+      },
       // Proxy /nominatim-proxy/* → https://nominatim.openstreetmap.org/*
       '/nominatim-proxy': {
         target: 'https://nominatim.openstreetmap.org',

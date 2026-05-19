@@ -25,6 +25,7 @@ import { runWikidataEnrichNode }  from './runWikidataEnrichNode'
 import { runXMLSectionNode }      from './runXMLSectionNode'
 import { runEuropeanaNode }       from './runEuropeanaNode'
 import { runARIADNENode }         from './runARIADNENode'
+import { runHSDSNode }            from './runHSDSNode'
 import { runKCLNode }             from './runKCLNode'
 import { runKCLFieldNode }        from './runKCLFieldNode'
 import { runBodleianSearchNode }  from './runBodleianSearchNode'
@@ -59,6 +60,7 @@ export const nodeRunners: Record<string, NodeRunner> = {
   mdsSearch:         withFixture('mdsSearch',       runMDSNode),
   europeanaSearch:   withFixture('europeanaSearch', runEuropeanaNode),
   ariadneSearch:     withFixture('ariadneSearch',   runARIADNENode),
+  hsdsSearch:        runHSDSNode,
   bodleianSearch:    withFixture('bodleianSearch',  runBodleianSearchNode),
   adsSearchAdvanced: runADSAdvancedNode,
   adsLibrarySearch:  runADSLibraryNode,

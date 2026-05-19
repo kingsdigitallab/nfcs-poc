@@ -31,6 +31,7 @@ import { CitationNode }             from './CitationNode'
 import { EuropeanaSearchNode }     from './EuropeanaSearchNode'
 import { FieldDistributionNode }   from './FieldDistributionNode'
 import { ARIADNESearchNode }       from './ARIADNESearchNode'
+import { HSDSSearchNode }          from './HSDSSearchNode'
 import { BodleianSearchNode }      from './BodleianSearchNode'
 import { KCLNode }                  from './KCLNode'
 import { KCLFieldNode }             from './KCLFieldNode'
@@ -83,6 +84,7 @@ export const nodeTypes = {
   europeanaSearch:   withToolbar(EuropeanaSearchNode),
   fieldDistribution: withToolbar(FieldDistributionNode),
   ariadneSearch:     withToolbar(ARIADNESearchNode),
+  hsdsSearch:        withToolbar(HSDSSearchNode),
   bodleianSearch:    withToolbar(BodleianSearchNode),
   kclNode:           withToolbar(KCLNode),
   kclField:          withToolbar(KCLFieldNode),
