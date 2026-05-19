@@ -16,7 +16,7 @@ interface NominatimResult {
 export async function queryNominatim(toponym: string): Promise<GeoCandidate[]> {
   const url = `${NOMINATIM_BASE}?q=${encodeURIComponent(toponym)}&format=json&limit=5&addressdetails=0`
   const res  = await fetch(url, {
-    headers: { Accept: 'application/json' },
+    headers: { Accept: 'application/json', 'User-Agent': 'NFCS-AH-PoC/2.0 (research application; https://github.com/kingsdigitallab/nfcs-poc)' },
     signal:  AbortSignal.timeout(TIMEOUT_MS),
   })
   if (!res.ok) throw new Error(`Nominatim HTTP ${res.status}`)
