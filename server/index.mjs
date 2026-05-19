@@ -407,6 +407,19 @@ app.use('/nominatim-proxy', createProxyMiddleware({
   },
 }))
 
+app.use('/hsds-proxy', createProxyMiddleware({
+  target: 'https://hsds.ac.uk',
+  changeOrigin: true,
+  pathRewrite: { '^/hsds-proxy': '' },
+  on: {
+    proxyReq: (proxyReq) => {
+      stripEncoding(proxyReq)
+      proxyReq.setHeader('User-Agent', DESKTOP_UA)
+      proxyReq.setHeader('Accept', 'application/json, text/plain, */*')
+    },
+  },
+}))
+
 // ── Custom middleware ─────────────────────────────────────────────────────────
 
 app.use(adsLibrarySearchMiddleware)
