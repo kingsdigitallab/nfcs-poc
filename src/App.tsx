@@ -70,6 +70,7 @@ import type { ImageViewNodeData }        from './nodes/ImageViewNode'
 import type { CitationNodeData }           from './nodes/CitationNode'
 import type { EuropeanaSearchNodeData }    from './nodes/EuropeanaSearchNode'
 import type { ARIADNESearchNodeData }      from './nodes/ARIADNESearchNode'
+import type { HSDSSearchNodeData }         from './nodes/HSDSSearchNode'
 import type { BodleianSearchNodeData }     from './nodes/BodleianSearchNode'
 import type { FieldDistributionNodeData }  from './nodes/FieldDistributionNode'
 import type { TimelineOutputNodeData }     from './nodes/TimelineOutputNode'
@@ -122,6 +123,7 @@ type AppNode =
   | Node<CitationNodeData>
   | Node<EuropeanaSearchNodeData>
   | Node<ARIADNESearchNodeData>
+  | Node<HSDSSearchNodeData>
   | Node<BodleianSearchNodeData>
   | Node<FieldDistributionNodeData>
   | Node<TimelineOutputNodeData>
@@ -200,6 +202,16 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       sort: '_score', order: 'desc',
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies ARIADNESearchNodeData,
+  }),
+  hsdsSearch: pos => ({
+    id: newId('hsds'), type: 'hsdsSearch', position: pos,
+    data: {
+      inlineQuery: '', inlineLimit: '20', fetchAll: false,
+      ariadneSubject: '', derivedSubject: '', nativeSubject: '',
+      country: '', dataType: '', temporal: '', contributor: '',
+      sort: '_score', order: 'desc',
+      status: 'idle', statusMessage: '', results: undefined, count: 0,
+    } satisfies HSDSSearchNodeData,
   }),
   bodleianSearch: pos => ({
     id: newId('bodleian'), type: 'bodleianSearch', position: pos,
@@ -655,6 +667,7 @@ const SIDEBAR_ITEMS = [
   { type: 'sourceProfile',     label: 'SourceProfile',         sub: 'Schema, field stats, completeness + AI narrative', color: '#1f2937', group: 'Inspection' },
   // ── Data Services ────────────────────────────────────────────────────────────
   { type: 'ariadneSearch',     label: 'ARIADNESearch',         sub: 'ARIADNE pan-European archaeology portal',  color: '#164e63', group: 'Data Services' },
+  { type: 'hsdsSearch',        label: 'HSDSSearch',            sub: 'Historic Environment Data Service',        color: '#134e4a', group: 'Data Services' },
   { type: 'bodleianSearch',   label: 'BodleianSearch',        sub: 'Bodleian Digital Collections (Oxford)',    color: '#003865', group: 'Data Services' },
   { type: 'europeanaSearch',   label: 'EuropeanaSearch',       sub: 'Europeana cultural heritage aggregator',  color: '#2563eb', group: 'Data Services' },
   { type: 'gbifSearch',        label: 'GBIFSearch',            sub: 'GBIF occurrence search',                  color: '#0f4c81', group: 'Data Services' },
@@ -1292,7 +1305,7 @@ function DebugPanel({ nodes }: { nodes: AppNode[] }) {
 
   const slim = nodes.map(n => {
     const d = n.data as Record<string, unknown>
-    const isSearchNode = n.type === 'gbifSearch' || n.type === 'lldsSearch' || n.type === 'adsSearchAdvanced' || n.type === 'mdsSearch' || n.type === 'adsLibrarySearch' || n.type === 'ariadneSearch'
+    const isSearchNode = n.type === 'gbifSearch' || n.type === 'lldsSearch' || n.type === 'adsSearchAdvanced' || n.type === 'mdsSearch' || n.type === 'adsLibrarySearch' || n.type === 'ariadneSearch' || n.type === 'hsdsSearch'
     if (isSearchNode && d.results) {
       const recs = d.results as UnifiedRecord[]
       return {

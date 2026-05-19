@@ -79,6 +79,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | Node | Service | Notes |
 |------|---------|-------|
 | **ARIADNESearch** | [ARIADNE Infrastructure Portal](https://portal.ariadne-infrastructure.eu/) | Pan-European archaeology data aggregator covering 40+ institutions across 23 countries. Direct browser fetch (permissive CORS). Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type**, **Getty AAT subject**, **Native subject**, **Country**, **Data type**, **Period**, and **Contributor** (e.g. "Archaeology Data Service" to retrieve ADS records specifically). Citation metadata stamped on every record. |
+| **HSDSSearch** | [Historic Environment Data Service](https://hsds.ac.uk/) | UK historic environment data service aggregating records from Historic England, Historic Environment Scotland, Cadw (Wales), and other national bodies. Fetched via Vite proxy (no Cloudflare protection). Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel: **Resource type**, **Getty AAT subject**, **Native subject**, **Country** (England/Scotland/Wales/Northern Ireland/Isle of Man), **Data type**, **Period**, and **Contributor**. Records include `hsds.*` namespace with landingPage, contributor, temporal, spatial, and subject arrays. Best for: scheduled monuments, listed buildings, UK historic environment records, built heritage, maritime archaeology. |
 | **BodleianSearch** | [Bodleian Digital Collections](https://digital.bodleian.ox.ac.uk/) | Oxford's digital collections portal covering manuscripts, printed books, maps, photographs, coins, musical scores, and more. Inline fields: plain keyword query (e.g. `psalter`), limit (default 20), and sort order. Collapsible **Filters** panel: date range (from/to year), language (e.g. `Latin`), place of origin (e.g. `England`), completeness (fully digitised / partial), and musical notation presence. Records include `bodleian.*` namespace with shelfmark, date range, and IIIF manifest URL — connect output to **ImageView** in IIIF mode to browse manuscripts directly on the canvas. Fixture mode supported. |
 | **EuropeanaSearch** | [Europeana](https://www.europeana.eu/) | Pan-European cultural heritage aggregator covering museums, galleries, libraries and archives. Direct browser fetch (permissive CORS). API key is pre-configured (🔒 Configured); wire a **Param** node to the `apiKey` handle to override with your own key from [apis.europeana.eu](https://apis.europeana.eu/apikey). Inline fields: `query`, `limit` (up to 1 000 records via cursor-based pagination). Filters: Type, Reusability, media only. Records include `europeana.*` namespace with thumbnail, shownAt (original institution URL), rights, provider, and completeness. |
 | **GBIFSearch** | [GBIF Occurrence API](https://www.gbif.org/developer/occurrence) | Biodiversity specimens and observations. Direct browser fetch (permissive CORS). Inline fields: free-text `q`, `scientificName`, `country`, `year`, `limit`. |
@@ -139,6 +140,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 ParamNode ─┐
            ▼
   ARIADNESearch       ─────────────────────────────────────────────────┐
+  HSDSSearch          ─────────────────────────────────────────────────┤
   BodleianSearch      ─────────────────────────────────────────────────┤
   EuropeanaSearch     ─────────────────────────────────────────────────┤
   GBIFSearch          ─────────────────────────────────────────────────┤
@@ -205,6 +207,7 @@ decimalLatitude, decimalLongitude  — used by MapOutput
 gbif.*        — full raw GBIF occurrence object
 llds.*        — LLDS handle, branding, itemType
 ariadne.*     — ARIADNE temporal, country, spatial, contributor, subjects, identifier
+hsds.*        — HSDS landingPage, contributor, temporal, spatial, ariadneSubject, nativeSubject, derivedSubject, dataType, accessRights
 mds.*         — MDS field map (condition, materials, dimensions, provenance, …)
 europeana.*   — provider, dataProvider, rights, thumbnail, shownAt, completeness
 bodleian.*    — shelfmark, objectType, dateRange, manifest (IIIF manifest URL)
@@ -548,6 +551,7 @@ The fixture filename derives from the search query (inline or wired from a Param
 | `/kcl-proxy/…` | `https://api.ai.create.kcl.ac.uk/…` | KCL inference API — avoids CORS for hosted inference |
 | `/ollama/…` | `http://localhost:11434/…` | Cross-port CORS for local Ollama |
 | `/url-proxy?url=…` | *any URL* | Vite middleware; sidesteps CORS for arbitrary URL fetching |
+| `/hsds-proxy/…` | `https://hsds.ac.uk/…` | No CORS |
 | `/ads-proxy/…` | `https://archaeologydataservice.ac.uk/…` | Deprecated — ADS blocked by Cloudflare |
 
 > **Production note:** This proxy is development-only. The `deploy/express-server` branch includes an Express server that replicates all proxy routes for deployed instances.

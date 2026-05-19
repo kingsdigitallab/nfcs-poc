@@ -66,6 +66,7 @@ const ID_PREFIX: Record<string, string> = {
   mdsSearch:       'mds',
   europeanaSearch: 'europeana',
   ariadneSearch:   'ariadne',
+  hsdsSearch:      'hsds',
   bodleianSearch:  'bodleian',
   smgSearch:       'smg',
   vaSearch:        'va',
@@ -76,7 +77,7 @@ const ID_PREFIX: Record<string, string> = {
 
 const VALID_SEARCH_TYPES = new Set([
   'gbifSearch', 'lldsSearch', 'mdsSearch',
-  'europeanaSearch', 'ariadneSearch', 'bodleianSearch', 'smgSearch', 'vaSearch',
+  'europeanaSearch', 'ariadneSearch', 'hsdsSearch', 'bodleianSearch', 'smgSearch', 'vaSearch',
 ])
 
 const VALID_OUTPUT_TYPES = new Set(['tableOutput', 'mapOutput'])
@@ -117,6 +118,12 @@ ariadneSearch — ARIADNE Archaeological Research Infrastructure (includes UK/AD
   Best for: Site/monument records, excavation archives, UK and European archaeology, historic environment data, artefact types, period-specific pan-European data
   Params: inlineQuery, inlineLimit, ariadneSubject ("Site/monument"|"Artefact"|"Coin"|"Ecofact"|"Sample"), temporal (period name e.g. "roman", "medieval", "bronze age", "iron age", "neolithic"), country ("England"|"Scotland"|"Wales"|"Italy"|"Greece"|"France")
 
+hsdsSearch — Historic Environment Data Service
+  Domain: UK historic environment records — archaeological sites, listed buildings, scheduled monuments, historic landscapes, maritime heritage
+  Coverage: England, Scotland, Wales, Northern Ireland; aggregates from Historic England, Historic Environment Scotland, Cadw (Wales), and other UK heritage bodies
+  Best for: Scheduled monuments, listed buildings, historic parks and gardens, maritime archaeology, UK-specific heritage records, HER (Historic Environment Record) data, built heritage
+  Params: inlineQuery, inlineLimit, ariadneSubject ("Site/monument"|"Fieldwork report"|"Scientific analysis"|"Monument"), temporal (period name e.g. "roman", "medieval", "bronze age", "iron age", "neolithic"), country ("England"|"Scotland"|"Wales"|"Northern Ireland"), contributor ("Historic England"|"Historic Environment Scotland"|"Cadw")
+
 bodleianSearch — Bodleian Libraries, University of Oxford
   Domain: Manuscripts (medieval to 20th c.), rare printed books, maps, archives, music scores, photographs
   Coverage: Oxford and UK-wide collections; strong for English medieval manuscripts, early printed books
@@ -144,7 +151,7 @@ vaSearch — Victoria and Albert Museum
 
 AVAILABLE OUTPUT NODES:
 - tableOutput — paginated sortable table; always include one
-- mapOutput — geographic map; only include when results are expected to have geographic coordinates (gbifSearch, ariadneSearch have coordinates)
+- mapOutput — geographic map; only include when results are expected to have geographic coordinates (gbifSearch, ariadneSearch, hsdsSearch have coordinates)
 
 REQUIRED JSON SCHEMA — output exactly this structure:
 {
@@ -171,7 +178,8 @@ RULES:
 - For secondary or lower-confidence sources, note this explicitly in comment.body (e.g. "Included as a secondary source — coverage for this specific topic may be partial")
 - Always include tableOutput; add mapOutput only for geographic questions using spatial-data sources
 - Default inlineLimit to "20"
-- Set temporal for ariadneSearch when a period is clear (e.g. "roman", "medieval", "bronze age")
+- Set temporal for ariadneSearch and hsdsSearch when a period is clear (e.g. "roman", "medieval", "bronze age")
+- Prefer hsdsSearch over ariadneSearch for questions specifically about UK built heritage, listed buildings, scheduled monuments, or Historic Environment Records; use both for broader UK archaeology
 - For gbifSearch: prefer inlineScientificName for species-level questions, inlineQ for broader biodiversity queries
 - When a question involves multiple distinct terms that work better searched separately than combined (e.g. "Iron Age hillforts in England" → two ariadneSearch nodes with inlineQuery "hillforts" and "England" separately rather than "English hillforts"), output 2 or 3 searchNodes of the same type with different params. Never exceed 3 nodes of any single type. Each must appear in at least one edge.
 - Every searchNode must appear in at least one edge; every outputNode must appear in at least one edge
@@ -261,6 +269,13 @@ function buildSearchData(spec: SearchNodeSpec): Record<string, unknown> {
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     },
     ariadneSearch: {
+      inlineQuery: '', inlineLimit: '20', fetchAll: false,
+      ariadneSubject: '', derivedSubject: '', nativeSubject: '',
+      country: '', dataType: '', temporal: '', sort: '_score', order: 'desc',
+      contributor: '',
+      status: 'idle', statusMessage: '', results: undefined, count: 0,
+    },
+    hsdsSearch: {
       inlineQuery: '', inlineLimit: '20', fetchAll: false,
       ariadneSubject: '', derivedSubject: '', nativeSubject: '',
       country: '', dataType: '', temporal: '', sort: '_score', order: 'desc',

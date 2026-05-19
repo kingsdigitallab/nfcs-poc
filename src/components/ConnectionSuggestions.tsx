@@ -35,6 +35,10 @@ export const NODE_PARAM_HANDLES: Record<string, ParamHandle[]> = {
     { id: 'query', label: 'query' },
     { id: 'limit', label: 'limit' },
   ],
+  hsdsSearch: [
+    { id: 'query', label: 'query' },
+    { id: 'limit', label: 'limit' },
+  ],
   gbifSearch: [
     { id: 'q',              label: 'q (free text)'    },
     { id: 'scientificName', label: 'scientificName'   },
@@ -61,7 +65,7 @@ export const NODE_PARAM_HANDLES: Record<string, ParamHandle[]> = {
 
 const DATA_SOURCES = new Set([
   'gbifSearch', 'lldsSearch', 'adsSearchAdvanced', 'adsLibrarySearch',
-  'mdsSearch', 'europeanaSearch', 'ariadneSearch', 'bodleianSearch',
+  'mdsSearch', 'europeanaSearch', 'ariadneSearch', 'hsdsSearch', 'bodleianSearch',
   'smgSearch', 'vaSearch', 'localFolderSource', 'localFileSource', 'loadSavedSearch',
 ])
 
@@ -124,6 +128,7 @@ const SUGGESTIONS: Record<string, Suggestion[]> = {
     { type: 'kclNode',          label: 'KingsInference',        sub: 'Connect as API key',          color: '#881337', targetHandle: 'apiKey' },
     { type: 'kclField',         label: 'KingsInferenceByField', sub: 'Connect as API key',          color: '#7f1d1d', targetHandle: 'apiKey' },
     { type: 'ariadneSearch',    label: 'ARIADNESearch',         sub: 'query / limit',               color: '#164e63', targetHandle: null },
+    { type: 'hsdsSearch',       label: 'HSDSSearch',            sub: 'query / limit',               color: '#134e4a', targetHandle: null },
     { type: 'gbifSearch',       label: 'GBIFSearch',            sub: 'q / scientificName / …',      color: '#0f4c81', targetHandle: null },
     { type: 'lldsSearch',       label: 'LLDSSearch',            sub: 'query / limit',               color: '#92400e', targetHandle: null },
     { type: 'mdsSearch',        label: 'MDSSearch',             sub: 'query / limit',               color: '#1e3a8a', targetHandle: null },

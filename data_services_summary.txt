@@ -1,0 +1,782 @@
+================================================================================
+DATA SERVICES SUMMARY — iDAH Federation Workflow PoC
+A reflective audit of each integrated service's current amenability to federation, and of the schema decisions made for each adapter.
+================================================================================
+
+PREFACE — THE FEDERATION CONTRACT
+---------------------------------------------------------------
+Every adapter in the PoC must convert its source response into a `UnifiedRecord[]` (see `src/types/UnifiedRecord.ts`). The contract has three layers:
+
+  (a) PROVENANCE     — `id` (service-prefixed), `_source`, `_sourceId`,
+                       `_sourceUrl`, `_pid`, `_cached`, `_citation`.
+  (b) CROSS-SERVICE  — A small canonical vocabulary intended to make heterogeneous
+       NORMALISED       records co-exist in the same table / map / timeline:
+                       title, description, creator, date, subject, language,
+                       type, format, collection, country, spatialCoverage,
+                       decimalLatitude/Longitude, periodStart/End, periodName,
+                       and the Darwin-Core taxonomic block (scientificName,
+                       kingdom...species, eventDate, basisOfRecord,
+                       institutionCode, datasetName).
+  (c) SERVICE        — `record.<service>.*` — a verbatim namespace where any
+       NAMESPACE        non-normalisable, source-specific structure lives, so
+                       downstream processing nodes do not have to re-parse the
+                       raw response.
+
+Cross-service fields are the federation surface. Namespace fields are an escape hatch — useful but, crucially, *not* portable between services. Reconciliation, mapping, timeline, export and reconciliation-aware cells all target the cross-service vocabulary; an adapter that leaves a field only in its namespace is, in practice, invisible to those downstream nodes.
+
+This document inspects each integrated source through that lens.
+
+================================================================================
+1. GBIF — Global Biodiversity Information Facility
+================================================================================
+
+ENDPOINT      https://api.gbif.org/v1/occurrence/search (direct fetch, no proxy)
+ADAPTER       src/utils/gbifAdapter.ts
+RUNNER        src/utils/runGBIFNode.ts
+
+AMENABILITY TO FEDERATION
+-------------------------
+The reference case for how a federated source ought to behave. GBIF returns JSON, sends correct CORS headers, is unauthenticated, paginates predictably (limit/offset up to 100,000), and reports `count` and `endOfRecords` so the runner can decide when to stop.
+
+The data itself sits on Darwin Core, which is the closest the biodiversity world has to a universal schema, so adapter logic is little more than a field rename. Scientific names, geographic coordinates and event dates arrive already normalised. There is essentially no parsing risk.
+
+Practical limits: page size capped at 300 per request; offset capped at 100,000 records. Records have variable spatial-resolution and licensing varies dataset-by-dataset, but quality is high and stable.
+
+This is the only one of the ten sources that is genuinely *plug-and-play* for federation purposes. Everything else in this report is, to a greater or lesser extent, a story of working around what should have been GBIF-shaped.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title              ← scientificName       (best display label for a record)
+  date               ← eventDate
+  scientificName     ← scientificName       (Darwin-Core block, all promoted)
+  kingdom, phylum, class, order, family, genus, species
+  country            ← country
+  eventDate          ← eventDate
+  decimalLatitude    ← decimalLatitude
+  decimalLongitude   ← decimalLongitude
+  basisOfRecord      ← basisOfRecord
+  institutionCode    ← institutionCode
+  datasetName        ← datasetName
+
+NAMESPACE  record.gbif.*  — full occurrence object preserved verbatim
+                              (taxonKey, datasetKey, license, recordedBy,
+                              identifiers, media references, etc.)
+
+NOTE: The Darwin-Core taxonomic ladder is enshrined in `UnifiedRecord` itself — a deliberate decision that privileges biodiversity records over other domains. No other source populates these fields.
+
+================================================================================
+2. LLDS — Linguistic Linked Data Service (Oxford)
+================================================================================
+
+ENDPOINT      /llds-proxy/xmlui/discover  (HTML scrape via Vite dev proxy)
+ADAPTER       src/utils/lldsAdapter.ts  +  src/utils/llds.ts (scraper)
+RUNNER        src/utils/runLLDSNode.ts
+CACHE         localStorage fallback (lldsCache.ts), staleness-aware
+
+AMENABILITY TO FEDERATION
+-------------------------
+A worked example of the gap between *technically open* and *practically federable*. LLDS exposes a DSpace REST API in principle, but in practice that API was unworkable: XML-by-default content negotiation, schema fields that did not match the documented spec, and 5xx responses under modest load. The decision was to scrape the discover HTML page instead — a trade-off documented at the top of `llds.ts` — because the scraped page is stable, returns the fields we actually need, and is forgiving of intermittent server problems.
+
+Practical consequences:
+
+  * No server-side filtering or faceting — we ask for a query string and
+    page size only.
+  * Hard cap of 50 records per query (LLDS_CAP), to be polite and to keep
+    DOM parsing fast.
+  * 15-second timeout. On failure, the runner silently falls back to a
+    localStorage cache and tags every record with `_cached:true` so the
+    UI can flag it. This is the only source with a built-in offline path.
+  * No CORS support — must go through the Vite proxy.
+
+LLDS is technically the *least* federable of the language collections in the PoC. The data is high-quality and well-curated, but the access route is a brittle agreement between our DOM selectors and Oxford's DSpace theme.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title          ← .artifact-title text
+  description    ← .artifact-abstract
+  creator        ← .artifact-info .author span a (one entry per <a>;
+                   collapses to scalar if single, array if multiple)
+  date           ← .publisher-date .date
+  type           ← .item-type   (Text | Dataset | …)
+  _sourceId      ← handle (e.g. 20.500.14106/A47049)
+  _pid           ← https://hdl.handle.net/<handle>     ← only source that
+                                                        populates the PID slot
+
+NAMESPACE  record.llds.*:
+  handle, branding (collection label: EEBO-TCP, OTA Legacy Collection, …),
+  itemType
+
+IDIOSYNCRATIC: LLDS is the only source we surface that exposes a true persistent identifier (Handle) as `_pid`. The `branding` namespace field is DSpace-specific and has no analogue elsewhere.
+
+================================================================================
+3. ADS DATA CATALOGUE — Archaeology Data Service (research datasets)
+================================================================================
+
+ENDPOINT      /ads-catalogue-search (Vite middleware → Puppeteer page →
+              https://archaeologydataservice.ac.uk/data-catalogue-api/api/search)
+ADAPTER       src/utils/adsAdapter.ts
+RUNNER        src/utils/runADSAdvancedNode.ts
+
+AMENABILITY TO FEDERATION
+-------------------------
+The ADS catalogue API returns rich, well-modelled JSON — easily the most semantically complete of the cultural-heritage sources in the PoC. The problem is access, not data. ADS sits behind Cloudflare, which now blocks non-browser User-Agents outright and requires a `cf_clearance` cookie obtained by completing a JS challenge.
+
+The PoC's resolution is a long-lived Puppeteer page kept by the Vite middleware: it navigates to the ADS catalogue once on first use to establish a Cloudflare session, then serves all subsequent API calls via `page.evaluate(fetch)` from within that browser context. The page is shared across paginated requests so only the first call in a `fetchAll` loop pays the warm-up cost; a 403 response resets the singleton and triggers a re-warm.
+
+Pagination is capped server-side at 50 records per request — the runner loops `from=0, 50, 100…` until `total.value` is reached. Faceted filtering is rich: ariadneSubject, derivedSubject, nativeSubject, country, dataType, temporal.
+
+Practical consequence: ADS is highly federable when the Cloudflare session is healthy, and entirely unreachable when it is not. In a production deployment a long-running headless-browser service is hard to justify; this is the most operationally fragile component in the PoC.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title             ← data.title.text         (the .text/.language split is
+                                              localised — language preserved
+                                              in namespace as titleLanguage)
+  description       ← data.description.text
+  creator           ← data.creator[].name     (collapses scalar/array)
+  date              ← data.issued
+  subject           ← nativeSubject + derivedSubject (prefLabels merged)
+  language          ← data.language
+  type              ← data.resourceType
+  format            ← data.format
+  country           ← data.country[].name     (readable strings only)
+  spatialCoverage   ← first non-empty data.spatial[].placeName
+  decimalLatitude   ← data.spatial[0].geopoint.lat
+  decimalLongitude  ← data.spatial[0].geopoint.lon
+  periodStart       ← data.temporal[0].from
+  periodEnd         ← data.temporal[0].until
+  periodName        ← data.temporal[].periodName (all collected, scalar/array)
+
+NAMESPACE  record.ads.*:
+  elasticId, temporal[] (full), country[] (full, with IDs), allSpatial[],
+  allPlaceNames, creatorDetails[] (name + role + identifier + uri),
+  nativeSubject[], derivedSubject[], rights, license, publisher,
+  identifier, relation[], titleLanguage, descLanguage
+
+IDIOSYNCRATIC: ADS is the dominant contributor to the temporal-coverage vocabulary (`periodStart`, `periodEnd`, `periodName`) — those fields exist in the unified schema *because* ADS uses them. Likewise the `creatorDetails` namespace (with creator role and URI) has no analogue elsewhere; collapsing it to a plain creator string for cross-service portability is a known loss.
+
+================================================================================
+4. ADS LIBRARY — Archaeology Data Service (grey-literature catalogue)
+================================================================================
+
+ENDPOINT      /ads-library-search (Vite middleware, JSF session handshake)
+ADAPTER       src/utils/adsLibraryAdapter.ts  +  src/utils/adsLibrary.ts
+RUNNER        src/utils/runADSLibraryNode.ts
+
+AMENABILITY TO FEDERATION
+-------------------------
+The ADS Library catalogue has no JSON API at all. The site is a Jakarta Server Faces (JSF) application that submits searches as partial-AJAX POSTs containing a `jakarta.faces.ViewState` token plus a session cookie. The middleware does the two-step dance server-side:
+
+  1. GET searchResults.xhtml — capture JSESSIONID and ViewState.
+  2. POST the search with those tokens — response is XML with the actual
+     HTML embedded inside a `<![CDATA[…]]>` block in `<update id="searchResultForm">`.
+  3. Extract the CDATA HTML and return it to the client, which parses it
+     with DOMParser.
+
+Records are recognised by the presence of an `<a href*="recordId=…">` anchor within the row; the rest of the metadata is extracted by walking sibling `<div>` elements (Publication Type, Parent Title, Publication Date, Author(s), Abstract). A download icon (when present) yields the bitstream URL.
+
+Practical consequences:
+
+  * Cap of 100 per request (perPage parameter), enforced by the site.
+  * Any layout tweak on the ADS side can break parsing; the middleware
+    already contains fallbacks for both the ViewState regex and the submit
+    button ID.
+  * No filtering beyond a free-text query.
+  * Total record count is read from a summary row at the top of the table.
+
+This is the most expensive source to integrate per byte of useful data — the integration is essentially a contract between our parser and an internal JSF component layout, with no formal API to rely on.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title         ← record title text (or `ADS Library Record N` fallback)
+  creator       ← Author(s) line
+  date          ← Publication Date
+  type          ← Publication Type (Journal / Monograph / Series …)
+  _sourceId     ← recordId from the URL query parameter
+  _sourceUrl    ← absolute ADS URL
+
+NAMESPACE  record.adsLibrary.*:
+  recordId, recordType, publicationType, parentTitle, publicationDate,
+  authors, downloadUrl
+
+IDIOSYNCRATIC: `parentTitle` (the host publication) and `downloadUrl` (when present) have no canonical home. `downloadUrl` is the field URLFetchNode typically targets via dot-notation (`adsLibrary.downloadUrl`) to harvest PDF content for downstream extraction.
+
+================================================================================
+5. MDS — Museum Data Service (museumdata.uk)
+================================================================================
+
+ENDPOINT      /mds-proxy/object-search/ (HTML scrape via Vite dev proxy)
+ADAPTER       src/utils/mdsAdapter.ts  +  src/utils/mds.ts
+RUNNER        src/utils/runMDSNode.ts
+
+AMENABILITY TO FEDERATION
+-------------------------
+Of all UK cultural-heritage aggregators, MDS is the most awkward to integrate. There is no JSON endpoint that can be called without per-query auth tokens, so the PoC scrapes the public search page. The HTML is structured but un-typed: every record is a `<details class="object-overview">` containing two `<dl>` sections of `<dt>label:</dt><dd>value</dd>` pairs.
+
+The scraper does a two-step fetch — first with no `?view=` to read the total from the page header, then with `?view=N` (capped at 1000 by the site, capped at 200 by the PoC for performance) to render all records on one page. Each `<details>` is mined for every dt/dd pair and stored in a `fields` map keyed by the normalised label, with repeated labels accumulating as arrays.
+
+Idiosyncrasies that affect federation:
+
+  * Field labels are presentation-layer strings ("Object production date",
+    "Content - concept") with no controlled vocabulary behind them.
+  * The adapter has to *guess* which labels stand in for canonical
+    concepts. It uses a coalescing pattern: `first(fields, 'Brief description',
+    'Physical description')`.
+  * Subjects are aggregated from four different labels — "Object name(s)",
+    "Object name", "Content - concept", "Associated concept" — which is
+    pragmatically correct but loses provenance.
+  * Each record carries its own per-licence string.
+  * Hard cap of 200 records (`amber` badge) per query.
+
+MDS is rich in object detail (material, condition, dimensions, history notes, person associations) but the depth lives almost entirely in the namespace, not in canonical fields. This means MDS records appear in the unified table but contribute little to map / timeline / reconciliation unless additional adapter work is done to surface their place / date information at the canonical level.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title          ← "Title"  (fallback: "MDS Record N")
+  description    ← "Brief description" | "Physical description"
+  creator        ← "Object production person" + "Object production organisation"
+  date           ← "Object production date" | "Date - earliest / single"
+  subject        ← Object name(s) + Object name + Content - concept +
+                   Associated concept (all merged)
+  type           ← "Museum object"  (fixed literal)
+  collection     ← "Collection"  (top-level so it shows in table column auto-detection)
+  _sourceId      ← Object number   (preferring id attribute over field)
+  _sourceUrl     ← https://museumdata.uk/object/<uuid>
+
+NAMESPACE  record.mds.*:
+  uuid, objectNumber, material[], place[] (production/content/associated
+  place, all coalesced), condition, dimensions[], objectHistory,
+  numberOfObjects, inscriptionContent, personAssociation[], licence,
+  allFields (the entire un-coalesced dt/dd map, kept for downstream
+  processing nodes that need provenance).
+
+IDIOSYNCRATIC: `record.mds.allFields` is the only namespace bag that preserves the source's *original* field labels verbatim. This is a design concession to the variability of museum metadata. Note that MDS place information (production place, content place, associated place) does NOT populate `spatialCoverage` — those fields are uncoordinated text only and have to be reconciled before they can be mapped.
+
+================================================================================
+6. EUROPEANA — Pan-European cultural-heritage aggregator
+================================================================================
+
+ENDPOINT      https://api.europeana.eu/record/v2/search.json (direct, CORS open)
+ADAPTER       src/utils/europeanaAdapter.ts
+RUNNER        src/utils/runEuropeanaNode.ts
+
+AMENABILITY TO FEDERATION
+-------------------------
+A close second to GBIF in terms of plug-and-play character. Open JSON API, correct CORS headers, cursor-based pagination, fast and stable. The only practical friction is the API key requirement — registered free at apis.europeana.eu, injected at build time via `VITE_EUROPEANA_API_KEY` (see commit c37a2c0).
+
+The Europeana Data Model (EDM) underneath the API is genuinely standardised across thousands of providers, and Europeana publishes a `completeness` integer (0–10) that lets downstream nodes filter for better-described records.
+
+Practical limits:
+
+  * 100 records per page (Europeana hard cap).
+  * 1000-record practical ceiling in the PoC (`MAX_TOTAL`) to avoid runaway
+    cursor loops.
+  * Filtering: type (TEXT | IMAGE | VIDEO | SOUND | 3D), reusability
+    (open/restricted), media-only.
+
+Note that Europeana itself federates over its providers — records vary considerably in depth depending on the provider, which is reflected in the `completeness` score.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title         ← title[0]
+  creator       ← dcCreator   (full array preserved when present)
+  description   ← dcDescription[0]
+  subject       ← dcSubject   (full array)
+  date          ← year[0]
+  type          ← type        (single string: IMAGE | TEXT | …)
+  language      ← language[0]
+  country       ← country     (full array — Europeana is multi-country by design)
+
+NAMESPACE  record.europeana.*:
+  provider, dataProvider, rights (rights statement URL), thumbnail
+  (edmPreview), shownAt (edmIsShownAt — the link back to the providing
+  institution), completeness
+
+IDIOSYNCRATIC: `rights` and `completeness` are concepts unique to EDM and not represented at the canonical level. `dataProvider` (the holding institution) vs `provider` (the aggregator that supplied the record to Europeana) is also EDM-specific and useful for citation but not portable.
+
+================================================================================
+7. ARIADNE — Pan-European archaeology research infrastructure
+================================================================================
+
+ENDPOINT      https://portal.ariadne-infrastructure.eu/api/search (direct,
+              CORS open — no proxy needed)
+ADAPTER       src/utils/ariadneAdapter.ts
+RUNNER        src/utils/runARIADNENode.ts
+
+AMENABILITY TO FEDERATION
+-------------------------
+A very close cousin of the ADS Data Catalogue API (same vendor lineage): the JSON shape is almost identical, and the adapter is largely a re-skin of `adsAdapter.ts`. Pagination is 1-indexed pages, 50 records per page.
+
+The crucial operational difference is that ARIADNE sends correct CORS headers and is *not* behind Cloudflare. It can be called directly from the browser without any proxy or Puppeteer warm-up. This makes ARIADNE the single most federable archaeology resource in the PoC by a large margin.
+
+The schema includes some richer agent modelling than ADS — separate `contributor`, `publisher`, `owner`, and `responsible` arrays, each with homepage / institution / agentIdentifier / email fields. Spatial entries include both `geopoint` and `centroid` (the adapter falls back from one to the other). The `ariadneSubject` array is a curated cross-collection vocabulary that does not appear in ADS.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title             ← data.title.text
+  description       ← data.description.text
+  creator           ← data.creator[].name (collapses scalar/array)
+  date              ← data.issued
+  subject           ← nativeSubject + derivedSubject prefLabels merged
+  language          ← data.language
+  type              ← data.resourceType
+  country           ← data.country[].name
+  spatialCoverage   ← first non-empty data.spatial[].placeName
+  decimalLatitude   ← geopoint.lat OR centroid.lat
+  decimalLongitude  ← geopoint.lon OR centroid.lon
+  periodStart       ← data.temporal[0].from
+  periodEnd         ← data.temporal[0].until
+  periodName        ← data.temporal[].periodName
+
+NAMESPACE  record.ariadne.*:
+  elasticId, temporal[], country[] (with IDs), allSpatial[], allPlaceNames,
+  creatorDetails[] (name + agentIdentifier), nativeSubject[],
+  derivedSubject[], ariadneSubject[] (the curated cross-collection vocab),
+  publisher, contributor, dataType[] (resource-type vocabulary),
+  identifier, otherId[], isPartOf[], accessRights, nativePeriod[]
+
+IDIOSYNCRATIC: `ariadneSubject` is ARIADNE-only and is the closest thing the PoC sees to a controlled subject vocabulary across archaeology records. `dataType` (a labelled URI list) is also ARIADNE-specific.
+
+================================================================================
+8. HSDS — Historic Environment Data Service
+================================================================================
+
+ENDPOINT      /hsds-proxy/data-catalogue-api/api/search (Vite proxy →
+              https://hsds.ac.uk — no Cloudflare; simple pass-through)
+ADAPTER       src/utils/hsdsAdapter.ts
+RUNNER        src/utils/runHSDSNode.ts
+
+AMENABILITY TO FEDERATION
+-------------------------
+A very close technical cousin of the ADS Data Catalogue and ARIADNE APIs: the JSON response shape is essentially identical (same Elasticsearch-style `total.value` / `hits[]` / `data{}` structure, same ARIADNE-backbone schema). This makes the integration straightforward — the adapter is a near re-skin of `adsAdapter.ts` with corrections for HSDS-specific field differences.
+
+The critical operational advantage over ADS is that HSDS is not currently behind Cloudflare. A simple Vite proxy rule is sufficient; no Puppeteer warm-up is required. Pagination is 1-indexed pages (`page=N&size=50`), matching ARIADNE rather than the `from=N` pattern of ADS.
+
+Field differences from the ADS/ARIADNE adapter:
+  * `publisher` is an array of agent objects `[{name, agentIdentifier, …}]`,
+    not a plain string — the adapter extracts the first entry's name.
+  * `contributor` likewise — extracted as a name array.
+  * `dataType` is `[{label, uri}]` — labels extracted to a string array.
+  * `landingPage` is a top-level field (DOI or institutional URL) and is
+    used as `_sourceUrl` directly when present.
+  * `has_type.label` provides a human-readable record type alongside the
+    machine-readable `resourceType`.
+
+Coverage: England, Scotland, Wales, Northern Ireland, Isle of Man, Channel Islands. Primary contributing bodies include Historic England, Historic Environment Scotland, Cadw (Wales), and the Archaeology Data Service. The data reflects UK HER (Historic Environment Record) aggregation and ARIADNE-federated archaeology datasets with a distinctly UK focus.
+
+Practical limits: no hard server cap observed during testing; the runner paginates at 50 records per page and respects the `total.value` ceiling. The `getSearchAggregationData` endpoint returns aggregation facets but currently comes back with an empty `aggregations: []` array, so filter options in the node UI are populated from known values derived from live test queries rather than dynamic aggregation.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title             ← data.title.text
+  description       ← data.description.text
+  creator           ← data.creator[].name     (collapses scalar/array)
+  date              ← data.issued ?? data.wasCreated
+  subject           ← nativeSubject + derivedSubject prefLabels merged
+  language          ← data.language
+  type              ← data.has_type.label ?? data.resourceType
+  format            ← data.dataType[].label   (collapses scalar/array)
+  country           ← data.country[].name
+  spatialCoverage   ← first non-empty data.spatial[].placeName
+  decimalLatitude   ← first data.spatial[].geopoint.lat
+  decimalLongitude  ← first data.spatial[].geopoint.lon
+  periodStart       ← data.temporal[0].from
+  periodEnd         ← data.temporal[0].until
+  periodName        ← data.temporal[].periodName (all collected, scalar/array)
+
+NAMESPACE  record.hsds.*:
+  elasticId, originalId, landingPage, modified,
+  contributor[] (name strings), publisherName,
+  allSpatial[], allPlaceNames,
+  temporal[] (full with from/until/periodName/uri),
+  country[] (with Wikidata IDs),
+  nativeSubject[], derivedSubject[], ariadneSubject[],
+  dataType[] (label strings), hasType,
+  accessPolicy, accessRights, isPartOf[], otherId[]
+
+IDIOSYNCRATIC: `landingPage` is used as `_sourceUrl` directly — it typically carries a DOI or institutional landing page URL rather than a constructed API path, making it more immediately useful for citation and URL-fetching workflows. `ariadneSubject` (the curated ARIADNE cross-collection vocabulary) appears here too, reflecting HSDS's role as a UK node in the ARIADNE infrastructure.
+
+================================================================================
+9. SMG — Science Museum Group Collections Online
+================================================================================
+
+ENDPOINT      /smg-proxy/search/<type> (Vite proxy →
+              https://collection.sciencemuseumgroup.org.uk)
+ADAPTER       inline in src/utils/runSMGSearchNode.ts
+RUNNER        src/utils/runSMGSearchNode.ts
+
+AMENABILITY TO FEDERATION
+-------------------------
+SMG publishes a JSON:API-conformant collections API covering five museums (Science Museum, NRM, NSMM, MSI, Locomotion). It requires a Referer header but is otherwise unauthenticated. CORS is not granted to arbitrary origins, so the call must go through the Vite proxy with a spoofed Referer.
+
+The schema is deeply nested — most fields are arrays of `{value, primary, …}` objects, requiring a `primaryVal()` helper that walks each array and prefers the entry flagged `primary:true`. Multimedia objects expose an `@processed.large_thumbnail.location` that is relative to a CDN host, so the adapter rewrites it to an absolute URL.
+
+A IIIF Presentation manifest URL is constructed deterministically from the record id (`/iiif/objects/<id>`) — the PoC takes this on faith without fetching the manifest. This is the closest the PoC gets to first-class IIIF integration on the search side.
+
+Practical limits: 100 records per page (`page[size]`), `total_pages` and `count.type.all` reported in the meta block.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title          ← primary of attributes.title OR primary of attributes.name
+                   OR attributes.summary.title
+  description    ← primary of attributes.description
+  creator        ← attributes.creation.maker[].summary.title | .name[0].value
+                   (collapses scalar/array)
+  date           ← attributes.creation.date (preferring source==='catalogue')
+  subject        ← attributes.category[].name
+  language       ← attributes.language[0].value (defaults to 'eng')
+  _pid           ← primary identifier (accession number)
+
+NAMESPACE  record.smg.*:
+  museum (display name), museumCode (SMG | NRM | NSMM | MSI | …),
+  accessionNumber, manifest (IIIF Presentation URL — synthesised, not
+  fetched), categories[], makingPlace, thumbnail (CDN-prefixed),
+  dimensions, credit (legal credit line), imageRights (multimedia licence)
+
+IDIOSYNCRATIC: The `manifest` field is a deterministic IIIF URL that has no analogue in any other source. `museumCode` reflects SMG's internal five-museum federation and is meaningful only inside that group. `_citation` is built inline by the adapter — SMG is one of two sources (with V&A) that synthesises a complete citation string per record rather than relying on `_citation` being built later.
+
+================================================================================
+10. V&A — Victoria and Albert Museum Collections
+================================================================================
+
+ENDPOINT      /vam-proxy/v2/objects/search (Vite proxy → api.vam.ac.uk)
+ADAPTER       inline in src/utils/runVASearchNode.ts
+RUNNER        src/utils/runVASearchNode.ts
+
+AMENABILITY TO FEDERATION
+-------------------------
+V&A run a documented JSON REST API (v2). CORS is not granted; calls go via the Vite proxy. Pagination is 1-indexed pages of up to 100 records.
+
+The schema uses an underscore-prefix convention (`_primaryTitle`, `_primaryMaker`, `_primaryDate`, `_primaryPlace`, `_currentLocation`, `_images`) which the API documentation refers to as "summary fields" — each is the v&A's pre-resolved canonical pick from a longer field list. The adapter consumes only the summary fields, which keeps the integration tidy but means deeper structures (full maker biographies, all object dates with their qualifiers) are not surfaced even into the namespace.
+
+V&A is the second source (with SMG) to natively expose IIIF: every record includes an `_iiif_presentation_url` manifest and an `_iiif_image_base_url` suitable for direct IIIF Image API requests. The PoC's `ImageViewNode` has a dedicated IIIF mode that consumes these directly.
+
+Optional filters: imagesOnly, year_made_from/to, kw_object_type.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title         ← _primaryTitle OR objectType
+  creator       ← _primaryMaker.name
+  date          ← _primaryDate
+  subject       ← [objectType]  (as a one-element array)
+  language      ← 'eng'  (hard-coded — V&A doesn't report a language code)
+  _pid          ← accessionNumber
+
+NAMESPACE  record.vam.*:
+  objectType, place (_primaryPlace), accessionNumber, onDisplay,
+  location (currentLocation.displayName), thumbnail (_primary_thumbnail),
+  manifest (IIIF Presentation URL), iiifImageBase (IIIF Image API base URL)
+
+IDIOSYNCRATIC: `iiifImageBase` is V&A-only and unlocks the IIIF Image API zoom-tier requests in ImageViewNode. The flattening of `subject` to a one-element array containing `objectType` is a deliberate convention — V&A has no subject vocabulary in the summary view, so the most-useful single field stands in.
+
+================================================================================
+11. BODLEIAN — Bodleian Digital Collections (Oxford)
+================================================================================
+
+ENDPOINT      /bodleian-proxy/search/ (note trailing slash required —
+              without it the API 301-redirects to HTML)
+ADAPTER       inline in src/utils/runBodleianSearchNode.ts
+RUNNER        src/utils/runBodleianSearchNode.ts
+
+AMENABILITY TO FEDERATION
+-------------------------
+JSON-LD over the public Digital Bodleian search API. Open, no auth. Records expose IIIF Presentation manifests for digitised items (`member.manifest.id`) and a `surfaceCount` for number of digitised folios.
+
+Practical limits:
+
+  * 100 records per page; hard cap of 5 pages (500 records) in the PoC to
+    prevent runaway pagination.
+  * Filtering via `fq=` parameters: completeness, origins, languages,
+    has-musical-notation, and a date range expressed as `date:[from TO to]`.
+
+Bodleian's data model is shaped around the manuscript / printed-book catalogue, so the canonical-field surface is necessarily thin — there is no creator field equivalent that maps cleanly into UnifiedRecord without loss. Origins (place + date of production) are merged into a comma-joined string and stored only in the namespace.
+
+Note also that BodleianMember.id is the full URL to the record, and the adapter derives a uuid by regex extraction; this is fragile if the URL pattern changes.
+
+SCHEMA MAPPING
+--------------
+CROSS-SERVICE (CANONICAL):
+  title       ← displayFields.title[0]  (HTML-stripped) OR member.shelfmark
+  date        ← displayFields.dateStatement[0]
+  type        ← member.type
+  _sourceUrl  ← member.id (full URL)
+  _source     ← 'bodleian'
+
+  NOTE: The Bodleian adapter assigns `_id` and `_service` rather than
+  the canonical `id`/`_source` — a known minor schema drift that should
+  be reconciled (currently the only adapter that does this).
+
+NAMESPACE  record.bodleian.*:
+  uuid (regex-extracted from URL), manifest (IIIF Presentation URL),
+  thumbnail, shelfmark, origins (comma-joined display string),
+  completeness, textAvailable, surfaceCount
+
+IDIOSYNCRATIC: `surfaceCount`, `completeness` and `textAvailable` are catalogue-specific flags that say something about the *digitisation state* of a manuscript rather than its content. `shelfmark` is the Bodleian's local identifier and has no canonical analogue.
+
+================================================================================
+CROSS-CUTTING OBSERVATIONS
+================================================================================
+
+ACCESS PATTERN BY EFFORT (least to most)
+----------------------------------------
+  1. GBIF, ARIADNE, HSDS               direct fetch / simple proxy, JSON, no auth
+  2. Europeana                         direct fetch, JSON, CORS open, API key
+  3. SMG, V&A, Bodleian                JSON via Vite proxy (CORS only)
+  4. ADS Data Catalogue                Puppeteer-mediated Cloudflare session
+                                       (currently non-functional — use ARIADNE
+                                       or HSDS as alternatives)
+  5. LLDS, MDS                         HTML scrape via Vite proxy
+  6. ADS Library                       JSF ViewState handshake + CDATA HTML
+                                       extraction in custom Vite middleware
+
+Roughly: the further down the list, the more brittle the integration, the slower the response, and the more likely a layout change at the source will break the adapter without warning.
+
+SCHEMA RICHNESS vs. CANONICAL COVERAGE
+--------------------------------------
+The schema decisions reflect an awkward truth about cross-domain federation: the *richer* a source is, the larger the fraction of its useful structure that has no canonical home. ADS and ARIADNE expose agent-modelling (creator role + identifier + URI), full temporal intervals with named periods, and structured subject vocabularies — all of which collapse to plain strings in the cross-service vocabulary.
+
+MDS is the inverse case: shallow canonical mapping but a rich, untyped namespace bag (`record.mds.allFields`) that any downstream processing node can mine. Both decisions are defensible; both lose information.
+
+UnifiedRecord currently privileges biodiversity (Darwin Core taxonomic fields are first-class) and archaeology (temporal coverage is first-class because of ADS and ARIADNE). It under-serves library / manuscript sources, where descriptive cataloguing categories (shelfmark, surface count, holding repository) have no canonical home and live only in namespaces.
+
+IDENTIFIERS
+-----------
+Only LLDS populates `_pid` with a true persistent identifier (Handle). SMG and V&A populate it with accession numbers, which are persistent internally but not globally resolvable. GBIF, ADS, ARIADNE, MDS, Europeana, Bodleian populate only `_sourceId` + `_sourceUrl`. The federation has no canonical DOI / ARK story today.
+
+LICENCE INFORMATION
+-------------------
+Licence handling is inconsistent across sources:
+
+  * GBIF       — licence per dataset, not surfaced (lives in `record.gbif.license`).
+  * Europeana  — rights statement URL surfaced in namespace.
+  * ADS        — `rights` and `license` strings in namespace.
+  * MDS        — `licence` string per record, in namespace.
+  * SMG        — `imageRights` (multimedia-specific) in namespace.
+  * V&A, Bodleian, LLDS, ARIADNE, HSDS, ADS Library — not currently captured.
+
+A canonical `licence` field would be a natural next step, but only if the vocabulary can be standardised (CC strings vs rights-statement URIs vs free text).
+
+RELIABILITY / CACHING
+---------------------
+Only LLDS has a fallback cache (localStorage, staleness-aware). The Cloudflare path to ADS Data Catalogue and the JSF dance for ADS Library are both single points of failure with no fallback. A more robust deployment would add a server-side warm cache for all scraped sources and treat the network call as a refresher rather than the primary path.
+
+================================================================================
+RECOMMENDATIONS FOR REVISING THE UNIFIED SCHEMA
+================================================================================
+
+The current `UnifiedRecord` reflects its history: GBIF and ADS were the first two services integrated, and the canonical field set still privileges what those two needed. With ten sources now in scope — six of them cultural-heritage rather than scientific — several biases are starting to cost portability. The recommendations below are listed in rough order of impact-per-effort, with concrete before/after sketches.
+
+------------------------------------------------------------
+R1.  DEMOTE THE DARWIN-CORE TAXONOMIC LADDER TO THE NAMESPACE
+------------------------------------------------------------
+PROBLEM: `kingdom, phylum, class, order, family, genus, species, scientificName, basisOfRecord, institutionCode, datasetName, eventDate` are all first-class on `UnifiedRecord`. Only GBIF populates any of them. Every table-output node, JSON-output node, and serializer pays a cost for fields that 90 % of records leave empty.
+
+PROPOSAL: Keep only `decimalLatitude` / `decimalLongitude` at the canonical level (they are genuinely cross-domain). Move the taxonomic block and `basisOfRecord` / `institutionCode` / `datasetName` to `record.gbif.*`. GBIF already keeps the full raw occurrence there; the move is essentially a de-duplication.
+
+  BEFORE:                                AFTER:
+    record.scientificName                  record.gbif.scientificName
+    record.kingdom                         record.gbif.kingdom
+    record.basisOfRecord                   record.gbif.basisOfRecord
+    record.institutionCode                 record.gbif.institutionCode
+
+`eventDate` is a near-duplicate of `date` — keep `date` only.
+
+------------------------------------------------------------
+R2.  PROMOTE A CANONICAL `thumbnail` FIELD
+------------------------------------------------------------
+PROBLEM: Six of the ten sources expose a thumbnail URL, and every one of them stores it in a different namespace key:
+
+  record.europeana.thumbnail   record.smg.thumbnail   record.vam.thumbnail
+  record.bodleian.thumbnail    record.adsLibrary.* (none)
+  (MDS, LLDS, ADS Data, ARIADNE, GBIF: none)
+
+The `ImageViewNode` and table-output cell renderer have to know all four variants. Cross-source gallery / map-popup rendering is impossible without each adapter being touched.
+
+PROPOSAL: Add `thumbnail?: string` at the canonical level. Each adapter populates it from the source's preferred image. Keep the namespace copy as provenance.
+
+------------------------------------------------------------
+R3.  PROMOTE A CANONICAL `manifest` FIELD (IIIF PRESENTATION URL)
+------------------------------------------------------------
+PROBLEM: SMG, V&A and Bodleian all expose IIIF Presentation manifests, but each stores it as `record.<service>.manifest`. `ImageViewNode` already has a IIIF mode but has to special-case three different lookups.
+
+PROPOSAL: Add `manifest?: string` at the canonical level. This makes IIIF-aware nodes service-agnostic. Future IIIF-native sources (a fourth museum API, or a manuscript repository) drop in for free.
+
+------------------------------------------------------------
+R4.  ADD A CANONICAL `licence` / `rights` FIELD
+------------------------------------------------------------
+PROBLEM: Licence information is captured inconsistently and lives in different shapes across sources:
+
+  record.europeana.rights         (rights-statement URL)
+  record.ads.license              (free text)
+  record.mds.licence              (CC string)
+  record.smg.imageRights          (multimedia-specific licence)
+
+`ExportNode` cannot today produce a single "licence" column for a federated result set.
+
+PROPOSAL: Add `licence?: string` at the canonical level, populated as a CC short-code where determinable (`CC BY 4.0`, `CC BY-NC`, `CC0`), and a free-text fallback otherwise. Keep the source-specific shape in the namespace. Long-term, a structured `licence?: { code?: string; url?: string; text?: string }` would be cleaner but is more disruptive.
+
+------------------------------------------------------------
+R5.  ADD A CANONICAL `holding` BLOCK FOR CULTURAL-HERITAGE RECORDS
+------------------------------------------------------------
+PROBLEM: Every cultural-heritage source has its own identifier convention, and they all conflate two distinct concepts: the *holding institution* and the *local identifier* within that institution.
+
+  SMG:       museum + accessionNumber
+  V&A:       (implicit V&A) + accessionNumber
+  Bodleian:  (implicit Bodleian) + shelfmark
+  LLDS:      (implicit Oxford) + handle
+  MDS:       collection + objectNumber
+  ADS Lib:   parentTitle + recordId (recordId is opaque, parentTitle is the host pub.)
+
+The UnifiedRecord today has no place for any of this. It scrapes by because `_sourceId` doubles as a local identifier, but that conflates the *service* identifier (an internal Elasticsearch ID, say) with the *institutional* identifier (a shelfmark or accession number) — two different things.
+
+PROPOSAL: Add a `holding` block:
+
+    holding?: {
+      institution?:    string    // "Victoria and Albert Museum"
+      collection?:     string    // "EEBO-TCP" (LLDS branding), "Print Room"
+      localIdentifier?: string   // accession number, shelfmark, handle
+      identifierType?: 'accession' | 'shelfmark' | 'handle' | 'doi' | 'other'
+    }
+
+This subsumes today's top-level `collection` field and the museum/shelfmark namespace fields. It also gives `_pid` a clearer remit — it stops being overloaded for handles vs. accession numbers.
+
+------------------------------------------------------------
+R6.  PROMOTE A CANONICAL `place[]` ARRAY (RICH SPATIAL COVERAGE)
+------------------------------------------------------------
+PROBLEM: `spatialCoverage` is a single string — but ADS and ARIADNE both expose `allSpatial[]` arrays in the namespace, and MDS aggregates three different place fields (production / content / associated). Promoting only the first place loses information that is useful for both mapping and reconciliation.
+
+PROPOSAL: Add a `places?: PlaceRef[]` array:
+
+    places?: Array<{
+      name:         string
+      role?:        'production' | 'content' | 'finding' | 'associated' | 'subject'
+      lat?:         number
+      lng?:         number
+      uri?:         string   // populated by GeocodingNode / reconciliation
+    }>
+
+Keep `decimalLatitude` / `decimalLongitude` for the map-output node's "primary point" convention, and have the adapter populate them from `places[0]`.
+
+This also gives the geocoding enrichment a natural home — `places[].uri` instead of the separate `geocoding` block, which currently sits awkwardly outside the canonical surface.
+
+------------------------------------------------------------
+R7.  PROMOTE A CANONICAL `temporalCoverage[]` ARRAY
+------------------------------------------------------------
+PROBLEM: `periodStart` / `periodEnd` / `periodName` together describe one interval. ADS and ARIADNE routinely return multiple periods per record (e.g. a site with Iron Age and Roman phases). Today we collect them all into `periodName` as an array but only one interval survives at the canonical level.
+
+PROPOSAL: Replace `periodStart` / `periodEnd` / `periodName` with:
+
+    temporalCoverage?: Array<{
+      from?:        string   // ISO 8601 or year string
+      until?:       string
+      periodName?:  string
+      uri?:         string   // PeriodO URI when reconciled
+    }>
+
+Keep `date` for the *event* date (publication, creation), distinct from the *coverage* dates. TimelineNode already accepts arrays of intervals; this just promotes the same shape to canonical.
+
+------------------------------------------------------------
+R8.  NORMALISE ARRAY-OR-SCALAR FIELDS
+------------------------------------------------------------
+PROBLEM: `creator`, `subject`, `country`, `periodName` are each typed `string | string[] | undefined`. The pattern in every adapter is:
+
+    creator.length === 1 ? creator[0] : creator.length > 1 ? creator : undefined
+
+Every downstream node (filter-transform, reconciliation, export, output) has to defend against three shapes. Cell renderers re-implement the flattening; the export utility special-cases reconciled values; CSV serialisation joins arrays with semicolons but only after detecting them.
+
+PROPOSAL: Always store arrays, even when length === 1. `string | undefined` fields stay scalar. Drop the `string | string[]` union entirely.
+
+    creator?:   string[]
+    subject?:   string[]
+    country?:   string[]
+    periodName: (subsumed by temporalCoverage[].periodName)
+
+This is a breaking change for every output node, but the surface area of breakage is small (the consumers are well-localised) and the simplification compounds across every downstream filter and export.
+
+------------------------------------------------------------
+R9.  ADD A CANONICAL `digitalObject` REFERENCE
+------------------------------------------------------------
+PROBLEM: Several sources point at a downloadable artefact (PDF, image, IIIF tile) — and again, each puts it in a different namespace:
+
+  record.adsLibrary.downloadUrl     PDF download
+  record.vam.iiifImageBase          IIIF Image API base URL
+  record.smg.thumbnail              CDN image
+  record.bodleian.manifest          IIIF Presentation manifest
+
+URLFetchNode currently relies on dot-notation field paths (`adsLibrary.downloadUrl`) to find a download target. That works but is not portable across sources.
+
+PROPOSAL: Add a `digitalObject` block:
+
+    digitalObject?: {
+      url:        string
+      mediaType?: 'pdf' | 'image' | 'iiif-manifest' | 'iiif-image' | 'audio' | 'video'
+      thumbnail?: string
+    }
+
+This subsumes R2 (thumbnail) and R3 (manifest) into a richer structure. The URLFetchNode and ImageViewNode field-pickers become source-agnostic.
+
+------------------------------------------------------------
+R10. FIX BODLEIAN ADAPTER SCHEMA DRIFT
+------------------------------------------------------------
+PROBLEM: `runBodleianSearchNode.adaptMember()` assigns `_id` and `_service` rather than the canonical `id` / `_source`. This is the only adapter that does so, and it almost certainly breaks downstream nodes that key off `id` (reconciliation by record key, dedupe by QID, etc.).
+
+PROPOSAL: Rename `_id` → `id` (with the `bodleian:` prefix that every other adapter uses) and `_service` → `_source`. This is the smallest, least controversial change in this list and should land first.
+
+------------------------------------------------------------
+R11. CLARIFY THE PROVENANCE / CITATION SURFACE
+------------------------------------------------------------
+PROBLEM: There are currently several overlapping provenance fields: `_source`, `_sourceId`, `_sourceUrl`, `_pid`, `_cached`, and the `_citation` object. Two adapters (SMG, V&A) also synthesise a stringified `_citation` per record inline, where the rest depend on `addCitation()` adding a structured `_citation` object afterwards. This is inconsistent and means the `_citation` field type is effectively `object | string`.
+
+PROPOSAL:
+  * Drop inline `_citation: "<string>"` from SMG and V&A; let
+    `addCitation()` build the structured form for all adapters.
+  * Document `_pid` as "the most globally-resolvable identifier available"
+    and let `holding.localIdentifier` carry institution-specific IDs (R5).
+  * Keep `_cached: true` only on sources with a caching strategy
+    (currently LLDS only — future server-side cache would extend this).
+
+------------------------------------------------------------
+SEQUENCING & MIGRATION NOTES
+------------------------------------------------------------
+The recommendations are not independent. A plausible migration order:
+
+  1. R10 (Bodleian drift)               — isolated, no downstream impact.
+  2. R2  (thumbnail)                    — additive, no breakage.
+  3. R3  (manifest)                     — additive, no breakage.
+  4. R4  (licence)                      — additive, no breakage.
+  5. R8  (array normalisation)          — breaking for output / export nodes
+                                          but mechanical, well-bounded.
+  6. R7  (temporalCoverage[])           — breaking for TimelineNode; replaces
+                                          three canonical fields.
+  7. R6  (places[])                     — breaking for MapOutputNode and the
+                                          geocoding pipeline (subsumes the
+                                          separate `geocoding` block).
+  8. R5  (holding block)                — breaking for citation rendering,
+                                          export columns, reconciliation
+                                          authority map.
+  9. R9  (digitalObject)                — subsumes R2 + R3 once those are
+                                          stable; reshapes URLFetch /
+                                          ImageView field pickers.
+ 10. R1  (demote Darwin Core)           — touches every adapter that reads
+                                          taxonomic fields downstream (none
+                                          currently — only GBIF writes them,
+                                          and the namespace already mirrors
+                                          them). Safest to do last because
+                                          it requires confidence that the
+                                          namespace path is universally used.
+
+Recommendations 1–4 can ship in a single pass with no migration burden. 5–9 should be staged with downstream node updates in the same PR. R1 is best done last, when there is confidence that no downstream node silently depends on the top-level Darwin-Core fields.
+
+--------------------------------------------------------------------------------
+End of report.
+--------------------------------------------------------------------------------
