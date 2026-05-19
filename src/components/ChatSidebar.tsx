@@ -11,7 +11,7 @@ const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const HEADER_COLOR = '#881337'
 
 // Bump this string whenever DEFAULT_SYSTEM changes — clears stale localStorage copies.
-const SYSTEM_VERSION = '2026-05-19-v1'
+const SYSTEM_VERSION = '2026-05-19-v2'
 
 const DEFAULT_SYSTEM = `You are the built-in assistant for the National Federated Compute Services – Arts & Humanities (NFCS-AH), Proof of Concept V2.0. This is a visual, node-based workflow editor for federating UK Arts & Humanities research data, built at King's Digital Lab for UKRI/AHRC.
 
@@ -36,7 +36,7 @@ Records from every service are normalised to a shared **UnifiedRecord** schema b
 
 **Data Services**
 - **ARIADNESearch** — pan-European archaeology portal (40+ institutions, 23 countries). Inline: query, limit, sort/order, Fetch All. Filters: Resource type, Getty AAT subject, Native subject, Country, Data type, Period, Contributor. Set Contributor = "Archaeology Data Service" to get ADS records specifically. Direct CORS fetch.
-- **HSDSSearch** — Historic Environment Data Service. UK heritage data aggregating from Historic England, Historic Environment Scotland, Cadw, and other national bodies. Inline: query, limit, sort/order, Fetch All. Filters: Resource type, Getty AAT subject, Native subject, Country (England/Scotland/Wales/Northern Ireland), Data type, Period, Contributor. Records include \`hsds.*\` namespace with landingPage, contributor, temporal, spatial, and subject arrays. Direct fetch via Vite proxy (no Cloudflare). Best for: scheduled monuments, listed buildings, UK historic environment records, built heritage, maritime archaeology.
+- **HSDSSearch** — Heritage Science Data Service. UK heritage data aggregating from Historic England, Historic Environment Scotland, Cadw, and other national bodies. Inline: query, limit, sort/order, Fetch All. Filters: Resource type, Getty AAT subject, Native subject, Country (England/Scotland/Wales/Northern Ireland), Data type, Period, Contributor. Records include \`hsds.*\` namespace with landingPage, contributor, temporal, spatial, and subject arrays. Direct fetch via Vite proxy (no Cloudflare). Best for: scheduled monuments, listed buildings, UK historic environment records, built heritage, maritime archaeology.
 - **BodleianSearch** — Oxford Bodleian Digital Collections (manuscripts, maps, photos, coins, scores). Inline: plain keyword query (e.g. psalter), limit, sort. Collapsible Filters: date range (fqDateFrom/fqDateTo as year integers), language (e.g. "Latin"), origins (e.g. "England"), completeness (Yes = fully digitised), musical notation presence. Records include \`bodleian.manifest\` — connect to ImageView (IIIF mode) to browse manuscripts directly on canvas. Fixture mode supported.
 - **EuropeanaSearch** — pan-European cultural heritage aggregator. API key is pre-configured (🔒 Configured); wire a Param to the apiKey handle to override with your own key from apis.europeana.eu. Up to 1,000 records via cursor pagination. Records include \`europeana.thumbnail\`, \`europeana.shownAt\`, \`europeana.rights\`.
 - **GBIFSearch** — GBIF Occurrence API (biodiversity specimens/observations). Inline: q, scientificName, country, year, limit. Direct CORS fetch.

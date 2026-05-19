@@ -80,7 +80,7 @@ export async function runHSDSNode(
   const citationBase = {
     service:    'HSDS',
     serviceUrl: 'https://hsds.ac.uk',
-    publisher:  'Historic Environment Data Service',
+    publisher:  'Heritage Science Data Service',
     accessDate,
     query: Object.entries(baseParams)
       .filter(([k, v]) => !['sort', 'order', 'size', 'page'].includes(k) && v)

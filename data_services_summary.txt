@@ -345,7 +345,7 @@ NAMESPACE  record.ariadne.*:
 IDIOSYNCRATIC: `ariadneSubject` is ARIADNE-only and is the closest thing the PoC sees to a controlled subject vocabulary across archaeology records. `dataType` (a labelled URI list) is also ARIADNE-specific.
 
 ================================================================================
-8. HSDS — Historic Environment Data Service
+8. HSDS — Heritage Science Data Service
 ================================================================================
 
 ENDPOINT      /hsds-proxy/data-catalogue-api/api/search (Vite proxy →

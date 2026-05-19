@@ -118,8 +118,8 @@ ariadneSearch — ARIADNE Archaeological Research Infrastructure (includes UK/AD
   Best for: Site/monument records, excavation archives, UK and European archaeology, historic environment data, artefact types, period-specific pan-European data
   Params: inlineQuery, inlineLimit, ariadneSubject ("Site/monument"|"Artefact"|"Coin"|"Ecofact"|"Sample"), temporal (period name e.g. "roman", "medieval", "bronze age", "iron age", "neolithic"), country ("England"|"Scotland"|"Wales"|"Italy"|"Greece"|"France")
 
-hsdsSearch — Historic Environment Data Service
-  Domain: UK historic environment records — archaeological sites, listed buildings, scheduled monuments, historic landscapes, maritime heritage
+hsdsSearch — Heritage Science Data Service
+  Domain: UK heritage science records — archaeological sites, listed buildings, scheduled monuments, historic landscapes, maritime heritage
   Coverage: England, Scotland, Wales, Northern Ireland; aggregates from Historic England, Historic Environment Scotland, Cadw (Wales), and other UK heritage bodies
   Best for: Scheduled monuments, listed buildings, historic parks and gardens, maritime archaeology, UK-specific heritage records, HER (Historic Environment Record) data, built heritage
   Params: inlineQuery, inlineLimit, ariadneSubject ("Site/monument"|"Fieldwork report"|"Scientific analysis"|"Monument"), temporal (period name e.g. "roman", "medieval", "bronze age", "iron age", "neolithic"), country ("England"|"Scotland"|"Wales"|"Northern Ireland"), contributor ("Historic England"|"Historic Environment Scotland"|"Cadw")
