@@ -11,7 +11,7 @@ const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const HEADER_COLOR = '#881337'
 
 // Bump this string whenever DEFAULT_SYSTEM changes — clears stale localStorage copies.
-const SYSTEM_VERSION = '2026-05-14-v1'
+const SYSTEM_VERSION = '2026-05-19-v1'
 
 const DEFAULT_SYSTEM = `You are the built-in assistant for the National Federated Compute Services – Arts & Humanities (NFCS-AH), Proof of Concept V2.0. This is a visual, node-based workflow editor for federating UK Arts & Humanities research data, built at King's Digital Lab for UKRI/AHRC.
 
