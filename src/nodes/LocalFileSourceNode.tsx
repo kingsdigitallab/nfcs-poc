@@ -1,10 +1,11 @@
 /**
  * LocalFileSourceNode — source node that reads a single local file.
  *
- * Supports three modes:
- *   csv  — CSV/TSV parsed into column-keyed records
- *   xml  — Raw XML/HTML text passed as a FileRecord (for XMLSectionNode / Ollama)
+ * Supports four modes:
+ *   csv   — CSV/TSV parsed into column-keyed records
+ *   xml   — Raw XML/HTML text passed as a FileRecord (for XMLSectionNode / Ollama)
  *   image — Image read as base64 data URL for vision models
+ *   pdf   — PDF text extracted via pdfjs-dist (for KingsInference / Ollama)
  *
  * No runner registered — file selection requires a direct user gesture.
  */
@@ -12,15 +13,16 @@
 import { useRef, useCallback } from 'react'
 import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
-import { extractFileContent } from '../utils/fileReaders'
+import { extractFileContent, extractPdfPages } from '../utils/fileReaders'
 
 // ── Node data ─────────────────────────────────────────────────────────────────
 
 export interface LocalFileSourceNodeData {
-  fileMode: 'csv' | 'xml' | 'image'
+  fileMode: 'csv' | 'xml' | 'image' | 'pdf'
   delimiter: 'auto' | ',' | '\t' | ';' | '|'
   hasHeader: boolean
   autoCast: boolean
+  pdfRenderPages: boolean
   fileName: string
   status: 'idle' | 'loading' | 'ready' | 'error'
   statusMessage: string
@@ -39,6 +41,7 @@ const MODE_OPTIONS = [
   { value: 'csv',   label: 'CSV / TSV' },
   { value: 'xml',   label: 'XML / HTML' },
   { value: 'image', label: 'Image' },
+  { value: 'pdf',   label: 'PDF' },
 ]
 
 const DELIMITER_OPTIONS = [
@@ -53,6 +56,7 @@ const ACCEPT: Record<string, string> = {
   csv:   '.csv,.tsv,.txt',
   xml:   '.xml,.html,.tei,.tei.xml',
   image: '.jpg,.jpeg,.png,.tiff,.tif,.webp',
+  pdf:   '.pdf',
 }
 
 const STATUS_BORDER: Record<string, string> = {
@@ -139,10 +143,11 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
   const d = data as LocalFileSourceNodeData
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  const fileMode  = (d.fileMode  as string | undefined) ?? 'csv'
-  const delimiter = (d.delimiter as string | undefined) ?? 'auto'
-  const hasHeader = (d.hasHeader as boolean | undefined) ?? true
-  const autoCast  = (d.autoCast  as boolean | undefined) ?? true
+  const fileMode       = (d.fileMode       as string  | undefined) ?? 'csv'
+  const delimiter      = (d.delimiter      as string  | undefined) ?? 'auto'
+  const hasHeader      = (d.hasHeader      as boolean | undefined) ?? true
+  const autoCast       = (d.autoCast       as boolean | undefined) ?? true
+  const pdfRenderPages = (d.pdfRenderPages as boolean | undefined) ?? false
   const status      = (d.status      as string   | undefined) ?? 'idle'
   const fileName    = (d.fileName    as string   | undefined) ?? ''
   const count       = (d.count       as number   | undefined) ?? 0
@@ -180,6 +185,28 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
           count:          records.length,
           columnNames:    columns,
           resultsVersion: version,
+        })
+      } else if (fileMode === 'pdf' && pdfRenderPages) {
+        const pages: Record<string, unknown>[] = []
+        let totalPages = 0
+
+        await extractPdfPages(file, 1.5, 20, (record, pageNum, total) => {
+          totalPages = total
+          pages.push(record as unknown as Record<string, unknown>)
+          const version = setNodeResults(id, [...pages])
+          updateNodeData(id, {
+            statusMessage:  `⟳ Rendering page ${pageNum}/${Math.min(total, 20)}…`,
+            count:          pages.length,
+            resultsVersion: version,
+          })
+        })
+
+        updateNodeData(id, {
+          status:        'ready',
+          statusMessage: `✓ ${pages.length} page${pages.length !== 1 ? 's' : ''} rendered${totalPages > 20 ? ` (capped at 20 of ${totalPages})` : ''}`,
+          fileName:      file.name,
+          count:         pages.length,
+          columnNames:   [],
         })
       } else {
         const record = await extractFileContent(file, file.name, '')
@@ -275,16 +302,29 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
           </>
         )}
 
+        {/* PDF-only options */}
+        {fileMode === 'pdf' && (
+          <label style={styles.checkLabel} className="nodrag">
+            <input
+              type="checkbox"
+              checked={pdfRenderPages}
+              onChange={e => updateNodeData(id, { pdfRenderPages: e.target.checked, count: 0, columnNames: [], fileName: '', status: 'idle', statusMessage: '' })}
+              style={{ marginRight: 4 }}
+            />
+            Render as page images
+          </label>
+        )}
+
         {/* File info */}
         {fileName ? (
           <div style={styles.fileInfo}>
             <span style={styles.fileIcon}>
-              {fileMode === 'image' ? '🖼️' : fileMode === 'xml' ? '📋' : '📄'}
+              {fileMode === 'image' ? '🖼️' : fileMode === 'xml' ? '📋' : fileMode === 'pdf' ? '📕' : '📄'}
             </span>
             <span style={styles.fileName} title={fileName}>{fileName}</span>
             {count > 0 && (
               <span style={styles.countBadge}>
-                {fileMode === 'csv' ? `${count} rows` : fileMode}
+                {fileMode === 'csv' ? `${count} rows` : fileMode.toUpperCase()}
               </span>
             )}
           </div>
