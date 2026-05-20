@@ -141,7 +141,8 @@ function parseDelimited(
 export function LocalFileSourceNode({ id, data }: NodeProps) {
   const { updateNodeData } = useReactFlow()
   const d = data as LocalFileSourceNodeData
-  const fileInputRef = useRef<HTMLInputElement>(null)
+  const fileInputRef  = useRef<HTMLInputElement>(null)
+  const lastFileRef   = useRef<File | null>(null)
 
   const fileMode       = (d.fileMode       as string  | undefined) ?? 'csv'
   const delimiter      = (d.delimiter      as string  | undefined) ?? 'auto'
@@ -154,53 +155,25 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
   const columnNames = (d.columnNames as string[] | undefined) ?? []
   const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
 
-  const handleFileChange = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (!file) return
-
+  const processFile = useCallback(async (file: File) => {
     clearNodeResults(id)
-    updateNodeData(id, {
-      status: 'loading',
-      statusMessage: 'Reading…',
-      fileName: file.name,
-      count: 0,
-      columnNames: [],
-    })
+    updateNodeData(id, { status: 'loading', statusMessage: 'Reading…', fileName: file.name, count: 0, columnNames: [] })
 
     try {
       if (fileMode === 'csv') {
         const text = await file.text()
-        const { records, columns } = parseDelimited(
-          text,
-          delimiter,
-          hasHeader,
-          autoCast,
-          file.name,
-        )
+        const { records, columns } = parseDelimited(text, delimiter, hasHeader, autoCast, file.name)
         const version = setNodeResults(id, records)
-        updateNodeData(id, {
-          status:         'ready',
-          statusMessage:  `✓ ${records.length} rows`,
-          fileName:       file.name,
-          count:          records.length,
-          columnNames:    columns,
-          resultsVersion: version,
-        })
+        updateNodeData(id, { status: 'ready', statusMessage: `✓ ${records.length} rows`, fileName: file.name, count: records.length, columnNames: columns, resultsVersion: version })
       } else if (fileMode === 'pdf' && pdfRenderPages) {
         const pages: Record<string, unknown>[] = []
         let totalPages = 0
-
         await extractPdfPages(file, 1.5, 20, (record, pageNum, total) => {
           totalPages = total
           pages.push(record as unknown as Record<string, unknown>)
           const version = setNodeResults(id, [...pages])
-          updateNodeData(id, {
-            statusMessage:  `⟳ Rendering page ${pageNum}/${Math.min(total, 20)}…`,
-            count:          pages.length,
-            resultsVersion: version,
-          })
+          updateNodeData(id, { statusMessage: `⟳ Rendering page ${pageNum}/${Math.min(total, 20)}…`, count: pages.length, resultsVersion: version })
         })
-
         updateNodeData(id, {
           status:        'ready',
           statusMessage: `✓ ${pages.length} page${pages.length !== 1 ? 's' : ''} rendered${totalPages > 20 ? ` (capped at 20 of ${totalPages})` : ''}`,
@@ -212,27 +185,29 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
         const record = await extractFileContent(file, file.name, '')
         if (!record) throw new Error('Unsupported file type')
         const version = setNodeResults(id, [record as unknown as Record<string, unknown>])
-        updateNodeData(id, {
-          status:         'ready',
-          statusMessage:  `✓ ${record.contentType} loaded`,
-          fileName:       file.name,
-          count:          1,
-          columnNames:    [],
-          resultsVersion: version,
-        })
+        updateNodeData(id, { status: 'ready', statusMessage: `✓ ${record.contentType} loaded`, fileName: file.name, count: 1, columnNames: [], resultsVersion: version })
       }
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err)
-      updateNodeData(id, {
-        status:        'error',
-        statusMessage: `✗ ${msg}`,
-        count:         0,
-        columnNames:   [],
-      })
+      updateNodeData(id, { status: 'error', statusMessage: `✗ ${msg}`, count: 0, columnNames: [] })
     }
-
-    if (fileInputRef.current) fileInputRef.current.value = ''
   }, [id, updateNodeData, fileMode, delimiter, hasHeader, autoCast, pdfRenderPages])
+
+  const handleFileChange = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    lastFileRef.current = file
+    await processFile(file)
+    if (fileInputRef.current) fileInputRef.current.value = ''
+  }, [processFile])
+
+  // Re-process the stored file when the pdfRenderPages toggle changes after a file is loaded
+  useEffect(() => {
+    if (fileMode === 'pdf' && lastFileRef.current && status === 'ready') {
+      processFile(lastFileRef.current)
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pdfRenderPages])
 
   const handlePickFile = useCallback(() => {
     fileInputRef.current?.click()
