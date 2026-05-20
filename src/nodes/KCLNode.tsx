@@ -38,12 +38,32 @@ type ContentPart =
   | { type: 'text'; text: string }
   | { type: 'image_url'; image_url: { url: string; format: string } }
 
+const IMAGE_MAX_DIM = 1280
+
+function resizeDataUrl(dataUrl: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const img = new Image()
+    img.onload = () => {
+      const { naturalWidth: w, naturalHeight: h } = img
+      if (w <= IMAGE_MAX_DIM && h <= IMAGE_MAX_DIM) { resolve(dataUrl); return }
+      const scale  = IMAGE_MAX_DIM / Math.max(w, h)
+      const canvas = document.createElement('canvas')
+      canvas.width  = Math.round(w * scale)
+      canvas.height = Math.round(h * scale)
+      canvas.getContext('2d')!.drawImage(img, 0, 0, canvas.width, canvas.height)
+      resolve(canvas.toDataURL('image/jpeg', 0.85))
+    }
+    img.onerror = () => reject(new Error('Image load failed for resize'))
+    img.src = dataUrl
+  })
+}
+
 /** Build the user message content — plain string or multi-part array when a record has an image. */
-function buildUserContent(
+async function buildUserContent(
   textPrompt: string,
   record: Record<string, unknown>,
   imageField: string,
-): string | ContentPart[] {
+): Promise<string | ContentPart[]> {
   let imageUrl: string | null = null
   if (imageField) {
     const val = record[imageField]
@@ -58,6 +78,7 @@ function buildUserContent(
     }
   }
   if (!imageUrl) return textPrompt
+  imageUrl = await resizeDataUrl(imageUrl)
   const mimeMatch = /^data:(image\/[^;]+);base64,/.exec(imageUrl)
   const format    = mimeMatch?.[1] ?? (record.mimeType as string | undefined) ?? 'image/jpeg'
   return [
@@ -314,7 +335,7 @@ export function KCLNode({ id, data }: NodeProps) {
 
         const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
         const userContent    = visionMode
-          ? buildUserContent(renderedPrompt, record, imageField)
+          ? await buildUserContent(renderedPrompt, record, imageField)
           : renderedPrompt
 
         const response = await kclChat(
