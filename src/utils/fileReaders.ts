@@ -67,6 +67,51 @@ async function extractPdfText(file: File): Promise<string> {
   return pages.filter(Boolean).join('\n')
 }
 
+export async function extractPdfPages(
+  file: File,
+  scale    = 1.5,
+  maxPages = 20,
+  onPage?: (
+    record: FileRecord & Record<string, unknown>,
+    pageNum: number,
+    totalPages: number,
+  ) => void,
+): Promise<(FileRecord & Record<string, unknown>)[]> {
+  const arrayBuffer = await file.arrayBuffer()
+  const pdf         = await pdfjsLib.getDocument({ data: arrayBuffer }).promise
+  const total       = pdf.numPages
+  const cap         = Math.min(total, maxPages)
+  const records: (FileRecord & Record<string, unknown>)[] = []
+
+  for (let i = 1; i <= cap; i++) {
+    const page     = await pdf.getPage(i)
+    const viewport = page.getViewport({ scale })
+    const canvas   = document.createElement('canvas')
+    canvas.width   = viewport.width
+    canvas.height  = viewport.height
+    const ctx = canvas.getContext('2d')!
+    await page.render({ canvasContext: ctx, viewport }).promise
+    const dataUrl = canvas.toDataURL('image/jpeg', 0.85)
+
+    const record: FileRecord & Record<string, unknown> = {
+      id:           crypto.randomUUID(),
+      filename:     `${file.name} — page ${i}`,
+      path:         file.name,
+      contentType:  'image' as ContentType,
+      content:      dataUrl,
+      mimeType:     'image/jpeg',
+      sizeBytes:    Math.round(dataUrl.length * 0.75),
+      sourceFolder: '',
+      pageNumber:   i,
+      totalPages:   total,
+      sourcePdf:    file.name,
+    }
+    records.push(record)
+    onPage?.(record, i, total)
+  }
+  return records
+}
+
 function readAsDataURL(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()

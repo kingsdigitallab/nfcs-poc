@@ -498,6 +498,10 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
       for (const [k, v] of Object.entries(rec)) {
         if (k.startsWith('_')) continue
         keys.add(k)
+        // Also surface any field whose value is a data URL (e.g. 'content' from FileRecord)
+        if (typeof v === 'string' && v.startsWith('data:image/')) {
+          keys.add(k)
+        }
         if (v != null && typeof v === 'object' && !Array.isArray(v)) {
           for (const [nk, nv] of Object.entries(v as Record<string, unknown>)) {
             if (IMAGE_KEYS.test(nk) && (typeof nv === 'string' || nv == null)) {
@@ -517,6 +521,18 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 
   const selectedField    = (d.selectedField as string | undefined) ?? ''
   const imageDirectUrl   = String(d.imageDirectUrl || '')
+
+  // Auto-select 'content' when connected records are local images (contentType === 'image')
+  // and no field has been chosen yet. Handles LocalFileSourceNode, LocalFolderSourceNode
+  // image handle, and PDF page image records.
+  useEffect(() => {
+    if (mode !== 'images' || selectedField || imageDirectUrl) return
+    if (!records?.length) return
+    const hasImageRecords = records.some(
+      r => (r as Record<string, unknown>).contentType === 'image'
+    )
+    if (hasImageRecords) updateNodeData(id, { selectedField: 'content' })
+  }, [records, selectedField, imageDirectUrl, mode, id, updateNodeData])
   const safeRecordIndex  = records?.length ? Math.min(recordIndex, records.length - 1) : 0
   const currentRecord    = (records?.[safeRecordIndex] ?? {}) as Record<string, unknown>
 
