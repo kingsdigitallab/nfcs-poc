@@ -548,7 +548,7 @@ export function KCLNode({ id, data }: NodeProps) {
               if (Number.isFinite(n)) updateNodeData(id, { maxTokens: n })
               else setTokenInput(String(maxTokens))
             }}
-            placeholder="1024"
+            placeholder="4096"
             className="nodrag"
           />
         </div>
