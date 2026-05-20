@@ -10,7 +10,7 @@
  * No runner registered — file selection requires a direct user gesture.
  */
 
-import { useRef, useCallback } from 'react'
+import { useRef, useCallback, useEffect } from 'react'
 import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { extractFileContent, extractPdfPages } from '../utils/fileReaders'
