@@ -128,7 +128,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const [apiOk, setApiOk]               = useState<boolean | null>(null)
   const [liveTokens, setLiveTokens]     = useState('')
   const [liveProgress, setLiveProgress] = useState('')
-  const [tokenInput, setTokenInput]     = useState(String((d.maxTokens as number | undefined) ?? 1024))
+  const [tokenInput, setTokenInput]     = useState(String((d.maxTokens as number | undefined) ?? 32768))
   const abortRef       = useRef<AbortController | null>(null)
   const apexClickCount = useRef(0)
   const apexClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -204,7 +204,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const systemPrompt   = (d.systemPrompt  ?? DEFAULT_SYSTEM) as string
   const promptTemplate = (d.userPromptTemplate ?? (mode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER)) as string
   const temperature    = (d.temperature   ?? 0.7) as number
-  const maxTokens      = (d.maxTokens     ?? 1024) as number
+  const maxTokens      = (d.maxTokens     ?? 32768) as number
   const isRunning      = d.status === 'running'
 
   useEffect(() => { setTokenInput(String(maxTokens)) }, [maxTokens])
@@ -494,7 +494,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
               if (Number.isFinite(n)) updateNodeData(id, { maxTokens: n })
               else setTokenInput(String(maxTokens))
             }}
-            placeholder="4096" className="nodrag" />
+            placeholder="32768" className="nodrag" />
         </div>
 
         {/* Live preview */}

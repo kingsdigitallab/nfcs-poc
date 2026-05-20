@@ -92,7 +92,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
   const promptTemplate = (d.userPromptTemplate as string | undefined)
     ?? (mode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER)
   const temperature    = (d.temperature    as number | undefined) ?? 0.7
-  const maxTokens      = (d.maxTokens      as number | undefined) ?? 1024
+  const maxTokens      = (d.maxTokens      as number | undefined) ?? 32768
 
   if (!apiKey) {
     updateNodeData(nodeId, { status: 'error', statusMessage: '✗ No API key configured' })
