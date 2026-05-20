@@ -150,7 +150,7 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
   const systemPrompt   = (d.systemPrompt   as string | undefined) ?? ''
   const promptTemplate = (d.userPromptTemplate as string | undefined) ?? '{{content}}'
   const temperature    = (d.temperature    as number | undefined) ?? 0.7
-  const maxTokens      = (d.maxTokens      as number | undefined) ?? 1024
+  const maxTokens      = (d.maxTokens      as number | undefined) ?? 32768
   const visionMode     = (d.visionMode     as boolean | undefined) ?? false
   const imageField     = (d.imageField     as string  | undefined) ?? ''
 

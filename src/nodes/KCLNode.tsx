@@ -177,7 +177,7 @@ export function KCLNode({ id, data }: NodeProps) {
   const apexClickCount = useRef(0)
   const apexClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const apexUnlocked   = !!(d.apexUnlocked as boolean | undefined)
-  const [tokenInput, setTokenInput]     = useState(String((d.maxTokens as number | undefined) ?? 1024))
+  const [tokenInput, setTokenInput]     = useState(String((d.maxTokens as number | undefined) ?? 32768))
   const abortRef = useRef<AbortController | null>(null)
 
   // ── Resolve apiKey — inline field or connected Param node ───────────────────
@@ -239,7 +239,7 @@ export function KCLNode({ id, data }: NodeProps) {
   const systemPrompt   = (d.systemPrompt  ?? DEFAULT_SYSTEM) as string
   const promptTemplate = (d.userPromptTemplate ?? DEFAULT_PROMPT) as string
   const temperature    = (d.temperature   ?? 0.7) as number
-  const maxTokens      = (d.maxTokens     ?? 1024) as number
+  const maxTokens      = (d.maxTokens     ?? 32768) as number
   const isRunning      = d.status === 'running'
 
   useEffect(() => { setTokenInput(String(maxTokens)) }, [maxTokens])
@@ -548,7 +548,7 @@ export function KCLNode({ id, data }: NodeProps) {
               if (Number.isFinite(n)) updateNodeData(id, { maxTokens: n })
               else setTokenInput(String(maxTokens))
             }}
-            placeholder="4096"
+            placeholder="32768"
             className="nodrag"
           />
         </div>
