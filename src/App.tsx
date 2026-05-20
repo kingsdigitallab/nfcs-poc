@@ -679,7 +679,7 @@ const SIDEBAR_ITEMS = [
   { type: 'smartGeocoder',    label: 'SmartGeocoder',         sub: 'LLM place extraction → Nominatim + TGN + Wikidata',  color: '#1e3a5f', group: 'Extraction and Enrichment' },
   // ── Local Content ────────────────────────────────────────────────────────────
   { type: 'frameSenseSource',  label: 'FrameSenseSource',      sub: 'Load pre-processed FrameSense video shots', color: '#1c2a3a', group: 'Local Content' },
-  { type: 'localFileSource',   label: 'LocalFileSource',       sub: 'Single CSV, XML or image file',           color: '#0e7490', group: 'Local Content' },
+  { type: 'localFileSource',   label: 'LocalFileSource',       sub: 'Single CSV, XML, image or PDF file',           color: '#0e7490', group: 'Local Content' },
   { type: 'localFolderSource', label: 'LocalFolderSource',     sub: 'Read files from local folder',            color: '#14532d', group: 'Local Content' },
   { type: 'loadSavedSearch',   label: 'LoadSavedSearch',       sub: 'Replay a .nfcs.json saved search',        color: '#4c1d95', group: 'Local Content' },
   { type: 'saveSearch',        label: 'SaveSearch',            sub: 'Save records + metadata to .nfcs.json',   color: '#1b4332', group: 'Local Content' },

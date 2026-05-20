@@ -1,10 +1,11 @@
 /**
  * LocalFileSourceNode — source node that reads a single local file.
  *
- * Supports three modes:
- *   csv  — CSV/TSV parsed into column-keyed records
- *   xml  — Raw XML/HTML text passed as a FileRecord (for XMLSectionNode / Ollama)
+ * Supports four modes:
+ *   csv   — CSV/TSV parsed into column-keyed records
+ *   xml   — Raw XML/HTML text passed as a FileRecord (for XMLSectionNode / Ollama)
  *   image — Image read as base64 data URL for vision models
+ *   pdf   — PDF text extracted via pdfjs-dist (for KingsInference / Ollama)
  *
  * No runner registered — file selection requires a direct user gesture.
  */
@@ -17,7 +18,7 @@ import { extractFileContent } from '../utils/fileReaders'
 // ── Node data ─────────────────────────────────────────────────────────────────
 
 export interface LocalFileSourceNodeData {
-  fileMode: 'csv' | 'xml' | 'image'
+  fileMode: 'csv' | 'xml' | 'image' | 'pdf'
   delimiter: 'auto' | ',' | '\t' | ';' | '|'
   hasHeader: boolean
   autoCast: boolean
@@ -39,6 +40,7 @@ const MODE_OPTIONS = [
   { value: 'csv',   label: 'CSV / TSV' },
   { value: 'xml',   label: 'XML / HTML' },
   { value: 'image', label: 'Image' },
+  { value: 'pdf',   label: 'PDF' },
 ]
 
 const DELIMITER_OPTIONS = [
@@ -53,6 +55,7 @@ const ACCEPT: Record<string, string> = {
   csv:   '.csv,.tsv,.txt',
   xml:   '.xml,.html,.tei,.tei.xml',
   image: '.jpg,.jpeg,.png,.tiff,.tif,.webp',
+  pdf:   '.pdf',
 }
 
 const STATUS_BORDER: Record<string, string> = {
@@ -279,12 +282,12 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
         {fileName ? (
           <div style={styles.fileInfo}>
             <span style={styles.fileIcon}>
-              {fileMode === 'image' ? '🖼️' : fileMode === 'xml' ? '📋' : '📄'}
+              {fileMode === 'image' ? '🖼️' : fileMode === 'xml' ? '📋' : fileMode === 'pdf' ? '📕' : '📄'}
             </span>
             <span style={styles.fileName} title={fileName}>{fileName}</span>
             {count > 0 && (
               <span style={styles.countBadge}>
-                {fileMode === 'csv' ? `${count} rows` : fileMode}
+                {fileMode === 'csv' ? `${count} rows` : fileMode.toUpperCase()}
               </span>
             )}
           </div>
