@@ -232,7 +232,7 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
     }
 
     if (fileInputRef.current) fileInputRef.current.value = ''
-  }, [id, updateNodeData, fileMode, delimiter, hasHeader, autoCast])
+  }, [id, updateNodeData, fileMode, delimiter, hasHeader, autoCast, pdfRenderPages])
 
   const handlePickFile = useCallback(() => {
     fileInputRef.current?.click()
