@@ -25,11 +25,32 @@ function renderTemplate(template: string, record: Record<string, unknown>): stri
   })
 }
 
-function buildUserContent(
+const IMAGE_MAX_DIM = 1280
+
+function resizeDataUrl(dataUrl: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const img = new Image()
+    img.onload = () => {
+      const { naturalWidth: w, naturalHeight: h } = img
+      if (w <= IMAGE_MAX_DIM && h <= IMAGE_MAX_DIM) { resolve(dataUrl); return }
+      const scale  = IMAGE_MAX_DIM / Math.max(w, h)
+      const canvas = document.createElement('canvas')
+      canvas.width  = Math.round(w * scale)
+      canvas.height = Math.round(h * scale)
+      const ctx = canvas.getContext('2d')!
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+      resolve(canvas.toDataURL('image/jpeg', 0.85))
+    }
+    img.onerror = () => reject(new Error('Image load failed for resize'))
+    img.src = dataUrl
+  })
+}
+
+async function buildUserContent(
   textPrompt: string,
   record: Record<string, unknown>,
   imageField: string,
-): string | ContentPart[] {
+): Promise<string | ContentPart[]> {
   let imageUrl: string | null = null
   if (imageField) {
     const val = record[imageField]
@@ -44,6 +65,7 @@ function buildUserContent(
     }
   }
   if (!imageUrl) return textPrompt
+  imageUrl = await resizeDataUrl(imageUrl)
   const mimeMatch = /^data:(image\/[^;]+);base64,/.exec(imageUrl)
   const format    = mimeMatch?.[1] ?? (record.mimeType as string | undefined) ?? 'image/jpeg'
   return [
@@ -170,7 +192,7 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
 
     const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
     const userContent    = visionMode
-      ? buildUserContent(renderedPrompt, record, imageField)
+      ? await buildUserContent(renderedPrompt, record, imageField)
       : renderedPrompt
 
     let response: string
