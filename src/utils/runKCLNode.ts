@@ -81,7 +81,7 @@ async function kclChat(
   userContent: string | ContentPart[],
   temperature: number,
   maxTokens: number,
-): Promise<string> {
+): Promise<{ text: string; resolvedModel: string }> {
   const res = await fetch(KCL_CHAT, {
     method: 'POST',
     headers: {
@@ -105,8 +105,9 @@ async function kclChat(
 
   const reader  = res.body.getReader()
   const decoder = new TextDecoder()
-  let buffer      = ''
-  let accumulated = ''
+  let buffer        = ''
+  let accumulated   = ''
+  let resolvedModel = model
 
   while (true) {
     const { done, value } = await reader.read()
@@ -119,17 +120,19 @@ async function kclChat(
       const trimmed = line.trim()
       if (!trimmed.startsWith('data:')) continue
       const payload = trimmed.slice(5).trim()
-      if (payload === '[DONE]') return accumulated
+      if (payload === '[DONE]') return { text: accumulated, resolvedModel }
       try {
         const chunk = JSON.parse(payload) as {
+          model?: string
           choices?: Array<{ delta?: { content?: string }; finish_reason?: string | null }>
         }
+        if (chunk.model && chunk.model !== resolvedModel) resolvedModel = chunk.model
         const content = chunk.choices?.[0]?.delta?.content
         if (content) accumulated += content
       } catch { /* malformed chunk — skip */ }
     }
   }
-  return accumulated
+  return { text: accumulated, resolvedModel }
 }
 
 export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNodeData) => {
@@ -195,9 +198,12 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
       ? await buildUserContent(renderedPrompt, record, imageField)
       : renderedPrompt
 
-    let response: string
+    let response      = ''
+    let resolvedModel = model
     try {
-      response = await kclChat(apiKey, model, systemPrompt, userContent, temperature, maxTokens)
+      const result  = await kclChat(apiKey, model, systemPrompt, userContent, temperature, maxTokens)
+      response      = result.text
+      resolvedModel = result.resolvedModel
     } catch (err) {
       errCount++
       const msg = err instanceof Error ? err.message : String(err)
@@ -206,10 +212,11 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
 
     enriched.push({
       ...record,
-      kclModel:       model,
-      kclPrompt:      renderedPrompt,
-      kclResponse:    response,
-      kclProcessedAt: new Date().toISOString(),
+      kclModel:         model,
+      kclModelResolved: resolvedModel,
+      kclPrompt:        renderedPrompt,
+      kclResponse:      response,
+      kclProcessedAt:   new Date().toISOString(),
     })
 
     const partialVersion = setNodeResults(nodeId, enriched)

@@ -127,7 +127,7 @@ async function kclChat(
   maxTokens: number,
   signal: AbortSignal,
   onToken: (accumulated: string) => void,
-): Promise<string> {
+): Promise<{ text: string; resolvedModel: string }> {
   const res = await fetch(KCL_CHAT, {
     method: 'POST',
     headers: {
@@ -151,8 +151,9 @@ async function kclChat(
 
   const reader  = res.body.getReader()
   const decoder = new TextDecoder()
-  let buffer      = ''
-  let accumulated = ''
+  let buffer        = ''
+  let accumulated   = ''
+  let resolvedModel = model
 
   while (true) {
     const { done, value } = await reader.read()
@@ -165,11 +166,13 @@ async function kclChat(
       const trimmed = line.trim()
       if (!trimmed.startsWith('data:')) continue
       const payload = trimmed.slice(5).trim()
-      if (payload === '[DONE]') return accumulated
+      if (payload === '[DONE]') return { text: accumulated, resolvedModel }
       try {
         const chunk = JSON.parse(payload) as {
+          model?: string
           choices?: Array<{ delta?: { content?: string }; finish_reason?: string | null }>
         }
+        if (chunk.model && chunk.model !== resolvedModel) resolvedModel = chunk.model
         const content = chunk.choices?.[0]?.delta?.content
         if (content) {
           accumulated += content
@@ -178,7 +181,7 @@ async function kclChat(
       } catch { /* malformed chunk — skip */ }
     }
   }
-  return accumulated
+  return { text: accumulated, resolvedModel }
 }
 
 // ── Component ──────────────────────────────────────────────────────────────────
@@ -338,7 +341,7 @@ export function KCLNode({ id, data }: NodeProps) {
           ? await buildUserContent(renderedPrompt, record, imageField)
           : renderedPrompt
 
-        const response = await kclChat(
+        const { text: response, resolvedModel } = await kclChat(
           effectiveApiKey, selectedModel, systemPrompt, userContent,
           temperature, maxTokens, signal,
           tok => setLiveTokens(tok),
@@ -346,10 +349,11 @@ export function KCLNode({ id, data }: NodeProps) {
 
         enriched.push({
           ...record,
-          kclModel:       selectedModel,
-          kclPrompt:      renderedPrompt,
-          kclResponse:    response,
-          kclProcessedAt: new Date().toISOString(),
+          kclModel:         selectedModel,
+          kclModelResolved: resolvedModel,
+          kclPrompt:        renderedPrompt,
+          kclResponse:      response,
+          kclProcessedAt:   new Date().toISOString(),
         })
 
         updateNodeData(id, {
