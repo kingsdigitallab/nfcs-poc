@@ -60,7 +60,12 @@ export const FIELD_AUTHORITY_MAP: Record<string, AuthorityConfig[]> = {
 }
 
 export function authoritiesForField(fieldName: string): AuthorityConfig[] {
-  return FIELD_AUTHORITY_MAP[fieldName] ?? FIELD_AUTHORITY_MAP.default
+  const mapped = FIELD_AUTHORITY_MAP[fieldName]
+  if (!mapped) return FIELD_AUTHORITY_MAP.default
+  // Always offer untyped "Wikidata Items" as an escape hatch for fields whose
+  // default authority is too narrow (e.g. creator = org rather than person).
+  const hasUntyped = mapped.some(a => a.value === 'wikidata-item')
+  return hasUntyped ? mapped : [...mapped, ...ITEM_AUTHORITIES]
 }
 
 /**
