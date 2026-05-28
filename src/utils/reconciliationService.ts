@@ -64,16 +64,24 @@ export function authoritiesForField(fieldName: string): AuthorityConfig[] {
 }
 
 /**
- * Type guard: returns true when a record field value is a ReconciliationResult
- * (i.e. a `${fieldName}_reconciled` key written by ReconciliationNode).
+ * Type guard: returns true when a record field value is a single ReconciliationResult
+ * (i.e. a `${fieldName}_reconciled` key written by ReconciliationNode for a string field).
  */
 export function isReconciledValue(v: unknown): v is ReconciliationResult {
   return (
-    typeof v === 'object' && v !== null &&
+    typeof v === 'object' && v !== null && !Array.isArray(v) &&
     'status' in v &&
     ((v as ReconciliationResult).status === 'resolved' ||
      (v as ReconciliationResult).status === 'review')
   )
+}
+
+/**
+ * Type guard: returns true when a value is a ReconciliationResult array.
+ * Written when the source field is itself a string array (e.g. periodName: string[]).
+ */
+export function isReconciledArray(v: unknown): v is ReconciliationResult[] {
+  return Array.isArray(v) && v.length > 0 && isReconciledValue(v[0])
 }
 
 // ─── output type ─────────────────────────────────────────────────────────────
@@ -174,12 +182,15 @@ export async function reconcileField(
   // Cast to loose type for dynamic field access
   const recs = records as unknown as Record<string, unknown>[]
 
-  // Collect unique non-empty string values for the field
+  // Collect unique non-empty string values — handles both string and string[] fields
   const uniqueValues = [
     ...new Set(
-      recs
-        .map(r => r[fieldName])
-        .filter((v): v is string => typeof v === 'string' && v.trim() !== ''),
+      recs.flatMap(r => {
+        const v = r[fieldName]
+        if (Array.isArray(v)) return v.filter((s): s is string => typeof s === 'string' && s.trim() !== '')
+        if (typeof v === 'string' && v.trim() !== '') return [v]
+        return []
+      })
     ),
   ]
 
@@ -247,8 +258,15 @@ export async function reconcileField(
   })
 
   const key = `${fieldName}_reconciled`
-  return recs.map(r => ({
-    ...r,
-    [key]: resultMap.get(r[fieldName] as string) ?? null,
-  })) as unknown as UnifiedRecord[]
+  return recs.map(r => {
+    const v = r[fieldName]
+    if (Array.isArray(v)) {
+      const results = (v as unknown[])
+        .filter((s): s is string => typeof s === 'string' && s.trim() !== '')
+        .map(s => resultMap.get(s) ?? null)
+        .filter((x): x is ReconciliationResult => x !== null)
+      return { ...r, [key]: results.length > 0 ? results : null } as unknown as UnifiedRecord
+    }
+    return { ...r, [key]: resultMap.get(v as string) ?? null } as unknown as UnifiedRecord
+  })
 }

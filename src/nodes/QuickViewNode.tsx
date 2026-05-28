@@ -10,6 +10,7 @@ import { useState, useMemo } from 'react'
 import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { isReconciledValue } from '../utils/reconciliationService'
+import type { ReconciliationResult } from '../utils/reconciliationService'
 
 const HEADER_COLOR = '#1e293b'
 const ROWS_PER_PAGE = 50
@@ -45,7 +46,12 @@ function formatValue(val: unknown): string {
     const r = val as { id?: string; name?: string; score?: number; match?: boolean }
     return `${r.name ?? '?'} (${r.id ?? ''}) — score: ${r.score ?? '?'}, match: ${String(r.match)}`
   }
-  if (Array.isArray(val)) return val.join('\n')
+  if (Array.isArray(val)) {
+    if (val.length > 0 && isReconciledValue(val[0])) {
+      return (val as ReconciliationResult[]).map(r => `${r.label ?? '?'} (${r.qid ?? ''}) ${Math.round(r.confidence * 100)}%`).join('\n')
+    }
+    return val.join('\n')
+  }
   if (typeof val === 'object') return JSON.stringify(val, null, 2)
   return String(val)
 }
