@@ -635,7 +635,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     }
   }, [currentCanvas, iiifRegions, id, manifestMeta, updateNodeData])
 
-  const getSvgCoords = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
+  const getSvgCoords = useCallback((e: React.PointerEvent<SVGSVGElement>) => {
     const rect = svgRef.current!.getBoundingClientRect()
     return {
       x: Math.max(0, Math.min(1, (e.clientX - rect.left)  / rect.width)),
@@ -643,23 +643,25 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     }
   }, [])
 
-  const onSvgMouseDown = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
+  const onSvgPointerDown = useCallback((e: React.PointerEvent<SVGSVGElement>) => {
     if (!drawMode) return
     e.stopPropagation()
+    e.currentTarget.setPointerCapture(e.pointerId)
     const { x, y } = getSvgCoords(e)
     setDrawBox({ startX: x, startY: y, curX: x, curY: y })
   }, [drawMode, getSvgCoords])
 
-  const onSvgMouseMove = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
+  const onSvgPointerMove = useCallback((e: React.PointerEvent<SVGSVGElement>) => {
     if (!drawMode || !drawBox) return
     e.stopPropagation()
     const { x, y } = getSvgCoords(e)
     setDrawBox(prev => prev ? { ...prev, curX: x, curY: y } : null)
   }, [drawMode, drawBox, getSvgCoords])
 
-  const onSvgMouseUp = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
+  const onSvgPointerUp = useCallback((e: React.PointerEvent<SVGSVGElement>) => {
     if (!drawMode) return
     e.stopPropagation()
+    e.currentTarget.releasePointerCapture(e.pointerId)
     if (drawBox) {
       const { x, y } = getSvgCoords(e)
       const nb = normalizeBox({ ...drawBox, curX: x, curY: y })
@@ -905,10 +907,9 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
                   cursor: drawMode ? 'crosshair' : 'default',
                   pointerEvents: (drawMode || iiifRegions.length > 0) ? 'auto' : 'none',
                 }}
-                onMouseDown={onSvgMouseDown}
-                onMouseMove={onSvgMouseMove}
-                onMouseUp={onSvgMouseUp}
-                onMouseLeave={() => drawBox && setDrawBox(null)}
+                onPointerDown={onSvgPointerDown}
+                onPointerMove={onSvgPointerMove}
+                onPointerUp={onSvgPointerUp}
               >
                 {iiifRegions.map((r, idx) => (
                   <g key={r.id}>
