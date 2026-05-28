@@ -516,6 +516,64 @@ Any JSON file produced by **Export** (format: JSON) can also be loaded into **Lo
 
 ---
 
+## Workshop deployment and retrieving saves
+
+When running the Docker deployment (`deploy/express-server` branch), every time a participant clicks **💾 Save** a copy of their workflow is silently posted to the server and written to `/app/data/workflows/` inside the container, in addition to the usual local browser download. Files are stored in a named Docker volume (`workflow_saves`) so they survive container restarts.
+
+### File naming
+
+Each file is named by UTC timestamp plus a random suffix to prevent collisions when multiple participants save simultaneously:
+
+```
+2026-05-28T14-30-00-000Z-x3k9mf.json
+```
+
+Files contain the full workflow JSON (nodes, edges, configuration) plus two server-injected fields:
+
+| Field | Description |
+|-------|-------------|
+| `serverReceivedAt` | ISO timestamp of when the server received the save |
+| `remoteIp` | Participant's IP address — useful for grouping saves by participant |
+
+### Listing saves (without extracting)
+
+```bash
+docker compose exec app ls /app/data/workflows/
+```
+
+### Extracting all saves to a local folder
+
+Using Docker Compose v2 (`docker compose cp`):
+
+```bash
+docker compose cp app:/app/data/workflows/ ./workshop-saves/
+```
+
+This creates a `workshop-saves/` directory in your current folder containing all `.json` files.
+
+If you need to use plain `docker cp` instead, first get the container name:
+
+```bash
+docker ps --format '{{.Names}}'
+# e.g. nfcs-poc-app-1
+
+docker cp nfcs-poc-app-1:/app/data/workflows/ ./workshop-saves/
+```
+
+### After extraction
+
+Each file is a standard JSON object you can open in any text editor or analyse with tools like `jq`:
+
+```bash
+# Count saves per participant IP
+jq -r '.remoteIp' workshop-saves/*.json | sort | uniq -c | sort -rn
+
+# List all node types used across all saved workflows
+jq -r '[.[].nodes[].type] | unique[]' workshop-saves/*.json | sort | uniq -c | sort -rn
+```
+
+---
+
 ## Offline fixtures
 
 Every active search node ships with a fixture mode for offline and workshop use.
