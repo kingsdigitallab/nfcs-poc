@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { newId, bumpCounterPast } from './utils/nodeIdCounter'
 import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from './utils/kclConfig'
-import { downloadWorkflow, parseWorkflowFile, hydrateNodes } from './utils/workflowIO'
+import { buildWorkflowPayload, downloadWorkflow, parseWorkflowFile, hydrateNodes } from './utils/workflowIO'
 import {
   ReactFlow,
   Background,
@@ -889,7 +889,13 @@ export default function App() {
   }, [rfInstance, setNodes])
 
   const handleSave = useCallback(() => {
+    const payload = buildWorkflowPayload(nodes, edges)
     downloadWorkflow(nodes, edges)
+    fetch('/api/save-workflow', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    }).catch(() => {})
   }, [nodes, edges])
 
   const handleLoadFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {

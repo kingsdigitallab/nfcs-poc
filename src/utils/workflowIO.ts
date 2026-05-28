@@ -68,8 +68,8 @@ export function stripTransient(data: Record<string, unknown>): Record<string, un
   return out
 }
 
-export function downloadWorkflow(nodes: Node[], edges: Edge[]): void {
-  const file: WorkflowFile = {
+export function buildWorkflowPayload(nodes: Node[], edges: Edge[]): WorkflowFile {
+  return {
     version: 2,
     savedAt: new Date().toISOString(),
     nodes: nodes.map(n => {
@@ -88,7 +88,10 @@ export function downloadWorkflow(nodes: Node[], edges: Edge[]): void {
     }),
     edges,
   }
+}
 
+export function downloadWorkflow(nodes: Node[], edges: Edge[]): void {
+  const file = buildWorkflowPayload(nodes, edges)
   const blob = new Blob([JSON.stringify(file, null, 2)], { type: 'application/json' })
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
