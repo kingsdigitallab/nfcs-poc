@@ -444,7 +444,8 @@ app.post('/api/save-workflow', express.json({ limit: '10mb' }), (req, res) => {
     serverReceivedAt: new Date().toISOString(),
     remoteIp: req.headers['x-forwarded-for'] ?? req.socket.remoteAddress ?? 'unknown',
   }
-  const filename = `${new Date().toISOString().replace(/:/g, '-')}.json`
+  const random = Math.random().toString(36).slice(2, 8)
+  const filename = `${new Date().toISOString().replace(/:/g, '-')}-${random}.json`
   writeFile(join(WORKFLOWS_DIR, filename), JSON.stringify(enriched, null, 2))
     .then(() => {
       console.log(`[save] Workflow saved: ${filename}`)
