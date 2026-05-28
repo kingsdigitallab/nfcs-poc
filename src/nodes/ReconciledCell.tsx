@@ -209,6 +209,15 @@ export function renderCell(
     return <ReconciledPill value={val} />
   }
 
+  // Array of reconciled objects → multiple pills (array-valued fields e.g. periodName)
+  if (Array.isArray(val) && val.length > 0 && isReconciledValue(val[0])) {
+    return (
+      <span style={{ display: 'inline-flex', flexWrap: 'wrap', gap: 2 }}>
+        {(val as ReconciliationResult[]).map((r, i) => <ReconciledPill key={i} value={r} />)}
+      </span>
+    )
+  }
+
   // URL string → external link
   if (isUrl(val)) return <ExternalLink href={val} />
 

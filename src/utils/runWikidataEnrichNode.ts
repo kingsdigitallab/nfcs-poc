@@ -1,6 +1,7 @@
 import type { NodeRunner } from './nodeRunners'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { ReconciliationResult } from './reconciliationService'
+import { isReconciledArray } from './reconciliationService'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
 import type { WikidataEnrichNodeData } from '../nodes/WikidataEnrichNode'
@@ -12,14 +13,22 @@ function getQID(record: UnifiedRecord, reconcileField: string): string | null {
     const val = r[reconcileField]
     // _qid on merged records is a plain string; *_reconciled fields are objects
     if (typeof val === 'string' && val.startsWith('Q')) return val
+    // array-valued reconciled field — return first available QID
+    if (isReconciledArray(val)) return val.find(x => x.qid)?.qid ?? null
     return (val as ReconciliationResult | null)?.qid ?? null
   }
   // Auto-detect: prefer plain _qid, then fall back to first reconciled object
   if (typeof r['_qid'] === 'string') return r['_qid'] as string
   for (const k of Object.keys(r)) {
     if (!k.endsWith('_reconciled')) continue
-    const val = r[k] as ReconciliationResult | null
-    if (val?.qid) return val.qid
+    const val = r[k]
+    if (isReconciledArray(val)) {
+      const qid = val.find(x => x.qid)?.qid
+      if (qid) return qid
+    } else {
+      const single = val as ReconciliationResult | null
+      if (single?.qid) return single.qid
+    }
   }
   return null
 }

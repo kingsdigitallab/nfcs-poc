@@ -12,6 +12,7 @@
 
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { isReconciledValue }  from './reconciliationService'
+import type { ReconciliationResult } from './reconciliationService'
 
 // ─── namespace keys excluded from flat exports ────────────────────────────────
 
@@ -43,6 +44,12 @@ export function flattenRecord(record: UnifiedRecord): Record<string, unknown> {
       out[`${k}_label`]      = v.label      ?? ''
       out[`${k}_confidence`] = v.confidence
       out[`${k}_status`]     = v.status
+    } else if (Array.isArray(v) && v.length > 0 && isReconciledValue(v[0])) {
+      const arr = v as ReconciliationResult[]
+      out[`${k}_qid`]        = arr.map(r => r.qid   ?? '').join('; ')
+      out[`${k}_label`]      = arr.map(r => r.label ?? '').join('; ')
+      out[`${k}_confidence`] = arr.map(r => r.confidence).join('; ')
+      out[`${k}_status`]     = arr.map(r => r.status).join('; ')
     } else {
       out[k] = v
     }

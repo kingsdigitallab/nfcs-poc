@@ -80,9 +80,16 @@ export const runReconciliationNode: NodeRunner = async (
     const reconciledKey = `${fieldName}_reconciled`
     let resolved = 0, review = 0
     for (const r of augmented as unknown as Record<string, unknown>[]) {
-      const rec = r[reconciledKey] as { status?: string } | null
-      if (rec?.status === 'resolved') resolved++
-      else if (rec?.status === 'review') review++
+      const rec = r[reconciledKey]
+      if (Array.isArray(rec)) {
+        const statuses = (rec as { status?: string }[]).map(x => x?.status)
+        if (statuses.includes('resolved')) resolved++
+        else if (statuses.includes('review')) review++
+      } else {
+        const single = rec as { status?: string } | null
+        if (single?.status === 'resolved') resolved++
+        else if (single?.status === 'review') review++
+      }
     }
 
     console.log(`[Reconciliation] ${fieldName} → ${authority.label}: ${resolved} resolved, ${review} for review`)

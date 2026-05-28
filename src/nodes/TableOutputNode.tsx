@@ -89,7 +89,10 @@ function sortValue(rec: UnifiedRecord, col: string): string | number {
   if (typeof v === 'number') return v
   if (typeof v === 'boolean') return v ? 0 : 1
   if (isReconciledValue(v)) return (v as ReconciliationResult).label ?? '￿'
-  if (Array.isArray(v)) return v.join(', ')
+  if (Array.isArray(v)) {
+    if (v.length > 0 && isReconciledValue(v[0])) return (v as ReconciliationResult[]).map(r => r.label ?? '').join(', ')
+    return v.join(', ')
+  }
   return String(v)
 }
 
@@ -270,7 +273,10 @@ export function TableOutputNode({ id, data }: NodeProps) {
     return effectiveRecords.filter(r =>
       Object.values(r).some(v => {
         if (v === null || v === undefined) return false
-        if (isReconciledValue(v)) return (v as ReconciliationResult).label?.toLowerCase().includes(q)
+        if (isReconciledValue(v)) return (v as ReconciliationResult).label?.toLowerCase().includes(q) ?? false
+        if (Array.isArray(v) && v.length > 0 && isReconciledValue(v[0])) {
+          return (v as ReconciliationResult[]).some(r => r.label?.toLowerCase().includes(q))
+        }
         if (typeof v === 'object' && !Array.isArray(v)) {
           return Object.values(v as Record<string, unknown>).some(
             sv => sv != null && String(sv).toLowerCase().includes(q),
