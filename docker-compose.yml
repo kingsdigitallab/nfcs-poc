@@ -12,6 +12,8 @@ services:
       # Points to the ollama service by its Docker Compose service name.
       # Override with OLLAMA_HOST env var if Ollama is running elsewhere.
       - OLLAMA_HOST=${OLLAMA_HOST:-http://ollama:11434}
+    volumes:
+      - workflow_saves:/app/data
     restart: unless-stopped
 
   ollama:
@@ -44,3 +46,5 @@ services:
 volumes:
   # Persists downloaded Ollama models across container restarts
   ollama_data:
+  # Persists workshop workflow saves across container restarts
+  workflow_saves:
