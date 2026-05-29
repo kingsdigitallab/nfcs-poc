@@ -14,6 +14,10 @@ services:
       - OLLAMA_HOST=${OLLAMA_HOST:-http://ollama:11434}
     volumes:
       - workflow_saves:/app/data
+      # Mount host public/fixtures/ over the built dist/fixtures/ so fixture
+      # updates committed to the repo take effect after git pull + docker
+      # compose restart — no image rebuild needed.
+      - ./public/fixtures:/app/dist/fixtures:ro
     restart: unless-stopped
 
   ollama:
