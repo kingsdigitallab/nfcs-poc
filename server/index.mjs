@@ -265,6 +265,30 @@ async function adsCatalogueSearchMiddleware(req, res, next) {
   }
 }
 
+// ── LLDS search middleware ────────────────────────────────────────────────────
+// Uses Puppeteer to solve the Anubis JS proof-of-work challenge.
+
+async function lldsSearchMiddleware(req, res, next) {
+  if (!req.url?.startsWith('/llds-search')) { next(); return }
+
+  const parsed = new URL(req.url, 'http://localhost')
+  const q   = parsed.searchParams.get('q') ?? ''
+  const rpp = parsed.searchParams.get('rpp') ?? '50'
+
+  const target =
+    `https://llds.ling-phil.ox.ac.uk/llds/xmlui/discover` +
+    `?query=${encodeURIComponent(q)}&rpp=${encodeURIComponent(rpp)}`
+
+  try {
+    await fetchWithBrowser(target, res, 'networkidle2')
+  } catch (err) {
+    if (!res.headersSent) {
+      res.statusCode = 502
+      res.end(`LLDS search error: ${err instanceof Error ? err.message : String(err)}`)
+    }
+  }
+}
+
 // ── Generic URL proxy middleware ──────────────────────────────────────────────
 
 function urlProxyMiddleware(req, res, next) {
@@ -425,6 +449,7 @@ app.use('/hsds-proxy', createProxyMiddleware({
 
 app.use(adsLibrarySearchMiddleware)
 app.use(adsCatalogueSearchMiddleware)
+app.use(lldsSearchMiddleware)
 app.use(urlProxyMiddleware)
 
 // ── Workshop workflow saves ───────────────────────────────────────────────────
