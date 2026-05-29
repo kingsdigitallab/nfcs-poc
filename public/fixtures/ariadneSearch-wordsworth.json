@@ -115,7 +115,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:210396912c47fddf792d304b2f84e14d579f9746f2c8820189fecc263f5e9826",
       "title": "WORDSWORTH MUSEUM",
@@ -228,7 +228,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:9a2aa66f10d791e6d1424bf9e20d9b761723fca2925e8078db598b5b32424ca2",
       "title": "Wordsworth House 1745",
@@ -343,7 +343,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:776817373c15afabe67f7cc5eadfe067edaf48a931a809e1fa7cea80233bf285",
       "title": "WORDSWORTH GRAVES",
@@ -456,7 +456,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:9329eb6629cc96d2006868a2cb036afc8327d3f9b542d70fbf235f8fe9ededda",
       "title": "WORDSWORTH COTTAGE",
@@ -616,7 +616,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:350495cfd9a90267ed1bcdfa6acf42a13edf78a8b95ccf24fd26f86cab3e688b",
       "title": "BISHOP WORDSWORTH GRAMMAR SCHOOL",
@@ -726,7 +726,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:8b100fbe2700cd96bd9ec80e99674e6852448b940ab2ba9a2ac4152ac8395e7d",
       "title": "Wordsworth Street Axe Find",
@@ -821,7 +821,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:90923a39e2888ad4990713e6ae1cd6d83d41fd07b63791c38cedf48baecaba36",
       "title": "1 WORDSWORTH STREET",
@@ -924,7 +924,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:64ea10e2c2f82bac08a437c479e375beabc160a0ac62eb9368c1480c4e77f524",
       "title": "WORDSWORTH HOUSE, COCKERMOUTH",
@@ -953,7 +953,10 @@
     "language": "en",
     "type": "dataset",
     "spatialCoverage": "Bishop Wordsworth Grammar School, Salisbury, SALISBURY, Wiltshire, Wiltshire, England",
-    "country": "England",
+    "country": [
+      "England",
+      "England"
+    ],
     "decimalLatitude": null,
     "decimalLongitude": null,
     "periodStart": "1066",
@@ -974,11 +977,15 @@
         {
           "from": "1540",
           "periodName": "post medieval",
-          "until": "1901",
+          "until": "1900",
           "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
         }
       ],
       "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
         {
           "id": "https://www.wikidata.org/wiki/Q21",
           "name": "England"
@@ -1069,7 +1076,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:2c51ad804d2850b57013e12c972f5f67c14023676222cf1dba2c3c2de93bcf5f",
       "title": "Bishop Wordsworth Grammar School, Salisbury, Wiltshire",
@@ -1230,7 +1237,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:7251da6c089bcb8520dc8b76372da065b3b8a1987b1978cbe4388aa5ffc5b052",
       "title": "LAND AT WORDSWORTH HOUSE",
@@ -1333,7 +1340,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:6489de9b7baa391bddc5286f707daaec027298458c8774d21ff3edfce142ed8b",
       "title": "WORDSWORTH HOUSE: REAR GARDEN",
@@ -1450,7 +1457,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:9af041560ea8e66bc374a727fe812ad884c0ba0c88ff2348ac9f4122192ecbcc",
       "title": "ASHBOURNE HOUSE, WORDSWORTH ROAD,SHIRLEY",
@@ -1541,7 +1548,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:5cce7e796f27db60e64a6cad529682189d2102a3a7c457d4be53732a70db57ba",
       "title": "Wordsworth House, Main Street, Cockermouth",
@@ -1662,7 +1669,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:fc49b38b11473295d5578fff72792eaa8abbfe12de80fab66316276599ea50bd",
       "title": "FORMER BROWN'S FACTORY, WORDSWORTH YARD",
@@ -1763,7 +1770,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:689dd8ef04ff3df256144ef2a37a8d3d001db30f61810fcaca988acf1d92cbc8",
       "title": "Toilet Block, Wordsworth House, Cockermouth",
@@ -1877,7 +1884,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:a7d4ff10f25a7315ab2b51497bfb3c044f684c5b0e5b2227d276b51c88f4f972",
       "title": "BISHOP WORDSWORTH SCHOOL, NEW SPORTS HALL",
@@ -1904,11 +1911,14 @@
     "language": "en",
     "type": "dataset",
     "spatialCoverage": "England",
-    "country": "England",
+    "country": [
+      "England",
+      "England"
+    ],
     "decimalLatitude": null,
     "decimalLongitude": null,
     "periodStart": "1540",
-    "periodEnd": "1901",
+    "periodEnd": "1900",
     "periodName": "post medieval",
     "ariadne": {
       "elasticId": "eefad844fe2ae539c25482f84acfd417fd3c584a8719d5cdcb706a7a8efc2716",
@@ -1916,11 +1926,15 @@
         {
           "from": "1540",
           "periodName": "post medieval",
-          "until": "1901",
+          "until": "1900",
           "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
         }
       ],
       "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
         {
           "id": "https://www.wikidata.org/wiki/Q21",
           "name": "England"
@@ -2000,7 +2014,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:eefad844fe2ae539c25482f84acfd417fd3c584a8719d5cdcb706a7a8efc2716",
       "title": "Wordsworth Hotel, Main Street, Cockermouth: Historic Building Survey Level III",
@@ -2122,7 +2136,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:beea6f40a5d0c92f4fbfccb707cb3b6f3c81f1dc519db1486cbcd55ee384ede3",
       "title": "WORDSWORTH HOUSE: FRONT GARDEN AND REAR TERRACE",
@@ -2225,7 +2239,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:4b89c65a5929d5d13d3f554b212eb1f855478d8723296baf0b01343bee8e775b",
       "title": "ASHBOURNE HOUSE, WORDSWORTH ROAD (SOU 517/SAS3)",
@@ -2256,7 +2270,10 @@
     "language": "en",
     "type": "dataset",
     "spatialCoverage": "England",
-    "country": "England",
+    "country": [
+      "England",
+      "England"
+    ],
     "decimalLatitude": null,
     "decimalLongitude": null,
     "periodStart": "1066",
@@ -2277,11 +2294,15 @@
         {
           "from": "1540",
           "periodName": "post medieval",
-          "until": "1901",
+          "until": "1900",
           "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
         }
       ],
       "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
         {
           "id": "https://www.wikidata.org/wiki/Q21",
           "name": "England"
@@ -2378,13 +2399,3567 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T10:03:25.131Z",
+      "accessDate": "2026-05-29T12:53:13.704Z",
       "query": "q:wordsworth",
       "recordId": "ariadne:1afa6ec98878dc6d3297b03117e4edb73f3b95b1a06902153689661daa5b516f",
       "title": "Archaeological Watching Brief at Wordsworth House, Cockermouth, Cumbria",
       "url": "https://portal.ariadne-infrastructure.eu/resource/1afa6ec98878dc6d3297b03117e4edb73f3b95b1a06902153689661daa5b516f",
       "creator": "K Mounsey",
       "date": "2016-11-28"
+    }
+  },
+  {
+    "id": "ariadne:85cc63d37375ddcee1c6ec8cbdb571517dd2b87edbe635ebd042697465828e08",
+    "_source": "ariadne",
+    "_sourceId": "14309",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/85cc63d37375ddcee1c6ec8cbdb571517dd2b87edbe635ebd042697465828e08",
+    "title": "St Joseph's Roman Catholic Church, Wordsworth Avenue, Penarth",
+    "description": "St Joseph's Catholic church, Penarth was built in 1914-15 in the Lombardic/Italian style, gable entry type to the designs of F. A. Walters.  \"Italian Romanesque, on a basilican plan. W. towers not built\" (J. Newman, Glamorgan, The buildings of Wales, advis. ed. John Newman (London: Penguin Books, 1995), p. 492.  The church was planned in 3 stages: \"Originally the body of the present church was used and a temporary wall built where the altar rail is now. In 1928 the present sanctuary, side chapels and sacristies were prepared. The third portion, twin towers at the west end, have not been added\" (Roy Thorne, Penarth, a history, vol. 2 (Starling Press, 1976), pp.198-199.  For the old St Joseph's church, see NPRN: 9995.",
+    "creator": "Royal Commission Ancient and Historic Monuments Wales",
+    "date": "2023-09-07",
+    "subject": "church",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Penarth, The Vale of Glamorgan, Glamorgan",
+    "country": "Wales",
+    "decimalLatitude": 51.439147,
+    "decimalLongitude": -3.1811427,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "85cc63d37375ddcee1c6ec8cbdb571517dd2b87edbe635ebd042697465828e08",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Penarth, The Vale of Glamorgan, Glamorgan",
+          "geopoint": {
+            "lat": 51.439147,
+            "lon": -3.1811427
+          },
+          "centroid": {
+            "lat": 51.439147,
+            "lon": -3.1811427
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Penarth, The Vale of Glamorgan, Glamorgan"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Royal Commission Ancient and Historic Monuments Wales",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Royal%20Commission%20Ancient%20and%20Historic%20Monuments%20Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "church",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CHURCH"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Royal Commission on the Ancient and Historical Monuments of Wales",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/RCAHMW/1E7873B2-2FCE-33A8-A961-13AD3B8B39F1",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/RCAHMW/8D520B07-78F5-3A8E-AD61-580FCFF7218E"
+      ],
+      "accessRights": "CC BY NC ND",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:85cc63d37375ddcee1c6ec8cbdb571517dd2b87edbe635ebd042697465828e08",
+      "title": "St Joseph's Roman Catholic Church, Wordsworth Avenue, Penarth",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/85cc63d37375ddcee1c6ec8cbdb571517dd2b87edbe635ebd042697465828e08",
+      "creator": "Royal Commission Ancient and Historic Monuments Wales",
+      "date": "2023-09-07"
+    }
+  },
+  {
+    "id": "ariadne:45da1d99e0bf2240428814504f9e7e9a7d6d78f3d9dfad4c6fb96d21b0bd3cd8",
+    "_source": "ariadne",
+    "_sourceId": "1112414",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/45da1d99e0bf2240428814504f9e7e9a7d6d78f3d9dfad4c6fb96d21b0bd3cd8",
+    "title": "3 and 4 Wordsworth Street, Lincoln, Lincolnshire. Archaeological Watching Brief",
+    "creator": "Anon",
+    "date": "2016-11-24",
+    "subject": [
+      "archaeological feature",
+      "archaeological sites",
+      "man-made hypsographic features"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "3 and 4 Wordsworth Street, LINCOLN, Lincolnshire, Lincoln, England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "43",
+    "periodEnd": "400",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "45da1d99e0bf2240428814504f9e7e9a7d6d78f3d9dfad4c6fb96d21b0bd3cd8",
+      "temporal": [
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "400",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "3 and 4 Wordsworth Street, LINCOLN, Lincolnshire, Lincoln, England"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "geopoint": {
+            "lat": 53.2338623616408,
+            "lon": -0.539252799974309
+          },
+          "centroid": {
+            "lat": 53.2338623616408,
+            "lon": -0.539252799974309
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "3 and 4 Wordsworth Street, LINCOLN, Lincolnshire, Lincoln, England",
+        "England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Anon",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Anon"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "archaeological feature",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGICAL%20FEATURE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "man-made hypsographic features",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300387704",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "City of Lincoln Archaeology Unit",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/051CB6A5-A2E9-3640-AE59-0A88941B9D61",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "roman"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:45da1d99e0bf2240428814504f9e7e9a7d6d78f3d9dfad4c6fb96d21b0bd3cd8",
+      "title": "3 and 4 Wordsworth Street, Lincoln, Lincolnshire. Archaeological Watching Brief",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/45da1d99e0bf2240428814504f9e7e9a7d6d78f3d9dfad4c6fb96d21b0bd3cd8",
+      "creator": "Anon",
+      "date": "2016-11-24"
+    }
+  },
+  {
+    "id": "ariadne:f50cd4abe22f3d66c45014b6c876d95e55cdb7d3d25228c2378f5019bff5475c",
+    "_source": "ariadne",
+    "_sourceId": "1243064",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/f50cd4abe22f3d66c45014b6c876d95e55cdb7d3d25228c2378f5019bff5475c",
+    "title": "Land Adjacent to 18 Wordsworth Avenue, Newham, London: An Archaeological Evaluation Report",
+    "description": "In May 2019, AOC Archaeology Group conducted an archaeological evaluation at the site known as Land adjacent to 18 Wordsworth Avenue, Newham, London; TQ 42237 84534. The site evaluation was composed of three trenches measuring between 3.50m and 18.00m long by 2.00m wide, located to target areas to be impacted upon by the development as well as give good coverage of the site within the constraints.    The site sequence revealed natural yellow/orange brown sand and gravels overlain with a disturbed sandy gravel subsoil and brickearth in patches. Layers of made ground were observed in all trenches and comprised rubble with CBM, concrete, brick fragments and gravel as well as made ground comprising yellow sand in Trench 3 in the south-east of the site. Structural remains of a post-medieval or modern cellar were encountered as well as evidence for modern drainage and services. All trenches indicated significant horizontal truncation, indicated by the presence of the natural sand and gravels directly overlain by modern made ground deposits.  No further archaeological work is recommended for the site. The archive will be collated and deposited with the London Archaeological Archive Research Centre (LAARC). The results will be published through the Archaeology Data Service website and copies of the report available at the local studies library.",
+    "creator": "Y Robertson",
+    "date": "2025-06-30",
+    "subject": "trial trench",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Newham, unparished area, Newham, Newham, England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "f50cd4abe22f3d66c45014b6c876d95e55cdb7d3d25228c2378f5019bff5475c",
+      "temporal": [],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Newham, unparished area, Newham, Newham, England"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.5417790245959,
+            "lon": 0.0496400942697924
+          },
+          "centroid": {
+            "lat": 51.5417790245959,
+            "lon": 0.0496400942697924
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Newham, unparished area, Newham, Newham, England",
+        "England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Y Robertson",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Y%20Robertson"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "trial trench",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TRIAL%20TRENCH"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "AOC Archaeology Ltd",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/A8A6F41C-12D6-3D63-BD78-4DDBD50DBE02",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:f50cd4abe22f3d66c45014b6c876d95e55cdb7d3d25228c2378f5019bff5475c",
+      "title": "Land Adjacent to 18 Wordsworth Avenue, Newham, London: An Archaeological Evaluation Report",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/f50cd4abe22f3d66c45014b6c876d95e55cdb7d3d25228c2378f5019bff5475c",
+      "creator": "Y Robertson",
+      "date": "2025-06-30"
+    }
+  },
+  {
+    "id": "ariadne:e56967e748cf9393b6762da3bfa1839f8ad393aed49dddd07ad484072db82e7f",
+    "_source": "ariadne",
+    "_sourceId": "1220920",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/e56967e748cf9393b6762da3bfa1839f8ad393aed49dddd07ad484072db82e7f",
+    "title": "CHAD VARAH HOUSE, DRURY LANE / WORDSWORTH STREET, LINCOLN: ARCHAEOLOGICAL MONITORING AND STRIP, MAP AND RECORD REPORT",
+    "description": "Monitoring of groundwork in Areas 1 -5 only revealed modern make-up and garden soil deposits. Boreholes in Areas 1 and 2 did however encounter archaeological deposits between c 1.4m and 4m - 5m below present ground level, but no firm datable material was collected from any of these deposits which lay significantly below the formation level of the redevelopment.     During the strip, map and record excavations in Area 6, structural remains were encountered, likely forming a structure and associated internal surface. Finds recovered from overlying deposits were of post-medieval date (17th - 18th century), and the structural remains were thereby assigned to the late medieval/post-medieval period. Excavation of a large pit cutting the east/west aligned wall also contained pottery dating to the 18th century, confirming this approximate date for the structure. Excavation of a slot through the structure, removed to allow for a greater understanding of the exposed stonework, including construction and phasing, revealed a buried soil horizon directly below the postulated internal surface of the structure. This buried soil contained pottery dating to the 14th and 15th centuries AD and overlay an earlier north-east to south-west orientated limestone wall; cut into an earlier buried soil from which only Roman pottery was retrieved. This suggests the north-east - south-west wall is also of medieval date (pre-15th century), but with only a small area of the buried soil containing Roman pottery revealed within the slot excavation, a definitive date for that soil horizon (and therefore earliest date for the wall) could not be determined.",
+    "creator": "P Evans",
+    "date": "2024-07-19",
+    "subject": [
+      "excavation",
+      "medieval wall",
+      "wall",
+      "watching brief",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "ariadne": {
+      "elasticId": "e56967e748cf9393b6762da3bfa1839f8ad393aed49dddd07ad484072db82e7f",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Lincoln, unparished area, Lincolnshire, Lincoln, England"
+        },
+        {
+          "geopoint": {
+            "lat": 53.2333200905829,
+            "lon": -0.539750657440232
+          },
+          "centroid": {
+            "lat": 53.2333200905829,
+            "lon": -0.539750657440232
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Lincoln, unparished area, Lincolnshire, Lincoln, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "P Evans",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/P%20Evans"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "excavation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXCAVATION"
+        },
+        {
+          "prefLabel": "medieval wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MEDIEVAL%20WALL"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        },
+        {
+          "prefLabel": "watching brief",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WATCHING%20BRIEF"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Pre-Construct Archaeology Limited",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/17782100-B0DF-3571-8343-69FD0138B6CC",
+      "otherId": [
+        "OBIB PCAS report no 1870 / 1955"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:e56967e748cf9393b6762da3bfa1839f8ad393aed49dddd07ad484072db82e7f",
+      "title": "CHAD VARAH HOUSE, DRURY LANE / WORDSWORTH STREET, LINCOLN: ARCHAEOLOGICAL MONITORING AND STRIP, MAP AND RECORD REPORT",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/e56967e748cf9393b6762da3bfa1839f8ad393aed49dddd07ad484072db82e7f",
+      "creator": "P Evans",
+      "date": "2024-07-19"
+    }
+  },
+  {
+    "id": "ariadne:9cc81a8fd174244dec5f25c45b2667998a9ae7424eda93d5f25759286a12cd11",
+    "_source": "ariadne",
+    "_sourceId": "1220825",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/9cc81a8fd174244dec5f25c45b2667998a9ae7424eda93d5f25759286a12cd11",
+    "title": "Archaeological monitoring and recording at Lexden Mount, near 11 Wordsworth Road, Colchester, Essex, CO3 4HR: September 2016",
+    "description": "The site was continually monitored while the posthole required for the installation of the interpretation panel was excavated. The posthole was 500mm by 400mm and was excavated to a depth of 600mm. Continuous archaeological recording was undertaken during the excavation of a posthole for to the installation of an interpretation panel at Lexden Mount. No archaeological evidence was encountered.",
+    "creator": "P Parmenter",
+    "date": "2024-07-17",
+    "subject": [
+      "barrow",
+      "roman barrow",
+      "watching brief"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "43",
+    "periodEnd": "400",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "9cc81a8fd174244dec5f25c45b2667998a9ae7424eda93d5f25759286a12cd11",
+      "temporal": [
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "400",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Colchester, unparished area, Essex, Colchester, England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.8877168709698,
+            "lon": 0.858741715153812
+          },
+          "centroid": {
+            "lat": 51.8877168709698,
+            "lon": 0.858741715153812
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Colchester, unparished area, Essex, Colchester, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "P Parmenter",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/P%20Parmenter"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        },
+        {
+          "prefLabel": "roman barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROMAN%20BARROW"
+        },
+        {
+          "prefLabel": "watching brief",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WATCHING%20BRIEF"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Colchester Archaeological Trust",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/E22E8823-F84E-3DCF-A75D-5E4F22854595",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "roman"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:9cc81a8fd174244dec5f25c45b2667998a9ae7424eda93d5f25759286a12cd11",
+      "title": "Archaeological monitoring and recording at Lexden Mount, near 11 Wordsworth Road, Colchester, Essex, CO3 4HR: September 2016",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/9cc81a8fd174244dec5f25c45b2667998a9ae7424eda93d5f25759286a12cd11",
+      "creator": "P Parmenter",
+      "date": "2024-07-17"
+    }
+  },
+  {
+    "id": "ariadne:1db3d62331ea5a56c9744c197f56a24acfd71d1c35bdd89992662712d10cea80",
+    "_source": "ariadne",
+    "_sourceId": "1238173",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/1db3d62331ea5a56c9744c197f56a24acfd71d1c35bdd89992662712d10cea80",
+    "title": "Extension to Warden's House, Bailgate Court, Wordsworth Street, City of Lincoln: Report on a Scheme of Archaeological Monitoring and Recording",
+    "description": "The programme of archaeological monitoring and recording initially consisted of the monitoring of a 2.0m x 2.0m trial pit, to be excavated in the centre of the footprint of the proposed building in order to identify the targeted horizon for the base of the six stanchion pits of the raft foundation of the new building, with a second phase of monitoring during the excavation of the stanchion pits. Following the excavation of the trial pit, the methodology was expanded, in consultation with the City Archaeologist, to include the full excavation to the first archaeological horizon of the entire building footprint, which was then to be back-filled under archaeological supervision before the excavation of the stanchion pits. Machine excavation of the test pit and the subsequent extended excavation area was carried out using a tracked mini-digger fitted with a toothless ditching bucket. Overburden and made ground were removed to the first archaeological horizon, and the exposed surfaces were cleaned by hand and recorded in plan and section, in accordance with the approved WSI. The excavated area was then back-filled and consolidated under archaeological supervision, protecting exposed remains with geotextile, before the excavation of the stanchion pits. All deposits and features seen were recorded on standard PCAS context recording sheets, and the progress of the groundworks noted on standard PCAS site diary sheets. Features were cleaned and sample excavated by hand before being drawn in section at scale 1:20. A plan of the excavation area was created using GPS surveying. A digital photographic record was also maintained The west-north-west to east-south-east aligned limestone rubble wall footing exposed in the excavation area can be dated with reasonable certainty to the Roman colonia settlement, and may correspond to remains of other stone buildings discovered during archaeological works at Spring Hill, St. Michael's Terrace and Stanthaket Court, as well as possibly being associated with traces of a north-to-south-aligned road roughly following the line of the north end of Gibraltar Hill. The Lincoln Archaeological Research Agenda notes that the steep slopes of the hillside above the River Witham were probably first settled in the later Roman period (RAZ 7.11.4), and this corresponds to the  mid- to late 2nd century or later pottery retrieved, dating to a period well after the military occupation of Lincoln had ceased at the end of the 1st century AD, but probably before the civilian settlement was fortified in the 3rd century.  The identification of a stone foundation beneath the brick wall of the hospital grounds, possibly indicating the re-use of an earlier boundary, may have a bearing on the Research Agenda note that commercial premises on street-fronting plots in the Lower City gave way to the dwellings of the wealthy during the economically depressed period between the mid-14th and mid-18th centuries (RAZ 10.25). The brick footings of the north-eastern corner of a building, which were exposed at the south side of the excavation area, are likely to have been part of a building shown  in the hospital grounds on the 1868 town plan; no other elements of the hospital grounds were exposed.",
+    "creator": "Rachel Savage",
+    "date": "2025-03-18",
+    "subject": [
+      "post medieval wall",
+      "roman wall",
+      "wall",
+      "watching brief",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1540",
+    "periodEnd": "1900",
+    "periodName": [
+      "post medieval",
+      "roman"
+    ],
+    "ariadne": {
+      "elasticId": "1db3d62331ea5a56c9744c197f56a24acfd71d1c35bdd89992662712d10cea80",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1900",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        },
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "400",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Lincoln, unparished area, Lincolnshire, Lincoln, England"
+        },
+        {
+          "geopoint": {
+            "lat": 53.2335694965819,
+            "lon": -0.54029653166853
+          },
+          "centroid": {
+            "lat": 53.2335694965819,
+            "lon": -0.54029653166853
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Lincoln, unparished area, Lincolnshire, Lincoln, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Rachel Savage",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Rachel%20Savage"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "post medieval wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/POST%20MEDIEVAL%20WALL"
+        },
+        {
+          "prefLabel": "roman wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROMAN%20WALL"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        },
+        {
+          "prefLabel": "watching brief",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WATCHING%20BRIEF"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Pre-Construct Archaeology Limited",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/0589414B-8A40-3B96-8D04-9DF54C6DA9A8",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "post medieval",
+        "roman"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:1db3d62331ea5a56c9744c197f56a24acfd71d1c35bdd89992662712d10cea80",
+      "title": "Extension to Warden's House, Bailgate Court, Wordsworth Street, City of Lincoln: Report on a Scheme of Archaeological Monitoring and Recording",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/1db3d62331ea5a56c9744c197f56a24acfd71d1c35bdd89992662712d10cea80",
+      "creator": "Rachel Savage",
+      "date": "2025-03-18"
+    }
+  },
+  {
+    "id": "ariadne:1af755babb4b1a8f686ee2555d38cb68ef0ae7d3ec6d0492f836002936764081",
+    "_source": "ariadne",
+    "_sourceId": "1170545",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/1af755babb4b1a8f686ee2555d38cb68ef0ae7d3ec6d0492f836002936764081",
+    "title": "Dove Cottage, Grasmere, Cumbria: An architectural analysis of Wordsworth's Grasmere home (1799-1808), its origins and evolution",
+    "description": "Dove Cottage, a Grade I listed building, is internationally famous as the home, between 1799 and 1808, of William and Dorothy Wordsworth, and as the meeting place during their residence of many of the greatest figures of British Romanticism, including Coleridge, Southey, Scott, Wilson and De Quincey. Built as a two-storeyed vernacular house probably in the late 17th century or around 1700, Dove Cottage is constructed of irregular fieldstone rubble with a Cumbrian slate roof. It is built to an irregular plan consisting of a two-bay front range, a single-bay rear range, a small projecting pantry (known to Dorothy Wordsworth as the 'out-jutting') and, at the opposite end of the house, an attached outbuilding, probably intended as a stable. Photographs of the front range, taken when external roughcast was removed in the 1970s, show that it originally incorporated wider, lower windows which must have been mullioned. They were altered to receive taller, narrower casement windows probably in the second quarter of the 18th century, when raised-and-fielded panelling was introduced to the ground-floor rooms of the front range, and several panelled internal doors were introduced. Wordsworth's poem Benjamin the Waggoner is the source for the tradition that the house served as an alehouse (the Dove and Olive Bough) at some point prior to 1799.",
+    "creator": "Adam Menuge",
+    "date": "2019-09-12",
+    "subject": [
+      "building survey",
+      "house",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1540",
+    "periodEnd": "1900",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "1af755babb4b1a8f686ee2555d38cb68ef0ae7d3ec6d0492f836002936764081",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1900",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Dove Cottage, Grasmere, LAKES, Cumbria, South Lakeland, England"
+        },
+        {
+          "geopoint": {
+            "lat": 54.4543772571677,
+            "lon": -3.01640132417363
+          },
+          "centroid": {
+            "lat": 54.4543772571677,
+            "lon": -3.01640132417363
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Dove Cottage, Grasmere, LAKES, Cumbria, South Lakeland, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Adam Menuge",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Adam%20Menuge"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "building survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUILDING%20SURVEY"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/938FB356-B262-30C4-A30E-D6E7DF8E9884",
+      "otherId": [
+        "OBIB 84/2010"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:1af755babb4b1a8f686ee2555d38cb68ef0ae7d3ec6d0492f836002936764081",
+      "title": "Dove Cottage, Grasmere, Cumbria: An architectural analysis of Wordsworth's Grasmere home (1799-1808), its origins and evolution",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/1af755babb4b1a8f686ee2555d38cb68ef0ae7d3ec6d0492f836002936764081",
+      "creator": "Adam Menuge",
+      "date": "2019-09-12"
+    }
+  },
+  {
+    "id": "ariadne:d9b8eba1c94cb90ebf41bf3a56cd28722e5db72158cbff391236542de6f17820",
+    "_source": "ariadne",
+    "_sourceId": "3506098",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/d9b8eba1c94cb90ebf41bf3a56cd28722e5db72158cbff391236542de6f17820",
+    "title": "BISHOP WORDSWORTH'S SCHOOL, CATHEDRAL CLOSE",
+    "description": "No Description",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "cathedral close",
+      "geophysical survey",
+      "school",
+      "not provided",
+      "schools (buildings)",
+      "cathedrals (buildings)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, SALISBURY",
+    "country": "England",
+    "decimalLatitude": 51.064028,
+    "decimalLongitude": -1.792767,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": [
+      "medieval",
+      "post medieval"
+    ],
+    "ariadne": {
+      "elasticId": "d9b8eba1c94cb90ebf41bf3a56cd28722e5db72158cbff391236542de6f17820",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, SALISBURY",
+          "geopoint": {
+            "lat": 51.064028,
+            "lon": -1.792767
+          },
+          "centroid": {
+            "lat": 51.064028,
+            "lon": -1.792767
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, SALISBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cathedral close",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CATHEDRAL%20CLOSE"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "school",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SCHOOL"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "schools (buildings)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006495",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "cathedrals (buildings)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007501",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/459022A7-7D18-3232-BB5A-9473FF85AA8D",
+      "otherId": [
+        "Associated ID: AIP Record Number: B.46.592",
+        "Depositor ID: 1601666",
+        "EHNMR-1601666"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "medieval",
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:d9b8eba1c94cb90ebf41bf3a56cd28722e5db72158cbff391236542de6f17820",
+      "title": "BISHOP WORDSWORTH'S SCHOOL, CATHEDRAL CLOSE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/d9b8eba1c94cb90ebf41bf3a56cd28722e5db72158cbff391236542de6f17820",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:11a38c4198d8265c8b3e568053d9e17780129575e5b8925605380d58bdb3d345",
+    "_source": "ariadne",
+    "_sourceId": "64953",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/11a38c4198d8265c8b3e568053d9e17780129575e5b8925605380d58bdb3d345",
+    "title": "CLOSE WALL, BISHOP WORDSWORTH'S SCHOOL",
+    "creator": "ASI (Archaeological Site Investigations)",
+    "date": "2002-06-20",
+    "subject": [
+      "wall",
+      "watching brief",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "CLOSE WALL, BISHOP WORDSWORTH'S SCHOOL, Salisbury, Salisbury, Wiltshire, England",
+    "country": "England",
+    "decimalLatitude": 51.064118,
+    "decimalLongitude": -1.793053,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "ariadne": {
+      "elasticId": "11a38c4198d8265c8b3e568053d9e17780129575e5b8925605380d58bdb3d345",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "CLOSE WALL, BISHOP WORDSWORTH'S SCHOOL, Salisbury, Salisbury, Wiltshire, England",
+          "geopoint": {
+            "lat": 51.064118,
+            "lon": -1.793053
+          },
+          "centroid": {
+            "lat": 51.064118,
+            "lon": -1.793053
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "CLOSE WALL, BISHOP WORDSWORTH'S SCHOOL, Salisbury, Salisbury, Wiltshire, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "ASI (Archaeological Site Investigations)",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/ASI%20%28Archaeological%20Site%20Investigations%29"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        },
+        {
+          "prefLabel": "watching brief",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WATCHING%20BRIEF"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/B5FBC470-0C17-308B-9D0F-FEBB5EA68D32",
+      "otherId": [
+        "Associated ID: Site code: ASI3058",
+        "Depositor ID: 6906",
+        "NMRMIC-6906"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F31C1473-3527-3C56-9801-F833D3C26A70"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:11a38c4198d8265c8b3e568053d9e17780129575e5b8925605380d58bdb3d345",
+      "title": "CLOSE WALL, BISHOP WORDSWORTH'S SCHOOL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/11a38c4198d8265c8b3e568053d9e17780129575e5b8925605380d58bdb3d345",
+      "creator": "ASI (Archaeological Site Investigations)",
+      "date": "2002-06-20"
+    }
+  },
+  {
+    "id": "ariadne:4b5ec8c7ad55eee8a904f1befa4104fa5c239fd7ab7b8918d87ec40ef44e7e9d",
+    "_source": "ariadne",
+    "_sourceId": "1917043",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/4b5ec8c7ad55eee8a904f1befa4104fa5c239fd7ab7b8918d87ec40ef44e7e9d",
+    "title": "BISHOP WORDSWORTH'S SCHOOL",
+    "description": "Site code: W690/37497. Eleven trenches excavated.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "building",
+      "geophysical survey",
+      "not provided",
+      "buildings (structures)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, SALISBURY",
+    "country": "England",
+    "decimalLatitude": 51.065017,
+    "decimalLongitude": -1.793049,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": [
+      "medieval",
+      "post medieval"
+    ],
+    "ariadne": {
+      "elasticId": "4b5ec8c7ad55eee8a904f1befa4104fa5c239fd7ab7b8918d87ec40ef44e7e9d",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, SALISBURY",
+          "geopoint": {
+            "lat": 51.065017,
+            "lon": -1.793049
+          },
+          "centroid": {
+            "lat": 51.065017,
+            "lon": -1.793049
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, SALISBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUILDING"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "buildings (structures)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004792",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/8AAA2AC0-AB5D-3019-9B15-01D14AB744DE",
+      "otherId": [
+        "Associated ID: AIP Record Number: C.46.0029",
+        "Depositor ID: 1046774",
+        "EHNMR-1046774"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "medieval",
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:4b5ec8c7ad55eee8a904f1befa4104fa5c239fd7ab7b8918d87ec40ef44e7e9d",
+      "title": "BISHOP WORDSWORTH'S SCHOOL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/4b5ec8c7ad55eee8a904f1befa4104fa5c239fd7ab7b8918d87ec40ef44e7e9d",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:4ed21dc8a8e790a814464846b42c479ffb6051a8e64b6bc0e4fca01f7a2ac2d0",
+    "_source": "ariadne",
+    "_sourceId": "1897112",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/4ed21dc8a8e790a814464846b42c479ffb6051a8e64b6bc0e4fca01f7a2ac2d0",
+    "title": "CLOSE WALL, BISHOP WORDSWORTH'S SCHOOL",
+    "description": "Site code: ASI 3058.  NMR Microfilm Index PRN: 6906.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "wall",
+      "not provided",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, SALISBURY",
+    "country": "England",
+    "decimalLatitude": 51.064118,
+    "decimalLongitude": -1.793053,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "ariadne": {
+      "elasticId": "4ed21dc8a8e790a814464846b42c479ffb6051a8e64b6bc0e4fca01f7a2ac2d0",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, SALISBURY",
+          "geopoint": {
+            "lat": 51.064118,
+            "lon": -1.793053
+          },
+          "centroid": {
+            "lat": 51.064118,
+            "lon": -1.793053
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, SALISBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/8C91E0F5-9588-3BB1-914C-4E46A494028B",
+      "otherId": [
+        "Associated ID: AIP Record Number: G.46.2301",
+        "Associated ID: RCHME Microfilm Index Number: 6906",
+        "Depositor ID: 1259432",
+        "EHNMR-1259432"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:4ed21dc8a8e790a814464846b42c479ffb6051a8e64b6bc0e4fca01f7a2ac2d0",
+      "title": "CLOSE WALL, BISHOP WORDSWORTH'S SCHOOL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/4ed21dc8a8e790a814464846b42c479ffb6051a8e64b6bc0e4fca01f7a2ac2d0",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:d4ba78d6040f06f2a5704c78fa79be81eee68341edd16e04e71884189cd97d55",
+    "_source": "ariadne",
+    "_sourceId": "1756041",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/d4ba78d6040f06f2a5704c78fa79be81eee68341edd16e04e71884189cd97d55",
+    "title": "Old Coach House, now Shop, Wordsworth's House, Cockermouth",
+    "description": "A single storied building which is now used as a National Trust shop. Formerly it was the coach house, and it retains a wall cupboard and a Victorican fireplace.<br />WALLS - They are lime rendered, and the building abuts on to the next door house.<br />ROOF - It is a mono pitch and has decreasing sizes of tiles to the ridge. The guttering is modern.<br />(NT VBS Surveyor; 1983)",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": "coach house",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, Cumbria, Allerdale, Cockermouth",
+    "country": "England",
+    "decimalLatitude": 54.663538,
+    "decimalLongitude": -3.36756,
+    "ariadne": {
+      "elasticId": "d4ba78d6040f06f2a5704c78fa79be81eee68341edd16e04e71884189cd97d55",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, Cumbria, Allerdale, Cockermouth",
+          "geopoint": {
+            "lat": 54.663538,
+            "lon": -3.36756
+          },
+          "centroid": {
+            "lat": 54.663538,
+            "lon": -3.36756
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, Cumbria, Allerdale, Cockermouth"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "coach house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COACH%20HOUSE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/40812589-1E01-33A7-BCCE-244B7AAEC755",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA115794",
+        "Depositor ID: 25858",
+        "NTSMR-MNA115794"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1540 - 1900"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:d4ba78d6040f06f2a5704c78fa79be81eee68341edd16e04e71884189cd97d55",
+      "title": "Old Coach House, now Shop, Wordsworth's House, Cockermouth",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/d4ba78d6040f06f2a5704c78fa79be81eee68341edd16e04e71884189cd97d55",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  },
+  {
+    "id": "ariadne:1966e5aacf340f4e3e949ab169f4b641bec543300c0f3f47fc87e06611619e72",
+    "_source": "ariadne",
+    "_sourceId": "1180923",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/1966e5aacf340f4e3e949ab169f4b641bec543300c0f3f47fc87e06611619e72",
+    "title": "New Emergency Access for Bishop Wordsworth's School, Salisbury, Wiltshire, Historic Building Record and Archaeological Watching Brief",
+    "description": "Wessex Archaeology was commissioned by Bell Cornwell on behalf of Bishop Wordsworth's School to carry out a programme of historic building recording and archaeological watching brief on the west boundary wall at Bishop Wordsworth's School, Exeter Street, Salisbury, Wiltshire, SP1 2ED. The wall is a Grade II listed building named 'WALL RUNNING NORTH OF LODGE, PARALLEL WITH ROAD'. The recording occurred prior to and during construction of a new emergency access in March and October 2019 respectively.    The list entry dates the wall to the late 16th century. The lower part of the wall is constructed of a mix of stone rubble, flint and red brick with some occasional tile. Probably in the later 18th or early 19th century the wall was raised, and an opening infilled leaving a narrow pedestrian doorway. The new emergency access reinstates the width of the earlier opening.     There is evidence that indicates the wall terminals of the new emergency access were rebuilt prior to the raising and infilling of the wall, but no earlier than the 18th century. The brick lacing courses to the north of the entrance may indicate that this section of wall was also wholly or substantially rebuilt at this time, perhaps in the earlier part of the 18th century. Conversely, the absence of brick lacing to the south suggests this part of the wall was probably repaired rather than rebuilt and thus largely survives from an earlier, possibly late 16th century date.",
+    "creator": [
+      "Grace Flood",
+      "P Andrews"
+    ],
+    "date": "2020-06-11",
+    "subject": [
+      "building survey",
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1540",
+    "periodEnd": "1900",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "1966e5aacf340f4e3e949ab169f4b641bec543300c0f3f47fc87e06611619e72",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1900",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "New Emergency Access for Bishop Wordsworth's School,  Exeter Street, SALISBURY, Wiltshire, Wiltshire, England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.0648994040816,
+            "lon": -1.79567870985571
+          },
+          "centroid": {
+            "lat": 51.0648994040816,
+            "lon": -1.79567870985571
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "New Emergency Access for Bishop Wordsworth's School,  Exeter Street, SALISBURY, Wiltshire, Wiltshire, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Grace Flood",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Grace%20Flood"
+        },
+        {
+          "name": "P Andrews",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/P%20Andrews"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "building survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUILDING%20SURVEY"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Wessex Archaeology",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/E2215ABF-6DA5-36F3-9D34-5CA5BD6D95CB",
+      "otherId": [
+        "OBIB 213981.03"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:1966e5aacf340f4e3e949ab169f4b641bec543300c0f3f47fc87e06611619e72",
+      "title": "New Emergency Access for Bishop Wordsworth's School, Salisbury, Wiltshire, Historic Building Record and Archaeological Watching Brief",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/1966e5aacf340f4e3e949ab169f4b641bec543300c0f3f47fc87e06611619e72",
+      "creator": [
+        "Grace Flood",
+        "P Andrews"
+      ],
+      "date": "2020-06-11"
+    }
+  },
+  {
+    "id": "ariadne:0165d42226f48f9d16f7e11d73d40a80ff19382e752a4d0ee39e033ca6033270",
+    "_source": "ariadne",
+    "_sourceId": "1188220",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0165d42226f48f9d16f7e11d73d40a80ff19382e752a4d0ee39e033ca6033270",
+    "title": "Bishop Wordsworth's School, Salisbury, Wiltshire",
+    "description": "Wessex Archaeology was commissioned by Bell Cornwell Partnership, on behalf of Bishop Wordsworth's Grammar to undertake an archaeological watching brief during the excavation of awning foundations, at Bishop Wordsworth's School, Salisbury. The watching brief was carried out as a condition of planning permission (20/04558/FUL). Despite the presence of medieval and post-medieval remains across the site, no archaeological features or deposits were observed during the course of the watching brief. The soil matrix found within the trenches confirms the stratigraphy reported during earlier works, with modern layers comprising the majority of the excavated material.",
+    "creator": [
+      "E Legg",
+      "Steven Froud"
+    ],
+    "date": "2021-10-28",
+    "subject": "watching brief",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Bishop Wordsworth's School, SALISBURY, Wiltshire, Wiltshire, England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "0165d42226f48f9d16f7e11d73d40a80ff19382e752a4d0ee39e033ca6033270",
+      "temporal": [],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Bishop Wordsworth's School, SALISBURY, Wiltshire, Wiltshire, England"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.0657969639962,
+            "lon": -1.79473287886421
+          },
+          "centroid": {
+            "lat": 51.0657969639962,
+            "lon": -1.79473287886421
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Bishop Wordsworth's School, SALISBURY, Wiltshire, Wiltshire, England",
+        "England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "E Legg",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/E%20Legg"
+        },
+        {
+          "name": "Steven Froud",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Steven%20Froud"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "watching brief",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WATCHING%20BRIEF"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Wessex Archaeology",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/AA66880B-BA1D-3C52-B12C-A02BB59F538C",
+      "otherId": [
+        "OBIB 237740.03"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:0165d42226f48f9d16f7e11d73d40a80ff19382e752a4d0ee39e033ca6033270",
+      "title": "Bishop Wordsworth's School, Salisbury, Wiltshire",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0165d42226f48f9d16f7e11d73d40a80ff19382e752a4d0ee39e033ca6033270",
+      "creator": [
+        "E Legg",
+        "Steven Froud"
+      ],
+      "date": "2021-10-28"
+    }
+  },
+  {
+    "id": "ariadne:a73859bba8737c233cebbef9ff4b42069c074439fce477b417a8685e823b5df8",
+    "_source": "ariadne",
+    "_sourceId": "1220154",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/a73859bba8737c233cebbef9ff4b42069c074439fce477b417a8685e823b5df8",
+    "title": "New Classrooms, Bishop Wordsworth's School Salisbury,Archaeological Watching Brief",
+    "description": "Wessex Archaeology was commissioned by Bishop Wordsworth's Grammar School (the Client), to undertake an archaeological watching brief during works associated with the construction of a new teaching block at the school. The monitored works covered 0.8 ha, centred on NGR 414461 129495, at Bishop Wordsworth's School, Cathedral Close, Salisbury, Wiltshire, SP1 2EF. Two structures were revealed during the course of the watching brief. Both features were present at relatively shallow depths below the modern hardstanding and made ground deposits and were relatively undisturbed by modern intrusions.     The southernmost of these structures (Structure 1) expanded on a previous investigation which is believed to represent part of the 19th century Bishop's Stables, which were demolished following a fire in 1965. Beneath these was an extensive and thick deposit of made ground containing medieval material, on which the buildings had been constructed. Beneath made ground were extensive deposits of alluvial silt. Structure 2 in the northern part of site consisted of a single wall and associated mortar/gravel spread. Although undated, the wall and deposit appear to follow the ordination of a boundary path shown on 18th and 19th century historical mapping.",
+    "creator": "P Capps",
+    "date": "2024-07-02",
+    "subject": [
+      "evaluation",
+      "post medieval wall",
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Salisbury, Wiltshire, Wiltshire, England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1540",
+    "periodEnd": "1900",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "a73859bba8737c233cebbef9ff4b42069c074439fce477b417a8685e823b5df8",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1900",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Salisbury, Wiltshire, Wiltshire, England"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.064601514978,
+            "lon": -1.79502353078149
+          },
+          "centroid": {
+            "lat": 51.064601514978,
+            "lon": -1.79502353078149
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Salisbury, Wiltshire, Wiltshire, England",
+        "England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "P Capps",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/P%20Capps"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "evaluation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EVALUATION"
+        },
+        {
+          "prefLabel": "post medieval wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/POST%20MEDIEVAL%20WALL"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Wessex Archaeology",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/8CCF35BE-2130-338A-A2B5-DE36A56F3116",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:a73859bba8737c233cebbef9ff4b42069c074439fce477b417a8685e823b5df8",
+      "title": "New Classrooms, Bishop Wordsworth's School Salisbury,Archaeological Watching Brief",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/a73859bba8737c233cebbef9ff4b42069c074439fce477b417a8685e823b5df8",
+      "creator": "P Capps",
+      "date": "2024-07-02"
+    }
+  },
+  {
+    "id": "ariadne:bef2bfd5fa26e86b61b348894bf8dfc0d3d0964298a444409f9ae4820fd5e4af",
+    "_source": "ariadne",
+    "_sourceId": "2129047",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/bef2bfd5fa26e86b61b348894bf8dfc0d3d0964298a444409f9ae4820fd5e4af",
+    "title": "Dove Cottage, Grasmere",
+    "description": "Dove Cottage was the home of the poet William Wordsworth and his sister Dorothy from 1799 to 1808.  The house, garden and orchard were written about and added to by them.\nDove Cottage is now a museum detailing the life of William Wordsworth and his work.  The gardens have been restored back to the designs of William and Dorothy during the late-18th and early-19th century.<br /><br />History: Dove Cottage was the home of William Wordsworth and his sister between 1799 and 1808. In 1890 the cottage was brought by the Wordsworth trust and converted into a museum.<br /><br />Current Use: ornamental garden<br />Feature: House [1617] The house, first recorded in 1617, was an inn until 1793. It was occupied by William Wordsworth between 1799 and 1808.",
+    "creator": "Parks and Gardens UK",
+    "date": "2012-10-10",
+    "subject": [
+      "garden",
+      "house",
+      "museum",
+      "houses",
+      "gardens (open spaces)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, Cumbria, South Lakeland, Lakes",
+    "decimalLatitude": 54.455781,
+    "decimalLongitude": -3.015055,
+    "ariadne": {
+      "elasticId": "bef2bfd5fa26e86b61b348894bf8dfc0d3d0964298a444409f9ae4820fd5e4af",
+      "temporal": [],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "England, Cumbria, South Lakeland, Lakes",
+          "geopoint": {
+            "lat": 54.455781,
+            "lon": -3.015055
+          },
+          "centroid": {
+            "lat": 54.455781,
+            "lon": -3.015055
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, Cumbria, South Lakeland, Lakes"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Parks and Gardens UK",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Parks%20and%20Gardens%20UK"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GARDEN"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        },
+        {
+          "prefLabel": "museum",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "gardens (open spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008090",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Parks and Gardens UK",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/06D26B26-5A14-3BA2-81C7-C92317E2FB86",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/58114087-BD7B-3ECC-9B46-A48C8BB36F6C"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "late 18th century"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:bef2bfd5fa26e86b61b348894bf8dfc0d3d0964298a444409f9ae4820fd5e4af",
+      "title": "Dove Cottage, Grasmere",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/bef2bfd5fa26e86b61b348894bf8dfc0d3d0964298a444409f9ae4820fd5e4af",
+      "creator": "Parks and Gardens UK",
+      "date": "2012-10-10"
+    }
+  },
+  {
+    "id": "ariadne:c1c9e848b492d2707d9c201659281e3ddc6a26250311303b74b6160bb8f14d8b",
+    "_source": "ariadne",
+    "_sourceId": "1123436",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/c1c9e848b492d2707d9c201659281e3ddc6a26250311303b74b6160bb8f14d8b",
+    "title": "A mid to late 17th...",
+    "description": "A mid to late 17th century barn related to the Wordsworth Musuem.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "barn",
+      "agricultural buildings"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "LAKES, SOUTH LAKELAND, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.453085,
+    "decimalLongitude": -3.014989,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "c1c9e848b492d2707d9c201659281e3ddc6a26250311303b74b6160bb8f14d8b",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "LAKES, SOUTH LAKELAND, CUMBRIA, ENGLAND",
+          "geopoint": {
+            "lat": 54.453085,
+            "lon": -3.014989
+          },
+          "centroid": {
+            "lat": 54.453085,
+            "lon": -3.014989
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "LAKES, SOUTH LAKELAND, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARN"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "agricultural buildings",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004900",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/27830DE8-D10A-3D4E-AD59-24520C687305",
+      "otherId": [
+        "Depositor ID: NY 30 NW 75",
+        "NMR_NATINV-510422"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:c1c9e848b492d2707d9c201659281e3ddc6a26250311303b74b6160bb8f14d8b",
+      "title": "A mid to late 17th...",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/c1c9e848b492d2707d9c201659281e3ddc6a26250311303b74b6160bb8f14d8b",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:3d80e41bd19d0a749df0a2980ffd8b7f69820c07c7dcfdc3ebbbcab8c25632ea",
+    "_source": "ariadne",
+    "_sourceId": "1164308",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/3d80e41bd19d0a749df0a2980ffd8b7f69820c07c7dcfdc3ebbbcab8c25632ea",
+    "title": "Hardraw Force - reputed highest...",
+    "description": "Hardraw Force - reputed highest waterfall in England. A Romantic's Dream! Wordsworth waxed lyrical!",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "natural feature",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HIGH ABBOTSIDE, RICHMONDSHIRE, NORTH YORKSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.319664,
+    "decimalLongitude": -2.200492,
+    "ariadne": {
+      "elasticId": "3d80e41bd19d0a749df0a2980ffd8b7f69820c07c7dcfdc3ebbbcab8c25632ea",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HIGH ABBOTSIDE, RICHMONDSHIRE, NORTH YORKSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 54.319664,
+            "lon": -2.200492
+          },
+          "centroid": {
+            "lat": 54.319664,
+            "lon": -2.200492
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "HIGH ABBOTSIDE, RICHMONDSHIRE, NORTH YORKSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "natural feature",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NATURAL%20FEATURE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/344EE7E2-8DE8-3188-A9B9-342EE6023AAB",
+      "otherId": [
+        "Depositor ID: SD 89 SE 74",
+        "NMR_NATINV-592506"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:3d80e41bd19d0a749df0a2980ffd8b7f69820c07c7dcfdc3ebbbcab8c25632ea",
+      "title": "Hardraw Force - reputed highest...",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/3d80e41bd19d0a749df0a2980ffd8b7f69820c07c7dcfdc3ebbbcab8c25632ea",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:7ce5779f3f91e728292891ab72be3bfe7739c11359af7098f81b9f2dd684a1b3",
+    "_source": "ariadne",
+    "_sourceId": "1869124",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/7ce5779f3f91e728292891ab72be3bfe7739c11359af7098f81b9f2dd684a1b3",
+    "title": "GROVELY CASTLE",
+    "description": "Devizes Museum Library archive ref: Wilts. Tracts 152, Bishop Wordsworth School second excavation report.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "hillfort",
+      "not provided",
+      "hillforts"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, STEEPLE LANGFORD",
+    "country": "England",
+    "decimalLatitude": 51.120848,
+    "decimalLongitude": -1.930981,
+    "periodStart": "-0799",
+    "periodEnd": "0043",
+    "periodName": "iron age",
+    "ariadne": {
+      "elasticId": "7ce5779f3f91e728292891ab72be3bfe7739c11359af7098f81b9f2dd684a1b3",
+      "temporal": [
+        {
+          "from": "-0799",
+          "periodName": "iron age",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsj33x"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, STEEPLE LANGFORD",
+          "geopoint": {
+            "lat": 51.120848,
+            "lon": -1.930981
+          },
+          "centroid": {
+            "lat": 51.120848,
+            "lon": -1.930981
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, STEEPLE LANGFORD"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HILLFORT"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "hillforts",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006911",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/3C53BFF3-6929-3FB0-A87B-019455158E35",
+      "otherId": [
+        "Depositor ID: 643786",
+        "EHNMR-643786"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "iron age"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:7ce5779f3f91e728292891ab72be3bfe7739c11359af7098f81b9f2dd684a1b3",
+      "title": "GROVELY CASTLE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/7ce5779f3f91e728292891ab72be3bfe7739c11359af7098f81b9f2dd684a1b3",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:b822f98ce78b63934f27e3d6a6a2e260de53f351b7e8ebc6063b7b9f3058de2b",
+    "_source": "ariadne",
+    "_sourceId": "2132711",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/b822f98ce78b63934f27e3d6a6a2e260de53f351b7e8ebc6063b7b9f3058de2b",
+    "title": "Brinsop Vicarage",
+    "description": "Brinsop is a mid-19th-century vicarage whose garden was designed by the poet William Wordsworth.<br />",
+    "creator": "Parks and Gardens UK",
+    "date": "2012-10-10",
+    "subject": [
+      "garden",
+      "house",
+      "houses",
+      "gardens (open spaces)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, Herefordshire, County of Herefordshire, Brinsop and Wormsley",
+    "decimalLatitude": 52.093802,
+    "decimalLongitude": -2.816061,
+    "ariadne": {
+      "elasticId": "b822f98ce78b63934f27e3d6a6a2e260de53f351b7e8ebc6063b7b9f3058de2b",
+      "temporal": [],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "England, Herefordshire, County of Herefordshire, Brinsop and Wormsley",
+          "geopoint": {
+            "lat": 52.093802,
+            "lon": -2.816061
+          },
+          "centroid": {
+            "lat": 52.093802,
+            "lon": -2.816061
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, Herefordshire, County of Herefordshire, Brinsop and Wormsley"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Parks and Gardens UK",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Parks%20and%20Gardens%20UK"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GARDEN"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "gardens (open spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008090",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Parks and Gardens UK",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F0C6D613-D08C-34B5-941F-14454A671D30",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/58114087-BD7B-3ECC-9B46-A48C8BB36F6C"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1840 - 1860",
+        "mid 19th century"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:b822f98ce78b63934f27e3d6a6a2e260de53f351b7e8ebc6063b7b9f3058de2b",
+      "title": "Brinsop Vicarage",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/b822f98ce78b63934f27e3d6a6a2e260de53f351b7e8ebc6063b7b9f3058de2b",
+      "creator": "Parks and Gardens UK",
+      "date": "2012-10-10"
+    }
+  },
+  {
+    "id": "ariadne:4659d6cbe84eb01d6bbbd1b75e99d516c1639347c4d2fb0f61284adae66f7393",
+    "_source": "ariadne",
+    "_sourceId": "96616",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/4659d6cbe84eb01d6bbbd1b75e99d516c1639347c4d2fb0f61284adae66f7393",
+    "title": "The Old Rectory",
+    "description": "Rectory for Llanfihangel Glyn Myfyr Church. William Wordsworth believed to have stayed here.  GME 20/07/1999",
+    "creator": "Royal Commission Ancient and Historic Monuments Wales",
+    "date": "2023-09-07",
+    "subject": [
+      "house",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Llanfihangel Glyn Myfyr, Conwy, Denbighshire",
+    "country": "Wales",
+    "decimalLatitude": 53.037274,
+    "decimalLongitude": -3.5134025,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "4659d6cbe84eb01d6bbbd1b75e99d516c1639347c4d2fb0f61284adae66f7393",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Llanfihangel Glyn Myfyr, Conwy, Denbighshire",
+          "geopoint": {
+            "lat": 53.037274,
+            "lon": -3.5134025
+          },
+          "centroid": {
+            "lat": 53.037274,
+            "lon": -3.5134025
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Llanfihangel Glyn Myfyr, Conwy, Denbighshire"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Royal Commission Ancient and Historic Monuments Wales",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Royal%20Commission%20Ancient%20and%20Historic%20Monuments%20Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Royal Commission on the Ancient and Historical Monuments of Wales",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/RCAHMW/70689189-9743-3C62-A697-A9102B47251C",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/RCAHMW/8D520B07-78F5-3A8E-AD61-580FCFF7218E"
+      ],
+      "accessRights": "CC BY NC ND",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:4659d6cbe84eb01d6bbbd1b75e99d516c1639347c4d2fb0f61284adae66f7393",
+      "title": "The Old Rectory",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/4659d6cbe84eb01d6bbbd1b75e99d516c1639347c4d2fb0f61284adae66f7393",
+      "creator": "Royal Commission Ancient and Historic Monuments Wales",
+      "date": "2023-09-07"
+    }
+  },
+  {
+    "id": "ariadne:a2d0ee4239a3486026d3c12ebc77eee587c4dbde1c750ebd89d45f919d5a7af7",
+    "_source": "ariadne",
+    "_sourceId": "1023538",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/a2d0ee4239a3486026d3c12ebc77eee587c4dbde1c750ebd89d45f919d5a7af7",
+    "title": "Palaeolithic handaxe found in Wilton...",
+    "description": "Palaeolithic handaxe found in Wilton Park. The find was placed in the Bishop Wordsworth School Museum, Salisbury.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "find",
+      "findspot",
+      "handaxe",
+      "archaeological sites",
+      "axes (tools)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WILTON, SALISBURY, WILTSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 51.06332,
+    "decimalLongitude": -1.861562,
+    "periodStart": "-500000",
+    "periodEnd": "-10000",
+    "periodName": "palaeolithic",
+    "ariadne": {
+      "elasticId": "a2d0ee4239a3486026d3c12ebc77eee587c4dbde1c750ebd89d45f919d5a7af7",
+      "temporal": [
+        {
+          "from": "-500000",
+          "periodName": "palaeolithic",
+          "until": "-10000",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsqfgv"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WILTON, SALISBURY, WILTSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 51.06332,
+            "lon": -1.861562
+          },
+          "centroid": {
+            "lat": 51.06332,
+            "lon": -1.861562
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "WILTON, SALISBURY, WILTSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "find",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIND"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        },
+        {
+          "prefLabel": "handaxe",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HANDAXE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "axes (tools)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300024664",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/E1D5C855-BE77-3442-A97B-6EB1BE976D24",
+      "otherId": [
+        "Depositor ID: SU 02 NE 24",
+        "NMR_NATINV-213927"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:a2d0ee4239a3486026d3c12ebc77eee587c4dbde1c750ebd89d45f919d5a7af7",
+      "title": "Palaeolithic handaxe found in Wilton...",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/a2d0ee4239a3486026d3c12ebc77eee587c4dbde1c750ebd89d45f919d5a7af7",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:74fb4be64fbacbd162fb1140799c2383b1e530e3d5fda45cdb30ccd4753c8337",
+    "_source": "ariadne",
+    "_sourceId": "971094",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/74fb4be64fbacbd162fb1140799c2383b1e530e3d5fda45cdb30ccd4753c8337",
+    "title": "A Neolithic polished stone axe...",
+    "description": "A Neolithic polished stone axe was found at a depth of eighteen inches in a field where Wordsworth Street now stands about 1890 by Mr A Hutchinson.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "find",
+      "findspot",
+      "polished axehead",
+      "archaeological sites",
+      "ax heads"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "KESWICK, ALLERDALE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.600387,
+    "decimalLongitude": -3.128569,
+    "periodStart": "-3999",
+    "periodEnd": "-2199",
+    "periodName": "neolithic",
+    "ariadne": {
+      "elasticId": "74fb4be64fbacbd162fb1140799c2383b1e530e3d5fda45cdb30ccd4753c8337",
+      "temporal": [
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "KESWICK, ALLERDALE, CUMBRIA, ENGLAND",
+          "geopoint": {
+            "lat": 54.600387,
+            "lon": -3.128569
+          },
+          "centroid": {
+            "lat": 54.600387,
+            "lon": -3.128569
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "KESWICK, ALLERDALE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "find",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIND"
+        },
+        {
+          "prefLabel": "findspot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FINDSPOT"
+        },
+        {
+          "prefLabel": "polished axehead",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/POLISHED%20AXEHEAD"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "archaeological sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000810",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "ax heads",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300400808",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/17ABC76C-6C05-3FA1-877D-62F34DA395EE",
+      "otherId": [
+        "Depositor ID: NY 22 SE 25",
+        "NMR_NATINV-9862"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:74fb4be64fbacbd162fb1140799c2383b1e530e3d5fda45cdb30ccd4753c8337",
+      "title": "A Neolithic polished stone axe...",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/74fb4be64fbacbd162fb1140799c2383b1e530e3d5fda45cdb30ccd4753c8337",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:4524b4da67103a415b9ac4095865b2b1a774ee676d2604390327f7b666e7bac7",
+    "_source": "ariadne",
+    "_sourceId": "1765082",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/4524b4da67103a415b9ac4095865b2b1a774ee676d2604390327f7b666e7bac7",
+    "title": "Allen Bank, Grasmere",
+    "description": "Allen Bank is located to the west of Grasmere village to the south-east of Low Score Crag.  The property is one of the former Grasmere homes of William Wordsworth.",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": [
+      "house",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, Cumbria, South Lakeland, Lakes",
+    "country": "England",
+    "decimalLatitude": 54.460046,
+    "decimalLongitude": -3.028398,
+    "ariadne": {
+      "elasticId": "4524b4da67103a415b9ac4095865b2b1a774ee676d2604390327f7b666e7bac7",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, Cumbria, South Lakeland, Lakes",
+          "geopoint": {
+            "lat": 54.460046,
+            "lon": -3.028398
+          },
+          "centroid": {
+            "lat": 54.460046,
+            "lon": -3.028398
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, Cumbria, South Lakeland, Lakes"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/2B41B829-FCB1-39DB-BBA0-4E6F5E92F5C3",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA155520",
+        "Depositor ID: 29843",
+        "NTSMR-MNA155520"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1800 - 1900"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:4524b4da67103a415b9ac4095865b2b1a774ee676d2604390327f7b666e7bac7",
+      "title": "Allen Bank, Grasmere",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/4524b4da67103a415b9ac4095865b2b1a774ee676d2604390327f7b666e7bac7",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  },
+  {
+    "id": "ariadne:417460ec4d565903d92f1f24e16695fd5f1662ac47ec5959993884890f16d2a2",
+    "_source": "ariadne",
+    "_sourceId": "2886241",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/417460ec4d565903d92f1f24e16695fd5f1662ac47ec5959993884890f16d2a2",
+    "title": "Rydal Mount Garden and House",
+    "description": "<b>House and garden (home of William Wordsworth) of Post Medieval date.</b><br /><br />Rydal Mount, C16-18.  The home of Wm Wordsworth from 1813 until he died in 1850.  3 storeys, colour-washed stone rubble, slate roof with round chimneys, gabled porch, new windows.  Lower wings are 2 storeys.  E block late C16.  W wing C17.  A cross-wing added ca 1700 at N end of original block.  A mid C18 block between the original house and the W wing.  LB Grade II (S1268).    Listed in the National Parks & Gardens Register as Grade II no. 1663.  The early C19 garden, c 2ha, created by Wordsworth after moving from the parsonage at Grasmere to Rydal Mount in 1813.  The garden contains a vestigial Mound or Mount, probably C16 (S1324).    Also see the NAS Gazetteer (S1323).    The grounds at Rydal Mount encompass 2 hectacres. The gardens have been described as well-designed and executed by William Wordsworth. There are a series of four garden terraces surrounded by hedges (S3203, p. 227).<br /><br />Monument Type: Monument<br /><br />Monument Status: Register of Parks and Gardens<br />Monument Status: Listed Building",
+    "creator": "Lake District National Park Authority",
+    "date": "2011-02-22",
+    "subject": [
+      "garden",
+      "house",
+      "houses",
+      "gardens (open spaces)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, Cumbria, Lakes, South Lakeland, Lakes",
+    "country": "England",
+    "decimalLatitude": 54.448601,
+    "decimalLongitude": -2.981099,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "417460ec4d565903d92f1f24e16695fd5f1662ac47ec5959993884890f16d2a2",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, Cumbria, Lakes, South Lakeland, Lakes",
+          "geopoint": {
+            "lat": 54.448601,
+            "lon": -2.981099
+          },
+          "centroid": {
+            "lat": 54.448601,
+            "lon": -2.981099
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, Cumbria, Lakes, South Lakeland, Lakes"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Lake District National Park Authority",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Lake%20District%20National%20Park%20Authority"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GARDEN"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "gardens (open spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008090",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Lake District National Park Authority",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F57D5958-5761-30A3-94F0-FD53DEA4EF1D",
+      "otherId": [
+        "Depositor ID: 3757",
+        "LDNPHER11-3757"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/855634FC-AA21-3FFA-BD71-DC60699FC7E4"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1540 to 1901",
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:417460ec4d565903d92f1f24e16695fd5f1662ac47ec5959993884890f16d2a2",
+      "title": "Rydal Mount Garden and House",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/417460ec4d565903d92f1f24e16695fd5f1662ac47ec5959993884890f16d2a2",
+      "creator": "Lake District National Park Authority",
+      "date": "2011-02-22"
+    }
+  },
+  {
+    "id": "ariadne:2a8ae3f833b15f20dc6fcd7b9afce2190bf9458eaa63160d5a6ecb151061286c",
+    "_source": "ariadne",
+    "_sourceId": "1304245",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2a8ae3f833b15f20dc6fcd7b9afce2190bf9458eaa63160d5a6ecb151061286c",
+    "title": "Early 19th century garden at...",
+    "description": "Early 19th century garden at Rydal Mount, created by William Wordsworth, incorporating an 18th century kitchen garden, now gone, and an garden terrace of c1790. Features include garden terraces of c1816, late 1830s and 1830.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "garden",
+      "garden terrace",
+      "kitchen garden",
+      "structure",
+      "terraced garden",
+      "garden structures",
+      "gardens (open spaces)",
+      "kitchen gardens",
+      "terrace gardens"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "LAKES, SOUTH LAKELAND, ENGLAND, CUMBRIA",
+    "country": "England",
+    "decimalLatitude": 54.448417,
+    "decimalLongitude": -2.981711,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "2a8ae3f833b15f20dc6fcd7b9afce2190bf9458eaa63160d5a6ecb151061286c",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "LAKES, SOUTH LAKELAND, ENGLAND, CUMBRIA",
+          "geopoint": {
+            "lat": 54.448417,
+            "lon": -2.981711
+          },
+          "centroid": {
+            "lat": 54.448417,
+            "lon": -2.981711
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "LAKES, SOUTH LAKELAND, ENGLAND, CUMBRIA"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GARDEN"
+        },
+        {
+          "prefLabel": "garden terrace",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GARDEN%20TERRACE"
+        },
+        {
+          "prefLabel": "kitchen garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/KITCHEN%20GARDEN"
+        },
+        {
+          "prefLabel": "structure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STRUCTURE"
+        },
+        {
+          "prefLabel": "terraced garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TERRACED%20GARDEN"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "garden structures",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006822",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "gardens (open spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008090",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "kitchen gardens",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008110",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "terrace gardens",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300404778",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/FB3C0AA3-05FA-36BA-ABD3-B98FCD371567",
+      "otherId": [
+        "Depositor ID: NY 30 NE 35",
+        "NMR_NATINV-1071899"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:2a8ae3f833b15f20dc6fcd7b9afce2190bf9458eaa63160d5a6ecb151061286c",
+      "title": "Early 19th century garden at...",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2a8ae3f833b15f20dc6fcd7b9afce2190bf9458eaa63160d5a6ecb151061286c",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:3f7b1436ed8714551e162a2f09d14b620ca63049b75a9cd6a777943406de550d",
+    "_source": "ariadne",
+    "_sourceId": "2899615",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/3f7b1436ed8714551e162a2f09d14b620ca63049b75a9cd6a777943406de550d",
+    "title": "Dove Cottage at Town End, Grasmere",
+    "description": "<b>A 17th-18th century Cottage (a domestic, residential building), once home to William and Dorothy Wordsworth 1799-1808</b><br /><br />A white 17th-18th century cottage once home to William and Dorothy Wordsworth between 1799-1808, and Mary Wordsworth from 1802. The front windows have been enlarged but the house is otherwise preserved largely as the Wordsworths left it. End entry by the stack under a little porch (of 1939), and straight into a small, crudely panelled parlour with an iron range and black flag floor. A bedroom and kitchen complete the downstairs, the sitting room is located upstairs over the parlour.(5115)    Tree ring dating of the cottage timbers was carried out by the Nottingham Tree-Ring Dating Laboratory in 2010. 17 samples were taken but only ten were viable for dating. These samples did not match and did not date independently and remain undated providing no independent dating evidence for the chronological development of the house. (S5114). Also mentioned in the C&WAAS 2011 transactions (S5202).<br /><br />Monument Type: Listed building<br /><br />Monument Status: Listed Building",
+    "creator": "Lake District National Park Authority",
+    "date": "2011-02-22",
+    "subject": "cottage home",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, Cumbria, Lakes, South Lakeland, Lakes",
+    "country": "England",
+    "decimalLatitude": 54.454218,
+    "decimalLongitude": -3.01497,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "3f7b1436ed8714551e162a2f09d14b620ca63049b75a9cd6a777943406de550d",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, Cumbria, Lakes, South Lakeland, Lakes",
+          "geopoint": {
+            "lat": 54.454218,
+            "lon": -3.01497
+          },
+          "centroid": {
+            "lat": 54.454218,
+            "lon": -3.01497
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, Cumbria, Lakes, South Lakeland, Lakes"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Lake District National Park Authority",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Lake%20District%20National%20Park%20Authority"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cottage home",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COTTAGE%20HOME"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Lake District National Park Authority",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/6129E1ED-1C57-3AAA-9D82-E64046048F24",
+      "otherId": [
+        "Depositor ID: 60221",
+        "LDNPHER11-60221"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/855634FC-AA21-3FFA-BD71-DC60699FC7E4"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:3f7b1436ed8714551e162a2f09d14b620ca63049b75a9cd6a777943406de550d",
+      "title": "Dove Cottage at Town End, Grasmere",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/3f7b1436ed8714551e162a2f09d14b620ca63049b75a9cd6a777943406de550d",
+      "creator": "Lake District National Park Authority",
+      "date": "2011-02-22"
+    }
+  },
+  {
+    "id": "ariadne:48ddc2d96d0edf0e88a2903005e7240d03b70d816f1ca4e37bb7727e0691ab44",
+    "_source": "ariadne",
+    "_sourceId": "971270",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/48ddc2d96d0edf0e88a2903005e7240d03b70d816f1ca4e37bb7727e0691ab44",
+    "title": "RYDAL MOUNT",
+    "description": "Probable late 16th century house with additions of 17th century, circa 1700 and the mid-18th century. It is of three- storeys built of colour-washed stone rubble and a slate roof. Former home of William Wordsworth 1813-1850. Now open to the public.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "extant building",
+      "house",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "SOUTH LAKELAND, CUMBRIA, ENGLAND, LAKES",
+    "country": "England",
+    "decimalLatitude": 54.448601,
+    "decimalLongitude": -2.981099,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "48ddc2d96d0edf0e88a2903005e7240d03b70d816f1ca4e37bb7727e0691ab44",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "SOUTH LAKELAND, CUMBRIA, ENGLAND, LAKES",
+          "geopoint": {
+            "lat": 54.448601,
+            "lon": -2.981099
+          },
+          "centroid": {
+            "lat": 54.448601,
+            "lon": -2.981099
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "SOUTH LAKELAND, CUMBRIA, ENGLAND, LAKES"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "extant building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXTANT%20BUILDING"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/DA8B45D1-3BF0-32FF-96B2-AF46822BB52D",
+      "otherId": [
+        "Depositor ID: NY 30 NE 4",
+        "NMR_NATINV-10150"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:48ddc2d96d0edf0e88a2903005e7240d03b70d816f1ca4e37bb7727e0691ab44",
+      "title": "RYDAL MOUNT",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/48ddc2d96d0edf0e88a2903005e7240d03b70d816f1ca4e37bb7727e0691ab44",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:015e524a106f8d6743c5887467bd0ba14e768cc46d02f43592b11688247b80eb",
+    "_source": "ariadne",
+    "_sourceId": "1218490",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/015e524a106f8d6743c5887467bd0ba14e768cc46d02f43592b11688247b80eb",
+    "title": "Landscape park and pleasure grounds...",
+    "description": "Landscape park and pleasure grounds developed between 1800 and 1827 by Sir George Beaumont with the help of many of his friends including William and Dorothy Wordsworth and Uvedale Price. The landscape gardener in charge of the work was James Cranston and from 1820 William Sawrey Gilpin.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "landscape park",
+      "pleasance"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "COLEORTON, NORTH WEST LEICESTERSHIRE, ENGLAND, LEICESTERSHIRE",
+    "country": "England",
+    "decimalLatitude": 52.753352,
+    "decimalLongitude": -1.419133,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "015e524a106f8d6743c5887467bd0ba14e768cc46d02f43592b11688247b80eb",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "COLEORTON, NORTH WEST LEICESTERSHIRE, ENGLAND, LEICESTERSHIRE",
+          "geopoint": {
+            "lat": 52.753352,
+            "lon": -1.419133
+          },
+          "centroid": {
+            "lat": 52.753352,
+            "lon": -1.419133
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "COLEORTON, NORTH WEST LEICESTERSHIRE, ENGLAND, LEICESTERSHIRE"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "landscape park",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LANDSCAPE%20PARK"
+        },
+        {
+          "prefLabel": "pleasance",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PLEASANCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/3E29812A-6851-3DDA-89D6-B9085479B0A8",
+      "otherId": [
+        "Depositor ID: SK 31 NE 82",
+        "NMR_NATINV-948783"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:015e524a106f8d6743c5887467bd0ba14e768cc46d02f43592b11688247b80eb",
+      "title": "Landscape park and pleasure grounds...",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/015e524a106f8d6743c5887467bd0ba14e768cc46d02f43592b11688247b80eb",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:a7f8b52846ee6750aadcbc9fc539c04a9dfc58c04ad7d13e70e4f5a817f52761",
+    "_source": "ariadne",
+    "_sourceId": "2131263",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/a7f8b52846ee6750aadcbc9fc539c04a9dfc58c04ad7d13e70e4f5a817f52761",
+    "title": "St Hugh's College, Oxford",
+    "description": "St. Hugh's garden, associated with the college, is one of the largest college gardens of the University of Oxford.<br /><br />History: The current garden was planted in 1920 by Annie Rogers, Custos Hortulorum.<br /><br />Size: 1.5 ha<br />Current Use: ornamental garden<br />Feature: College [1886] The college was founded in 1886 by Elizabeth Wordsworth.",
+    "creator": "Parks and Gardens UK",
+    "date": "2012-10-10",
+    "subject": [
+      "college",
+      "college garden",
+      "herbaceous border",
+      "lawn",
+      "ornamental pond",
+      "shrub border",
+      "terrace",
+      "terraces (landscaped-site elements)",
+      "gardens (open spaces)",
+      "lawns (landscaped grass)",
+      "colleges (institutions)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, Oxfordshire, Oxford",
+    "decimalLatitude": 51.766101,
+    "decimalLongitude": -1.260877,
+    "periodStart": "1901",
+    "periodEnd": "1932",
+    "periodName": "early 20th century",
+    "ariadne": {
+      "elasticId": "a7f8b52846ee6750aadcbc9fc539c04a9dfc58c04ad7d13e70e4f5a817f52761",
+      "temporal": [
+        {
+          "from": "1901",
+          "periodName": "early 20th century",
+          "until": "1932",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dstffb"
+        }
+      ],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "England, Oxfordshire, Oxford",
+          "geopoint": {
+            "lat": 51.766101,
+            "lon": -1.260877
+          },
+          "centroid": {
+            "lat": 51.766101,
+            "lon": -1.260877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, Oxfordshire, Oxford"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Parks and Gardens UK",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Parks%20and%20Gardens%20UK"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "college",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COLLEGE"
+        },
+        {
+          "prefLabel": "college garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COLLEGE%20GARDEN"
+        },
+        {
+          "prefLabel": "herbaceous border",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERBACEOUS%20BORDER"
+        },
+        {
+          "prefLabel": "lawn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LAWN"
+        },
+        {
+          "prefLabel": "ornamental pond",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ORNAMENTAL%20POND"
+        },
+        {
+          "prefLabel": "shrub border",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SHRUB%20BORDER"
+        },
+        {
+          "prefLabel": "terrace",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TERRACE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "terraces (landscaped-site elements)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004182",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "gardens (open spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008090",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "lawns (landscaped grass)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008889",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "colleges (institutions)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300312285",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Parks and Gardens UK",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/9EF7AC35-D788-3CEC-8E8E-4B7FDAED770D",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/58114087-BD7B-3ECC-9B46-A48C8BB36F6C"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1920",
+        "early 20th century"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:13.704Z",
+      "query": "q:wordsworth",
+      "recordId": "ariadne:a7f8b52846ee6750aadcbc9fc539c04a9dfc58c04ad7d13e70e4f5a817f52761",
+      "title": "St Hugh's College, Oxford",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/a7f8b52846ee6750aadcbc9fc539c04a9dfc58c04ad7d13e70e4f5a817f52761",
+      "creator": "Parks and Gardens UK",
+      "date": "2012-10-10"
     }
   }
 ]

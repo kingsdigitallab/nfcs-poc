@@ -1,0 +1,326 @@
+[
+  {
+    "id": "ariadne:6c8074877f9c99a6200aa180559c72646d8541549201c80f7be54be3139c3b77",
+    "_source": "ariadne",
+    "_sourceId": "1240104",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/6c8074877f9c99a6200aa180559c72646d8541549201c80f7be54be3139c3b77",
+    "title": "QUEENSWAY HALL",
+    "description": "The Queensway Hall, formerly the Civic Hall, was built in 1963-64 as a concert hall to the designs of Shinger Risdon Associates. Before closing in 1999 its client list has, amongst others, included Pink Floyd, David Bowie, Genesis, Sex Pistols, and REM. In 2001, it was planned to be demolsihed and replaced by a supermarket.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "concert hall",
+      "extant building"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BEDFORD, BEDFORD, BEDFORDSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.292063,
+    "decimalLongitude": 0.61401,
+    "ariadne": {
+      "elasticId": "6c8074877f9c99a6200aa180559c72646d8541549201c80f7be54be3139c3b77",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BEDFORD, BEDFORD, BEDFORDSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 52.292063,
+            "lon": 0.61401
+          },
+          "centroid": {
+            "lat": 52.292063,
+            "lon": 0.61401
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "BEDFORD, BEDFORD, BEDFORDSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "concert hall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CONCERT%20HALL"
+        },
+        {
+          "prefLabel": "extant building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXTANT%20BUILDING"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/42E76FBC-58F3-3750-BC65-9C2C7D7DBC05",
+      "otherId": [
+        "Depositor ID: TL 02 SW 99",
+        "NMR_NATINV-1349460"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:26.736Z",
+      "query": "q:david bowie",
+      "recordId": "ariadne:6c8074877f9c99a6200aa180559c72646d8541549201c80f7be54be3139c3b77",
+      "title": "QUEENSWAY HALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/6c8074877f9c99a6200aa180559c72646d8541549201c80f7be54be3139c3b77",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:d9fcdc6532e47b4d4944c8d7bf60078f93a409b026a8113f79d89c70c5124709",
+    "_source": "ariadne",
+    "_sourceId": "1239065",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/d9fcdc6532e47b4d4944c8d7bf60078f93a409b026a8113f79d89c70c5124709",
+    "title": "ABC",
+    "description": "A cine-variety theatre which was built in 1938 to the designs of John Fairweather and Son. In its hey day it housed concerts from the likes of The Beatles, The Rolling Stones, and David Bowie. The cinema closed on 28 May 1977 for tripling and bingo in the former stalls area. ABC 1, 2 and 3 opened on 5 March 1977 and remained in use for nearly six years, closing on 5 March 1983. It reopend as an indepedent called the Ritz on 4 January 1985 but in the late 1990s, following the construction of a new multiplex at Robin Park, it closed. Substantial remains of its life as a cine-variety lie largely concealed from view. Under the stage of the former bingo hall in the stalls area are dressing and band rooms and the entrance to the orchestra pit. The building now stands derelict and boarded-up.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bingo hall",
+      "cinema",
+      "concert hall",
+      "extant building",
+      "music hall",
+      "bingo halls",
+      "multiplex cinemas"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WIGAN, WIGAN, GREATER MANCHESTER, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 53.546852,
+    "decimalLongitude": -2.6279,
+    "ariadne": {
+      "elasticId": "d9fcdc6532e47b4d4944c8d7bf60078f93a409b026a8113f79d89c70c5124709",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WIGAN, WIGAN, GREATER MANCHESTER, ENGLAND",
+          "geopoint": {
+            "lat": 53.546852,
+            "lon": -2.6279
+          },
+          "centroid": {
+            "lat": 53.546852,
+            "lon": -2.6279
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "WIGAN, WIGAN, GREATER MANCHESTER, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bingo hall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BINGO%20HALL"
+        },
+        {
+          "prefLabel": "cinema",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CINEMA"
+        },
+        {
+          "prefLabel": "concert hall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CONCERT%20HALL"
+        },
+        {
+          "prefLabel": "extant building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXTANT%20BUILDING"
+        },
+        {
+          "prefLabel": "music hall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSIC%20HALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "bingo halls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007208",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "multiplex cinemas",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300260475",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/4AC5922F-F347-3078-835C-B3CEBAD05E9F",
+      "otherId": [
+        "Depositor ID: SD 50 NE 62",
+        "NMR_NATINV-1346568"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:26.736Z",
+      "query": "q:david bowie",
+      "recordId": "ariadne:d9fcdc6532e47b4d4944c8d7bf60078f93a409b026a8113f79d89c70c5124709",
+      "title": "ABC",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/d9fcdc6532e47b4d4944c8d7bf60078f93a409b026a8113f79d89c70c5124709",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:c0248500a5fdaa39a2e67e45ff125d8cffac1cf73e6e7edffe6fdcee86b8731b",
+    "_source": "ariadne",
+    "_sourceId": "HESH-ECC0B3",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/c0248500a5fdaa39a2e67e45ff125d8cffac1cf73e6e7edffe6fdcee86b8731b",
+    "title": "Iron DAGGER",
+    "description": "Incomplete single edged bladed iron weapon, probably a dagger (either of the Kidney-dagger type or possibly the Basleard), of probable later medieval, post-medieval or early modern date (1350-1800). The weapon is incomplete and only the tang, quillon plate and upper part of the blade survive. \nThe blade is relatively narrow and has suffered from laminating corrosion in the burial environment along with abrasion which has reduced the width further. From what survives of the blade it seems that the cutting edge is limited to the lower side, however it is possible that there may have been a segment of cutting blade on the upper edge, although this would have been limited to the section just above the point. The blade is broadly sub-rectangular in plan with tapering long edges from a uniform width at the hilt to a broken rounded point. It is likely that the blade would have extended at least a further ¼ of what survives. The thickness of the blade remains relatively constant along its length, suggesting that the blade would originally have been relatively strong. The cross section of the blade is an elongated lentoid. The upper section of the blade extends into the tang which is the same width as the blade. The tang / handle continues to expand and then tapers slightly at the top which terminates in a rounded end. The tang is relatively flat and of a uniform thickness. It has two iron rivets projecting through it although there is evidence that the kidneys (the two wooden or bone parts of the handle) would have been held by at least 5 rivets. The quillon (or cross guard) is fused to the blade and tang, although it is now set at a slight diagonal angle. It is formed from a shaped oval (lentoid) piece of iron which is uniform in thickness. In plan it expands at the mid point and then tapers to rounded ends. It is slotted onto the blade through a sub-rectangular shaped central hole which is fowled presently with iron corrosion. The quillon measures 53mm length, 20mm width and is 5.2mm thick. The dagger measures 240.8mm length, maximum of 26.8mm width and is 4.8mm thick. The blade weighs 132.47 grams.\nThe dagger is a dark orange brown colour with an encrusted surface which is laminating in places revealing a dark black coloured metal. There is no evidence of organic material surviving on either the blade or the tang. A direct parallel for this blade has not been found, although it is similar to a number of dagger-weapons in Museum of London Medieval Catalogue. In shape the blade is also similar to a number of later medieval knives however the presence of the quillon suggests that the functional use is as a weapon. There are no marks or punches to suggest makers and it is likely that this is a domestic (non-military) weapon.\nThe dagger has been shown to David J Stevens, Curator of the Social History Collections at Hereford Museum and a local authority on arms and armour. He has suggested that the dagger is most likely to be of the post medieval period and is unlikely to date prior to 1400. He has suggested that the blade is a non-standard type and maybe the result of an individual journeyman or local smith rather than the stock trade of the blade maker. He suggests that it is likely to be similar in form to the modern 'Bowie style' knife blade; with the caveat that it could be similar to some of the longer hunting blades of the late post-medieval period. The shape of the tang is designed to add strength to the blade and eliminate the inherent structural weakness associated with 'rat-tail' tanged blades of the similar period. He has also suggested that it has been over engineered in that 5 rivet points are highly unusual to fix a handle. He confirmed that the dagger was not of a standard military issue and agreed with the idea of it being a domestic weapon\nThanks are extended to David Stevens for his time, comments, and expertise in helping to identify this blade.",
+    "creator": "Portable Antiquities Scheme",
+    "date": "2008-05-29",
+    "subject": [
+      "dagger",
+      "daggers (weapons)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Whitchurch Rural, Shropshire, Shropshire",
+    "country": "England",
+    "decimalLatitude": 52.9779045421858,
+    "decimalLongitude": -2.6790732865576996,
+    "periodStart": "1350",
+    "periodEnd": "1800",
+    "periodName": "medieval",
+    "ariadne": {
+      "elasticId": "c0248500a5fdaa39a2e67e45ff125d8cffac1cf73e6e7edffe6fdcee86b8731b",
+      "temporal": [
+        {
+          "from": "1350",
+          "periodName": "medieval",
+          "until": "1800",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/MEDIEVAL"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Whitchurch Rural, Shropshire, Shropshire",
+          "boundingbox": "polygon ((-2.68644866629319 52.9824413714729, -2.68644866629319 52.9733677128987, -2.67169790682221 52.9733677128987, -2.67169790682221 52.9824413714729, -2.68644866629319 52.9824413714729))",
+          "centroid": {
+            "lat": 52.9779045421858,
+            "lon": -2.6790732865576996
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Whitchurch Rural, Shropshire, Shropshire"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Portable Antiquities Scheme",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Portable%20Antiquities%20Scheme"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "dagger",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/DAGGER"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "daggers (weapons)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300037058",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Artefact"
+        }
+      ],
+      "publisher": "British Museum",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Still Image"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BMPAS/D78991F3-34C6-3794-A318-869186230130",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/BM/69F34212-FA39-3E9C-8A08-10DC106FB3D6"
+      ],
+      "accessRights": "CC-BY",
+      "nativePeriod": [
+        "medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:26.736Z",
+      "query": "q:david bowie",
+      "recordId": "ariadne:c0248500a5fdaa39a2e67e45ff125d8cffac1cf73e6e7edffe6fdcee86b8731b",
+      "title": "Iron DAGGER",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/c0248500a5fdaa39a2e67e45ff125d8cffac1cf73e6e7edffe6fdcee86b8731b",
+      "creator": "Portable Antiquities Scheme",
+      "date": "2008-05-29"
+    }
+  }
+]

@@ -1,0 +1,1807 @@
+[
+  {
+    "id": "vam:O122340",
+    "_source": "vam",
+    "_sourceId": "O122340",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O122340",
+    "_pid": "A.708-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O122340",
+      "title": "Coin of Trajan",
+      "url": "https://collections.vam.ac.uk/item/O122340",
+      "pid": "A.708-1910",
+      "creator": "Unknown",
+      "date": "105 AD"
+    },
+    "title": "Coin of Trajan",
+    "creator": "Unknown",
+    "date": "105 AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.708-1910",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 64, The Wolfson Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2008BV1279/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O122340/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2008BV1279/"
+    }
+  },
+  {
+    "id": "vam:O122479",
+    "_source": "vam",
+    "_sourceId": "O122479",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O122479",
+    "_pid": "A.680-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O122479",
+      "title": "Aureus of Trajan",
+      "url": "https://collections.vam.ac.uk/item/O122479",
+      "pid": "A.680-1910",
+      "creator": "Unknown",
+      "date": "112-114 AD"
+    },
+    "title": "Aureus of Trajan",
+    "creator": "Unknown",
+    "date": "112-114 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.680-1910",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 64, The Wolfson Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AY3115/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O122479/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AY3115/"
+    }
+  },
+  {
+    "id": "vam:O310889",
+    "_source": "vam",
+    "_sourceId": "O310889",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310889",
+    "_pid": "A.701-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310889",
+      "title": "Coin of Claudius and Agrippina",
+      "url": "https://collections.vam.ac.uk/item/O310889",
+      "pid": "A.701-1910",
+      "creator": "Unknown",
+      "date": "50 AD"
+    },
+    "title": "Coin of Claudius and Agrippina",
+    "creator": "Unknown",
+    "date": "50 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman",
+      "accessionNumber": "A.701-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5127/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310889/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5127/"
+    }
+  },
+  {
+    "id": "vam:O310888",
+    "_source": "vam",
+    "_sourceId": "O310888",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310888",
+    "_pid": "A.700-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310888",
+      "title": "Coin of Augustus",
+      "url": "https://collections.vam.ac.uk/item/O310888",
+      "pid": "A.700-1910",
+      "creator": "Unknown",
+      "date": "last century BC to 1st century AD"
+    },
+    "title": "Coin of Augustus",
+    "creator": "Unknown",
+    "date": "last century BC to 1st century AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman",
+      "accessionNumber": "A.700-1910",
+      "onDisplay": true,
+      "location": "British Galleries, Room 118, The Wolfson Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2025PC7224/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310888/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2025PC7224/"
+    }
+  },
+  {
+    "id": "vam:O118597",
+    "_source": "vam",
+    "_sourceId": "O118597",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O118597",
+    "_pid": "A.681-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O118597",
+      "title": "Aureus of Hadrian",
+      "url": "https://collections.vam.ac.uk/item/O118597",
+      "pid": "A.681-1910",
+      "creator": "Unknown",
+      "date": "118 AD"
+    },
+    "title": "Aureus of Hadrian",
+    "creator": "Unknown",
+    "date": "118 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.681-1910",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 8, The William and Eileen Ruddock Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2009CC5562/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O118597/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2009CC5562/"
+    }
+  },
+  {
+    "id": "vam:O119150",
+    "_source": "vam",
+    "_sourceId": "O119150",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O119150",
+    "_pid": "A.695-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O119150",
+      "title": "Aureus of Elagabalus",
+      "url": "https://collections.vam.ac.uk/item/O119150",
+      "pid": "A.695-1910",
+      "creator": "Unknown",
+      "date": "221 AD"
+    },
+    "title": "Aureus of Elagabalus",
+    "creator": "Unknown",
+    "date": "221 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.695-1910",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 8, The William and Eileen Ruddock Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2008BU3689/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O119150/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2008BU3689/"
+    }
+  },
+  {
+    "id": "vam:O126875",
+    "_source": "vam",
+    "_sourceId": "O126875",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O126875",
+    "_pid": "A.707-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O126875",
+      "title": "Coin (sestertius)",
+      "url": "https://collections.vam.ac.uk/item/O126875",
+      "pid": "A.707-1910",
+      "creator": "Unknown",
+      "date": "104-110"
+    },
+    "title": "Coin (sestertius)",
+    "creator": "Unknown",
+    "date": "104-110",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "accessionNumber": "A.707-1910",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 64, The Wolfson Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2008BV1236/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O126875/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2008BV1236/"
+    }
+  },
+  {
+    "id": "vam:O119019",
+    "_source": "vam",
+    "_sourceId": "O119019",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O119019",
+    "_pid": "A.679-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O119019",
+      "title": "Aureus of Domitian",
+      "url": "https://collections.vam.ac.uk/item/O119019",
+      "pid": "A.679-1910",
+      "creator": "Unknown",
+      "date": "81 AD"
+    },
+    "title": "Aureus of Domitian",
+    "creator": "Unknown",
+    "date": "81 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.679-1910",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 8, The William and Eileen Ruddock Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2008BU3692/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O119019/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2008BU3692/"
+    }
+  },
+  {
+    "id": "vam:O310886",
+    "_source": "vam",
+    "_sourceId": "O310886",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310886",
+    "_pid": "A.696-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310886",
+      "title": "Denarius of Marcus Junius Brutus",
+      "url": "https://collections.vam.ac.uk/item/O310886",
+      "pid": "A.696-1910",
+      "creator": "Unknown",
+      "date": "44 BC - 42 BC"
+    },
+    "title": "Denarius of Marcus Junius Brutus",
+    "creator": "Unknown",
+    "date": "44 BC - 42 BC",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman",
+      "accessionNumber": "A.696-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5127/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310886/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5127/"
+    }
+  },
+  {
+    "id": "vam:O310865",
+    "_source": "vam",
+    "_sourceId": "O310865",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310865",
+    "_pid": "A.699-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310865",
+      "title": "Denarius of Augustus",
+      "url": "https://collections.vam.ac.uk/item/O310865",
+      "pid": "A.699-1910",
+      "creator": "Unknown",
+      "date": "ca. 39 BC"
+    },
+    "title": "Denarius of Augustus",
+    "creator": "Unknown",
+    "date": "ca. 39 BC",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman",
+      "accessionNumber": "A.699-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5127/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310865/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5127/"
+    }
+  },
+  {
+    "id": "vam:O119054",
+    "_source": "vam",
+    "_sourceId": "O119054",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O119054",
+    "_pid": "A.691-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O119054",
+      "title": "Aureus of Lucius Verus",
+      "url": "https://collections.vam.ac.uk/item/O119054",
+      "pid": "A.691-1910",
+      "creator": "Unknown",
+      "date": "164-169 AD"
+    },
+    "title": "Aureus of Lucius Verus",
+    "creator": "Unknown",
+    "date": "164-169 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.691-1910",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 8, The William and Eileen Ruddock Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2008BU3690/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O119054/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2008BU3690/"
+    }
+  },
+  {
+    "id": "vam:O128633",
+    "_source": "vam",
+    "_sourceId": "O128633",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O128633",
+    "_pid": "A.683-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O128633",
+      "title": "Aureus of Antonius Pius",
+      "url": "https://collections.vam.ac.uk/item/O128633",
+      "pid": "A.683-1910",
+      "creator": "Unknown",
+      "date": "140-144 AD"
+    },
+    "title": "Aureus of Antonius Pius",
+    "creator": "Unknown",
+    "date": "140-144 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.683-1910",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 8, The William and Eileen Ruddock Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2009CC5563/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O128633/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2009CC5563/"
+    }
+  },
+  {
+    "id": "vam:O310887",
+    "_source": "vam",
+    "_sourceId": "O310887",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310887",
+    "_pid": "A.697-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310887",
+      "title": "Denarius of Caius Cassius Longinus",
+      "url": "https://collections.vam.ac.uk/item/O310887",
+      "pid": "A.697-1910",
+      "creator": "Unknown",
+      "date": "43 BC"
+    },
+    "title": "Denarius of Caius Cassius Longinus",
+    "creator": "Unknown",
+    "date": "43 BC",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman",
+      "accessionNumber": "A.697-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5127/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310887/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5127/"
+    }
+  },
+  {
+    "id": "vam:O310830",
+    "_source": "vam",
+    "_sourceId": "O310830",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310830",
+    "_pid": "A.690-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310830",
+      "title": "Aureus of Lucius Verus",
+      "url": "https://collections.vam.ac.uk/item/O310830",
+      "pid": "A.690-1910",
+      "creator": "Unknown",
+      "date": "163-164 AD"
+    },
+    "title": "Aureus of Lucius Verus",
+    "creator": "Unknown",
+    "date": "163-164 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.690-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310830/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O310866",
+    "_source": "vam",
+    "_sourceId": "O310866",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310866",
+    "_pid": "A.698-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310866",
+      "title": "Denarius of Caius Flavius Hemicillus and Quintus Caepio Brutus",
+      "url": "https://collections.vam.ac.uk/item/O310866",
+      "pid": "A.698-1910",
+      "creator": "Unknown",
+      "date": "43 BC - 42 BC"
+    },
+    "title": "Denarius of Caius Flavius Hemicillus and Quintus Caepio Brutus",
+    "creator": "Unknown",
+    "date": "43 BC - 42 BC",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman",
+      "accessionNumber": "A.698-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5127/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310866/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5127/"
+    }
+  },
+  {
+    "id": "vam:O310829",
+    "_source": "vam",
+    "_sourceId": "O310829",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310829",
+    "_pid": "A.693-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310829",
+      "title": "Aureus of Septimius Severus",
+      "url": "https://collections.vam.ac.uk/item/O310829",
+      "pid": "A.693-1910",
+      "creator": "Unknown",
+      "date": "198-201 AD"
+    },
+    "title": "Aureus of Septimius Severus",
+    "creator": "Unknown",
+    "date": "198-201 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.693-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310829/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O310882",
+    "_source": "vam",
+    "_sourceId": "O310882",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310882",
+    "_pid": "A.689-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310882",
+      "title": "Aureus of Lucius Verus",
+      "url": "https://collections.vam.ac.uk/item/O310882",
+      "pid": "A.689-1910",
+      "creator": "Unknown",
+      "date": "163-164 AD"
+    },
+    "title": "Aureus of Lucius Verus",
+    "creator": "Unknown",
+    "date": "163-164 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.689-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310882/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O310831",
+    "_source": "vam",
+    "_sourceId": "O310831",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310831",
+    "_pid": "A.688-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310831",
+      "title": "Aureus of Faustina the Younger",
+      "url": "https://collections.vam.ac.uk/item/O310831",
+      "pid": "A.688-1910",
+      "creator": "Unknown",
+      "date": "157-161 AD"
+    },
+    "title": "Aureus of Faustina the Younger",
+    "creator": "Unknown",
+    "date": "157-161 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.688-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310831/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O310828",
+    "_source": "vam",
+    "_sourceId": "O310828",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310828",
+    "_pid": "A.694-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310828",
+      "title": "Aureus of Julia Domna",
+      "url": "https://collections.vam.ac.uk/item/O310828",
+      "pid": "A.694-1910",
+      "creator": "Unknown",
+      "date": "ca. 198-209 AD"
+    },
+    "title": "Aureus of Julia Domna",
+    "creator": "Unknown",
+    "date": "ca. 198-209 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.694-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310828/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O310884",
+    "_source": "vam",
+    "_sourceId": "O310884",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310884",
+    "_pid": "A.682-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310884",
+      "title": "Aureus of Sabina",
+      "url": "https://collections.vam.ac.uk/item/O310884",
+      "pid": "A.682-1910",
+      "creator": "Unknown",
+      "date": "1st century AD"
+    },
+    "title": "Aureus of Sabina",
+    "creator": "Unknown",
+    "date": "1st century AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.682-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5122/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310884/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5122/"
+    }
+  },
+  {
+    "id": "vam:O310832",
+    "_source": "vam",
+    "_sourceId": "O310832",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310832",
+    "_pid": "A.687-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310832",
+      "title": "Aureus of Marcus Aurelius",
+      "url": "https://collections.vam.ac.uk/item/O310832",
+      "pid": "A.687-1910",
+      "creator": "Unknown",
+      "date": "154-155 AD"
+    },
+    "title": "Aureus of Marcus Aurelius",
+    "creator": "Unknown",
+    "date": "154-155 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.687-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310832/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O128637",
+    "_source": "vam",
+    "_sourceId": "O128637",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O128637",
+    "_pid": "A.684-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O128637",
+      "title": "Aureus of Antonius Pius",
+      "url": "https://collections.vam.ac.uk/item/O128637",
+      "pid": "A.684-1910",
+      "creator": "Unknown",
+      "date": "140-143 AD"
+    },
+    "title": "Aureus of Antonius Pius",
+    "creator": "Unknown",
+    "date": "140-143 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.684-1910",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 8, The William and Eileen Ruddock Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2009CC5561/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O128637/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2009CC5561/"
+    }
+  },
+  {
+    "id": "vam:O310870",
+    "_source": "vam",
+    "_sourceId": "O310870",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310870",
+    "_pid": "A.692-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310870",
+      "title": "Aureus of Crispina",
+      "url": "https://collections.vam.ac.uk/item/O310870",
+      "pid": "A.692-1910",
+      "creator": "Unknown",
+      "date": "180-183 AD"
+    },
+    "title": "Aureus of Crispina",
+    "creator": "Unknown",
+    "date": "180-183 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.692-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310870/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O310833",
+    "_source": "vam",
+    "_sourceId": "O310833",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310833",
+    "_pid": "A.686-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310833",
+      "title": "Aureus of Faustina the Elder",
+      "url": "https://collections.vam.ac.uk/item/O310833",
+      "pid": "A.686-1910",
+      "creator": "Unknown",
+      "date": "141-161 AD"
+    },
+    "title": "Aureus of Faustina the Elder",
+    "creator": "Unknown",
+    "date": "141-161 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.686-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5122/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310833/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5122/"
+    }
+  },
+  {
+    "id": "vam:O310883",
+    "_source": "vam",
+    "_sourceId": "O310883",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310883",
+    "_pid": "A.685-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310883",
+      "title": "Aureus of Antonius Pius",
+      "url": "https://collections.vam.ac.uk/item/O310883",
+      "pid": "A.685-1910",
+      "creator": "Unknown",
+      "date": "151-152 AD"
+    },
+    "title": "Aureus of Antonius Pius",
+    "creator": "Unknown",
+    "date": "151-152 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Rome",
+      "accessionNumber": "A.685-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5122/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310883/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5122/"
+    }
+  },
+  {
+    "id": "vam:O310839",
+    "_source": "vam",
+    "_sourceId": "O310839",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310839",
+    "_pid": "A.672-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310839",
+      "title": "Aureus of Tiberius",
+      "url": "https://collections.vam.ac.uk/item/O310839",
+      "pid": "A.672-1910",
+      "creator": "Unknown",
+      "date": "15 AD"
+    },
+    "title": "Aureus of Tiberius",
+    "creator": "Unknown",
+    "date": "15 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.672-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310839/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O117869",
+    "_source": "vam",
+    "_sourceId": "O117869",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O117869",
+    "_pid": "A.10-1960",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O117869",
+      "title": "Gold nomisma (hyperpyron)",
+      "url": "https://collections.vam.ac.uk/item/O117869",
+      "pid": "A.10-1960",
+      "creator": "Unknown",
+      "date": "1081-1118"
+    },
+    "title": "Gold nomisma (hyperpyron)",
+    "creator": "Unknown",
+    "date": "1081-1118",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Istanbul (City)",
+      "accessionNumber": "A.10-1960",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 8, The William and Eileen Ruddock Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2008BU3744/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O117869/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2008BU3744/"
+    }
+  },
+  {
+    "id": "vam:O310868",
+    "_source": "vam",
+    "_sourceId": "O310868",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310868",
+    "_pid": "A.670-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310868",
+      "title": "Aureus of M. Agrippa",
+      "url": "https://collections.vam.ac.uk/item/O310868",
+      "pid": "A.670-1910",
+      "creator": "Unknown",
+      "date": "38 BC"
+    },
+    "title": "Aureus of M. Agrippa",
+    "creator": "Unknown",
+    "date": "38 BC",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.670-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5122/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310868/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5122/"
+    }
+  },
+  {
+    "id": "vam:O310838",
+    "_source": "vam",
+    "_sourceId": "O310838",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310838",
+    "_pid": "A.674-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310838",
+      "title": "Aureus of Claudius",
+      "url": "https://collections.vam.ac.uk/item/O310838",
+      "pid": "A.674-1910",
+      "creator": "Unknown",
+      "date": "41 AD"
+    },
+    "title": "Aureus of Claudius",
+    "creator": "Unknown",
+    "date": "41 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.674-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310838/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O310836",
+    "_source": "vam",
+    "_sourceId": "O310836",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310836",
+    "_pid": "A.676-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310836",
+      "title": "Aureus of Vespasian",
+      "url": "https://collections.vam.ac.uk/item/O310836",
+      "pid": "A.676-1910",
+      "creator": "Unknown",
+      "date": "72 or 73 AD"
+    },
+    "title": "Aureus of Vespasian",
+    "creator": "Unknown",
+    "date": "72 or 73 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.676-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5122/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310836/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5122/"
+    }
+  },
+  {
+    "id": "vam:O310835",
+    "_source": "vam",
+    "_sourceId": "O310835",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310835",
+    "_pid": "A.677-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310835",
+      "title": "Aureus of Titus",
+      "url": "https://collections.vam.ac.uk/item/O310835",
+      "pid": "A.677-1910",
+      "creator": "Unknown",
+      "date": "75 AD"
+    },
+    "title": "Aureus of Titus",
+    "creator": "Unknown",
+    "date": "75 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.677-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5122/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310835/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5122/"
+    }
+  },
+  {
+    "id": "vam:O310867",
+    "_source": "vam",
+    "_sourceId": "O310867",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310867",
+    "_pid": "A.673-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310867",
+      "title": "Aureus of Antonia Augusta",
+      "url": "https://collections.vam.ac.uk/item/O310867",
+      "pid": "A.673-1910",
+      "creator": "Unknown",
+      "date": "1st century AD"
+    },
+    "title": "Aureus of Antonia Augusta",
+    "creator": "Unknown",
+    "date": "1st century AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.673-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310867/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O310834",
+    "_source": "vam",
+    "_sourceId": "O310834",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310834",
+    "_pid": "A.678-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310834",
+      "title": "Aureus of Domitian",
+      "url": "https://collections.vam.ac.uk/item/O310834",
+      "pid": "A.678-1910",
+      "creator": "Unknown",
+      "date": "74 AD"
+    },
+    "title": "Aureus of Domitian",
+    "creator": "Unknown",
+    "date": "74 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.678-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5122/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310834/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5122/"
+    }
+  },
+  {
+    "id": "vam:O310837",
+    "_source": "vam",
+    "_sourceId": "O310837",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310837",
+    "_pid": "A.675-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310837",
+      "title": "Aureus of Nero",
+      "url": "https://collections.vam.ac.uk/item/O310837",
+      "pid": "A.675-1910",
+      "creator": "Unknown",
+      "date": "60 AD"
+    },
+    "title": "Aureus of Nero",
+    "creator": "Unknown",
+    "date": "60 AD",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.675-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5123/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310837/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5123/"
+    }
+  },
+  {
+    "id": "vam:O310885",
+    "_source": "vam",
+    "_sourceId": "O310885",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310885",
+    "_pid": "A.667-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310885",
+      "title": "Aureus of Lucius Manlius and Lucius Cornelius Sulla",
+      "url": "https://collections.vam.ac.uk/item/O310885",
+      "pid": "A.667-1910",
+      "creator": "Unknown",
+      "date": "81 BC"
+    },
+    "title": "Aureus of Lucius Manlius and Lucius Cornelius Sulla",
+    "creator": "Unknown",
+    "date": "81 BC",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.667-1910",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2018KY5122/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310885/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2018KY5122/"
+    }
+  },
+  {
+    "id": "vam:O310869",
+    "_source": "vam",
+    "_sourceId": "O310869",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310869",
+    "_pid": "A.669-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310869",
+      "title": "Aureus of Caius Vibius Varus",
+      "url": "https://collections.vam.ac.uk/item/O310869",
+      "pid": "A.669-1910",
+      "creator": "Unknown",
+      "date": "ca. 38 BC"
+    },
+    "title": "Aureus of Caius Vibius Varus",
+    "creator": "Unknown",
+    "date": "ca. 38 BC",
+    "subject": [
+      "Coin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin",
+      "place": "Roman Empire",
+      "accessionNumber": "A.669-1910",
+      "onDisplay": true,
+      "location": "British Galleries, Room 118, The Wolfson Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2025PC7229/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310869/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2025PC7229/"
+    }
+  },
+  {
+    "id": "vam:O166936",
+    "_source": "vam",
+    "_sourceId": "O166936",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O166936",
+    "_pid": "530 to E-1872",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O166936",
+      "title": "Coin mould",
+      "url": "https://collections.vam.ac.uk/item/O166936",
+      "pid": "530 to E-1872",
+      "creator": "Unknown"
+    },
+    "title": "Coin mould",
+    "creator": "Unknown",
+    "subject": [
+      "Coin mould"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin mould",
+      "place": "Fayyum",
+      "accessionNumber": "530 to E-1872",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310849",
+    "_source": "vam",
+    "_sourceId": "O310849",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310849",
+    "_pid": "A.719-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310849",
+      "title": "Sestertius of Crispina",
+      "url": "https://collections.vam.ac.uk/item/O310849",
+      "pid": "A.719-1910",
+      "creator": "Unknown",
+      "date": "2nd century AD"
+    },
+    "title": "Sestertius of Crispina",
+    "creator": "Unknown",
+    "date": "2nd century AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.719-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310854",
+    "_source": "vam",
+    "_sourceId": "O310854",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310854",
+    "_pid": "A.714-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310854",
+      "title": "Sestertius of Faustina the Younger",
+      "url": "https://collections.vam.ac.uk/item/O310854",
+      "pid": "A.714-1910",
+      "creator": "Unknown",
+      "date": "2nd century AD"
+    },
+    "title": "Sestertius of Faustina the Younger",
+    "creator": "Unknown",
+    "date": "2nd century AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.714-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310840",
+    "_source": "vam",
+    "_sourceId": "O310840",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310840",
+    "_pid": "A.730-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310840",
+      "title": "Sestertius of Volusian",
+      "url": "https://collections.vam.ac.uk/item/O310840",
+      "pid": "A.730-1910",
+      "creator": "Unknown",
+      "date": "3rd century AD"
+    },
+    "title": "Sestertius of Volusian",
+    "creator": "Unknown",
+    "date": "3rd century AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.730-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310848",
+    "_source": "vam",
+    "_sourceId": "O310848",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310848",
+    "_pid": "A.720-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310848",
+      "title": "Sestertius of Didius Julianus",
+      "url": "https://collections.vam.ac.uk/item/O310848",
+      "pid": "A.720-1910",
+      "creator": "Unknown",
+      "date": "2nd century AD"
+    },
+    "title": "Sestertius of Didius Julianus",
+    "creator": "Unknown",
+    "date": "2nd century AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.720-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310852",
+    "_source": "vam",
+    "_sourceId": "O310852",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310852",
+    "_pid": "A.716-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310852",
+      "title": "Sestertius of Lucius Verus",
+      "url": "https://collections.vam.ac.uk/item/O310852",
+      "pid": "A.716-1910",
+      "creator": "Unknown",
+      "date": "161 AD"
+    },
+    "title": "Sestertius of Lucius Verus",
+    "creator": "Unknown",
+    "date": "161 AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.716-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310851",
+    "_source": "vam",
+    "_sourceId": "O310851",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310851",
+    "_pid": "A.717-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310851",
+      "title": "Sestertius of Lucilla",
+      "url": "https://collections.vam.ac.uk/item/O310851",
+      "pid": "A.717-1910",
+      "creator": "Unknown",
+      "date": "2nd century AD"
+    },
+    "title": "Sestertius of Lucilla",
+    "creator": "Unknown",
+    "date": "2nd century AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.717-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310844",
+    "_source": "vam",
+    "_sourceId": "O310844",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310844",
+    "_pid": "A.724-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310844",
+      "title": "Sestertius of Septimius Severus",
+      "url": "https://collections.vam.ac.uk/item/O310844",
+      "pid": "A.724-1910",
+      "creator": "Unknown",
+      "date": "3rd century AD"
+    },
+    "title": "Sestertius of Septimius Severus",
+    "creator": "Unknown",
+    "date": "3rd century AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.724-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310862",
+    "_source": "vam",
+    "_sourceId": "O310862",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310862",
+    "_pid": "A.703-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310862",
+      "title": "Sestertius of Caligula",
+      "url": "https://collections.vam.ac.uk/item/O310862",
+      "pid": "A.703-1910",
+      "creator": "Unknown",
+      "date": "40 AD"
+    },
+    "title": "Sestertius of Caligula",
+    "creator": "Unknown",
+    "date": "40 AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.703-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310845",
+    "_source": "vam",
+    "_sourceId": "O310845",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310845",
+    "_pid": "A.723-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310845",
+      "title": "Sestertius of Septimius Severus",
+      "url": "https://collections.vam.ac.uk/item/O310845",
+      "pid": "A.723-1910",
+      "creator": "Unknown",
+      "date": "210 AD"
+    },
+    "title": "Sestertius of Septimius Severus",
+    "creator": "Unknown",
+    "date": "210 AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.723-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310846",
+    "_source": "vam",
+    "_sourceId": "O310846",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310846",
+    "_pid": "A.722-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310846",
+      "title": "Sestertius of Didia Clara",
+      "url": "https://collections.vam.ac.uk/item/O310846",
+      "pid": "A.722-1910",
+      "creator": "Unknown",
+      "date": "2nd century AD"
+    },
+    "title": "Sestertius of Didia Clara",
+    "creator": "Unknown",
+    "date": "2nd century AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.722-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310847",
+    "_source": "vam",
+    "_sourceId": "O310847",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310847",
+    "_pid": "A.721-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310847",
+      "title": "Sestertius of Manlia Scantilla",
+      "url": "https://collections.vam.ac.uk/item/O310847",
+      "pid": "A.721-1910",
+      "creator": "Unknown",
+      "date": "2nd century AD"
+    },
+    "title": "Sestertius of Manlia Scantilla",
+    "creator": "Unknown",
+    "date": "2nd century AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.721-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O312620",
+    "_source": "vam",
+    "_sourceId": "O312620",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O312620",
+    "_pid": "A.725-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O312620",
+      "title": "Sestertius of Julia Domna",
+      "url": "https://collections.vam.ac.uk/item/O312620",
+      "pid": "A.725-1910",
+      "creator": "Unknown",
+      "date": "2nd century to 3rd century"
+    },
+    "title": "Sestertius of Julia Domna",
+    "creator": "Unknown",
+    "date": "2nd century to 3rd century",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.725-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O310856",
+    "_source": "vam",
+    "_sourceId": "O310856",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310856",
+    "_pid": "A.712-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:04.012Z",
+      "query": "roman coin",
+      "recordId": "vam:O310856",
+      "title": "Sestertius of Faustina the Elder",
+      "url": "https://collections.vam.ac.uk/item/O310856",
+      "pid": "A.712-1910",
+      "creator": "Unknown",
+      "date": "2nd century AD"
+    },
+    "title": "Sestertius of Faustina the Elder",
+    "creator": "Unknown",
+    "date": "2nd century AD",
+    "subject": [
+      "Coin (sestertius)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coin (sestertius)",
+      "place": "Roman",
+      "accessionNumber": "A.712-1910",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  }
+]

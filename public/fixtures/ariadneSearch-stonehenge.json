@@ -132,7 +132,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:7ca428c42abd08dee541aad608a0fa78bd18f17f7ffcb564145d1ebb61f91dc4",
       "title": "STONEHENGE",
@@ -268,7 +268,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:3cadfd784f036ae7e4a27d99eef64de685fd9e8b8d0d2524826215c215b69a0a",
       "title": "STONEHENGE",
@@ -411,7 +411,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:acfc020dfa9170b9366db10aabff026442f63e749e99b65636e60e7d6245dea0",
       "title": "STONEHENGE WHS: STONEHENGE AERODROME",
@@ -554,114 +554,13 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:b90a6c1c023c92e1047f8ef0f6955649fc24c45040c35bf99d7b91a62b1688b8",
       "title": "STONEHENGE WHS: 'RESTORING' STONEHENGE",
       "url": "https://portal.ariadne-infrastructure.eu/resource/b90a6c1c023c92e1047f8ef0f6955649fc24c45040c35bf99d7b91a62b1688b8",
       "creator": "Historic England",
       "date": "2020-06-08"
-    }
-  },
-  {
-    "id": "ariadne:0d9cb4e3904f31060b38614efa1cf0289d07dc35735b25e6e93338d8d5d48e3e",
-    "_source": "ariadne",
-    "_sourceId": "1787811",
-    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0d9cb4e3904f31060b38614efa1cf0289d07dc35735b25e6e93338d8d5d48e3e",
-    "title": "Stonehenge Cottages Stonehenge Estate Office",
-    "description": "Stonehenge Cottages now a single building virtually rebuilt in c.1960s-80s but visible on earlier maps (Chandler  2002)<br />The Amesbury tithe map (WRO T/A) dating from 1846 shows a rectangular building aligned east to west within the New King Barrows plantation a rectangular enclosure on its north site with a small building against its north boundary. The 1877 OS map indicates the site of a small garden on the south side but the same north enclosure containing a well and small outhouse on its north boundary. This is matched in 1899 and 1923 OS maps In 1961 OS the cottages had been built to the east of Stonehenge Cottages. In 1974 OS a central line divides the north garden and the outhouse has gone. The dvision indicates that there were the building had been dividede into two cottages by then and the rebuilding probably took place between 1961 and 1974. A small square building east of Stonehenge Cottages by the entrance is a garage built by this time. The Stonehenge Cottages were converted to a National Trust office in 2004 and a car park was constructed on the south side in August 2005.",
-    "creator": "National Trust",
-    "date": "2010-06-25",
-    "subject": [
-      "building",
-      "buildings (structures)"
-    ],
-    "language": "en",
-    "type": "dataset",
-    "spatialCoverage": "England, Wiltshire, Salisbury, Amesbury",
-    "country": "England",
-    "decimalLatitude": 51.177007,
-    "decimalLongitude": -1.807856,
-    "ariadne": {
-      "elasticId": "0d9cb4e3904f31060b38614efa1cf0289d07dc35735b25e6e93338d8d5d48e3e",
-      "temporal": [],
-      "country": [
-        {
-          "id": "http://www.wikidata.org/entity/Q21",
-          "name": "England"
-        }
-      ],
-      "allSpatial": [
-        {
-          "placeName": "England, Wiltshire, Salisbury, Amesbury",
-          "geopoint": {
-            "lat": 51.177007,
-            "lon": -1.807856
-          },
-          "centroid": {
-            "lat": 51.177007,
-            "lon": -1.807856
-          }
-        }
-      ],
-      "allPlaceNames": [
-        "England, Wiltshire, Salisbury, Amesbury"
-      ],
-      "creatorDetails": [
-        {
-          "name": "National Trust",
-          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
-        }
-      ],
-      "nativeSubject": [
-        {
-          "prefLabel": "building",
-          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUILDING"
-        }
-      ],
-      "derivedSubject": [
-        {
-          "prefLabel": "buildings (structures)",
-          "source": "Getty AAT",
-          "id": "http://vocab.getty.edu/aat/300004792",
-          "lang": "en"
-        }
-      ],
-      "ariadneSubject": [
-        {
-          "prefLabel": "Site/monument"
-        }
-      ],
-      "publisher": "Archaeology Data Service",
-      "contributor": "National Trust",
-      "dataType": [
-        "Structured Data"
-      ],
-      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/DB27AADC-BE16-37E8-9735-A1E12207D8B8",
-      "otherId": [
-        "Associated ID: HBSMR Id: MNA141450",
-        "Depositor ID: 117787",
-        "NTSMR-MNA141450"
-      ],
-      "isPartOf": [
-        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
-      ],
-      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
-      "nativePeriod": [
-        "1540 - 2050"
-      ]
-    },
-    "_citation": {
-      "service": "ARIADNE",
-      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
-      "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
-      "query": "q:stonehenge",
-      "recordId": "ariadne:0d9cb4e3904f31060b38614efa1cf0289d07dc35735b25e6e93338d8d5d48e3e",
-      "title": "Stonehenge Cottages Stonehenge Estate Office",
-      "url": "https://portal.ariadne-infrastructure.eu/resource/0d9cb4e3904f31060b38614efa1cf0289d07dc35735b25e6e93338d8d5d48e3e",
-      "creator": "National Trust",
-      "date": "2010-06-25"
     }
   },
   {
@@ -1293,7 +1192,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:e79ccc8b658ef13bfb037f99c1a8d473e16c328f6b98b9d76cfa488f3a4cf104",
       "title": "STONEHENGE",
@@ -1303,26 +1202,26 @@
     }
   },
   {
-    "id": "ariadne:9d2347256afc2b9a5e0aad6978b186c0482e2419afee3663f79af6f308ef7084",
+    "id": "ariadne:0d9cb4e3904f31060b38614efa1cf0289d07dc35735b25e6e93338d8d5d48e3e",
     "_source": "ariadne",
-    "_sourceId": "1788652",
-    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/9d2347256afc2b9a5e0aad6978b186c0482e2419afee3663f79af6f308ef7084",
-    "title": "Site of Stonehenge Cafe, 350m east of Stonehenge, Stonehenge Estate",
-    "description": "Earthwork terrace on west slope of Stonehenge bottom beside A344. Built as Stonehenge Café in use from 1930s-1950s now demolished footings of outside toilet and carpark in addition to main café building.",
+    "_sourceId": "1787811",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0d9cb4e3904f31060b38614efa1cf0289d07dc35735b25e6e93338d8d5d48e3e",
+    "title": "Stonehenge Cottages Stonehenge Estate Office",
+    "description": "Stonehenge Cottages now a single building virtually rebuilt in c.1960s-80s but visible on earlier maps (Chandler  2002)<br />The Amesbury tithe map (WRO T/A) dating from 1846 shows a rectangular building aligned east to west within the New King Barrows plantation a rectangular enclosure on its north site with a small building against its north boundary. The 1877 OS map indicates the site of a small garden on the south side but the same north enclosure containing a well and small outhouse on its north boundary. This is matched in 1899 and 1923 OS maps In 1961 OS the cottages had been built to the east of Stonehenge Cottages. In 1974 OS a central line divides the north garden and the outhouse has gone. The dvision indicates that there were the building had been dividede into two cottages by then and the rebuilding probably took place between 1961 and 1974. A small square building east of Stonehenge Cottages by the entrance is a garage built by this time. The Stonehenge Cottages were converted to a National Trust office in 2004 and a car park was constructed on the south side in August 2005.",
     "creator": "National Trust",
     "date": "2010-06-25",
     "subject": [
-      "tea room",
-      "tea rooms"
+      "building",
+      "buildings (structures)"
     ],
     "language": "en",
     "type": "dataset",
-    "spatialCoverage": "Wiltshire, Salisbury, Amesbury",
+    "spatialCoverage": "England, Wiltshire, Salisbury, Amesbury",
     "country": "England",
-    "decimalLatitude": 51.177988,
-    "decimalLongitude": -1.819842,
+    "decimalLatitude": 51.177007,
+    "decimalLongitude": -1.807856,
     "ariadne": {
-      "elasticId": "9d2347256afc2b9a5e0aad6978b186c0482e2419afee3663f79af6f308ef7084",
+      "elasticId": "0d9cb4e3904f31060b38614efa1cf0289d07dc35735b25e6e93338d8d5d48e3e",
       "temporal": [],
       "country": [
         {
@@ -1332,19 +1231,19 @@
       ],
       "allSpatial": [
         {
-          "placeName": "Wiltshire, Salisbury, Amesbury",
+          "placeName": "England, Wiltshire, Salisbury, Amesbury",
           "geopoint": {
-            "lat": 51.177988,
-            "lon": -1.819842
+            "lat": 51.177007,
+            "lon": -1.807856
           },
           "centroid": {
-            "lat": 51.177988,
-            "lon": -1.819842
+            "lat": 51.177007,
+            "lon": -1.807856
           }
         }
       ],
       "allPlaceNames": [
-        "Wiltshire, Salisbury, Amesbury"
+        "England, Wiltshire, Salisbury, Amesbury"
       ],
       "creatorDetails": [
         {
@@ -1354,15 +1253,15 @@
       ],
       "nativeSubject": [
         {
-          "prefLabel": "tea room",
-          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TEA%20ROOM"
+          "prefLabel": "building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUILDING"
         }
       ],
       "derivedSubject": [
         {
-          "prefLabel": "tea rooms",
+          "prefLabel": "buildings (structures)",
           "source": "Getty AAT",
-          "id": "http://vocab.getty.edu/aat/300005204",
+          "id": "http://vocab.getty.edu/aat/300004792",
           "lang": "en"
         }
       ],
@@ -1376,27 +1275,29 @@
       "dataType": [
         "Structured Data"
       ],
-      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/1E2AFB72-A2D2-31AF-B965-CA7861FEB599",
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/DB27AADC-BE16-37E8-9735-A1E12207D8B8",
       "otherId": [
-        "Associated ID: HBSMR Id: MNA164816",
-        "Depositor ID: 117794",
-        "NTSMR-MNA164816"
+        "Associated ID: HBSMR Id: MNA141450",
+        "Depositor ID: 117787",
+        "NTSMR-MNA141450"
       ],
       "isPartOf": [
         "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
       ],
       "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
-      "nativePeriod": []
+      "nativePeriod": [
+        "1540 - 2050"
+      ]
     },
     "_citation": {
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
-      "recordId": "ariadne:9d2347256afc2b9a5e0aad6978b186c0482e2419afee3663f79af6f308ef7084",
-      "title": "Site of Stonehenge Cafe, 350m east of Stonehenge, Stonehenge Estate",
-      "url": "https://portal.ariadne-infrastructure.eu/resource/9d2347256afc2b9a5e0aad6978b186c0482e2419afee3663f79af6f308ef7084",
+      "recordId": "ariadne:0d9cb4e3904f31060b38614efa1cf0289d07dc35735b25e6e93338d8d5d48e3e",
+      "title": "Stonehenge Cottages Stonehenge Estate Office",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0d9cb4e3904f31060b38614efa1cf0289d07dc35735b25e6e93338d8d5d48e3e",
       "creator": "National Trust",
       "date": "2010-06-25"
     }
@@ -1520,13 +1421,112 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:3ad1983edf290075f8058ac3b649b1da9ef0041b78012e85d33b374dfa984c62",
       "title": "STONEHENGE",
       "url": "https://portal.ariadne-infrastructure.eu/resource/3ad1983edf290075f8058ac3b649b1da9ef0041b78012e85d33b374dfa984c62",
       "creator": "Trust for Wessex Archaeology / Central Excavation Unit",
       "date": "2002-06-20"
+    }
+  },
+  {
+    "id": "ariadne:9d2347256afc2b9a5e0aad6978b186c0482e2419afee3663f79af6f308ef7084",
+    "_source": "ariadne",
+    "_sourceId": "1788652",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/9d2347256afc2b9a5e0aad6978b186c0482e2419afee3663f79af6f308ef7084",
+    "title": "Site of Stonehenge Cafe, 350m east of Stonehenge, Stonehenge Estate",
+    "description": "Earthwork terrace on west slope of Stonehenge bottom beside A344. Built as Stonehenge Café in use from 1930s-1950s now demolished footings of outside toilet and carpark in addition to main café building.",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": [
+      "tea room",
+      "tea rooms"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Wiltshire, Salisbury, Amesbury",
+    "country": "England",
+    "decimalLatitude": 51.177988,
+    "decimalLongitude": -1.819842,
+    "ariadne": {
+      "elasticId": "9d2347256afc2b9a5e0aad6978b186c0482e2419afee3663f79af6f308ef7084",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Wiltshire, Salisbury, Amesbury",
+          "geopoint": {
+            "lat": 51.177988,
+            "lon": -1.819842
+          },
+          "centroid": {
+            "lat": 51.177988,
+            "lon": -1.819842
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Wiltshire, Salisbury, Amesbury"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "tea room",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TEA%20ROOM"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "tea rooms",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005204",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/1E2AFB72-A2D2-31AF-B965-CA7861FEB599",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA164816",
+        "Depositor ID: 117794",
+        "NTSMR-MNA164816"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:9d2347256afc2b9a5e0aad6978b186c0482e2419afee3663f79af6f308ef7084",
+      "title": "Site of Stonehenge Cafe, 350m east of Stonehenge, Stonehenge Estate",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/9d2347256afc2b9a5e0aad6978b186c0482e2419afee3663f79af6f308ef7084",
+      "creator": "National Trust",
+      "date": "2010-06-25"
     }
   },
   {
@@ -1640,7 +1640,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:11dd394cccdd3a7df38ec3d59db1d0dbca28969aed66385cdd11bb2f45b684fe",
       "title": "STONEHENGE",
@@ -1760,7 +1760,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:e1309859227787ca1b795ec48ad477afd6b4f0d002f775165e889a2b783acf52",
       "title": "STONEHENGE",
@@ -1892,7 +1892,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:6feceb3ab548bf319f1b4329bcbdd4ec7da30e88e5ef0f742fbcebd4d103350d",
       "title": "STONEHENGE",
@@ -2022,7 +2022,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:44b64d0096e14323f5cf339b55ab0ddda7ff979e33f95f8182370d0f6466578f",
       "title": "STONEHENGE",
@@ -2165,7 +2165,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:c611f9e99625990bc740e314a41e491ba485b3db04734b465f0eb771b928e4f9",
       "title": "STONEHENGE",
@@ -2308,7 +2308,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:9becce16575c1463705d245537f425b047376438cee505a69f281e917c7f18e0",
       "title": "STONEHENGE",
@@ -2428,7 +2428,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:7b68f81d8785b3f3e4a9011d8fb707b7a7c9b46d2ac3c30aacb519672dfb4f1e",
       "title": "STONEHENGE",
@@ -2558,7 +2558,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:d914f14a22a28c6e1854fb0db06e9b3427ac5ffbdbba36b5d6ab48c49fe3a6a3",
       "title": "STONEHENGE",
@@ -2688,7 +2688,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:63749561e076fa28bfd4c50c7e1d81896c020e55517a8e2ef30ce75a87275818",
       "title": "STONEHENGE",
@@ -2818,7 +2818,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:cf6c9f9b313c6f007b233b43e391fe26b1059ef97ef960624ddd3ba9e38a32a4",
       "title": "STONEHENGE",
@@ -2948,7 +2948,7 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:dea7df7adf1905858946437e2be4f67a2d5d07f01c67e22ee8f03534f1a3c935",
       "title": "STONEHENGE",
@@ -3078,11 +3078,4095 @@
       "service": "ARIADNE",
       "serviceUrl": "https://portal.ariadne-infrastructure.eu",
       "publisher": "ARIADNE Research Infrastructure",
-      "accessDate": "2026-05-01T09:44:31.991Z",
+      "accessDate": "2026-05-29T12:53:08.493Z",
       "query": "q:stonehenge",
       "recordId": "ariadne:998d407722c064755dcf603b3da58a40ea95e299e145a792839001675b025eae",
       "title": "STONEHENGE",
       "url": "https://portal.ariadne-infrastructure.eu/resource/998d407722c064755dcf603b3da58a40ea95e299e145a792839001675b025eae",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:d888b83ea2f263cc450cbfcd5a59548e9d8e13f46a8d43c120bf15dd3bb7f002",
+    "_source": "ariadne",
+    "_sourceId": "1868568",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/d888b83ea2f263cc450cbfcd5a59548e9d8e13f46a8d43c120bf15dd3bb7f002",
+    "title": "STONEHENGE",
+    "description": "No Description",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "henge",
+      "not provided",
+      "henges"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.178202,
+    "decimalLongitude": -1.824877,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "neolithic"
+    ],
+    "ariadne": {
+      "elasticId": "d888b83ea2f263cc450cbfcd5a59548e9d8e13f46a8d43c120bf15dd3bb7f002",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          },
+          "centroid": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HENGE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "henges",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120486",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/EF161287-F394-3429-B0C0-38B2C044889B",
+      "otherId": [
+        "Depositor ID: 644365",
+        "EHNMR-644365"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "bronze age",
+        "neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:d888b83ea2f263cc450cbfcd5a59548e9d8e13f46a8d43c120bf15dd3bb7f002",
+      "title": "STONEHENGE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/d888b83ea2f263cc450cbfcd5a59548e9d8e13f46a8d43c120bf15dd3bb7f002",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:2e306550a98791838a52888376d546ed73762df24542acc8abe3da440f410ba2",
+    "_source": "ariadne",
+    "_sourceId": "1868594",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2e306550a98791838a52888376d546ed73762df24542acc8abe3da440f410ba2",
+    "title": "STONEHENGE",
+    "description": "Various features excavated. Devizes Museum Library archive: Wilts Cuttings 21/53. Photos held at NMRC taken by H. O'Neil.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "henge",
+      "not provided",
+      "henges"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.178202,
+    "decimalLongitude": -1.824877,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "neolithic"
+    ],
+    "ariadne": {
+      "elasticId": "2e306550a98791838a52888376d546ed73762df24542acc8abe3da440f410ba2",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          },
+          "centroid": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HENGE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "henges",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120486",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/78923AD9-257A-36B1-933F-7B798C32467A",
+      "otherId": [
+        "Depositor ID: 644381",
+        "EHNMR-644381"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "bronze age",
+        "neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:2e306550a98791838a52888376d546ed73762df24542acc8abe3da440f410ba2",
+      "title": "STONEHENGE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2e306550a98791838a52888376d546ed73762df24542acc8abe3da440f410ba2",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:d3c4a122c5666b0213892ab95d8c5dea0f218a7ff0e01683002041d41c645fb6",
+    "_source": "ariadne",
+    "_sourceId": "1868608",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/d3c4a122c5666b0213892ab95d8c5dea0f218a7ff0e01683002041d41c645fb6",
+    "title": "STONEHENGE",
+    "description": "See also SMR No. 302.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "henge",
+      "unidentified object",
+      "not provided",
+      "henges"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.178202,
+    "decimalLongitude": -1.824877,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "iron age",
+      "neolithic",
+      "roman"
+    ],
+    "ariadne": {
+      "elasticId": "d3c4a122c5666b0213892ab95d8c5dea0f218a7ff0e01683002041d41c645fb6",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-0799",
+          "periodName": "iron age",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsj33x"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        },
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          },
+          "centroid": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HENGE"
+        },
+        {
+          "prefLabel": "unidentified object",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/UNIDENTIFIED%20OBJECT"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "henges",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120486",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/2609CBBB-86A2-3B39-B096-D9784C7236D7",
+      "otherId": [
+        "Depositor ID: 644371",
+        "EHNMR-644371"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "bronze age",
+        "iron age",
+        "neolithic",
+        "roman"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:d3c4a122c5666b0213892ab95d8c5dea0f218a7ff0e01683002041d41c645fb6",
+      "title": "STONEHENGE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/d3c4a122c5666b0213892ab95d8c5dea0f218a7ff0e01683002041d41c645fb6",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:199400260339f1c532e15e9b66078a14401e781b3bec89084b0248eb5d70a179",
+    "_source": "ariadne",
+    "_sourceId": "1868603",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/199400260339f1c532e15e9b66078a14401e781b3bec89084b0248eb5d70a179",
+    "title": "STONEHENGE",
+    "description": "No finds from site.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "henge",
+      "not provided",
+      "henges"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.178202,
+    "decimalLongitude": -1.824877,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "neolithic"
+    ],
+    "ariadne": {
+      "elasticId": "199400260339f1c532e15e9b66078a14401e781b3bec89084b0248eb5d70a179",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          },
+          "centroid": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HENGE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "henges",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120486",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F90E91A9-366C-3390-ABB9-61C19C229B25",
+      "otherId": [
+        "Depositor ID: 644372",
+        "EHNMR-644372"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "bronze age",
+        "neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:199400260339f1c532e15e9b66078a14401e781b3bec89084b0248eb5d70a179",
+      "title": "STONEHENGE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/199400260339f1c532e15e9b66078a14401e781b3bec89084b0248eb5d70a179",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:f296dcb408ef7d16f0d43292a82e494e038ae3ce52442ad8d4ba7bce335f9a88",
+    "_source": "ariadne",
+    "_sourceId": "1868610",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/f296dcb408ef7d16f0d43292a82e494e038ae3ce52442ad8d4ba7bce335f9a88",
+    "title": "STONEHENGE",
+    "description": "Excavations were undertaken near altar and ditch.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "henge",
+      "unidentified object",
+      "not provided",
+      "henges"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.178202,
+    "decimalLongitude": -1.824877,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "neolithic",
+      "roman"
+    ],
+    "ariadne": {
+      "elasticId": "f296dcb408ef7d16f0d43292a82e494e038ae3ce52442ad8d4ba7bce335f9a88",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        },
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          },
+          "centroid": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HENGE"
+        },
+        {
+          "prefLabel": "unidentified object",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/UNIDENTIFIED%20OBJECT"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "henges",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120486",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/EE4C572E-A7F8-3DB0-93B5-4C737DD748DB",
+      "otherId": [
+        "Depositor ID: 644369",
+        "EHNMR-644369"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "bronze age",
+        "neolithic",
+        "roman"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:f296dcb408ef7d16f0d43292a82e494e038ae3ce52442ad8d4ba7bce335f9a88",
+      "title": "STONEHENGE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/f296dcb408ef7d16f0d43292a82e494e038ae3ce52442ad8d4ba7bce335f9a88",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:48a6672a597cd69e9b67ed5ea2e95c981ec6fe16a42f14eeee581fb33b2112f4",
+    "_source": "ariadne",
+    "_sourceId": "1868609",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/48a6672a597cd69e9b67ed5ea2e95c981ec6fe16a42f14eeee581fb33b2112f4",
+    "title": "STONEHENGE",
+    "description": "No Description",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "henge",
+      "not provided",
+      "henges"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.178202,
+    "decimalLongitude": -1.824877,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "neolithic"
+    ],
+    "ariadne": {
+      "elasticId": "48a6672a597cd69e9b67ed5ea2e95c981ec6fe16a42f14eeee581fb33b2112f4",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          },
+          "centroid": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HENGE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "henges",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120486",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/2D43DCF4-0862-3796-AADF-63978BD4137C",
+      "otherId": [
+        "Depositor ID: 644368",
+        "EHNMR-644368"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "bronze age",
+        "neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:48a6672a597cd69e9b67ed5ea2e95c981ec6fe16a42f14eeee581fb33b2112f4",
+      "title": "STONEHENGE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/48a6672a597cd69e9b67ed5ea2e95c981ec6fe16a42f14eeee581fb33b2112f4",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:f72f50c19de73bc57142c8138482da6aa2d7ff9e285302cb15a010b624e7362f",
+    "_source": "ariadne",
+    "_sourceId": "1868606",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/f72f50c19de73bc57142c8138482da6aa2d7ff9e285302cb15a010b624e7362f",
+    "title": "STONEHENGE",
+    "description": "Excavation undertaken in soil around a fallen trilithon.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "henge",
+      "unidentified object",
+      "not provided",
+      "henges"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.178202,
+    "decimalLongitude": -1.824877,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "neolithic",
+      "roman"
+    ],
+    "ariadne": {
+      "elasticId": "f72f50c19de73bc57142c8138482da6aa2d7ff9e285302cb15a010b624e7362f",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        },
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          },
+          "centroid": {
+            "lat": 51.178202,
+            "lon": -1.824877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HENGE"
+        },
+        {
+          "prefLabel": "unidentified object",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/UNIDENTIFIED%20OBJECT"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "henges",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120486",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/16952B61-96CA-3024-A455-2E5F67DB5C69",
+      "otherId": [
+        "Depositor ID: 644370",
+        "EHNMR-644370"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "bronze age",
+        "neolithic",
+        "roman"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:f72f50c19de73bc57142c8138482da6aa2d7ff9e285302cb15a010b624e7362f",
+      "title": "STONEHENGE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/f72f50c19de73bc57142c8138482da6aa2d7ff9e285302cb15a010b624e7362f",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:fc9c7d31e9808cde18f2fd4c02d751f661de042f3c5dff242c02714e0800e710",
+    "_source": "ariadne",
+    "_sourceId": "1150920",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/fc9c7d31e9808cde18f2fd4c02d751f661de042f3c5dff242c02714e0800e710",
+    "title": "Stonehenge World Heritage Site Landscape Project: Stonehenge Aerodrome and the Stonehenge Landscape",
+    "description": "Between 1917 and 1921, Stonehenge had an aerodrome for a near-neighbour. Initially a Royal Flying Corps training establishment, from January 1918 it became the No. 1 School of Aerial Navigation and Bomb Dropping, home to a contingent of RNAS Handley Page bombers. The aerodrome featured two camps either side of a take-off and landing ground, the first located close to Fargo Plantation, and a subsequent and more substantial technical and domestic site situated either side of what is now the A303, a few hundred yards west of Stonehenge. After the war, the aerodrome buildings became the focus of debate about what constituted unacceptable modern intrusions in the Stonehenge landscape. Converted to both agricultural and domestic use, the hangars and accommodation blocks prompted the first demands to 'restore' the Stonehenge landscape - not to what it had been prior to the war, but to something deemed more appropriate as a setting for the monument. Following a public appeal, the aerodrome and neighbouring farmland was purchased, the buildings dismantled and removed, and the land handed to the National Trust. The result was intended to be a landscape freed from 'the restless and commonplace current of every day life'.",
+    "creator": "Martyn Barber",
+    "date": "2015-08-12",
+    "subject": [
+      "aerial photography",
+      "airfield",
+      "cursus",
+      "field survey",
+      "airfields",
+      "megalithic monuments"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1901",
+    "periodEnd": "2000",
+    "periodName": [
+      "20th century",
+      "neolithic"
+    ],
+    "ariadne": {
+      "elasticId": "fc9c7d31e9808cde18f2fd4c02d751f661de042f3c5dff242c02714e0800e710",
+      "temporal": [
+        {
+          "from": "1901",
+          "periodName": "20th century",
+          "until": "2000",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dstg2x"
+        },
+        {
+          "from": "-4000",
+          "periodName": "neolithic",
+          "until": "-2200",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Stonehenge Aerodrome, AMESBURY, Wiltshire, Wiltshire, England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.1771239606103,
+            "lon": -1.83829995366552
+          },
+          "centroid": {
+            "lat": 51.1771239606103,
+            "lon": -1.83829995366552
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Stonehenge Aerodrome, AMESBURY, Wiltshire, Wiltshire, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Martyn Barber",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Martyn%20Barber"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "aerial photography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AERIAL%20PHOTOGRAPHY"
+        },
+        {
+          "prefLabel": "airfield",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AIRFIELD"
+        },
+        {
+          "prefLabel": "cursus",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CURSUS"
+        },
+        {
+          "prefLabel": "field survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SURVEY"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "airfields",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000679",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "megalithic monuments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006983",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/9BCD53FE-3A90-37BF-880F-483C9BE02EC2",
+      "otherId": [
+        "OBIB 7-2014"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "20th century",
+        "neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:fc9c7d31e9808cde18f2fd4c02d751f661de042f3c5dff242c02714e0800e710",
+      "title": "Stonehenge World Heritage Site Landscape Project: Stonehenge Aerodrome and the Stonehenge Landscape",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/fc9c7d31e9808cde18f2fd4c02d751f661de042f3c5dff242c02714e0800e710",
+      "creator": "Martyn Barber",
+      "date": "2015-08-12"
+    }
+  },
+  {
+    "id": "ariadne:cddc66a93087e6611989aa51bf7798c6dcdc7aa2ef31bbdd0db41c669220cf8d",
+    "_source": "ariadne",
+    "_sourceId": "1912331",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/cddc66a93087e6611989aa51bf7798c6dcdc7aa2ef31bbdd0db41c669220cf8d",
+    "title": "STONEHENGE VISITOR CENTRE SITE 9, STONEHENGE BOTTOM",
+    "description": "Assessment undertaken into the archaeological implications of a possible site for the proposed new Visitor Centre at Stonehenge Bottom. Thirty-two archaeological sites were identified.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "site",
+      "not provided"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.177473,
+    "decimalLongitude": -1.818298,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "neolithic"
+    ],
+    "ariadne": {
+      "elasticId": "cddc66a93087e6611989aa51bf7798c6dcdc7aa2ef31bbdd0db41c669220cf8d",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.177473,
+            "lon": -1.818298
+          },
+          "centroid": {
+            "lat": 51.177473,
+            "lon": -1.818298
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SITE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F1A74D6D-8075-3F75-87DB-C76BDBAC4692",
+      "otherId": [
+        "Associated ID: AIP Record Number: B.46.0021",
+        "Depositor ID: 1310539",
+        "EHNMR-1310539"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "bronze age",
+        "neolithic",
+        "uncertain"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:cddc66a93087e6611989aa51bf7798c6dcdc7aa2ef31bbdd0db41c669220cf8d",
+      "title": "STONEHENGE VISITOR CENTRE SITE 9, STONEHENGE BOTTOM",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/cddc66a93087e6611989aa51bf7798c6dcdc7aa2ef31bbdd0db41c669220cf8d",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:98e9aa2b4952779a706d61f2d4baefb653419a30914950e2632e863961aca7a3",
+    "_source": "ariadne",
+    "_sourceId": "3487308",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/98e9aa2b4952779a706d61f2d4baefb653419a30914950e2632e863961aca7a3",
+    "title": "STONEHENGE RIVERSIDE PROJECT",
+    "description": "Excavations in 2008 recorded the northern part of a small henge at the end of the Stonehenge Avenue.  Excavation of an Aubrey Hole showed that the bluestones arrived at Stonehenge in the decades after 3000 BC.  A stone-dressing area, tomb, and field boundaries were also recorded.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "field boundary",
+      "geophysical survey",
+      "henge",
+      "site",
+      "not provided",
+      "boundaries",
+      "henges"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.189989,
+    "decimalLongitude": -1.775316,
+    "periodStart": "-3999",
+    "periodEnd": "-2199",
+    "periodName": [
+      "neolithic",
+      "prehistoric"
+    ],
+    "ariadne": {
+      "elasticId": "98e9aa2b4952779a706d61f2d4baefb653419a30914950e2632e863961aca7a3",
+      "temporal": [
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        },
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.189989,
+            "lon": -1.775316
+          },
+          "centroid": {
+            "lat": 51.189989,
+            "lon": -1.775316
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "field boundary",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20BOUNDARY"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HENGE"
+        },
+        {
+          "prefLabel": "site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SITE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "boundaries",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300055590",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "henges",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120486",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/482D7967-0F30-30ED-9C52-AE97C735B74B",
+      "otherId": [
+        "Associated ID: AIP Record Number: E.46.3542/2008",
+        "Associated ID: SMR Number (Wiltshire): 2008.095",
+        "Depositor ID: 1541566",
+        "EHNMR-1541566"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "neolithic",
+        "prehistoric"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:98e9aa2b4952779a706d61f2d4baefb653419a30914950e2632e863961aca7a3",
+      "title": "STONEHENGE RIVERSIDE PROJECT",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/98e9aa2b4952779a706d61f2d4baefb653419a30914950e2632e863961aca7a3",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:39ff720883e76a8efdc0dadd7d385e5334497a146d4ebb96720814789e10b9f9",
+    "_source": "ariadne",
+    "_sourceId": "1931914",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/39ff720883e76a8efdc0dadd7d385e5334497a146d4ebb96720814789e10b9f9",
+    "title": "STONEHENGE MILITARY INSTALLATIONS",
+    "description": "Desk-based study of the 20th century military installations  including Stonehenge Airfield (No. 1 School), closed 1920. .",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "military airfield",
+      "military training site",
+      "not provided",
+      "airfields",
+      "military buildings"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.176589,
+    "decimalLongitude": -1.828317,
+    "periodStart": "1901",
+    "periodEnd": "2000",
+    "periodName": "20th century",
+    "ariadne": {
+      "elasticId": "39ff720883e76a8efdc0dadd7d385e5334497a146d4ebb96720814789e10b9f9",
+      "temporal": [
+        {
+          "from": "1901",
+          "periodName": "20th century",
+          "until": "2000",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dstg2x"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.176589,
+            "lon": -1.828317
+          },
+          "centroid": {
+            "lat": 51.176589,
+            "lon": -1.828317
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "military airfield",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MILITARY%20AIRFIELD"
+        },
+        {
+          "prefLabel": "military training site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MILITARY%20TRAINING%20SITE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "airfields",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000679",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "military buildings",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006887",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/308CD0C1-0617-384B-9316-89BD44A9D881",
+      "otherId": [
+        "Associated ID: AIP Record Number: F.46.2000",
+        "Depositor ID: 1222696",
+        "EHNMR-1222696"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "20th century"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:39ff720883e76a8efdc0dadd7d385e5334497a146d4ebb96720814789e10b9f9",
+      "title": "STONEHENGE MILITARY INSTALLATIONS",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/39ff720883e76a8efdc0dadd7d385e5334497a146d4ebb96720814789e10b9f9",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:45d37fe517ee47e6cafc09b4e8b3a1348411dd4293fac9ceaa20e94c03cdbb65",
+    "_source": "ariadne",
+    "_sourceId": "1915665",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/45d37fe517ee47e6cafc09b4e8b3a1348411dd4293fac9ceaa20e94c03cdbb65",
+    "title": "STONEHENGE RIVERSIDE PROJECT",
+    "description": "Survey of the westernmost 200m section and terminal of the Stonehenge Greater Cursus identified ditch-type anomalies.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "cursus",
+      "geophysical survey",
+      "not provided",
+      "megalithic monuments"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.184703,
+    "decimalLongitude": -1.842596,
+    "periodStart": "-3999",
+    "periodEnd": "-2199",
+    "periodName": "neolithic",
+    "ariadne": {
+      "elasticId": "45d37fe517ee47e6cafc09b4e8b3a1348411dd4293fac9ceaa20e94c03cdbb65",
+      "temporal": [
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.184703,
+            "lon": -1.842596
+          },
+          "centroid": {
+            "lat": 51.184703,
+            "lon": -1.842596
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cursus",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CURSUS"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "megalithic monuments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006983",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/8113DAFB-C2E0-3645-90B6-4EEEC6C31BDE",
+      "otherId": [
+        "Depositor ID: 1459570",
+        "EHNMR-1459570"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:45d37fe517ee47e6cafc09b4e8b3a1348411dd4293fac9ceaa20e94c03cdbb65",
+      "title": "STONEHENGE RIVERSIDE PROJECT",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/45d37fe517ee47e6cafc09b4e8b3a1348411dd4293fac9ceaa20e94c03cdbb65",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:34c972dc4ef22880964ef151b7430f8175edbe8484b61784a65587b3e90c0adc",
+    "_source": "ariadne",
+    "_sourceId": "59545",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/34c972dc4ef22880964ef151b7430f8175edbe8484b61784a65587b3e90c0adc",
+    "title": "STONEHENGE UNDERPASS",
+    "creator": "Trust for Wessex Archaeology",
+    "date": "2002-06-20",
+    "subject": [
+      "enclosure",
+      "agricultural settlements"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "STONEHENGE UNDERPASS, Amesbury, Salisbury, Wiltshire, England",
+    "country": "England",
+    "decimalLatitude": 51.178381,
+    "decimalLongitude": -1.824018,
+    "periodStart": "-500000",
+    "periodEnd": "0043",
+    "periodName": "prehistoric",
+    "ariadne": {
+      "elasticId": "34c972dc4ef22880964ef151b7430f8175edbe8484b61784a65587b3e90c0adc",
+      "temporal": [
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "STONEHENGE UNDERPASS, Amesbury, Salisbury, Wiltshire, England",
+          "geopoint": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          },
+          "centroid": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "STONEHENGE UNDERPASS, Amesbury, Salisbury, Wiltshire, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Trust for Wessex Archaeology",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Trust%20for%20Wessex%20Archaeology"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "enclosure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENCLOSURE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "agricultural settlements",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008420",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/6B5B08A2-B8F0-3596-ABA0-A7CD47F3F54A",
+      "otherId": [
+        "Depositor ID: 2466",
+        "NMRMIC-2466"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F31C1473-3527-3C56-9801-F833D3C26A70"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "prehistoric"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:34c972dc4ef22880964ef151b7430f8175edbe8484b61784a65587b3e90c0adc",
+      "title": "STONEHENGE UNDERPASS",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/34c972dc4ef22880964ef151b7430f8175edbe8484b61784a65587b3e90c0adc",
+      "creator": "Trust for Wessex Archaeology",
+      "date": "2002-06-20"
+    }
+  },
+  {
+    "id": "ariadne:ac4798d25553679af9629609d5a54f163b2b12184edab1908e73ef328789c2e4",
+    "_source": "ariadne",
+    "_sourceId": "65261",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ac4798d25553679af9629609d5a54f163b2b12184edab1908e73ef328789c2e4",
+    "title": "STONEHENGE ROAD",
+    "creator": "Bristol and Region Archaeological Services",
+    "date": "2002-06-20",
+    "subject": [
+      "ard marks",
+      "evaluation"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "STONEHENGE ROAD, Durrington, Salisbury, Wiltshire, England",
+    "country": "England",
+    "decimalLatitude": 51.196744,
+    "decimalLongitude": -1.780722,
+    "periodStart": "-0099",
+    "periodEnd": "0043",
+    "periodName": [
+      "late iron age",
+      "middle neolithic"
+    ],
+    "ariadne": {
+      "elasticId": "ac4798d25553679af9629609d5a54f163b2b12184edab1908e73ef328789c2e4",
+      "temporal": [
+        {
+          "from": "-0099",
+          "periodName": "late iron age",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds8p8k"
+        },
+        {
+          "from": "-3299",
+          "periodName": "middle neolithic",
+          "until": "-2899",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbm2h"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "STONEHENGE ROAD, Durrington, Salisbury, Wiltshire, England",
+          "geopoint": {
+            "lat": 51.196744,
+            "lon": -1.780722
+          },
+          "centroid": {
+            "lat": 51.196744,
+            "lon": -1.780722
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "STONEHENGE ROAD, Durrington, Salisbury, Wiltshire, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Bristol and Region Archaeological Services",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Bristol%20and%20Region%20Archaeological%20Services"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "ard marks",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARD%20MARKS"
+        },
+        {
+          "prefLabel": "evaluation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EVALUATION"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/1CA6472B-590F-3F85-8F0E-AB7AEEB26F89",
+      "otherId": [
+        "Associated ID: Site code: SBYWM",
+        "Depositor ID: 7214",
+        "NMRMIC-7214"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F31C1473-3527-3C56-9801-F833D3C26A70"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "late iron age",
+        "middle neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:ac4798d25553679af9629609d5a54f163b2b12184edab1908e73ef328789c2e4",
+      "title": "STONEHENGE ROAD",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ac4798d25553679af9629609d5a54f163b2b12184edab1908e73ef328789c2e4",
+      "creator": "Bristol and Region Archaeological Services",
+      "date": "2002-06-20"
+    }
+  },
+  {
+    "id": "ariadne:ec09df3ee2385e19ddf3ac22b3cf44a2686c48383d6167639598f3b2fbcd3820",
+    "_source": "ariadne",
+    "_sourceId": "64832",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ec09df3ee2385e19ddf3ac22b3cf44a2686c48383d6167639598f3b2fbcd3820",
+    "title": "STONEHENGE FARM",
+    "creator": "Oxford Archaeological Unit",
+    "date": "2002-06-20",
+    "subject": [
+      "evaluation",
+      "settlement",
+      "inhabited places"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "STONEHENGE FARM, Northmoor, West Oxfordshire, Oxfordshire, England",
+    "country": "England",
+    "decimalLatitude": 51.716562,
+    "decimalLongitude": -1.405006,
+    "periodStart": "-0799",
+    "periodEnd": "0043",
+    "periodName": [
+      "iron age",
+      "roman"
+    ],
+    "ariadne": {
+      "elasticId": "ec09df3ee2385e19ddf3ac22b3cf44a2686c48383d6167639598f3b2fbcd3820",
+      "temporal": [
+        {
+          "from": "-0799",
+          "periodName": "iron age",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsj33x"
+        },
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "STONEHENGE FARM, Northmoor, West Oxfordshire, Oxfordshire, England",
+          "geopoint": {
+            "lat": 51.716562,
+            "lon": -1.405006
+          },
+          "centroid": {
+            "lat": 51.716562,
+            "lon": -1.405006
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "STONEHENGE FARM, Northmoor, West Oxfordshire, Oxfordshire, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Oxford Archaeological Unit",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Oxford%20Archaeological%20Unit"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "evaluation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EVALUATION"
+        },
+        {
+          "prefLabel": "settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SETTLEMENT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "inhabited places",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008347",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/205BD506-3D33-3F27-B743-95D1F0CD0EDC",
+      "otherId": [
+        "Associated ID: Site code: NSF88",
+        "Depositor ID: 6784",
+        "NMRMIC-6784"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F31C1473-3527-3C56-9801-F833D3C26A70"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "iron age",
+        "roman"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:ec09df3ee2385e19ddf3ac22b3cf44a2686c48383d6167639598f3b2fbcd3820",
+      "title": "STONEHENGE FARM",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ec09df3ee2385e19ddf3ac22b3cf44a2686c48383d6167639598f3b2fbcd3820",
+      "creator": "Oxford Archaeological Unit",
+      "date": "2002-06-20"
+    }
+  },
+  {
+    "id": "ariadne:e9fe21b6aa27c012fa30cc43234b0b329bfe767022811a0caba4edb0415812a8",
+    "_source": "ariadne",
+    "_sourceId": "3489705",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/e9fe21b6aa27c012fa30cc43234b0b329bfe767022811a0caba4edb0415812a8",
+    "title": "A344 STONEHENGE WORKS",
+    "description": "Site code: W76860. Monitoring of twelve small trial-pits between Stonehenge and Airman's Corner recorded no significant archaeological activity. Information from OASIS Online Form.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "site",
+      "not provided"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, WINTERBOURNE STOKE",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "e9fe21b6aa27c012fa30cc43234b0b329bfe767022811a0caba4edb0415812a8",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, WINTERBOURNE STOKE"
+        },
+        {
+          "geopoint": {
+            "lat": 51.18497,
+            "lon": -1.861813
+          },
+          "centroid": {
+            "lat": 51.18497,
+            "lon": -1.861813
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 51.177854,
+            "lon": -1.820414
+          },
+          "centroid": {
+            "lat": 51.177854,
+            "lon": -1.820414
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, WINTERBOURNE STOKE"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SITE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/4B819778-0ADF-38E4-BF90-678149ED9019",
+      "otherId": [
+        "Associated ID: OASIS ID: wessexar1-98456",
+        "Depositor ID: 1546668",
+        "EHNMR-1546668"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "uncertain"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:e9fe21b6aa27c012fa30cc43234b0b329bfe767022811a0caba4edb0415812a8",
+      "title": "A344 STONEHENGE WORKS",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/e9fe21b6aa27c012fa30cc43234b0b329bfe767022811a0caba4edb0415812a8",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:af4c44bc33195ee651a9656fb72c2f5aad2811513310f771361ef5ac9f358d80",
+    "_source": "ariadne",
+    "_sourceId": "1847116",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/af4c44bc33195ee651a9656fb72c2f5aad2811513310f771361ef5ac9f358d80",
+    "title": "STONEHENGE LESSER CURSUS",
+    "description": "AML Survey Database Reference No.: 18 Survey type: Magnetometer: recorded grid Survey requested by Trust for Wessex Archaeology as part of the Stonehenge Environs Project.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "cursus",
+      "geophysical survey",
+      "not provided",
+      "megalithic monuments"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, WINTERBOURNE STOKE",
+    "country": "England",
+    "decimalLatitude": 51.190108,
+    "decimalLongitude": -1.849733,
+    "periodStart": "-500000",
+    "periodEnd": "0043",
+    "periodName": "prehistoric",
+    "ariadne": {
+      "elasticId": "af4c44bc33195ee651a9656fb72c2f5aad2811513310f771361ef5ac9f358d80",
+      "temporal": [
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, WINTERBOURNE STOKE",
+          "geopoint": {
+            "lat": 51.190108,
+            "lon": -1.849733
+          },
+          "centroid": {
+            "lat": 51.190108,
+            "lon": -1.849733
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, WINTERBOURNE STOKE"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cursus",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CURSUS"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "megalithic monuments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006983",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/7FD4331C-41FB-3008-84E1-3F1C0BC59BDC",
+      "otherId": [
+        "Depositor ID: 911080",
+        "EHNMR-911080"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "prehistoric"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:af4c44bc33195ee651a9656fb72c2f5aad2811513310f771361ef5ac9f358d80",
+      "title": "STONEHENGE LESSER CURSUS",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/af4c44bc33195ee651a9656fb72c2f5aad2811513310f771361ef5ac9f358d80",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:43bc2bf2d800548a6dfd84daf7238cd9de4122bc65a09518cd1b79cb53aab4f2",
+    "_source": "ariadne",
+    "_sourceId": "3501717",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/43bc2bf2d800548a6dfd84daf7238cd9de4122bc65a09518cd1b79cb53aab4f2",
+    "title": "STONEHENGE LASER SCAN",
+    "description": "From May to August 2012, ArcHeritage, in collaboration with Dr Hugo Anderson-Whymark, undertook the archaeological analysis of laser scan data of Stonehenge, collected by the Greenhatch Group in March 2011. The results of the project were beyond all expectations. The investigation identified traces of stone-working on virtually every stone, revealing significant new evidence for how Stonehenge was built. In addition, all of the known prehistoric carvings were identified and examined, and numerous new carvings of axe-heads and a possible dagger were revealed. The number of prehistoric axe-head carvings on Stonehenge has increased from 44 to 115; this doubles the number of Early Bronze Age axe-head carvings known in Britain. Differences in patterns of tooling across Stonehenge were also identified that reveal significant new evidence for how, and potentially when, different elements of the monument were constructed. The analysis revealed that the Sarsen Circle was built and dressed with an apparent emphasis on the NE-SW solstitial axis. The study also presents new evidence allowing the question of the non-completion of the Sarsen Circle to be explored. The project, funded by English Heritage, recorded all visible graffiti, damage, weathering and restoration. This revealed considerable evidence for the removal of stones from Stonehenge, and documented extensive damage from past visitors. Information from OASIS Online Form.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "rock carving",
+      "stone circle",
+      "not provided",
+      "megalithic monuments",
+      "rock carvings"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.178292,
+    "decimalLongitude": -1.824877,
+    "periodStart": "-2599",
+    "periodEnd": "-1599",
+    "periodName": [
+      "early bronze age",
+      "neolithic"
+    ],
+    "ariadne": {
+      "elasticId": "43bc2bf2d800548a6dfd84daf7238cd9de4122bc65a09518cd1b79cb53aab4f2",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "early bronze age",
+          "until": "-1599",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dshs59"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.178292,
+            "lon": -1.824877
+          },
+          "centroid": {
+            "lat": 51.178292,
+            "lon": -1.824877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "rock carving",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROCK%20CARVING"
+        },
+        {
+          "prefLabel": "stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "megalithic monuments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006983",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "rock carvings",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300080131",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/725A5E13-AFD8-35D1-AAD9-8C5D097DAB0E",
+      "otherId": [
+        "Associated ID: OASIS ID: englishh2-135474",
+        "Depositor ID: 1592816",
+        "EHNMR-1592816"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "early bronze age",
+        "neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:43bc2bf2d800548a6dfd84daf7238cd9de4122bc65a09518cd1b79cb53aab4f2",
+      "title": "STONEHENGE LASER SCAN",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/43bc2bf2d800548a6dfd84daf7238cd9de4122bc65a09518cd1b79cb53aab4f2",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:6d3df28b7e86448c77e54326fa2cf34e5e78a1731ba5546ca404fba2f4012cb1",
+    "_source": "ariadne",
+    "_sourceId": "1916885",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/6d3df28b7e86448c77e54326fa2cf34e5e78a1731ba5546ca404fba2f4012cb1",
+    "title": "STONEHENGE WATER SUPPLY",
+    "description": "Site code: W7611. Monitoring of three trenches excavated north of the A303 between Stonehenge and New King Barrows. Finds & archive have been deposited at Salisbury Museum.  NMR Microfilm Index PRN: 6975.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "animal burial",
+      "field boundary",
+      "field system",
+      "geophysical survey",
+      "not provided",
+      "agricultural land",
+      "boundaries",
+      "burials"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.177912,
+    "decimalLongitude": -1.811858,
+    "periodStart": "1901",
+    "periodEnd": "2000",
+    "periodName": "20th century",
+    "ariadne": {
+      "elasticId": "6d3df28b7e86448c77e54326fa2cf34e5e78a1731ba5546ca404fba2f4012cb1",
+      "temporal": [
+        {
+          "from": "1901",
+          "periodName": "20th century",
+          "until": "2000",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dstg2x"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.177912,
+            "lon": -1.811858
+          },
+          "centroid": {
+            "lat": 51.177912,
+            "lon": -1.811858
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "animal burial",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANIMAL%20BURIAL"
+        },
+        {
+          "prefLabel": "field boundary",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20BOUNDARY"
+        },
+        {
+          "prefLabel": "field system",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SYSTEM"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "agricultural land",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008631",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "boundaries",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300055590",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "burials",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300263485",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F8B512D5-F63F-3C95-ABD0-3068AAAC7695",
+      "otherId": [
+        "Associated ID: AIP Record Number: E.46.0009",
+        "Associated ID: RCHME Microfilm Index Number: 6975",
+        "Depositor ID: 1046469",
+        "EHNMR-1046469"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "20th century",
+        "uncertain"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:6d3df28b7e86448c77e54326fa2cf34e5e78a1731ba5546ca404fba2f4012cb1",
+      "title": "STONEHENGE WATER SUPPLY",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/6d3df28b7e86448c77e54326fa2cf34e5e78a1731ba5546ca404fba2f4012cb1",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:2ef43d163ecf43d999d97e1a5c4d1fb377559bdfdaee01198ef7658bdd4f9a4d",
+    "_source": "ariadne",
+    "_sourceId": "3484988",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2ef43d163ecf43d999d97e1a5c4d1fb377559bdfdaee01198ef7658bdd4f9a4d",
+    "title": "STONEHENGE LANDSCAPE PROJECT",
+    "description": "Human remains excavated from the Stonehenge landscape dating from 3700-1600BC were assessed. The assessment included unburnt disarticulated and articulated remains and cremated material. The report outlined the quantity and quality and condition of the remains.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "human remains",
+      "inhumation",
+      "not provided",
+      "burials",
+      "human remains"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.178383,
+    "decimalLongitude": -1.825449,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "neolithic"
+    ],
+    "ariadne": {
+      "elasticId": "2ef43d163ecf43d999d97e1a5c4d1fb377559bdfdaee01198ef7658bdd4f9a4d",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.178383,
+            "lon": -1.825449
+          },
+          "centroid": {
+            "lat": 51.178383,
+            "lon": -1.825449
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "human remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HUMAN%20REMAINS"
+        },
+        {
+          "prefLabel": "inhumation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INHUMATION"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "burials",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300263485",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "human remains",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300379896",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/55CE70B0-36BE-3779-A3DF-01A74D2CBA1E",
+      "otherId": [
+        "Associated ID: AIP Record Number: P.46.5415",
+        "Associated ID: OASIS ID: englishh2-85094",
+        "Depositor ID: 1534889",
+        "EHNMR-1534889"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "bronze age",
+        "neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:2ef43d163ecf43d999d97e1a5c4d1fb377559bdfdaee01198ef7658bdd4f9a4d",
+      "title": "STONEHENGE LANDSCAPE PROJECT",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2ef43d163ecf43d999d97e1a5c4d1fb377559bdfdaee01198ef7658bdd4f9a4d",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:6d832893652d48a9e087805104d5b3bbe01d7b16fdba52016317bf9fa265ad05",
+    "_source": "ariadne",
+    "_sourceId": "3512691",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/6d832893652d48a9e087805104d5b3bbe01d7b16fdba52016317bf9fa265ad05",
+    "title": "STONEHENGE GREATER CURSUS",
+    "description": "In 2010 the Research Department of English Heritage undertook the first detailed analytical earthwork survey of the Stonehenge Cursus. Dating to the early Neolithic period, the Cursus is one of the oldest monuments in the Stonehenge World Heritage Site. The monument is defined by a bank and ditch of varying preservation which forms a rectangular enclosure around 100m wide and extending nearly 3km from Winterbourne Stoke Down in the west to King Barrow Ridge in the east. There is possible evidence that the bank was constructed in sections and that changes in the alignment indicate attempts to relate the monument to natural features. Although a number of gaps exist, notably in Stonehenge Bottom, no definite evidence for an entrance was discovered. One view is that the monument was used as a processional routeway, providing changing views of the surrounding landscape along its length. Computer modelling of the relationship of the monument to the valley system also suggests that the monument may have been a territorial marker controlling access along the valleys to a discrete block of higher ground to the north",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "cursus",
+      "geophysical survey",
+      "not provided",
+      "megalithic monuments"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "-3999",
+    "periodEnd": "-3299",
+    "periodName": "early neolithic",
+    "ariadne": {
+      "elasticId": "6d832893652d48a9e087805104d5b3bbe01d7b16fdba52016317bf9fa265ad05",
+      "temporal": [
+        {
+          "from": "-3999",
+          "periodName": "early neolithic",
+          "until": "-3299",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbnzg"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+        },
+        {
+          "geopoint": {
+            "lat": 51.186023,
+            "lon": -1.822558
+          },
+          "centroid": {
+            "lat": 51.186023,
+            "lon": -1.822558
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 51.184884,
+            "lon": -1.843454
+          },
+          "centroid": {
+            "lat": 51.184884,
+            "lon": -1.843454
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 51.187252,
+            "lon": -1.80395
+          },
+          "centroid": {
+            "lat": 51.187252,
+            "lon": -1.80395
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cursus",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CURSUS"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "megalithic monuments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006983",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/290BA267-CFC7-3E33-BBEE-0A6CAC086DB2",
+      "otherId": [
+        "Associated ID: OASIS ID: englishh2-132980",
+        "Depositor ID: 1612040",
+        "EHNMR-1612040"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "early neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:6d832893652d48a9e087805104d5b3bbe01d7b16fdba52016317bf9fa265ad05",
+      "title": "STONEHENGE GREATER CURSUS",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/6d832893652d48a9e087805104d5b3bbe01d7b16fdba52016317bf9fa265ad05",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:c605452b3f2a26785a9337c33b3cc0473b5cce00fd2c9f2f77dd2dd51ec1fe47",
+    "_source": "ariadne",
+    "_sourceId": "1784156",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/c605452b3f2a26785a9337c33b3cc0473b5cce00fd2c9f2f77dd2dd51ec1fe47",
+    "title": "Stonehenge Avenue, Bronze Age Avenue on Stonehenge Down",
+    "description": "Stonehenge Avenue runs a sinuous course from the entrance at Stonehenge over 2.5km ( 1.5 miles) to the River Avon at West Amesbury.    Originally consisted of twin parallel banks with external ditches. Only the third nearest to Stonehenge remains. The section from Stonehenge to SU01270458 is thought to be an initial phase ( C14 1770BC) with the remainder added later ( C14 800BC, 1070BC) ( Wiltshire SMR). The initial phase of the Avenue's construction corresponds with Phase II of the development of Stonehenge ( VCH 1957, 28).   From Stonehenge the Avenue extends downhill for some 530m in a straight line towards the north-east and then bends sharply east- south-east to cross Stonehenge Bottom. At the point where the bend begins a low mound abuts the south ditch and possibly served as a marking or sighting point for the construction of the straight initial section. As well as being the best preserved this part of the Avenue is the most regular both in alignment and width; it measures 27.5m across overall and the bank still stands 0.3m above the bottom of the ditch.   Beyond Stonehenge Bottom the Avenue, now levelled, continues in an almost straight line up the slope to the top of the ridge at Seven Barrows where, after passing between the Old and New King Barrows, it makes a broad curve and then continues south-south- east on a relatively straight alignment towards the river at about SU142414. Air photographs show that throughout this section from Stonehenge Bottom eastwards the ditches are less regularly spaced, especially east of the ridge.   The Avenue has suffered much damage from subsequent human activity. Much of its eastern course lay within the unenclosed arable of West Amesbury and had already been flattened, and more was in process of being flattened, when Stukeley wrote his account of the monument ( 1740, 35-7). From the top of the Seven Barrows ridge he noted that it 'still continues in the very same direction eastward, till unfortunately broke off by the plow'd ground, 300 feet from hence. This plow'd ground continues for a mile together, as far as the river's side at Ambresbury. So that 'tis impossible to trace it any farther. The first plow'd field, that southward, is Mr Hayward's; the other is of a different estate, call'd Countess Farm. And the plowing of these two go on at right angles one of another. That piece on the north side of the avenue, is long and narrow, and has ( as usual with greedy farmers) encroached upon and swallow'd up so much of the length of the avenue'. On the slope west of the Seven Barrows ridge the Avenue survived relatively undamaged into the early nineteenth century ( Hoare 1810, 157-8) but by 1823 the upper part of the slope was in arable ( WRO 283/202) and by the middle of the century the remainder appears to have been ploughed ( Long 1876, 236).   In Stonehenge Bottom, however, the Avenue was already, in Stukeley's day, 'much obscur'd by the wheels of carriages going over it, for a great way together' on the road from Amesbury to Market Lavington. Close by another track or road leading south- west from Durrington breached the Avenue at the bend and followed it towards Stonehenge ( OS 1-inch 1st ed. surveyed 1807-11). It is traceable today as a hollow way within the north-west bank of the Avenue. This track would appear to have been in existence by the early eighteenth century and its course immediately north of the bend in the Avenue, emphasised for a short distance on the west side by what is now known to be a Bronze Age bank and ditch, led Stukeley ( 1740, 35) to the mistaken conclusion that the Avenue bifurcated at the bend and that one branch of it continued north towards the Cursus. This interpretation was accepted and perpetuated by Hoare ( 1810, 157-8).<br /> A short length of bank and ditch blocks the Avenue obliquely and crosses its north side at the bend; its sharper form, and the evidence of test excavations, show that it is of relatively recent construction, perhaps later than Hoare's time since it is not mentioned by him. Nearer to Stonehenge the Avenue is cut by the earthworks of an unfinished road. NMR SU 1242 and 1342 passim; 1441/17/18-21; 1441/18/174-5 ( RCHM 1979, 11-13).<br /><br />Status: Scheduled Monument",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": [
+      "embanked avenue",
+      "avenues"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": "England",
+    "decimalLatitude": 51.181965,
+    "decimalLongitude": -1.815419,
+    "ariadne": {
+      "elasticId": "c605452b3f2a26785a9337c33b3cc0473b5cce00fd2c9f2f77dd2dd51ec1fe47",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England",
+          "geopoint": {
+            "lat": 51.181965,
+            "lon": -1.815419
+          },
+          "centroid": {
+            "lat": 51.181965,
+            "lon": -1.815419
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "embanked avenue",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EMBANKED%20AVENUE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "avenues",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008250",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/3C45576D-F394-3FE5-9A7E-D721C1D5BFA3",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA137762",
+        "Depositor ID: 117501",
+        "NTSMR-MNA137762"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "-1770 - -1501",
+        "1070 - -701"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:c605452b3f2a26785a9337c33b3cc0473b5cce00fd2c9f2f77dd2dd51ec1fe47",
+      "title": "Stonehenge Avenue, Bronze Age Avenue on Stonehenge Down",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/c605452b3f2a26785a9337c33b3cc0473b5cce00fd2c9f2f77dd2dd51ec1fe47",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  },
+  {
+    "id": "ariadne:fd420934ad3d6e7fb52a162a4865e6e76f5c17180269b1709d9ab7c8dc4e2763",
+    "_source": "ariadne",
+    "_sourceId": "3508284",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/fd420934ad3d6e7fb52a162a4865e6e76f5c17180269b1709d9ab7c8dc4e2763",
+    "title": "STONEHENGE ENVIRONMENTAL IMPROVEMENTS",
+    "description": "Wessex Archaeology was commissioned by Vinci Construction on behalf of English Heritage to undertake a programme of archaeological work during the groundworks associated with the Stonehenge Environmental Improvements Project, including excavation, watching briefs, historic building recording, and monitoring during the relocation of the Grade II Listed Airman's Cross memorial and an adjacent unlisted milestone. The archaeological excavation during the removal of the A344 road adjacent to Stonehenge revealed short lengths of the Stonehenge Avenue ditches, and a part of the outer edge of the ditch that encircles the Heel Stone. All had been truncated by the construction of the road, but the excavation of slots through them confirmed the results obtained from previous excavations. Small pieces of Bluestone, and one of Sarsen, were recovered from the upper levels of the Avenue ditches. A large oval feature was exposed on the west side of the A360, approximately 110m south of Airman's Corner. A slot cut through it revealed a sequence of fills, the lowest of which provided a radiocarbon date of cal AD 1655-1955. The feature is interpreted as a possible quarry, perhaps to provide bank material for the post-medieval square embanked pond on the other side of the road. The old visitor facilities and structures at Stonehenge were subject to Level 1 building recording prior to their demolition. The Grade II listed Airman's Cross memorial, which commemorates the first fatal military aviation accident, on 5th July 1912, was photographed in situ and during lifting, as was the adjacent unlisted milestone. Information from OASIS Online Form.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "avenue (landscape feature)",
+      "commemorative monument",
+      "ditch",
+      "geophysical survey",
+      "lithic implement",
+      "milestone",
+      "quarry",
+      "not provided",
+      "quarries (extracting complexes)",
+      "ditches",
+      "memorials (monuments)",
+      "avenues",
+      "lithics"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.184913,
+    "decimalLongitude": -1.859123,
+    "periodStart": "1901",
+    "periodEnd": "2000",
+    "periodName": [
+      "20th century",
+      "neolithic",
+      "post medieval"
+    ],
+    "ariadne": {
+      "elasticId": "fd420934ad3d6e7fb52a162a4865e6e76f5c17180269b1709d9ab7c8dc4e2763",
+      "temporal": [
+        {
+          "from": "1901",
+          "periodName": "20th century",
+          "until": "2000",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dstg2x"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        },
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.184913,
+            "lon": -1.859123
+          },
+          "centroid": {
+            "lat": 51.184913,
+            "lon": -1.859123
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "avenue (landscape feature)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AVENUE%20%28LANDSCAPE%20FEATURE%29"
+        },
+        {
+          "prefLabel": "commemorative monument",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COMMEMORATIVE%20MONUMENT"
+        },
+        {
+          "prefLabel": "ditch",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DITCH"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "lithic implement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LITHIC%20IMPLEMENT"
+        },
+        {
+          "prefLabel": "milestone",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MILESTONE"
+        },
+        {
+          "prefLabel": "quarry",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/QUARRY"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "quarries (extracting complexes)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000402",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "ditches",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006178",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "memorials (monuments)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006956",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "avenues",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008250",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "lithics",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300379567",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/A696CFEB-FFCB-3D9D-B77E-CF1341AE3434",
+      "otherId": [
+        "Associated ID: OASIS ID: wessexar1-191014",
+        "Depositor ID: 1605776",
+        "EHNMR-1605776"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "20th century",
+        "neolithic",
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:fd420934ad3d6e7fb52a162a4865e6e76f5c17180269b1709d9ab7c8dc4e2763",
+      "title": "STONEHENGE ENVIRONMENTAL IMPROVEMENTS",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/fd420934ad3d6e7fb52a162a4865e6e76f5c17180269b1709d9ab7c8dc4e2763",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:603971e0a4bc28aef8505ac8d19e1417c415116f15a7487e9a2814b6a10bc24d",
+    "_source": "ariadne",
+    "_sourceId": "1788649",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/603971e0a4bc28aef8505ac8d19e1417c415116f15a7487e9a2814b6a10bc24d",
+    "title": "Settlement, west  side of Stonehenge Bottom, Stonehenge Estate",
+    "description": "Terraced earthworks found as part of an English Heritage Stonehenge landscape survey in Jan 2010. David Filed believed them to be part of a settlement. The earthworks continue across the line of the Avenue and are therefore later. No finds from mole hill suggested possible date sub Roman",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": [
+      "settlement",
+      "inhabited places",
+      "settlements (sites of small communities)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Wiltshire, Salisbury, Amesbury",
+    "country": "England",
+    "decimalLatitude": 51.179101,
+    "decimalLongitude": -1.818693,
+    "ariadne": {
+      "elasticId": "603971e0a4bc28aef8505ac8d19e1417c415116f15a7487e9a2814b6a10bc24d",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Wiltshire, Salisbury, Amesbury",
+          "geopoint": {
+            "lat": 51.179101,
+            "lon": -1.818693
+          },
+          "centroid": {
+            "lat": 51.179101,
+            "lon": -1.818693
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Wiltshire, Salisbury, Amesbury"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SETTLEMENT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "inhabited places",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008347",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "settlements (sites of small communities)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300444153",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/798343AA-EF90-36DB-84EA-AD8570899869",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA164800",
+        "Depositor ID: 117791",
+        "NTSMR-MNA164800"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "43 - 2050"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:603971e0a4bc28aef8505ac8d19e1417c415116f15a7487e9a2814b6a10bc24d",
+      "title": "Settlement, west  side of Stonehenge Bottom, Stonehenge Estate",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/603971e0a4bc28aef8505ac8d19e1417c415116f15a7487e9a2814b6a10bc24d",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  },
+  {
+    "id": "ariadne:499d57ea0b3cb1e75a84dc6ae18882f5ce86a6cb28aac236efac5824255da933",
+    "_source": "ariadne",
+    "_sourceId": "1823700",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/499d57ea0b3cb1e75a84dc6ae18882f5ce86a6cb28aac236efac5824255da933",
+    "title": "STONEHENGE CURSUS",
+    "description": "AML Survey Database Reference No: 1081 Survey Type: Magnetometer: recorded grid Survey Type: Resistivity: recorded grid Survey Type: Magnetic Susceptibility: recorded grid: multiple traverse Survey of a proposed visitor transportation route; geophysics sought to determine the precise location of the northern ditch of the Cursus and of nearby ploughed-out barrows, as well as levelled barrows to the east and south of the Cursus terminal.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "barrow cemetery",
+      "cursus",
+      "geophysical survey",
+      "long barrow",
+      "ring ditch",
+      "not provided",
+      "megalithic monuments",
+      "cemeteries",
+      "ring ditches",
+      "long barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.185555,
+    "decimalLongitude": -1.811112,
+    "periodStart": "-3999",
+    "periodEnd": "0043",
+    "periodName": [
+      "later prehistoric",
+      "neolithic",
+      "prehistoric"
+    ],
+    "ariadne": {
+      "elasticId": "499d57ea0b3cb1e75a84dc6ae18882f5ce86a6cb28aac236efac5824255da933",
+      "temporal": [
+        {
+          "from": "-3999",
+          "periodName": "later prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds785r"
+        },
+        {
+          "from": "-3999",
+          "periodName": "neolithic",
+          "until": "-2199",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        },
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.185555,
+            "lon": -1.811112
+          },
+          "centroid": {
+            "lat": 51.185555,
+            "lon": -1.811112
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow cemetery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW%20CEMETERY"
+        },
+        {
+          "prefLabel": "cursus",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CURSUS"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "long barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LONG%20BARROW"
+        },
+        {
+          "prefLabel": "ring ditch",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RING%20DITCH"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "megalithic monuments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006983",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "cemeteries",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300266755",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "ring ditches",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300312201",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "long barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391498",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/47E643CA-282C-39AF-A49E-ADCCDB34B479",
+      "otherId": [
+        "Depositor ID: 1144031",
+        "EHNMR-1144031"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "later prehistoric",
+        "neolithic",
+        "prehistoric"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:499d57ea0b3cb1e75a84dc6ae18882f5ce86a6cb28aac236efac5824255da933",
+      "title": "STONEHENGE CURSUS",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/499d57ea0b3cb1e75a84dc6ae18882f5ce86a6cb28aac236efac5824255da933",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:3879e028904b76acd925c15ebf6a321d9b67c771f8fc3dc8293d33cc129ae311",
+    "_source": "ariadne",
+    "_sourceId": "1847354",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/3879e028904b76acd925c15ebf6a321d9b67c771f8fc3dc8293d33cc129ae311",
+    "title": "STONEHENGE BOTTOM",
+    "description": "Four test pits excavated during the erection of new crash barriers on the A30.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "lithic implement",
+      "not provided",
+      "lithics"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.177473,
+    "decimalLongitude": -1.818298,
+    "periodStart": "-500000",
+    "periodEnd": "0043",
+    "periodName": "prehistoric",
+    "ariadne": {
+      "elasticId": "3879e028904b76acd925c15ebf6a321d9b67c771f8fc3dc8293d33cc129ae311",
+      "temporal": [
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.177473,
+            "lon": -1.818298
+          },
+          "centroid": {
+            "lat": 51.177473,
+            "lon": -1.818298
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "lithic implement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LITHIC%20IMPLEMENT"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "lithics",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300379567",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/6895BBC6-B6D0-3417-919F-A732111B5010",
+      "otherId": [
+        "Depositor ID: 1049928",
+        "EHNMR-1049928"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "prehistoric"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:3879e028904b76acd925c15ebf6a321d9b67c771f8fc3dc8293d33cc129ae311",
+      "title": "STONEHENGE BOTTOM",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/3879e028904b76acd925c15ebf6a321d9b67c771f8fc3dc8293d33cc129ae311",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:2c2214180a2e0a10a78a441bd5926d7efd691e1aa02fdf582dff4dbc5d9f9c1b",
+    "_source": "ariadne",
+    "_sourceId": "1847119",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2c2214180a2e0a10a78a441bd5926d7efd691e1aa02fdf582dff4dbc5d9f9c1b",
+    "title": "STONEHENGE CURSUS",
+    "description": "AML Survey Database Reference No.: 19 Survey type: Magnetometer: recorded grid Surveyed area under possible threat as access route to new Visitor Centre.  The eastern flanking ditch of the long barrow (Amesbury 42) and portion of cursus ditch were located.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "cursus",
+      "geophysical survey",
+      "long barrow",
+      "not provided",
+      "megalithic monuments",
+      "long barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.18644,
+    "decimalLongitude": -1.802522,
+    "periodStart": "-500000",
+    "periodEnd": "0043",
+    "periodName": "prehistoric",
+    "ariadne": {
+      "elasticId": "2c2214180a2e0a10a78a441bd5926d7efd691e1aa02fdf582dff4dbc5d9f9c1b",
+      "temporal": [
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.18644,
+            "lon": -1.802522
+          },
+          "centroid": {
+            "lat": 51.18644,
+            "lon": -1.802522
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cursus",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CURSUS"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "long barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LONG%20BARROW"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "megalithic monuments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006983",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "long barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391498",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/EE2F5F77-D2CC-32C0-B1AD-550C0A0D521B",
+      "otherId": [
+        "Depositor ID: 911083",
+        "EHNMR-911083"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "prehistoric"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:2c2214180a2e0a10a78a441bd5926d7efd691e1aa02fdf582dff4dbc5d9f9c1b",
+      "title": "STONEHENGE CURSUS",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2c2214180a2e0a10a78a441bd5926d7efd691e1aa02fdf582dff4dbc5d9f9c1b",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:3265dfc2df97226b835c42d25bc7a9e1ddd441f1cbec2bc0de10d1b53c03bdbf",
+    "_source": "ariadne",
+    "_sourceId": "1922154",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/3265dfc2df97226b835c42d25bc7a9e1ddd441f1cbec2bc0de10d1b53c03bdbf",
+    "title": "STONEHENGE AVENUE",
+    "description": "AML Survey Database Reference No.: 242 Survey type: Magnetometer: recorded grid Survey to determine the route of the Avenue. National Trust Project Reference No.: 9403",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "geophysical survey",
+      "stone avenue",
+      "not provided",
+      "megalithic monuments"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.181072,
+    "decimalLongitude": -1.819715,
+    "periodStart": "-500000",
+    "periodEnd": "0043",
+    "periodName": "prehistoric",
+    "ariadne": {
+      "elasticId": "3265dfc2df97226b835c42d25bc7a9e1ddd441f1cbec2bc0de10d1b53c03bdbf",
+      "temporal": [
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.181072,
+            "lon": -1.819715
+          },
+          "centroid": {
+            "lat": 51.181072,
+            "lon": -1.819715
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "stone avenue",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STONE%20AVENUE"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "megalithic monuments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006983",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/5B6AD949-F31D-3CA3-B4DA-CF0EF2E3944C",
+      "otherId": [
+        "Associated ID: National Trust Project Reference Number: 9403",
+        "Depositor ID: 1025054",
+        "EHNMR-1025054"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "prehistoric"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:3265dfc2df97226b835c42d25bc7a9e1ddd441f1cbec2bc0de10d1b53c03bdbf",
+      "title": "STONEHENGE AVENUE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/3265dfc2df97226b835c42d25bc7a9e1ddd441f1cbec2bc0de10d1b53c03bdbf",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:37e2901265b8842afd32804806c9129e9ec7947e3112682a6adbb351b70de5ed",
+    "_source": "ariadne",
+    "_sourceId": "1918670",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/37e2901265b8842afd32804806c9129e9ec7947e3112682a6adbb351b70de5ed",
+    "title": "A303 STONEHENGE",
+    "description": "64 evaluation trenches were excavated in advance of the proposed new road scheme. A sparse distribution of archaeology was recorded. This included features relating to the Late Bronze Age settlement at Longbarrow Crossroads. Iron Age, Roman and medieval features were also recorded.",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "burnt flint",
+      "ditch",
+      "geophysical survey",
+      "lithic implement",
+      "pit",
+      "quern",
+      "settlement",
+      "strip lynchet",
+      "not provided",
+      "ditches",
+      "pits (earthworks)",
+      "archdeaconries",
+      "querns",
+      "lithics"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, WINTERBOURNE STOKE",
+    "country": "England",
+    "decimalLatitude": 51.164994,
+    "decimalLongitude": -1.917041,
+    "periodStart": "-0799",
+    "periodEnd": "0043",
+    "periodName": [
+      "iron age",
+      "late bronze age",
+      "medieval",
+      "prehistoric",
+      "roman"
+    ],
+    "ariadne": {
+      "elasticId": "37e2901265b8842afd32804806c9129e9ec7947e3112682a6adbb351b70de5ed",
+      "temporal": [
+        {
+          "from": "-0799",
+          "periodName": "iron age",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsj33x"
+        },
+        {
+          "from": "-1199",
+          "periodName": "late bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsqkbq"
+        },
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        },
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, WINTERBOURNE STOKE",
+          "geopoint": {
+            "lat": 51.164994,
+            "lon": -1.917041
+          },
+          "centroid": {
+            "lat": 51.164994,
+            "lon": -1.917041
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, WINTERBOURNE STOKE"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "burnt flint",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BURNT%20FLINT"
+        },
+        {
+          "prefLabel": "ditch",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DITCH"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "lithic implement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LITHIC%20IMPLEMENT"
+        },
+        {
+          "prefLabel": "pit",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PIT"
+        },
+        {
+          "prefLabel": "quern",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/QUERN"
+        },
+        {
+          "prefLabel": "settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SETTLEMENT"
+        },
+        {
+          "prefLabel": "strip lynchet",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STRIP%20LYNCHET"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "ditches",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006178",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "pits (earthworks)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008027",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "archdeaconries",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008347",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "querns",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300200181",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "lithics",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300379567",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/25A8D7FD-1B4F-3B00-8D6C-443D89D751A7",
+      "otherId": [
+        "Associated ID: AIP Record Number: C.46.N023",
+        "Depositor ID: 1470143",
+        "EHNMR-1470143"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "iron age",
+        "late bronze age",
+        "medieval",
+        "prehistoric",
+        "roman",
+        "uncertain"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:37e2901265b8842afd32804806c9129e9ec7947e3112682a6adbb351b70de5ed",
+      "title": "A303 STONEHENGE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/37e2901265b8842afd32804806c9129e9ec7947e3112682a6adbb351b70de5ed",
+      "creator": "Historic England",
+      "date": "2020-06-08"
+    }
+  },
+  {
+    "id": "ariadne:86c79a1e6d92da424c934582e2bf9e2855c9244cc76087c70538c5a541878295",
+    "_source": "ariadne",
+    "_sourceId": "1917899",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/86c79a1e6d92da424c934582e2bf9e2855c9244cc76087c70538c5a541878295",
+    "title": "STONEHENGE AVENUE",
+    "description": "AML Survey Database Reference Nos.: 383 & 384 Survey type: Magnetometer: recorded grid Survey type: Resistivity: recorded grid A trial survey of the first 45m of the Avenue to test for a conjectural sequence of stones or stone holes (23/10/79), continued (7/10/80) to try and locate paired stone positions. National Trust Project Reference No.: 9402",
+    "creator": "Historic England",
+    "date": "2020-06-08",
+    "subject": [
+      "avenue (landscape feature)",
+      "geophysical survey",
+      "not provided",
+      "avenues"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+    "country": "England",
+    "decimalLatitude": 51.179278,
+    "decimalLongitude": -1.822584,
+    "periodStart": "-500000",
+    "periodEnd": "0043",
+    "periodName": "prehistoric",
+    "ariadne": {
+      "elasticId": "86c79a1e6d92da424c934582e2bf9e2855c9244cc76087c70538c5a541878295",
+      "temporal": [
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, WILTSHIRE, WILTSHIRE, AMESBURY",
+          "geopoint": {
+            "lat": 51.179278,
+            "lon": -1.822584
+          },
+          "centroid": {
+            "lat": 51.179278,
+            "lon": -1.822584
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, WILTSHIRE, WILTSHIRE, AMESBURY"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "avenue (landscape feature)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AVENUE%20%28LANDSCAPE%20FEATURE%29"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "avenues",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008250",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BE809A68-5F7F-3329-A7B8-8709C9AF852D",
+      "otherId": [
+        "Associated ID: National Trust Project Reference Number: 9402",
+        "Depositor ID: 1032977",
+        "EHNMR-1032977"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F350D267-D463-33DE-883B-3561AA523168"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "prehistoric"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T12:53:08.493Z",
+      "query": "q:stonehenge",
+      "recordId": "ariadne:86c79a1e6d92da424c934582e2bf9e2855c9244cc76087c70538c5a541878295",
+      "title": "STONEHENGE AVENUE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/86c79a1e6d92da424c934582e2bf9e2855c9244cc76087c70538c5a541878295",
       "creator": "Historic England",
       "date": "2020-06-08"
     }

@@ -1,0 +1,1780 @@
+[
+  {
+    "id": "vam:O1041792",
+    "_source": "vam",
+    "_sourceId": "O1041792",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1041792",
+    "_pid": "800-1888",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1041792",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1041792",
+      "pid": "800-1888",
+      "creator": "Constable, John (RA)",
+      "date": "possibly 1836"
+    },
+    "title": "Stonehenge",
+    "creator": "Constable, John (RA)",
+    "date": "possibly 1836",
+    "subject": [
+      "Watercolour"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Watercolour",
+      "place": "England",
+      "accessionNumber": "800-1888",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level H",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2013GE8498/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1041792/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2013GE8498/"
+    }
+  },
+  {
+    "id": "vam:O74470",
+    "_source": "vam",
+    "_sourceId": "O74470",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O74470",
+    "_pid": "1629-1888",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O74470",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O74470",
+      "pid": "1629-1888",
+      "creator": "Constable, John (RA)",
+      "date": "1835"
+    },
+    "title": "Stonehenge",
+    "creator": "Constable, John (RA)",
+    "date": "1835",
+    "subject": [
+      "Watercolour"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Watercolour",
+      "place": "Salisbury",
+      "accessionNumber": "1629-1888",
+      "onDisplay": false,
+      "location": "In Store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2024NX3124/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O74470/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2024NX3124/"
+    }
+  },
+  {
+    "id": "vam:O125910",
+    "_source": "vam",
+    "_sourceId": "O125910",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O125910",
+    "_pid": "309-1888",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O125910",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O125910",
+      "pid": "309-1888",
+      "creator": "Constable, John (RA)",
+      "date": "15/07/1820"
+    },
+    "title": "Stonehenge",
+    "creator": "Constable, John (RA)",
+    "date": "15/07/1820",
+    "subject": [
+      "drawing"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "drawing",
+      "place": "England",
+      "accessionNumber": "309-1888",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level H",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2014GY5640/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O125910/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2014GY5640/"
+    }
+  },
+  {
+    "id": "vam:O1241179",
+    "_source": "vam",
+    "_sourceId": "O1241179",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1241179",
+    "_pid": "FA.344",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1241179",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1241179",
+      "pid": "FA.344",
+      "creator": "Prout, Samuel",
+      "date": "ca. 1805"
+    },
+    "title": "Stonehenge",
+    "creator": "Prout, Samuel",
+    "date": "ca. 1805",
+    "subject": [
+      "Watercolour "
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Watercolour ",
+      "place": "Britain",
+      "accessionNumber": "FA.344",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level H",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2012FH0017/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1241179/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2012FH0017/"
+    }
+  },
+  {
+    "id": "vam:O1754615",
+    "_source": "vam",
+    "_sourceId": "O1754615",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1754615",
+    "_pid": "RPS.952-2023",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1754615",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1754615",
+      "pid": "RPS.952-2023",
+      "creator": "Bull, Philip C. (Lt.-Col.)",
+      "date": "ca. 1953"
+    },
+    "title": "Stonehenge",
+    "creator": "Bull, Philip C. (Lt.-Col.)",
+    "date": "ca. 1953",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "accessionNumber": "RPS.952-2023",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2025PH1709/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2025PH1709/"
+    }
+  },
+  {
+    "id": "vam:O1754604",
+    "_source": "vam",
+    "_sourceId": "O1754604",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1754604",
+    "_pid": "RPS.941-2023",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1754604",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1754604",
+      "pid": "RPS.941-2023",
+      "creator": "Bull, Philip C. (Lt.-Col.)",
+      "date": "ca. 1950"
+    },
+    "title": "Stonehenge",
+    "creator": "Bull, Philip C. (Lt.-Col.)",
+    "date": "ca. 1950",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "RPS.941-2023",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2025PH1714/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2025PH1714/"
+    }
+  },
+  {
+    "id": "vam:O133262",
+    "_source": "vam",
+    "_sourceId": "O133262",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O133262",
+    "_pid": "E.64-2007",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O133262",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O133262",
+      "pid": "E.64-2007",
+      "creator": "Francis Frith & Co.",
+      "date": "ca. 1865"
+    },
+    "title": "Stonehenge",
+    "creator": "Francis Frith & Co.",
+    "date": "ca. 1865",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "E.64-2007",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017KE3486/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O133262/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017KE3486/"
+    }
+  },
+  {
+    "id": "vam:O1244503",
+    "_source": "vam",
+    "_sourceId": "O1244503",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1244503",
+    "_pid": "E.232-2012",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1244503",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1244503",
+      "pid": "E.232-2012",
+      "creator": "David DiFrancesco",
+      "date": "1979"
+    },
+    "title": "Stonehenge",
+    "creator": "David DiFrancesco",
+    "date": "1979",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "USA",
+      "accessionNumber": "E.232-2012",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level E",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2012FH0045/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2012FH0045/"
+    }
+  },
+  {
+    "id": "vam:O562058",
+    "_source": "vam",
+    "_sourceId": "O562058",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O562058",
+    "_pid": "E.5508-1960",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O562058",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O562058",
+      "pid": "E.5508-1960",
+      "creator": "Hermes, Gertrude (RA)",
+      "date": "1959"
+    },
+    "title": "Stonehenge",
+    "creator": "Hermes, Gertrude (RA)",
+    "date": "1959",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Great Britain",
+      "accessionNumber": "E.5508-1960",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level C",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2010EL6940/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2010EL6940/"
+    }
+  },
+  {
+    "id": "vam:O1754479",
+    "_source": "vam",
+    "_sourceId": "O1754479",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1754479",
+    "_pid": "RPS.819-2023",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1754479",
+      "title": "Winter Evening, Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1754479",
+      "pid": "RPS.819-2023",
+      "creator": "Boyes, Frederick Charles",
+      "date": "1933"
+    },
+    "title": "Winter Evening, Stonehenge",
+    "creator": "Boyes, Frederick Charles",
+    "date": "1933",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "RPS.819-2023",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2025PH0721/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2025PH0721/"
+    }
+  },
+  {
+    "id": "vam:O239614",
+    "_source": "vam",
+    "_sourceId": "O239614",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O239614",
+    "_pid": "E.1025-2009",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O239614",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O239614",
+      "pid": "E.1025-2009",
+      "creator": "DiFrancesco, David",
+      "date": "1981"
+    },
+    "title": "Stonehenge",
+    "creator": "DiFrancesco, David",
+    "date": "1981",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "USA",
+      "accessionNumber": "E.1025-2009",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level E",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2009BX6015/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2009BX6015/"
+    }
+  },
+  {
+    "id": "vam:O1816234",
+    "_source": "vam",
+    "_sourceId": "O1816234",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1816234",
+    "_pid": "WE.13576-2014",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1816234",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1816234",
+      "pid": "WE.13576-2014",
+      "creator": "Josiah Wedgwood and Sons",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Josiah Wedgwood and Sons",
+    "date": "20th century",
+    "subject": [
+      "Plate"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Plate",
+      "place": "Barlaston",
+      "accessionNumber": "WE.13576-2014",
+      "onDisplay": false,
+      "location": "in store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2024NW1446/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1816234/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2024NW1446/"
+    }
+  },
+  {
+    "id": "vam:O132689",
+    "_source": "vam",
+    "_sourceId": "O132689",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O132689",
+    "_pid": "B.259-2015",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O132689",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O132689",
+      "pid": "B.259-2015",
+      "creator": "L'Instant Durable",
+      "date": "1991"
+    },
+    "title": "Stonehenge",
+    "creator": "L'Instant Durable",
+    "date": "1991",
+    "subject": [
+      "Model"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Model",
+      "place": "France",
+      "accessionNumber": "B.259-2015",
+      "onDisplay": false,
+      "location": "In Store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2015HK9631/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2015HK9631/"
+    }
+  },
+  {
+    "id": "vam:O1106213",
+    "_source": "vam",
+    "_sourceId": "O1106213",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1106213",
+    "_pid": "99-1889",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1106213",
+      "title": "Stonehenge, Wiltshire",
+      "url": "https://collections.vam.ac.uk/item/O1106213",
+      "pid": "99-1889",
+      "creator": "Malton",
+      "date": "1800"
+    },
+    "title": "Stonehenge, Wiltshire",
+    "creator": "Malton",
+    "date": "1800",
+    "subject": [
+      "Watercolour"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Watercolour",
+      "place": "Britain",
+      "accessionNumber": "99-1889",
+      "onDisplay": false,
+      "location": "In Store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017JV9387/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1106213/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017JV9387/"
+    }
+  },
+  {
+    "id": "vam:O1036790",
+    "_source": "vam",
+    "_sourceId": "O1036790",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1036790",
+    "_pid": "CIRC.242-1961",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1036790",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1036790",
+      "pid": "CIRC.242-1961",
+      "creator": "Julian Trevelyan",
+      "date": "1961"
+    },
+    "title": "Stonehenge",
+    "creator": "Julian Trevelyan",
+    "date": "1961",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Great Britain",
+      "accessionNumber": "CIRC.242-1961",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level C",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2009BX5263/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2009BX5263/"
+    }
+  },
+  {
+    "id": "vam:O145098",
+    "_source": "vam",
+    "_sourceId": "O145098",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O145098",
+    "_pid": "E.5577-1905",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O145098",
+      "title": "Stonehenge Trilithon (13) on the left of Altar Stone",
+      "url": "https://collections.vam.ac.uk/item/O145098",
+      "pid": "E.5577-1905",
+      "creator": "Waterhouse, James John (Major General)",
+      "date": "1867"
+    },
+    "title": "Stonehenge Trilithon (13) on the left of Altar Stone",
+    "creator": "Waterhouse, James John (Major General)",
+    "date": "1867",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "E.5577-1905",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2019MH7035/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O145098/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2019MH7035/"
+    }
+  },
+  {
+    "id": "vam:O557654",
+    "_source": "vam",
+    "_sourceId": "O557654",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O557654",
+    "_pid": "E.2228-1974",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O557654",
+      "title": "Stonehenge XIII",
+      "url": "https://collections.vam.ac.uk/item/O557654",
+      "pid": "E.2228-1974",
+      "creator": "Sica, Marilyn",
+      "date": "ca. 1970"
+    },
+    "title": "Stonehenge XIII",
+    "creator": "Sica, Marilyn",
+    "date": "ca. 1970",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "USA",
+      "accessionNumber": "E.2228-1974",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level E",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2009BX5254/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2009BX5254/"
+    }
+  },
+  {
+    "id": "vam:O1061491",
+    "_source": "vam",
+    "_sourceId": "O1061491",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1061491",
+    "_pid": "PH.461-1980",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1061491",
+      "title": "Stonehenge Under Snow",
+      "url": "https://collections.vam.ac.uk/item/O1061491",
+      "pid": "PH.461-1980",
+      "creator": "Bill Brandt",
+      "date": "1947"
+    },
+    "title": "Stonehenge Under Snow",
+    "creator": "Bill Brandt",
+    "date": "1947",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "PH.461-1980",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2011EY4104/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2011EY4104/"
+    }
+  },
+  {
+    "id": "vam:O1277656",
+    "_source": "vam",
+    "_sourceId": "O1277656",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1277656",
+    "_pid": "B.2913-2022",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1277656",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1277656",
+      "pid": "B.2913-2022",
+      "creator": "Brian & Lizzie Sanders",
+      "date": "2001"
+    },
+    "title": "Stonehenge",
+    "creator": "Brian & Lizzie Sanders",
+    "date": "2001",
+    "subject": [
+      "Model"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Model",
+      "place": "Great Britain",
+      "accessionNumber": "B.2913-2022",
+      "onDisplay": false,
+      "location": "In Store"
+    }
+  },
+  {
+    "id": "vam:O1102250",
+    "_source": "vam",
+    "_sourceId": "O1102250",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102250",
+    "_pid": "CIRC.567-1975",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102250",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102250",
+      "pid": "CIRC.567-1975",
+      "creator": "Brandt, Bill",
+      "date": "1947"
+    },
+    "title": "Stonehenge",
+    "creator": "Brandt, Bill",
+    "date": "1947",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.567-1975",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2011EY3931/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2011EY3931/"
+    }
+  },
+  {
+    "id": "vam:O864882",
+    "_source": "vam",
+    "_sourceId": "O864882",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O864882",
+    "_pid": "E.2997-1904",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O864882",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O864882",
+      "pid": "E.2997-1904",
+      "creator": "Lucas, Richard Cockle",
+      "date": "1837"
+    },
+    "title": "Stonehenge",
+    "creator": "Lucas, Richard Cockle",
+    "date": "1837",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Great Britain",
+      "accessionNumber": "E.2997-1904",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level H"
+    }
+  },
+  {
+    "id": "vam:O539991",
+    "_source": "vam",
+    "_sourceId": "O539991",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O539991",
+    "_pid": "E.353-1986",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O539991",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O539991",
+      "pid": "E.353-1986",
+      "creator": "B, P.",
+      "date": "1986"
+    },
+    "title": "Stonehenge",
+    "creator": "B, P.",
+    "date": "1986",
+    "subject": [
+      "Poster"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Poster",
+      "place": "Great Britain",
+      "accessionNumber": "E.353-1986",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level C"
+    }
+  },
+  {
+    "id": "vam:O125172",
+    "_source": "vam",
+    "_sourceId": "O125172",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O125172",
+    "_pid": "E.2510-1901",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O125172",
+      "title": "Stonehenge, Salisbury Plain",
+      "url": "https://collections.vam.ac.uk/item/O125172",
+      "pid": "E.2510-1901",
+      "creator": "Constable, John",
+      "date": "1845"
+    },
+    "title": "Stonehenge, Salisbury Plain",
+    "creator": "Constable, John",
+    "date": "1845",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Great Britain",
+      "accessionNumber": "E.2510-1901",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level E"
+    }
+  },
+  {
+    "id": "vam:O112715",
+    "_source": "vam",
+    "_sourceId": "O112715",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O112715",
+    "_pid": "CIRC.538-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O112715",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O112715",
+      "pid": "CIRC.538-1976",
+      "creator": "Caponigro, Paul",
+      "date": "probably around 1970 - 1972"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro, Paul",
+    "date": "probably around 1970 - 1972",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.538-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AE6232/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AE6232/"
+    }
+  },
+  {
+    "id": "vam:O138430",
+    "_source": "vam",
+    "_sourceId": "O138430",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O138430",
+    "_pid": "E.1648-1931",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O138430",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O138430",
+      "pid": "E.1648-1931",
+      "creator": "Kauffer, Edward McKnight",
+      "date": "1931"
+    },
+    "title": "Stonehenge",
+    "creator": "Kauffer, Edward McKnight",
+    "date": "1931",
+    "subject": [
+      "Poster"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Poster",
+      "place": "England",
+      "accessionNumber": "E.1648-1931",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level C",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006BG0697/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O138430/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006BG0697/"
+    }
+  },
+  {
+    "id": "vam:O1037659",
+    "_source": "vam",
+    "_sourceId": "O1037659",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1037659",
+    "_pid": "CIRC.158-1968",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1037659",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1037659",
+      "pid": "CIRC.158-1968",
+      "creator": "Kauffer, Edward McKnight",
+      "date": "1931"
+    },
+    "title": "Stonehenge",
+    "creator": "Kauffer, Edward McKnight",
+    "date": "1931",
+    "subject": [
+      "Poster"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Poster",
+      "place": "Great Britain",
+      "accessionNumber": "CIRC.158-1968",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level C",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006BE6265/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1037659/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006BE6265/"
+    }
+  },
+  {
+    "id": "vam:O1102226",
+    "_source": "vam",
+    "_sourceId": "O1102226",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102226",
+    "_pid": "CIRC.535-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102226",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102226",
+      "pid": "CIRC.535-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.535-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102225",
+    "_source": "vam",
+    "_sourceId": "O1102225",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102225",
+    "_pid": "CIRC.536-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102225",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102225",
+      "pid": "CIRC.536-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.536-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102224",
+    "_source": "vam",
+    "_sourceId": "O1102224",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102224",
+    "_pid": "CIRC.537-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102224",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102224",
+      "pid": "CIRC.537-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.537-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102223",
+    "_source": "vam",
+    "_sourceId": "O1102223",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102223",
+    "_pid": "CIRC.539-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102223",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102223",
+      "pid": "CIRC.539-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.539-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102222",
+    "_source": "vam",
+    "_sourceId": "O1102222",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102222",
+    "_pid": "CIRC.540-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102222",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102222",
+      "pid": "CIRC.540-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.540-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102221",
+    "_source": "vam",
+    "_sourceId": "O1102221",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102221",
+    "_pid": "CIRC.541-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102221",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102221",
+      "pid": "CIRC.541-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.541-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102220",
+    "_source": "vam",
+    "_sourceId": "O1102220",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102220",
+    "_pid": "CIRC.542-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102220",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102220",
+      "pid": "CIRC.542-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.542-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102219",
+    "_source": "vam",
+    "_sourceId": "O1102219",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102219",
+    "_pid": "CIRC.543-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102219",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102219",
+      "pid": "CIRC.543-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.543-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102218",
+    "_source": "vam",
+    "_sourceId": "O1102218",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102218",
+    "_pid": "CIRC.544-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102218",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102218",
+      "pid": "CIRC.544-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.544-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102217",
+    "_source": "vam",
+    "_sourceId": "O1102217",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102217",
+    "_pid": "CIRC.545-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102217",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102217",
+      "pid": "CIRC.545-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.545-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102216",
+    "_source": "vam",
+    "_sourceId": "O1102216",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102216",
+    "_pid": "CIRC.546-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102216",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102216",
+      "pid": "CIRC.546-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.546-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1102215",
+    "_source": "vam",
+    "_sourceId": "O1102215",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102215",
+    "_pid": "CIRC.547-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1102215",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1102215",
+      "pid": "CIRC.547-1976",
+      "creator": "Caponigro",
+      "date": "20th century"
+    },
+    "title": "Stonehenge",
+    "creator": "Caponigro",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Stonehenge",
+      "accessionNumber": "CIRC.547-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O153914",
+    "_source": "vam",
+    "_sourceId": "O153914",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O153914",
+    "_pid": "C.113:1, 2-1996",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O153914",
+      "title": "Creation",
+      "url": "https://collections.vam.ac.uk/item/O153914",
+      "pid": "C.113:1, 2-1996",
+      "creator": "Midwinter, Eve",
+      "date": "1972"
+    },
+    "title": "Creation",
+    "creator": "Midwinter, Eve",
+    "date": "1972",
+    "subject": [
+      "Sugar pot and cover"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sugar pot and cover",
+      "place": "Burslem",
+      "accessionNumber": "C.113:1, 2-1996",
+      "onDisplay": true,
+      "location": "Ceramics, Room 140, Factory Ceramics",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2009CD6861/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2009CD6861/"
+    }
+  },
+  {
+    "id": "vam:O249523",
+    "_source": "vam",
+    "_sourceId": "O249523",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O249523",
+    "_pid": "CIRC.66-1975",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O249523",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O249523",
+      "pid": "CIRC.66-1975",
+      "creator": "Stennett-Willson, Ronald",
+      "date": "1972"
+    },
+    "title": "Stonehenge",
+    "creator": "Stennett-Willson, Ronald",
+    "date": "1972",
+    "subject": [
+      "Wine glass"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Wine glass",
+      "place": "King's Lynn",
+      "accessionNumber": "CIRC.66-1975",
+      "onDisplay": true,
+      "location": "Glass, Room 131"
+    }
+  },
+  {
+    "id": "vam:O249522",
+    "_source": "vam",
+    "_sourceId": "O249522",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O249522",
+    "_pid": "CIRC.67-1975",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O249522",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O249522",
+      "pid": "CIRC.67-1975",
+      "creator": "Stennett-Willson, Ronald",
+      "date": "1972"
+    },
+    "title": "Stonehenge",
+    "creator": "Stennett-Willson, Ronald",
+    "date": "1972",
+    "subject": [
+      "Wine glass"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Wine glass",
+      "place": "King's Lynn",
+      "accessionNumber": "CIRC.67-1975",
+      "onDisplay": true,
+      "location": "Glass, Room 131"
+    }
+  },
+  {
+    "id": "vam:O249521",
+    "_source": "vam",
+    "_sourceId": "O249521",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O249521",
+    "_pid": "CIRC.68-1975",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O249521",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O249521",
+      "pid": "CIRC.68-1975",
+      "creator": "Stennett-Willson, Ronald",
+      "date": "1972"
+    },
+    "title": "Stonehenge",
+    "creator": "Stennett-Willson, Ronald",
+    "date": "1972",
+    "subject": [
+      "Wine glass"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Wine glass",
+      "place": "King's Lynn",
+      "accessionNumber": "CIRC.68-1975",
+      "onDisplay": true,
+      "location": "Glass, Room 131"
+    }
+  },
+  {
+    "id": "vam:O153913",
+    "_source": "vam",
+    "_sourceId": "O153913",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O153913",
+    "_pid": "C.112:1, 2-1996",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O153913",
+      "title": "Creation",
+      "url": "https://collections.vam.ac.uk/item/O153913",
+      "pid": "C.112:1, 2-1996",
+      "creator": "Midwinter, Eve",
+      "date": "1972"
+    },
+    "title": "Creation",
+    "creator": "Midwinter, Eve",
+    "date": "1972",
+    "subject": [
+      "Coffee pot and cover"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Coffee pot and cover",
+      "place": "Burslem",
+      "accessionNumber": "C.112:1, 2-1996",
+      "onDisplay": true,
+      "location": "Ceramics, Room 140, Factory Ceramics",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2009CD6862/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2009CD6862/"
+    }
+  },
+  {
+    "id": "vam:O1319137",
+    "_source": "vam",
+    "_sourceId": "O1319137",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1319137",
+    "_pid": "B.4525.2022",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1319137",
+      "title": "Stonehenge, Wiltshire",
+      "url": "https://collections.vam.ac.uk/item/O1319137",
+      "pid": "B.4525.2022",
+      "creator": "Mark Walker",
+      "date": "1991"
+    },
+    "title": "Stonehenge, Wiltshire",
+    "creator": "Mark Walker",
+    "date": "1991",
+    "subject": [
+      "Model"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Model",
+      "place": "London",
+      "accessionNumber": "B.4525.2022",
+      "onDisplay": false,
+      "location": "In Store"
+    }
+  },
+  {
+    "id": "vam:O602663",
+    "_source": "vam",
+    "_sourceId": "O602663",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O602663",
+    "_pid": "E.5509-1946",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O602663",
+      "title": "Liber Studiorum",
+      "url": "https://collections.vam.ac.uk/item/O602663",
+      "pid": "E.5509-1946",
+      "creator": "Turner, Joseph Mallord William",
+      "date": "1807-1819"
+    },
+    "title": "Liber Studiorum",
+    "creator": "Turner, Joseph Mallord William",
+    "date": "1807-1819",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Britain",
+      "accessionNumber": "E.5509-1946",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level D"
+    }
+  },
+  {
+    "id": "vam:O602662",
+    "_source": "vam",
+    "_sourceId": "O602662",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O602662",
+    "_pid": "E.5510-1946",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O602662",
+      "title": "Liber Studiorum",
+      "url": "https://collections.vam.ac.uk/item/O602662",
+      "pid": "E.5510-1946",
+      "creator": "Turner, Joseph Mallord William",
+      "date": "1807-1819"
+    },
+    "title": "Liber Studiorum",
+    "creator": "Turner, Joseph Mallord William",
+    "date": "1807-1819",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Britain",
+      "accessionNumber": "E.5510-1946",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level D"
+    }
+  },
+  {
+    "id": "vam:O1023599",
+    "_source": "vam",
+    "_sourceId": "O1023599",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1023599",
+    "_pid": "E.2-2005",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1023599",
+      "title": "Stonehenge Salisbury Plains",
+      "url": "https://collections.vam.ac.uk/item/O1023599",
+      "pid": "E.2-2005",
+      "creator": "unknown",
+      "date": "19th century"
+    },
+    "title": "Stonehenge Salisbury Plains",
+    "creator": "unknown",
+    "date": "19th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "accessionNumber": "E.2-2005",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level E"
+    }
+  },
+  {
+    "id": "vam:O557121",
+    "_source": "vam",
+    "_sourceId": "O557121",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O557121",
+    "_pid": "E.654-1975",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O557121",
+      "title": "Constable's Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O557121",
+      "pid": "E.654-1975",
+      "creator": "Branfield, Peter",
+      "date": "1975"
+    },
+    "title": "Constable's Stonehenge",
+    "creator": "Branfield, Peter",
+    "date": "1975",
+    "subject": [
+      "Poster"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Poster",
+      "place": "England",
+      "accessionNumber": "E.654-1975",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level C",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2014HG8867/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2014HG8867/"
+    }
+  },
+  {
+    "id": "vam:O557120",
+    "_source": "vam",
+    "_sourceId": "O557120",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O557120",
+    "_pid": "E.655-1975",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O557120",
+      "title": "Henry Moore's Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O557120",
+      "pid": "E.655-1975",
+      "creator": "Branfield, Peter",
+      "date": "1975"
+    },
+    "title": "Henry Moore's Stonehenge",
+    "creator": "Branfield, Peter",
+    "date": "1975",
+    "subject": [
+      "Poster"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Poster",
+      "place": "England",
+      "accessionNumber": "E.655-1975",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level C",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2014HG8638/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2014HG8638/"
+    }
+  },
+  {
+    "id": "vam:O1351887",
+    "_source": "vam",
+    "_sourceId": "O1351887",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1351887",
+    "_pid": "CIRC.412-1960",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T12:53:09.371Z",
+      "query": "stonehenge",
+      "recordId": "vam:O1351887",
+      "title": "Stonehenge",
+      "url": "https://collections.vam.ac.uk/item/O1351887",
+      "pid": "CIRC.412-1960",
+      "creator": "Gertrude Hermes",
+      "date": "1960"
+    },
+    "title": "Stonehenge",
+    "creator": "Gertrude Hermes",
+    "date": "1960",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "accessionNumber": "CIRC.412-1960",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level C",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2019LX1690/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2019LX1690/"
+    }
+  }
+]
