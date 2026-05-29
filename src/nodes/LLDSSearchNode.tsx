@@ -129,11 +129,11 @@ export function LLDSSearchNode({ id, data }: NodeProps) {
           >
             <input
               type="checkbox"
-              checked={d.useCache ?? true}
+              checked={d.useCache ?? false}
               onChange={e => updateNodeData(id, { useCache: e.target.checked })}
               className="nodrag"
             />
-            <span style={{ color: (d.useCache ?? true) ? '#92400e' : '#6b7280' }}>
+            <span style={{ color: (d.useCache ?? false) ? '#92400e' : '#6b7280' }}>
               {status === 'cached' ? '📦 cached' : 'use cache'}
             </span>
           </label>
