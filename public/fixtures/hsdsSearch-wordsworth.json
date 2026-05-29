@@ -1,0 +1,190 @@
+[
+  {
+    "id": "hsds:913296",
+    "_source": "hsds",
+    "_sourceId": "913296",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f151d15cf4a1272bd6e429d3eb62c37617aba9add8ca34fa1aa301e68d25b6fc",
+    "title": "Radiocarbon date, Sample number GU-1376",
+    "description": "Charcoal, id as mixed, bulked sample of Ulmus, Pinus and Betula by C Dickson, from lower Meso horizon at Inverness (13-24 Castle Street), Highland, Scotland. Comment (subm): No significant difference between this and GU-1377.<br>Flint industry",
+    "creator": "J Wordsworth",
+    "date": "1998-12-01",
+    "subject": [
+      "2b occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.475614,
+    "decimalLongitude": -4.234879,
+    "hsds": {
+      "elasticId": "f151d15cf4a1272bd6e429d3eb62c37617aba9add8ca34fa1aa301e68d25b6fc",
+      "originalId": "913296",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.475614,
+            "lon": -4.234879
+          },
+          "centroid": {
+            "lat": 57.475614,
+            "lon": -4.234879
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "2b occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/2B%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1376",
+        "Depositor ID: GU-1376"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:15.052Z",
+      "query": "q:wordsworth",
+      "recordId": "hsds:913296",
+      "title": "Radiocarbon date, Sample number GU-1376",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f151d15cf4a1272bd6e429d3eb62c37617aba9add8ca34fa1aa301e68d25b6fc",
+      "creator": "J Wordsworth",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913297",
+    "_source": "hsds",
+    "_sourceId": "913297",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1d2034a1042f8bebb06e1bd6b8d720166c2003daa504da593a1931b43611a4ad",
+    "title": "Radiocarbon date, Sample number GU-1377",
+    "description": "Charcoal, id as mixed bulked sample of Ulmus, Pinus and Betula by C Dickson, from upper Meso horizon at Inverness (13-24 Castle Street), Highland, Scotland. Comment (subm): No significant difference between this and GU-1376.<br>Flint industry",
+    "creator": "J Wordsworth",
+    "date": "1998-12-01",
+    "subject": [
+      "2b occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.475614,
+    "decimalLongitude": -4.234879,
+    "hsds": {
+      "elasticId": "1d2034a1042f8bebb06e1bd6b8d720166c2003daa504da593a1931b43611a4ad",
+      "originalId": "913297",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.475614,
+            "lon": -4.234879
+          },
+          "centroid": {
+            "lat": 57.475614,
+            "lon": -4.234879
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "2b occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/2B%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1377",
+        "Depositor ID: GU-1377"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:15.052Z",
+      "query": "q:wordsworth",
+      "recordId": "hsds:913297",
+      "title": "Radiocarbon date, Sample number GU-1377",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1d2034a1042f8bebb06e1bd6b8d720166c2003daa504da593a1931b43611a4ad",
+      "creator": "J Wordsworth",
+      "date": "1998-12-01"
+    }
+  }
+]

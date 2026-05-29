@@ -1,0 +1,242 @@
+[
+  {
+    "_id": "59ae8d29-bfec-41bd-8ab1-04dfbdbc3e75",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/59ae8d29-bfec-41bd-8ab1-04dfbdbc3e75/",
+    "_service": "bodleian",
+    "title": "Collectanea rerum mirabilium.",
+    "date": "1457",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3087936a-f670-44a9-bb16-58acae4e1cee/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "59ae8d29-bfec-41bd-8ab1-04dfbdbc3e75",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/59ae8d29-bfec-41bd-8ab1-04dfbdbc3e75.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3087936a-f670-44a9-bb16-58acae4e1cee/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Canon. Class. Lat. 161",
+      "origins": "Italy, Padua?",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:03.316Z",
+      "query": "roman coin",
+      "title": "Collectanea rerum mirabilium.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/59ae8d29-bfec-41bd-8ab1-04dfbdbc3e75/",
+      "date": "1457"
+    }
+  },
+  {
+    "_id": "cdbbc3ca-0a2b-4c78-b0b7-b1c17de222e7",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/cdbbc3ca-0a2b-4c78-b0b7-b1c17de222e7/",
+    "_service": "bodleian",
+    "title": "Catalogue of the coins in Christ Church Library",
+    "date": "1686",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/323ef0ec-1c5c-45ae-bf50-73ad50374c3e/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "cdbbc3ca-0a2b-4c78-b0b7-b1c17de222e7",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/cdbbc3ca-0a2b-4c78-b0b7-b1c17de222e7.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/323ef0ec-1c5c-45ae-bf50-73ad50374c3e/full/255,/0/default.jpg",
+      "shelfmark": "Christ Church MS 690",
+      "origins": "Oxford, England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 134
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:03.316Z",
+      "query": "roman coin",
+      "title": "Catalogue of the coins in Christ Church Library",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/cdbbc3ca-0a2b-4c78-b0b7-b1c17de222e7/",
+      "date": "1686"
+    }
+  },
+  {
+    "_id": "50b4b99b-1fb7-4ce9-be13-d29f553c0c28",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/50b4b99b-1fb7-4ce9-be13-d29f553c0c28/",
+    "_service": "bodleian",
+    "title": "Catalogue of the coins in Christ Church Library",
+    "date": "1710",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/9da52ee8-7c82-4fbb-8051-e6fe054e963d/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "50b4b99b-1fb7-4ce9-be13-d29f553c0c28",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/50b4b99b-1fb7-4ce9-be13-d29f553c0c28.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/9da52ee8-7c82-4fbb-8051-e6fe054e963d/full/255,/0/default.jpg",
+      "shelfmark": "Christ Church MS 691",
+      "origins": "Oxford, England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 200
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:03.316Z",
+      "query": "roman coin",
+      "title": "Catalogue of the coins in Christ Church Library",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/50b4b99b-1fb7-4ce9-be13-d29f553c0c28/",
+      "date": "1710"
+    }
+  },
+  {
+    "_id": "289e6dfd-d9da-4e8a-8ab0-9e0eeb525a7b",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/289e6dfd-d9da-4e8a-8ab0-9e0eeb525a7b/",
+    "_service": "bodleian",
+    "title": "Monumenta Britannica",
+    "date": "1665–1693",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f5cb1ad0-15e9-484c-baca-ef06f2374f29/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "289e6dfd-d9da-4e8a-8ab0-9e0eeb525a7b",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/289e6dfd-d9da-4e8a-8ab0-9e0eeb525a7b.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f5cb1ad0-15e9-484c-baca-ef06f2374f29/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Top. gen. c. 25",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 550
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:03.316Z",
+      "query": "roman coin",
+      "title": "Monumenta Britannica",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/289e6dfd-d9da-4e8a-8ab0-9e0eeb525a7b/",
+      "date": "1665–1693"
+    }
+  },
+  {
+    "_id": "ca49c07b-cfb5-41cc-ab66-c215e1268a05",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ca49c07b-cfb5-41cc-ab66-c215e1268a05/",
+    "_service": "bodleian",
+    "title": "Cosmographia Scoti, Notitia dignitatum. Etc.",
+    "date": "",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/df046fcb-ae3c-437e-a06d-d0ddcdf02b1d/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "ca49c07b-cfb5-41cc-ab66-c215e1268a05",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ca49c07b-cfb5-41cc-ab66-c215e1268a05.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/df046fcb-ae3c-437e-a06d-d0ddcdf02b1d/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Canon. Misc. 378",
+      "origins": "Italy and France, Basel",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 153
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:03.316Z",
+      "query": "roman coin",
+      "title": "Cosmographia Scoti, Notitia dignitatum. Etc.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/ca49c07b-cfb5-41cc-ab66-c215e1268a05/",
+      "date": ""
+    }
+  },
+  {
+    "_id": "74a59c79-c781-4994-9ff2-8e9aa3ea4e00",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/74a59c79-c781-4994-9ff2-8e9aa3ea4e00/",
+    "_service": "bodleian",
+    "title": "John Pointer, Musæum Pointerianum, Vol. 4 [part 1]",
+    "date": "ca. 1730-1731?",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/67986233-f737-4ff4-a010-6cf95091c0fb/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "74a59c79-c781-4994-9ff2-8e9aa3ea4e00",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/74a59c79-c781-4994-9ff2-8e9aa3ea4e00.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/67986233-f737-4ff4-a010-6cf95091c0fb/full/255,/0/default.jpg",
+      "shelfmark": "St John's College MS 253",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 110
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:03.316Z",
+      "query": "roman coin",
+      "title": "John Pointer, Musæum Pointerianum, Vol. 4 [part 1]",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/74a59c79-c781-4994-9ff2-8e9aa3ea4e00/",
+      "date": "ca. 1730-1731?"
+    }
+  },
+  {
+    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+    "_service": "bodleian",
+    "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+    "date": "1623",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/390fd0e8-9eae-475d-9564-ed916ab9035c.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Arch. G c.7",
+      "origins": "London",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 920
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:03.316Z",
+      "query": "roman coin",
+      "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+      "date": "1623"
+    }
+  },
+  {
+    "_id": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
+    "_service": "bodleian",
+    "title": "The Vernon Manuscript",
+    "date": "1381–1400",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/1c428c2e-d12b-422a-9057-52ca242cf1c5/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/1c428c2e-d12b-422a-9057-52ca242cf1c5/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Eng. poet. a. 1",
+      "origins": "England, West Midlands?",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 710
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:03.316Z",
+      "query": "roman coin",
+      "title": "The Vernon Manuscript",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
+      "date": "1381–1400"
+    }
+  }
+]

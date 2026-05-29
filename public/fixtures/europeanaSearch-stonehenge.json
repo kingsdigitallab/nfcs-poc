@@ -32,7 +32,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2024919/c126",
       "title": "-",
       "url": "https://www.europeana.eu/item/2024919/c126?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
@@ -76,7 +76,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/954/Culturalia_f636197c_7d9f_4aeb_995c_af3c4f423267",
       "title": "Essai de synthèse de l'histoire de l'humanité. [Tome] I Histoire ancienne. Eseu de sinteză a istoriei omenirii. Volumul I. Istoria antică",
       "url": "https://www.europeana.eu/item/954/Culturalia_f636197c_7d9f_4aeb_995c_af3c4f423267?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
@@ -85,6 +85,40 @@
         "http://www.wikidata.org/entity/Q313581"
       ],
       "date": "1926"
+    }
+  },
+  {
+    "id": "europeana:/1389/BOTANYXLX1243631",
+    "_source": "europeana",
+    "_sourceId": "/1389/BOTANYXLX1243631",
+    "_sourceUrl": "https://www.europeana.eu/item/1389/BOTANYXLX1243631?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Dichelachne crinita (L.f.) Hook.f.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1243631%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1243631",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/1389/BOTANYXLX1243631",
+      "title": "Dichelachne crinita (L.f.) Hook.f.",
+      "url": "https://www.europeana.eu/item/1389/BOTANYXLX1243631?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
     }
   },
   {
@@ -115,7 +149,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/1361/BOTANYXLX1243619",
       "title": "Dichelachne crinita (L.f.) Hook.f.",
       "url": "https://www.europeana.eu/item/1361/BOTANYXLX1243619?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
@@ -153,7 +187,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2058632/d8188d1d_b1b5_8466_0f41_f7e4ae3a8ee4_media_b6a512cb_06af_3066_9c92_b9e96a9e3681",
       "title": "Kunstwerk, bijgenaamd Stonehenge. Op een heuvel - restant van een viaduct - naast de autoweg bij kruispunt Haarlemmerweg en Australiëhavenweg",
       "url": "https://www.europeana.eu/item/2058632/d8188d1d_b1b5_8466_0f41_f7e4ae3a8ee4_media_b6a512cb_06af_3066_9c92_b9e96a9e3681?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
@@ -194,7 +228,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2058632/fe48ba4b_3407_4559_e649_7c6ea3a61387_media_fff3ef86_0322_0d6f_ee80_e26942b3857c",
       "title": "Kunstwerk, bijgenaamd Stonehenge. Op een heuvel - restant van een viaduct - naast de autoweg bij kruispunt Haarlemmerweg en Australiëhavenweg",
       "url": "https://www.europeana.eu/item/2058632/fe48ba4b_3407_4559_e649_7c6ea3a61387_media_fff3ef86_0322_0d6f_ee80_e26942b3857c?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
@@ -232,7 +266,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2020601/https___1914_1918_europeana_eu_contributions_3473",
       "title": "SS Henry Forbes Lancelot Knowles RFA",
       "url": "https://www.europeana.eu/item/2020601/https___1914_1918_europeana_eu_contributions_3473?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
@@ -267,7 +301,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/882/NHMUKXBOTXBM001164639",
       "title": "Neotinea ustulata (L.) R.M.Bateman, Pridgeon & M.W.Chase",
       "url": "https://www.europeana.eu/item/882/NHMUKXBOTXBM001164639?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
@@ -302,7 +336,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/882/NHMUKXBOTXBM001216008",
       "title": "Hildenbrandia rivularis (Liebmann) Agardh",
       "url": "https://www.europeana.eu/item/882/NHMUKXBOTXBM001216008?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
@@ -336,7 +370,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/872/NHMUKXPALXPBXVX665",
       "title": "Plantae",
       "url": "https://www.europeana.eu/item/872/NHMUKXPALXPBXVX665?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
@@ -370,7 +404,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/840/NHMUKXBOTXBM001138759",
       "title": "Neotinea ustulata (L.) R.M.Bateman, Pridgeon & M.W.Chase",
       "url": "https://www.europeana.eu/item/840/NHMUKXBOTXBM001138759?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
@@ -406,10 +440,44 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2020702/raa_fmi_10110201340001",
       "title": "Samlingsplats",
       "url": "https://www.europeana.eu/item/2020702/raa_fmi_10110201340001?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1389/BOTANYXUX1533010",
+    "_source": "europeana",
+    "_sourceId": "/1389/BOTANYXUX1533010",
+    "_sourceUrl": "https://www.europeana.eu/item/1389/BOTANYXUX1533010?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Quiina jamaicensis Griseb.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1533010%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1533010",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/1389/BOTANYXUX1533010",
+      "title": "Quiina jamaicensis Griseb.",
+      "url": "https://www.europeana.eu/item/1389/BOTANYXUX1533010?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
     }
   },
   {
@@ -441,7 +509,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2048128/697565",
       "title": "Az idő nyomában Stonehenge-től napjainkig - publikált sajtótermék",
       "url": "https://www.europeana.eu/item/2048128/697565?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
@@ -476,7 +544,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2059209/3779_11163809596_1a86ef7899_o_jpg",
       "title": "Stonehenge from \"Dictionnaire des sciences anthropologiques ... publié sous la direction de A. Bertillon, Coudereau, A. Hovelacque, Issaurat [and others], etc\".",
       "url": "https://www.europeana.eu/item/2059209/3779_11163809596_1a86ef7899_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
@@ -511,7 +579,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2059209/5480_11307043746_03778f8651_o_jpg",
       "title": "Stonehenge from \"[Our own country. Descriptive, historical, pictorial.]\".",
       "url": "https://www.europeana.eu/item/2059209/5480_11307043746_03778f8651_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
@@ -547,7 +615,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2059209/5526_11086280744_fca5e03e85_o_jpg",
       "title": "map from \"The Illustrated Guide to Old Sarum and Stonehenge with engravings\".",
       "url": "https://www.europeana.eu/item/2059209/5526_11086280744_fca5e03e85_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
@@ -584,7 +652,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2059209/5549_11188817635_c5f8ea7c0e_o_jpg",
       "title": "England from \"La création de l'homme et les premiers âges de l'humanité ... Ouvrage illustré, etc. [With a preface by C. Flammarion.]\".",
       "url": "https://www.europeana.eu/item/2059209/5549_11188817635_c5f8ea7c0e_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
@@ -620,7 +688,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/2059209/7342_11277688713_7f4ea4a42b_o_jpg",
       "title": "Stonehenge from \"Great Britain for Little Britons. A book for children, etc\".",
       "url": "https://www.europeana.eu/item/2059209/7342_11277688713_7f4ea4a42b_o_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
@@ -654,7 +722,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/1356/BOTANYXLX3695658",
       "title": "Cirsium acaule (L.) Scop.",
       "url": "https://www.europeana.eu/item/1356/BOTANYXLX3695658?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
@@ -688,7 +756,7 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/1356/BOTANYXUX1439302",
       "title": "Eugenia disticha (Sw.) DC.",
       "url": "https://www.europeana.eu/item/1356/BOTANYXUX1439302?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
@@ -722,10 +790,1133 @@
       "serviceUrl": "https://www.europeana.eu",
       "publisher": "Europeana Foundation",
       "query": "stonehenge",
-      "accessDate": "2026-05-01T09:44:32.221Z",
+      "accessDate": "2026-05-29T12:53:09.006Z",
       "recordId": "europeana:/1324/BOTANYXUX1440743",
       "title": "Calyptranthes chytraculia Sw.",
       "url": "https://www.europeana.eu/item/1324/BOTANYXUX1440743?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1323/BOTANYXLX2577730",
+    "_source": "europeana",
+    "_sourceId": "/1323/BOTANYXLX2577730",
+    "_sourceUrl": "https://www.europeana.eu/item/1323/BOTANYXLX2577730?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Pastinaca sativa L.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.2577730%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.2577730",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/1323/BOTANYXLX2577730",
+      "title": "Pastinaca sativa L.",
+      "url": "https://www.europeana.eu/item/1323/BOTANYXLX2577730?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/945/EUROPEANHERITAGEAWARDSXARCHIVEXEUX106",
+    "_source": "europeana",
+    "_sourceId": "/945/EUROPEANHERITAGEAWARDSXARCHIVEXEUX106",
+    "_sourceUrl": "https://www.europeana.eu/item/945/EUROPEANHERITAGEAWARDSXARCHIVEXEUX106?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Stonehenge: Surrounding landscape and visitor centre",
+    "creator": [
+      "Project Leader: English Heritage"
+    ],
+    "description": "Notes4: 1 project dossier",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Austria"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Local Austria"
+      ],
+      "dataProvider": [
+        "European Heritage Awards Archive"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Feuropeanheritageawards-archive.eu%2Ffileadmin%2FBibliothek%2F2015%2Fconservation%2Fstonehenge-surrounding-landscape-and-visitor-centre%2F01_Aerial_view_before.jpg&type=IMAGE",
+      "shownAt": "https://europeanheritageawards-archive.eu/laureates-1978-2022/detail/stonehenge-surrounding-landscape-and-visitor-centre",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/945/EUROPEANHERITAGEAWARDSXARCHIVEXEUX106",
+      "title": "Stonehenge: Surrounding landscape and visitor centre",
+      "url": "https://www.europeana.eu/item/945/EUROPEANHERITAGEAWARDSXARCHIVEXEUX106?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Project Leader: English Heritage"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/206/item_5MXJIZSVDBSZIW2ECDHWSVGUPO2OP72M",
+    "_source": "europeana",
+    "_sourceId": "/206/item_5MXJIZSVDBSZIW2ECDHWSVGUPO2OP72M",
+    "_sourceUrl": "https://www.europeana.eu/item/206/item_5MXJIZSVDBSZIW2ECDHWSVGUPO2OP72M?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "'arry at Stonehenge",
+    "type": "IMAGE",
+    "language": "de",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "German Digital Library"
+      ],
+      "dataProvider": [
+        "Heidelberg University Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fheidicon.ub.uni-heidelberg.de%2Fapi%2Fv1%2Fobjects%2Fuuid%2F29c11f08-bd50-4bcf-bff8-2d30f4c66d17%2Ffile%2Fid%2F324633%2Ffile_version%2Fname%2Fhuge%2Fdisposition%2Finline&type=IMAGE",
+      "shownAt": "https://heidicon.ub.uni-heidelberg.de/detail/852739",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/206/item_5MXJIZSVDBSZIW2ECDHWSVGUPO2OP72M",
+      "title": "'arry at Stonehenge",
+      "url": "https://www.europeana.eu/item/206/item_5MXJIZSVDBSZIW2ECDHWSVGUPO2OP72M?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/206/item_B5SG47IV7GDUMAZOW3TO76T2WZSIUVQP",
+    "_source": "europeana",
+    "_sourceId": "/206/item_B5SG47IV7GDUMAZOW3TO76T2WZSIUVQP",
+    "_sourceUrl": "https://www.europeana.eu/item/206/item_B5SG47IV7GDUMAZOW3TO76T2WZSIUVQP?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "A dream of Stonehenge. 1872",
+    "description": "Bildunterschift: Arch-Druid. \"Brother C-rdw-ll, brother C-rdw-ll, you call yourself a druid?\" The Oxford druid (sleepily). \"Oroveso, by Jingo!!\"",
+    "type": "IMAGE",
+    "language": "de",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "German Digital Library"
+      ],
+      "dataProvider": [
+        "Heidelberg University Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fheidicon.ub.uni-heidelberg.de%2Fapi%2Fv1%2Fobjects%2Fuuid%2F2a171f56-49b9-460b-91e0-a4ae7919a660%2Ffile%2Fid%2F307402%2Ffile_version%2Fname%2Fhuge%2Fdisposition%2Finline&type=IMAGE",
+      "shownAt": "https://heidicon.ub.uni-heidelberg.de/detail/835905",
+      "completeness": 9
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/206/item_B5SG47IV7GDUMAZOW3TO76T2WZSIUVQP",
+      "title": "A dream of Stonehenge. 1872",
+      "url": "https://www.europeana.eu/item/206/item_B5SG47IV7GDUMAZOW3TO76T2WZSIUVQP?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/206/item_DY2SJ6JVJ3MMIXRTPI2ZJSXOALCTNWXT",
+    "_source": "europeana",
+    "_sourceId": "/206/item_DY2SJ6JVJ3MMIXRTPI2ZJSXOALCTNWXT",
+    "_sourceUrl": "https://www.europeana.eu/item/206/item_DY2SJ6JVJ3MMIXRTPI2ZJSXOALCTNWXT?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Punch's pencillings - No. XVIII.",
+    "description": "Bildbeschriftung: Political theatricals extraordinary. Norma. Norma (the Deserted) Lord Melbourne. Adalgisa (the Seductive) Sir R. Peel. Pollio (the Faithless) Mr. Weakley. Children... Masters Russell & Morpeth",
+    "type": "IMAGE",
+    "language": "de",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "German Digital Library"
+      ],
+      "dataProvider": [
+        "Heidelberg University Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fheidicon.ub.uni-heidelberg.de%2Fapi%2Fv1%2Fobjects%2Fuuid%2F70c6b90d-3127-410d-ad24-d50baa27821d%2Ffile%2Fid%2F312985%2Ffile_version%2Fname%2Fhuge%2Fdisposition%2Finline&type=IMAGE",
+      "shownAt": "https://heidicon.ub.uni-heidelberg.de/detail/841320",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/206/item_DY2SJ6JVJ3MMIXRTPI2ZJSXOALCTNWXT",
+      "title": "Punch's pencillings - No. XVIII.",
+      "url": "https://www.europeana.eu/item/206/item_DY2SJ6JVJ3MMIXRTPI2ZJSXOALCTNWXT?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/206/item_WAOENKIA7EA3SKV6LOC2QNP73KFOYTXY",
+    "_source": "europeana",
+    "_sourceId": "/206/item_WAOENKIA7EA3SKV6LOC2QNP73KFOYTXY",
+    "_sourceUrl": "https://www.europeana.eu/item/206/item_WAOENKIA7EA3SKV6LOC2QNP73KFOYTXY?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "How Stonehenge might be popularised if the government bought ist. Suggestion gratis.",
+    "type": "IMAGE",
+    "language": "de",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "German Digital Library"
+      ],
+      "dataProvider": [
+        "Heidelberg University Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fheidicon.ub.uni-heidelberg.de%2Fapi%2Fv1%2Fobjects%2Fuuid%2Fceab343d-61c2-44a7-9249-1fddedd9fa13%2Ffile%2Fid%2F326405%2Ffile_version%2Fname%2Fhuge%2Fdisposition%2Finline&type=IMAGE",
+      "shownAt": "https://heidicon.ub.uni-heidelberg.de/detail/854443",
+      "completeness": 7
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/206/item_WAOENKIA7EA3SKV6LOC2QNP73KFOYTXY",
+      "title": "How Stonehenge might be popularised if the government bought ist. Suggestion gratis.",
+      "url": "https://www.europeana.eu/item/206/item_WAOENKIA7EA3SKV6LOC2QNP73KFOYTXY?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/0940411/_nhtTsWh",
+    "_source": "europeana",
+    "_sourceId": "/0940411/_nhtTsWh",
+    "_sourceUrl": "https://www.europeana.eu/item/0940411/_nhtTsWh?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Reise durch einige westlichen und südlichen Provinzen Englands von Dr. G.F.A. Wendeborn. Erster Band",
+    "creator": [
+      "Wanderborn, Gebhard Friedrich August",
+      "Wanderborn, Gebhard Friedrich August"
+    ],
+    "description": "Reise durch einige westlichen und südlichen Provinzen Englands - wydany w 1793 roku w Hamburgu pierwszy tom opisu podróży po niektórych zachodnich i południowych prowincjach Anglii autorstwa Gebharda Friedricha Augusta Wanderborna (1742-1811) - niemieckiego pastora, kaznodziei i historyka sztuki. Relacja przedstawiona w formie dziesięciu listów jest opisem XVIII-wiecznej rzeczywistości kulturowej, społecznej, gospodarczej, politycznej i obyczajowej Anglii oraz jej mieszkańców. W dokumencie znajdujemy m.in. opisy dzielnic Londynu (Kensington, Hammersmith, Hounslow), działalności ulicznych opryszków, charakteru i zwyczajów Anglików, sławnych angielskich śniadań, malowniczych krajobrazów i osobliwości hrabstw Wilhskire, Berkshire, Somerset oraz znajdujących się w tych okolicach miast: m.in. Bath (miejscowości położonej w dolinie rzeki Avon w miejscu, gdzie występowały naturalne wody geotermalne), Salisbury, Bristol; opis pochodzącej z epok neolitu i brązu, jednej z najsłynniejszych europejskich budowli megalitycznych Stonehenge etc.",
+    "date": "1793",
+    "type": "TEXT",
+    "language": "pl",
+    "country": [
+      "Poland"
+    ],
+    "europeana": {
+      "provider": [
+        "Digital Libraries Federation"
+      ],
+      "dataProvider": [
+        "Elbląska Digital Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdlibra.bibliotekaelblaska.pl%2FContent%2F65769%2FPDF%2F92356.pdf&type=TEXT",
+      "shownAt": "http://fbc.pionier.net.pl/id/oai:dlibra.bibliotekaelblaska.pl:65769",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/0940411/_nhtTsWh",
+      "title": "Reise durch einige westlichen und südlichen Provinzen Englands von Dr. G.F.A. Wendeborn. Erster Band",
+      "url": "https://www.europeana.eu/item/0940411/_nhtTsWh?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Wanderborn, Gebhard Friedrich August",
+        "Wanderborn, Gebhard Friedrich August"
+      ],
+      "date": "1793"
+    }
+  },
+  {
+    "id": "europeana:/11614/KXHERBARIUMXK000378625",
+    "_source": "europeana",
+    "_sourceId": "/11614/KXHERBARIUMXK000378625",
+    "_sourceUrl": "https://www.europeana.eu/item/11614/KXHERBARIUMXK000378625?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Streptocarpus hirticapsa B.L.Burtt",
+    "description": "Perennial herb.  Fls. small, white with reddish purple stripes.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Royal Botanic Gardens Kew"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.kew.org%2Fherbcatimg%2F67270.jpg&type=IMAGE",
+      "completeness": 7
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/11614/KXHERBARIUMXK000378625",
+      "title": "Streptocarpus hirticapsa B.L.Burtt",
+      "url": "https://www.europeana.eu/item/11614/KXHERBARIUMXK000378625?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/11614/KXHERBARIUMXK000790770",
+    "_source": "europeana",
+    "_sourceId": "/11614/KXHERBARIUMXK000790770",
+    "_sourceUrl": "https://www.europeana.eu/item/11614/KXHERBARIUMXK000790770?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Tephroseris integrifolia (L.) Holub",
+    "description": "Collection number: 49828 Y",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Royal Botanic Gardens Kew"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.kew.org%2Fherbcatimg%2F382991.jpg&type=IMAGE",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/11614/KXHERBARIUMXK000790770",
+      "title": "Tephroseris integrifolia (L.) Holub",
+      "url": "https://www.europeana.eu/item/11614/KXHERBARIUMXK000790770?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/11614/KXHERBARIUMXK000958915",
+    "_source": "europeana",
+    "_sourceId": "/11614/KXHERBARIUMXK000958915",
+    "_sourceUrl": "https://www.europeana.eu/item/11614/KXHERBARIUMXK000958915?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Brachiaria advena Vickery",
+    "description": "10220?",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Royal Botanic Gardens Kew"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.kew.org%2Fherbcatimg%2F638670.jpg&type=IMAGE",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/11614/KXHERBARIUMXK000958915",
+      "title": "Brachiaria advena Vickery",
+      "url": "https://www.europeana.eu/item/11614/KXHERBARIUMXK000958915?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/90402/RP_F_F80279",
+    "_source": "europeana",
+    "_sourceId": "/90402/RP_F_F80279",
+    "_sourceUrl": "https://www.europeana.eu/item/90402/RP_F_F80279?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Stonehenge",
+    "type": "IMAGE",
+    "language": "nl",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "Rijksmuseum"
+      ],
+      "dataProvider": [
+        "Rijksmuseum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.rijksmuseum.nl%2Fassetimage2.jsp%3Fid%3DRP-F-F80279&type=IMAGE",
+      "shownAt": "http://hdl.handle.net/10934/RM0001.COLLECT.350029",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/90402/RP_F_F80279",
+      "title": "Stonehenge",
+      "url": "https://www.europeana.eu/item/90402/RP_F_F80279?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/07101/G_10045_36",
+    "_source": "europeana",
+    "_sourceId": "/07101/G_10045_36",
+    "_sourceUrl": "https://www.europeana.eu/item/07101/G_10045_36?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Pohľad na Stonehenge a Felsenbühne",
+    "creator": [
+      "Fischer von Erlach, Johann Bernhard",
+      "Fischer von Erlach, Johann Bernhard"
+    ],
+    "description": "Pozn.:\nAngl. vydanie knihy: Entwurf einer historischen Architektur, Wien 1721.\n\nLit.: Architectura delineata et sculpta. Obraz architektúry v grafike 16. – 18. storočia, \nBratislava 2011, s. 48, kat. 3.4\n\nGrafika pozostáva z dvoch zobrazení: 1. Stonehenge 2. Felsenbühne. K obom sú v rámci tej istej grafiky pripojené krátke texty (jeden vo francúzskom a jeden v nemeckom jazyku), kde sa nachádza krátka charakteristika objektov.",
+    "type": "IMAGE",
+    "language": "sk",
+    "country": [
+      "Slovakia"
+    ],
+    "europeana": {
+      "provider": [
+        "Slovak national gallery"
+      ],
+      "dataProvider": [
+        "Slovak national gallery"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.webumenia.sk%2Fdielo%2FSVK%3ASNG.G_10045-36%2Fstiahnut&type=IMAGE",
+      "shownAt": "http://www.webumenia.sk/dielo/SVK:SNG.G_10045-36",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/07101/G_10045_36",
+      "title": "Pohľad na Stonehenge a Felsenbühne",
+      "url": "https://www.europeana.eu/item/07101/G_10045_36?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Fischer von Erlach, Johann Bernhard",
+        "Fischer von Erlach, Johann Bernhard"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/2020739/object_DCU_24257300",
+    "_source": "europeana",
+    "_sourceId": "/2020739/object_DCU_24257300",
+    "_sourceUrl": "https://www.europeana.eu/item/2020739/object_DCU_24257300?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "View of Stonehenge",
+    "creator": [
+      "Kate Fernie"
+    ],
+    "description": "View of the prehistoric stone circle and earthwork henge monument at Stonehenge.",
+    "date": "2014",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "2Culture Associates"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2F2culture.locloudhosting.net%2Ffiles%2Foriginal%2Fa09970a27c8bad51442a0dcdb97f9e1c.jpg&type=IMAGE",
+      "shownAt": "https://2culture.locloudhosting.net/items/show/3",
+      "completeness": 7
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/2020739/object_DCU_24257300",
+      "title": "View of Stonehenge",
+      "url": "https://www.europeana.eu/item/2020739/object_DCU_24257300?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Kate Fernie"
+      ],
+      "date": "2014"
+    }
+  },
+  {
+    "id": "europeana:/08711/https___www_biodiversitylibrary_org_item_116746",
+    "_source": "europeana",
+    "_sourceId": "/08711/https___www_biodiversitylibrary_org_item_116746",
+    "_sourceUrl": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_116746?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "The dog, its varieties and management in health, by \"Stonehenge\" [pseud.] with its diseases and their treatment",
+    "creator": [
+      "Walsh, J. H.   (John Henry), 1810-1888"
+    ],
+    "date": "1896",
+    "type": "TEXT",
+    "language": "en",
+    "country": [
+      "United States of America"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Cornell University Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpagethumb%2F37928331&type=TEXT",
+      "shownAt": "https://doi.org/10.5962/bhl.title.56011",
+      "completeness": 8
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/08711/https___www_biodiversitylibrary_org_item_116746",
+      "title": "The dog, its varieties and management in health, by \"Stonehenge\" [pseud.] with its diseases and their treatment",
+      "url": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_116746?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Walsh, J. H.   (John Henry), 1810-1888"
+      ],
+      "date": "1896"
+    }
+  },
+  {
+    "id": "europeana:/08711/https___www_biodiversitylibrary_org_item_66962",
+    "_source": "europeana",
+    "_sourceId": "/08711/https___www_biodiversitylibrary_org_item_66962",
+    "_sourceUrl": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_66962?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Every horse owner's cyclopedia : the anatomy and physiology of the horse; general characteristics; the points of the horse, with directions how to choose him; the principles of breeding, and the best kind to breed from; the treatment of the brood mare and foal; raising and breaking the colt; stables and stable management; riding, driving, etc., etc. Diseases, and how to cure them. The principal medicines, and the doses in which they can be safely administered; accidents, fractures, and the operations necessary in each case; shoeing, etc",
+    "date": "1880",
+    "type": "TEXT",
+    "language": "en",
+    "country": [
+      "United States of America"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Webster Family Library of Veterinary Medicine"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpagethumb%2F20469030&type=TEXT",
+      "shownAt": "https://doi.org/10.5962/bhl.title.25331",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/08711/https___www_biodiversitylibrary_org_item_66962",
+      "title": "Every horse owner's cyclopedia : the anatomy and physiology of the horse; general characteristics; the points of the horse, with directions how to choose him; the principles of breeding, and the best kind to breed from; the treatment of the brood mare and foal; raising and breaking the colt; stables and stable management; riding, driving, etc., etc. Diseases, and how to cure them. The principal medicines, and the doses in which they can be safely administered; accidents, fractures, and the operations necessary in each case; shoeing, etc",
+      "url": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_66962?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1880"
+    }
+  },
+  {
+    "id": "europeana:/08711/https___www_biodiversitylibrary_org_item_69415",
+    "_source": "europeana",
+    "_sourceId": "/08711/https___www_biodiversitylibrary_org_item_69415",
+    "_sourceUrl": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_69415?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "The dog in health and disease : comprising the various modes of breaking and using him for hunting, coursing, shooting, etc., and including the points or characteristics of toy dogs",
+    "creator": [
+      "Walsh, J. H.   (John Henry), 1810-1888"
+    ],
+    "date": "1872",
+    "type": "TEXT",
+    "language": "en",
+    "country": [
+      "United States of America"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Webster Family Library of Veterinary Medicine"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.biodiversitylibrary.org%2Fpagethumb%2F21322527&type=TEXT",
+      "shownAt": "https://doi.org/10.5962/bhl.title.27038",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/08711/https___www_biodiversitylibrary_org_item_69415",
+      "title": "The dog in health and disease : comprising the various modes of breaking and using him for hunting, coursing, shooting, etc., and including the points or characteristics of toy dogs",
+      "url": "https://www.europeana.eu/item/08711/https___www_biodiversitylibrary_org_item_69415?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Walsh, J. H.   (John Henry), 1810-1888"
+      ],
+      "date": "1872"
+    }
+  },
+  {
+    "id": "europeana:/626/item_24VGMO6RDNVYVZBFJ5OOCINXGW5MX6E2",
+    "_source": "europeana",
+    "_sourceId": "/626/item_24VGMO6RDNVYVZBFJ5OOCINXGW5MX6E2",
+    "_sourceUrl": "https://www.europeana.eu/item/626/item_24VGMO6RDNVYVZBFJ5OOCINXGW5MX6E2?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Amesbury, Stonehenge",
+    "description": "Beschriftung: STONEHENGE",
+    "type": "IMAGE",
+    "language": "de",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "German Digital Library"
+      ],
+      "dataProvider": [
+        "Media library of Art and Visual History of Humboldt University of Berlin"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Frs.cms.hu-berlin.de%2Fikb_mediathek%2Fpages%2Fdownload.php%3Fref%3D26193&type=IMAGE",
+      "shownAt": "https://rs.cms.hu-berlin.de/ikb_mediathek/pages/view.php?ref=26193",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/626/item_24VGMO6RDNVYVZBFJ5OOCINXGW5MX6E2",
+      "title": "Amesbury, Stonehenge",
+      "url": "https://www.europeana.eu/item/626/item_24VGMO6RDNVYVZBFJ5OOCINXGW5MX6E2?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/2048705/object_HA_1329",
+    "_source": "europeana",
+    "_sourceId": "/2048705/object_HA_1329",
+    "_sourceUrl": "https://www.europeana.eu/item/2048705/object_HA_1329?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Tech Midchúarta, Tara (Turntable Movie)",
+    "creator": [
+      "The Discovery Programme"
+    ],
+    "description": "SMR No. ME031-033023-The Tech Midchúarta, or Banqueting Hall at Tara so captured the imagination of the medieval men of learning that they composed fanciful descriptions and illustrations of the king’s court there. They imagined that the monument consisted of a hall, with seven opposed doorways, at the top of which the king of Tara presided over his court, each member being designated a place according to rank. Its heyday was supposed to have occurred during the reign of Cormac mac Airt, whose court was said to have been surpassed only by that of Solomon, son of David.The monument is a linear earthwork consisting of two parallel, though slightly curved banks running downslope from south to north for a distance of 203m. There are slight traces of a terminal bank across the south end. Material for the bank appears to have been derived from the central area which had been dug out to below the surrounding ground level. There are five gaps in the west bank and two slight depressions near the south end. It is more difficult to see the original gaps along the east bank because they were deliberately filled in when a ditch was dug along its base. Five, or possibly six gaps can, however, be noted. But for some quarrying at the north end which foreshortened the east bank, the monument appears to survive to its original length. The north end may originally have terminated in an area of boggy ground known in the dinnshenchas as Sescend Temrach (‘The Marsh of Tara’). Irish linear earthworks can be divided broadly between those that act as boundary markers or defensive frontiers, of which there is a fine example at least 1.5km long to the west of Tara, and those that appear to have been built for ceremonial or ritual purposes such as the Mucklaghs at Crúachain, County Roscommon and the Knockauns at Teltown, County Meath. The only available dating evidence in Ireland is for the boundary markers, which seem to have been built in the centuries around the birth of Christ. What the Tech Midchúarta has in common with ritual linear earthworks apart from its location, is its curvature, the multitude of gaps and the possibility that one end terminates in an area of boggy ground. These monuments may have been built as symbolic representations of functioning boundary markers. Another possibility is that the Tech Midchúarta is a cursus monument. Cursus monuments, sometimes described as ceremonial avenues, are characteristic of the Middle to Late Neolithic in Britain and are an integral part of developed ritual landscapes, three occurring around Stonehenge in Wiltshire. They are quite rare in Ireland - one example is known at Loughcrew, County Meath and a possible variant occurs near Newgrange, County Meath. They are often aligned on earlier ritual and burial monuments and sometimes played an important role in the subsequent spatial development of ritual monuments. The alignment of the Tech Midchúarta on the Mound of the Hostages is evidence in support of its being described as a cursus.",
+    "type": "VIDEO",
+    "language": "en",
+    "country": [
+      "Ireland"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "The Discovery Programme"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.3dicons.ie%2Fimages%2FCONTENT%2FSITES%2FTARA%2FBANQUET%2FTARA_BANQUET_INTRO.jpg&type=VIDEO",
+      "shownAt": "http://3dicons.ie/3d-content/",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/2048705/object_HA_1329",
+      "title": "Tech Midchúarta, Tara (Turntable Movie)",
+      "url": "https://www.europeana.eu/item/2048705/object_HA_1329?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "The Discovery Programme"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/2048705/object_HA_1630",
+    "_source": "europeana",
+    "_sourceId": "/2048705/object_HA_1630",
+    "_sourceUrl": "https://www.europeana.eu/item/2048705/object_HA_1630?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Tech Midchúarta, Tara (3D Model, photo texture)",
+    "creator": [
+      "The Discovery Programme"
+    ],
+    "description": "SMR No. ME031-033023-The Tech Midchúarta, or Banqueting Hall at Tara so captured the imagination of the medieval men of learning that they composed fanciful descriptions and illustrations of the king’s court there. They imagined that the monument consisted of a hall, with seven opposed doorways, at the top of which the king of Tara presided over his court, each member being designated a place according to rank. Its heyday was supposed to have occurred during the reign of Cormac mac Airt, whose court was said to have been surpassed only by that of Solomon, son of David.The monument is a linear earthwork consisting of two parallel, though slightly curved banks running downslope from south to north for a distance of 203m. There are slight traces of a terminal bank across the south end. Material for the bank appears to have been derived from the central area which had been dug out to below the surrounding ground level. There are five gaps in the west bank and two slight depressions near the south end. It is more difficult to see the original gaps along the east bank because they were deliberately filled in when a ditch was dug along its base. Five, or possibly six gaps can, however, be noted. But for some quarrying at the north end which foreshortened the east bank, the monument appears to survive to its original length. The north end may originally have terminated in an area of boggy ground known in the dinnshenchas as Sescend Temrach (‘The Marsh of Tara’). Irish linear earthworks can be divided broadly between those that act as boundary markers or defensive frontiers, of which there is a fine example at least 1.5km long to the west of Tara, and those that appear to have been built for ceremonial or ritual purposes such as the Mucklaghs at Crúachain, County Roscommon and the Knockauns at Teltown, County Meath. The only available dating evidence in Ireland is for the boundary markers, which seem to have been built in the centuries around the birth of Christ. What the Tech Midchúarta has in common with ritual linear earthworks apart from its location, is its curvature, the multitude of gaps and the possibility that one end terminates in an area of boggy ground. These monuments may have been built as symbolic representations of functioning boundary markers. Another possibility is that the Tech Midchúarta is a cursus monument. Cursus monuments, sometimes described as ceremonial avenues, are characteristic of the Middle to Late Neolithic in Britain and are an integral part of developed ritual landscapes, three occurring around Stonehenge in Wiltshire. They are quite rare in Ireland - one example is known at Loughcrew, County Meath and a possible variant occurs near Newgrange, County Meath. They are often aligned on earlier ritual and burial monuments and sometimes played an important role in the subsequent spatial development of ritual monuments. The alignment of the Tech Midchúarta on the Mound of the Hostages is evidence in support of its being described as a cursus.",
+    "type": "3D",
+    "language": "en",
+    "country": [
+      "Ireland"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "The Discovery Programme"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.3dicons.ie%2F%2Fmedia%2Fmod_zentools%2Fcache%2Fimages%2FTara_Banquet_Hall_HillofTara_AerialImage-e0b6400725f10c7420bb9f3d489abbe3.jpg&type=3D",
+      "shownAt": "http://3dicons.ie/3d-content/",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/2048705/object_HA_1630",
+      "title": "Tech Midchúarta, Tara (3D Model, photo texture)",
+      "url": "https://www.europeana.eu/item/2048705/object_HA_1630?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "The Discovery Programme"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/2048705/object_HA_1634",
+    "_source": "europeana",
+    "_sourceId": "/2048705/object_HA_1634",
+    "_sourceUrl": "https://www.europeana.eu/item/2048705/object_HA_1634?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Tech Midchúarta, Tara (3D Model, hill-shade texture)",
+    "creator": [
+      "The Discovery Programme"
+    ],
+    "description": "SMR No. ME031-033023-The Tech Midchúarta, or Banqueting Hall at Tara so captured the imagination of the medieval men of learning that they composed fanciful descriptions and illustrations of the king’s court there. They imagined that the monument consisted of a hall, with seven opposed doorways, at the top of which the king of Tara presided over his court, each member being designated a place according to rank. Its heyday was supposed to have occurred during the reign of Cormac mac Airt, whose court was said to have been surpassed only by that of Solomon, son of David.The monument is a linear earthwork consisting of two parallel, though slightly curved banks running downslope from south to north for a distance of 203m. There are slight traces of a terminal bank across the south end. Material for the bank appears to have been derived from the central area which had been dug out to below the surrounding ground level. There are five gaps in the west bank and two slight depressions near the south end. It is more difficult to see the original gaps along the east bank because they were deliberately filled in when a ditch was dug along its base. Five, or possibly six gaps can, however, be noted. But for some quarrying at the north end which foreshortened the east bank, the monument appears to survive to its original length. The north end may originally have terminated in an area of boggy ground known in the dinnshenchas as Sescend Temrach (‘The Marsh of Tara’). Irish linear earthworks can be divided broadly between those that act as boundary markers or defensive frontiers, of which there is a fine example at least 1.5km long to the west of Tara, and those that appear to have been built for ceremonial or ritual purposes such as the Mucklaghs at Crúachain, County Roscommon and the Knockauns at Teltown, County Meath. The only available dating evidence in Ireland is for the boundary markers, which seem to have been built in the centuries around the birth of Christ. What the Tech Midchúarta has in common with ritual linear earthworks apart from its location, is its curvature, the multitude of gaps and the possibility that one end terminates in an area of boggy ground. These monuments may have been built as symbolic representations of functioning boundary markers. Another possibility is that the Tech Midchúarta is a cursus monument. Cursus monuments, sometimes described as ceremonial avenues, are characteristic of the Middle to Late Neolithic in Britain and are an integral part of developed ritual landscapes, three occurring around Stonehenge in Wiltshire. They are quite rare in Ireland - one example is known at Loughcrew, County Meath and a possible variant occurs near Newgrange, County Meath. They are often aligned on earlier ritual and burial monuments and sometimes played an important role in the subsequent spatial development of ritual monuments. The alignment of the Tech Midchúarta on the Mound of the Hostages is evidence in support of its being described as a cursus.",
+    "type": "3D",
+    "language": "en",
+    "country": [
+      "Ireland"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "The Discovery Programme"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.3dicons.ie%2Fimages%2FCONTENT%2FSITES%2FTARA%2FBANQUET%2FTARA_BANQUET_BW_INTRO.jpg&type=3D",
+      "shownAt": "http://3dicons.ie/3d-content/",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/2048705/object_HA_1634",
+      "title": "Tech Midchúarta, Tara (3D Model, hill-shade texture)",
+      "url": "https://www.europeana.eu/item/2048705/object_HA_1634?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "The Discovery Programme"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/1493/item_7RNKWJXNQAKKPZES6OCRR36Z53Y66JMW",
+    "_source": "europeana",
+    "_sourceId": "/1493/item_7RNKWJXNQAKKPZES6OCRR36Z53Y66JMW",
+    "_sourceUrl": "https://www.europeana.eu/item/1493/item_7RNKWJXNQAKKPZES6OCRR36Z53Y66JMW?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Reisen in England und Wales, 3. Oxford, Salisbury, Stonehenge, Eton-College, Windsor-Castle, Winchester, Southampton, Netley-Abbey, New-Forest, Portsmouth und Insel Wight",
+    "creator": [
+      "http://data.europeana.eu/agent/167264",
+      "https://d-nb.info/gnd/119117509"
+    ],
+    "description": "In Fraktur",
+    "date": "1844",
+    "type": "TEXT",
+    "language": "de",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "German Digital Library"
+      ],
+      "dataProvider": [
+        "Bavarian State Library"
+      ],
+      "rights": "http://rightsstatements.org/vocab/NoC-NC/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fapi.digitale-sammlungen.de%2Fiiif%2Fimage%2Fv2%2Fbsb11248715_00005%2Ffull%2Ffull%2F0%2Fdefault.jpg&type=TEXT",
+      "shownAt": "http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11248715-1",
+      "completeness": 9
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/1493/item_7RNKWJXNQAKKPZES6OCRR36Z53Y66JMW",
+      "title": "Reisen in England und Wales, 3. Oxford, Salisbury, Stonehenge, Eton-College, Windsor-Castle, Winchester, Southampton, Netley-Abbey, New-Forest, Portsmouth und Insel Wight",
+      "url": "https://www.europeana.eu/item/1493/item_7RNKWJXNQAKKPZES6OCRR36Z53Y66JMW?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "http://data.europeana.eu/agent/167264",
+        "https://d-nb.info/gnd/119117509"
+      ],
+      "date": "1844"
+    }
+  },
+  {
+    "id": "europeana:/1493/item_BMJQICCOON6TE4DJK35W5XIABW62G63C",
+    "_source": "europeana",
+    "_sourceId": "/1493/item_BMJQICCOON6TE4DJK35W5XIABW62G63C",
+    "_sourceUrl": "https://www.europeana.eu/item/1493/item_BMJQICCOON6TE4DJK35W5XIABW62G63C?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ein englischer September : Heitere Fahrten jenseits des Kanals von Ludwig Hevesi. (Inhalt: Auf englischen Eisenbahnen.- Stonehenge.- Chester.- Ein Ausflug nach der Insel Man.- English Seen.- Glasgow.- Bei den Toten in Glasgow.- Jona, die heilige Insel.- Die Fingalshöhle.- Im schottischen Hochland.- Bei Elisabeth Maria Stuart.- Ein seltsamer Friedhof.- Ein Besuch bei Walter Scott.- Ein schottischer Sonntag.- Die Antipoden.- Newcastle.- York.- Zu Tische in England Theater vergnügen in England. Der Tag von Waterloo.)",
+    "creator": [
+      "http://data.europeana.eu/agent/166983",
+      "https://d-nb.info/gnd/11678508X"
+    ],
+    "date": "1891",
+    "type": "TEXT",
+    "language": "de",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "German Digital Library"
+      ],
+      "dataProvider": [
+        "Bavarian State Library"
+      ],
+      "rights": "http://rightsstatements.org/vocab/NoC-NC/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fapi.digitale-sammlungen.de%2Fiiif%2Fimage%2Fv2%2Fbsb11576745_00015%2Ffull%2Ffull%2F0%2Fdefault.jpg&type=TEXT",
+      "shownAt": "http://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11576745-6",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/1493/item_BMJQICCOON6TE4DJK35W5XIABW62G63C",
+      "title": "Ein englischer September : Heitere Fahrten jenseits des Kanals von Ludwig Hevesi. (Inhalt: Auf englischen Eisenbahnen.- Stonehenge.- Chester.- Ein Ausflug nach der Insel Man.- English Seen.- Glasgow.- Bei den Toten in Glasgow.- Jona, die heilige Insel.- Die Fingalshöhle.- Im schottischen Hochland.- Bei Elisabeth Maria Stuart.- Ein seltsamer Friedhof.- Ein Besuch bei Walter Scott.- Ein schottischer Sonntag.- Die Antipoden.- Newcastle.- York.- Zu Tische in England Theater vergnügen in England. Der Tag von Waterloo.)",
+      "url": "https://www.europeana.eu/item/1493/item_BMJQICCOON6TE4DJK35W5XIABW62G63C?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "http://data.europeana.eu/agent/166983",
+        "https://d-nb.info/gnd/11678508X"
+      ],
+      "date": "1891"
+    }
+  },
+  {
+    "id": "europeana:/2024904/www_topfoto_co_uk_Europeana_WEAVE_0155406_jpg",
+    "_source": "europeana",
+    "_sourceId": "/2024904/www_topfoto_co_uk_Europeana_WEAVE_0155406_jpg",
+    "_sourceUrl": "https://www.europeana.eu/item/2024904/www_topfoto_co_uk_Europeana_WEAVE_0155406_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Stonehenge",
+    "creator": [
+      "http://www.wikidata.org/entity/Q24238356"
+    ],
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "PHOTOCONSORTIUM"
+      ],
+      "dataProvider": [
+        "TopFoto"
+      ],
+      "rights": "http://rightsstatements.org/vocab/InC-EDU/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.topfoto.co.uk%2FEuropeana%2FWEAVE%2F0155406.jpg&type=IMAGE",
+      "shownAt": "https://www.topfoto.co.uk/asset/3190773",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/2024904/www_topfoto_co_uk_Europeana_WEAVE_0155406_jpg",
+      "title": "Stonehenge",
+      "url": "https://www.europeana.eu/item/2024904/www_topfoto_co_uk_Europeana_WEAVE_0155406_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "http://www.wikidata.org/entity/Q24238356"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/2024904/www_topfoto_co_uk_Europeana_WEAVE_1452237_jpg",
+    "_source": "europeana",
+    "_sourceId": "/2024904/www_topfoto_co_uk_Europeana_WEAVE_1452237_jpg",
+    "_sourceUrl": "https://www.europeana.eu/item/2024904/www_topfoto_co_uk_Europeana_WEAVE_1452237_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Stonehenge",
+    "creator": [
+      "http://www.wikidata.org/entity/Q24238356"
+    ],
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "PHOTOCONSORTIUM"
+      ],
+      "dataProvider": [
+        "TopFoto"
+      ],
+      "rights": "http://rightsstatements.org/vocab/InC-EDU/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.topfoto.co.uk%2FEuropeana%2FWEAVE%2F1452237.jpg&type=IMAGE",
+      "shownAt": "https://www.topfoto.co.uk/asset/3005826",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/2024904/www_topfoto_co_uk_Europeana_WEAVE_1452237_jpg",
+      "title": "Stonehenge",
+      "url": "https://www.europeana.eu/item/2024904/www_topfoto_co_uk_Europeana_WEAVE_1452237_jpg?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "http://www.wikidata.org/entity/Q24238356"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/262/C_LD_000001846",
+    "_source": "europeana",
+    "_sourceId": "/262/C_LD_000001846",
+    "_sourceUrl": "https://www.europeana.eu/item/262/C_LD_000001846?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "C-LD-000001846 - letfoto lokality",
+    "creator": [
+      "Gojda, Martin",
+      "Archaeological Institute Prague",
+      "Gojda, Martin",
+      "Archeologický ústav Praha"
+    ],
+    "description": "Wiltshire. Vegetační příznaky, stínové příznaky, mohyly nedaleko Stonehenge. Velká Británie.",
+    "date": "1993",
+    "type": "IMAGE",
+    "language": "cs",
+    "country": [
+      "Czech Republic"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "Archaeological Information System of the Czech Republic"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdigiarchiv.aiscr.cz%2Fimg%3Ffull%3Dtrue%26id%3D1612542819018_CLD000001846.tif&type=IMAGE",
+      "shownAt": "https://digiarchiv.aiscr.cz/id/C-LD-000001846",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/262/C_LD_000001846",
+      "title": "C-LD-000001846 - letfoto lokality",
+      "url": "https://www.europeana.eu/item/262/C_LD_000001846?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gojda, Martin",
+        "Archaeological Institute Prague",
+        "Gojda, Martin",
+        "Archeologický ústav Praha"
+      ],
+      "date": "1993"
+    }
+  },
+  {
+    "id": "europeana:/262/C_LD_000001847",
+    "_source": "europeana",
+    "_sourceId": "/262/C_LD_000001847",
+    "_sourceUrl": "https://www.europeana.eu/item/262/C_LD_000001847?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "C-LD-000001847 - letfoto lokality",
+    "creator": [
+      "Gojda, Martin",
+      "Archaeological Institute Prague",
+      "Gojda, Martin",
+      "Archeologický ústav Praha"
+    ],
+    "description": "Stonehenge, Wiltshire. Velká Británie.",
+    "date": "1993",
+    "type": "IMAGE",
+    "language": "cs",
+    "country": [
+      "Czech Republic"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "Archaeological Information System of the Czech Republic"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdigiarchiv.aiscr.cz%2Fimg%3Ffull%3Dtrue%26id%3D1612542819338_CLD000001847.tif&type=IMAGE",
+      "shownAt": "https://digiarchiv.aiscr.cz/id/C-LD-000001847",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/262/C_LD_000001847",
+      "title": "C-LD-000001847 - letfoto lokality",
+      "url": "https://www.europeana.eu/item/262/C_LD_000001847?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gojda, Martin",
+        "Archaeological Institute Prague",
+        "Gojda, Martin",
+        "Archeologický ústav Praha"
+      ],
+      "date": "1993"
+    }
+  },
+  {
+    "id": "europeana:/262/C_LD_000001848",
+    "_source": "europeana",
+    "_sourceId": "/262/C_LD_000001848",
+    "_sourceUrl": "https://www.europeana.eu/item/262/C_LD_000001848?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "C-LD-000001848 - letfoto lokality",
+    "creator": [
+      "Gojda, Martin",
+      "Archaeological Institute Prague",
+      "Gojda, Martin",
+      "Archeologický ústav Praha"
+    ],
+    "description": "Stonehenge, Wiltshire. Velká Británie.",
+    "date": "1993",
+    "type": "IMAGE",
+    "language": "cs",
+    "country": [
+      "Czech Republic"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "Archaeological Information System of the Czech Republic"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdigiarchiv.aiscr.cz%2Fimg%3Ffull%3Dtrue%26id%3D1612542819690_CLD000001848.tif&type=IMAGE",
+      "shownAt": "https://digiarchiv.aiscr.cz/id/C-LD-000001848",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/262/C_LD_000001848",
+      "title": "C-LD-000001848 - letfoto lokality",
+      "url": "https://www.europeana.eu/item/262/C_LD_000001848?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gojda, Martin",
+        "Archaeological Institute Prague",
+        "Gojda, Martin",
+        "Archeologický ústav Praha"
+      ],
+      "date": "1993"
+    }
+  },
+  {
+    "id": "europeana:/262/C_LD_000001849",
+    "_source": "europeana",
+    "_sourceId": "/262/C_LD_000001849",
+    "_sourceUrl": "https://www.europeana.eu/item/262/C_LD_000001849?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "C-LD-000001849 - letfoto lokality",
+    "creator": [
+      "Gojda, Martin",
+      "Archaeological Institute Prague",
+      "Gojda, Martin",
+      "Archeologický ústav Praha"
+    ],
+    "description": "Wiltshire. Vegetační příznaky, stínové příznaky, mohyly nedaleko Stonehenge. Velká Británie.",
+    "date": "1993",
+    "type": "IMAGE",
+    "language": "cs",
+    "country": [
+      "Czech Republic"
+    ],
+    "europeana": {
+      "provider": [
+        "CARARE"
+      ],
+      "dataProvider": [
+        "Archaeological Information System of the Czech Republic"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fdigiarchiv.aiscr.cz%2Fimg%3Ffull%3Dtrue%26id%3D1612542820032_CLD000001849.tif&type=IMAGE",
+      "shownAt": "https://digiarchiv.aiscr.cz/id/C-LD-000001849",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "stonehenge",
+      "accessDate": "2026-05-29T12:53:09.006Z",
+      "recordId": "europeana:/262/C_LD_000001849",
+      "title": "C-LD-000001849 - letfoto lokality",
+      "url": "https://www.europeana.eu/item/262/C_LD_000001849?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gojda, Martin",
+        "Archaeological Institute Prague",
+        "Gojda, Martin",
+        "Archeologický ústav Praha"
+      ],
+      "date": "1993"
     }
   }
 ]

@@ -1,0 +1,4447 @@
+[
+  {
+    "id": "hsds:1117367",
+    "_source": "hsds",
+    "_sourceId": "1117367",
+    "_sourceUrl": "https://doi.org/10.5284/1033861",
+    "title": "Stonehenge, Amesbury, Wiltshire: Chronological Modelling",
+    "description": "This report contains details of all the radiocarbon determinations obtained on samples dated from Stonehenge up to the end of 2011. A series of chronological models based on different readings of the archaeology are presented for the monument as a way of exploring how these interpretations influence our understanding of its chronology.",
+    "creator": [
+      "Geoffrey Wainwright",
+      "Mike Parker Pearson",
+      "Peter Marshall",
+      "Timothy Darvill"
+    ],
+    "date": "2016-11-25",
+    "subject": [
+      "field survey",
+      "henge",
+      "heritage science",
+      "stone circle",
+      "megalithic monuments",
+      "menhirs",
+      "henges"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.1789059943162,
+    "decimalLongitude": -1.82684903586337,
+    "periodStart": "-2200",
+    "periodEnd": "-700",
+    "periodName": [
+      "bronze age",
+      "neolithic"
+    ],
+    "hsds": {
+      "elasticId": "f0520d9f58d5b223e1998e33ec6dfa7c18a9d0975ae46017a15e506428e1f7bb",
+      "originalId": "1117367",
+      "landingPage": "https://doi.org/10.5284/1033861",
+      "modified": "2025-08-07",
+      "contributor": [
+        "Historic England"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Stonehenge Chronological Modelling, AMESBURY, Wiltshire, Wiltshire, England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.1789059943162,
+            "lon": -1.82684903586337
+          },
+          "centroid": {
+            "lat": 51.1789059943162,
+            "lon": -1.82684903586337
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Stonehenge Chronological Modelling, AMESBURY, Wiltshire, Wiltshire, England"
+      ],
+      "temporal": [
+        {
+          "from": "-2200",
+          "periodName": "bronze age",
+          "until": "-700",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-4000",
+          "periodName": "neolithic",
+          "until": "-2200",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "field survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SURVEY"
+        },
+        {
+          "prefLabel": "henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STONE%20CIRCLE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "megalithic monuments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006983",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "menhirs",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006985",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "henges",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120486",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": [
+        "OBIB 1-2012"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:1117367",
+      "title": "Stonehenge, Amesbury, Wiltshire: Chronological Modelling",
+      "url": "https://doi.org/10.5284/1033861",
+      "creator": [
+        "Geoffrey Wainwright",
+        "Mike Parker Pearson",
+        "Peter Marshall",
+        "Timothy Darvill"
+      ],
+      "date": "2016-11-25"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.5284/1084808",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1084808",
+    "_sourceUrl": "https://doi.org/10.5284/1084808",
+    "title": "Petrography, Geochemistry and Mineralogy of the Stonehenge Sarsens: Digital Data Collection",
+    "description": "This collection includes a suite of digital materials that, in combination, characterise the petrography, mineralogy and geochemistry of a sarsen upright (Stone 58) from the central trilithon horseshoe at Stonehenge. The collection arises from work undertaken during the British Academy/Leverhulme Trust project \"Geochemical fingerprinting the sarsen stones at Stonehenge\" (Small Research Grant SG-170610), led by the University of Brighton.  The data accompanies the publication: Nash, D. J., Ciborowski, T. J. R., Darvill, T., Parker Pearson, M., Ullyott, J. S., Damaschke, M., Evans, J. A., Goderis, S., Greaney, S., Huggett, J. M., Ixer, R. A., Pirrie, D., Power, M. R., Salge, T. & Whitaker, N. (2021, in review) Petrological and geochemical characterisation of the sarsen stones at Stonehenge. PLoS ONE.",
+    "creator": [
+      "David Nash",
+      "Jake Ciborowski",
+      "Magret Damaschke",
+      "Steven Goderis",
+      "Tobias Salge"
+    ],
+    "date": "2021-08-04",
+    "subject": [
+      "alpha spectrometry",
+      "archaeology",
+      "chemical techniques",
+      "environmental sampling",
+      "heritage science",
+      "inductively-coupled plasma",
+      "intrusive event",
+      "mass spectrometry",
+      "microscopy",
+      "mineralogy",
+      "multi-element analysis",
+      "polarised light microscopy",
+      "sarsen stone",
+      "scanning electron microscopy",
+      "specialist sampling",
+      "stonehenge (england)",
+      "stonehenge world heritage site (england)",
+      "x-ray fluorescence spectrometry"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Still Image",
+      "Structured Data",
+      "Video"
+    ],
+    "spatialCoverage": "World, Europe, United Kingdom, England, Wiltshire, Stonehenge",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.178889,
+    "decimalLongitude": -1.826111,
+    "periodStart": "-4000",
+    "periodEnd": "-2200",
+    "periodName": "neolithic",
+    "hsds": {
+      "elasticId": "543bd0de4fd8fa157539ecca86dd013ab436916f09ec57a2f5fef65c686793b3",
+      "originalId": "https://doi.org/10.5284/1084808",
+      "landingPage": "https://doi.org/10.5284/1084808",
+      "modified": "2021-08-04",
+      "contributor": [
+        "David Nash",
+        "Jake Ciborowski",
+        "Magret Damaschke",
+        "Steven Goderis",
+        "Tobias Salge"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "World, Europe, United Kingdom, England, Wiltshire, Stonehenge"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "World, Europe, United Kingdom, England, Wiltshire, Amesbury"
+        },
+        {
+          "boundingbox": "polygon ((-1.826613 51.17909, -1.826613 51.178583, -1.8258405 51.178583, -1.8258405 51.17909, -1.826613 51.17909))",
+          "centroid": {
+            "lat": 51.1788365,
+            "lon": -1.8262267499999998
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 51.178889,
+            "lon": -1.826111
+          },
+          "centroid": {
+            "lat": 51.178889,
+            "lon": -1.826111
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 51.178887,
+            "lon": -1.826105
+          },
+          "centroid": {
+            "lat": 51.178887,
+            "lon": -1.826105
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "World, Europe, United Kingdom, England, Wiltshire, Stonehenge",
+        "England",
+        "World, Europe, United Kingdom, England, Wiltshire, Amesbury"
+      ],
+      "temporal": [
+        {
+          "from": "-4000",
+          "periodName": "neolithic",
+          "until": "-2200",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "alpha spectrometry",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ALPHA%20SPECTROMETRY"
+        },
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "chemical techniques",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CHEMICAL%20TECHNIQUES"
+        },
+        {
+          "prefLabel": "environmental sampling",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENVIRONMENTAL%20SAMPLING"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "inductively-coupled plasma",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INDUCTIVELY-COUPLED%20PLASMA"
+        },
+        {
+          "prefLabel": "intrusive event",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INTRUSIVE%20EVENT"
+        },
+        {
+          "prefLabel": "mass spectrometry",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MASS%20SPECTROMETRY"
+        },
+        {
+          "prefLabel": "microscopy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MICROSCOPY"
+        },
+        {
+          "prefLabel": "mineralogy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MINERALOGY"
+        },
+        {
+          "prefLabel": "multi-element analysis",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MULTI-ELEMENT%20ANALYSIS"
+        },
+        {
+          "prefLabel": "polarised light microscopy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/POLARISED%20LIGHT%20MICROSCOPY"
+        },
+        {
+          "prefLabel": "sarsen stone",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SARSEN%20STONE"
+        },
+        {
+          "prefLabel": "scanning electron microscopy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SCANNING%20ELECTRON%20MICROSCOPY"
+        },
+        {
+          "prefLabel": "specialist sampling",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SPECIALIST%20SAMPLING"
+        },
+        {
+          "prefLabel": "stonehenge (england)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STONEHENGE%20%28ENGLAND%29"
+        },
+        {
+          "prefLabel": "stonehenge world heritage site (england)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STONEHENGE%20WORLD%20HERITAGE%20SITE%20%28ENGLAND%29"
+        },
+        {
+          "prefLabel": "x-ray fluorescence spectrometry",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/X-RAY%20FLUORESCENCE%20SPECTROMETRY"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Scientific analysis"
+        }
+      ],
+      "dataType": [
+        "Still Image",
+        "Structured Data",
+        "Video"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1003972",
+        "dcterms:DOI https://doi.org/10.5284/1084808"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:https://doi.org/10.5284/1084808",
+      "title": "Petrography, Geochemistry and Mineralogy of the Stonehenge Sarsens: Digital Data Collection",
+      "url": "https://doi.org/10.5284/1084808",
+      "creator": [
+        "David Nash",
+        "Jake Ciborowski",
+        "Magret Damaschke",
+        "Steven Goderis",
+        "Tobias Salge"
+      ],
+      "date": "2021-08-04"
+    }
+  },
+  {
+    "id": "hsds:920803",
+    "_source": "hsds",
+    "_sourceId": "920803",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/126c81d9d3a979fa03b297618f8cb1f4efc884c733ea64a9633ef06550cdc2eb",
+    "title": "Radiocarbon date, Sample number BM-1617",
+    "description": "Antler, id as red deer (Cervus elaphus L), from base of Stonehenge I ditch at Stonehenge, Wiltshire, England.<br>ST 122422",
+    "creator": "R J C Atkinson & J G Evans",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.171768,
+    "decimalLongitude": -3.256039,
+    "hsds": {
+      "elasticId": "126c81d9d3a979fa03b297618f8cb1f4efc884c733ea64a9633ef06550cdc2eb",
+      "originalId": "920803",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.171768,
+            "lon": -3.256039
+          },
+          "centroid": {
+            "lat": 51.171768,
+            "lon": -3.256039
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-1617",
+        "Depositor ID: BM-1617"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:920803",
+      "title": "Radiocarbon date, Sample number BM-1617",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/126c81d9d3a979fa03b297618f8cb1f4efc884c733ea64a9633ef06550cdc2eb",
+      "creator": "R J C Atkinson & J G Evans",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917939",
+    "_source": "hsds",
+    "_sourceId": "917939",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1fa113e793ac459e53d57710cad044cbdcc317800de1798aa4848c5ed3b5ae12",
+    "title": "Radiocarbon date, Sample number OxA-4877",
+    "description": "<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s64.29"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "1fa113e793ac459e53d57710cad044cbdcc317800de1798aa4848c5ed3b5ae12",
+      "originalId": "917939",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s64.29",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S64.29"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4877-2",
+        "Depositor ID: OxA-4877"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917939",
+      "title": "Radiocarbon date, Sample number OxA-4877",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1fa113e793ac459e53d57710cad044cbdcc317800de1798aa4848c5ed3b5ae12",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917940",
+    "_source": "hsds",
+    "_sourceId": "917940",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2cc40886d29ae7a9bb02b7619527a4a860b4922505f826ff4976613cda213374",
+    "title": "Radiocarbon date, Sample number OxA-4878",
+    "description": "<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s56.35"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "2cc40886d29ae7a9bb02b7619527a4a860b4922505f826ff4976613cda213374",
+      "originalId": "917940",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s56.35",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S56.35"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4878-2",
+        "Depositor ID: OxA-4878"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917940",
+      "title": "Radiocarbon date, Sample number OxA-4878",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2cc40886d29ae7a9bb02b7619527a4a860b4922505f826ff4976613cda213374",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917948",
+    "_source": "hsds",
+    "_sourceId": "917948",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/09cddb2360e5fd3fd34cf7f9bd2bbd370b7c0f9c54a025c5fca42a9f76d3a169",
+    "title": "Radiocarbon date, Sample number OxA-4902",
+    "description": "<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s64.41"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "09cddb2360e5fd3fd34cf7f9bd2bbd370b7c0f9c54a025c5fca42a9f76d3a169",
+      "originalId": "917948",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s64.41",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S64.41"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4902-2",
+        "Depositor ID: OxA-4902"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917948",
+      "title": "Radiocarbon date, Sample number OxA-4902",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/09cddb2360e5fd3fd34cf7f9bd2bbd370b7c0f9c54a025c5fca42a9f76d3a169",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918428",
+    "_source": "hsds",
+    "_sourceId": "918428",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2495603b5efc3855142169a0cdb0f9e911ed1ec7efdfe528d3e0a107a31f1d99",
+    "title": "Radiocarbon date, Sample number OxA-1408",
+    "description": "Bone, id as animal, W2.2306, from fill of primary ditch at Coneybury Henge, near Stonehenge, Wiltshire, England. Subm JR 1981-4. Comment (subm): slightly earlier than estimated; the construction and use of the henge, assoc with small quantities of Grooved Ware, appears contemporary with first phase of Stonehenge.<br>Stonehenge Environs Project",
+    "creator": "Julian Richards, Trust for Wessex Archaeol",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.172961,
+    "decimalLongitude": -1.808302,
+    "hsds": {
+      "elasticId": "2495603b5efc3855142169a0cdb0f9e911ed1ec7efdfe528d3e0a107a31f1d99",
+      "originalId": "918428",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.172961,
+            "lon": -1.808302
+          },
+          "centroid": {
+            "lat": 51.172961,
+            "lon": -1.808302
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1408-2",
+        "Depositor ID: OxA-1408"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:918428",
+      "title": "Radiocarbon date, Sample number OxA-1408",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2495603b5efc3855142169a0cdb0f9e911ed1ec7efdfe528d3e0a107a31f1d99",
+      "creator": "Julian Richards, Trust for Wessex Archaeol",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917945",
+    "_source": "hsds",
+    "_sourceId": "917945",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c47b5fda23344d6a27ccfc0823959c9fe6dfedc53122e6ebacc986303a93e0b2",
+    "title": "Radiocarbon date, Sample number OxA-4883",
+    "description": "bone:Bos<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "1593a",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "c47b5fda23344d6a27ccfc0823959c9fe6dfedc53122e6ebacc986303a93e0b2",
+      "originalId": "917945",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "1593a",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/1593A"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4883-2",
+        "Depositor ID: OxA-4883"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917945",
+      "title": "Radiocarbon date, Sample number OxA-4883",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c47b5fda23344d6a27ccfc0823959c9fe6dfedc53122e6ebacc986303a93e0b2",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917947",
+    "_source": "hsds",
+    "_sourceId": "917947",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/25ac9c1008c7923cba5d90a0b7b51203170b51f5bb2dba54131d079496db810b",
+    "title": "Radiocarbon date, Sample number OxA-4885",
+    "description": "bone:Bos<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "421",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "25ac9c1008c7923cba5d90a0b7b51203170b51f5bb2dba54131d079496db810b",
+      "originalId": "917947",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "421",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/421"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4885-2",
+        "Depositor ID: OxA-4885"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917947",
+      "title": "Radiocarbon date, Sample number OxA-4885",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/25ac9c1008c7923cba5d90a0b7b51203170b51f5bb2dba54131d079496db810b",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917916",
+    "_source": "hsds",
+    "_sourceId": "917916",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/cf7c6342883510372e139c73daa7f113d2aa34e3efba9fdc03bc58933ebed4fd",
+    "title": "Radiocarbon date, Sample number OxA-4901",
+    "description": "bone:pig<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s64.49"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "cf7c6342883510372e139c73daa7f113d2aa34e3efba9fdc03bc58933ebed4fd",
+      "originalId": "917916",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s64.49",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S64.49"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4901-2",
+        "Depositor ID: OxA-4901"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917916",
+      "title": "Radiocarbon date, Sample number OxA-4901",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/cf7c6342883510372e139c73daa7f113d2aa34e3efba9fdc03bc58933ebed4fd",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919905",
+    "_source": "hsds",
+    "_sourceId": "919905",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2372947ee04928ae7415adaa49e8e689ab2eb66c4cd87af815785a28496dbdf9",
+    "title": "Radiocarbon date, Sample number OxA-4884",
+    "description": "Antler, from context 1912, Avenue northern ditch, Stonehenge terminal (C6) on bottom, Phase 3 at Stonehenge, Wiltshire, England. Comment (subm): Date accepted as reliable; 2 sigma cal range given.<br>",
+    "creator": "(ed Cleal)",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.178381,
+    "decimalLongitude": -1.824018,
+    "hsds": {
+      "elasticId": "2372947ee04928ae7415adaa49e8e689ab2eb66c4cd87af815785a28496dbdf9",
+      "originalId": "919905",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          },
+          "centroid": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4884-1",
+        "Depositor ID: OxA-4884"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:919905",
+      "title": "Radiocarbon date, Sample number OxA-4884",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2372947ee04928ae7415adaa49e8e689ab2eb66c4cd87af815785a28496dbdf9",
+      "creator": "(ed Cleal)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917926",
+    "_source": "hsds",
+    "_sourceId": "917926",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/98cc8f7b224d326e30c99702cc3048117071620aea4e3cef383d07716bec30fc",
+    "title": "Radiocarbon date, Sample number OxA-4833",
+    "description": "bone:red deer<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "ab122",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "98cc8f7b224d326e30c99702cc3048117071620aea4e3cef383d07716bec30fc",
+      "originalId": "917926",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "ab122",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AB122"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4833-2",
+        "Depositor ID: OxA-4833"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917926",
+      "title": "Radiocarbon date, Sample number OxA-4833",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/98cc8f7b224d326e30c99702cc3048117071620aea4e3cef383d07716bec30fc",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917927",
+    "_source": "hsds",
+    "_sourceId": "917927",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b58b4692d7afeef6cc4d1851fc2fdef7059d23058707c652401cfe5c6c09c4fc",
+    "title": "Radiocarbon date, Sample number OxA-4834",
+    "description": "bone:ox jaw<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "ab126",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "b58b4692d7afeef6cc4d1851fc2fdef7059d23058707c652401cfe5c6c09c4fc",
+      "originalId": "917927",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "ab126",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AB126"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4834-2",
+        "Depositor ID: OxA-4834"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917927",
+      "title": "Radiocarbon date, Sample number OxA-4834",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b58b4692d7afeef6cc4d1851fc2fdef7059d23058707c652401cfe5c6c09c4fc",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917928",
+    "_source": "hsds",
+    "_sourceId": "917928",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e62f0339cd2b872780489d6ee33c1f593402f2b8e8a9ada374bae61f3e9b10e8",
+    "title": "Radiocarbon date, Sample number OxA-4835",
+    "description": "bone:ox jaw<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "ab131",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "e62f0339cd2b872780489d6ee33c1f593402f2b8e8a9ada374bae61f3e9b10e8",
+      "originalId": "917928",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "ab131",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AB131"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4835-2",
+        "Depositor ID: OxA-4835"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917928",
+      "title": "Radiocarbon date, Sample number OxA-4835",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e62f0339cd2b872780489d6ee33c1f593402f2b8e8a9ada374bae61f3e9b10e8",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917929",
+    "_source": "hsds",
+    "_sourceId": "917929",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/44a0b4510dd824c899e87fbfc2ba144b5a5f9f0db003aac3c91c9a732824397f",
+    "title": "Radiocarbon date, Sample number OxA-4836",
+    "description": "antler:red deer<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "4068b",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "44a0b4510dd824c899e87fbfc2ba144b5a5f9f0db003aac3c91c9a732824397f",
+      "originalId": "917929",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4068b",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4068B"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4836-2",
+        "Depositor ID: OxA-4836"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917929",
+      "title": "Radiocarbon date, Sample number OxA-4836",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/44a0b4510dd824c899e87fbfc2ba144b5a5f9f0db003aac3c91c9a732824397f",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917930",
+    "_source": "hsds",
+    "_sourceId": "917930",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b00a4f8baec0f30be44747914bfad9c02172c4e542f95e289d74ac522df361f5",
+    "title": "Radiocarbon date, Sample number OxA-4837",
+    "description": "antler:red deer<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "4849",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "b00a4f8baec0f30be44747914bfad9c02172c4e542f95e289d74ac522df361f5",
+      "originalId": "917930",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4849",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4849"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4837-2",
+        "Depositor ID: OxA-4837"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917930",
+      "title": "Radiocarbon date, Sample number OxA-4837",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b00a4f8baec0f30be44747914bfad9c02172c4e542f95e289d74ac522df361f5",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917951",
+    "_source": "hsds",
+    "_sourceId": "917951",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a27439bd6a05c647a81862e97acedfdd8535623488db469606fea29f574ef6b5",
+    "title": "Radiocarbon date, Sample number OxA-4905",
+    "description": "bone:Bos pelvis<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "9716/bp",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "a27439bd6a05c647a81862e97acedfdd8535623488db469606fea29f574ef6b5",
+      "originalId": "917951",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "9716/bp",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/9716/BP"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4905-2",
+        "Depositor ID: OxA-4905"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917951",
+      "title": "Radiocarbon date, Sample number OxA-4905",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a27439bd6a05c647a81862e97acedfdd8535623488db469606fea29f574ef6b5",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917953",
+    "_source": "hsds",
+    "_sourceId": "917953",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9ddfaef151b98c910c6cbf620a49a49ccba644e8623b82d7632a57077ba9d3a0",
+    "title": "Radiocarbon date, Sample number OxA-4919",
+    "description": "charcoal:Pinus sp<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "w243-11"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "9ddfaef151b98c910c6cbf620a49a49ccba644e8623b82d7632a57077ba9d3a0",
+      "originalId": "917953",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "w243-11",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/W243-11"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4919-2",
+        "Depositor ID: OxA-4919"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917953",
+      "title": "Radiocarbon date, Sample number OxA-4919",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9ddfaef151b98c910c6cbf620a49a49ccba644e8623b82d7632a57077ba9d3a0",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917954",
+    "_source": "hsds",
+    "_sourceId": "917954",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1359c0e88eccbcc3adacd46aec5beb10d2095a02fd2ab2714a188209630a8f5b",
+    "title": "Radiocarbon date, Sample number OxA-4920",
+    "description": "charcoal:Pinus sp<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "w243-14"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "1359c0e88eccbcc3adacd46aec5beb10d2095a02fd2ab2714a188209630a8f5b",
+      "originalId": "917954",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "w243-14",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/W243-14"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4920-2",
+        "Depositor ID: OxA-4920"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917954",
+      "title": "Radiocarbon date, Sample number OxA-4920",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1359c0e88eccbcc3adacd46aec5beb10d2095a02fd2ab2714a188209630a8f5b",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917960",
+    "_source": "hsds",
+    "_sourceId": "917960",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4a18ebc50d19995fe5a6dce615d604edb6650e12c6e51decff48d8add583485c",
+    "title": "Radiocarbon date, Sample number OxA-5044",
+    "description": "bone:human femur<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "evans 78",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "4a18ebc50d19995fe5a6dce615d604edb6650e12c6e51decff48d8add583485c",
+      "originalId": "917960",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "evans 78",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EVANS%2078"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-5044-2",
+        "Depositor ID: OxA-5044"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917960",
+      "title": "Radiocarbon date, Sample number OxA-5044",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4a18ebc50d19995fe5a6dce615d604edb6650e12c6e51decff48d8add583485c",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917961",
+    "_source": "hsds",
+    "_sourceId": "917961",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/fab96c5a9edbe6a2403ebe9ebb25d6c6edb84c02be9507a2a496f388830e404b",
+    "title": "Radiocarbon date, Sample number OxA-5045",
+    "description": "bone:human femur<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "evans 78",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "fab96c5a9edbe6a2403ebe9ebb25d6c6edb84c02be9507a2a496f388830e404b",
+      "originalId": "917961",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "evans 78",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EVANS%2078"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-5045-2",
+        "Depositor ID: OxA-5045"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917961",
+      "title": "Radiocarbon date, Sample number OxA-5045",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/fab96c5a9edbe6a2403ebe9ebb25d6c6edb84c02be9507a2a496f388830e404b",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917962",
+    "_source": "hsds",
+    "_sourceId": "917962",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/37e2030d543debe49f5fd449586aa73c6db03a5b682d3393b9447d573a42f7b2",
+    "title": "Radiocarbon date, Sample number OxA-5046",
+    "description": "bone:human femur<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "evans 78",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "37e2030d543debe49f5fd449586aa73c6db03a5b682d3393b9447d573a42f7b2",
+      "originalId": "917962",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "evans 78",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EVANS%2078"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-5046-2",
+        "Depositor ID: OxA-5046"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917962",
+      "title": "Radiocarbon date, Sample number OxA-5046",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/37e2030d543debe49f5fd449586aa73c6db03a5b682d3393b9447d573a42f7b2",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917931",
+    "_source": "hsds",
+    "_sourceId": "917931",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/10b7abcbe80411015d62fb9c1c928fe6a488a16d7d100ddb888c7e934cb92053",
+    "title": "Radiocarbon date, Sample number OxA-4838",
+    "description": "antler:red deer<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "4848",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "10b7abcbe80411015d62fb9c1c928fe6a488a16d7d100ddb888c7e934cb92053",
+      "originalId": "917931",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4848",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4848"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4838-2",
+        "Depositor ID: OxA-4838"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917931",
+      "title": "Radiocarbon date, Sample number OxA-4838",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/10b7abcbe80411015d62fb9c1c928fe6a488a16d7d100ddb888c7e934cb92053",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917932",
+    "_source": "hsds",
+    "_sourceId": "917932",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/47eed15e1e1410aca80218ce7b945e2b8689a3c690e7fd582b5774f4c559cd87",
+    "title": "Radiocarbon date, Sample number OxA-4839",
+    "description": "antler:red deer<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s56.52"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "47eed15e1e1410aca80218ce7b945e2b8689a3c690e7fd582b5774f4c559cd87",
+      "originalId": "917932",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s56.52",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S56.52"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4839-2",
+        "Depositor ID: OxA-4839"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917932",
+      "title": "Radiocarbon date, Sample number OxA-4839",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/47eed15e1e1410aca80218ce7b945e2b8689a3c690e7fd582b5774f4c559cd87",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917933",
+    "_source": "hsds",
+    "_sourceId": "917933",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f91dddfd9dc31686e1d3ac1c462ade03eae9c2f41bcc6d196431c1aecbfbc1d3",
+    "title": "Radiocarbon date, Sample number OxA-4840",
+    "description": "antler:red deer<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s64.21"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "f91dddfd9dc31686e1d3ac1c462ade03eae9c2f41bcc6d196431c1aecbfbc1d3",
+      "originalId": "917933",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s64.21",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S64.21"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4840-2",
+        "Depositor ID: OxA-4840"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917933",
+      "title": "Radiocarbon date, Sample number OxA-4840",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f91dddfd9dc31686e1d3ac1c462ade03eae9c2f41bcc6d196431c1aecbfbc1d3",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917934",
+    "_source": "hsds",
+    "_sourceId": "917934",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/7077ab337078ae3f6f8a1a62670780f2a2e96acd94a4d358872c8f10e6ff5c6a",
+    "title": "Radiocarbon date, Sample number OxA-4841",
+    "description": "bone:ox ulna<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s54.77"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "7077ab337078ae3f6f8a1a62670780f2a2e96acd94a4d358872c8f10e6ff5c6a",
+      "originalId": "917934",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s54.77",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S54.77"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4841-2",
+        "Depositor ID: OxA-4841"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917934",
+      "title": "Radiocarbon date, Sample number OxA-4841",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/7077ab337078ae3f6f8a1a62670780f2a2e96acd94a4d358872c8f10e6ff5c6a",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917935",
+    "_source": "hsds",
+    "_sourceId": "917935",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4dab3e85deaa6bf477494403f0a036ad76c6a7f7923b56673ae1066c1e854c41",
+    "title": "Radiocarbon date, Sample number OxA-4842",
+    "description": "bone:Bos primogenus<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "ab.41",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "4dab3e85deaa6bf477494403f0a036ad76c6a7f7923b56673ae1066c1e854c41",
+      "originalId": "917935",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "ab.41",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AB.41"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4842-2",
+        "Depositor ID: OxA-4842"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917935",
+      "title": "Radiocarbon date, Sample number OxA-4842",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4dab3e85deaa6bf477494403f0a036ad76c6a7f7923b56673ae1066c1e854c41",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917936",
+    "_source": "hsds",
+    "_sourceId": "917936",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1a628fe4d092fc12b6f59951d136102d18a08ded84b13eef34c1b19b4158b3ba",
+    "title": "Radiocarbon date, Sample number OxA-4843",
+    "description": "bone:Ox pelvis<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s54.72"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "1a628fe4d092fc12b6f59951d136102d18a08ded84b13eef34c1b19b4158b3ba",
+      "originalId": "917936",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s54.72",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S54.72"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4843-2",
+        "Depositor ID: OxA-4843"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917936",
+      "title": "Radiocarbon date, Sample number OxA-4843",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1a628fe4d092fc12b6f59951d136102d18a08ded84b13eef34c1b19b4158b3ba",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917941",
+    "_source": "hsds",
+    "_sourceId": "917941",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e41f3b96a9fb9427cc6857c35534b96e0248fd91af9b6dc5c67f9ed1083b8976",
+    "title": "Radiocarbon date, Sample number OxA-4879",
+    "description": "bone:pig tibia<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s54.29"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "e41f3b96a9fb9427cc6857c35534b96e0248fd91af9b6dc5c67f9ed1083b8976",
+      "originalId": "917941",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s54.29",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S54.29"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4879-2",
+        "Depositor ID: OxA-4879"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917941",
+      "title": "Radiocarbon date, Sample number OxA-4879",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e41f3b96a9fb9427cc6857c35534b96e0248fd91af9b6dc5c67f9ed1083b8976",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917943",
+    "_source": "hsds",
+    "_sourceId": "917943",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/96f9380c5e63b7bb3ae442671709bf229b56eb0e7bb88712b63a3dda6fdebf33",
+    "title": "Radiocarbon date, Sample number OxA-4881",
+    "description": "antler:red deer<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s54.818"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "96f9380c5e63b7bb3ae442671709bf229b56eb0e7bb88712b63a3dda6fdebf33",
+      "originalId": "917943",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s54.818",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S54.818"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4881-2",
+        "Depositor ID: OxA-4881"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917943",
+      "title": "Radiocarbon date, Sample number OxA-4881",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/96f9380c5e63b7bb3ae442671709bf229b56eb0e7bb88712b63a3dda6fdebf33",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917944",
+    "_source": "hsds",
+    "_sourceId": "917944",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9e198d84cbdea603ed8ec2b799b0922e4750cc3407c9e77594e6b6c2236b44a2",
+    "title": "Radiocarbon date, Sample number OxA-4882",
+    "description": "bone:Ox femur<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s54.79"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "9e198d84cbdea603ed8ec2b799b0922e4750cc3407c9e77594e6b6c2236b44a2",
+      "originalId": "917944",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s54.79",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S54.79"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4882-2",
+        "Depositor ID: OxA-4882"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917944",
+      "title": "Radiocarbon date, Sample number OxA-4882",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9e198d84cbdea603ed8ec2b799b0922e4750cc3407c9e77594e6b6c2236b44a2",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917946",
+    "_source": "hsds",
+    "_sourceId": "917946",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/291e7bc83b9ce8cbe1ae0e9e03966df05daea4f928e7a31bcbbff479fb8b549f",
+    "title": "Radiocarbon date, Sample number OxA-4884",
+    "description": "antler:red deer<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "4763",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "291e7bc83b9ce8cbe1ae0e9e03966df05daea4f928e7a31bcbbff479fb8b549f",
+      "originalId": "917946",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4763",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4763"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4884-2",
+        "Depositor ID: OxA-4884"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917946",
+      "title": "Radiocarbon date, Sample number OxA-4884",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/291e7bc83b9ce8cbe1ae0e9e03966df05daea4f928e7a31bcbbff479fb8b549f",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917949",
+    "_source": "hsds",
+    "_sourceId": "917949",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/676dbe6d4991fe7e23f6d69f2fe31e7d108c32177fdd12a974a99a6353ec4e5a",
+    "title": "Radiocarbon date, Sample number OxA-4903",
+    "description": "bone:ox scapula<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s54.810"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "676dbe6d4991fe7e23f6d69f2fe31e7d108c32177fdd12a974a99a6353ec4e5a",
+      "originalId": "917949",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s54.810",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S54.810"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4903-2",
+        "Depositor ID: OxA-4903"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917949",
+      "title": "Radiocarbon date, Sample number OxA-4903",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/676dbe6d4991fe7e23f6d69f2fe31e7d108c32177fdd12a974a99a6353ec4e5a",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917950",
+    "_source": "hsds",
+    "_sourceId": "917950",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4d1d4804faddbc50061728dadda824ff035a93f7ba26bc84e8c083bf0cfd4be0",
+    "title": "Radiocarbon date, Sample number OxA-4904",
+    "description": "antler:red deer<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s54.85"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "4d1d4804faddbc50061728dadda824ff035a93f7ba26bc84e8c083bf0cfd4be0",
+      "originalId": "917950",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s54.85",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S54.85"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4904-2",
+        "Depositor ID: OxA-4904"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917950",
+      "title": "Radiocarbon date, Sample number OxA-4904",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4d1d4804faddbc50061728dadda824ff035a93f7ba26bc84e8c083bf0cfd4be0",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917914",
+    "_source": "hsds",
+    "_sourceId": "917914",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/867626fa79931113671e9852ec9feb4a2139c254ab2a66411a62c84c2667049e",
+    "title": "Radiocarbon date, Sample number OxA-4886",
+    "description": "bone:human femur<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "evans 78",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "867626fa79931113671e9852ec9feb4a2139c254ab2a66411a62c84c2667049e",
+      "originalId": "917914",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "evans 78",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EVANS%2078"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4886-2",
+        "Depositor ID: OxA-4886"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917914",
+      "title": "Radiocarbon date, Sample number OxA-4886",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/867626fa79931113671e9852ec9feb4a2139c254ab2a66411a62c84c2667049e",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917915",
+    "_source": "hsds",
+    "_sourceId": "917915",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2feaf05bddf51216b95207dad843ee2f7349efb1fa43df362265c8f8a4f026a4",
+    "title": "Radiocarbon date, Sample number OxA-4900",
+    "description": "antler:red deer<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s56.39"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "2feaf05bddf51216b95207dad843ee2f7349efb1fa43df362265c8f8a4f026a4",
+      "originalId": "917915",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s56.39",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S56.39"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4900-2",
+        "Depositor ID: OxA-4900"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917915",
+      "title": "Radiocarbon date, Sample number OxA-4900",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2feaf05bddf51216b95207dad843ee2f7349efb1fa43df362265c8f8a4f026a4",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918372",
+    "_source": "hsds",
+    "_sourceId": "918372",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/0842ddfa0710487c64a4d11d3fb215f8f2e51a24dbc10392c35785a831653f3a",
+    "title": "Radiocarbon date, Sample number OxA-1409",
+    "description": "Bone, id as animal, W2.1980, 1447, from interior pit [or ditch fill: sources differ] at Coneybury Henge, near Stonehenge, Wiltshire, England. Subm JR 1981-4. Comment (subm): slightly earlier than estimated; the construction and use of the henge, assoc with small quantities of Grooved Ware, appears contemporary with first phase of Stonehenge.<br>Stonehenge Environs Project",
+    "creator": "Julian Richards, Trust for Wessex Archaeol",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.172961,
+    "decimalLongitude": -1.808302,
+    "hsds": {
+      "elasticId": "0842ddfa0710487c64a4d11d3fb215f8f2e51a24dbc10392c35785a831653f3a",
+      "originalId": "918372",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.172961,
+            "lon": -1.808302
+          },
+          "centroid": {
+            "lat": 51.172961,
+            "lon": -1.808302
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1409-2",
+        "Depositor ID: OxA-1409"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:918372",
+      "title": "Radiocarbon date, Sample number OxA-1409",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/0842ddfa0710487c64a4d11d3fb215f8f2e51a24dbc10392c35785a831653f3a",
+      "creator": "Julian Richards, Trust for Wessex Archaeol",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919906",
+    "_source": "hsds",
+    "_sourceId": "919906",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f9d1c305df9b92f4b7dee037fed83badfeb40ae58285aa13e4289139bbdc0151",
+    "title": "Radiocarbon date, Sample number BM-1164",
+    "description": "Antler, from context C6, Avenue northern ditch, Stonehenge terminal (C6) in primary silt, Phase 3 at Stonehenge, Wiltshire, England. Comment (subm): Date accepted as reliable; 2 sigma cal range given.<br>",
+    "creator": "(ed Cleal)",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.178381,
+    "decimalLongitude": -1.824018,
+    "hsds": {
+      "elasticId": "f9d1c305df9b92f4b7dee037fed83badfeb40ae58285aa13e4289139bbdc0151",
+      "originalId": "919906",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          },
+          "centroid": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-1164-2",
+        "Depositor ID: BM-1164"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:919906",
+      "title": "Radiocarbon date, Sample number BM-1164",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f9d1c305df9b92f4b7dee037fed83badfeb40ae58285aa13e4289139bbdc0151",
+      "creator": "(ed Cleal)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917937",
+    "_source": "hsds",
+    "_sourceId": "917937",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a2c67b1d3bc433cf4b9a24173ba76aeddf4b65944079152abf9b0038d0f874a3",
+    "title": "Radiocarbon date, Sample number OxA-4844",
+    "description": "bone:ox axis vertebra<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s54.833"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "a2c67b1d3bc433cf4b9a24173ba76aeddf4b65944079152abf9b0038d0f874a3",
+      "originalId": "917937",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s54.833",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S54.833"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4844-2",
+        "Depositor ID: OxA-4844"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917937",
+      "title": "Radiocarbon date, Sample number OxA-4844",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a2c67b1d3bc433cf4b9a24173ba76aeddf4b65944079152abf9b0038d0f874a3",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917942",
+    "_source": "hsds",
+    "_sourceId": "917942",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1828ca224c48bcbfa55c84bae548a9b82dbb739e883514a637880395ca79e5f6",
+    "title": "Radiocarbon date, Sample number OxA-4880",
+    "description": "bone:pig radius & ulna<br>Stonehenge, England",
+    "creator": "Allen",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "s54.57"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "1828ca224c48bcbfa55c84bae548a9b82dbb739e883514a637880395ca79e5f6",
+      "originalId": "917942",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "s54.57",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/S54.57"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4880-2",
+        "Depositor ID: OxA-4880"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:917942",
+      "title": "Radiocarbon date, Sample number OxA-4880",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1828ca224c48bcbfa55c84bae548a9b82dbb739e883514a637880395ca79e5f6",
+      "creator": "Allen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916817",
+    "_source": "hsds",
+    "_sourceId": "916817",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/544deca388a895685dd434a833505a5b910910e90b82423dd55718cb5559c3f2",
+    "title": "Radiocarbon date, Sample number OxA-1403",
+    "description": "antler:red deer<br>Stonehenge Cursus, England",
+    "creator": "Richards",
+    "date": "1998-12-01",
+    "subject": [
+      "1947.14",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "544deca388a895685dd434a833505a5b910910e90b82423dd55718cb5559c3f2",
+      "originalId": "916817",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "1947.14",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/1947.14"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1403-1",
+        "Depositor ID: OxA-1403"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:916817",
+      "title": "Radiocarbon date, Sample number OxA-1403",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/544deca388a895685dd434a833505a5b910910e90b82423dd55718cb5559c3f2",
+      "creator": "Richards",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918442",
+    "_source": "hsds",
+    "_sourceId": "918442",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/cdbe1af2e3096deda660d0ca2e0d9b3cb36701bc8f8fa79a902edd85d83fee8f",
+    "title": "Radiocarbon date, Sample number OxA-1406",
+    "description": "Antler, W55, C, 320, 42 from ditch fill, western terminal, destruction phase atLesser Cursus, Winterbourne Stoke, Wiltshire, England. Subm JR 1981-4. Comment (subm): similar to Stonehenge Cursus, OxA-1403.<br>Stonehenge Environs Project",
+    "creator": "Julian Richards, Trust for Wessex Archaeol",
+    "date": "1998-12-01",
+    "subject": [
+      "3i cursus (rel to henge)",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.189209,
+    "decimalLongitude": -1.849736,
+    "hsds": {
+      "elasticId": "cdbe1af2e3096deda660d0ca2e0d9b3cb36701bc8f8fa79a902edd85d83fee8f",
+      "originalId": "918442",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.189209,
+            "lon": -1.849736
+          },
+          "centroid": {
+            "lat": 51.189209,
+            "lon": -1.849736
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i cursus (rel to henge)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20CURSUS%20%28REL%20TO%20HENGE%29"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1406-2",
+        "Depositor ID: OxA-1406"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:918442",
+      "title": "Radiocarbon date, Sample number OxA-1406",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/cdbe1af2e3096deda660d0ca2e0d9b3cb36701bc8f8fa79a902edd85d83fee8f",
+      "creator": "Julian Richards, Trust for Wessex Archaeol",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920804",
+    "_source": "hsds",
+    "_sourceId": "920804",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/95e7508c72a96edf2f92cc74b09c6d817186334d14ab810c7bbd926f4e5182c9",
+    "title": "Radiocarbon date, Sample number BM-1582",
+    "description": "Bone collagen, id as human femur, from burial inserted in upper secondary fill of enclosure ditch near W terminal of Stonehenge I; wristguard and arrows in association; also dates earliest bluestone chips on site at Stonehenge, Wiltshire, England.<br>",
+    "creator": "R J C Atkinson & J G Evans",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge / 3k beaker burial / 4f ceremonial site",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.171768,
+    "decimalLongitude": -3.256039,
+    "hsds": {
+      "elasticId": "95e7508c72a96edf2f92cc74b09c6d817186334d14ab810c7bbd926f4e5182c9",
+      "originalId": "920804",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.171768,
+            "lon": -3.256039
+          },
+          "centroid": {
+            "lat": 51.171768,
+            "lon": -3.256039
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge / 3k beaker burial / 4f ceremonial site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE%20/%203K%20BEAKER%20BURIAL%20/%204F%20CEREMONIAL%20SITE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-1582",
+        "Depositor ID: BM-1582"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:920804",
+      "title": "Radiocarbon date, Sample number BM-1582",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/95e7508c72a96edf2f92cc74b09c6d817186334d14ab810c7bbd926f4e5182c9",
+      "creator": "R J C Atkinson & J G Evans",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916391",
+    "_source": "hsds",
+    "_sourceId": "916391",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/db8cc15ec9d00df7934556424624ddc4435aad5a228ffb11d99a4914fd2dd6d4",
+    "title": "Radiocarbon date, Sample number C-602",
+    "description": "Charcoal from Aubrey Hole 32 at Stonehenge, Wiltshire, England.<br>",
+    "creator": "S Piggott et al",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.178381,
+    "decimalLongitude": -1.824018,
+    "hsds": {
+      "elasticId": "db8cc15ec9d00df7934556424624ddc4435aad5a228ffb11d99a4914fd2dd6d4",
+      "originalId": "916391",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          },
+          "centroid": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-C-602",
+        "Depositor ID: C-602"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:916391",
+      "title": "Radiocarbon date, Sample number C-602",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/db8cc15ec9d00df7934556424624ddc4435aad5a228ffb11d99a4914fd2dd6d4",
+      "creator": "S Piggott et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918429",
+    "_source": "hsds",
+    "_sourceId": "918429",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/aae3b45c362b93d627c365defc144274995b563f61a3b681bbea10ec0bad4523",
+    "title": "Radiocarbon date, Sample number OxA-1399",
+    "description": "Bone, id as human, from crouched inhumation post-dating buried land surface assoc with deposits of burnt flint at Durrington Riverside, near Stonehenge, Wiltshire, England. Subm J Richards 1985. Comment (subm): site may be interpretable asLBA `sauna'; compare Cob Lane site, Birm-1087.<br>Stonehenge Environs Project",
+    "creator": "Julian Richards, Trust for Wessex Archaeol",
+    "date": "1998-12-01",
+    "subject": [
+      "4a occupation / with burial",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.183699,
+    "decimalLongitude": -1.778208,
+    "hsds": {
+      "elasticId": "aae3b45c362b93d627c365defc144274995b563f61a3b681bbea10ec0bad4523",
+      "originalId": "918429",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.183699,
+            "lon": -1.778208
+          },
+          "centroid": {
+            "lat": 51.183699,
+            "lon": -1.778208
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a occupation / with burial",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20OCCUPATION%20/%20WITH%20BURIAL"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1399-2",
+        "Depositor ID: OxA-1399"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:918429",
+      "title": "Radiocarbon date, Sample number OxA-1399",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/aae3b45c362b93d627c365defc144274995b563f61a3b681bbea10ec0bad4523",
+      "creator": "Julian Richards, Trust for Wessex Archaeol",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916393",
+    "_source": "hsds",
+    "_sourceId": "916393",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/024fe9943a342172c7a02df44bc632ab90418166dbf18fdcf2ac9d1e45270fb4",
+    "title": "Radiocarbon date, Sample number BM-46",
+    "description": "Antler from base of ramp of Great Trilithon at Stonehenge, Wiltshire, England.<br>",
+    "creator": "S Piggott et al",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.178381,
+    "decimalLongitude": -1.824018,
+    "hsds": {
+      "elasticId": "024fe9943a342172c7a02df44bc632ab90418166dbf18fdcf2ac9d1e45270fb4",
+      "originalId": "916393",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          },
+          "centroid": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-46",
+        "Depositor ID: BM-46"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:916393",
+      "title": "Radiocarbon date, Sample number BM-46",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/024fe9943a342172c7a02df44bc632ab90418166dbf18fdcf2ac9d1e45270fb4",
+      "creator": "S Piggott et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918439",
+    "_source": "hsds",
+    "_sourceId": "918439",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/7b0ceab8af6434c5c5e8c8843260b52630de5cbe6d92df633dd512ef27740cd2",
+    "title": "Radiocarbon date, Sample number OxA-1403",
+    "description": "Antler, id as red deer, from Stonehenge Cursus, Wiltshire, England. Subm JR 1981-4. Comment (subm): the only sample not excavated as part of the Project, though there seemed no reason to doubt its integrity; is considerably younger than expected (cf OxA-1404, -1405).<br>Stonehenge Environs Project",
+    "creator": "Julian Richards, Trust for Wessex Archaeol",
+    "date": "1998-12-01",
+    "subject": [
+      "3i cursus (rel to henge)",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.183797,
+    "decimalLongitude": -1.838306,
+    "hsds": {
+      "elasticId": "7b0ceab8af6434c5c5e8c8843260b52630de5cbe6d92df633dd512ef27740cd2",
+      "originalId": "918439",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.183797,
+            "lon": -1.838306
+          },
+          "centroid": {
+            "lat": 51.183797,
+            "lon": -1.838306
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i cursus (rel to henge)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20CURSUS%20%28REL%20TO%20HENGE%29"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1403-2",
+        "Depositor ID: OxA-1403"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:918439",
+      "title": "Radiocarbon date, Sample number OxA-1403",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/7b0ceab8af6434c5c5e8c8843260b52630de5cbe6d92df633dd512ef27740cd2",
+      "creator": "Julian Richards, Trust for Wessex Archaeol",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916395",
+    "_source": "hsds",
+    "_sourceId": "916395",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b0395f228fe3d750c698f175c2431952d7cb95cdc7d7cb2c9840e653786b20b0",
+    "title": "Radiocarbon date, Sample number I-2445",
+    "description": "Antler (1923) from base of Y hole 30 (Phase IIIb/IIIc transition) at Stonehenge, Wiltshire, England.<br>",
+    "creator": "S Piggott et al",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.178381,
+    "decimalLongitude": -1.824018,
+    "hsds": {
+      "elasticId": "b0395f228fe3d750c698f175c2431952d7cb95cdc7d7cb2c9840e653786b20b0",
+      "originalId": "916395",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          },
+          "centroid": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-I-2445",
+        "Depositor ID: I-2445"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:916395",
+      "title": "Radiocarbon date, Sample number I-2445",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b0395f228fe3d750c698f175c2431952d7cb95cdc7d7cb2c9840e653786b20b0",
+      "creator": "S Piggott et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916394",
+    "_source": "hsds",
+    "_sourceId": "916394",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/88b6a1521d0cc17cefe02632d61f954bdfcea98707ff98ffcc3fc8c81cf05bd2",
+    "title": "Radiocarbon date, Sample number I-2384",
+    "description": "Antler from base of unfinished R hole (abandonment of double bluestone circle) at Stonehenge, Wiltshire, England.<br>",
+    "creator": "S Piggott et al",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.178381,
+    "decimalLongitude": -1.824018,
+    "hsds": {
+      "elasticId": "88b6a1521d0cc17cefe02632d61f954bdfcea98707ff98ffcc3fc8c81cf05bd2",
+      "originalId": "916394",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          },
+          "centroid": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-I-2384",
+        "Depositor ID: I-2384"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:916394",
+      "title": "Radiocarbon date, Sample number I-2384",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/88b6a1521d0cc17cefe02632d61f954bdfcea98707ff98ffcc3fc8c81cf05bd2",
+      "creator": "S Piggott et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919859",
+    "_source": "hsds",
+    "_sourceId": "919859",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/be0431523fc4e6b3e1421f6e087fd8fa717832bc001425ab17a4886a11b48bed",
+    "title": "Radiocarbon date, Sample number GU-5109",
+    "description": "Charcoal, id as Pinus, from postpit WA 9580 at Stonehenge, Wiltshire, England. Comment (subm): see ref.<br>",
+    "creator": "F Vatcher & L Vatcher",
+    "date": "1998-12-01",
+    "subject": [
+      "2b occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.178381,
+    "decimalLongitude": -1.824018,
+    "hsds": {
+      "elasticId": "be0431523fc4e6b3e1421f6e087fd8fa717832bc001425ab17a4886a11b48bed",
+      "originalId": "919859",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          },
+          "centroid": {
+            "lat": 51.178381,
+            "lon": -1.824018
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "2b occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/2B%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-5109",
+        "Depositor ID: GU-5109"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T12:53:09.516Z",
+      "query": "q:stonehenge",
+      "recordId": "hsds:919859",
+      "title": "Radiocarbon date, Sample number GU-5109",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/be0431523fc4e6b3e1421f6e087fd8fa717832bc001425ab17a4886a11b48bed",
+      "creator": "F Vatcher & L Vatcher",
+      "date": "1998-12-01"
+    }
+  }
+]

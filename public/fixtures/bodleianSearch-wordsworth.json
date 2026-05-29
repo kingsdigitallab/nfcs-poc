@@ -1,0 +1,692 @@
+[
+  {
+    "_id": "f041c56f-7f55-42b4-8e60-8eea0fda0a0b",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f041c56f-7f55-42b4-8e60-8eea0fda0a0b/",
+    "_service": "bodleian",
+    "title": "[Playbill of Theatre Royal, Tuesday, the 19th of December, 1786, announcing Venice preserv'd; or, A plot discover'd &c.]",
+    "date": "1786-12-19",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f041c56f-7f55-42b4-8e60-8eea0fda0a0b/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "f041c56f-7f55-42b4-8e60-8eea0fda0a0b",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/f041c56f-7f55-42b4-8e60-8eea0fda0a0b.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f041c56f-7f55-42b4-8e60-8eea0fda0a0b/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Provincial Playbills folder 1 (6)",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "[Playbill of Theatre Royal, Tuesday, the 19th of December, 1786, announcing Venice preserv'd; or, A plot discover'd &c.]",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/f041c56f-7f55-42b4-8e60-8eea0fda0a0b/",
+      "date": "1786-12-19"
+    }
+  },
+  {
+    "_id": "2ec2826f-41a6-480d-bb78-7d0c3d2b329f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/2ec2826f-41a6-480d-bb78-7d0c3d2b329f/",
+    "_service": "bodleian",
+    "title": "[Playbill of Theatre Royal, Thursday evening, January 17, 1782, announcing King John &c.]",
+    "date": "1782-01-17",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/2ec2826f-41a6-480d-bb78-7d0c3d2b329f/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "2ec2826f-41a6-480d-bb78-7d0c3d2b329f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/2ec2826f-41a6-480d-bb78-7d0c3d2b329f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/2ec2826f-41a6-480d-bb78-7d0c3d2b329f/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Provincial Playbills box Taunton-York (51)",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "[Playbill of Theatre Royal, Thursday evening, January 17, 1782, announcing King John &c.]",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/2ec2826f-41a6-480d-bb78-7d0c3d2b329f/",
+      "date": "1782-01-17"
+    }
+  },
+  {
+    "_id": "e0b1f21b-ae3b-4128-987b-1c7f7df68258",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e0b1f21b-ae3b-4128-987b-1c7f7df68258/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1805–7",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/a78461cb-7bb3-4fb1-a0bb-af58025f9ac8/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "e0b1f21b-ae3b-4128-987b-1c7f7df68258",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e0b1f21b-ae3b-4128-987b-1c7f7df68258.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/a78461cb-7bb3-4fb1-a0bb-af58025f9ac8/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 13",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 96
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e0b1f21b-ae3b-4128-987b-1c7f7df68258/",
+      "date": "1805–7"
+    }
+  },
+  {
+    "_id": "c0784cf6-64d1-4dcd-9d43-29c92f45182d",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/c0784cf6-64d1-4dcd-9d43-29c92f45182d/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1803–5",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/334db531-8f37-4c77-bae0-f8ca99ee3c51/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "c0784cf6-64d1-4dcd-9d43-29c92f45182d",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c0784cf6-64d1-4dcd-9d43-29c92f45182d.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/334db531-8f37-4c77-bae0-f8ca99ee3c51/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 12",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 96
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/c0784cf6-64d1-4dcd-9d43-29c92f45182d/",
+      "date": "1803–5"
+    }
+  },
+  {
+    "_id": "98b6e8ab-9402-4430-8d93-333ed20cb419",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/98b6e8ab-9402-4430-8d93-333ed20cb419/",
+    "_service": "bodleian",
+    "title": "Scrapbook 1910-1928",
+    "date": "1910-1928",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/1f1e27af-3579-44ec-8793-b9298e447ce2/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "98b6e8ab-9402-4430-8d93-333ed20cb419",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/98b6e8ab-9402-4430-8d93-333ed20cb419.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/1f1e27af-3579-44ec-8793-b9298e447ce2/full/255,/0/default.jpg",
+      "shelfmark": "Lady Margaret Hall LMH Album 3/1910-1928",
+      "origins": "England, Oxford",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 208
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Scrapbook 1910-1928",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/98b6e8ab-9402-4430-8d93-333ed20cb419/",
+      "date": "1910-1928"
+    }
+  },
+  {
+    "_id": "3c051d06-6959-49cd-b9af-fa3fc28a253f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/3c051d06-6959-49cd-b9af-fa3fc28a253f/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1795–6",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f0ac8166-6c15-4dfa-a62d-fb9acaface9e/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "3c051d06-6959-49cd-b9af-fa3fc28a253f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/3c051d06-6959-49cd-b9af-fa3fc28a253f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f0ac8166-6c15-4dfa-a62d-fb9acaface9e/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 7",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 100
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/3c051d06-6959-49cd-b9af-fa3fc28a253f/",
+      "date": "1795–6"
+    }
+  },
+  {
+    "_id": "3bb1b2f5-199c-49a9-a221-2b5702120e38",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/3bb1b2f5-199c-49a9-a221-2b5702120e38/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1809–10",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/52400fe0-b4e7-4f2f-810f-7d280d285c8b/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "3bb1b2f5-199c-49a9-a221-2b5702120e38",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/3bb1b2f5-199c-49a9-a221-2b5702120e38.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/52400fe0-b4e7-4f2f-810f-7d280d285c8b/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 15",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 96
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/3bb1b2f5-199c-49a9-a221-2b5702120e38/",
+      "date": "1809–10"
+    }
+  },
+  {
+    "_id": "d0cd36ec-3bf8-476a-842b-d0062e2c543f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d0cd36ec-3bf8-476a-842b-d0062e2c543f/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1810–12",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/78a0cea6-bdcf-4aff-bd84-f132f64af2f4/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "d0cd36ec-3bf8-476a-842b-d0062e2c543f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d0cd36ec-3bf8-476a-842b-d0062e2c543f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/78a0cea6-bdcf-4aff-bd84-f132f64af2f4/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 16",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 80
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/d0cd36ec-3bf8-476a-842b-d0062e2c543f/",
+      "date": "1810–12"
+    }
+  },
+  {
+    "_id": "3e9e4a9d-c91c-4d21-b722-30b066a0ea1d",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/3e9e4a9d-c91c-4d21-b722-30b066a0ea1d/",
+    "_service": "bodleian",
+    "title": "Scrapbook 1920-1939",
+    "date": "1888-1924",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ec28c1a6-5889-4f4c-bf90-00b5ea4c2e54/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "3e9e4a9d-c91c-4d21-b722-30b066a0ea1d",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/3e9e4a9d-c91c-4d21-b722-30b066a0ea1d.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ec28c1a6-5889-4f4c-bf90-00b5ea4c2e54/full/255,/0/default.jpg",
+      "shelfmark": "St Hugh's College SHG/K/5/2",
+      "origins": "England, Oxford",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 349
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Scrapbook 1920-1939",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/3e9e4a9d-c91c-4d21-b722-30b066a0ea1d/",
+      "date": "1888-1924"
+    }
+  },
+  {
+    "_id": "5ef34ed3-defb-4c9d-ab4f-aa1440f8e266",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/5ef34ed3-defb-4c9d-ab4f-aa1440f8e266/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1825–6",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/586415f7-070f-4eaf-b179-7ec8630d3637/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "5ef34ed3-defb-4c9d-ab4f-aa1440f8e266",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/5ef34ed3-defb-4c9d-ab4f-aa1440f8e266.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/586415f7-070f-4eaf-b179-7ec8630d3637/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 26",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 84
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/5ef34ed3-defb-4c9d-ab4f-aa1440f8e266/",
+      "date": "1825–6"
+    }
+  },
+  {
+    "_id": "e6eefc89-9183-405a-a66f-15a31867d515",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e6eefc89-9183-405a-a66f-15a31867d515/",
+    "_service": "bodleian",
+    "title": "Volume of AEW Calendars 1887-1893",
+    "date": "1887-1893",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/dd04d190-6723-4f1e-b0cb-3c2f3b1f86c3/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "e6eefc89-9183-405a-a66f-15a31867d515",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e6eefc89-9183-405a-a66f-15a31867d515.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/dd04d190-6723-4f1e-b0cb-3c2f3b1f86c3/full/255,/0/default.jpg",
+      "shelfmark": "St Anne's College ANN/R 9/2",
+      "origins": "England, Oxford",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 153
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Volume of AEW Calendars 1887-1893",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e6eefc89-9183-405a-a66f-15a31867d515/",
+      "date": "1887-1893"
+    }
+  },
+  {
+    "_id": "e2e12af1-720c-4b99-b564-d5f026305f2d",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e2e12af1-720c-4b99-b564-d5f026305f2d/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1796–8",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/9d9d04ca-875e-4a11-83fd-13162d35b284/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "e2e12af1-720c-4b99-b564-d5f026305f2d",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e2e12af1-720c-4b99-b564-d5f026305f2d.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/9d9d04ca-875e-4a11-83fd-13162d35b284/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 8",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 100
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e2e12af1-720c-4b99-b564-d5f026305f2d/",
+      "date": "1796–8"
+    }
+  },
+  {
+    "_id": "0cecbd8e-bc19-4acd-93cd-202ff38303e8",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/0cecbd8e-bc19-4acd-93cd-202ff38303e8/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1807–9",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f1b7db99-9bc2-4025-a48c-40f1208c7bfc/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "0cecbd8e-bc19-4acd-93cd-202ff38303e8",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/0cecbd8e-bc19-4acd-93cd-202ff38303e8.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f1b7db99-9bc2-4025-a48c-40f1208c7bfc/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 14",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 96
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/0cecbd8e-bc19-4acd-93cd-202ff38303e8/",
+      "date": "1807–9"
+    }
+  },
+  {
+    "_id": "bec7172d-d2d7-4f7e-ad59-7a9d84a1d1d2",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/bec7172d-d2d7-4f7e-ad59-7a9d84a1d1d2/",
+    "_service": "bodleian",
+    "title": "Principals' Meeting Minutes 1903-17",
+    "date": "1903-1917",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/83939b05-7cfc-490e-a77a-c59594172efa/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "bec7172d-d2d7-4f7e-ad59-7a9d84a1d1d2",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/bec7172d-d2d7-4f7e-ad59-7a9d84a1d1d2.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/83939b05-7cfc-490e-a77a-c59594172efa/full/255,/0/default.jpg",
+      "shelfmark": "Somerville College SC/PO/PM/1",
+      "origins": "England, Oxford",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 76
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Principals' Meeting Minutes 1903-17",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/bec7172d-d2d7-4f7e-ad59-7a9d84a1d1d2/",
+      "date": "1903-1917"
+    }
+  },
+  {
+    "_id": "4d7ce21a-805b-4576-a55d-1d7023c8e2e0",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/4d7ce21a-805b-4576-a55d-1d7023c8e2e0/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1834–6",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d53ef489-d8da-49b5-aac7-f68dbc8d4cbe/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "4d7ce21a-805b-4576-a55d-1d7023c8e2e0",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/4d7ce21a-805b-4576-a55d-1d7023c8e2e0.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d53ef489-d8da-49b5-aac7-f68dbc8d4cbe/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 32",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 94
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/4d7ce21a-805b-4576-a55d-1d7023c8e2e0/",
+      "date": "1834–6"
+    }
+  },
+  {
+    "_id": "371eb192-512f-4d32-b393-002d32216a0c",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/371eb192-512f-4d32-b393-002d32216a0c/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1815–16",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3246d178-8617-4f88-872d-db88e85defea/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "371eb192-512f-4d32-b393-002d32216a0c",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/371eb192-512f-4d32-b393-002d32216a0c.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3246d178-8617-4f88-872d-db88e85defea/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 19",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 80
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/371eb192-512f-4d32-b393-002d32216a0c/",
+      "date": "1815–16"
+    }
+  },
+  {
+    "_id": "700d292b-9bbf-4056-8057-4de1344012f5",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/700d292b-9bbf-4056-8057-4de1344012f5/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1817–19",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/bd0e2638-fc44-48e6-9b8a-aff271a91078/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "700d292b-9bbf-4056-8057-4de1344012f5",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/700d292b-9bbf-4056-8057-4de1344012f5.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/bd0e2638-fc44-48e6-9b8a-aff271a91078/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 21",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 76
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/700d292b-9bbf-4056-8057-4de1344012f5/",
+      "date": "1817–19"
+    }
+  },
+  {
+    "_id": "160e12bc-4a28-49e5-9bbe-fd09fdd418ff",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/160e12bc-4a28-49e5-9bbe-fd09fdd418ff/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1820–21",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/af392cd3-8b98-4b53-8d13-80370d80874e/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "160e12bc-4a28-49e5-9bbe-fd09fdd418ff",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/160e12bc-4a28-49e5-9bbe-fd09fdd418ff.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/af392cd3-8b98-4b53-8d13-80370d80874e/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 23",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 80
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/160e12bc-4a28-49e5-9bbe-fd09fdd418ff/",
+      "date": "1820–21"
+    }
+  },
+  {
+    "_id": "b2d6e53c-8b80-4f7f-bd37-850f222a91ce",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/b2d6e53c-8b80-4f7f-bd37-850f222a91ce/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1813–15",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/16933631-f45b-458a-9ca3-7057081e607a/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "b2d6e53c-8b80-4f7f-bd37-850f222a91ce",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/b2d6e53c-8b80-4f7f-bd37-850f222a91ce.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/16933631-f45b-458a-9ca3-7057081e607a/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 18",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 80
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/b2d6e53c-8b80-4f7f-bd37-850f222a91ce/",
+      "date": "1813–15"
+    }
+  },
+  {
+    "_id": "de4a8b6b-930b-4d8c-9fb7-2be4730554de",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/de4a8b6b-930b-4d8c-9fb7-2be4730554de/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1822–3",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/218e1201-f1b4-45be-b343-a20d9ffd9f03/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "de4a8b6b-930b-4d8c-9fb7-2be4730554de",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/de4a8b6b-930b-4d8c-9fb7-2be4730554de.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/218e1201-f1b4-45be-b343-a20d9ffd9f03/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 24",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 84
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/de4a8b6b-930b-4d8c-9fb7-2be4730554de/",
+      "date": "1822–3"
+    }
+  },
+  {
+    "_id": "d00a8061-ca51-48be-b107-f3ef9ce47d59",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d00a8061-ca51-48be-b107-f3ef9ce47d59/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1800–02",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/17079d4c-8983-49be-8010-bd337e0778b1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "d00a8061-ca51-48be-b107-f3ef9ce47d59",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d00a8061-ca51-48be-b107-f3ef9ce47d59.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/17079d4c-8983-49be-8010-bd337e0778b1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 10",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 96
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/d00a8061-ca51-48be-b107-f3ef9ce47d59/",
+      "date": "1800–02"
+    }
+  },
+  {
+    "_id": "82af1207-cce2-481b-b8d4-86751e44fbf0",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/82af1207-cce2-481b-b8d4-86751e44fbf0/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1829–31",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/7446eaf5-1cf9-406b-9149-5b4c1aba36e6/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "82af1207-cce2-481b-b8d4-86751e44fbf0",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/82af1207-cce2-481b-b8d4-86751e44fbf0.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/7446eaf5-1cf9-406b-9149-5b4c1aba36e6/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 29",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 92
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/82af1207-cce2-481b-b8d4-86751e44fbf0/",
+      "date": "1829–31"
+    }
+  },
+  {
+    "_id": "309f41b6-53ad-4227-982a-aee885afbfca",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/309f41b6-53ad-4227-982a-aee885afbfca/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1831–2",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/898061e7-8795-49ca-9013-6b67bcd0de8c/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "309f41b6-53ad-4227-982a-aee885afbfca",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/309f41b6-53ad-4227-982a-aee885afbfca.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/898061e7-8795-49ca-9013-6b67bcd0de8c/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 30",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 92
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:14.192Z",
+      "query": "wordsworth",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/309f41b6-53ad-4227-982a-aee885afbfca/",
+      "date": "1831–2"
+    }
+  }
+]

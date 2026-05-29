@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "d16a4a69-e9c2-430a-85ad-7dfe769931e7",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d16a4a69-e9c2-430a-85ad-7dfe769931e7/",
+    "_service": "bodleian",
+    "title": "Monumenta Britannica",
+    "date": "1665–1693",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/b3b88166-e65c-4f90-b164-126882641a95/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "d16a4a69-e9c2-430a-85ad-7dfe769931e7",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d16a4a69-e9c2-430a-85ad-7dfe769931e7.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/b3b88166-e65c-4f90-b164-126882641a95/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Top. gen. c. 24",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 578
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T12:53:09.011Z",
+      "query": "stonehenge",
+      "title": "Monumenta Britannica",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/d16a4a69-e9c2-430a-85ad-7dfe769931e7/",
+      "date": "1665–1693"
+    }
+  }
+]
