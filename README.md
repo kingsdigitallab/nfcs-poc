@@ -10,6 +10,12 @@ Drag nodes onto a canvas, connect them in any order, and run federated searches 
 
 ---
 
+## Video tutorials
+
+**[▶ Watch the instructional video playlist](https://media.kcl.ac.uk/playlist/dedicated/1_byz38x11/1_kx4vwr4g)** — 6 videos covering the core workflow concepts and node types.
+
+---
+
 ## Prerequisites
 
 - **Node.js** v18 or later ([nodejs.org](https://nodejs.org))
