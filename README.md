@@ -14,6 +14,12 @@ Drag nodes onto a canvas, connect them in any order, and run federated searches 
 
 **[▶ Watch the instructional video playlist](https://media.kcl.ac.uk/playlist/dedicated/1_byz38x11/1_kx4vwr4g)** — 6 videos covering the core workflow concepts and node types.
 
+<script src="https://www.kaltura.com/p/2368101/sp/236810100/embedIframeJs/uiconf_id/41728511/partner_id/2368101"></script>
+<div id="kaltura_player_0522" style="width: 400px; height: 620px;"></div>
+<script>
+kWidget.embed({"targetId":"kaltura_player_0522","wid":"1_9613nnb4","uiconf_id":"41728511","flashvars":{"imageDefaultDuration":30,"localizationCode":"en","forceMobileHTML5":"true","scrubber.sliderPreview":"false","nextPrevBtn.plugin":"true","sideBarContainer.plugin":"true","sideBarContainer.position":"left","sideBarContainer.clickToClose":"true","chapters.plugin":"true","chapters.layout":"vertical","chapters.thumbnailRotator":"false","streamSelector.plugin":"true","EmbedPlayer.SpinnerTarget":"videoHolder","dualScreen.plugin":"true","hotspots.plugin":true,"playlistAPI.playlistUrl":"https://media.kcl.ac.uk/playlist/details/{playlistAPI.kpl0Id}","playlistAPI":{"kpl0Id":"1_byz38x11","autoPlay":false,"autoContinue":false}}});
+</script>
+
 ---
 
 ## Prerequisites
