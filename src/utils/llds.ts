@@ -6,13 +6,13 @@
  * Instead we scrape the human-readable search results page, which is stable
  * and returns the data we actually need.
  *
- * Search URL (via Vite dev proxy):
- *   /llds-proxy/xmlui/discover?query={q}&rpp={n}
- *   → https://llds.ling-phil.ox.ac.uk/llds/xmlui/discover?query={q}&rpp={n}
+ * Search URL (via Vite dev middleware — Puppeteer bypasses Anubis JS PoW):
+ *   /llds-search?q={q}&rpp={n}
+ *   → Puppeteer renders https://llds.ling-phil.ox.ac.uk/llds/xmlui/discover?query={q}&rpp={n}
  *
- * Two-step fetch (same pattern as mds.ts):
- *   1. Probe with rpp=1 to read total from <h4>Showing … out of N results</h4>
- *   2. Re-fetch with rpp=min(total, userLimit, LLDS_CAP) to get all records
+ * Single-request design: one fetch with rpp=LLDS_CAP; total extracted from
+ * the same page (<h4>Showing … out of N results</h4>). The two-step probe
+ * approach is not used because each Puppeteer page load is ~2–4 s.
  *
  * Per-item structure (li.item-box):
  *   .artifact-title a     → title text + href (/llds/xmlui/handle/{handle})
@@ -23,9 +23,9 @@
  *   .item-branding        → collection label (EEBO-TCP, OTA, …)
  */
 
-const LLDS_DISCOVER = '/llds-proxy/xmlui/discover'
-const LLDS_CAP      = 50
-const TIMEOUT_MS    = 15_000
+const LLDS_SEARCH = '/llds-search'
+const LLDS_CAP    = 50
+const TIMEOUT_MS  = 60_000  // Anubis PoW + page load can take ~10–30 s
 
 // ─── types ────────────────────────────────────────────────────────────────────
 
@@ -46,8 +46,8 @@ export interface LLDSRawRecord {
 // ─── internal helpers ─────────────────────────────────────────────────────────
 
 async function fetchHTML(query: string, rpp: number): Promise<Document> {
-  const params = new URLSearchParams({ query, rpp: String(rpp) })
-  const url    = `${LLDS_DISCOVER}?${params}`
+  const params = new URLSearchParams({ q: query, rpp: String(rpp) })
+  const url    = `${LLDS_SEARCH}?${params}`
 
   const controller = new AbortController()
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS)
@@ -131,24 +131,16 @@ export async function fetchLLDSRecords(
   query: string,
   limit: number,
 ): Promise<LLDSFetchResult> {
-  // Step 1 — lightweight probe to read total
-  const probeDoc = await fetchHTML(query, 1)
-  const total    = extractTotal(probeDoc)
-
-  console.log(`[LLDS] total=${total}`)
-
-  const fetchCount = Math.min(total || 0, limit, LLDS_CAP)
+  // Single request — Puppeteer page loads are expensive (~2–4 s each after the
+  // Anubis PoW solve, which itself can take ~10–30 s on first request). Fetch
+  // LLDS_CAP items and extract the total from the same rendered page.
+  const fetchCount = Math.min(limit, LLDS_CAP)
+  const doc        = await fetchHTML(query, fetchCount)
+  const records    = parseItems(doc)
+  const total      = extractTotal(doc)
   const capped     = total > fetchCount
 
-  if (fetchCount === 0) {
-    return { records: [], total: 0, capped: false }
-  }
-
-  // Step 2 — full fetch with the right page size
-  const fullDoc = await fetchHTML(query, fetchCount)
-  const records = parseItems(fullDoc)
-
-  console.log(`[LLDS] parsed ${records.length} records (fetchCount=${fetchCount}, capped=${capped})`)
+  console.log(`[LLDS] parsed ${records.length} records (total=${total}, capped=${capped})`)
 
   return { records, total, capped }
 }
