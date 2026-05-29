@@ -335,6 +335,38 @@ async function adsCatalogueSearchMiddleware(
   })()
 }
 
+// ── LLDS search middleware ────────────────────────────────────────────────────
+// Browser fetches /llds-search?q=<query>&rpp=<n>
+// Uses Puppeteer to solve the Anubis JS proof-of-work challenge before
+// returning the fully-rendered DSpace discover HTML to the client.
+
+async function lldsSearchMiddleware(
+  req: IncomingMessage,
+  res: ServerResponse,
+  next: () => void,
+) {
+  if (!req.url?.startsWith('/llds-search')) { next(); return }
+
+  const parsed = new URL(req.url, 'http://localhost')
+  const q   = parsed.searchParams.get('q') ?? ''
+  const rpp = parsed.searchParams.get('rpp') ?? '50'
+
+  const target =
+    `https://llds.ling-phil.ox.ac.uk/llds/xmlui/discover` +
+    `?query=${encodeURIComponent(q)}&rpp=${encodeURIComponent(rpp)}`
+
+  ;(async () => {
+    try {
+      await fetchWithBrowser(target, res, 'networkidle2')
+    } catch (err) {
+      if (!res.headersSent) {
+        res.statusCode = 502
+        res.end(`LLDS search error: ${err instanceof Error ? err.message : String(err)}`)
+      }
+    }
+  })()
+}
+
 // ── Generic URL proxy middleware ──────────────────────────────────────────────
 // Browser fetches /url-proxy?url=<encoded>[&js=true][&wait=networkidle0]
 // Vite handles it server-side, sidestepping CORS entirely.
@@ -389,6 +421,12 @@ export default defineConfig({
         target: 'https://llds.ling-phil.ox.ac.uk',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/llds-proxy/, '/llds'),
+        headers: {
+          'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Referer':         'https://llds.ling-phil.ox.ac.uk/',
+          'Accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Language': 'en-GB,en;q=0.9',
+        },
       },
       // Proxy /ads-proxy/* → https://archaeologydataservice.ac.uk/*
       '/ads-proxy': {
@@ -488,6 +526,7 @@ export default defineConfig({
       configureServer(server) {
         server.middlewares.use(adsLibrarySearchMiddleware)
         server.middlewares.use(adsCatalogueSearchMiddleware)
+        server.middlewares.use(lldsSearchMiddleware)
         server.middlewares.use(urlProxyMiddleware)
 
         // Dev-only: write fixture JSON directly to public/fixtures/
