@@ -173,7 +173,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('llds'), type: 'lldsSearch', position: pos,
     data: {
       inlineQuery: '', inlineLimit: '20',
-      useCache: true,
+      useCache: false,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies LLDSSearchNodeData,
   }),
@@ -213,6 +213,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       ariadneSubject: '', derivedSubject: '', nativeSubject: '',
       country: '', dataType: '', temporal: '', contributor: '',
       sort: '_score', order: 'desc',
+      useFixture: false,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies HSDSSearchNodeData,
   }),

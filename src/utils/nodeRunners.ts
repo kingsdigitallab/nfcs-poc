@@ -60,7 +60,7 @@ export const nodeRunners: Record<string, NodeRunner> = {
   mdsSearch:         withFixture('mdsSearch',       runMDSNode),
   europeanaSearch:   withFixture('europeanaSearch', runEuropeanaNode),
   ariadneSearch:     withFixture('ariadneSearch',   runARIADNENode),
-  hsdsSearch:        runHSDSNode,
+  hsdsSearch:        withFixture('hsdsSearch', runHSDSNode),
   bodleianSearch:    withFixture('bodleianSearch',  runBodleianSearchNode),
   adsSearchAdvanced: withFixture('adsSearchAdvanced', runADSAdvancedNode),
   adsLibrarySearch:  runADSLibraryNode,
