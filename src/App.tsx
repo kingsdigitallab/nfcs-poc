@@ -23,6 +23,7 @@ import { nodeTypes } from './nodes'
 import { ExpandedOutputPanel } from './nodes/ExpandedOutputPanel'
 import { ChatSidebar } from './components/ChatSidebar'
 import { ConnectionSuggestions, HandlePicker, NODE_PARAM_HANDLES, type Suggestion } from './components/ConnectionSuggestions'
+import { FixturePreflightPanel } from './components/FixturePreflightPanel'
 
 /**
  * Handle ids that must only ever carry ONE inbound connection. These are the
@@ -190,6 +191,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       ariadneSubject: '', derivedSubject: '', nativeSubject: '',
       country: '', dataType: '', temporal: '',
       sort: '_score', order: 'desc',
+      useFixture: false,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies ADSSearchAdvancedNodeData,
   }),
@@ -340,7 +342,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       systemPrompt:        'You are a research assistant helping to analyse humanities research documents and data.',
       userPromptTemplate:  'Summarise the key themes and subjects in 3-4 sentences:\n\n{{content}}',
       temperature:         0.7,
-      maxTokens:           1024,
+      maxTokens:           4096,
       status:              'idle',
       statusMessage:       '',
       results:             undefined,
@@ -357,7 +359,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       systemPrompt:        'You are a research assistant helping to analyse humanities research data.',
       userPromptTemplate:  'Summarise the following in 2–3 sentences:\n\n{{value}}',
       temperature:         0.7,
-      maxTokens:           1024,
+      maxTokens:           4096,
       status:              'idle',
       statusMessage:       '',
       results:             undefined,
@@ -709,8 +711,8 @@ const SIDEBAR_ITEMS = [
   // ── Hidden ───────────────────────────────────────────────────────────────────
   { type: 'adsLibrarySearch',  label: 'ADSLibrary',            sub: 'ADS Library catalogue',                   color: '#1e3a5f', group: 'Output', hidden: true },
   { type: 'adsSearchAdvanced', label: 'ADSSearch',             sub: 'Archaeology Data Services',                color: '#7c2d12', group: 'Output', hidden: true },
-  { type: 'ollamaNode',        label: 'Ollama',                sub: 'Local LLM — file/content records',        color: '#312e81', group: 'Output', hidden: true },
-  { type: 'ollamaField',       label: 'OllamaByField',         sub: 'LLM inference on a chosen field',        color: '#1e1b4b', group: 'Output', hidden: true },
+  { type: 'ollamaNode',        label: 'Ollama',                sub: 'Local LLM — file/content records',        color: '#312e81', group: 'Extraction and Enrichment', hidden: true },
+  { type: 'ollamaField',       label: 'OllamaByField',         sub: 'LLM inference on a chosen field',        color: '#1e1b4b', group: 'Extraction and Enrichment', hidden: true },
   { type: 'ollamaOutput',      label: 'OllamaOutput',          sub: 'Display Ollama inference text',           color: '#0f172a', group: 'Output', hidden: true },
 ]
 
@@ -727,6 +729,12 @@ export default function App() {
   const [expandedNodeId, setExpandedNodeId] = useState<string | null>(null)
   const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set(['Data Services', 'Local Content', 'Filters and Transforms', 'Extraction and Enrichment', 'Output']))
   const [chatOpen, setChatOpen] = useState(true)
+  const [showOllama, setShowOllama] = useState(
+    () => localStorage.getItem('show_ollama_nodes') === 'true',
+  )
+  useEffect(() => {
+    localStorage.setItem('show_ollama_nodes', String(showOllama))
+  }, [showOllama])
 
   const [connMenu, setConnMenu] = useState<{
     x: number; y: number
@@ -1159,6 +1167,14 @@ export default function App() {
             ⚠ {loadError}
           </span>
         )}
+        {import.meta.env.DEV && <FixturePreflightPanel />}
+        <button
+          style={{ ...templateBtnStyle, background: showOllama ? '#312e81' : undefined, color: showOllama ? '#fff' : undefined, borderColor: showOllama ? '#312e81' : undefined }}
+          onClick={() => setShowOllama(v => !v)}
+          title={showOllama ? 'Hide Ollama nodes (local LLM)' : 'Show Ollama nodes — use this if KCL inference is unavailable'}
+        >
+          🦙 Ollama
+        </button>
         <button
           style={{ ...templateBtnStyle, background: chatOpen ? '#881337' : undefined, color: chatOpen ? '#fff' : undefined, borderColor: chatOpen ? '#881337' : undefined }}
           onClick={() => setChatOpen(v => !v)}
@@ -1179,7 +1195,10 @@ export default function App() {
         {/* Sidebar */}
         <div style={sidebarStyle}>
           {(['Canvas', 'Input', 'Inspection', 'Data Services', 'Local Content', 'Filters and Transforms', 'Extraction and Enrichment', 'Output'] as const).map(group => {
-            const items      = SIDEBAR_ITEMS.filter(i => i.group === group && !i.hidden)
+            const OLLAMA_TYPES = new Set(['ollamaNode', 'ollamaField', 'ollamaOutput'])
+            const items = SIDEBAR_ITEMS.filter(
+              i => i.group === group && (!i.hidden || (showOllama && OLLAMA_TYPES.has(i.type))),
+            )
             const isCollapsed = collapsedGroups.has(group)
             const toggleGroup = () => setCollapsedGroups(prev => {
               const next = new Set(prev)

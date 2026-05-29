@@ -62,7 +62,7 @@ export const nodeRunners: Record<string, NodeRunner> = {
   ariadneSearch:     withFixture('ariadneSearch',   runARIADNENode),
   hsdsSearch:        runHSDSNode,
   bodleianSearch:    withFixture('bodleianSearch',  runBodleianSearchNode),
-  adsSearchAdvanced: runADSAdvancedNode,
+  adsSearchAdvanced: withFixture('adsSearchAdvanced', runADSAdvancedNode),
   adsLibrarySearch:  runADSLibraryNode,
   reconciliation:    runReconciliationNode,
   filterTransform:   runFilterTransformNode,

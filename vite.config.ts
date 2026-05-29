@@ -2,6 +2,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import type { IncomingMessage, ServerResponse } from 'http'
+import { writeFileSync, mkdirSync } from 'fs'
+import { join } from 'path'
 
 // ── URL proxy helpers ─────────────────────────────────────────────────────────
 
@@ -487,6 +489,33 @@ export default defineConfig({
         server.middlewares.use(adsLibrarySearchMiddleware)
         server.middlewares.use(adsCatalogueSearchMiddleware)
         server.middlewares.use(urlProxyMiddleware)
+
+        // Dev-only: write fixture JSON directly to public/fixtures/
+        // Used by FixturePreflightPanel to bulk-generate offline fixtures.
+        server.middlewares.use((req, res, next) => {
+          if (req.method !== 'POST' || !req.url?.startsWith('/dev/write-fixture')) { next(); return }
+          let body = ''
+          req.on('data', (chunk: Buffer) => { body += chunk.toString() })
+          req.on('end', () => {
+            try {
+              const { filename, records } = JSON.parse(body) as { filename: string; records: unknown }
+              if (!filename || typeof filename !== 'string' || !/^[\w-]+\.json$/.test(filename)) {
+                res.statusCode = 400
+                res.end('Invalid filename')
+                return
+              }
+              const dir = join(process.cwd(), 'public', 'fixtures')
+              mkdirSync(dir, { recursive: true })
+              writeFileSync(join(dir, filename), JSON.stringify(records, null, 2))
+              res.setHeader('Content-Type', 'application/json')
+              res.statusCode = 200
+              res.end(JSON.stringify({ saved: filename }))
+            } catch (e) {
+              res.statusCode = 400
+              res.end(String(e))
+            }
+          })
+        })
       },
     },
   ],
