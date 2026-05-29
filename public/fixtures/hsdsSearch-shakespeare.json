@@ -1,0 +1,135 @@
+[
+  {
+    "id": "hsds:1252107",
+    "_source": "hsds",
+    "_sourceId": "1252107",
+    "_sourceUrl": "https://doi.org/10.5284/1141626",
+    "title": "The Shakespeare Hotel, 14-19 Chapel Street, Stratford-upon-Avon, Warwickshire: Tree-ring Analysis of Timbers",
+    "description": "Scientific dating of historic timbers. Three species of timber were found in this building, the majority being oak, although the rear ranges contained a lot of elm and at least one ash. The front range, known as 'Five Gables' dated to the early AD 1620s, while a single timber from a range to the rear at the south end of this block had a likely felling date of after AD 1512, suggesting this either represented an earlier building on the site, or was a re-used timber. A single timber from one of the rear ranges to 'Four Gables' had a likely felling date range of AD 1695-1724, which may represent the construction of this range, currently a corridor from Reception to the rear entrance.",
+    "creator": "Martin Bridge",
+    "date": "2026-05-01",
+    "subject": [
+      "dendrochronological survey",
+      "heritage science",
+      "hotel",
+      "post medieval hotel",
+      "hotels (built public accommodations)"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 52.1910046225666,
+    "decimalLongitude": -1.70668348588658,
+    "periodStart": "1540",
+    "periodEnd": "1900",
+    "periodName": "post medieval",
+    "hsds": {
+      "elasticId": "531aa07c3718eaa5eb634f852f6011d3cf5c352ac0f5e590a6f2c7abaf248953",
+      "originalId": "1252107",
+      "landingPage": "https://doi.org/10.5284/1141626",
+      "modified": "2026-05-01",
+      "contributor": [
+        "Nottingham Tree-ring Dating Laboratory"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Stratford-upon-Avon, Warwickshire, Stratford-on-Avon, England"
+        },
+        {
+          "geopoint": {
+            "lat": 52.1910046225666,
+            "lon": -1.70668348588658
+          },
+          "centroid": {
+            "lat": 52.1910046225666,
+            "lon": -1.70668348588658
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Stratford-upon-Avon, Warwickshire, Stratford-on-Avon, England"
+      ],
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1900",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "dendrochronological survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DENDROCHRONOLOGICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "hotel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOTEL"
+        },
+        {
+          "prefLabel": "post medieval hotel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/POST%20MEDIEVAL%20HOTEL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "hotels (built public accommodations)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007166",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": []
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T13:54:58.171Z",
+      "query": "q:shakespeare",
+      "recordId": "hsds:1252107",
+      "title": "The Shakespeare Hotel, 14-19 Chapel Street, Stratford-upon-Avon, Warwickshire: Tree-ring Analysis of Timbers",
+      "url": "https://doi.org/10.5284/1141626",
+      "creator": "Martin Bridge",
+      "date": "2026-05-01"
+    }
+  }
+]

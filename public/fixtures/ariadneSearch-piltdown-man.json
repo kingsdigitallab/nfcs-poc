@@ -1,0 +1,97 @@
+[
+  {
+    "id": "ariadne:d837f62827319a6f5815ec91d6f5ae72204aecccc9a5a2448918c0f5291de981",
+    "_source": "ariadne",
+    "_sourceId": "912439",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/d837f62827319a6f5815ec91d6f5ae72204aecccc9a5a2448918c0f5291de981",
+    "title": "Radiocarbon date, Sample number GrN-2204",
+    "description": "Bone, id as jawbone of \"Piltdown Man\" (actually orangutan), from Piltdown, Sussex, England.<br>",
+    "creator": "K Oakley",
+    "date": "1998-12-01",
+    "subject": [
+      "8a piltdown forgery",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 50.978815,
+    "decimalLongitude": 0.051526,
+    "ariadne": {
+      "elasticId": "d837f62827319a6f5815ec91d6f5ae72204aecccc9a5a2448918c0f5291de981",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 50.978815,
+            "lon": 0.051526
+          },
+          "centroid": {
+            "lat": 50.978815,
+            "lon": 0.051526
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "creatorDetails": [
+        {
+          "name": "K Oakley",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/K%20Oakley"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "8a piltdown forgery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/8A%20PILTDOWN%20FORGERY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Council for British Archaeology",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/0873D863-600B-346C-955F-14AAF24BE609",
+      "otherId": [
+        "C14-GRN-2204",
+        "Depositor ID: GrN-2204"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T13:59:48.646Z",
+      "query": "q:piltdown man",
+      "recordId": "ariadne:d837f62827319a6f5815ec91d6f5ae72204aecccc9a5a2448918c0f5291de981",
+      "title": "Radiocarbon date, Sample number GrN-2204",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/d837f62827319a6f5815ec91d6f5ae72204aecccc9a5a2448918c0f5291de981",
+      "creator": "K Oakley",
+      "date": "1998-12-01"
+    }
+  }
+]

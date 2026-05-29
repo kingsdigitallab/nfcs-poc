@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import type { IncomingMessage, ServerResponse } from 'http'
-import { writeFileSync, mkdirSync } from 'fs'
+import { writeFileSync, mkdirSync, readdirSync } from 'fs'
 import { join } from 'path'
 
 // ── URL proxy helpers ─────────────────────────────────────────────────────────
@@ -557,6 +557,16 @@ export default defineConfig({
               const dir = join(process.cwd(), 'public', 'fixtures')
               mkdirSync(dir, { recursive: true })
               writeFileSync(join(dir, filename), JSON.stringify(records, null, 2))
+              // Regenerate manifest from all fixture filenames
+              const manifest: Record<string, string[]> = {}
+              for (const f of readdirSync(dir).filter(f => f.endsWith('.json') && f !== 'manifest.json')) {
+                const m = /^([a-zA-Z]+)-(.+)\.json$/.exec(f)
+                if (!m) continue
+                const [, nodeType, slug] = m
+                ;(manifest[nodeType] ??= []).push(slug)
+              }
+              for (const k of Object.keys(manifest)) manifest[k].sort()
+              writeFileSync(join(dir, 'manifest.json'), JSON.stringify(manifest, null, 2))
               res.setHeader('Content-Type', 'application/json')
               res.statusCode = 200
               res.end(JSON.stringify({ saved: filename }))

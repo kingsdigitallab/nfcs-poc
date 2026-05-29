@@ -1,0 +1,212 @@
+[
+  {
+    "_id": "44797a0d-80ee-4cec-8cf4-1063294cfdd0",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/44797a0d-80ee-4cec-8cf4-1063294cfdd0/",
+    "_service": "bodleian",
+    "title": "Account of Arnolf Van Harff's travels in 1496-1499.",
+    "date": "1554",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0ef2d683-5cd4-448c-ad15-0982a28279b1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "44797a0d-80ee-4cec-8cf4-1063294cfdd0",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/44797a0d-80ee-4cec-8cf4-1063294cfdd0.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0ef2d683-5cd4-448c-ad15-0982a28279b1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Bodl. 972",
+      "origins": "Germany",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 17
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:45.886Z",
+      "query": "amazon",
+      "title": "Account of Arnolf Van Harff's travels in 1496-1499.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/44797a0d-80ee-4cec-8cf4-1063294cfdd0/",
+      "date": "1554"
+    }
+  },
+  {
+    "_id": "7cdd5238-59bf-4d78-954b-cc791af2988f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/7cdd5238-59bf-4d78-954b-cc791af2988f/",
+    "_service": "bodleian",
+    "title": "Miroir du Monde. Universal history from the Creation to the birth of Christ. Vol. I.",
+    "date": "Before 1463 (?)",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d0ed36cf-e811-4526-b759-b7e5fce37976/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "7cdd5238-59bf-4d78-954b-cc791af2988f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/7cdd5238-59bf-4d78-954b-cc791af2988f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d0ed36cf-e811-4526-b759-b7e5fce37976/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Douce 336",
+      "origins": "France, Normandy?",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 36
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:45.886Z",
+      "query": "amazon",
+      "title": "Miroir du Monde. Universal history from the Creation to the birth of Christ. Vol. I.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/7cdd5238-59bf-4d78-954b-cc791af2988f/",
+      "date": "Before 1463 (?)"
+    }
+  },
+  {
+    "_id": "9e62854b-7dec-4087-b91d-1e0e89ae45d8",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/9e62854b-7dec-4087-b91d-1e0e89ae45d8/",
+    "_service": "bodleian",
+    "title": "Épître d'Othéa.",
+    "date": "15th century, third quarter",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/2ba34e08-fe2a-443d-bfe2-3d878ff29778/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "9e62854b-7dec-4087-b91d-1e0e89ae45d8",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/9e62854b-7dec-4087-b91d-1e0e89ae45d8.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/2ba34e08-fe2a-443d-bfe2-3d878ff29778/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Bodl. 421",
+      "origins": "France",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 123
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:45.886Z",
+      "query": "amazon",
+      "title": "Épître d'Othéa.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/9e62854b-7dec-4087-b91d-1e0e89ae45d8/",
+      "date": "15th century, third quarter"
+    }
+  },
+  {
+    "_id": "d85bec81-9a93-452d-a5fc-881dafa83536",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d85bec81-9a93-452d-a5fc-881dafa83536/",
+    "_service": "bodleian",
+    "title": "Epitome of Pompeius Trogus.",
+    "date": "15th century, third quarter",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/84ddfbbe-587e-42c9-949f-661e28437529/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "d85bec81-9a93-452d-a5fc-881dafa83536",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d85bec81-9a93-452d-a5fc-881dafa83536.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/84ddfbbe-587e-42c9-949f-661e28437529/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Auct. F. 2. 29",
+      "origins": "France",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 29
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:45.886Z",
+      "query": "amazon",
+      "title": "Epitome of Pompeius Trogus.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/d85bec81-9a93-452d-a5fc-881dafa83536/",
+      "date": "15th century, third quarter"
+    }
+  },
+  {
+    "_id": "8d17bc13-14b6-4a56-b3b5-d2e1a935c60d",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/8d17bc13-14b6-4a56-b3b5-d2e1a935c60d/",
+    "_service": "bodleian",
+    "title": "Romance of Alexander.",
+    "date": "",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/6fb21473-8721-4b74-8916-8519575b90cc/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "8d17bc13-14b6-4a56-b3b5-d2e1a935c60d",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/8d17bc13-14b6-4a56-b3b5-d2e1a935c60d.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/6fb21473-8721-4b74-8916-8519575b90cc/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Bodl. 264, pt. I",
+      "origins": "Flanders, Tournai",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 802
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:45.886Z",
+      "query": "amazon",
+      "title": "Romance of Alexander.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/8d17bc13-14b6-4a56-b3b5-d2e1a935c60d/",
+      "date": ""
+    }
+  },
+  {
+    "_id": "d52e17b1-f82e-4392-ba52-022f5eba564f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d52e17b1-f82e-4392-ba52-022f5eba564f/",
+    "_service": "bodleian",
+    "title": "F. Mendelssohn Bartholdy's Album containing autograph music, album leaves and pictures from various contributors, 1821-1847",
+    "date": "1821-1847",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4c2e5f45-fc3d-45b0-8b89-ec367725d104/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "d52e17b1-f82e-4392-ba52-022f5eba564f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d52e17b1-f82e-4392-ba52-022f5eba564f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4c2e5f45-fc3d-45b0-8b89-ec367725d104/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. M. Deneke Mendelssohn d. 8",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 140
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:45.886Z",
+      "query": "amazon",
+      "title": "F. Mendelssohn Bartholdy's Album containing autograph music, album leaves and pictures from various contributors, 1821-1847",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/d52e17b1-f82e-4392-ba52-022f5eba564f/",
+      "date": "1821-1847"
+    }
+  },
+  {
+    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+    "_service": "bodleian",
+    "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+    "date": "1623",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/390fd0e8-9eae-475d-9564-ed916ab9035c.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Arch. G c.7",
+      "origins": "London",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 920
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:45.886Z",
+      "query": "amazon",
+      "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+      "date": "1623"
+    }
+  }
+]

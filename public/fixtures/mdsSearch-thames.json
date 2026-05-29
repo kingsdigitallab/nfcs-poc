@@ -1,0 +1,5363 @@
+[
+  {
+    "id": "mds:bc788465-b5d2-3a1d-a06c-d34a6faed65b",
+    "_source": "mds",
+    "_sourceId": "co66668",
+    "_sourceUrl": "https://museumdata.uk/objects/bc788465-b5d2-3a1d-a06c-d34a6faed65b",
+    "title": "\"A perspective view of the Thames and the Thames Tunnel. History of The Thames Tunnel\"",
+    "description": "A peepshow, entitled `A perspective view of the Thames and the Thames Tunnel. History of The Thames Tunnel'. 3 engraved sections and front, hand coloured, with 3 peepholes. Published by Azulay 1850. Size 20cmx17cm extending to 53cm. c.f.710",
+    "date": "1850",
+    "subject": [
+      "peepshow; peepshow",
+      "peepshow; peepshow",
+      "peepshow"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "bc788465-b5d2-3a1d-a06c-d34a6faed65b",
+      "objectNumber": "co66668",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "\"A perspective view of the Thames and the Thames Tunnel. History of The Thames Tunnel\""
+        ],
+        "Object name(s)": [
+          "peepshow; peepshow"
+        ],
+        "Brief description": [
+          "A peepshow, entitled `A perspective view of the Thames and the Thames Tunnel. History of The Thames Tunnel'. 3 engraved sections and front, hand coloured, with 3 peepholes. Published by Azulay 1850. Size 20cmx17cm extending to 53cm. c.f.710"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "peepshow"
+        ],
+        "Credit line": [
+          "Bernard Quaritch Ltd."
+        ],
+        "Object name": [
+          "peepshow; peepshow"
+        ],
+        "Date - earliest / single": [
+          "1850"
+        ],
+        "Date - latest": [
+          "1850"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1981-1749",
+          "1009/80/151"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:bc788465-b5d2-3a1d-a06c-d34a6faed65b",
+      "title": "\"A perspective view of the Thames and the Thames Tunnel. History of The Thames Tunnel\"",
+      "url": "https://museumdata.uk/objects/bc788465-b5d2-3a1d-a06c-d34a6faed65b",
+      "date": "1850"
+    }
+  },
+  {
+    "id": "mds:530915b0-cc58-3c9d-a0ed-4ae97499f564",
+    "_source": "mds",
+    "_sourceId": "co447953",
+    "_sourceUrl": "https://museumdata.uk/objects/530915b0-cc58-3c9d-a0ed-4ae97499f564",
+    "title": "Papers re Thames Driftway and Richard Trevithick's involvement in the project / Thames Archway Company",
+    "description": "[Papers re Thames Driftway and Richard Trevithick's involvement in the project / Thames Archway Company. 1808-1809. 8 items in folder, comprising chiefly minutes of shareholders' and directors' meetings, but also include lithograph and ink sketch of the workings]",
+    "creator": "Thames Archway Company",
+    "date": "1808",
+    "subject": [
+      "diagram; diagram",
+      "diagram; diagram",
+      "diagram"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "530915b0-cc58-3c9d-a0ed-4ae97499f564",
+      "objectNumber": "co447953",
+      "material": [
+        "paper (fibre product)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Papers re Thames Driftway and Richard Trevithick's involvement in the project / Thames Archway Company"
+        ],
+        "Object name(s)": [
+          "diagram; diagram"
+        ],
+        "Brief description": [
+          "[Papers re Thames Driftway and Richard Trevithick's involvement in the project / Thames Archway Company. 1808-1809. 8 items in folder, comprising chiefly minutes of shareholders' and directors' meetings, but also include lithograph and ink sketch of the workings]"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "diagram"
+        ],
+        "Credit line": [
+          "Sotheby Parke, Bernet & Co."
+        ],
+        "Material": [
+          "paper (fibre product)"
+        ],
+        "Object name": [
+          "diagram; diagram"
+        ],
+        "Date - earliest / single": [
+          "1808"
+        ],
+        "Date - latest": [
+          "1809"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Thames Archway Company"
+        ],
+        "Other number": [
+          "1998-195",
+          "E1998.2969.1",
+          "MS/0207",
+          "MS 207/6"
+        ],
+        "Other number type": [
+          "accession number",
+          "Entry number",
+          "Adlib Reference number",
+          "Manuscript number"
+        ],
+        "Responsible department/section": [
+          "SCM - Archive"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:530915b0-cc58-3c9d-a0ed-4ae97499f564",
+      "title": "Papers re Thames Driftway and Richard Trevithick's involvement in the project / Thames Archway Company",
+      "url": "https://museumdata.uk/objects/530915b0-cc58-3c9d-a0ed-4ae97499f564",
+      "creator": "Thames Archway Company",
+      "date": "1808"
+    }
+  },
+  {
+    "id": "mds:01229eb5-242d-3b3a-a107-ff55ad8b0b74",
+    "_source": "mds",
+    "_sourceId": "co430207",
+    "_sourceUrl": "https://museumdata.uk/objects/01229eb5-242d-3b3a-a107-ff55ad8b0b74",
+    "title": "Bound volume comprising Thames Ironworks Historical Catalogue (1911)",
+    "description": "[Bound volume comprising Thames Ironworks Historical Catalogue (1911) and Thames Iron Works Gazette (1911 May) / Thames Iron Works, Shipbuilding & Engineering Co. Ltd. See /1 and /2 below]",
+    "creator": "Thames Iron Works, Shipbuilding and Engineering Company Limited",
+    "date": "1911",
+    "subject": [
+      "volume; volume",
+      "volume; volume"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "01229eb5-242d-3b3a-a107-ff55ad8b0b74",
+      "objectNumber": "co430207",
+      "dimensions": [
+        "height",
+        "width",
+        "11",
+        "280",
+        "8 7/16",
+        "215"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bound volume comprising Thames Ironworks Historical Catalogue (1911)"
+        ],
+        "Object name(s)": [
+          "volume; volume"
+        ],
+        "Brief description": [
+          "[Bound volume comprising Thames Ironworks Historical Catalogue (1911) and Thames Iron Works Gazette (1911 May) / Thames Iron Works, Shipbuilding & Engineering Co. Ltd. See /1 and /2 below]"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Newcomen Society"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "11",
+          "280",
+          "8 7/16",
+          "215"
+        ],
+        "Object name": [
+          "volume; volume"
+        ],
+        "Date - earliest / single": [
+          "1911"
+        ],
+        "Date - latest": [
+          "1911"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Thames Iron Works, Shipbuilding and Engineering Company Limited"
+        ],
+        "Other number": [
+          "1997-1623",
+          "MS/0616"
+        ],
+        "Other number type": [
+          "accession number",
+          "Adlib Reference"
+        ],
+        "Responsible department/section": [
+          "SCM - Archive"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:01229eb5-242d-3b3a-a107-ff55ad8b0b74",
+      "title": "Bound volume comprising Thames Ironworks Historical Catalogue (1911)",
+      "url": "https://museumdata.uk/objects/01229eb5-242d-3b3a-a107-ff55ad8b0b74",
+      "creator": "Thames Iron Works, Shipbuilding and Engineering Company Limited",
+      "date": "1911"
+    }
+  },
+  {
+    "id": "mds:67d4421b-9195-334d-a363-1a5933d290b1",
+    "_source": "mds",
+    "_sourceId": "co8790835",
+    "_sourceUrl": "https://museumdata.uk/objects/67d4421b-9195-334d-a363-1a5933d290b1",
+    "title": "Thames Logo Panel",
+    "description": "Two Thames TV logo panels.",
+    "subject": [
+      "panel - surface component; panel - surface component",
+      "panel - surface component; panel - surface component",
+      "panel - surface component"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "67d4421b-9195-334d-a363-1a5933d290b1",
+      "objectNumber": "co8790835",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Thames Logo Panel"
+        ],
+        "Object name(s)": [
+          "panel - surface component; panel - surface component"
+        ],
+        "Brief description": [
+          "Two Thames TV logo panels."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "panel - surface component"
+        ],
+        "Credit line": [
+          "Thames Television Collection"
+        ],
+        "Object name": [
+          "panel - surface component; panel - surface component"
+        ],
+        "Other number": [
+          "1991-5005/332"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Television"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:67d4421b-9195-334d-a363-1a5933d290b1",
+      "title": "Thames Logo Panel",
+      "url": "https://museumdata.uk/objects/67d4421b-9195-334d-a363-1a5933d290b1"
+    }
+  },
+  {
+    "id": "mds:4fe01323-9f4a-3f39-bce6-832773c83bc1",
+    "_source": "mds",
+    "_sourceId": "co8013329",
+    "_sourceUrl": "https://museumdata.uk/objects/4fe01323-9f4a-3f39-bce6-832773c83bc1",
+    "title": "Broadsheet: The Thames Tunnel./ Printed by Teape & Son",
+    "description": "Broadsheet: The Thames Tunnel./ Printed by Teape & Son, Tower-hill.., [London] Issued by Thames Tunnel Office, Walbrook Buildings1835, Mar 31. Woodcut with letterpress. 38x27cm. Perspective view of the tunnel archways and stairwell. Section across the river Thames.",
+    "date": "1827",
+    "subject": [
+      "print; print",
+      "print; print",
+      "print"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "4fe01323-9f4a-3f39-bce6-832773c83bc1",
+      "objectNumber": "co8013329",
+      "place": [
+        "London, Greater London, England, United Kingdom"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Broadsheet: The Thames Tunnel./ Printed by Teape & Son"
+        ],
+        "Object name(s)": [
+          "print; print"
+        ],
+        "Brief description": [
+          "Broadsheet: The Thames Tunnel./ Printed by Teape & Son, Tower-hill.., [London] Issued by Thames Tunnel Office, Walbrook Buildings1835, Mar 31. Woodcut with letterpress. 38x27cm. Perspective view of the tunnel archways and stairwell. Section across the river Thames.",
+          "Broadsheet: The Thames Tunnel./ Printed by Teape & Son, Tower-hill..,\n[London] Issued by Thames Tunnel Office , Walbrook Buildings1835, Mar 31.\nWoodcut with letterpress. 38x27cm. Perspective view of the tunnel archways\nand stairwell. Section across the river Thames."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "print"
+        ],
+        "Credit line": [
+          "Edmunds, A."
+        ],
+        "Object name": [
+          "print; print"
+        ],
+        "Date - earliest / single": [
+          "1827"
+        ],
+        "Date - latest": [
+          "1843"
+        ],
+        "Object production place": [
+          "London, Greater London, England, United Kingdom"
+        ],
+        "Other number": [
+          "1981-1015/21",
+          "1009/80/135"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:4fe01323-9f4a-3f39-bce6-832773c83bc1",
+      "title": "Broadsheet: The Thames Tunnel./ Printed by Teape & Son",
+      "url": "https://museumdata.uk/objects/4fe01323-9f4a-3f39-bce6-832773c83bc1",
+      "date": "1827"
+    }
+  },
+  {
+    "id": "mds:bf8521f0-5e0b-3e19-a964-5a0f38fb7037",
+    "_source": "mds",
+    "_sourceId": "BLDIDFA004286",
+    "_sourceUrl": "https://museumdata.uk/objects/bf8521f0-5e0b-3e19-a964-5a0f38fb7037",
+    "title": "\"Thames Ditton\" aka [\"On the Thames, At Thames Ditton\"]",
+    "description": "Linear pencil drawing showing a curve of a river showing a boat moored at a small jetty. Trees line the banks. \nInscription 'Thames Ditton' blc.\n\nMounted with NCM 1882-29 and NCM 1882-30.",
+    "creator": "DAWSON/Henry",
+    "subject": [
+      "Works on paper * topography * landscapes * rivers and lakes; drawing",
+      "Works on paper (drawing) * topography * landscapes * rivers and lakes; drawing (pencil)"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "bf8521f0-5e0b-3e19-a964-5a0f38fb7037",
+      "objectNumber": "BLDIDFA004286",
+      "material": [
+        "pencil"
+      ],
+      "condition": "fair, light/acidic damage at edges",
+      "dimensions": [
+        "113 x 158 mm sight"
+      ],
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "\"Thames Ditton\" aka [\"On the Thames, At Thames Ditton\"]"
+        ],
+        "Object name(s)": [
+          "Works on paper * topography * landscapes * rivers and lakes; drawing"
+        ],
+        "Brief description": [
+          "Linear pencil drawing showing a curve of a river showing a boat moored at a small jetty. Trees line the banks. \nInscription 'Thames Ditton' blc.\n\nMounted with NCM 1882-29 and NCM 1882-30."
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Acquisition date": [
+          "10.04.1882"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Acquisition source": [
+          "Sulley/A.J."
+        ],
+        "Condition": [
+          "fair, light/acidic damage at edges"
+        ],
+        "Dimension": [
+          "113 x 158 mm sight"
+        ],
+        "Material": [
+          "pencil"
+        ],
+        "Object name": [
+          "Works on paper (drawing) * topography * landscapes * rivers and lakes; drawing (pencil)"
+        ],
+        "Object number": [
+          "NCM 1882-31"
+        ],
+        "Object production person": [
+          "DAWSON/Henry"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Person's occupation": [
+          "by"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:bf8521f0-5e0b-3e19-a964-5a0f38fb7037",
+      "title": "\"Thames Ditton\" aka [\"On the Thames, At Thames Ditton\"]",
+      "url": "https://museumdata.uk/objects/bf8521f0-5e0b-3e19-a964-5a0f38fb7037",
+      "creator": "DAWSON/Henry"
+    }
+  },
+  {
+    "id": "mds:1e43e577-c9d2-37da-b833-e89bfda74a4c",
+    "_source": "mds",
+    "_sourceId": "POOMS:1992.282",
+    "_sourceUrl": "https://museumdata.uk/objects/1e43e577-c9d2-37da-b833-e89bfda74a4c",
+    "title": "Mouth of R. Thames",
+    "description": "Thames barge under sail, facing left; red sails; black hull; steamship off bows; two barges on background",
+    "creator": "Burt, Albert Francis",
+    "date": "1910",
+    "subject": [
+      "watercolour; painting",
+      "watercolour; painting",
+      "maritime",
+      "fine art"
+    ],
+    "type": "Museum object",
+    "collection": "Poole Museum",
+    "mds": {
+      "uuid": "1e43e577-c9d2-37da-b833-e89bfda74a4c",
+      "objectNumber": "POOMS:1992.282",
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "17.7 cm",
+        "25.3 cm"
+      ],
+      "inscriptionContent": "title : painted : back :: Mouth of R. Thames",
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Mouth of R. Thames"
+        ],
+        "Object name(s)": [
+          "watercolour; painting"
+        ],
+        "Brief description": [
+          "Thames barge under sail, facing left; red sails; black hull; steamship off bows; two barges on background",
+          "watercolour sketch; Thames barge in mouth of River Thames; A.F. Burt c.1910"
+        ],
+        "Collection": [
+          "Poole Museum"
+        ],
+        "Date - earliest / single": [
+          "30.5.1990",
+          "1910"
+        ],
+        "Associated concept": [
+          "maritime",
+          "fine art"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - description": [
+          "Thames barge under sail, facing left; red sails; black hull; steamship off bows; two barges on background"
+        ],
+        "Content - object": [
+          "Thames barge"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "17.7 cm",
+          "25.3 cm"
+        ],
+        "Inscription content": [
+          "title : painted : back :: Mouth of R. Thames"
+        ],
+        "Object name": [
+          "watercolour; painting"
+        ],
+        "Object number": [
+          "POOMS:1992.282"
+        ],
+        "Object production date": [
+          "1910"
+        ],
+        "Object production person": [
+          "Burt, Albert Francis"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Other number": [
+          "OR 2187",
+          "T:1996.1334"
+        ],
+        "Other number type": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:1e43e577-c9d2-37da-b833-e89bfda74a4c",
+      "title": "Mouth of R. Thames",
+      "url": "https://museumdata.uk/objects/1e43e577-c9d2-37da-b833-e89bfda74a4c",
+      "creator": "Burt, Albert Francis",
+      "date": "1910"
+    }
+  },
+  {
+    "id": "mds:49985cd7-02a4-3da4-9b79-3162b5d04d27",
+    "_source": "mds",
+    "_sourceId": "co8338859",
+    "_sourceUrl": "https://museumdata.uk/objects/49985cd7-02a4-3da4-9b79-3162b5d04d27",
+    "title": "Thames Television Station Clock",
+    "description": "Thames television station clock",
+    "subject": [
+      "station clock; station clock",
+      "station clock; station clock"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "49985cd7-02a4-3da4-9b79-3162b5d04d27",
+      "objectNumber": "co8338859",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Thames Television Station Clock"
+        ],
+        "Object name(s)": [
+          "station clock; station clock"
+        ],
+        "Brief description": [
+          "Thames television station clock"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Thames Television Collection"
+        ],
+        "Object name": [
+          "station clock; station clock"
+        ],
+        "Other number": [
+          "1991-5005/287"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Television"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:49985cd7-02a4-3da4-9b79-3162b5d04d27",
+      "title": "Thames Television Station Clock",
+      "url": "https://museumdata.uk/objects/49985cd7-02a4-3da4-9b79-3162b5d04d27"
+    }
+  },
+  {
+    "id": "mds:8e27bb2c-722a-3bf0-ba17-c944f4a45f46",
+    "_source": "mds",
+    "_sourceId": "co8013330",
+    "_sourceUrl": "https://museumdata.uk/objects/8e27bb2c-722a-3bf0-ba17-c944f4a45f46",
+    "title": "Broadsheet: The Thames Tunnel./ Printed by Teape & Son",
+    "description": "Broadsheet: The Thames Tunnel./ Printed by Teape & Son, Tower-hill.., [London] Issued by Thames Tunnel Office, Walbrook Buildings1839, Woodcut with letterpress. 40.5x26.5cm. Perspective view of the tunnel archways. Section across the river Thames. Front elevation of the shield.",
+    "date": "1827",
+    "subject": [
+      "print; print",
+      "print; print",
+      "print"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "8e27bb2c-722a-3bf0-ba17-c944f4a45f46",
+      "objectNumber": "co8013330",
+      "place": [
+        "London, Greater London, England, United Kingdom"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Broadsheet: The Thames Tunnel./ Printed by Teape & Son"
+        ],
+        "Object name(s)": [
+          "print; print"
+        ],
+        "Brief description": [
+          "Broadsheet: The Thames Tunnel./ Printed by Teape & Son, Tower-hill.., [London] Issued by Thames Tunnel Office, Walbrook Buildings1839, Woodcut with letterpress. 40.5x26.5cm. Perspective view of the tunnel archways. Section across the river Thames. Front elevation of the shield.",
+          "Broadsheet: The Thames Tunnel./ Printed by Teape & Son, Tower-hill..,\n[London] Issued by Thames Tunnel Office , Walbrook Buildings1839, Woodcut\nwith letterpress. 40.5x26.5cm. Perspective view of the tunnel archways.\nSection across the river Thames. Front elevation of the shield."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "print"
+        ],
+        "Credit line": [
+          "Edmunds, A."
+        ],
+        "Object name": [
+          "print; print"
+        ],
+        "Date - earliest / single": [
+          "1827"
+        ],
+        "Date - latest": [
+          "1843"
+        ],
+        "Object production place": [
+          "London, Greater London, England, United Kingdom"
+        ],
+        "Other number": [
+          "1981-1015/22",
+          "1009/80/135"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:8e27bb2c-722a-3bf0-ba17-c944f4a45f46",
+      "title": "Broadsheet: The Thames Tunnel./ Printed by Teape & Son",
+      "url": "https://museumdata.uk/objects/8e27bb2c-722a-3bf0-ba17-c944f4a45f46",
+      "date": "1827"
+    }
+  },
+  {
+    "id": "mds:accd7468-8cac-3664-94a1-5c0e460ead44",
+    "_source": "mds",
+    "_sourceId": "co8226520",
+    "_sourceUrl": "https://museumdata.uk/objects/accd7468-8cac-3664-94a1-5c0e460ead44",
+    "title": "Thames Ironworks, Blackwall",
+    "description": "A glass photographic negative entitled 'Thames Ironworks, Blackwall', taken by Edgar Tarry Adams, c. 1900. The photograph shows a detail of the Thames Ironworks shipbuilders in Blackwall, London.",
+    "creator": "Adams, Edgar Tarry (1852-1926)",
+    "date": "1895",
+    "subject": [
+      "negative; negative",
+      "negative; negative",
+      "negative - photographic",
+      "photograph",
+      "Photography",
+      "Photography collection",
+      "digital positive from celluloid negative"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "accd7468-8cac-3664-94a1-5c0e460ead44",
+      "objectNumber": "co8226520",
+      "material": [
+        "glass"
+      ],
+      "place": [
+        "Thames Ironworks, Blackwall, Tower Hamlets, London, Greater London, England, United Kingdom"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Thames Ironworks, Blackwall"
+        ],
+        "Object name(s)": [
+          "negative; negative"
+        ],
+        "Brief description": [
+          "A glass photographic negative entitled 'Thames Ironworks, Blackwall', taken by Edgar Tarry Adams, c. 1900. The photograph shows a detail of the Thames Ironworks shipbuilders in Blackwall, London.",
+          "A photograph entitled 'Thames Ironworks, Blackwall', taken by Edgar Tarry Adams, c. 1900. \n\nThe photograph shows a detail of the Thames Ironworks shipbuilders in Blackwall, London. Adams' father had encouraged his interest in boats from childhood. He regularly documented the construction and launching of ships."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "negative - photographic",
+          "photograph",
+          "Photography",
+          "Photography collection",
+          "digital positive from celluloid negative"
+        ],
+        "Credit line": [
+          "National Media Museum, Bradford"
+        ],
+        "Material": [
+          "glass"
+        ],
+        "Object name": [
+          "negative; negative"
+        ],
+        "Date - earliest / single": [
+          "1895",
+          "1900"
+        ],
+        "Date - latest": [
+          "1905",
+          "1900"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Adams, Edgar Tarry (1852-1926)"
+        ],
+        "Object production place": [
+          "Thames Ironworks, Blackwall, Tower Hamlets, London, Greater London, England, United Kingdom"
+        ],
+        "Other number": [
+          "1997-5003/152"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ],
+        "Right holder": [
+          "National Science and Media Museum"
+        ],
+        "Right type": [
+          "Copyright"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:accd7468-8cac-3664-94a1-5c0e460ead44",
+      "title": "Thames Ironworks, Blackwall",
+      "url": "https://museumdata.uk/objects/accd7468-8cac-3664-94a1-5c0e460ead44",
+      "creator": "Adams, Edgar Tarry (1852-1926)",
+      "date": "1895"
+    }
+  },
+  {
+    "id": "mds:66f90c31-ae15-3269-9961-63c9686f09e6",
+    "_source": "mds",
+    "_sourceId": "Industry-8133D166-73FB-41B5-BD2E-018F53BC717E",
+    "_sourceUrl": "https://museumdata.uk/objects/66f90c31-ae15-3269-9961-63c9686f09e6",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "66f90c31-ae15-3269-9961-63c9686f09e6",
+      "objectNumber": "Industry-8133D166-73FB-41B5-BD2E-018F53BC717E",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):112",
+        "width (mm):92"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):112",
+          "width (mm):92"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1953"
+        ],
+        "Date - latest": [
+          "31/12/1953"
+        ],
+        "Object production date": [
+          "1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2085.4"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:66f90c31-ae15-3269-9961-63c9686f09e6",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/66f90c31-ae15-3269-9961-63c9686f09e6",
+      "creator": "H. Tempest Ltd",
+      "date": "1953"
+    }
+  },
+  {
+    "id": "mds:9fd46010-d1f9-35ef-8430-bbcc99e36c90",
+    "_source": "mds",
+    "_sourceId": "Industry-CEA0061D-1918-4E3A-A83C-1BDE5BBC266E",
+    "_sourceUrl": "https://museumdata.uk/objects/9fd46010-d1f9-35ef-8430-bbcc99e36c90",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "9fd46010-d1f9-35ef-8430-bbcc99e36c90",
+      "objectNumber": "Industry-CEA0061D-1918-4E3A-A83C-1BDE5BBC266E",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):95",
+        "width (mm):115"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):95",
+          "width (mm):115"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.8"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:9fd46010-d1f9-35ef-8430-bbcc99e36c90",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/9fd46010-d1f9-35ef-8430-bbcc99e36c90",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:aba11aab-af34-37e1-b2f9-fd2b4aef118b",
+    "_source": "mds",
+    "_sourceId": "Industry-D2B89D12-8CC9-46EE-8EE6-2FFCE28611C9",
+    "_sourceUrl": "https://museumdata.uk/objects/aba11aab-af34-37e1-b2f9-fd2b4aef118b",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "aba11aab-af34-37e1-b2f9-fd2b4aef118b",
+      "objectNumber": "Industry-D2B89D12-8CC9-46EE-8EE6-2FFCE28611C9",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):111",
+        "width (mm):85"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):111",
+          "width (mm):85"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.7"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:aba11aab-af34-37e1-b2f9-fd2b4aef118b",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/aba11aab-af34-37e1-b2f9-fd2b4aef118b",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:6915aad9-dedb-3c67-83a8-839581261c1e",
+    "_source": "mds",
+    "_sourceId": "Industry-E0E12C80-A409-45B2-B06B-B1991C3E9C4E",
+    "_sourceUrl": "https://museumdata.uk/objects/6915aad9-dedb-3c67-83a8-839581261c1e",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "6915aad9-dedb-3c67-83a8-839581261c1e",
+      "objectNumber": "Industry-E0E12C80-A409-45B2-B06B-B1991C3E9C4E",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):113",
+        "width (mm):93"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):113",
+          "width (mm):93"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.2"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:6915aad9-dedb-3c67-83a8-839581261c1e",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/6915aad9-dedb-3c67-83a8-839581261c1e",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:00df4a57-c81c-33ce-8356-6edf162947d4",
+    "_source": "mds",
+    "_sourceId": "Industry-2AA0C38B-880A-4530-B0E6-C52516D73CB5",
+    "_sourceUrl": "https://museumdata.uk/objects/00df4a57-c81c-33ce-8356-6edf162947d4",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "05/1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "00df4a57-c81c-33ce-8356-6edf162947d4",
+      "objectNumber": "Industry-2AA0C38B-880A-4530-B0E6-C52516D73CB5",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):97",
+        "width (mm):114"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):97",
+          "width (mm):114"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/5/1953"
+        ],
+        "Date - latest": [
+          "31/5/1953"
+        ],
+        "Object production date": [
+          "05/1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2088.3"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:00df4a57-c81c-33ce-8356-6edf162947d4",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/00df4a57-c81c-33ce-8356-6edf162947d4",
+      "creator": "H. Tempest Ltd",
+      "date": "05/1953"
+    }
+  },
+  {
+    "id": "mds:1a4fd2ff-e0c2-3813-9592-edea46c97ec8",
+    "_source": "mds",
+    "_sourceId": "Industry-1FED3519-775F-44B1-8E6C-FC20EA6C58CD",
+    "_sourceUrl": "https://museumdata.uk/objects/1a4fd2ff-e0c2-3813-9592-edea46c97ec8",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "05/1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "1a4fd2ff-e0c2-3813-9592-edea46c97ec8",
+      "objectNumber": "Industry-1FED3519-775F-44B1-8E6C-FC20EA6C58CD",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):92",
+        "width (mm):113"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):92",
+          "width (mm):113"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/5/1953"
+        ],
+        "Date - latest": [
+          "31/5/1953"
+        ],
+        "Object production date": [
+          "05/1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2088.8"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:1a4fd2ff-e0c2-3813-9592-edea46c97ec8",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/1a4fd2ff-e0c2-3813-9592-edea46c97ec8",
+      "creator": "H. Tempest Ltd",
+      "date": "05/1953"
+    }
+  },
+  {
+    "id": "mds:c2f25c29-fa73-3f1b-a7ee-ecbe400e50f8",
+    "_source": "mds",
+    "_sourceId": "Industry-AEEF2D17-DE81-46DD-9089-3018F432C8C9",
+    "_sourceUrl": "https://museumdata.uk/objects/c2f25c29-fa73-3f1b-a7ee-ecbe400e50f8",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "c2f25c29-fa73-3f1b-a7ee-ecbe400e50f8",
+      "objectNumber": "Industry-AEEF2D17-DE81-46DD-9089-3018F432C8C9",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):116",
+        "width (mm):97"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):116",
+          "width (mm):97"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.5"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:c2f25c29-fa73-3f1b-a7ee-ecbe400e50f8",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/c2f25c29-fa73-3f1b-a7ee-ecbe400e50f8",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:67bab68b-c211-3c8a-8add-827800b0d7ec",
+    "_source": "mds",
+    "_sourceId": "Industry-8ABBD604-FD4D-49F9-B7FC-60D271B452CE",
+    "_sourceUrl": "https://museumdata.uk/objects/67bab68b-c211-3c8a-8add-827800b0d7ec",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "05/1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "67bab68b-c211-3c8a-8add-827800b0d7ec",
+      "objectNumber": "Industry-8ABBD604-FD4D-49F9-B7FC-60D271B452CE",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):92",
+        "width (mm):113"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):92",
+          "width (mm):113"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/5/1953"
+        ],
+        "Date - latest": [
+          "31/5/1953"
+        ],
+        "Object production date": [
+          "05/1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2088.6"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:67bab68b-c211-3c8a-8add-827800b0d7ec",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/67bab68b-c211-3c8a-8add-827800b0d7ec",
+      "creator": "H. Tempest Ltd",
+      "date": "05/1953"
+    }
+  },
+  {
+    "id": "mds:36b20dcd-6a00-3d7c-800f-8114c9614c9c",
+    "_source": "mds",
+    "_sourceId": "Industry-2862F4AB-4480-4115-A0DD-877AAFF8CCBF",
+    "_sourceUrl": "https://museumdata.uk/objects/36b20dcd-6a00-3d7c-800f-8114c9614c9c",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "36b20dcd-6a00-3d7c-800f-8114c9614c9c",
+      "objectNumber": "Industry-2862F4AB-4480-4115-A0DD-877AAFF8CCBF",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):87",
+        "width (mm):110"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):87",
+          "width (mm):110"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.10"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:36b20dcd-6a00-3d7c-800f-8114c9614c9c",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/36b20dcd-6a00-3d7c-800f-8114c9614c9c",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:ea9239cc-4bbe-3478-a436-55386d340d13",
+    "_source": "mds",
+    "_sourceId": "Industry-F36E667E-A8E3-47E6-BE1F-C4A9C844F01F",
+    "_sourceUrl": "https://museumdata.uk/objects/ea9239cc-4bbe-3478-a436-55386d340d13",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "05/1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "ea9239cc-4bbe-3478-a436-55386d340d13",
+      "objectNumber": "Industry-F36E667E-A8E3-47E6-BE1F-C4A9C844F01F",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):91",
+        "width (mm):116"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):91",
+          "width (mm):116"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/5/1953"
+        ],
+        "Date - latest": [
+          "31/5/1953"
+        ],
+        "Object production date": [
+          "05/1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2088.9"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:ea9239cc-4bbe-3478-a436-55386d340d13",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/ea9239cc-4bbe-3478-a436-55386d340d13",
+      "creator": "H. Tempest Ltd",
+      "date": "05/1953"
+    }
+  },
+  {
+    "id": "mds:c1f94bfb-895a-34ed-812c-d4447a7c099c",
+    "_source": "mds",
+    "_sourceId": "Industry-11C26595-72F7-45B3-853C-E38D909515A6",
+    "_sourceUrl": "https://museumdata.uk/objects/c1f94bfb-895a-34ed-812c-d4447a7c099c",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "c1f94bfb-895a-34ed-812c-d4447a7c099c",
+      "objectNumber": "Industry-11C26595-72F7-45B3-853C-E38D909515A6",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):93",
+        "width (mm):114"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):93",
+          "width (mm):114"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.1"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:c1f94bfb-895a-34ed-812c-d4447a7c099c",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/c1f94bfb-895a-34ed-812c-d4447a7c099c",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:adb10cbf-79ee-3963-a024-a88de9a980f2",
+    "_source": "mds",
+    "_sourceId": "Industry-D338EC89-D392-4497-A6D4-B4E38BB65A58",
+    "_sourceUrl": "https://museumdata.uk/objects/adb10cbf-79ee-3963-a024-a88de9a980f2",
+    "title": "Thame, negative",
+    "description": "Aerial view of Thame, a market town 13 miles east of Oxford.",
+    "creator": "H. Tempest Ltd",
+    "date": "25/10/1955",
+    "subject": [
+      "Thame, negative; film negative; accessioned photograph",
+      "Thame, negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "adb10cbf-79ee-3963-a024-a88de9a980f2",
+      "objectNumber": "Industry-D338EC89-D392-4497-A6D4-B4E38BB65A58",
+      "material": [
+        "film (photographic)"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Thame, negative"
+        ],
+        "Object name(s)": [
+          "Thame, negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Thame, a market town 13 miles east of Oxford."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Thame, negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "25/10/1955"
+        ],
+        "Date - latest": [
+          "25/10/1955"
+        ],
+        "Object production date": [
+          "25/10/1955"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2973.2"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Thame"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:adb10cbf-79ee-3963-a024-a88de9a980f2",
+      "title": "Thame, negative",
+      "url": "https://museumdata.uk/objects/adb10cbf-79ee-3963-a024-a88de9a980f2",
+      "creator": "H. Tempest Ltd",
+      "date": "25/10/1955"
+    }
+  },
+  {
+    "id": "mds:4674d043-cb94-3993-8ccb-72ad06a92f4c",
+    "_source": "mds",
+    "_sourceId": "Industry-A7F0F39E-6A1A-416B-A18C-B921CA69D984",
+    "_sourceUrl": "https://museumdata.uk/objects/4674d043-cb94-3993-8ccb-72ad06a92f4c",
+    "title": "Henley-on-Thames, negative",
+    "description": "Aerial view of Henley-on-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "25/10/1955",
+    "subject": [
+      "Henley-on-Thames, negative; film negative; accessioned photograph",
+      "Henley-on-Thames, negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "4674d043-cb94-3993-8ccb-72ad06a92f4c",
+      "objectNumber": "Industry-A7F0F39E-6A1A-416B-A18C-B921CA69D984",
+      "material": [
+        "film (photographic)"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Henley-on-Thames, negative"
+        ],
+        "Object name(s)": [
+          "Henley-on-Thames, negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Henley-on-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Henley-on-Thames, negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "25/10/1955"
+        ],
+        "Date - latest": [
+          "25/10/1955"
+        ],
+        "Object production date": [
+          "25/10/1955"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2990.1"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Henley-on-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:4674d043-cb94-3993-8ccb-72ad06a92f4c",
+      "title": "Henley-on-Thames, negative",
+      "url": "https://museumdata.uk/objects/4674d043-cb94-3993-8ccb-72ad06a92f4c",
+      "creator": "H. Tempest Ltd",
+      "date": "25/10/1955"
+    }
+  },
+  {
+    "id": "mds:7536e5c9-1b06-3e54-9b0c-0cb3bdf7135f",
+    "_source": "mds",
+    "_sourceId": "Industry-C7BDB573-35CE-4FCD-AB24-1BA0021B78EC",
+    "_sourceUrl": "https://museumdata.uk/objects/7536e5c9-1b06-3e54-9b0c-0cb3bdf7135f",
+    "title": "Thame, negative",
+    "description": "Aerial view of Thame, a market town 13 miles east of Oxford.",
+    "creator": "H. Tempest Ltd",
+    "date": "25/10/1955",
+    "subject": [
+      "Thame, negative; film negative; accessioned photograph",
+      "Thame, negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "7536e5c9-1b06-3e54-9b0c-0cb3bdf7135f",
+      "objectNumber": "Industry-C7BDB573-35CE-4FCD-AB24-1BA0021B78EC",
+      "material": [
+        "film (photographic)"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Thame, negative"
+        ],
+        "Object name(s)": [
+          "Thame, negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Thame, a market town 13 miles east of Oxford."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Thame, negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "25/10/1955"
+        ],
+        "Date - latest": [
+          "25/10/1955"
+        ],
+        "Object production date": [
+          "25/10/1955"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2973.1"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Thame"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:7536e5c9-1b06-3e54-9b0c-0cb3bdf7135f",
+      "title": "Thame, negative",
+      "url": "https://museumdata.uk/objects/7536e5c9-1b06-3e54-9b0c-0cb3bdf7135f",
+      "creator": "H. Tempest Ltd",
+      "date": "25/10/1955"
+    }
+  },
+  {
+    "id": "mds:7528435c-a062-3701-8111-61c4fed74cbe",
+    "_source": "mds",
+    "_sourceId": "BLDIDFA004284",
+    "_sourceUrl": "https://museumdata.uk/objects/7528435c-a062-3701-8111-61c4fed74cbe",
+    "title": "\"On the Thames, Thames Ditton\"",
+    "description": "Linear pencil drawing of a line of trees and a church, seen across the river. A small rowing boat at left. Inscription at blc 'On the Thames, Thames Ditton'\n\nMounted with NCM 1882-30 and NCM 1882-31.",
+    "creator": "DAWSON/Henry",
+    "subject": [
+      "Works on paper * topography * rivers and lakes * landscapes; drawing",
+      "Works on paper (drawing) * topography * rivers and lakes * landscapes; drawing (pencil)"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "7528435c-a062-3701-8111-61c4fed74cbe",
+      "objectNumber": "BLDIDFA004284",
+      "material": [
+        "pencil"
+      ],
+      "condition": "ok, some light/acidic damage",
+      "dimensions": [
+        "116 x 158 mm"
+      ],
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "\"On the Thames, Thames Ditton\""
+        ],
+        "Object name(s)": [
+          "Works on paper * topography * rivers and lakes * landscapes; drawing"
+        ],
+        "Brief description": [
+          "Linear pencil drawing of a line of trees and a church, seen across the river. A small rowing boat at left. Inscription at blc 'On the Thames, Thames Ditton'\n\nMounted with NCM 1882-30 and NCM 1882-31."
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Acquisition date": [
+          "10.04.1882"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Acquisition source": [
+          "Sulley/A.J."
+        ],
+        "Condition": [
+          "ok, some light/acidic damage"
+        ],
+        "Dimension": [
+          "116 x 158 mm"
+        ],
+        "Material": [
+          "pencil"
+        ],
+        "Object name": [
+          "Works on paper (drawing) * topography * rivers and lakes * landscapes; drawing (pencil)"
+        ],
+        "Object number": [
+          "NCM 1882-29"
+        ],
+        "Object production person": [
+          "DAWSON/Henry"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Person's occupation": [
+          "by"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:7528435c-a062-3701-8111-61c4fed74cbe",
+      "title": "\"On the Thames, Thames Ditton\"",
+      "url": "https://museumdata.uk/objects/7528435c-a062-3701-8111-61c4fed74cbe",
+      "creator": "DAWSON/Henry"
+    }
+  },
+  {
+    "id": "mds:a9291fcf-e920-3fff-ad0f-1e29a63f69a4",
+    "_source": "mds",
+    "_sourceId": "318151",
+    "_sourceUrl": "https://museumdata.uk/objects/a9291fcf-e920-3fff-ad0f-1e29a63f69a4",
+    "title": "The Thame Hoard (popular)",
+    "description": "Reliquary ring (The Thame Ring)",
+    "date": "14th century (1301 - 1400)",
+    "subject": [
+      "personal ornament > jewellery > finger-ring; container > box > reliquary-box",
+      "personal ornament > jewellery > finger-ring; container > box > reliquary-box"
+    ],
+    "type": "Museum object",
+    "collection": "Ashmolean Museum",
+    "mds": {
+      "uuid": "a9291fcf-e920-3fff-ad0f-1e29a63f69a4",
+      "objectNumber": "318151",
+      "place": [
+        "Europe > United Kingdom > England > Oxfordshire > South Oxfordshire District > Thame parish > Thame"
+      ],
+      "inscriptionContent": "'Remember me, O Lord', Latin",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Thame Hoard (popular)"
+        ],
+        "Object name(s)": [
+          "personal ornament > jewellery > finger-ring; container > box > reliquary-box"
+        ],
+        "Brief description": [
+          "Reliquary ring (The Thame Ring)"
+        ],
+        "Collection": [
+          "Ashmolean Museum"
+        ],
+        "Associated place": [
+          "Europe > United Kingdom > England > Oxfordshire > South Oxfordshire District > Thame parish > Thame"
+        ],
+        "Place association": [
+          "find spot"
+        ],
+        "Place note": [
+          "near"
+        ],
+        "Inscription content": [
+          "'Remember me, O Lord', Latin"
+        ],
+        "Object name": [
+          "personal ornament > jewellery > finger-ring; container > box > reliquary-box"
+        ],
+        "Object number": [
+          "AN1940.228"
+        ],
+        "Object production date": [
+          "14th century (1301 - 1400)"
+        ],
+        "Date - association": [
+          "date of creation"
+        ],
+        "Date - earliest / single": [
+          "1301"
+        ],
+        "Date - latest": [
+          "1400"
+        ],
+        "Date - period": [
+          "14th century (1301 - 1400)"
+        ],
+        "Responsible department/section": [
+          "Antiquities"
+        ],
+        "Text": [
+          "https://collections.ashmolean.org/object/318151"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:a9291fcf-e920-3fff-ad0f-1e29a63f69a4",
+      "title": "The Thame Hoard (popular)",
+      "url": "https://museumdata.uk/objects/a9291fcf-e920-3fff-ad0f-1e29a63f69a4",
+      "date": "14th century (1301 - 1400)"
+    }
+  },
+  {
+    "id": "mds:01921145-7843-3f77-82d0-681b9bc931ed",
+    "_source": "mds",
+    "_sourceId": "co535571",
+    "_sourceUrl": "https://museumdata.uk/objects/01921145-7843-3f77-82d0-681b9bc931ed",
+    "title": "Southern Railway poster, The Londoner's Leisure - The Thames",
+    "description": "Poster, Southern Railway, \"The Londoner's Leisure - The Thames\", by Gregory Brown, 1926. Shows people engaging in different activities of the banks of the Thames.",
+    "creator": "Brown, Gregory; Southern Railway",
+    "date": "1926",
+    "subject": [
+      "poster; poster",
+      "poster; poster",
+      "poster",
+      "Posters"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "01921145-7843-3f77-82d0-681b9bc931ed",
+      "objectNumber": "co535571",
+      "material": [
+        "paper"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Southern Railway poster, The Londoner's Leisure - The Thames"
+        ],
+        "Object name(s)": [
+          "poster; poster"
+        ],
+        "Brief description": [
+          "Poster, Southern Railway, \"The Londoner's Leisure - The Thames\", by Gregory Brown, 1926. Shows people engaging in different activities of the banks of the Thames.",
+          "he Londoner's Leisure-The Thames by Gregory Brown,1926."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "poster",
+          "Posters"
+        ],
+        "Credit line": [
+          "Christies"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "poster; poster"
+        ],
+        "Date - earliest / single": [
+          "1926"
+        ],
+        "Date - latest": [
+          "1926"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Brown, Gregory; Southern Railway"
+        ],
+        "Other number": [
+          "2000-8431",
+          "E2000.615.1"
+        ],
+        "Other number type": [
+          "accession number",
+          "Entry number"
+        ],
+        "Responsible department/section": [
+          "NRM - Railway Posters, Notices & Handbills"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:01921145-7843-3f77-82d0-681b9bc931ed",
+      "title": "Southern Railway poster, The Londoner's Leisure - The Thames",
+      "url": "https://museumdata.uk/objects/01921145-7843-3f77-82d0-681b9bc931ed",
+      "creator": "Brown, Gregory; Southern Railway",
+      "date": "1926"
+    }
+  },
+  {
+    "id": "mds:c8c69829-2f5c-3c31-9aa2-5da6fd24a76d",
+    "_source": "mds",
+    "_sourceId": "co455246",
+    "_sourceUrl": "https://museumdata.uk/objects/c8c69829-2f5c-3c31-9aa2-5da6fd24a76d",
+    "title": "Thames Tunnel peep show",
+    "description": "Peep show, in folder:  folder is embroidered with birds, flowers and cottages, contained paper peep show labelled \"A Perspective View of the Thames and Thames Tunnel - History of the Thames Tunnel\", giving a brief account of the tunnel inside the front cover.",
+    "creator": "Azulay",
+    "date": "1846",
+    "subject": [
+      "peep show; peep show",
+      "peep show; peep show",
+      "peep show",
+      "toys and games",
+      "Using the Railway"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "c8c69829-2f5c-3c31-9aa2-5da6fd24a76d",
+      "objectNumber": "co455246",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Thames Tunnel peep show"
+        ],
+        "Object name(s)": [
+          "peep show; peep show"
+        ],
+        "Brief description": [
+          "Peep show, in folder:  folder is embroidered with birds, flowers and cottages, contained paper peep show labelled \"A Perspective View of the Thames and Thames Tunnel - History of the Thames Tunnel\", giving a brief account of the tunnel inside the front cover."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "peep show",
+          "toys and games",
+          "Using the Railway"
+        ],
+        "Credit line": [
+          "British Rail, Clapham"
+        ],
+        "Object name": [
+          "peep show; peep show"
+        ],
+        "Date - earliest / single": [
+          "1846"
+        ],
+        "Date - latest": [
+          "1846"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Azulay"
+        ],
+        "Other number": [
+          "1998-10438",
+          "26/63"
+        ],
+        "Other number type": [
+          "accession number",
+          "Clapham number"
+        ],
+        "Responsible department/section": [
+          "NRM - Toys & Games"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:c8c69829-2f5c-3c31-9aa2-5da6fd24a76d",
+      "title": "Thames Tunnel peep show",
+      "url": "https://museumdata.uk/objects/c8c69829-2f5c-3c31-9aa2-5da6fd24a76d",
+      "creator": "Azulay",
+      "date": "1846"
+    }
+  },
+  {
+    "id": "mds:5c59b888-700e-39b2-9f5e-8e5c138aa922",
+    "_source": "mds",
+    "_sourceId": "Industry-3FB80FE7-DEFF-467A-9F32-5AC6E088D835",
+    "_sourceUrl": "https://museumdata.uk/objects/5c59b888-700e-39b2-9f5e-8e5c138aa922",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames, showing Bentalls department store.",
+    "creator": "H. Tempest Ltd",
+    "date": "1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "miscellaneous (other industries)",
+      "other industries and man."
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "5c59b888-700e-39b2-9f5e-8e5c138aa922",
+      "objectNumber": "Industry-3FB80FE7-DEFF-467A-9F32-5AC6E088D835",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):116",
+        "width (mm):98"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames, showing Bentalls department store."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "miscellaneous (other industries)",
+          "other industries and man."
+        ],
+        "Dimension": [
+          "length (mm):116",
+          "width (mm):98"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1953"
+        ],
+        "Date - latest": [
+          "31/12/1953"
+        ],
+        "Object production date": [
+          "1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2085.1"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:5c59b888-700e-39b2-9f5e-8e5c138aa922",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/5c59b888-700e-39b2-9f5e-8e5c138aa922",
+      "creator": "H. Tempest Ltd",
+      "date": "1953"
+    }
+  },
+  {
+    "id": "mds:0d01b320-6038-339f-a788-7feaad02d825",
+    "_source": "mds",
+    "_sourceId": "17612",
+    "_sourceUrl": "https://museumdata.uk/objects/0d01b320-6038-339f-a788-7feaad02d825",
+    "title": "The Thames Book - 1973",
+    "description": "The Thames Book - 1973",
+    "subject": [
+      "book",
+      "book"
+    ],
+    "type": "Museum object",
+    "collection": "Chertsey Museum",
+    "mds": {
+      "uuid": "0d01b320-6038-339f-a788-7feaad02d825",
+      "objectNumber": "17612",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Thames Book - 1973"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "The Thames Book - 1973"
+        ],
+        "Collection": [
+          "Chertsey Museum"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "E04"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:0d01b320-6038-339f-a788-7feaad02d825",
+      "title": "The Thames Book - 1973",
+      "url": "https://museumdata.uk/objects/0d01b320-6038-339f-a788-7feaad02d825"
+    }
+  },
+  {
+    "id": "mds:de2e91a9-78d3-3bc6-8d8b-08552c03b103",
+    "_source": "mds",
+    "_sourceId": "Industry-4B5ECD85-B253-4D6A-8340-98890D661400",
+    "_sourceUrl": "https://museumdata.uk/objects/de2e91a9-78d3-3bc6-8d8b-08552c03b103",
+    "title": "Henley-on-Thames, negative",
+    "description": "Aerial view of Henley-on-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "25/10/1955",
+    "subject": [
+      "Henley-on-Thames, negative; film negative; accessioned photograph",
+      "Henley-on-Thames, negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "de2e91a9-78d3-3bc6-8d8b-08552c03b103",
+      "objectNumber": "Industry-4B5ECD85-B253-4D6A-8340-98890D661400",
+      "material": [
+        "film (photographic)"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Henley-on-Thames, negative"
+        ],
+        "Object name(s)": [
+          "Henley-on-Thames, negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Henley-on-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Henley-on-Thames, negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "25/10/1955"
+        ],
+        "Date - latest": [
+          "25/10/1955"
+        ],
+        "Object production date": [
+          "25/10/1955"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2990.3"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Henley-on-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:de2e91a9-78d3-3bc6-8d8b-08552c03b103",
+      "title": "Henley-on-Thames, negative",
+      "url": "https://museumdata.uk/objects/de2e91a9-78d3-3bc6-8d8b-08552c03b103",
+      "creator": "H. Tempest Ltd",
+      "date": "25/10/1955"
+    }
+  },
+  {
+    "id": "mds:3921454d-07da-3cdf-9604-578cc4ecff64",
+    "_source": "mds",
+    "_sourceId": "Industry-0177618E-5866-4F7C-AEEA-CAFF2DCD5899",
+    "_sourceUrl": "https://museumdata.uk/objects/3921454d-07da-3cdf-9604-578cc4ecff64",
+    "title": "Henley-on-Thames, negative",
+    "description": "Aerial view of Henley-on-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "25/10/1955",
+    "subject": [
+      "Henley-on-Thames, negative; film negative; accessioned photograph",
+      "Henley-on-Thames, negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "3921454d-07da-3cdf-9604-578cc4ecff64",
+      "objectNumber": "Industry-0177618E-5866-4F7C-AEEA-CAFF2DCD5899",
+      "material": [
+        "film (photographic)"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Henley-on-Thames, negative"
+        ],
+        "Object name(s)": [
+          "Henley-on-Thames, negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Henley-on-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Henley-on-Thames, negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "25/10/1955"
+        ],
+        "Date - latest": [
+          "25/10/1955"
+        ],
+        "Object production date": [
+          "25/10/1955"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2990.2"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Henley-on-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:3921454d-07da-3cdf-9604-578cc4ecff64",
+      "title": "Henley-on-Thames, negative",
+      "url": "https://museumdata.uk/objects/3921454d-07da-3cdf-9604-578cc4ecff64",
+      "creator": "H. Tempest Ltd",
+      "date": "25/10/1955"
+    }
+  },
+  {
+    "id": "mds:b7bb74ed-5219-35bb-a4e1-491975c80fe7",
+    "_source": "mds",
+    "_sourceId": "Industry-DE1E1557-F930-4F6C-9C03-E6B7E25628D8",
+    "_sourceUrl": "https://museumdata.uk/objects/b7bb74ed-5219-35bb-a4e1-491975c80fe7",
+    "title": "Thame, negative",
+    "description": "Aerial view of Thame, a market town 13 miles east of Oxford.",
+    "creator": "H. Tempest Ltd",
+    "date": "25/10/1955",
+    "subject": [
+      "Thame, negative; film negative; accessioned photograph",
+      "Thame, negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "b7bb74ed-5219-35bb-a4e1-491975c80fe7",
+      "objectNumber": "Industry-DE1E1557-F930-4F6C-9C03-E6B7E25628D8",
+      "material": [
+        "film (photographic)"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Thame, negative"
+        ],
+        "Object name(s)": [
+          "Thame, negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Thame, a market town 13 miles east of Oxford."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Thame, negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "25/10/1955"
+        ],
+        "Date - latest": [
+          "25/10/1955"
+        ],
+        "Object production date": [
+          "25/10/1955"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2973.3"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Thame"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:b7bb74ed-5219-35bb-a4e1-491975c80fe7",
+      "title": "Thame, negative",
+      "url": "https://museumdata.uk/objects/b7bb74ed-5219-35bb-a4e1-491975c80fe7",
+      "creator": "H. Tempest Ltd",
+      "date": "25/10/1955"
+    }
+  },
+  {
+    "id": "mds:0a881b26-4c21-3b0d-9f21-d649c59cd416",
+    "_source": "mds",
+    "_sourceId": "Industry-E22FA503-2115-4A69-BC97-0E7242FBE4F2",
+    "_sourceUrl": "https://museumdata.uk/objects/0a881b26-4c21-3b0d-9f21-d649c59cd416",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "0a881b26-4c21-3b0d-9f21-d649c59cd416",
+      "objectNumber": "Industry-E22FA503-2115-4A69-BC97-0E7242FBE4F2",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):87",
+        "width (mm):107"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):87",
+          "width (mm):107"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.11"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:0a881b26-4c21-3b0d-9f21-d649c59cd416",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/0a881b26-4c21-3b0d-9f21-d649c59cd416",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:28aa5011-952d-38cc-b8a1-08d481fda8a6",
+    "_source": "mds",
+    "_sourceId": "Industry-E67E7ED0-E600-4F3E-AD45-3C109494B09F",
+    "_sourceUrl": "https://museumdata.uk/objects/28aa5011-952d-38cc-b8a1-08d481fda8a6",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "28aa5011-952d-38cc-b8a1-08d481fda8a6",
+      "objectNumber": "Industry-E67E7ED0-E600-4F3E-AD45-3C109494B09F",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):112",
+        "width (mm):92"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):112",
+          "width (mm):92"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.12"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:28aa5011-952d-38cc-b8a1-08d481fda8a6",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/28aa5011-952d-38cc-b8a1-08d481fda8a6",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:59d4e887-bcd5-3d6e-aef8-3c5d7c472045",
+    "_source": "mds",
+    "_sourceId": "Industry-D822959B-6FD6-44A6-8557-4312A3684CB8",
+    "_sourceUrl": "https://museumdata.uk/objects/59d4e887-bcd5-3d6e-aef8-3c5d7c472045",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "59d4e887-bcd5-3d6e-aef8-3c5d7c472045",
+      "objectNumber": "Industry-D822959B-6FD6-44A6-8557-4312A3684CB8",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):108",
+        "width (mm):92"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):108",
+          "width (mm):92"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1953"
+        ],
+        "Date - latest": [
+          "31/12/1953"
+        ],
+        "Object production date": [
+          "1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2085.2"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:59d4e887-bcd5-3d6e-aef8-3c5d7c472045",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/59d4e887-bcd5-3d6e-aef8-3c5d7c472045",
+      "creator": "H. Tempest Ltd",
+      "date": "1953"
+    }
+  },
+  {
+    "id": "mds:6653b616-9c5d-3b6c-bbe3-760800b18498",
+    "_source": "mds",
+    "_sourceId": "Industry-B6D8A9A7-3391-4870-B06C-A9EB353DD2D6",
+    "_sourceUrl": "https://museumdata.uk/objects/6653b616-9c5d-3b6c-bbe3-760800b18498",
+    "title": "Thame, negative",
+    "description": "Aerial view of Thame, a market town 13 miles east of Oxford.",
+    "creator": "H. Tempest Ltd",
+    "date": "25/10/1955",
+    "subject": [
+      "Thame, negative; film negative; accessioned photograph",
+      "Thame, negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "6653b616-9c5d-3b6c-bbe3-760800b18498",
+      "objectNumber": "Industry-B6D8A9A7-3391-4870-B06C-A9EB353DD2D6",
+      "material": [
+        "film (photographic)"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Thame, negative"
+        ],
+        "Object name(s)": [
+          "Thame, negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Thame, a market town 13 miles east of Oxford."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Thame, negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "25/10/1955"
+        ],
+        "Date - latest": [
+          "25/10/1955"
+        ],
+        "Object production date": [
+          "25/10/1955"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2973.4"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Thame"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:6653b616-9c5d-3b6c-bbe3-760800b18498",
+      "title": "Thame, negative",
+      "url": "https://museumdata.uk/objects/6653b616-9c5d-3b6c-bbe3-760800b18498",
+      "creator": "H. Tempest Ltd",
+      "date": "25/10/1955"
+    }
+  },
+  {
+    "id": "mds:fd300281-fe57-31ac-a32a-ce170e10d551",
+    "_source": "mds",
+    "_sourceId": "Industry-415FA319-7D6F-4FCD-AFEE-9ECD241CBD31",
+    "_sourceUrl": "https://museumdata.uk/objects/fd300281-fe57-31ac-a32a-ce170e10d551",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "fd300281-fe57-31ac-a32a-ce170e10d551",
+      "objectNumber": "Industry-415FA319-7D6F-4FCD-AFEE-9ECD241CBD31",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):93",
+        "width (mm):118"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):93",
+          "width (mm):118"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.4"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:fd300281-fe57-31ac-a32a-ce170e10d551",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/fd300281-fe57-31ac-a32a-ce170e10d551",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:96aad851-d8df-3a8d-9edb-5207e19655e1",
+    "_source": "mds",
+    "_sourceId": "Industry-6C397FA6-B2FF-4E68-9392-FB03611082F5",
+    "_sourceUrl": "https://museumdata.uk/objects/96aad851-d8df-3a8d-9edb-5207e19655e1",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "96aad851-d8df-3a8d-9edb-5207e19655e1",
+      "objectNumber": "Industry-6C397FA6-B2FF-4E68-9392-FB03611082F5",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):98",
+        "width (mm):115"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):98",
+          "width (mm):115"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.3"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:96aad851-d8df-3a8d-9edb-5207e19655e1",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/96aad851-d8df-3a8d-9edb-5207e19655e1",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:0247852c-4ea5-3da3-a777-9a86291b5c42",
+    "_source": "mds",
+    "_sourceId": "Industry-65B113E1-9BFC-4661-BB59-7169A1818316",
+    "_sourceUrl": "https://museumdata.uk/objects/0247852c-4ea5-3da3-a777-9a86291b5c42",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "05/1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "0247852c-4ea5-3da3-a777-9a86291b5c42",
+      "objectNumber": "Industry-65B113E1-9BFC-4661-BB59-7169A1818316",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):93",
+        "width (mm):115"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):93",
+          "width (mm):115"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/5/1953"
+        ],
+        "Date - latest": [
+          "31/5/1953"
+        ],
+        "Object production date": [
+          "05/1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2088.1"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:0247852c-4ea5-3da3-a777-9a86291b5c42",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/0247852c-4ea5-3da3-a777-9a86291b5c42",
+      "creator": "H. Tempest Ltd",
+      "date": "05/1953"
+    }
+  },
+  {
+    "id": "mds:882bc279-2f7d-312d-9d98-e9a6dbc8203d",
+    "_source": "mds",
+    "_sourceId": "Industry-F8EC9A76-33E9-45CA-9851-789EEC63958F",
+    "_sourceUrl": "https://museumdata.uk/objects/882bc279-2f7d-312d-9d98-e9a6dbc8203d",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "882bc279-2f7d-312d-9d98-e9a6dbc8203d",
+      "objectNumber": "Industry-F8EC9A76-33E9-45CA-9851-789EEC63958F",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):93",
+        "width (mm):113"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):93",
+          "width (mm):113"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.9"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:882bc279-2f7d-312d-9d98-e9a6dbc8203d",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/882bc279-2f7d-312d-9d98-e9a6dbc8203d",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:f3a8cc68-e071-3062-b01b-0f5dddcb5357",
+    "_source": "mds",
+    "_sourceId": "Industry-BA1B1720-02B3-48AA-B246-861CEE01CCFC",
+    "_sourceUrl": "https://museumdata.uk/objects/f3a8cc68-e071-3062-b01b-0f5dddcb5357",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "05/1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "f3a8cc68-e071-3062-b01b-0f5dddcb5357",
+      "objectNumber": "Industry-BA1B1720-02B3-48AA-B246-861CEE01CCFC",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):97",
+        "width (mm):119"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):97",
+          "width (mm):119"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/5/1953"
+        ],
+        "Date - latest": [
+          "31/5/1953"
+        ],
+        "Object production date": [
+          "05/1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2088.4"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:f3a8cc68-e071-3062-b01b-0f5dddcb5357",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/f3a8cc68-e071-3062-b01b-0f5dddcb5357",
+      "creator": "H. Tempest Ltd",
+      "date": "05/1953"
+    }
+  },
+  {
+    "id": "mds:bf653f6f-af10-380b-9eac-9357052afec0",
+    "_source": "mds",
+    "_sourceId": "Industry-D9C8B80E-5A51-4298-8672-891E74236A9C",
+    "_sourceUrl": "https://museumdata.uk/objects/bf653f6f-af10-380b-9eac-9357052afec0",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "05/1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "bf653f6f-af10-380b-9eac-9357052afec0",
+      "objectNumber": "Industry-D9C8B80E-5A51-4298-8672-891E74236A9C",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):98",
+        "width (mm):115"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):98",
+          "width (mm):115"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/5/1953"
+        ],
+        "Date - latest": [
+          "31/5/1953"
+        ],
+        "Object production date": [
+          "05/1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2088.2"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:bf653f6f-af10-380b-9eac-9357052afec0",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/bf653f6f-af10-380b-9eac-9357052afec0",
+      "creator": "H. Tempest Ltd",
+      "date": "05/1953"
+    }
+  },
+  {
+    "id": "mds:50a67bbf-0020-3234-b0dd-8281401770ec",
+    "_source": "mds",
+    "_sourceId": "Industry-18D197ED-B12C-4F92-A772-BE6179D6C83D",
+    "_sourceUrl": "https://museumdata.uk/objects/50a67bbf-0020-3234-b0dd-8281401770ec",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames District.",
+    "creator": "H. Tempest Ltd",
+    "date": "20th century, mid",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "20th century, mid",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "50a67bbf-0020-3234-b0dd-8281401770ec",
+      "objectNumber": "Industry-18D197ED-B12C-4F92-A772-BE6179D6C83D",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):89",
+        "width (mm):114"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames District."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "20th century, mid",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):89",
+          "width (mm):114"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1925"
+        ],
+        "Date - latest": [
+          "31/12/1975"
+        ],
+        "Object production date": [
+          "20th century, mid"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2094.6"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:50a67bbf-0020-3234-b0dd-8281401770ec",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/50a67bbf-0020-3234-b0dd-8281401770ec",
+      "creator": "H. Tempest Ltd",
+      "date": "20th century, mid"
+    }
+  },
+  {
+    "id": "mds:3ceb468f-94a2-3bf0-9a57-5fab28c49acd",
+    "_source": "mds",
+    "_sourceId": "Industry-68A5F4D5-30C7-4EB8-9D6F-F15F2143607E",
+    "_sourceUrl": "https://museumdata.uk/objects/3ceb468f-94a2-3bf0-9a57-5fab28c49acd",
+    "title": "Kingston-Upon-Thames, film negative",
+    "description": "Aerial view of Kingston-Upon-Thames.",
+    "creator": "H. Tempest Ltd",
+    "date": "1953",
+    "subject": [
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "Kingston-Upon-Thames, film negative; film negative; accessioned photograph",
+      "townscape",
+      "1950s",
+      "social history"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "3ceb468f-94a2-3bf0-9a57-5fab28c49acd",
+      "objectNumber": "Industry-68A5F4D5-30C7-4EB8-9D6F-F15F2143607E",
+      "material": [
+        "film (photographic)"
+      ],
+      "dimensions": [
+        "length (mm):89",
+        "width (mm):113"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kingston-Upon-Thames, film negative"
+        ],
+        "Object name(s)": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Brief description": [
+          "Aerial view of Kingston-Upon-Thames."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1/1983"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "townscape",
+          "1950s",
+          "social history"
+        ],
+        "Dimension": [
+          "length (mm):89",
+          "width (mm):113"
+        ],
+        "Entry date": [
+          "20/2/1986"
+        ],
+        "Material": [
+          "film (photographic)"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Kingston-Upon-Thames, film negative; film negative; accessioned photograph"
+        ],
+        "Date - earliest / single": [
+          "1/1/1953"
+        ],
+        "Date - latest": [
+          "31/12/1953"
+        ],
+        "Object production date": [
+          "1953"
+        ],
+        "Object production person": [
+          "H. Tempest Ltd"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "86.34I/2085.3"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Ownership place": [
+          "Kingston-Upon-Thames"
+        ],
+        "Place status": [
+          "place name"
+        ],
+        "Technique": [
+          "film negative (black & white)",
+          "film negative",
+          "negative"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:3ceb468f-94a2-3bf0-9a57-5fab28c49acd",
+      "title": "Kingston-Upon-Thames, film negative",
+      "url": "https://museumdata.uk/objects/3ceb468f-94a2-3bf0-9a57-5fab28c49acd",
+      "creator": "H. Tempest Ltd",
+      "date": "1953"
+    }
+  },
+  {
+    "id": "mds:4c397708-46b3-3d34-ae18-fa8470fbc07b",
+    "_source": "mds",
+    "_sourceId": "RNSM",
+    "_sourceUrl": "https://museumdata.uk/objects/4c397708-46b3-3d34-ae18-fa8470fbc07b",
+    "title": "Cap tally of HMS Thames",
+    "description": "Cap tally of HMS Thames: black ribbon with 'H.M.S THAMES.' stitched in gold off centre.",
+    "subject": [
+      "uniform & clothing; cap",
+      "uniform & clothing; cap",
+      "River Class submarines"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "4c397708-46b3-3d34-ae18-fa8470fbc07b",
+      "objectNumber": "RNSM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Cap tally of HMS Thames"
+        ],
+        "Object name(s)": [
+          "uniform & clothing; cap"
+        ],
+        "Brief description": [
+          "Cap tally of HMS Thames: black ribbon with 'H.M.S THAMES.' stitched in gold off centre."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "River Class submarines"
+        ],
+        "Object name": [
+          "uniform & clothing; cap"
+        ],
+        "Object number": [
+          "RNSM 2003/67/1"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:4c397708-46b3-3d34-ae18-fa8470fbc07b",
+      "title": "Cap tally of HMS Thames",
+      "url": "https://museumdata.uk/objects/4c397708-46b3-3d34-ae18-fa8470fbc07b"
+    }
+  },
+  {
+    "id": "mds:39e64cd1-b860-3595-aaf1-707fc4b049b9",
+    "_source": "mds",
+    "_sourceId": "co66540",
+    "_sourceUrl": "https://museumdata.uk/objects/39e64cd1-b860-3595-aaf1-707fc4b049b9",
+    "title": "Lithograph, Thames Viaduct Railway",
+    "description": "Thames viaduct Railway - Kell Brothers Lithograph. 1864. 40x79cm (Dendy Marshall)",
+    "creator": "Kell Brothers",
+    "subject": [
+      "print; print",
+      "print; print",
+      "print"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "39e64cd1-b860-3595-aaf1-707fc4b049b9",
+      "objectNumber": "co66540",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Lithograph, Thames Viaduct Railway"
+        ],
+        "Object name(s)": [
+          "print; print"
+        ],
+        "Brief description": [
+          "Thames viaduct Railway - Kell Brothers Lithograph. 1864. 40x79cm (Dendy Marshall)"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "print"
+        ],
+        "Object name": [
+          "print; print"
+        ],
+        "Object production person": [
+          "Kell Brothers"
+        ],
+        "Other number": [
+          "1980-1023/4",
+          "1009/80/94"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:39e64cd1-b860-3595-aaf1-707fc4b049b9",
+      "title": "Lithograph, Thames Viaduct Railway",
+      "url": "https://museumdata.uk/objects/39e64cd1-b860-3595-aaf1-707fc4b049b9",
+      "creator": "Kell Brothers"
+    }
+  },
+  {
+    "id": "mds:c0046b40-e44a-32bc-80c8-108f065b5cc8",
+    "_source": "mds",
+    "_sourceId": "Yarmouth_collections-16995",
+    "_sourceUrl": "https://museumdata.uk/objects/c0046b40-e44a-32bc-80c8-108f065b5cc8",
+    "title": "The Royal Thames Tunnel Almanack",
+    "description": "Broadsheet entitled 'The Royal Thames Tunnel Almamack', 1844",
+    "date": "1844",
+    "subject": [
+      "Thames Tunnel; almanac; broadsheet",
+      "Thames Tunnel; almanac; broadsheet",
+      "1.713",
+      "community life",
+      "communications"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "c0046b40-e44a-32bc-80c8-108f065b5cc8",
+      "objectNumber": "Yarmouth_collections-16995",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "England",
+        "River Thames"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Royal Thames Tunnel Almanack"
+        ],
+        "Object name(s)": [
+          "Thames Tunnel; almanac; broadsheet"
+        ],
+        "Brief description": [
+          "Broadsheet entitled 'The Royal Thames Tunnel Almamack', 1844"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "4.9.1991"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "1.713",
+          "community life",
+          "communications"
+        ],
+        "Associated place": [
+          "England",
+          "River Thames"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "Thames Tunnel; almanac; broadsheet"
+        ],
+        "Object number": [
+          "GRYEH : 1988.2.2"
+        ],
+        "Object production date": [
+          "1844"
+        ],
+        "Date - earliest / single": [
+          "1844"
+        ],
+        "Date - latest": [
+          "1844"
+        ],
+        "Other number": [
+          "."
+        ],
+        "Other number type": [
+          "assigned number"
+        ],
+        "Responsible department/section": [
+          "Yarmouth Museums"
+        ],
+        "Technique": [
+          "printed"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:c0046b40-e44a-32bc-80c8-108f065b5cc8",
+      "title": "The Royal Thames Tunnel Almanack",
+      "url": "https://museumdata.uk/objects/c0046b40-e44a-32bc-80c8-108f065b5cc8",
+      "date": "1844"
+    }
+  },
+  {
+    "id": "mds:58e6ebb5-4a38-3d28-9820-14578ce7c85c",
+    "_source": "mds",
+    "_sourceId": "co24325",
+    "_sourceUrl": "https://museumdata.uk/objects/58e6ebb5-4a38-3d28-9820-14578ce7c85c",
+    "title": "Bus tickets, Thames Valley Traction Co. Ltd.",
+    "description": "[Bus tickets (2) / Thames Valley Traction Co. Ltd. (and London Tramways Co.?). nd. One is a Thames Valley Traction Co. Ltd. 2/6d monthly return; one is an L. T. Trolleybuses 2 1/2d work return]",
+    "creator": "Thames Valley Traction Company Limited",
+    "subject": [
+      "bus tickets; bus tickets",
+      "bus tickets; bus tickets"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "58e6ebb5-4a38-3d28-9820-14578ce7c85c",
+      "objectNumber": "co24325",
+      "dimensions": [
+        "height",
+        "width",
+        "2 9/16",
+        "65",
+        "1 3/16",
+        "30"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bus tickets, Thames Valley Traction Co. Ltd."
+        ],
+        "Object name(s)": [
+          "bus tickets; bus tickets"
+        ],
+        "Brief description": [
+          "[Bus tickets (2) / Thames Valley Traction Co. Ltd. (and London Tramways Co.?). nd. One is a Thames Valley Traction Co. Ltd. 2/6d monthly return; one is an L. T. Trolleybuses 2 1/2d work return]"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Wise, G.W."
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "2 9/16",
+          "65",
+          "1 3/16",
+          "30"
+        ],
+        "Object name": [
+          "bus tickets; bus tickets"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Thames Valley Traction Company Limited"
+        ],
+        "Other number": [
+          "1975-291",
+          "MS/1697",
+          "2503/114/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "Adlib Reference number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Archive"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:58e6ebb5-4a38-3d28-9820-14578ce7c85c",
+      "title": "Bus tickets, Thames Valley Traction Co. Ltd.",
+      "url": "https://museumdata.uk/objects/58e6ebb5-4a38-3d28-9820-14578ce7c85c",
+      "creator": "Thames Valley Traction Company Limited"
+    }
+  },
+  {
+    "id": "mds:2c3128ce-198b-37a3-b840-f1a9a99961eb",
+    "_source": "mds",
+    "_sourceId": "O1458795",
+    "_sourceUrl": "https://museumdata.uk/objects/2c3128ce-198b-37a3-b840-f1a9a99961eb",
+    "title": "[The Thames and the Thames Tunnel]",
+    "description": "Two accordion-style paper peepshows of the River Thames and Thames Tunnel, bound together.\n\nTwo paper peepshows mounted in a leather wallet. The wallet has gilt borders on both side, and the letters ‘E.&C.’ in gilt on one side.\n\n[The Thames]\n\n3 cut-out panels. 1 peep-hole. Hand-coloured etching and wood engraving. Expands to approximately 70 cm. \n\nFront-face: On the blue background, view of the Queen Victoria and Prince Albert’s visit to the Tunnel on 26 July 1843, from a print by the same publisher. The image shows Victoria and Albert about to disembark from a ceremonial barge at Wapping, and the crowds on the quay. Entrance building for the Tunnel and the Irving & Brown Coal Wharf in the background. At the top of the print is the title ‘Thames Tunnel Wapping Entrance,’ and the line ‘1200 feet long, 76 feet below high-water mark was 8 years building and cost £440,000. Opened March 25, 1843.’ The peep-hole consists of one circular opening in the centre.\n\nPanels 1-3: ships on the Thames.\n\nBack panel: ships on the Thames; buildings on the bank of the river.\n\n[The Thames Tunnel]\n\n3 cut-out panels. 2 peep-holes. Hand-coloured aquatint. Expands to approximately 68 cm.\n\nFront-face: on the blue background the view of the Wapping entrance to the Thames Tunnel. Pedestrians on the stairs and in front of and inside the archways. The peep-holes consist of two openings on either side of the image.\n\nPanels 1-3 and back panel: pedestrians in the left and right archway of the Tunnel.",
+    "creator": "Azulay, Bondy",
+    "date": "ca. 1843",
+    "subject": [
+      "Paper peepshow",
+      "Paper peepshow",
+      "National Art Library",
+      "Optical toys",
+      "Paper Peepshow",
+      "Thames Tunnel"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria and Albert Museum",
+    "mds": {
+      "uuid": "2c3128ce-198b-37a3-b840-f1a9a99961eb",
+      "objectNumber": "O1458795",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "London"
+      ],
+      "dimensions": [
+        "Height",
+        "Width",
+        "Length",
+        "11.1",
+        "20",
+        "70",
+        "68"
+      ],
+      "objectHistory": "Part of the Jacqueline and Jonathan Gestetner Collection, collected over 30 years and given to the V&A Museum through the government's Cultural Gift Scheme, 2016.",
+      "personAssociation": [
+        "publisher"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "[The Thames and the Thames Tunnel]"
+        ],
+        "Object name(s)": [
+          "Paper peepshow"
+        ],
+        "Brief description": [
+          "Two accordion-style paper peepshows of the River Thames and Thames Tunnel, bound together.\n\nTwo paper peepshows mounted in a leather wallet. The wallet has gilt borders on both side, and the letters ‘E.&C.’ in gilt on one side.\n\n[The Thames]\n\n3 cut-out panels. 1 peep-hole. Hand-coloured etching and wood engraving. Expands to approximately 70 cm. \n\nFront-face: On the blue background, view of the Queen Victoria and Prince Albert’s visit to the Tunnel on 26 July 1843, from a print by the same publisher. The image shows Victoria and Albert about to disembark from a ceremonial barge at Wapping, and the crowds on the quay. Entrance building for the Tunnel and the Irving & Brown Coal Wharf in the background. At the top of the print is the title ‘Thames Tunnel Wapping Entrance,’ and the line ‘1200 feet long, 76 feet below high-water mark was 8 years building and cost £440,000. Opened March 25, 1843.’ The peep-hole consists of one circular opening in the centre.\n\nPanels 1-3: ships on the Thames.\n\nBack panel: ships on the Thames; buildings on the bank of the river.\n\n[The Thames Tunnel]\n\n3 cut-out panels. 2 peep-holes. Hand-coloured aquatint. Expands to approximately 68 cm.\n\nFront-face: on the blue background the view of the Wapping entrance to the Thames Tunnel. Pedestrians on the stairs and in front of and inside the archways. The peep-holes consist of two openings on either side of the image.\n\nPanels 1-3 and back panel: pedestrians in the left and right archway of the Tunnel.",
+          "[The Thames and the Thames Tunnel], Azulay, Bondy, ca. 1843."
+        ],
+        "Collection": [
+          "Victoria and Albert Museum"
+        ],
+        "Associated concept": [
+          "National Art Library",
+          "Optical toys",
+          "Paper Peepshow",
+          "Thames Tunnel"
+        ],
+        "Credit line": [
+          "Accepted under the Cultural Gifts Scheme by HM Government from the collections of Jacqueline and Jonathan Gestetner and allocated to the Victoria and Albert Museum, 2016."
+        ],
+        "Dimension": [
+          "Height",
+          "Width",
+          "Length"
+        ],
+        "Dimension measured part": [
+          "Thames paper peepshow",
+          "Thames paper peepshow fully extended",
+          "Thames Tunnel paper peepshow",
+          "Thames Tunnel paper peepshow fully extended"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "11.1",
+          "20",
+          "70",
+          "68"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object history note": [
+          "Part of the Jacqueline and Jonathan Gestetner Collection, collected over 30 years and given to the V&A Museum through the government's Cultural Gift Scheme, 2016."
+        ],
+        "Object name": [
+          "Paper peepshow"
+        ],
+        "Object number": [
+          "Gestetner 244"
+        ],
+        "Object production date": [
+          "ca. 1843"
+        ],
+        "Date - association": [
+          "published"
+        ],
+        "Date - earliest / single": [
+          "1838-01-01"
+        ],
+        "Date - latest": [
+          "1847-12-31"
+        ],
+        "Object production person": [
+          "Azulay, Bondy"
+        ],
+        "Person's association": [
+          "publisher"
+        ],
+        "Person's biographical note": [
+          "Counters 27, 41 and 62, Thames Tunnel, London"
+        ],
+        "Object production place": [
+          "London"
+        ],
+        "Place association": [
+          "published"
+        ],
+        "Other number": [
+          "38041016059016"
+        ],
+        "Other number type": [
+          "NAL barcode"
+        ],
+        "Physical description": [
+          "Two accordion-style paper peepshows of the River Thames and Thames Tunnel, bound together.\n\nTwo paper peepshows mounted in a leather wallet. The wallet has gilt borders on both side, and the letters ‘E.&C.’ in gilt on one side.\n\n[The Thames]\n\n3 cut-out panels. 1 peep-hole. Hand-coloured etching and wood engraving. Expands to approximately 70 cm. \n\nFront-face: On the blue background, view of the Queen Victoria and Prince Albert’s visit to the Tunnel on 26 July 1843, from a print by the same publisher. The image shows Victoria and Albert about to disembark from a ceremonial barge at Wapping, and the crowds on the quay. Entrance building for the Tunnel and the Irving & Brown Coal Wharf in the background. At the top of the print is the title ‘Thames Tunnel Wapping Entrance,’ and the line ‘1200 feet long, 76 feet below high-water mark was 8 years building and cost £440,000. Opened March 25, 1843.’ The peep-hole consists of one circular opening in the centre.\n\nPanels 1-3: ships on the Thames.\n\nBack panel: ships on the Thames; buildings on the bank of the river.\n\n[The Thames Tunnel]\n\n3 cut-out panels. 2 peep-holes. Hand-coloured aquatint. Expands to approximately 68 cm.\n\nFront-face: on the blue background the view of the Wapping entrance to the Thames Tunnel. Pedestrians on the stairs and in front of and inside the archways. The peep-holes consist of two openings on either side of the image.\n\nPanels 1-3 and back panel: pedestrians in the left and right archway of the Tunnel."
+        ],
+        "Responsible department/section": [
+          "NAL"
+        ],
+        "Text": [
+          "https://collections.vam.ac.uk/item/O1458795/",
+          "The Thame Tunnel was one of the most popular subjects for British paper peepshows, which were produced throughout the period of its construction and beyond. The Tunnel’s construction started in 1825, and after various flood accidents and a long period of suspension of work between 1828 and 1835, the Tunnel finally opened to the public on 25 March 1843. It was received with great excitement both during and immediately after its construction, which explains why it remained a popular topic for the paper peepshow for so long. The sensation of being under the Thames, and yet completely safe and dry stimulated much interest. It was therefore not unusual for representations of the Tunnel to appear together with the Thames to highlight this feeling.\n\nWhereas paper peepshows showing both the Thames Tunnel and the River Thames are not unique (see for example Gestetner 241, see references),  these are usually in the format of ‘double-decker’ paper peepshows, i.e., the top and bottom parts of the work showing different images. Combining two separate works in one wallet, however, is a rare practice (another similar example is Gestetner 247, see references). One wonders if this could be the result of the owner having bought these two items separately, although Bondy Azulay and T. C. Brandon, the two main sellers of Thames Tunnel paper peepshows, did often sell their works in wallets.\n\nThe paper peepshows as such are typical of the work by Azulay and Brandon. Both are crudely executed: colours in sweeps and dabs, and imagery on the cut-out panels taken from other prints. For example, Ralph Hyde identified that some of the figures comes from a sheet of stock figures like that in the Nobel Collection at the London Metropolitan Archives. The front-face of paper peepshow of the Thames is also a re-print of Brandon’s double print of Queen Victoria’s visit to the Tunnel on 26 July 1843. The publisher(s) of both works appear(s) not to be concerned with the high quality of paper peepshows, but rather stereotypical items that would make mass-production cheaper, and hence available to a wider range of customers."
+        ],
+        "Text reason": [
+          "Collections online record",
+          "Summary description"
+        ],
+        "Reference": [
+          "R. Hyde, Paper Peepshows. The Jacqueline and Jonathan Gestetner Collection (Woodbridge: The Antique Collectors' Club, 2015), cat. 244.",
+          "Paper peepshows showing both the Thames Tunnel and the River Thames are not unique, see for example Gestetner 241:\n\nhttp://web.archive.org/web/20230131160439/https://collections.vam.ac.uk/item/O1458790/thames-tunnel-paper-peepshow-brandon-t-c/\n\nThese are usually in the format of ‘double-decker’ paper peepshows, i.e., the top and bottom parts of the work showing different images. Combining two separate works in one wallet, however, is a rare practice (another similar example is Gestetner 247:\n\nhttp://web.archive.org/web/20230131161049/https://collections.vam.ac.uk/item/O1463226/the-thames-and-the-thames-paper-peepshow-azulay-bondy/"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:01.551Z",
+      "query": "thames",
+      "recordId": "mds:2c3128ce-198b-37a3-b840-f1a9a99961eb",
+      "title": "[The Thames and the Thames Tunnel]",
+      "url": "https://museumdata.uk/objects/2c3128ce-198b-37a3-b840-f1a9a99961eb",
+      "creator": "Azulay, Bondy",
+      "date": "ca. 1843"
+    }
+  }
+]

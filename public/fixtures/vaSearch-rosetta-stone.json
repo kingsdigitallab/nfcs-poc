@@ -1,0 +1,110 @@
+[
+  {
+    "id": "vam:O512925",
+    "_source": "vam",
+    "_sourceId": "O512925",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O512925",
+    "_pid": "SP.483:4",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T13:59:30.201Z",
+      "query": "rosetta stone",
+      "recordId": "vam:O512925",
+      "title": "Oriental Album- Characters, Costumes, And Modes Of Life, In The Valley Of The Nile",
+      "url": "https://collections.vam.ac.uk/item/O512925",
+      "pid": "SP.483:4",
+      "creator": "Achille-Constant-Théodore-Emile Prisse d'Avennes",
+      "date": "1848"
+    },
+    "title": "Oriental Album- Characters, Costumes, And Modes Of Life, In The Valley Of The Nile",
+    "creator": "Achille-Constant-Théodore-Emile Prisse d'Avennes",
+    "date": "1848",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Paris",
+      "accessionNumber": "SP.483:4",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level D",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006BF3075/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O512925/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006BF3075/"
+    }
+  },
+  {
+    "id": "vam:O1795852",
+    "_source": "vam",
+    "_sourceId": "O1795852",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1795852",
+    "_pid": "S.378-2026",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T13:59:30.201Z",
+      "query": "rosetta stone",
+      "recordId": "vam:O1795852",
+      "title": "Jacket worn by Beverley Knight",
+      "url": "https://collections.vam.ac.uk/item/O1795852",
+      "pid": "S.378-2026",
+      "creator": "Hamnett, Katharine",
+      "date": "1997"
+    },
+    "title": "Jacket worn by Beverley Knight",
+    "creator": "Hamnett, Katharine",
+    "date": "1997",
+    "subject": [
+      "Jacket"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Jacket",
+      "place": "London",
+      "accessionNumber": "S.378-2026",
+      "onDisplay": true,
+      "location": "Theatre and Performance Galleries, Room 106",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2026PN4090/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2026PN4090/"
+    }
+  },
+  {
+    "id": "vam:O1043818",
+    "_source": "vam",
+    "_sourceId": "O1043818",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1043818",
+    "_pid": "73977A",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-05-29T13:59:30.201Z",
+      "query": "rosetta stone",
+      "recordId": "vam:O1043818",
+      "title": "Photograph",
+      "url": "https://collections.vam.ac.uk/item/O1043818",
+      "pid": "73977A",
+      "creator": "Thompson, Stephen",
+      "date": "1872"
+    },
+    "title": "Photograph",
+    "creator": "Thompson, Stephen",
+    "date": "1872",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "British Museum",
+      "accessionNumber": "73977A",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, room 512M"
+    }
+  }
+]

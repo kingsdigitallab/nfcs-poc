@@ -1,0 +1,49 @@
+[
+  {
+    "id": "smg:co8997327",
+    "_source": "smg",
+    "_sourceId": "co8997327",
+    "_sourceUrl": "https://collection.sciencemuseumgroup.org.uk/objects/co8997327/octocopter-drone-with-red-camera",
+    "_pid": "2024-462",
+    "_citation": {
+      "service": "Science Museum Group",
+      "serviceUrl": "https://collection.sciencemuseumgroup.org.uk",
+      "publisher": "Science Museum Group",
+      "accessDate": "2026-05-29T14:00:42.215Z",
+      "query": "rainforest",
+      "recordId": "smg:co8997327",
+      "title": "Octocopter drone with RED camera",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8997327/octocopter-drone-with-red-camera",
+      "pid": "2024-462",
+      "creator": [
+        "Heliguy PTY LTD",
+        "Heliguy PTY LTD"
+      ],
+      "date": "2015"
+    },
+    "title": "Octocopter drone with RED camera",
+    "description": "Octocopter drone designed and built by Heliguy in Australia, 2015, with on board RED epic-M S35 Digital Cinematography Camera with a resolution of 5K, Manufactured by RED, California c. 2011. Used in Costa Rica in 2015 to film “Jungles”, an episode of \"Planet Earth II\", a natural history programme made for the BBC.",
+    "creator": [
+      "Heliguy PTY LTD",
+      "Heliguy PTY LTD"
+    ],
+    "date": "2015",
+    "subject": [
+      "Television"
+    ],
+    "language": "eng",
+    "smg": {
+      "museum": "National Science and Media Museum",
+      "museumCode": "NSMM",
+      "accessionNumber": "2024-462",
+      "manifest": "https://collection.sciencemuseumgroup.org.uk/iiif/objects/co8997327",
+      "categories": [
+        "Television"
+      ],
+      "makingPlace": "Australia",
+      "thumbnail": "https://coimages.sciencemuseumgroup.org.uk/733/555/large_thumbnail_2024_462_0001__0001_.jpg",
+      "dimensions": "overall: 650 mm x 1550 mm x 1250 mm, 25 kg",
+      "imageRights": "CC BY-NC-SA 4.0"
+    }
+  }
+]

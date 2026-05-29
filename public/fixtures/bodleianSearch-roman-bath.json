@@ -1,0 +1,212 @@
+[
+  {
+    "_id": "53b69cab-ea33-49cd-958f-a63842f9bd18",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/53b69cab-ea33-49cd-958f-a63842f9bd18/",
+    "_service": "bodleian",
+    "title": "Laus Calvitii.",
+    "date": "c. 1461",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/960a240d-69f3-4190-8574-0210edb63941/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "53b69cab-ea33-49cd-958f-a63842f9bd18",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/53b69cab-ea33-49cd-958f-a63842f9bd18.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/960a240d-69f3-4190-8574-0210edb63941/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Bodl. 80",
+      "origins": "Italy, Padua",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 7
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:01:57.687Z",
+      "query": "roman bath",
+      "title": "Laus Calvitii.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/53b69cab-ea33-49cd-958f-a63842f9bd18/",
+      "date": "c. 1461"
+    }
+  },
+  {
+    "_id": "fff6e93c-f666-4b30-afd3-ea704d7b00c0",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/fff6e93c-f666-4b30-afd3-ea704d7b00c0/",
+    "_service": "bodleian",
+    "title": "Photograph Album of Arthur Glyndwr Foulkes",
+    "date": "1885-1886",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/fb1a781c-9883-4b33-a71e-d47bd481fbf7/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "fff6e93c-f666-4b30-afd3-ea704d7b00c0",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/fff6e93c-f666-4b30-afd3-ea704d7b00c0.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/fb1a781c-9883-4b33-a71e-d47bd481fbf7/full/255,/0/default.jpg",
+      "shelfmark": "Pembroke College PMB/N/18/12",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 109
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:01:57.687Z",
+      "query": "roman bath",
+      "title": "Photograph Album of Arthur Glyndwr Foulkes",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/fff6e93c-f666-4b30-afd3-ea704d7b00c0/",
+      "date": "1885-1886"
+    }
+  },
+  {
+    "_id": "19d3829a-521d-4fad-9414-e51bc2a1866e",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/19d3829a-521d-4fad-9414-e51bc2a1866e/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1793–5",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/6cd9f6c1-3912-4fa2-aa87-ea600daf0917/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "19d3829a-521d-4fad-9414-e51bc2a1866e",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/19d3829a-521d-4fad-9414-e51bc2a1866e.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/6cd9f6c1-3912-4fa2-aa87-ea600daf0917/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 6",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 100
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:01:57.687Z",
+      "query": "roman bath",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/19d3829a-521d-4fad-9414-e51bc2a1866e/",
+      "date": "1793–5"
+    }
+  },
+  {
+    "_id": "6272311c-058d-417a-8e21-05e463b4f1f9",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/6272311c-058d-417a-8e21-05e463b4f1f9/",
+    "_service": "bodleian",
+    "title": "Chronicle of England. Additions in French ('The Peterborough Chronicle', E text).",
+    "date": "c. 1121-1140",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ec9ae7f7-302c-46a6-ae10-9c18d42428a0/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "6272311c-058d-417a-8e21-05e463b4f1f9",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/6272311c-058d-417a-8e21-05e463b4f1f9.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ec9ae7f7-302c-46a6-ae10-9c18d42428a0/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Laud Misc. 636",
+      "origins": "England, Peterborough?",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 187
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:01:57.687Z",
+      "query": "roman bath",
+      "title": "Chronicle of England. Additions in French ('The Peterborough Chronicle', E text).",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/6272311c-058d-417a-8e21-05e463b4f1f9/",
+      "date": "c. 1121-1140"
+    }
+  },
+  {
+    "_id": "57f96442-de1f-4a69-a3cf-5ca845018e62",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/57f96442-de1f-4a69-a3cf-5ca845018e62/",
+    "_service": "bodleian",
+    "title": "Gospel of St. John, with interlinear and marginal glosses",
+    "date": "12th century, middle",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/dc627a08-760f-4901-899e-d00915d2438f/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "57f96442-de1f-4a69-a3cf-5ca845018e62",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/57f96442-de1f-4a69-a3cf-5ca845018e62.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/dc627a08-760f-4901-899e-d00915d2438f/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Lyell 1",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 214
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:01:57.687Z",
+      "query": "roman bath",
+      "title": "Gospel of St. John, with interlinear and marginal glosses",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/57f96442-de1f-4a69-a3cf-5ca845018e62/",
+      "date": "12th century, middle"
+    }
+  },
+  {
+    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+    "_service": "bodleian",
+    "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+    "date": "1623",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/390fd0e8-9eae-475d-9564-ed916ab9035c.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Arch. G c.7",
+      "origins": "London",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 920
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:01:57.687Z",
+      "query": "roman bath",
+      "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+      "date": "1623"
+    }
+  },
+  {
+    "_id": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
+    "_service": "bodleian",
+    "title": "The Vernon Manuscript",
+    "date": "1381–1400",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/1c428c2e-d12b-422a-9057-52ca242cf1c5/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52f0a31a-1478-40e4-b05b-fddb1ad076ff.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/1c428c2e-d12b-422a-9057-52ca242cf1c5/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Eng. poet. a. 1",
+      "origins": "England, West Midlands?",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 710
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:01:57.687Z",
+      "query": "roman bath",
+      "title": "The Vernon Manuscript",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
+      "date": "1381–1400"
+    }
+  }
+]

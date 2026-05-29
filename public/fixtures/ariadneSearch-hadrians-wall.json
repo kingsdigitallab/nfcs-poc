@@ -1,0 +1,5197 @@
+[
+  {
+    "id": "ariadne:01160c61c5def9f529dfa528f0612c4f750f94cd3a3ff4caf10ffd6918b6a45a",
+    "_source": "ariadne",
+    "_sourceId": "1792847",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/01160c61c5def9f529dfa528f0612c4f750f94cd3a3ff4caf10ffd6918b6a45a",
+    "title": "Hadrians Wall",
+    "description": "A 100m length of the turf-vcovered remains of Hadrians Wall between NY7375 6732 and NY 7381 6740 is the one section between Cawfield quarry and Black Dyke not on NT lands. There is some Wall core material to the N of a field wall which probably occupies the S face of Hadrians Wall. About 1.5m from the N face of the field wall is a distinct robber trench and there is some evidence of possible of original Roman foundations.",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": "not provided",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "01160c61c5def9f529dfa528f0612c4f750f94cd3a3ff4caf10ffd6918b6a45a",
+      "temporal": [],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "England"
+        }
+      ],
+      "allPlaceNames": [
+        "England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "not provided",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ads/NOT_PROVIDED"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/3B94813C-3062-3A81-90E8-1B5D7FD6E917",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA111717",
+        "Depositor ID: 12025*0",
+        "NTSMR-MNA111717"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:01160c61c5def9f529dfa528f0612c4f750f94cd3a3ff4caf10ffd6918b6a45a",
+      "title": "Hadrians Wall",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/01160c61c5def9f529dfa528f0612c4f750f94cd3a3ff4caf10ffd6918b6a45a",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  },
+  {
+    "id": "ariadne:979f00098c7c05d2cff7510b763b2a62869e199da55a41b7e2aae2a6e77bd271",
+    "_source": "ariadne",
+    "_sourceId": "1282518",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/979f00098c7c05d2cff7510b763b2a62869e199da55a41b7e2aae2a6e77bd271",
+    "title": "HADRIANS WALL",
+    "description": "Wall now lost, a modern wall overlies the south face of the Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "TYNEDALE, NORTHUMBERLAND, ENGLAND, BARDON MILL",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "979f00098c7c05d2cff7510b763b2a62869e199da55a41b7e2aae2a6e77bd271",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "TYNEDALE, NORTHUMBERLAND, ENGLAND, BARDON MILL"
+        }
+      ],
+      "allPlaceNames": [
+        "TYNEDALE, NORTHUMBERLAND, ENGLAND, BARDON MILL"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/E4CE8CD3-899C-32D5-9CFC-5F5B19A849A9",
+      "otherId": [
+        "Depositor ID: NY 76 NE 166",
+        "NMR_NATINV-1009467"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:979f00098c7c05d2cff7510b763b2a62869e199da55a41b7e2aae2a6e77bd271",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/979f00098c7c05d2cff7510b763b2a62869e199da55a41b7e2aae2a6e77bd271",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:a0852f9c9ffdc15a5ef6919bfb2c0a39e4662dc1cc65fe774d369d01c77c203c",
+    "_source": "ariadne",
+    "_sourceId": "1283363",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/a0852f9c9ffdc15a5ef6919bfb2c0a39e4662dc1cc65fe774d369d01c77c203c",
+    "title": "HADRIANS WALL",
+    "description": "No trace of the Stone Wall or underlying Turf Wall; roadside wall on line.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "a0852f9c9ffdc15a5ef6919bfb2c0a39e4662dc1cc65fe774d369d01c77c203c",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/3C79E05A-E5E9-351D-9C02-7E40506E7FE3",
+      "otherId": [
+        "Depositor ID: NY 56 SE 120",
+        "NMR_NATINV-1010435"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:a0852f9c9ffdc15a5ef6919bfb2c0a39e4662dc1cc65fe774d369d01c77c203c",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/a0852f9c9ffdc15a5ef6919bfb2c0a39e4662dc1cc65fe774d369d01c77c203c",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:453a43b430da19fc4ee404ac2219c5fb3f700f5989878f1ea306894342688dcc",
+    "_source": "ariadne",
+    "_sourceId": "1283142",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/453a43b430da19fc4ee404ac2219c5fb3f700f5989878f1ea306894342688dcc",
+    "title": "HADRIANS WALL",
+    "description": "A modern field wall lies on the course of the Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HENSHAW, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.996826,
+    "decimalLongitude": -2.406458,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "453a43b430da19fc4ee404ac2219c5fb3f700f5989878f1ea306894342688dcc",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HENSHAW, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+          "geopoint": {
+            "lat": 54.996826,
+            "lon": -2.406458
+          },
+          "centroid": {
+            "lat": 54.996826,
+            "lon": -2.406458
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "HENSHAW, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/C5F4E586-22B6-3DBA-BE37-D7EB7AB2F586",
+      "otherId": [
+        "Depositor ID: NY 76 NW 193",
+        "NMR_NATINV-1010164"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:453a43b430da19fc4ee404ac2219c5fb3f700f5989878f1ea306894342688dcc",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/453a43b430da19fc4ee404ac2219c5fb3f700f5989878f1ea306894342688dcc",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:31c3861b93a87d9443bca36e98e6dbe5eca28aef86b473dedf2af6a73d616706",
+    "_source": "ariadne",
+    "_sourceId": "1283283",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/31c3861b93a87d9443bca36e98e6dbe5eca28aef86b473dedf2af6a73d616706",
+    "title": "HADRIANS WALL",
+    "description": "No visible remains; but remnants of Wall probably exist beneath Lanercost Priory wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "31c3861b93a87d9443bca36e98e6dbe5eca28aef86b473dedf2af6a73d616706",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/55E379C2-3415-3607-8CB8-B364F80C7BDF",
+      "otherId": [
+        "Depositor ID: NY 56 SE 40",
+        "NMR_NATINV-1010348"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:31c3861b93a87d9443bca36e98e6dbe5eca28aef86b473dedf2af6a73d616706",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/31c3861b93a87d9443bca36e98e6dbe5eca28aef86b473dedf2af6a73d616706",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:38d7dfc5c68d7e1a6621e64301e1be9fc5c0f3ee6c66da1484e971259bd8a280",
+    "_source": "ariadne",
+    "_sourceId": "1283370",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/38d7dfc5c68d7e1a6621e64301e1be9fc5c0f3ee6c66da1484e971259bd8a280",
+    "title": "HADRIANS WALL",
+    "description": "No trace; the line of the Wall is occupied mainly by a roadside wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "38d7dfc5c68d7e1a6621e64301e1be9fc5c0f3ee6c66da1484e971259bd8a280",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/4A855621-8ADE-3E42-940C-970E40788CCB",
+      "otherId": [
+        "Depositor ID: NY 56 NE 16",
+        "NMR_NATINV-1010442"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:38d7dfc5c68d7e1a6621e64301e1be9fc5c0f3ee6c66da1484e971259bd8a280",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/38d7dfc5c68d7e1a6621e64301e1be9fc5c0f3ee6c66da1484e971259bd8a280",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:0fd80158d7b9c86589ed748ba52780ba2a87557c2176bace5a28759984941793",
+    "_source": "ariadne",
+    "_sourceId": "1283829",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0fd80158d7b9c86589ed748ba52780ba2a87557c2176bace5a28759984941793",
+    "title": "HADRIANS WALL",
+    "description": "No visible remains; a garden wall is on or close to the Wall line.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "IRTHINGTON, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "0fd80158d7b9c86589ed748ba52780ba2a87557c2176bace5a28759984941793",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "IRTHINGTON, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "IRTHINGTON, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F36D77DD-8BD2-3D5A-9480-804EA2080E52",
+      "otherId": [
+        "Depositor ID: NY 46 SE 98",
+        "NMR_NATINV-1010998"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:0fd80158d7b9c86589ed748ba52780ba2a87557c2176bace5a28759984941793",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0fd80158d7b9c86589ed748ba52780ba2a87557c2176bace5a28759984941793",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:35f478f5621d9bc5798893a9e32111d2f69159ce2390e86f2237efdc598c9b57",
+    "_source": "ariadne",
+    "_sourceId": "1283315",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/35f478f5621d9bc5798893a9e32111d2f69159ce2390e86f2237efdc598c9b57",
+    "title": "HADRIANS WALL",
+    "description": "Course overlaid or alongside crumbling field wall. No trace, but probable survival beneath field wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "35f478f5621d9bc5798893a9e32111d2f69159ce2390e86f2237efdc598c9b57",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/6DCAC134-9EBE-30FC-B5C5-06F847208428",
+      "otherId": [
+        "Depositor ID: NY 56 SE 71",
+        "NMR_NATINV-1010383"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:35f478f5621d9bc5798893a9e32111d2f69159ce2390e86f2237efdc598c9b57",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/35f478f5621d9bc5798893a9e32111d2f69159ce2390e86f2237efdc598c9b57",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:f312143861782d704f5d9c7a3ccdd1e720456f348b8eee3aec8188b26b855e64",
+    "_source": "ariadne",
+    "_sourceId": "1282702",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/f312143861782d704f5d9c7a3ccdd1e720456f348b8eee3aec8188b26b855e64",
+    "title": "HADRIANS WALL",
+    "description": "The Wall is destroyed. Course defined as slight lift on the line of the field wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HUMSHAUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 55.030477,
+    "decimalLongitude": -2.156774,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "f312143861782d704f5d9c7a3ccdd1e720456f348b8eee3aec8188b26b855e64",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HUMSHAUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+          "geopoint": {
+            "lat": 55.030477,
+            "lon": -2.156774
+          },
+          "centroid": {
+            "lat": 55.030477,
+            "lon": -2.156774
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "HUMSHAUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/E5D0A440-59CE-3201-AA2E-E25DC8900C36",
+      "otherId": [
+        "Depositor ID: NY 87 SE 124",
+        "NMR_NATINV-1009661"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:f312143861782d704f5d9c7a3ccdd1e720456f348b8eee3aec8188b26b855e64",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/f312143861782d704f5d9c7a3ccdd1e720456f348b8eee3aec8188b26b855e64",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:cdf377161d187cc79492613effe8ec1086c11cd75831dd6fd7a80bd39ec72434",
+    "_source": "ariadne",
+    "_sourceId": "1283512",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/cdf377161d187cc79492613effe8ec1086c11cd75831dd6fd7a80bd39ec72434",
+    "title": "HADRIANS WALL",
+    "description": "The Wall line runs beneath the railway embankment, no visible remains, though excavation in 1928 uncovered the Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "UPPER DENTON, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "cdf377161d187cc79492613effe8ec1086c11cd75831dd6fd7a80bd39ec72434",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "UPPER DENTON, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "UPPER DENTON, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/416666BE-E224-3DD8-A792-4EA088136B94",
+      "otherId": [
+        "Depositor ID: NY 66 NW 206",
+        "NMR_NATINV-1010595"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:cdf377161d187cc79492613effe8ec1086c11cd75831dd6fd7a80bd39ec72434",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/cdf377161d187cc79492613effe8ec1086c11cd75831dd6fd7a80bd39ec72434",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:4ab48fcfcecb8e72a49221a0ea0704eafc20ac811e368ec24f7746b08d74440e",
+    "_source": "ariadne",
+    "_sourceId": "1282094",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/4ab48fcfcecb8e72a49221a0ea0704eafc20ac811e368ec24f7746b08d74440e",
+    "title": "HADRIANS WALL",
+    "description": "The Wall is buried under a modern road, therefore no trace. The precise line of the Wall is unknown.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WHITTINGTON, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "4ab48fcfcecb8e72a49221a0ea0704eafc20ac811e368ec24f7746b08d74440e",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WHITTINGTON, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "WHITTINGTON, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/63B9ABBC-C72C-36B5-BE56-90D6A8FC2111",
+      "otherId": [
+        "Depositor ID: NY 96 NE 116",
+        "NMR_NATINV-1008852"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:4ab48fcfcecb8e72a49221a0ea0704eafc20ac811e368ec24f7746b08d74440e",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/4ab48fcfcecb8e72a49221a0ea0704eafc20ac811e368ec24f7746b08d74440e",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:b54cc3f3a4f16ec15196878e8648470f6a3f59de294675032cd31d8181f8f858",
+    "_source": "ariadne",
+    "_sourceId": "1283476",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/b54cc3f3a4f16ec15196878e8648470f6a3f59de294675032cd31d8181f8f858",
+    "title": "HADRIANS WALL",
+    "description": "No visible remains; a modern field wall on or close to the line of the north face of Hadrian's Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "UPPER DENTON, CARLISLE, ENGLAND, CUMBRIA",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "b54cc3f3a4f16ec15196878e8648470f6a3f59de294675032cd31d8181f8f858",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "UPPER DENTON, CARLISLE, ENGLAND, CUMBRIA"
+        }
+      ],
+      "allPlaceNames": [
+        "UPPER DENTON, CARLISLE, ENGLAND, CUMBRIA"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/16D680C7-B457-30DD-BA2E-02B22C4D4102",
+      "otherId": [
+        "Depositor ID: NY 66 NW 170",
+        "NMR_NATINV-1010558"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:b54cc3f3a4f16ec15196878e8648470f6a3f59de294675032cd31d8181f8f858",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/b54cc3f3a4f16ec15196878e8648470f6a3f59de294675032cd31d8181f8f858",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:b69a0e72320ad9c0d6287f23aa6d7b433ceefe7472f749d7ad701cc8ddd47d07",
+    "_source": "ariadne",
+    "_sourceId": "1292124",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/b69a0e72320ad9c0d6287f23aa6d7b433ceefe7472f749d7ad701cc8ddd47d07",
+    "title": "HADRIANS WALL",
+    "description": "Excavation in advance of pipe-laying located the Vallum, Wall and Wall ditch. No locational information, no access to Central Excavation Unit archive.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "STANWIX RURAL, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.936,
+    "decimalLongitude": -2.866331,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "b69a0e72320ad9c0d6287f23aa6d7b433ceefe7472f749d7ad701cc8ddd47d07",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "STANWIX RURAL, CARLISLE, CUMBRIA, ENGLAND",
+          "geopoint": {
+            "lat": 54.936,
+            "lon": -2.866331
+          },
+          "centroid": {
+            "lat": 54.936,
+            "lon": -2.866331
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "STANWIX RURAL, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/05DC4FFB-E6A3-3EF1-8A5B-2F9C8E69CA43",
+      "otherId": [
+        "Depositor ID: NY 46 SW 45",
+        "NMR_NATINV-1035206"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:b69a0e72320ad9c0d6287f23aa6d7b433ceefe7472f749d7ad701cc8ddd47d07",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/b69a0e72320ad9c0d6287f23aa6d7b433ceefe7472f749d7ad701cc8ddd47d07",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:aa674104525c10aa65e97c471653941cacad89112e53b83a7e1a5703b40d9bf0",
+    "_source": "ariadne",
+    "_sourceId": "1284241",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/aa674104525c10aa65e97c471653941cacad89112e53b83a7e1a5703b40d9bf0",
+    "title": "HADRIANS WALL",
+    "description": "Course of Hadrian's Wall. A small bank was seen as an earthwork on air photographs, it lies along the course of the Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BOWNESS, ALLERDALE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "aa674104525c10aa65e97c471653941cacad89112e53b83a7e1a5703b40d9bf0",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BOWNESS, ALLERDALE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "BOWNESS, ALLERDALE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/44C5AE37-AFB3-3160-9226-EA2A0EE0A36F",
+      "otherId": [
+        "Depositor ID: NY 26 SE 4",
+        "NMR_NATINV-1011449"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:aa674104525c10aa65e97c471653941cacad89112e53b83a7e1a5703b40d9bf0",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/aa674104525c10aa65e97c471653941cacad89112e53b83a7e1a5703b40d9bf0",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:4f3461daf3a84b03dcea3c7d29cdc0dca8623b20e94ba1ededaf19de01d9e5a1",
+    "_source": "ariadne",
+    "_sourceId": "1283382",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/4f3461daf3a84b03dcea3c7d29cdc0dca8623b20e94ba1ededaf19de01d9e5a1",
+    "title": "HADRIANS WALL",
+    "description": "Overlaid by the modern road; no visible remains. &#62;From milecastle 51 westward the Stone Wall is built on the line of the Turf Wall hence the berm between the Wall and the ditch is narrow. The approximate course is interpreted by extending the line of t",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "4f3461daf3a84b03dcea3c7d29cdc0dca8623b20e94ba1ededaf19de01d9e5a1",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/DF944EBB-0CF2-3647-8610-2F7C8BC79C10",
+      "otherId": [
+        "Depositor ID: NY 56 NE 28",
+        "NMR_NATINV-1010455"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:4f3461daf3a84b03dcea3c7d29cdc0dca8623b20e94ba1ededaf19de01d9e5a1",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/4f3461daf3a84b03dcea3c7d29cdc0dca8623b20e94ba1ededaf19de01d9e5a1",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:bb2ae839dde39d8204d3c9107d6eaad7595b875139d1096e0d2958cbc1a2426a",
+    "_source": "ariadne",
+    "_sourceId": "1282555",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/bb2ae839dde39d8204d3c9107d6eaad7595b875139d1096e0d2958cbc1a2426a",
+    "title": "HADRIANS WALL",
+    "description": "Consolidated Wall; Narrow Wall 2.3m wide, Broad Wall foundations up to 3m wide, the height is variable, up to 1.5m.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "structure",
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HAYDON, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "bb2ae839dde39d8204d3c9107d6eaad7595b875139d1096e0d2958cbc1a2426a",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HAYDON, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "HAYDON, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "structure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STRUCTURE"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/2F48574A-9E9E-3C5A-9CE0-B21F121D8B9D",
+      "otherId": [
+        "Depositor ID: NY 87 SW 49",
+        "NMR_NATINV-1009505"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:bb2ae839dde39d8204d3c9107d6eaad7595b875139d1096e0d2958cbc1a2426a",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/bb2ae839dde39d8204d3c9107d6eaad7595b875139d1096e0d2958cbc1a2426a",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:9c44f67530ad95ff23c0b91447716f82eb8bc74aa899755005696c87b75ff827",
+    "_source": "ariadne",
+    "_sourceId": "1282345",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/9c44f67530ad95ff23c0b91447716f82eb8bc74aa899755005696c87b75ff827",
+    "title": "HADRIANS WALL",
+    "description": "The Wall is intermittent and overgrown, modern wall on south face; the Wall is spread to 3.5m wide and 0.6m high.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HENSHAW, NORTHUMBERLAND, ENGLAND, TYNEDALE",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "9c44f67530ad95ff23c0b91447716f82eb8bc74aa899755005696c87b75ff827",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HENSHAW, NORTHUMBERLAND, ENGLAND, TYNEDALE"
+        }
+      ],
+      "allPlaceNames": [
+        "HENSHAW, NORTHUMBERLAND, ENGLAND, TYNEDALE"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ED0E3D61-23E8-315D-A275-F07B03920EC8",
+      "otherId": [
+        "Depositor ID: NY 76 NE 127",
+        "NMR_NATINV-1009185"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:9c44f67530ad95ff23c0b91447716f82eb8bc74aa899755005696c87b75ff827",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/9c44f67530ad95ff23c0b91447716f82eb8bc74aa899755005696c87b75ff827",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:99159666e56cf07ce12beeec8626bffdea13436e90d98147480d4c33402fdcb5",
+    "_source": "ariadne",
+    "_sourceId": "1282643",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/99159666e56cf07ce12beeec8626bffdea13436e90d98147480d4c33402fdcb5",
+    "title": "HADRIANS WALL",
+    "description": "The Wall is overlain by a modern road, verge, and roadside wall; no visible remains. Course accepted as straight between known points, east and west.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "NEWBROUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "99159666e56cf07ce12beeec8626bffdea13436e90d98147480d4c33402fdcb5",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "NEWBROUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "NEWBROUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/EE6C117F-010E-385B-874C-7BE9C20829BF",
+      "otherId": [
+        "Depositor ID: NY 87 SE 67",
+        "NMR_NATINV-1009598"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:99159666e56cf07ce12beeec8626bffdea13436e90d98147480d4c33402fdcb5",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/99159666e56cf07ce12beeec8626bffdea13436e90d98147480d4c33402fdcb5",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:86f51144fc4584caff216f33999859a43127d7ffa5a5b09c6e224e9088f47489",
+    "_source": "ariadne",
+    "_sourceId": "1283018",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/86f51144fc4584caff216f33999859a43127d7ffa5a5b09c6e224e9088f47489",
+    "title": "HADRIANS WALL",
+    "description": "A low scarp, 0.2m high running south of modern wall is all that is visible of the line of Hadrian's Wall, thus the modern wall is on a low platform representing the foundations of Hadrian's Wall. Scheduled.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "86f51144fc4584caff216f33999859a43127d7ffa5a5b09c6e224e9088f47489",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/D75E1480-D52A-3D48-8F46-F8EE8005C6E0",
+      "otherId": [
+        "Depositor ID: NY 76 NW 85",
+        "NMR_NATINV-1010011"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:86f51144fc4584caff216f33999859a43127d7ffa5a5b09c6e224e9088f47489",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/86f51144fc4584caff216f33999859a43127d7ffa5a5b09c6e224e9088f47489",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:ead7ea06be47f4962ee97be4e56cb2d73e0ed4003d31b7b889c00c602936190c",
+    "_source": "ariadne",
+    "_sourceId": "1282752",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ead7ea06be47f4962ee97be4e56cb2d73e0ed4003d31b7b889c00c602936190c",
+    "title": "HADRIANS WALL",
+    "description": "There is much loose stone in the west bank of the North Tyne on the line of the Wall and upstream from it, possibly tumble from the Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HUMSHAUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 55.02529,
+    "decimalLongitude": -2.135477,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "ead7ea06be47f4962ee97be4e56cb2d73e0ed4003d31b7b889c00c602936190c",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HUMSHAUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+          "geopoint": {
+            "lat": 55.02529,
+            "lon": -2.135477
+          },
+          "centroid": {
+            "lat": 55.02529,
+            "lon": -2.135477
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "HUMSHAUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CC449F02-A021-393C-847C-F4658ADF06D5",
+      "otherId": [
+        "Depositor ID: NY 97 SW 82",
+        "NMR_NATINV-1009713"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:ead7ea06be47f4962ee97be4e56cb2d73e0ed4003d31b7b889c00c602936190c",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ead7ea06be47f4962ee97be4e56cb2d73e0ed4003d31b7b889c00c602936190c",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:0bfcfd9fab9a64375bcebdbcfe6f3f155808a9d16567fe64633b1f88a5c4910c",
+    "_source": "ariadne",
+    "_sourceId": "1283052",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0bfcfd9fab9a64375bcebdbcfe6f3f155808a9d16567fe64633b1f88a5c4910c",
+    "title": "HADRIANS WALL",
+    "description": "The modern wall and the south frontage of Burnhead House is on the line of Hadrian's Wall. Occasional scarps can be seen south of the field wall which sits on a rubbly crest, indicative of the collapse of Hadrian's Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "0bfcfd9fab9a64375bcebdbcfe6f3f155808a9d16567fe64633b1f88a5c4910c",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/5295691E-C0BB-39ED-9691-8558C629727F",
+      "otherId": [
+        "Depositor ID: NY 76 NW 116",
+        "NMR_NATINV-1010054"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:0bfcfd9fab9a64375bcebdbcfe6f3f155808a9d16567fe64633b1f88a5c4910c",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0bfcfd9fab9a64375bcebdbcfe6f3f155808a9d16567fe64633b1f88a5c4910c",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:0337615ceff1890a659369bbb21dba8de9bb3321877e46845f13cdd66a4a674e",
+    "_source": "ariadne",
+    "_sourceId": "1282946",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0337615ceff1890a659369bbb21dba8de9bb3321877e46845f13cdd66a4a674e",
+    "title": "HADRIANS WALL",
+    "description": "A modern wall has utilised the north face of Hadrian's Wall for much of this section. The Roman Wall survives to a maximum height of 1.7m and is unconsolidated. The South face is hidden beneath wall debris, up to 1.3m high.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "0337615ceff1890a659369bbb21dba8de9bb3321877e46845f13cdd66a4a674e",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/E16835B5-3BB0-37A5-843C-9E6192E9B388",
+      "otherId": [
+        "Depositor ID: NY 66 NE 167",
+        "NMR_NATINV-1009932"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:0337615ceff1890a659369bbb21dba8de9bb3321877e46845f13cdd66a4a674e",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0337615ceff1890a659369bbb21dba8de9bb3321877e46845f13cdd66a4a674e",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:99aabebb4602115a927d7b53ddd1c00484ef9313697d4eaeafeb370bcafab297",
+    "_source": "ariadne",
+    "_sourceId": "1282984",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/99aabebb4602115a927d7b53ddd1c00484ef9313697d4eaeafeb370bcafab297",
+    "title": "HADRIANS WALL",
+    "description": "A stony bank with a modern wall is on the line of the Wall. Some basal stones of the north face of the Roman Wall protrude.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "TYNEDALE, NORTHUMBERLAND, ENGLAND, GREENHEAD",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "99aabebb4602115a927d7b53ddd1c00484ef9313697d4eaeafeb370bcafab297",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "TYNEDALE, NORTHUMBERLAND, ENGLAND, GREENHEAD"
+        }
+      ],
+      "allPlaceNames": [
+        "TYNEDALE, NORTHUMBERLAND, ENGLAND, GREENHEAD"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/822466E6-3EF8-3DC5-8BF3-B084623C399F",
+      "otherId": [
+        "Depositor ID: NY 66 NE 203",
+        "NMR_NATINV-1009971"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:99aabebb4602115a927d7b53ddd1c00484ef9313697d4eaeafeb370bcafab297",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/99aabebb4602115a927d7b53ddd1c00484ef9313697d4eaeafeb370bcafab297",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:927ac9d18bd870efc498bcab316231c3348af181b0b9319145c3f2fc0a86685d",
+    "_source": "ariadne",
+    "_sourceId": "1282782",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/927ac9d18bd870efc498bcab316231c3348af181b0b9319145c3f2fc0a86685d",
+    "title": "HADRIANS WALL",
+    "description": "The Wall is consolidated and under guardianship, it demonstrates the change from the narrow wall, 1.75m wide [west part], to the broad wall, 2.8m wide [east end].",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "structure",
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "TYNEDALE, NORTHUMBERLAND, ENGLAND, WALL",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "927ac9d18bd870efc498bcab316231c3348af181b0b9319145c3f2fc0a86685d",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "TYNEDALE, NORTHUMBERLAND, ENGLAND, WALL"
+        }
+      ],
+      "allPlaceNames": [
+        "TYNEDALE, NORTHUMBERLAND, ENGLAND, WALL"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "structure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STRUCTURE"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/80FC79F8-99B8-3F25-9481-977F9D7F9A73",
+      "otherId": [
+        "Depositor ID: NY 96 NW 123",
+        "NMR_NATINV-1009743"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:927ac9d18bd870efc498bcab316231c3348af181b0b9319145c3f2fc0a86685d",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/927ac9d18bd870efc498bcab316231c3348af181b0b9319145c3f2fc0a86685d",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:e3b12ea3b31135630017b3b7cb4e7764465cecaf6b4280898e7cff349441a149",
+    "_source": "ariadne",
+    "_sourceId": "1282953",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/e3b12ea3b31135630017b3b7cb4e7764465cecaf6b4280898e7cff349441a149",
+    "title": "HADRIANS WALL",
+    "description": "Hadrian's Wall is a stony, turf-covered bank, 6.5m maximum width and 1.3m maximum height demarcates the Wall-line. The stony wall is visible on air photographs.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "e3b12ea3b31135630017b3b7cb4e7764465cecaf6b4280898e7cff349441a149",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BB2977FB-4C64-3E4C-A942-81A39F62BB6D",
+      "otherId": [
+        "Depositor ID: NY 66 NE 174",
+        "NMR_NATINV-1009939"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:e3b12ea3b31135630017b3b7cb4e7764465cecaf6b4280898e7cff349441a149",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/e3b12ea3b31135630017b3b7cb4e7764465cecaf6b4280898e7cff349441a149",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:cc6b99785bc04d54bac0bb05ea0c6ea110f80fa05b18123c988a3d8835f4f547",
+    "_source": "ariadne",
+    "_sourceId": "1283942",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/cc6b99785bc04d54bac0bb05ea0c6ea110f80fa05b18123c988a3d8835f4f547",
+    "title": "HADRIANS WALL",
+    "description": "A tenant remembered that an excavation in 1933 proved that the Wall ran very close to the north wall of the northern farm buildings. No visible remains in Sandysike farmyard.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WALTON, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "cc6b99785bc04d54bac0bb05ea0c6ea110f80fa05b18123c988a3d8835f4f547",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WALTON, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "WALTON, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/80ED6B13-D9C7-3B97-9E3A-7E0B3F2E62F6",
+      "otherId": [
+        "Depositor ID: NY 56 SW 189",
+        "NMR_NATINV-1011116"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:cc6b99785bc04d54bac0bb05ea0c6ea110f80fa05b18123c988a3d8835f4f547",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/cc6b99785bc04d54bac0bb05ea0c6ea110f80fa05b18123c988a3d8835f4f547",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:58edf467fa273ccf868d4f317bd0ae4e7525f64f57b53f5224ebd7ada0ffa75d",
+    "_source": "ariadne",
+    "_sourceId": "1283017",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/58edf467fa273ccf868d4f317bd0ae4e7525f64f57b53f5224ebd7ada0ffa75d",
+    "title": "HADRIANS WALL",
+    "description": "Two to six courses of unconsolidated inner face of Wall standing up to 1.5m high; the outer face is less obvious; the Wall is 1.8m thick. In the field south of the Wall are low denuded field walls, possibly enclosures, 8m-12m from the Wall",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "structure",
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "58edf467fa273ccf868d4f317bd0ae4e7525f64f57b53f5224ebd7ada0ffa75d",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "structure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STRUCTURE"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/07BD586D-7661-3DE5-9F3E-854EC400D82E",
+      "otherId": [
+        "Depositor ID: NY 76 NW 84",
+        "NMR_NATINV-1010010"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:58edf467fa273ccf868d4f317bd0ae4e7525f64f57b53f5224ebd7ada0ffa75d",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/58edf467fa273ccf868d4f317bd0ae4e7525f64f57b53f5224ebd7ada0ffa75d",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:d40f2857a7b418705f000a0069ba6e4d042d5fe9e929bd25f22c466d0bcf188c",
+    "_source": "ariadne",
+    "_sourceId": "1282329",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/d40f2857a7b418705f000a0069ba6e4d042d5fe9e929bd25f22c466d0bcf188c",
+    "title": "HADRIANS WALL",
+    "description": "Course of, modern field wall on north foundation stones of the Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HENSHAW, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "d40f2857a7b418705f000a0069ba6e4d042d5fe9e929bd25f22c466d0bcf188c",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HENSHAW, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "HENSHAW, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/2F2111A4-B014-313B-9032-AA7A7635622C",
+      "otherId": [
+        "Depositor ID: NY 76 NE 111",
+        "NMR_NATINV-1009169"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:d40f2857a7b418705f000a0069ba6e4d042d5fe9e929bd25f22c466d0bcf188c",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/d40f2857a7b418705f000a0069ba6e4d042d5fe9e929bd25f22c466d0bcf188c",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:533361e24781536c8850527dacf779d2029722ceea186fa87801c9d4b81a8285",
+    "_source": "ariadne",
+    "_sourceId": "1283287",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/533361e24781536c8850527dacf779d2029722ceea186fa87801c9d4b81a8285",
+    "title": "HADRIANS WALL",
+    "description": "The Ordnance Survey line of Hadrian's Wall along modern the stone wall is wrong. Plan and photo of Milecastle 54 indicate that the Wall is on the line of the modern hedge. Further east the Wall shows as a swelling along the north side of the hedge.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "533361e24781536c8850527dacf779d2029722ceea186fa87801c9d4b81a8285",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/EE4559BD-03FF-3BB0-845F-F45949FF116B",
+      "otherId": [
+        "Depositor ID: NY 56 SE 44",
+        "NMR_NATINV-1010352"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:533361e24781536c8850527dacf779d2029722ceea186fa87801c9d4b81a8285",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/533361e24781536c8850527dacf779d2029722ceea186fa87801c9d4b81a8285",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:0616e712a33e4b6d867283124bf62aa6c0ae3f2b58435fee68255ddb5fb8d7be",
+    "_source": "ariadne",
+    "_sourceId": "1282000",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0616e712a33e4b6d867283124bf62aa6c0ae3f2b58435fee68255ddb5fb8d7be",
+    "title": "HADRIANS WALL",
+    "description": "No trace of the Wall in a pasture field except for a slight lift in a modern wall at the east edge of the field. The present public road crosses the line.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WALL, NORTHUMBERLAND, ENGLAND, TYNEDALE",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "0616e712a33e4b6d867283124bf62aa6c0ae3f2b58435fee68255ddb5fb8d7be",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WALL, NORTHUMBERLAND, ENGLAND, TYNEDALE"
+        }
+      ],
+      "allPlaceNames": [
+        "WALL, NORTHUMBERLAND, ENGLAND, TYNEDALE"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/11AADA92-FE96-329F-AEAA-1BA456D505E2",
+      "otherId": [
+        "Depositor ID: NY 96 NW 83",
+        "NMR_NATINV-1008758"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:0616e712a33e4b6d867283124bf62aa6c0ae3f2b58435fee68255ddb5fb8d7be",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0616e712a33e4b6d867283124bf62aa6c0ae3f2b58435fee68255ddb5fb8d7be",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:9ec813e5ca5032f6a107e033c40e25a2a2c026f31b42c0e4366d2b480707d4e8",
+    "_source": "ariadne",
+    "_sourceId": "1282496",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/9ec813e5ca5032f6a107e033c40e25a2a2c026f31b42c0e4366d2b480707d4e8",
+    "title": "HADRIANS WALL",
+    "description": "Modern field wall built on foundations of the south face of the Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BARDON MILL, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "9ec813e5ca5032f6a107e033c40e25a2a2c026f31b42c0e4366d2b480707d4e8",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BARDON MILL, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "BARDON MILL, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/96AF16EA-1AC2-32A1-8444-31DEB5255FC9",
+      "otherId": [
+        "Depositor ID: NY 76 NE 145",
+        "NMR_NATINV-1009445"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:9ec813e5ca5032f6a107e033c40e25a2a2c026f31b42c0e4366d2b480707d4e8",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/9ec813e5ca5032f6a107e033c40e25a2a2c026f31b42c0e4366d2b480707d4e8",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:9af0211d3d11e4f59eb44830829bc9b4a0ea4b3e25aa3e3de96c56356df72784",
+    "_source": "ariadne",
+    "_sourceId": "1282753",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/9af0211d3d11e4f59eb44830829bc9b4a0ea4b3e25aa3e3de96c56356df72784",
+    "title": "HADRIANS WALL",
+    "description": "No surface remains of the Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HUMSHAUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "9af0211d3d11e4f59eb44830829bc9b4a0ea4b3e25aa3e3de96c56356df72784",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HUMSHAUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "HUMSHAUGH, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/DA95DC00-B373-32CB-AB87-EB65C82675A3",
+      "otherId": [
+        "Depositor ID: NY 97 SW 83",
+        "NMR_NATINV-1009714"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:9af0211d3d11e4f59eb44830829bc9b4a0ea4b3e25aa3e3de96c56356df72784",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/9af0211d3d11e4f59eb44830829bc9b4a0ea4b3e25aa3e3de96c56356df72784",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:75053259520a372a918ff04d80ad5258ad7f8326283faf68cbb94920fb84ef4e",
+    "_source": "ariadne",
+    "_sourceId": "1284263",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/75053259520a372a918ff04d80ad5258ad7f8326283faf68cbb94920fb84ef4e",
+    "title": "HADRIANS WALL",
+    "description": "No surface trace of Hadrian's Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BOWNESS, ALLERDALE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "75053259520a372a918ff04d80ad5258ad7f8326283faf68cbb94920fb84ef4e",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BOWNESS, ALLERDALE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "BOWNESS, ALLERDALE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/E5EEB988-CB36-3022-B80E-019FA3970D85",
+      "otherId": [
+        "Depositor ID: NY 25 NE 29",
+        "NMR_NATINV-1011472"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:75053259520a372a918ff04d80ad5258ad7f8326283faf68cbb94920fb84ef4e",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/75053259520a372a918ff04d80ad5258ad7f8326283faf68cbb94920fb84ef4e",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:2787255d9f5eeb4f45c527a263bfc6423152e9f7b2c62b936e25e40d63b3819e",
+    "_source": "ariadne",
+    "_sourceId": "1284260",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2787255d9f5eeb4f45c527a263bfc6423152e9f7b2c62b936e25e40d63b3819e",
+    "title": "HADRIANS WALL",
+    "description": "No surface trace of Hadrian's Wall.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BOWNESS, ALLERDALE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "2787255d9f5eeb4f45c527a263bfc6423152e9f7b2c62b936e25e40d63b3819e",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BOWNESS, ALLERDALE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "BOWNESS, ALLERDALE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/5544EA8C-50BB-3C8E-93D5-B5899496A749",
+      "otherId": [
+        "Depositor ID: NY 25 NE 26",
+        "NMR_NATINV-1011469"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:2787255d9f5eeb4f45c527a263bfc6423152e9f7b2c62b936e25e40d63b3819e",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2787255d9f5eeb4f45c527a263bfc6423152e9f7b2c62b936e25e40d63b3819e",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:001fd9f6c79f450e9a585748bc9205d088c3c1837d81be24efd71d657d214905",
+    "_source": "ariadne",
+    "_sourceId": "1282983",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/001fd9f6c79f450e9a585748bc9205d088c3c1837d81be24efd71d657d214905",
+    "title": "HADRIANS WALL",
+    "description": "No remains of the Wall are visible; farm buildings and modern enclosure walls on the line of the Wall. The course is assumed to be straight between known points to west and east.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "001fd9f6c79f450e9a585748bc9205d088c3c1837d81be24efd71d657d214905",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/B54326C2-FE9D-3B1D-9D87-F6D4F5CE96E7",
+      "otherId": [
+        "Depositor ID: NY 66 NE 202",
+        "NMR_NATINV-1009970"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:001fd9f6c79f450e9a585748bc9205d088c3c1837d81be24efd71d657d214905",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/001fd9f6c79f450e9a585748bc9205d088c3c1837d81be24efd71d657d214905",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:cebd9773cb8fc1aab183ceac0aa94296f4271f85c674ab55952fc48cc83aca89",
+    "_source": "ariadne",
+    "_sourceId": "1283831",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/cebd9773cb8fc1aab183ceac0aa94296f4271f85c674ab55952fc48cc83aca89",
+    "title": "HADRIANS WALL",
+    "description": "Geophysical survey in this paddock shows much disturbance suggestive of rubble scatters, but no clear wall lines. Either the Wall is robbed out or the rubble obscures it. Ground disturbed; no visible remains.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "IRTHINGTON, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.947263,
+    "decimalLongitude": -2.810205,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "cebd9773cb8fc1aab183ceac0aa94296f4271f85c674ab55952fc48cc83aca89",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "IRTHINGTON, CARLISLE, CUMBRIA, ENGLAND",
+          "geopoint": {
+            "lat": 54.947263,
+            "lon": -2.810205
+          },
+          "centroid": {
+            "lat": 54.947263,
+            "lon": -2.810205
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "IRTHINGTON, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/2B624A14-B872-394A-91F3-292265607255",
+      "otherId": [
+        "Depositor ID: NY 46 SE 100",
+        "NMR_NATINV-1011000"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:cebd9773cb8fc1aab183ceac0aa94296f4271f85c674ab55952fc48cc83aca89",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/cebd9773cb8fc1aab183ceac0aa94296f4271f85c674ab55952fc48cc83aca89",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:1b013cdd4a5d63e9e74dca3e34e8a6c1b749ee4d0e567e69f3ab6eadc32b20ec",
+    "_source": "ariadne",
+    "_sourceId": "1282947",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/1b013cdd4a5d63e9e74dca3e34e8a6c1b749ee4d0e567e69f3ab6eadc32b20ec",
+    "title": "HADRIANS WALL",
+    "description": "The North face of the Wall is incorporated in the fabric of a modern wall to a maximum height of 1.9m; the Roman Wall is unconsolidated and collapsing in places. The Wall fabric remains as a stoney bank, 1.4m in height. The South face is exposed by dig",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "1b013cdd4a5d63e9e74dca3e34e8a6c1b749ee4d0e567e69f3ab6eadc32b20ec",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BC3EE94A-6022-38E8-86D1-409641AAF1C4",
+      "otherId": [
+        "Depositor ID: NY 66 NE 168",
+        "NMR_NATINV-1009933"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:1b013cdd4a5d63e9e74dca3e34e8a6c1b749ee4d0e567e69f3ab6eadc32b20ec",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/1b013cdd4a5d63e9e74dca3e34e8a6c1b749ee4d0e567e69f3ab6eadc32b20ec",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:982de6d9f58bc945b81fb0e409c87861901b116961daf5408cc5514b630d6233",
+    "_source": "ariadne",
+    "_sourceId": "1282343",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/982de6d9f58bc945b81fb0e409c87861901b116961daf5408cc5514b630d6233",
+    "title": "HADRIANS WALL",
+    "description": "Course of, field wall on north face.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HENSHAW, TYNEDALE, ENGLAND, NORTHUMBERLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "982de6d9f58bc945b81fb0e409c87861901b116961daf5408cc5514b630d6233",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HENSHAW, TYNEDALE, ENGLAND, NORTHUMBERLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "HENSHAW, TYNEDALE, ENGLAND, NORTHUMBERLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/314950B9-7B2F-3FA9-9D3E-68AE06751872",
+      "otherId": [
+        "Depositor ID: NY 76 NE 125",
+        "NMR_NATINV-1009183"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:982de6d9f58bc945b81fb0e409c87861901b116961daf5408cc5514b630d6233",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/982de6d9f58bc945b81fb0e409c87861901b116961daf5408cc5514b630d6233",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:4fd7358e1ec0261c197b7d5681d28c0aaac383ef1d15403ab6e70015f5ada6fe",
+    "_source": "ariadne",
+    "_sourceId": "1282868",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/4fd7358e1ec0261c197b7d5681d28c0aaac383ef1d15403ab6e70015f5ada6fe",
+    "title": "HADRIANS WALL",
+    "description": "No trace; runs through Wall End farmyard.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "THIRLWALL, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "4fd7358e1ec0261c197b7d5681d28c0aaac383ef1d15403ab6e70015f5ada6fe",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "THIRLWALL, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "THIRLWALL, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F2B7F35B-8D1C-3DFB-A1C7-A86E5EFA5AD5",
+      "otherId": [
+        "Depositor ID: NY 66 NE 92",
+        "NMR_NATINV-1009853"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:4fd7358e1ec0261c197b7d5681d28c0aaac383ef1d15403ab6e70015f5ada6fe",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/4fd7358e1ec0261c197b7d5681d28c0aaac383ef1d15403ab6e70015f5ada6fe",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:a6fc4e97176c6ac564c9a52c0205b34b26f93bf71cc41aa2db8ad2f6294116a6",
+    "_source": "ariadne",
+    "_sourceId": "1283313",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/a6fc4e97176c6ac564c9a52c0205b34b26f93bf71cc41aa2db8ad2f6294116a6",
+    "title": "HADRIANS WALL",
+    "description": "No trace of the Wall in pasture.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "CARLISLE, CUMBRIA, ENGLAND, BURTHOLME",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "a6fc4e97176c6ac564c9a52c0205b34b26f93bf71cc41aa2db8ad2f6294116a6",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "CARLISLE, CUMBRIA, ENGLAND, BURTHOLME"
+        }
+      ],
+      "allPlaceNames": [
+        "CARLISLE, CUMBRIA, ENGLAND, BURTHOLME"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/3B59D6DC-933A-3618-A388-693718EF45CC",
+      "otherId": [
+        "Depositor ID: NY 56 SE 69",
+        "NMR_NATINV-1010381"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:a6fc4e97176c6ac564c9a52c0205b34b26f93bf71cc41aa2db8ad2f6294116a6",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/a6fc4e97176c6ac564c9a52c0205b34b26f93bf71cc41aa2db8ad2f6294116a6",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:1e5bc806df6ef03413eb2dfe63807f6d8a32d281972881258714bbf9b6a3f91e",
+    "_source": "ariadne",
+    "_sourceId": "1283860",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/1e5bc806df6ef03413eb2dfe63807f6d8a32d281972881258714bbf9b6a3f91e",
+    "title": "HADRIANS WALL",
+    "description": "Trenched by Haverfield who found that the Wall and Vallum were approximately 80 yards apart. Ordnance Survey course verified (see NY 6962/6 and NY 6962/7). Line of Wall parallel and SE of field boundary.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "IRTHINGTON, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "1e5bc806df6ef03413eb2dfe63807f6d8a32d281972881258714bbf9b6a3f91e",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "IRTHINGTON, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "IRTHINGTON, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/9B40B164-CCF5-300F-8BA0-C8555E0463EA",
+      "otherId": [
+        "Depositor ID: NY 46 SE 128",
+        "NMR_NATINV-1011031"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:1e5bc806df6ef03413eb2dfe63807f6d8a32d281972881258714bbf9b6a3f91e",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/1e5bc806df6ef03413eb2dfe63807f6d8a32d281972881258714bbf9b6a3f91e",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:47b92c8af33bf3fc9f8e7af0258a22fff0be0320625e39afbec955006c6cafc2",
+    "_source": "ariadne",
+    "_sourceId": "1282535",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/47b92c8af33bf3fc9f8e7af0258a22fff0be0320625e39afbec955006c6cafc2",
+    "title": "HADRIANS WALL",
+    "description": "The Wall is completely robbed at this point.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HAYDON, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 55.023883,
+    "decimalLongitude": -2.313653,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "47b92c8af33bf3fc9f8e7af0258a22fff0be0320625e39afbec955006c6cafc2",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HAYDON, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+          "geopoint": {
+            "lat": 55.023883,
+            "lon": -2.313653
+          },
+          "centroid": {
+            "lat": 55.023883,
+            "lon": -2.313653
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "HAYDON, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/412BD3AF-C0D4-3534-8746-4413C9FC86B5",
+      "otherId": [
+        "Depositor ID: NY 76 NE 181",
+        "NMR_NATINV-1009484"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:47b92c8af33bf3fc9f8e7af0258a22fff0be0320625e39afbec955006c6cafc2",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/47b92c8af33bf3fc9f8e7af0258a22fff0be0320625e39afbec955006c6cafc2",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:0e1be3fa815b0cdd9a00663332ba10a55c545d50fe8ccf1d3325aaa304546ae9",
+    "_source": "ariadne",
+    "_sourceId": "1283444",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0e1be3fa815b0cdd9a00663332ba10a55c545d50fe8ccf1d3325aaa304546ae9",
+    "title": "HADRIANS WALL",
+    "description": "The Wall is overlain by a public road.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "0e1be3fa815b0cdd9a00663332ba10a55c545d50fe8ccf1d3325aaa304546ae9",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "WATERHEAD, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/634A30EF-EA9B-3656-AC11-985887A028F6",
+      "otherId": [
+        "Depositor ID: NY 66 NW 138",
+        "NMR_NATINV-1010525"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:0e1be3fa815b0cdd9a00663332ba10a55c545d50fe8ccf1d3325aaa304546ae9",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0e1be3fa815b0cdd9a00663332ba10a55c545d50fe8ccf1d3325aaa304546ae9",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:c6efc7b39ab1a2a038c4d17111b563107d98db13d939847c92e0e496254b03ca",
+    "_source": "ariadne",
+    "_sourceId": "1282582",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/c6efc7b39ab1a2a038c4d17111b563107d98db13d939847c92e0e496254b03ca",
+    "title": "HADRIANS WALL",
+    "description": "West facing offset in the south side of the Narrow Wall on Broad Wall foundations, 0.25m wide.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "structure",
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HAYDON, NORTHUMBERLAND, ENGLAND, TYNEDALE",
+    "country": "England",
+    "decimalLatitude": 55.025061,
+    "decimalLongitude": -2.309751,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "c6efc7b39ab1a2a038c4d17111b563107d98db13d939847c92e0e496254b03ca",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HAYDON, NORTHUMBERLAND, ENGLAND, TYNEDALE",
+          "geopoint": {
+            "lat": 55.025061,
+            "lon": -2.309751
+          },
+          "centroid": {
+            "lat": 55.025061,
+            "lon": -2.309751
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "HAYDON, NORTHUMBERLAND, ENGLAND, TYNEDALE"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "structure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STRUCTURE"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BA5D1DD2-BE41-3C8A-B004-B2E93576BB4F",
+      "otherId": [
+        "Depositor ID: NY 87 SW 74",
+        "NMR_NATINV-1009534"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:c6efc7b39ab1a2a038c4d17111b563107d98db13d939847c92e0e496254b03ca",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/c6efc7b39ab1a2a038c4d17111b563107d98db13d939847c92e0e496254b03ca",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:569e75956aa187fc8c25331c6bdb4f4a5a64f16e17ef5e15c00d5680bbffd28d",
+    "_source": "ariadne",
+    "_sourceId": "1282095",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/569e75956aa187fc8c25331c6bdb4f4a5a64f16e17ef5e15c00d5680bbffd28d",
+    "title": "HADRIANS WALL",
+    "description": "The Wall Ditch was discovered by excavation to have been dug before construction of Haltonchesters Fort, but there was no evidence from excavation for the Wall itself across the fort; the putative line is under the present road.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WHITTINGTON, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "569e75956aa187fc8c25331c6bdb4f4a5a64f16e17ef5e15c00d5680bbffd28d",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WHITTINGTON, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "WHITTINGTON, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CD0B0E13-37CF-3F07-8B59-D46ADB505F1E",
+      "otherId": [
+        "Depositor ID: NY 96 NE 117",
+        "NMR_NATINV-1008853"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:569e75956aa187fc8c25331c6bdb4f4a5a64f16e17ef5e15c00d5680bbffd28d",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/569e75956aa187fc8c25331c6bdb4f4a5a64f16e17ef5e15c00d5680bbffd28d",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:cc808da8cacd6a3e4ff788a9a005c1752b6235f2f0833d06e6387d78d9a83640",
+    "_source": "ariadne",
+    "_sourceId": "1282328",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/cc808da8cacd6a3e4ff788a9a005c1752b6235f2f0833d06e6387d78d9a83640",
+    "title": "HADRIANS WALL",
+    "description": "Course of, modern field wall roughly on the line.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HENSHAW, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "cc808da8cacd6a3e4ff788a9a005c1752b6235f2f0833d06e6387d78d9a83640",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HENSHAW, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "HENSHAW, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CA652CC0-4935-31DC-9452-E9E4F2C2E053",
+      "otherId": [
+        "Depositor ID: NY 76 NE 110",
+        "NMR_NATINV-1009168"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:cc808da8cacd6a3e4ff788a9a005c1752b6235f2f0833d06e6387d78d9a83640",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/cc808da8cacd6a3e4ff788a9a005c1752b6235f2f0833d06e6387d78d9a83640",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:91820112d17b691cd179016bbb16cfbae5e0c5aab5a1bdf50f5f9b41a974715b",
+    "_source": "ariadne",
+    "_sourceId": "1282553",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/91820112d17b691cd179016bbb16cfbae5e0c5aab5a1bdf50f5f9b41a974715b",
+    "title": "HADRIANS WALL",
+    "description": "Course of Wall, now lost in a farm complex.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HAYDON, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "91820112d17b691cd179016bbb16cfbae5e0c5aab5a1bdf50f5f9b41a974715b",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HAYDON, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "HAYDON, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/5C51834E-91C6-3880-AC23-9F079B5C05FB",
+      "otherId": [
+        "Depositor ID: NY 87 SW 47",
+        "NMR_NATINV-1009503"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:91820112d17b691cd179016bbb16cfbae5e0c5aab5a1bdf50f5f9b41a974715b",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/91820112d17b691cd179016bbb16cfbae5e0c5aab5a1bdf50f5f9b41a974715b",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:f35c311d17ddb9206975fceec1e128cadd8fc02a4d72a8141c131565947653ca",
+    "_source": "ariadne",
+    "_sourceId": "1283901",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/f35c311d17ddb9206975fceec1e128cadd8fc02a4d72a8141c131565947653ca",
+    "title": "HADRIANS WALL",
+    "description": "No trace of the Wall alongside hedge-fence line.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "wall",
+      "walls"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "CARLISLE, CUMBRIA, ENGLAND, IRTHINGTON",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "f35c311d17ddb9206975fceec1e128cadd8fc02a4d72a8141c131565947653ca",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "CARLISLE, CUMBRIA, ENGLAND, IRTHINGTON"
+        }
+      ],
+      "allPlaceNames": [
+        "CARLISLE, CUMBRIA, ENGLAND, IRTHINGTON"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/171E8369-B559-39FA-8F1C-1E92E04C1965",
+      "otherId": [
+        "Depositor ID: NY 56 SW 150",
+        "NMR_NATINV-1011075"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:f35c311d17ddb9206975fceec1e128cadd8fc02a4d72a8141c131565947653ca",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/f35c311d17ddb9206975fceec1e128cadd8fc02a4d72a8141c131565947653ca",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:ad59cee7b188fcce8cc066db8ccf79d174f87053069ba74c5e66d2bfe6692079",
+    "_source": "ariadne",
+    "_sourceId": "1282989",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ad59cee7b188fcce8cc066db8ccf79d174f87053069ba74c5e66d2bfe6692079",
+    "title": "HADRIANS WALL",
+    "description": "The Wall survives generally as a grass-grown stony bank surmounted by a modern wall built of Roman Wall stones. A few original facing stones still in situ can be seen. The banks are visible on air photographs.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "ad59cee7b188fcce8cc066db8ccf79d174f87053069ba74c5e66d2bfe6692079",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "GREENHEAD, TYNEDALE, NORTHUMBERLAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/C94F98FC-51F7-3316-B6F8-9F07F6291681",
+      "otherId": [
+        "Depositor ID: NY 66 NE 207",
+        "NMR_NATINV-1009976"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:ad59cee7b188fcce8cc066db8ccf79d174f87053069ba74c5e66d2bfe6692079",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ad59cee7b188fcce8cc066db8ccf79d174f87053069ba74c5e66d2bfe6692079",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:b9853c2bf098fe813935ee548ca1f59399a4b175f0108a69970b2c05630fe228",
+    "_source": "ariadne",
+    "_sourceId": "1283285",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/b9853c2bf098fe813935ee548ca1f59399a4b175f0108a69970b2c05630fe228",
+    "title": "HADRIANS WALL",
+    "description": "Wall on the line of a later wall. The foundation stones are of typical Hadrianic size and disposition and probably re-used in the well-built Lanercost Priory boundary wall, but some could be original Roman in situ.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "earthwork",
+      "wall",
+      "walls",
+      "earthworks (engineering works)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "0043",
+    "periodEnd": "0410",
+    "periodName": "roman",
+    "ariadne": {
+      "elasticId": "b9853c2bf098fe813935ee548ca1f59399a4b175f0108a69970b2c05630fe228",
+      "temporal": [
+        {
+          "from": "0043",
+          "periodName": "roman",
+          "until": "0410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND"
+        }
+      ],
+      "allPlaceNames": [
+        "BURTHOLME, CARLISLE, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WALL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002469",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/926059F7-274F-34A7-BF50-583CE2699987",
+      "otherId": [
+        "Depositor ID: NY 56 SE 42",
+        "NMR_NATINV-1010350"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:01:41.247Z",
+      "query": "q:hadrians wall",
+      "recordId": "ariadne:b9853c2bf098fe813935ee548ca1f59399a4b175f0108a69970b2c05630fe228",
+      "title": "HADRIANS WALL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/b9853c2bf098fe813935ee548ca1f59399a4b175f0108a69970b2c05630fe228",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  }
+]

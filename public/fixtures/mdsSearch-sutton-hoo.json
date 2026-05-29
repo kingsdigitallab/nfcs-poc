@@ -1,0 +1,5108 @@
+[
+  {
+    "id": "mds:928f68ac-8890-35af-ba35-bbdeb51b83ed",
+    "_source": "mds",
+    "_sourceId": "DERSR",
+    "_sourceUrl": "https://museumdata.uk/objects/928f68ac-8890-35af-ba35-bbdeb51b83ed",
+    "title": "The Sutton Hoo Ship-Burial",
+    "description": "The Sutton Hoo Ship-Burial",
+    "subject": [
+      "book",
+      "book"
+    ],
+    "type": "Museum object",
+    "collection": "Buxton Museum and Art Gallery",
+    "mds": {
+      "uuid": "928f68ac-8890-35af-ba35-bbdeb51b83ed",
+      "objectNumber": "DERSR",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Sutton Hoo Ship-Burial"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "The Sutton Hoo Ship-Burial"
+        ],
+        "Collection": [
+          "Buxton Museum and Art Gallery"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DERSR : b3628"
+        ],
+        "Object production note": [
+          "author Bruce-Mitford, R.L.S. 1968 publisher British Museum, London"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:928f68ac-8890-35af-ba35-bbdeb51b83ed",
+      "title": "The Sutton Hoo Ship-Burial",
+      "url": "https://museumdata.uk/objects/928f68ac-8890-35af-ba35-bbdeb51b83ed"
+    }
+  },
+  {
+    "id": "mds:735c154f-dbe8-3ae2-9ae5-87f448392f3f",
+    "_source": "mds",
+    "_sourceId": "co41115",
+    "_sourceUrl": "https://museumdata.uk/objects/735c154f-dbe8-3ae2-9ae5-87f448392f3f",
+    "title": "Two ink drawings of encrusted iron fastenings recovered from the Sutton Hoo ship",
+    "description": "Two ink drawings of encrusted iron fastenings recovered from the Sutton Hoo ship (c.A.D. 650):- a) Specimens I to V.; b) Specimens VI to XI",
+    "subject": [
+      "drawings; drawings",
+      "drawings; drawings",
+      "drawings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "735c154f-dbe8-3ae2-9ae5-87f448392f3f",
+      "objectNumber": "co41115",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Two ink drawings of encrusted iron fastenings recovered from the Sutton Hoo ship"
+        ],
+        "Object name(s)": [
+          "drawings; drawings"
+        ],
+        "Brief description": [
+          "Two ink drawings of encrusted iron fastenings recovered from the Sutton Hoo ship (c.A.D. 650):- a) Specimens I to V.; b) Specimens VI to XI"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "drawings"
+        ],
+        "Credit line": [
+          "Science Museum Draughtsman"
+        ],
+        "Object name": [
+          "drawings; drawings"
+        ],
+        "Other number": [
+          "1950-36",
+          "8073/2/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Water Transport"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:735c154f-dbe8-3ae2-9ae5-87f448392f3f",
+      "title": "Two ink drawings of encrusted iron fastenings recovered from the Sutton Hoo ship",
+      "url": "https://museumdata.uk/objects/735c154f-dbe8-3ae2-9ae5-87f448392f3f"
+    }
+  },
+  {
+    "id": "mds:55aaa857-497d-309c-a409-a777bca550ab",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.1970",
+    "_sourceUrl": "https://museumdata.uk/objects/55aaa857-497d-309c-a409-a777bca550ab",
+    "title": "Sutton Hoo Excavations 1966, 1968-70/Occasional Paper 23/ Longworth, I, H and Kinnes, I, A",
+    "description": "Sutton Hoo Excavations 1966, 1968-70/Occasional Paper 23/ Longworth, I, H and Kinnes, I, A/1980",
+    "creator": [
+      "Longworth, I, H",
+      "Kinnes, I, A",
+      "British Museum"
+    ],
+    "date": "1980",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "excavation",
+      "Anglo-Saxon",
+      "Archaeology",
+      "Excavations"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "55aaa857-497d-309c-a409-a777bca550ab",
+      "objectNumber": "DZSWS:Book.1970",
+      "material": [
+        "paper"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Sutton Hoo Excavations 1966, 1968-70/Occasional Paper 23/ Longworth, I, H and Kinnes, I, A"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "Sutton Hoo Excavations 1966, 1968-70/Occasional Paper 23/ Longworth, I, H and Kinnes, I, A/1980"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "Archaeology",
+          "Excavations"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "excavation",
+          "Anglo-Saxon"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.1970"
+        ],
+        "Object production date": [
+          "1980"
+        ],
+        "Object production organisation": [
+          "British Museum"
+        ],
+        "Organisation's function": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "Longworth, I, H",
+          "Kinnes, I, A"
+        ],
+        "Person's association": [
+          "Author"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:55aaa857-497d-309c-a409-a777bca550ab",
+      "title": "Sutton Hoo Excavations 1966, 1968-70/Occasional Paper 23/ Longworth, I, H and Kinnes, I, A",
+      "url": "https://museumdata.uk/objects/55aaa857-497d-309c-a409-a777bca550ab",
+      "creator": [
+        "Longworth, I, H",
+        "Kinnes, I, A",
+        "British Museum"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "mds:915e096c-7e50-3efe-ae1d-8e5c9fc43093",
+    "_source": "mds",
+    "_sourceId": "DZSWS:MSS.4495",
+    "_sourceUrl": "https://museumdata.uk/objects/915e096c-7e50-3efe-ae1d-8e5c9fc43093",
+    "title": "What is true and false in The Dig / Love taints the portrayal of women at historic dig / Who was the bling king of Sutton Hoo?",
+    "description": "What is true and false in The Dig / Love taints the portrayal of women at historic dig / Who was the bling king of Sutton Hoo?, newspaper articles from the Times about Netflix TV film about excavation of Saxon ship burial at Sutton Hoo / The Times / January 2021",
+    "creator": [
+      "Times Newspapers Ltd",
+      "The Times"
+    ],
+    "date": "1.2021",
+    "subject": [
+      "press cutting",
+      "press cutting",
+      "archaeology",
+      "Anglo-Saxon",
+      "theatre",
+      "excavation",
+      "WANHS",
+      "jewellery",
+      "photographs",
+      "television"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "915e096c-7e50-3efe-ae1d-8e5c9fc43093",
+      "objectNumber": "DZSWS:MSS.4495",
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Suffolk"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "362mm",
+        "280mm"
+      ],
+      "objectHistory": "newspaper articles about the Netflix TV programme on the Sutton Hoo ship burial excavation",
+      "numberOfObjects": "3",
+      "personAssociation": [
+        "archaeologist",
+        "wanhs chairman",
+        "landowner",
+        "king"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "What is true and false in The Dig / Love taints the portrayal of women at historic dig / Who was the bling king of Sutton Hoo?"
+        ],
+        "Object name(s)": [
+          "press cutting"
+        ],
+        "Brief description": [
+          "What is true and false in The Dig / Love taints the portrayal of women at historic dig / Who was the bling king of Sutton Hoo?, newspaper articles from the Times about Netflix TV film about excavation of Saxon ship burial at Sutton Hoo / The Times / January 2021"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "Anglo-Saxon",
+          "theatre",
+          "excavation",
+          "WANHS",
+          "jewellery",
+          "photographs",
+          "television"
+        ],
+        "Content - person": [
+          "Piggott, Stuart",
+          "Piggott, Margaret (Peggy)",
+          "Guido, Margaret (Peggy)",
+          "Pretty, Edith",
+          "Raedwald, King"
+        ],
+        "Person's association": [
+          "archaeologist",
+          "wanhs chairman",
+          "landowner",
+          "king"
+        ],
+        "Person's occupation": [
+          "archaeologist",
+          "wanhs chairman",
+          "landowner",
+          "king"
+        ],
+        "Person's additions to name": [
+          "Saxon king of East Anglia"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Suffolk"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "362mm",
+          "280mm"
+        ],
+        "Number of objects": [
+          "3"
+        ],
+        "Object component name": [
+          "edition"
+        ],
+        "Object history note": [
+          "newspaper articles about the Netflix TV programme on the Sutton Hoo ship burial excavation"
+        ],
+        "Object name": [
+          "press cutting"
+        ],
+        "Object number": [
+          "DZSWS:MSS.4495"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "1.2021"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "Times Newspapers Ltd",
+          "The Times"
+        ],
+        "Organisation's function": [
+          "publisher",
+          "printer"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:915e096c-7e50-3efe-ae1d-8e5c9fc43093",
+      "title": "What is true and false in The Dig / Love taints the portrayal of women at historic dig / Who was the bling king of Sutton Hoo?",
+      "url": "https://museumdata.uk/objects/915e096c-7e50-3efe-ae1d-8e5c9fc43093",
+      "creator": [
+        "Times Newspapers Ltd",
+        "The Times"
+      ],
+      "date": "1.2021"
+    }
+  },
+  {
+    "id": "mds:65e84554-4cc8-34ad-b637-19fb6aefdf54",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.18371",
+    "_sourceUrl": "https://museumdata.uk/objects/65e84554-4cc8-34ad-b637-19fb6aefdf54",
+    "title": "The Women of Sutton Hoo: Tracing female stories at a celebrated cemetery",
+    "description": "The Women of Sutton Hoo: Tracing female stories at a celebrated cemetery/Hilts, Carly/Current Archaeology/May 2021",
+    "creator": [
+      "Hilts, Carly",
+      "Current Archaeology"
+    ],
+    "date": "2021",
+    "subject": [
+      "journal article",
+      "journal article",
+      "archaeology",
+      "biography",
+      "Anglo-Saxon",
+      "excavation",
+      "artefacts"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "65e84554-4cc8-34ad-b637-19fb6aefdf54",
+      "objectNumber": "DZSWS:Book.18371",
+      "material": [
+        "journal article"
+      ],
+      "place": [
+        "Woodbridge",
+        "Devizes",
+        "Sutton Hoo",
+        "Wiltshire Museum",
+        "Suffolk",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "objectHistory": "journal article with profiles of women who were involved in the excavation of the Aglo-Saxon burial at Sutton Hoo",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "archaeologist",
+        "photographer",
+        "landowner",
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Women of Sutton Hoo: Tracing female stories at a celebrated cemetery"
+        ],
+        "Object name(s)": [
+          "journal article"
+        ],
+        "Brief description": [
+          "The Women of Sutton Hoo: Tracing female stories at a celebrated cemetery/Hilts, Carly/Current Archaeology/May 2021",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "biography",
+          "Anglo-Saxon",
+          "excavation",
+          "artefacts"
+        ],
+        "Content - person": [
+          "Piggott, Peggy",
+          "Guido, Margaret",
+          "Lack, Mercie",
+          "Wagstaff, Barbara",
+          "Pretty, Edith"
+        ],
+        "Person's association": [
+          "archaeologist",
+          "photographer",
+          "landowner",
+          "author"
+        ],
+        "Person's occupation": [
+          "archaeologist",
+          "photographer",
+          "landowner"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Devizes",
+          "Sutton Hoo",
+          "Wiltshire Museum",
+          "Suffolk",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "297",
+          "210"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "journal article"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "journal article with profiles of women who were involved in the excavation of the Aglo-Saxon burial at Sutton Hoo"
+        ],
+        "Object name": [
+          "journal article"
+        ],
+        "Object number": [
+          "DZSWS:Book.18371"
+        ],
+        "Date - association": [
+          "publication date",
+          "May 2021"
+        ],
+        "Object production date": [
+          "2021"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "Current Archaeology"
+        ],
+        "Organisation's function": [
+          "publisher"
+        ],
+        "Object production person": [
+          "Hilts, Carly"
+        ],
+        "Other number": [
+          "ISBN"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:65e84554-4cc8-34ad-b637-19fb6aefdf54",
+      "title": "The Women of Sutton Hoo: Tracing female stories at a celebrated cemetery",
+      "url": "https://museumdata.uk/objects/65e84554-4cc8-34ad-b637-19fb6aefdf54",
+      "creator": [
+        "Hilts, Carly",
+        "Current Archaeology"
+      ],
+      "date": "2021"
+    }
+  },
+  {
+    "id": "mds:9e64f797-1098-38ad-ae8c-efca9818e188",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.7929",
+    "_sourceUrl": "https://museumdata.uk/objects/9e64f797-1098-38ad-ae8c-efca9818e188",
+    "title": "Excavations at Sutton Hoo in 1938",
+    "description": "Excavations at Sutton Hoo in 1938/ Bruce-Mitford, R.L.S./ 1964",
+    "creator": [
+      "Bruce-Mitford, R.L.S.",
+      "The Proceedings of the Suffolk Institute of Archaeology"
+    ],
+    "date": "1964",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "ships",
+      "Anglo-Saxon",
+      "excavation"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "9e64f797-1098-38ad-ae8c-efca9818e188",
+      "objectNumber": "DZSWS:Book.7929",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Suffolk"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Excavations at Sutton Hoo in 1938"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "Excavations at Sutton Hoo in 1938/ Bruce-Mitford, R.L.S./ 1964",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "ships",
+          "Anglo-Saxon",
+          "excavation"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Suffolk"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "214",
+          "138"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.7929"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "1964"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "The Proceedings of the Suffolk Institute of Archaeology"
+        ],
+        "Organisation's function": [
+          "publisher"
+        ],
+        "Object production person": [
+          "Bruce-Mitford, R.L.S."
+        ],
+        "Other number": [
+          "ISBN"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:9e64f797-1098-38ad-ae8c-efca9818e188",
+      "title": "Excavations at Sutton Hoo in 1938",
+      "url": "https://museumdata.uk/objects/9e64f797-1098-38ad-ae8c-efca9818e188",
+      "creator": [
+        "Bruce-Mitford, R.L.S.",
+        "The Proceedings of the Suffolk Institute of Archaeology"
+      ],
+      "date": "1964"
+    }
+  },
+  {
+    "id": "mds:76c17a7b-ce81-3c84-9f40-aeff275bdd40",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.10768",
+    "_sourceUrl": "https://museumdata.uk/objects/76c17a7b-ce81-3c84-9f40-aeff275bdd40",
+    "title": "The Sutton Hoo Ship Burial",
+    "description": "The Sutton Hoo Ship Burial/ Evans, Angela Care/ 1986",
+    "creator": [
+      "Evans, Angela Care",
+      "British Museum Publications Ltd",
+      "Tradespools Ltd"
+    ],
+    "date": "1986",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "Anglo-Saxon",
+      "coins",
+      "ships"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "76c17a7b-ce81-3c84-9f40-aeff275bdd40",
+      "objectNumber": "DZSWS:Book.10768",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Suffolk"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Sutton Hoo Ship Burial"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "The Sutton Hoo Ship Burial/ Evans, Angela Care/ 1986",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "Anglo-Saxon",
+          "coins",
+          "ships"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Suffolk"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "242",
+          "188"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.10768"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "1986"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "British Museum Publications Ltd",
+          "Tradespools Ltd"
+        ],
+        "Organisation's function": [
+          "publisher",
+          "printer"
+        ],
+        "Object production person": [
+          "Evans, Angela Care"
+        ],
+        "Other number": [
+          "ISBN 0 7141 0544 9"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:76c17a7b-ce81-3c84-9f40-aeff275bdd40",
+      "title": "The Sutton Hoo Ship Burial",
+      "url": "https://museumdata.uk/objects/76c17a7b-ce81-3c84-9f40-aeff275bdd40",
+      "creator": [
+        "Evans, Angela Care",
+        "British Museum Publications Ltd",
+        "Tradespools Ltd"
+      ],
+      "date": "1986"
+    }
+  },
+  {
+    "id": "mds:783d8c3d-614f-36a0-8e48-b94fcbd570e8",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.17943",
+    "_sourceUrl": "https://museumdata.uk/objects/783d8c3d-614f-36a0-8e48-b94fcbd570e8",
+    "title": "The Sutton Hoo Story: Encounters with Early England",
+    "description": "The Sutton Hoo Story: Encounters with Early England/Carver, Martin/The Boydell Press/2017",
+    "creator": [
+      "Carver, Martin",
+      "The Boydell Press"
+    ],
+    "date": "2017",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "Anglo-Saxon",
+      "death and burial",
+      "iron age",
+      "excavation",
+      "artefacts",
+      "photographs"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "783d8c3d-614f-36a0-8e48-b94fcbd570e8",
+      "objectNumber": "DZSWS:Book.17943",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Suffolk"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "archaeologist",
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Sutton Hoo Story: Encounters with Early England"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "The Sutton Hoo Story: Encounters with Early England/Carver, Martin/The Boydell Press/2017",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "Anglo-Saxon",
+          "death and burial",
+          "iron age",
+          "excavation",
+          "artefacts",
+          "photographs"
+        ],
+        "Content - person": [
+          "Guido, Margaret (Peggy)"
+        ],
+        "Person's association": [
+          "archaeologist",
+          "author"
+        ],
+        "Person's occupation": [
+          "archaeologist"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Suffolk"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "243",
+          "155"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.17943"
+        ],
+        "Date - association": [
+          "publication date",
+          "first edition"
+        ],
+        "Object production date": [
+          "2017"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "The Boydell Press"
+        ],
+        "Organisation's function": [
+          "publisher"
+        ],
+        "Object production person": [
+          "Carver, Martin"
+        ],
+        "Other number": [
+          "ISBN 978 178327 204 4"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:783d8c3d-614f-36a0-8e48-b94fcbd570e8",
+      "title": "The Sutton Hoo Story: Encounters with Early England",
+      "url": "https://museumdata.uk/objects/783d8c3d-614f-36a0-8e48-b94fcbd570e8",
+      "creator": [
+        "Carver, Martin",
+        "The Boydell Press"
+      ],
+      "date": "2017"
+    }
+  },
+  {
+    "id": "mds:a4449860-88fd-3d31-a40c-c411d6469917",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.7928",
+    "_sourceUrl": "https://museumdata.uk/objects/a4449860-88fd-3d31-a40c-c411d6469917",
+    "title": "The Sutton Hoo Burial: A Handbook",
+    "description": "The Sutton Hoo Burial: A Handbook/ Bruce-Mitford, R. L. S./ 1968",
+    "creator": [
+      "Bruce-Mitford, R.L.S.",
+      "The Trustees of the British Museum",
+      "Alden and Mowbray Ltd"
+    ],
+    "date": "1968",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "monuments",
+      "cemeteries",
+      "death and burial"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "a4449860-88fd-3d31-a40c-c411d6469917",
+      "objectNumber": "DZSWS:Book.7928",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Suffolk"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Sutton Hoo Burial: A Handbook"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "The Sutton Hoo Burial: A Handbook/ Bruce-Mitford, R. L. S./ 1968",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "monuments",
+          "cemeteries",
+          "death and burial"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Suffolk"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "245",
+          "184"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.7928"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "1968"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "The Trustees of the British Museum",
+          "Alden and Mowbray Ltd"
+        ],
+        "Organisation's function": [
+          "publisher",
+          "printer"
+        ],
+        "Object production person": [
+          "Bruce-Mitford, R.L.S."
+        ],
+        "Other number": [
+          "ISBN"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:a4449860-88fd-3d31-a40c-c411d6469917",
+      "title": "The Sutton Hoo Burial: A Handbook",
+      "url": "https://museumdata.uk/objects/a4449860-88fd-3d31-a40c-c411d6469917",
+      "creator": [
+        "Bruce-Mitford, R.L.S.",
+        "The Trustees of the British Museum",
+        "Alden and Mowbray Ltd"
+      ],
+      "date": "1968"
+    }
+  },
+  {
+    "id": "mds:d682323d-56cb-34cd-b188-c49f4f037f9f",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.17164.4",
+    "_sourceUrl": "https://museumdata.uk/objects/d682323d-56cb-34cd-b188-c49f4f037f9f",
+    "title": "Edith Pretty, From Socialite to Sutton Hoo",
+    "description": "Edith Pretty, From Socialite to Sutton Hoo/Skelcher, Mary and Durrant, Chris/privately published/2006",
+    "creator": [
+      "Skelcher, Mary",
+      "Durrant, Chris",
+      "Leiston Press"
+    ],
+    "date": "2016",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "Anglo-Saxon",
+      "biography",
+      "excavation",
+      "death and burial"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "d682323d-56cb-34cd-b188-c49f4f037f9f",
+      "objectNumber": "DZSWS:Book.17164.4",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Suffolk"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Edith Pretty, From Socialite to Sutton Hoo"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "Edith Pretty, From Socialite to Sutton Hoo/Skelcher, Mary and Durrant, Chris/privately published/2006",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "Anglo-Saxon",
+          "biography",
+          "excavation",
+          "death and burial"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Suffolk"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "210",
+          "148"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.17164.4"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "2016"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "Leiston Press"
+        ],
+        "Organisation's function": [
+          "printer"
+        ],
+        "Object production person": [
+          "Skelcher, Mary",
+          "Durrant, Chris"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Other number": [
+          "ISBN 978 0 9554725 0 3"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:d682323d-56cb-34cd-b188-c49f4f037f9f",
+      "title": "Edith Pretty, From Socialite to Sutton Hoo",
+      "url": "https://museumdata.uk/objects/d682323d-56cb-34cd-b188-c49f4f037f9f",
+      "creator": [
+        "Skelcher, Mary",
+        "Durrant, Chris",
+        "Leiston Press"
+      ],
+      "date": "2016"
+    }
+  },
+  {
+    "id": "mds:1b493555-7da4-354e-b0d4-5d479da6fbc8",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.17164.1",
+    "_sourceUrl": "https://museumdata.uk/objects/1b493555-7da4-354e-b0d4-5d479da6fbc8",
+    "title": "A Souvenir Guide, Sutton Hoo, Suffolk",
+    "description": "A Souvenir Guide, Sutton Hoo, Suffolk//Bullen, Annie/National Trust/2014",
+    "creator": [
+      "Bullen, Annie",
+      "Groves, Anna",
+      "The National Trust",
+      "Pureprint Group"
+    ],
+    "date": "2014",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "Anglo-Saxon",
+      "death and burial",
+      "cemeteries",
+      "guidebook",
+      "history"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "1b493555-7da4-354e-b0d4-5d479da6fbc8",
+      "objectNumber": "DZSWS:Book.17164.1",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Suffolk"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "King of the East Angles",
+        "author",
+        "editor"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "A Souvenir Guide, Sutton Hoo, Suffolk"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "A Souvenir Guide, Sutton Hoo, Suffolk//Bullen, Annie/National Trust/2014",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "Anglo-Saxon",
+          "death and burial",
+          "cemeteries",
+          "guidebook",
+          "history"
+        ],
+        "Content - date": [
+          "Anglo-Saxon"
+        ],
+        "Content - person": [
+          "Raedwald"
+        ],
+        "Person's association": [
+          "King of the East Angles",
+          "author",
+          "editor"
+        ],
+        "Person's occupation": [
+          "King of the East Angles"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Suffolk"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "210"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.17164.1"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "2014"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "The National Trust",
+          "Pureprint Group"
+        ],
+        "Organisation's function": [
+          "publisher",
+          "printer"
+        ],
+        "Object production person": [
+          "Bullen, Annie",
+          "Groves, Anna"
+        ],
+        "Other number": [
+          "ISBN 978 1 843359 432 1"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:1b493555-7da4-354e-b0d4-5d479da6fbc8",
+      "title": "A Souvenir Guide, Sutton Hoo, Suffolk",
+      "url": "https://museumdata.uk/objects/1b493555-7da4-354e-b0d4-5d479da6fbc8",
+      "creator": [
+        "Bullen, Annie",
+        "Groves, Anna",
+        "The National Trust",
+        "Pureprint Group"
+      ],
+      "date": "2014"
+    }
+  },
+  {
+    "id": "mds:779a5fe1-3c17-359c-9fb3-a30ea400b0f9",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.17164.3",
+    "_sourceUrl": "https://museumdata.uk/objects/779a5fe1-3c17-359c-9fb3-a30ea400b0f9",
+    "title": "Treasures from Sutton Hoo",
+    "description": "Treasures from Sutton Hoo/Williams, Gareth/British Museum Press/2011",
+    "creator": [
+      "Williams, Gareth",
+      "The British Museum Press",
+      "SC (Sang Choy) International Pte Ltd"
+    ],
+    "date": "2011",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "Anglo-Saxon",
+      "artefacts",
+      "excavation",
+      "death and burial"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "779a5fe1-3c17-359c-9fb3-a30ea400b0f9",
+      "objectNumber": "DZSWS:Book.17164.3",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Suffolk"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "King of the East Angles",
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Treasures from Sutton Hoo"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "Treasures from Sutton Hoo/Williams, Gareth/British Museum Press/2011",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "Anglo-Saxon",
+          "artefacts",
+          "excavation",
+          "death and burial"
+        ],
+        "Content - date": [
+          "Anglo-Saxon"
+        ],
+        "Content - person": [
+          "Raedwald"
+        ],
+        "Person's association": [
+          "King of the East Angles",
+          "author"
+        ],
+        "Person's occupation": [
+          "King of the East Angles"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Suffolk"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "210",
+          "148"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.17164.3"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "2011"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "The British Museum Press",
+          "SC (Sang Choy) International Pte Ltd"
+        ],
+        "Organisation's function": [
+          "publisher",
+          "printer"
+        ],
+        "Object production person": [
+          "Williams, Gareth"
+        ],
+        "Other number": [
+          "ISBN 978 0 7141 2825 2"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:779a5fe1-3c17-359c-9fb3-a30ea400b0f9",
+      "title": "Treasures from Sutton Hoo",
+      "url": "https://museumdata.uk/objects/779a5fe1-3c17-359c-9fb3-a30ea400b0f9",
+      "creator": [
+        "Williams, Gareth",
+        "The British Museum Press",
+        "SC (Sang Choy) International Pte Ltd"
+      ],
+      "date": "2011"
+    }
+  },
+  {
+    "id": "mds:84266bc2-2e62-39b3-8c0c-d49c18040aa3",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.17164.2",
+    "_sourceUrl": "https://museumdata.uk/objects/84266bc2-2e62-39b3-8c0c-d49c18040aa3",
+    "title": "The Sutton Hoo Helmet",
+    "description": "The Sutton Hoo Helmet/Marzinzik, Sonja/British Museum Press/2013 (first published 2007)",
+    "creator": [
+      "Marzinzik, Sonja",
+      "The British Museum Press",
+      "C7C Offset"
+    ],
+    "date": "2013",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "Anglo-Saxon",
+      "artefacts",
+      "excavation",
+      "armour"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "84266bc2-2e62-39b3-8c0c-d49c18040aa3",
+      "objectNumber": "DZSWS:Book.17164.2",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Suffolk"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "King of the East Angles",
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Sutton Hoo Helmet"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "The Sutton Hoo Helmet/Marzinzik, Sonja/British Museum Press/2013 (first published 2007)",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "Anglo-Saxon",
+          "artefacts",
+          "excavation",
+          "armour"
+        ],
+        "Content - date": [
+          "Anglo-Saxon"
+        ],
+        "Content - person": [
+          "Raedwald"
+        ],
+        "Person's association": [
+          "King of the East Angles",
+          "author"
+        ],
+        "Person's occupation": [
+          "King of the East Angles"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Suffolk"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "210",
+          "148"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.17164.2"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "2013"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "The British Museum Press",
+          "C7C Offset"
+        ],
+        "Organisation's function": [
+          "publisher",
+          "printer"
+        ],
+        "Object production person": [
+          "Marzinzik, Sonja"
+        ],
+        "Other number": [
+          "ISBN 978 0 7141 2325 7"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:84266bc2-2e62-39b3-8c0c-d49c18040aa3",
+      "title": "The Sutton Hoo Helmet",
+      "url": "https://museumdata.uk/objects/84266bc2-2e62-39b3-8c0c-d49c18040aa3",
+      "creator": [
+        "Marzinzik, Sonja",
+        "The British Museum Press",
+        "C7C Offset"
+      ],
+      "date": "2013"
+    }
+  },
+  {
+    "id": "mds:db8c4e46-706b-35e5-85cd-6562605184f4",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.18365",
+    "_sourceUrl": "https://museumdata.uk/objects/db8c4e46-706b-35e5-85cd-6562605184f4",
+    "title": "Sutton Hoo and other memories of Stuart and Peggy Piggott",
+    "description": "Sutton Hoo and other memories of Stuart and Peggy Piggott/Fox, George/Devon Archaeological Society Newsletter/May 2021",
+    "creator": [
+      "Fox, George",
+      "Devon Archaeological Society"
+    ],
+    "date": "2021",
+    "subject": [
+      "journal article",
+      "journal article",
+      "archaeology",
+      "family history",
+      "Anglo-Saxon",
+      "poetry",
+      "photographs",
+      "excavation"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "db8c4e46-706b-35e5-85cd-6562605184f4",
+      "objectNumber": "DZSWS:Book.18365",
+      "material": [
+        "journal article"
+      ],
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Syracuse",
+        "Suffolk",
+        "Sicily",
+        "Wiltshire",
+        "Italy"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "objectHistory": "journal article about archaeologists Stuart and Peggy Piggott",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "archaeologist",
+        "wife",
+        "formerly Piggott"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Sutton Hoo and other memories of Stuart and Peggy Piggott"
+        ],
+        "Object name(s)": [
+          "journal article"
+        ],
+        "Brief description": [
+          "Sutton Hoo and other memories of Stuart and Peggy Piggott/Fox, George/Devon Archaeological Society Newsletter/May 2021",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "family history",
+          "Anglo-Saxon",
+          "poetry",
+          "photographs",
+          "excavation"
+        ],
+        "Content - person": [
+          "Piggott, Stuart",
+          "Piggott, Peggy",
+          "Guido, Margaret"
+        ],
+        "Person's association": [
+          "archaeologist",
+          "wife",
+          "formerly Piggott"
+        ],
+        "Person's occupation": [
+          "archaeologist",
+          "wife",
+          "formerly Piggott"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Syracuse",
+          "Suffolk",
+          "Sicily",
+          "Wiltshire",
+          "Italy"
+        ],
+        "Place status": [
+          "Parish",
+          "County",
+          "Country"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "297",
+          "210"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "journal article"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "journal article about archaeologists Stuart and Peggy Piggott"
+        ],
+        "Object name": [
+          "journal article"
+        ],
+        "Object number": [
+          "DZSWS:Book.18365"
+        ],
+        "Date - association": [
+          "publication date",
+          "May 2021"
+        ],
+        "Object production date": [
+          "2021"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "Devon Archaeological Society"
+        ],
+        "Organisation's function": [
+          "publisher"
+        ],
+        "Object production person": [
+          "Fox, George"
+        ],
+        "Other number": [
+          "ISBN"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:db8c4e46-706b-35e5-85cd-6562605184f4",
+      "title": "Sutton Hoo and other memories of Stuart and Peggy Piggott",
+      "url": "https://museumdata.uk/objects/db8c4e46-706b-35e5-85cd-6562605184f4",
+      "creator": [
+        "Fox, George",
+        "Devon Archaeological Society"
+      ],
+      "date": "2021"
+    }
+  },
+  {
+    "id": "mds:fbff2968-ee2f-38e5-8e27-3a1c7527cbca",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1996.84",
+    "_sourceUrl": "https://museumdata.uk/objects/fbff2968-ee2f-38e5-8e27-3a1c7527cbca",
+    "title": "MDS Record 15",
+    "description": "tape measure in brass and leather case, glazed linen tape 100ft long, used by Peggy Guido and Stuart Piggott during the excavations at Sutton Hoo, and other archaeological excavations in Wiltshire.",
+    "creator": "Rabone, John and Sons",
+    "subject": [
+      "measure; tape measure",
+      "measure; tape measure",
+      "technology",
+      "measures"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "fbff2968-ee2f-38e5-8e27-3a1c7527cbca",
+      "objectNumber": "DZSWS:1996.84",
+      "material": [
+        "leather",
+        "metal",
+        "copper alloy",
+        "textile",
+        "linen"
+      ],
+      "place": [
+        "Wilford Bridge",
+        "Suffolk",
+        "Sutton Hoo"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "diameter",
+        "145"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "measure; tape measure"
+        ],
+        "Brief description": [
+          "tape measure in brass and leather case, glazed linen tape 100ft long, used by Peggy Guido and Stuart Piggott during the excavations at Sutton Hoo, and other archaeological excavations in Wiltshire."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "technology",
+          "measures"
+        ],
+        "Associated place": [
+          "Wilford Bridge",
+          "Suffolk",
+          "Sutton Hoo"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Dimension": [
+          "diameter"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "145"
+        ],
+        "Material": [
+          "leather",
+          "metal",
+          "copper alloy",
+          "textile",
+          "linen"
+        ],
+        "Object name": [
+          "measure; tape measure"
+        ],
+        "Object number": [
+          "DZSWS:1996.84"
+        ],
+        "Date - latest": [
+          "1960"
+        ],
+        "Object production person": [
+          "Rabone, John and Sons"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:fbff2968-ee2f-38e5-8e27-3a1c7527cbca",
+      "title": "MDS Record 15",
+      "url": "https://museumdata.uk/objects/fbff2968-ee2f-38e5-8e27-3a1c7527cbca",
+      "creator": "Rabone, John and Sons"
+    }
+  },
+  {
+    "id": "mds:6a3ec4ce-5125-33cb-8a6c-5f54a0b0d27f",
+    "_source": "mds",
+    "_sourceId": "O136948",
+    "_sourceUrl": "https://museumdata.uk/objects/6a3ec4ce-5125-33cb-8a6c-5f54a0b0d27f",
+    "title": "Archaeology",
+    "description": "Length of jacquard woven upholstery furnishing fabric. 56% cotton, 27% polyester and 17% rayon. Blue Sun colourway.",
+    "creator": [
+      "Weitzner, Lori",
+      "Pallas Textiles"
+    ],
+    "date": "1997",
+    "subject": [
+      "Furnishing fabric",
+      "Furnishing fabric",
+      "Textiles",
+      "Interiors"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria and Albert Museum",
+    "mds": {
+      "uuid": "6a3ec4ce-5125-33cb-8a6c-5f54a0b0d27f",
+      "objectNumber": "O136948",
+      "material": [
+        "cotton yarn",
+        "polyester",
+        "rayon"
+      ],
+      "place": [
+        "United States"
+      ],
+      "dimensions": [
+        "Length",
+        "Width",
+        "288",
+        "144"
+      ],
+      "personAssociation": [
+        "designer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Archaeology"
+        ],
+        "Object name(s)": [
+          "Furnishing fabric"
+        ],
+        "Brief description": [
+          "Length of jacquard woven upholstery furnishing fabric. 56% cotton, 27% polyester and 17% rayon. Blue Sun colourway.",
+          "Jacquard woven furnishing fabric 'Sutton Hoo' from 'Archaeology', designed by Lori Weitzner, made by Pallas Textiles, United States, 1997"
+        ],
+        "Collection": [
+          "Victoria and Albert Museum"
+        ],
+        "Associated concept": [
+          "Textiles",
+          "Interiors"
+        ],
+        "Credit line": [
+          "Gift of Pallas Textiles."
+        ],
+        "Current reproduction location": [
+          "https://framemark.vam.ac.uk/collections/2019MD0482/full/!100,100/0/default.jpg"
+        ],
+        "Location type": [
+          "Thumbnail"
+        ],
+        "Dimension": [
+          "Length",
+          "Width"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "288",
+          "144"
+        ],
+        "Material": [
+          "cotton yarn",
+          "polyester",
+          "rayon"
+        ],
+        "Object name": [
+          "Furnishing fabric"
+        ],
+        "Object number": [
+          "T.55-1998"
+        ],
+        "Object production date": [
+          "1997"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Date - earliest / single": [
+          "1997-01-01"
+        ],
+        "Date - latest": [
+          "1997-12-31"
+        ],
+        "Object production organisation": [
+          "Pallas Textiles"
+        ],
+        "Organisation's association": [
+          "manufacturer"
+        ],
+        "Object production person": [
+          "Weitzner, Lori"
+        ],
+        "Person's association": [
+          "designer"
+        ],
+        "Object production place": [
+          "United States"
+        ],
+        "Place association": [
+          "made"
+        ],
+        "Object status": [
+          "Mass produced"
+        ],
+        "Physical description": [
+          "Length of jacquard woven upholstery furnishing fabric. 56% cotton, 27% polyester and 17% rayon. Blue Sun colourway."
+        ],
+        "Reproduction number": [
+          "2019MD0482",
+          "2019MD0484"
+        ],
+        "Responsible department/section": [
+          "T&F"
+        ],
+        "Technique": [
+          "jacquard weaving",
+          "Jacquard woven cotton, polyester and rayon"
+        ],
+        "Text": [
+          "https://collections.vam.ac.uk/item/O136948/",
+          "'Sutton Hoo' is part of a collection of textile designs entitled 'Archaeology' by Lori Weitzner.  They were manufactured by Pallas Textiles, a company based in the USA, for the large contract furnishing market, such as offices, as well as smaller environments.\n\n The 'Archaeology' collection was inspired by archaeological discoveries of the 19th and 20th centuries, incorporating patterns and woven structures that were 'suggested by the intricate designs of these treasures'.  'Sutton Hoo' is woven with a boucle yarn on a satin ground, giving it a raised, textured feel.  The design was inspired by the interlacing patterns of an Anglo Saxon gold belt buckle that was discovered in a ship burial dating from about 620 AD. \n\nLori Weitzner's work has extended beyond textiles. She has designed for a range of companies, with commissions including packaging for Estee Lauder cosmetics and interiors for Lufthansa Airlines."
+        ],
+        "Text reason": [
+          "Collections online record",
+          "Summary description"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:6a3ec4ce-5125-33cb-8a6c-5f54a0b0d27f",
+      "title": "Archaeology",
+      "url": "https://museumdata.uk/objects/6a3ec4ce-5125-33cb-8a6c-5f54a0b0d27f",
+      "creator": [
+        "Weitzner, Lori",
+        "Pallas Textiles"
+      ],
+      "date": "1997"
+    }
+  },
+  {
+    "id": "mds:9dd8a13d-ddab-3e6d-9fe3-0a0d506ac8d2",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-17286",
+    "_sourceUrl": "https://museumdata.uk/objects/9dd8a13d-ddab-3e6d-9fe3-0a0d506ac8d2",
+    "title": "MDS Record 17",
+    "description": "Pair of shears and iron fragments",
+    "subject": [
+      "shears; shears",
+      "shears; shears",
+      "archaeology",
+      "tools and equipment"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "9dd8a13d-ddab-3e6d-9fe3-0a0d506ac8d2",
+      "objectNumber": "Norwich_Archaeology2-17286",
+      "material": [
+        "iron"
+      ],
+      "condition": "good",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "shears; shears"
+        ],
+        "Brief description": [
+          "Pair of shears and iron fragments"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "tools and equipment"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Current location": [
+          "Norwich Castle Museum and Art Gallery"
+        ],
+        "Material": [
+          "iron"
+        ],
+        "Object name": [
+          "shears; shears"
+        ],
+        "Object number": [
+          "NWHCM : 1994.5.233.243"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:9dd8a13d-ddab-3e6d-9fe3-0a0d506ac8d2",
+      "title": "MDS Record 17",
+      "url": "https://museumdata.uk/objects/9dd8a13d-ddab-3e6d-9fe3-0a0d506ac8d2"
+    }
+  },
+  {
+    "id": "mds:15f0040f-5cc1-324f-b8f5-dba265e1adef",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-17264",
+    "_sourceUrl": "https://museumdata.uk/objects/15f0040f-5cc1-324f-b8f5-dba265e1adef",
+    "title": "MDS Record 18",
+    "description": "Long iron key. Ring at one end, two 'hooks' at the other, found in Grave 11",
+    "subject": [
+      "key; key",
+      "key; key",
+      "archaeology",
+      "tools and equipment"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "15f0040f-5cc1-324f-b8f5-dba265e1adef",
+      "objectNumber": "Norwich_Archaeology2-17264",
+      "material": [
+        "iron"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "lengthapprox",
+        "230"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "key; key"
+        ],
+        "Brief description": [
+          "Long iron key. Ring at one end, two 'hooks' at the other, found in Grave 11"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "tools and equipment"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Current location": [
+          "Norwich Castle Museum and Art Gallery"
+        ],
+        "Dimension": [
+          "lengthapprox"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "230"
+        ],
+        "Material": [
+          "iron"
+        ],
+        "Object name": [
+          "key; key"
+        ],
+        "Object number": [
+          "NWHCM : 1994.5.85"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:15f0040f-5cc1-324f-b8f5-dba265e1adef",
+      "title": "MDS Record 18",
+      "url": "https://museumdata.uk/objects/15f0040f-5cc1-324f-b8f5-dba265e1adef"
+    }
+  },
+  {
+    "id": "mds:de2682b9-de12-3661-8131-3a22e955381e",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-17265",
+    "_sourceUrl": "https://museumdata.uk/objects/de2682b9-de12-3661-8131-3a22e955381e",
+    "title": "MDS Record 19",
+    "description": "Pair of iron shears and a long knife blade",
+    "subject": [
+      "iron shears and knife blade; knife; shears; collection",
+      "iron shears and knife blade; knife; shears; collection",
+      "archaeology",
+      "tools and equipment"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "de2682b9-de12-3661-8131-3a22e955381e",
+      "objectNumber": "Norwich_Archaeology2-17265",
+      "material": [
+        "iron"
+      ],
+      "condition": "fair",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "iron shears and knife blade; knife; shears; collection"
+        ],
+        "Brief description": [
+          "Pair of iron shears and a long knife blade"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "tools and equipment"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Current location": [
+          "Norwich Castle Museum and Art Gallery"
+        ],
+        "Material": [
+          "iron"
+        ],
+        "Object name": [
+          "iron shears and knife blade; knife; shears; collection"
+        ],
+        "Object number": [
+          "NWHCM : 1994.5.86"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:de2682b9-de12-3661-8131-3a22e955381e",
+      "title": "MDS Record 19",
+      "url": "https://museumdata.uk/objects/de2682b9-de12-3661-8131-3a22e955381e"
+    }
+  },
+  {
+    "id": "mds:1a917261-fb65-3f1b-9686-82a73c4a2c7c",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-7775",
+    "_sourceUrl": "https://museumdata.uk/objects/1a917261-fb65-3f1b-9686-82a73c4a2c7c",
+    "title": "MDS Record 20",
+    "description": "Spindle whorl, a roughly finished Anglo-Saxon bun shaped clay spindle-whorl found at the Whites Hill Anglo-Saxon cemetery, Markshall, Caistor St Edmund in 1948",
+    "subject": [
+      "spindle whorl; spindle whorl",
+      "spindle whorl; spindle whorl",
+      "archaeology",
+      "tools and equipment"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "1a917261-fb65-3f1b-9686-82a73c4a2c7c",
+      "objectNumber": "Norwich_Archaeology2-7775",
+      "material": [
+        "ceramic"
+      ],
+      "condition": "fair",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "spindle whorl; spindle whorl"
+        ],
+        "Brief description": [
+          "Spindle whorl, a roughly finished Anglo-Saxon bun shaped clay spindle-whorl found at the Whites Hill Anglo-Saxon cemetery, Markshall, Caistor St Edmund in 1948"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "1949"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "tools and equipment"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Material": [
+          "ceramic"
+        ],
+        "Object name": [
+          "spindle whorl; spindle whorl"
+        ],
+        "Object number": [
+          "NWHCM : 1948.203.IVb"
+        ],
+        "Other number": [
+          "203.948(IVb)"
+        ],
+        "Other number type": [
+          "assigned number"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:1a917261-fb65-3f1b-9686-82a73c4a2c7c",
+      "title": "MDS Record 20",
+      "url": "https://museumdata.uk/objects/1a917261-fb65-3f1b-9686-82a73c4a2c7c"
+    }
+  },
+  {
+    "id": "mds:975e7505-5581-31ef-a9b0-48b605bd4ae9",
+    "_source": "mds",
+    "_sourceId": "DZSWS:MSS.4368",
+    "_sourceUrl": "https://museumdata.uk/objects/975e7505-5581-31ef-a9b0-48b605bd4ae9",
+    "title": "Peggy Piggott (1912-1994)",
+    "description": "Peggy Piggott (1912-1994): a short biography of Margaret (Peggy) Piggott, later Guido, by Ken Allen, volunteer at Sutton Hoo, with related email from the author.",
+    "creator": "Allen, Ken",
+    "date": "2018",
+    "subject": [
+      "note",
+      "note",
+      "biography",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "975e7505-5581-31ef-a9b0-48b605bd4ae9",
+      "objectNumber": "DZSWS:MSS.4368",
+      "place": [
+        "Woodbridge",
+        "Devizes",
+        "Sutton Hoo",
+        "Long Street",
+        "Suffolk",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "biographee",
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Peggy Piggott (1912-1994)"
+        ],
+        "Object name(s)": [
+          "note"
+        ],
+        "Brief description": [
+          "Peggy Piggott (1912-1994): a short biography of Margaret (Peggy) Piggott, later Guido, by Ken Allen, volunteer at Sutton Hoo, with related email from the author.",
+          "biographical note of Peggy Guido"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "biography",
+          "archaeology"
+        ],
+        "Content - note": [
+          "short biography of Magaret (Peggy) Guido, formerly Mrs Stuart Piggott, prepared for an exhibition at Sutton Hoo, where she played a leading part in the excavtion of the Saxon chieftain's grave"
+        ],
+        "Content - person": [
+          "Preston, Cecily Margaret",
+          "Piggott, Margaret (Peggy)",
+          "Guido, Margaret (Peggy)"
+        ],
+        "Person's association": [
+          "biographee",
+          "author"
+        ],
+        "Person's occupation": [
+          "biographee"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Devizes",
+          "Sutton Hoo",
+          "Long Street",
+          "Suffolk",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "297",
+          "210"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object component name": [
+          "edition"
+        ],
+        "Object name": [
+          "note"
+        ],
+        "Object number": [
+          "DZSWS:MSS.4368"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "2018"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production person": [
+          "Allen, Ken"
+        ],
+        "Physical description": [
+          "biographical note of Peggy Guido"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:975e7505-5581-31ef-a9b0-48b605bd4ae9",
+      "title": "Peggy Piggott (1912-1994)",
+      "url": "https://museumdata.uk/objects/975e7505-5581-31ef-a9b0-48b605bd4ae9",
+      "creator": "Allen, Ken",
+      "date": "2018"
+    }
+  },
+  {
+    "id": "mds:dc71c894-1020-33bb-a405-fda0f9fa7c06",
+    "_source": "mds",
+    "_sourceId": "Hallam_Ashley_Negatives-1300",
+    "_sourceUrl": "https://museumdata.uk/objects/dc71c894-1020-33bb-a405-fda0f9fa7c06",
+    "title": "MDS Record 22",
+    "description": "SUTTON HOO shield BM",
+    "subject": [
+      "negative; negative",
+      "negative; negative"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "dc71c894-1020-33bb-a405-fda0f9fa7c06",
+      "objectNumber": "Hallam_Ashley_Negatives-1300",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "negative; negative"
+        ],
+        "Brief description": [
+          "SUTTON HOO shield BM"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "negative; negative"
+        ],
+        "Object number": [
+          "523"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:dc71c894-1020-33bb-a405-fda0f9fa7c06",
+      "title": "MDS Record 22",
+      "url": "https://museumdata.uk/objects/dc71c894-1020-33bb-a405-fda0f9fa7c06"
+    }
+  },
+  {
+    "id": "mds:aec88fef-c141-3c87-aefe-5b4fc720e4ba",
+    "_source": "mds",
+    "_sourceId": "Hallam_Ashley_Negatives-1299",
+    "_sourceUrl": "https://museumdata.uk/objects/aec88fef-c141-3c87-aefe-5b4fc720e4ba",
+    "title": "MDS Record 23",
+    "description": "SUTTON HOO helmet BM",
+    "subject": [
+      "negative; negative",
+      "negative; negative"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "aec88fef-c141-3c87-aefe-5b4fc720e4ba",
+      "objectNumber": "Hallam_Ashley_Negatives-1299",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "negative; negative"
+        ],
+        "Brief description": [
+          "SUTTON HOO helmet BM"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "negative; negative"
+        ],
+        "Object number": [
+          "522"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:aec88fef-c141-3c87-aefe-5b4fc720e4ba",
+      "title": "MDS Record 23",
+      "url": "https://museumdata.uk/objects/aec88fef-c141-3c87-aefe-5b4fc720e4ba"
+    }
+  },
+  {
+    "id": "mds:19b689a1-5c78-3bfa-8b64-666d781e6d6c",
+    "_source": "mds",
+    "_sourceId": "Hallam_Ashley_Negatives-1296",
+    "_sourceUrl": "https://museumdata.uk/objects/19b689a1-5c78-3bfa-8b64-666d781e6d6c",
+    "title": "MDS Record 24",
+    "description": "SUTTON HOO Purse mount BM lantern slide exists",
+    "subject": [
+      "negative; negative",
+      "negative; negative"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "19b689a1-5c78-3bfa-8b64-666d781e6d6c",
+      "objectNumber": "Hallam_Ashley_Negatives-1296",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "negative; negative"
+        ],
+        "Brief description": [
+          "SUTTON HOO Purse mount BM lantern slide exists"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "negative; negative"
+        ],
+        "Object number": [
+          "519"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:19b689a1-5c78-3bfa-8b64-666d781e6d6c",
+      "title": "MDS Record 24",
+      "url": "https://museumdata.uk/objects/19b689a1-5c78-3bfa-8b64-666d781e6d6c"
+    }
+  },
+  {
+    "id": "mds:31067781-64ae-353f-aa6e-34dcb103d395",
+    "_source": "mds",
+    "_sourceId": "Hallam_Ashley_Negatives-1302",
+    "_sourceUrl": "https://museumdata.uk/objects/31067781-64ae-353f-aa6e-34dcb103d395",
+    "title": "MDS Record 25",
+    "description": "SUTTON HOO sceptre BM h lantern slide exists",
+    "subject": [
+      "negative; negative",
+      "negative; negative"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "31067781-64ae-353f-aa6e-34dcb103d395",
+      "objectNumber": "Hallam_Ashley_Negatives-1302",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "negative; negative"
+        ],
+        "Brief description": [
+          "SUTTON HOO sceptre BM h lantern slide exists"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "negative; negative"
+        ],
+        "Object number": [
+          "525"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:31067781-64ae-353f-aa6e-34dcb103d395",
+      "title": "MDS Record 25",
+      "url": "https://museumdata.uk/objects/31067781-64ae-353f-aa6e-34dcb103d395"
+    }
+  },
+  {
+    "id": "mds:10f28e1f-8285-3922-a9f0-15e515892050",
+    "_source": "mds",
+    "_sourceId": "Hallam_Ashley_Negatives-1276",
+    "_sourceUrl": "https://museumdata.uk/objects/10f28e1f-8285-3922-a9f0-15e515892050",
+    "title": "MDS Record 26",
+    "description": "SUTTON HOO Wrist claps BM lantern slide exists",
+    "subject": [
+      "negative; negative",
+      "negative; negative"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "10f28e1f-8285-3922-a9f0-15e515892050",
+      "objectNumber": "Hallam_Ashley_Negatives-1276",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "negative; negative"
+        ],
+        "Brief description": [
+          "SUTTON HOO Wrist claps BM lantern slide exists"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "negative; negative"
+        ],
+        "Object number": [
+          "500"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:10f28e1f-8285-3922-a9f0-15e515892050",
+      "title": "MDS Record 26",
+      "url": "https://museumdata.uk/objects/10f28e1f-8285-3922-a9f0-15e515892050"
+    }
+  },
+  {
+    "id": "mds:bc4d552f-5029-339b-816d-fcbd0da1efb3",
+    "_source": "mds",
+    "_sourceId": "Hallam_Ashley_Negatives-1301",
+    "_sourceUrl": "https://museumdata.uk/objects/bc4d552f-5029-339b-816d-fcbd0da1efb3",
+    "title": "MDS Record 27",
+    "description": "SUTTON HOO Great horn BM lantern slide exists",
+    "subject": [
+      "negative; negative",
+      "negative; negative"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "bc4d552f-5029-339b-816d-fcbd0da1efb3",
+      "objectNumber": "Hallam_Ashley_Negatives-1301",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "negative; negative"
+        ],
+        "Brief description": [
+          "SUTTON HOO Great horn BM lantern slide exists"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "negative; negative"
+        ],
+        "Object number": [
+          "524"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:bc4d552f-5029-339b-816d-fcbd0da1efb3",
+      "title": "MDS Record 27",
+      "url": "https://museumdata.uk/objects/bc4d552f-5029-339b-816d-fcbd0da1efb3"
+    }
+  },
+  {
+    "id": "mds:7de40504-31bc-3cf0-8285-c4501fec11c1",
+    "_source": "mds",
+    "_sourceId": "Hallam_Ashley_Negatives-1298",
+    "_sourceUrl": "https://museumdata.uk/objects/7de40504-31bc-3cf0-8285-c4501fec11c1",
+    "title": "MDS Record 28",
+    "description": "SUTTON HOO silver spoons B M 4 75 lantern slide exists",
+    "subject": [
+      "negative; negative",
+      "negative; negative"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "7de40504-31bc-3cf0-8285-c4501fec11c1",
+      "objectNumber": "Hallam_Ashley_Negatives-1298",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "negative; negative"
+        ],
+        "Brief description": [
+          "SUTTON HOO silver spoons B M 4 75 lantern slide exists"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "negative; negative"
+        ],
+        "Object number": [
+          "521"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:7de40504-31bc-3cf0-8285-c4501fec11c1",
+      "title": "MDS Record 28",
+      "url": "https://museumdata.uk/objects/7de40504-31bc-3cf0-8285-c4501fec11c1"
+    }
+  },
+  {
+    "id": "mds:de3a5b34-f6ae-35ec-935e-dfd29f0f463a",
+    "_source": "mds",
+    "_sourceId": "1041886",
+    "_sourceUrl": "https://museumdata.uk/objects/de3a5b34-f6ae-35ec-935e-dfd29f0f463a",
+    "title": "MDS Record 29",
+    "description": "drawing",
+    "date": "1950 - 1974",
+    "subject": [
+      "visual representation > drawing",
+      "visual representation > drawing"
+    ],
+    "type": "Museum object",
+    "collection": "Ashmolean Museum",
+    "mds": {
+      "uuid": "de3a5b34-f6ae-35ec-935e-dfd29f0f463a",
+      "objectNumber": "1041886",
+      "place": [
+        "Europe > United Kingdom > England > Suffolk > Woodbridge"
+      ],
+      "inscriptionContent": "maker's mark: Notes around the image",
+      "personAssociation": [
+        "creator"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "visual representation > drawing"
+        ],
+        "Brief description": [
+          "drawing"
+        ],
+        "Collection": [
+          "Ashmolean Museum"
+        ],
+        "Associated person": [
+          "Alan Sorrell"
+        ],
+        "Person's association": [
+          "creator"
+        ],
+        "Person's birth date": [
+          "1904 - 1976"
+        ],
+        "Associated place": [
+          "Europe > United Kingdom > England > Suffolk > Woodbridge"
+        ],
+        "Place association": [
+          "subject"
+        ],
+        "Place note": [
+          "Sutton Hoo"
+        ],
+        "Inscription content": [
+          "maker's mark: Notes around the image"
+        ],
+        "Object name": [
+          "visual representation > drawing"
+        ],
+        "Object number": [
+          "GB/1648/SORRELL/TN/3"
+        ],
+        "Object production date": [
+          "1950 - 1974"
+        ],
+        "Date - association": [
+          "date of creation"
+        ],
+        "Date - earliest / single": [
+          "1950"
+        ],
+        "Date - latest": [
+          "1974"
+        ],
+        "Responsible department/section": [
+          "Antiquities"
+        ],
+        "Right holder": [
+          "Ashmolean Museum, University of Oxford"
+        ],
+        "Text": [
+          "https://collections.ashmolean.org/object/1041886"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:de3a5b34-f6ae-35ec-935e-dfd29f0f463a",
+      "title": "MDS Record 29",
+      "url": "https://museumdata.uk/objects/de3a5b34-f6ae-35ec-935e-dfd29f0f463a",
+      "date": "1950 - 1974"
+    }
+  },
+  {
+    "id": "mds:cfd02364-b7ff-3cb4-a89b-11739441d230",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-52187",
+    "_sourceUrl": "https://museumdata.uk/objects/cfd02364-b7ff-3cb4-a89b-11739441d230",
+    "title": "MDS Record 30",
+    "description": "Iron shield boss: Spong Hill gr 31, Norfolk",
+    "subject": [
+      "shield boss",
+      "shield boss",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "cfd02364-b7ff-3cb4-a89b-11739441d230",
+      "objectNumber": "Norwich_Archaeology2-52187",
+      "material": [
+        "iron"
+      ],
+      "condition": "fair",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "shield boss"
+        ],
+        "Brief description": [
+          "Iron shield boss: Spong Hill gr 31, Norfolk"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "1988"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Associated concept": [
+          "archaeology"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Material": [
+          "iron"
+        ],
+        "Object name": [
+          "shield boss"
+        ],
+        "Object number": [
+          "NWHCM : 1994.192.31.3"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:cfd02364-b7ff-3cb4-a89b-11739441d230",
+      "title": "MDS Record 30",
+      "url": "https://museumdata.uk/objects/cfd02364-b7ff-3cb4-a89b-11739441d230"
+    }
+  },
+  {
+    "id": "mds:b905b1ae-f6b4-3191-9f67-871f0d1becf1",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.18742",
+    "_sourceUrl": "https://museumdata.uk/objects/b905b1ae-f6b4-3191-9f67-871f0d1becf1",
+    "title": "Peggy Piggott: Women and British Archaeology (1930-1945)",
+    "description": "An article from the Oxford Journal of Archaeology, 'Peggy Piggott: Women and British Archology (1930-1945)'/Pope, Rachel and Davies, Mairi, H/2023/Oxford Journal of Archaeology",
+    "creator": [
+      "Pope, Rachel",
+      "Davies, Mairi, H",
+      "John Wiley & Son on behalf of University of Oxford"
+    ],
+    "date": "2023",
+    "subject": [
+      "book",
+      "book",
+      "biography",
+      "archaeology",
+      "excavation"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "b905b1ae-f6b4-3191-9f67-871f0d1becf1",
+      "objectNumber": "DZSWS:Book.18742",
+      "material": [
+        "journal article"
+      ],
+      "place": [
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "295 mm",
+        "210 mm"
+      ],
+      "objectHistory": "life and work of Peggy Piggott of Sutton Hoo excavation fame",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "archaeologist",
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Peggy Piggott: Women and British Archaeology (1930-1945)"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "An article from the Oxford Journal of Archaeology, 'Peggy Piggott: Women and British Archology (1930-1945)'/Pope, Rachel and Davies, Mairi, H/2023/Oxford Journal of Archaeology",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "biography",
+          "archaeology",
+          "excavation"
+        ],
+        "Content - person": [
+          "Piggot, Peggy"
+        ],
+        "Person's association": [
+          "archaeologist",
+          "author"
+        ],
+        "Person's occupation": [
+          "archaeologist"
+        ],
+        "Content - place": [
+          "Wiltshire"
+        ],
+        "Place status": [
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "295 mm",
+          "210 mm"
+        ],
+        "Material": [
+          "journal article"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "life and work of Peggy Piggott of Sutton Hoo excavation fame"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.18742"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "2023"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "John Wiley & Son on behalf of University of Oxford"
+        ],
+        "Organisation's function": [
+          "publisher"
+        ],
+        "Object production person": [
+          "Pope, Rachel",
+          "Davies, Mairi, H"
+        ],
+        "Other number": [
+          "ISBN"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:b905b1ae-f6b4-3191-9f67-871f0d1becf1",
+      "title": "Peggy Piggott: Women and British Archaeology (1930-1945)",
+      "url": "https://museumdata.uk/objects/b905b1ae-f6b4-3191-9f67-871f0d1becf1",
+      "creator": [
+        "Pope, Rachel",
+        "Davies, Mairi, H",
+        "John Wiley & Son on behalf of University of Oxford"
+      ],
+      "date": "2023"
+    }
+  },
+  {
+    "id": "mds:a28f2817-b47f-3887-aeee-5de0ab6e2f41",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2000.1003",
+    "_sourceUrl": "https://museumdata.uk/objects/a28f2817-b47f-3887-aeee-5de0ab6e2f41",
+    "title": "MDS Record 32",
+    "description": "Oil on canvas depicting portrait of Mrs Margaret (Peggy) Guido, (1912-1994), by Frank Griffith, R.A. c.1935.",
+    "creator": "Griffith, Frank",
+    "date": "1935",
+    "subject": [
+      "painting; oil painting",
+      "painting; oil painting",
+      "fine art",
+      "paintings",
+      "subject",
+      "portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "a28f2817-b47f-3887-aeee-5de0ab6e2f41",
+      "objectNumber": "DZSWS:2000.1003",
+      "material": [
+        "paint",
+        "oil",
+        "canvas"
+      ],
+      "condition": "excellent",
+      "dimensions": [
+        "width",
+        "height",
+        "340",
+        "390"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "painting; oil painting"
+        ],
+        "Brief description": [
+          "Oil on canvas depicting portrait of Mrs Margaret (Peggy) Guido, (1912-1994), by Frank Griffith, R.A. c.1935."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "fine art",
+          "paintings",
+          "subject",
+          "portrait"
+        ],
+        "Condition": [
+          "excellent"
+        ],
+        "Content - date": [
+          "1935"
+        ],
+        "Content - note": [
+          "Peggy Guido or Mrs C. M. Piggott was an archaeologist and long-standing member of the Wiltshire Archaeological and Natural History Society, and together with her husband Professor Stuart Piggott, she worked on the excavations at Sutton Hoo.  She lived in Devizes for many years."
+        ],
+        "Content - person": [
+          "Guido, Margaret",
+          "Piggott, C M, Mrs"
+        ],
+        "Dimension": [
+          "width",
+          "height"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "340",
+          "390"
+        ],
+        "Distinguishing features": [
+          "framed"
+        ],
+        "Material": [
+          "paint",
+          "oil",
+          "canvas"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "painting; oil painting"
+        ],
+        "Object number": [
+          "DZSWS:2000.1003"
+        ],
+        "Date - earliest / single": [
+          "1935"
+        ],
+        "Object production person": [
+          "Griffith, Frank"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:a28f2817-b47f-3887-aeee-5de0ab6e2f41",
+      "title": "MDS Record 32",
+      "url": "https://museumdata.uk/objects/a28f2817-b47f-3887-aeee-5de0ab6e2f41",
+      "creator": "Griffith, Frank",
+      "date": "1935"
+    }
+  },
+  {
+    "id": "mds:2d67f2c1-eae8-3055-88d4-5805a619db4b",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-52188",
+    "_sourceUrl": "https://museumdata.uk/objects/2d67f2c1-eae8-3055-88d4-5805a619db4b",
+    "title": "MDS Record 33",
+    "description": "Shield fish mount: Spong Hill gr 31, Norfolk",
+    "subject": [
+      "shield mount",
+      "shield mount",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "2d67f2c1-eae8-3055-88d4-5805a619db4b",
+      "objectNumber": "Norwich_Archaeology2-52188",
+      "material": [
+        "iron"
+      ],
+      "condition": "fair",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "shield mount"
+        ],
+        "Brief description": [
+          "Shield fish mount: Spong Hill gr 31, Norfolk"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "1988"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Associated concept": [
+          "archaeology"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Material": [
+          "iron"
+        ],
+        "Object name": [
+          "shield mount"
+        ],
+        "Object number": [
+          "NWHCM : 1994.192.31.4"
+        ],
+        "Reproduction format": [
+          "jpeg"
+        ],
+        "Reproduction type": [
+          "image"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:2d67f2c1-eae8-3055-88d4-5805a619db4b",
+      "title": "MDS Record 33",
+      "url": "https://museumdata.uk/objects/2d67f2c1-eae8-3055-88d4-5805a619db4b"
+    }
+  },
+  {
+    "id": "mds:7245d929-7649-31e5-bb2d-38163c31be11",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-52189",
+    "_sourceUrl": "https://museumdata.uk/objects/7245d929-7649-31e5-bb2d-38163c31be11",
+    "title": "MDS Record 34",
+    "description": "Shield fish mount: Spong Hill gr 31, Norfolk",
+    "subject": [
+      "shield mount",
+      "shield mount",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "7245d929-7649-31e5-bb2d-38163c31be11",
+      "objectNumber": "Norwich_Archaeology2-52189",
+      "material": [
+        "iron"
+      ],
+      "condition": "fair",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "shield mount"
+        ],
+        "Brief description": [
+          "Shield fish mount: Spong Hill gr 31, Norfolk"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "1988"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Associated concept": [
+          "archaeology"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Material": [
+          "iron"
+        ],
+        "Object name": [
+          "shield mount"
+        ],
+        "Object number": [
+          "NWHCM : 1994.192.31.5"
+        ],
+        "Reproduction format": [
+          "jpeg"
+        ],
+        "Reproduction type": [
+          "image"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:7245d929-7649-31e5-bb2d-38163c31be11",
+      "title": "MDS Record 34",
+      "url": "https://museumdata.uk/objects/7245d929-7649-31e5-bb2d-38163c31be11"
+    }
+  },
+  {
+    "id": "mds:c252c197-14d8-3598-8fb2-870eb08528c6",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-32946",
+    "_sourceUrl": "https://museumdata.uk/objects/c252c197-14d8-3598-8fb2-870eb08528c6",
+    "title": "MDS Record 35",
+    "description": "Rim sherd from a cast copper-alloy Coptic bowl with the externally thickened top above a horizontal cordon and an integral circular suspension ring. The sherd is too small to make the rim diameter measurable. The sherd would appear to be of a Coptic bowl of Werner’s Type B1 or B1a (Bruce-Mitford Sutton Hoo, 1983, 744, Fig. 531).. This is probably a product of Egypt from the first half of the seventh century.",
+    "date": "600 AD-650 AD",
+    "subject": [
+      "sherd; sherd",
+      "sherd; sherd",
+      "archaeology",
+      "containers"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "c252c197-14d8-3598-8fb2-870eb08528c6",
+      "objectNumber": "Norwich_Archaeology2-32946",
+      "place": [
+        "Egypt"
+      ],
+      "dimensions": [
+        "External diameter (suspension ring)",
+        "Internal diameter (suspension ring)",
+        "24.5",
+        "13"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "sherd; sherd"
+        ],
+        "Brief description": [
+          "Rim sherd from a cast copper-alloy Coptic bowl with the externally thickened top above a horizontal cordon and an integral circular suspension ring. The sherd is too small to make the rim diameter measurable. The sherd would appear to be of a Coptic bowl of Werner’s Type B1 or B1a (Bruce-Mitford Sutton Hoo, 1983, 744, Fig. 531).. This is probably a product of Egypt from the first half of the seventh century."
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "containers"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Dimension": [
+          "External diameter (suspension ring)",
+          "Internal diameter (suspension ring)"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "24.5",
+          "13"
+        ],
+        "Object name": [
+          "sherd; sherd"
+        ],
+        "Object number": [
+          "NWHCM : 2014.6"
+        ],
+        "Object production date": [
+          "600 AD-650 AD"
+        ],
+        "Date - earliest / single": [
+          "600"
+        ],
+        "Date - latest": [
+          "650"
+        ],
+        "Object production place": [
+          "Egypt"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:c252c197-14d8-3598-8fb2-870eb08528c6",
+      "title": "MDS Record 35",
+      "url": "https://museumdata.uk/objects/c252c197-14d8-3598-8fb2-870eb08528c6",
+      "date": "600 AD-650 AD"
+    }
+  },
+  {
+    "id": "mds:092af836-6fc6-354d-b731-16f82e39d8a9",
+    "_source": "mds",
+    "_sourceId": "Lynn_collections-92389",
+    "_sourceUrl": "https://museumdata.uk/objects/092af836-6fc6-354d-b731-16f82e39d8a9",
+    "title": "MDS Record 36",
+    "description": "Unused b/w postcard photograph of enlarged detail from 7th century gold clasp, showing two interlinked boars; gold with garnets, enamel and filigree work; from the ship burial at Sutton Hoo, Suffolk; now in the British Museum",
+    "subject": [
+      "b/w printpostcard; postcard",
+      "b/w printpostcard; postcard"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "092af836-6fc6-354d-b731-16f82e39d8a9",
+      "objectNumber": "Lynn_collections-92389",
+      "place": [
+        "England",
+        "London"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "b/w printpostcard; postcard"
+        ],
+        "Brief description": [
+          "Unused b/w postcard photograph of enlarged detail from 7th century gold clasp, showing two interlinked boars; gold with garnets, enamel and filigree work; from the ship burial at Sutton Hoo, Suffolk; now in the British Museum"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "untraced find"
+        ],
+        "Content - place": [
+          "England",
+          "London"
+        ],
+        "Place status": [
+          "country",
+          "county or region"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "b/w printpostcard; postcard"
+        ],
+        "Object number": [
+          "KILLM : 2007.1032.2"
+        ],
+        "Reproduction format": [
+          "jpeg"
+        ],
+        "Reproduction type": [
+          "image"
+        ],
+        "Responsible department/section": [
+          "Lynn Museum"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:092af836-6fc6-354d-b731-16f82e39d8a9",
+      "title": "MDS Record 36",
+      "url": "https://museumdata.uk/objects/092af836-6fc6-354d-b731-16f82e39d8a9"
+    }
+  },
+  {
+    "id": "mds:9b797213-8f82-316d-a4fb-e7c69649f0e5",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.18379",
+    "_sourceUrl": "https://museumdata.uk/objects/9b797213-8f82-316d-a4fb-e7c69649f0e5",
+    "title": "The Dig, a Faustian pact with antiquity",
+    "description": "The Dig, a Faustian pact with antiquity/Pitts, Mike, Brunning, Sue and Howarth, Laura/British Archaeology/March/April 2021",
+    "creator": [
+      "Pitts, Mike",
+      "Brunning, Sue",
+      "Howarth, Laura",
+      "British Archaeology"
+    ],
+    "date": "2021",
+    "subject": [
+      "journal article",
+      "journal article",
+      "archaeology",
+      "Anglo-Saxon",
+      "film",
+      "excavation"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "9b797213-8f82-316d-a4fb-e7c69649f0e5",
+      "objectNumber": "DZSWS:Book.18379",
+      "material": [
+        "journal article"
+      ],
+      "place": [
+        "Woodbridge",
+        "Sutton Hoo",
+        "Suffolk"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "objectHistory": "journal article about the feature film The Dig, about the 1939 excavation of a Saxon ship burial at Sutton Hoo, Woodbridge, Suffolk",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "archaeologist",
+        "landowner",
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Dig, a Faustian pact with antiquity"
+        ],
+        "Object name(s)": [
+          "journal article"
+        ],
+        "Brief description": [
+          "The Dig, a Faustian pact with antiquity/Pitts, Mike, Brunning, Sue and Howarth, Laura/British Archaeology/March/April 2021",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "Anglo-Saxon",
+          "film",
+          "excavation"
+        ],
+        "Content - person": [
+          "Piggott, Peggy",
+          "Brown, Basil",
+          "Pretty, Edith"
+        ],
+        "Person's association": [
+          "archaeologist",
+          "landowner",
+          "author"
+        ],
+        "Person's occupation": [
+          "archaeologist",
+          "landowner"
+        ],
+        "Content - place": [
+          "Woodbridge",
+          "Sutton Hoo",
+          "Suffolk"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "295",
+          "224"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "journal article"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "journal article about the feature film The Dig, about the 1939 excavation of a Saxon ship burial at Sutton Hoo, Woodbridge, Suffolk"
+        ],
+        "Object name": [
+          "journal article"
+        ],
+        "Object number": [
+          "DZSWS:Book.18379"
+        ],
+        "Date - association": [
+          "publication date",
+          "March/April 2021"
+        ],
+        "Object production date": [
+          "2021"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "British Archaeology"
+        ],
+        "Organisation's function": [
+          "publisher"
+        ],
+        "Object production person": [
+          "Pitts, Mike",
+          "Brunning, Sue",
+          "Howarth, Laura"
+        ],
+        "Other number": [
+          "ISSN 1357-4442"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Related object number": [
+          "DZSWS:Book.18365",
+          "DZSWS:Book.17164.4"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:9b797213-8f82-316d-a4fb-e7c69649f0e5",
+      "title": "The Dig, a Faustian pact with antiquity",
+      "url": "https://museumdata.uk/objects/9b797213-8f82-316d-a4fb-e7c69649f0e5",
+      "creator": [
+        "Pitts, Mike",
+        "Brunning, Sue",
+        "Howarth, Laura",
+        "British Archaeology"
+      ],
+      "date": "2021"
+    }
+  },
+  {
+    "id": "mds:524388c0-6865-34ff-b754-56e444c1795f",
+    "_source": "mds",
+    "_sourceId": "Lynn_collections-92388",
+    "_sourceUrl": "https://museumdata.uk/objects/524388c0-6865-34ff-b754-56e444c1795f",
+    "title": "MDS Record 38",
+    "description": "Unused b/w postcard photograph of 7th century gold clasps inset with garnets and glass from the ship burial at Sutton Hoo, Suffolk; now in the British Museum",
+    "subject": [
+      "b/w printpostcard; postcard",
+      "b/w printpostcard; postcard"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "524388c0-6865-34ff-b754-56e444c1795f",
+      "objectNumber": "Lynn_collections-92388",
+      "place": [
+        "England",
+        "London"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "b/w printpostcard; postcard"
+        ],
+        "Brief description": [
+          "Unused b/w postcard photograph of 7th century gold clasps inset with garnets and glass from the ship burial at Sutton Hoo, Suffolk; now in the British Museum"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "untraced find"
+        ],
+        "Content - place": [
+          "England",
+          "London"
+        ],
+        "Place status": [
+          "country",
+          "county or region"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "b/w printpostcard; postcard"
+        ],
+        "Object number": [
+          "KILLM : 2007.1032.1"
+        ],
+        "Reproduction format": [
+          "jpeg"
+        ],
+        "Reproduction type": [
+          "image"
+        ],
+        "Responsible department/section": [
+          "Lynn Museum"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:524388c0-6865-34ff-b754-56e444c1795f",
+      "title": "MDS Record 38",
+      "url": "https://museumdata.uk/objects/524388c0-6865-34ff-b754-56e444c1795f"
+    }
+  },
+  {
+    "id": "mds:1d3db3f0-4505-30cf-b1b6-63267546c58a",
+    "_source": "mds",
+    "_sourceId": "BLDIDHH014360",
+    "_sourceUrl": "https://museumdata.uk/objects/1d3db3f0-4505-30cf-b1b6-63267546c58a",
+    "title": "MDS Record 39",
+    "description": "Horned head mount\n\"Small bronze mount, flat, in the shape of a stylised man's head, bearded and moustached, surmounted by two horns with bird head terminals in salin style 2, projecting from the side of the head and curving to meet above it.....\" [Input Form (Registry)]",
+    "date": "500?",
+    "subject": [
+      "metalwork * religion? * Nottingham and Notts.; mount/horned head",
+      "metalwork * religion? * Nottingham and Notts.; mount/horned head",
+      "archaeology out of county"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "1d3db3f0-4505-30cf-b1b6-63267546c58a",
+      "objectNumber": "BLDIDHH014360",
+      "material": [
+        "copper alloy"
+      ],
+      "dimensions": [
+        "36 x 26.7mm"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "metalwork * religion? * Nottingham and Notts.; mount/horned head"
+        ],
+        "Brief description": [
+          "Horned head mount\n\"Small bronze mount, flat, in the shape of a stylised man's head, bearded and moustached, surmounted by two horns with bird head terminals in salin style 2, projecting from the side of the head and curving to meet above it.....\" [Input Form (Registry)]"
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Acquisition date": [
+          "15.03.1988"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Acquisition reference number": [
+          "LTB202"
+        ],
+        "Acquisition source": [
+          "Grattan/Mr J.P."
+        ],
+        "Associated concept": [
+          "archaeology out of county"
+        ],
+        "Dimension": [
+          "36 x 26.7mm"
+        ],
+        "Field collection place": [
+          "Rempstone, S.Derbyshire"
+        ],
+        "Material": [
+          "copper alloy"
+        ],
+        "Object name": [
+          "metalwork * religion? * Nottingham and Notts.; mount/horned head"
+        ],
+        "Object number": [
+          "NCM 1987-1445"
+        ],
+        "Object production date": [
+          "500?"
+        ],
+        "Text": [
+          "From old museum label - 'A South Swedish Bronze Mount, c. 500 AD. Rempstone, Notts. Only two other representations of such bearded heads, horned with birds heads at the end, are known from England. The front panels on the royal helmet from Sutton Hoo and a silver fragment from Caenby, Lincs. Others occur on helmets from Southern Sweden. This example was mounted on wood, possibly a religious staff. Given by Mr. J.P. Grattan.'"
+        ],
+        "Text reason": [
+          "caption"
+        ],
+        "Use note": [
+          "Previously on display at Nottingham Castle - dates yet to be defined."
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:1d3db3f0-4505-30cf-b1b6-63267546c58a",
+      "title": "MDS Record 39",
+      "url": "https://museumdata.uk/objects/1d3db3f0-4505-30cf-b1b6-63267546c58a",
+      "date": "500?"
+    }
+  },
+  {
+    "id": "mds:a12dd19b-fd8b-3ce2-a003-c946d6188d1a",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-52423",
+    "_sourceUrl": "https://museumdata.uk/objects/a12dd19b-fd8b-3ce2-a003-c946d6188d1a",
+    "title": "MDS Record 40",
+    "description": "A gold rivet boss, circular in plan, domed in form and hollow on the underside. It is formed from a domed piece of gold sheet attached to a gold sheet back-plate. The outer edge, where the upper and lower components join, is masked by a strand of gold beaded wire. There is a hole in the centre of the back-plate.",
+    "subject": [
+      "boss",
+      "boss",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "a12dd19b-fd8b-3ce2-a003-c946d6188d1a",
+      "objectNumber": "Norwich_Archaeology2-52423",
+      "material": [
+        "gold"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "diameter",
+        "height",
+        "11",
+        "3.9"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "boss"
+        ],
+        "Brief description": [
+          "A gold rivet boss, circular in plan, domed in form and hollow on the underside. It is formed from a domed piece of gold sheet attached to a gold sheet back-plate. The outer edge, where the upper and lower components join, is masked by a strand of gold beaded wire. There is a hole in the centre of the back-plate.",
+          "This boss is very typical of decorative bosses that were attached to deluxe jewellery, dress accessories and weapon fittings in the seventh century. They appear in various shapes and sizes, for instance small examples from the Staffordshire Hoard sword hilt fittings (PAS database STAFFS-668196 and STAFFS-C2FD97) and very large examples like those on the Sutton Hoo great gold buckle (British Museum 1939,1010.1). They typically feature a filigree collar, like this example."
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "archaeology"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Dimension": [
+          "diameter",
+          "height"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "11",
+          "3.9"
+        ],
+        "Material": [
+          "gold"
+        ],
+        "Object name": [
+          "boss"
+        ],
+        "Object number": [
+          "NWHCM : 2019.129"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:a12dd19b-fd8b-3ce2-a003-c946d6188d1a",
+      "title": "MDS Record 40",
+      "url": "https://museumdata.uk/objects/a12dd19b-fd8b-3ce2-a003-c946d6188d1a"
+    }
+  },
+  {
+    "id": "mds:4d3833ff-95fd-332c-b3eb-5fbb3a4159a9",
+    "_source": "mds",
+    "_sourceId": "506423",
+    "_sourceUrl": "https://museumdata.uk/objects/4d3833ff-95fd-332c-b3eb-5fbb3a4159a9",
+    "title": "scabbard mount",
+    "description": "A decorative mount from a scabbard. It is made from gilded silver and the square recess at the point of the pyramid would originally have held a gem or piece of glass. These mounts date from the early-medieval period, probably 6th or 7th centuries, and are found across England and Europe. Really decorative examples were found at Sutton Hoo.\n\nPyramidal mounts are well known finds from early medieval archaeological contexts in lowland Britain and on the Continent. They are distributed fairly widely across England, with concentrations in the South, East and North-east. This example is the first to be found in Devon.\n\n\nThis object is not on display.",
+    "subject": [
+      "pyramidal mount; decorative pyramidal mount probably from a sword scabbard",
+      "pyramidal mount; decorative pyramidal mount probably from a sword scabbard"
+    ],
+    "type": "Museum object",
+    "collection": "Royal Albert Memorial Museum & Art Gallery",
+    "mds": {
+      "uuid": "4d3833ff-95fd-332c-b3eb-5fbb3a4159a9",
+      "objectNumber": "506423",
+      "material": [
+        "silver",
+        "gold"
+      ],
+      "dimensions": [
+        "whole length 14.9 mm",
+        "width 15.2 mm",
+        "height 6.4 mm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "scabbard mount"
+        ],
+        "Object name(s)": [
+          "pyramidal mount; decorative pyramidal mount probably from a sword scabbard"
+        ],
+        "Brief description": [
+          "A decorative mount from a scabbard. It is made from gilded silver and the square recess at the point of the pyramid would originally have held a gem or piece of glass. These mounts date from the early-medieval period, probably 6th or 7th centuries, and are found across England and Europe. Really decorative examples were found at Sutton Hoo.\n\nPyramidal mounts are well known finds from early medieval archaeological contexts in lowland Britain and on the Continent. They are distributed fairly widely across England, with concentrations in the South, East and North-east. This example is the first to be found in Devon.\n\n\nThis object is not on display."
+        ],
+        "Collection": [
+          "Royal Albert Memorial Museum & Art Gallery"
+        ],
+        "Current location": [
+          "Not on display"
+        ],
+        "Dimension": [
+          "whole length 14.9 mm",
+          "width 15.2 mm",
+          "height 6.4 mm"
+        ],
+        "Field collection place": [
+          "Colaton Raleigh",
+          "Devon",
+          "United Kingdom: England",
+          "Northern Europe",
+          "Europe"
+        ],
+        "Field collector": [
+          "Mr Stuart Woolger   (collector)"
+        ],
+        "Material": [
+          "silver",
+          "gold"
+        ],
+        "Object name": [
+          "pyramidal mount; decorative pyramidal mount probably from a sword scabbard"
+        ],
+        "Object number": [
+          "39/2022"
+        ],
+        "Reproduction number": [
+          "39-2022.jpg",
+          "39-2022-shot1.jpg",
+          "39-2022-shot2.jpg",
+          "39-2022-shot3.jpg",
+          "39-2022-shot4.jpg",
+          "39-2022-shot5.jpg"
+        ],
+        "Responsible department/section": [
+          "Antiquities",
+          "Devon archaeology"
+        ],
+        "Right type": [
+          "https://creativecommons.org/licenses/by-nc/4.0/"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:4d3833ff-95fd-332c-b3eb-5fbb3a4159a9",
+      "title": "scabbard mount",
+      "url": "https://museumdata.uk/objects/4d3833ff-95fd-332c-b3eb-5fbb3a4159a9"
+    }
+  },
+  {
+    "id": "mds:934f4362-e22a-3ef6-86f1-1068aac8277e",
+    "_source": "mds",
+    "_sourceId": "O112685",
+    "_sourceUrl": "https://museumdata.uk/objects/934f4362-e22a-3ef6-86f1-1068aac8277e",
+    "title": "MDS Record 42",
+    "description": "Belt buckle of iron, damascened with interlaced ornamentation in gold and silver. The buckle plate has five dome-headed rivets and the base of the tongue carries an enlarged tongue-shield.",
+    "creator": "Unknown",
+    "date": "600-700",
+    "subject": [
+      "Belt buckle",
+      "Belt buckle",
+      "Accessories",
+      "Europeana Fashion Project"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria and Albert Museum",
+    "mds": {
+      "uuid": "934f4362-e22a-3ef6-86f1-1068aac8277e",
+      "objectNumber": "O112685",
+      "material": [
+        "iron",
+        "silver",
+        "brass (alloy)"
+      ],
+      "place": [
+        "France"
+      ],
+      "dimensions": [
+        "Height",
+        "Width",
+        "Weight",
+        "7.4",
+        "17.9",
+        "250.8"
+      ],
+      "objectHistory": "Bought for 2l in 1858",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Belt buckle"
+        ],
+        "Brief description": [
+          "Belt buckle of iron, damascened with interlaced ornamentation in gold and silver. The buckle plate has five dome-headed rivets and the base of the tongue carries an enlarged tongue-shield.",
+          "Merovingian belt buckle with a tongue-shaped plate with silver and brass wire inlay, made in Europe, possibly France, 7th century"
+        ],
+        "Collection": [
+          "Victoria and Albert Museum"
+        ],
+        "Associated concept": [
+          "Accessories",
+          "Europeana Fashion Project"
+        ],
+        "Current reproduction location": [
+          "https://framemark.vam.ac.uk/collections/2008BU7170/full/!100,100/0/default.jpg"
+        ],
+        "Location type": [
+          "Thumbnail"
+        ],
+        "Dimension": [
+          "Height",
+          "Width",
+          "Weight"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "g"
+        ],
+        "Dimension value": [
+          "7.4",
+          "17.9",
+          "250.8"
+        ],
+        "Material": [
+          "iron",
+          "silver",
+          "brass (alloy)"
+        ],
+        "Object history note": [
+          "Bought for 2l in 1858",
+          "Buckles such as this were popular in large parts of early medieval north-western Europe. Similar pieces are known from the northern French-Belgian regions inhabited by the Franks to the Alamanic regions of Switzerland and south-western Germany.\n\nThe intricated animal ornament consists of beaked, snake-like animals which are interlaced in the so-called Style II defined by Edward Salin. Although inlaid iron buckles such as these are very rare in Anglo-Saxon England, the art style was known as well. The large gold buckle from Sutton Hoo, for instance, is also decorated with intertwined snakes and it has been suggested that the interlace represents an attempt to ban negative forces by literally tying them up (Hawkes 1997).\n\nA splendid buckle like this would have been a costly item that not everyone could have afforded. It may originally have formed part of a larger suite, with a matching counter plate. It dates to the 7th century A.D. or perhaps to the end of the 6th century.\n\nAlthough we don't know where this buckle came from, it may well have been found in a grave, buried with its owner."
+        ],
+        "Object name": [
+          "Belt buckle"
+        ],
+        "Object number": [
+          "4510-1858"
+        ],
+        "Object production date": [
+          "600-700"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Date - earliest / single": [
+          "0600-01-01"
+        ],
+        "Date - latest": [
+          "0700-12-31"
+        ],
+        "Object production person": [
+          "Unknown"
+        ],
+        "Object production place": [
+          "France"
+        ],
+        "Place association": [
+          "made"
+        ],
+        "Place note": [
+          "possibly"
+        ],
+        "Physical description": [
+          "Belt buckle of iron, damascened with interlaced ornamentation in gold and silver. The buckle plate has five dome-headed rivets and the base of the tongue carries an enlarged tongue-shield."
+        ],
+        "Reproduction number": [
+          "2008BU7170",
+          "2008BU7240",
+          "2008BU7205"
+        ],
+        "Responsible department/section": [
+          "MET"
+        ],
+        "Style": [
+          "Merovingian"
+        ],
+        "Technique": [
+          "inlay (process)",
+          "forging (metal forming)",
+          "Forged iron inlaid with silver and possibly brass"
+        ],
+        "Text": [
+          "https://collections.vam.ac.uk/item/O112685/",
+          "A splendid buckle like this would have been a costly item that not everyone could have afforded. It may originally have formed part of a larger set of adornments, with a matching counter plate. The buckle is decorated with fabulous beaked snakes in an interlace pattern, a popular motif on jewellery of the late sixth and early seventh centuries. The large gold buckle from Sutton Hoo, for instance, is also decorated with intertwined snakes and it has been suggested that the interlace represents an attempt to counter negative forces by literally tying them up. Although we don't know where this buckle came from, it may well have been found in a grave, buried with its owner."
+        ],
+        "Text reason": [
+          "Collections online record",
+          "Summary description"
+        ],
+        "Reference": [
+          "Mossbrugger-Leu, Rudolf, Die Schweiz zur Merowingerzeit. Die archäologische Hinterlassenschaft der Romanen, Burgunder und Alamannen. 2 vols (Bern 1971), esp. vol B, plate 42.",
+          "Marzinzik, Sonja, Early Anglo-Saxon belt buckles (late 5th to early 8th centuries): Their classification and context. BAR British Series 357 (Oxford 2003).",
+          "Trenteseau, Berthie,  La damasquinure mérovingienne en Belgique; plaques-boucles et autres accessoires de buffleterie. Dissertationes archaeologicae Gandenses (Brugges 1966).",
+          "Hawkes, Jane, Symbolic lives: the visual evidence. The Anglo-Saxons from the Migration Period to the Eighth Century: an Ethnographic perspective. ed. Hines J. Studies in Historical Archaeoethnology 2 (Woodbridge 1997) 311-338.",
+          "Hawkes, Sonia Chadwick, Recent finds of inlaid iron buckles and belt-plates from seventh-century Kent. Anglo-Saxon Studies in Archaeology and History 2, 1981, 49-71."
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:934f4362-e22a-3ef6-86f1-1068aac8277e",
+      "title": "MDS Record 42",
+      "url": "https://museumdata.uk/objects/934f4362-e22a-3ef6-86f1-1068aac8277e",
+      "creator": "Unknown",
+      "date": "600-700"
+    }
+  },
+  {
+    "id": "mds:7f4333c8-7a23-3185-977b-6843009be9f7",
+    "_source": "mds",
+    "_sourceId": "object-272037",
+    "_sourceUrl": "https://museumdata.uk/objects/7f4333c8-7a23-3185-977b-6843009be9f7",
+    "title": "This is one of the very earliest Anglo-Saxon coins, and the only type to bear the name of a king before that of King Aldfrith (685-704).  Two specimens were previously known: one in the Ashmolean (ex Crondall hoard, 1828) and one in the American Numismatic Society, New York (found Pas-de-Calais, before 1887).  There is no example in the British Museum.  All three known pieces are struck from the same obverse die, but different reverse dies.  The Ashmolean's piece allows the complete reading of the inscription, but this has the best portrait.  The form of the king's name can be compared with those used by Bede, Adulualdi and Audubaldi.  The reverse inscription, when compared with the other two, is probably to be interpreted as a corruption of a moneyer's name ( . . . bal) and Londenus.  The fineness of this and the Ashmolean coin (72% and 69%) show that they belong near the head of the Anglo-Saxon series, and were probably struck c.630.  Eadbald was the son of King Æthelberht who received Augustine's mission, and a contemporary of King Rædwald, the probable occupant of the Sutton Hoo ship grave.  According the Bede, Eadbald was initially a heathen, but was converted some years after his accession.  The Christian iconography of this coin is notable.  The fact that the coins were struck at London, in the East Saxon kingdom, has puzzled scholars, but it must reflect the status of the city and the extent of Eadbald's authority.",
+    "description": "Anglo-Saxon, King Eadbald of Kent (616-40), gold shilling, London, c.630; obv. AVDV[ARLD REG]ES, bust right; rev. I++IDIWBALLOIENVS, cross-on-globule (Sutherland 77-8; North 29); SG 15.66 (= 72% gold), 1.27g.  Found at Tangmere, near Chichester 1997.",
+    "creator": "Eadbald (616-40)",
+    "date": "616",
+    "subject": [
+      "coin; shilling",
+      "coin; shilling"
+    ],
+    "type": "Museum object",
+    "collection": "Fitzwilliam Museum",
+    "mds": {
+      "uuid": "7f4333c8-7a23-3185-977b-6843009be9f7",
+      "objectNumber": "object-272037",
+      "dimensions": [
+        "Weight",
+        "1.27"
+      ],
+      "personAssociation": [
+        "ruler"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "This is one of the very earliest Anglo-Saxon coins, and the only type to bear the name of a king before that of King Aldfrith (685-704).  Two specimens were previously known: one in the Ashmolean (ex Crondall hoard, 1828) and one in the American Numismatic Society, New York (found Pas-de-Calais, before 1887).  There is no example in the British Museum.  All three known pieces are struck from the same obverse die, but different reverse dies.  The Ashmolean's piece allows the complete reading of the inscription, but this has the best portrait.  The form of the king's name can be compared with those used by Bede, Adulualdi and Audubaldi.  The reverse inscription, when compared with the other two, is probably to be interpreted as a corruption of a moneyer's name ( . . . bal) and Londenus.  The fineness of this and the Ashmolean coin (72% and 69%) show that they belong near the head of the Anglo-Saxon series, and were probably struck c.630.  Eadbald was the son of King Æthelberht who received Augustine's mission, and a contemporary of King Rædwald, the probable occupant of the Sutton Hoo ship grave.  According the Bede, Eadbald was initially a heathen, but was converted some years after his accession.  The Christian iconography of this coin is notable.  The fact that the coins were struck at London, in the East Saxon kingdom, has puzzled scholars, but it must reflect the status of the city and the extent of Eadbald's authority."
+        ],
+        "Object name(s)": [
+          "coin; shilling"
+        ],
+        "Brief description": [
+          "Anglo-Saxon, King Eadbald of Kent (616-40), gold shilling, London, c.630; obv. AVDV[ARLD REG]ES, bust right; rev. I++IDIWBALLOIENVS, cross-on-globule (Sutherland 77-8; North 29); SG 15.66 (= 72% gold), 1.27g.  Found at Tangmere, near Chichester 1997."
+        ],
+        "Collection": [
+          "Fitzwilliam Museum"
+        ],
+        "Acquisition date": [
+          "1997-12-05"
+        ],
+        "Acquisition method": [
+          "bought"
+        ],
+        "Acquisition source": [
+          "Finn, Patrick"
+        ],
+        "Dimension": [
+          "Weight"
+        ],
+        "Dimension measured part": [
+          "Object"
+        ],
+        "Dimension measurement unit": [
+          "g"
+        ],
+        "Dimension value": [
+          "1.27"
+        ],
+        "Object component name": [
+          "Object"
+        ],
+        "Object component information": [
+          "gold"
+        ],
+        "Object name": [
+          "coin; shilling"
+        ],
+        "Object number": [
+          "CM.2559-1997"
+        ],
+        "Date - earliest / single": [
+          "616"
+        ],
+        "Date - latest": [
+          "640"
+        ],
+        "Object production person": [
+          "Eadbald (616-40)"
+        ],
+        "Person's association": [
+          "ruler"
+        ],
+        "Other number": [
+          "CM.2559-1997",
+          "272037",
+          "https://data.fitzmuseum.cam.ac.uk/id/object/272037"
+        ],
+        "Other number type": [
+          "accession number",
+          "priref",
+          "uri"
+        ],
+        "Responsible department/section": [
+          "Coins and Medals"
+        ],
+        "Technique": [
+          "struck"
+        ],
+        "Text": [
+          "https://data.fitzmuseum.cam.ac.uk/id/object/272037"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:7f4333c8-7a23-3185-977b-6843009be9f7",
+      "title": "This is one of the very earliest Anglo-Saxon coins, and the only type to bear the name of a king before that of King Aldfrith (685-704).  Two specimens were previously known: one in the Ashmolean (ex Crondall hoard, 1828) and one in the American Numismatic Society, New York (found Pas-de-Calais, before 1887).  There is no example in the British Museum.  All three known pieces are struck from the same obverse die, but different reverse dies.  The Ashmolean's piece allows the complete reading of the inscription, but this has the best portrait.  The form of the king's name can be compared with those used by Bede, Adulualdi and Audubaldi.  The reverse inscription, when compared with the other two, is probably to be interpreted as a corruption of a moneyer's name ( . . . bal) and Londenus.  The fineness of this and the Ashmolean coin (72% and 69%) show that they belong near the head of the Anglo-Saxon series, and were probably struck c.630.  Eadbald was the son of King Æthelberht who received Augustine's mission, and a contemporary of King Rædwald, the probable occupant of the Sutton Hoo ship grave.  According the Bede, Eadbald was initially a heathen, but was converted some years after his accession.  The Christian iconography of this coin is notable.  The fact that the coins were struck at London, in the East Saxon kingdom, has puzzled scholars, but it must reflect the status of the city and the extent of Eadbald's authority.",
+      "url": "https://museumdata.uk/objects/7f4333c8-7a23-3185-977b-6843009be9f7",
+      "creator": "Eadbald (616-40)",
+      "date": "616"
+    }
+  },
+  {
+    "id": "mds:d281fd46-e671-35de-84cf-014ec4de58c6",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-34575",
+    "_sourceUrl": "https://museumdata.uk/objects/d281fd46-e671-35de-84cf-014ec4de58c6",
+    "title": "MDS Record 44",
+    "description": "Seal matrix, finger ring, Middle Saxon swivelling gold seal matrix, originally the bezel of a signet ring of which the axis bar survives, second half of 7th century; obverse with two standing figures with a cross above, reverse engraved with a full face beneath a cross and legend BALDE hILDIS",
+    "date": "650 AD-699 AD",
+    "subject": [
+      "seal matrix; signet ring; finger ring; seal matrix; seal matrix",
+      "seal matrix; signet ring; finger ring; seal matrix; seal matrix",
+      "archaeology",
+      "tools and equipment",
+      "dress and personal accessories"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "d281fd46-e671-35de-84cf-014ec4de58c6",
+      "objectNumber": "Norwich_Archaeology2-34575",
+      "material": [
+        "gold"
+      ],
+      "place": [
+        "Neustria",
+        "France"
+      ],
+      "condition": "excellent",
+      "dimensions": [
+        "diameter",
+        "width",
+        "11",
+        "4"
+      ],
+      "inscriptionContent": "BALDE hILDIS",
+      "personAssociation": [
+        "queen",
+        "king"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "seal matrix; signet ring; finger ring; seal matrix; seal matrix"
+        ],
+        "Brief description": [
+          "Seal matrix, finger ring, Middle Saxon swivelling gold seal matrix, originally the bezel of a signet ring of which the axis bar survives, second half of 7th century; obverse with two standing figures with a cross above, reverse engraved with a full face beneath a cross and legend BALDE hILDIS",
+          "This Middle Anglo-Saxon gold seal matrix was discovered by a metal-detector user in a field a few miles east of Norwich. It was originally part of a swivelling finger ring. The style of its engravings immediately indicated its Anglo-Saxon date.",
+          "Close inspection of the seal matrix at Norwich Castle Museum revealed contrasting images on the two faces. On the front is the face of a queen, beneath a cross, and bearing the legend BALDEHILDIS in Frankish lettering. On the reverse is a very personal impression showing two naked figures.",
+          "Subsequent study managed to associate the object with Balthild, who was the wife and queen of Clovis II, king of Burgundy and Neustria (639-658). Balthild is known to have been an Anglo-Saxon of elite birth, perhaps a relative of King Ricberht of East Anglia. The depiction on the reverse presumably shows Balthild and Clovis in an erotic position beneath a cross. Thus the matrix had one side which could be used for official communications while the more intimate side could be used for those of a personal nature.",
+          "As queen Balthild abolished the practice of trading in Christian slaves. She is also famed for founding monasteries. On the death of her husband she acted as regent to his son Clotaire. When he came of age in 664 she retired to a convent, where she dedicated her remaining years to the service of the poor. She was made a saint following her death in 680.",
+          "So why was such an important and valuable object found in central Norfolk? It is possible that this personal seal may have been returned to her family, still in England, after her death."
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "11.1.2000"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "tools and equipment",
+          "dress and personal accessories"
+        ],
+        "Associated person": [
+          "Bathilde, Queen of Neustria",
+          "Balthild, Queen of Neustria",
+          "Clovis II, King of Neustria"
+        ],
+        "Person's association": [
+          "queen",
+          "king"
+        ],
+        "Associated place": [
+          "Neustria",
+          "France"
+        ],
+        "Place status": [
+          "country"
+        ],
+        "Condition": [
+          "excellent"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Dimension": [
+          "diameter",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "11",
+          "4"
+        ],
+        "Inscription content": [
+          "BALDE hILDIS"
+        ],
+        "Inscription description": [
+          "full face beneath cross"
+        ],
+        "Inscription method": [
+          "engraving"
+        ],
+        "Inscription position": [
+          "reverse"
+        ],
+        "Inscription type": [
+          "inscription"
+        ],
+        "Material": [
+          "gold"
+        ],
+        "Object name": [
+          "seal matrix; signet ring; finger ring; seal matrix; seal matrix"
+        ],
+        "Object number": [
+          "NWHCM : 2000.42"
+        ],
+        "Object production date": [
+          "650 AD-699 AD"
+        ],
+        "Date - earliest / single": [
+          "650"
+        ],
+        "Date - latest": [
+          "699"
+        ],
+        "Other number": [
+          "2000.42"
+        ],
+        "Other number type": [
+          "assigned number"
+        ],
+        "Reproduction format": [
+          "jpeg"
+        ],
+        "Reproduction type": [
+          "image"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:d281fd46-e671-35de-84cf-014ec4de58c6",
+      "title": "MDS Record 44",
+      "url": "https://museumdata.uk/objects/d281fd46-e671-35de-84cf-014ec4de58c6",
+      "date": "650 AD-699 AD"
+    }
+  },
+  {
+    "id": "mds:f5d779f8-7f05-3379-a0ca-706330a9ec4f",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-50361",
+    "_sourceUrl": "https://museumdata.uk/objects/f5d779f8-7f05-3379-a0ca-706330a9ec4f",
+    "title": "MDS Record 45",
+    "description": "Anglo-Saxon silver gilt mount in the form of a fish, made from a sheet folded lengthways and hammered together at the tail.  A gap or socket runs along the rest of the underside as far as the head.  The tail and the head, which has suffered slight damage and distortion, are cut to shape and gilded, and both are edged on both faces with an engraved groove.  Black niello remains in a small part of the groove near the head.  The eyes, punched with an annular stamp, were probably also inlaid.  The dorsal fin is fixed in a slot, probably with solder, and the gilt and hooked pectoral fins, of which one is incomplete, are held in drilled holes with their inner ends hammered flat.  Most of the surface is covered with the punched impressions of a triangular stamp with concave sides, arranged so that the majority form sexfoils.  The impressions were inlaid with niello, but the material has been lost from a number.  On the underside, behind the pectoral fins, the edges are marked by a pair of rounded notches produced by wear.  Despite the relative sizes and positions of the snout and eyes it is most likely that the object is intended to be a pike, the most distinctive feature of which is a single dorsal fin placed quite near the tail.  It is uncertain to what the mount that would have been attached, and no close parallel has been noted.  One possiblility is that it was originally positioned on a small rod atttached to the underside and mounted in a hanging bowl to appear as though swimming in water, as was found in the Sutton Hoo Mound assemblage. Date 6th-7th century.",
+    "date": "500 AD-700 AD",
+    "subject": [
+      "mount",
+      "mount",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "f5d779f8-7f05-3379-a0ca-706330a9ec4f",
+      "objectNumber": "Norwich_Archaeology2-50361",
+      "dimensions": [
+        "depth",
+        "height",
+        "length",
+        "weight",
+        "width",
+        "0.9 - 1.2",
+        "7.2",
+        "51",
+        "5.90",
+        "6.3"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "mount"
+        ],
+        "Brief description": [
+          "Anglo-Saxon silver gilt mount in the form of a fish, made from a sheet folded lengthways and hammered together at the tail.  A gap or socket runs along the rest of the underside as far as the head.  The tail and the head, which has suffered slight damage and distortion, are cut to shape and gilded, and both are edged on both faces with an engraved groove.  Black niello remains in a small part of the groove near the head.  The eyes, punched with an annular stamp, were probably also inlaid.  The dorsal fin is fixed in a slot, probably with solder, and the gilt and hooked pectoral fins, of which one is incomplete, are held in drilled holes with their inner ends hammered flat.  Most of the surface is covered with the punched impressions of a triangular stamp with concave sides, arranged so that the majority form sexfoils.  The impressions were inlaid with niello, but the material has been lost from a number.  On the underside, behind the pectoral fins, the edges are marked by a pair of rounded notches produced by wear.  Despite the relative sizes and positions of the snout and eyes it is most likely that the object is intended to be a pike, the most distinctive feature of which is a single dorsal fin placed quite near the tail.  It is uncertain to what the mount that would have been attached, and no close parallel has been noted.  One possiblility is that it was originally positioned on a small rod atttached to the underside and mounted in a hanging bowl to appear as though swimming in water, as was found in the Sutton Hoo Mound assemblage. Date 6th-7th century."
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Associated concept": [
+          "archaeology"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "length",
+          "weight",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm",
+          "g"
+        ],
+        "Dimension value": [
+          "0.9 - 1.2",
+          "7.2",
+          "51",
+          "5.90",
+          "6.3"
+        ],
+        "Object name": [
+          "mount"
+        ],
+        "Object number": [
+          "NWHCM : 2010.8"
+        ],
+        "Object production date": [
+          "500 AD-700 AD"
+        ],
+        "Date - earliest / single": [
+          "500"
+        ],
+        "Date - latest": [
+          "700"
+        ],
+        "Reproduction format": [
+          "jpeg"
+        ],
+        "Reproduction type": [
+          "image"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:f5d779f8-7f05-3379-a0ca-706330a9ec4f",
+      "title": "MDS Record 45",
+      "url": "https://museumdata.uk/objects/f5d779f8-7f05-3379-a0ca-706330a9ec4f",
+      "date": "500 AD-700 AD"
+    }
+  },
+  {
+    "id": "mds:ee536138-ef00-3c54-b625-890abdf8c681",
+    "_source": "mds",
+    "_sourceId": "Norwich_Archaeology2-25326",
+    "_sourceUrl": "https://museumdata.uk/objects/ee536138-ef00-3c54-b625-890abdf8c681",
+    "title": "MDS Record 46",
+    "description": "Silver gilt sword pommel cap, ovoid in plan, hemispherical in elevation, and hollow on the underside, with a perforation in the top for the tang, and two small holes on both faces, one of which is filled with hard grey material. Zoomorphic relief decoration, entirely removed through wear from the top and almost all of one face, is in Style II. On the better preserved face are two interlacing beasts, with one head and one tail at both ends, which form an arch over a semicircular border framing a space around the small hole. On the other face only one small patch of decoration is extant, a three-toed foot and a tail. In the centre there is a similar framed space around the hole. Both holes lie near the centres of roughly circular recesses, perhaps containing decorative inlays of some sort. The holes probably contained rivets securing the object to the organic material of the hilt. However the cap may simply have been impaled on the tang and the rivets have been only decorative. This alternative is supported by the material remaining in one hole, perhaps fixative. No parallel for the form has been noted, the large majority of contemporary pommel caps being of 'cocked hat' type. The style of animal ornament suggests a late 6th to early 7th-century date. An explanation for the unusual design is made by Dr Vladimir Vassilev, who suggestes that this is in fact a component of a large pommel with 'sword ring' arrangement, of his ring-type 2b, the fixed pseudo-ring. On p. 5 of his article 'The role of ring-sword of the aristocracy in Early Middle Europe', his examples of type 2b, with which we could compare our object (NMS-BE3EB3), include K136, K163 and K291 from the Staffordshire Hoard (Fern et al’s catalogue numbers 77, 75 and 76 respectively). K291 (Fern No. 76) is photographed with a scale, so we can make a decent comparison. 'Dr Vassilev says that there are no other comparisons and although I can’t find any statement to that effect from a quick flick through Fern et al, I have no reason to doubt him' - Helen Geake pers. comm. 27.4.23",
+    "subject": [
+      "sword pommel cap; sword",
+      "sword pommel cap; sword",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "ee536138-ef00-3c54-b625-890abdf8c681",
+      "objectNumber": "Norwich_Archaeology2-25326",
+      "material": [
+        "gilt",
+        "silver"
+      ],
+      "dimensions": [
+        "height",
+        "length",
+        "weight",
+        "width",
+        "11.5",
+        "23.5",
+        "6.54",
+        "12"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "sword pommel cap; sword"
+        ],
+        "Brief description": [
+          "Silver gilt sword pommel cap, ovoid in plan, hemispherical in elevation, and hollow on the underside, with a perforation in the top for the tang, and two small holes on both faces, one of which is filled with hard grey material. Zoomorphic relief decoration, entirely removed through wear from the top and almost all of one face, is in Style II. On the better preserved face are two interlacing beasts, with one head and one tail at both ends, which form an arch over a semicircular border framing a space around the small hole. On the other face only one small patch of decoration is extant, a three-toed foot and a tail. In the centre there is a similar framed space around the hole. Both holes lie near the centres of roughly circular recesses, perhaps containing decorative inlays of some sort. The holes probably contained rivets securing the object to the organic material of the hilt. However the cap may simply have been impaled on the tang and the rivets have been only decorative. This alternative is supported by the material remaining in one hole, perhaps fixative. No parallel for the form has been noted, the large majority of contemporary pommel caps being of 'cocked hat' type. The style of animal ornament suggests a late 6th to early 7th-century date. An explanation for the unusual design is made by Dr Vladimir Vassilev, who suggestes that this is in fact a component of a large pommel with 'sword ring' arrangement, of his ring-type 2b, the fixed pseudo-ring. On p. 5 of his article 'The role of ring-sword of the aristocracy in Early Middle Europe', his examples of type 2b, with which we could compare our object (NMS-BE3EB3), include K136, K163 and K291 from the Staffordshire Hoard (Fern et al’s catalogue numbers 77, 75 and 76 respectively). K291 (Fern No. 76) is photographed with a scale, so we can make a decent comparison. 'Dr Vassilev says that there are no other comparisons and although I can’t find any statement to that effect from a quick flick through Fern et al, I have no reason to doubt him' - Helen Geake pers. comm. 27.4.23"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Associated concept": [
+          "archaeology"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Dimension": [
+          "height",
+          "length",
+          "weight",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm",
+          "g"
+        ],
+        "Dimension value": [
+          "11.5",
+          "23.5",
+          "6.54",
+          "12"
+        ],
+        "Material": [
+          "gilt",
+          "silver"
+        ],
+        "Object name": [
+          "sword pommel cap; sword"
+        ],
+        "Object number": [
+          "NWHCM : 2008.204"
+        ],
+        "Reproduction format": [
+          "jpeg"
+        ],
+        "Reproduction type": [
+          "image"
+        ],
+        "Responsible department/section": [
+          "Archaeology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:14.326Z",
+      "query": "sutton hoo",
+      "recordId": "mds:ee536138-ef00-3c54-b625-890abdf8c681",
+      "title": "MDS Record 46",
+      "url": "https://museumdata.uk/objects/ee536138-ef00-3c54-b625-890abdf8c681"
+    }
+  }
+]

@@ -1,0 +1,60 @@
+[
+  {
+    "id": "llds:20.500.14106/2004",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/2004",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/2004",
+    "_pid": "https://hdl.handle.net/20.500.14106/2004",
+    "title": "The last days of Pompeii / by Edward George Bulwer-Lytton",
+    "description": "This work was published in various locations in 1834 and the exact source is not clear.",
+    "creator": "Lytton, Edward Bulwer Lytton, Baron, 1803-1873",
+    "date": "1834",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/2004",
+      "branding": "Oxford Text Archive Core Collection",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-05-29T14:01:20.658Z",
+      "query": "pompeii",
+      "recordId": "llds:20.500.14106/2004",
+      "title": "The last days of Pompeii / by Edward George Bulwer-Lytton",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/2004",
+      "pid": "https://hdl.handle.net/20.500.14106/2004",
+      "creator": "Lytton, Edward Bulwer Lytton, Baron, 1803-1873",
+      "date": "1834"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/0410",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/0410",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/0410",
+    "_pid": "https://hdl.handle.net/20.500.14106/0410",
+    "title": "Dipinti on amphorae from Rome and Pompeii from Corpus Inscriptionum Latinarum 4 and 15",
+    "description": "Resource deposited with the Oxford Text Archive.",
+    "date": "0-79",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/0410",
+      "branding": "Oxford Text Archive Legacy Collection",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-05-29T14:01:20.658Z",
+      "query": "pompeii",
+      "recordId": "llds:20.500.14106/0410",
+      "title": "Dipinti on amphorae from Rome and Pompeii from Corpus Inscriptionum Latinarum 4 and 15",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/0410",
+      "pid": "https://hdl.handle.net/20.500.14106/0410",
+      "date": "0-79"
+    }
+  }
+]

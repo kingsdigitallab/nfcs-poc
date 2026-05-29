@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "c10de3e0-0836-4008-83f0-05a6ae62b158",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/c10de3e0-0836-4008-83f0-05a6ae62b158/",
+    "_service": "bodleian",
+    "title": "Three details from \"The description of such lands, roades, and harbours as weare obserued in the Riall Ann her first voyage, with their seuerall showes, appearing markes and depthes; by Will. Baffin and Rob. Sommersonn\"",
+    "date": "16th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/e9d58135-5786-4cdd-bc2a-2e540e2ca69f/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "c10de3e0-0836-4008-83f0-05a6ae62b158",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/c10de3e0-0836-4008-83f0-05a6ae62b158.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/e9d58135-5786-4cdd-bc2a-2e540e2ca69f/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Rawl. A. 301 [fols. 1r, 9r, 10r]",
+      "origins": "",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 3
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:19.548Z",
+      "query": "silk road",
+      "title": "Three details from \"The description of such lands, roades, and harbours as weare obserued in the Riall Ann her first voyage, with their seuerall showes, appearing markes and depthes; by Will. Baffin and Rob. Sommersonn\"",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/c10de3e0-0836-4008-83f0-05a6ae62b158/",
+      "date": "16th century"
+    }
+  },
+  {
+    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+    "_service": "bodleian",
+    "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+    "date": "1623",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/390fd0e8-9eae-475d-9564-ed916ab9035c.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Arch. G c.7",
+      "origins": "London",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 920
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:19.548Z",
+      "query": "silk road",
+      "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+      "date": "1623"
+    }
+  }
+]

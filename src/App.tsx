@@ -24,6 +24,7 @@ import { ExpandedOutputPanel } from './nodes/ExpandedOutputPanel'
 import { ChatSidebar } from './components/ChatSidebar'
 import { ConnectionSuggestions, HandlePicker, NODE_PARAM_HANDLES, type Suggestion } from './components/ConnectionSuggestions'
 import { FixturePreflightPanel } from './components/FixturePreflightPanel'
+import { FixtureReferenceCard } from './components/FixtureReferenceCard'
 
 /**
  * Handle ids that must only ever carry ONE inbound connection. These are the
@@ -1167,6 +1168,7 @@ export default function App() {
             ⚠ {loadError}
           </span>
         )}
+        <FixtureReferenceCard />
         {import.meta.env.DEV && <FixturePreflightPanel />}
         <button
           style={{ ...templateBtnStyle, background: showOllama ? '#312e81' : undefined, color: showOllama ? '#fff' : undefined, borderColor: showOllama ? '#312e81' : undefined }}

@@ -1,0 +1,4401 @@
+[
+  {
+    "id": "mds:ec96e6a2-23c4-3da7-aeab-55c0bb3f1e45",
+    "_source": "mds",
+    "_sourceId": "O61646",
+    "_sourceUrl": "https://museumdata.uk/objects/ec96e6a2-23c4-3da7-aeab-55c0bb3f1e45",
+    "title": "Galapagos diary. A complete guide to the archipelago's birdlife.",
+    "creator": [
+      "HEINZEL, Hermann and HALL, Barnaby",
+      "Christopher Helm"
+    ],
+    "date": "2000",
+    "subject": [
+      "Book",
+      "Book",
+      "Birds: Galapagos",
+      "Galapagos Islands",
+      "Galapagos Archipelago"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "ec96e6a2-23c4-3da7-aeab-55c0bb3f1e45",
+      "objectNumber": "O61646",
+      "place": [
+        "London"
+      ],
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "272",
+        "24"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Galapagos diary. A complete guide to the archipelago's birdlife."
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Birds: Galapagos",
+          "Galapagos Islands",
+          "Galapagos Archipelago"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "272",
+          "24"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "L.2006.532"
+        ],
+        "Object production date": [
+          "2000"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production organisation": [
+          "Christopher Helm"
+        ],
+        "Organisation's association": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "HEINZEL, Hermann and HALL, Barnaby"
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Object production place": [
+          "London"
+        ],
+        "Place association": [
+          "Published"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:ec96e6a2-23c4-3da7-aeab-55c0bb3f1e45",
+      "title": "Galapagos diary. A complete guide to the archipelago's birdlife.",
+      "url": "https://museumdata.uk/objects/ec96e6a2-23c4-3da7-aeab-55c0bb3f1e45",
+      "creator": [
+        "HEINZEL, Hermann and HALL, Barnaby",
+        "Christopher Helm"
+      ],
+      "date": "2000"
+    }
+  },
+  {
+    "id": "mds:9a36efba-8610-3e79-9885-e7bab42877de",
+    "_source": "mds",
+    "_sourceId": "1995.506.22",
+    "_sourceUrl": "https://museumdata.uk/objects/9a36efba-8610-3e79-9885-e7bab42877de",
+    "title": "Galapagos sea-lions",
+    "description": "A colour photograph of Galapagos sea-lions.\nThe mount is cream and  measures 440 x 535 x 20mm.\nAnimal",
+    "creator": "Angel, Heather",
+    "subject": [
+      "photograph",
+      "photograph"
+    ],
+    "type": "Museum object",
+    "collection": "Nature in Art",
+    "mds": {
+      "uuid": "9a36efba-8610-3e79-9885-e7bab42877de",
+      "objectNumber": "1995.506.22",
+      "material": [
+        "printed photographed paper"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Galapagos sea-lions"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "A colour photograph of Galapagos sea-lions.\nThe mount is cream and  measures 440 x 535 x 20mm.\nAnimal"
+        ],
+        "Collection": [
+          "Nature in Art"
+        ],
+        "Material": [
+          "printed photographed paper"
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "1995.506.22"
+        ],
+        "Object production person": [
+          "Angel, Heather"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:9a36efba-8610-3e79-9885-e7bab42877de",
+      "title": "Galapagos sea-lions",
+      "url": "https://museumdata.uk/objects/9a36efba-8610-3e79-9885-e7bab42877de",
+      "creator": "Angel, Heather"
+    }
+  },
+  {
+    "id": "mds:167c1654-1cf3-3880-8f22-0e6876953be9",
+    "_source": "mds",
+    "_sourceId": "1995.506.5",
+    "_sourceUrl": "https://museumdata.uk/objects/167c1654-1cf3-3880-8f22-0e6876953be9",
+    "title": "Galapagos hawk hovering",
+    "description": "A colour photograph of a Galapagos hawk hovering.\nThe mount is cream and  measures 440 x 535 x 20mm.\nBird, sky",
+    "creator": "Angel, Heather",
+    "subject": [
+      "photograph",
+      "photograph"
+    ],
+    "type": "Museum object",
+    "collection": "Nature in Art",
+    "mds": {
+      "uuid": "167c1654-1cf3-3880-8f22-0e6876953be9",
+      "objectNumber": "1995.506.5",
+      "material": [
+        "printed photographed paper"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Galapagos hawk hovering"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "A colour photograph of a Galapagos hawk hovering.\nThe mount is cream and  measures 440 x 535 x 20mm.\nBird, sky"
+        ],
+        "Collection": [
+          "Nature in Art"
+        ],
+        "Material": [
+          "printed photographed paper"
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "1995.506.5"
+        ],
+        "Object production person": [
+          "Angel, Heather"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:167c1654-1cf3-3880-8f22-0e6876953be9",
+      "title": "Galapagos hawk hovering",
+      "url": "https://museumdata.uk/objects/167c1654-1cf3-3880-8f22-0e6876953be9",
+      "creator": "Angel, Heather"
+    }
+  },
+  {
+    "id": "mds:cb05c019-dffb-34de-8df3-d28fa25eb4e6",
+    "_source": "mds",
+    "_sourceId": "O1101952",
+    "_sourceUrl": "https://museumdata.uk/objects/cb05c019-dffb-34de-8df3-d28fa25eb4e6",
+    "title": "Kicker Rocks, Galapagos Islands 1966",
+    "description": "Photograph (dye transfer print)",
+    "creator": "Eliot Porter",
+    "date": "20th century",
+    "subject": [
+      "Photograph",
+      "Photograph",
+      "Photographs",
+      "Landscapes"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria and Albert Museum",
+    "mds": {
+      "uuid": "cb05c019-dffb-34de-8df3-d28fa25eb4e6",
+      "objectNumber": "O1101952",
+      "material": [
+        "photographic paper"
+      ],
+      "place": [
+        "Galapagos",
+        "Galapagos",
+        "Galapagos",
+        "Pacific"
+      ],
+      "inscriptionContent": "/No./ 66-2291\n/Title/ Kicker Rock  Galapagos",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Kicker Rocks, Galapagos Islands 1966"
+        ],
+        "Object name(s)": [
+          "Photograph"
+        ],
+        "Brief description": [
+          "Photograph (dye transfer print)",
+          "'Kicker Rocks, Galapagos Islands 1966'; photograph (dye transfer print) by Eliot Porter, 1966"
+        ],
+        "Collection": [
+          "Victoria and Albert Museum"
+        ],
+        "Associated concept": [
+          "Photographs",
+          "Landscapes"
+        ],
+        "Associated place": [
+          "Galapagos",
+          "Pacific"
+        ],
+        "Content - place": [
+          "Galapagos"
+        ],
+        "Credit line": [
+          "Acquired from the Artist in 1975."
+        ],
+        "Inscription content": [
+          "/No./ 66-2291\n/Title/ Kicker Rock  Galapagos"
+        ],
+        "Inscription interpretation": [
+          "Stamped on the back and in Indian ink"
+        ],
+        "Material": [
+          "photographic paper"
+        ],
+        "Object name": [
+          "Photograph"
+        ],
+        "Object number": [
+          "CIRC.501-1975"
+        ],
+        "Object production date": [
+          "20th century",
+          "22 May 1966"
+        ],
+        "Date - association": [
+          "made",
+          "Photographed"
+        ],
+        "Date - earliest / single": [
+          "1900-01-01",
+          "1966-05-22"
+        ],
+        "Date - latest": [
+          "1999-12-31",
+          "1966-05-22"
+        ],
+        "Object production person": [
+          "Eliot Porter"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Object production place": [
+          "Galapagos"
+        ],
+        "Place association": [
+          "photographed"
+        ],
+        "Physical description": [
+          "Photograph (dye transfer print)"
+        ],
+        "Responsible department/section": [
+          "PDP"
+        ],
+        "Technique": [
+          "dye transfer",
+          "photography",
+          "photographic paper, dye transfer print"
+        ],
+        "Text": [
+          "https://collections.vam.ac.uk/item/O1101952/"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ],
+        "Reference": [
+          "Taken from Departmental Circulation Register 1975"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:cb05c019-dffb-34de-8df3-d28fa25eb4e6",
+      "title": "Kicker Rocks, Galapagos Islands 1966",
+      "url": "https://museumdata.uk/objects/cb05c019-dffb-34de-8df3-d28fa25eb4e6",
+      "creator": "Eliot Porter",
+      "date": "20th century"
+    }
+  },
+  {
+    "id": "mds:8a38705f-761b-3c62-89a4-f724d629aacc",
+    "_source": "mds",
+    "_sourceId": "O1101953",
+    "_sourceUrl": "https://museumdata.uk/objects/8a38705f-761b-3c62-89a4-f724d629aacc",
+    "title": "Dead Mangroves, Punta Espinosa, Galapagos Islands, 1966",
+    "description": "Photograph (dye transfer print)",
+    "creator": "Eliot Porter",
+    "date": "20th century",
+    "subject": [
+      "Photograph",
+      "Photograph",
+      "Photographs",
+      "Landscapes"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria and Albert Museum",
+    "mds": {
+      "uuid": "8a38705f-761b-3c62-89a4-f724d629aacc",
+      "objectNumber": "O1101953",
+      "material": [
+        "photographic paper"
+      ],
+      "place": [
+        "Galapagos",
+        "Galapagos",
+        "Pacific Ocean",
+        "Galapagos"
+      ],
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Dead Mangroves, Punta Espinosa, Galapagos Islands, 1966"
+        ],
+        "Object name(s)": [
+          "Photograph"
+        ],
+        "Brief description": [
+          "Photograph (dye transfer print)",
+          "'Dead Mangroves, Punta Espinosa, Galapagos Islands, 1966'; photograph (dye transfer print) by Eliot Porter, 1966"
+        ],
+        "Collection": [
+          "Victoria and Albert Museum"
+        ],
+        "Associated concept": [
+          "Photographs",
+          "Landscapes"
+        ],
+        "Associated place": [
+          "Pacific Ocean",
+          "Galapagos"
+        ],
+        "Content - place": [
+          "Galapagos"
+        ],
+        "Credit line": [
+          "Acquired from the Artist in 1975."
+        ],
+        "Material": [
+          "photographic paper"
+        ],
+        "Object name": [
+          "Photograph"
+        ],
+        "Object number": [
+          "CIRC.500-1975"
+        ],
+        "Object production date": [
+          "20th century",
+          "7 April 1966"
+        ],
+        "Date - association": [
+          "made",
+          "photographed"
+        ],
+        "Date - earliest / single": [
+          "1900-01-01",
+          "1966-04-07"
+        ],
+        "Date - latest": [
+          "1999-12-31",
+          "1966-04-07"
+        ],
+        "Object production person": [
+          "Eliot Porter"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Object production place": [
+          "Galapagos"
+        ],
+        "Place association": [
+          "photographed"
+        ],
+        "Physical description": [
+          "Photograph (dye transfer print)"
+        ],
+        "Responsible department/section": [
+          "PDP"
+        ],
+        "Technique": [
+          "dye transfer",
+          "photography",
+          "photographic paper, dye transfer print"
+        ],
+        "Text": [
+          "https://collections.vam.ac.uk/item/O1101953/"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ],
+        "Reference": [
+          "Taken from Departmental Circulation Register 1975"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:8a38705f-761b-3c62-89a4-f724d629aacc",
+      "title": "Dead Mangroves, Punta Espinosa, Galapagos Islands, 1966",
+      "url": "https://museumdata.uk/objects/8a38705f-761b-3c62-89a4-f724d629aacc",
+      "creator": "Eliot Porter",
+      "date": "20th century"
+    }
+  },
+  {
+    "id": "mds:4470f4fc-5440-35ac-b573-4108bafdfa61",
+    "_source": "mds",
+    "_sourceId": "NaturalHistory_collections-32188",
+    "_sourceUrl": "https://museumdata.uk/objects/4470f4fc-5440-35ac-b573-4108bafdfa61",
+    "title": "MDS Record 6",
+    "description": "Bird, taxidermy specimen, Galapagos Hawk (Buteo galapagoensis) from Galapagos Islands",
+    "subject": [
+      "Buteo galapagensis; Buteo galapagoensis; Galapagos Hawk; skindefault value until specimen located; bird",
+      "Buteo galapagensis; Buteo galapagoensis; Galapagos Hawk; skindefault value until specimen located; bird",
+      "zoology",
+      "vertebrates",
+      "birds"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "4470f4fc-5440-35ac-b573-4108bafdfa61",
+      "objectNumber": "NaturalHistory_collections-32188",
+      "condition": "fairdefault value",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Buteo galapagensis; Buteo galapagoensis; Galapagos Hawk; skindefault value until specimen located; bird"
+        ],
+        "Brief description": [
+          "Bird, taxidermy specimen, Galapagos Hawk (Buteo galapagoensis) from Galapagos Islands"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "1894"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "zoology",
+          "vertebrates",
+          "birds"
+        ],
+        "Condition": [
+          "fairdefault value"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "Buteo galapagensis; Buteo galapagoensis; Galapagos Hawk; skindefault value until specimen located; bird"
+        ],
+        "Object number": [
+          "NWHCM : 1894.57"
+        ],
+        "Responsible department/section": [
+          "Natural History-Zoology : Norwich Castle Museum"
+        ],
+        "Technique": [
+          "taxidermy"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:4470f4fc-5440-35ac-b573-4108bafdfa61",
+      "title": "MDS Record 6",
+      "url": "https://museumdata.uk/objects/4470f4fc-5440-35ac-b573-4108bafdfa61"
+    }
+  },
+  {
+    "id": "mds:aef1317e-62d7-33c5-bfbf-fab7c4854c7e",
+    "_source": "mds",
+    "_sourceId": "NaturalHistory_collections-32588",
+    "_sourceUrl": "https://museumdata.uk/objects/aef1317e-62d7-33c5-bfbf-fab7c4854c7e",
+    "title": "MDS Record 7",
+    "description": "Bird, taxidermy specimen, Galapagos Hawk (Buteo galapagoensis) from Galapagos Islands",
+    "subject": [
+      "Buteo galapagensis; Buteo galapagoensis; Galapagos Hawk; skindefault value until specimen located; bird",
+      "Buteo galapagensis; Buteo galapagoensis; Galapagos Hawk; skindefault value until specimen located; bird",
+      "zoology",
+      "vertebrates",
+      "birds"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "aef1317e-62d7-33c5-bfbf-fab7c4854c7e",
+      "objectNumber": "NaturalHistory_collections-32588",
+      "condition": "fairdefault value",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Buteo galapagensis; Buteo galapagoensis; Galapagos Hawk; skindefault value until specimen located; bird"
+        ],
+        "Brief description": [
+          "Bird, taxidermy specimen, Galapagos Hawk (Buteo galapagoensis) from Galapagos Islands"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "1901"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "zoology",
+          "vertebrates",
+          "birds"
+        ],
+        "Condition": [
+          "fairdefault value"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "Buteo galapagensis; Buteo galapagoensis; Galapagos Hawk; skindefault value until specimen located; bird"
+        ],
+        "Object number": [
+          "NWHCM : 1901.10.1"
+        ],
+        "Responsible department/section": [
+          "Natural History-Zoology : Norwich Castle Museum"
+        ],
+        "Technique": [
+          "taxidermy"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:aef1317e-62d7-33c5-bfbf-fab7c4854c7e",
+      "title": "MDS Record 7",
+      "url": "https://museumdata.uk/objects/aef1317e-62d7-33c5-bfbf-fab7c4854c7e"
+    }
+  },
+  {
+    "id": "mds:7e5ca203-3b6a-36d5-88d2-eb3675f4381b",
+    "_source": "mds",
+    "_sourceId": "74120",
+    "_sourceUrl": "https://museumdata.uk/objects/7e5ca203-3b6a-36d5-88d2-eb3675f4381b",
+    "title": "Colour photograph showing St Ninian (II), renamed Buccaneer, at the Galapagos Islands, Ecuador",
+    "date": "1980",
+    "subject": [
+      "photograph",
+      "photograph",
+      "Maritime History"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "7e5ca203-3b6a-36d5-88d2-eb3675f4381b",
+      "objectNumber": "74120",
+      "material": [
+        "paper"
+      ],
+      "dimensions": [
+        "15.1 x 10.1cm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Colour photograph showing St Ninian (II), renamed Buccaneer, at the Galapagos Islands, Ecuador"
+        ],
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Accession date": [
+          "1999"
+        ],
+        "Acquisition method": [
+          "Gift"
+        ],
+        "Associated concept": [
+          "Maritime History"
+        ],
+        "Associated date": [
+          "1980s"
+        ],
+        "Associated person": [
+          "North of Scotland & Orkney & Shetland Steam Navigation Company"
+        ],
+        "Credit line": [
+          "Presented in 1999 by Mrs Maureen McRobb."
+        ],
+        "Current location": [
+          "View by Appointment - Aberdeen Treasure Hub"
+        ],
+        "Dimension": [
+          "15.1 x 10.1cm"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "ABDMS045382.71"
+        ],
+        "Date - earliest / single": [
+          "1980"
+        ],
+        "Date - latest": [
+          "1989"
+        ],
+        "Object status": [
+          "Accessioned object"
+        ],
+        "Responsible department/section": [
+          "Maritime History"
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/82388"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:7e5ca203-3b6a-36d5-88d2-eb3675f4381b",
+      "title": "Colour photograph showing St Ninian (II), renamed Buccaneer, at the Galapagos Islands, Ecuador",
+      "url": "https://museumdata.uk/objects/7e5ca203-3b6a-36d5-88d2-eb3675f4381b",
+      "date": "1980"
+    }
+  },
+  {
+    "id": "mds:4abc0a5a-3dac-3535-9b94-9b024c2c44fc",
+    "_source": "mds",
+    "_sourceId": "DUNUC",
+    "_sourceUrl": "https://museumdata.uk/objects/4abc0a5a-3dac-3535-9b94-9b024c2c44fc",
+    "title": "MDS Record 9",
+    "description": "*Testudo elephantopus* (or Testudo vicina ?); mounted - Giant tortoise (= Chelonoidis niger )",
+    "subject": [
+      "mounted",
+      "mounted"
+    ],
+    "type": "Museum object",
+    "collection": "University of Dundee Museums",
+    "mds": {
+      "uuid": "4abc0a5a-3dac-3535-9b94-9b024c2c44fc",
+      "objectNumber": "DUNUC",
+      "licence": "CC 0",
+      "allFields": {
+        "Object name(s)": [
+          "mounted"
+        ],
+        "Brief description": [
+          "*Testudo elephantopus* (or Testudo vicina ?); mounted - Giant tortoise (= Chelonoidis niger )"
+        ],
+        "Collection": [
+          "University of Dundee Museums"
+        ],
+        "Field collection place": [
+          "Galapagos IslandsDWT's 1901-2 report lists \"a skeleton and a mounted skin of one of the giant tortoises (Testudo vicina) of the Galapagos Islands, purchased\""
+        ],
+        "Object name": [
+          "mounted"
+        ],
+        "Object number": [
+          "DUNUC 1493"
+        ],
+        "Responsible department/section": [
+          "Zoology Museum Collection"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:4abc0a5a-3dac-3535-9b94-9b024c2c44fc",
+      "title": "MDS Record 9",
+      "url": "https://museumdata.uk/objects/4abc0a5a-3dac-3535-9b94-9b024c2c44fc"
+    }
+  },
+  {
+    "id": "mds:8695c8e9-7174-35c3-9eaf-77fe444779e6",
+    "_source": "mds",
+    "_sourceId": "BPM1633",
+    "_sourceUrl": "https://museumdata.uk/objects/8695c8e9-7174-35c3-9eaf-77fe444779e6",
+    "title": "Testudo sp.",
+    "description": "Giant Tortoise. Galapagos Is.?\nTaxidermy.",
+    "subject": [
+      "Taxidermy",
+      "Taxidermy"
+    ],
+    "type": "Museum object",
+    "collection": "University of St Andrews",
+    "mds": {
+      "uuid": "8695c8e9-7174-35c3-9eaf-77fe444779e6",
+      "objectNumber": "BPM1633",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Testudo sp."
+        ],
+        "Object name(s)": [
+          "Taxidermy"
+        ],
+        "Brief description": [
+          "Giant Tortoise. Galapagos Is.?\nTaxidermy."
+        ],
+        "Collection": [
+          "University of St Andrews"
+        ],
+        "Object name": [
+          "Taxidermy"
+        ],
+        "Object number": [
+          "BPM1633"
+        ],
+        "Responsible department/section": [
+          "BP:C49, Zoology (Bell Pettigrew Museum)"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:8695c8e9-7174-35c3-9eaf-77fe444779e6",
+      "title": "Testudo sp.",
+      "url": "https://museumdata.uk/objects/8695c8e9-7174-35c3-9eaf-77fe444779e6"
+    }
+  },
+  {
+    "id": "mds:587c6749-172f-3949-82ce-f544fa29219d",
+    "_source": "mds",
+    "_sourceId": "DUNUC",
+    "_sourceUrl": "https://museumdata.uk/objects/587c6749-172f-3949-82ce-f544fa29219d",
+    "title": "MDS Record 11",
+    "description": "Testudo elephantopus egg= Geochelone elephantopus - Galapagos tortoise egg",
+    "subject": [
+      "egg",
+      "egg"
+    ],
+    "type": "Museum object",
+    "collection": "University of Dundee Museums",
+    "mds": {
+      "uuid": "587c6749-172f-3949-82ce-f544fa29219d",
+      "objectNumber": "DUNUC",
+      "licence": "CC 0",
+      "allFields": {
+        "Object name(s)": [
+          "egg"
+        ],
+        "Brief description": [
+          "Testudo elephantopus egg= Geochelone elephantopus - Galapagos tortoise egg"
+        ],
+        "Collection": [
+          "University of Dundee Museums"
+        ],
+        "Field collection place": [
+          "Unknown"
+        ],
+        "Object name": [
+          "egg"
+        ],
+        "Object number": [
+          "DUNUC 1550"
+        ],
+        "Responsible department/section": [
+          "Zoology Museum Collection"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:587c6749-172f-3949-82ce-f544fa29219d",
+      "title": "MDS Record 11",
+      "url": "https://museumdata.uk/objects/587c6749-172f-3949-82ce-f544fa29219d"
+    }
+  },
+  {
+    "id": "mds:0f74546d-1524-3e70-a810-c9ed5b092c55",
+    "_source": "mds",
+    "_sourceId": "79170",
+    "_sourceUrl": "https://museumdata.uk/objects/0f74546d-1524-3e70-a810-c9ed5b092c55",
+    "title": "Itinerary for cruises for MV Bucanero (ex St Ninian II) on tours of the Galapagos Islands",
+    "description": "Page from a brochure with details of the range of cruise available together with some information on the vessel itself, including deck plans",
+    "date": "1989",
+    "subject": [
+      "Advertisement",
+      "Advertisement",
+      "Maritime History"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "0f74546d-1524-3e70-a810-c9ed5b092c55",
+      "objectNumber": "79170",
+      "material": [
+        "paper"
+      ],
+      "dimensions": [
+        "27.5 x 43cm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Itinerary for cruises for MV Bucanero (ex St Ninian II) on tours of the Galapagos Islands"
+        ],
+        "Object name(s)": [
+          "Advertisement"
+        ],
+        "Brief description": [
+          "Page from a brochure with details of the range of cruise available together with some information on the vessel itself, including deck plans"
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Accession date": [
+          "1999"
+        ],
+        "Acquisition method": [
+          "Gift"
+        ],
+        "Associated concept": [
+          "Maritime History"
+        ],
+        "Associated date": [
+          "1989"
+        ],
+        "Associated person": [
+          "Bucanero"
+        ],
+        "Credit line": [
+          "Presented in 1999 by Mrs Maureen McRobb."
+        ],
+        "Current location": [
+          "View by Appointment - Aberdeen Treasure Hub"
+        ],
+        "Dimension": [
+          "27.5 x 43cm"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "Advertisement"
+        ],
+        "Object number": [
+          "ABDMS045412.2"
+        ],
+        "Date - earliest / single": [
+          "1989"
+        ],
+        "Date - latest": [
+          "1989"
+        ],
+        "Object status": [
+          "Accessioned object"
+        ],
+        "Responsible department/section": [
+          "Maritime History"
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/82588"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:0f74546d-1524-3e70-a810-c9ed5b092c55",
+      "title": "Itinerary for cruises for MV Bucanero (ex St Ninian II) on tours of the Galapagos Islands",
+      "url": "https://museumdata.uk/objects/0f74546d-1524-3e70-a810-c9ed5b092c55",
+      "date": "1989"
+    }
+  },
+  {
+    "id": "mds:2da7ddfc-c42c-3eb5-8b1a-2e6f778ee6e5",
+    "_source": "mds",
+    "_sourceId": "79169",
+    "_sourceUrl": "https://museumdata.uk/objects/2da7ddfc-c42c-3eb5-8b1a-2e6f778ee6e5",
+    "title": "Sheet with 1989 departure dates and fares for MV Bucanero (ex St Ninian II) on tours of the Galapagos Islands",
+    "description": "Page from a brochure with details of types of cruise available, their departure dates and the various rates depending on type of cabin",
+    "date": "1989",
+    "subject": [
+      "Advertisement",
+      "Advertisement",
+      "Maritime History"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "2da7ddfc-c42c-3eb5-8b1a-2e6f778ee6e5",
+      "objectNumber": "79169",
+      "material": [
+        "paper"
+      ],
+      "dimensions": [
+        "25.3 x 19.3cm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Sheet with 1989 departure dates and fares for MV Bucanero (ex St Ninian II) on tours of the Galapagos Islands"
+        ],
+        "Object name(s)": [
+          "Advertisement"
+        ],
+        "Brief description": [
+          "Page from a brochure with details of types of cruise available, their departure dates and the various rates depending on type of cabin"
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Accession date": [
+          "1999"
+        ],
+        "Acquisition method": [
+          "Gift"
+        ],
+        "Associated concept": [
+          "Maritime History"
+        ],
+        "Associated date": [
+          "1989"
+        ],
+        "Associated person": [
+          "Bucanero"
+        ],
+        "Credit line": [
+          "Presented in 1999 by Mrs Maureen McRobb."
+        ],
+        "Current location": [
+          "View by Appointment - Aberdeen Treasure Hub"
+        ],
+        "Dimension": [
+          "25.3 x 19.3cm"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "Advertisement"
+        ],
+        "Object number": [
+          "ABDMS045412.1"
+        ],
+        "Date - earliest / single": [
+          "1989"
+        ],
+        "Date - latest": [
+          "1989"
+        ],
+        "Object status": [
+          "Accessioned object"
+        ],
+        "Responsible department/section": [
+          "Maritime History"
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/82587"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:2da7ddfc-c42c-3eb5-8b1a-2e6f778ee6e5",
+      "title": "Sheet with 1989 departure dates and fares for MV Bucanero (ex St Ninian II) on tours of the Galapagos Islands",
+      "url": "https://museumdata.uk/objects/2da7ddfc-c42c-3eb5-8b1a-2e6f778ee6e5",
+      "date": "1989"
+    }
+  },
+  {
+    "id": "mds:ede9e69a-d662-33e1-965d-e2f5b169d6ff",
+    "_source": "mds",
+    "_sourceId": "'52'",
+    "_sourceUrl": "https://museumdata.uk/objects/ede9e69a-d662-33e1-965d-e2f5b169d6ff",
+    "title": "MDS Record 14",
+    "description": "'Cousteau",
+    "subject": [
+      "Titicaca; J.-Y. Galapagos",
+      "Titicaca; J.-Y. Galapagos"
+    ],
+    "type": "Museum object",
+    "collection": "Diving Museum",
+    "mds": {
+      "uuid": "ede9e69a-d662-33e1-965d-e2f5b169d6ff",
+      "objectNumber": "'52'",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Titicaca; J.-Y. Galapagos"
+        ],
+        "Brief description": [
+          "'Cousteau"
+        ],
+        "Collection": [
+          "Diving Museum"
+        ],
+        "Comments": [
+          "the Blue Holes (1973)'"
+        ],
+        "Object name": [
+          "Titicaca; J.-Y. Galapagos"
+        ],
+        "Object number": [
+          "'52'"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:ede9e69a-d662-33e1-965d-e2f5b169d6ff",
+      "title": "MDS Record 14",
+      "url": "https://museumdata.uk/objects/ede9e69a-d662-33e1-965d-e2f5b169d6ff"
+    }
+  },
+  {
+    "id": "mds:7c1f5804-c56b-3c5b-8f72-16f518d55599",
+    "_source": "mds",
+    "_sourceId": "'9884'",
+    "_sourceUrl": "https://museumdata.uk/objects/7c1f5804-c56b-3c5b-8f72-16f518d55599",
+    "title": "MDS Record 15",
+    "description": "'Beebe",
+    "subject": [
+      "1924'; W: Galapagos World's End. New York",
+      "1924'; W: Galapagos World's End. New York"
+    ],
+    "type": "Museum object",
+    "collection": "Diving Museum",
+    "mds": {
+      "uuid": "7c1f5804-c56b-3c5b-8f72-16f518d55599",
+      "objectNumber": "'9884'",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "1924'; W: Galapagos World's End. New York"
+        ],
+        "Brief description": [
+          "'Beebe"
+        ],
+        "Collection": [
+          "Diving Museum"
+        ],
+        "Comments": [
+          "'Book'"
+        ],
+        "Object name": [
+          "1924'; W: Galapagos World's End. New York"
+        ],
+        "Object number": [
+          "'9884'"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:7c1f5804-c56b-3c5b-8f72-16f518d55599",
+      "title": "MDS Record 15",
+      "url": "https://museumdata.uk/objects/7c1f5804-c56b-3c5b-8f72-16f518d55599"
+    }
+  },
+  {
+    "id": "mds:4dd5ec7f-a96b-34e3-b0fd-5fbfa18809bd",
+    "_source": "mds",
+    "_sourceId": "BLDIDNHI002238",
+    "_sourceUrl": "https://museumdata.uk/objects/4dd5ec7f-a96b-34e3-b0fd-5fbfa18809bd",
+    "title": "MDS Record 16",
+    "subject": [
+      "planospira/Lam.; Purpura; Tribulus; MURICIDAE PURPURIDAE, CANCELLARIDAE",
+      "planospira/Lam.; Purpura; Tribulus; MURICIDAE PURPURIDAE, CANCELLARIDAE"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "4dd5ec7f-a96b-34e3-b0fd-5fbfa18809bd",
+      "objectNumber": "BLDIDNHI002238",
+      "numberOfObjects": "1",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "planospira/Lam.; Purpura; Tribulus; MURICIDAE PURPURIDAE, CANCELLARIDAE"
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Field collection place": [
+          "Galapagos Is."
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "planospira/Lam.; Purpura; Tribulus; MURICIDAE PURPURIDAE, CANCELLARIDAE"
+        ],
+        "Other number": [
+          "MOLL01B",
+          "ML 258"
+        ],
+        "Other number type": [
+          "file name",
+          "baseline number"
+        ],
+        "Responsible department/section": [
+          "MOLLUSCA"
+        ],
+        "Sex": [
+          "B."
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:4dd5ec7f-a96b-34e3-b0fd-5fbfa18809bd",
+      "title": "MDS Record 16",
+      "url": "https://museumdata.uk/objects/4dd5ec7f-a96b-34e3-b0fd-5fbfa18809bd"
+    }
+  },
+  {
+    "id": "mds:bda08019-a5ed-370f-b796-16e8cf894c6c",
+    "_source": "mds",
+    "_sourceId": "BLDIDNHI003825",
+    "_sourceUrl": "https://museumdata.uk/objects/bda08019-a5ed-370f-b796-16e8cf894c6c",
+    "title": "MDS Record 17",
+    "subject": [
+      "nux/Brod.; Conus; Coronaxis; CONIDAE",
+      "nux/Brod.; Conus; Coronaxis; CONIDAE"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "bda08019-a5ed-370f-b796-16e8cf894c6c",
+      "objectNumber": "BLDIDNHI003825",
+      "numberOfObjects": "1",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "nux/Brod.; Conus; Coronaxis; CONIDAE"
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Comments": [
+          "'37'"
+        ],
+        "Field collection place": [
+          "Galapagos"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "nux/Brod.; Conus; Coronaxis; CONIDAE"
+        ],
+        "Other number": [
+          "MOLL05B",
+          "ML 1846"
+        ],
+        "Other number type": [
+          "file name",
+          "baseline number"
+        ],
+        "Responsible department/section": [
+          "MOLLUSCA (COMPOSITE)"
+        ],
+        "Sex": [
+          "P."
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:bda08019-a5ed-370f-b796-16e8cf894c6c",
+      "title": "MDS Record 17",
+      "url": "https://museumdata.uk/objects/bda08019-a5ed-370f-b796-16e8cf894c6c"
+    }
+  },
+  {
+    "id": "mds:758ca57a-8026-3345-b3f8-9c7e79e8c060",
+    "_source": "mds",
+    "_sourceId": "O258174",
+    "_sourceUrl": "https://museumdata.uk/objects/758ca57a-8026-3345-b3f8-9c7e79e8c060",
+    "title": "Island Collection",
+    "description": "Colour swatch of printed cotton.",
+    "creator": "Borås Wäfveri AB",
+    "date": "1992",
+    "subject": [
+      "Colour swatch",
+      "Colour swatch",
+      "Textiles",
+      "Interiors"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria and Albert Museum",
+    "mds": {
+      "uuid": "758ca57a-8026-3345-b3f8-9c7e79e8c060",
+      "objectNumber": "O258174",
+      "material": [
+        "cotton (textile)"
+      ],
+      "place": [
+        "Sweden"
+      ],
+      "objectHistory": "Registered File number 1992/2696. With furnishing fabric T.480:1-1992.",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Island Collection"
+        ],
+        "Object name(s)": [
+          "Colour swatch"
+        ],
+        "Brief description": [
+          "Colour swatch of printed cotton.",
+          "Colour swatch of printed cotton 'Galapagos' from the 'Island Collection', designed and made by Borås Wäfveri AB, Sweden, 1992"
+        ],
+        "Collection": [
+          "Victoria and Albert Museum"
+        ],
+        "Associated concept": [
+          "Textiles",
+          "Interiors"
+        ],
+        "Credit line": [
+          "Given by Boras Cotton (UK) Ltd"
+        ],
+        "Current reproduction location": [
+          "https://framemark.vam.ac.uk/collections/2019LJ1250/full/!100,100/0/default.jpg"
+        ],
+        "Location type": [
+          "Thumbnail"
+        ],
+        "Material": [
+          "cotton (textile)"
+        ],
+        "Object history note": [
+          "Registered File number 1992/2696. With furnishing fabric T.480:1-1992.",
+          "Borås Wäfveri AB are one of the largest Scandinavian textile manufacturers, with outlets worldwide. They produce high quality, modern designs for the middle market. The product range includes yarns, furnishing fabrics, upholstery fabrics, bedding, roller blind fabrics, shower curtains and fabrics for work clothes. The Company operates through the following divisons: industrial, production of textiles and yarn, washable fabrics, polyester, artificial silks, bed linen and other household products; commercial, marketing of household textile products through mail-order and general retail. Industrial sales accounted for 79% of 2000 revenues, commercial sales 19%. \n\nBorås the city is a transportation and commercial centre and Sweden's leading textile centre, with numerous cotton and woollen mills. Borås was founded in 1632 by Gustavus II."
+        ],
+        "Object name": [
+          "Colour swatch"
+        ],
+        "Object number": [
+          "T.480:2-1992"
+        ],
+        "Object production date": [
+          "1992"
+        ],
+        "Date - association": [
+          "printed"
+        ],
+        "Date - earliest / single": [
+          "1992-01-01"
+        ],
+        "Date - latest": [
+          "1992-12-31"
+        ],
+        "Object production organisation": [
+          "Borås Wäfveri AB"
+        ],
+        "Organisation's association": [
+          "designer",
+          "manufacturer"
+        ],
+        "Object production place": [
+          "Sweden"
+        ],
+        "Place association": [
+          "made"
+        ],
+        "Physical description": [
+          "Colour swatch of printed cotton."
+        ],
+        "Reproduction number": [
+          "2019LJ1250"
+        ],
+        "Responsible department/section": [
+          "T&F"
+        ],
+        "Technique": [
+          "printed",
+          "Printed cotton"
+        ],
+        "Text": [
+          "https://collections.vam.ac.uk/item/O258174/"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:758ca57a-8026-3345-b3f8-9c7e79e8c060",
+      "title": "Island Collection",
+      "url": "https://museumdata.uk/objects/758ca57a-8026-3345-b3f8-9c7e79e8c060",
+      "creator": "Borås Wäfveri AB",
+      "date": "1992"
+    }
+  },
+  {
+    "id": "mds:f2868d64-2f68-3f09-bdab-846d9aa67025",
+    "_source": "mds",
+    "_sourceId": "BLDIDNHI004609",
+    "_sourceUrl": "https://museumdata.uk/objects/f2868d64-2f68-3f09-bdab-846d9aa67025",
+    "title": "MDS Record 19",
+    "subject": [
+      "nebulosum/Sow.; Cerithium; Weatherhead; CERITHIDAE",
+      "nebulosum/Sow.; Cerithium; Weatherhead; CERITHIDAE"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "f2868d64-2f68-3f09-bdab-846d9aa67025",
+      "objectNumber": "BLDIDNHI004609",
+      "numberOfObjects": "3",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "nebulosum/Sow.; Cerithium; Weatherhead; CERITHIDAE"
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Acquisition date": [
+          "[16.2.1904]"
+        ],
+        "Acquisition method": [
+          "[purchase]"
+        ],
+        "Acquisition reference number": [
+          "1904.04"
+        ],
+        "Acquisition source": [
+          "[Weatherhead, J.R.]"
+        ],
+        "Field collection place": [
+          "Galapagos Is."
+        ],
+        "Number of objects": [
+          "3"
+        ],
+        "Object name": [
+          "nebulosum/Sow.; Cerithium; Weatherhead; CERITHIDAE"
+        ],
+        "Other number": [
+          "MOLL07B",
+          "ML 2630"
+        ],
+        "Other number type": [
+          "file name",
+          "baseline number"
+        ],
+        "Responsible department/section": [
+          "MOLLUSCA (COMPOSITE)"
+        ],
+        "Sex": [
+          "T."
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:f2868d64-2f68-3f09-bdab-846d9aa67025",
+      "title": "MDS Record 19",
+      "url": "https://museumdata.uk/objects/f2868d64-2f68-3f09-bdab-846d9aa67025"
+    }
+  },
+  {
+    "id": "mds:64e4a9e7-8c99-3385-8b58-1ac4088ca10a",
+    "_source": "mds",
+    "_sourceId": "BLDIDNHI004613",
+    "_sourceUrl": "https://museumdata.uk/objects/64e4a9e7-8c99-3385-8b58-1ac4088ca10a",
+    "title": "MDS Record 20",
+    "subject": [
+      "nebulosum/Sow.; Cerithium; CERITHIDAE",
+      "nebulosum/Sow.; Cerithium; CERITHIDAE"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "64e4a9e7-8c99-3385-8b58-1ac4088ca10a",
+      "objectNumber": "BLDIDNHI004613",
+      "numberOfObjects": "1",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "nebulosum/Sow.; Cerithium; CERITHIDAE"
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Comments": [
+          "'3'"
+        ],
+        "Field collection place": [
+          "Galapagos Islands"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "nebulosum/Sow.; Cerithium; CERITHIDAE"
+        ],
+        "Other number": [
+          "MOLL07B",
+          "ML 2634"
+        ],
+        "Other number type": [
+          "file name",
+          "baseline number"
+        ],
+        "Responsible department/section": [
+          "MOLLUSCA (COMPOSITE)"
+        ],
+        "Sex": [
+          "T."
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:64e4a9e7-8c99-3385-8b58-1ac4088ca10a",
+      "title": "MDS Record 20",
+      "url": "https://museumdata.uk/objects/64e4a9e7-8c99-3385-8b58-1ac4088ca10a"
+    }
+  },
+  {
+    "id": "mds:32a09d7e-6f51-30d8-9984-e0fa381226c9",
+    "_source": "mds",
+    "_sourceId": "BLDIDNHI006794",
+    "_sourceUrl": "https://museumdata.uk/objects/32a09d7e-6f51-30d8-9984-e0fa381226c9",
+    "title": "MDS Record 21",
+    "subject": [
+      "striata/Quoy.; Acmaea; PATELLIDAE",
+      "striata/Quoy.; Acmaea (!! = Tectura); PATELLIDAE"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "32a09d7e-6f51-30d8-9984-e0fa381226c9",
+      "objectNumber": "BLDIDNHI006794",
+      "numberOfObjects": "1",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "striata/Quoy.; Acmaea; PATELLIDAE"
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Field collection place": [
+          "Galapagos Islands"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "striata/Quoy.; Acmaea (!! = Tectura); PATELLIDAE"
+        ],
+        "Other number": [
+          "MOLL14B",
+          "ML 4812"
+        ],
+        "Other number type": [
+          "file name",
+          "baseline number"
+        ],
+        "Responsible department/section": [
+          "MOLLUSCA COMPOSITE GASTROPODA"
+        ],
+        "Sex": [
+          "T"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:32a09d7e-6f51-30d8-9984-e0fa381226c9",
+      "title": "MDS Record 21",
+      "url": "https://museumdata.uk/objects/32a09d7e-6f51-30d8-9984-e0fa381226c9"
+    }
+  },
+  {
+    "id": "mds:4a73f4fd-66d1-3d63-8319-7bff1ff2f733",
+    "_source": "mds",
+    "_sourceId": "O96398",
+    "_sourceUrl": "https://museumdata.uk/objects/4a73f4fd-66d1-3d63-8319-7bff1ff2f733",
+    "title": "Island Collection",
+    "description": "Furnishing fabric length of printed cotton. With a simple graphic design of stylised flat fish, black on a green ground. Vertical wavy lines run parallel to the fabric edges and down the centre. 61 cm repeat pattern.",
+    "creator": "Borås Wäfveri AB",
+    "date": "1992",
+    "subject": [
+      "Furnishing fabric",
+      "Furnishing fabric",
+      "fish",
+      "Textiles",
+      "Interiors"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria and Albert Museum",
+    "mds": {
+      "uuid": "4a73f4fd-66d1-3d63-8319-7bff1ff2f733",
+      "objectNumber": "O96398",
+      "material": [
+        "cotton (textile)"
+      ],
+      "place": [
+        "Sweden"
+      ],
+      "dimensions": [
+        "Length",
+        "Width",
+        "337",
+        "152"
+      ],
+      "objectHistory": "Registered File number 1992/2696. With swatch T.480:2-1992.",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Island Collection"
+        ],
+        "Object name(s)": [
+          "Furnishing fabric"
+        ],
+        "Brief description": [
+          "Furnishing fabric length of printed cotton. With a simple graphic design of stylised flat fish, black on a green ground. Vertical wavy lines run parallel to the fabric edges and down the centre. 61 cm repeat pattern.",
+          "Furnishing fabric length of printed cotton 'Galapagos' from the 'Island Collection', designed and made by Borås Wäfveri AB, Sweden, 1992"
+        ],
+        "Collection": [
+          "Victoria and Albert Museum"
+        ],
+        "Associated concept": [
+          "Textiles",
+          "Interiors"
+        ],
+        "Content - concept": [
+          "fish"
+        ],
+        "Credit line": [
+          "Given by Boras Cotton (UK) Ltd"
+        ],
+        "Current reproduction location": [
+          "https://framemark.vam.ac.uk/collections/2019LK6663/full/!100,100/0/default.jpg"
+        ],
+        "Location type": [
+          "Thumbnail"
+        ],
+        "Dimension": [
+          "Length",
+          "Width"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "337",
+          "152"
+        ],
+        "Edition number": [
+          "812 4552"
+        ],
+        "Material": [
+          "cotton (textile)"
+        ],
+        "Object history note": [
+          "Registered File number 1992/2696. With swatch T.480:2-1992.",
+          "Borås Wäfveri AB are one of the largest Scandinavian textile manufacturers, with outlets worldwide. They produce high quality, modern designs for the middle market. The product range includes yarns, furnishing fabrics, upholstery fabrics, bedding, roller blind fabrics, shower curtains and fabrics for work clothes. The Company operates through the following divisons: industrial, production of textiles and yarn, washable fabrics, polyester, artificial silks, bed linen and other household products; commercial, marketing of household textile products through mail-order and general retail. Industrial sales accounted for 79% of 2000 revenues, commercial sales 19%. \n\nBorås the city is a transportation and commercial centre and Sweden's leading textile centre, with numerous cotton and woollen mills. Borås was founded in 1632 by Gustavus II."
+        ],
+        "Object name": [
+          "Furnishing fabric"
+        ],
+        "Object number": [
+          "T.480:1-1992"
+        ],
+        "Object production date": [
+          "1992"
+        ],
+        "Date - association": [
+          "printed"
+        ],
+        "Date - earliest / single": [
+          "1992-01-01"
+        ],
+        "Date - latest": [
+          "1992-12-31"
+        ],
+        "Object production note": [
+          "Reason For Production: Retail"
+        ],
+        "Object production organisation": [
+          "Borås Wäfveri AB"
+        ],
+        "Organisation's association": [
+          "designer",
+          "manufacturer"
+        ],
+        "Object production place": [
+          "Sweden"
+        ],
+        "Place association": [
+          "made"
+        ],
+        "Object status": [
+          "Mass produced"
+        ],
+        "Other number": [
+          "col 08"
+        ],
+        "Physical description": [
+          "Furnishing fabric length of printed cotton. With a simple graphic design of stylised flat fish, black on a green ground. Vertical wavy lines run parallel to the fabric edges and down the centre. 61 cm repeat pattern."
+        ],
+        "Reproduction number": [
+          "2019LK6663"
+        ],
+        "Responsible department/section": [
+          "T&F"
+        ],
+        "Technique": [
+          "printed",
+          "Printed cotton"
+        ],
+        "Text": [
+          "https://collections.vam.ac.uk/item/O96398/",
+          "Boras Wafveri AB is a Swedish Company which designs, manufactures and markets textile products.  The product range includes yarns, furnishing fabrics, upholstery fabrics, bedding, roller blind fabrics and fashion fabrics.  'Galapagos' was produced as part of the 'Island Collection'."
+        ],
+        "Text reason": [
+          "Collections online record",
+          "Gallery label text"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:4a73f4fd-66d1-3d63-8319-7bff1ff2f733",
+      "title": "Island Collection",
+      "url": "https://museumdata.uk/objects/4a73f4fd-66d1-3d63-8319-7bff1ff2f733",
+      "creator": "Borås Wäfveri AB",
+      "date": "1992"
+    }
+  },
+  {
+    "id": "mds:c17e1d4b-b843-3da5-a278-872edb235e97",
+    "_source": "mds",
+    "_sourceId": "https://tmp-placeholder/33173",
+    "_sourceUrl": "https://museumdata.uk/objects/c17e1d4b-b843-3da5-a278-872edb235e97",
+    "title": "Clifftops at South Plaza, Galapagos",
+    "description": "semi abstract view of two cliff edges and swirling sea birds.",
+    "creator": "(artist) Harkess, Lorna Claire (b.1970)",
+    "subject": [
+      "painting, watercolour",
+      "painting, watercolour",
+      "Fine Art and Art Archives"
+    ],
+    "type": "Museum object",
+    "collection": "Culture Perth & Kinross",
+    "mds": {
+      "uuid": "c17e1d4b-b843-3da5-a278-872edb235e97",
+      "objectNumber": "https://tmp-placeholder/33173",
+      "place": [
+        "Pacific",
+        "Galapgaos",
+        "South Plaza",
+        "Galapagos"
+      ],
+      "dimensions": [
+        "H (frame)",
+        "W (frame)",
+        "1180",
+        "1680"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Clifftops at South Plaza, Galapagos"
+        ],
+        "Object name(s)": [
+          "painting, watercolour"
+        ],
+        "Brief description": [
+          "semi abstract view of two cliff edges and swirling sea birds.",
+          "cliff edges and swirling sea birds"
+        ],
+        "Collection": [
+          "Culture Perth & Kinross"
+        ],
+        "Acquisition date": [
+          "16/09/2008"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Associated concept": [
+          "Fine Art and Art Archives"
+        ],
+        "Content - description": [
+          "semi abstract view of two cliff edges and swirling sea birds.",
+          "cliff edges and swirling sea birds"
+        ],
+        "Content - note": [
+          "The subject matter relates directly to the artist's concerns",
+          "with capturing the delicate balance of life in extreme",
+          "environments. The Galapagos Islands are 600 miles west of",
+          "Ecuador surrounded by the Pacific Ocean. They were made famous",
+          "by the publication of Charles Darwin's 'The Origin of Species'.",
+          "This isolated outpost remained realtively untouched by man,",
+          "evolving to become one of the world's unique ecosystems. the",
+          "artist seeks to reflect in this painting the delicate balance",
+          "that exists in nature. Her use of watercolour and its qualities",
+          "of light and energy together with her delicate palette and",
+          "economy of line create a subtle tension while giving a hint of",
+          "the freedom and sense of place experienced by a visit to theis",
+          "unique location."
+        ],
+        "Content - other type": [
+          "landscape",
+          "landscape, seascape, animals, birds, Galapagos"
+        ],
+        "Content - place": [
+          "Pacific",
+          "Galapgaos",
+          "South Plaza",
+          "Galapagos"
+        ],
+        "Dimension": [
+          "H (frame)",
+          "W (frame)"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "1180",
+          "1680"
+        ],
+        "Object name": [
+          "painting, watercolour"
+        ],
+        "Object number": [
+          "2008.332"
+        ],
+        "Object production note": [
+          "2008",
+          "painted in pure watercolour and on a scale that is the artist's",
+          "largest to date. In treatment and handling this work shows very",
+          "strongly the influence of a study visit to China where she was",
+          "able to observe the work of Chinese calligraphy artists. She",
+          "used Chinese calligraphy brushes to paint this work. Painted at",
+          "a time of transition the work illustrates a move towards more",
+          "abstract form."
+        ],
+        "Object production person": [
+          "(artist) Harkess, Lorna Claire (b.1970)"
+        ],
+        "Reproduction number": [
+          "2008-332.jpg"
+        ],
+        "Technique": [
+          "watercolour on paper"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:c17e1d4b-b843-3da5-a278-872edb235e97",
+      "title": "Clifftops at South Plaza, Galapagos",
+      "url": "https://museumdata.uk/objects/c17e1d4b-b843-3da5-a278-872edb235e97",
+      "creator": "(artist) Harkess, Lorna Claire (b.1970)"
+    }
+  },
+  {
+    "id": "mds:9d1c84fd-2f82-3bec-8450-a563cd6c01e2",
+    "_source": "mds",
+    "_sourceId": "TRURI",
+    "_sourceUrl": "https://museumdata.uk/objects/9d1c84fd-2f82-3bec-8450-a563cd6c01e2",
+    "title": "MDS Record 24",
+    "description": "specimen of Helophorus walkeri",
+    "subject": [
+      "beetle; Bannister Collection",
+      "beetle; Bannister Collection",
+      "ZOOLOGY",
+      "Zoology - Coleoptera",
+      "Hydrophilidae",
+      "Helophorus",
+      "walkeri",
+      "entomology"
+    ],
+    "type": "Museum object",
+    "collection": "Cornwall Museum and Art Gallery",
+    "mds": {
+      "uuid": "9d1c84fd-2f82-3bec-8450-a563cd6c01e2",
+      "objectNumber": "TRURI",
+      "dimensions": [
+        "length",
+        "mm"
+      ],
+      "numberOfObjects": "one",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "beetle; Bannister Collection"
+        ],
+        "Brief description": [
+          "specimen of Helophorus walkeri"
+        ],
+        "Collection": [
+          "Cornwall Museum and Art Gallery"
+        ],
+        "Acquisition date": [
+          "23.11.1976"
+        ],
+        "Acquisition method": [
+          "bequest"
+        ],
+        "Associated concept": [
+          "ZOOLOGY",
+          "Zoology - Coleoptera",
+          "Hydrophilidae",
+          "Helophorus",
+          "walkeri",
+          "entomology"
+        ],
+        "Dimension": [
+          "length"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Field collection place": [
+          "Flacana",
+          "Galapagos",
+          "Ecuador"
+        ],
+        "Place environmental details": [
+          "on dead sealion on beach"
+        ],
+        "Number of objects": [
+          "one"
+        ],
+        "Object name": [
+          "beetle; Bannister Collection"
+        ],
+        "Object number": [
+          "TRURI : 1976.34.a5263"
+        ],
+        "Responsible department/section": [
+          "coleoptera"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:9d1c84fd-2f82-3bec-8450-a563cd6c01e2",
+      "title": "MDS Record 24",
+      "url": "https://museumdata.uk/objects/9d1c84fd-2f82-3bec-8450-a563cd6c01e2"
+    }
+  },
+  {
+    "id": "mds:874b7126-e140-3adc-b573-552a514c3989",
+    "_source": "mds",
+    "_sourceId": "TRURI",
+    "_sourceUrl": "https://museumdata.uk/objects/874b7126-e140-3adc-b573-552a514c3989",
+    "title": "MDS Record 25",
+    "description": "specimen of Stenus nitidiusculus",
+    "subject": [
+      "beetle; Bannister Collection",
+      "beetle; Bannister Collection",
+      "ZOOLOGY",
+      "Zoology - Coleoptera",
+      "Staphylinidae",
+      "Stenus",
+      "nitidiusculus",
+      "entomology"
+    ],
+    "type": "Museum object",
+    "collection": "Cornwall Museum and Art Gallery",
+    "mds": {
+      "uuid": "874b7126-e140-3adc-b573-552a514c3989",
+      "objectNumber": "TRURI",
+      "dimensions": [
+        "length",
+        "mm"
+      ],
+      "numberOfObjects": "one",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "beetle; Bannister Collection"
+        ],
+        "Brief description": [
+          "specimen of Stenus nitidiusculus"
+        ],
+        "Collection": [
+          "Cornwall Museum and Art Gallery"
+        ],
+        "Acquisition date": [
+          "23.11.1976"
+        ],
+        "Acquisition method": [
+          "bequest"
+        ],
+        "Associated concept": [
+          "ZOOLOGY",
+          "Zoology - Coleoptera",
+          "Staphylinidae",
+          "Stenus",
+          "nitidiusculus",
+          "entomology"
+        ],
+        "Dimension": [
+          "length"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Field collection place": [
+          "Flacana",
+          "Galapagos",
+          "Ecuador"
+        ],
+        "Place environmental details": [
+          "on dead sealion on beach"
+        ],
+        "Number of objects": [
+          "one"
+        ],
+        "Object name": [
+          "beetle; Bannister Collection"
+        ],
+        "Object number": [
+          "TRURI : 1976.34.a5264"
+        ],
+        "Responsible department/section": [
+          "coleoptera"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:874b7126-e140-3adc-b573-552a514c3989",
+      "title": "MDS Record 25",
+      "url": "https://museumdata.uk/objects/874b7126-e140-3adc-b573-552a514c3989"
+    }
+  },
+  {
+    "id": "mds:31331530-8fb6-30d6-a0f4-970370f6f985",
+    "_source": "mds",
+    "_sourceId": "57271",
+    "_sourceUrl": "https://museumdata.uk/objects/31331530-8fb6-30d6-a0f4-970370f6f985",
+    "title": "Painting of St Ninian (II)",
+    "description": "oil painting in wooden frame",
+    "date": "1950",
+    "subject": [
+      "painting",
+      "painting",
+      "Paintings And Drawings"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "31331530-8fb6-30d6-a0f4-970370f6f985",
+      "objectNumber": "57271",
+      "material": [
+        "oil"
+      ],
+      "dimensions": [
+        "49.8 x 58.1cm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Painting of St Ninian (II)"
+        ],
+        "Object name(s)": [
+          "painting"
+        ],
+        "Brief description": [
+          "oil painting in wooden frame"
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Accession date": [
+          "13/11/2002"
+        ],
+        "Acquisition method": [
+          "Gift"
+        ],
+        "Associated concept": [
+          "Paintings And Drawings"
+        ],
+        "Associated date": [
+          "1950"
+        ],
+        "Associated person": [
+          "Daniel Ferguson McDowell"
+        ],
+        "Credit line": [
+          "Presented in 2002 by the P&O Art Collection."
+        ],
+        "Current location": [
+          "View by Appointment - Aberdeen Treasure Hub"
+        ],
+        "Dimension": [
+          "49.8 x 58.1cm"
+        ],
+        "Material": [
+          "oil"
+        ],
+        "Object name": [
+          "painting"
+        ],
+        "Object number": [
+          "ABDAG013153"
+        ],
+        "Date - earliest / single": [
+          "1950"
+        ],
+        "Date - latest": [
+          "1950"
+        ],
+        "Object status": [
+          "Accessioned object"
+        ],
+        "Responsible department/section": [
+          "Maritime History"
+        ],
+        "Right type": [
+          "© Daniel Ferguson McDowell"
+        ],
+        "Text": [
+          "St Ninian (II) was built in Dundee in 1950 for the North of Scotland & Orkney & Shetland Steam Navigation Company.  The vessel was the company's largest to date and their first twin-screw motor ship.  St Ninian operated company services between Leith, Aberdeen, Orkney and Shetland until its sale in 1971.  By 1976, St Ninian (now known as Buccaneer) was owned by the Galapagos Tourist Corporation, Ecuador and operated regular cruises to the Galapagos Islands.  This work provides quite a contrast to the island voyages for which St Ninian was originally constructed."
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/17502"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:31331530-8fb6-30d6-a0f4-970370f6f985",
+      "title": "Painting of St Ninian (II)",
+      "url": "https://museumdata.uk/objects/31331530-8fb6-30d6-a0f4-970370f6f985",
+      "date": "1950"
+    }
+  },
+  {
+    "id": "mds:3a3f39c8-bc0e-3d4d-97c7-58f38856d6b5",
+    "_source": "mds",
+    "_sourceId": "BLDIDNHI004916",
+    "_sourceUrl": "https://museumdata.uk/objects/3a3f39c8-bc0e-3d4d-97c7-58f38856d6b5",
+    "title": "MDS Record 27",
+    "subject": [
+      "planicostata/Sow.; Planaxis; PLANAXIDAE",
+      "planicostata/Sow.; Planaxis; PLANAXIDAE"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "3a3f39c8-bc0e-3d4d-97c7-58f38856d6b5",
+      "objectNumber": "BLDIDNHI004916",
+      "condition": "3 glued",
+      "numberOfObjects": "3",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "planicostata/Sow.; Planaxis; PLANAXIDAE"
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Condition": [
+          "3 glued"
+        ],
+        "Field collection place": [
+          "Galapagos"
+        ],
+        "Number of objects": [
+          "3"
+        ],
+        "Object name": [
+          "planicostata/Sow.; Planaxis; PLANAXIDAE"
+        ],
+        "Other number": [
+          "MOLL08B",
+          "ML 2934"
+        ],
+        "Other number type": [
+          "file name",
+          "baseline number"
+        ],
+        "Responsible department/section": [
+          "MOLLUSCA COMPOSITE GASTROPODA"
+        ],
+        "Sex": [
+          "P"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:3a3f39c8-bc0e-3d4d-97c7-58f38856d6b5",
+      "title": "MDS Record 27",
+      "url": "https://museumdata.uk/objects/3a3f39c8-bc0e-3d4d-97c7-58f38856d6b5"
+    }
+  },
+  {
+    "id": "mds:f7f9dc0c-0cc4-38c8-9bc6-544f3164fb2f",
+    "_source": "mds",
+    "_sourceId": "RNM",
+    "_sourceUrl": "https://museumdata.uk/objects/f7f9dc0c-0cc4-38c8-9bc6-544f3164fb2f",
+    "title": "HMS Kent (1901) circa 1915.",
+    "description": "Page from album. Photograph, black and white, of a large cactus plant on the Galapagos Islands. Petty officer in whites standing before it.",
+    "date": "1910",
+    "subject": [
+      "photographs; photograph",
+      "photographs; photograph"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "f7f9dc0c-0cc4-38c8-9bc6-544f3164fb2f",
+      "objectNumber": "RNM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "HMS Kent (1901) circa 1915."
+        ],
+        "Object name(s)": [
+          "photographs; photograph"
+        ],
+        "Brief description": [
+          "Page from album. Photograph, black and white, of a large cactus plant on the Galapagos Islands. Petty officer in whites standing before it."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Object name": [
+          "photographs; photograph"
+        ],
+        "Object number": [
+          "RNM 2014/38/115"
+        ],
+        "Date - earliest / single": [
+          "1910"
+        ],
+        "Date - latest": [
+          "1930"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:f7f9dc0c-0cc4-38c8-9bc6-544f3164fb2f",
+      "title": "HMS Kent (1901) circa 1915.",
+      "url": "https://museumdata.uk/objects/f7f9dc0c-0cc4-38c8-9bc6-544f3164fb2f",
+      "date": "1910"
+    }
+  },
+  {
+    "id": "mds:1e327c5c-593d-3a6c-a9d4-3c7ca0331307",
+    "_source": "mds",
+    "_sourceId": "1989.123.61",
+    "_sourceUrl": "https://museumdata.uk/objects/1e327c5c-593d-3a6c-a9d4-3c7ca0331307",
+    "title": "MDS Record 29",
+    "subject": [
+      "Geochelone elephantopus",
+      "Geochelone elephantopus (ephippium?) (Gunther, 1875)",
+      "Zoology Vertebrates: Reptiles and Amphibians"
+    ],
+    "type": "Museum object",
+    "collection": "National Museums Liverpool",
+    "mds": {
+      "uuid": "1e327c5c-593d-3a6c-a9d4-3c7ca0331307",
+      "objectNumber": "1989.123.61",
+      "material": [
+        "Osteological preparation Skull"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Geochelone elephantopus"
+        ],
+        "Collection": [
+          "National Museums Liverpool"
+        ],
+        "Associated concept": [
+          "Zoology Vertebrates: Reptiles and Amphibians"
+        ],
+        "Field collection date": [
+          "Not recorded"
+        ],
+        "Field collection place": [
+          "Americas: South America: Galápagos Islands [Ecuador]: Pinzon Island"
+        ],
+        "Field collector": [
+          "Not recorded"
+        ],
+        "Material": [
+          "Osteological preparation Skull"
+        ],
+        "Object name": [
+          "Geochelone elephantopus (ephippium?) (Gunther, 1875)"
+        ],
+        "Object number": [
+          "1989.123.61"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:1e327c5c-593d-3a6c-a9d4-3c7ca0331307",
+      "title": "MDS Record 29",
+      "url": "https://museumdata.uk/objects/1e327c5c-593d-3a6c-a9d4-3c7ca0331307"
+    }
+  },
+  {
+    "id": "mds:43966cdc-aa3a-3354-b9b5-9fcce053cf49",
+    "_source": "mds",
+    "_sourceId": "TRURI",
+    "_sourceUrl": "https://museumdata.uk/objects/43966cdc-aa3a-3354-b9b5-9fcce053cf49",
+    "title": "MDS Record 30",
+    "subject": [
+      "beetle; Bannister Collection",
+      "beetle; Bannister Collection",
+      "ZOOLOGY",
+      "Zoology - Coleoptera",
+      "Trichopterygidae",
+      "Trichopteryx",
+      "fascicularis",
+      "entomology"
+    ],
+    "type": "Museum object",
+    "collection": "Cornwall Museum and Art Gallery",
+    "mds": {
+      "uuid": "43966cdc-aa3a-3354-b9b5-9fcce053cf49",
+      "objectNumber": "TRURI",
+      "dimensions": [
+        "length",
+        "mm"
+      ],
+      "numberOfObjects": "one",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "beetle; Bannister Collection"
+        ],
+        "Collection": [
+          "Cornwall Museum and Art Gallery"
+        ],
+        "Acquisition date": [
+          "23.11.1976"
+        ],
+        "Acquisition method": [
+          "bequest"
+        ],
+        "Associated concept": [
+          "ZOOLOGY",
+          "Zoology - Coleoptera",
+          "Trichopterygidae",
+          "Trichopteryx",
+          "fascicularis",
+          "entomology"
+        ],
+        "Dimension": [
+          "length"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Field collection place": [
+          "James Island",
+          "Galapagos",
+          "Ecuador"
+        ],
+        "Place environmental details": [
+          "under stone"
+        ],
+        "Number of objects": [
+          "one"
+        ],
+        "Object name": [
+          "beetle; Bannister Collection"
+        ],
+        "Object number": [
+          "TRURI : 1976.34.a5256"
+        ],
+        "Responsible department/section": [
+          "coleoptera"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:43966cdc-aa3a-3354-b9b5-9fcce053cf49",
+      "title": "MDS Record 30",
+      "url": "https://museumdata.uk/objects/43966cdc-aa3a-3354-b9b5-9fcce053cf49"
+    }
+  },
+  {
+    "id": "mds:c3640439-780c-325c-91e5-b0984ade5eb2",
+    "_source": "mds",
+    "_sourceId": "T:2001.300",
+    "_sourceUrl": "https://museumdata.uk/objects/c3640439-780c-325c-91e5-b0984ade5eb2",
+    "title": "MDS Record 31",
+    "description": "gastropod; Boat Ear Moon (Sinum cymba Menke); low spired shell; large body whorl",
+    "subject": [
+      "shell specimen; gastropod; shell",
+      "shell specimen; gastropod; shell",
+      "natural history"
+    ],
+    "type": "Museum object",
+    "collection": "Poole Museum",
+    "mds": {
+      "uuid": "c3640439-780c-325c-91e5-b0984ade5eb2",
+      "objectNumber": "T:2001.300",
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "5.5 cm"
+      ],
+      "objectHistory": "Possible range W.S. America, Galapagos",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "shell specimen; gastropod; shell"
+        ],
+        "Brief description": [
+          "gastropod; Boat Ear Moon (Sinum cymba Menke); low spired shell; large body whorl"
+        ],
+        "Collection": [
+          "Poole Museum"
+        ],
+        "Associated concept": [
+          "natural history"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "5.5 cm"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Possible range W.S. America, Galapagos"
+        ],
+        "Object name": [
+          "shell specimen; gastropod; shell"
+        ],
+        "Object number": [
+          "T:2001.300"
+        ],
+        "User's reference": [
+          "Dance, S. Peter : 1992: Eyewitness Shells: Dorling Kindersley: p.78: 0-7513-1001-8"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:c3640439-780c-325c-91e5-b0984ade5eb2",
+      "title": "MDS Record 31",
+      "url": "https://museumdata.uk/objects/c3640439-780c-325c-91e5-b0984ade5eb2"
+    }
+  },
+  {
+    "id": "mds:1d9d227c-52de-3f17-89ce-b5cdc27bf16e",
+    "_source": "mds",
+    "_sourceId": "T:2001.241",
+    "_sourceUrl": "https://museumdata.uk/objects/1d9d227c-52de-3f17-89ce-b5cdc27bf16e",
+    "title": "MDS Record 32",
+    "description": "gastropod; Boat Ear Moon (Sinum cymba Menke); low spired shell; large body whorl; purplish/brown colouring",
+    "subject": [
+      "shell specimen; gastropod; shell",
+      "shell specimen; gastropod; shell",
+      "natural history"
+    ],
+    "type": "Museum object",
+    "collection": "Poole Museum",
+    "mds": {
+      "uuid": "1d9d227c-52de-3f17-89ce-b5cdc27bf16e",
+      "objectNumber": "T:2001.241",
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "5 cm"
+      ],
+      "objectHistory": "possible range W.S. America, Galapagos",
+      "numberOfObjects": "2",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "shell specimen; gastropod; shell"
+        ],
+        "Brief description": [
+          "gastropod; Boat Ear Moon (Sinum cymba Menke); low spired shell; large body whorl; purplish/brown colouring"
+        ],
+        "Collection": [
+          "Poole Museum"
+        ],
+        "Associated concept": [
+          "natural history"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "5 cm"
+        ],
+        "Number of objects": [
+          "2"
+        ],
+        "Object history note": [
+          "possible range W.S. America, Galapagos"
+        ],
+        "Object name": [
+          "shell specimen; gastropod; shell"
+        ],
+        "Object number": [
+          "T:2001.241"
+        ],
+        "User's reference": [
+          "Dance, S. Peter : 1992: Eyewitness Shells: Dorling Kindersley: p.78: 0-7513-1001-8"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:1d9d227c-52de-3f17-89ce-b5cdc27bf16e",
+      "title": "MDS Record 32",
+      "url": "https://museumdata.uk/objects/1d9d227c-52de-3f17-89ce-b5cdc27bf16e"
+    }
+  },
+  {
+    "id": "mds:17c25c56-44d9-3e2f-86f3-7c833f910a07",
+    "_source": "mds",
+    "_sourceId": "BLDIDNHI015559",
+    "_sourceUrl": "https://museumdata.uk/objects/17c25c56-44d9-3e2f-86f3-7c833f910a07",
+    "title": "MDS Record 33",
+    "subject": [
+      "janus/ Reeve; Chama; CHAMIDAE",
+      "janus/ Reeve; Chama; CHAMIDAE"
+    ],
+    "type": "Museum object",
+    "collection": "Nottingham Museums",
+    "mds": {
+      "uuid": "17c25c56-44d9-3e2f-86f3-7c833f910a07",
+      "objectNumber": "BLDIDNHI015559",
+      "condition": "Good",
+      "numberOfObjects": "1",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "janus/ Reeve; Chama; CHAMIDAE"
+        ],
+        "Collection": [
+          "Nottingham Museums"
+        ],
+        "Condition": [
+          "Good"
+        ],
+        "Field collection place": [
+          "Galapagos"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "janus/ Reeve; Chama; CHAMIDAE"
+        ],
+        "Other number": [
+          "SHELLS1B",
+          "ML 11093"
+        ],
+        "Other number type": [
+          "file name",
+          "baseline number"
+        ],
+        "Responsible department/section": [
+          "WORLD SHELLS MOLLUSC DISPLAY COLLECTION"
+        ],
+        "Text": [
+          "'TRIDACNIDAE' and 'CHAMIDAE' and 'PSAMMOBIIDAE' and paragraphs on Tridacnidae , sub - order Chamacea and sub - order Myacea"
+        ],
+        "Text reason": [
+          "Interior storage label"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:17c25c56-44d9-3e2f-86f3-7c833f910a07",
+      "title": "MDS Record 33",
+      "url": "https://museumdata.uk/objects/17c25c56-44d9-3e2f-86f3-7c833f910a07"
+    }
+  },
+  {
+    "id": "mds:628b754f-bae8-3ad5-8398-e0c44ac4a8af",
+    "_source": "mds",
+    "_sourceId": "BPM1080",
+    "_sourceUrl": "https://museumdata.uk/objects/628b754f-bae8-3ad5-8398-e0c44ac4a8af",
+    "title": "Grapsus strigosus",
+    "description": "A wet specimen of a Land crab in a glass battery jar. The specimen is mounted to a piece of blue acryllic. A label attached to the front of the jar reads 'Land-Crab, Grapsus strigosus, Lord Howe's Is. Galapagos'.",
+    "subject": [
+      "Wet Specimen",
+      "Wet Specimen"
+    ],
+    "type": "Museum object",
+    "collection": "University of St Andrews",
+    "mds": {
+      "uuid": "628b754f-bae8-3ad5-8398-e0c44ac4a8af",
+      "objectNumber": "BPM1080",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Grapsus strigosus"
+        ],
+        "Object name(s)": [
+          "Wet Specimen"
+        ],
+        "Brief description": [
+          "A wet specimen of a Land crab in a glass battery jar. The specimen is mounted to a piece of blue acryllic. A label attached to the front of the jar reads 'Land-Crab, Grapsus strigosus, Lord Howe's Is. Galapagos'."
+        ],
+        "Collection": [
+          "University of St Andrews"
+        ],
+        "Object name": [
+          "Wet Specimen"
+        ],
+        "Object number": [
+          "BPM1080"
+        ],
+        "Responsible department/section": [
+          "BP:C49, Zoology (Bell Pettigrew Museum)"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:628b754f-bae8-3ad5-8398-e0c44ac4a8af",
+      "title": "Grapsus strigosus",
+      "url": "https://museumdata.uk/objects/628b754f-bae8-3ad5-8398-e0c44ac4a8af"
+    }
+  },
+  {
+    "id": "mds:84a867c5-335d-3928-b954-e180b15ef70c",
+    "_source": "mds",
+    "_sourceId": "0f304cd7-fe3d-4133-9014-64fca8ec25c2",
+    "_sourceUrl": "https://museumdata.uk/objects/84a867c5-335d-3928-b954-e180b15ef70c",
+    "title": "MDS Record 35",
+    "subject": [
+      "Pelecypoda; Fossil",
+      "Pelecypoda; Fossil"
+    ],
+    "type": "Museum object",
+    "collection": "University of Aberdeen Collections",
+    "mds": {
+      "uuid": "84a867c5-335d-3928-b954-e180b15ef70c",
+      "objectNumber": "0f304cd7-fe3d-4133-9014-64fca8ec25c2",
+      "place": [
+        "Galapagos, Pacific"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "Pelecypoda; Fossil"
+        ],
+        "Collection": [
+          "University of Aberdeen Collections"
+        ],
+        "Associated date": [
+          "Recent"
+        ],
+        "Associated place": [
+          "Galapagos, Pacific"
+        ],
+        "Object name": [
+          "Pelecypoda; Fossil"
+        ],
+        "Object number": [
+          "ABDUG Pal.7276"
+        ],
+        "Responsible department/section": [
+          "ABDUG University of Aberdeen, Geological Collections"
+        ],
+        "Text": [
+          "https://calm.abdn.ac.uk/museums/Record.aspx?src=CalmView.Catalog&id=ABDUG Pal.7276"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:84a867c5-335d-3928-b954-e180b15ef70c",
+      "title": "MDS Record 35",
+      "url": "https://museumdata.uk/objects/84a867c5-335d-3928-b954-e180b15ef70c"
+    }
+  },
+  {
+    "id": "mds:4985f7d6-b72e-3540-8d84-bc675fd1114e",
+    "_source": "mds",
+    "_sourceId": "288957",
+    "_sourceUrl": "https://museumdata.uk/objects/4985f7d6-b72e-3540-8d84-bc675fd1114e",
+    "title": "urchin",
+    "description": "Label with the specimen: ‘M.C.Z.’ Museum of Comparative Zoology, Harvard, Mass., U.S.A.’\n\nThis object is not on display.",
+    "subject": [
+      "sea-urchin; Cidaridae: Eucidaris thouarsii galapagensis Doderlein",
+      "sea-urchin; Cidaridae: Eucidaris thouarsii galapagensis Doderlein"
+    ],
+    "type": "Museum object",
+    "collection": "Royal Albert Memorial Museum & Art Gallery",
+    "mds": {
+      "uuid": "4985f7d6-b72e-3540-8d84-bc675fd1114e",
+      "objectNumber": "288957",
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "urchin"
+        ],
+        "Object name(s)": [
+          "sea-urchin; Cidaridae: Eucidaris thouarsii galapagensis Doderlein"
+        ],
+        "Brief description": [
+          "Label with the specimen: ‘M.C.Z.’ Museum of Comparative Zoology, Harvard, Mass., U.S.A.’\n\nThis object is not on display."
+        ],
+        "Collection": [
+          "Royal Albert Memorial Museum & Art Gallery"
+        ],
+        "Current location": [
+          "Not on display"
+        ],
+        "Field collection place": [
+          "Galapagos Islands",
+          "Ecuador",
+          "South America",
+          "Latin America and the Caribbean"
+        ],
+        "Object name": [
+          "sea-urchin; Cidaridae: Eucidaris thouarsii galapagensis Doderlein"
+        ],
+        "Object number": [
+          "263/1903/i/330"
+        ],
+        "Reproduction number": [
+          "263-1903-i-330.jpg"
+        ],
+        "Responsible department/section": [
+          "Natural Sciences",
+          "Echinoderms"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:4985f7d6-b72e-3540-8d84-bc675fd1114e",
+      "title": "urchin",
+      "url": "https://museumdata.uk/objects/4985f7d6-b72e-3540-8d84-bc675fd1114e"
+    }
+  },
+  {
+    "id": "mds:133c8e63-e82a-356e-91c7-8bdceb2e76f5",
+    "_source": "mds",
+    "_sourceId": "f6f07541-9966-468e-a862-5a78d26e5d48",
+    "_sourceUrl": "https://museumdata.uk/objects/133c8e63-e82a-356e-91c7-8bdceb2e76f5",
+    "title": "MDS Record 37",
+    "description": "dry",
+    "subject": [
+      "Cypraea suffusa; Littorinimorpha; Gastropoda",
+      "Cypraea suffusa (Gray); Littorinimorpha; Gastropoda"
+    ],
+    "type": "Museum object",
+    "collection": "University of Aberdeen Collections",
+    "mds": {
+      "uuid": "133c8e63-e82a-356e-91c7-8bdceb2e76f5",
+      "objectNumber": "f6f07541-9966-468e-a862-5a78d26e5d48",
+      "place": [
+        "neritic",
+        "Equador Galapagos Is.,  (Altitude: <=0m.)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "Cypraea suffusa; Littorinimorpha; Gastropoda"
+        ],
+        "Brief description": [
+          "dry"
+        ],
+        "Collection": [
+          "University of Aberdeen Collections"
+        ],
+        "Associated place": [
+          "neritic",
+          "Equador Galapagos Is.,  (Altitude: <=0m.)"
+        ],
+        "Object name": [
+          "Cypraea suffusa (Gray); Littorinimorpha; Gastropoda"
+        ],
+        "Object number": [
+          "ABDUZ:5779"
+        ],
+        "Responsible department/section": [
+          "ABDUZ University of Aberdeen, Zoology Museum"
+        ],
+        "Text": [
+          "https://calm.abdn.ac.uk/museums/Record.aspx?src=CalmView.Catalog&id=ABDUZ:5779"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:133c8e63-e82a-356e-91c7-8bdceb2e76f5",
+      "title": "MDS Record 37",
+      "url": "https://museumdata.uk/objects/133c8e63-e82a-356e-91c7-8bdceb2e76f5"
+    }
+  },
+  {
+    "id": "mds:2b5c68de-75bc-3e6a-9ae1-204f94ef5157",
+    "_source": "mds",
+    "_sourceId": "PSGCT.PD274",
+    "_sourceUrl": "https://museumdata.uk/objects/2b5c68de-75bc-3e6a-9ae1-204f94ef5157",
+    "title": "Galapagos",
+    "description": "Coloured etching 13/50. Two circular forms composed of thin black lines. Surrounded by various other line forms some with eyes and beaks.",
+    "creator": "Ernst, Max",
+    "date": "1955",
+    "subject": [
+      "print; dry point coloured etching",
+      "print; dry point coloured etching",
+      "prints and drawings"
+    ],
+    "type": "Museum object",
+    "collection": "Peter Scott Gallery",
+    "mds": {
+      "uuid": "2b5c68de-75bc-3e6a-9ae1-204f94ef5157",
+      "objectNumber": "PSGCT.PD274",
+      "dimensions": [
+        "height x width",
+        "29.5",
+        "35"
+      ],
+      "numberOfObjects": "1",
+      "inscriptionContent": "13/50",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Galapagos"
+        ],
+        "Object name(s)": [
+          "print; dry point coloured etching"
+        ],
+        "Brief description": [
+          "Coloured etching 13/50. Two circular forms composed of thin black lines. Surrounded by various other line forms some with eyes and beaks."
+        ],
+        "Collection": [
+          "Peter Scott Gallery"
+        ],
+        "Associated concept": [
+          "prints and drawings"
+        ],
+        "Dimension": [
+          "height x width"
+        ],
+        "Dimension measured part": [
+          "image",
+          "image mounted"
+        ],
+        "Dimension measurement unit": [
+          "cms"
+        ],
+        "Dimension value": [
+          "29.5",
+          "35"
+        ],
+        "Inscription content": [
+          "13/50"
+        ],
+        "Inscription method": [
+          "numbered"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "print; dry point coloured etching"
+        ],
+        "Object number": [
+          "PSGCT.PD274"
+        ],
+        "Object production date": [
+          "1955"
+        ],
+        "Object production person": [
+          "Ernst, Max"
+        ],
+        "Person's nationality": [
+          "German"
+        ],
+        "Technique": [
+          "dry point coloured etching"
+        ],
+        "User's reference": [
+          "'Max Ernst: Beyond Surrealism' A Retrospective of the Artist's Books and Prints Ed: Robert Rainwater NY public Libraries and Oxford University Press"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:2b5c68de-75bc-3e6a-9ae1-204f94ef5157",
+      "title": "Galapagos",
+      "url": "https://museumdata.uk/objects/2b5c68de-75bc-3e6a-9ae1-204f94ef5157",
+      "creator": "Ernst, Max",
+      "date": "1955"
+    }
+  },
+  {
+    "id": "mds:2873dc1d-c0a7-3365-8026-352d8a587f94",
+    "_source": "mds",
+    "_sourceId": "NaturalHistory_collections-32589",
+    "_sourceUrl": "https://museumdata.uk/objects/2873dc1d-c0a7-3365-8026-352d8a587f94",
+    "title": "MDS Record 39",
+    "description": "Bird, taxidermy specimen, Short-eared Owl (Asio flammeus) from Galapagos Islands",
+    "subject": [
+      "Asio flammeus; Brachyotus galapagensis; Short-eared Owl; skindefault value until specimen located; bird",
+      "Asio flammeus; Brachyotus galapagensis; Short-eared Owl; skindefault value until specimen located; bird",
+      "zoology",
+      "vertebrates",
+      "birds"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "2873dc1d-c0a7-3365-8026-352d8a587f94",
+      "objectNumber": "NaturalHistory_collections-32589",
+      "condition": "fairdefault value",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Asio flammeus; Brachyotus galapagensis; Short-eared Owl; skindefault value until specimen located; bird"
+        ],
+        "Brief description": [
+          "Bird, taxidermy specimen, Short-eared Owl (Asio flammeus) from Galapagos Islands"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "1901"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "zoology",
+          "vertebrates",
+          "birds"
+        ],
+        "Condition": [
+          "fairdefault value"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "Asio flammeus; Brachyotus galapagensis; Short-eared Owl; skindefault value until specimen located; bird"
+        ],
+        "Object number": [
+          "NWHCM : 1901.10.2"
+        ],
+        "Responsible department/section": [
+          "Natural History-Zoology : Norwich Castle Museum"
+        ],
+        "Technique": [
+          "taxidermy"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:2873dc1d-c0a7-3365-8026-352d8a587f94",
+      "title": "MDS Record 39",
+      "url": "https://museumdata.uk/objects/2873dc1d-c0a7-3365-8026-352d8a587f94"
+    }
+  },
+  {
+    "id": "mds:4ab8140f-feb3-3289-a293-6347f2f91ec0",
+    "_source": "mds",
+    "_sourceId": "O202560",
+    "_sourceUrl": "https://museumdata.uk/objects/4ab8140f-feb3-3289-a293-6347f2f91ec0",
+    "title": "Lava Lizards",
+    "description": "Black and white print of two lizard type creatures, stacked on top of each other, one with a green tongue and one with a blue tongue.",
+    "creator": "Veronika Paleckova",
+    "date": "1988",
+    "subject": [
+      "Print",
+      "Print",
+      "Prints"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria and Albert Museum",
+    "mds": {
+      "uuid": "4ab8140f-feb3-3289-a293-6347f2f91ec0",
+      "objectNumber": "O202560",
+      "material": [
+        "Printing ink",
+        "Paper"
+      ],
+      "place": [
+        "Czech Republic"
+      ],
+      "dimensions": [
+        "Width",
+        "Height",
+        "48.8",
+        "32.1",
+        "12",
+        "30.9"
+      ],
+      "personAssociation": [
+        "maker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Lava Lizards"
+        ],
+        "Object name(s)": [
+          "Print"
+        ],
+        "Brief description": [
+          "Black and white print of two lizard type creatures, stacked on top of each other, one with a green tongue and one with a blue tongue.",
+          "'Lava Lizards', etching by Veronika palečková, Czech Republic, 1988."
+        ],
+        "Collection": [
+          "Victoria and Albert Museum"
+        ],
+        "Associated concept": [
+          "Prints"
+        ],
+        "Content - other type": [
+          "Galapagos by Kurt Vonnegurt"
+        ],
+        "Dimension": [
+          "Width",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "48.8",
+          "32.1",
+          "12",
+          "30.9"
+        ],
+        "Material": [
+          "Printing ink",
+          "Paper"
+        ],
+        "Object name": [
+          "Print"
+        ],
+        "Object number": [
+          "E.2517-1992"
+        ],
+        "Object production date": [
+          "1988"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Date - earliest / single": [
+          "1988-01-01"
+        ],
+        "Date - latest": [
+          "1988-12-31"
+        ],
+        "Object production person": [
+          "Veronika Paleckova"
+        ],
+        "Person's association": [
+          "maker"
+        ],
+        "Object production place": [
+          "Czech Republic"
+        ],
+        "Place association": [
+          "Printed"
+        ],
+        "Physical description": [
+          "Black and white print of two lizard type creatures, stacked on top of each other, one with a green tongue and one with a blue tongue."
+        ],
+        "Responsible department/section": [
+          "PDP"
+        ],
+        "Technique": [
+          "Etching",
+          "Etching, ink on paper."
+        ],
+        "Text": [
+          "https://collections.vam.ac.uk/item/O202560/"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:4ab8140f-feb3-3289-a293-6347f2f91ec0",
+      "title": "Lava Lizards",
+      "url": "https://museumdata.uk/objects/4ab8140f-feb3-3289-a293-6347f2f91ec0",
+      "creator": "Veronika Paleckova",
+      "date": "1988"
+    }
+  },
+  {
+    "id": "mds:84aac0aa-1b12-3851-bb17-31b3500c6762",
+    "_source": "mds",
+    "_sourceId": "418393",
+    "_sourceUrl": "https://museumdata.uk/objects/84aac0aa-1b12-3851-bb17-31b3500c6762",
+    "title": "chiton",
+    "description": "Chitons are molluscs that live on the rocky shore. Their shells are made up of several plates that act like a protective armour. They are flexible enough to allow the chiton to securely attach to uneven rock surfaces.\n\nThis object is not on display.",
+    "subject": [
+      "Mollusc; ISCHNOCHITONIDAE: Ischnochiton contractus: Chiton",
+      "Mollusc; ISCHNOCHITONIDAE: Ischnochiton contractus: Chiton"
+    ],
+    "type": "Museum object",
+    "collection": "Royal Albert Memorial Museum & Art Gallery",
+    "mds": {
+      "uuid": "84aac0aa-1b12-3851-bb17-31b3500c6762",
+      "objectNumber": "418393",
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "chiton"
+        ],
+        "Object name(s)": [
+          "Mollusc; ISCHNOCHITONIDAE: Ischnochiton contractus: Chiton"
+        ],
+        "Brief description": [
+          "Chitons are molluscs that live on the rocky shore. Their shells are made up of several plates that act like a protective armour. They are flexible enough to allow the chiton to securely attach to uneven rock surfaces.\n\nThis object is not on display."
+        ],
+        "Collection": [
+          "Royal Albert Memorial Museum & Art Gallery"
+        ],
+        "Current location": [
+          "Not on display"
+        ],
+        "Field collection place": [
+          "Galapagos Islands",
+          "Santa Fe Island [Barrington]",
+          "Ecuador",
+          "South America",
+          "Latin America and the Caribbean"
+        ],
+        "Place coordinates": [
+          "-90.062,-0.818"
+        ],
+        "Field collector": [
+          "Mrs Alison Leadley-Brown  b. 07/1912 (collector)"
+        ],
+        "Object name": [
+          "Mollusc; ISCHNOCHITONIDAE: Ischnochiton contractus: Chiton"
+        ],
+        "Object number": [
+          "112/1982/272"
+        ],
+        "Reproduction number": [
+          "112-1982-272.jpg",
+          "112-1982-272-shot1.jpg"
+        ],
+        "Responsible department/section": [
+          "Natural Sciences",
+          "Molluscs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:84aac0aa-1b12-3851-bb17-31b3500c6762",
+      "title": "chiton",
+      "url": "https://museumdata.uk/objects/84aac0aa-1b12-3851-bb17-31b3500c6762"
+    }
+  },
+  {
+    "id": "mds:eb9c3974-b694-3698-8d36-b9f396501b16",
+    "_source": "mds",
+    "_sourceId": "O156611",
+    "_sourceUrl": "https://museumdata.uk/objects/eb9c3974-b694-3698-8d36-b9f396501b16",
+    "title": "MDS Record 42",
+    "description": "The oval cowrie shell is mounted in silver, with a hinged grater and plain scroll handle.  The shell is held in place by a cruciform cage of silver straps on the upper side; the straps have engailed borders and an escutcheon at the engraved with the initials RB.",
+    "creator": "Unknown",
+    "date": "ca. 1690",
+    "subject": [
+      "Nutmeg grater",
+      "Nutmeg grater",
+      "Food vessels & Tableware",
+      "Metalwork"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria and Albert Museum",
+    "mds": {
+      "uuid": "eb9c3974-b694-3698-8d36-b9f396501b16",
+      "objectNumber": "O156611",
+      "material": [
+        "silver",
+        "cowrie shell"
+      ],
+      "place": [
+        "England"
+      ],
+      "dimensions": [
+        "Length",
+        "Width",
+        "Depth",
+        "Weight",
+        "9.3",
+        "4.5",
+        "3.8",
+        "100"
+      ],
+      "objectHistory": "Provenance: Purchased from S.J.  Schrubsole Corporation, New York, 1980.",
+      "inscriptionContent": "No marks",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Nutmeg grater"
+        ],
+        "Brief description": [
+          "The oval cowrie shell is mounted in silver, with a hinged grater and plain scroll handle.  The shell is held in place by a cruciform cage of silver straps on the upper side; the straps have engailed borders and an escutcheon at the engraved with the initials RB.",
+          "Silver and cowrie shell, England, ca.1690"
+        ],
+        "Collection": [
+          "Victoria and Albert Museum"
+        ],
+        "Associated concept": [
+          "Food vessels & Tableware",
+          "Metalwork"
+        ],
+        "Credit line": [
+          "The Rosalinde and Arthur Gilbert Collection on loan to the Victoria and Albert Museum, London"
+        ],
+        "Current reproduction location": [
+          "https://framemark.vam.ac.uk/collections/2009CC6490/full/!100,100/0/default.jpg"
+        ],
+        "Location type": [
+          "Thumbnail"
+        ],
+        "Dimension": [
+          "Length",
+          "Width",
+          "Depth",
+          "Weight"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "g"
+        ],
+        "Dimension value": [
+          "9.3",
+          "4.5",
+          "3.8",
+          "100"
+        ],
+        "Inscription content": [
+          "No marks",
+          "Engraved with the initals RB"
+        ],
+        "Material": [
+          "silver",
+          "cowrie shell"
+        ],
+        "Object history note": [
+          "Provenance: Purchased from S.J.  Schrubsole Corporation, New York, 1980."
+        ],
+        "Object name": [
+          "Nutmeg grater"
+        ],
+        "Object number": [
+          "LOAN:GILBERT.588-2008"
+        ],
+        "Object production date": [
+          "ca. 1690"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Date - earliest / single": [
+          "1685-01-01"
+        ],
+        "Date - latest": [
+          "1694-12-31"
+        ],
+        "Object production note": [
+          "Engraved with initials RB"
+        ],
+        "Object production person": [
+          "Unknown"
+        ],
+        "Object production place": [
+          "England"
+        ],
+        "Place association": [
+          "made"
+        ],
+        "Other number": [
+          "SG 108",
+          "1996.665",
+          "GB 215",
+          "1998.17"
+        ],
+        "Other number type": [
+          "Arthur Gilbert Number",
+          "The Gilbert Collection, Somerset House"
+        ],
+        "Physical description": [
+          "The oval cowrie shell is mounted in silver, with a hinged grater and plain scroll handle.  The shell is held in place by a cruciform cage of silver straps on the upper side; the straps have engailed borders and an escutcheon at the engraved with the initials RB."
+        ],
+        "Reproduction number": [
+          "2009CC6490",
+          "2009CC6640",
+          "2009CC6639",
+          "2009CC6554",
+          "2009CC6488",
+          "2009CC6487",
+          "2009CC6486"
+        ],
+        "Responsible department/section": [
+          "MET"
+        ],
+        "Technique": [
+          "engraving (incising)",
+          "cutting (dividing)",
+          "mounting",
+          "Engraved silver and cowrie shell"
+        ],
+        "Text": [
+          "https://collections.vam.ac.uk/item/O156611/",
+          "Nutmeg was an expensive spice, used among other things to season the fashionable drink of punch.The use of a shell to catch the nutmeg shavings reinforces the luxury and exoticism of the spice. This species of Cowrie shell is found in the Galapagos Islands and along the west coast of South America.\n\nOutside the wealthiest court circles, 17th-century silver was used primarily for eating and drinking. The dining table was the heart of social activity, and novelty items were made for fashionable new drinks flavoured with spices and drinking games.  The range of British silver for the home from this period (the first for which a representative quantity survives) demonstrates increasing foreign influences from France, the Netherlands and Portugal. The rising demand for fashionably decorated European silver from the 1660s onwards reflects Britain's new wealth and political stability. \n\nSir Arthur Gilbert and his wife Rosalinde formed one of the world's great decorative art collections, including silver,  mosaics, enamelled portrait miniatures and gold boxes.  Arthur Gilbert donated his extraordinary collection to Britain in 1996.",
+          "(Gallery 70, case 4)\n11. Nutmeg grater for seasoning punch\nAbout 1690\n\nEngland\nSilver and cowrie shell from the Galapagos Islands or South America\nEngraved with initials ‘RB’\nMuseum no. Loan:Gilbert.588-2008"
+        ],
+        "Text reason": [
+          "Collections online record",
+          "Summary description",
+          "Gallery label text"
+        ],
+        "Text date": [
+          "16/11/2016 - 20/03/2024"
+        ],
+        "Reference": [
+          "Schroder, Timothy. The Gilbert collection of gold and silver. Los Angeles (Los Angeles County Museum of Art) 1988, cat. no. 32, pp. 135-36.  ISBN.0875871445"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:eb9c3974-b694-3698-8d36-b9f396501b16",
+      "title": "MDS Record 42",
+      "url": "https://museumdata.uk/objects/eb9c3974-b694-3698-8d36-b9f396501b16",
+      "creator": "Unknown",
+      "date": "ca. 1690"
+    }
+  },
+  {
+    "id": "mds:05e48eac-cb86-3c58-8b26-f1ff4383c57d",
+    "_source": "mds",
+    "_sourceId": "127863",
+    "_sourceUrl": "https://museumdata.uk/objects/05e48eac-cb86-3c58-8b26-f1ff4383c57d",
+    "title": "Will's Cigarette Card - ''Do You Know'' 2nd series - No. 3  Which Animals live longest?",
+    "description": "Rectangular cigarette card.  On the front is a landscape-orientated illustration of a large tortoise, crawling along the ground.  It has a brown/green shell and body, and is walking over light brown shore with yellow grass behind it.  At the top right of the card are the words \"Will's Cigarettes\" and at the bottom left is the word \"A Giant Land-Tortoise.\"  On the back side of the card is the name of the issuer (\"W.D. & H.O. Wills\"), the name of the series (\"Do You Know, 2nd Series of 50\"), and a description to go along with Which Animals Live Longest.",
+    "date": "1924",
+    "subject": [
+      "Cigarette Card",
+      "Cigarette Card",
+      "Sports and Recreation"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "05e48eac-cb86-3c58-8b26-f1ff4383c57d",
+      "objectNumber": "127863",
+      "material": [
+        "paper, ink"
+      ],
+      "dimensions": [
+        "6.8 x 3.6cm"
+      ],
+      "inscriptionContent": "NO - 3\n\nWILL'S CIGARETTES\n2nd SERIES OF 50\n\nDO YOU KNOW\nwhich Animals live longest?\n\nThe giant land-tortoise of the Islands of the Indian Ocean, and of the Galapagos Islands, off S. America, are considered to be the longest lived of all animals.  Their chief rivals are the elephants, but exact information as to the age of such animals is difficult to obtain, and naturalists usually regard the land-tortoise as the Methuselah of the animal kingdom.  One of these venerable creatures, brought to England from the Island of Mauritius in 1897, was known to be at least 200 years old, and weighed five cwt.\n\nW.D. & H.O. WILLS\nBRISTOL & LONDON\nISSUED BY THE IMPERIAL TOBACCO CO. (OF GREAT BRITAIN & IRELAND) LTD.",
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Will's Cigarette Card - ''Do You Know'' 2nd series - No. 3  Which Animals live longest?"
+        ],
+        "Object name(s)": [
+          "Cigarette Card"
+        ],
+        "Brief description": [
+          "Rectangular cigarette card.  On the front is a landscape-orientated illustration of a large tortoise, crawling along the ground.  It has a brown/green shell and body, and is walking over light brown shore with yellow grass behind it.  At the top right of the card are the words \"Will's Cigarettes\" and at the bottom left is the word \"A Giant Land-Tortoise.\"  On the back side of the card is the name of the issuer (\"W.D. & H.O. Wills\"), the name of the series (\"Do You Know, 2nd Series of 50\"), and a description to go along with Which Animals Live Longest."
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Acquisition method": [
+          "Gift"
+        ],
+        "Associated concept": [
+          "Sports and Recreation"
+        ],
+        "Associated date": [
+          "1924"
+        ],
+        "Associated person": [
+          "W D & H O Wills"
+        ],
+        "Dimension": [
+          "6.8 x 3.6cm"
+        ],
+        "Inscription content": [
+          "NO - 3\n\nWILL'S CIGARETTES\n2nd SERIES OF 50\n\nDO YOU KNOW\nwhich Animals live longest?\n\nThe giant land-tortoise of the Islands of the Indian Ocean, and of the Galapagos Islands, off S. America, are considered to be the longest lived of all animals.  Their chief rivals are the elephants, but exact information as to the age of such animals is difficult to obtain, and naturalists usually regard the land-tortoise as the Methuselah of the animal kingdom.  One of these venerable creatures, brought to England from the Island of Mauritius in 1897, was known to be at least 200 years old, and weighed five cwt.\n\nW.D. & H.O. WILLS\nBRISTOL & LONDON\nISSUED BY THE IMPERIAL TOBACCO CO. (OF GREAT BRITAIN & IRELAND) LTD."
+        ],
+        "Material": [
+          "paper, ink"
+        ],
+        "Object name": [
+          "Cigarette Card"
+        ],
+        "Object number": [
+          "ABDMS086469.2"
+        ],
+        "Date - earliest / single": [
+          "1924"
+        ],
+        "Date - latest": [
+          "1924"
+        ],
+        "Object status": [
+          "Accessioned object"
+        ],
+        "Responsible department/section": [
+          "Social History"
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/144637"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:05e48eac-cb86-3c58-8b26-f1ff4383c57d",
+      "title": "Will's Cigarette Card - ''Do You Know'' 2nd series - No. 3  Which Animals live longest?",
+      "url": "https://museumdata.uk/objects/05e48eac-cb86-3c58-8b26-f1ff4383c57d",
+      "date": "1924"
+    }
+  },
+  {
+    "id": "mds:e9ee32a0-8db6-3702-a6d0-3676b9269d5c",
+    "_source": "mds",
+    "_sourceId": "68709",
+    "_sourceUrl": "https://museumdata.uk/objects/e9ee32a0-8db6-3702-a6d0-3676b9269d5c",
+    "title": "Wills's Cigarette Card - \"Wonders of the Sea\" series - No. 2  The Marine Iguana",
+    "description": "Rectangular cigarette card.  On the front is a landscape-orientated illustration of a brown and dark green iguana standing on top of a rock at the shore, waves rising up to splash against it and the rock.  At the top right of the card are the words \"Wills's Cigarettes\" and at the bottom right \"Marine Iguana.\"  On the back of the card is the name of the issuer (\"W.D. & H.O. Wills\"), the name of the series (\"Wonders of the Sea, A Series of 50\"), and a description to go along with the illustration of The Marine Iguana.",
+    "subject": [
+      "Cigarette Card",
+      "Cigarette Card",
+      "Sports and Recreation"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "e9ee32a0-8db6-3702-a6d0-3676b9269d5c",
+      "objectNumber": "68709",
+      "material": [
+        "card, ink"
+      ],
+      "dimensions": [
+        "6.7 x 3.5cm"
+      ],
+      "inscriptionContent": "WILL'S CIGARETTES\n2\nWONDERS OF THE SEA\nA SERIES OF 50.\n\nThe Marine Iguana.\nthe only sea lizard in the world.\n\nThe curious Marine Iguana or Sea Lizard, Amblyrhynchus cristatus, the only member of its family, is a native of the Galapagos Islands which lie upon the equator, west of S. America.  It is about four feet in length and has a rudder-like tail.  This Sea Lizard spends the night in a rock-crevice or burrow, and in the morning at low tide it goes down to the edge of the surf.  There it feeds on the seaweed with which the rocks are covered, clinging tightly with its claws as the incoming waves wash completely over it.\n\nW.D. & H.O. WILLS\nISSUED BY THE IMPERIAL TOBACCO CO. (OF GREAT BRITAIN & IRELAND) LTD.",
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Wills's Cigarette Card - \"Wonders of the Sea\" series - No. 2  The Marine Iguana"
+        ],
+        "Object name(s)": [
+          "Cigarette Card"
+        ],
+        "Brief description": [
+          "Rectangular cigarette card.  On the front is a landscape-orientated illustration of a brown and dark green iguana standing on top of a rock at the shore, waves rising up to splash against it and the rock.  At the top right of the card are the words \"Wills's Cigarettes\" and at the bottom right \"Marine Iguana.\"  On the back of the card is the name of the issuer (\"W.D. & H.O. Wills\"), the name of the series (\"Wonders of the Sea, A Series of 50\"), and a description to go along with the illustration of The Marine Iguana."
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Acquisition method": [
+          "Gift"
+        ],
+        "Associated concept": [
+          "Sports and Recreation"
+        ],
+        "Associated person": [
+          "W D & H O Wills"
+        ],
+        "Current location": [
+          "View by Appointment - Aberdeen Treasure Hub"
+        ],
+        "Dimension": [
+          "6.7 x 3.5cm"
+        ],
+        "Inscription content": [
+          "WILL'S CIGARETTES\n2\nWONDERS OF THE SEA\nA SERIES OF 50.\n\nThe Marine Iguana.\nthe only sea lizard in the world.\n\nThe curious Marine Iguana or Sea Lizard, Amblyrhynchus cristatus, the only member of its family, is a native of the Galapagos Islands which lie upon the equator, west of S. America.  It is about four feet in length and has a rudder-like tail.  This Sea Lizard spends the night in a rock-crevice or burrow, and in the morning at low tide it goes down to the edge of the surf.  There it feeds on the seaweed with which the rocks are covered, clinging tightly with its claws as the incoming waves wash completely over it.\n\nW.D. & H.O. WILLS\nISSUED BY THE IMPERIAL TOBACCO CO. (OF GREAT BRITAIN & IRELAND) LTD."
+        ],
+        "Material": [
+          "card, ink"
+        ],
+        "Object name": [
+          "Cigarette Card"
+        ],
+        "Object number": [
+          "ABDMS072010.2"
+        ],
+        "Object status": [
+          "Accessioned object"
+        ],
+        "Responsible department/section": [
+          "Social History"
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/123155"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:e9ee32a0-8db6-3702-a6d0-3676b9269d5c",
+      "title": "Wills's Cigarette Card - \"Wonders of the Sea\" series - No. 2  The Marine Iguana",
+      "url": "https://museumdata.uk/objects/e9ee32a0-8db6-3702-a6d0-3676b9269d5c"
+    }
+  },
+  {
+    "id": "mds:13b7e2c3-69dc-3562-90d5-47a1599c48e8",
+    "_source": "mds",
+    "_sourceId": "85184",
+    "_sourceUrl": "https://museumdata.uk/objects/13b7e2c3-69dc-3562-90d5-47a1599c48e8",
+    "title": "Mountbatten Medallic History of Great Britain and the Sea Medal: Charles  Darwin HMS Beagle",
+    "description": "Silver medal of 2nd volume of `The Mountbatten Medallic History of Great Britain and the Sea'.",
+    "date": "2004",
+    "subject": [
+      "Medal",
+      "Medal",
+      "Medals-Commemorative"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "13b7e2c3-69dc-3562-90d5-47a1599c48e8",
+      "objectNumber": "85184",
+      "material": [
+        "Sterling Silver"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Mountbatten Medallic History of Great Britain and the Sea Medal: Charles  Darwin HMS Beagle"
+        ],
+        "Object name(s)": [
+          "Medal"
+        ],
+        "Brief description": [
+          "Silver medal of 2nd volume of `The Mountbatten Medallic History of Great Britain and the Sea'."
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Accession date": [
+          "2004-05"
+        ],
+        "Acquisition method": [
+          "Gift"
+        ],
+        "Associated concept": [
+          "Medals-Commemorative"
+        ],
+        "Associated date": [
+          "May-04"
+        ],
+        "Associated person": [
+          "Lord Mountbatten of Burma"
+        ],
+        "Credit line": [
+          "Presented in 2004 by Dr Joan M Burrell."
+        ],
+        "Current location": [
+          "View by Appointment - Aberdeen Treasure Hub"
+        ],
+        "Material": [
+          "Sterling Silver"
+        ],
+        "Object name": [
+          "Medal"
+        ],
+        "Object number": [
+          "ABDMS072500.46"
+        ],
+        "Date - earliest / single": [
+          "2004"
+        ],
+        "Date - latest": [
+          "2004"
+        ],
+        "Object status": [
+          "Accessioned object"
+        ],
+        "Responsible department/section": [
+          "Numismatics"
+        ],
+        "Text": [
+          "The scientific data amassed by Charles Darwin (1809-1882) on his world voyage in HMS Beagle between 1831 and 1836 became the basis for his famous work, the Origin of Species, which was published in 1859. Twenty years earlier, it had been preceded by his Journal of Researches into the Geology and Natural History of the various Countries visited by HMS Beagle. The ship herself, a sloop of 235 tons, had been launched in 1820. Earlier in her career her captain, Robert Fitzroy (1805-1865) had surveyed the southern coast of South America. He lived to reach flag rank and to be one of the leading meteorologists of his time. \n\nSouth America was again extensively re-visited on the famous voyage, which included visits to Teneriffe, the Cape Verde Islands, the Falklands and to many islands in the Pacific, notably the Galapagos group, and Tahiti. After touching at Australia and New Zealand, the voyage home, by way of the Cape of Good Hope, enabled Darwin to see something of St Helena and Ascension. By the age of 27 he had enjoyed experiences which were to affect his thought and outlook for the rest of his life, and which in turn were to affect man's whole attitude towards the universe.\n\nThe Mountbatten Medallic History of Great Britain and the Sea, John Pinches Medallists Ltd."
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/124767"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:13b7e2c3-69dc-3562-90d5-47a1599c48e8",
+      "title": "Mountbatten Medallic History of Great Britain and the Sea Medal: Charles  Darwin HMS Beagle",
+      "url": "https://museumdata.uk/objects/13b7e2c3-69dc-3562-90d5-47a1599c48e8",
+      "date": "2004"
+    }
+  },
+  {
+    "id": "mds:4ed06d3b-0d54-3072-8950-355065d050f8",
+    "_source": "mds",
+    "_sourceId": "512738",
+    "_sourceUrl": "https://museumdata.uk/objects/4ed06d3b-0d54-3072-8950-355065d050f8",
+    "title": "Francis William Locke Ross",
+    "description": "Initially Francis William Locke Ross (1793-1860) pursued a naval career. He was a Midshipman on the HMS Tagus in 1813 which sailed to Peru, the Galapagos Islands, Ecuador, Argentina, Uruguay, Brazil, Chile and the Marquesas Islands. He kept an illustrated journal which is now cared for by the New York Public Library. He left his commission in 1830 and moved to Broadway House, Topsham. \n\nFrom this point forwards he devoted his life to studying natural history. He kept detailed and beautifully illustrated journals of his studies (now at the Devon Heritage Centre). Ross built up a private museum which was open to the public. It included ethnographic and archaeological material as well as some rare and valuable specimens of birds, shells and geology.  \n\nThe birds in the painting are a black-necked red cotinga (Phoenicircus nigricollis) from South America and a green jay (Cyanocorax yncas), both from South America as well as an African Grey Hornbill (Lophoceros nasutus). The hornbill and green jay may be the ones now in the collection at RAMM.\n\n‘His great and accurate detail and finish, combined with a fine eye for colour, gave him the power of combining all the requirements of scientific accuracy with artistic effect, and made his works really of great value as illustrations of natural science.’ (Gentleman’s Magazine, 1861).\n\n\nThis object is on display at RAMM in Gallery 20.",
+    "creator": "Mr James Leakey   (1775-1865) (attributed artist)",
+    "date": "1840 to 1850",
+    "subject": [
+      "painting; Francis William Locke Ross",
+      "painting; Francis William Locke Ross",
+      "History of RAMM"
+    ],
+    "type": "Museum object",
+    "collection": "Royal Albert Memorial Museum & Art Gallery",
+    "mds": {
+      "uuid": "4ed06d3b-0d54-3072-8950-355065d050f8",
+      "objectNumber": "512738",
+      "material": [
+        "oil on canvas"
+      ],
+      "place": [
+        "Exeter",
+        "Devon",
+        "United Kingdom: England",
+        "Northern Europe",
+        "Europe"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Francis William Locke Ross"
+        ],
+        "Object name(s)": [
+          "painting; Francis William Locke Ross"
+        ],
+        "Brief description": [
+          "Initially Francis William Locke Ross (1793-1860) pursued a naval career. He was a Midshipman on the HMS Tagus in 1813 which sailed to Peru, the Galapagos Islands, Ecuador, Argentina, Uruguay, Brazil, Chile and the Marquesas Islands. He kept an illustrated journal which is now cared for by the New York Public Library. He left his commission in 1830 and moved to Broadway House, Topsham. \n\nFrom this point forwards he devoted his life to studying natural history. He kept detailed and beautifully illustrated journals of his studies (now at the Devon Heritage Centre). Ross built up a private museum which was open to the public. It included ethnographic and archaeological material as well as some rare and valuable specimens of birds, shells and geology.  \n\nThe birds in the painting are a black-necked red cotinga (Phoenicircus nigricollis) from South America and a green jay (Cyanocorax yncas), both from South America as well as an African Grey Hornbill (Lophoceros nasutus). The hornbill and green jay may be the ones now in the collection at RAMM.\n\n‘His great and accurate detail and finish, combined with a fine eye for colour, gave him the power of combining all the requirements of scientific accuracy with artistic effect, and made his works really of great value as illustrations of natural science.’ (Gentleman’s Magazine, 1861).\n\n\nThis object is on display at RAMM in Gallery 20."
+        ],
+        "Collection": [
+          "Royal Albert Memorial Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "History of RAMM"
+        ],
+        "Credit line": [
+          "Purchased with support from the Friends of RAMM."
+        ],
+        "Current location": [
+          "On display"
+        ],
+        "Material": [
+          "oil on canvas"
+        ],
+        "Object name": [
+          "painting; Francis William Locke Ross"
+        ],
+        "Object number": [
+          "2/2025"
+        ],
+        "Object production date": [
+          "1840 to 1850"
+        ],
+        "Date - period": [
+          "Victorian (1837-1901)"
+        ],
+        "Object production person": [
+          "Mr James Leakey   (1775-1865) (attributed artist)"
+        ],
+        "Object production place": [
+          "Exeter",
+          "Devon",
+          "United Kingdom: England",
+          "Northern Europe",
+          "Europe"
+        ],
+        "Reproduction number": [
+          "2-2025.jpg",
+          "2-2025-shot2.jpg",
+          "2-2025-shot3.jpg",
+          "2-2025-shot4.jpg",
+          "2-2025-shot5.jpg"
+        ],
+        "Responsible department/section": [
+          "Fine Art",
+          "Paintings"
+        ],
+        "Right type": [
+          "https://creativecommons.org/publicdomain/zero/1.0/"
+        ],
+        "Use title": [
+          "Exeter’s Fine Art Collection - Highlights. Exhibition 2026"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:4ed06d3b-0d54-3072-8950-355065d050f8",
+      "title": "Francis William Locke Ross",
+      "url": "https://museumdata.uk/objects/4ed06d3b-0d54-3072-8950-355065d050f8",
+      "creator": "Mr James Leakey   (1775-1865) (attributed artist)",
+      "date": "1840 to 1850"
+    }
+  },
+  {
+    "id": "mds:927872ca-8c5e-3fc6-942b-ea01d8d36fec",
+    "_source": "mds",
+    "_sourceId": "AIBDC",
+    "_sourceUrl": "https://museumdata.uk/objects/927872ca-8c5e-3fc6-942b-ea01d8d36fec",
+    "title": "Groasis Waterboxx plant cocoon, 2 of 3",
+    "description": "A Waterboxx plant cocoon from Groasis, designed by company founder Pieter Hoff, a Dutch Lily breeder. His original idea to plant trees in degraded land without using drip irrigation was first conceived in 2003, but after extensive development, testing and adaptation, this round version of his product was introduced in 2008. Reusable up to ten times, the Waterboxx is placed over trees, shrubs, flowers or vegetables, which grow though the opening in the middle of the container. It catches rainwater and produces water from condensation and dew, which slowly drip down to the plant via a wick, and the stored water stabilises the temperature underneath to create a micro-climate, further supporting growth. The Waterboxx can be removed after one year, by which time the plant will have become established with deep roots, able to tap into ground water and survive without assistance. The system has been successfully applied in over 40 countries and saves time, water and money as plants grow faster and are more productive. The technology has been commercially available since 2011 and has won numerous innovation and environmental excellence awards, including being appointed a 'National Icon' by the Dutch Ministry of Economic Affairs in 2016. Since then, Groasis has contributed to reforestation, food production and ecosystem restoration projects across the globe, testing the Waterboxx in extreme conditions such as within the Sahara, the deserts of Kuwait and the Galapagos Islands, all areas with limited water supplies. The parts are injection moulded in polypropylene (PP) and consist of a green coloured water reservoir, a black coloured centre plate (to promote condensation water production on the lid), a beige coloured lid with grooves (to collect water from rain and dew), a blue coloured cap to seal the container and two syphons to guide the water into the reservoir and prevent evaporation. A nylon wick completes the unit with an optional Growsafe Telescoprotexx plant protector, a green sheet of PP which can be folded into a tube to wrap around the plant to prevent damage from grazing animals and offer additional frost, storm and wind protection.",
+    "creator": [
+      "Hoff, Pieter",
+      "Groasis"
+    ],
+    "date": "2021",
+    "subject": [
+      "garden and horticultural equipment; plant pot",
+      "garden and horticultural equipment; plant pot",
+      "house and garden"
+    ],
+    "type": "Museum object",
+    "collection": "Museum of Design in Plastics",
+    "mds": {
+      "uuid": "927872ca-8c5e-3fc6-942b-ea01d8d36fec",
+      "objectNumber": "AIBDC",
+      "material": [
+        "plastic",
+        "PP",
+        "polypropylene",
+        "PA",
+        "polyamide",
+        "nylon"
+      ],
+      "place": [
+        "Holland"
+      ],
+      "dimensions": [
+        "height 225 mm",
+        "diameter 500 mm"
+      ],
+      "inscriptionContent": "Cadmium free. Art. Nr. 1005. 21. 8. PP. 2011. sticker. 2031. Made in Holland.",
+      "personAssociation": [
+        "Designer"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Groasis Waterboxx plant cocoon, 2 of 3"
+        ],
+        "Object name(s)": [
+          "garden and horticultural equipment; plant pot"
+        ],
+        "Brief description": [
+          "A Waterboxx plant cocoon from Groasis, designed by company founder Pieter Hoff, a Dutch Lily breeder. His original idea to plant trees in degraded land without using drip irrigation was first conceived in 2003, but after extensive development, testing and adaptation, this round version of his product was introduced in 2008. Reusable up to ten times, the Waterboxx is placed over trees, shrubs, flowers or vegetables, which grow though the opening in the middle of the container. It catches rainwater and produces water from condensation and dew, which slowly drip down to the plant via a wick, and the stored water stabilises the temperature underneath to create a micro-climate, further supporting growth. The Waterboxx can be removed after one year, by which time the plant will have become established with deep roots, able to tap into ground water and survive without assistance. The system has been successfully applied in over 40 countries and saves time, water and money as plants grow faster and are more productive. The technology has been commercially available since 2011 and has won numerous innovation and environmental excellence awards, including being appointed a 'National Icon' by the Dutch Ministry of Economic Affairs in 2016. Since then, Groasis has contributed to reforestation, food production and ecosystem restoration projects across the globe, testing the Waterboxx in extreme conditions such as within the Sahara, the deserts of Kuwait and the Galapagos Islands, all areas with limited water supplies. The parts are injection moulded in polypropylene (PP) and consist of a green coloured water reservoir, a black coloured centre plate (to promote condensation water production on the lid), a beige coloured lid with grooves (to collect water from rain and dew), a blue coloured cap to seal the container and two syphons to guide the water into the reservoir and prevent evaporation. A nylon wick completes the unit with an optional Growsafe Telescoprotexx plant protector, a green sheet of PP which can be folded into a tube to wrap around the plant to prevent damage from grazing animals and offer additional frost, storm and wind protection."
+        ],
+        "Collection": [
+          "Museum of Design in Plastics"
+        ],
+        "Associated concept": [
+          "house and garden"
+        ],
+        "Colour": [
+          "green",
+          "brown",
+          "black"
+        ],
+        "Dimension": [
+          "height 225 mm",
+          "diameter 500 mm"
+        ],
+        "Inscription content": [
+          "Cadmium free. Art. Nr. 1005. 21. 8. PP. 2011. sticker. 2031. Made in Holland."
+        ],
+        "Inscription method": [
+          "moulded"
+        ],
+        "Inscription position": [
+          "reservoir underside"
+        ],
+        "Material": [
+          "plastic",
+          "PP",
+          "polypropylene",
+          "PA",
+          "polyamide",
+          "nylon"
+        ],
+        "Object name": [
+          "garden and horticultural equipment; plant pot"
+        ],
+        "Object number": [
+          "AIBDC : 009172.2"
+        ],
+        "Object production date": [
+          "2021"
+        ],
+        "Object production organisation": [
+          "Groasis"
+        ],
+        "Organisation's association": [
+          "Manufacturer"
+        ],
+        "Object production person": [
+          "Hoff, Pieter"
+        ],
+        "Person's association": [
+          "Designer"
+        ],
+        "Object production place": [
+          "Holland"
+        ],
+        "Technique": [
+          "injection moulded"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:927872ca-8c5e-3fc6-942b-ea01d8d36fec",
+      "title": "Groasis Waterboxx plant cocoon, 2 of 3",
+      "url": "https://museumdata.uk/objects/927872ca-8c5e-3fc6-942b-ea01d8d36fec",
+      "creator": [
+        "Hoff, Pieter",
+        "Groasis"
+      ],
+      "date": "2021"
+    }
+  },
+  {
+    "id": "mds:e53786a5-751c-3db4-af97-ffeb785f9e89",
+    "_source": "mds",
+    "_sourceId": "85170",
+    "_sourceUrl": "https://museumdata.uk/objects/e53786a5-751c-3db4-af97-ffeb785f9e89",
+    "title": "Mountbatten Medallic History of Great Britain and the Sea Medal: Vancouver Discovers West Coast of America",
+    "description": "Silver medal of 2nd volume of `The Mountbatten Medallic History of Great Britain and the Sea'.",
+    "date": "2004",
+    "subject": [
+      "Medal",
+      "Medal",
+      "Medals-Commemorative"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "e53786a5-751c-3db4-af97-ffeb785f9e89",
+      "objectNumber": "85170",
+      "material": [
+        "Sterling Silver"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Mountbatten Medallic History of Great Britain and the Sea Medal: Vancouver Discovers West Coast of America"
+        ],
+        "Object name(s)": [
+          "Medal"
+        ],
+        "Brief description": [
+          "Silver medal of 2nd volume of `The Mountbatten Medallic History of Great Britain and the Sea'."
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Accession date": [
+          "2004-05"
+        ],
+        "Acquisition method": [
+          "Gift"
+        ],
+        "Associated concept": [
+          "Medals-Commemorative"
+        ],
+        "Associated date": [
+          "May-04"
+        ],
+        "Associated person": [
+          "Lord Mountbatten of Burma"
+        ],
+        "Credit line": [
+          "Presented in 2004 by Dr Joan M Burrell."
+        ],
+        "Current location": [
+          "View by Appointment - Aberdeen Treasure Hub"
+        ],
+        "Material": [
+          "Sterling Silver"
+        ],
+        "Object name": [
+          "Medal"
+        ],
+        "Object number": [
+          "ABDMS072500.32"
+        ],
+        "Date - earliest / single": [
+          "2004"
+        ],
+        "Date - latest": [
+          "2004"
+        ],
+        "Object status": [
+          "Accessioned object"
+        ],
+        "Responsible department/section": [
+          "Numismatics"
+        ],
+        "Text": [
+          "George Vancouver (1758-1798), the English navigator and explorer, entered the Navy at the age of 13, and, as an able seaman, accompanied James Cook on his second voyage (1770-74) and third voyage (1776-79). On the third voyage Cook had explored Nootka Sound on the western side of the island later to be named after Vancouver himself. \n\nAlthough the hope of establishing the existence of an open sea passage between the Pacific and the Atlantic had been dashed by the discoveries made on Cook's third voyage, it was still thought that there might be a waterway linking the Pacific seaboard and the Great Lakes. This would have had great significance for traders seeking to facilitate the important fur trade to Europe. \n\nFollowing the Nootka Sound incident, and with a view to establishing British rights to prosecute trade and establish settlements on the Canadian Pacific coast, Vancouver was instructed to proceed to the Pacific, with the dual purpose of charting unexplored regions and consolidating British commercial interests. It was also intended that he should survey the Hawaiian Islands, important for the Southern Whale Fishery, and the west coast of South America. \n\nVancouver set sail in 1791 in the sloop Discovery accompanied by the brig Chatham and he and his companions made their headquarters on the Sandwich Islands. Vancouver then spent two productive years in surveying and charting part of the coast of South-west Australia, part of New Zealand, and he explored the Galapagos Islands. He also charted the north-west Pacific shores of North America with 'scrupulous exactness'. \n\nVancouver returned to England by way of Cape Horn in 1795 to find Britain at war with France. The explorer was engaged on an important narrative of his voyage at the time of his early death in 1798, and it was completed and published by his brother in the same year, as' A Voyage of Discovery to the North Pacific Ocean and Round the World'.\n\nThe Mountbatten Medallic History of Great Britain and the Sea, John Pinches Medallists Ltd."
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/124752"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:e53786a5-751c-3db4-af97-ffeb785f9e89",
+      "title": "Mountbatten Medallic History of Great Britain and the Sea Medal: Vancouver Discovers West Coast of America",
+      "url": "https://museumdata.uk/objects/e53786a5-751c-3db4-af97-ffeb785f9e89",
+      "date": "2004"
+    }
+  },
+  {
+    "id": "mds:9ec6f586-6ac3-3e18-919c-964bedeed935",
+    "_source": "mds",
+    "_sourceId": "AIBDC",
+    "_sourceUrl": "https://museumdata.uk/objects/9ec6f586-6ac3-3e18-919c-964bedeed935",
+    "title": "Groasis Waterboxx plant cocoon, 1 of 3",
+    "description": "A Waterboxx plant cocoon from Groasis, designed by company founder Pieter Hoff, a Dutch Lily breeder. His original idea to plant trees in degraded land without using drip irrigation was first conceived in 2003, but after extensive development, testing and adaptation, this round version of his product was introduced in 2008. Reusable up to ten times, the Waterboxx is placed over trees, shrubs, flowers or vegetables, which grow though the opening in the middle of the container. It catches rainwater and produces water from condensation and dew, which slowly drip down to the plant via a wick, and the stored water stabilises the temperature underneath to create a micro-climate, further supporting growth. The Waterboxx can be removed after one year, by which time the plant will have become established with deep roots, able to tap into ground water and survive without assistance. The system has been successfully applied in over 40 countries and saves time, water and money as plants grow faster and are more productive. The technology has been commercially available since 2011 and has won numerous innovation and environmental excellence awards, including being appointed a 'National Icon' by the Dutch Ministry of Economic Affairs in 2016. Since then, Groasis has contributed to reforestation, food production and ecosystem restoration projects across the globe, testing the Waterboxx in extreme conditions such as within the Sahara, the deserts of Kuwait and the Galapagos Islands, all areas with limited water supplies. The parts are injection moulded in polypropylene (PP) and consist of a green coloured water reservoir, a black coloured centre plate (to promote condensation water production on the lid), a beige coloured lid with grooves (to collect water from rain and dew), a blue coloured cap to seal the container and two syphons to guide the water into the reservoir and prevent evaporation. A nylon wick completes the unit with an optional Growsafe Telescoprotexx plant protector, a green sheet of PP which can be folded into a tube to wrap around the plant to prevent damage from grazing animals and offer additional frost, storm and wind protection.",
+    "creator": [
+      "Hoff, Pieter",
+      "Groasis"
+    ],
+    "date": "2021",
+    "subject": [
+      "garden and horticultural equipment; plant pot",
+      "garden and horticultural equipment; plant pot",
+      "house and garden"
+    ],
+    "type": "Museum object",
+    "collection": "Museum of Design in Plastics",
+    "mds": {
+      "uuid": "9ec6f586-6ac3-3e18-919c-964bedeed935",
+      "objectNumber": "AIBDC",
+      "material": [
+        "plastic",
+        "PP",
+        "polypropylene",
+        "PA",
+        "polyamide",
+        "nylon"
+      ],
+      "place": [
+        "Holland"
+      ],
+      "dimensions": [
+        "height 225 mm",
+        "diameter 500 mm"
+      ],
+      "inscriptionContent": "Cadmium free. Art. Nr. 1005. 21. 8. PP. 2011. sticker. 2031. Made in Holland.",
+      "personAssociation": [
+        "Designer"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Groasis Waterboxx plant cocoon, 1 of 3"
+        ],
+        "Object name(s)": [
+          "garden and horticultural equipment; plant pot"
+        ],
+        "Brief description": [
+          "A Waterboxx plant cocoon from Groasis, designed by company founder Pieter Hoff, a Dutch Lily breeder. His original idea to plant trees in degraded land without using drip irrigation was first conceived in 2003, but after extensive development, testing and adaptation, this round version of his product was introduced in 2008. Reusable up to ten times, the Waterboxx is placed over trees, shrubs, flowers or vegetables, which grow though the opening in the middle of the container. It catches rainwater and produces water from condensation and dew, which slowly drip down to the plant via a wick, and the stored water stabilises the temperature underneath to create a micro-climate, further supporting growth. The Waterboxx can be removed after one year, by which time the plant will have become established with deep roots, able to tap into ground water and survive without assistance. The system has been successfully applied in over 40 countries and saves time, water and money as plants grow faster and are more productive. The technology has been commercially available since 2011 and has won numerous innovation and environmental excellence awards, including being appointed a 'National Icon' by the Dutch Ministry of Economic Affairs in 2016. Since then, Groasis has contributed to reforestation, food production and ecosystem restoration projects across the globe, testing the Waterboxx in extreme conditions such as within the Sahara, the deserts of Kuwait and the Galapagos Islands, all areas with limited water supplies. The parts are injection moulded in polypropylene (PP) and consist of a green coloured water reservoir, a black coloured centre plate (to promote condensation water production on the lid), a beige coloured lid with grooves (to collect water from rain and dew), a blue coloured cap to seal the container and two syphons to guide the water into the reservoir and prevent evaporation. A nylon wick completes the unit with an optional Growsafe Telescoprotexx plant protector, a green sheet of PP which can be folded into a tube to wrap around the plant to prevent damage from grazing animals and offer additional frost, storm and wind protection."
+        ],
+        "Collection": [
+          "Museum of Design in Plastics"
+        ],
+        "Associated concept": [
+          "house and garden"
+        ],
+        "Colour": [
+          "green",
+          "brown",
+          "black"
+        ],
+        "Dimension": [
+          "height 225 mm",
+          "diameter 500 mm"
+        ],
+        "Inscription content": [
+          "Cadmium free. Art. Nr. 1005. 21. 8. PP. 2011. sticker. 2031. Made in Holland."
+        ],
+        "Inscription method": [
+          "moulded"
+        ],
+        "Inscription position": [
+          "reservoir underside"
+        ],
+        "Material": [
+          "plastic",
+          "PP",
+          "polypropylene",
+          "PA",
+          "polyamide",
+          "nylon"
+        ],
+        "Object name": [
+          "garden and horticultural equipment; plant pot"
+        ],
+        "Object number": [
+          "AIBDC : 009172.1"
+        ],
+        "Object production date": [
+          "2021"
+        ],
+        "Object production organisation": [
+          "Groasis"
+        ],
+        "Organisation's association": [
+          "Manufacturer"
+        ],
+        "Object production person": [
+          "Hoff, Pieter"
+        ],
+        "Person's association": [
+          "Designer"
+        ],
+        "Object production place": [
+          "Holland"
+        ],
+        "Technique": [
+          "injection moulded"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:9ec6f586-6ac3-3e18-919c-964bedeed935",
+      "title": "Groasis Waterboxx plant cocoon, 1 of 3",
+      "url": "https://museumdata.uk/objects/9ec6f586-6ac3-3e18-919c-964bedeed935",
+      "creator": [
+        "Hoff, Pieter",
+        "Groasis"
+      ],
+      "date": "2021"
+    }
+  },
+  {
+    "id": "mds:cf0f1d72-0c98-3985-a722-4adfe36c07cc",
+    "_source": "mds",
+    "_sourceId": "AIBDC",
+    "_sourceUrl": "https://museumdata.uk/objects/cf0f1d72-0c98-3985-a722-4adfe36c07cc",
+    "title": "Groasis Waterboxx plant cocoon, 3 of 3",
+    "description": "A Waterboxx plant cocoon from Groasis, designed by company founder Pieter Hoff, a Dutch Lily breeder. His original idea to plant trees in degraded land without using drip irrigation was first conceived in 2003, but after extensive development, testing and adaptation, this round version of his product was introduced in 2008. Reusable up to ten times, the Waterboxx is placed over trees, shrubs, flowers or vegetables, which grow though the opening in the middle of the container. It catches rainwater and produces water from condensation and dew, which slowly drip down to the plant via a wick, and the stored water stabilises the temperature underneath to create a micro-climate, further supporting growth. The Waterboxx can be removed after one year, by which time the plant will have become established with deep roots, able to tap into ground water and survive without assistance. The system has been successfully applied in over 40 countries and saves time, water and money as plants grow faster and are more productive. The technology has been commercially available since 2011 and has won numerous innovation and environmental excellence awards, including being appointed a 'National Icon' by the Dutch Ministry of Economic Affairs in 2016. Since then, Groasis has contributed to reforestation, food production and ecosystem restoration projects across the globe, testing the Waterboxx in extreme conditions such as within the Sahara, the deserts of Kuwait and the Galapagos Islands, all areas with limited water supplies. The parts are injection moulded in polypropylene (PP) and consist of a green coloured water reservoir, a black coloured centre plate (to promote condensation water production on the lid), a beige coloured lid with grooves (to collect water from rain and dew), a blue coloured cap to seal the container and two syphons to guide the water into the reservoir and prevent evaporation. A nylon wick completes the unit with an optional Growsafe Telescoprotexx plant protector, a green sheet of PP which can be folded into a tube to wrap around the plant to prevent damage from grazing animals and offer additional frost, storm and wind protection.",
+    "creator": [
+      "Hoff, Pieter",
+      "Groasis"
+    ],
+    "date": "2021",
+    "subject": [
+      "garden and horticultural equipment; plant pot",
+      "garden and horticultural equipment; plant pot",
+      "house and garden"
+    ],
+    "type": "Museum object",
+    "collection": "Museum of Design in Plastics",
+    "mds": {
+      "uuid": "cf0f1d72-0c98-3985-a722-4adfe36c07cc",
+      "objectNumber": "AIBDC",
+      "material": [
+        "plastic",
+        "PP",
+        "polypropylene",
+        "PA",
+        "polyamide",
+        "nylon"
+      ],
+      "place": [
+        "Holland"
+      ],
+      "dimensions": [
+        "height 225 mm",
+        "diameter 500 mm"
+      ],
+      "inscriptionContent": "Cadmium free. Art. Nr. 1005. 21. 8. PP. 2011. sticker. 2031. Made in Holland.",
+      "personAssociation": [
+        "Designer"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Groasis Waterboxx plant cocoon, 3 of 3"
+        ],
+        "Object name(s)": [
+          "garden and horticultural equipment; plant pot"
+        ],
+        "Brief description": [
+          "A Waterboxx plant cocoon from Groasis, designed by company founder Pieter Hoff, a Dutch Lily breeder. His original idea to plant trees in degraded land without using drip irrigation was first conceived in 2003, but after extensive development, testing and adaptation, this round version of his product was introduced in 2008. Reusable up to ten times, the Waterboxx is placed over trees, shrubs, flowers or vegetables, which grow though the opening in the middle of the container. It catches rainwater and produces water from condensation and dew, which slowly drip down to the plant via a wick, and the stored water stabilises the temperature underneath to create a micro-climate, further supporting growth. The Waterboxx can be removed after one year, by which time the plant will have become established with deep roots, able to tap into ground water and survive without assistance. The system has been successfully applied in over 40 countries and saves time, water and money as plants grow faster and are more productive. The technology has been commercially available since 2011 and has won numerous innovation and environmental excellence awards, including being appointed a 'National Icon' by the Dutch Ministry of Economic Affairs in 2016. Since then, Groasis has contributed to reforestation, food production and ecosystem restoration projects across the globe, testing the Waterboxx in extreme conditions such as within the Sahara, the deserts of Kuwait and the Galapagos Islands, all areas with limited water supplies. The parts are injection moulded in polypropylene (PP) and consist of a green coloured water reservoir, a black coloured centre plate (to promote condensation water production on the lid), a beige coloured lid with grooves (to collect water from rain and dew), a blue coloured cap to seal the container and two syphons to guide the water into the reservoir and prevent evaporation. A nylon wick completes the unit with an optional Growsafe Telescoprotexx plant protector, a green sheet of PP which can be folded into a tube to wrap around the plant to prevent damage from grazing animals and offer additional frost, storm and wind protection."
+        ],
+        "Collection": [
+          "Museum of Design in Plastics"
+        ],
+        "Associated concept": [
+          "house and garden"
+        ],
+        "Colour": [
+          "green",
+          "brown",
+          "black"
+        ],
+        "Dimension": [
+          "height 225 mm",
+          "diameter 500 mm"
+        ],
+        "Inscription content": [
+          "Cadmium free. Art. Nr. 1005. 21. 8. PP. 2011. sticker. 2031. Made in Holland."
+        ],
+        "Inscription method": [
+          "moulded"
+        ],
+        "Inscription position": [
+          "reservoir underside"
+        ],
+        "Material": [
+          "plastic",
+          "PP",
+          "polypropylene",
+          "PA",
+          "polyamide",
+          "nylon"
+        ],
+        "Object name": [
+          "garden and horticultural equipment; plant pot"
+        ],
+        "Object number": [
+          "AIBDC : 009172.3"
+        ],
+        "Object production date": [
+          "2021"
+        ],
+        "Object production organisation": [
+          "Groasis"
+        ],
+        "Organisation's association": [
+          "Manufacturer"
+        ],
+        "Object production person": [
+          "Hoff, Pieter"
+        ],
+        "Person's association": [
+          "Designer"
+        ],
+        "Object production place": [
+          "Holland"
+        ],
+        "Technique": [
+          "injection moulded"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T13:55:18.592Z",
+      "query": "galapagos",
+      "recordId": "mds:cf0f1d72-0c98-3985-a722-4adfe36c07cc",
+      "title": "Groasis Waterboxx plant cocoon, 3 of 3",
+      "url": "https://museumdata.uk/objects/cf0f1d72-0c98-3985-a722-4adfe36c07cc",
+      "creator": [
+        "Hoff, Pieter",
+        "Groasis"
+      ],
+      "date": "2021"
+    }
+  }
+]
