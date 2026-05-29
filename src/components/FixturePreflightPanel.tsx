@@ -11,24 +11,28 @@ import { useState, useCallback } from 'react'
 import { nodeRunners } from '../utils/nodeRunners'
 import { getNodeResults, clearNodeResults } from '../store/resultsStore'
 import { fixtureFilename } from '../utils/fixtureUtils'
+import { DEFAULT_EUROPEANA_API_KEY } from '../utils/kclConfig'
 
-// Each service entry: the runner key, a display label, and the data shape
-// needed by the runner. inlineQ covers GBIF; inlineQuery covers everything else.
+// Each service entry: the runner key, a display label, and any extra node data
+// fields required by that service's runner (e.g. API keys).
+// inlineQ covers GBIF; inlineQuery covers everything else.
+// ADS Search (adsSearchAdvanced) is intentionally excluded — it uses a Puppeteer
+// Cloudflare bypass that is not suitable for programmatic preflight generation.
 const PREFLIGHT_SERVICES = [
-  { nodeType: 'gbifSearch',        label: 'GBIF' },
-  { nodeType: 'lldsSearch',        label: 'LLDS' },
-  { nodeType: 'mdsSearch',         label: 'MDS' },
-  { nodeType: 'adsSearchAdvanced', label: 'ADS Search' },
-  { nodeType: 'ariadneSearch',     label: 'ARIADNE' },
-  { nodeType: 'europeanaSearch',   label: 'Europeana' },
-  { nodeType: 'bodleianSearch',    label: 'Bodleian' },
-  { nodeType: 'smgSearch',         label: 'SMG' },
-  { nodeType: 'vaSearch',          label: 'V&A' },
+  { nodeType: 'gbifSearch',      label: 'GBIF',      extra: {} },
+  { nodeType: 'lldsSearch',      label: 'LLDS',      extra: {} },
+  { nodeType: 'mdsSearch',       label: 'MDS',       extra: {} },
+  { nodeType: 'ariadneSearch',   label: 'ARIADNE',   extra: {} },
+  { nodeType: 'europeanaSearch', label: 'Europeana', extra: { apiKey: DEFAULT_EUROPEANA_API_KEY } },
+  { nodeType: 'bodleianSearch',  label: 'Bodleian',  extra: {} },
+  { nodeType: 'smgSearch',       label: 'SMG',       extra: {} },
+  { nodeType: 'vaSearch',        label: 'V&A',       extra: {} },
+  { nodeType: 'hsdsSearch',      label: 'HSDS',      extra: {} },
 ] as const
 
 const DEFAULT_TERMS = 'roman coin\nstonehenge\nwordsworth'
 
-type ServiceType = (typeof PREFLIGHT_SERVICES)[number]['nodeType']
+type ServiceType = typeof PREFLIGHT_SERVICES[number]['nodeType']
 
 export function FixturePreflightPanel() {
   const [open, setOpen] = useState(false)
@@ -49,7 +53,7 @@ export function FixturePreflightPanel() {
     setLog([`Starting: ${queryList.length} term(s) × ${PREFLIGHT_SERVICES.filter(s => enabled[s.nodeType]).length} service(s)…`])
 
     for (const term of queryList) {
-      for (const { nodeType, label } of PREFLIGHT_SERVICES) {
+      for (const { nodeType, label, extra } of PREFLIGHT_SERVICES) {
         if (!enabled[nodeType]) continue
 
         const syntheticId = `preflight-${nodeType}`
@@ -69,6 +73,7 @@ export function FixturePreflightPanel() {
             status:          'idle',
             statusMessage:   '',
             count:           0,
+            ...extra,
           },
         }
 
@@ -82,9 +87,11 @@ export function FixturePreflightPanel() {
             () => { /* no-op: we don't need live node data updates */ },
           )
 
-          const records = getNodeResults(syntheticId)
-          if (!records.length) {
-            appendLog(`⚠ ${label} / "${term}" — 0 records (check service availability)`)
+          // getNodeResults returns undefined when the runner ended with an error
+          // and never called setNodeResults — guard before accessing .length
+          const records = getNodeResults(syntheticId) ?? []
+          if (records.length === 0) {
+            appendLog(`⚠ ${label} / "${term}" — 0 records (service may be unavailable)`)
           } else {
             const filename = fixtureFilename(nodeType, term)
             const res = await fetch('/dev/write-fixture', {
