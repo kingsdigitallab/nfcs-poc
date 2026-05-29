@@ -20,6 +20,7 @@
  */
 import type { Node, Edge } from '@xyflow/react'
 import { nodeRunners } from './nodeRunners'
+import { resolveProxyEdges } from './upstreamRecords'
 
 export async function runWorkflow(
   getNodes: () => Node[],
@@ -27,6 +28,9 @@ export async function runWorkflow(
   updateNodeData: (id: string, data: Record<string, unknown>) => void,
 ): Promise<void> {
   const allNodes = getNodes()
+  // Translate proxy-rewired edges (from collapsed groups) back to their real
+  // source endpoints so dep ordering and collectUpstreamRecords work correctly.
+  const resolvedEdges = resolveProxyEdges(edges, allNodes)
   const runnableNodes = allNodes.filter(n => n.type != null && n.type in nodeRunners)
 
   if (runnableNodes.length === 0) {
@@ -43,7 +47,7 @@ export async function runWorkflow(
   for (const node of runnableNodes) {
     deps.set(node.id, new Set())
   }
-  for (const edge of edges) {
+  for (const edge of resolvedEdges) {
     if (runnableIds.has(edge.source) && runnableIds.has(edge.target)) {
       deps.get(edge.target)!.add(edge.source)
     }
@@ -92,7 +96,7 @@ export async function runWorkflow(
     await Promise.all(
       wave.map(async n => {
         try {
-          await nodeRunners[n.type!](n.id, getNodes, edges, updateNodeData)
+          await nodeRunners[n.type!](n.id, getNodes, resolvedEdges, updateNodeData)
           completed.add(n.id)
         } catch (err) {
           // Runner shouldn't throw, but if it does treat as failure

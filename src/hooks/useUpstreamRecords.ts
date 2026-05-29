@@ -9,7 +9,7 @@
  */
 import { useNodes, useEdges } from '@xyflow/react'
 import { getNodeResults } from '../store/resultsStore'
-import { TYPED_HANDLES } from '../utils/upstreamRecords'
+import { TYPED_HANDLES, resolveProxyEdges } from '../utils/upstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export interface UpstreamData {
@@ -28,7 +28,8 @@ export function useUpstreamRecords(nodeId: string): UpstreamData {
   const allNodes = useNodes()
   const allEdges = useEdges()
 
-  const inputEdges = allEdges.filter(e => e.target === nodeId && e.targetHandle === 'data')
+  const inputEdges = resolveProxyEdges(allEdges, allNodes)
+    .filter(e => e.target === nodeId && e.targetHandle === 'data')
 
   if (inputEdges.length === 0) {
     return { records: undefined, count: 0, status: 'idle', connected: false, sourceCount: 0 }
