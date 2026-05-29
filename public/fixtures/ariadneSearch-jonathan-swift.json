@@ -1,0 +1,1191 @@
+[
+  {
+    "id": "ariadne:ca353dffc0647d341093f2c87b294800c84bc64b8890e2b476f57372ef86fcc6",
+    "_source": "ariadne",
+    "_sourceId": "1765031",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ca353dffc0647d341093f2c87b294800c84bc64b8890e2b476f57372ef86fcc6",
+    "title": "Jonathan Swift's House, Whitehaven Coast",
+    "description": "Inhabited house, of complex form; walls harled, so structural history not apparent from rapid external examination.  <br />Initially presumably the inn/clubhouse for the bowling green (NTSMR 29061); continued in use as inn after closure of bowling green, the name @Red Flag Inn@ perhaps reflecting the adjacent Bowling Green Fort (NTSMR 29062)<br />In private domestic occupation; only observed from distance.<br /><br />Status: Listed Building<br />Grade: II",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": [
+      "house",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": "England",
+    "decimalLatitude": 54.547993,
+    "decimalLongitude": -3.596543,
+    "ariadne": {
+      "elasticId": "ca353dffc0647d341093f2c87b294800c84bc64b8890e2b476f57372ef86fcc6",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England",
+          "geopoint": {
+            "lat": 54.547993,
+            "lon": -3.596543
+          },
+          "centroid": {
+            "lat": 54.547993,
+            "lon": -3.596543
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/B77189EB-72E8-3FB9-B658-0A0C5B101476",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA155379",
+        "Depositor ID: 29060",
+        "NTSMR-MNA155379"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1540 - 2050"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:ca353dffc0647d341093f2c87b294800c84bc64b8890e2b476f57372ef86fcc6",
+      "title": "Jonathan Swift's House, Whitehaven Coast",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ca353dffc0647d341093f2c87b294800c84bc64b8890e2b476f57372ef86fcc6",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  },
+  {
+    "id": "ariadne:786ec559b29089719cb3eb8bff607b1059257bf7d544987284e0839cbbf24353",
+    "_source": "ariadne",
+    "_sourceId": "1765030",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/786ec559b29089719cb3eb8bff607b1059257bf7d544987284e0839cbbf24353",
+    "title": "Lamp post, SE of Jonathan Swift's House, Whitehaven Coast",
+    "description": "19th Century cast iron gas-lamp post (c 3m high), at entrance to Jonathan Swift's House, inscribed with the makers name.<br />Potentially in situ, though no positive evidence.",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": [
+      "gas lamp",
+      "gas lamps"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": "England",
+    "decimalLatitude": 54.547879,
+    "decimalLongitude": -3.596337,
+    "ariadne": {
+      "elasticId": "786ec559b29089719cb3eb8bff607b1059257bf7d544987284e0839cbbf24353",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England",
+          "geopoint": {
+            "lat": 54.547879,
+            "lon": -3.596337
+          },
+          "centroid": {
+            "lat": 54.547879,
+            "lon": -3.596337
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "gas lamp",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GAS%20LAMP"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "gas lamps",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300037639",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADAE74BB-2367-3135-A9A4-1540EBFB2805",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA155378",
+        "Depositor ID: 29059",
+        "NTSMR-MNA155378"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1800 - 1900"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:786ec559b29089719cb3eb8bff607b1059257bf7d544987284e0839cbbf24353",
+      "title": "Lamp post, SE of Jonathan Swift's House, Whitehaven Coast",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/786ec559b29089719cb3eb8bff607b1059257bf7d544987284e0839cbbf24353",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  },
+  {
+    "id": "ariadne:13e14c5aadeaa602769e132e290c5fe037d97866baf34fa70e83a73113402558",
+    "_source": "ariadne",
+    "_sourceId": "DU018-020354-",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/13e14c5aadeaa602769e132e290c5fe037d97866baf34fa70e83a73113402558",
+    "title": "House - 16th/17th century, Dublin South City, County Dublin",
+    "description": "Murtagh (1973, 46) mentions the former residence of Jonathan Swift in 1668. There are no visible remains.",
+    "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+    "date": "2022-07-21",
+    "subject": [
+      "hols",
+      "house - 16th/17th century",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "County Dublin",
+    "country": "Ireland",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "13e14c5aadeaa602769e132e290c5fe037d97866baf34fa70e83a73113402558",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "County Dublin"
+        },
+        {
+          "placeName": "Dublin South City"
+        }
+      ],
+      "allPlaceNames": [
+        "County Dublin",
+        "Dublin South City"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/9AA210A3-B69C-3403-AF90-138303F2893A"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "hols",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/HOLS"
+        },
+        {
+          "prefLabel": "house - 16th/17th century",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/HOUSE%20-%2016TH/17TH%20CENTURY"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "contributor": "Not provided",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CARARE/AE371DDD-FF46-39F6-B569-61B91952AB53",
+      "otherId": [
+        "DU018-020354-"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/CARARE/0CD0C31C-7A51-329B-95C9-652086CF077F"
+      ],
+      "accessRights": "https://archaeology.ie/archaeological-survey-ireland/historic-environment-viewer-application",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:13e14c5aadeaa602769e132e290c5fe037d97866baf34fa70e83a73113402558",
+      "title": "House - 16th/17th century, Dublin South City, County Dublin",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/13e14c5aadeaa602769e132e290c5fe037d97866baf34fa70e83a73113402558",
+      "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "date": "2022-07-21"
+    }
+  },
+  {
+    "id": "ariadne:e00d82643843e4251829da3dbd51e918a32e75aead10d117ece615e4dc9139c2",
+    "_source": "ariadne",
+    "_sourceId": "1131550",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/e00d82643843e4251829da3dbd51e918a32e75aead10d117ece615e4dc9139c2",
+    "title": "NEW HOUSE FARMHOUSE",
+    "description": "Former rectory built in 1636 to a Y-shaped plan with alterations in the late 17th century. Converted to a farmhouse before 1963. Timber-framed internally; externally of sandstone rubble with ashlar dressings and a slate roof. Thought to have been built for the then rector, Rev. Thomas Swift, father of the author Jonathan Swift.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "extant building",
+      "farmhouse",
+      "timber framed house",
+      "vicarage",
+      "farmhouses",
+      "vicarages",
+      "frame construction"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GOODRICH, HEREFORDSHIRE, HEREFORD AND WORCESTER, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 51.867399,
+    "decimalLongitude": -2.639105,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "e00d82643843e4251829da3dbd51e918a32e75aead10d117ece615e4dc9139c2",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GOODRICH, HEREFORDSHIRE, HEREFORD AND WORCESTER, ENGLAND",
+          "geopoint": {
+            "lat": 51.867399,
+            "lon": -2.639105
+          },
+          "centroid": {
+            "lat": 51.867399,
+            "lon": -2.639105
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "GOODRICH, HEREFORDSHIRE, HEREFORD AND WORCESTER, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "extant building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXTANT%20BUILDING"
+        },
+        {
+          "prefLabel": "farmhouse",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FARMHOUSE"
+        },
+        {
+          "prefLabel": "timber framed house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TIMBER%20FRAMED%20HOUSE"
+        },
+        {
+          "prefLabel": "vicarage",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VICARAGE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "farmhouses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005574",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "vicarages",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005650",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "frame construction",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300111619",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/6B158B0D-E529-34B1-AB86-70FBDD3C484A",
+      "otherId": [
+        "Depositor ID: SO 51 NE 213",
+        "NMR_NATINV-519879"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:e00d82643843e4251829da3dbd51e918a32e75aead10d117ece615e4dc9139c2",
+      "title": "NEW HOUSE FARMHOUSE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/e00d82643843e4251829da3dbd51e918a32e75aead10d117ece615e4dc9139c2",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:bfe619ce769dd28fe8665b6d0e600313b7be76efebfe4a0a8440158b3f5b3b09",
+    "_source": "ariadne",
+    "_sourceId": "KK010-075001-",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/bfe619ce769dd28fe8665b6d0e600313b7be76efebfe4a0a8440158b3f5b3b09",
+    "title": "House - 17th century, Swiftsheath, County Kilkenny",
+    "description": "Described by the National Inventory of Architectural Heritage as a, 'detached seven-bay two-storey Classical-style country house over basement, built c.1750, but incorporating fabric of earlier house dated 1651. Comprises five-bay two-storey recessed section, middle bays pedimented, fronted by single-bay single-storey flat-roofed projecting porch; seven-bay two-storey garden front to south having three-bay single-storey return to southeast. Extensively renovated c.1850' (http://www.buildingsofireland.ie/niah/search.jsp?type=record&county=KK&regno=12401002). The front W facing facade has composite pilasters supporting a frieze, with a cut limestone date-stone of A. D. 1651 incorporated in the frieze above the second pilaster from the recessed N end. The A. D. is inscribed in Cló Gaelach (Gaelic script). Bence-Jones (1978, 269) states that the house, 'was the boyhood home of Dean [Jonathan] Swift [1667-1745], who was brought up here by his uncle, Godwin Swift, Attorney-General to the Duke of Ormonde for the County Palatine of Tipperary'.Compiled by: Jean FarrellyDate of upload: 8 January 2019",
+    "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+    "date": "2022-07-21",
+    "subject": [
+      "hose",
+      "house - 17th century",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "County Kilkenny",
+    "country": "Ireland",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "bfe619ce769dd28fe8665b6d0e600313b7be76efebfe4a0a8440158b3f5b3b09",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "County Kilkenny"
+        },
+        {
+          "placeName": "Swiftsheath"
+        },
+        {
+          "geopoint": {
+            "lat": 52.740669,
+            "lon": -7.315673
+          },
+          "centroid": {
+            "lat": 52.740669,
+            "lon": -7.315673
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "County Kilkenny",
+        "Swiftsheath"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/9AA210A3-B69C-3403-AF90-138303F2893A"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "hose",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/HOSE"
+        },
+        {
+          "prefLabel": "house - 17th century",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/HOUSE%20-%2017TH%20CENTURY"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "contributor": "Not provided",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CARARE/EAF8B64B-81E9-308B-90FE-797468FBA9DA",
+      "otherId": [
+        "KK010-075001-"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/CARARE/0CD0C31C-7A51-329B-95C9-652086CF077F"
+      ],
+      "accessRights": "https://archaeology.ie/archaeological-survey-ireland/historic-environment-viewer-application",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:bfe619ce769dd28fe8665b6d0e600313b7be76efebfe4a0a8440158b3f5b3b09",
+      "title": "House - 17th century, Swiftsheath, County Kilkenny",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/bfe619ce769dd28fe8665b6d0e600313b7be76efebfe4a0a8440158b3f5b3b09",
+      "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "date": "2022-07-21"
+    }
+  },
+  {
+    "id": "ariadne:0b1b4795517162c4a0e386285016e270b2fcc145c51562884b35fa8686237102",
+    "_source": "ariadne",
+    "_sourceId": "ME036-078----",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0b1b4795517162c4a0e386285016e270b2fcc145c51562884b35fa8686237102",
+    "title": "House - 17th century, Knightsbrook, County Meath",
+    "description": "Located on a level landscape with a small SW-NE stream c. 70m to the NW. Traditionally, this is the house occupied by Esther Johnson, known as 'Stella' and the life-long friend of Jonathan Swift, when she first came to Ireland in 1701 and wanted to live close to Swift while he was rector of Laracor church (ME036-044----), c. 1.2km to the S. After her death in 1728 the house was occupied by two families and continued to be occupied until c. 1960 when a local committee purchased it. Unfortunately, only the base of the walls could be preserved and built up. It is a rectangular structure (ext. dims 10.1m NW-SE; 6.1m NW-SW; int. dims 9.15m NW-SE; 4.15m NE-SW) with conserved and reconstructed walls (Wth 0.5m; H 1.1m). There is a doorway (Wth 0.9m) in the centre of the NE wall and a recess (Wth 1.35m; D 0.2m) on the SW wall opposite, which might be a fireplace. (Reynolds 1967, 53, fn 19; Haworth 2009, 21-3)  Compiled by: Michael Moore  Date of upload: 20 February, 2015",
+    "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+    "date": "2022-07-21",
+    "subject": [
+      "hose",
+      "house - 17th century",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Knightsbrook",
+    "country": "Ireland",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "0b1b4795517162c4a0e386285016e270b2fcc145c51562884b35fa8686237102",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Knightsbrook"
+        },
+        {
+          "placeName": "County Meath"
+        },
+        {
+          "geopoint": {
+            "lat": 53.536642,
+            "lon": -6.788688
+          },
+          "centroid": {
+            "lat": 53.536642,
+            "lon": -6.788688
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Knightsbrook",
+        "County Meath"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/9AA210A3-B69C-3403-AF90-138303F2893A"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "hose",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/HOSE"
+        },
+        {
+          "prefLabel": "house - 17th century",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/HOUSE%20-%2017TH%20CENTURY"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "contributor": "Not provided",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CARARE/3E5FA2BB-EE8A-3B66-A37E-ED320FD5B956",
+      "otherId": [
+        "ME036-078----"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/CARARE/0CD0C31C-7A51-329B-95C9-652086CF077F"
+      ],
+      "accessRights": "https://archaeology.ie/archaeological-survey-ireland/historic-environment-viewer-application",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:0b1b4795517162c4a0e386285016e270b2fcc145c51562884b35fa8686237102",
+      "title": "House - 17th century, Knightsbrook, County Meath",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0b1b4795517162c4a0e386285016e270b2fcc145c51562884b35fa8686237102",
+      "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "date": "2022-07-21"
+    }
+  },
+  {
+    "id": "ariadne:6a80a2a66c9a6f64af577fadf8b3ec5f9a387e78da57dc818d1c7f5aae8f43eb",
+    "_source": "ariadne",
+    "_sourceId": "ME044-030----",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/6a80a2a66c9a6f64af577fadf8b3ec5f9a387e78da57dc818d1c7f5aae8f43eb",
+    "title": "Church, Rathbeggan, County Meath",
+    "description": "Situated on a level landscape. A church at Rathbeggan is listed in the ecclesiastical taxation (1302-04) of Pope Nicholas IV (Cal. doc. Ire., 5, 254). The Augustinian priory at Colpe was endowed with the tithes at Rathbeggan, and Thomas Stevens was paying 4 pounds for them to the abbey at the Suppression in 1540 (White 1943, 316). Ussher (1622) describes the church and chancel as in good repair (Erlington 1847-64, 1, lxx). According to Dopping's visitation book (1682-5) the church of the Blessed Virgin Mary at Rathbeggan was in ruins since 1641 but the walls of the church and chancel were still standing and the graveyard was enclosed (Ellison 1971, 38). Rathbeggan was part of the living Jonathan Swift obtained when he returned to Ireland in 1701, although it is doubtful if he attended much (Reynolds 1967, 41). The present church was built in 1817 (Lewis 1837, 2, 489), but only the tower remains. The bottom of a rectangular font (ext. dim. 0.63m; H 0.45m) with the shallow remains of a basin (diam. 0.39m; surviving D 5cm) is in the subrectangular graveyard (dims c. 55-65m N-S; c. 25-35m E-W) defined by masonry walls, which has a few 19th century headstones. The font has chamfered corners and under-panels. The motte (ME044-029----) is c. 100m to the WNW.  The above description is derived from the published 'Archaeological Inventory of County Meath' (Dublin: Stationery Office, 1987). In certain instances the entries have been revised and updated in the light of recent research.  Compiled by: Michael Moore  Date of revision: 7 April, 2015",
+    "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+    "date": "2022-07-21",
+    "subject": [
+      "chur",
+      "church",
+      "churches (buildings)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Rathbeggan",
+    "country": "Ireland",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "6a80a2a66c9a6f64af577fadf8b3ec5f9a387e78da57dc818d1c7f5aae8f43eb",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Rathbeggan"
+        },
+        {
+          "placeName": "County Meath"
+        },
+        {
+          "geopoint": {
+            "lat": 53.463049,
+            "lon": -6.493507
+          },
+          "centroid": {
+            "lat": 53.463049,
+            "lon": -6.493507
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Rathbeggan",
+        "County Meath"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/9AA210A3-B69C-3403-AF90-138303F2893A"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "chur",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/CHUR"
+        },
+        {
+          "prefLabel": "church",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/CHURCH"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "churches (buildings)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007466",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "contributor": "Not provided",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CARARE/126308A3-3B54-350F-A69A-BE7A04AE5D64",
+      "otherId": [
+        "ME044-030----"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/CARARE/0CD0C31C-7A51-329B-95C9-652086CF077F"
+      ],
+      "accessRights": "https://archaeology.ie/archaeological-survey-ireland/historic-environment-viewer-application",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:6a80a2a66c9a6f64af577fadf8b3ec5f9a387e78da57dc818d1c7f5aae8f43eb",
+      "title": "Church, Rathbeggan, County Meath",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/6a80a2a66c9a6f64af577fadf8b3ec5f9a387e78da57dc818d1c7f5aae8f43eb",
+      "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "date": "2022-07-21"
+    }
+  },
+  {
+    "id": "ariadne:05e5df2c518b820f60b25645e5750004509dac8fcfff237e520bcdaa4dafcc7c",
+    "_source": "ariadne",
+    "_sourceId": "ME048-009----",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/05e5df2c518b820f60b25645e5750004509dac8fcfff237e520bcdaa4dafcc7c",
+    "title": "Church, Agher (Deece Upper By., Agher Par.), County Meath",
+    "description": "Located towards the bottom of a S-facing slope. A church at Atherath in Scryne deanery is listed in the ecclesiastical taxation (1302-06) of Pope Nicholas IV (Cal. doc. Ire. 5, 255), and this probably refers to Agher. Ussher (1622) describes the church and chancel at Agher as ruinous (Erlington 1847-64, 1, lxxiii). According to Dopping (1682 5) the church and chancel walls were out of repair since 1641 but the graveyard was enclosed (Ellison 1972, 4). The parish of Agher was part of the living Jonathan Swift obtained when he returned to Ireland in 1701, although it is doubtful if he attended much (Reynolds 1967, 41). The present Church of Ireland church was built in 1804 (Lewis 1837, 1, 18). The site of the medieval parish church is within a D-shaped graveyard (dims c. 65m E-W; c. 48m N-S), which is defined by an earthen bank or scarp NW-SE and by masonry walls on the straight S and W sides. There is no visible trace of an older structure, but a slate graveslab dated 1771 and now in the graveyard includes the phrase ‘beneath this floor’ and would have come from the older structure. The motte and bailey (ME048-011----), deserted settlement (ME048-010----) and field system (ME048-012----) are c. 300-560m to the E and S.  The above description is derived from the published 'Archaeological Inventory of County Meath' (Dublin: Stationery Office, 1987). In certain instances the entries have been revised and updated in the light of recent research.  Compiled by: Michael Moore  Date of revision: 9 April, 2015",
+    "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+    "date": "2022-07-21",
+    "subject": [
+      "chur",
+      "church",
+      "churches (buildings)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Agher (Deece Upper By., Agher Par.)",
+    "country": "Ireland",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "05e5df2c518b820f60b25645e5750004509dac8fcfff237e520bcdaa4dafcc7c",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Agher (Deece Upper By., Agher Par.)"
+        },
+        {
+          "placeName": "County Meath"
+        },
+        {
+          "geopoint": {
+            "lat": 53.45384,
+            "lon": -6.7553
+          },
+          "centroid": {
+            "lat": 53.45384,
+            "lon": -6.7553
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Agher (Deece Upper By., Agher Par.)",
+        "County Meath"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/9AA210A3-B69C-3403-AF90-138303F2893A"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "chur",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/CHUR"
+        },
+        {
+          "prefLabel": "church",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/CHURCH"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "churches (buildings)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007466",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "contributor": "Not provided",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CARARE/3F5C8D0E-8BDF-33BD-ACA7-FD5DB433F51A",
+      "otherId": [
+        "ME048-009----"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/CARARE/0CD0C31C-7A51-329B-95C9-652086CF077F"
+      ],
+      "accessRights": "https://archaeology.ie/archaeological-survey-ireland/historic-environment-viewer-application",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:05e5df2c518b820f60b25645e5750004509dac8fcfff237e520bcdaa4dafcc7c",
+      "title": "Church, Agher (Deece Upper By., Agher Par.), County Meath",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/05e5df2c518b820f60b25645e5750004509dac8fcfff237e520bcdaa4dafcc7c",
+      "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "date": "2022-07-21"
+    }
+  },
+  {
+    "id": "ariadne:375b2d6c8aeae25677d585bc409c4f6eaad6d8966f5cf5814b726e45fda2f000",
+    "_source": "ariadne",
+    "_sourceId": "3301964",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/375b2d6c8aeae25677d585bc409c4f6eaad6d8966f5cf5814b726e45fda2f000",
+    "title": "Site of Dawpool(e)/Dalpool(e)/Dalpool Town, Thurstaston",
+    "description": "Former site of Dawpool(e)/Dalpool(e)/Dalpool Town, Thurstaston. (1)<br />Dalpool is shown on Burdett's map of 1777 as a collection of scattered houses along the coast. (2)<br />\"The village of Dawpoole or Dalpoole is situated on the shore below Cladey\" [a note of 1819]. (3)<br />Greenwood's map does not show the site, only the roads leading from Thurstaston to it. (4)<br />Bryant's map of 1831 labels the area as \"Site of Dalpool Town\", at the end of Dalpool Lane leading from Thurstaston. (5)<br />The houses by the seaside were called Dawpool and lay within the parish of Thurstaston. (6)<br />\"A few small houses called Dawpool or Dalpool, scattered below Caldy on the verge of the river are all that remain of that place, once the celebrated rendezvous for the embarkation of the troops of Cheshire and Lancashire.\" (7)<br />In the late 16th century New Key was constructed at Neston. \"It was, however, very inefficient, as those [vessels] of greater burthen than twenty tons were obliged to remain at Dawpool.\" (8)<br />Jonathan Swift landed at Dawpool on 28th November 1707 on his way over from Ireland. He sailed from Dawpool to Ireland in June 1709. In 1822 a report appeared in the Gentleman's Magazine that the Port of Dawpool is in progress (evidently an early 19th century enhancement of the existing facilities). (9)<br />There is some uncertainty over its exact location but it appears to have been within Thurstaston parish with the houses to the north west towards Caldy also called Dawpool. (10)<br />Erosion of boulder clay cliffs in 1981 revealed foundations. The exact location and form of these foundations is not known. (11)<br />In 1694/5 the dwelling house of William Penkett at Dawpool was in use as a Dissenter's meeting house. (12)",
+    "creator": "Merseyside Environmental Advisory Service",
+    "date": "2021-01-18",
+    "subject": [
+      "hamlet",
+      "nonconformist meeting house",
+      "hamlets"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England, MERSEYSIDE, WIRRAL, WIRRAL, THURSTASTON",
+    "country": "England",
+    "decimalLatitude": 53.344856,
+    "decimalLongitude": -3.149944,
+    "ariadne": {
+      "elasticId": "375b2d6c8aeae25677d585bc409c4f6eaad6d8966f5cf5814b726e45fda2f000",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England, MERSEYSIDE, WIRRAL, WIRRAL, THURSTASTON",
+          "geopoint": {
+            "lat": 53.344856,
+            "lon": -3.149944
+          },
+          "centroid": {
+            "lat": 53.344856,
+            "lon": -3.149944
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England, MERSEYSIDE, WIRRAL, WIRRAL, THURSTASTON"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Merseyside Environmental Advisory Service",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Merseyside%20Environmental%20Advisory%20Service"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "hamlet",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HAMLET"
+        },
+        {
+          "prefLabel": "nonconformist meeting house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NONCONFORMIST%20MEETING%20HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "hamlets",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008369",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Merseyside Environmental Advisory Service",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/007C4CC5-29D0-3722-B789-B3EA5345D564",
+      "otherId": [
+        "Associated ID: HBSMR Id: MME250",
+        "Associated ID: Related Resource: SME1",
+        "Associated ID: Related Resource: SME110",
+        "Associated ID: Related Resource: SME117",
+        "Associated ID: Related Resource: SME175",
+        "Associated ID: Related Resource: SME179",
+        "Associated ID: Related Resource: SME3",
+        "Associated ID: Related Resource: SME330",
+        "Associated ID: Related Resource: SME332",
+        "Associated ID: Related Resource: SME63",
+        "Associated ID: Related Resource: SME64",
+        "Associated ID: Related Resource: SME65",
+        "Depositor ID: MME250",
+        "MHER15-MME250"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/BB5172FB-55D2-3E6F-B03B-78B9A4B595BA"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1540 - 1777",
+        "1694 - 1695"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:375b2d6c8aeae25677d585bc409c4f6eaad6d8966f5cf5814b726e45fda2f000",
+      "title": "Site of Dawpool(e)/Dalpool(e)/Dalpool Town, Thurstaston",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/375b2d6c8aeae25677d585bc409c4f6eaad6d8966f5cf5814b726e45fda2f000",
+      "creator": "Merseyside Environmental Advisory Service",
+      "date": "2021-01-18"
+    }
+  },
+  {
+    "id": "ariadne:fa4824fb75e0ecdf569cf1d1a2d825f08fee68a1b25899ca8033739d47bae4ec",
+    "_source": "ariadne",
+    "_sourceId": "ME036-063----",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/fa4824fb75e0ecdf569cf1d1a2d825f08fee68a1b25899ca8033739d47bae4ec",
+    "title": "Castle - unclassified, Laracor, County Meath",
+    "description": "The motte at Laracor (ME036-043----) was succeeded at some period by a castle, which is represented on the Down Survey (1656-8) maps of Moyfenrath barony and Laracor parish, for which see this web-page accessed on 09/11/2017: http://downsurvey.tcd.ie/down-survey-maps.php#bm=Moyfenrath&c=Meath&p=Lauracorr   The terrier or commentary lists Gerald Linch of the Knock (ME043-021002-), Valerian Weisley of Dangan (ME042-009----) and Richard Linehann, an Irish papist, as the joint owners of 446 acres at Lauracorr. It describes Lauracorr as ‘..a small stone castle in repair with some cabins about it. There is near it the ruins of a chappell or church and a bridge over which the high way from Trim to Kilcock lyes likewise and under it runs the River Evernocke…’ The castle may have been built by the Linehan family, but according to the Civil Survey (1654-5) in 1640 the vicar, Mr. Bunning, had possession of the glebe including ‘a castle with a backside (Bakehouse?)’ (Simington 1940, 192).  A later occupant was Jonathan Swift when he became rector of Laracor church (ME036-044----) in 1700 until he became Dean of St Patrick’s Cathedral (DU018-020069-) in 1713, and less frequently until his death in 1745. A structure is described ‘Dean Swift’s Glebe House (in Ruins)’ on the 1836 and 1908 editions of the OS 6-inch map. The remnant of the castle survives as a conserved masonry pier (dims 2.5m E-W; 1.3m N-S; H 3.1m) which has a small projecting pier (dims 0.95m; 0.15m N-S; H 1.5m) attached on the S side. An illustration from 1847 shows it as it is today but with an external rebate c. 3m above the ground and a further rebate c. 2m higher up supporting a gable (Haworth 2006, 14-18, figs 6, 7). More than one period of building is probably represented in what was once probably a tower house.     Compiled by: Michael Moore  Date of upload: 9 November, 2017",
+    "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+    "date": "2022-07-21",
+    "subject": [
+      "castle - unclassified",
+      "unca",
+      "castles (fortifications)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "County Meath",
+    "country": "Ireland",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "fa4824fb75e0ecdf569cf1d1a2d825f08fee68a1b25899ca8033739d47bae4ec",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "County Meath"
+        },
+        {
+          "placeName": "Laracor"
+        },
+        {
+          "geopoint": {
+            "lat": 53.527432,
+            "lon": -6.783581
+          },
+          "centroid": {
+            "lat": 53.527432,
+            "lon": -6.783581
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "County Meath",
+        "Laracor"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/9AA210A3-B69C-3403-AF90-138303F2893A"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "castle - unclassified",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/CASTLE%20-%20UNCLASSIFIED"
+        },
+        {
+          "prefLabel": "unca",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/UNCA"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "castles (fortifications)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006891",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "contributor": "Not provided",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CARARE/E114FDBC-4216-3866-8642-F3369272DA32",
+      "otherId": [
+        "ME036-063----"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/CARARE/0CD0C31C-7A51-329B-95C9-652086CF077F"
+      ],
+      "accessRights": "https://archaeology.ie/archaeological-survey-ireland/historic-environment-viewer-application",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:fa4824fb75e0ecdf569cf1d1a2d825f08fee68a1b25899ca8033739d47bae4ec",
+      "title": "Castle - unclassified, Laracor, County Meath",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/fa4824fb75e0ecdf569cf1d1a2d825f08fee68a1b25899ca8033739d47bae4ec",
+      "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "date": "2022-07-21"
+    }
+  },
+  {
+    "id": "ariadne:bbc5f17c30d01ee870d735bfe0ca0491a4c04daddd550ec548e2107700031bbc",
+    "_source": "ariadne",
+    "_sourceId": "ME036-044----",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/bbc5f17c30d01ee870d735bfe0ca0491a4c04daddd550ec548e2107700031bbc",
+    "title": "Church, Laracor, County Meath",
+    "description": "Situated on a level landscape. William Scurlag granted the income of a church at Laracor to the Augustinian abbey of St. Thomas in Dublin (DU018-020051-) c. 1177 (Gilbert 1889, 37), probably in the hope that they would build one. The church at Lethercorre is listed in the ecclesiastical taxation (1302-06) of Pope Nicholas IV (Cal. doc. Ire., 5, 256). According to Cogan (1862-70, 2, 385) the church was dedicated to St. Peter, and the rectory of Laraghcorre was still amongst the possessions of St. Thomas’ at the Suppression in 1540 (White 1943, 30). Ussher (1622) describes the church as ruinous but the chancel as reasonably repaired (Erlington 1847-64, 1, lxxxii). The church and chancel were in disrepair according to Dopping (1682-5), who says it was dedicated to the Blessed Virgin Mary, but repairs were almost completed by the Royal visitation (1693). In the meantime the chapel-of-ease at Summerhill (ME043-031----) was being used (Ellison 1972, 9-10).  Jonathan Swift was the incumbent from 1700 until his death in 1745, and Laracor would have provided his principal income and Irish residence until he became Dean of St Patrick’s Cathedral (DU018-020069-) in 1713, after which he employed a curate at Laracor. He also held the smaller parishes of Agher (ME048-009----) and Rathbeggan (ME044-030----). The house Swift is thought to have occupied (ME036-063----) is a castle located c. 150m NW of the church. His lifelong friend Esther Johnson, known as Stella, had a house (ME036-078----) at Knightsbrook, c. 1.2km to the NW of Laracor church, after she first came to Ireland in 1701. (Reynolds 1967, 41-3) The present church building dates to 1856 and was closed c. 1970, but two sketches dating from the mid-nineteenth century of the older structure show a western porch and two round-headed windows in the W gable, probably the work of the 1690s, under the stump of a belfry (Haworth 2009, figs 2, 3). A two storey building, probably a vestry, was attached to the N side of the church. The site of the medieval parish church is within a rectangular graveyard (dims c. 65m NW-SE: c. 55m NE-SW) defined by masonry walls with mature trees within the perimeter and headstones dating from c. 1750-1970. During conversion work c. 1983 part of the N wall (Wth 1-1.2m; L 9m plus; H 0.5-0.6m) of the medieval church with its footing and a blocked doorway (Wth 0.91m) was exposed within the 19th century church. A sandstone jamb with a chamfer was re-used in the fabric of the wall (ibid. 11). A collection of dressed stones from the graveyard that had been moved off the site are now returned. There is the head of a lancet window of thirteenth century date, and there are fragments that could be combined to make the head of a three-light cinquefoil window within a square head with solid spandrels. This would date to the fifteenth century and might have formed the E window of the medieval church, indicating a major rebuilding. There is also the octagonal base of a font (dims 0.53m x 0.53m; H 0.2m) with a central hour-glass perforation. Another stone from the reveal of a doorway has the remains of a stoup in a D-shaped hollow on one face while another face has a crest in relief that is quartered with a lion or lynx in each quarter, thought to represent the Linehan, Lenihan or Lynam family, who lived in the castle (ME043-063----),  The above description is derived from the published 'Archaeological Inventory of County Meath' (Dublin: Stationery Office, 1987). In certain instances the entries have been revised and updated in the light of recent research.  Compiled by: Michael Moore  Date of revision: 09 November 2017",
+    "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+    "date": "2022-07-21",
+    "subject": [
+      "chur",
+      "church",
+      "churches (buildings)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "County Meath",
+    "country": "Ireland",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "bbc5f17c30d01ee870d735bfe0ca0491a4c04daddd550ec548e2107700031bbc",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "County Meath"
+        },
+        {
+          "placeName": "Laracor"
+        },
+        {
+          "geopoint": {
+            "lat": 53.526622,
+            "lon": -6.781764
+          },
+          "centroid": {
+            "lat": 53.526622,
+            "lon": -6.781764
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "County Meath",
+        "Laracor"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/9AA210A3-B69C-3403-AF90-138303F2893A"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "chur",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/CHUR"
+        },
+        {
+          "prefLabel": "church",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/CARARE/CHURCH"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "churches (buildings)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007466",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "contributor": "Not provided",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CARARE/55111146-CC3C-3225-82A0-1D37B3091941",
+      "otherId": [
+        "ME036-044----"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/CARARE/0CD0C31C-7A51-329B-95C9-652086CF077F"
+      ],
+      "accessRights": "https://archaeology.ie/archaeological-survey-ireland/historic-environment-viewer-application",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:27:07.359Z",
+      "query": "q:jonathan swift",
+      "recordId": "ariadne:bbc5f17c30d01ee870d735bfe0ca0491a4c04daddd550ec548e2107700031bbc",
+      "title": "Church, Laracor, County Meath",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/bbc5f17c30d01ee870d735bfe0ca0491a4c04daddd550ec548e2107700031bbc",
+      "creator": "National Monuments Service, Department of Housing, Local Government and Heritage, Republic of Ireland",
+      "date": "2022-07-21"
+    }
+  }
+]
