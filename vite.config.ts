@@ -504,6 +504,17 @@ export default defineConfig({
                 res.end('Invalid filename')
                 return
               }
+              if (!Array.isArray(records) || records.length === 0) {
+                res.statusCode = 400
+                res.end('records must be a non-empty array')
+                return
+              }
+              // Sanity-check the first record looks like a UnifiedRecord, not HTML/garbage
+              if (typeof records[0] !== 'object' || records[0] === null || Array.isArray(records[0])) {
+                res.statusCode = 400
+                res.end('records[0] is not an object — refusing to save potentially corrupt fixture')
+                return
+              }
               const dir = join(process.cwd(), 'public', 'fixtures')
               mkdirSync(dir, { recursive: true })
               writeFileSync(join(dir, filename), JSON.stringify(records, null, 2))
