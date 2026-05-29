@@ -1,0 +1,139 @@
+[
+  {
+    "id": "ariadne:f1170df6fa7791e27028c6a18870de1e100a2fe75c0d1be50616f42f66c5a2ed",
+    "_source": "ariadne",
+    "_sourceId": "1269752",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/f1170df6fa7791e27028c6a18870de1e100a2fe75c0d1be50616f42f66c5a2ed",
+    "title": "DOWN HOUSE",
+    "description": "Down House, the home of Charles Darwin from 1842-1882, originated as a farmhouse in the late 18th century. The house in its present form dates from the early 19th century and is a three storey stuccoed building with a slate roof. The north west wing is a mid 19th century addition made by Darwin to house is new study. It was from his study at Down House that Darwin worked on the scientific theories that first scandalized and then revolutionized the Victorian world, culminating in the publication of the most significant book of the century, \"On the Origin of Species by means of Natural Selection\", in 1859. His home for forty years, Down House was the centre of his intellectual world and even now remains full of notebooks, journals and mementoes from his epic voyage of discovery that took him most famously to the Galapagos Islands. The principal asset of the house is that it remains much as it was when Darwin lived there. Most special of all is the ground-floor study which was the centre of his life and in which are collected some of the 3,500 objects connected with his work. Since 1929 used as a museum to the life and work of Darwin. Listed Grade I for its historical association with Charles Darwin and in the care of the Secretary of State.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "extant building",
+      "farmhouse",
+      "house",
+      "museum",
+      "houses",
+      "farmhouses",
+      "museums buildings by subject"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BROMLEY, BROMLEY, GREATER LONDON, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 51.330879,
+    "decimalLongitude": 0.055001,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "f1170df6fa7791e27028c6a18870de1e100a2fe75c0d1be50616f42f66c5a2ed",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BROMLEY, BROMLEY, GREATER LONDON, ENGLAND",
+          "geopoint": {
+            "lat": 51.330879,
+            "lon": 0.055001
+          },
+          "centroid": {
+            "lat": 51.330879,
+            "lon": 0.055001
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "BROMLEY, BROMLEY, GREATER LONDON, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "extant building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXTANT%20BUILDING"
+        },
+        {
+          "prefLabel": "farmhouse",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FARMHOUSE"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        },
+        {
+          "prefLabel": "museum",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "farmhouses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005574",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "museums buildings by subject",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300169788",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/4751D5BB-366B-32CF-8F4D-4D4E31E4316D",
+      "otherId": [
+        "Depositor ID: TQ 46 SW 38",
+        "NMR_NATINV-966117"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T13:55:18.604Z",
+      "query": "q:galapagos",
+      "recordId": "ariadne:f1170df6fa7791e27028c6a18870de1e100a2fe75c0d1be50616f42f66c5a2ed",
+      "title": "DOWN HOUSE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/f1170df6fa7791e27028c6a18870de1e100a2fe75c0d1be50616f42f66c5a2ed",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  }
+]

@@ -1,0 +1,4684 @@
+[
+  {
+    "id": "hsds:913628",
+    "_source": "hsds",
+    "_sourceId": "913628",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/6304e5503a479efa351d4c6fac6d6c7efa2add0d9f79c369e35496c4c9dfd271",
+    "title": "Radiocarbon date, Sample number GrN-9172",
+    "description": "Charcoal from stony layer (G) deposited during construction of stone circle at Cashelkeelty II, Co Kerry, Ireland. Coll A Lynch. Comment (subm): May be intrusive.<br>Profile from 5-stone circle to eastern stone of alignment",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "3i recumbent stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": 51.268149,
+    "decimalLongitude": -10.758689,
+    "hsds": {
+      "elasticId": "6304e5503a479efa351d4c6fac6d6c7efa2add0d9f79c369e35496c4c9dfd271",
+      "originalId": "913628",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.268149,
+            "lon": -10.758689
+          },
+          "centroid": {
+            "lat": 51.268149,
+            "lon": -10.758689
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i recumbent stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20RECUMBENT%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GRN-9172-1",
+        "Depositor ID: GrN-9172"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:913628",
+      "title": "Radiocarbon date, Sample number GrN-9172",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/6304e5503a479efa351d4c6fac6d6c7efa2add0d9f79c369e35496c4c9dfd271",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913629",
+    "_source": "hsds",
+    "_sourceId": "913629",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/46fa93a14781d81a4c446da0a700d4f224976889b314e901133aa2add8dbab38",
+    "title": "Radiocarbon date, Sample number GrN-9173",
+    "description": "Charcoal from OGS, sealed by layer of stony soil used to level sloping surface before construction of circle at Cashel-keelty II, Co Kerry, Ireland. Coll A Lynch. Comment (subm): Relates to construction date of circle.<br>Profile from 5-stone circle to eastern stone of alignment",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "3i recumbent stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": 51.268149,
+    "decimalLongitude": -10.758689,
+    "hsds": {
+      "elasticId": "46fa93a14781d81a4c446da0a700d4f224976889b314e901133aa2add8dbab38",
+      "originalId": "913629",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.268149,
+            "lon": -10.758689
+          },
+          "centroid": {
+            "lat": 51.268149,
+            "lon": -10.758689
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i recumbent stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20RECUMBENT%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GRN-9173-1",
+        "Depositor ID: GrN-9173"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:913629",
+      "title": "Radiocarbon date, Sample number GrN-9173",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/46fa93a14781d81a4c446da0a700d4f224976889b314e901133aa2add8dbab38",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920738",
+    "_source": "hsds",
+    "_sourceId": "920738",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b0d2329a19cf06bf4afdbb7c4296c43c6dd3467990aa6fc37f94ba25d4872bf5",
+    "title": "Radiocarbon date, Sample number BM-2315R",
+    "description": "Charcoal, ref 2b/ST81, id as Alnus sp by J Ambers, from bottom of shallow gullysealed by rubble, inside Recumbent Stone Circle at Strichen, Grampian, Scotland. Subm PA 1981. (Is revision of earlier determination BM-2315.)<br>",
+    "creator": "P Abramson, Leeds 1981",
+    "date": "1998-12-01",
+    "subject": [
+      "3i recumbent stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.580745,
+    "decimalLongitude": -2.105364,
+    "hsds": {
+      "elasticId": "b0d2329a19cf06bf4afdbb7c4296c43c6dd3467990aa6fc37f94ba25d4872bf5",
+      "originalId": "920738",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.580745,
+            "lon": -2.105364
+          },
+          "centroid": {
+            "lat": 57.580745,
+            "lon": -2.105364
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i recumbent stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20RECUMBENT%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2315R",
+        "Depositor ID: BM-2315R"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:920738",
+      "title": "Radiocarbon date, Sample number BM-2315R",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b0d2329a19cf06bf4afdbb7c4296c43c6dd3467990aa6fc37f94ba25d4872bf5",
+      "creator": "P Abramson, Leeds 1981",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914510",
+    "_source": "hsds",
+    "_sourceId": "914510",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/fba2e75c2878f933858150a139d13fd4eb046a34e49f1989c9a8e6319c9b6a56",
+    "title": "Radiocarbon date, Sample number GU-1296",
+    "description": "Charcoal, id as oak, from stone hole 8 of northern circle (site no. 98) at Temple Wood, Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Northern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "3i stone circle and 4f stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "fba2e75c2878f933858150a139d13fd4eb046a34e49f1989c9a8e6319c9b6a56",
+      "originalId": "914510",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i stone circle and 4f stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20STONE%20CIRCLE%20AND%204F%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1296",
+        "Depositor ID: GU-1296"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914510",
+      "title": "Radiocarbon date, Sample number GU-1296",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/fba2e75c2878f933858150a139d13fd4eb046a34e49f1989c9a8e6319c9b6a56",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920739",
+    "_source": "hsds",
+    "_sourceId": "920739",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f44645752f33026e4fffb7f52d8fc3c21126e90812126fb4b0bcdcfecd0acc81",
+    "title": "Radiocarbon date, Sample number BM-2316R",
+    "description": "Charcoal, ref 3/ST81, id as Alnus sp by J Ambers, from bottom of disturbed areacontaining cremation of adult female, assoc with coarse-fabric sherds, from Recumbent Stone Circle at Strichen, Grampian, Scotland. Subm PA 1981. Comment (subm): probably inserted into bank of circle towards end of period of use. (Is revision of earlier determination BM-2316.)<br>",
+    "creator": "P Abramson, Leeds 1981",
+    "date": "1998-12-01",
+    "subject": [
+      "3i recumbent stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.580745,
+    "decimalLongitude": -2.105364,
+    "hsds": {
+      "elasticId": "f44645752f33026e4fffb7f52d8fc3c21126e90812126fb4b0bcdcfecd0acc81",
+      "originalId": "920739",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.580745,
+            "lon": -2.105364
+          },
+          "centroid": {
+            "lat": 57.580745,
+            "lon": -2.105364
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i recumbent stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20RECUMBENT%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2316R",
+        "Depositor ID: BM-2316R"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:920739",
+      "title": "Radiocarbon date, Sample number BM-2316R",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f44645752f33026e4fffb7f52d8fc3c21126e90812126fb4b0bcdcfecd0acc81",
+      "creator": "P Abramson, Leeds 1981",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914518",
+    "_source": "hsds",
+    "_sourceId": "914518",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/7d1f004e95eeae8f0f47995fc0045c7ea4965a4b79a1a3be106b0417ded269cd",
+    "title": "Radiocarbon date, Sample number GU-1530",
+    "description": "Charcoal, id as juniper twig and pine, from stone bank surrounding circle, beneath black soil and just above yellow clay layer believed to mark and seal top ofcairn of burial B (site no. 109) at Temple Wood, Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle and 3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "7d1f004e95eeae8f0f47995fc0045c7ea4965a4b79a1a3be106b0417ded269cd",
+      "originalId": "914518",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle and 3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE%20AND%203I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1530",
+        "Depositor ID: GU-1530"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914518",
+      "title": "Radiocarbon date, Sample number GU-1530",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/7d1f004e95eeae8f0f47995fc0045c7ea4965a4b79a1a3be106b0417ded269cd",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918886",
+    "_source": "hsds",
+    "_sourceId": "918886",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9f58fc62adcc891964710278a2d80c6c5940762f6f662cee35152e6c077529fb",
+    "title": "Radiocarbon date, Sample number OxA-2439",
+    "description": "Charcoal, no. 6, within one of stoneholes of embanked stone circle at Barbrook II, within eastern extension of Big Moor cairnfields, Holmesfield, Derbyshire, England. Subm K R Smith, Peak Dist Nat Park. Comment (J B): samples were obtainedfrom recent re-excavation and restoration of circle. In retrospect this sample is either contaminated or relates to a time when the orthostat fell, with migration of charcoal down the soil profile.<br>",
+    "creator": "J Barnatt",
+    "date": "1998-12-01",
+    "subject": [
+      "3i stone circle -- embanked",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.278179,
+    "decimalLongitude": -1.584531,
+    "hsds": {
+      "elasticId": "9f58fc62adcc891964710278a2d80c6c5940762f6f662cee35152e6c077529fb",
+      "originalId": "918886",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.278179,
+            "lon": -1.584531
+          },
+          "centroid": {
+            "lat": 53.278179,
+            "lon": -1.584531
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i stone circle -- embanked",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20STONE%20CIRCLE%20--%20EMBANKED"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2439-2",
+        "Depositor ID: OxA-2439"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:918886",
+      "title": "Radiocarbon date, Sample number OxA-2439",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9f58fc62adcc891964710278a2d80c6c5940762f6f662cee35152e6c077529fb",
+      "creator": "J Barnatt",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916455",
+    "_source": "hsds",
+    "_sourceId": "916455",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/6586a366259ecc17c0938ef3851dd9f6e147dd1d4839ecc4fa67c0b153a38f78",
+    "title": "Radiocarbon date, Sample number SRR-351",
+    "description": "Sample unspecified, from area around two stone-holes near centre of circle at Stenness, Orkney, Scotland.<br>",
+    "creator": "J N G Ritchie",
+    "date": "1998-12-01",
+    "subject": [
+      "3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 58.995281,
+    "decimalLongitude": -3.207953,
+    "hsds": {
+      "elasticId": "6586a366259ecc17c0938ef3851dd9f6e147dd1d4839ecc4fa67c0b153a38f78",
+      "originalId": "916455",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 58.995281,
+            "lon": -3.207953
+          },
+          "centroid": {
+            "lat": 58.995281,
+            "lon": -3.207953
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-SRR-351",
+        "Depositor ID: SRR-351"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:916455",
+      "title": "Radiocarbon date, Sample number SRR-351",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/6586a366259ecc17c0938ef3851dd9f6e147dd1d4839ecc4fa67c0b153a38f78",
+      "creator": "J N G Ritchie",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918887",
+    "_source": "hsds",
+    "_sourceId": "918887",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/8414adb4f036604d3f92dda38a32c39d85cffe6d65127f0d746663713d4a0ed1",
+    "title": "Radiocarbon date, Sample number OxA-2440",
+    "description": "Charcoal, no. 2, from under bank of embanked stone circle at Barbrook II, within eastern extension of Big Moor cairnfields, Holmesfield, Derbyshire, England. Subm K R Smith, Peak Dist Nat Park. Comment (J B): samples were obtained from recent re-excavation and restoration of circle. This date accords well with BM-179 (3450  150) obtained in earlier excavation from cremation pit under internal cairn. See also OxA-2439, now thought contaminated/misplaced.<br>",
+    "creator": "J Barnatt",
+    "date": "1998-12-01",
+    "subject": [
+      "3i stone circle -- embanked",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.278179,
+    "decimalLongitude": -1.584531,
+    "hsds": {
+      "elasticId": "8414adb4f036604d3f92dda38a32c39d85cffe6d65127f0d746663713d4a0ed1",
+      "originalId": "918887",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.278179,
+            "lon": -1.584531
+          },
+          "centroid": {
+            "lat": 53.278179,
+            "lon": -1.584531
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i stone circle -- embanked",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20STONE%20CIRCLE%20--%20EMBANKED"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2440-2",
+        "Depositor ID: OxA-2440"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:918887",
+      "title": "Radiocarbon date, Sample number OxA-2440",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/8414adb4f036604d3f92dda38a32c39d85cffe6d65127f0d746663713d4a0ed1",
+      "creator": "J Barnatt",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914517",
+    "_source": "hsds",
+    "_sourceId": "914517",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c8cdcdc7bcb923c93b83a8e803e10151a094b965f425e68d4ec82f76c440f482",
+    "title": "Radiocarbon date, Sample number GU-1298",
+    "description": "Charcoal, id as alder, from possible stake in stone-hole of lower kerb of burial E (site no. 82) at Temple Wood, Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle and 3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "c8cdcdc7bcb923c93b83a8e803e10151a094b965f425e68d4ec82f76c440f482",
+      "originalId": "914517",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle and 3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE%20AND%203I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1298",
+        "Depositor ID: GU-1298"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914517",
+      "title": "Radiocarbon date, Sample number GU-1298",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c8cdcdc7bcb923c93b83a8e803e10151a094b965f425e68d4ec82f76c440f482",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914975",
+    "_source": "hsds",
+    "_sourceId": "914975",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/600a9053eed5d70776fb6a2a28c8c407e39122ffc0750e98c51fd11cd748bb62",
+    "title": "Radiocarbon date, Sample number CAR-162",
+    "description": "Charcoal from fill of F11 at edge of circle at Moel Goedog Circle 1, nr Harlech, Gwynedd, Wales. Coll F Lynch. Subm Gwynedd Archaeol Trust.<br>12-stone circle with cairn and pits",
+    "creator": "F Lynch",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.87075,
+    "decimalLongitude": -4.065375,
+    "hsds": {
+      "elasticId": "600a9053eed5d70776fb6a2a28c8c407e39122ffc0750e98c51fd11cd748bb62",
+      "originalId": "914975",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          },
+          "centroid": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-162",
+        "Depositor ID: CAR-162"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914975",
+      "title": "Radiocarbon date, Sample number CAR-162",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/600a9053eed5d70776fb6a2a28c8c407e39122ffc0750e98c51fd11cd748bb62",
+      "creator": "F Lynch",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912593",
+    "_source": "hsds",
+    "_sourceId": "912593",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d47452110b6f6f9d94e3de6fb449404c9459e75b80234d525ccfaddad115f849",
+    "title": "Radiocarbon date, Sample number UB-436",
+    "description": "Charcoal from clay below large stone just outside BA stone circle at Gortcorbies, Limavady, Londonderry, Ireland. [Ed: date lies within Late Irish Iron Age.]<br>",
+    "creator": "A G Smith / I C Goddard",
+    "date": "1998-12-01",
+    "subject": [
+      "3b or 4a occupation / 9 anomalous",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 55.074849,
+    "decimalLongitude": -6.836648,
+    "hsds": {
+      "elasticId": "d47452110b6f6f9d94e3de6fb449404c9459e75b80234d525ccfaddad115f849",
+      "originalId": "912593",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.074849,
+            "lon": -6.836648
+          },
+          "centroid": {
+            "lat": 55.074849,
+            "lon": -6.836648
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3b or 4a occupation / 9 anomalous",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3B%20OR%204A%20OCCUPATION%20/%209%20ANOMALOUS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-436",
+        "Depositor ID: UB-436"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:912593",
+      "title": "Radiocarbon date, Sample number UB-436",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d47452110b6f6f9d94e3de6fb449404c9459e75b80234d525ccfaddad115f849",
+      "creator": "A G Smith / I C Goddard",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914978",
+    "_source": "hsds",
+    "_sourceId": "914978",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/53dc4e2c1fc08d9797b49d8ba5dae0e887cd8aa6731f653df8dde4488b8d41da",
+    "title": "Radiocarbon date, Sample number CAR-164",
+    "description": "Charcoal from fill of small pit in central area, F3, cut through earth fill, covered by stone spread at Moel Goedog Circle 1, nr Harlech, Gwynedd, Wales. Coll F Lynch. Subm Gwynedd Archaeol Trust.<br>12-stone circle with cairn and pits",
+    "creator": "F Lynch",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.87075,
+    "decimalLongitude": -4.065375,
+    "hsds": {
+      "elasticId": "53dc4e2c1fc08d9797b49d8ba5dae0e887cd8aa6731f653df8dde4488b8d41da",
+      "originalId": "914978",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          },
+          "centroid": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-164",
+        "Depositor ID: CAR-164"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914978",
+      "title": "Radiocarbon date, Sample number CAR-164",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/53dc4e2c1fc08d9797b49d8ba5dae0e887cd8aa6731f653df8dde4488b8d41da",
+      "creator": "F Lynch",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914974",
+    "_source": "hsds",
+    "_sourceId": "914974",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/18affeac96b1dfd16f7086f62a69f9b7d621967d2ef6c04eecff3f23e6a5509f",
+    "title": "Radiocarbon date, Sample number CAR-165",
+    "description": "Charcoal from within and around mouth of cremation urn in pit F10 at Moel Goedog Circle 1, nr Harlech, Gwynedd, Wales. Coll F Lynch. Subm Gwynedd Archaeol Trust.<br>12-stone circle with cairn and pits",
+    "creator": "F Lynch",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.87075,
+    "decimalLongitude": -4.065375,
+    "hsds": {
+      "elasticId": "18affeac96b1dfd16f7086f62a69f9b7d621967d2ef6c04eecff3f23e6a5509f",
+      "originalId": "914974",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          },
+          "centroid": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-165",
+        "Depositor ID: CAR-165"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914974",
+      "title": "Radiocarbon date, Sample number CAR-165",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/18affeac96b1dfd16f7086f62a69f9b7d621967d2ef6c04eecff3f23e6a5509f",
+      "creator": "F Lynch",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914976",
+    "_source": "hsds",
+    "_sourceId": "914976",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b97047bb8212b013ff6b61b329a2bb587a23e2c86a4229e0be51ee2b880ec1f3",
+    "title": "Radiocarbon date, Sample number CAR-163",
+    "description": "Charcoal from fill of F1, with small quantity of bone, in central area and covered by stone slabs embedded in earth fill, from Moel Goedog Circle 1, M. Harlech, Gwynedd. Coll F Lynch. Subm Gwynedd Archaeol Trust.<br>12-stone circle with cairn and pits",
+    "creator": "F Lynch",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.87075,
+    "decimalLongitude": -4.065375,
+    "hsds": {
+      "elasticId": "b97047bb8212b013ff6b61b329a2bb587a23e2c86a4229e0be51ee2b880ec1f3",
+      "originalId": "914976",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          },
+          "centroid": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-163",
+        "Depositor ID: CAR-163"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914976",
+      "title": "Radiocarbon date, Sample number CAR-163",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b97047bb8212b013ff6b61b329a2bb587a23e2c86a4229e0be51ee2b880ec1f3",
+      "creator": "F Lynch",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913925",
+    "_source": "hsds",
+    "_sourceId": "913925",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c01165a530c09dd60ab3d30fbd953bac016d9a59e9405e2f72fb8c8bd86fafed",
+    "title": "Radiocarbon date, Sample number Lu-1750",
+    "description": "Charcoal from secondary inner stone circle, sample 2:79 at Carrowmore - Grave 4, Sligo, Ireland. Coll G Burenhult. Subm G Burenhult. Comment (subm): See monograph below.<br>",
+    "creator": "G Burenhult",
+    "date": "1998-12-01",
+    "subject": [
+      "3e burial",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 54.244653,
+    "decimalLongitude": -8.5216,
+    "hsds": {
+      "elasticId": "c01165a530c09dd60ab3d30fbd953bac016d9a59e9405e2f72fb8c8bd86fafed",
+      "originalId": "913925",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.244653,
+            "lon": -8.5216
+          },
+          "centroid": {
+            "lat": 54.244653,
+            "lon": -8.5216
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3e burial",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3E%20BURIAL"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-LU-1750",
+        "Depositor ID: Lu-1750"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:913925",
+      "title": "Radiocarbon date, Sample number Lu-1750",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c01165a530c09dd60ab3d30fbd953bac016d9a59e9405e2f72fb8c8bd86fafed",
+      "creator": "G Burenhult",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920689",
+    "_source": "hsds",
+    "_sourceId": "920689",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/bfd7405640d185a6d4c2c04668edac819ac80dfad3e2ebb14015c467162ced3e",
+    "title": "Radiocarbon date, Sample number HAR-9696",
+    "description": "Charcoal, ref CIRCLE 10, from ash layer in Stonehole 44 of main stone circle (NW quadrant) at Avebury, Wiltshire, England. Subm M Pitts 1985. Comment (subm): must be rejected as intrusive. [Ed: NGR not given, estimated only.]<br>",
+    "creator": "A Keiller 1937",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.419449,
+    "decimalLongitude": -1.870556,
+    "hsds": {
+      "elasticId": "bfd7405640d185a6d4c2c04668edac819ac80dfad3e2ebb14015c467162ced3e",
+      "originalId": "920689",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.419449,
+            "lon": -1.870556
+          },
+          "centroid": {
+            "lat": 51.419449,
+            "lon": -1.870556
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-9696",
+        "Depositor ID: HAR-9696"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:920689",
+      "title": "Radiocarbon date, Sample number HAR-9696",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/bfd7405640d185a6d4c2c04668edac819ac80dfad3e2ebb14015c467162ced3e",
+      "creator": "A Keiller 1937",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919279",
+    "_source": "hsds",
+    "_sourceId": "919279",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/ad266c348fb3a8694a003a5d1b398ba0c3236c6bc80b30f012dcc0983cffbae5",
+    "title": "Radiocarbon date, Sample number OxA-3690",
+    "description": "Charcoal, id by M A Robinson as oak, F227/5, from circle henge at Devil's Quoits, Stanton Harcourt, Oxfordshire, England. Subm A Barclay and G Lambrick 1992. Comment (subm): OxA-3689 and -3690 were obtained on material from two excavated stone holes; -3689 is probably more reliable and supports a late Neolithic date for the construction of the stone circle. [See also OxA-3686 to -3688, and also HAR-1887, -1888.] Results support idea that henge and stone circle were constructed within a short period and that the two monuments date from mid-3rd millenniumcal BC.<br>",
+    "creator": "A Barclay and G Lambrick, Oxf AU",
+    "date": "1998-12-01",
+    "subject": [
+      "3h henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.739041,
+    "decimalLongitude": -1.404711,
+    "hsds": {
+      "elasticId": "ad266c348fb3a8694a003a5d1b398ba0c3236c6bc80b30f012dcc0983cffbae5",
+      "originalId": "919279",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.739041,
+            "lon": -1.404711
+          },
+          "centroid": {
+            "lat": 51.739041,
+            "lon": -1.404711
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3h henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3H%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3690-2",
+        "Depositor ID: OxA-3690"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:919279",
+      "title": "Radiocarbon date, Sample number OxA-3690",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/ad266c348fb3a8694a003a5d1b398ba0c3236c6bc80b30f012dcc0983cffbae5",
+      "creator": "A Barclay and G Lambrick, Oxf AU",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919278",
+    "_source": "hsds",
+    "_sourceId": "919278",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c537a8773699ab86eb584cd1a2c6ad294f746a9fd2b881eb39fec4b70e5ed8e9",
+    "title": "Radiocarbon date, Sample number OxA-3689",
+    "description": "Antler, id by B Levitan as red deer, F17 AB76, from circle henge at Devil's Quoits, Stanton Harcourt, Oxfordshire, England. Subm A Barclay and G Lambrick 1992.Comment (subm): OxA-3689 and -3690 were obtained on material from two excavatedstone holes; -3689 is probably more reliable and supports a late Neolithic datefor the construction of the stone circle. [See also OxA-3686 to -3688, and alsoHAR-1887, -1888.] Results support idea that henge and stone circle were constructed within a short period and that the two monuments date from mid-3rd millennium cal BC.<br>",
+    "creator": "A Barclay and G Lambrick, Oxf AU",
+    "date": "1998-12-01",
+    "subject": [
+      "3h henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.739041,
+    "decimalLongitude": -1.404711,
+    "hsds": {
+      "elasticId": "c537a8773699ab86eb584cd1a2c6ad294f746a9fd2b881eb39fec4b70e5ed8e9",
+      "originalId": "919278",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.739041,
+            "lon": -1.404711
+          },
+          "centroid": {
+            "lat": 51.739041,
+            "lon": -1.404711
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3h henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3H%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3689-2",
+        "Depositor ID: OxA-3689"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:919278",
+      "title": "Radiocarbon date, Sample number OxA-3689",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c537a8773699ab86eb584cd1a2c6ad294f746a9fd2b881eb39fec4b70e5ed8e9",
+      "creator": "A Barclay and G Lambrick, Oxf AU",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914977",
+    "_source": "hsds",
+    "_sourceId": "914977",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/13b3b9439659c8e660a3b4bf874629a3cf49aa9b264623e78beddcaa17e6d1d0",
+    "title": "Radiocarbon date, Sample number CAR-160",
+    "description": "Charcoal from fill of pit F8 (dug at same time as Stonehole L) containing enlarged food vessel at Moel Goedog Circle 1, nr Harlech, Gwynedd, Wales. Coll F Lynch. Subm Gwynedd Archaeol Trust.<br>12-stone circle with cairn and pits",
+    "creator": "F Lynch",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.87075,
+    "decimalLongitude": -4.065375,
+    "hsds": {
+      "elasticId": "13b3b9439659c8e660a3b4bf874629a3cf49aa9b264623e78beddcaa17e6d1d0",
+      "originalId": "914977",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          },
+          "centroid": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-160",
+        "Depositor ID: CAR-160"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914977",
+      "title": "Radiocarbon date, Sample number CAR-160",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/13b3b9439659c8e660a3b4bf874629a3cf49aa9b264623e78beddcaa17e6d1d0",
+      "creator": "F Lynch",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920740",
+    "_source": "hsds",
+    "_sourceId": "920740",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b736ffb5a603cfb48f24bfb3aef0efb6ffa87a88e3fee5d527a3fe3cb3af9a03",
+    "title": "Radiocarbon date, Sample number BM-2317R",
+    "description": "Charcoal, ref 5/ST81, id as Alnus sp by J Ambers, from fill of shallow pit regarded as stone hole of prehistoric circle at Strichen, Grampian, Scotland. Subm PA 1981. (Is revision of earlier determination BM-2317.)<br>",
+    "creator": "P Abramson, Leeds 1981",
+    "date": "1998-12-01",
+    "subject": [
+      "3i recumbent stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.580745,
+    "decimalLongitude": -2.105364,
+    "hsds": {
+      "elasticId": "b736ffb5a603cfb48f24bfb3aef0efb6ffa87a88e3fee5d527a3fe3cb3af9a03",
+      "originalId": "920740",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.580745,
+            "lon": -2.105364
+          },
+          "centroid": {
+            "lat": 57.580745,
+            "lon": -2.105364
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i recumbent stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20RECUMBENT%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2317R",
+        "Depositor ID: BM-2317R"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:920740",
+      "title": "Radiocarbon date, Sample number BM-2317R",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b736ffb5a603cfb48f24bfb3aef0efb6ffa87a88e3fee5d527a3fe3cb3af9a03",
+      "creator": "P Abramson, Leeds 1981",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914449",
+    "_source": "hsds",
+    "_sourceId": "914449",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/83cd598a36d6d7fdc4c8f5081ee4837e3e29b2f485ee777232995bf3920217a5",
+    "title": "Radiocarbon date, Sample number GrN-17509",
+    "description": "Charcoal from pit cremation burial in interior of circle at Reanascreena South,Ross parish, East Carbery barony, County Cork, Ireland. Comments (lab): CAL dates given; (subm): Site thought related to ring barrow rather than henge. [Ed: NGR not given in source.]<br>recumbent stone circle",
+    "creator": "E Fahy 1960",
+    "date": "1998-12-01",
+    "subject": [
+      "4f ceremonial site",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 51.517864,
+    "decimalLongitude": -9.152646,
+    "hsds": {
+      "elasticId": "83cd598a36d6d7fdc4c8f5081ee4837e3e29b2f485ee777232995bf3920217a5",
+      "originalId": "914449",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.517864,
+            "lon": -9.152646
+          },
+          "centroid": {
+            "lat": 51.517864,
+            "lon": -9.152646
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f ceremonial site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20CEREMONIAL%20SITE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GRN-17509",
+        "Depositor ID: GrN-17509"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914449",
+      "title": "Radiocarbon date, Sample number GrN-17509",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/83cd598a36d6d7fdc4c8f5081ee4837e3e29b2f485ee777232995bf3920217a5",
+      "creator": "E Fahy 1960",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915008",
+    "_source": "hsds",
+    "_sourceId": "915008",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/7ea6f61f6235386c9bbce0e6f0adaf9b8c8358705f556bf409f1cc9032ab23a2",
+    "title": "Radiocarbon date, Sample number CAR-166",
+    "description": "Charcoal from immediately around remains of broken urn in pit F7 at Moel GoedogCircle 1, nr Harlech, Gwynedd, Wales. Coll F Lynch. Subm Gwynedd Archaeol Trust.<br>12-stone circle with cairn and pits",
+    "creator": "F Lynch",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.87075,
+    "decimalLongitude": -4.065375,
+    "hsds": {
+      "elasticId": "7ea6f61f6235386c9bbce0e6f0adaf9b8c8358705f556bf409f1cc9032ab23a2",
+      "originalId": "915008",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          },
+          "centroid": {
+            "lat": 52.87075,
+            "lon": -4.065375
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-166",
+        "Depositor ID: CAR-166"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:915008",
+      "title": "Radiocarbon date, Sample number CAR-166",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/7ea6f61f6235386c9bbce0e6f0adaf9b8c8358705f556bf409f1cc9032ab23a2",
+      "creator": "F Lynch",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914511",
+    "_source": "hsds",
+    "_sourceId": "914511",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/5f1f4359bb1a68ca2b5112266bca3ba5bd7ff6456f49ea0744d8a2199f495f36",
+    "title": "Radiocarbon date, Sample number GU-1528",
+    "description": "Charcoal, id as oak, from upper OGS (site no. 46) at Temple Wood, Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle and 3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "5f1f4359bb1a68ca2b5112266bca3ba5bd7ff6456f49ea0744d8a2199f495f36",
+      "originalId": "914511",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle and 3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE%20AND%203I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1528",
+        "Depositor ID: GU-1528"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914511",
+      "title": "Radiocarbon date, Sample number GU-1528",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/5f1f4359bb1a68ca2b5112266bca3ba5bd7ff6456f49ea0744d8a2199f495f36",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914423",
+    "_source": "hsds",
+    "_sourceId": "914423",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d89cd87f073c7e4018f65cd1391acaa52db5c1c5713f999c890a5e4950304c08",
+    "title": "Radiocarbon date, Sample number GU-1527",
+    "description": "Charcoal, id as oak with trace of hazel, from OGS (site no. 41) at Temple Wood,Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle and 3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "d89cd87f073c7e4018f65cd1391acaa52db5c1c5713f999c890a5e4950304c08",
+      "originalId": "914423",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle and 3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE%20AND%203I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1527",
+        "Depositor ID: GU-1527"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914423",
+      "title": "Radiocarbon date, Sample number GU-1527",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d89cd87f073c7e4018f65cd1391acaa52db5c1c5713f999c890a5e4950304c08",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914421",
+    "_source": "hsds",
+    "_sourceId": "914421",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9703e2455c2d8ad3fc3f1a42117d6529d350a6f57d90118684b32a3c610be30d",
+    "title": "Radiocarbon date, Sample number SRR-530",
+    "description": "Charcoal from OGS, with gravel subsoil, sealed beneath 7.50-10cm layer of clay and stones (site no. 11) at Temple Wood, Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "3i stone circle and 4f stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "9703e2455c2d8ad3fc3f1a42117d6529d350a6f57d90118684b32a3c610be30d",
+      "originalId": "914421",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i stone circle and 4f stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20STONE%20CIRCLE%20AND%204F%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-SRR-530",
+        "Depositor ID: SRR-530"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914421",
+      "title": "Radiocarbon date, Sample number SRR-530",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9703e2455c2d8ad3fc3f1a42117d6529d350a6f57d90118684b32a3c610be30d",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914513",
+    "_source": "hsds",
+    "_sourceId": "914513",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9fcb45826998dc284065e6a271008e54fa956d341a96531840fe265994655176",
+    "title": "Radiocarbon date, Sample number GU-1297",
+    "description": "Charcoal, id as oak, sealed beneath outer edge of slab capping bordering central cist, Burial D (site no. 84) at Temple Wood, Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle and 3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "9fcb45826998dc284065e6a271008e54fa956d341a96531840fe265994655176",
+      "originalId": "914513",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle and 3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE%20AND%203I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1297",
+        "Depositor ID: GU-1297"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914513",
+      "title": "Radiocarbon date, Sample number GU-1297",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9fcb45826998dc284065e6a271008e54fa956d341a96531840fe265994655176",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914512",
+    "_source": "hsds",
+    "_sourceId": "914512",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2f7b889ed419fb6ad2fefc356830eef82af243f58fda1ed956c6351af731b2c2",
+    "title": "Radiocarbon date, Sample number GU-1045",
+    "description": "Charcoal from just above natural surface and beneath outer edge of slab cappingbordering central cist, burial D (site no. 60) at Temple Wood, Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle and 3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "2f7b889ed419fb6ad2fefc356830eef82af243f58fda1ed956c6351af731b2c2",
+      "originalId": "914512",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle and 3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE%20AND%203I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1045",
+        "Depositor ID: GU-1045"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914512",
+      "title": "Radiocarbon date, Sample number GU-1045",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2f7b889ed419fb6ad2fefc356830eef82af243f58fda1ed956c6351af731b2c2",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914516",
+    "_source": "hsds",
+    "_sourceId": "914516",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f394742566912616098f58a851e1d3fb542e08853321bbd1556d2d283a66d514",
+    "title": "Radiocarbon date, Sample number GU-1299",
+    "description": "Charcoal, id as alder and (rather less) hazel, assoc. with cremation in cremation pit of burial E (site no. 79) at Temple Wood, Kilmartin, Argyll, Strathclyde,Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle and 3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "f394742566912616098f58a851e1d3fb542e08853321bbd1556d2d283a66d514",
+      "originalId": "914516",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle and 3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE%20AND%203I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1299",
+        "Depositor ID: GU-1299"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914516",
+      "title": "Radiocarbon date, Sample number GU-1299",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f394742566912616098f58a851e1d3fb542e08853321bbd1556d2d283a66d514",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914637",
+    "_source": "hsds",
+    "_sourceId": "914637",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/0267bb40f1e96e64714c78f32c2d5b3e8631f1512a661324a504c7ccb7cd7ff0",
+    "title": "Radiocarbon date, Sample number BM-2572",
+    "description": "Charcoal, id by P Franklin (Oxford U Dept Forestry) as Quercus sp, bulked sample, from sandy layer below ring bank, poss carbonised remains of stakes of woodenstake circle at Harden Moor, near Bingley, West Yorkshire, England. Subm J Henderson 1984. Comment (subm): BM-2572 is youngest in series and provides tpq for ring bank. Other dates provide firm EBA attribution for cremation deposits on site and all prob fall within same early phase of activity (as indicated by stratigraphy). Measurements provide tpq for stone circle which was pushed over to seal some of cremation pits. Oak is long-lived species but dates still indicate post ring later than cremations and poss later than stone circle.<br>",
+    "creator": "J Henderson (Res Lab for Archaeol & Hist of Art, Oxford)",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.843381,
+    "decimalLongitude": -1.885999,
+    "hsds": {
+      "elasticId": "0267bb40f1e96e64714c78f32c2d5b3e8631f1512a661324a504c7ccb7cd7ff0",
+      "originalId": "914637",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.843381,
+            "lon": -1.885999
+          },
+          "centroid": {
+            "lat": 53.843381,
+            "lon": -1.885999
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2572",
+        "Depositor ID: BM-2572"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914637",
+      "title": "Radiocarbon date, Sample number BM-2572",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/0267bb40f1e96e64714c78f32c2d5b3e8631f1512a661324a504c7ccb7cd7ff0",
+      "creator": "J Henderson (Res Lab for Archaeol & Hist of Art, Oxford)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920678",
+    "_source": "hsds",
+    "_sourceId": "920678",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e17a4b86d4f2a265e2cd239b755d7533cea1103ab59c26365ef52aefccc919b7",
+    "title": "Radiocarbon date, Sample number HAR-10061",
+    "description": "Charcoal, AML 831785, from stakehole on edge of Stonehole 8 of main stone circle (SW quadrant) at Avebury, Wiltshire, England. Subm M Pitts 1987. Comment (subm): must be rejected as intrusive. [Ed: NGR not given, estimated only.]<br>",
+    "creator": "A Keiller 1938",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.419449,
+    "decimalLongitude": -1.870556,
+    "hsds": {
+      "elasticId": "e17a4b86d4f2a265e2cd239b755d7533cea1103ab59c26365ef52aefccc919b7",
+      "originalId": "920678",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.419449,
+            "lon": -1.870556
+          },
+          "centroid": {
+            "lat": 51.419449,
+            "lon": -1.870556
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-10061",
+        "Depositor ID: HAR-10061"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:920678",
+      "title": "Radiocarbon date, Sample number HAR-10061",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e17a4b86d4f2a265e2cd239b755d7533cea1103ab59c26365ef52aefccc919b7",
+      "creator": "A Keiller 1938",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920679",
+    "_source": "hsds",
+    "_sourceId": "920679",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d63ef9547af129fb03fb0c351b47aa840419ec1b963cf25c1e41df366aacdebd",
+    "title": "Radiocarbon date, Sample number HAR-10062",
+    "description": "Charcoal, AML 831784, from bottom of Stonehole 41 of main stone circle (NW quadrant) at Avebury, Wiltshire, England. Subm M Pitts 1987. Comment (subm): perhapsless reliable than HAR-103276 on bone. [Ed: NGR not given, estimated only.]<br>",
+    "creator": "A Keiller 1937",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.419449,
+    "decimalLongitude": -1.870556,
+    "hsds": {
+      "elasticId": "d63ef9547af129fb03fb0c351b47aa840419ec1b963cf25c1e41df366aacdebd",
+      "originalId": "920679",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.419449,
+            "lon": -1.870556
+          },
+          "centroid": {
+            "lat": 51.419449,
+            "lon": -1.870556
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-10062",
+        "Depositor ID: HAR-10062"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:920679",
+      "title": "Radiocarbon date, Sample number HAR-10062",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d63ef9547af129fb03fb0c351b47aa840419ec1b963cf25c1e41df366aacdebd",
+      "creator": "A Keiller 1937",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914422",
+    "_source": "hsds",
+    "_sourceId": "914422",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b6ec352f0b5aa88b28eeb8acb4a2ab0e041cf846d4be4a701d0ff8185266ab07",
+    "title": "Radiocarbon date, Sample number SRR-531",
+    "description": "Charcoal from OGS, with gravel subsoil, sealed beneath 7.50-10cm layer of clay and stones (site no. 12, and context as for site no. 11) at Temple Wood, Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle and 3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "b6ec352f0b5aa88b28eeb8acb4a2ab0e041cf846d4be4a701d0ff8185266ab07",
+      "originalId": "914422",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle and 3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE%20AND%203I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-SRR-531",
+        "Depositor ID: SRR-531"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914422",
+      "title": "Radiocarbon date, Sample number SRR-531",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b6ec352f0b5aa88b28eeb8acb4a2ab0e041cf846d4be4a701d0ff8185266ab07",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914514",
+    "_source": "hsds",
+    "_sourceId": "914514",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/103f8509a6469ad38dac1728ad0d6ecf07de79c425d38af617bbedf62290074d",
+    "title": "Radiocarbon date, Sample number GU-1300",
+    "description": "Charcoal, id as oak, sealed below apparently infilled brown soil forming part of cairn material overlying pit cremation of burial E (site no. 72) at Temple Wood, Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle and 3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "103f8509a6469ad38dac1728ad0d6ecf07de79c425d38af617bbedf62290074d",
+      "originalId": "914514",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle and 3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE%20AND%203I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1300",
+        "Depositor ID: GU-1300"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914514",
+      "title": "Radiocarbon date, Sample number GU-1300",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/103f8509a6469ad38dac1728ad0d6ecf07de79c425d38af617bbedf62290074d",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914515",
+    "_source": "hsds",
+    "_sourceId": "914515",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/063412995621799567797fce11478f393632df94668ebcc3ac68cfebf82f85b2",
+    "title": "Radiocarbon date, Sample number GU-1529",
+    "description": "Charcoal, id as alder (incl piece diam. 20+ cm), from possible stake-hole to E of area of cremation deposit of burial E (site no. 78) at Temple Wood, Kilmartin, Argyll, Strathclyde, Scotland. Comments (lab): Calibration on Klein 1982 tables; (subm): See report.<br>Southern circle of pair",
+    "creator": "J G Scott",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle and 3i stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.123196,
+    "decimalLongitude": -5.498086,
+    "hsds": {
+      "elasticId": "063412995621799567797fce11478f393632df94668ebcc3ac68cfebf82f85b2",
+      "originalId": "914515",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          },
+          "centroid": {
+            "lat": 56.123196,
+            "lon": -5.498086
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle and 3i stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE%20AND%203I%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1529",
+        "Depositor ID: GU-1529"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914515",
+      "title": "Radiocarbon date, Sample number GU-1529",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/063412995621799567797fce11478f393632df94668ebcc3ac68cfebf82f85b2",
+      "creator": "J G Scott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914639",
+    "_source": "hsds",
+    "_sourceId": "914639",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/27f9f56441a8e224aa4ad69f5c73ad261d9820d0566f4638b104c6574b97ac48",
+    "title": "Radiocarbon date, Sample number BM-2574",
+    "description": "Charcoal, id by P Franklin (Oxford Univ Dept Forestry) as Quercus sp, from cremation pit cut into base of ring bank in SW quad, sealed by recumbent stone, assoc with cremated bone at Harden Moor, near Bingley, West Yorkshire, England. SubmJ Henderson 1984. Comment (subm): BM-2572 is youngest in series and provides tpq for ring bank. Other dates provide firm EBA attribution for cremation depositson site and all prob fall within same early phase of activity (as indicated by stratigraphy). Measurements provide tpq for stone circle which was pushed over to seal some of cremation pits. Oak is long-lived species but dates still indicate post ring later than cremations and poss later than stone circle.<br>",
+    "creator": "J Henderson (Res Lab for Archaeol & Hist of Art, Oxford)",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.843381,
+    "decimalLongitude": -1.885999,
+    "hsds": {
+      "elasticId": "27f9f56441a8e224aa4ad69f5c73ad261d9820d0566f4638b104c6574b97ac48",
+      "originalId": "914639",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.843381,
+            "lon": -1.885999
+          },
+          "centroid": {
+            "lat": 53.843381,
+            "lon": -1.885999
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2574",
+        "Depositor ID: BM-2574"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914639",
+      "title": "Radiocarbon date, Sample number BM-2574",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/27f9f56441a8e224aa4ad69f5c73ad261d9820d0566f4638b104c6574b97ac48",
+      "creator": "J Henderson (Res Lab for Archaeol & Hist of Art, Oxford)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914640",
+    "_source": "hsds",
+    "_sourceId": "914640",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1d7bd040921a53d4bd6550f7aaa5e07ed5b14034108dccdecb1fdac3cd0c73a0",
+    "title": "Radiocarbon date, Sample number BM-2575",
+    "description": "Charcoal, id by P Franklin (Oxford Univ Dept Forestry) as Quercus sp, from cremation pit in NW quadrant, sealed by recumbent stone, assoc with cremated bone atHarden Moor, near Bingley, West Yorkshire, England. Subm J Henderson 1984. Comment (subm): BM-2572 is youngest in series and provides tpq for ring bank. Other dates provide firm EBA attribution for cremation deposits on site and all prob fall within same early phase of activity (as indicated by stratigraphy). Measurements provide tpq for stone circle which was pushed over to seal some of cremation pits. Oak is long-lived species but dates still indicate post ring later than cremations and poss later than stone circle.<br>",
+    "creator": "J Henderson (Res Lab for Archaeol & Hist of Art, Oxford)",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.843381,
+    "decimalLongitude": -1.885999,
+    "hsds": {
+      "elasticId": "1d7bd040921a53d4bd6550f7aaa5e07ed5b14034108dccdecb1fdac3cd0c73a0",
+      "originalId": "914640",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.843381,
+            "lon": -1.885999
+          },
+          "centroid": {
+            "lat": 53.843381,
+            "lon": -1.885999
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2575",
+        "Depositor ID: BM-2575"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914640",
+      "title": "Radiocarbon date, Sample number BM-2575",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1d7bd040921a53d4bd6550f7aaa5e07ed5b14034108dccdecb1fdac3cd0c73a0",
+      "creator": "J Henderson (Res Lab for Archaeol & Hist of Art, Oxford)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914450",
+    "_source": "hsds",
+    "_sourceId": "914450",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/5a6eda1869cb460a3630edc8955637b34561c138b245ffd8a3f5634ab227e7f4",
+    "title": "Radiocarbon date, Sample number GrN-17510",
+    "description": "Charcoal from beneath enclosure bank on E side of site at Reanascreena South, Ross parish, East Carbery barony, County Cork, Ireland. Comments (lab): CAL datesgiven; (subm): Site thought related to ring barrow rather than henge. [Ed: NGR not given.]<br>recumbent stone circle",
+    "creator": "E Fahy 1960",
+    "date": "1998-12-01",
+    "subject": [
+      "4f ceremonial site",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 51.517864,
+    "decimalLongitude": -9.152646,
+    "hsds": {
+      "elasticId": "5a6eda1869cb460a3630edc8955637b34561c138b245ffd8a3f5634ab227e7f4",
+      "originalId": "914450",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.517864,
+            "lon": -9.152646
+          },
+          "centroid": {
+            "lat": 51.517864,
+            "lon": -9.152646
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f ceremonial site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20CEREMONIAL%20SITE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GRN-17510",
+        "Depositor ID: GrN-17510"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914450",
+      "title": "Radiocarbon date, Sample number GrN-17510",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/5a6eda1869cb460a3630edc8955637b34561c138b245ffd8a3f5634ab227e7f4",
+      "creator": "E Fahy 1960",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914451",
+    "_source": "hsds",
+    "_sourceId": "914451",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/fd464c790e8a81286600fc5a892934549b841f9a43874a856e8c4817a4454e78",
+    "title": "Radiocarbon date, Sample number GrN-17511",
+    "description": "Peat from near bottom of ditch inside enclosure bank at Reanascreena South, Ross parish, East Carbery barony, County Cork, Ireland. Comments (lab): CAL dates given; (subm): Site thought related to ring barrow rather than henge. [Ed: NGR not given.]<br>recumbent stone circle",
+    "creator": "E Fahy 1960",
+    "date": "1998-12-01",
+    "subject": [
+      "4f ceremonial site",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 51.517864,
+    "decimalLongitude": -9.152646,
+    "hsds": {
+      "elasticId": "fd464c790e8a81286600fc5a892934549b841f9a43874a856e8c4817a4454e78",
+      "originalId": "914451",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.517864,
+            "lon": -9.152646
+          },
+          "centroid": {
+            "lat": 51.517864,
+            "lon": -9.152646
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f ceremonial site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20CEREMONIAL%20SITE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GRN-17511",
+        "Depositor ID: GrN-17511"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914451",
+      "title": "Radiocarbon date, Sample number GrN-17511",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/fd464c790e8a81286600fc5a892934549b841f9a43874a856e8c4817a4454e78",
+      "creator": "E Fahy 1960",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920688",
+    "_source": "hsds",
+    "_sourceId": "920688",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/74f8334a6f39c369b27afa5a26e8b409a66c6fc4e584bb01959178bb0b167daa",
+    "title": "Radiocarbon date, Sample number HAR-10327",
+    "description": "Bone, AML 831783, id as pig, from bottom of Stonehole 44 of main stone circle (NW quadrant) at Avebury, Wiltshire, England. Subm M Pitts 1987. Comment (subm): perhaps more reliable than HAR-10062 on charcoal. [Ed: NGR not given, estimated only.]<br>",
+    "creator": "A Keiller 1937",
+    "date": "1998-12-01",
+    "subject": [
+      "3i henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.419449,
+    "decimalLongitude": -1.870556,
+    "hsds": {
+      "elasticId": "74f8334a6f39c369b27afa5a26e8b409a66c6fc4e584bb01959178bb0b167daa",
+      "originalId": "920688",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.419449,
+            "lon": -1.870556
+          },
+          "centroid": {
+            "lat": 51.419449,
+            "lon": -1.870556
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-10327",
+        "Depositor ID: HAR-10327"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:920688",
+      "title": "Radiocarbon date, Sample number HAR-10327",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/74f8334a6f39c369b27afa5a26e8b409a66c6fc4e584bb01959178bb0b167daa",
+      "creator": "A Keiller 1937",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912422",
+    "_source": "hsds",
+    "_sourceId": "912422",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/73d56fd119498d3e38dc47eb9fbf414fed8b57d1b3f0232a3cc2b207ae224f9d",
+    "title": "Radiocarbon date, Sample number GrN-9173",
+    "description": "Charcoal embedded in OGS sealed by stony layer used for levelling sloping ground before circle constructed at Cashel-keelty II, Co Kerry, Ireland.<br>4 stones plus recumbent",
+    "creator": "A Lynch",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": 51.268149,
+    "decimalLongitude": -10.758689,
+    "hsds": {
+      "elasticId": "73d56fd119498d3e38dc47eb9fbf414fed8b57d1b3f0232a3cc2b207ae224f9d",
+      "originalId": "912422",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.268149,
+            "lon": -10.758689
+          },
+          "centroid": {
+            "lat": 51.268149,
+            "lon": -10.758689
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GRN-9173-2",
+        "Depositor ID: GrN-9173"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:912422",
+      "title": "Radiocarbon date, Sample number GrN-9173",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/73d56fd119498d3e38dc47eb9fbf414fed8b57d1b3f0232a3cc2b207ae224f9d",
+      "creator": "A Lynch",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914641",
+    "_source": "hsds",
+    "_sourceId": "914641",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/36553bbb6b7b049944ea96a93d7b24db6740ad636fadb7ed1db79396744a0996",
+    "title": "Radiocarbon date, Sample number BM-2576",
+    "description": "Charcoal, id by P Franklin (Oxford Univ Dept Forestry) as Quercus sp, from cremation pit cut into base of bank on E of site, sealed by ring bank, assoc with cremated bone and pygmy cup at Harden Moor, near Bingley, West Yorkshire, England.Subm J Henderson 1984. Comment (subm): BM-2572 is youngest in series and provides tpq for ring bank. Other dates provide firm EBA attribution for cremation deposits on site and all prob fall within same early phase of activity (as indicated by stratigraphy). Measurements provide tpq for stone circle which was pushed over to seal some of cremation pits. Oak is long-lived species but dates still indicate post ring later than cremations and poss later than stone circle.<br>",
+    "creator": "J Henderson (Res Lab for Archaeol & Hist of Art, Oxford)",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.843381,
+    "decimalLongitude": -1.885999,
+    "hsds": {
+      "elasticId": "36553bbb6b7b049944ea96a93d7b24db6740ad636fadb7ed1db79396744a0996",
+      "originalId": "914641",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.843381,
+            "lon": -1.885999
+          },
+          "centroid": {
+            "lat": 53.843381,
+            "lon": -1.885999
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2576",
+        "Depositor ID: BM-2576"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914641",
+      "title": "Radiocarbon date, Sample number BM-2576",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/36553bbb6b7b049944ea96a93d7b24db6740ad636fadb7ed1db79396744a0996",
+      "creator": "J Henderson (Res Lab for Archaeol & Hist of Art, Oxford)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914638",
+    "_source": "hsds",
+    "_sourceId": "914638",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/452f72a4a1ebc4bfc71fb3126f11fbb961d2db3e620df392e4c0dc60be6bc885",
+    "title": "Radiocarbon date, Sample number BM-2573",
+    "description": "Charcoal, id by P Franklin (Oxford Univ Dept Forestry) as Quercus or Castanea sp, from cremation pit cut into Bronze Age surface on interior of ring bank in NWquadrant, assoc w cremated bone, accessory cup base, clay toggle and chert artefacts at Harden Moor, near Bingley, West Yorkshire, England. Subm J Henderson 1984. Comment (subm): BM-2572 is youngest in series and provides tpq for ring bank. Other dates provide firm EBA attribution for cremation deposits on site and all prob fall within same early phase of activity (as indicated by stratigraphy). Measurements provide tpq for stone circle which was pushed over to seal some of cremation pits. Oak is long-lived species but dates still indicate post ring later than cremations and poss later than stone circle.<br>",
+    "creator": "J Henderson (Res Lab for Archaeol & Hist of Art, Oxford)",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.843381,
+    "decimalLongitude": -1.885999,
+    "hsds": {
+      "elasticId": "452f72a4a1ebc4bfc71fb3126f11fbb961d2db3e620df392e4c0dc60be6bc885",
+      "originalId": "914638",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.843381,
+            "lon": -1.885999
+          },
+          "centroid": {
+            "lat": 53.843381,
+            "lon": -1.885999
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2573",
+        "Depositor ID: BM-2573"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:914638",
+      "title": "Radiocarbon date, Sample number BM-2573",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/452f72a4a1ebc4bfc71fb3126f11fbb961d2db3e620df392e4c0dc60be6bc885",
+      "creator": "J Henderson (Res Lab for Archaeol & Hist of Art, Oxford)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919219",
+    "_source": "hsds",
+    "_sourceId": "919219",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/3e7c92d118a97160bad5d5b5654134414b1c283e3b15ec864b07fc4020f317f0",
+    "title": "Radiocarbon date, Sample number OxA-3686",
+    "description": "Antler, id by B Levitan as red deer, Fa(b) AB118, from circle henge at Devil's Quoits, Stanton Harcourt, Oxfordshire, England. Subm A Barclay and G Lambrick 1992. Comment (subm): OxA-3686 to -3688 are for antler and bone from secondary fill (cutting IIIb) through ditch. [See also OxA-3689 to -3690, and also HAR-1887, -1888.] Results support idea that henge and stone circle were constructed withina short period and that the two monuments date from mid-3rd millennium cal BC.<br>",
+    "creator": "A Barclay and G Lambrick, Oxf AU",
+    "date": "1998-12-01",
+    "subject": [
+      "3h henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.739041,
+    "decimalLongitude": -1.404711,
+    "hsds": {
+      "elasticId": "3e7c92d118a97160bad5d5b5654134414b1c283e3b15ec864b07fc4020f317f0",
+      "originalId": "919219",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.739041,
+            "lon": -1.404711
+          },
+          "centroid": {
+            "lat": 51.739041,
+            "lon": -1.404711
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3h henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3H%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3686-2",
+        "Depositor ID: OxA-3686"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:919219",
+      "title": "Radiocarbon date, Sample number OxA-3686",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/3e7c92d118a97160bad5d5b5654134414b1c283e3b15ec864b07fc4020f317f0",
+      "creator": "A Barclay and G Lambrick, Oxf AU",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919277",
+    "_source": "hsds",
+    "_sourceId": "919277",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/342875f4a4ff482c7a811efa0bc277e0f022beb3deb2da84f23fbe8af85cce37",
+    "title": "Radiocarbon date, Sample number OxA-3688",
+    "description": "Bone, id by B Levitan as animal, H(b) AB92, from circle henge at Devil's Quoits, Stanton Harcourt, Oxfordshire, England. Subm A Barclay and G Lambrick 1992. Comment (subm): OxA-3686 to -3688 are for antler and bone from secondary fill (cutting IIIb) through ditch. [See also OxA-3689 to -3690, and also HAR-1887, -1888.] Results support idea that henge and stone circle were constructed within a short period and that the two monuments date from mid-3rd millennium cal BC.<br>",
+    "creator": "A Barclay and G Lambrick, Oxf AU",
+    "date": "1998-12-01",
+    "subject": [
+      "3h henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.739041,
+    "decimalLongitude": -1.404711,
+    "hsds": {
+      "elasticId": "342875f4a4ff482c7a811efa0bc277e0f022beb3deb2da84f23fbe8af85cce37",
+      "originalId": "919277",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.739041,
+            "lon": -1.404711
+          },
+          "centroid": {
+            "lat": 51.739041,
+            "lon": -1.404711
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3h henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3H%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3688-2",
+        "Depositor ID: OxA-3688"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:919277",
+      "title": "Radiocarbon date, Sample number OxA-3688",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/342875f4a4ff482c7a811efa0bc277e0f022beb3deb2da84f23fbe8af85cce37",
+      "creator": "A Barclay and G Lambrick, Oxf AU",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919276",
+    "_source": "hsds",
+    "_sourceId": "919276",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/02d70f3d3065acbca1a0217019678713d963bc0a6073e0996513b4a96e9f5e96",
+    "title": "Radiocarbon date, Sample number OxA-3687",
+    "description": "Bone, id by B Levitan as cattle ulna, G(b) AB93, from circle henge at Devil's Quoits, Stanton Harcourt, Oxfordshire, England. Subm A Barclay and G Lambrick 1992. Comment (subm): OxA-3686 to -3688 are for antler and bone from secondary fill(cutting IIIb) through ditch. [See also OxA-3689 to -3690, and also HAR-1887, -1888.] Results support idea that henge and stone circle were constructed within a short period and that the two monuments date from mid-3rd millennium cal BC.<br>",
+    "creator": "A Barclay and G Lambrick, Oxf AU",
+    "date": "1998-12-01",
+    "subject": [
+      "3h henge",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.739041,
+    "decimalLongitude": -1.404711,
+    "hsds": {
+      "elasticId": "02d70f3d3065acbca1a0217019678713d963bc0a6073e0996513b4a96e9f5e96",
+      "originalId": "919276",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.739041,
+            "lon": -1.404711
+          },
+          "centroid": {
+            "lat": 51.739041,
+            "lon": -1.404711
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3h henge",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3H%20HENGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3687-2",
+        "Depositor ID: OxA-3687"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:919276",
+      "title": "Radiocarbon date, Sample number OxA-3687",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/02d70f3d3065acbca1a0217019678713d963bc0a6073e0996513b4a96e9f5e96",
+      "creator": "A Barclay and G Lambrick, Oxf AU",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919857",
+    "_source": "hsds",
+    "_sourceId": "919857",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2c41edfa3fa3684489bf49585df43d11de3ef11b65b62fa607a4af461266c457",
+    "title": "Radiocarbon date, Sample number OxA-2684",
+    "description": "Charcoal, from Ballycommane, Co Cork, Ireland. Subm A L Brindley and J N Lanting, BAI Groningen, 1990-1. Comment (subm): OxA-2682 to -2684 attempt to date Irish stone circles, though finding reliable samples from these monuments is not easy. This date is far too young, probably owing to intrusion of small charcoal particles. [Ed: grid ref obtained from Duchas]<br>Irish stone circles dating programme",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 51.626399,
+    "decimalLongitude": -9.487585,
+    "hsds": {
+      "elasticId": "2c41edfa3fa3684489bf49585df43d11de3ef11b65b62fa607a4af461266c457",
+      "originalId": "919857",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.626399,
+            "lon": -9.487585
+          },
+          "centroid": {
+            "lat": 51.626399,
+            "lon": -9.487585
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2684",
+        "Depositor ID: OxA-2684"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:919857",
+      "title": "Radiocarbon date, Sample number OxA-2684",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2c41edfa3fa3684489bf49585df43d11de3ef11b65b62fa607a4af461266c457",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919801",
+    "_source": "hsds",
+    "_sourceId": "919801",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a173e968c612e78925f549afe4438bb876425cc27f34c65290270fdd5140d2e2",
+    "title": "Radiocarbon date, Sample number OxA-2682",
+    "description": "Charcoal, from Bohonagh site 2, Co Cork, Ireland. Subm A L Brindley and J N Lanting, BAI Groningen, 1990-1. Comment (subm): OxA-2682 to -2684 attempt to date Irish stone circles, though finding reliable samples from these monuments is not easy. This date is far too young, probably owing to intrusion of small charcoal particles. [Ed: some uncertainty about grid ref.]<br>Irish stone circles dating programme",
+    "creator": "E M Fahy",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 51.573087,
+    "decimalLongitude": -9.009783,
+    "hsds": {
+      "elasticId": "a173e968c612e78925f549afe4438bb876425cc27f34c65290270fdd5140d2e2",
+      "originalId": "919801",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.573087,
+            "lon": -9.009783
+          },
+          "centroid": {
+            "lat": 51.573087,
+            "lon": -9.009783
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2682",
+        "Depositor ID: OxA-2682"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:919801",
+      "title": "Radiocarbon date, Sample number OxA-2682",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a173e968c612e78925f549afe4438bb876425cc27f34c65290270fdd5140d2e2",
+      "creator": "E M Fahy",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919228",
+    "_source": "hsds",
+    "_sourceId": "919228",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/803b2973361c625d592bbfa48ee2262d52110f38ad41d2730871d56ee6c1fff0",
+    "title": "Radiocarbon date, Sample number OxA-2683",
+    "description": "Charcoal, from Drombeg, Co Cork, Ireland. Subm A L Brindley and J N Lanting, BAI Groningen, 1990-1. Comment (subm): OxA-2682 to -2684 attempt to date Irish stone circles, though finding reliable samples from these monuments is not easy. This date agrees well with other 14C dates for undecorated, coarse LBA pottery. The Dublin date (D-62, 1350  120 BP) is obviously much too young.<br>Irish stone circles dating programme",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "4f stone circle",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 51.563462,
+    "decimalLongitude": -9.081684,
+    "hsds": {
+      "elasticId": "803b2973361c625d592bbfa48ee2262d52110f38ad41d2730871d56ee6c1fff0",
+      "originalId": "919228",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.563462,
+            "lon": -9.081684
+          },
+          "centroid": {
+            "lat": 51.563462,
+            "lon": -9.081684
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f stone circle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20STONE%20CIRCLE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2683-2",
+        "Depositor ID: OxA-2683"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:919228",
+      "title": "Radiocarbon date, Sample number OxA-2683",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/803b2973361c625d592bbfa48ee2262d52110f38ad41d2730871d56ee6c1fff0",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915262",
+    "_source": "hsds",
+    "_sourceId": "915262",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d8dc27c77a3ae5e6fab69b577d5189d0f367156210590019e88733a924e448b2",
+    "title": "Radiocarbon date, Sample number GaK-3426",
+    "description": "Charcoal in land surface built up within square stone setting at Balbirnie, Markinch, Fife, Scotland.<br>",
+    "creator": "J N G Ritchie",
+    "date": "1998-12-01",
+    "subject": [
+      "4b stone circle and cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.214271,
+    "decimalLongitude": -3.152953,
+    "hsds": {
+      "elasticId": "d8dc27c77a3ae5e6fab69b577d5189d0f367156210590019e88733a924e448b2",
+      "originalId": "915262",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.214271,
+            "lon": -3.152953
+          },
+          "centroid": {
+            "lat": 56.214271,
+            "lon": -3.152953
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b stone circle and cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20STONE%20CIRCLE%20AND%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GAK-3426",
+        "Depositor ID: GaK-3426"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:58.326Z",
+      "query": "q:stone circle",
+      "recordId": "hsds:915262",
+      "title": "Radiocarbon date, Sample number GaK-3426",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d8dc27c77a3ae5e6fab69b577d5189d0f367156210590019e88733a924e448b2",
+      "creator": "J N G Ritchie",
+      "date": "1998-12-01"
+    }
+  }
+]

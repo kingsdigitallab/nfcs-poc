@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "059a858f-000e-4c51-bb00-82fb807d840e",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/059a858f-000e-4c51-bb00-82fb807d840e/",
+    "_service": "bodleian",
+    "title": "Epigraphical and archaeological collections including copies of drawings by Ciriaco d'Ancona ('Codex Ashmolensis').",
+    "date": "15th century, end",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0621f4b2-08fa-4003-adfe-b457d96db6f5/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "059a858f-000e-4c51-bb00-82fb807d840e",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/059a858f-000e-4c51-bb00-82fb807d840e.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0621f4b2-08fa-4003-adfe-b457d96db6f5/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Lat. misc. d. 85",
+      "origins": "Italy, Florence",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 49
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:01:41.656Z",
+      "query": "hadrians wall",
+      "title": "Epigraphical and archaeological collections including copies of drawings by Ciriaco d'Ancona ('Codex Ashmolensis').",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/059a858f-000e-4c51-bb00-82fb807d840e/",
+      "date": "15th century, end"
+    }
+  },
+  {
+    "_id": "32638ab9-c0b2-4258-9ca7-980b4b9268f2",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/32638ab9-c0b2-4258-9ca7-980b4b9268f2/",
+    "_service": "bodleian",
+    "title": "‘The Gough Map’.",
+    "date": "",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/c7516abb-fc1f-4547-8bab-6796bc60aa15/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "32638ab9-c0b2-4258-9ca7-980b4b9268f2",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/32638ab9-c0b2-4258-9ca7-980b4b9268f2.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/c7516abb-fc1f-4547-8bab-6796bc60aa15/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Gough Gen. Top. 16",
+      "origins": "England",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 30
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:01:41.656Z",
+      "query": "hadrians wall",
+      "title": "‘The Gough Map’.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/32638ab9-c0b2-4258-9ca7-980b4b9268f2/",
+      "date": ""
+    }
+  },
+  {
+    "_id": "ca49c07b-cfb5-41cc-ab66-c215e1268a05",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ca49c07b-cfb5-41cc-ab66-c215e1268a05/",
+    "_service": "bodleian",
+    "title": "Cosmographia Scoti, Notitia dignitatum. Etc.",
+    "date": "",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/df046fcb-ae3c-437e-a06d-d0ddcdf02b1d/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "ca49c07b-cfb5-41cc-ab66-c215e1268a05",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ca49c07b-cfb5-41cc-ab66-c215e1268a05.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/df046fcb-ae3c-437e-a06d-d0ddcdf02b1d/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Canon. Misc. 378",
+      "origins": "Italy and France, Basel",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 153
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:01:41.656Z",
+      "query": "hadrians wall",
+      "title": "Cosmographia Scoti, Notitia dignitatum. Etc.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/ca49c07b-cfb5-41cc-ab66-c215e1268a05/",
+      "date": ""
+    }
+  }
+]

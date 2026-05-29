@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+    "_service": "bodleian",
+    "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+    "date": "1623",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/390fd0e8-9eae-475d-9564-ed916ab9035c.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Arch. G c.7",
+      "origins": "London",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 920
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T13:55:14.863Z",
+      "query": "sutton hoo",
+      "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+      "date": "1623"
+    }
+  }
+]

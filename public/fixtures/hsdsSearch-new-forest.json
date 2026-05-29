@@ -1,0 +1,1107 @@
+[
+  {
+    "id": "hsds:https://doi.org/10.5284/1095844",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1095844",
+    "_sourceUrl": "https://doi.org/10.5284/1095844",
+    "title": "The Verderers of the New Forest Higher Level Stewardship Scheme",
+    "description": "The Verderers of the New Forest Higher Level Stewardship (HLS) Scheme is a large environmental scheme to restore and enhance internationally important habitants on the Crown lands of the New Forest National Park. \n\nThe ten-year project, running from 2010 to 2020, was funded by Natural England using funding drawn from both the EU and the UK. It was the largest such scheme in England. The project was overseen by a board drawn from the chief executives of the partner organisations, principally the New Forest National Park Authority (NFNPA), Forestry England (FE), Natural England (NE) and the New Forest Verderers, and has five main objectives:\n \n1.  Wildlife conservation\n2.  Protection of the historic environment\n3.  Maintenance and enhancement of landscape quality and character\n4.  Promote public access and understanding\n5.  Resource protection\n\nElements of the scheme included wetland restoration (reversing the effects of managed drainage introduced in the 19th century), verge restoration (restoring erosion caused by vehicles on grass verges alongside forest roads), habitat restoration (in Sites of Special Scientific Interest) and the promotion of historic practices such as commoning. A key element of aim 2 was that land upon which restoration or conservation took place would show evidence of archaeological feature protection, and that within three years of work being undertaken, there would be no evidence of ongoing degradation. This would include maintaining the depth of soil protecting features, the reduction of detrimental features such as scrub or animal burrows, and the prevention of activities such as heather burning or vehicle damage. This included the installation of rabbit proof mesh on two Scheduled Ancient Monuments (SAMs).\n\nThe HLS scheme funded a Lidar survey of the Crown lands, as well as aerial photography in both high-resolution colour photographs and near-infrared imagery. These data were used to inform annual surveys of the Crown lands, conducted by NFNPA archaeologists and volunteers during the winter months. The work to visit, assess, record and, in some instances, preserve historic features was titled the Heritage Mapping project. Over the ten years of the project, several thousand previously unrecorded historic features, ranging from prehistoric burial mounds to Second World War military installations, were surveyed and recorded.",
+    "creator": [
+      "Cambridge University Technical Services",
+      "Network Mapping",
+      "Peter Crow"
+    ],
+    "date": "2022-07-07",
+    "subject": [
+      "aerial photography",
+      "archaeology",
+      "bee garden",
+      "burial",
+      "earthwork",
+      "enclosure",
+      "extractive pit",
+      "field system",
+      "heritage science",
+      "infrared aerial photography",
+      "lidar survey",
+      "pillow mound",
+      "remote sensing",
+      "road",
+      "settlement",
+      "trackway",
+      "mines (extracting complexes)",
+      "beehives (apiaries)",
+      "earthworks (engineering works)",
+      "pits (earthworks)",
+      "gardens (open spaces)",
+      "roads",
+      "paths",
+      "inhabited places",
+      "agricultural settlements",
+      "agricultural land",
+      "burials",
+      "burial sites",
+      "settlements (sites of small communities)"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": "Geospatial",
+    "spatialCoverage": "World, Europe, United Kingdom, England, Hampshire, New Forest",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 50.961658,
+    "decimalLongitude": -1.774972,
+    "hsds": {
+      "elasticId": "f6d77091e51dffe469eff8c852c29516fd24fc42a461561a6517c1c79d0c992d",
+      "originalId": "https://doi.org/10.5284/1095844",
+      "landingPage": "https://doi.org/10.5284/1095844",
+      "modified": "2022-07-07",
+      "contributor": [
+        "Cambridge University Technical Services",
+        "Network Mapping",
+        "Peter Crow"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "World, Europe, United Kingdom, England, Hampshire, New Forest"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "boundingbox": "polygon ((-1.7809 50.9807, -1.7809 50.7688, -1.3461 50.7688, -1.3461 50.9807, -1.7809 50.9807))",
+          "centroid": {
+            "lat": 50.87475,
+            "lon": -1.5635
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 50.961658,
+            "lon": -1.774972
+          },
+          "centroid": {
+            "lat": 50.961658,
+            "lon": -1.774972
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 50.961242,
+            "lon": -1.6154978
+          },
+          "centroid": {
+            "lat": 50.961242,
+            "lon": -1.6154978
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 50.796915,
+            "lon": -1.3614442
+          },
+          "centroid": {
+            "lat": 50.796915,
+            "lon": -1.3614442
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 50.798388,
+            "lon": -1.7473773
+          },
+          "centroid": {
+            "lat": 50.798388,
+            "lon": -1.7473773
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "World, Europe, United Kingdom, England, Hampshire, New Forest",
+        "England"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "aerial photography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AERIAL%20PHOTOGRAPHY"
+        },
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "bee garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BEE%20GARDEN"
+        },
+        {
+          "prefLabel": "burial",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BURIAL"
+        },
+        {
+          "prefLabel": "earthwork",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARTHWORK"
+        },
+        {
+          "prefLabel": "enclosure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENCLOSURE"
+        },
+        {
+          "prefLabel": "extractive pit",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXTRACTIVE%20PIT"
+        },
+        {
+          "prefLabel": "field system",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SYSTEM"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "infrared aerial photography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INFRARED%20AERIAL%20PHOTOGRAPHY"
+        },
+        {
+          "prefLabel": "lidar survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LIDAR%20SURVEY"
+        },
+        {
+          "prefLabel": "pillow mound",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PILLOW%20MOUND"
+        },
+        {
+          "prefLabel": "remote sensing",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/REMOTE%20SENSING"
+        },
+        {
+          "prefLabel": "road",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROAD"
+        },
+        {
+          "prefLabel": "settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SETTLEMENT"
+        },
+        {
+          "prefLabel": "trackway",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TRACKWAY"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "mines (extracting complexes)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000390",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "beehives (apiaries)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004970",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "earthworks (engineering works)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008020",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "pits (earthworks)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008027",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "gardens (open spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008090",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "roads",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008217",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "paths",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008321",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "inhabited places",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008347",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "agricultural settlements",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008420",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "agricultural land",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008631",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "burials",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300263485",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "burial sites",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300387004",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "settlements (sites of small communities)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300444153",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork archive"
+        }
+      ],
+      "dataType": [
+        "Geospatial"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1003530",
+        "dcterms:DOI https://doi.org/10.5284/1095844"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:38.079Z",
+      "query": "q:new forest",
+      "recordId": "hsds:https://doi.org/10.5284/1095844",
+      "title": "The Verderers of the New Forest Higher Level Stewardship Scheme",
+      "url": "https://doi.org/10.5284/1095844",
+      "creator": [
+        "Cambridge University Technical Services",
+        "Network Mapping",
+        "Peter Crow"
+      ],
+      "date": "2022-07-07"
+    }
+  },
+  {
+    "id": "hsds:912197",
+    "_source": "hsds",
+    "_sourceId": "912197",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f620cf7b0374897b60bdcba2dda2ecef949abb09c2638c65f67f19bda5bc80dd",
+    "title": "Radiocarbon date, Sample number HAR-1021",
+    "description": "Leg bones from burial 55 with New Forest Ware beaker at Burntwood Farm, Itchen Valley Parish, Hampshire, England. Comment [Ed]: Date lies within Iron Age period.<br>",
+    "creator": "P J Fasham etc",
+    "date": "1998-12-01",
+    "subject": [
+      "9 rb cemetery",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.103391,
+    "decimalLongitude": -1.270067,
+    "hsds": {
+      "elasticId": "f620cf7b0374897b60bdcba2dda2ecef949abb09c2638c65f67f19bda5bc80dd",
+      "originalId": "912197",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.103391,
+            "lon": -1.270067
+          },
+          "centroid": {
+            "lat": 51.103391,
+            "lon": -1.270067
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "9 rb cemetery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/9%20RB%20CEMETERY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1021",
+        "Depositor ID: HAR-1021"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:38.079Z",
+      "query": "q:new forest",
+      "recordId": "hsds:912197",
+      "title": "Radiocarbon date, Sample number HAR-1021",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f620cf7b0374897b60bdcba2dda2ecef949abb09c2638c65f67f19bda5bc80dd",
+      "creator": "P J Fasham etc",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.5284/1025045",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1025045",
+    "_sourceUrl": "https://doi.org/10.5284/1025045",
+    "title": "The Lyonesse Project: a study of the coastal and marine environment of the Isles of Scilly (OASIS ID cornwall2-58903)",
+    "description": "This project was commissioned by English Heritage and carried out between 2009 and 2013 by Historic Environment Projects, Cornwall Council with a team of specialists from Aberystwyth, Cardiff, Exeter and Plymouth Universities, English Heritage's Scientific Dating Team, volunteers and local experts and enthusiasts from the Cornwall and Isles of Scilly Maritime Archaeological Society and the Islands Maritime Archaeology Group. The aims of the project were to reconstruct the evolution of the physical environment of Scilly during the Holocene (11,700 cal BP to present), investigate the progressive occupation of this changing coastal landscape by early peoples, explore past and present climate change and sea-level rise, develop geophysical techniques for mapping submerged palaeo-landscapes, improve management and promote better understanding of the islands' historic environment and encourage local community engagement with the historic environment. Six main types of work were involved: an audit of recorded and reported coastal and subtidal 'peat' exposures, auger and GPS surveys of the intertidal 'peat' sites; geophysical survey and diver inspection of the sub-tidal 'peats', sampling and palaeoenvironmental analysis of selected intertidal and sub-tidal sites; a programme of radiocarbon and optically stimulated luminescence (OSL) dating; and outreach to inform the public, disseminate results and encourage volunteer participation. A notable aspect of Scilly's historic environment is the presence of stone walls and other remains below high water, the result of low-lying land being submerged by the gradual rise in sea-level. The timing and nature of changing land areas and the separation of the individual islands has, in the past, been the subject of much conjecture and debate. Seventy-eight new radiocarbon dates and 15 new OSL ages were obtained for the Project and the new data provide a much more secure basis than previously existed for reconstructing the evolution of the islands during the Holocene. The Project's pollen data represent almost the entire last 13,500 years of vegetation history on Scilly providing a unique insight into the development of the landscape through the Holocene; set against the backdrop of changing sea levels",
+    "creator": [
+      "Charlie Johns",
+      "Dan Charman",
+      "Helen M Roberts",
+      "Jacqui Mulville",
+      "Kevin Camidge",
+      "Peter Marshall",
+      "Steve F Mills"
+    ],
+    "date": "2014-04-07",
+    "subject": [
+      "animal micro remains",
+      "archaeology",
+      "buried land surface",
+      "buried soil horizon",
+      "environment",
+      "heritage science",
+      "historic area assessment",
+      "maritime",
+      "plant macro remains",
+      "plant micro remains",
+      "plant remains",
+      "sample",
+      "society",
+      "submarine forest",
+      "submerged landscape",
+      "waterlogged sample",
+      "marine structures",
+      "buried",
+      "underground environments",
+      "remains (object genre)"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Geospatial",
+      "Numeric",
+      "Still Image",
+      "Structured Data",
+      "Text"
+    ],
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 49.917298,
+    "decimalLongitude": -6.3175551,
+    "periodStart": "-10000",
+    "periodEnd": "-4000",
+    "periodName": [
+      "mesolithic",
+      "prehistoric"
+    ],
+    "hsds": {
+      "elasticId": "d241752fd1b6ad03ff65b12c6cd0becc3a99889888242e61cbce1d038ae18c72",
+      "originalId": "https://doi.org/10.5284/1025045",
+      "landingPage": "https://doi.org/10.5284/1025045",
+      "modified": "2014-04-07",
+      "contributor": [
+        "Charlie Johns",
+        "Dan Charman",
+        "Helen M Roberts",
+        "Jacqui Mulville",
+        "Kevin Camidge",
+        "Peter Marshall",
+        "Steve F Mills"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "World, Europe, United Kingdom, England, Cornwall, Isles of Scilly"
+        },
+        {
+          "placeName": "World, Europe, United Kingdom, England, Cornwall, Isles of Scilly, Trescoe"
+        },
+        {
+          "placeName": "World, Europe, United Kingdom, England, Cornwall, Saint Agnes"
+        },
+        {
+          "placeName": "World, Europe, United Kingdom, England, Cornwall, Isles of Scilly, Bryher"
+        },
+        {
+          "boundingbox": "polygon ((-6.4165649 49.987435, -6.4165649 49.854808, -6.2236175 49.854808, -6.2236175 49.987435, -6.4165649 49.987435))",
+          "centroid": {
+            "lat": 49.92112149999999,
+            "lon": -6.320091199999999
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 49.917298,
+            "lon": -6.3175551
+          },
+          "centroid": {
+            "lat": 49.917298,
+            "lon": -6.3175551
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "World, Europe, United Kingdom, England, Cornwall, Isles of Scilly",
+        "World, Europe, United Kingdom, England, Cornwall, Isles of Scilly, Trescoe",
+        "World, Europe, United Kingdom, England, Cornwall, Saint Agnes",
+        "World, Europe, United Kingdom, England, Cornwall, Isles of Scilly, Bryher"
+      ],
+      "temporal": [
+        {
+          "from": "-10000",
+          "periodName": "mesolithic",
+          "until": "-4000",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dskb4m"
+        },
+        {
+          "from": "-1000000",
+          "periodName": "prehistoric",
+          "until": "43",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "animal micro remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANIMAL%20MICRO%20REMAINS"
+        },
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "buried land surface",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BURIED%20LAND%20SURFACE"
+        },
+        {
+          "prefLabel": "buried soil horizon",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BURIED%20SOIL%20HORIZON"
+        },
+        {
+          "prefLabel": "environment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENVIRONMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "historic area assessment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HISTORIC%20AREA%20ASSESSMENT"
+        },
+        {
+          "prefLabel": "maritime",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MARITIME"
+        },
+        {
+          "prefLabel": "plant macro remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PLANT%20MACRO%20REMAINS"
+        },
+        {
+          "prefLabel": "plant micro remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PLANT%20MICRO%20REMAINS"
+        },
+        {
+          "prefLabel": "plant remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PLANT%20REMAINS"
+        },
+        {
+          "prefLabel": "sample",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SAMPLE"
+        },
+        {
+          "prefLabel": "society",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SOCIETY"
+        },
+        {
+          "prefLabel": "submarine forest",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SUBMARINE%20FOREST"
+        },
+        {
+          "prefLabel": "submerged landscape",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SUBMERGED%20LANDSCAPE"
+        },
+        {
+          "prefLabel": "waterlogged sample",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WATERLOGGED%20SAMPLE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "marine structures",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008038",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "buried",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300223830",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "underground environments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300246268",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "remains (object genre)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300265420",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork archive"
+        },
+        {
+          "prefLabel": "Maritime"
+        }
+      ],
+      "dataType": [
+        "Geospatial",
+        "Numeric",
+        "Still Image",
+        "Structured Data",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1001631",
+        "dcterms:DOI https://doi.org/10.5284/1025045"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:38.079Z",
+      "query": "q:new forest",
+      "recordId": "hsds:https://doi.org/10.5284/1025045",
+      "title": "The Lyonesse Project: a study of the coastal and marine environment of the Isles of Scilly (OASIS ID cornwall2-58903)",
+      "url": "https://doi.org/10.5284/1025045",
+      "creator": [
+        "Charlie Johns",
+        "Dan Charman",
+        "Helen M Roberts",
+        "Jacqui Mulville",
+        "Kevin Camidge",
+        "Peter Marshall",
+        "Steve F Mills"
+      ],
+      "date": "2014-04-07"
+    }
+  },
+  {
+    "id": "hsds:1237508",
+    "_source": "hsds",
+    "_sourceId": "1237508",
+    "_sourceUrl": "https://doi.org/10.5284/1128171",
+    "title": "A31 Road Widening Scheme - Archaeological Boreholes, Ringwood, Hampshire: Post-Excavation Palaeoenvironmental Assessment Report",
+    "description": "Palaeoenvironmental assessment was carried out on borehole samples obtained from the site of Jubilee Gardens, as part of the A31 Ringwood Improvement Scheme (NGR 414343 105245) during geoarchaeological borehole evaluation carried out on the 25th of March 2022. The work was undertaken by AOC Archaeology Group for Volker Fitzpatrick and Stantec on behalf of their client, National Highways as part of the wider scheme archaeological mitigation package agreed with Hampshire County Council. This document summarises the results of the palaeoenvironmental assessment, including those of pollen, diatoms, ostracods, macroplant remains, and radiocarbon dates obtained from the Holocene sequence. The principal objective of this report is to present the results, refine the research objectives of the project in light of the findings, and make recommendations concerning any subsequent archaeological investigations in order to address these research objectives.  The geoarchaeological evaluation comprised the drilling of 2 purposive geoarchaeological boreholes to a maximum depth of c. 5m bgl, and the extraction and retention of the cored samples. Together with local geotechnical records, these were used to produce deposit models. Geoarchaeological and geotechnical deposit data can be used to identify areas of archaeological potential by characterising the probable nature and depth of sub-surface deposits. These have been refined following the assessment results, with updated models presented within this document. The deposit sequence recorded across the site included Tertiary Bedrock of Selsey Sand and Barton Sand, Pleistocene River Terrace Gravels, Holocene alluvium and organic deposits, made ground, and topsoil. Six subsamples were taken from the Holocene alluvium and organics sequence sampled (AOC34537_WS603) for each pollen, diatom, and ostracod assessment. Two additional bulk samples were acquired for macroplant assessment, and for radiocarbon dating. The assessment has identified which proxies may be useful for a further stage of analysis. Development impacts from the currently proposed A31 westbound carriageway expansion, and junction and bridge improvements may affect peat deposits which may be preserved in situ, as well as the Holocene alluvial sequence which has been shown to begin approximately during the early to mid Neolithic period. It is recommended that the impact on deposits of interest may be mitigated by palaeoenvironmental analysis of pollen and diatoms, the assessment of which has suggested these to be of interest combined with radiocarbon dates. Ostracods were not preserved well within this sequence, and macroplant assessment showed the assemblage to be small in number and unlikely to aid in answering specific research questions.",
+    "creator": "Jessica Taylor",
+    "date": "2025-03-13",
+    "subject": [
+      "heritage science",
+      "neolithic palaeochannel",
+      "palaeochannel",
+      "post excavation assessment"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "-4000",
+    "periodEnd": "-2200",
+    "periodName": "neolithic",
+    "hsds": {
+      "elasticId": "9e59fab4d422af305b3f7f2a94dfd2eb02e8906b68549edebd0470736061313a",
+      "originalId": "1237508",
+      "landingPage": "https://doi.org/10.5284/1128171",
+      "modified": "2026-02-05",
+      "contributor": [
+        "AOC Archaeology Ltd"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Ringwood, Hampshire, New Forest, England"
+        },
+        {
+          "polygon": "POLYGON ((-1.798355 50.846205, -1.79827 50.846426, -1.79783 50.84658, -1.796723 50.847043, -1.796772 50.846926, -1.797154 50.846375, -1.797142 50.846349, -1.797333 50.846274, -1.797686 50.846217, -1.798054 50.8462, -1.798355 50.846205))",
+          "centroid": {
+            "lat": 50.846512189430676,
+            "lon": -1.797521416559403
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Ringwood, Hampshire, New Forest, England"
+      ],
+      "temporal": [
+        {
+          "from": "-4000",
+          "periodName": "neolithic",
+          "until": "-2200",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "neolithic palaeochannel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NEOLITHIC%20PALAEOCHANNEL"
+        },
+        {
+          "prefLabel": "palaeochannel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PALAEOCHANNEL"
+        },
+        {
+          "prefLabel": "post excavation assessment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/POST%20EXCAVATION%20ASSESSMENT"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": []
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:38.079Z",
+      "query": "q:new forest",
+      "recordId": "hsds:1237508",
+      "title": "A31 Road Widening Scheme - Archaeological Boreholes, Ringwood, Hampshire: Post-Excavation Palaeoenvironmental Assessment Report",
+      "url": "https://doi.org/10.5284/1128171",
+      "creator": "Jessica Taylor",
+      "date": "2025-03-13"
+    }
+  },
+  {
+    "id": "hsds:1125663",
+    "_source": "hsds",
+    "_sourceId": "1125663",
+    "_sourceUrl": "https://doi.org/10.5284/1033475",
+    "title": "Tree-Ring Analysis of Timbers from the Barn at St Leonard's Grange, Beaulieu, Hampshire",
+    "description": "The current barn is built within the ruins of an earlier medieval barn, which was thought to have been the largest medieval barn in England. It was thought that the present barn may have been built using materials from the original barn, which was destroyed at the time of the Dissolution. No dendrochronological evidence was found to support this hypothesis. Several repairs and alterations are evident in the present structure. A total of seventeen timbers was sampled from various elements. Two groups of cross-matching timbers were identified, one thought to represent the original construction of the present barn, containing four timbers, with a likely felling date range in the period AD 1557-89, the second group representing a period of repair to the present roof, having a likely felling date range of AD 1734-66, including a single timber retaining complete sapwood, which was felled in spring AD 1739.",
+    "creator": "M. C. Bridge",
+    "date": "2016-11-28",
+    "subject": [
+      "barn",
+      "building survey",
+      "heritage science",
+      "tithe barn",
+      "agricultural buildings",
+      "tithe barns"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 50.7815088270246,
+    "decimalLongitude": -1.42505828964755,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": [
+      "medieval",
+      "post medieval"
+    ],
+    "hsds": {
+      "elasticId": "67ea3272cd893631d9245095042691c1c9b8be6d5389a116b25cf3a5cb69a0cd",
+      "originalId": "1125663",
+      "landingPage": "https://doi.org/10.5284/1033475",
+      "modified": "2025-09-05",
+      "contributor": [
+        "Historic England"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "St Leonard's Grange Barn, BEAULIEU, Hampshire, New Forest, England"
+        },
+        {
+          "geopoint": {
+            "lat": 50.7815088270246,
+            "lon": -1.42505828964755
+          },
+          "centroid": {
+            "lat": 50.7815088270246,
+            "lon": -1.42505828964755
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "St Leonard's Grange Barn, BEAULIEU, Hampshire, New Forest, England"
+      ],
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1900",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARN"
+        },
+        {
+          "prefLabel": "building survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUILDING%20SURVEY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "tithe barn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TITHE%20BARN"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "agricultural buildings",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004900",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "tithe barns",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004910",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": [
+        "OBIB 62/2005"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:38.079Z",
+      "query": "q:new forest",
+      "recordId": "hsds:1125663",
+      "title": "Tree-Ring Analysis of Timbers from the Barn at St Leonard's Grange, Beaulieu, Hampshire",
+      "url": "https://doi.org/10.5284/1033475",
+      "creator": "M. C. Bridge",
+      "date": "2016-11-28"
+    }
+  },
+  {
+    "id": "hsds:1171394",
+    "_source": "hsds",
+    "_sourceId": "1171394",
+    "_sourceUrl": "https://doi.org/10.5284/1056698",
+    "title": "Palaeolithic Archaeology of the Sussex/Hampshire Coastal Corridor : Amino Acid Racemization Analysis",
+    "description": "This report documents the attempts to conduct amino acid racemization analysis for age estimation. It is concluded that while Pennington is clearly younger than all other sites, it is difficult to assess how much younger as the shells have suffered dissolution. We suggest that Norton Farm is MIS 7a, that Portfield Pit is MIS7 and that Portfield Pit Tr 31-10-96 Unit VII younger than other Portfield Pit samples. The remainder of putative MIS 7 sites contain only one or two species none of which occurs at more than one other site. These sites are Oving, Yeoman's Road, Lepe and Selsey. None of these is convincingly younger (but there is a significant caveat that we do not know enough about racemization in the species we have studied). On the basis of Macoma data alone, it seems difficult to separate Oving, Yeoman's Road, and Portfield Pit. The remaining three sites Red Barnes, Harnham, and Brooks Field North all have higher ranges in their DL values. It is difficult to say more than all three sites are MIS9, although given the cold-stage character of Harnham, the DL data are not inconsistent with an MIS8 assignment. However if Red Barnes and Brooksfield North are MIS9, it is unlikely that Harnham is MIS10. The other site Brighton, Civic Centre, has only one species (Littorina) which we have not worked with before. The values for Gix and Asx are higher than other marine species (believed to be MIS7), but the values for Ala are lower. Given this variation it is not safe to make an assignment for this species.",
+    "creator": [
+      "Kirsty Penkman",
+      "M. Collins"
+    ],
+    "date": "2019-10-10",
+    "subject": [
+      "ecofacts",
+      "field survey",
+      "heritage science",
+      "layer",
+      "ecofact"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "Palaeolithic Archaeology of the Sussex/Hampshire Coastal Corridor, LYMINGTON AND PENNINGTON, Hampshire, New Forest, England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 50.7408400122645,
+    "decimalLongitude": -1.5559818308053,
+    "periodStart": "-1000000",
+    "periodEnd": "-10000",
+    "periodName": "palaeolithic",
+    "hsds": {
+      "elasticId": "f3893be7a96e4b5b75aab1c9f0cafda663bd0d823ffc517c4fb4eb305f388b78",
+      "originalId": "1171394",
+      "landingPage": "https://doi.org/10.5284/1056698",
+      "modified": "2025-08-27",
+      "contributor": [
+        "Historic England"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Palaeolithic Archaeology of the Sussex/Hampshire Coastal Corridor, LYMINGTON AND PENNINGTON, Hampshire, New Forest, England"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "geopoint": {
+            "lat": 50.7408400122645,
+            "lon": -1.5559818308053
+          },
+          "centroid": {
+            "lat": 50.7408400122645,
+            "lon": -1.5559818308053
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Palaeolithic Archaeology of the Sussex/Hampshire Coastal Corridor, LYMINGTON AND PENNINGTON, Hampshire, New Forest, England",
+        "England"
+      ],
+      "temporal": [
+        {
+          "from": "-1000000",
+          "periodName": "palaeolithic",
+          "until": "-10000",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsqfgv"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "ecofacts",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ECOFACTS"
+        },
+        {
+          "prefLabel": "field survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SURVEY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "layer",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LAYER"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "ecofact",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300423942",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": [
+        "OBIB 63/2004"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:38.079Z",
+      "query": "q:new forest",
+      "recordId": "hsds:1171394",
+      "title": "Palaeolithic Archaeology of the Sussex/Hampshire Coastal Corridor : Amino Acid Racemization Analysis",
+      "url": "https://doi.org/10.5284/1056698",
+      "creator": [
+        "Kirsty Penkman",
+        "M. Collins"
+      ],
+      "date": "2019-10-10"
+    }
+  }
+]

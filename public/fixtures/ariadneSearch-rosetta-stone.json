@@ -1,0 +1,103 @@
+[
+  {
+    "id": "ariadne:472a0b20cdb6d0ae0299717962eebd36883a2e6f3e6389445bd3c7907b39253c",
+    "_source": "ariadne",
+    "_sourceId": "1772041",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/472a0b20cdb6d0ae0299717962eebd36883a2e6f3e6389445bd3c7907b39253c",
+    "title": "Rosetta Cottage, Isle of Wight",
+    "description": "EXTERNAL FEATURES  Roof: Clay tile to front.  Slate to rear wing.  Interior not seen.  Chimney: 5 brick stacks.  Walls: Main elevations are rendered.  Rear elevations are of brick.  Doors: Mostly four recessed plain panels.  Windows: Mostly casements dating to the early 20thC.   WEST COTTAGE  Hall: 4 panel front door with moulded recessed panels.  Reeded dado.  Original staircase.  Round newel, cut string and square balusters.  Dining Room: 3 cased beams.  Wooden floor.  C.1840 marble mantelpiece and cast iron register plate (with hob removed).  Moulded 4 panel door with rising crowns.  Sitting Room: 2 cased beams.  Wooden floor. C.1850 rounded headed register grate and marble mantelpiece.  Bathroom: Flagstone floor.  Double hung sash window of 8 over 8.  Bedroom: Good hob grate.  Tongue and groove planked walls.  Kitchen: Plain beam.  Solid floor.  Tongue and groove planked partition to E. Cottage.  4 panel doors (except 6 panel door to stairs) Sash window of 8 over 8.  Rear Lobby: Cased beam.  4 panel door.  First Floor  Bedroom1: 4 panel door.  Early 20thC ? cast iron grate.  Landing (rear): North-South boards.  Dado.  Bathroom: 4 panel door.  Good bath upon feet.  Beds. 2 & 3: 6 panel doors.  Bedroom 4: Corner fireplace.  Bedroom 5: 6 panel door.  Corner fireplace.  Landing: Ceiling divided by beam.  Good cupboard door with HL hinges.  (Plain recessed unmoulded panels).  Edwardian? Sash window.   EAST COTTAGE  Lobby: Good brick floor to external porch.  Flagstone and concrete floor to Lobby itself.  Dining Room: (former Kitchen)-Plain ceiling.  Floor not seem.  6 panel door to West Cottage.  Very good range still in situ (\"Flavell's Kitchener. Leamington\").  High plain mantelshelf.  Plain surround of ?stone.  Loose cast iron round headed register grate ?intended for Sitting Room.  Sitting Room: $ panel cupboard door with spring hatchet latch.  Scullery: 4 panel cupboard door.  Good flagstone floor.   First Floor <br />Bedroom3: 4 panel door.  2 light casement.   Round headed cast iron register grate.  Wooden partition to South.<br />Bedroom2: 4 panel door. High hob grate.<br />Bedroom1: 4 panel door with spring hatchet latch.  High hob grate.  Replacement window.<br />Bathroom: Two 4 panel doors.<br />Landing: Excellent door to West Cottage.",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": [
+      "house",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": "England",
+    "decimalLatitude": 50.766484,
+    "decimalLongitude": -1.309826,
+    "ariadne": {
+      "elasticId": "472a0b20cdb6d0ae0299717962eebd36883a2e6f3e6389445bd3c7907b39253c",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England",
+          "geopoint": {
+            "lat": 50.766484,
+            "lon": -1.309826
+          },
+          "centroid": {
+            "lat": 50.766484,
+            "lon": -1.309826
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/61ED21E9-BB99-37D1-B8FF-477DF829953B",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA129767",
+        "Depositor ID: 128092",
+        "NTSMR-MNA129767"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1840 - 1900"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T13:59:29.244Z",
+      "query": "q:rosetta stone",
+      "recordId": "ariadne:472a0b20cdb6d0ae0299717962eebd36883a2e6f3e6389445bd3c7907b39253c",
+      "title": "Rosetta Cottage, Isle of Wight",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/472a0b20cdb6d0ae0299717962eebd36883a2e6f3e6389445bd3c7907b39253c",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  }
+]

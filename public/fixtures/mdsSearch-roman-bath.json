@@ -1,0 +1,4631 @@
+[
+  {
+    "id": "mds:400aef32-fb40-3d4b-8aaf-7a115d119aff",
+    "_source": "mds",
+    "_sourceId": "SSL-ART-1707",
+    "_sourceUrl": "https://museumdata.uk/objects/400aef32-fb40-3d4b-8aaf-7a115d119aff",
+    "title": "First of two watercolours mounted on page 18 of H.J. Moule \"England. various\". A view of the Roman Bath with Bath Abbey in the background.",
+    "description": "First of two watercolours mounted on page 18 of H.J. Moule \"England. various\". A view of the Roman Bath with Bath Abbey in the background.",
+    "creator": "Moule, Henry Joseph",
+    "date": "1889.11.02",
+    "subject": [
+      "painting; watercolour; Roman Bath and Bath Abbey",
+      "painting; watercolour; Roman Bath and Bath Abbey",
+      "abbey",
+      "architecture (roman)"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "400aef32-fb40-3d4b-8aaf-7a115d119aff",
+      "objectNumber": "SSL-ART-1707",
+      "material": [
+        "watercolour",
+        "paper (support)",
+        "album"
+      ],
+      "place": [
+        "Roman Baths, Bath",
+        "Roman Baths, Bath",
+        "Bath Abbey"
+      ],
+      "dimensions": [
+        "height (image) 145 mm",
+        "width (image) 90 mm",
+        "height (mount) 345 mm",
+        "width (mount) 250 mm"
+      ],
+      "inscriptionContent": "English \"Nov 2 89\" \"Roman Bath and Bath Abbey\" \"18a)\"",
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "First of two watercolours mounted on page 18 of H.J. Moule \"England. various\". A view of the Roman Bath with Bath Abbey in the background."
+        ],
+        "Object name(s)": [
+          "painting; watercolour; Roman Bath and Bath Abbey"
+        ],
+        "Brief description": [
+          "First of two watercolours mounted on page 18 of H.J. Moule \"England. various\". A view of the Roman Bath with Bath Abbey in the background.",
+          "The main bath at Bath surrounded by Roman walls on three sides. The fourth side is a building with part of Bath Abbey and its towers in the background."
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "abbey",
+          "architecture (roman)"
+        ],
+        "Associated date": [
+          "1889",
+          "late 19th Century",
+          "Victorian"
+        ],
+        "Associated person": [
+          "MOULE (Henry Joseph) 1825-1904"
+        ],
+        "Associated place": [
+          "Roman Baths, Bath",
+          "Bath Abbey"
+        ],
+        "Dimension": [
+          "height (image) 145 mm",
+          "width (image) 90 mm",
+          "height (mount) 345 mm",
+          "width (mount) 250 mm"
+        ],
+        "Inscription content": [
+          "English \"Nov 2 89\" \"Roman Bath and Bath Abbey\" \"18a)\""
+        ],
+        "Inscription position": [
+          "on mount bottom left on image bottom middle"
+        ],
+        "Inscription type": [
+          "date",
+          "title",
+          "number"
+        ],
+        "Material": [
+          "watercolour",
+          "paper (support)",
+          "album"
+        ],
+        "Object name": [
+          "painting; watercolour; Roman Bath and Bath Abbey"
+        ],
+        "Object number": [
+          "1993.545.29"
+        ],
+        "Object production date": [
+          "1889.11.02",
+          "late 19th Century",
+          "Victorian"
+        ],
+        "Object production person": [
+          "Moule, Henry Joseph"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Object production place": [
+          "Roman Baths, Bath"
+        ],
+        "Reproduction number": [
+          "2021AA03081",
+          "2021AA04463"
+        ],
+        "Responsible department/section": [
+          "Art_Fine-Moule"
+        ],
+        "Technique": [
+          "painted"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:400aef32-fb40-3d4b-8aaf-7a115d119aff",
+      "title": "First of two watercolours mounted on page 18 of H.J. Moule \"England. various\". A view of the Roman Bath with Bath Abbey in the background.",
+      "url": "https://museumdata.uk/objects/400aef32-fb40-3d4b-8aaf-7a115d119aff",
+      "creator": "Moule, Henry Joseph",
+      "date": "1889.11.02"
+    }
+  },
+  {
+    "id": "mds:e1caf269-9ffc-384b-9be7-8549168a7ac4",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/e1caf269-9ffc-384b-9be7-8549168a7ac4",
+    "title": "MDS Record 2",
+    "subject": [
+      "Part of the Roman Circular Bath, the Roman Baths at Bath; Watercolour",
+      "Part of the Roman Circular Bath, the Roman Baths at Bath; Watercolour"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "e1caf269-9ffc-384b-9be7-8549168a7ac4",
+      "objectNumber": "BATVG",
+      "place": [
+        "Circular Bath (Roman Baths)"
+      ],
+      "dimensions": [
+        "Height (cm) framed : 42.7",
+        "Width (cm) framed : 52.6",
+        "Width (cm) : 35",
+        "Height (cm) : 25"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Part of the Roman Circular Bath, the Roman Baths at Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated date": [
+          "1892"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Poynter Edward"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Circular Bath (Roman Baths)"
+        ],
+        "Dimension": [
+          "Height (cm) framed : 42.7",
+          "Width (cm) framed : 52.6",
+          "Width (cm) : 35",
+          "Height (cm) : 25"
+        ],
+        "Object name": [
+          "Part of the Roman Circular Bath, the Roman Baths at Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : PD : 1995.16"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:e1caf269-9ffc-384b-9be7-8549168a7ac4",
+      "title": "MDS Record 2",
+      "url": "https://museumdata.uk/objects/e1caf269-9ffc-384b-9be7-8549168a7ac4"
+    }
+  },
+  {
+    "id": "mds:e71be3f7-891c-3fff-8757-1f49c999a7e0",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/e71be3f7-891c-3fff-8757-1f49c999a7e0",
+    "title": "MDS Record 3",
+    "subject": [
+      "The Great Roman Bath, Bath; Watercolour",
+      "The Great Roman Bath, Bath; Watercolour"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "e71be3f7-891c-3fff-8757-1f49c999a7e0",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 48.8",
+        "Height (cm) : 32.8"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "The Great Roman Bath, Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated date": [
+          "1884"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Hobson George"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 48.8",
+          "Height (cm) : 32.8"
+        ],
+        "Object name": [
+          "The Great Roman Bath, Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : PD : 1991.124"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:e71be3f7-891c-3fff-8757-1f49c999a7e0",
+      "title": "MDS Record 3",
+      "url": "https://museumdata.uk/objects/e71be3f7-891c-3fff-8757-1f49c999a7e0"
+    }
+  },
+  {
+    "id": "mds:ed88cb2a-3c6e-3f0e-a7f9-cfbbabb1aba7",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/ed88cb2a-3c6e-3f0e-a7f9-cfbbabb1aba7",
+    "title": "MDS Record 4",
+    "subject": [
+      "The Great Roman Bath, Bath; Watercolour",
+      "The Great Roman Bath, Bath; Watercolour",
+      "Archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "ed88cb2a-3c6e-3f0e-a7f9-cfbbabb1aba7",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 43.3",
+        "Height (cm) : 29.8"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "The Great Roman Bath, Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Archaeology"
+        ],
+        "Associated date": [
+          "1883"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Hobson George"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 43.3",
+          "Height (cm) : 29.8"
+        ],
+        "Object name": [
+          "The Great Roman Bath, Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : PD : 1991.123"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:ed88cb2a-3c6e-3f0e-a7f9-cfbbabb1aba7",
+      "title": "MDS Record 4",
+      "url": "https://museumdata.uk/objects/ed88cb2a-3c6e-3f0e-a7f9-cfbbabb1aba7"
+    }
+  },
+  {
+    "id": "mds:710ead49-da53-335b-82de-bb98fd8fba51",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/710ead49-da53-335b-82de-bb98fd8fba51",
+    "title": "MDS Record 5",
+    "subject": [
+      "Roman Baths, Bath; Watercolour",
+      "Roman Baths, Bath; Watercolour",
+      "Local landscape"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "710ead49-da53-335b-82de-bb98fd8fba51",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 32.9",
+        "Height (cm) : 20.9"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Roman Baths, Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Local landscape"
+        ],
+        "Associated date": [
+          "20th century, early (1900 - 1929)"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Poole Samuel",
+          "Chivers Cedric"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 32.9",
+          "Height (cm) : 20.9"
+        ],
+        "Object name": [
+          "Roman Baths, Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1929.146"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:710ead49-da53-335b-82de-bb98fd8fba51",
+      "title": "MDS Record 5",
+      "url": "https://museumdata.uk/objects/710ead49-da53-335b-82de-bb98fd8fba51"
+    }
+  },
+  {
+    "id": "mds:24c06092-cc2d-34a4-989d-3d9eaf3c76df",
+    "_source": "mds",
+    "_sourceId": "co83993",
+    "_sourceUrl": "https://museumdata.uk/objects/24c06092-cc2d-34a4-989d-3d9eaf3c76df",
+    "title": "Roman Marble Bath",
+    "description": "Roman marble bath, 150-250 CE",
+    "creator": "Unknown maker",
+    "date": "150",
+    "subject": [
+      "bath; bath",
+      "bath; bath",
+      "bath",
+      "Public health"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "24c06092-cc2d-34a4-989d-3d9eaf3c76df",
+      "objectNumber": "co83993",
+      "material": [
+        "marble, white"
+      ],
+      "place": [
+        "Roman Republic and Empire",
+        "Unattributed place"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "weight",
+        "28 9/16",
+        "725",
+        "25 3/16",
+        "640",
+        "68 5/16",
+        "1735",
+        "450",
+        "992.08536"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Roman Marble Bath"
+        ],
+        "Object name(s)": [
+          "bath; bath"
+        ],
+        "Brief description": [
+          "Roman marble bath, 150-250 CE",
+          "Ornately decorated marble baths like this one could only be afforded by wealthy Romans and were installed within private homes. Washing and cleansing were significant parts of everyday Roman life – at least for the elite in society.\n\nWater was very often pumped directly into their homes to fill the bath, without having to carry it from the nearest well. While such facilities at home were limited to the few, most Romans would go to the public baths to wash and clean themselves where they could socialise while catching up with the gossip."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "bath",
+          "Public health"
+        ],
+        "Associated person": [
+          "Wellcome Institute"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Associated place": [
+          "Unattributed place"
+        ],
+        "Place association": [
+          "production or association role association details"
+        ],
+        "Credit line": [
+          "Rocchi"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width",
+          "weight"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm",
+          "kg",
+          "lbs"
+        ],
+        "Dimension value": [
+          "28 9/16",
+          "725",
+          "25 3/16",
+          "640",
+          "68 5/16",
+          "1735",
+          "450",
+          "992.08536"
+        ],
+        "Material": [
+          "marble, white"
+        ],
+        "Object name": [
+          "bath; bath"
+        ],
+        "Date - earliest / single": [
+          "150"
+        ],
+        "Date - latest": [
+          "129",
+          "250"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Object production place": [
+          "Roman Republic and Empire"
+        ],
+        "Other number": [
+          "A156211",
+          "69/1935"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Classical & Medieval Medicine"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:24c06092-cc2d-34a4-989d-3d9eaf3c76df",
+      "title": "Roman Marble Bath",
+      "url": "https://museumdata.uk/objects/24c06092-cc2d-34a4-989d-3d9eaf3c76df",
+      "creator": "Unknown maker",
+      "date": "150"
+    }
+  },
+  {
+    "id": "mds:2c7c8286-9a2e-3d98-b40e-60d8dbf7dd96",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/2c7c8286-9a2e-3d98-b40e-60d8dbf7dd96",
+    "title": "MDS Record 7",
+    "subject": [
+      "Great Roman Bath showing inlet from King's Bath Spring; Watercolour",
+      "Great Roman Bath showing inlet from King's Bath Spring; Watercolour",
+      "Bathing"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "2c7c8286-9a2e-3d98-b40e-60d8dbf7dd96",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 35.6",
+        "Height (cm) : 25.2"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Great Roman Bath showing inlet from King's Bath Spring; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Bathing"
+        ],
+        "Associated date": [
+          "19th century, late (1870 - 1899)"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Hobson George"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 35.6",
+          "Height (cm) : 25.2"
+        ],
+        "Object name": [
+          "Great Roman Bath showing inlet from King's Bath Spring; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1903.52"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:2c7c8286-9a2e-3d98-b40e-60d8dbf7dd96",
+      "title": "MDS Record 7",
+      "url": "https://museumdata.uk/objects/2c7c8286-9a2e-3d98-b40e-60d8dbf7dd96"
+    }
+  },
+  {
+    "id": "mds:4de3bdf3-0723-30d9-95d8-6b3ebb00d902",
+    "_source": "mds",
+    "_sourceId": "co52519",
+    "_sourceUrl": "https://museumdata.uk/objects/4de3bdf3-0723-30d9-95d8-6b3ebb00d902",
+    "title": "Two sepia bromide prints of Roman baths at Bath",
+    "description": "Two sepia bromide prints of Roman baths at Bath",
+    "subject": [
+      "prints; prints",
+      "prints; prints",
+      "prints"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "4de3bdf3-0723-30d9-95d8-6b3ebb00d902",
+      "objectNumber": "co52519",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Two sepia bromide prints of Roman baths at Bath"
+        ],
+        "Object name(s)": [
+          "prints; prints"
+        ],
+        "Brief description": [
+          "Two sepia bromide prints of Roman baths at Bath"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "prints"
+        ],
+        "Credit line": [
+          "Great Western Railway"
+        ],
+        "Object name": [
+          "prints; prints"
+        ],
+        "Other number": [
+          "1927-1032",
+          "2517/1/11"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Water Supply Metering"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:4de3bdf3-0723-30d9-95d8-6b3ebb00d902",
+      "title": "Two sepia bromide prints of Roman baths at Bath",
+      "url": "https://museumdata.uk/objects/4de3bdf3-0723-30d9-95d8-6b3ebb00d902"
+    }
+  },
+  {
+    "id": "mds:9cb4418d-d423-37d7-8683-c3f3745f2faf",
+    "_source": "mds",
+    "_sourceId": "501053",
+    "_sourceUrl": "https://museumdata.uk/objects/9cb4418d-d423-37d7-8683-c3f3745f2faf",
+    "title": "Magic Lantern Slide: The Roman Bath, Bath",
+    "description": "This image by William Weaver Baker shows the Great Bath of the Roman Baths in Bath, Somerset. The building was of interest to Weaver Baker for its architectural features. Although a similar view is still seen today, the visitors in this photograph are able to touch the water and sit on ancient relics. \n\nThis object is not on display.\n\nInscription\n\nedges handwritten  handwritten 'BATH  ROMAN BATH' on top edge\n\nfront (under cover glass) handwritten  handwritten 'The Roman Bath / Bath' on mount",
+    "creator": "William Weaver Baker  1866-1954 (photographer)",
+    "subject": [
+      "slide; Lantern Slide: The Roman Bath, Bath",
+      "slide; Lantern Slide: The Roman Bath, Bath"
+    ],
+    "type": "Museum object",
+    "collection": "Royal Albert Memorial Museum & Art Gallery",
+    "mds": {
+      "uuid": "9cb4418d-d423-37d7-8683-c3f3745f2faf",
+      "objectNumber": "501053",
+      "material": [
+        "glass",
+        "paper",
+        "photographic emulsion"
+      ],
+      "place": [
+        "United Kingdom",
+        "Northern Europe",
+        "Europe"
+      ],
+      "dimensions": [
+        "whole width 83 mm",
+        "whole H 83 mm",
+        "whole TH 2.5 mm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Magic Lantern Slide: The Roman Bath, Bath"
+        ],
+        "Object name(s)": [
+          "slide; Lantern Slide: The Roman Bath, Bath"
+        ],
+        "Brief description": [
+          "This image by William Weaver Baker shows the Great Bath of the Roman Baths in Bath, Somerset. The building was of interest to Weaver Baker for its architectural features. Although a similar view is still seen today, the visitors in this photograph are able to touch the water and sit on ancient relics. \n\nThis object is not on display.\n\nInscription\n\nedges handwritten  handwritten 'BATH  ROMAN BATH' on top edge\n\nfront (under cover glass) handwritten  handwritten 'The Roman Bath / Bath' on mount"
+        ],
+        "Collection": [
+          "Royal Albert Memorial Museum & Art Gallery"
+        ],
+        "Current location": [
+          "Not on display"
+        ],
+        "Dimension": [
+          "whole width 83 mm",
+          "whole H 83 mm",
+          "whole TH 2.5 mm"
+        ],
+        "Material": [
+          "glass",
+          "paper",
+          "photographic emulsion"
+        ],
+        "Object name": [
+          "slide; Lantern Slide: The Roman Bath, Bath"
+        ],
+        "Object number": [
+          "313/1977/162"
+        ],
+        "Object production person": [
+          "William Weaver Baker  1866-1954 (photographer)"
+        ],
+        "Object production place": [
+          "United Kingdom",
+          "Northern Europe",
+          "Europe"
+        ],
+        "Reproduction number": [
+          "313-1977-162.jpg"
+        ],
+        "Responsible department/section": [
+          "Social History",
+          "Social and industrial history"
+        ],
+        "Right type": [
+          "https://creativecommons.org/publicdomain/zero/1.0/"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:9cb4418d-d423-37d7-8683-c3f3745f2faf",
+      "title": "Magic Lantern Slide: The Roman Bath, Bath",
+      "url": "https://museumdata.uk/objects/9cb4418d-d423-37d7-8683-c3f3745f2faf",
+      "creator": "William Weaver Baker  1866-1954 (photographer)"
+    }
+  },
+  {
+    "id": "mds:0811617a-0f15-3bb1-b8ba-5ca322739bf4",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/0811617a-0f15-3bb1-b8ba-5ca322739bf4",
+    "title": "MDS Record 10",
+    "subject": [
+      "Roman Baths, Bath; Watercolour",
+      "Roman Baths, Bath; Watercolour",
+      "Architecture"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "0811617a-0f15-3bb1-b8ba-5ca322739bf4",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 33.2",
+        "Height (cm) : 26"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Roman Baths, Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Architecture"
+        ],
+        "Associated date": [
+          "19th century, late (1870 - 1899)"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Hobson George"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 33.2",
+          "Height (cm) : 26"
+        ],
+        "Object name": [
+          "Roman Baths, Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1903.50"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:0811617a-0f15-3bb1-b8ba-5ca322739bf4",
+      "title": "MDS Record 10",
+      "url": "https://museumdata.uk/objects/0811617a-0f15-3bb1-b8ba-5ca322739bf4"
+    }
+  },
+  {
+    "id": "mds:07ed32f1-317d-3427-8356-d885e12a7846",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/07ed32f1-317d-3427-8356-d885e12a7846",
+    "title": "MDS Record 11",
+    "subject": [
+      "Roman Baths, Bath; Watercolour",
+      "Roman Baths, Bath; Watercolour",
+      "Architecture"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "07ed32f1-317d-3427-8356-d885e12a7846",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 34.2",
+        "Height (cm) : 27.3"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Roman Baths, Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Architecture"
+        ],
+        "Associated date": [
+          "19th century, late (1870 - 1899)"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Hobson George"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 34.2",
+          "Height (cm) : 27.3"
+        ],
+        "Object name": [
+          "Roman Baths, Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1903.49"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:07ed32f1-317d-3427-8356-d885e12a7846",
+      "title": "MDS Record 11",
+      "url": "https://museumdata.uk/objects/07ed32f1-317d-3427-8356-d885e12a7846"
+    }
+  },
+  {
+    "id": "mds:cb57fe4e-3bc2-3ad8-a5e1-67d5f3284383",
+    "_source": "mds",
+    "_sourceId": "co52520",
+    "_sourceUrl": "https://museumdata.uk/objects/cb57fe4e-3bc2-3ad8-a5e1-67d5f3284383",
+    "title": "Excavation plan of the old Roman hot mineral baths at Bath",
+    "description": "Excavation plan of the old Roman hot mineral baths at Bath, AD100 to AD120",
+    "date": "100",
+    "subject": [
+      "plan; plan",
+      "plan; plan",
+      "plan - orthographic projection"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "cb57fe4e-3bc2-3ad8-a5e1-67d5f3284383",
+      "objectNumber": "co52520",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Excavation plan of the old Roman hot mineral baths at Bath"
+        ],
+        "Object name(s)": [
+          "plan; plan"
+        ],
+        "Brief description": [
+          "Excavation plan of the old Roman hot mineral baths at Bath, AD100 to AD120"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "plan - orthographic projection"
+        ],
+        "Credit line": [
+          "Science Museum Draughtsman"
+        ],
+        "Object name": [
+          "plan; plan"
+        ],
+        "Date - earliest / single": [
+          "100"
+        ],
+        "Date - latest": [
+          "90",
+          "120"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1928-1",
+          "1210/100/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Water Supply Metering"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:cb57fe4e-3bc2-3ad8-a5e1-67d5f3284383",
+      "title": "Excavation plan of the old Roman hot mineral baths at Bath",
+      "url": "https://museumdata.uk/objects/cb57fe4e-3bc2-3ad8-a5e1-67d5f3284383",
+      "date": "100"
+    }
+  },
+  {
+    "id": "mds:6962d681-e7e3-35a5-9251-1aacd268a6e5",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/6962d681-e7e3-35a5-9251-1aacd268a6e5",
+    "title": "MDS Record 13",
+    "subject": [
+      "The Great Roman Bath at Bath; Watercolour",
+      "The Great Roman Bath at Bath; Watercolour",
+      "Victorian period (1837-1901)"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "6962d681-e7e3-35a5-9251-1aacd268a6e5",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 49.9",
+        "Height (cm) : 28.1"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "The Great Roman Bath at Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Victorian period (1837-1901)"
+        ],
+        "Associated date": [
+          "1893"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Pedder Anne",
+          "Pedder A"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 49.9",
+          "Height (cm) : 28.1"
+        ],
+        "Object name": [
+          "The Great Roman Bath at Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1928.17"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:6962d681-e7e3-35a5-9251-1aacd268a6e5",
+      "title": "MDS Record 13",
+      "url": "https://museumdata.uk/objects/6962d681-e7e3-35a5-9251-1aacd268a6e5"
+    }
+  },
+  {
+    "id": "mds:9f4ba13e-303f-3497-8b83-f4654a2fc57f",
+    "_source": "mds",
+    "_sourceId": "O58896",
+    "_sourceUrl": "https://museumdata.uk/objects/9f4ba13e-303f-3497-8b83-f4654a2fc57f",
+    "title": "Book of Roman Bath.",
+    "creator": [
+      "CUNLIFFE, Barry",
+      "Batsford/English Heritage"
+    ],
+    "date": "1995",
+    "subject": [
+      "Book",
+      "Book",
+      "Bath, Somerset",
+      "Roman Britain",
+      "Archaeology: Bath"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "9f4ba13e-303f-3497-8b83-f4654a2fc57f",
+      "objectNumber": "O58896",
+      "place": [
+        "London"
+      ],
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "128",
+        "25"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Book of Roman Bath."
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Bath, Somerset",
+          "Roman Britain",
+          "Archaeology: Bath"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "128",
+          "25"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "Book_list.3554"
+        ],
+        "Object production date": [
+          "1995"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production organisation": [
+          "Batsford/English Heritage"
+        ],
+        "Organisation's association": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "CUNLIFFE, Barry"
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Object production place": [
+          "London"
+        ],
+        "Place association": [
+          "Published"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:9f4ba13e-303f-3497-8b83-f4654a2fc57f",
+      "title": "Book of Roman Bath.",
+      "url": "https://museumdata.uk/objects/9f4ba13e-303f-3497-8b83-f4654a2fc57f",
+      "creator": [
+        "CUNLIFFE, Barry",
+        "Batsford/English Heritage"
+      ],
+      "date": "1995"
+    }
+  },
+  {
+    "id": "mds:747f9e17-d292-3470-896e-f718806f5a8c",
+    "_source": "mds",
+    "_sourceId": "co89219",
+    "_sourceUrl": "https://museumdata.uk/objects/747f9e17-d292-3470-896e-f718806f5a8c",
+    "title": "Roman marble bath reputedly owned by Emperor Hadrian, England, 117-138 CE",
+    "description": "Roman marble bath reputedly owned by Emperor Hadrian, English, 117 to 138 CE.",
+    "creator": "Unknown maker",
+    "date": "117",
+    "subject": [
+      "bath; bath",
+      "bath; bath",
+      "bath",
+      "hygiene",
+      "Treatments and cures",
+      "Public health"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "747f9e17-d292-3470-896e-f718806f5a8c",
+      "objectNumber": "co89219",
+      "material": [
+        "marble, white"
+      ],
+      "place": [
+        "England, United Kingdom"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "weight",
+        "width",
+        "29 15/16",
+        "760",
+        "22 7/16",
+        "570",
+        "477",
+        "1051.61049",
+        "70 1/16",
+        "1780"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Roman marble bath reputedly owned by Emperor Hadrian, England, 117-138 CE"
+        ],
+        "Object name(s)": [
+          "bath; bath"
+        ],
+        "Brief description": [
+          "Roman marble bath reputedly owned by Emperor Hadrian, English, 117 to 138 CE.",
+          "Hadrian was Emperor of Rome from 117 to 138 CE. He is famous for initiating the building of the great wall across northern England that bears his name. He reputedly owned this marble bath. Wealthier Romans believed in regular bathing for the purposes of both health and socialising. The Romans introduced water systems and public baths into England. These revolutionised public health - but only for the elite and the military ranks in society. They were forerunners of the ‘health spas’ we visit today."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "bath",
+          "hygiene",
+          "Treatments and cures",
+          "Public health"
+        ],
+        "Credit line": [
+          "Rocchi"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "weight",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm",
+          "kg",
+          "lbs"
+        ],
+        "Dimension value": [
+          "29 15/16",
+          "760",
+          "22 7/16",
+          "570",
+          "477",
+          "1051.61049",
+          "70 1/16",
+          "1780"
+        ],
+        "Material": [
+          "marble, white"
+        ],
+        "Object name": [
+          "bath; bath"
+        ],
+        "Date - earliest / single": [
+          "117"
+        ],
+        "Date - latest": [
+          "105",
+          "138"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Object production place": [
+          "England, United Kingdom"
+        ],
+        "Other number": [
+          "A602842",
+          "A156212",
+          "68/1935"
+        ],
+        "Other number type": [
+          "accession number",
+          "Wellcome (WHMM) accession A number"
+        ],
+        "Responsible department/section": [
+          "SCM - Classical & Medieval Medicine"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:747f9e17-d292-3470-896e-f718806f5a8c",
+      "title": "Roman marble bath reputedly owned by Emperor Hadrian, England, 117-138 CE",
+      "url": "https://museumdata.uk/objects/747f9e17-d292-3470-896e-f718806f5a8c",
+      "creator": "Unknown maker",
+      "date": "117"
+    }
+  },
+  {
+    "id": "mds:31a5c3b4-bc55-3695-aa94-256e95bfd72e",
+    "_source": "mds",
+    "_sourceId": "O58940",
+    "_sourceUrl": "https://museumdata.uk/objects/31a5c3b4-bc55-3695-aa94-256e95bfd72e",
+    "title": "Roman Bath Discovered",
+    "creator": [
+      "CUNLIFFE, Barry,",
+      "Routledge & K. Paul"
+    ],
+    "date": "1971",
+    "subject": [
+      "Book",
+      "Book",
+      "Bath, Somerset",
+      "Roman Britain: Bath",
+      "Archaeology: Roman"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "31a5c3b4-bc55-3695-aa94-256e95bfd72e",
+      "objectNumber": "O58940",
+      "place": [
+        "London"
+      ],
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "108",
+        "28"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Roman Bath Discovered"
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Bath, Somerset",
+          "Roman Britain: Bath",
+          "Archaeology: Roman"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "108",
+          "28"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "L.1984.62"
+        ],
+        "Object production date": [
+          "1971"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production organisation": [
+          "Routledge & K. Paul"
+        ],
+        "Organisation's association": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "CUNLIFFE, Barry,"
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Object production place": [
+          "London"
+        ],
+        "Place association": [
+          "Published"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:31a5c3b4-bc55-3695-aa94-256e95bfd72e",
+      "title": "Roman Bath Discovered",
+      "url": "https://museumdata.uk/objects/31a5c3b4-bc55-3695-aa94-256e95bfd72e",
+      "creator": [
+        "CUNLIFFE, Barry,",
+        "Routledge & K. Paul"
+      ],
+      "date": "1971"
+    }
+  },
+  {
+    "id": "mds:1babd5b9-64a4-30d9-acfa-e55ad06eea42",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/1babd5b9-64a4-30d9-acfa-e55ad06eea42",
+    "title": "MDS Record 17",
+    "subject": [
+      "The Roman Circular Bath; Watercolour",
+      "The Roman Circular Bath; Watercolour"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "1babd5b9-64a4-30d9-acfa-e55ad06eea42",
+      "objectNumber": "BATVG",
+      "place": [
+        "Circular Bath (Roman Baths)"
+      ],
+      "dimensions": [
+        "Width (cm) : 37.4",
+        "Height (cm) : 25.2"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "The Roman Circular Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated date": [
+          "1953"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Wright Reginald Wilberforce Mills"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Circular Bath (Roman Baths)"
+        ],
+        "Dimension": [
+          "Width (cm) : 37.4",
+          "Height (cm) : 25.2"
+        ],
+        "Object name": [
+          "The Roman Circular Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1953.3"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:1babd5b9-64a4-30d9-acfa-e55ad06eea42",
+      "title": "MDS Record 17",
+      "url": "https://museumdata.uk/objects/1babd5b9-64a4-30d9-acfa-e55ad06eea42"
+    }
+  },
+  {
+    "id": "mds:f63a1d91-f70a-32bf-8ba0-7ce7a32e85dd",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/f63a1d91-f70a-32bf-8ba0-7ce7a32e85dd",
+    "title": "MDS Record 18",
+    "subject": [
+      "The Old Roman Bath; Drawing",
+      "The Old Roman Bath; Drawing"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "f63a1d91-f70a-32bf-8ba0-7ce7a32e85dd",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 22.2",
+        "Height (cm) : 30.4"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "The Old Roman Bath; Drawing"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated date": [
+          "19th century, mid (1830 - 1869)"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Lansdown Henry Venn"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 22.2",
+          "Height (cm) : 30.4"
+        ],
+        "Object name": [
+          "The Old Roman Bath; Drawing"
+        ],
+        "Object number": [
+          "BATVG : PD : 1991.192"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:f63a1d91-f70a-32bf-8ba0-7ce7a32e85dd",
+      "title": "MDS Record 18",
+      "url": "https://museumdata.uk/objects/f63a1d91-f70a-32bf-8ba0-7ce7a32e85dd"
+    }
+  },
+  {
+    "id": "mds:92c44cd4-254d-3b71-be89-4b504d635ce7",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/92c44cd4-254d-3b71-be89-4b504d635ce7",
+    "title": "MDS Record 19",
+    "subject": [
+      "North East View of the Roman Bath at Bath; Watercolour",
+      "North East View of the Roman Bath at Bath; Watercolour",
+      "Victorian period (1837-1901)"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "92c44cd4-254d-3b71-be89-4b504d635ce7",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 27.3",
+        "Height (cm) : 20.2"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "North East View of the Roman Bath at Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Victorian period (1837-1901)"
+        ],
+        "Associated date": [
+          "c. 1892"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Pedder Anne"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 27.3",
+          "Height (cm) : 20.2"
+        ],
+        "Object name": [
+          "North East View of the Roman Bath at Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1928.14"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:92c44cd4-254d-3b71-be89-4b504d635ce7",
+      "title": "MDS Record 19",
+      "url": "https://museumdata.uk/objects/92c44cd4-254d-3b71-be89-4b504d635ce7"
+    }
+  },
+  {
+    "id": "mds:ca7ffe41-b255-3ba4-ac05-e3fcbeda6c5f",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/ca7ffe41-b255-3ba4-ac05-e3fcbeda6c5f",
+    "title": "MDS Record 20",
+    "subject": [
+      "Old Bath: Volume III; Aquatint, coloured; Roman antiquities discovered at Bath; Print",
+      "Old Bath: Volume III; Aquatint, coloured; Roman antiquities discovered at Bath; Print",
+      "Roman antiquities"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "ca7ffe41-b255-3ba4-ac05-e3fcbeda6c5f",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "personAssociation": [
+        "Creation",
+        "Execution"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Old Bath: Volume III; Aquatint, coloured; Roman antiquities discovered at Bath; Print"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Roman antiquities"
+        ],
+        "Associated date": [
+          "1802"
+        ],
+        "Date - association": [
+          "Creation",
+          "Execution"
+        ],
+        "Date - text": [
+          "Publisher"
+        ],
+        "Associated person": [
+          "Daniell William",
+          "Lysons Samuel",
+          "Smirke Robert"
+        ],
+        "Person's association": [
+          "Creation",
+          "Execution"
+        ],
+        "Person's biographical note": [
+          "Publisher",
+          "Artist"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Object name": [
+          "Old Bath: Volume III; Aquatint, coloured; Roman antiquities discovered at Bath; Print"
+        ],
+        "Object number": [
+          "BATVG : PD : 1933.343"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:ca7ffe41-b255-3ba4-ac05-e3fcbeda6c5f",
+      "title": "MDS Record 20",
+      "url": "https://museumdata.uk/objects/ca7ffe41-b255-3ba4-ac05-e3fcbeda6c5f"
+    }
+  },
+  {
+    "id": "mds:7481ffe3-6ae5-35be-904e-51903245b12d",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/7481ffe3-6ae5-35be-904e-51903245b12d",
+    "title": "MDS Record 21",
+    "subject": [
+      "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print",
+      "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print",
+      "Roman antiquities"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "7481ffe3-6ae5-35be-904e-51903245b12d",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "personAssociation": [
+        "Creation",
+        "Execution"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Roman antiquities"
+        ],
+        "Associated date": [
+          "1802"
+        ],
+        "Date - association": [
+          "Creation",
+          "Execution"
+        ],
+        "Date - text": [
+          "Publisher"
+        ],
+        "Associated person": [
+          "Daniell William",
+          "Lysons Samuel",
+          "Smirke Robert"
+        ],
+        "Person's association": [
+          "Creation",
+          "Execution"
+        ],
+        "Person's biographical note": [
+          "Publisher",
+          "Artist"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Object name": [
+          "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print"
+        ],
+        "Object number": [
+          "BATVG : PD : 1933.345"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:7481ffe3-6ae5-35be-904e-51903245b12d",
+      "title": "MDS Record 21",
+      "url": "https://museumdata.uk/objects/7481ffe3-6ae5-35be-904e-51903245b12d"
+    }
+  },
+  {
+    "id": "mds:5a3f26bb-24c8-3b87-9025-3ea15a1ef41a",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/5a3f26bb-24c8-3b87-9025-3ea15a1ef41a",
+    "title": "MDS Record 22",
+    "subject": [
+      "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print",
+      "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print",
+      "Roman antiquities"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "5a3f26bb-24c8-3b87-9025-3ea15a1ef41a",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "personAssociation": [
+        "Creation",
+        "Execution"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Roman antiquities"
+        ],
+        "Associated date": [
+          "1802"
+        ],
+        "Date - association": [
+          "Creation",
+          "Execution"
+        ],
+        "Date - text": [
+          "Publisher"
+        ],
+        "Associated person": [
+          "Daniell William",
+          "Lysons Samuel",
+          "Smirke Robert"
+        ],
+        "Person's association": [
+          "Creation",
+          "Execution"
+        ],
+        "Person's biographical note": [
+          "Publisher",
+          "Artist"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Object name": [
+          "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print"
+        ],
+        "Object number": [
+          "BATVG : PD : 1933.346"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:5a3f26bb-24c8-3b87-9025-3ea15a1ef41a",
+      "title": "MDS Record 22",
+      "url": "https://museumdata.uk/objects/5a3f26bb-24c8-3b87-9025-3ea15a1ef41a"
+    }
+  },
+  {
+    "id": "mds:02679ee9-8f63-3092-a67d-82a6e4df34c8",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/02679ee9-8f63-3092-a67d-82a6e4df34c8",
+    "title": "MDS Record 23",
+    "subject": [
+      "View of the Roman Bath; Watercolour",
+      "View of the Roman Bath; Watercolour",
+      "Victorian period (1837-1901)"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "02679ee9-8f63-3092-a67d-82a6e4df34c8",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 27",
+        "Height (cm) : 19.3"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "View of the Roman Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Victorian period (1837-1901)"
+        ],
+        "Associated date": [
+          "1895"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Pedder Anne"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 27",
+          "Height (cm) : 19.3"
+        ],
+        "Object name": [
+          "View of the Roman Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1928.20"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:02679ee9-8f63-3092-a67d-82a6e4df34c8",
+      "title": "MDS Record 23",
+      "url": "https://museumdata.uk/objects/02679ee9-8f63-3092-a67d-82a6e4df34c8"
+    }
+  },
+  {
+    "id": "mds:81a6e2fd-f133-3592-ab1c-cbb7db453f34",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/81a6e2fd-f133-3592-ab1c-cbb7db453f34",
+    "title": "MDS Record 24",
+    "subject": [
+      "Excavations at the Roman Bath 1888; Watercolour",
+      "Excavations at the Roman Bath 1888; Watercolour",
+      "Victorian period (1837-1901)"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "81a6e2fd-f133-3592-ab1c-cbb7db453f34",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 43",
+        "Height (cm) : 54.6"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Excavations at the Roman Bath 1888; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Victorian period (1837-1901)"
+        ],
+        "Associated date": [
+          "1888"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Unknown"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 43",
+          "Height (cm) : 54.6"
+        ],
+        "Object name": [
+          "Excavations at the Roman Bath 1888; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1932.20"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:81a6e2fd-f133-3592-ab1c-cbb7db453f34",
+      "title": "MDS Record 24",
+      "url": "https://museumdata.uk/objects/81a6e2fd-f133-3592-ab1c-cbb7db453f34"
+    }
+  },
+  {
+    "id": "mds:03f6ce38-8d68-3b73-b905-012f699d0c14",
+    "_source": "mds",
+    "_sourceId": "Norwich_Art-29980",
+    "_sourceUrl": "https://museumdata.uk/objects/03f6ce38-8d68-3b73-b905-012f699d0c14",
+    "title": "Roman Baths at Tr~ves",
+    "description": "Drawing, 'Roman Baths at Tr~ves' by Charles Wild (?) (1781-1835), wash (brown) on paper, 13 Aug 1833; 21 cm x 26.3 cm; inscription bottom left 'Roman Baths at Tr~ves'; inscription bottom right dated 'Aug 13 1833'",
+    "creator": "Wild, Charles",
+    "date": "13.8.1833",
+    "subject": [
+      "washbrown; drawing",
+      "washbrown; drawing",
+      "roman bath",
+      "building",
+      "fine art",
+      "drawings"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "03f6ce38-8d68-3b73-b905-012f699d0c14",
+      "objectNumber": "Norwich_Art-29980",
+      "place": [
+        "France",
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "21",
+        "26.3"
+      ],
+      "inscriptionContent": "Roman Baths at Tr~ves",
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Roman Baths at Tr~ves"
+        ],
+        "Object name(s)": [
+          "washbrown; drawing"
+        ],
+        "Brief description": [
+          "Drawing, 'Roman Baths at Tr~ves' by Charles Wild (?) (1781-1835), wash (brown) on paper, 13 Aug 1833; 21 cm x 26.3 cm; inscription bottom left 'Roman Baths at Tr~ves'; inscription bottom right dated 'Aug 13 1833'",
+          "Roman Baths at Tr~ves in August 1833."
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "1970"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "fine art",
+          "drawings"
+        ],
+        "Content - concept": [
+          "roman bath",
+          "building"
+        ],
+        "Content - date": [
+          "13.8.1833"
+        ],
+        "Date - earliest / single": [
+          "1833"
+        ],
+        "Date - latest": [
+          "1833"
+        ],
+        "Content - description": [
+          "Roman Baths at Tr~ves in August 1833."
+        ],
+        "Content - place": [
+          "France",
+          "Roman Baths"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "21",
+          "26.3"
+        ],
+        "Inscription content": [
+          "Roman Baths at Tr~ves",
+          "Aug 13 1833"
+        ],
+        "Inscription position": [
+          "bottom left",
+          "bottom right"
+        ],
+        "Inscription type": [
+          "inscription"
+        ],
+        "Inscription description": [
+          "dated"
+        ],
+        "Object component name": [
+          "support"
+        ],
+        "Object component information": [
+          "paper"
+        ],
+        "Object name": [
+          "washbrown; drawing"
+        ],
+        "Object number": [
+          "NWHCM : 1970.483.14.p.17"
+        ],
+        "Object production date": [
+          "13.8.1833"
+        ],
+        "Object production note": [
+          "Dawson Turner's Rhemish Tour 1833"
+        ],
+        "Object production person": [
+          "Wild, Charles"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Person's birth date": [
+          "1781"
+        ],
+        "Person's death date": [
+          "1835"
+        ],
+        "Other number": [
+          "1.642",
+          "14.483.970"
+        ],
+        "Other number type": [
+          "SHIC",
+          "assigned number"
+        ],
+        "Responsible department/section": [
+          "Art-Fine Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:03f6ce38-8d68-3b73-b905-012f699d0c14",
+      "title": "Roman Baths at Tr~ves",
+      "url": "https://museumdata.uk/objects/03f6ce38-8d68-3b73-b905-012f699d0c14",
+      "creator": "Wild, Charles",
+      "date": "13.8.1833"
+    }
+  },
+  {
+    "id": "mds:feb86f46-c978-3429-a06e-e5d83a109d88",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/feb86f46-c978-3429-a06e-e5d83a109d88",
+    "title": "MDS Record 26",
+    "subject": [
+      "North Side of the Roman Bath; Watercolour",
+      "North Side of the Roman Bath; Watercolour",
+      "Victorian period (1837-1901)"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "feb86f46-c978-3429-a06e-e5d83a109d88",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 35",
+        "Height (cm) : 23.2"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "North Side of the Roman Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Victorian period (1837-1901)"
+        ],
+        "Associated date": [
+          "1892"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Pedder Anne"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 35",
+          "Height (cm) : 23.2"
+        ],
+        "Object name": [
+          "North Side of the Roman Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1928.15"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:feb86f46-c978-3429-a06e-e5d83a109d88",
+      "title": "MDS Record 26",
+      "url": "https://museumdata.uk/objects/feb86f46-c978-3429-a06e-e5d83a109d88"
+    }
+  },
+  {
+    "id": "mds:dc5da02e-b732-39f4-8f41-badd890ebd88",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/dc5da02e-b732-39f4-8f41-badd890ebd88",
+    "title": "MDS Record 27",
+    "subject": [
+      "The Roman Circular Bath; Watercolour",
+      "The Roman Circular Bath; Watercolour",
+      "Victorian period (1837-1901)"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "dc5da02e-b732-39f4-8f41-badd890ebd88",
+      "objectNumber": "BATVG",
+      "place": [
+        "Circular Bath (Roman Baths)"
+      ],
+      "dimensions": [
+        "Width (cm) : 28.6",
+        "Height (cm) : 24"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "The Roman Circular Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Victorian period (1837-1901)"
+        ],
+        "Associated date": [
+          "c. 1892"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Pedder Anne"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Circular Bath (Roman Baths)"
+        ],
+        "Dimension": [
+          "Width (cm) : 28.6",
+          "Height (cm) : 24"
+        ],
+        "Object name": [
+          "The Roman Circular Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1928.18"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:dc5da02e-b732-39f4-8f41-badd890ebd88",
+      "title": "MDS Record 27",
+      "url": "https://museumdata.uk/objects/dc5da02e-b732-39f4-8f41-badd890ebd88"
+    }
+  },
+  {
+    "id": "mds:473b8fc4-1fc8-3794-a28e-86422f51c170",
+    "_source": "mds",
+    "_sourceId": "287092",
+    "_sourceUrl": "https://museumdata.uk/objects/473b8fc4-1fc8-3794-a28e-86422f51c170",
+    "title": "Roman Bath",
+    "description": "Roman Bath",
+    "creator": "Hilary Paynter",
+    "date": "1984",
+    "subject": [
+      "visual representation > print",
+      "visual representation > print"
+    ],
+    "type": "Museum object",
+    "collection": "Ashmolean Museum",
+    "mds": {
+      "uuid": "473b8fc4-1fc8-3794-a28e-86422f51c170",
+      "objectNumber": "287092",
+      "place": [
+        "Europe"
+      ],
+      "inscriptionContent": "Signed in the margin lower right: Hilary Paynter '84\nInscribed in the margin lower left: 15/100 Roman Bath",
+      "personAssociation": [
+        "printmaker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Roman Bath"
+        ],
+        "Object name(s)": [
+          "visual representation > print"
+        ],
+        "Brief description": [
+          "Roman Bath"
+        ],
+        "Collection": [
+          "Ashmolean Museum"
+        ],
+        "Associated place": [
+          "Europe"
+        ],
+        "Place association": [
+          "place of creation"
+        ],
+        "Inscription content": [
+          "Signed in the margin lower right: Hilary Paynter '84\nInscribed in the margin lower left: 15/100 Roman Bath"
+        ],
+        "Object name": [
+          "visual representation > print"
+        ],
+        "Object number": [
+          "WA1984.175"
+        ],
+        "Object production date": [
+          "1984"
+        ],
+        "Date - association": [
+          "date of creation"
+        ],
+        "Date - earliest / single": [
+          "1984"
+        ],
+        "Object production person": [
+          "Hilary Paynter"
+        ],
+        "Person's association": [
+          "printmaker"
+        ],
+        "Person's birth date": [
+          "born 1943"
+        ],
+        "Responsible department/section": [
+          "Western Art"
+        ],
+        "Right holder": [
+          "the artist"
+        ],
+        "Text": [
+          "https://collections.ashmolean.org/object/287092"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:473b8fc4-1fc8-3794-a28e-86422f51c170",
+      "title": "Roman Bath",
+      "url": "https://museumdata.uk/objects/473b8fc4-1fc8-3794-a28e-86422f51c170",
+      "creator": "Hilary Paynter",
+      "date": "1984"
+    }
+  },
+  {
+    "id": "mds:fdf55324-c058-35a8-bcb8-e0759779bcba",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.18158.1",
+    "_sourceUrl": "https://museumdata.uk/objects/fdf55324-c058-35a8-bcb8-e0759779bcba",
+    "title": "An Elusive Legacy: The Rediscovery of Roman Baths in Eighteenth-Century Britain",
+    "description": "An Elusive Legacy: The Rediscovery of Roman Baths in Eighteenth-Century Britain/Savani, Giacomo/Britannia/2019",
+    "creator": [
+      "Savani, Giacomo",
+      "Britannia (Society for the Promotion of Roman Studies)"
+    ],
+    "date": "2019",
+    "subject": [
+      "journal article",
+      "journal article",
+      "ancient history",
+      "Roman",
+      "towns",
+      "antiquarians",
+      "archaeology",
+      "architecture",
+      "local history"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "fdf55324-c058-35a8-bcb8-e0759779bcba",
+      "objectNumber": "DZSWS:Book.18158.1",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Bath",
+        "Somerset"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "objectHistory": "an investigation into hows 18th century antiquarians engaged with the remains of Roman bath buildings in Britain together with the interests and priorities of of Georgian scholars in studying Roman baths, and finally the elusive socio-cultural legacy of Roman baths in 18th century Britain",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "architect",
+        "achitect",
+        "antiquarian",
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "An Elusive Legacy: The Rediscovery of Roman Baths in Eighteenth-Century Britain"
+        ],
+        "Object name(s)": [
+          "journal article"
+        ],
+        "Brief description": [
+          "An Elusive Legacy: The Rediscovery of Roman Baths in Eighteenth-Century Britain/Savani, Giacomo/Britannia/2019",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "ancient history",
+          "Roman",
+          "towns",
+          "antiquarians",
+          "archaeology",
+          "architecture",
+          "local history"
+        ],
+        "Content - person": [
+          "Wood, John (the elder)",
+          "Wood, John (the younger)",
+          "Stukeley, William",
+          "Cameron, Charles",
+          "Warner, Richard"
+        ],
+        "Person's association": [
+          "architect",
+          "achitect",
+          "antiquarian",
+          "author"
+        ],
+        "Person's occupation": [
+          "architect",
+          "achitect",
+          "antiquarian",
+          "author"
+        ],
+        "Content - place": [
+          "Bath",
+          "Somerset"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "245",
+          "173"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "an investigation into hows 18th century antiquarians engaged with the remains of Roman bath buildings in Britain together with the interests and priorities of of Georgian scholars in studying Roman baths, and finally the elusive socio-cultural legacy of Roman baths in 18th century Britain"
+        ],
+        "Object name": [
+          "journal article"
+        ],
+        "Object number": [
+          "DZSWS:Book.18158.1"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "2019"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "Britannia (Society for the Promotion of Roman Studies)"
+        ],
+        "Organisation's function": [
+          "publisher"
+        ],
+        "Object production person": [
+          "Savani, Giacomo"
+        ],
+        "Other number": [
+          "ISSN 0068 113X"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:fdf55324-c058-35a8-bcb8-e0759779bcba",
+      "title": "An Elusive Legacy: The Rediscovery of Roman Baths in Eighteenth-Century Britain",
+      "url": "https://museumdata.uk/objects/fdf55324-c058-35a8-bcb8-e0759779bcba",
+      "creator": [
+        "Savani, Giacomo",
+        "Britannia (Society for the Promotion of Roman Studies)"
+      ],
+      "date": "2019"
+    }
+  },
+  {
+    "id": "mds:70cfe642-c34e-3116-91a5-92d981dda561",
+    "_source": "mds",
+    "_sourceId": "ArchNum-4CAA49A3-FE5E-4842-B460-AE6E08A30CC3",
+    "_sourceUrl": "https://museumdata.uk/objects/70cfe642-c34e-3116-91a5-92d981dda561",
+    "title": "Roman bath stone carved block",
+    "description": "With acanthus ornament.",
+    "date": "Roman",
+    "subject": [
+      "Roman bath stone carved block; carving",
+      "Roman bath stone carved block; carving",
+      "not verified"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "70cfe642-c34e-3116-91a5-92d981dda561",
+      "objectNumber": "ArchNum-4CAA49A3-FE5E-4842-B460-AE6E08A30CC3",
+      "material": [
+        "Bath stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Roman bath stone carved block"
+        ],
+        "Object name(s)": [
+          "Roman bath stone carved block; carving"
+        ],
+        "Brief description": [
+          "With acanthus ornament."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "16/6/1989"
+        ],
+        "Acquisition method": [
+          "collected officially"
+        ],
+        "Associated concept": [
+          "not verified"
+        ],
+        "Entry date": [
+          "16/6/1989"
+        ],
+        "Field collection note": [
+          "found in a modern rubble wall in the garden of the Roman Legionary Museum"
+        ],
+        "Field collection place": [
+          "Museum Garden",
+          "Caerleon",
+          "Gwent",
+          "South Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "Bath stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Roman bath stone carved block; carving"
+        ],
+        "Object production date": [
+          "Roman"
+        ],
+        "Other number": [
+          "89.137H/3",
+          "Micromusée V6 SN:13511"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:70cfe642-c34e-3116-91a5-92d981dda561",
+      "title": "Roman bath stone carved block",
+      "url": "https://museumdata.uk/objects/70cfe642-c34e-3116-91a5-92d981dda561",
+      "date": "Roman"
+    }
+  },
+  {
+    "id": "mds:aaaeaa05-7f50-300a-9b86-bc32257d48be",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/aaaeaa05-7f50-300a-9b86-bc32257d48be",
+    "title": "MDS Record 31",
+    "subject": [
+      "Etching; Circular Roman Bath, Bath; Print",
+      "Etching; Circular Roman Bath, Bath; Print"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "aaaeaa05-7f50-300a-9b86-bc32257d48be",
+      "objectNumber": "BATVG",
+      "place": [
+        "Circular Bath (Roman Baths)"
+      ],
+      "dimensions": [
+        "Width (cm) : 16.4",
+        "Height (cm) : 11.5"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Etching; Circular Roman Bath, Bath; Print"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated person": [
+          "Hanson Frances A"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Circular Bath (Roman Baths)"
+        ],
+        "Dimension": [
+          "Width (cm) : 16.4",
+          "Height (cm) : 11.5"
+        ],
+        "Object name": [
+          "Etching; Circular Roman Bath, Bath; Print"
+        ],
+        "Object number": [
+          "BATVG : PD : 2000.147"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:aaaeaa05-7f50-300a-9b86-bc32257d48be",
+      "title": "MDS Record 31",
+      "url": "https://museumdata.uk/objects/aaaeaa05-7f50-300a-9b86-bc32257d48be"
+    }
+  },
+  {
+    "id": "mds:4ff59a16-2f6b-3db5-8b93-05212b1ed08f",
+    "_source": "mds",
+    "_sourceId": "co421256",
+    "_sourceUrl": "https://museumdata.uk/objects/4ff59a16-2f6b-3db5-8b93-05212b1ed08f",
+    "title": "Great Western Railway carriage photographs",
+    "description": "Great Western Railway carriage photographs. Three colour photographs in mount. Roman Baths, Bath; Grand Pump Room, Bath; Circular Bath, Roman Baths, Bath. (c1901).",
+    "subject": [
+      "carriage photograph; carriage photograph",
+      "carriage photograph; carriage photograph"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "4ff59a16-2f6b-3db5-8b93-05212b1ed08f",
+      "objectNumber": "co421256",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Great Western Railway carriage photographs"
+        ],
+        "Object name(s)": [
+          "carriage photograph; carriage photograph"
+        ],
+        "Brief description": [
+          "Great Western Railway carriage photographs. Three colour photographs in mount. Roman Baths, Bath; Grand Pump Room, Bath; Circular Bath, Roman Baths, Bath. (c1901)."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Object name": [
+          "carriage photograph; carriage photograph"
+        ],
+        "Other number": [
+          "1980-7406",
+          "1007/1-3/60",
+          "80/21/59"
+        ],
+        "Other number type": [
+          "accession number",
+          "Clapham number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Pictorial Collection (Railway)"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:4ff59a16-2f6b-3db5-8b93-05212b1ed08f",
+      "title": "Great Western Railway carriage photographs",
+      "url": "https://museumdata.uk/objects/4ff59a16-2f6b-3db5-8b93-05212b1ed08f"
+    }
+  },
+  {
+    "id": "mds:bf3bcbf5-e860-3f33-8080-d6511d2e7c03",
+    "_source": "mds",
+    "_sourceId": "26864",
+    "_sourceUrl": "https://museumdata.uk/objects/bf3bcbf5-e860-3f33-8080-d6511d2e7c03",
+    "title": "Roman Baths, Bath",
+    "description": "Old roman baths at Bath 3485 GWW",
+    "subject": [
+      "Photograph",
+      "Photograph",
+      "Science And Technology"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "bf3bcbf5-e860-3f33-8080-d6511d2e7c03",
+      "objectNumber": "26864",
+      "material": [
+        "albumen print"
+      ],
+      "dimensions": [
+        "Overall: Height: 29.2 cm, Width: 19.2 cm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Roman Baths, Bath"
+        ],
+        "Object name(s)": [
+          "Photograph"
+        ],
+        "Brief description": [
+          "Old roman baths at Bath 3485 GWW"
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Accession date": [
+          "1987"
+        ],
+        "Acquisition method": [
+          "Purchase"
+        ],
+        "Associated concept": [
+          "Science And Technology"
+        ],
+        "Associated person": [
+          "George Washington Wilson"
+        ],
+        "Credit line": [
+          "Purchased in 1987 with assistance from the National Fund for Acquisitions, the National Art Collections Fund, the National Heritage Memorial Fund and with income from the Ramsay-Dyce Bequest."
+        ],
+        "Current location": [
+          "View by Appointment - Aberdeen Treasure Hub"
+        ],
+        "Dimension": [
+          "Overall: Height: 29.2 cm, Width: 19.2 cm"
+        ],
+        "Material": [
+          "albumen print"
+        ],
+        "Object name": [
+          "Photograph"
+        ],
+        "Object number": [
+          "ABDMS018169"
+        ],
+        "Object status": [
+          "Accessioned object"
+        ],
+        "Responsible department/section": [
+          "Science and Industry"
+        ],
+        "Right type": [
+          "Out of copyright - CC0"
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/48552"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:bf3bcbf5-e860-3f33-8080-d6511d2e7c03",
+      "title": "Roman Baths, Bath",
+      "url": "https://museumdata.uk/objects/bf3bcbf5-e860-3f33-8080-d6511d2e7c03"
+    }
+  },
+  {
+    "id": "mds:1765903f-9b3a-351d-bdf4-053ac4b7918d",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/1765903f-9b3a-351d-bdf4-053ac4b7918d",
+    "title": "MDS Record 34",
+    "subject": [
+      "Circular Roman Bath; Watercolour",
+      "Circular Roman Bath; Watercolour"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "1765903f-9b3a-351d-bdf4-053ac4b7918d",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 20.1",
+        "Height (cm) : 15.1"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Circular Roman Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated date": [
+          "19th - 20th century (1800 - 1999)"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Poole Samuel"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 20.1",
+          "Height (cm) : 15.1"
+        ],
+        "Object name": [
+          "Circular Roman Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1929.74"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:1765903f-9b3a-351d-bdf4-053ac4b7918d",
+      "title": "MDS Record 34",
+      "url": "https://museumdata.uk/objects/1765903f-9b3a-351d-bdf4-053ac4b7918d"
+    }
+  },
+  {
+    "id": "mds:aef93e62-d54d-366e-9989-0d340204c91b",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/aef93e62-d54d-366e-9989-0d340204c91b",
+    "title": "MDS Record 35",
+    "subject": [
+      "Great Roman Bath; Watercolour",
+      "Great Roman Bath; Watercolour",
+      "Bathing"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "aef93e62-d54d-366e-9989-0d340204c91b",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 34",
+        "Height (cm) : 24.2"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Great Roman Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Bathing"
+        ],
+        "Associated date": [
+          "19th century, late (1870 - 1899)"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Hobson George"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 34",
+          "Height (cm) : 24.2"
+        ],
+        "Object name": [
+          "Great Roman Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1903.51"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:aef93e62-d54d-366e-9989-0d340204c91b",
+      "title": "MDS Record 35",
+      "url": "https://museumdata.uk/objects/aef93e62-d54d-366e-9989-0d340204c91b"
+    }
+  },
+  {
+    "id": "mds:a44e0a42-1125-3c97-978e-1f883179ad1b",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/a44e0a42-1125-3c97-978e-1f883179ad1b",
+    "title": "MDS Record 36",
+    "subject": [
+      "The Great Roman Bath; Drawing",
+      "The Great Roman Bath; Drawing"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "a44e0a42-1125-3c97-978e-1f883179ad1b",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 38.2",
+        "Height (cm) : 28"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "The Great Roman Bath; Drawing"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated date": [
+          "Victorian period (1837 - 1901)",
+          "1884"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Gibbs James Walter"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 38.2",
+          "Height (cm) : 28"
+        ],
+        "Object name": [
+          "The Great Roman Bath; Drawing"
+        ],
+        "Object number": [
+          "BATVG : P : 1909.196"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:a44e0a42-1125-3c97-978e-1f883179ad1b",
+      "title": "MDS Record 36",
+      "url": "https://museumdata.uk/objects/a44e0a42-1125-3c97-978e-1f883179ad1b"
+    }
+  },
+  {
+    "id": "mds:001dabc1-6015-3c01-a027-d406df5b6156",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/001dabc1-6015-3c01-a027-d406df5b6156",
+    "title": "MDS Record 37",
+    "subject": [
+      "Hot spring, Roman Baths; Drawing",
+      "Hot spring, Roman Baths; Drawing"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "001dabc1-6015-3c01-a027-d406df5b6156",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 21.8",
+        "Height (cm) : 29.6"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Hot spring, Roman Baths; Drawing"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated date": [
+          "c. 1855"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Lansdown Henry Venn",
+          "Brown E Godfrey"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 21.8",
+          "Height (cm) : 29.6"
+        ],
+        "Object name": [
+          "Hot spring, Roman Baths; Drawing"
+        ],
+        "Object number": [
+          "BATVG : PD : 1926.30"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:001dabc1-6015-3c01-a027-d406df5b6156",
+      "title": "MDS Record 37",
+      "url": "https://museumdata.uk/objects/001dabc1-6015-3c01-a027-d406df5b6156"
+    }
+  },
+  {
+    "id": "mds:1b2b7ba9-9412-3f26-8daf-958e4b34a8d9",
+    "_source": "mds",
+    "_sourceId": "O1769408",
+    "_sourceUrl": "https://museumdata.uk/objects/1b2b7ba9-9412-3f26-8daf-958e4b34a8d9",
+    "title": "The Great Roman Bath",
+    "description": "Colour lithograph print from the Bath Suite",
+    "creator": "Gentleman, David",
+    "date": "1975",
+    "subject": [
+      "Print",
+      "Print",
+      "Prints"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria and Albert Museum",
+    "mds": {
+      "uuid": "1b2b7ba9-9412-3f26-8daf-958e4b34a8d9",
+      "objectNumber": "O1769408",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Britain"
+      ],
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Great Roman Bath"
+        ],
+        "Object name(s)": [
+          "Print"
+        ],
+        "Brief description": [
+          "Colour lithograph print from the Bath Suite",
+          "Lithograph by David Gentleman, 'The Great Roman Bath', from the Bath Suite. Britain, 1975."
+        ],
+        "Collection": [
+          "Victoria and Albert Museum"
+        ],
+        "Associated concept": [
+          "Prints"
+        ],
+        "Credit line": [
+          "Given by the artist"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "Print"
+        ],
+        "Object production date": [
+          "1975"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Date - earliest / single": [
+          "1975-01-01"
+        ],
+        "Date - latest": [
+          "1975-12-31"
+        ],
+        "Object production person": [
+          "Gentleman, David"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Object production place": [
+          "Britain"
+        ],
+        "Place association": [
+          "made"
+        ],
+        "Physical description": [
+          "Colour lithograph print from the Bath Suite"
+        ],
+        "Responsible department/section": [
+          "PDP"
+        ],
+        "Technique": [
+          "lithography"
+        ],
+        "Text": [
+          "https://collections.vam.ac.uk/item/O1769408/"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:1b2b7ba9-9412-3f26-8daf-958e4b34a8d9",
+      "title": "The Great Roman Bath",
+      "url": "https://museumdata.uk/objects/1b2b7ba9-9412-3f26-8daf-958e4b34a8d9",
+      "creator": "Gentleman, David",
+      "date": "1975"
+    }
+  },
+  {
+    "id": "mds:ea0672da-6112-3eed-89d7-ec2446899484",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/ea0672da-6112-3eed-89d7-ec2446899484",
+    "title": "MDS Record 39",
+    "subject": [
+      "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print",
+      "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print",
+      "Roman antiquities"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "ea0672da-6112-3eed-89d7-ec2446899484",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "personAssociation": [
+        "Creation",
+        "Execution"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Roman antiquities"
+        ],
+        "Associated date": [
+          "1802"
+        ],
+        "Date - association": [
+          "Creation",
+          "Execution"
+        ],
+        "Date - text": [
+          "Publisher"
+        ],
+        "Associated person": [
+          "Daniell William",
+          "Lysons Samuel",
+          "Smirke Robert"
+        ],
+        "Person's association": [
+          "Creation",
+          "Execution"
+        ],
+        "Person's biographical note": [
+          "Publisher",
+          "Artist"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Object name": [
+          "Old Bath: Volume III; Aquatint, coloured; Roman inscriptions discovered at Bath; Print"
+        ],
+        "Object number": [
+          "BATVG : PD : 1933.344"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:ea0672da-6112-3eed-89d7-ec2446899484",
+      "title": "MDS Record 39",
+      "url": "https://museumdata.uk/objects/ea0672da-6112-3eed-89d7-ec2446899484"
+    }
+  },
+  {
+    "id": "mds:9f3f3e42-7280-37ed-b78b-5034f94d8706",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/9f3f3e42-7280-37ed-b78b-5034f94d8706",
+    "title": "MDS Record 40",
+    "subject": [
+      "Old Bath: Volume III; Aquatint, coloured; Roman antiquities discovered at Bath; Print",
+      "Old Bath: Volume III; Aquatint, coloured; Roman antiquities discovered at Bath; Print",
+      "Roman antiquities"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "9f3f3e42-7280-37ed-b78b-5034f94d8706",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "personAssociation": [
+        "Creation",
+        "Execution"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Old Bath: Volume III; Aquatint, coloured; Roman antiquities discovered at Bath; Print"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Roman antiquities"
+        ],
+        "Associated date": [
+          "1802"
+        ],
+        "Date - association": [
+          "Creation",
+          "Execution"
+        ],
+        "Date - text": [
+          "Publisher"
+        ],
+        "Associated person": [
+          "Daniell William",
+          "Lysons Samuel",
+          "Smirke Robert"
+        ],
+        "Person's association": [
+          "Creation",
+          "Execution"
+        ],
+        "Person's biographical note": [
+          "Publisher",
+          "Artist"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Object name": [
+          "Old Bath: Volume III; Aquatint, coloured; Roman antiquities discovered at Bath; Print"
+        ],
+        "Object number": [
+          "BATVG : PD : 1933.342"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:9f3f3e42-7280-37ed-b78b-5034f94d8706",
+      "title": "MDS Record 40",
+      "url": "https://museumdata.uk/objects/9f3f3e42-7280-37ed-b78b-5034f94d8706"
+    }
+  },
+  {
+    "id": "mds:8d6449fb-34c7-322a-9b98-1df0cd2f0a7e",
+    "_source": "mds",
+    "_sourceId": "ArchNum-41D826D8-9C88-428D-AEEA-A01DEEB2F991",
+    "_sourceUrl": "https://museumdata.uk/objects/8d6449fb-34c7-322a-9b98-1df0cd2f0a7e",
+    "title": "Roman bath stone moulding",
+    "description": "Moulded base",
+    "date": "Roman",
+    "subject": [
+      "Roman bath stone moulding; moulding",
+      "Roman bath stone moulding; moulding"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "8d6449fb-34c7-322a-9b98-1df0cd2f0a7e",
+      "objectNumber": "ArchNum-41D826D8-9C88-428D-AEEA-A01DEEB2F991",
+      "material": [
+        "Bath stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Roman bath stone moulding"
+        ],
+        "Object name(s)": [
+          "Roman bath stone moulding; moulding"
+        ],
+        "Brief description": [
+          "Moulded base"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Entry date": [
+          "6/8/1981"
+        ],
+        "Field collection place": [
+          "Caerleon Fortress Baths",
+          "Caerleon",
+          "Gwent",
+          "South Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "Bath stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Roman bath stone moulding; moulding"
+        ],
+        "Object production date": [
+          "Roman"
+        ],
+        "Other number": [
+          "81.79H/39.9",
+          "Micromusée V6 SN:303297",
+          "Context number:-",
+          "Caerleon item number:6",
+          "Caerleon box number:51"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p.312 fig.102.2"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:8d6449fb-34c7-322a-9b98-1df0cd2f0a7e",
+      "title": "Roman bath stone moulding",
+      "url": "https://museumdata.uk/objects/8d6449fb-34c7-322a-9b98-1df0cd2f0a7e",
+      "date": "Roman"
+    }
+  },
+  {
+    "id": "mds:9888778f-3645-359b-883b-d7850e1d2fb7",
+    "_source": "mds",
+    "_sourceId": "O78988",
+    "_sourceUrl": "https://museumdata.uk/objects/9888778f-3645-359b-883b-d7850e1d2fb7",
+    "title": "Description of Roman villa with tesselated pavements: discovered at Newton St Loe, Twerton, near Bath.",
+    "creator": [
+      "COOK, W.B. publisher",
+      "W.B. Cook"
+    ],
+    "date": "1839",
+    "subject": [
+      "Book",
+      "Book",
+      "Bath: Archaeology",
+      "Roman Villas",
+      "Mosaics: Roman"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "9888778f-3645-359b-883b-d7850e1d2fb7",
+      "objectNumber": "O78988",
+      "place": [
+        "London"
+      ],
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "4",
+        "55"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Description of Roman villa with tesselated pavements: discovered at Newton St Loe, Twerton, near Bath."
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Bath: Archaeology",
+          "Roman Villas",
+          "Mosaics: Roman"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "4",
+          "55"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "L.1947.93.1"
+        ],
+        "Object production date": [
+          "1839"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production organisation": [
+          "W.B. Cook"
+        ],
+        "Organisation's association": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "COOK, W.B. publisher"
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Object production place": [
+          "London"
+        ],
+        "Place association": [
+          "Published"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:9888778f-3645-359b-883b-d7850e1d2fb7",
+      "title": "Description of Roman villa with tesselated pavements: discovered at Newton St Loe, Twerton, near Bath.",
+      "url": "https://museumdata.uk/objects/9888778f-3645-359b-883b-d7850e1d2fb7",
+      "creator": [
+        "COOK, W.B. publisher",
+        "W.B. Cook"
+      ],
+      "date": "1839"
+    }
+  },
+  {
+    "id": "mds:b57d46b2-63d4-327c-a440-959d4d3fe186",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1983.6211",
+    "_sourceUrl": "https://museumdata.uk/objects/b57d46b2-63d4-327c-a440-959d4d3fe186",
+    "title": "Roman bath found at Farley Wiltshire",
+    "description": "Roman bath, Farley. Plan and drawing of bath with surrounding structure walls, turf tops, no roof.  Plan is labelled and scaled, 1823.",
+    "creator": [
+      "Sc, W",
+      "Gentlemen's Magazine"
+    ],
+    "date": "1823",
+    "subject": [
+      "print",
+      "print",
+      "archaeology",
+      "roman"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "b57d46b2-63d4-327c-a440-959d4d3fe186",
+      "objectNumber": "DZSWS:1983.6211",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Farley",
+        "Wiltshire",
+        "Farley",
+        "Roman Bath",
+        "Wiltshire"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "210",
+        "122"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Roman bath found at Farley Wiltshire"
+        ],
+        "Object name(s)": [
+          "print"
+        ],
+        "Brief description": [
+          "Roman bath, Farley. Plan and drawing of bath with surrounding structure walls, turf tops, no roof.  Plan is labelled and scaled, 1823."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "roman"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - note": [
+          "duplicate of 1983.3538; 1983.1481"
+        ],
+        "Content - place": [
+          "Farley",
+          "Roman Bath",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "bath house"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "210",
+          "122"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "print"
+        ],
+        "Object number": [
+          "DZSWS:1983.6211"
+        ],
+        "Object production date": [
+          "1823"
+        ],
+        "Object production organisation": [
+          "Gentlemen's Magazine"
+        ],
+        "Object production person": [
+          "Sc, W"
+        ],
+        "Person's biographical note": [
+          "on picture"
+        ],
+        "Object production place": [
+          "Farley",
+          "Wiltshire"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:b57d46b2-63d4-327c-a440-959d4d3fe186",
+      "title": "Roman bath found at Farley Wiltshire",
+      "url": "https://museumdata.uk/objects/b57d46b2-63d4-327c-a440-959d4d3fe186",
+      "creator": [
+        "Sc, W",
+        "Gentlemen's Magazine"
+      ],
+      "date": "1823"
+    }
+  },
+  {
+    "id": "mds:beb80b7a-4a13-3fd3-9839-6e3907312eda",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1983.3538",
+    "_sourceUrl": "https://museumdata.uk/objects/beb80b7a-4a13-3fd3-9839-6e3907312eda",
+    "title": "Roman bath found at Farley Wiltshire",
+    "description": "Roman bath, Farley. Plan and drawing of bath with surrounding structure walls, turf tops, no roof.  Plan is labelled and scaled, 1823.",
+    "creator": [
+      "Sc, W",
+      "Gentlemen's Magazine"
+    ],
+    "date": "1823",
+    "subject": [
+      "print",
+      "print",
+      "archaeology",
+      "roman"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "beb80b7a-4a13-3fd3-9839-6e3907312eda",
+      "objectNumber": "DZSWS:1983.3538",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Farley",
+        "Wiltshire",
+        "Farley",
+        "Roman Bath",
+        "Wiltshire"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "223",
+        "142"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Roman bath found at Farley Wiltshire"
+        ],
+        "Object name(s)": [
+          "print"
+        ],
+        "Brief description": [
+          "Roman bath, Farley. Plan and drawing of bath with surrounding structure walls, turf tops, no roof.  Plan is labelled and scaled, 1823."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "roman"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - note": [
+          "duplicate of 1983.6211; 1983.1481"
+        ],
+        "Content - place": [
+          "Farley",
+          "Roman Bath",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "bath house"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "223",
+          "142"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "print"
+        ],
+        "Object number": [
+          "DZSWS:1983.3538"
+        ],
+        "Object production date": [
+          "1823"
+        ],
+        "Object production organisation": [
+          "Gentlemen's Magazine"
+        ],
+        "Object production person": [
+          "Sc, W"
+        ],
+        "Person's biographical note": [
+          "on picture"
+        ],
+        "Object production place": [
+          "Farley",
+          "Wiltshire"
+        ],
+        "Reproduction number": [
+          "1983.3538.jpg"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:beb80b7a-4a13-3fd3-9839-6e3907312eda",
+      "title": "Roman bath found at Farley Wiltshire",
+      "url": "https://museumdata.uk/objects/beb80b7a-4a13-3fd3-9839-6e3907312eda",
+      "creator": [
+        "Sc, W",
+        "Gentlemen's Magazine"
+      ],
+      "date": "1823"
+    }
+  },
+  {
+    "id": "mds:1ccf06d2-8f85-3041-bb5f-3f1940c16de7",
+    "_source": "mds",
+    "_sourceId": "ArchNum-C00CBEA9-03ED-447C-B9AD-2AFDCF03A485",
+    "_sourceUrl": "https://museumdata.uk/objects/1ccf06d2-8f85-3041-bb5f-3f1940c16de7",
+    "title": "Roman bath stone moulding",
+    "description": "A basal moulding; its upper surface is roughly-tooled, and would have been hidden by another block placed upon it.",
+    "date": "Roman",
+    "subject": [
+      "Roman bath stone moulding; moulding",
+      "Roman bath stone moulding; moulding"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "1ccf06d2-8f85-3041-bb5f-3f1940c16de7",
+      "objectNumber": "ArchNum-C00CBEA9-03ED-447C-B9AD-2AFDCF03A485",
+      "material": [
+        "Bath stone"
+      ],
+      "dimensions": [
+        "length / m:0.19"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Roman bath stone moulding"
+        ],
+        "Object name(s)": [
+          "Roman bath stone moulding; moulding"
+        ],
+        "Brief description": [
+          "A basal moulding; its upper surface is roughly-tooled, and would have been hidden by another block placed upon it."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Dimension": [
+          "length / m:0.19"
+        ],
+        "Entry date": [
+          "6/8/1981"
+        ],
+        "Field collection note": [
+          "Incorporated in the Phase V reducing-wall of the Natatio."
+        ],
+        "Field collection place": [
+          "Caerleon Fortress Baths",
+          "Caerleon",
+          "Gwent",
+          "South Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "Bath stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Roman bath stone moulding; moulding"
+        ],
+        "Object production date": [
+          "Roman"
+        ],
+        "Other number": [
+          "81.79H/39.100",
+          "Micromusée V6 SN:88801",
+          "Context number:616"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p.312 fig.102.3"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:1ccf06d2-8f85-3041-bb5f-3f1940c16de7",
+      "title": "Roman bath stone moulding",
+      "url": "https://museumdata.uk/objects/1ccf06d2-8f85-3041-bb5f-3f1940c16de7",
+      "date": "Roman"
+    }
+  },
+  {
+    "id": "mds:818063e8-4da0-3667-8b37-ff1ec316c8c6",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/818063e8-4da0-3667-8b37-ff1ec316c8c6",
+    "title": "MDS Record 46",
+    "subject": [
+      "Part of the Roman Bath; Watercolour",
+      "Part of the Roman Bath; Watercolour",
+      "Victorian period (1837-1901)"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "818063e8-4da0-3667-8b37-ff1ec316c8c6",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 27.4",
+        "Height (cm) : 17"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Part of the Roman Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Victorian period (1837-1901)"
+        ],
+        "Associated date": [
+          "c. 1892"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Pedder Anne"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 27.4",
+          "Height (cm) : 17"
+        ],
+        "Object name": [
+          "Part of the Roman Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1928.16"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:818063e8-4da0-3667-8b37-ff1ec316c8c6",
+      "title": "MDS Record 46",
+      "url": "https://museumdata.uk/objects/818063e8-4da0-3667-8b37-ff1ec316c8c6"
+    }
+  },
+  {
+    "id": "mds:89f8cdd9-2417-3192-a96e-930124c36489",
+    "_source": "mds",
+    "_sourceId": "BATVG",
+    "_sourceUrl": "https://museumdata.uk/objects/89f8cdd9-2417-3192-a96e-930124c36489",
+    "title": "MDS Record 47",
+    "subject": [
+      "View of the Roman Bath; Watercolour",
+      "View of the Roman Bath; Watercolour",
+      "Victorian period (1837-1901)"
+    ],
+    "type": "Museum object",
+    "collection": "Victoria Art Gallery",
+    "mds": {
+      "uuid": "89f8cdd9-2417-3192-a96e-930124c36489",
+      "objectNumber": "BATVG",
+      "place": [
+        "Roman Baths"
+      ],
+      "dimensions": [
+        "Width (cm) : 28.4",
+        "Height (cm) : 17.3"
+      ],
+      "personAssociation": [
+        "Creation"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "View of the Roman Bath; Watercolour"
+        ],
+        "Collection": [
+          "Victoria Art Gallery"
+        ],
+        "Associated concept": [
+          "Victorian period (1837-1901)"
+        ],
+        "Associated date": [
+          "c. 1892"
+        ],
+        "Date - association": [
+          "Creation"
+        ],
+        "Associated person": [
+          "Pedder Anne"
+        ],
+        "Person's association": [
+          "Creation"
+        ],
+        "Associated place": [
+          "Roman Baths"
+        ],
+        "Dimension": [
+          "Width (cm) : 28.4",
+          "Height (cm) : 17.3"
+        ],
+        "Object name": [
+          "View of the Roman Bath; Watercolour"
+        ],
+        "Object number": [
+          "BATVG : P : 1928.19"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:89f8cdd9-2417-3192-a96e-930124c36489",
+      "title": "MDS Record 47",
+      "url": "https://museumdata.uk/objects/89f8cdd9-2417-3192-a96e-930124c36489"
+    }
+  },
+  {
+    "id": "mds:71261aa0-2338-3a39-bef9-e11f9cd5b15e",
+    "_source": "mds",
+    "_sourceId": "DZSWS:MSS.59",
+    "_sourceUrl": "https://museumdata.uk/objects/71261aa0-2338-3a39-bef9-e11f9cd5b15e",
+    "title": "On the Roman Remains discovered in Bath",
+    "description": "On the Roman Remains discovered in Bath/ Scarth, H M, Rev./ 1853",
+    "creator": [
+      "Scarth, H M",
+      "Somerset Archaeological and Natural History Society",
+      "Frederick May"
+    ],
+    "date": "1853",
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "history",
+      "roman (Britain)",
+      "memorials"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "71261aa0-2338-3a39-bef9-e11f9cd5b15e",
+      "objectNumber": "DZSWS:MSS.59",
+      "place": [
+        "Bath",
+        "Somerset"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "220mms",
+        "140mms"
+      ],
+      "objectHistory": "a discussion of the Roman Remains discovered in Bath",
+      "numberOfObjects": "1",
+      "inscriptionContent": "from the author to J Britton Esq Sept '53",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "On the Roman Remains discovered in Bath"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "On the Roman Remains discovered in Bath/ Scarth, H M, Rev./ 1853",
+          "a discussion of the Roman Remains in the City"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "history",
+          "roman (Britain)",
+          "memorials"
+        ],
+        "Content - place": [
+          "Bath",
+          "Somerset"
+        ],
+        "Place status": [
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "220mms",
+          "140mms"
+        ],
+        "Inscription content": [
+          "from the author to J Britton Esq Sept '53"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "a discussion of the Roman Remains discovered in Bath"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:MSS.59"
+        ],
+        "Object production date": [
+          "1853"
+        ],
+        "Date - association": [
+          "contains two letters signed by the author to John Britton"
+        ],
+        "Object production organisation": [
+          "Somerset Archaeological and Natural History Society",
+          "Frederick May"
+        ],
+        "Organisation's function": [
+          "publisher",
+          "printer"
+        ],
+        "Object production person": [
+          "Scarth, H M"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Physical description": [
+          "a discussion of the Roman Remains in the City"
+        ],
+        "Technical attribute measurement": [
+          "37 pages"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:71261aa0-2338-3a39-bef9-e11f9cd5b15e",
+      "title": "On the Roman Remains discovered in Bath",
+      "url": "https://museumdata.uk/objects/71261aa0-2338-3a39-bef9-e11f9cd5b15e",
+      "creator": [
+        "Scarth, H M",
+        "Somerset Archaeological and Natural History Society",
+        "Frederick May"
+      ],
+      "date": "1853"
+    }
+  },
+  {
+    "id": "mds:d1d30830-beef-308b-910f-242d2fa0b970",
+    "_source": "mds",
+    "_sourceId": "4080",
+    "_sourceUrl": "https://museumdata.uk/objects/d1d30830-beef-308b-910f-242d2fa0b970",
+    "title": "MDS Record 49",
+    "description": "Roman Bath in Bath plus large group of gentlemen R8 S9",
+    "date": "1900",
+    "subject": [
+      "photograph b/w",
+      "photograph b/w"
+    ],
+    "type": "Museum object",
+    "collection": "Teign Heritage Centre",
+    "mds": {
+      "uuid": "d1d30830-beef-308b-910f-242d2fa0b970",
+      "objectNumber": "4080",
+      "place": [
+        "Bath",
+        "Somerset",
+        "United Kingdom"
+      ],
+      "dimensions": [
+        "height x width"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "photograph b/w"
+        ],
+        "Brief description": [
+          "Roman Bath in Bath plus large group of gentlemen R8 S9",
+          "Roman Bath in Bath plus large group of gentlemen"
+        ],
+        "Collection": [
+          "Teign Heritage Centre"
+        ],
+        "Date - earliest / single": [
+          "1900"
+        ],
+        "Content - description": [
+          "Roman Bath in Bath plus large group of gentlemen R8 S9"
+        ],
+        "Content - place": [
+          "Bath",
+          "Somerset",
+          "United Kingdom"
+        ],
+        "Place name": [
+          "Roman Bath"
+        ],
+        "Place status": [
+          "County",
+          "Country"
+        ],
+        "Dimension": [
+          "height x width"
+        ],
+        "Dimension measured part": [
+          "photograph",
+          "mount"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "photograph b/w"
+        ],
+        "Object number": [
+          "4080"
+        ],
+        "Other number": [
+          "9026"
+        ],
+        "Other number type": [
+          "subjectcode"
+        ],
+        "Reproduction number": [
+          "r8/largepictures/4080.jpg"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:d1d30830-beef-308b-910f-242d2fa0b970",
+      "title": "MDS Record 49",
+      "url": "https://museumdata.uk/objects/d1d30830-beef-308b-910f-242d2fa0b970",
+      "date": "1900"
+    }
+  },
+  {
+    "id": "mds:5a46ac4f-60cb-3cba-b82f-7761280cb2f0",
+    "_source": "mds",
+    "_sourceId": "892192",
+    "_sourceUrl": "https://museumdata.uk/objects/5a46ac4f-60cb-3cba-b82f-7761280cb2f0",
+    "title": "Four Roman altars with Latin inscriptions found at Bath",
+    "description": "Four Roman altars with Latin inscriptions found at Bath",
+    "creator": "Samuel Lysons",
+    "date": "1802 - 1802",
+    "subject": [
+      "visual representation > print; visual representation > book-illustration",
+      "visual representation > print; visual representation > book-illustration"
+    ],
+    "type": "Museum object",
+    "collection": "Ashmolean Museum",
+    "mds": {
+      "uuid": "5a46ac4f-60cb-3cba-b82f-7761280cb2f0",
+      "objectNumber": "892192",
+      "place": [
+        "Europe > United Kingdom > England > Greater London > London",
+        "Europe > United Kingdom > England > Somerset > Bath & North East Somerset > Bath"
+      ],
+      "inscriptionContent": "lettered production information: Published 1.st May 1802 by S. Lysons., at lower right corner, lettered",
+      "personAssociation": [
+        "publisher",
+        "printmaker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Four Roman altars with Latin inscriptions found at Bath"
+        ],
+        "Object name(s)": [
+          "visual representation > print; visual representation > book-illustration"
+        ],
+        "Brief description": [
+          "Four Roman altars with Latin inscriptions found at Bath"
+        ],
+        "Collection": [
+          "Ashmolean Museum"
+        ],
+        "Associated person": [
+          "Samuel Lysons"
+        ],
+        "Person's association": [
+          "publisher",
+          "printmaker"
+        ],
+        "Person's birth date": [
+          "1763-1819"
+        ],
+        "Associated place": [
+          "Europe > United Kingdom > England > Greater London > London",
+          "Europe > United Kingdom > England > Somerset > Bath & North East Somerset > Bath"
+        ],
+        "Place association": [
+          "place of publication",
+          "subject"
+        ],
+        "Inscription content": [
+          "lettered production information: Published 1.st May 1802 by S. Lysons., at lower right corner, lettered",
+          "lettered title: ROMAN INSCRIPTIONS DISCOVERED AT BATH, at bottom centre, lettered",
+          "general lettering: PL. XI, at top, lettered",
+          "general lettering: 1. / 2. / 3. / 4., throughout the image, lettered"
+        ],
+        "Object name": [
+          "visual representation > print; visual representation > book-illustration"
+        ],
+        "Object number": [
+          "WA2003.Douce.7002"
+        ],
+        "Object production date": [
+          "1802 - 1802"
+        ],
+        "Date - association": [
+          "date of creation"
+        ],
+        "Date - earliest / single": [
+          "1802"
+        ],
+        "Date - latest": [
+          "1802"
+        ],
+        "Object production person": [
+          "Samuel Lysons"
+        ],
+        "Responsible department/section": [
+          "Western Art"
+        ],
+        "Text": [
+          "https://collections.ashmolean.org/object/892192"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:01:57.053Z",
+      "query": "roman bath",
+      "recordId": "mds:5a46ac4f-60cb-3cba-b82f-7761280cb2f0",
+      "title": "Four Roman altars with Latin inscriptions found at Bath",
+      "url": "https://museumdata.uk/objects/5a46ac4f-60cb-3cba-b82f-7761280cb2f0",
+      "creator": "Samuel Lysons",
+      "date": "1802 - 1802"
+    }
+  }
+]

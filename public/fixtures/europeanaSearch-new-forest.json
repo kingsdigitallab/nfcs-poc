@@ -1,0 +1,1796 @@
+[
+  {
+    "id": "europeana:/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_8616",
+    "_source": "europeana",
+    "_sourceId": "/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_8616",
+    "_sourceUrl": "https://www.europeana.eu/item/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_8616?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Δάσος",
+    "creator": [
+      "http://semantics.gr/authorities/searchculture-persons/1584958674",
+      "Παύλος (Διονυσόπουλος) (1930-2019)",
+      "Pavlos (Dionyssopoulos) (1930-2019)"
+    ],
+    "description": "Τη δεκαετία του 1980 ο Παύλος πειραματίζεται με νέους τρόπους επεξεργασίας και χρήσης του χαρτιού της αφίσας και δίπλα στα γνωστά του θέματα εμφανίζονται και νέα όπως οι ολάνθιστοι αγροί και οι θάλασσες. Στο «Δάσος», προσφιλές του θέμα, επανέρχεται με ευρηματικότητα κατορθώνοντας να υπερβεί τη μονοτονία της επανάληψης. Παρατάσσει επάλληλους κορμούς για να συνθέσει μια συστάδα δέντρων, τους οποίους «ντύνει» με ατσαλόσυρμα και μεταλλικές ίνες.",
+    "date": "1983",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Greece"
+    ],
+    "europeana": {
+      "provider": [
+        "Greek Aggregator SearchCulture.gr"
+      ],
+      "dataProvider": [
+        "Metropolitan Organisation of Museums of Visual Arts of Thessaloniki – MOMus"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.searchculture.gr%2Faggregator%2Fthumbnails%2Fedm-record%2Fmomus%2F000179-8616&type=IMAGE",
+      "shownAt": "https://www.momus.gr/collections/0008616",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_8616",
+      "title": "Δάσος",
+      "url": "https://www.europeana.eu/item/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_8616?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "http://semantics.gr/authorities/searchculture-persons/1584958674",
+        "Παύλος (Διονυσόπουλος) (1930-2019)",
+        "Pavlos (Dionyssopoulos) (1930-2019)"
+      ],
+      "date": "1983"
+    }
+  },
+  {
+    "id": "europeana:/109/https___hispana_mcu_es_lod_oai_bvpb_mcu_es_441177_ent0",
+    "_source": "europeana",
+    "_sourceId": "/109/https___hispana_mcu_es_lod_oai_bvpb_mcu_es_441177_ent0",
+    "_sourceUrl": "https://www.europeana.eu/item/109/https___hispana_mcu_es_lod_oai_bvpb_mcu_es_441177_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "A New and Accurate Map South Wales : Containig the Countries of Pembroke, Carmarthen, Cardigan, Glamorgan. Brecknack and Radnor : and the Towns, Villages, Churches, Chapels, Gentlemen's-Seats Together nuth. the Rivers, Roads, Divisions, Montains, Forest, Mireridges, Cakes, Fens,& c. in their true Position Situation and Distances [Mapa]",
+    "creator": [
+      "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:441177#ent2",
+      "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:441177#ent3",
+      "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:441177#ent4",
+      "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:441177#ent5"
+    ],
+    "description": "Dedicatoria : \"Is this Royal Highness George Prince of Wales Electoral Prince of Walles Electoral Prince of Bruniwich Lunenburgh Duke of Cornwall and Edinburg &c. and Knight of the most noble order of the Garter. This map of that pant of your Highnefs's Principality call'd South Wales, is most Humbly Dedicated and Presented, by May it please your Royal Highness, your Hishness's most Obedient most Humble servt. Eman Bowen\"",
+    "date": "1700",
+    "type": "IMAGE",
+    "language": "es",
+    "country": [
+      "Spain"
+    ],
+    "europeana": {
+      "provider": [
+        "Hispana"
+      ],
+      "dataProvider": [
+        "Virtual Library of Bibliographical Heritage"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fbvpb.mcu.es%2Fes%2Fcatalogo_imagenes%2Fimagen_id.do%3FidImagen%3D2756519&type=IMAGE",
+      "shownAt": "https://bvpb.mcu.es/es/consulta/registro.do?id=441177",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/109/https___hispana_mcu_es_lod_oai_bvpb_mcu_es_441177_ent0",
+      "title": "A New and Accurate Map South Wales : Containig the Countries of Pembroke, Carmarthen, Cardigan, Glamorgan. Brecknack and Radnor : and the Towns, Villages, Churches, Chapels, Gentlemen's-Seats Together nuth. the Rivers, Roads, Divisions, Montains, Forest, Mireridges, Cakes, Fens,& c. in their true Position Situation and Distances [Mapa]",
+      "url": "https://www.europeana.eu/item/109/https___hispana_mcu_es_lod_oai_bvpb_mcu_es_441177_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:441177#ent2",
+        "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:441177#ent3",
+        "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:441177#ent4",
+        "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:441177#ent5"
+      ],
+      "date": "1700"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_2633f1fa_fd37_40f1_a3cf_002341adcdb3",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_2633f1fa_fd37_40f1_a3cf_002341adcdb3",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_2633f1fa_fd37_40f1_a3cf_002341adcdb3?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "Sâmbra oilor este un obicei pe care ciobanii îl respectă în fiecare an: primăvara, după primul muls, cantitatea de lapte este cântărită, iar apoi este împărțită proprietarilor de oi, iar în felul acesta se știe cât caș, câtă brânză și câtă urdă i se cuvin fiecărui gospodar pe parcursul întregii perioade de pășunat; separarea și numărarea oilor ca și măsurarea laptelui de către ciobani care pornesc cu turmele spre pajiștile din munți de unde coboară doar toamna. Adunarea are loc pe dealul de la Huta Certeze. Sâmbra reprezentând un fel de contract nescris, dar respectat cu sfințenie, o înțelegere, o reglementare gospodărească, un protocol asupra treburilor majore ale oieritului. Imaginea ne prezintă cum se petrece după „măsură” când urmează ospățul ritual pe pajiștea din imediata apropiere a stânei. Pe iarba verde, se întind ștergare și covoare peste care se așează bunătățile culinare pregătite special pentru acest moment festiv. Femeile pregătesc mâncăruri speciale (drob de miel, friptură, sarmale, cozonaci, tocăniță de miel, păsat, etc.) iar bărbații au grijă ca băutura să fie suficientă. Jos, pe iarbă, se așează masa comună: broderiile artistice și multicolore ale fețelor de masă (măsoaie în zonă), ale prosoapelor (ștergurilor) ornamentate și desagilor, precum și culorile vii din costumele populare de sărbătoare, oferă privirii un cadru pitoresc al peisajului de coline și pădure. Pentru această mare sărbătoare toți participanții poartă cele mai frumoase haine de sărbătoare, multe fiind confecționate special pentru această sărbătoare. Alimntele pregătite se transportă în desagă nouă ”desaga de sâmbră” pentru realizarea căreia femeile au avut multă imaginație și măiestrie. Veselia este întreținută de ”ceterașii” (lăutari care cântă din vioară) și strigăturile (”țâpuituri” în zonă) lor specifice, continuîndu-se cu dansul ”în doi” sau cu ”roata feciorilor”.",
+    "date": "1980",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2FC7ED382B7FCB4605A59FF53BEB55FFE2.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/2633f1fa-fd37-40f1-a3cf-002341adcdb3/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/936/Culturalia_2633f1fa_fd37_40f1_a3cf_002341adcdb3",
+      "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_2633f1fa_fd37_40f1_a3cf_002341adcdb3?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_4550c297_02ae_4ad3_bcb9_c0a7b71a0f57",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_4550c297_02ae_4ad3_bcb9_c0a7b71a0f57",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_4550c297_02ae_4ad3_bcb9_c0a7b71a0f57?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "Sâmbra oilor este un obicei pe care ciobanii îl respectă în fiecare an: primăvara, după primul muls, cantitatea de lapte este cântărită, iar apoi este împărțită proprietarilor de oi, iar în felul acesta se știe cât caș, câtă brânză și câtă urdă i se cuvin fiecărui gospodar pe parcursul întregii perioade de pășunat; separarea și numărarea oilor ca și măsurarea laptelui de către ciobani care pornesc cu turmele spre pajiștile din munți de unde coboară doar toamna. Adunarea are loc pe dealul de la Huta Certeze. Sâmbra reprezentând un fel de contract nescris, dar respectat cu sfințenie, o înțelegere, o reglementare gospodărească, un protocol asupra treburilor majore ale oieritului. Imaginea ne prezintă cum se petrece după „măsură” când urmează ospățul ritual pe pajiștea din imediata apropiere a stânei. Pe iarba verde, se întind ștergare și covoare peste care se așează bunătățile culinare pregătite special pentru acest moment festiv. Femeile pregătesc mâncăruri speciale (drob de miel, friptură, sarmale, cozonaci, tocăniță de miel, păsat, etc.) iar bărbații au grijă ca băutura să fie suficientă. Jos, pe iarbă, se așează masa comună: broderiile artistice și multicolore ale fețelor de masă (măsoaie în zonă), ale prosoapelor (ștergurilor) ornamentate și desagilor, precum și culorile vii din costumele populare de sărbătoare, oferă privirii un cadru pitoresc al peisajului de coline și pădure. Pentru această mare sărbătoare toți participanții poartă cele mai frumoase haine de sărbătoare, multe fiind confecționate special pentru această sărbătoare. Alimntele pregătite se transportă în desagă nouă ”desaga de sâmbră” pentru realizarea căreia femeile au avut multă imaginație și măiestrie. Veselia este întreținută de ”ceterașii” (lăutari care cântă din vioară) și strigăturile (”țâpuituri” în zonă) lor specifice, continuîndu-se cu dansul ”în doi” sau cu ”roata feciorilor”.",
+    "date": "1980",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2FFBCFC769482649728511D063E9CF89CD.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/4550c297-02ae-4ad3-bcb9-c0a7b71a0f57/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/936/Culturalia_4550c297_02ae_4ad3_bcb9_c0a7b71a0f57",
+      "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_4550c297_02ae_4ad3_bcb9_c0a7b71a0f57?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_552382e9_2108_4344_a85e_48985e3e1ceb",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_552382e9_2108_4344_a85e_48985e3e1ceb",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_552382e9_2108_4344_a85e_48985e3e1ceb?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "Sâmbra oilor este un obicei pe care ciobanii îl respectă în fiecare an: primăvara, după primul muls, cantitatea de lapte este cântărită, iar apoi este împărțită proprietarilor de oi, iar în felul acesta se știe cât caș, câtă brânză și câtă urdă i se cuvin fiecărui gospodar pe parcursul întregii perioade de pășunat; separarea și numărarea oilor ca și măsurarea laptelui de către ciobani care pornesc cu turmele spre pajiștile din munți de unde coboară doar toamna. Adunarea are loc pe dealul de la Huta Certeze. Sâmbra reprezentând un fel de contract nescris, dar respectat cu sfințenie, o înțelegere, o reglementare gospodărească, un protocol asupra treburilor majore ale oieritului. Imaginea ne prezintă cum se petrece după „măsură” când urmează ospățul ritual pe pajiștea din imediata apropiere a stânei. Pe iarba verde, se întind ștergare și covoare peste care se așează bunătățile culinare pregătite special pentru acest moment festiv. Femeile pregătesc mâncăruri speciale (drob de miel, friptură, sarmale, cozonaci, tocăniță de miel, păsat, etc.) iar bărbații au grijă ca băutura să fie suficientă. Jos, pe iarbă, se așează masa comună: broderiile artistice și multicolore ale fețelor de masă (măsoaie în zonă), ale prosoapelor (ștergurilor) ornamentate și desagilor, precum și culorile vii din costumele populare de sărbătoare, oferă privirii un cadru pitoresc al peisajului de coline și pădure. Pentru această mare sărbătoare toți participanții poartă cele mai frumoase haine de sărbătoare, multe fiind confecționate special pentru această sărbătoare. Alimntele pregătite se transportă în desagă nouă ”desaga de sâmbră” pentru realizarea căreia femeile au avut multă imaginație și măiestrie. Veselia este întreținută de ”ceterașii” (lăutari care cântă din vioară) și strigăturile (”țâpuituri” în zonă) lor specifice, continuîndu-se cu dansul ”în doi” sau cu ”roata feciorilor”.",
+    "date": "1980",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2F1918893318EB40F3A7E8FFCDF02195F3.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/552382e9-2108-4344-a85e-48985e3e1ceb/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/936/Culturalia_552382e9_2108_4344_a85e_48985e3e1ceb",
+      "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_552382e9_2108_4344_a85e_48985e3e1ceb?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_5b812965_f46c_486c_a07f_e66bf6b35440",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_5b812965_f46c_486c_a07f_e66bf6b35440",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_5b812965_f46c_486c_a07f_e66bf6b35440?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "Sâmbra oilor este un obicei pe care ciobanii îl respectă în fiecare an: primăvara, după primul muls, cantitatea de lapte este cântărită, iar apoi este împărțită proprietarilor de oi, iar în felul acesta se știe cât caș, câtă brânză și câtă urdă i se cuvin fiecărui gospodar pe parcursul întregii perioade de pășunat; separarea și numărarea oilor ca și măsurarea laptelui de către ciobani care pornesc cu turmele spre pajiștile din munți de unde coboară doar toamna. Adunarea are loc pe dealul de la Huta Certeze. Sâmbra reprezentând un fel de contract nescris, dar respectat cu sfințenie, o înțelegere, o reglementare gospodărească, un protocol asupra treburilor majore ale oieritului. Imaginea ne prezintă cum se petrece după „măsură” când urmează ospățul ritual pe pajiștea din imediata apropiere a stânei. Pe iarba verde, se întind ștergare și covoare peste care se așează bunătățile culinare pregătite special pentru acest moment festiv. Femeile pregătesc mâncăruri speciale (drob de miel, friptură, sarmale, cozonaci, tocăniță de miel, păsat, etc.) iar bărbații au grijă ca băutura să fie suficientă. Jos, pe iarbă, se așează masa comună: broderiile artistice și multicolore ale fețelor de masă (măsoaie în zonă), ale prosoapelor (ștergurilor) ornamentate și desagilor, precum și culorile vii din costumele populare de sărbătoare, oferă privirii un cadru pitoresc al peisajului de coline și pădure. Pentru această mare sărbătoare toți participanții poartă cele mai frumoase haine de sărbătoare, multe fiind confecționate special pentru această sărbătoare. Alimntele pregătite se transportă în desagă nouă ”desaga de sâmbră” pentru realizarea căreia femeile au avut multă imaginație și măiestrie. Veselia este întreținută de ”ceterașii” (lăutari care cântă din vioară) și strigăturile (”țâpuituri” în zonă) lor specifice, continuîndu-se cu dansul ”în doi” sau cu ”roata feciorilor”.",
+    "date": "1980",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2FECB039FCC03044F6A04A675D00DC11E4.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/5b812965-f46c-486c-a07f-e66bf6b35440/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/936/Culturalia_5b812965_f46c_486c_a07f_e66bf6b35440",
+      "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_5b812965_f46c_486c_a07f_e66bf6b35440?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_5f0e1c2e_0829_47e3_a24f_a503f61e4733",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_5f0e1c2e_0829_47e3_a24f_a503f61e4733",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_5f0e1c2e_0829_47e3_a24f_a503f61e4733?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "The sheep’s kernels are a custom that the shepherds adhere to each year: in spring, after the first milking, the amount of milk is weighed, and then it is divided to the sheep owners, and in this way it is known how much curd, how much cheese and how much urde is due to each householder during the entire grazing period; the separation and counting of sheep as the measurement of milk by shepherds starting with herds to the meadows in the mountains from which only fall. The gathering takes place on the hill from Huta Certez. The shadow representing a kind of unwritten contract, but respected with holiness, an understanding, a household regulation, a protocol on the major affairs of the oierite. The picture presents how it happens after the “measure” when the ritual feast follows on the meadow in the immediate vicinity of the rock. On the green grass, we spread wiping and carpets over which lay the culinary goodies specially prepared for this festive moment. Women prepare special dishes (lamb’s drob, steak, sarmale, cozonaci, lamb’s stud, etc.) and men take care that the drink is sufficient. Down, on the grass, we place the common table: the artistic and multicolored embroidery of the tablecloths (gloves in the area), the ornate towels (wipes) and the desagas, as well as the vivid colors from the popular holiday costumes, give the eye a picturesque setting of the hill and forest landscape. For this great celebration all the participants wear the most beautiful holiday clothes, many being made especially for this celebration. The prepared alimntes are transported in desagus new “kernel desaga” for the realization of which the women had a lot of imagination and craftsmanship. Veselia is maintained by the “CeterV” (lute singing from the violin) and their specific shouts (“tâpuV” in the area), continuing with the dance “in two” or with the “wheel of the virgins.”",
+    "date": "1980",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2FE369DC1576504BDB8CEE1781C68E37BD.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/5f0e1c2e-0829-47e3-a24f-a503f61e4733/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/936/Culturalia_5f0e1c2e_0829_47e3_a24f_a503f61e4733",
+      "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_5f0e1c2e_0829_47e3_a24f_a503f61e4733?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_f2a8f363_a371_42fa_bac7_a5fec723a279",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_f2a8f363_a371_42fa_bac7_a5fec723a279",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_f2a8f363_a371_42fa_bac7_a5fec723a279?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "The sheep’s kernels are a custom that the shepherds adhere to each year: in spring, after the first milking, the amount of milk is weighed, and then it is divided to the sheep owners, and in this way it is known how much curd, how much cheese and how much urde is due to each householder during the entire grazing period; the separation and counting of sheep as the measurement of milk by shepherds starting with herds to the meadows in the mountains from which only fall. The gathering takes place on the hill from Huta Certez. The shadow representing a kind of unwritten contract, but respected with holiness, an understanding, a household regulation, a protocol on the major affairs of the oierite. The picture presents how it happens after the “measure” when the ritual feast follows on the meadow in the immediate vicinity of the rock. On the green grass, we spread wiping and carpets over which lay the culinary goodies specially prepared for this festive moment. Women prepare special dishes (lamb’s drob, steak, sarmale, cozonaci, lamb’s stud, etc.) and men take care that the drink is sufficient. Down, on the grass, we place the common table: the artistic and multicolored embroidery of the tablecloths (gloves in the area), the ornate towels (wipes) and the desagas, as well as the vivid colors from the popular holiday costumes, give the eye a picturesque setting of the hill and forest landscape. For this great celebration all the participants wear the most beautiful holiday clothes, many being made especially for this celebration. The prepared alimntes are transported in desagus new “kernel desaga” for the realization of which the women had a lot of imagination and craftsmanship. Veselia is maintained by the “CeterV” (lute singing from the violin) and their specific shouts (“tâpuV” in the area), continuing with the dance “in two” or with the “wheel of the virgins.”",
+    "date": "1980",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2FE0CFBB32DBE442098EBAD798FE3D57EC.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/f2a8f363-a371-42fa-bac7-a5fec723a279/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/936/Culturalia_f2a8f363_a371_42fa_bac7_a5fec723a279",
+      "title": "Sâmbra oilor la stână - sâmbrași la masă. Cercetare teren în Țara Oașului, comuna Certeze, jud. Satu Mare (1980)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_f2a8f363_a371_42fa_bac7_a5fec723a279?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1170447",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1170447",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1170447?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Drimys",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1170447%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1170447",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1170447",
+      "title": "Drimys",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1170447?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1170478",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1170478",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1170478?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Drimys",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1170478%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1170478",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1170478",
+      "title": "Drimys",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1170478?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1238795",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1238795",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1238795?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Danthonia racemosa R.Br.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1238795%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1238795",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1238795",
+      "title": "Danthonia racemosa R.Br.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1238795?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1250020",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1250020",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1250020?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ehrharta diplax F.Muell. var. diplax",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1250020%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1250020",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1250020",
+      "title": "Ehrharta diplax F.Muell. var. diplax",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1250020?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1261257",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1261257",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1261257?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Eriachne pallescens R.Br.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1261257%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1261257",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1261257",
+      "title": "Eriachne pallescens R.Br.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1261257?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1261277",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1261277",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1261277?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Eriachne pallescens R.Br.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1261277%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1261277",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1261277",
+      "title": "Eriachne pallescens R.Br.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1261277?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1274158",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1274158",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1274158?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Lophatherum gracile Brongn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1274158%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1274158",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1274158",
+      "title": "Lophatherum gracile Brongn.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1274158?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1275229",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1275229",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1275229?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Microlaena stipoides R.Br. var. stipoides",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1275229%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1275229",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1275229",
+      "title": "Microlaena stipoides R.Br. var. stipoides",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1275229?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1310185",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1310185",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1310185?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Gnaphalium involucratum G.Forst.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1310185%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1310185",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1310185",
+      "title": "Gnaphalium involucratum G.Forst.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1310185?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1310232",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1310232",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1310232?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Gnaphalium gymnocephalum DC.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1310232%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1310232",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1310232",
+      "title": "Gnaphalium gymnocephalum DC.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1310232?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1332892",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1332892",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1332892?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Schizachyrium fragile (R.Br.) A.Camus",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1332892%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1332892",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1332892",
+      "title": "Schizachyrium fragile (R.Br.) A.Camus",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1332892?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1349444",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1349444",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1349444?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Carex breviculmis R.Br.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1349444%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1349444",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1349444",
+      "title": "Carex breviculmis R.Br.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1349444?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1387598",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1387598",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1387598?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Fimbristylis globulosa (Retz.) Kunth",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1387598%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1387598",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1387598",
+      "title": "Fimbristylis globulosa (Retz.) Kunth",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1387598?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1393462",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1393462",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1393462?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Fimbristylis",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1393462%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1393462",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1393462",
+      "title": "Fimbristylis",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1393462?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1399275",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1399275",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1399275?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Uncinia",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1399275%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1399275",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1399275",
+      "title": "Uncinia",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1399275?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1411755",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1411755",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1411755?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Calyptrocalyx",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1411755%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1411755",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1411755",
+      "title": "Calyptrocalyx",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1411755?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1411835",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1411835",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1411835?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Calyptrocalyx",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1411835%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1411835",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1411835",
+      "title": "Calyptrocalyx",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1411835?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1415839",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1415839",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1415839?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Colocasia esculenta (L.) Schott",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1415839%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1415839",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1415839",
+      "title": "Colocasia esculenta (L.) Schott",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1415839?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1419047",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1419047",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1419047?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Flagellaria indica L.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1419047%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1419047",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1419047",
+      "title": "Flagellaria indica L.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1419047?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1419867",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1419867",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1419867?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Joinvillea plicata (Hook.f.) Newell & B.C.Stone subsp. plicata",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1419867%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1419867",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1419867",
+      "title": "Joinvillea plicata (Hook.f.) Newell & B.C.Stone subsp. plicata",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1419867?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1427883",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1427883",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1427883?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Murdannia",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1427883%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1427883",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1427883",
+      "title": "Murdannia",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1427883?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1445813",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1445813",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1445813?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Juncus prismatocarpus R.Br. var. prismatocarpus",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1445813%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1445813",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1445813",
+      "title": "Juncus prismatocarpus R.Br. var. prismatocarpus",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1445813?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1452232",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1452232",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1452232?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Lomandra longifolia Labill.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1452232%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1452232",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1452232",
+      "title": "Lomandra longifolia Labill.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1452232?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1454222",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1454222",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1454222?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Crinum asiaticum L.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1454222%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1454222",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1454222",
+      "title": "Crinum asiaticum L.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1454222?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1456977",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1456977",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1456977?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ripogonum scandens J.R.Forst. & G.Forst.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1456977%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1456977",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1456977",
+      "title": "Ripogonum scandens J.R.Forst. & G.Forst.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1456977?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1527434",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1527434",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1527434?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Phreatia",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1527434%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1527434",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1527434",
+      "title": "Phreatia",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1527434?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1580553",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1580553",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1580553?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Trema orientalis (L.) Blume",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1580553%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1580553",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1580553",
+      "title": "Trema orientalis (L.) Blume",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1580553?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1594850",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1594850",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1594850?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ficus benjamina L.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1594850%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1594850",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1594850",
+      "title": "Ficus benjamina L.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1594850?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1611123",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1611123",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1611123?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ficus septica Burm.f.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1611123%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1611123",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1611123",
+      "title": "Ficus septica Burm.f.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1611123?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1622385",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1622385",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1622385?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ficus virgata Reinw. ex Blume",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1622385%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1622385",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1622385",
+      "title": "Ficus virgata Reinw. ex Blume",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1622385?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1628308",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1628308",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1628308?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Pilea",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1628308%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1628308",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1628308",
+      "title": "Pilea",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1628308?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1633158",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1633158",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1633158?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Poikilospermum",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1633158%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1633158",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1633158",
+      "title": "Poikilospermum",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1633158?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1634946",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1634946",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1634946?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Hakea eriantha R.Br.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1634946%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1634946",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1634946",
+      "title": "Hakea eriantha R.Br.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1634946?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1732964",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1732964",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1732964?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ranunculus sessiliflorus R.Br. ex DC. var. sessiliflorus",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1732964%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1732964",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1732964",
+      "title": "Ranunculus sessiliflorus R.Br. ex DC. var. sessiliflorus",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1732964?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1741635",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1741635",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1741635?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Magnolia tsiampacca (L.) Figlar & Noot. var. tsiampacca",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1741635%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1741635",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1741635",
+      "title": "Magnolia tsiampacca (L.) Figlar & Noot. var. tsiampacca",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1741635?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1748625",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1748625",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1748625?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Drimys",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1748625%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1748625",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1748625",
+      "title": "Drimys",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1748625?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1778141",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1778141",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1778141?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Myristica hollrungii Warb.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1778141%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1778141",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1778141",
+      "title": "Myristica hollrungii Warb.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1778141?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1786326",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1786326",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1786326?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Palmeria",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1786326%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1786326",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1786326",
+      "title": "Palmeria",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1786326?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1847594",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1847594",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1847594?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Nepenthes ampullaria Jack",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1847594%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1847594",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1847594",
+      "title": "Nepenthes ampullaria Jack",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1847594?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1848586",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1848586",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1848586?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Carpodetus serratus J.R.Forst. & G.Forst.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1848586%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1848586",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1848586",
+      "title": "Carpodetus serratus J.R.Forst. & G.Forst.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1848586?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1875181",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1875181",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1875181?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Weinmannia racemosa L.f.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1875181%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1875181",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1875181",
+      "title": "Weinmannia racemosa L.f.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1875181?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1882292",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1882292",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1882292?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Davidsonia pruriens F.Muell.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1882292%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1882292",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "new forest",
+      "accessDate": "2026-05-29T14:00:37.018Z",
+      "recordId": "europeana:/1390/BOTANYXLX1882292",
+      "title": "Davidsonia pruriens F.Muell.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1882292?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  }
+]

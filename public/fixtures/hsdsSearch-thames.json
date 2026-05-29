@@ -1,0 +1,5030 @@
+[
+  {
+    "id": "hsds:https://doi.org/10.5284/1099753",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1099753",
+    "_sourceUrl": "https://doi.org/10.5284/1099753",
+    "title": "Site Data from a Geophysical Survey at the Lower Thames Crossing Phase 1 2018-2019",
+    "description": "This collection comprises site data from a geophysical (magnetometer) survey of a 287 hectare site east of Gravesend, Kent, where a new crossing underneath the River Thames is proposed, this work was undertaken by Headland Archaeology (UK) Ltd",
+    "creator": "Sam Harrison",
+    "date": "2022-08-24",
+    "subject": [
+      "archaeology",
+      "geophysical survey",
+      "geophysical surveys",
+      "geophysics in archaeology",
+      "heritage science",
+      "magnetometry in archaeology",
+      "magnetometry survey",
+      "rectilinear enclosure",
+      "ring ditch",
+      "road scheme (new and widening)",
+      "trackway",
+      "paths",
+      "ring ditches"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "CAD",
+      "Geospatial",
+      "Numeric",
+      "Still Image"
+    ],
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.417152,
+    "decimalLongitude": 0.411317,
+    "hsds": {
+      "elasticId": "62bb4805738d832cc29f0744a9d650b3b7c142cd640380ff6f3e62033fd70815",
+      "originalId": "https://doi.org/10.5284/1099753",
+      "landingPage": "https://doi.org/10.5284/1099753",
+      "modified": "2022-08-24",
+      "contributor": [
+        "Sam Harrison"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "World, Europe, United Kingdom, England, Kent, Gravesham"
+        },
+        {
+          "boundingbox": "polygon ((0.4279089 51.428327, 0.4279089 51.400651, 0.39117336 51.400651, 0.39117336 51.428327, 0.4279089 51.428327))",
+          "centroid": {
+            "lat": 51.414488999999996,
+            "lon": 0.40954113000000003
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 51.417152,
+            "lon": 0.411317
+          },
+          "centroid": {
+            "lat": 51.417152,
+            "lon": 0.411317
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "World, Europe, United Kingdom, England, Kent, Gravesham"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "geophysical survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEY"
+        },
+        {
+          "prefLabel": "geophysical surveys",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICAL%20SURVEYS"
+        },
+        {
+          "prefLabel": "geophysics in archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GEOPHYSICS%20IN%20ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "magnetometry in archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MAGNETOMETRY%20IN%20ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "magnetometry survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MAGNETOMETRY%20SURVEY"
+        },
+        {
+          "prefLabel": "rectilinear enclosure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RECTILINEAR%20ENCLOSURE"
+        },
+        {
+          "prefLabel": "ring ditch",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RING%20DITCH"
+        },
+        {
+          "prefLabel": "road scheme (new and widening)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROAD%20SCHEME%20%28NEW%20AND%20WIDENING%29"
+        },
+        {
+          "prefLabel": "trackway",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TRACKWAY"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "paths",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008321",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "ring ditches",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300312201",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork archive"
+        }
+      ],
+      "dataType": [
+        "CAD",
+        "Geospatial",
+        "Numeric",
+        "Still Image"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1004084",
+        "dcterms:DOI https://doi.org/10.5284/1099753"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:https://doi.org/10.5284/1099753",
+      "title": "Site Data from a Geophysical Survey at the Lower Thames Crossing Phase 1 2018-2019",
+      "url": "https://doi.org/10.5284/1099753",
+      "creator": "Sam Harrison",
+      "date": "2022-08-24"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.5284/1138286",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1138286",
+    "_sourceUrl": "https://doi.org/10.5284/1138286",
+    "title": "Data from a Test Pit Evaluation at Abingdon Abbey Buildings, Abingdon-on-Thames, Oxfordshire, July 2024",
+    "description": "This collection consists of images, site records, reports, Harris matrices, spreadsheets, GIS and 3D data from a test pit evaluation on the site of a group of buildings known as Abingdon Abbey Buildings, Abingdon-on-Thames, Oxfordshire. The works were commissioned by Friends of Abingdon Abbey Buildings to Oxford Archaeology, to inform a proposed enhancement project to create an accessible community centre for the visual and performing arts. The work comprised the excavation of six trenches and took place between the 8th and 19th July 2024.",
+    "creator": "Oxford Archaeology (South)",
+    "date": "2026-01-14",
+    "subject": [
+      "abbey",
+      "archaeology",
+      "evaluation",
+      "heritage science",
+      "sherd",
+      "structure",
+      "test pit",
+      "abbeys (monasteries)"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "3D",
+      "Geospatial",
+      "Other",
+      "Still Image",
+      "Structured Data",
+      "Text"
+    ],
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.66977523,
+    "decimalLongitude": -1.27872924,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": [
+      "medieval",
+      "roman"
+    ],
+    "hsds": {
+      "elasticId": "419ce40b113ee4eb3712113c2bfedad5a9e5e7ec463a9774b4191a505dfd1d2c",
+      "originalId": "https://doi.org/10.5284/1138286",
+      "landingPage": "https://doi.org/10.5284/1138286",
+      "modified": "2026-01-14",
+      "contributor": [
+        "Oxford Archaeology (South)"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "World, Europe, United Kingdom, England, Oxfordshire, Abingdon-on-Thames"
+        },
+        {
+          "geopoint": {
+            "lat": 51.66977523,
+            "lon": -1.27872924
+          },
+          "centroid": {
+            "lat": 51.66977523,
+            "lon": -1.27872924
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "World, Europe, United Kingdom, England, Oxfordshire, Abingdon-on-Thames"
+      ],
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "400",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "abbey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ABBEY"
+        },
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "evaluation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EVALUATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "sherd",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SHERD"
+        },
+        {
+          "prefLabel": "structure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STRUCTURE"
+        },
+        {
+          "prefLabel": "test pit",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TEST%20PIT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "abbeys (monasteries)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000642",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork archive"
+        }
+      ],
+      "dataType": [
+        "3D",
+        "Geospatial",
+        "Other",
+        "Still Image",
+        "Structured Data",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1008087",
+        "dcterms:DOI https://doi.org/10.5284/1138286"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:https://doi.org/10.5284/1138286",
+      "title": "Data from a Test Pit Evaluation at Abingdon Abbey Buildings, Abingdon-on-Thames, Oxfordshire, July 2024",
+      "url": "https://doi.org/10.5284/1138286",
+      "creator": "Oxford Archaeology (South)",
+      "date": "2026-01-14"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.5284/1137031",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1137031",
+    "_sourceUrl": "https://doi.org/10.5284/1137031",
+    "title": "Data from a Historic Buildings Investigation and Recording at Abingdon Abbey, Abingdon-on-Thames, Oxfordshire, February 2024",
+    "description": "This collection consists of site photographs and 3D models from a building recording on two Grade I listed structures at Abingdon Abbey, Abingdon-on-Thames, Oxfordshire. This work was undertaken by Oxford Archaeology and commissioned by Focus Consultants, on behalf of The Friends of Abingdon Abbey Buildings Trust.  A brief for the work was produced by Purcell and the on-site recording was undertaken on 13th February 2024.",
+    "creator": "Oxford Archaeology (South)",
+    "date": "2025-12-22",
+    "subject": [
+      "abbey",
+      "archaeology",
+      "exchequer",
+      "heritage science",
+      "historic buildings--england",
+      "undercroft",
+      "visual buildings record (level 1)",
+      "abbeys (monasteries)",
+      "cellars (storerooms)",
+      "vaults (tomb spaces)"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "3D",
+      "Still Image"
+    ],
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.66977523,
+    "decimalLongitude": -1.27872924,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "hsds": {
+      "elasticId": "23eb23385989068a2c1d9ebeb6188deaf907c814cdffc7edf5eafcadffabce62",
+      "originalId": "https://doi.org/10.5284/1137031",
+      "landingPage": "https://doi.org/10.5284/1137031",
+      "modified": "2025-12-22",
+      "contributor": [
+        "Oxford Archaeology (South)"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "World, Europe, United Kingdom, England, Oxfordshire, Abingdon-on-Thames"
+        },
+        {
+          "geopoint": {
+            "lat": 51.66977523,
+            "lon": -1.27872924
+          },
+          "centroid": {
+            "lat": 51.66977523,
+            "lon": -1.27872924
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "World, Europe, United Kingdom, England, Oxfordshire, Abingdon-on-Thames"
+      ],
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "abbey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ABBEY"
+        },
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "exchequer",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXCHEQUER"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "historic buildings--england",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HISTORIC%20BUILDINGS--ENGLAND"
+        },
+        {
+          "prefLabel": "undercroft",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/UNDERCROFT"
+        },
+        {
+          "prefLabel": "visual buildings record (level 1)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VISUAL%20BUILDINGS%20RECORD%20%28LEVEL%201%29"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "abbeys (monasteries)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000642",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "cellars (storerooms)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004759",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "vaults (tomb spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300112480",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Building survey"
+        },
+        {
+          "prefLabel": "Fieldwork archive"
+        }
+      ],
+      "dataType": [
+        "3D",
+        "Still Image"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1007962",
+        "dcterms:DOI https://doi.org/10.5284/1137031"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:https://doi.org/10.5284/1137031",
+      "title": "Data from a Historic Buildings Investigation and Recording at Abingdon Abbey, Abingdon-on-Thames, Oxfordshire, February 2024",
+      "url": "https://doi.org/10.5284/1137031",
+      "creator": "Oxford Archaeology (South)",
+      "date": "2025-12-22"
+    }
+  },
+  {
+    "id": "hsds:1223864",
+    "_source": "hsds",
+    "_sourceId": "1223864",
+    "_sourceUrl": "https://doi.org/10.5284/1123617",
+    "title": "12 Thames Road London Borough Of Barking & Dagenham: Geoarchaeological & Palaeoenvironmental Assessment Report",
+    "description": "Geoarchaeological Fieldwork and deposit model Borehole survey and updated geoarchaeological deposit model Palaeoenvironmental assessment (sediment characterisation, radiocarbon dating, OSL dating, pollen, diatom, macrofossils) Palaeoenvironmental analysis (further OSL dating, diatom and microfaunal investigation) On the western side of the site, the gravel surface is overlain by a sequence of alluvial and peat deposits capped by Made Ground. Peat formation was recorded as taking place from the early Neolithic to late Bronze Age. Both the timing of peat formation and vegetation communities indicated by an assessment of the pollen are broadly consistent with previous palaeoenvironmental reconstructions undertaken in the local vicinity at Barking Riverside. The evolution of the landscape on the eastern part of the site was different. The gravel is recorded at a lower elevation and the alluvial and peat deposits are seemingly absent. Instead, thick deposits of silts and sands are recorded, which are often soft, mottled in colour and sometimes laminated. These deposits are interpreted as the infill of a sizable north-south aligned palaeochannel traversing the eastern side of the site and possibly turning to the west towards the southern end of the site. OSL dating has shown that the entire sequence is of early medieval date. Diatom, foraminifera and ostracoda investigations indicate the channel would appear to have infilled under predominantly estuarine conditions. There is no doubt that the channel infilled after accumulation of the peat (and in all likelihood, after much if not all of the overlying alluvial deposits).",
+    "creator": [
+      "Christopher Green",
+      "E Andrieux",
+      "J Athersuch",
+      "Rob Batchelor",
+      "Tom Hill"
+    ],
+    "date": "2024-10-28",
+    "subject": [
+      "environmental sampling",
+      "heritage science",
+      "medieval palaeochannel",
+      "palaeochannel"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.5237040429871,
+    "decimalLongitude": 0.0999465776798891,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "hsds": {
+      "elasticId": "58e9231114ac7dd4780b52b9fa8d5f2ac9d65b423336f248a4d61cdaf8028c9d",
+      "originalId": "1223864",
+      "landingPage": "https://doi.org/10.5284/1123617",
+      "modified": "2025-08-18",
+      "contributor": [
+        "Quest (University of Reading)"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Barking and Dagenham, unparished area, Greater London, Barking and Dagenham, England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.5237040429871,
+            "lon": 0.0999465776798891
+          },
+          "centroid": {
+            "lat": 51.5237040429871,
+            "lon": 0.0999465776798891
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Barking and Dagenham, unparished area, Greater London, Barking and Dagenham, England"
+      ],
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "environmental sampling",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENVIRONMENTAL%20SAMPLING"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "medieval palaeochannel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MEDIEVAL%20PALAEOCHANNEL"
+        },
+        {
+          "prefLabel": "palaeochannel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PALAEOCHANNEL"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": []
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:1223864",
+      "title": "12 Thames Road London Borough Of Barking & Dagenham: Geoarchaeological & Palaeoenvironmental Assessment Report",
+      "url": "https://doi.org/10.5284/1123617",
+      "creator": [
+        "Christopher Green",
+        "E Andrieux",
+        "J Athersuch",
+        "Rob Batchelor",
+        "Tom Hill"
+      ],
+      "date": "2024-10-28"
+    }
+  },
+  {
+    "id": "hsds:1223865",
+    "_source": "hsds",
+    "_sourceId": "1223865",
+    "_sourceUrl": "https://doi.org/10.5284/1123618",
+    "title": "12 Thames Road London Borough Of Barking & Dagenham: Geoarchaeological & Palaeoenvironmental Analysis Report",
+    "description": "Geoarchaeological Fieldwork and deposit model Borehole survey and updated geoarchaeological deposit model Palaeoenvironmental assessment (sediment characterisation, radiocarbon dating, OSL dating, pollen, diatom, macrofossils) Palaeoenvironmental analysis (further OSL dating, diatom and microfaunal investigation) On the western side of the site, the gravel surface is overlain by a sequence of alluvial and peat deposits capped by Made Ground. Peat formation was recorded as taking place from the early Neolithic to late Bronze Age. Both the timing of peat formation and vegetation communities indicated by an assessment of the pollen are broadly consistent with previous palaeoenvironmental reconstructions undertaken in the local vicinity at Barking Riverside. The evolution of the landscape on the eastern part of the site was different. The gravel is recorded at a lower elevation and the alluvial and peat deposits are seemingly absent. Instead, thick deposits of silts and sands are recorded, which are often soft, mottled in colour and sometimes laminated. These deposits are interpreted as the infill of a sizable north-south aligned palaeochannel traversing the eastern side of the site and possibly turning to the west towards the southern end of the site. OSL dating has shown that the entire sequence is of early medieval date. Diatom, foraminifera and ostracoda investigations indicate the channel would appear to have infilled under predominantly estuarine conditions. There is no doubt that the channel infilled after accumulation of the peat (and in all likelihood, after much if not all of the overlying alluvial deposits).",
+    "creator": [
+      "Christopher Green",
+      "E Andrieux",
+      "J Athersuch",
+      "Michael Simmonds",
+      "P Toms",
+      "Rob Batchelor",
+      "Tom Hill"
+    ],
+    "date": "2024-10-28",
+    "subject": [
+      "environmental sampling",
+      "heritage science",
+      "medieval palaeochannel",
+      "palaeochannel"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.5237040429871,
+    "decimalLongitude": 0.0999465776798891,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "hsds": {
+      "elasticId": "61c54dd3a41a799eab32795a88668f0740e909697d7fbeee1843123a8bcc149b",
+      "originalId": "1223865",
+      "landingPage": "https://doi.org/10.5284/1123618",
+      "modified": "2025-08-19",
+      "contributor": [
+        "Quest (University of Reading)"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Barking and Dagenham, unparished area, Greater London, Barking and Dagenham, England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.5237040429871,
+            "lon": 0.0999465776798891
+          },
+          "centroid": {
+            "lat": 51.5237040429871,
+            "lon": 0.0999465776798891
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Barking and Dagenham, unparished area, Greater London, Barking and Dagenham, England"
+      ],
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "environmental sampling",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENVIRONMENTAL%20SAMPLING"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "medieval palaeochannel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MEDIEVAL%20PALAEOCHANNEL"
+        },
+        {
+          "prefLabel": "palaeochannel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PALAEOCHANNEL"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": []
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:1223865",
+      "title": "12 Thames Road London Borough Of Barking & Dagenham: Geoarchaeological & Palaeoenvironmental Analysis Report",
+      "url": "https://doi.org/10.5284/1123618",
+      "creator": [
+        "Christopher Green",
+        "E Andrieux",
+        "J Athersuch",
+        "Michael Simmonds",
+        "P Toms",
+        "Rob Batchelor",
+        "Tom Hill"
+      ],
+      "date": "2024-10-28"
+    }
+  },
+  {
+    "id": "hsds:1223862",
+    "_source": "hsds",
+    "_sourceId": "1223862",
+    "_sourceUrl": "https://doi.org/10.5284/1123615",
+    "title": "12 Thames Road, London Borough of Barking: Geoarchaeological Fieldwork & Deposit Model Report",
+    "description": "Geoarchaeological Fieldwork and deposit model Borehole survey and updated geoarchaeological deposit model Palaeoenvironmental assessment (sediment characterisation, radiocarbon dating, OSL dating, pollen, diatom, macrofossils) Palaeoenvironmental analysis (further OSL dating, diatom and microfaunal investigation) On the western side of the site, the gravel surface is overlain by a sequence of alluvial and peat deposits capped by Made Ground. Peat formation was recorded as taking place from the early Neolithic to late Bronze Age. Both the timing of peat formation and vegetation communities indicated by an assessment of the pollen are broadly consistent with previous palaeoenvironmental reconstructions undertaken in the local vicinity at Barking Riverside. The evolution of the landscape on the eastern part of the site was different. The gravel is recorded at a lower elevation and the alluvial and peat deposits are seemingly absent. Instead, thick deposits of silts and sands are recorded, which are often soft, mottled in colour and sometimes laminated. These deposits are interpreted as the infill of a sizable north-south aligned palaeochannel traversing the eastern side of the site and possibly turning to the west towards the southern end of the site. OSL dating has shown that the entire sequence is of early medieval date. Diatom, foraminifera and ostracoda investigations indicate the channel would appear to have infilled under predominantly estuarine conditions. There is no doubt that the channel infilled after accumulation of the peat (and in all likelihood, after much if not all of the overlying alluvial deposits).",
+    "creator": [
+      "P Lincoln",
+      "Rob Batchelor"
+    ],
+    "date": "2024-10-28",
+    "subject": [
+      "environmental sampling",
+      "heritage science",
+      "medieval palaeochannel",
+      "palaeochannel"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.5237040429871,
+    "decimalLongitude": 0.0999465776798891,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "hsds": {
+      "elasticId": "2538317acd9f303ba2f04aa004d2d651f33ad98ac280951ce1ad863dcbb99d00",
+      "originalId": "1223862",
+      "landingPage": "https://doi.org/10.5284/1123615",
+      "modified": "2025-08-15",
+      "contributor": [
+        "Quest (University of Reading)"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Barking and Dagenham, unparished area, Greater London, Barking and Dagenham, England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.5237040429871,
+            "lon": 0.0999465776798891
+          },
+          "centroid": {
+            "lat": 51.5237040429871,
+            "lon": 0.0999465776798891
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Barking and Dagenham, unparished area, Greater London, Barking and Dagenham, England"
+      ],
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "environmental sampling",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENVIRONMENTAL%20SAMPLING"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "medieval palaeochannel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MEDIEVAL%20PALAEOCHANNEL"
+        },
+        {
+          "prefLabel": "palaeochannel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PALAEOCHANNEL"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": []
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:1223862",
+      "title": "12 Thames Road, London Borough of Barking: Geoarchaeological Fieldwork & Deposit Model Report",
+      "url": "https://doi.org/10.5284/1123615",
+      "creator": [
+        "P Lincoln",
+        "Rob Batchelor"
+      ],
+      "date": "2024-10-28"
+    }
+  },
+  {
+    "id": "hsds:1223863",
+    "_source": "hsds",
+    "_sourceId": "1223863",
+    "_sourceUrl": "https://doi.org/10.5284/1123616",
+    "title": "12 Thames Road, London Borough of Barking: Geoarchaeological fieldwork & updated deposit model report",
+    "description": "Geoarchaeological Fieldwork and deposit model Borehole survey and updated geoarchaeological deposit model Palaeoenvironmental assessment (sediment characterisation, radiocarbon dating, OSL dating, pollen, diatom, macrofossils) Palaeoenvironmental analysis (further OSL dating, diatom and microfaunal investigation) On the western side of the site, the gravel surface is overlain by a sequence of alluvial and peat deposits capped by Made Ground. Peat formation was recorded as taking place from the early Neolithic to late Bronze Age. Both the timing of peat formation and vegetation communities indicated by an assessment of the pollen are broadly consistent with previous palaeoenvironmental reconstructions undertaken in the local vicinity at Barking Riverside.   The evolution of the landscape on the eastern part of the site was different. The gravel is recorded at a lower elevation and the alluvial and peat deposits are seemingly absent. Instead, thick deposits of silts and sands are recorded, which are often soft, mottled in colour and sometimes laminated. These deposits are interpreted as the infill of a sizable north-south aligned palaeochannel traversing the eastern side of the site and possibly turning to the west towards the southern end of the site. OSL dating has shown that the entire sequence is of early medieval date. Diatom, foraminifera and ostracoda investigations indicate the channel would appear to have infilled under predominantly estuarine conditions. There is no doubt that the channel infilled after accumulation of the peat (and in all likelihood, after much if not all of the overlying alluvial deposits).",
+    "creator": "Rob Batchelor",
+    "date": "2024-10-28",
+    "subject": [
+      "environmental sampling",
+      "heritage science",
+      "medieval palaeochannel",
+      "palaeochannel"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.5237040429871,
+    "decimalLongitude": 0.0999465776798891,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "hsds": {
+      "elasticId": "d95d2fa5e6585f4bec691a9194df27f1082750a96b2f597776b3e9c72e6aab68",
+      "originalId": "1223863",
+      "landingPage": "https://doi.org/10.5284/1123616",
+      "modified": "2025-08-15",
+      "contributor": [
+        "Quest (University of Reading)"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Barking and Dagenham, unparished area, Greater London, Barking and Dagenham, England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.5237040429871,
+            "lon": 0.0999465776798891
+          },
+          "centroid": {
+            "lat": 51.5237040429871,
+            "lon": 0.0999465776798891
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Barking and Dagenham, unparished area, Greater London, Barking and Dagenham, England"
+      ],
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "environmental sampling",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENVIRONMENTAL%20SAMPLING"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "medieval palaeochannel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MEDIEVAL%20PALAEOCHANNEL"
+        },
+        {
+          "prefLabel": "palaeochannel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PALAEOCHANNEL"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": []
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:1223863",
+      "title": "12 Thames Road, London Borough of Barking: Geoarchaeological fieldwork & updated deposit model report",
+      "url": "https://doi.org/10.5284/1123616",
+      "creator": "Rob Batchelor",
+      "date": "2024-10-28"
+    }
+  },
+  {
+    "id": "hsds:916744",
+    "_source": "hsds",
+    "_sourceId": "916744",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a8a2a10122e64a559b5170ccad6387925ce3f02eb2272cde8d46716e901484f5",
+    "title": "Radiocarbon date, Sample number OxA-1193",
+    "description": "bone:human<br>Thames skull, RCS, England",
+    "creator": "Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4.1021",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "a8a2a10122e64a559b5170ccad6387925ce3f02eb2272cde8d46716e901484f5",
+      "originalId": "916744",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4.1021",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4.1021"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1193-1",
+        "Depositor ID: OxA-1193"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:916744",
+      "title": "Radiocarbon date, Sample number OxA-1193",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a8a2a10122e64a559b5170ccad6387925ce3f02eb2272cde8d46716e901484f5",
+      "creator": "Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916745",
+    "_source": "hsds",
+    "_sourceId": "916745",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/785707e2ec6a58d9c47ddbbb08f217f47040dd689dcceedd40d8ae99df727573",
+    "title": "Radiocarbon date, Sample number OxA-1194",
+    "description": "bone:human<br>Thames skull, RCS, England",
+    "creator": "Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4.1022",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "785707e2ec6a58d9c47ddbbb08f217f47040dd689dcceedd40d8ae99df727573",
+      "originalId": "916745",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4.1022",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4.1022"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1194-1",
+        "Depositor ID: OxA-1194"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:916745",
+      "title": "Radiocarbon date, Sample number OxA-1194",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/785707e2ec6a58d9c47ddbbb08f217f47040dd689dcceedd40d8ae99df727573",
+      "creator": "Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916746",
+    "_source": "hsds",
+    "_sourceId": "916746",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/dea675917e4a9d0ce29c065208e9cfd78789030b93ec8ee2564f8a9e4bd7443f",
+    "title": "Radiocarbon date, Sample number OxA-1195",
+    "description": "bone:human<br>Thames skull, RCS, England",
+    "creator": "Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4.7172",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "dea675917e4a9d0ce29c065208e9cfd78789030b93ec8ee2564f8a9e4bd7443f",
+      "originalId": "916746",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4.7172",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4.7172"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1195-1",
+        "Depositor ID: OxA-1195"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:916746",
+      "title": "Radiocarbon date, Sample number OxA-1195",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/dea675917e4a9d0ce29c065208e9cfd78789030b93ec8ee2564f8a9e4bd7443f",
+      "creator": "Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916747",
+    "_source": "hsds",
+    "_sourceId": "916747",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/56db97e4edbd252fb32c844521e6b8c918ac6c79c0e5c051840e3d7aeb8b1532",
+    "title": "Radiocarbon date, Sample number OxA-1196",
+    "description": "bone:human<br>Thames skull, Mortla, England",
+    "creator": "Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "1957.1.8.3",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "56db97e4edbd252fb32c844521e6b8c918ac6c79c0e5c051840e3d7aeb8b1532",
+      "originalId": "916747",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "1957.1.8.3",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/1957.1.8.3"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1196-1",
+        "Depositor ID: OxA-1196"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:916747",
+      "title": "Radiocarbon date, Sample number OxA-1196",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/56db97e4edbd252fb32c844521e6b8c918ac6c79c0e5c051840e3d7aeb8b1532",
+      "creator": "Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916748",
+    "_source": "hsds",
+    "_sourceId": "916748",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/7a9125b7f2fb413df8c7ad998341ae4acde87379ba3d8e36702458eb8c111401",
+    "title": "Radiocarbon date, Sample number OxA-1197",
+    "description": "bone:human<br>Thames skull, Kew, England",
+    "creator": "Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "1893.4.19.9",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "7a9125b7f2fb413df8c7ad998341ae4acde87379ba3d8e36702458eb8c111401",
+      "originalId": "916748",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "1893.4.19.9",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/1893.4.19.9"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1197-1",
+        "Depositor ID: OxA-1197"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:916748",
+      "title": "Radiocarbon date, Sample number OxA-1197",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/7a9125b7f2fb413df8c7ad998341ae4acde87379ba3d8e36702458eb8c111401",
+      "creator": "Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916749",
+    "_source": "hsds",
+    "_sourceId": "916749",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2c5e23ab0dba1e3fe1580ffa0cdc9925fb9401ff91f9088e2beebf68bf94b2ce",
+    "title": "Radiocarbon date, Sample number OxA-1198",
+    "description": "bone:human<br>Thames skull, RCS, England",
+    "creator": "Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4.7196",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "2c5e23ab0dba1e3fe1580ffa0cdc9925fb9401ff91f9088e2beebf68bf94b2ce",
+      "originalId": "916749",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4.7196",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4.7196"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1198-1",
+        "Depositor ID: OxA-1198"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:916749",
+      "title": "Radiocarbon date, Sample number OxA-1198",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2c5e23ab0dba1e3fe1580ffa0cdc9925fb9401ff91f9088e2beebf68bf94b2ce",
+      "creator": "Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916750",
+    "_source": "hsds",
+    "_sourceId": "916750",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/167b217b815e29367521a49193cb5b2531b656324beab0919cd3043bd30785d1",
+    "title": "Radiocarbon date, Sample number OxA-1199",
+    "description": "bone:human<br>Thames skull, RCS, England",
+    "creator": "Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4.7191",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "167b217b815e29367521a49193cb5b2531b656324beab0919cd3043bd30785d1",
+      "originalId": "916750",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4.7191",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4.7191"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1199-1",
+        "Depositor ID: OxA-1199"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:916750",
+      "title": "Radiocarbon date, Sample number OxA-1199",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/167b217b815e29367521a49193cb5b2531b656324beab0919cd3043bd30785d1",
+      "creator": "Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916742",
+    "_source": "hsds",
+    "_sourceId": "916742",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4d563e708316fd7907d41f2a3ba3ae9dbd07e584766f51c6936e67851e3910e1",
+    "title": "Radiocarbon date, Sample number OxA-1191",
+    "description": "bone:human<br>Thames skull, Batter, England",
+    "creator": "Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "62.3.21.8",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "4d563e708316fd7907d41f2a3ba3ae9dbd07e584766f51c6936e67851e3910e1",
+      "originalId": "916742",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "62.3.21.8",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/62.3.21.8"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1191-1",
+        "Depositor ID: OxA-1191"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:916742",
+      "title": "Radiocarbon date, Sample number OxA-1191",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4d563e708316fd7907d41f2a3ba3ae9dbd07e584766f51c6936e67851e3910e1",
+      "creator": "Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916743",
+    "_source": "hsds",
+    "_sourceId": "916743",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b41bd03bc932c4b8886de8e7d472d8fc0b53dd327eb20b4ae58fff4f3aa7d047",
+    "title": "Radiocarbon date, Sample number OxA-1192",
+    "description": "bone:human<br>Thames skull, RCS, England",
+    "creator": "Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4.1023",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "b41bd03bc932c4b8886de8e7d472d8fc0b53dd327eb20b4ae58fff4f3aa7d047",
+      "originalId": "916743",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "4.1023",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4.1023"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1192-1",
+        "Depositor ID: OxA-1192"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:916743",
+      "title": "Radiocarbon date, Sample number OxA-1192",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b41bd03bc932c4b8886de8e7d472d8fc0b53dd327eb20b4ae58fff4f3aa7d047",
+      "creator": "Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918598",
+    "_source": "hsds",
+    "_sourceId": "918598",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/7b4adea0cb0055219ce1b36424a6ef82ae59d5ffad77c49e7a609fdf795995e6",
+    "title": "Radiocarbon date, Sample number OxA-1191",
+    "description": "Bone, id as human skull, 1862.3.12.8 from River Thames at Battersea, London, England. Subm R Bradley and B West. Comment (subm): dating programme followed an appraisal of the Thames and Walbrook skulls and was designed to test whether theybelonged to Later Bronze or Iron Ages. This is an unexpected outlier compared with four others. [Ed: NGR not given, estim only.]<br>Thames and Walbrook skulls dating programme",
+    "creator": "R Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "7c skull from river",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.467971,
+    "decimalLongitude": -0.157001,
+    "hsds": {
+      "elasticId": "7b4adea0cb0055219ce1b36424a6ef82ae59d5ffad77c49e7a609fdf795995e6",
+      "originalId": "918598",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.467971,
+            "lon": -0.157001
+          },
+          "centroid": {
+            "lat": 51.467971,
+            "lon": -0.157001
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c skull from river",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20SKULL%20FROM%20RIVER"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1191-2",
+        "Depositor ID: OxA-1191"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:918598",
+      "title": "Radiocarbon date, Sample number OxA-1191",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/7b4adea0cb0055219ce1b36424a6ef82ae59d5ffad77c49e7a609fdf795995e6",
+      "creator": "R Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918600",
+    "_source": "hsds",
+    "_sourceId": "918600",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/fb803260f955fd1e8b7dc4f5f639c2cf5375ce35c39bec29cadfc8af235abd26",
+    "title": "Radiocarbon date, Sample number OxA-1197",
+    "description": "Bone, id as human skull, 1893.4.19.9 from River Thames at Kew, London, England.Subm R Bradley and B West. Comment (subm): dating programme followed an appraisal of the Thames and Walbrook skulls and was designed to test whether they belonged to Later Bronze or Iron Ages. OxA-1195 to -1198 span the period in which large quantities of Bronze Age weapons were deposited in the same lengths of river.<br>Thames and Walbrook skulls dating programme",
+    "creator": "R Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4f skull from river",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.479138,
+    "decimalLongitude": -0.30058,
+    "hsds": {
+      "elasticId": "fb803260f955fd1e8b7dc4f5f639c2cf5375ce35c39bec29cadfc8af235abd26",
+      "originalId": "918600",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.479138,
+            "lon": -0.30058
+          },
+          "centroid": {
+            "lat": 51.479138,
+            "lon": -0.30058
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f skull from river",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20SKULL%20FROM%20RIVER"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1197-2",
+        "Depositor ID: OxA-1197"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:918600",
+      "title": "Radiocarbon date, Sample number OxA-1197",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/fb803260f955fd1e8b7dc4f5f639c2cf5375ce35c39bec29cadfc8af235abd26",
+      "creator": "R Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918599",
+    "_source": "hsds",
+    "_sourceId": "918599",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f1b309330ca493f22bf0c63939db83b381b7273e284fbd531b46666a33205971",
+    "title": "Radiocarbon date, Sample number OxA-1195",
+    "description": "Bone, id as human skull, RCS 4.7172 from River Thames at [?], London, England. Subm R Bradley and B West. Comment (subm): dating programme followed an appraisal of the Thames and Walbrook skulls and was designed to test whether they belonged to Later Bronze or Iron Ages. OxA-1195 to -1198 span the period in which large quantities of Bronze Age weapons were deposited in the same lengths of river. [Ed: NGR not given, estim only.]<br>Thames and Walbrook skulls dating programme",
+    "creator": "R Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4f skull from river",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.503001,
+    "decimalLongitude": -0.097945,
+    "hsds": {
+      "elasticId": "f1b309330ca493f22bf0c63939db83b381b7273e284fbd531b46666a33205971",
+      "originalId": "918599",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          },
+          "centroid": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f skull from river",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20SKULL%20FROM%20RIVER"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1195-2",
+        "Depositor ID: OxA-1195"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:918599",
+      "title": "Radiocarbon date, Sample number OxA-1195",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f1b309330ca493f22bf0c63939db83b381b7273e284fbd531b46666a33205971",
+      "creator": "R Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918601",
+    "_source": "hsds",
+    "_sourceId": "918601",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9e18e27fa84b7cde0fa517f4afebb9c4aa64a8bb6fe290f229c0e7156386ec06",
+    "title": "Radiocarbon date, Sample number OxA-1198",
+    "description": "Bone, id as human skull, RCS 4.7196 from River Thames at [?], London, England. Subm R Bradley and B West. Comment (subm): dating programme followed an appraisal of the Thames and Walbrook skulls and was designed to test whether they belonged to Later Bronze or Iron Ages. OxA-1195 to -1198 span the period in which large quantities of Bronze Age weapons were deposited in the same lengths of river. [Ed: NGR not given, estim only.]<br>Thames and Walbrook skulls dating programme",
+    "creator": "R Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4f skull from river",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.503001,
+    "decimalLongitude": -0.097945,
+    "hsds": {
+      "elasticId": "9e18e27fa84b7cde0fa517f4afebb9c4aa64a8bb6fe290f229c0e7156386ec06",
+      "originalId": "918601",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          },
+          "centroid": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f skull from river",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20SKULL%20FROM%20RIVER"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1198-2",
+        "Depositor ID: OxA-1198"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:918601",
+      "title": "Radiocarbon date, Sample number OxA-1198",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9e18e27fa84b7cde0fa517f4afebb9c4aa64a8bb6fe290f229c0e7156386ec06",
+      "creator": "R Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918522",
+    "_source": "hsds",
+    "_sourceId": "918522",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/3b8fd0087d53a1f8a90a49f20c13b8c02620efb53fd7c627ef163f7a9ae88671",
+    "title": "Radiocarbon date, Sample number OxA-1196",
+    "description": "Bone, id as human skull, 1957.1.8.3 from River Thames at Mortlake, London, England. Subm R Bradley and B West. Comment (subm): dating programme followed an appraisal of the Thames and Walbrook skulls and was designed to test whether they belonged to Later Bronze or Iron Ages. OxA-1195 to -1198 span the period in whichlarge quantities of Bronze Age weapons were deposited in the same lengths of river. [Ed: NGR not given, estim only.]<br>Thames and Walbrook skulls dating programme",
+    "creator": "R Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4f skull from river",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.460739,
+    "decimalLongitude": -0.27247,
+    "hsds": {
+      "elasticId": "3b8fd0087d53a1f8a90a49f20c13b8c02620efb53fd7c627ef163f7a9ae88671",
+      "originalId": "918522",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.460739,
+            "lon": -0.27247
+          },
+          "centroid": {
+            "lat": 51.460739,
+            "lon": -0.27247
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4f skull from river",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4F%20SKULL%20FROM%20RIVER"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1196-2",
+        "Depositor ID: OxA-1196"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:918522",
+      "title": "Radiocarbon date, Sample number OxA-1196",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/3b8fd0087d53a1f8a90a49f20c13b8c02620efb53fd7c627ef163f7a9ae88671",
+      "creator": "R Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912054",
+    "_source": "hsds",
+    "_sourceId": "912054",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/700dce2a40bff9586a01ee3e30312327dc297f5ed26e01d6487d8d5373158eed",
+    "title": "Radiocarbon date, Sample number HAR-1318",
+    "description": "Wood from silt in R Thames at Hays Lane Junction Box, Southwark, London, England.<br>",
+    "creator": "A Graham",
+    "date": "1998-12-01",
+    "subject": [
+      "6a late roman / post-roman deposits",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.504563,
+    "decimalLongitude": -0.083469,
+    "hsds": {
+      "elasticId": "700dce2a40bff9586a01ee3e30312327dc297f5ed26e01d6487d8d5373158eed",
+      "originalId": "912054",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.504563,
+            "lon": -0.083469
+          },
+          "centroid": {
+            "lat": 51.504563,
+            "lon": -0.083469
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6a late roman / post-roman deposits",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6A%20LATE%20ROMAN%20/%20POST-ROMAN%20DEPOSITS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1318",
+        "Depositor ID: HAR-1318"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:912054",
+      "title": "Radiocarbon date, Sample number HAR-1318",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/700dce2a40bff9586a01ee3e30312327dc297f5ed26e01d6487d8d5373158eed",
+      "creator": "A Graham",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918602",
+    "_source": "hsds",
+    "_sourceId": "918602",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f77409742b7086402ef8715caba1eb2543cf7303253aef0a77e0f94b3f75f5a4",
+    "title": "Radiocarbon date, Sample number OxA-1199",
+    "description": "Bone, id as human skull, RCS 4.7191 from River Thames at [?], London, England. Subm R Bradley and B West. Comment (subm): dating programme followed an appraisal of the Thames and Walbrook skulls and was designed to test whether they belonged to Later Bronze or Iron Ages. OxA-1195 to -1198 span the period in which large quantities of Bronze Age weapons were deposited in the same lengths of river. This date is an unexpected outlier. [Ed: NGR not given, estim only.]<br>Thames and Walbrook skulls dating programme",
+    "creator": "R Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "3h skull from river",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.503001,
+    "decimalLongitude": -0.097945,
+    "hsds": {
+      "elasticId": "f77409742b7086402ef8715caba1eb2543cf7303253aef0a77e0f94b3f75f5a4",
+      "originalId": "918602",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          },
+          "centroid": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3h skull from river",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3H%20SKULL%20FROM%20RIVER"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1199-2",
+        "Depositor ID: OxA-1199"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:918602",
+      "title": "Radiocarbon date, Sample number OxA-1199",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f77409742b7086402ef8715caba1eb2543cf7303253aef0a77e0f94b3f75f5a4",
+      "creator": "R Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915242",
+    "_source": "hsds",
+    "_sourceId": "915242",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/56b740b8f1c161a94679136d1492ed84535d2d7bde56b225c25346929f0a8c55",
+    "title": "Radiocarbon date, Sample number Birm-548",
+    "description": "Wood, id as silver birch, post of wharf at New Fresh Wharf, Lower Thames St, London, England.<br>",
+    "creator": "G Clewley",
+    "date": "1998-12-01",
+    "subject": [
+      "7c urban occupation - waterfront",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.508182,
+    "decimalLongitude": -0.084758,
+    "hsds": {
+      "elasticId": "56b740b8f1c161a94679136d1492ed84535d2d7bde56b225c25346929f0a8c55",
+      "originalId": "915242",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          },
+          "centroid": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c urban occupation - waterfront",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20URBAN%20OCCUPATION%20-%20WATERFRONT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BIRM-548",
+        "Depositor ID: Birm-548"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:915242",
+      "title": "Radiocarbon date, Sample number Birm-548",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/56b740b8f1c161a94679136d1492ed84535d2d7bde56b225c25346929f0a8c55",
+      "creator": "G Clewley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912112",
+    "_source": "hsds",
+    "_sourceId": "912112",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/109cad0d2de0eba8602f500e618576012a4c89b021c11c9f218a1c4f7fb68ffc",
+    "title": "Radiocarbon date, Sample number HAR-1867",
+    "description": "Wood from rings 90-110 of 290 mean curve at Lower Thames St (New Fresh Wharf), London, England.<br>",
+    "creator": "R Morgan / J Schofield",
+    "date": "1998-12-01",
+    "subject": [
+      "7c waterfront",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.508182,
+    "decimalLongitude": -0.084758,
+    "hsds": {
+      "elasticId": "109cad0d2de0eba8602f500e618576012a4c89b021c11c9f218a1c4f7fb68ffc",
+      "originalId": "912112",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          },
+          "centroid": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c waterfront",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20WATERFRONT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1867",
+        "Depositor ID: HAR-1867"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:912112",
+      "title": "Radiocarbon date, Sample number HAR-1867",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/109cad0d2de0eba8602f500e618576012a4c89b021c11c9f218a1c4f7fb68ffc",
+      "creator": "R Morgan / J Schofield",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912113",
+    "_source": "hsds",
+    "_sourceId": "912113",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/37dc5090b13b2ec8c70cc6288abed3952042287b6427c70274bccbcb70129071",
+    "title": "Radiocarbon date, Sample number HAR-1865",
+    "description": "Wood from rings 140-60 of 290 mean curve at Lower Thames St (New Fresh Wharf), London, England.<br>",
+    "creator": "R Morgan / J Schofield",
+    "date": "1998-12-01",
+    "subject": [
+      "7c waterfront",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.508182,
+    "decimalLongitude": -0.084758,
+    "hsds": {
+      "elasticId": "37dc5090b13b2ec8c70cc6288abed3952042287b6427c70274bccbcb70129071",
+      "originalId": "912113",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          },
+          "centroid": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c waterfront",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20WATERFRONT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1865",
+        "Depositor ID: HAR-1865"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:912113",
+      "title": "Radiocarbon date, Sample number HAR-1865",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/37dc5090b13b2ec8c70cc6288abed3952042287b6427c70274bccbcb70129071",
+      "creator": "R Morgan / J Schofield",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912114",
+    "_source": "hsds",
+    "_sourceId": "912114",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/af22a50c965bb1046236afcdffad0582f2b2f602f9eb4313b5f9483fb291be9e",
+    "title": "Radiocarbon date, Sample number HAR-1868",
+    "description": "Wood from rings 240-60 of 290 mean curve at Lower Thames St (New Fresh Wharf), London, England.<br>",
+    "creator": "R Morgan / J Schofield",
+    "date": "1998-12-01",
+    "subject": [
+      "7c waterfront",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.508182,
+    "decimalLongitude": -0.084758,
+    "hsds": {
+      "elasticId": "af22a50c965bb1046236afcdffad0582f2b2f602f9eb4313b5f9483fb291be9e",
+      "originalId": "912114",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          },
+          "centroid": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c waterfront",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20WATERFRONT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1868",
+        "Depositor ID: HAR-1868"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:912114",
+      "title": "Radiocarbon date, Sample number HAR-1868",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/af22a50c965bb1046236afcdffad0582f2b2f602f9eb4313b5f9483fb291be9e",
+      "creator": "R Morgan / J Schofield",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912115",
+    "_source": "hsds",
+    "_sourceId": "912115",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d30effd7ae127d90cbc7ff9a4bd3687421469d882eca1bb878e9f8c4d643b37c",
+    "title": "Radiocarbon date, Sample number HAR-1864",
+    "description": "Wood from rings 190-210 of 290 mean curve at Lower Thames St (New Fresh Wharf),London, England.<br>",
+    "creator": "R Morgan / J Schofield",
+    "date": "1998-12-01",
+    "subject": [
+      "7c waterfront",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.508182,
+    "decimalLongitude": -0.084758,
+    "hsds": {
+      "elasticId": "d30effd7ae127d90cbc7ff9a4bd3687421469d882eca1bb878e9f8c4d643b37c",
+      "originalId": "912115",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          },
+          "centroid": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c waterfront",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20WATERFRONT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1864",
+        "Depositor ID: HAR-1864"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:912115",
+      "title": "Radiocarbon date, Sample number HAR-1864",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d30effd7ae127d90cbc7ff9a4bd3687421469d882eca1bb878e9f8c4d643b37c",
+      "creator": "R Morgan / J Schofield",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913136",
+    "_source": "hsds",
+    "_sourceId": "913136",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/7594c5d4441c6151f3ad212f8a29ca217d27daf5df684c566d338e4d6b81ce88",
+    "title": "Radiocarbon date, Sample number OxA-119",
+    "description": "Amino acids from bone, id as human, from burial at Dorchester-on-Thames, Oxfordshire, England. Subm R Bradley.<br>",
+    "creator": "R A Chambers",
+    "date": "1998-12-01",
+    "subject": [
+      "6e cemetery",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.648523,
+    "decimalLongitude": -1.160158,
+    "hsds": {
+      "elasticId": "7594c5d4441c6151f3ad212f8a29ca217d27daf5df684c566d338e4d6b81ce88",
+      "originalId": "913136",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.648523,
+            "lon": -1.160158
+          },
+          "centroid": {
+            "lat": 51.648523,
+            "lon": -1.160158
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6e cemetery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6E%20CEMETERY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-119-2",
+        "Depositor ID: OxA-119"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:913136",
+      "title": "Radiocarbon date, Sample number OxA-119",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/7594c5d4441c6151f3ad212f8a29ca217d27daf5df684c566d338e4d6b81ce88",
+      "creator": "R A Chambers",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912116",
+    "_source": "hsds",
+    "_sourceId": "912116",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/47692a277c68697e3e16eabae8d44f8fba825e723350fd07ffe469c4fde896db",
+    "title": "Radiocarbon date, Sample number HAR-1421",
+    "description": "Wood, id as oak pile assoc with waterfront, Area III at Lower Thames St (New Fresh Wharf), London, England.<br>",
+    "creator": "R Morgan / J Schofield",
+    "date": "1998-12-01",
+    "subject": [
+      "7c waterfront",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.508182,
+    "decimalLongitude": -0.084758,
+    "hsds": {
+      "elasticId": "47692a277c68697e3e16eabae8d44f8fba825e723350fd07ffe469c4fde896db",
+      "originalId": "912116",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          },
+          "centroid": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c waterfront",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20WATERFRONT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1421",
+        "Depositor ID: HAR-1421"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:912116",
+      "title": "Radiocarbon date, Sample number HAR-1421",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/47692a277c68697e3e16eabae8d44f8fba825e723350fd07ffe469c4fde896db",
+      "creator": "R Morgan / J Schofield",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912117",
+    "_source": "hsds",
+    "_sourceId": "912117",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/23fe6ba67f77ff496a3f1ccab74918303ed6cd4357569efe28ce8c8afe028b24",
+    "title": "Radiocarbon date, Sample number HAR-1422",
+    "description": "Wood, id as oak stake assoc with mid-late Saxon waterfront at Lower Thames St (New Fresh Wharf), London, England.<br>",
+    "creator": "R Morgan / J Schofield",
+    "date": "1998-12-01",
+    "subject": [
+      "7c waterfront",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.508182,
+    "decimalLongitude": -0.084758,
+    "hsds": {
+      "elasticId": "23fe6ba67f77ff496a3f1ccab74918303ed6cd4357569efe28ce8c8afe028b24",
+      "originalId": "912117",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          },
+          "centroid": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c waterfront",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20WATERFRONT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1422",
+        "Depositor ID: HAR-1422"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:912117",
+      "title": "Radiocarbon date, Sample number HAR-1422",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/23fe6ba67f77ff496a3f1ccab74918303ed6cd4357569efe28ce8c8afe028b24",
+      "creator": "R Morgan / J Schofield",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913590",
+    "_source": "hsds",
+    "_sourceId": "913590",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/ce4837e13343e3612cb895b0b39256a8fca3c9b26c581b267f39d487db4cbfff",
+    "title": "Radiocarbon date, Sample number Q-3042",
+    "description": "Wood, id as Quercus, from boat in Reading Museum, found at Walton [on Thames, Surrey ?], England. Coll R Switsur. [Ed: Grid ref. estimated only.]<br>",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "6d boat",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.39178,
+    "decimalLongitude": -0.420259,
+    "hsds": {
+      "elasticId": "ce4837e13343e3612cb895b0b39256a8fca3c9b26c581b267f39d487db4cbfff",
+      "originalId": "913590",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.39178,
+            "lon": -0.420259
+          },
+          "centroid": {
+            "lat": 51.39178,
+            "lon": -0.420259
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6d boat",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6D%20BOAT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-Q-3042",
+        "Depositor ID: Q-3042"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:913590",
+      "title": "Radiocarbon date, Sample number Q-3042",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/ce4837e13343e3612cb895b0b39256a8fca3c9b26c581b267f39d487db4cbfff",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919717",
+    "_source": "hsds",
+    "_sourceId": "919717",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c3359ec21a0d73d0dade9160db6b315f5317ad8804dba4067e8e4d067683e94a",
+    "title": "Radiocarbon date, Sample number HAR-3463",
+    "description": "Shell, id as oyster (Ostrea edulis L) from context PM9 (6) at Thames Street, Poole, Dorset, England. Comment (subm): Applying Harkness formula for shell, radiocarbon age is 955  81. See also ref.]<br>",
+    "creator": "I P Horsey and J M Winder",
+    "date": "1998-12-01",
+    "subject": [
+      "7c (pre-) urban occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 50.71805,
+    "decimalLongitude": -1.971666,
+    "hsds": {
+      "elasticId": "c3359ec21a0d73d0dade9160db6b315f5317ad8804dba4067e8e4d067683e94a",
+      "originalId": "919717",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 50.71805,
+            "lon": -1.971666
+          },
+          "centroid": {
+            "lat": 50.71805,
+            "lon": -1.971666
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c (pre-) urban occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20%28PRE-%29%20URBAN%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-3463",
+        "Depositor ID: HAR-3463"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:919717",
+      "title": "Radiocarbon date, Sample number HAR-3463",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c3359ec21a0d73d0dade9160db6b315f5317ad8804dba4067e8e4d067683e94a",
+      "creator": "I P Horsey and J M Winder",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918595",
+    "_source": "hsds",
+    "_sourceId": "918595",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e65aec7c2949f543069c3d12113c0af28dc38c1195fb81fa2bc774edb547b6ae",
+    "title": "Radiocarbon date, Sample number OxA-1192",
+    "description": "Bone, id as human skull, RCS 4.1023 from River Walbrook, London, England. Subm R Bradley and B West. Comment (subm): dating programme followed an appraisal of the Thames and Walbrook skulls and was designed to test whether they were deposited during the same period(s) as the fine metalwork which is such a feature of British rivers. The Walbrook skulls were thought to date to Iron Age or Roman periods on the limited contextual evidence. OxA-1192 to -1194 fall within the expected date range. [Ed: NGR not given, estim only.]<br>Thames and Walbrook skulls dating programme",
+    "creator": "R Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "6e burials ? in rivers",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.503001,
+    "decimalLongitude": -0.097945,
+    "hsds": {
+      "elasticId": "e65aec7c2949f543069c3d12113c0af28dc38c1195fb81fa2bc774edb547b6ae",
+      "originalId": "918595",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          },
+          "centroid": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6e burials ? in rivers",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6E%20BURIALS%20%3F%20IN%20RIVERS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1192-2",
+        "Depositor ID: OxA-1192"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:918595",
+      "title": "Radiocarbon date, Sample number OxA-1192",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e65aec7c2949f543069c3d12113c0af28dc38c1195fb81fa2bc774edb547b6ae",
+      "creator": "R Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918596",
+    "_source": "hsds",
+    "_sourceId": "918596",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4a4e2361320393b837c2d875fb25366103b2fa49b1288be6daaeccf8df68920f",
+    "title": "Radiocarbon date, Sample number OxA-1193",
+    "description": "Bone, id as human skull, RCS 4.1021 from River Walbrook, London, England. Subm R Bradley and B West. Comment (subm): dating programme followed an appraisal of the Thames and Walbrook skulls and was designed to test whether they were deposited during the same period(s) as the fine metalwork which is such a feature of British rivers. The Walbrook skulls were thought to date to Iron Age or Roman periods on the limited contextual evidence. OxA-1192 to -1194 fall within the expected date range. [Ed: NGR not given, estim only.]<br>Thames and Walbrook skulls dating programme",
+    "creator": "R Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "5f burial or 6e burial ? in river",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.503001,
+    "decimalLongitude": -0.097945,
+    "hsds": {
+      "elasticId": "4a4e2361320393b837c2d875fb25366103b2fa49b1288be6daaeccf8df68920f",
+      "originalId": "918596",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          },
+          "centroid": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5f burial or 6e burial ? in river",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5F%20BURIAL%20OR%206E%20BURIAL%20%3F%20IN%20RIVER"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1193-2",
+        "Depositor ID: OxA-1193"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:918596",
+      "title": "Radiocarbon date, Sample number OxA-1193",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4a4e2361320393b837c2d875fb25366103b2fa49b1288be6daaeccf8df68920f",
+      "creator": "R Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918597",
+    "_source": "hsds",
+    "_sourceId": "918597",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/259433778ba999e0236e49de349606cd25abd1a51b1980f34b5a93ffc6c30a41",
+    "title": "Radiocarbon date, Sample number OxA-1194",
+    "description": "Bone, id as human skull, RCS 4.1022 from River Walbrook, London, England. Subm R Bradley and B West. Comment (subm): dating programme followed an appraisal of the Thames and Walbrook skulls and was designed to test whether they were deposited during the same period(s) as the fine metalwork which is such a feature of British rivers. The Walbrook skulls were thought to date to Iron Age or Roman periods on the limited contextual evidence. OxA-1192 to -1194 fall within the expected date range. [Ed: NGR not given, estim only.]<br>Thames and Walbrook skulls dating programme",
+    "creator": "R Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "5f burial or 6e burial ? in river",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.503001,
+    "decimalLongitude": -0.097945,
+    "hsds": {
+      "elasticId": "259433778ba999e0236e49de349606cd25abd1a51b1980f34b5a93ffc6c30a41",
+      "originalId": "918597",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          },
+          "centroid": {
+            "lat": 51.503001,
+            "lon": -0.097945
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5f burial or 6e burial ? in river",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5F%20BURIAL%20OR%206E%20BURIAL%20%3F%20IN%20RIVER"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1194-2",
+        "Depositor ID: OxA-1194"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:918597",
+      "title": "Radiocarbon date, Sample number OxA-1194",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/259433778ba999e0236e49de349606cd25abd1a51b1980f34b5a93ffc6c30a41",
+      "creator": "R Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912237",
+    "_source": "hsds",
+    "_sourceId": "912237",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/aef110a3eb99e0131a4fffb18c28e76a44993ce7e40b1c3c767ef90383b72988",
+    "title": "Radiocarbon date, Sample number OxA-2924",
+    "description": "Bone, id as human femur, in waterlogged vegetation layer beyond the area excavated at Kingston upon Thames (Eden Walk II), Greater London, England. Comment (subm): Good agreement with HAR-2497 and -2498. Calib. dates given in second ref.<br>",
+    "creator": "? Dale Serjeantson 1990",
+    "date": "1998-12-01",
+    "subject": [
+      "4a occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.409027,
+    "decimalLongitude": -0.303181,
+    "hsds": {
+      "elasticId": "aef110a3eb99e0131a4fffb18c28e76a44993ce7e40b1c3c767ef90383b72988",
+      "originalId": "912237",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.409027,
+            "lon": -0.303181
+          },
+          "centroid": {
+            "lat": 51.409027,
+            "lon": -0.303181
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2924-2",
+        "Depositor ID: OxA-2924"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:912237",
+      "title": "Radiocarbon date, Sample number OxA-2924",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/aef110a3eb99e0131a4fffb18c28e76a44993ce7e40b1c3c767ef90383b72988",
+      "creator": "? Dale Serjeantson 1990",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913390",
+    "_source": "hsds",
+    "_sourceId": "913390",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/873828055034f7b81932dfe4b2b7b0829bf5e3fceeafee58b7df4a752d4784bf",
+    "title": "Radiocarbon date, Sample number HAR-5350",
+    "description": "Bone, id as human, from F48, grave 229 at Queenford Farm or Queensford Mill, Dorchester-on-Thames, Oxfordshire, England. Subm R A Chambers. Comment (subm): No stratigraphic relationship between graves.<br>Site I along route of Dorchester bypass, and to NE of Roman town",
+    "creator": "R A Chambers",
+    "date": "1998-12-01",
+    "subject": [
+      "6e cemetery",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.649411,
+    "decimalLongitude": -1.158696,
+    "hsds": {
+      "elasticId": "873828055034f7b81932dfe4b2b7b0829bf5e3fceeafee58b7df4a752d4784bf",
+      "originalId": "913390",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.649411,
+            "lon": -1.158696
+          },
+          "centroid": {
+            "lat": 51.649411,
+            "lon": -1.158696
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6e cemetery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6E%20CEMETERY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5350",
+        "Depositor ID: HAR-5350"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:913390",
+      "title": "Radiocarbon date, Sample number HAR-5350",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/873828055034f7b81932dfe4b2b7b0829bf5e3fceeafee58b7df4a752d4784bf",
+      "creator": "R A Chambers",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913391",
+    "_source": "hsds",
+    "_sourceId": "913391",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/19229bb1d45cee5d074f4764106a8489ef3e70ef6648e080681d8ac60092c9ac",
+    "title": "Radiocarbon date, Sample number HAR-5351",
+    "description": "Bone, id as human, from F75, grave 250 at Queenford Farm or Queensford Mill, Dorchester-on-Thames, Oxfordshire, England. Subm R A Chambers. Comment (subm): No stratigraphic relationship between graves.<br>Site I along route of Dorchester bypass, and to NE of Roman town",
+    "creator": "R A Chambers",
+    "date": "1998-12-01",
+    "subject": [
+      "6e cemetery",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.649411,
+    "decimalLongitude": -1.158696,
+    "hsds": {
+      "elasticId": "19229bb1d45cee5d074f4764106a8489ef3e70ef6648e080681d8ac60092c9ac",
+      "originalId": "913391",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.649411,
+            "lon": -1.158696
+          },
+          "centroid": {
+            "lat": 51.649411,
+            "lon": -1.158696
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6e cemetery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6E%20CEMETERY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5351",
+        "Depositor ID: HAR-5351"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:913391",
+      "title": "Radiocarbon date, Sample number HAR-5351",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/19229bb1d45cee5d074f4764106a8489ef3e70ef6648e080681d8ac60092c9ac",
+      "creator": "R A Chambers",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913388",
+    "_source": "hsds",
+    "_sourceId": "913388",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/0e6ce81ba24137309d9e08e868c43f86a2fed2118ada3435071ac0d2a0fe85e8",
+    "title": "Radiocarbon date, Sample number HAR-5325",
+    "description": "Bone, id as human, from F34, grave 216 at Queenford Farm or Queensford Mill, Dorchester-on-Thames, Oxfordshire, England. Subm R A Chambers. Comment (subm): No stratigraphic relationship between graves.<br>Site I along route of Dorchester bypass, and to NE of Roman town",
+    "creator": "R A Chambers",
+    "date": "1998-12-01",
+    "subject": [
+      "6e cemetery",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.649411,
+    "decimalLongitude": -1.158696,
+    "hsds": {
+      "elasticId": "0e6ce81ba24137309d9e08e868c43f86a2fed2118ada3435071ac0d2a0fe85e8",
+      "originalId": "913388",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.649411,
+            "lon": -1.158696
+          },
+          "centroid": {
+            "lat": 51.649411,
+            "lon": -1.158696
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6e cemetery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6E%20CEMETERY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5325",
+        "Depositor ID: HAR-5325"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:913388",
+      "title": "Radiocarbon date, Sample number HAR-5325",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/0e6ce81ba24137309d9e08e868c43f86a2fed2118ada3435071ac0d2a0fe85e8",
+      "creator": "R A Chambers",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913389",
+    "_source": "hsds",
+    "_sourceId": "913389",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/16af058fae36f0df274a5988ad4ec333b68dc87d2eca3d8e01c93c9cbd852c07",
+    "title": "Radiocarbon date, Sample number HAR-5324",
+    "description": "Bone, id as human, from F64, grave 244 at Queenford Farm or Queensford Mill, Dorchester-on-Thames, Oxfordshire, England. Subm R A Chambers. Comment (subm): No stratigraphic relationship between graves.<br>Site I along route of Dorchester bypass, and to NE of Roman town",
+    "creator": "R A Chambers",
+    "date": "1998-12-01",
+    "subject": [
+      "6e cemetery",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.649411,
+    "decimalLongitude": -1.158696,
+    "hsds": {
+      "elasticId": "16af058fae36f0df274a5988ad4ec333b68dc87d2eca3d8e01c93c9cbd852c07",
+      "originalId": "913389",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.649411,
+            "lon": -1.158696
+          },
+          "centroid": {
+            "lat": 51.649411,
+            "lon": -1.158696
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6e cemetery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6E%20CEMETERY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5324",
+        "Depositor ID: HAR-5324"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:913389",
+      "title": "Radiocarbon date, Sample number HAR-5324",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/16af058fae36f0df274a5988ad4ec333b68dc87d2eca3d8e01c93c9cbd852c07",
+      "creator": "R A Chambers",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914784",
+    "_source": "hsds",
+    "_sourceId": "914784",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d190da9f11aecef20da3b05462dd8ad2b713a8c698a3e179d5e278c266665960",
+    "title": "Radiocarbon date, Sample number HAR-8363",
+    "description": "Wood, AML 872544, id as Corylus sp, at Oxford - 89 St Aldates - Oxfordshire, England. Subm B G Durham 1985. Comment (subm): Results for samples HAR-8362-4 confirm date of mid- or late- Saxon Thames causeway assumed to be constructed from upcast of mill stream.<br>",
+    "creator": "B G Durham (Oxford Archaeol Unit)",
+    "date": "1998-12-01",
+    "subject": [
+      "7c urban occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.748091,
+    "decimalLongitude": -1.256825,
+    "hsds": {
+      "elasticId": "d190da9f11aecef20da3b05462dd8ad2b713a8c698a3e179d5e278c266665960",
+      "originalId": "914784",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.748091,
+            "lon": -1.256825
+          },
+          "centroid": {
+            "lat": 51.748091,
+            "lon": -1.256825
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c urban occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20URBAN%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8363",
+        "Depositor ID: HAR-8363"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:914784",
+      "title": "Radiocarbon date, Sample number HAR-8363",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d190da9f11aecef20da3b05462dd8ad2b713a8c698a3e179d5e278c266665960",
+      "creator": "B G Durham (Oxford Archaeol Unit)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:1194199",
+    "_source": "hsds",
+    "_sourceId": "1194199",
+    "_sourceUrl": "https://doi.org/10.5284/1094901",
+    "title": "ARCHAEOMAGNETIC DATING. DRAYTON CURSUS, OXFORDSHIRE",
+    "description": "Depositional remanent magnetisation and magnetic susceptibility measurements were made on a column of samples taken from the filling of a Neolithic cursus ditch at Drayton, Oxfordshire. A tentative dating scale was obtained for the alluviation sequence of the Thames valley from about 2000 to 950 cal BP.",
+    "creator": "A J. Clark",
+    "date": "2022-06-17",
+    "subject": [
+      "cursus",
+      "field survey",
+      "heritage science",
+      "neolithic cursus",
+      "megalithic monuments"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.6516379290261,
+    "decimalLongitude": -1.29026263470026,
+    "periodStart": "-4000",
+    "periodEnd": "-2200",
+    "periodName": "neolithic",
+    "hsds": {
+      "elasticId": "e03c5f0a5a4d6b1891532151f9e5db8553771ade937a8e8991d860e3386ac833",
+      "originalId": "1194199",
+      "landingPage": "https://doi.org/10.5284/1094901",
+      "modified": "2025-08-26",
+      "contributor": [
+        "English Heritage"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Drayton, Oxfordshire, Vale of White Horse, England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.6516379290261,
+            "lon": -1.29026263470026
+          },
+          "centroid": {
+            "lat": 51.6516379290261,
+            "lon": -1.29026263470026
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 51.643563859265,
+            "lon": -1.29327902996882
+          },
+          "centroid": {
+            "lat": 51.643563859265,
+            "lon": -1.29327902996882
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Drayton, Oxfordshire, Vale of White Horse, England"
+      ],
+      "temporal": [
+        {
+          "from": "-4000",
+          "periodName": "neolithic",
+          "until": "-2200",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cursus",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CURSUS"
+        },
+        {
+          "prefLabel": "field survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SURVEY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "neolithic cursus",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NEOLITHIC%20CURSUS"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "megalithic monuments",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006983",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": [
+        "OBIB 203/1988"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:1194199",
+      "title": "ARCHAEOMAGNETIC DATING. DRAYTON CURSUS, OXFORDSHIRE",
+      "url": "https://doi.org/10.5284/1094901",
+      "creator": "A J. Clark",
+      "date": "2022-06-17"
+    }
+  },
+  {
+    "id": "hsds:914785",
+    "_source": "hsds",
+    "_sourceId": "914785",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4c88bc78fecb5a7a03eb510fa324b1796c9bdadad9e6edc6b326dfd66dcc619b",
+    "title": "Radiocarbon date, Sample number HAR-8364",
+    "description": "Wood, AML 872545, id as Alnus or Corylus twig, at Oxford - 89 St Aldates - Oxfordshire, England. Subm B G Durham 1985. Comment (subm): Results for samples HAR-8362-4 confirm date of mid- or late- Saxon Thames causeway assumed to be constructed from upcast of mill stream.<br>",
+    "creator": "B G Durham (Oxford Archaeol Unit)",
+    "date": "1998-12-01",
+    "subject": [
+      "7c urban occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.748091,
+    "decimalLongitude": -1.256825,
+    "hsds": {
+      "elasticId": "4c88bc78fecb5a7a03eb510fa324b1796c9bdadad9e6edc6b326dfd66dcc619b",
+      "originalId": "914785",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.748091,
+            "lon": -1.256825
+          },
+          "centroid": {
+            "lat": 51.748091,
+            "lon": -1.256825
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c urban occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20URBAN%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8364",
+        "Depositor ID: HAR-8364"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:914785",
+      "title": "Radiocarbon date, Sample number HAR-8364",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4c88bc78fecb5a7a03eb510fa324b1796c9bdadad9e6edc6b326dfd66dcc619b",
+      "creator": "B G Durham (Oxford Archaeol Unit)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919128",
+    "_source": "hsds",
+    "_sourceId": "919128",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e2819b508be00dcc1da8a2e28285ecb2249b3276fb6000ed609b88e1cded4251",
+    "title": "Radiocarbon date, Sample number OxA-3736",
+    "description": "Antler uniserial point, A.4907, isolated find from River Thames at Wandsworth, London, England. Subm C Bonsall and C Smith 1992. Comment (subm): point is of `Maglemosian' type, and the result is the latest for an implement of this type in Britain.<br>Bone and antler implements dating programme",
+    "creator": "C Bonsall and C Smith",
+    "date": "1998-12-01",
+    "subject": [
+      "2c artefact -- unassociated",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.46314,
+    "decimalLongitude": -0.19319,
+    "hsds": {
+      "elasticId": "e2819b508be00dcc1da8a2e28285ecb2249b3276fb6000ed609b88e1cded4251",
+      "originalId": "919128",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.46314,
+            "lon": -0.19319
+          },
+          "centroid": {
+            "lat": 51.46314,
+            "lon": -0.19319
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "2c artefact -- unassociated",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/2C%20ARTEFACT%20--%20UNASSOCIATED"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3736-2",
+        "Depositor ID: OxA-3736"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:919128",
+      "title": "Radiocarbon date, Sample number OxA-3736",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e2819b508be00dcc1da8a2e28285ecb2249b3276fb6000ed609b88e1cded4251",
+      "creator": "C Bonsall and C Smith",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920571",
+    "_source": "hsds",
+    "_sourceId": "920571",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a6234fb0e247d7444790c7d16a9fbd6f0572bcd69765436419d10edfa92d0a32",
+    "title": "Radiocarbon date, Sample number HAR-8647",
+    "description": "Wood, AML 8650254, T2PEAT, id as woody root, from base of wood peat 46cm thick exposed in bank section at Purfleet -- Aveley Marshes -- Thames Site 2, Essex, England. Subm PM 1986. Comment (subm): peat overlies palaeosol with woodland mollusc fauna and Neolithic artefacts including two polished axes.<br>",
+    "creator": "P Murphy, UEA 1986",
+    "date": "1998-12-01",
+    "subject": [
+      "3b occupation - environment",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.48563,
+    "decimalLongitude": 0.224017,
+    "hsds": {
+      "elasticId": "a6234fb0e247d7444790c7d16a9fbd6f0572bcd69765436419d10edfa92d0a32",
+      "originalId": "920571",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.48563,
+            "lon": 0.224017
+          },
+          "centroid": {
+            "lat": 51.48563,
+            "lon": 0.224017
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3b occupation - environment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3B%20OCCUPATION%20-%20ENVIRONMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8647",
+        "Depositor ID: HAR-8647"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:920571",
+      "title": "Radiocarbon date, Sample number HAR-8647",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a6234fb0e247d7444790c7d16a9fbd6f0572bcd69765436419d10edfa92d0a32",
+      "creator": "P Murphy, UEA 1986",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914783",
+    "_source": "hsds",
+    "_sourceId": "914783",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/74ad6f0f4510e04617cde964459370bee329c3c34e49efaf341c35cdef355df3",
+    "title": "Radiocarbon date, Sample number HAR-8362",
+    "description": "Wood, AML 872543, id as Alnus or Corylus twig, from mill stream at Oxford - 89 St Aldates - Oxfordshire, England. Subm B G Durham 1985. Comment (subm): Resultsfor samples HAR-8362-4 confirm date of mid- or late- Saxon Thames causeway assumed to be constructed from upcast of mill stream.<br>",
+    "creator": "B G Durham (Oxford Archaeol Unit)",
+    "date": "1998-12-01",
+    "subject": [
+      "7c urban occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.748091,
+    "decimalLongitude": -1.256825,
+    "hsds": {
+      "elasticId": "74ad6f0f4510e04617cde964459370bee329c3c34e49efaf341c35cdef355df3",
+      "originalId": "914783",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.748091,
+            "lon": -1.256825
+          },
+          "centroid": {
+            "lat": 51.748091,
+            "lon": -1.256825
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c urban occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20URBAN%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8362",
+        "Depositor ID: HAR-8362"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:914783",
+      "title": "Radiocarbon date, Sample number HAR-8362",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/74ad6f0f4510e04617cde964459370bee329c3c34e49efaf341c35cdef355df3",
+      "creator": "B G Durham (Oxford Archaeol Unit)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919343",
+    "_source": "hsds",
+    "_sourceId": "919343",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4125f0abcf2691d4b46db643942082d2643dee744e7e52441b398f645dd1a4ce",
+    "title": "Radiocarbon date, Sample number BM-2167R",
+    "description": "Charcoal, ref Site IV F1006, id by M Robinson as Quercus sp, from pit at centreof ring ditch inside cursus, assoc with Collared Urn and cremated bone at Dorchester-on-Thames Site III, Oxfordshire, England. Subm R Bradley. Comment (lab): Is revision of BM-2167.<br>at centre of cursus monument",
+    "creator": "R Chambers",
+    "date": "1998-12-01",
+    "subject": [
+      "3i post-circle in cursus complex",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.648512,
+    "decimalLongitude": -1.158713,
+    "hsds": {
+      "elasticId": "4125f0abcf2691d4b46db643942082d2643dee744e7e52441b398f645dd1a4ce",
+      "originalId": "919343",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.648512,
+            "lon": -1.158713
+          },
+          "centroid": {
+            "lat": 51.648512,
+            "lon": -1.158713
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3i post-circle in cursus complex",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3I%20POST-CIRCLE%20IN%20CURSUS%20COMPLEX"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2167R",
+        "Depositor ID: BM-2167R"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:919343",
+      "title": "Radiocarbon date, Sample number BM-2167R",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4125f0abcf2691d4b46db643942082d2643dee744e7e52441b398f645dd1a4ce",
+      "creator": "R Chambers",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913311",
+    "_source": "hsds",
+    "_sourceId": "913311",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e71dd47b756eaa18b09d290f464f525f4dc5ddd02d69a5fb304e93253266bc6d",
+    "title": "Radiocarbon date, Sample number HAR-3104",
+    "description": "Wood (treerings), id as Oak, from rings 27-46 of 161-year mean curve (growth allowance is 125 years) at New Fresh Wharf London, Lower Thames Street (St Magnus House), Greater London England. Comment (subm): HAR-3103/4/5 dates are not conclusive as they indicate a felling date between AD 15 +/- 120 and AD 395 +/- 90.<br>",
+    "creator": "Louise Miller et al",
+    "date": "1998-12-01",
+    "subject": [
+      "6b quay",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.508182,
+    "decimalLongitude": -0.084758,
+    "hsds": {
+      "elasticId": "e71dd47b756eaa18b09d290f464f525f4dc5ddd02d69a5fb304e93253266bc6d",
+      "originalId": "913311",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          },
+          "centroid": {
+            "lat": 51.508182,
+            "lon": -0.084758
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6b quay",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6B%20QUAY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-3104",
+        "Depositor ID: HAR-3104"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:913311",
+      "title": "Radiocarbon date, Sample number HAR-3104",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e71dd47b756eaa18b09d290f464f525f4dc5ddd02d69a5fb304e93253266bc6d",
+      "creator": "Louise Miller et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912235",
+    "_source": "hsds",
+    "_sourceId": "912235",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2bbb0b09c32d54412f4d4ba00a08ebb9db9866d439478939cb1b2785c5493090",
+    "title": "Radiocarbon date, Sample number HAR-2497",
+    "description": "Wood, unidentified, from lower layers of preserved wood in watercourse, associated with Mortlake sherds and other occupation material (77II, 22) at Kingston upon Thames (Eden Walk II), Greater London, England. Subm D A Hinton 1977. Comment(subm): Good agreement with HAR-2498, and OxA-2924 also concordant. Calib. dates given in second ref. Pottery is probably residual.<br>",
+    "creator": "D A Hinton",
+    "date": "1998-12-01",
+    "subject": [
+      "4a occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.409027,
+    "decimalLongitude": -0.303181,
+    "hsds": {
+      "elasticId": "2bbb0b09c32d54412f4d4ba00a08ebb9db9866d439478939cb1b2785c5493090",
+      "originalId": "912235",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.409027,
+            "lon": -0.303181
+          },
+          "centroid": {
+            "lat": 51.409027,
+            "lon": -0.303181
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-2497",
+        "Depositor ID: HAR-2497"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:00:03.078Z",
+      "query": "q:thames",
+      "recordId": "hsds:912235",
+      "title": "Radiocarbon date, Sample number HAR-2497",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2bbb0b09c32d54412f4d4ba00a08ebb9db9866d439478939cb1b2785c5493090",
+      "creator": "D A Hinton",
+      "date": "1998-12-01"
+    }
+  }
+]

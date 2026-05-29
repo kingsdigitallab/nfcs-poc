@@ -1,0 +1,465 @@
+[
+  {
+    "id": "ariadne:dececb09d60b6070381a049e8d029102d1fd8dc8d03f73dfc1216cd4b7500dd0",
+    "_source": "ariadne",
+    "_sourceId": "423569",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/dececb09d60b6070381a049e8d029102d1fd8dc8d03f73dfc1216cd4b7500dd0",
+    "title": "Felinwynt, Cardiganshire",
+    "description": "Felinwynt is a hamlet that has developed in a linear fashion for about half a mile along the minor road running from Y Ferwig village in the west to the West Wales Airport in the east. It it located approximately two and a half miles south west of Aberporth and four miles north east of Cardigan. For twenty-five years Felinwynt was home to the Felinwynt Rainforest Centre, which offered a 'unique experience to see exotic plants and wildlife that were contained within a large tropical house.' Although the centre is now closed the site is occupied by Caffi Cynnes, a cafe 'open daily from April to October for breakfasts, light bites, and soups.' Sources: http://cafficynnes.wixsite.com/felinwynt and John Francis (estate agents) sales particulars for the Felinwynt Rainforest Centre. M. Ryder, RCAHMW, 5th November 2018.",
+    "creator": "Royal Commission Ancient and Historic Monuments Wales",
+    "date": "2023-09-07",
+    "subject": [
+      "hamlet",
+      "hamlets"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Y Ferwig, Ceredigion, Cardiganshire",
+    "country": "Wales",
+    "decimalLatitude": 52.12326,
+    "decimalLongitude": -4.6001442,
+    "ariadne": {
+      "elasticId": "dececb09d60b6070381a049e8d029102d1fd8dc8d03f73dfc1216cd4b7500dd0",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Y Ferwig, Ceredigion, Cardiganshire",
+          "geopoint": {
+            "lat": 52.12326,
+            "lon": -4.6001442
+          },
+          "centroid": {
+            "lat": 52.12326,
+            "lon": -4.6001442
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Y Ferwig, Ceredigion, Cardiganshire"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Royal Commission Ancient and Historic Monuments Wales",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Royal%20Commission%20Ancient%20and%20Historic%20Monuments%20Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "hamlet",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HAMLET"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "hamlets",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008369",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Royal Commission on the Ancient and Historical Monuments of Wales",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/RCAHMW/1577BA82-7AB2-3774-B16F-EE04AD235B5B",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/RCAHMW/8D520B07-78F5-3A8E-AD61-580FCFF7218E"
+      ],
+      "accessRights": "CC BY NC ND",
+      "nativePeriod": [
+        "multiperiod"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:00:41.720Z",
+      "query": "q:rainforest",
+      "recordId": "ariadne:dececb09d60b6070381a049e8d029102d1fd8dc8d03f73dfc1216cd4b7500dd0",
+      "title": "Felinwynt, Cardiganshire",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/dececb09d60b6070381a049e8d029102d1fd8dc8d03f73dfc1216cd4b7500dd0",
+      "creator": "Royal Commission Ancient and Historic Monuments Wales",
+      "date": "2023-09-07"
+    }
+  },
+  {
+    "id": "ariadne:f787d07e96d165767aa1a19bab55e963b23caa52fdebfd29de2415302613c310",
+    "_source": "ariadne",
+    "_sourceId": "2128415",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/f787d07e96d165767aa1a19bab55e963b23caa52fdebfd29de2415302613c310",
+    "title": "Benmore",
+    "description": "The Botanic Garden comprises successive waves of planting from the early-19th century onwards and features renowned collections of conifers and rhododendrons as well as Bhutanese and Chilean rainforest species. The mid-19th-century walled garden is now a formal garden housing a collection of ornamental conifers.<br /><br />History: Benmore Botanic Garden is part of a once larger estate that was developed from 1820 with the commencement of forestry planting. The Forestry Commission now manages most of this land as the Argyll Forest Park.<br /><br />Size: 50.0 ha<br />Current Use: botanic garden<br />Feature: avenue [1863-1869] An avenue of redwoods planted by Piers Patrick.<br />Feature: fountain [1875] A fountain of German origin in the pond to the south of the walled garden.<br />Feature: garden building - Puck's Hut built to commemorate the work of John Duncan and dedicated to Sir Isaac Bayley Balfour who originally suggested a west coast outpost for the Royal Botanic Garden Edinburgh.",
+    "creator": "Parks and Gardens UK",
+    "date": "2012-10-10",
+    "subject": [
+      "avenue",
+      "botanic garden",
+      "education",
+      "fernery [glasshouse]",
+      "fountain",
+      "garden building",
+      "fountains",
+      "garden structures",
+      "botanical gardens",
+      "educational centres (buildings)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Scotland, Argyll And Bute, Argyll and Bute",
+    "decimalLatitude": 56.026295,
+    "decimalLongitude": -4.980323,
+    "ariadne": {
+      "elasticId": "f787d07e96d165767aa1a19bab55e963b23caa52fdebfd29de2415302613c310",
+      "temporal": [],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "Scotland, Argyll And Bute, Argyll and Bute",
+          "geopoint": {
+            "lat": 56.026295,
+            "lon": -4.980323
+          },
+          "centroid": {
+            "lat": 56.026295,
+            "lon": -4.980323
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Scotland, Argyll And Bute, Argyll and Bute"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Parks and Gardens UK",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Parks%20and%20Gardens%20UK"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "avenue",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AVENUE"
+        },
+        {
+          "prefLabel": "botanic garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOTANIC%20GARDEN"
+        },
+        {
+          "prefLabel": "education",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EDUCATION"
+        },
+        {
+          "prefLabel": "fernery [glasshouse]",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FERNERY%20%5BGLASSHOUSE%5D"
+        },
+        {
+          "prefLabel": "fountain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FOUNTAIN"
+        },
+        {
+          "prefLabel": "garden building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GARDEN%20BUILDING"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "fountains",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006179",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "garden structures",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006822",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "botanical gardens",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008107",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "educational centres (buildings)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300264742",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Parks and Gardens UK",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/AAE5A655-22B9-3A54-B7EE-BA1B0393526D",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/58114087-BD7B-3ECC-9B46-A48C8BB36F6C"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "early 19th century"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:00:41.720Z",
+      "query": "q:rainforest",
+      "recordId": "ariadne:f787d07e96d165767aa1a19bab55e963b23caa52fdebfd29de2415302613c310",
+      "title": "Benmore",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/f787d07e96d165767aa1a19bab55e963b23caa52fdebfd29de2415302613c310",
+      "creator": "Parks and Gardens UK",
+      "date": "2012-10-10"
+    }
+  },
+  {
+    "id": "ariadne:b7a0460afb85f1b2bdae2b10f1145ff7d30697cfae7a8c58ae1052b94f7f5290",
+    "_source": "ariadne",
+    "_sourceId": "1238404",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/b7a0460afb85f1b2bdae2b10f1145ff7d30697cfae7a8c58ae1052b94f7f5290",
+    "title": "THE EDEN PROJECT",
+    "description": "Designed by Nicholas Grimshaw and Partners, The Eden Project is a showcase for global biodiversity and human dependence on plants. It is located in the old china clay pit at Bodelva, near St Austell and the 'experience' is divided into linked climate-controlled 'biomes' ; one recreates the rainforest of the humid tropics and the other the warm temperate climate of the Mediterranean. Each of the biomes is made up of four joined domes which span up to 130 metres. The domes themselves are constructed from self-supporting and interconnecting tubular steel hexagonal frames. There cladding takes the form of hexagonal inflatable 'pillows' of ETEF (ethyltetrafluoroethylene) - a transparent foil. The two biomes are joined by 'the link' a low-tech, grass-roofed building which was conceived as a complete contrast to the space-age biomes. There are also more buildings in the pipeline: funds are being sought for a third 'arid' biome and for an education centre. In addition, plans are currently being drawn up for a 200-bedroom hotel on the site.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "botanic garden",
+      "extant building",
+      "glasshouse",
+      "temperate house",
+      "greenhouses",
+      "botanical gardens",
+      "military prisons (buildings)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "ST BLAISE, RESTORMEL, CORNWALL, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.36067,
+    "decimalLongitude": -4.743488,
+    "ariadne": {
+      "elasticId": "b7a0460afb85f1b2bdae2b10f1145ff7d30697cfae7a8c58ae1052b94f7f5290",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "ST BLAISE, RESTORMEL, CORNWALL, ENGLAND",
+          "geopoint": {
+            "lat": 50.36067,
+            "lon": -4.743488
+          },
+          "centroid": {
+            "lat": 50.36067,
+            "lon": -4.743488
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "ST BLAISE, RESTORMEL, CORNWALL, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "botanic garden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOTANIC%20GARDEN"
+        },
+        {
+          "prefLabel": "extant building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXTANT%20BUILDING"
+        },
+        {
+          "prefLabel": "glasshouse",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GLASSHOUSE"
+        },
+        {
+          "prefLabel": "temperate house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TEMPERATE%20HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "greenhouses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004938",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "botanical gardens",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008107",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "military prisons (buildings)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300133150",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/1E30C7AE-58D2-3403-9C02-D592F2EFF685",
+      "otherId": [
+        "Depositor ID: SX 05 SW 59",
+        "NMR_NATINV-1344569"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:00:41.720Z",
+      "query": "q:rainforest",
+      "recordId": "ariadne:b7a0460afb85f1b2bdae2b10f1145ff7d30697cfae7a8c58ae1052b94f7f5290",
+      "title": "THE EDEN PROJECT",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/b7a0460afb85f1b2bdae2b10f1145ff7d30697cfae7a8c58ae1052b94f7f5290",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:77bf859111275fb2a8549261884af0963ea9b26f07a2595d787e1dfdc721684a",
+    "_source": "ariadne",
+    "_sourceId": "LON-6059CB",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/77bf859111275fb2a8549261884af0963ea9b26f07a2595d787e1dfdc721684a",
+    "title": "Other BOX",
+    "description": "An incomplete Post Medieval tagua snuff box dating from the late 18th-19th century. The box is of composite construction made from four sections of tagua nut with an iron hinge. The box is decorated with a scene depicting a pitched roof building (brick?) with a central figure of a right facing lady standing holding a book or closed fan and a left facing man siting under a tree holding a mug. The back and sides are decorated with a radiating foliate design possibly tobacco leaves with a central rosette. The side end caps are missing.\nDimensions: length: 63.92mm; width: 30.12mm; thickness: 19.88mm; weight: 43.29mm\nThe \"palm ivory\" from the Amazon rainforest bear fruit whose pulpit inner (endosperm) becomes very hard when dry and texture very similar to ivory. It is this which is called vegetable ivory or tagua. The tagua nut carves, turns, polishes easily and almost as finely as ivory. The tagua nut was worked by the sailors who made ​​such small boxes, snuff graters or tobacco also made ​​by convicts. The latter worked to pass the time but mainly to get some money to improve their lives. Can also be attributed to sailors during their long journeys.",
+    "creator": "Portable Antiquities Scheme",
+    "date": "2018-01-10",
+    "subject": [
+      "box",
+      "boxes (containers)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "St. Katharine's and Wapping, Tower Hamlets, Greater London Authority",
+    "country": "England",
+    "decimalLatitude": 51.50719306647841,
+    "decimalLongitude": -0.048965822907771,
+    "periodStart": "1750",
+    "periodEnd": "1850",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "77bf859111275fb2a8549261884af0963ea9b26f07a2595d787e1dfdc721684a",
+      "temporal": [
+        {
+          "from": "1750",
+          "periodName": "post medieval",
+          "until": "1850",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/POST%20MEDIEVAL"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "St. Katharine's and Wapping, Tower Hamlets, Greater London Authority",
+          "boundingbox": "polygon ((-0.056357796626852 51.511566404612, -0.056357796626852 51.5028197283448, -0.04157384918869 51.5028197283448, -0.04157384918869 51.511566404612, -0.056357796626852 51.511566404612))",
+          "centroid": {
+            "lat": 51.50719306647841,
+            "lon": -0.048965822907771
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "St. Katharine's and Wapping, Tower Hamlets, Greater London Authority"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Portable Antiquities Scheme",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Portable%20Antiquities%20Scheme"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "box",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/BOX"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "boxes (containers)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300045643",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Artefact"
+        }
+      ],
+      "publisher": "British Museum",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Still Image"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BMPAS/11428CAC-E577-3408-A4D5-B0729E8FA1AD",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/BM/69F34212-FA39-3E9C-8A08-10DC106FB3D6"
+      ],
+      "accessRights": "CC-BY",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-05-29T14:00:41.720Z",
+      "query": "q:rainforest",
+      "recordId": "ariadne:77bf859111275fb2a8549261884af0963ea9b26f07a2595d787e1dfdc721684a",
+      "title": "Other BOX",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/77bf859111275fb2a8549261884af0963ea9b26f07a2595d787e1dfdc721684a",
+      "creator": "Portable Antiquities Scheme",
+      "date": "2018-01-10"
+    }
+  }
+]

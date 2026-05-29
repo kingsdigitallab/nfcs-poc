@@ -1,0 +1,1585 @@
+[
+  {
+    "id": "hsds:https://doi.org/10.5284/1052663",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1052663",
+    "_sourceUrl": "https://doi.org/10.5284/1052663",
+    "title": "Beneath the Surface of Roman Republican Cities",
+    "description": "This project deployed Ground-Penetrating Radar (henceforth GPR) survey alongside the study of ceramic assemblages across the full extent of two cities founded in this period - Interamna Lirenas founded as a colony in 312 BC and Falerii Novi founded by Rome in 241 BC (following Rome's razing of Falerii Veteres) to characterise their early development. Both sites were abandoned in the post-Roman period and now lie beneath agricultural land, hence they were available for total survey. The work built upon previous survey at both sites (which has included full magnetometry and topographical surveys of both) providing unique new data about the deeply buried deposits thereby allowing the integrated information to be used to map these towns and address key questions about the nature of Roman urban development in this key period.",
+    "creator": [
+      "Alessandro Launaro",
+      "Lieven Verdonck",
+      "Martin Millett",
+      "Ninetta Leone"
+    ],
+    "date": "2019-06-10",
+    "subject": [
+      "archaeological surveying",
+      "artefact scatter",
+      "basilica",
+      "bath house",
+      "courtyard house",
+      "drain",
+      "fishpond",
+      "floor",
+      "forum",
+      "fountain",
+      "grain warehouse",
+      "ground penetrating radar survey",
+      "heritage science",
+      "house",
+      "insula",
+      "macellum",
+      "nymphaeum",
+      "planned settlement",
+      "precinct",
+      "road",
+      "rome (italy)--history--to 476",
+      "rome--history--republic, 265-30 b.c",
+      "shop",
+      "sub surface deposit",
+      "systematic fieldwalking survey",
+      "temple",
+      "theatre",
+      "topographic survey",
+      "town",
+      "town house",
+      "town wall",
+      "vault",
+      "insulae",
+      "vaults (structural elements)",
+      "floors (surface elements)",
+      "city walls",
+      "macella",
+      "houses",
+      "courtyard houses",
+      "fountains",
+      "nymphaea (garden structures)",
+      "theaters (buildings)",
+      "public baths",
+      "temples (buildings",
+      "warehouses",
+      "forums (open spaces)",
+      "roads",
+      "towns",
+      "fishponds",
+      "drains",
+      "boundary walls",
+      "vaults (tomb spaces)",
+      "artifacts (object genre)",
+      "town houses",
+      "basilicas (works by form)",
+      "holy precincts",
+      "shops"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Numeric",
+      "Structured Data"
+    ],
+    "spatialCoverage": "World, Europe, Italy, Lazio, Frosinone province, Pignataro Interamna",
+    "country": "Italy",
+    "decimalLatitude": 41.42690777,
+    "decimalLongitude": 13.75295278,
+    "periodStart": "43",
+    "periodEnd": "400",
+    "periodName": "roman",
+    "hsds": {
+      "elasticId": "653cbf51b7e2bcd9bce48ec31776f61e0cd4542f01a5758bb25620067dbe13bf",
+      "originalId": "https://doi.org/10.5284/1052663",
+      "landingPage": "https://doi.org/10.5284/1052663",
+      "modified": "2019-06-10",
+      "contributor": [
+        "Alessandro Launaro",
+        "Lieven Verdonck",
+        "Martin Millett",
+        "Ninetta Leone"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "World, Europe, Italy, Lazio, Frosinone province, Pignataro Interamna"
+        },
+        {
+          "placeName": "World, Europe, Italy, Lazio, Viterbo province, Falerii Novi"
+        },
+        {
+          "boundingbox": "polygon ((12.257996 42.500453, 12.257996 41.401536, 13.834534 41.401536, 13.834534 42.500453, 12.257996 42.500453))",
+          "centroid": {
+            "lat": 41.9509945,
+            "lon": 13.046265
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 41.42690777,
+            "lon": 13.75295278
+          },
+          "centroid": {
+            "lat": 41.42690777,
+            "lon": 13.75295278
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 42.30032587,
+            "lon": 12.35896668
+          },
+          "centroid": {
+            "lat": 42.30032587,
+            "lon": 12.35896668
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "World, Europe, Italy, Lazio, Frosinone province, Pignataro Interamna",
+        "World, Europe, Italy, Lazio, Viterbo province, Falerii Novi"
+      ],
+      "temporal": [
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "400",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/wiki/Q38",
+          "name": "Italy"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "archaeological surveying",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGICAL%20SURVEYING"
+        },
+        {
+          "prefLabel": "artefact scatter",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARTEFACT%20SCATTER"
+        },
+        {
+          "prefLabel": "basilica",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BASILICA"
+        },
+        {
+          "prefLabel": "bath house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BATH%20HOUSE"
+        },
+        {
+          "prefLabel": "courtyard house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COURTYARD%20HOUSE"
+        },
+        {
+          "prefLabel": "drain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DRAIN"
+        },
+        {
+          "prefLabel": "fishpond",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FISHPOND"
+        },
+        {
+          "prefLabel": "floor",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FLOOR"
+        },
+        {
+          "prefLabel": "forum",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FORUM"
+        },
+        {
+          "prefLabel": "fountain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FOUNTAIN"
+        },
+        {
+          "prefLabel": "grain warehouse",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GRAIN%20WAREHOUSE"
+        },
+        {
+          "prefLabel": "ground penetrating radar survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GROUND%20PENETRATING%20RADAR%20SURVEY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        },
+        {
+          "prefLabel": "insula",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INSULA"
+        },
+        {
+          "prefLabel": "macellum",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MACELLUM"
+        },
+        {
+          "prefLabel": "nymphaeum",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NYMPHAEUM"
+        },
+        {
+          "prefLabel": "planned settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PLANNED%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "precinct",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PRECINCT"
+        },
+        {
+          "prefLabel": "road",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROAD"
+        },
+        {
+          "prefLabel": "rome (italy)--history--to 476",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROME%20%28ITALY%29--HISTORY--TO%20476"
+        },
+        {
+          "prefLabel": "rome--history--republic, 265-30 b.c",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROME--HISTORY--REPUBLIC%2C%20265-30%20B.C"
+        },
+        {
+          "prefLabel": "shop",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SHOP"
+        },
+        {
+          "prefLabel": "sub surface deposit",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SUB%20SURFACE%20DEPOSIT"
+        },
+        {
+          "prefLabel": "systematic fieldwalking survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SYSTEMATIC%20FIELDWALKING%20SURVEY"
+        },
+        {
+          "prefLabel": "temple",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TEMPLE"
+        },
+        {
+          "prefLabel": "theatre",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/THEATRE"
+        },
+        {
+          "prefLabel": "topographic survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TOPOGRAPHIC%20SURVEY"
+        },
+        {
+          "prefLabel": "town",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TOWN"
+        },
+        {
+          "prefLabel": "town house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TOWN%20HOUSE"
+        },
+        {
+          "prefLabel": "town wall",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TOWN%20WALL"
+        },
+        {
+          "prefLabel": "vault",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VAULT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "insulae",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000325",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "vaults (structural elements)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300001324",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "floors (surface elements)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300002060",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "city walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005072",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "macella",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005241",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "courtyard houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005449",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "fountains",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006179",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "nymphaea (garden structures)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006809",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "theaters (buildings)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007117",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "public baths",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007353",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "temples (buildings",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007595",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "warehouses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007722",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "forums (open spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008085",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "roads",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008217",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "towns",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008375",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "fishponds",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008689",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "drains",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300052564",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "boundary walls",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300100558",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "vaults (tomb spaces)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300112480",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "artifacts (object genre)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300117127",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "town houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120766",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "basilicas (works by form)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300170443",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "holy precincts",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300387001",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "shops",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300432409",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork archive"
+        }
+      ],
+      "dataType": [
+        "Numeric",
+        "Structured Data"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1003357",
+        "dcterms:DOI https://doi.org/10.5284/1052663"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:01:58.866Z",
+      "query": "q:roman bath",
+      "recordId": "hsds:https://doi.org/10.5284/1052663",
+      "title": "Beneath the Surface of Roman Republican Cities",
+      "url": "https://doi.org/10.5284/1052663",
+      "creator": [
+        "Alessandro Launaro",
+        "Lieven Verdonck",
+        "Martin Millett",
+        "Ninetta Leone"
+      ],
+      "date": "2019-06-10"
+    }
+  },
+  {
+    "id": "hsds:1123594",
+    "_source": "hsds",
+    "_sourceId": "1123594",
+    "_sourceUrl": "https://doi.org/10.5284/1033949",
+    "title": "Groundwell Ridge, Swindon, Wiltshire: rediocarbon dating and chronological modelling: scientific dating report",
+    "description": "Radiocarbon dating and chronological modelling of samples from the bath suite (Phase 2) in Trench 1 and the succeeding post-built structure (Phase 3) indicate that Building 2 was occupied throughout most, if not all, the Roman period.",
+    "creator": [
+      "Alex Bayliss",
+      "C Bronk Ramsey",
+      "Derek Hamilton",
+      "G Cook",
+      "Geoff Morley",
+      "J Meadows",
+      "Pete Wilson",
+      "Peter Marshall"
+    ],
+    "date": "2016-11-28",
+    "subject": [
+      "bath house",
+      "field survey",
+      "heritage science",
+      "villa",
+      "villas",
+      "public baths"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "Groundwell Ridge, BLUNSDON ST ANDREW, Wiltshire, Swindon, England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.6028160249047,
+    "decimalLongitude": -1.79809929038574,
+    "periodStart": "43",
+    "periodEnd": "400",
+    "periodName": "roman",
+    "hsds": {
+      "elasticId": "165c652f8dd6f8c3255a0f7dd9c84898ca36ad301272ee3a78caca182e891293",
+      "originalId": "1123594",
+      "landingPage": "https://doi.org/10.5284/1033949",
+      "modified": "2025-08-07",
+      "contributor": [
+        "Historic England"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Groundwell Ridge, BLUNSDON ST ANDREW, Wiltshire, Swindon, England"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.6028160249047,
+            "lon": -1.79809929038574
+          },
+          "centroid": {
+            "lat": 51.6028160249047,
+            "lon": -1.79809929038574
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Groundwell Ridge, BLUNSDON ST ANDREW, Wiltshire, Swindon, England",
+        "England"
+      ],
+      "temporal": [
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "400",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bath house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BATH%20HOUSE"
+        },
+        {
+          "prefLabel": "field survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SURVEY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "villa",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VILLA"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "villas",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005517",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "public baths",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007353",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": [
+        "OBIB 24-2012"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:01:58.866Z",
+      "query": "q:roman bath",
+      "recordId": "hsds:1123594",
+      "title": "Groundwell Ridge, Swindon, Wiltshire: rediocarbon dating and chronological modelling: scientific dating report",
+      "url": "https://doi.org/10.5284/1033949",
+      "creator": [
+        "Alex Bayliss",
+        "C Bronk Ramsey",
+        "Derek Hamilton",
+        "G Cook",
+        "Geoff Morley",
+        "J Meadows",
+        "Pete Wilson",
+        "Peter Marshall"
+      ],
+      "date": "2016-11-28"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.5284/1132999",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1132999",
+    "_sourceUrl": "https://doi.org/10.5284/1132999",
+    "title": "A Review of the Animal Bone Evidence from the Roman Period in Southern England",
+    "description": "This collection comprises a database of 578 assemblage-level records from 346 sites. The data presented here form part of the Historic England-funded regional review series, the goal of which is to summarise and disseminate the English animal bone record. This dataset includes published and unpublished assemblages of mammal, bird and fish bones from Roman sites from southern England, collected up to 2020.",
+    "creator": [
+      "Eva Fairnell",
+      "Fay Worley",
+      "Julia Cussans",
+      "Martyn Allen",
+      "Polydora Baker"
+    ],
+    "date": "2026-03-27",
+    "subject": [
+      "aisled hall house",
+      "amphibian remains",
+      "animal remains",
+      "animal remains (archaeology)",
+      "archaeology",
+      "bath house",
+      "bird remains",
+      "bone working debris",
+      "building",
+      "butchered animal remains",
+      "cemetery",
+      "civitas capital",
+      "colonia",
+      "documentary research",
+      "enclosure",
+      "fish remains",
+      "fort",
+      "fortress",
+      "granary",
+      "heritage science",
+      "hillfort",
+      "mammal remains",
+      "oppidum",
+      "public building",
+      "reptile remains",
+      "round house (domestic)",
+      "shrine",
+      "small mammal remains",
+      "temple",
+      "town house",
+      "vertebrate remains",
+      "vicus",
+      "villa",
+      "village",
+      "zooarchaeology",
+      "vici",
+      "buildings (structures)",
+      "granaries",
+      "houses",
+      "villas",
+      "fortresses",
+      "forts",
+      "hillforts",
+      "public baths",
+      "shrines (structures)",
+      "temples (buildings",
+      "villages",
+      "oppida",
+      "agricultural settlements",
+      "town houses",
+      "hall houses",
+      "remains (object genre)",
+      "cemeteries",
+      "civitates",
+      "animal remains"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": "Structured Data",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "43",
+    "periodEnd": "400",
+    "periodName": [
+      "roman",
+      "roman"
+    ],
+    "hsds": {
+      "elasticId": "947a3fafde99f63d93f8516e709dbf53a9a7758e9ff89bdb308292f1b2abfe7b",
+      "originalId": "https://doi.org/10.5284/1132999",
+      "landingPage": "https://doi.org/10.5284/1132999",
+      "modified": "2026-03-27",
+      "contributor": [
+        "Eva Fairnell",
+        "Fay Worley",
+        "Julia Cussans",
+        "Martyn Allen",
+        "Polydora Baker"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "World, Europe, United Kingdom, England"
+        },
+        {
+          "boundingbox": "polygon ((-6.1138864 52.093006, -6.1138864 49.830896, 1.5875244 49.830896, 1.5875244 52.093006, -6.1138864 52.093006))",
+          "centroid": {
+            "lat": 50.96195099999999,
+            "lon": -2.2631810000000003
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "World, Europe, United Kingdom, England"
+      ],
+      "temporal": [
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "400",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        },
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "410",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "aisled hall house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AISLED%20HALL%20HOUSE"
+        },
+        {
+          "prefLabel": "amphibian remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AMPHIBIAN%20REMAINS"
+        },
+        {
+          "prefLabel": "animal remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANIMAL%20REMAINS"
+        },
+        {
+          "prefLabel": "animal remains (archaeology)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANIMAL%20REMAINS%20%28ARCHAEOLOGY%29"
+        },
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "bath house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BATH%20HOUSE"
+        },
+        {
+          "prefLabel": "bird remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BIRD%20REMAINS"
+        },
+        {
+          "prefLabel": "bone working debris",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BONE%20WORKING%20DEBRIS"
+        },
+        {
+          "prefLabel": "building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUILDING"
+        },
+        {
+          "prefLabel": "butchered animal remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUTCHERED%20ANIMAL%20REMAINS"
+        },
+        {
+          "prefLabel": "cemetery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CEMETERY"
+        },
+        {
+          "prefLabel": "civitas capital",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CIVITAS%20CAPITAL"
+        },
+        {
+          "prefLabel": "colonia",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/COLONIA"
+        },
+        {
+          "prefLabel": "documentary research",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DOCUMENTARY%20RESEARCH"
+        },
+        {
+          "prefLabel": "enclosure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENCLOSURE"
+        },
+        {
+          "prefLabel": "fish remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FISH%20REMAINS"
+        },
+        {
+          "prefLabel": "fort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FORT"
+        },
+        {
+          "prefLabel": "fortress",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FORTRESS"
+        },
+        {
+          "prefLabel": "granary",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GRANARY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HILLFORT"
+        },
+        {
+          "prefLabel": "mammal remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MAMMAL%20REMAINS"
+        },
+        {
+          "prefLabel": "oppidum",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/OPPIDUM"
+        },
+        {
+          "prefLabel": "public building",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PUBLIC%20BUILDING"
+        },
+        {
+          "prefLabel": "reptile remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/REPTILE%20REMAINS"
+        },
+        {
+          "prefLabel": "round house (domestic)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20HOUSE%20%28DOMESTIC%29"
+        },
+        {
+          "prefLabel": "shrine",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SHRINE"
+        },
+        {
+          "prefLabel": "small mammal remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SMALL%20MAMMAL%20REMAINS"
+        },
+        {
+          "prefLabel": "temple",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TEMPLE"
+        },
+        {
+          "prefLabel": "town house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TOWN%20HOUSE"
+        },
+        {
+          "prefLabel": "vertebrate remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VERTEBRATE%20REMAINS"
+        },
+        {
+          "prefLabel": "vicus",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VICUS"
+        },
+        {
+          "prefLabel": "villa",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VILLA"
+        },
+        {
+          "prefLabel": "village",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VILLAGE"
+        },
+        {
+          "prefLabel": "zooarchaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ZOOARCHAEOLOGY"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "vici",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000754",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "buildings (structures)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004792",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "granaries",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004929",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "villas",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005517",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "fortresses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006894",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "forts",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006909",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "hillforts",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006911",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "public baths",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007353",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "shrines (structures)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007558",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "temples (buildings",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007595",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "villages",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008372",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "oppida",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008396",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "agricultural settlements",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008420",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "town houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300120766",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "hall houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300247461",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "remains (object genre)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300265420",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "cemeteries",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300266755",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "civitates",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300387214",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "animal remains",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300451324",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Scientific analysis"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1008259",
+        "dcterms:DOI https://doi.org/10.5284/1132999"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:01:58.866Z",
+      "query": "q:roman bath",
+      "recordId": "hsds:https://doi.org/10.5284/1132999",
+      "title": "A Review of the Animal Bone Evidence from the Roman Period in Southern England",
+      "url": "https://doi.org/10.5284/1132999",
+      "creator": [
+        "Eva Fairnell",
+        "Fay Worley",
+        "Julia Cussans",
+        "Martyn Allen",
+        "Polydora Baker"
+      ],
+      "date": "2026-03-27"
+    }
+  },
+  {
+    "id": "hsds:920587",
+    "_source": "hsds",
+    "_sourceId": "920587",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/5840fb079eae78e0f6a276028a7ebd531b36098f0f2541fab32bffe07a56eae9",
+    "title": "Radiocarbon date, Sample number HAR-8677",
+    "description": "Charcoal, ash, 1021-1, id by D Haddon-Reece as Fraxinus sp, from layer sealed beneath clay and timber rampart that enclosed a small annexe to Roman settlement containing bath house at HWCM 1021, Leintwardine, Herefordshire, England. Subm JW 1985. Comment (subm): previous excavations defined sequence of Roman military activity in NW Herefs but as yet this is poorly dated, and status and character of settlement at Leintwardine are disputed.<br>",
+    "creator": "J Wills, Hereford-Worcs Co Mus",
+    "date": "1998-12-01",
+    "subject": [
+      "6a settlement ?",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.359519,
+    "decimalLongitude": -2.876755,
+    "hsds": {
+      "elasticId": "5840fb079eae78e0f6a276028a7ebd531b36098f0f2541fab32bffe07a56eae9",
+      "originalId": "920587",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.359519,
+            "lon": -2.876755
+          },
+          "centroid": {
+            "lat": 52.359519,
+            "lon": -2.876755
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6a settlement ?",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6A%20SETTLEMENT%20%3F"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8677",
+        "Depositor ID: HAR-8677"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:01:58.866Z",
+      "query": "q:roman bath",
+      "recordId": "hsds:920587",
+      "title": "Radiocarbon date, Sample number HAR-8677",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/5840fb079eae78e0f6a276028a7ebd531b36098f0f2541fab32bffe07a56eae9",
+      "creator": "J Wills, Hereford-Worcs Co Mus",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920588",
+    "_source": "hsds",
+    "_sourceId": "920588",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f7d95d7bc25297b209ca0df10de3f269e94107694b755a5021a734c0af267797",
+    "title": "Radiocarbon date, Sample number HAR-8678",
+    "description": "Charcoal, ash, 1021-2, id by D Haddon-Reece as Fraxinus sp, from layer sealed beneath clay and timber rampart that enclosed a small annexe to Roman settlement containing bath house at HWCM 1021, Leintwardine, Herefordshire, England. Subm JW 1985. Comment (subm): previous excavations defined sequence of Roman military activity in NW Herefs but as yet this is poorly dated, and status and character of settlement at Leintwardine are disputed.<br>",
+    "creator": "J Wills, Hereford-Worcs Co Mus",
+    "date": "1998-12-01",
+    "subject": [
+      "6a settlement ?",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.359519,
+    "decimalLongitude": -2.876755,
+    "hsds": {
+      "elasticId": "f7d95d7bc25297b209ca0df10de3f269e94107694b755a5021a734c0af267797",
+      "originalId": "920588",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.359519,
+            "lon": -2.876755
+          },
+          "centroid": {
+            "lat": 52.359519,
+            "lon": -2.876755
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6a settlement ?",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6A%20SETTLEMENT%20%3F"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8678",
+        "Depositor ID: HAR-8678"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:01:58.866Z",
+      "query": "q:roman bath",
+      "recordId": "hsds:920588",
+      "title": "Radiocarbon date, Sample number HAR-8678",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f7d95d7bc25297b209ca0df10de3f269e94107694b755a5021a734c0af267797",
+      "creator": "J Wills, Hereford-Worcs Co Mus",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:1108465",
+    "_source": "hsds",
+    "_sourceId": "1108465",
+    "_sourceUrl": "https://doi.org/10.5284/1033711",
+    "title": "Groundwell Ridge, Swindon: archaeomagnetic dating report, July 2005",
+    "description": "Archaeomagnetic dating of two stone-lined Roman flue features excavated in 2005 recovered a last firing date of AD 170-AD 305 for one flue.",
+    "creator": "Paul Linford",
+    "date": "2016-11-24",
+    "subject": [
+      "bath house",
+      "bathhouse",
+      "field survey",
+      "flue",
+      "heritage science",
+      "villa",
+      "villas",
+      "public baths"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "Groundwell Ridge, BLUNSDON ST ANDREW, Wiltshire, Swindon, England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.6032650910237,
+    "decimalLongitude": -1.79780852485056,
+    "periodStart": "43",
+    "periodEnd": "400",
+    "periodName": "roman",
+    "hsds": {
+      "elasticId": "59ac000bd0951271335b2f80f39bbb662203861adf3664abf625f7899122f13c",
+      "originalId": "1108465",
+      "landingPage": "https://doi.org/10.5284/1033711",
+      "modified": "2025-08-27",
+      "contributor": [
+        "Historic England"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Groundwell Ridge, BLUNSDON ST ANDREW, Wiltshire, Swindon, England"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "geopoint": {
+            "lat": 51.6032650910237,
+            "lon": -1.79780852485056
+          },
+          "centroid": {
+            "lat": 51.6032650910237,
+            "lon": -1.79780852485056
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Groundwell Ridge, BLUNSDON ST ANDREW, Wiltshire, Swindon, England",
+        "England"
+      ],
+      "temporal": [
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "400",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bath house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BATH%20HOUSE"
+        },
+        {
+          "prefLabel": "bathhouse",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BATHHOUSE"
+        },
+        {
+          "prefLabel": "field survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SURVEY"
+        },
+        {
+          "prefLabel": "flue",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FLUE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "villa",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VILLA"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "villas",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005517",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "public baths",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300007353",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": [
+        "OBIB 69-2010"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:01:58.866Z",
+      "query": "q:roman bath",
+      "recordId": "hsds:1108465",
+      "title": "Groundwell Ridge, Swindon: archaeomagnetic dating report, July 2005",
+      "url": "https://doi.org/10.5284/1033711",
+      "creator": "Paul Linford",
+      "date": "2016-11-24"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.5284/1027501",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1027501",
+    "_sourceUrl": "https://doi.org/10.5284/1027501",
+    "title": "Avon Historic Landscape Characterisation (HLC)",
+    "description": "The Avon Historic Landscape Characterisation was undertaken by members of staff employed by the former county of Avon (later under the sponsorship of South Gloucestershire, North Somerset and Bath and North East Somerset Councils) between 1995 and 1998. The main aim was to produce a map which displayed the current (1998) character of the landscape by revealing the historic processes whereby the present plan form of the current landscape had been initiated and developed.",
+    "creator": "South Gloucestershire Council",
+    "date": "2014-08-05",
+    "subject": [
+      "archaeology",
+      "heritage assessment",
+      "heritage science",
+      "historic area assessment",
+      "historic landscape characterisation"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Geospatial",
+      "Structured Data",
+      "Text"
+    ],
+    "spatialCoverage": "World, Europe, United Kingdom, England, South Gloucestershire",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": [
+      "medieval",
+      "modern",
+      "post medieval",
+      "prehistoric",
+      "roman"
+    ],
+    "hsds": {
+      "elasticId": "52e26ba9d5d222d8d60a7945e5e24c75a2368bf2e768e38a95f3803ae360bd53",
+      "originalId": "https://doi.org/10.5284/1027501",
+      "landingPage": "https://doi.org/10.5284/1027501",
+      "modified": "2014-08-05",
+      "contributor": [
+        "South Gloucestershire Council"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "World, Europe, United Kingdom, England, South Gloucestershire"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "boundingbox": "polygon ((-2.995707 51.678, -2.995707 51.299081, -2.2762 51.299081, -2.2762 51.678, -2.995707 51.678))",
+          "centroid": {
+            "lat": 51.4885405,
+            "lon": -2.6359535000000003
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "World, Europe, United Kingdom, England, South Gloucestershire",
+        "England"
+      ],
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "1901",
+          "periodName": "modern",
+          "until": "2100",
+          "uri": "http://n2t.net/ark:/99152/p0xxt6t7t32"
+        },
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1900",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        },
+        {
+          "from": "-1000000",
+          "periodName": "prehistoric",
+          "until": "43",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        },
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "400",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "heritage assessment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20ASSESSMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "historic area assessment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HISTORIC%20AREA%20ASSESSMENT"
+        },
+        {
+          "prefLabel": "historic landscape characterisation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HISTORIC%20LANDSCAPE%20CHARACTERISATION"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork archive"
+        }
+      ],
+      "dataType": [
+        "Geospatial",
+        "Structured Data",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1001449",
+        "dcterms:DOI https://doi.org/10.5284/1027501"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-05-29T14:01:58.866Z",
+      "query": "q:roman bath",
+      "recordId": "hsds:https://doi.org/10.5284/1027501",
+      "title": "Avon Historic Landscape Characterisation (HLC)",
+      "url": "https://doi.org/10.5284/1027501",
+      "creator": "South Gloucestershire Council",
+      "date": "2014-08-05"
+    }
+  }
+]

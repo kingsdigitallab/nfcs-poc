@@ -1,0 +1,1841 @@
+[
+  {
+    "id": "europeana:/2048047/Clasate_0a6cac0c9ffb47e89ce15926b53f3a92",
+    "_source": "europeana",
+    "_sourceId": "/2048047/Clasate_0a6cac0c9ffb47e89ce15926b53f3a92",
+    "_sourceUrl": "https://www.europeana.eu/item/2048047/Clasate_0a6cac0c9ffb47e89ce15926b53f3a92?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "denar",
+    "description": "avers: Bust drapat pe umărul stâng și cap laureat spre dreapta",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "Neamț National Museum Complex - History and Archeology Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fimagini-clasate%2Fimagini14%2F6e576f946a2749fca88c362f9b342dd5.jpg&type=IMAGE",
+      "shownAt": "https://clasate.cimec.ro/detaliu.asp?k=0a6cac0c9ffb47e89ce15926b53f3a92",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/2048047/Clasate_0a6cac0c9ffb47e89ce15926b53f3a92",
+      "title": "denar",
+      "url": "https://www.europeana.eu/item/2048047/Clasate_0a6cac0c9ffb47e89ce15926b53f3a92?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_9757",
+    "_source": "europeana",
+    "_sourceId": "/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_9757",
+    "_sourceUrl": "https://www.europeana.eu/item/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_9757?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Αμαζών",
+    "creator": [
+      "http://semantics.gr/authorities/searchculture-persons/1535959680",
+      "Μυλωνά, Άλεξ (1920-2016)",
+      "Mylona, Alex (1920-2016)"
+    ],
+    "description": "Το έργο \"Αμαζών\" της Άλεξ Μυλωνά ανήκει στα πρώιμα γλυπτά της, στα οποία αναπαριστά ανθρώπινες μορφές και τα θέματα του έργου της είναι αναγνωρίσιμα. Η τραχύτητα του υλικού αποτυπώνεται πάνω στην επιφάνεια του έργου δίνοντας στην όλη σύνθεση μια πιο \"σκληρή\" αίσθηση.",
+    "date": "1953",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Greece"
+    ],
+    "europeana": {
+      "provider": [
+        "Greek Aggregator SearchCulture.gr"
+      ],
+      "dataProvider": [
+        "Metropolitan Organisation of Museums of Visual Arts of Thessaloniki – MOMus"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.searchculture.gr%2Faggregator%2Fthumbnails%2Fedm-record%2Fmomus%2F000179-9757&type=IMAGE",
+      "shownAt": "https://www.momus.gr/collections/0009757",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_9757",
+      "title": "Αμαζών",
+      "url": "https://www.europeana.eu/item/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_9757?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "http://semantics.gr/authorities/searchculture-persons/1535959680",
+        "Μυλωνά, Άλεξ (1920-2016)",
+        "Mylona, Alex (1920-2016)"
+      ],
+      "date": "1953"
+    }
+  },
+  {
+    "id": "europeana:/2051906/data_euscreenXL_https___www_openbeelden_nl_media_674906",
+    "_source": "europeana",
+    "_sourceId": "/2051906/data_euscreenXL_https___www_openbeelden_nl_media_674906",
+    "_sourceUrl": "https://www.europeana.eu/item/2051906/data_euscreenXL_https___www_openbeelden_nl_media_674906?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Kea Bouwman als Amazone",
+    "creator": [
+      "Polygoon-Profilti (producent)",
+      "Nederlands Instituut voor Beeld en Geluid (beheerder)"
+    ],
+    "description": "Bioscoopjournaals waarin Nederlandse onderwerpen van een bepaalde week worden gepresenteerd.",
+    "type": "VIDEO",
+    "language": "nl",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "EUscreen"
+      ],
+      "dataProvider": [
+        "Netherlands Institute for Sound & Vision"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.openbeelden.nl%2Fimages%2F675894%2FKea_Bouwman_als_Amazone_%25280_27%2529.png&type=VIDEO",
+      "shownAt": "https://www.openbeelden.nl/media/674906",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/2051906/data_euscreenXL_https___www_openbeelden_nl_media_674906",
+      "title": "Kea Bouwman als Amazone",
+      "url": "https://www.europeana.eu/item/2051906/data_euscreenXL_https___www_openbeelden_nl_media_674906?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Polygoon-Profilti (producent)",
+        "Nederlands Instituut voor Beeld en Geluid (beheerder)"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/1244/INP_books_27616",
+    "_source": "europeana",
+    "_sourceId": "/1244/INP_books_27616",
+    "_sourceUrl": "https://www.europeana.eu/item/1244/INP_books_27616?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ghidul colecțiilor Muzeului de Istorie Naturală „Grigore Antipa\"",
+    "creator": [
+      "Dumitru Murariu"
+    ],
+    "description": "Ghidul colecțiilor Muzeului Antipa a fost publicat cu ocazia sărbătoririi a 150 de ani de atestarea sa. Publicația se împarte în trei volume ce explorează fauna din spațiul românesc și din diferite arii geografice, pe baza exponatelor din patrimoniul muzeului. Primul volum a fost publicat în 1983 și este dedicat colecției de insecte. Al doilea volum, publicat în 1984, este dedicat păsărilor și redă un istoric al orginii acestora. Volumul al treilea cuprinde o clasificare generală a mamiferelor și oferă informații suplimentare cu privire la colecțiile muzeale și diverse aspecte din viața acestor animale.",
+    "date": "1990",
+    "type": "TEXT",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fbiblioteca-digitala.ro%2Freviste%2Fcarte%2Fantipa%2Fghidul-colectiilor-3-mamifere-antipa_1990.jpg&type=TEXT",
+      "shownAt": "https://biblioteca-digitala.ro/?volum=27616",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1244/INP_books_27616",
+      "title": "Ghidul colecțiilor Muzeului de Istorie Naturală „Grigore Antipa\"",
+      "url": "https://www.europeana.eu/item/1244/INP_books_27616?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Dumitru Murariu"
+      ],
+      "date": "1990"
+    }
+  },
+  {
+    "id": "europeana:/499/https___hispana_mcu_es_lod_oai_larramendi_es_15253_ent0",
+    "_source": "europeana",
+    "_sourceId": "/499/https___hispana_mcu_es_lod_oai_larramendi_es_15253_ent0",
+    "_sourceUrl": "https://www.europeana.eu/item/499/https___hispana_mcu_es_lod_oai_larramendi_es_15253_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Indian Yuri and Indian Iquito, [1789-1794]",
+    "creator": [
+      "https://hispana.mcu.es/lod/oai:larramendi.es:15253#ent5"
+    ],
+    "description": "Summary: An Indian yuri and another iquito from the Amazon basin are represented. Under each of them are inscriptions where the origin of each one is indicated and some characteristics about his way of life and customs in general. The Indian yuri on the left wears shorts and ornaments of flowers and feathers on his head. He holds a spear with one hand and on the other the sunbird or Yutipichu. The Indian iquito appears on his back and naked, with a spear and a band of crossed feathers. Performed during the Malaspina expedition, which took place between 1789 and 1794. Commander Alejandro Malaspina lead the expedition organized by the Spanish crown to tour his American possessions, according to a plan presented by the sailor himself. The material gathered is scattered in different institutions of Spain, England, Argentina and Chile.",
+    "date": "1789",
+    "type": "IMAGE",
+    "language": "es",
+    "country": [
+      "Spain"
+    ],
+    "europeana": {
+      "provider": [
+        "Hispana"
+      ],
+      "dataProvider": [
+        "Ignacio Larramendi Foundation"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.larramendi.es%2Fi18n%2Fcatalogo_imagenes%2Fimagen_id.do%3FidImagen%3D10372490&type=IMAGE",
+      "shownAt": "http://www.larramendi.es/es/consulta/registro.do?id=15253",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/499/https___hispana_mcu_es_lod_oai_larramendi_es_15253_ent0",
+      "title": "Indian Yuri and Indian Iquito, [1789-1794]",
+      "url": "https://www.europeana.eu/item/499/https___hispana_mcu_es_lod_oai_larramendi_es_15253_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "https://hispana.mcu.es/lod/oai:larramendi.es:15253#ent5"
+      ],
+      "date": "1789"
+    }
+  },
+  {
+    "id": "europeana:/499/https___hispana_mcu_es_lod_oai_larramendi_es_15254_ent0",
+    "_source": "europeana",
+    "_sourceId": "/499/https___hispana_mcu_es_lod_oai_larramendi_es_15254_ent0",
+    "_sourceUrl": "https://www.europeana.eu/item/499/https___hispana_mcu_es_lod_oai_larramendi_es_15254_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Indio guagua e indio sipibo, [1789-1794]",
+    "creator": [
+      "https://hispana.mcu.es/lod/oai:larramendi.es:15254#ent5"
+    ],
+    "description": "Resumen: Se representa a un indio guagua y a otro sipibo, de la cuenca del Amazonas. Bajo cada uno de ellos sendas inscripciones donde se indica la procedencia de cada uno y algunas características sobre su forma de vida y costumbres en general. El indio guagua a la izquierda figura desnudo con tres corazones colgados sobre el pecho, que pertenecen a los hombres por él matados en la última campaña. El indio sipibo figura cubierto con una túnica y tocado de plumas. En la mano derecha lleva una macana, arma ofensiva de madera empleada por los indígenas americanos. Realizado durante la expedición Malaspina, que tuvo lugar entre 1789 y 1794. El comandante Alejandro Malaspina dirigió la expedición organizada por la corona española para recorrer sus posesiones americanas, según un plan presentado por el propio marino. El material reunido se encuentra disperso en diferentes instituciones de España, Inglaterra, Argentina y Chile.",
+    "date": "1789",
+    "type": "IMAGE",
+    "language": "es",
+    "country": [
+      "Spain"
+    ],
+    "europeana": {
+      "provider": [
+        "Hispana"
+      ],
+      "dataProvider": [
+        "Ignacio Larramendi Foundation"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.larramendi.es%2Fi18n%2Fcatalogo_imagenes%2Fimagen_id.do%3FidImagen%3D10372486&type=IMAGE",
+      "shownAt": "http://www.larramendi.es/es/consulta/registro.do?id=15254",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/499/https___hispana_mcu_es_lod_oai_larramendi_es_15254_ent0",
+      "title": "Indio guagua e indio sipibo, [1789-1794]",
+      "url": "https://www.europeana.eu/item/499/https___hispana_mcu_es_lod_oai_larramendi_es_15254_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "https://hispana.mcu.es/lod/oai:larramendi.es:15254#ent5"
+      ],
+      "date": "1789"
+    }
+  },
+  {
+    "id": "europeana:/499/https___hispana_mcu_es_lod_oai_larramendi_es_15314_ent0",
+    "_source": "europeana",
+    "_sourceId": "/499/https___hispana_mcu_es_lod_oai_larramendi_es_15314_ent0",
+    "_sourceUrl": "https://www.europeana.eu/item/499/https___hispana_mcu_es_lod_oai_larramendi_es_15314_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Indio llagra e india omagua, [1789 y 1794]",
+    "creator": [
+      "https://hispana.mcu.es/lod/oai:larramendi.es:15314#ent5"
+    ],
+    "description": "Resumen: Se representa a un indio llagra y a una india omagua, de la cuenca del Amazonas. Bajo cada uno de ellos sendas inscripciones donde se indica la procedencia de cada uno y algunas características sobre su forma de vida, lengua hablada y costumbres en general. La figura masculina se representa con un faldellín de plumaje y un pez en la mano, mientras que ella aparece desnuda con un mono en brazos. Realizado durante la expedición Malaspina, que tuvo lugar entre 1789 y 1794. El comandante Alejandro Malaspina dirigió la expedición organizada por la corona española para recorrer sus posesiones americanas, según un plan presentado por el propio marino. El material reunido se encuentra disperso en diferentes instituciones de España, Inglaterra, Argentina y Chile.",
+    "date": "1789",
+    "type": "IMAGE",
+    "language": "es",
+    "country": [
+      "Spain"
+    ],
+    "europeana": {
+      "provider": [
+        "Hispana"
+      ],
+      "dataProvider": [
+        "Ignacio Larramendi Foundation"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=http%3A%2F%2Fwww.larramendi.es%2Fi18n%2Fcatalogo_imagenes%2Fimagen_id.do%3FidImagen%3D10372489&type=IMAGE",
+      "shownAt": "http://www.larramendi.es/es/consulta/registro.do?id=15314",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/499/https___hispana_mcu_es_lod_oai_larramendi_es_15314_ent0",
+      "title": "Indio llagra e india omagua, [1789 y 1794]",
+      "url": "https://www.europeana.eu/item/499/https___hispana_mcu_es_lod_oai_larramendi_es_15314_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "https://hispana.mcu.es/lod/oai:larramendi.es:15314#ent5"
+      ],
+      "date": "1789"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1693887",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1693887",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1693887?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Mollugo verticillata L.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1693887%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1693887",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1390/BOTANYXLX1693887",
+      "title": "Mollugo verticillata L.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1693887?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXUX1058016",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXUX1058016",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXUX1058016?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Echinodorus paniculatus Micheli",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1058016%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1058016",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1390/BOTANYXUX1058016",
+      "title": "Echinodorus paniculatus Micheli",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXUX1058016?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXUX1088330",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXUX1088330",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXUX1088330?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Allamanda cathartica L.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1088330%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1088330",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1390/BOTANYXUX1088330",
+      "title": "Allamanda cathartica L.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXUX1088330?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXUX1368150",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXUX1368150",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXUX1368150?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Stigmaphyllon adenodon A.Juss. var. adenodon",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1368150%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1368150",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1390/BOTANYXUX1368150",
+      "title": "Stigmaphyllon adenodon A.Juss. var. adenodon",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXUX1368150?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1389/BOTANYXUX1306028",
+    "_source": "europeana",
+    "_sourceId": "/1389/BOTANYXUX1306028",
+    "_sourceUrl": "https://www.europeana.eu/item/1389/BOTANYXUX1306028?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Inga edulis Mart.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1306028%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1306028",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1389/BOTANYXUX1306028",
+      "title": "Inga edulis Mart.",
+      "url": "https://www.europeana.eu/item/1389/BOTANYXUX1306028?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1389/BOTANYXUX1319162",
+    "_source": "europeana",
+    "_sourceId": "/1389/BOTANYXUX1319162",
+    "_sourceUrl": "https://www.europeana.eu/item/1389/BOTANYXUX1319162?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Taralea oppositifolia Aubl.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1319162%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1319162",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1389/BOTANYXUX1319162",
+      "title": "Taralea oppositifolia Aubl.",
+      "url": "https://www.europeana.eu/item/1389/BOTANYXUX1319162?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXARAUSIACAXLUEX55X1X0",
+    "_source": "europeana",
+    "_sourceId": "/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXARAUSIACAXLUEX55X1X0",
+    "_sourceUrl": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXARAUSIACAXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Amazona arausiaca",
+    "description": "call",
+    "type": "SOUND",
+    "language": "mul",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Natural History Museum, Berlin"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fsuche.tierstimmenarchiv.de%2Fdownload.mp3%3Funique_identifier%3DTSA%3AAmazona_arausiaca_Lue_55_1_0&type=SOUND",
+      "shownAt": "http://www.tierstimmenarchiv.de/webinterface/contents/showdetails.php?edit=-1&unique_id=TSA:Amazona_arausiaca_Lue_55_1_0&autologin=true",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXARAUSIACAXLUEX55X1X0",
+      "title": "Amazona arausiaca",
+      "url": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXARAUSIACAXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXBARBADENSISXLUEX55X1X0",
+    "_source": "europeana",
+    "_sourceId": "/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXBARBADENSISXLUEX55X1X0",
+    "_sourceUrl": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXBARBADENSISXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Amazona barbadensis",
+    "description": "call",
+    "type": "SOUND",
+    "language": "mul",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Natural History Museum, Berlin"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fsuche.tierstimmenarchiv.de%2Fdownload.mp3%3Funique_identifier%3DTSA%3AAmazona_barbadensis_Lue_55_1_0&type=SOUND",
+      "shownAt": "http://www.tierstimmenarchiv.de/webinterface/contents/showdetails.php?edit=-1&unique_id=TSA:Amazona_barbadensis_Lue_55_1_0&autologin=true",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXBARBADENSISXLUEX55X1X0",
+      "title": "Amazona barbadensis",
+      "url": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXBARBADENSISXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXFESTIVAXLUEX55X1X0",
+    "_source": "europeana",
+    "_sourceId": "/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXFESTIVAXLUEX55X1X0",
+    "_sourceUrl": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXFESTIVAXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Amazona festiva (Linnaeus, 1758)",
+    "description": "call",
+    "type": "SOUND",
+    "language": "mul",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Natural History Museum, Berlin"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fsuche.tierstimmenarchiv.de%2Fdownload.mp3%3Funique_identifier%3DTSA%3AAmazona_festiva_Lue_55_1_0&type=SOUND",
+      "shownAt": "http://www.tierstimmenarchiv.de/webinterface/contents/showdetails.php?edit=-1&unique_id=TSA:Amazona_festiva_Lue_55_1_0&autologin=true",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXFESTIVAXLUEX55X1X0",
+      "title": "Amazona festiva (Linnaeus, 1758)",
+      "url": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXFESTIVAXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXGUILDINGIIXLUEX55X1X0",
+    "_source": "europeana",
+    "_sourceId": "/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXGUILDINGIIXLUEX55X1X0",
+    "_sourceUrl": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXGUILDINGIIXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Amazona guildingii",
+    "description": "call",
+    "type": "SOUND",
+    "language": "mul",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Natural History Museum, Berlin"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fsuche.tierstimmenarchiv.de%2Fdownload.mp3%3Funique_identifier%3DTSA%3AAmazona_guildingii_Lue_55_1_0&type=SOUND",
+      "shownAt": "http://www.tierstimmenarchiv.de/webinterface/contents/showdetails.php?edit=-1&unique_id=TSA:Amazona_guildingii_Lue_55_1_0&autologin=true",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXGUILDINGIIXLUEX55X1X0",
+      "title": "Amazona guildingii",
+      "url": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXGUILDINGIIXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXORATRIXXLUEX55X1X0",
+    "_source": "europeana",
+    "_sourceId": "/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXORATRIXXLUEX55X1X0",
+    "_sourceUrl": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXORATRIXXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Amazona oratrix",
+    "description": "call",
+    "type": "SOUND",
+    "language": "mul",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Natural History Museum, Berlin"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fsuche.tierstimmenarchiv.de%2Fdownload.mp3%3Funique_identifier%3DTSA%3AAmazona_oratrix_Lue_55_1_0&type=SOUND",
+      "shownAt": "http://www.tierstimmenarchiv.de/webinterface/contents/showdetails.php?edit=-1&unique_id=TSA:Amazona_oratrix_Lue_55_1_0&autologin=true",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXORATRIXXLUEX55X1X0",
+      "title": "Amazona oratrix",
+      "url": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXORATRIXXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXVINACEAXLUEX55X1X0",
+    "_source": "europeana",
+    "_sourceId": "/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXVINACEAXLUEX55X1X0",
+    "_sourceUrl": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXVINACEAXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Amazona vinacea (Kuhl, 1820)",
+    "description": "call",
+    "type": "SOUND",
+    "language": "mul",
+    "country": [
+      "Germany"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Natural History Museum, Berlin"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fsuche.tierstimmenarchiv.de%2Fdownload.mp3%3Funique_identifier%3DTSA%3AAmazona_vinacea_Lue_55_1_0&type=SOUND",
+      "shownAt": "http://www.tierstimmenarchiv.de/webinterface/contents/showdetails.php?edit=-1&unique_id=TSA:Amazona_vinacea_Lue_55_1_0&autologin=true",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXVINACEAXLUEX55X1X0",
+      "title": "Amazona vinacea (Kuhl, 1820)",
+      "url": "https://www.europeana.eu/item/11622/TIERSTIMMENARCHIVXMFNXGERMANYXTSAXAMAZONAXVINACEAXLUEX55X1X0?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/2021007/_SLSA_1024_SLSA_1024_3A9_foto_11",
+    "_source": "europeana",
+    "_sourceId": "/2021007/_SLSA_1024_SLSA_1024_3A9_foto_11",
+    "_sourceUrl": "https://www.europeana.eu/item/2021007/_SLSA_1024_SLSA_1024_3A9_foto_11?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Doris Alftan vid en Volvo Sport ...",
+    "creator": [
+      "Erik A. Alftan"
+    ],
+    "description": "Doris Alftan vid en Volvo Sport Amazon, döpt till Antiope, på hemväg från Iran till Finland, genom Irak, Jordanien, Syrien, Libanon och vidare till Venedig med båt. Makarna Erik och Doris Alftan turades om att köra bilen.",
+    "date": "1965",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Finland"
+    ],
+    "europeana": {
+      "provider": [
+        "National Library of Finland"
+      ],
+      "dataProvider": [
+        "Society of Swedish Literature in Finland"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fyksa.disec.fi%2FYksa4%2Fdownload%2F168146551065600%2Ffile%2Fb74c4b71-76f2-4e1f-85c6-fbcb59ee4374&type=IMAGE",
+      "shownAt": "https://sls.finna.fi/Record/sls.SLSA+1024_SLSA+1024%253A9+foto+11?lng=en-gb",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/2021007/_SLSA_1024_SLSA_1024_3A9_foto_11",
+      "title": "Doris Alftan vid en Volvo Sport ...",
+      "url": "https://www.europeana.eu/item/2021007/_SLSA_1024_SLSA_1024_3A9_foto_11?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Erik A. Alftan"
+      ],
+      "date": "1965"
+    }
+  },
+  {
+    "id": "europeana:/2021007/_SLSA_1270_SLSA_1270_34_foto_1070",
+    "_source": "europeana",
+    "_sourceId": "/2021007/_SLSA_1270_SLSA_1270_34_foto_1070",
+    "_sourceUrl": "https://www.europeana.eu/item/2021007/_SLSA_1270_SLSA_1270_34_foto_1070?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ronny Johansson (1891-1979), svensk dansare och ...",
+    "creator": [
+      "Svenska Teaterns arkiv"
+    ],
+    "description": "Ronny Johansson (1891-1979), svensk dansare och fridanspedagog, i \"Amazon\".\nFoto: Benkow",
+    "date": "1930",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Finland"
+    ],
+    "europeana": {
+      "provider": [
+        "National Library of Finland"
+      ],
+      "dataProvider": [
+        "Society of Swedish Literature in Finland"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fyksa.disec.fi%2FYksa4%2Fdownload%2F168146696186200%2Ffile%2F88ae1349-0189-4f95-a637-9fc1e638b330&type=IMAGE",
+      "shownAt": "https://sls.finna.fi/Record/sls.SLSA+1270_SLSA+1270_34_foto_1070?lng=en-gb",
+      "completeness": 8
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/2021007/_SLSA_1270_SLSA_1270_34_foto_1070",
+      "title": "Ronny Johansson (1891-1979), svensk dansare och ...",
+      "url": "https://www.europeana.eu/item/2021007/_SLSA_1270_SLSA_1270_34_foto_1070?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Svenska Teaterns arkiv"
+      ],
+      "date": "1930"
+    }
+  },
+  {
+    "id": "europeana:/1381/BOTANYXLX2551369",
+    "_source": "europeana",
+    "_sourceId": "/1381/BOTANYXLX2551369",
+    "_sourceUrl": "https://www.europeana.eu/item/1381/BOTANYXLX2551369?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Miconia",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.2551369%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.2551369",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1381/BOTANYXLX2551369",
+      "title": "Miconia",
+      "url": "https://www.europeana.eu/item/1381/BOTANYXLX2551369?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1381/BOTANYXLX2864677",
+    "_source": "europeana",
+    "_sourceId": "/1381/BOTANYXLX2864677",
+    "_sourceUrl": "https://www.europeana.eu/item/1381/BOTANYXLX2864677?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Cestrum latifolium Lam. var. tenuiflorum",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.2864677%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.2864677",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1381/BOTANYXLX2864677",
+      "title": "Cestrum latifolium Lam. var. tenuiflorum",
+      "url": "https://www.europeana.eu/item/1381/BOTANYXLX2864677?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1381/BOTANYXUX1058076",
+    "_source": "europeana",
+    "_sourceId": "/1381/BOTANYXUX1058076",
+    "_sourceUrl": "https://www.europeana.eu/item/1381/BOTANYXUX1058076?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Echinodorus paniculatus Micheli",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1058076%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1058076",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1381/BOTANYXUX1058076",
+      "title": "Echinodorus paniculatus Micheli",
+      "url": "https://www.europeana.eu/item/1381/BOTANYXUX1058076?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1380/BOTANYXLX1201285",
+    "_source": "europeana",
+    "_sourceId": "/1380/BOTANYXLX1201285",
+    "_sourceUrl": "https://www.europeana.eu/item/1380/BOTANYXLX1201285?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Echinodorus paniculatus Micheli",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1201285%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1201285",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1380/BOTANYXLX1201285",
+      "title": "Echinodorus paniculatus Micheli",
+      "url": "https://www.europeana.eu/item/1380/BOTANYXLX1201285?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1380/BOTANYXLX2565167",
+    "_source": "europeana",
+    "_sourceId": "/1380/BOTANYXLX2565167",
+    "_sourceUrl": "https://www.europeana.eu/item/1380/BOTANYXLX2565167?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ludwigia hyssopifolia (G.Don) Exell",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.2565167%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.2565167",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1380/BOTANYXLX2565167",
+      "title": "Ludwigia hyssopifolia (G.Don) Exell",
+      "url": "https://www.europeana.eu/item/1380/BOTANYXLX2565167?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1380/BOTANYXUX1065434",
+    "_source": "europeana",
+    "_sourceId": "/1380/BOTANYXUX1065434",
+    "_sourceUrl": "https://www.europeana.eu/item/1380/BOTANYXUX1065434?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Eucharis",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1065434%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1065434",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1380/BOTANYXUX1065434",
+      "title": "Eucharis",
+      "url": "https://www.europeana.eu/item/1380/BOTANYXUX1065434?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1362/BOTANYXLX1376717",
+    "_source": "europeana",
+    "_sourceId": "/1362/BOTANYXLX1376717",
+    "_sourceUrl": "https://www.europeana.eu/item/1362/BOTANYXLX1376717?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Cyperus ferax Rich.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1376717%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1376717",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1362/BOTANYXLX1376717",
+      "title": "Cyperus ferax Rich.",
+      "url": "https://www.europeana.eu/item/1362/BOTANYXLX1376717?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1362/BOTANYXLX3583621",
+    "_source": "europeana",
+    "_sourceId": "/1362/BOTANYXLX3583621",
+    "_sourceUrl": "https://www.europeana.eu/item/1362/BOTANYXLX3583621?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Nephrolepis hirsutula (G.Forst.) C.Presl",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.3583621%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.3583621",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1362/BOTANYXLX3583621",
+      "title": "Nephrolepis hirsutula (G.Forst.) C.Presl",
+      "url": "https://www.europeana.eu/item/1362/BOTANYXLX3583621?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1362/BOTANYXWAGX1749713",
+    "_source": "europeana",
+    "_sourceId": "/1362/BOTANYXWAGX1749713",
+    "_sourceUrl": "https://www.europeana.eu/item/1362/BOTANYXWAGX1749713?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Cyperus imbricatus Retz.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FWAG.1749713%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/WAG.1749713",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1362/BOTANYXWAGX1749713",
+      "title": "Cyperus imbricatus Retz.",
+      "url": "https://www.europeana.eu/item/1362/BOTANYXWAGX1749713?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1361/BOTANYXLX2318472",
+    "_source": "europeana",
+    "_sourceId": "/1361/BOTANYXLX2318472",
+    "_sourceUrl": "https://www.europeana.eu/item/1361/BOTANYXLX2318472?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Indet.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.2318472%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.2318472",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1361/BOTANYXLX2318472",
+      "title": "Indet.",
+      "url": "https://www.europeana.eu/item/1361/BOTANYXLX2318472?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1361/BOTANYXUX1037819",
+    "_source": "europeana",
+    "_sourceId": "/1361/BOTANYXUX1037819",
+    "_sourceUrl": "https://www.europeana.eu/item/1361/BOTANYXUX1037819?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Salvinia rotundifolia Willd.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1037819%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1037819",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1361/BOTANYXUX1037819",
+      "title": "Salvinia rotundifolia Willd.",
+      "url": "https://www.europeana.eu/item/1361/BOTANYXUX1037819?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1361/BOTANYXUX1058077",
+    "_source": "europeana",
+    "_sourceId": "/1361/BOTANYXUX1058077",
+    "_sourceUrl": "https://www.europeana.eu/item/1361/BOTANYXUX1058077?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Echinodorus paniculatus Micheli",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1058077%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1058077",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1361/BOTANYXUX1058077",
+      "title": "Echinodorus paniculatus Micheli",
+      "url": "https://www.europeana.eu/item/1361/BOTANYXUX1058077?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1361/BOTANYXUX1228314",
+    "_source": "europeana",
+    "_sourceId": "/1361/BOTANYXUX1228314",
+    "_sourceUrl": "https://www.europeana.eu/item/1361/BOTANYXUX1228314?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ipomoea aquatica Forssk.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1228314%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1228314",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1361/BOTANYXUX1228314",
+      "title": "Ipomoea aquatica Forssk.",
+      "url": "https://www.europeana.eu/item/1361/BOTANYXUX1228314?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1357/BOTANYXLX1201286",
+    "_source": "europeana",
+    "_sourceId": "/1357/BOTANYXLX1201286",
+    "_sourceUrl": "https://www.europeana.eu/item/1357/BOTANYXLX1201286?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Echinodorus paniculatus Micheli",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1201286%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1201286",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1357/BOTANYXLX1201286",
+      "title": "Echinodorus paniculatus Micheli",
+      "url": "https://www.europeana.eu/item/1357/BOTANYXLX1201286?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1357/BOTANYXLX2741484",
+    "_source": "europeana",
+    "_sourceId": "/1357/BOTANYXLX2741484",
+    "_sourceUrl": "https://www.europeana.eu/item/1357/BOTANYXLX2741484?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Ipomoea aquatica Forssk.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.2741484%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.2741484",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1357/BOTANYXLX2741484",
+      "title": "Ipomoea aquatica Forssk.",
+      "url": "https://www.europeana.eu/item/1357/BOTANYXLX2741484?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1357/BOTANYXUX1065438",
+    "_source": "europeana",
+    "_sourceId": "/1357/BOTANYXUX1065438",
+    "_sourceUrl": "https://www.europeana.eu/item/1357/BOTANYXUX1065438?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Eucharis",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1065438%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1065438",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1357/BOTANYXUX1065438",
+      "title": "Eucharis",
+      "url": "https://www.europeana.eu/item/1357/BOTANYXUX1065438?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1357/BOTANYXUX1299506",
+    "_source": "europeana",
+    "_sourceId": "/1357/BOTANYXUX1299506",
+    "_sourceUrl": "https://www.europeana.eu/item/1357/BOTANYXUX1299506?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Cyperus imbricatus Retz.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1299506%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1299506",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1357/BOTANYXUX1299506",
+      "title": "Cyperus imbricatus Retz.",
+      "url": "https://www.europeana.eu/item/1357/BOTANYXUX1299506?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1357/BOTANYXUX1300411",
+    "_source": "europeana",
+    "_sourceId": "/1357/BOTANYXUX1300411",
+    "_sourceUrl": "https://www.europeana.eu/item/1357/BOTANYXUX1300411?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Clitoria fairchildiana R.A.Howard",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1300411%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1300411",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1357/BOTANYXUX1300411",
+      "title": "Clitoria fairchildiana R.A.Howard",
+      "url": "https://www.europeana.eu/item/1357/BOTANYXUX1300411?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1357/BOTANYXUX1524008",
+    "_source": "europeana",
+    "_sourceId": "/1357/BOTANYXUX1524008",
+    "_sourceUrl": "https://www.europeana.eu/item/1357/BOTANYXUX1524008?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Pontederia rotundifolia L.f.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1524008%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1524008",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1357/BOTANYXUX1524008",
+      "title": "Pontederia rotundifolia L.f.",
+      "url": "https://www.europeana.eu/item/1357/BOTANYXUX1524008?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1356/BOTANYXUX1320751",
+    "_source": "europeana",
+    "_sourceId": "/1356/BOTANYXUX1320751",
+    "_sourceUrl": "https://www.europeana.eu/item/1356/BOTANYXUX1320751?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Swartzia brachyrachis Harms var. brachyrachis",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1320751%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1320751",
+      "completeness": 6
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1356/BOTANYXUX1320751",
+      "title": "Swartzia brachyrachis Harms var. brachyrachis",
+      "url": "https://www.europeana.eu/item/1356/BOTANYXUX1320751?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1356/BOTANYXUX1481550",
+    "_source": "europeana",
+    "_sourceId": "/1356/BOTANYXUX1481550",
+    "_sourceUrl": "https://www.europeana.eu/item/1356/BOTANYXUX1481550?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Peperomia pellucida (L.) Kunth",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FU.1481550%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/U.1481550",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/1356/BOTANYXUX1481550",
+      "title": "Peperomia pellucida (L.) Kunth",
+      "url": "https://www.europeana.eu/item/1356/BOTANYXUX1481550?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/117/_01714177_C05B_4F61_A709_7B10B508F72C",
+    "_source": "europeana",
+    "_sourceId": "/117/_01714177_C05B_4F61_A709_7B10B508F72C",
+    "_sourceUrl": "https://www.europeana.eu/item/117/_01714177_C05B_4F61_A709_7B10B508F72C?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Näkymä Kivenhakkaajankadulta Punavuorenkadun kulmasta luoteeseen, Iso Roobertinkadun Sinebrychoffin puiston puoleiseen päähän",
+    "creator": [
+      "Rista, Simo"
+    ],
+    "description": "sisällön kuvaus: Näkymä Kivenhakkaajankadulta Punavuorenkadun kulmasta luoteeseen, Iso Roobertinkadun Sinebrychoffin puiston puoleiseen päähän. Kadulla pysäköityjä autoja, mm. Mini, Volvo Amazon, Honda N360/600 ja Fiat 850.",
+    "type": "IMAGE",
+    "language": "fi",
+    "country": [
+      "Finland"
+    ],
+    "europeana": {
+      "provider": [
+        "National Library of Finland"
+      ],
+      "dataProvider": [
+        "Helsinki City Museum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmpfinlandrepox.zetcom.app%2Fimagehelper%2Fdownload%3Fid%3D2318382%26size%3Dextra_extra_large%26org%3D92115&type=IMAGE",
+      "shownAt": "http://hkm.finna.fi/Record/hkm.01714177-C05B-4F61-A709-7B10B508F72C?lng=en-gb",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/117/_01714177_C05B_4F61_A709_7B10B508F72C",
+      "title": "Näkymä Kivenhakkaajankadulta Punavuorenkadun kulmasta luoteeseen, Iso Roobertinkadun Sinebrychoffin puiston puoleiseen päähän",
+      "url": "https://www.europeana.eu/item/117/_01714177_C05B_4F61_A709_7B10B508F72C?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Rista, Simo"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/117/_11746b1c_0a99_4db3_8566_0911c6824811",
+    "_source": "europeana",
+    "_sourceId": "/117/_11746b1c_0a99_4db3_8566_0911c6824811",
+    "_sourceUrl": "https://www.europeana.eu/item/117/_11746b1c_0a99_4db3_8566_0911c6824811?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Pysäköintialue Helsingissä.",
+    "creator": [
+      "Rista, Simo"
+    ],
+    "description": "sisällön kuvaus: Autojen täyttämä pysäköintialue Helsingissä. Jalankulkijat kulkevat vasemmalla. Etualalla Volvo Amazon.",
+    "type": "IMAGE",
+    "language": "fi",
+    "country": [
+      "Finland"
+    ],
+    "europeana": {
+      "provider": [
+        "National Library of Finland"
+      ],
+      "dataProvider": [
+        "Helsinki City Museum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmpfinlandrepox.zetcom.app%2Fimagehelper%2Fdownload%3Fid%3D3367519%26size%3Dextra_extra_large%26org%3D92115&type=IMAGE",
+      "shownAt": "http://hkm.finna.fi/Record/hkm.11746b1c-0a99-4db3-8566-0911c6824811?lng=en-gb",
+      "completeness": 8
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/117/_11746b1c_0a99_4db3_8566_0911c6824811",
+      "title": "Pysäköintialue Helsingissä.",
+      "url": "https://www.europeana.eu/item/117/_11746b1c_0a99_4db3_8566_0911c6824811?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Rista, Simo"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/117/_2141C451_EA77_4F5A_A515_6A03A4B4C17A",
+    "_source": "europeana",
+    "_sourceId": "/117/_2141C451_EA77_4F5A_A515_6A03A4B4C17A",
+    "_sourceUrl": "https://www.europeana.eu/item/117/_2141C451_EA77_4F5A_A515_6A03A4B4C17A?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Liikennettä Lauttasaaren sillalla",
+    "creator": [
+      "von Bonin, Volker"
+    ],
+    "description": "sisällön kuvaus: Liikennettä Lauttasaaren sillalla.  Taustalla oikealla Suomen Kaapelitehdas. Myös Julius Tallberg Oy:n varasto näkyy. Ajoneuvot kuvan etualalta taaksepäin lukien: Volvo Amazon, Skoda 440, Chevrolet vm. 1956.",
+    "type": "IMAGE",
+    "language": "fi",
+    "country": [
+      "Finland"
+    ],
+    "europeana": {
+      "provider": [
+        "National Library of Finland"
+      ],
+      "dataProvider": [
+        "Helsinki City Museum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmpfinlandrepox.zetcom.app%2Fimagehelper%2Fdownload%3Fid%3D2313987%26size%3Dextra_extra_large%26org%3D92115&type=IMAGE",
+      "shownAt": "http://hkm.finna.fi/Record/hkm.2141C451-EA77-4F5A-A515-6A03A4B4C17A?lng=en-gb",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/117/_2141C451_EA77_4F5A_A515_6A03A4B4C17A",
+      "title": "Liikennettä Lauttasaaren sillalla",
+      "url": "https://www.europeana.eu/item/117/_2141C451_EA77_4F5A_A515_6A03A4B4C17A?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "von Bonin, Volker"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/117/_32DC3082_A32A_4EF1_A6C6_CB81B7E80007",
+    "_source": "europeana",
+    "_sourceId": "/117/_32DC3082_A32A_4EF1_A6C6_CB81B7E80007",
+    "_sourceUrl": "https://www.europeana.eu/item/117/_32DC3082_A32A_4EF1_A6C6_CB81B7E80007?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Liisankatu",
+    "creator": [
+      "Rista, Simo"
+    ],
+    "description": "sisällön kuvaus: Liisankatu. Traktori lastaamassa lunta kuorma-auton lavalle Liisankadulla. Vasemmalla bussi 16 A Mariankadun kulmassa. Pysäköidyt ajoneuvot tunnistettu seuraavasti (vasemmalta oikealle): Renault 4, Volvo Amazon, Ford 17M Turnier, Austin/Morris Mini\n  \n-pakettiauto, Austin/Morris Mini.",
+    "type": "IMAGE",
+    "language": "fi",
+    "country": [
+      "Finland"
+    ],
+    "europeana": {
+      "provider": [
+        "National Library of Finland"
+      ],
+      "dataProvider": [
+        "Helsinki City Museum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmpfinlandrepox.zetcom.app%2Fimagehelper%2Fdownload%3Fid%3D2349352%26size%3Dextra_extra_large%26org%3D92115&type=IMAGE",
+      "shownAt": "http://hkm.finna.fi/Record/hkm.32DC3082-A32A-4EF1-A6C6-CB81B7E80007?lng=en-gb",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/117/_32DC3082_A32A_4EF1_A6C6_CB81B7E80007",
+      "title": "Liisankatu",
+      "url": "https://www.europeana.eu/item/117/_32DC3082_A32A_4EF1_A6C6_CB81B7E80007?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Rista, Simo"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/117/_422AD087_4325_4693_AB41_DC98CDF9C86B",
+    "_source": "europeana",
+    "_sourceId": "/117/_422AD087_4325_4693_AB41_DC98CDF9C86B",
+    "_sourceUrl": "https://www.europeana.eu/item/117/_422AD087_4325_4693_AB41_DC98CDF9C86B?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Lönnrotinkatu",
+    "creator": [
+      "Rista, Eeva"
+    ],
+    "description": "sisällön kuvaus: Lönnrotinkatu. Liikennettä Lönnrotinkadulla. Näkymä Lönnrotinkatu 41:n kohdalta koilliseen, Mannerheimintien suuntaan. Etualalla Volkswagen Kupla ja Volvo Amazon.",
+    "type": "IMAGE",
+    "language": "fi",
+    "country": [
+      "Finland"
+    ],
+    "europeana": {
+      "provider": [
+        "National Library of Finland"
+      ],
+      "dataProvider": [
+        "Helsinki City Museum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmpfinlandrepox.zetcom.app%2Fimagehelper%2Fdownload%3Fid%3D2354628%26size%3Dextra_extra_large%26org%3D92115&type=IMAGE",
+      "shownAt": "http://hkm.finna.fi/Record/hkm.422AD087-4325-4693-AB41-DC98CDF9C86B?lng=en-gb",
+      "completeness": 8
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/117/_422AD087_4325_4693_AB41_DC98CDF9C86B",
+      "title": "Lönnrotinkatu",
+      "url": "https://www.europeana.eu/item/117/_422AD087_4325_4693_AB41_DC98CDF9C86B?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Rista, Eeva"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/117/_58205B39_C5DE_41EE_88C2_FFD9D761D193",
+    "_source": "europeana",
+    "_sourceId": "/117/_58205B39_C5DE_41EE_88C2_FFD9D761D193",
+    "_sourceUrl": "https://www.europeana.eu/item/117/_58205B39_C5DE_41EE_88C2_FFD9D761D193?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Kluuvi",
+    "creator": [
+      "Rista, Eeva"
+    ],
+    "description": "sisällön kuvaus: Kluuvi. Aleksanterinkadulla jalankulkijoita ja muutama pysäköity auto (Ford Transit, Fiat 850, Volvo Amazon). Näkymä Kuusisen talon (Aleksanterinkatu 48) parvekkeelta Mikonkadun risteyksen suuntaan. Aleksanterinkatu 15:n rakennuksessa Hakaniemen\n  \nKenkäaitan myymälä.",
+    "type": "IMAGE",
+    "language": "fi",
+    "country": [
+      "Finland"
+    ],
+    "europeana": {
+      "provider": [
+        "National Library of Finland"
+      ],
+      "dataProvider": [
+        "Helsinki City Museum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmpfinlandrepox.zetcom.app%2Fimagehelper%2Fdownload%3Fid%3D2368931%26size%3Dextra_extra_large%26org%3D92115&type=IMAGE",
+      "shownAt": "http://hkm.finna.fi/Record/hkm.58205B39-C5DE-41EE-88C2-FFD9D761D193?lng=en-gb",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/117/_58205B39_C5DE_41EE_88C2_FFD9D761D193",
+      "title": "Kluuvi",
+      "url": "https://www.europeana.eu/item/117/_58205B39_C5DE_41EE_88C2_FFD9D761D193?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Rista, Eeva"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/117/_5DB2C150_0DC5_46FD_80A9_F1DEEED7C323",
+    "_source": "europeana",
+    "_sourceId": "/117/_5DB2C150_0DC5_46FD_80A9_F1DEEED7C323",
+    "_sourceUrl": "https://www.europeana.eu/item/117/_5DB2C150_0DC5_46FD_80A9_F1DEEED7C323?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Hietaniemenkatu 2, 4, 6, 8, 10",
+    "creator": [
+      "Rista, Simo"
+    ],
+    "description": "sisällön kuvaus: Hietaniemenkatu 2, 4, 6, 8, 10. Taustalla Runeberginkatu 13 / Pohjoinen Rautatiekatu 23 ja Eteläinen Rautatiekatu 10. Etualalla linja-auto numero 18. Hietaniemenkatu 8 on huomattavan ränsistynyt.\n  \nTien vasemmalla reunalla liikennemerkin takana pysäköityinä Ford Cortina sekä Volvo 144. Tien oikealla reunalla vaalea Volvo Amazon. Bussin takana pysäköityinä Austin A40 sekä kolme Renaultin henkilöautoa.",
+    "type": "IMAGE",
+    "language": "fi",
+    "country": [
+      "Finland"
+    ],
+    "europeana": {
+      "provider": [
+        "National Library of Finland"
+      ],
+      "dataProvider": [
+        "Helsinki City Museum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmpfinlandrepox.zetcom.app%2Fimagehelper%2Fdownload%3Fid%3D2365165%26size%3Dextra_extra_large%26org%3D92115&type=IMAGE",
+      "shownAt": "http://hkm.finna.fi/Record/hkm.5DB2C150-0DC5-46FD-80A9-F1DEEED7C323?lng=en-gb",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/117/_5DB2C150_0DC5_46FD_80A9_F1DEEED7C323",
+      "title": "Hietaniemenkatu 2, 4, 6, 8, 10",
+      "url": "https://www.europeana.eu/item/117/_5DB2C150_0DC5_46FD_80A9_F1DEEED7C323?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Rista, Simo"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/117/_5EBD97E8_2CA9_4075_8349_C41C6CC869D3",
+    "_source": "europeana",
+    "_sourceId": "/117/_5EBD97E8_2CA9_4075_8349_C41C6CC869D3",
+    "_sourceUrl": "https://www.europeana.eu/item/117/_5EBD97E8_2CA9_4075_8349_C41C6CC869D3?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Kluuvi, Aleksanterinkatu",
+    "creator": [
+      "Rista, Eeva"
+    ],
+    "description": "sisällön kuvaus: Kluuvi, Aleksanterinkatu. Aleksanterinkadun kävelykatukokeilu (12.6.1970-8.1.1971) on päättynyt. Nainen ylittämässä märkänä kiiltävää nupukivikatua keskeltä katua. Kadunreunaan pysäköitynä Volvo Amazon. Näkymä Kuusisen talon parvekkeelta,\n  \ntaustalla\n  \nMikonkadun kulma.",
+    "type": "IMAGE",
+    "language": "fi",
+    "country": [
+      "Finland"
+    ],
+    "europeana": {
+      "provider": [
+        "National Library of Finland"
+      ],
+      "dataProvider": [
+        "Helsinki City Museum"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmpfinlandrepox.zetcom.app%2Fimagehelper%2Fdownload%3Fid%3D2345206%26size%3Dextra_extra_large%26org%3D92115&type=IMAGE",
+      "shownAt": "http://hkm.finna.fi/Record/hkm.5EBD97E8-2CA9-4075-8349-C41C6CC869D3?lng=en-gb",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "amazon",
+      "accessDate": "2026-05-29T14:00:45.883Z",
+      "recordId": "europeana:/117/_5EBD97E8_2CA9_4075_8349_C41C6CC869D3",
+      "title": "Kluuvi, Aleksanterinkatu",
+      "url": "https://www.europeana.eu/item/117/_5EBD97E8_2CA9_4075_8349_C41C6CC869D3?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Rista, Eeva"
+      ]
+    }
+  }
+]

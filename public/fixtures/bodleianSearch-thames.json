@@ -1,0 +1,722 @@
+[
+  {
+    "_id": "da979405-9189-4cc1-966a-080861600b32",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/da979405-9189-4cc1-966a-080861600b32/",
+    "_service": "bodleian",
+    "title": "Thames Tunnel",
+    "date": "1843",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/6b3198f1-cc63-449a-b162-5c891050c192/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "da979405-9189-4cc1-966a-080861600b32",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/da979405-9189-4cc1-966a-080861600b32.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/6b3198f1-cc63-449a-b162-5c891050c192/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Games 7 (2)",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 2
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Thames Tunnel",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/da979405-9189-4cc1-966a-080861600b32/",
+      "date": "1843"
+    }
+  },
+  {
+    "_id": "ff74eca3-8250-4716-ba6b-69da44a63ce1",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ff74eca3-8250-4716-ba6b-69da44a63ce1/",
+    "_service": "bodleian",
+    "title": "View of Somerset Place from the River Thames",
+    "date": "1821-01-25",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ff74eca3-8250-4716-ba6b-69da44a63ce1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "ff74eca3-8250-4716-ba6b-69da44a63ce1",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ff74eca3-8250-4716-ba6b-69da44a63ce1.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ff74eca3-8250-4716-ba6b-69da44a63ce1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Educational folder 5 (32)",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "View of Somerset Place from the River Thames",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/ff74eca3-8250-4716-ba6b-69da44a63ce1/",
+      "date": "1821-01-25"
+    }
+  },
+  {
+    "_id": "814aa379-d616-4480-80b6-d547b886cea5",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/814aa379-d616-4480-80b6-d547b886cea5/",
+    "_service": "bodleian",
+    "title": "[East Anglia]",
+    "date": "1693",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/814aa379-d616-4480-80b6-d547b886cea5/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "814aa379-d616-4480-80b6-d547b886cea5",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/814aa379-d616-4480-80b6-d547b886cea5.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/814aa379-d616-4480-80b6-d547b886cea5/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library BOD: Gough Maps 86",
+      "origins": "",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "[East Anglia]",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/814aa379-d616-4480-80b6-d547b886cea5/",
+      "date": "1693"
+    }
+  },
+  {
+    "_id": "25d07de9-4d07-4110-bb6b-f3851c6171b9",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/25d07de9-4d07-4110-bb6b-f3851c6171b9/",
+    "_service": "bodleian",
+    "title": "Ordnance Survey of England and Wales",
+    "date": "1906",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/25d07de9-4d07-4110-bb6b-f3851c6171b9/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "25d07de9-4d07-4110-bb6b-f3851c6171b9",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/25d07de9-4d07-4110-bb6b-f3851c6171b9.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/25d07de9-4d07-4110-bb6b-f3851c6171b9/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Filmstrip Roll 199D, frame 14",
+      "origins": "",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Ordnance Survey of England and Wales",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/25d07de9-4d07-4110-bb6b-f3851c6171b9/",
+      "date": "1906"
+    }
+  },
+  {
+    "_id": "13954ab5-3774-45fe-96a9-50bdb8e2fa14",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/13954ab5-3774-45fe-96a9-50bdb8e2fa14/",
+    "_service": "bodleian",
+    "title": "Ordnance Survey of England and Wales large sheet series",
+    "date": "1906",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/13954ab5-3774-45fe-96a9-50bdb8e2fa14/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "13954ab5-3774-45fe-96a9-50bdb8e2fa14",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/13954ab5-3774-45fe-96a9-50bdb8e2fa14.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/13954ab5-3774-45fe-96a9-50bdb8e2fa14/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Filmstrip Roll 199D, frame 15",
+      "origins": "",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Ordnance Survey of England and Wales large sheet series",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/13954ab5-3774-45fe-96a9-50bdb8e2fa14/",
+      "date": "1906"
+    }
+  },
+  {
+    "_id": "4afc4f95-c741-4888-9b99-f88febc1e37e",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/4afc4f95-c741-4888-9b99-f88febc1e37e/",
+    "_service": "bodleian",
+    "title": "Thames Tunnel",
+    "date": "1843",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4afc4f95-c741-4888-9b99-f88febc1e37e/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "4afc4f95-c741-4888-9b99-f88febc1e37e",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/4afc4f95-c741-4888-9b99-f88febc1e37e.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4afc4f95-c741-4888-9b99-f88febc1e37e/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Games 7 (1)",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Thames Tunnel",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/4afc4f95-c741-4888-9b99-f88febc1e37e/",
+      "date": "1843"
+    }
+  },
+  {
+    "_id": "d58db688-8b4d-46a8-b49b-18ce6549a6f6",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d58db688-8b4d-46a8-b49b-18ce6549a6f6/",
+    "_service": "bodleian",
+    "title": "A map of the County of Oxford",
+    "date": "1797",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d58db688-8b4d-46a8-b49b-18ce6549a6f6/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "d58db688-8b4d-46a8-b49b-18ce6549a6f6",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d58db688-8b4d-46a8-b49b-18ce6549a6f6.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d58db688-8b4d-46a8-b49b-18ce6549a6f6/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Filmstrip Roll 271.1, frame 19",
+      "origins": "",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "A map of the County of Oxford",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/d58db688-8b4d-46a8-b49b-18ce6549a6f6/",
+      "date": "1797"
+    }
+  },
+  {
+    "_id": "fff6e93c-f666-4b30-afd3-ea704d7b00c0",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/fff6e93c-f666-4b30-afd3-ea704d7b00c0/",
+    "_service": "bodleian",
+    "title": "Photograph Album of Arthur Glyndwr Foulkes",
+    "date": "1885-1886",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/fb1a781c-9883-4b33-a71e-d47bd481fbf7/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "fff6e93c-f666-4b30-afd3-ea704d7b00c0",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/fff6e93c-f666-4b30-afd3-ea704d7b00c0.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/fb1a781c-9883-4b33-a71e-d47bd481fbf7/full/255,/0/default.jpg",
+      "shelfmark": "Pembroke College PMB/N/18/12",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 109
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Photograph Album of Arthur Glyndwr Foulkes",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/fff6e93c-f666-4b30-afd3-ea704d7b00c0/",
+      "date": "1885-1886"
+    }
+  },
+  {
+    "_id": "ef3e1af5-1525-4e30-9a97-e1344c7eb730",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ef3e1af5-1525-4e30-9a97-e1344c7eb730/",
+    "_service": "bodleian",
+    "title": "Geology of Oxford and the Valley of the Thames.",
+    "date": "1871",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4ed8a669-8ef6-414c-aa9f-e4392d8e0ad6/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "ef3e1af5-1525-4e30-9a97-e1344c7eb730",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ef3e1af5-1525-4e30-9a97-e1344c7eb730.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4ed8a669-8ef6-414c-aa9f-e4392d8e0ad6/full/255,/0/default.jpg",
+      "shelfmark": "Museum of Natural History OUM: AL4 OX./1",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 586
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Geology of Oxford and the Valley of the Thames.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/ef3e1af5-1525-4e30-9a97-e1344c7eb730/",
+      "date": "1871"
+    }
+  },
+  {
+    "_id": "714003cf-f976-4b15-9aac-2234dea1cb83",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/714003cf-f976-4b15-9aac-2234dea1cb83/",
+    "_service": "bodleian",
+    "title": "Album Amicorum of Friedrich Rechlinger.",
+    "date": "c. 1598-1610",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/7b2dbdb5-e205-4729-8fd5-ccf3b8667ff6/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "714003cf-f976-4b15-9aac-2234dea1cb83",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/714003cf-f976-4b15-9aac-2234dea1cb83.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/7b2dbdb5-e205-4729-8fd5-ccf3b8667ff6/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Douce 244",
+      "origins": "Germany, South, Ingolstadt",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 15
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Album Amicorum of Friedrich Rechlinger.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/714003cf-f976-4b15-9aac-2234dea1cb83/",
+      "date": "c. 1598-1610"
+    }
+  },
+  {
+    "_id": "6310dfa4-c4a0-4a6f-9d19-57c1a6a507c2",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/6310dfa4-c4a0-4a6f-9d19-57c1a6a507c2/",
+    "_service": "bodleian",
+    "title": "Album amicorum of Emanuel van Meteren of Antwerp.",
+    "date": "1575-1609",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/c95b1e1f-8731-4696-80a8-f3ff3ac3a944/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "6310dfa4-c4a0-4a6f-9d19-57c1a6a507c2",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/6310dfa4-c4a0-4a6f-9d19-57c1a6a507c2.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/c95b1e1f-8731-4696-80a8-f3ff3ac3a944/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Douce 68",
+      "origins": "Netherlands",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 2
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Album amicorum of Emanuel van Meteren of Antwerp.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/6310dfa4-c4a0-4a6f-9d19-57c1a6a507c2/",
+      "date": "1575-1609"
+    }
+  },
+  {
+    "_id": "0eaebfd7-97d4-4451-8021-2e50e95f9a3e",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/0eaebfd7-97d4-4451-8021-2e50e95f9a3e/",
+    "_service": "bodleian",
+    "title": "Zeespiegel.",
+    "date": "[1623] 1639",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/c30b9071-6eed-4fd5-9df4-df88539c09e8/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "0eaebfd7-97d4-4451-8021-2e50e95f9a3e",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/0eaebfd7-97d4-4451-8021-2e50e95f9a3e.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/c30b9071-6eed-4fd5-9df4-df88539c09e8/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Mason S 160",
+      "origins": "Netherlands, Amsterdam",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Zeespiegel.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/0eaebfd7-97d4-4451-8021-2e50e95f9a3e/",
+      "date": "[1623] 1639"
+    }
+  },
+  {
+    "_id": "684a8281-16e8-4191-b4db-8d81af6edc6f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/684a8281-16e8-4191-b4db-8d81af6edc6f/",
+    "_service": "bodleian",
+    "title": "The French fleet sailing into the mouth of the Thames!!!",
+    "date": "1803-09",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/684a8281-16e8-4191-b4db-8d81af6edc6f/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "684a8281-16e8-4191-b4db-8d81af6edc6f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/684a8281-16e8-4191-b4db-8d81af6edc6f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/684a8281-16e8-4191-b4db-8d81af6edc6f/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon b.12(10)",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "The French fleet sailing into the mouth of the Thames!!!",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/684a8281-16e8-4191-b4db-8d81af6edc6f/",
+      "date": "1803-09"
+    }
+  },
+  {
+    "_id": "51a735dd-0a85-4ead-8bd4-4724b551ab3b",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/51a735dd-0a85-4ead-8bd4-4724b551ab3b/",
+    "_service": "bodleian",
+    "title": "[South east Oxford, with River Thames and Eastgate]",
+    "date": "1644",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/51a735dd-0a85-4ead-8bd4-4724b551ab3b/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "51a735dd-0a85-4ead-8bd4-4724b551ab3b",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/51a735dd-0a85-4ead-8bd4-4724b551ab3b.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/51a735dd-0a85-4ead-8bd4-4724b551ab3b/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Top. Oxon b. 167",
+      "origins": "",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "[South east Oxford, with River Thames and Eastgate]",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/51a735dd-0a85-4ead-8bd4-4724b551ab3b/",
+      "date": "1644"
+    }
+  },
+  {
+    "_id": "885c3675-b066-415f-a264-c43c315fe2d8",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/885c3675-b066-415f-a264-c43c315fe2d8/",
+    "_service": "bodleian",
+    "title": "[South west Oxford, with River Thames and Christ Church]",
+    "date": "1644",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/885c3675-b066-415f-a264-c43c315fe2d8/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "885c3675-b066-415f-a264-c43c315fe2d8",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/885c3675-b066-415f-a264-c43c315fe2d8.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/885c3675-b066-415f-a264-c43c315fe2d8/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Top. Oxon b. 167",
+      "origins": "",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "[South west Oxford, with River Thames and Christ Church]",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/885c3675-b066-415f-a264-c43c315fe2d8/",
+      "date": "1644"
+    }
+  },
+  {
+    "_id": "5c9b7fc3-08a8-4a57-81f0-cb46da50481d",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/5c9b7fc3-08a8-4a57-81f0-cb46da50481d/",
+    "_service": "bodleian",
+    "title": "[Chart of the Indian Ocean]",
+    "date": "[1682]",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3eda18d1-2ea7-475d-86b7-9c52e63da0e0/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "5c9b7fc3-08a8-4a57-81f0-cb46da50481d",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/5c9b7fc3-08a8-4a57-81f0-cb46da50481d.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3eda18d1-2ea7-475d-86b7-9c52e63da0e0/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Map Res. 117",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "[Chart of the Indian Ocean]",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/5c9b7fc3-08a8-4a57-81f0-cb46da50481d/",
+      "date": "[1682]"
+    }
+  },
+  {
+    "_id": "564e646e-cdf4-4cef-8f28-6e619299ecc8",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/564e646e-cdf4-4cef-8f28-6e619299ecc8/",
+    "_service": "bodleian",
+    "title": "[North west Oxford, with Northgate, River Thames and the Castle]",
+    "date": "1644",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/564e646e-cdf4-4cef-8f28-6e619299ecc8/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "564e646e-cdf4-4cef-8f28-6e619299ecc8",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/564e646e-cdf4-4cef-8f28-6e619299ecc8.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/564e646e-cdf4-4cef-8f28-6e619299ecc8/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Top. Oxon b. 167",
+      "origins": "",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "[North west Oxford, with Northgate, River Thames and the Castle]",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/564e646e-cdf4-4cef-8f28-6e619299ecc8/",
+      "date": "1644"
+    }
+  },
+  {
+    "_id": "32638ab9-c0b2-4258-9ca7-980b4b9268f2",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/32638ab9-c0b2-4258-9ca7-980b4b9268f2/",
+    "_service": "bodleian",
+    "title": "‘The Gough Map’.",
+    "date": "",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/c7516abb-fc1f-4547-8bab-6796bc60aa15/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "32638ab9-c0b2-4258-9ca7-980b4b9268f2",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/32638ab9-c0b2-4258-9ca7-980b4b9268f2.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/c7516abb-fc1f-4547-8bab-6796bc60aa15/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Gough Gen. Top. 16",
+      "origins": "England",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 30
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "‘The Gough Map’.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/32638ab9-c0b2-4258-9ca7-980b4b9268f2/",
+      "date": ""
+    }
+  },
+  {
+    "_id": "064e049b-bef1-4973-a752-d1b5d026d4a4",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/064e049b-bef1-4973-a752-d1b5d026d4a4/",
+    "_service": "bodleian",
+    "title": "Glass Plate negative collection: Arnold Fairbairns for Stephen Warner’s book Lincoln College, Oxford",
+    "date": "1908",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3e8184e8-c075-4f8b-96d3-f2799bd9f61d/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "064e049b-bef1-4973-a752-d1b5d026d4a4",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/064e049b-bef1-4973-a752-d1b5d026d4a4.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3e8184e8-c075-4f8b-96d3-f2799bd9f61d/full/255,/0/default.jpg",
+      "shelfmark": "Lincoln College LC/PH/P",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 83
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Glass Plate negative collection: Arnold Fairbairns for Stephen Warner’s book Lincoln College, Oxford",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/064e049b-bef1-4973-a752-d1b5d026d4a4/",
+      "date": "1908"
+    }
+  },
+  {
+    "_id": "b2d6e53c-8b80-4f7f-bd37-850f222a91ce",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/b2d6e53c-8b80-4f7f-bd37-850f222a91ce/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1813–15",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/16933631-f45b-458a-9ca3-7057081e607a/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "b2d6e53c-8b80-4f7f-bd37-850f222a91ce",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/b2d6e53c-8b80-4f7f-bd37-850f222a91ce.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/16933631-f45b-458a-9ca3-7057081e607a/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 18",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 80
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/b2d6e53c-8b80-4f7f-bd37-850f222a91ce/",
+      "date": "1813–15"
+    }
+  },
+  {
+    "_id": "6272311c-058d-417a-8e21-05e463b4f1f9",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/6272311c-058d-417a-8e21-05e463b4f1f9/",
+    "_service": "bodleian",
+    "title": "Chronicle of England. Additions in French ('The Peterborough Chronicle', E text).",
+    "date": "c. 1121-1140",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ec9ae7f7-302c-46a6-ae10-9c18d42428a0/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "6272311c-058d-417a-8e21-05e463b4f1f9",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/6272311c-058d-417a-8e21-05e463b4f1f9.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ec9ae7f7-302c-46a6-ae10-9c18d42428a0/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Laud Misc. 636",
+      "origins": "England, Peterborough?",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 187
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Chronicle of England. Additions in French ('The Peterborough Chronicle', E text).",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/6272311c-058d-417a-8e21-05e463b4f1f9/",
+      "date": "c. 1121-1140"
+    }
+  },
+  {
+    "_id": "f0a9f4d0-7695-4c58-8fcf-4cca88dafd9a",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f0a9f4d0-7695-4c58-8fcf-4cca88dafd9a/",
+    "_service": "bodleian",
+    "title": "The Canterbury Tales",
+    "date": "1450s or early 1460s",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/665a62f2-bd89-476b-9948-ef8d82bfb9dd/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "f0a9f4d0-7695-4c58-8fcf-4cca88dafd9a",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/f0a9f4d0-7695-4c58-8fcf-4cca88dafd9a.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/665a62f2-bd89-476b-9948-ef8d82bfb9dd/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Rawl. poet. 223",
+      "origins": "England, on a linguistic basis presumably from the Thames Estuary.",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 580
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "The Canterbury Tales",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/f0a9f4d0-7695-4c58-8fcf-4cca88dafd9a/",
+      "date": "1450s or early 1460s"
+    }
+  },
+  {
+    "_id": "0a64c422-130e-4213-9eca-e7b880958bd0",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/0a64c422-130e-4213-9eca-e7b880958bd0/",
+    "_service": "bodleian",
+    "title": "The Architectural Drawings at All Souls College, Oxford: Wren and Hawksmoor",
+    "date": "1661-1726",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/fe04cd43-cd88-4031-96f7-048257ee1977/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "0a64c422-130e-4213-9eca-e7b880958bd0",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/0a64c422-130e-4213-9eca-e7b880958bd0.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/fe04cd43-cd88-4031-96f7-048257ee1977/full/255,/0/default.jpg",
+      "shelfmark": "All Souls College Wren",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 527
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "The Architectural Drawings at All Souls College, Oxford: Wren and Hawksmoor",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/0a64c422-130e-4213-9eca-e7b880958bd0/",
+      "date": "1661-1726"
+    }
+  },
+  {
+    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+    "_service": "bodleian",
+    "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+    "date": "1623",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/390fd0e8-9eae-475d-9564-ed916ab9035c.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/57e041f5-8945-44b6-918d-b949e5c97ba1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Arch. G c.7",
+      "origins": "London",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 920
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-05-29T14:00:02.108Z",
+      "query": "thames",
+      "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
+      "date": "1623"
+    }
+  }
+]

@@ -1,0 +1,5645 @@
+[
+  {
+    "id": "mds:0e70bfae-8827-356a-bb53-cc9ada94faee",
+    "_source": "mds",
+    "_sourceId": "SSL-ART-630",
+    "_sourceUrl": "https://museumdata.uk/objects/0e70bfae-8827-356a-bb53-cc9ada94faee",
+    "title": "paper mounted watercolour of a stone circle in a valley, 1877.",
+    "description": "A paper mounted watercolour of a stone circle in a valley, 1877.",
+    "date": "1877",
+    "subject": [
+      "painting; watercolour; Little Bredy. Dorset; Littlebredy",
+      "painting; watercolour; Little Bredy. Dorset; Littlebredy",
+      "stone circle",
+      "valley"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "0e70bfae-8827-356a-bb53-cc9ada94faee",
+      "objectNumber": "SSL-ART-630",
+      "material": [
+        "watercolour",
+        "paper (support)"
+      ],
+      "place": [
+        "Tenants Hill",
+        "Kingston Russell Stone Circle, Tenants Hill"
+      ],
+      "dimensions": [
+        "height (image) 140 mm",
+        "width (image) 240 mm",
+        "height (mount) 265 mm",
+        "width (mount) 360 mm"
+      ],
+      "inscriptionContent": "\"Little Bredy. Dorset\" \"XXVIII\" \"Circle at Little Bredy ---'77\"",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "paper mounted watercolour of a stone circle in a valley, 1877."
+        ],
+        "Object name(s)": [
+          "painting; watercolour; Little Bredy. Dorset; Littlebredy"
+        ],
+        "Brief description": [
+          "A paper mounted watercolour of a stone circle in a valley, 1877.",
+          "A stone circle in a valley."
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "stone circle",
+          "valley"
+        ],
+        "Associated date": [
+          "1877",
+          "late 19th Century",
+          "Victorian"
+        ],
+        "Associated place": [
+          "Kingston Russell Stone Circle, Tenants Hill"
+        ],
+        "Dimension": [
+          "height (image) 140 mm",
+          "width (image) 240 mm",
+          "height (mount) 265 mm",
+          "width (mount) 360 mm"
+        ],
+        "Inscription content": [
+          "\"Little Bredy. Dorset\" \"XXVIII\" \"Circle at Little Bredy ---'77\""
+        ],
+        "Inscription type": [
+          "title",
+          "number",
+          "description"
+        ],
+        "Material": [
+          "watercolour",
+          "paper (support)"
+        ],
+        "Object name": [
+          "painting; watercolour; Little Bredy. Dorset; Littlebredy"
+        ],
+        "Object number": [
+          "1993.495"
+        ],
+        "Object production date": [
+          "1877",
+          "late 19th Century",
+          "Victorian"
+        ],
+        "Object production place": [
+          "Tenants Hill"
+        ],
+        "Responsible department/section": [
+          "Art_Fine"
+        ],
+        "Technique": [
+          "painted"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:0e70bfae-8827-356a-bb53-cc9ada94faee",
+      "title": "paper mounted watercolour of a stone circle in a valley, 1877.",
+      "url": "https://museumdata.uk/objects/0e70bfae-8827-356a-bb53-cc9ada94faee",
+      "date": "1877"
+    }
+  },
+  {
+    "id": "mds:cd2f308c-8fdc-320f-aad1-0c3aeae33b3c",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1983.1807",
+    "_sourceUrl": "https://museumdata.uk/objects/cd2f308c-8fdc-320f-aad1-0c3aeae33b3c",
+    "title": "Rolrich the great circle of stones in Oxfordshire",
+    "description": "Circle of varying height stones with two smaller stones inside edge of circle.  One taller stone standing to right background.  Track and gateway from field at rear.",
+    "subject": [
+      "print",
+      "print",
+      "fine art",
+      "archaeology",
+      "prints"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "cd2f308c-8fdc-320f-aad1-0c3aeae33b3c",
+      "objectNumber": "DZSWS:1983.1807",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Rolrich",
+        "Oxfordshire"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "width",
+        "height",
+        "151",
+        "81"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Rolrich the great circle of stones in Oxfordshire"
+        ],
+        "Object name(s)": [
+          "print"
+        ],
+        "Brief description": [
+          "Circle of varying height stones with two smaller stones inside edge of circle.  One taller stone standing to right background.  Track and gateway from field at rear."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "fine art",
+          "archaeology",
+          "prints"
+        ],
+        "Association type": [
+          "antecedant"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - place": [
+          "Rolrich",
+          "Oxfordshire"
+        ],
+        "Place status": [
+          "Site Name",
+          "County",
+          "stone circle"
+        ],
+        "Dimension": [
+          "width",
+          "height"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "151",
+          "81"
+        ],
+        "Distinguishing features": [
+          "some glue staining",
+          "album"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "print"
+        ],
+        "Object number": [
+          "DZSWS:1983.1807"
+        ],
+        "Technique": [
+          "engraving"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:cd2f308c-8fdc-320f-aad1-0c3aeae33b3c",
+      "title": "Rolrich the great circle of stones in Oxfordshire",
+      "url": "https://museumdata.uk/objects/cd2f308c-8fdc-320f-aad1-0c3aeae33b3c"
+    }
+  },
+  {
+    "id": "mds:676ae9c5-0c54-3152-8493-10faa9a2ee1d",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.18673.2",
+    "_sourceUrl": "https://museumdata.uk/objects/676ae9c5-0c54-3152-8493-10faa9a2ee1d",
+    "title": "Re-examining stone circles in Dorset: the results of recent research and non-intrusive surveys at Kingston Russell stone circle",
+    "description": "Re-examining stone circles in Dorset: the results of recent research and non-intrusive surveys at Kingston Russell stone circle/Rylatt, Jim, Teather, Anne, Pullen, Rebecca, Pinnell, Jodie, Randall, Sam, Roberts, Hayley and Chamberlain, Andrew/The Archaeological Journal, Vol 179/2022",
+    "creator": [
+      "Rylatt, Jim",
+      "Teather, Anne",
+      "Pullen, Rebecca",
+      "Pinnell, Jodie",
+      "Randall, Sam",
+      "Roberts, Hayley",
+      "Chamberlain, Andrew",
+      "The Royal Archaeological Institute"
+    ],
+    "date": "2022",
+    "subject": [
+      "journal article",
+      "journal article",
+      "local history",
+      "archaeology",
+      "stone circles"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "676ae9c5-0c54-3152-8493-10faa9a2ee1d",
+      "objectNumber": "DZSWS:Book.18673.2",
+      "place": [
+        "Abbotsbury",
+        "Winterbourne Abbas",
+        "Avebury",
+        "Amesbury",
+        "The Grey Mare and her Colts chambered tomb",
+        "Kingston Russell",
+        "Dorset",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width"
+      ],
+      "objectHistory": "Re-examining stone circles in Dorset: the results of recent research and non-intrusive surveys at Kingston Russell stone circle (with references to circles in Wiltshire as well)",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Re-examining stone circles in Dorset: the results of recent research and non-intrusive surveys at Kingston Russell stone circle"
+        ],
+        "Object name(s)": [
+          "journal article"
+        ],
+        "Brief description": [
+          "Re-examining stone circles in Dorset: the results of recent research and non-intrusive surveys at Kingston Russell stone circle/Rylatt, Jim, Teather, Anne, Pullen, Rebecca, Pinnell, Jodie, Randall, Sam, Roberts, Hayley and Chamberlain, Andrew/The Archaeological Journal, Vol 179/2022",
+          "Re-examining stone circles in Dorset: the results of recent research and non-intrusive surveys at Kingston Russell stone circle (with references to circles in Wiltshire as well)"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "local history",
+          "archaeology",
+          "stone circles"
+        ],
+        "Content - place": [
+          "Abbotsbury",
+          "Winterbourne Abbas",
+          "Avebury",
+          "Amesbury",
+          "The Grey Mare and her Colts chambered tomb",
+          "Kingston Russell",
+          "Dorset",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "244",
+          "174"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Re-examining stone circles in Dorset: the results of recent research and non-intrusive surveys at Kingston Russell stone circle (with references to circles in Wiltshire as well)"
+        ],
+        "Object name": [
+          "journal article"
+        ],
+        "Object number": [
+          "DZSWS:Book.18673.2"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "2022"
+        ],
+        "Object production organisation": [
+          "The Royal Archaeological Institute"
+        ],
+        "Organisation's function": [
+          "publisher"
+        ],
+        "Object production person": [
+          "Rylatt, Jim",
+          "Teather, Anne",
+          "Pullen, Rebecca",
+          "Pinnell, Jodie",
+          "Randall, Sam",
+          "Roberts, Hayley",
+          "Chamberlain, Andrew"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Physical description": [
+          "Re-examining stone circles in Dorset: the results of recent research and non-intrusive surveys at Kingston Russell stone circle (with references to circles in Wiltshire as well)"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:676ae9c5-0c54-3152-8493-10faa9a2ee1d",
+      "title": "Re-examining stone circles in Dorset: the results of recent research and non-intrusive surveys at Kingston Russell stone circle",
+      "url": "https://museumdata.uk/objects/676ae9c5-0c54-3152-8493-10faa9a2ee1d",
+      "creator": [
+        "Rylatt, Jim",
+        "Teather, Anne",
+        "Pullen, Rebecca",
+        "Pinnell, Jodie",
+        "Randall, Sam",
+        "Roberts, Hayley",
+        "Chamberlain, Andrew",
+        "The Royal Archaeological Institute"
+      ],
+      "date": "2022"
+    }
+  },
+  {
+    "id": "mds:307c16b3-5e2c-3d83-983d-42d2e2d397f6",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2007.1038",
+    "_sourceUrl": "https://museumdata.uk/objects/307c16b3-5e2c-3d83-983d-42d2e2d397f6",
+    "title": "The Circle of Standing Stones at Avebury",
+    "description": "lino-cut monochrome print of the Circle of Standing Stones at Avebury, by D Grant-King. First print, impression crooked on thin yellow paper",
+    "creator": "Grant-King, Dennis",
+    "subject": [
+      "print; lino-cut",
+      "print; lino-cut",
+      "fine art",
+      "prints"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "307c16b3-5e2c-3d83-983d-42d2e2d397f6",
+      "objectNumber": "DZSWS:2007.1038",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Avebury",
+        "Wiltshire"
+      ],
+      "dimensions": [
+        "width",
+        "height",
+        "215",
+        "140"
+      ],
+      "numberOfObjects": "1",
+      "inscriptionContent": "The Circle of Standing Stones at Avebury",
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Circle of Standing Stones at Avebury"
+        ],
+        "Object name(s)": [
+          "print; lino-cut"
+        ],
+        "Brief description": [
+          "lino-cut monochrome print of the Circle of Standing Stones at Avebury, by D Grant-King. First print, impression crooked on thin yellow paper"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "fine art",
+          "prints"
+        ],
+        "Association type": [
+          "antecedant"
+        ],
+        "Content - place": [
+          "Avebury",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "stone circle"
+        ],
+        "Dimension": [
+          "width",
+          "height"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "215",
+          "140"
+        ],
+        "Inscription content": [
+          "The Circle of Standing Stones at Avebury"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "print; lino-cut"
+        ],
+        "Object number": [
+          "DZSWS:2007.1038"
+        ],
+        "Object production person": [
+          "Grant-King, Dennis"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:307c16b3-5e2c-3d83-983d-42d2e2d397f6",
+      "title": "The Circle of Standing Stones at Avebury",
+      "url": "https://museumdata.uk/objects/307c16b3-5e2c-3d83-983d-42d2e2d397f6",
+      "creator": "Grant-King, Dennis"
+    }
+  },
+  {
+    "id": "mds:ce1271b9-a20b-31b2-a5ab-74f7fcc3a260",
+    "_source": "mds",
+    "_sourceId": "490408",
+    "_sourceUrl": "https://museumdata.uk/objects/ce1271b9-a20b-31b2-a5ab-74f7fcc3a260",
+    "title": "magic lantern slide labelled as Circle and Stone Row, Deancombe",
+    "description": "This is one in a series of glass slides by photographer TA Falcon. They record archaeological sites on Dartmoor. This one is labelled as Deancombe Stone Row and Circle which are usually called Down Tor Stone Row and Stone Circle.\n\nThis object is not on display.\n\nInscription\n\nedges handwritten  handwritten 'DARTMOOR CIRCLE + ROW' on top edge\n\nfront (on top of cover glass) handwritten  handwritten 'CIRCLE + STONE ROW DEANCOM' on top binding strip",
+    "creator": "T A Falcon  1872-1944 (attributed photographer)",
+    "subject": [
+      "slide; lantern slide: Circle and Stone Row, Deancombe",
+      "slide; lantern slide: Circle and Stone Row, Deancombe",
+      "Dartmoor"
+    ],
+    "type": "Museum object",
+    "collection": "Royal Albert Memorial Museum & Art Gallery",
+    "mds": {
+      "uuid": "ce1271b9-a20b-31b2-a5ab-74f7fcc3a260",
+      "objectNumber": "490408",
+      "material": [
+        "glass",
+        "paper",
+        "photographic emulsion"
+      ],
+      "place": [
+        "Northern Europe",
+        "Europe"
+      ],
+      "dimensions": [
+        "whole width 83 mm",
+        "whole H 83 mm",
+        "whole TH 2.5 mm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "magic lantern slide labelled as Circle and Stone Row, Deancombe"
+        ],
+        "Object name(s)": [
+          "slide; lantern slide: Circle and Stone Row, Deancombe"
+        ],
+        "Brief description": [
+          "This is one in a series of glass slides by photographer TA Falcon. They record archaeological sites on Dartmoor. This one is labelled as Deancombe Stone Row and Circle which are usually called Down Tor Stone Row and Stone Circle.\n\nThis object is not on display.\n\nInscription\n\nedges handwritten  handwritten 'DARTMOOR CIRCLE + ROW' on top edge\n\nfront (on top of cover glass) handwritten  handwritten 'CIRCLE + STONE ROW DEANCOM' on top binding strip"
+        ],
+        "Collection": [
+          "Royal Albert Memorial Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Dartmoor"
+        ],
+        "Current location": [
+          "Not on display"
+        ],
+        "Dimension": [
+          "whole width 83 mm",
+          "whole H 83 mm",
+          "whole TH 2.5 mm"
+        ],
+        "Field collection place": [
+          "Down Tor Stone Row and Stone Circle, Dartmoor",
+          "Devon",
+          "United Kingdom: England",
+          "Northern Europe",
+          "Europe"
+        ],
+        "Material": [
+          "glass",
+          "paper",
+          "photographic emulsion"
+        ],
+        "Object name": [
+          "slide; lantern slide: Circle and Stone Row, Deancombe"
+        ],
+        "Object number": [
+          "29/2015/15"
+        ],
+        "Object production person": [
+          "T A Falcon  1872-1944 (attributed photographer)"
+        ],
+        "Object production place": [
+          "Northern Europe",
+          "Europe"
+        ],
+        "Reproduction number": [
+          "29-2015-15.jpg"
+        ],
+        "Responsible department/section": [
+          "Social History",
+          "Social and industrial history"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:ce1271b9-a20b-31b2-a5ab-74f7fcc3a260",
+      "title": "magic lantern slide labelled as Circle and Stone Row, Deancombe",
+      "url": "https://museumdata.uk/objects/ce1271b9-a20b-31b2-a5ab-74f7fcc3a260",
+      "creator": "T A Falcon  1872-1944 (attributed photographer)"
+    }
+  },
+  {
+    "id": "mds:4f2b052e-bc16-33ee-964e-89dd24cd1eb1",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1983.1784",
+    "_sourceUrl": "https://museumdata.uk/objects/4f2b052e-bc16-33ee-964e-89dd24cd1eb1",
+    "title": "Botallek Circles",
+    "description": "Six overlapping stone circles, some with standing stones within, in the scaled plan view.  Another stone circle to the north, a pair of stones to the west of overlapping circles and a triplet to the NW",
+    "creator": "Day, W",
+    "subject": [
+      "print",
+      "print",
+      "Archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "4f2b052e-bc16-33ee-964e-89dd24cd1eb1",
+      "objectNumber": "DZSWS:1983.1784",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Botallek Circles"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "244",
+        "199"
+      ],
+      "personAssociation": [
+        "printer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Botallek Circles"
+        ],
+        "Object name(s)": [
+          "print"
+        ],
+        "Brief description": [
+          "Six overlapping stone circles, some with standing stones within, in the scaled plan view.  Another stone circle to the north, a pair of stones to the west of overlapping circles and a triplet to the NW"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "Archaeology"
+        ],
+        "Association type": [
+          "antecedant"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - place": [
+          "Botallek Circles"
+        ],
+        "Place status": [
+          "Site Name",
+          "Stone circle"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "244",
+          "199"
+        ],
+        "Distinguishing features": [
+          "album"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "print"
+        ],
+        "Object number": [
+          "DZSWS:1983.1784"
+        ],
+        "Object production person": [
+          "Day, W"
+        ],
+        "Person's address": [
+          "59 Gt Queen Street"
+        ],
+        "Person's association": [
+          "printer"
+        ],
+        "Technique": [
+          "engraving"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:4f2b052e-bc16-33ee-964e-89dd24cd1eb1",
+      "title": "Botallek Circles",
+      "url": "https://museumdata.uk/objects/4f2b052e-bc16-33ee-964e-89dd24cd1eb1",
+      "creator": "Day, W"
+    }
+  },
+  {
+    "id": "mds:d068a293-fc9d-33d1-bccc-c7b92568782e",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1986.7322",
+    "_sourceUrl": "https://museumdata.uk/objects/d068a293-fc9d-33d1-bccc-c7b92568782e",
+    "title": "Longdean Circle. East Kennet",
+    "description": "1 photograph of a stone in the Longdean Bottom Stone Circle, East Kennett, Wiltshire, 1900=1950",
+    "creator": "Passmore, A D",
+    "subject": [
+      "stone; photograph; gelatine developed out print",
+      "stone; photograph; gelatine developed out print",
+      "archaeology",
+      "neolithic",
+      "bronze age"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "d068a293-fc9d-33d1-bccc-c7b92568782e",
+      "objectNumber": "DZSWS:1986.7322",
+      "material": [
+        "photographic paper"
+      ],
+      "place": [
+        "East Kennett",
+        "Longdean Bottom",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "164",
+        "215"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Longdean Circle. East Kennet"
+        ],
+        "Object name(s)": [
+          "stone; photograph; gelatine developed out print"
+        ],
+        "Brief description": [
+          "1 photograph of a stone in the Longdean Bottom Stone Circle, East Kennett, Wiltshire, 1900=1950"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "neolithic",
+          "bronze age"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - note": [
+          "written below the photograph:Longdean Circle. East Kennet. Stone in. Photo by AD Passmore."
+        ],
+        "Content - place": [
+          "East Kennett",
+          "Longdean Bottom",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "stone circle"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "164",
+          "215"
+        ],
+        "Material": [
+          "photographic paper"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "stone; photograph; gelatine developed out print"
+        ],
+        "Object number": [
+          "DZSWS:1986.7322"
+        ],
+        "Object production person": [
+          "Passmore, A D"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "User's reference": [
+          "Album CC"
+        ],
+        "Reference note": [
+          "page 47"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:d068a293-fc9d-33d1-bccc-c7b92568782e",
+      "title": "Longdean Circle. East Kennet",
+      "url": "https://museumdata.uk/objects/d068a293-fc9d-33d1-bccc-c7b92568782e",
+      "creator": "Passmore, A D"
+    }
+  },
+  {
+    "id": "mds:0c23207e-04e7-3814-9fc2-a9e5202ba5cb",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1983.1787",
+    "_sourceUrl": "https://museumdata.uk/objects/0c23207e-04e7-3814-9fc2-a9e5202ba5cb",
+    "title": "Gil Gal",
+    "description": "1) stone circle as 1983.1785  (2) Four sets of standing stones with lintels over, one single stone.  A mound with stones scattered on it.  (3) stone circle with some standings stones within",
+    "subject": [
+      "print",
+      "print",
+      "Archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "0c23207e-04e7-3814-9fc2-a9e5202ba5cb",
+      "objectNumber": "DZSWS:1983.1787",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Gil Gal"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "227",
+        "168"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Gil Gal"
+        ],
+        "Object name(s)": [
+          "print"
+        ],
+        "Brief description": [
+          "1) stone circle as 1983.1785  (2) Four sets of standing stones with lintels over, one single stone.  A mound with stones scattered on it.  (3) stone circle with some standings stones within"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "Archaeology"
+        ],
+        "Association type": [
+          "antecedant"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - place": [
+          "Gil Gal"
+        ],
+        "Place status": [
+          "Site Name",
+          "1,3)Stone circle  (2) standing stone"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "227",
+          "168"
+        ],
+        "Distinguishing features": [
+          "album"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "print"
+        ],
+        "Object number": [
+          "DZSWS:1983.1787"
+        ],
+        "Technique": [
+          "engraving"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:0c23207e-04e7-3814-9fc2-a9e5202ba5cb",
+      "title": "Gil Gal",
+      "url": "https://museumdata.uk/objects/0c23207e-04e7-3814-9fc2-a9e5202ba5cb"
+    }
+  },
+  {
+    "id": "mds:88ce633d-4e34-39e6-9dda-2520d9698d24",
+    "_source": "mds",
+    "_sourceId": "490404",
+    "_sourceUrl": "https://museumdata.uk/objects/88ce633d-4e34-39e6-9dda-2520d9698d24",
+    "title": "magic lantern slide labelled as Deancombe Stone Circle, Dartmoor",
+    "description": "This is one in a series of glass slides by photographer TA Falcon. They record archaeological sites on Dartmoor. This one is labelled as Deancombe Stone Circle which is usually called Down Tor Stone Circle.\n\nThis object is not on display.\n\nInscription\n\nedges handwritten  handwritten 'DEANCOMBE CIRCLE. DARTM' on top edge\n\nfront (on top of cover glass) handwritten  handwritten 'DARTMOOR STONE CIRCLE' on top binding strip",
+    "creator": "T A Falcon  1872-1944 (attributed photographer)",
+    "subject": [
+      "slide; lantern slide: Deancombe Stone Circle, Dartmoor",
+      "slide; lantern slide: Deancombe Stone Circle, Dartmoor",
+      "Dartmoor"
+    ],
+    "type": "Museum object",
+    "collection": "Royal Albert Memorial Museum & Art Gallery",
+    "mds": {
+      "uuid": "88ce633d-4e34-39e6-9dda-2520d9698d24",
+      "objectNumber": "490404",
+      "material": [
+        "glass",
+        "paper",
+        "photographic emulsion"
+      ],
+      "place": [
+        "Northern Europe",
+        "Europe"
+      ],
+      "dimensions": [
+        "whole width 83 mm",
+        "whole H 83 mm",
+        "whole TH 2.5 mm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "magic lantern slide labelled as Deancombe Stone Circle, Dartmoor"
+        ],
+        "Object name(s)": [
+          "slide; lantern slide: Deancombe Stone Circle, Dartmoor"
+        ],
+        "Brief description": [
+          "This is one in a series of glass slides by photographer TA Falcon. They record archaeological sites on Dartmoor. This one is labelled as Deancombe Stone Circle which is usually called Down Tor Stone Circle.\n\nThis object is not on display.\n\nInscription\n\nedges handwritten  handwritten 'DEANCOMBE CIRCLE. DARTM' on top edge\n\nfront (on top of cover glass) handwritten  handwritten 'DARTMOOR STONE CIRCLE' on top binding strip"
+        ],
+        "Collection": [
+          "Royal Albert Memorial Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Dartmoor"
+        ],
+        "Current location": [
+          "Not on display"
+        ],
+        "Dimension": [
+          "whole width 83 mm",
+          "whole H 83 mm",
+          "whole TH 2.5 mm"
+        ],
+        "Field collection place": [
+          "Down Tor Stone Circle, Dartmoor",
+          "Devon",
+          "United Kingdom: England",
+          "Northern Europe",
+          "Europe"
+        ],
+        "Material": [
+          "glass",
+          "paper",
+          "photographic emulsion"
+        ],
+        "Object name": [
+          "slide; lantern slide: Deancombe Stone Circle, Dartmoor"
+        ],
+        "Object number": [
+          "29/2015/11"
+        ],
+        "Object production person": [
+          "T A Falcon  1872-1944 (attributed photographer)"
+        ],
+        "Object production place": [
+          "Northern Europe",
+          "Europe"
+        ],
+        "Reproduction number": [
+          "29-2015-11.jpg"
+        ],
+        "Responsible department/section": [
+          "Social History",
+          "Social and industrial history"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:88ce633d-4e34-39e6-9dda-2520d9698d24",
+      "title": "magic lantern slide labelled as Deancombe Stone Circle, Dartmoor",
+      "url": "https://museumdata.uk/objects/88ce633d-4e34-39e6-9dda-2520d9698d24",
+      "creator": "T A Falcon  1872-1944 (attributed photographer)"
+    }
+  },
+  {
+    "id": "mds:78f71e5b-a248-3f0e-a3af-e5caf07ca14d",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1983.1767",
+    "_sourceUrl": "https://museumdata.uk/objects/78f71e5b-a248-3f0e-a3af-e5caf07ca14d",
+    "title": "Circle of nineteen stones, at Bolleit, St Bunyan's, Cornwall",
+    "description": "Standing stones making an almost complete circle with some smaller outliers.",
+    "subject": [
+      "print",
+      "print",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "78f71e5b-a248-3f0e-a3af-e5caf07ca14d",
+      "objectNumber": "DZSWS:1983.1767",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "St Bunyan's",
+        "Bolleit",
+        "Cornwall"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "123",
+        "224"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Circle of nineteen stones, at Bolleit, St Bunyan's, Cornwall"
+        ],
+        "Object name(s)": [
+          "print"
+        ],
+        "Brief description": [
+          "Standing stones making an almost complete circle with some smaller outliers."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology"
+        ],
+        "Association type": [
+          "antecedant"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - place": [
+          "St Bunyan's",
+          "Bolleit",
+          "Cornwall"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "stone circle"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "123",
+          "224"
+        ],
+        "Distinguishing features": [
+          "album"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "print"
+        ],
+        "Object number": [
+          "DZSWS:1983.1767"
+        ],
+        "Technique": [
+          "pen & ink"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:78f71e5b-a248-3f0e-a3af-e5caf07ca14d",
+      "title": "Circle of nineteen stones, at Bolleit, St Bunyan's, Cornwall",
+      "url": "https://museumdata.uk/objects/78f71e5b-a248-3f0e-a3af-e5caf07ca14d"
+    }
+  },
+  {
+    "id": "mds:3b89691b-0fc4-3c2c-a6dd-192cd234b2a5",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.17317.3",
+    "_sourceUrl": "https://museumdata.uk/objects/3b89691b-0fc4-3c2c-a6dd-192cd234b2a5",
+    "title": "The Age of Stone Circles - Report of the Committee .....appointed to conduct exploration with the object of ascertaining the Age of Stone Circles",
+    "description": "The Age of Stone Circles - Report of the Committee .....appointed to conduct exploration with the object of ascertaining the Age of Stone Circles/Gray, H St George/1908",
+    "creator": [
+      "Gray, H St George",
+      "Spottiswoode & Co Ltd"
+    ],
+    "date": "1908",
+    "subject": [
+      "tract",
+      "tract",
+      "archaeology",
+      "stone circles",
+      "monuments"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "3b89691b-0fc4-3c2c-a6dd-192cd234b2a5",
+      "objectNumber": "DZSWS:Book.17317.3",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Avebury",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Age of Stone Circles - Report of the Committee .....appointed to conduct exploration with the object of ascertaining the Age of Stone Circles"
+        ],
+        "Object name(s)": [
+          "tract"
+        ],
+        "Brief description": [
+          "The Age of Stone Circles - Report of the Committee .....appointed to conduct exploration with the object of ascertaining the Age of Stone Circles/Gray, H St George/1908",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "stone circles",
+          "monuments"
+        ],
+        "Content - place": [
+          "Avebury",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "215",
+          "135"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "tract"
+        ],
+        "Object number": [
+          "DZSWS:Book.17317.3"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "1908"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "Spottiswoode & Co Ltd"
+        ],
+        "Organisation's function": [
+          "printer"
+        ],
+        "Object production person": [
+          "Gray, H St George"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Other number": [
+          "ISBN"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:3b89691b-0fc4-3c2c-a6dd-192cd234b2a5",
+      "title": "The Age of Stone Circles - Report of the Committee .....appointed to conduct exploration with the object of ascertaining the Age of Stone Circles",
+      "url": "https://museumdata.uk/objects/3b89691b-0fc4-3c2c-a6dd-192cd234b2a5",
+      "creator": [
+        "Gray, H St George",
+        "Spottiswoode & Co Ltd"
+      ],
+      "date": "1908"
+    }
+  },
+  {
+    "id": "mds:010caaf0-7352-3741-a962-d1f4bcd7ff15",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1982.4728",
+    "_sourceUrl": "https://museumdata.uk/objects/010caaf0-7352-3741-a962-d1f4bcd7ff15",
+    "title": "Druidical Circle near Inverness, Scotland",
+    "description": "plan and side views of two concentric stone circles, the outer more sparse, with two lines of stones inside.  Scaled.  Most stones same height, one taller stone, though most laying in outer circle.",
+    "creator": "Philips, T, R A",
+    "subject": [
+      "drawing",
+      "drawing",
+      "fine art",
+      "archaeology",
+      "drawings"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "010caaf0-7352-3741-a962-d1f4bcd7ff15",
+      "objectNumber": "DZSWS:1982.4728",
+      "material": [
+        "pencil",
+        "paper"
+      ],
+      "place": [
+        "Inverness",
+        "Druidical Circle",
+        "Inverness-shire"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "228",
+        "175"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Druidical Circle near Inverness, Scotland"
+        ],
+        "Object name(s)": [
+          "drawing"
+        ],
+        "Brief description": [
+          "plan and side views of two concentric stone circles, the outer more sparse, with two lines of stones inside.  Scaled.  Most stones same height, one taller stone, though most laying in outer circle."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "fine art",
+          "archaeology",
+          "drawings"
+        ],
+        "Association type": [
+          "antecedant"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - other type": [
+          "stone circle"
+        ],
+        "Content - place": [
+          "Inverness",
+          "Druidical Circle",
+          "Inverness-shire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "henge"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "228",
+          "175"
+        ],
+        "Distinguishing features": [
+          "some staining"
+        ],
+        "Material": [
+          "pencil",
+          "paper"
+        ],
+        "Object name": [
+          "drawing"
+        ],
+        "Object number": [
+          "DZSWS:1982.4728"
+        ],
+        "Object production person": [
+          "Philips, T, R A"
+        ],
+        "Technique": [
+          "pen and ink"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:010caaf0-7352-3741-a962-d1f4bcd7ff15",
+      "title": "Druidical Circle near Inverness, Scotland",
+      "url": "https://museumdata.uk/objects/010caaf0-7352-3741-a962-d1f4bcd7ff15",
+      "creator": "Philips, T, R A"
+    }
+  },
+  {
+    "id": "mds:e2f49477-9a74-340e-8309-2b806f9f3ea6",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2009.1001.14",
+    "_sourceUrl": "https://museumdata.uk/objects/e2f49477-9a74-340e-8309-2b806f9f3ea6",
+    "title": "Repaved stone & Earthwork, Avebury Stone Circle",
+    "description": "Framed print of representation of large stone with points to top on grass background, brown hue, No: 20/100.",
+    "creator": "Munroe, Norman",
+    "date": "1978",
+    "subject": [
+      "print",
+      "print",
+      "art"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "e2f49477-9a74-340e-8309-2b806f9f3ea6",
+      "objectNumber": "DZSWS:2009.1001.14",
+      "material": [
+        "paper",
+        "board"
+      ],
+      "place": [
+        "Avebury",
+        "Wiltshire",
+        "Avebury",
+        "Avebury Stone Circle",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "700",
+        "725"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Repaved stone & Earthwork, Avebury Stone Circle"
+        ],
+        "Object name(s)": [
+          "print"
+        ],
+        "Brief description": [
+          "Framed print of representation of large stone with points to top on grass background, brown hue, No: 20/100."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "art"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - place": [
+          "Avebury",
+          "Avebury Stone Circle",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "stone circle"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "700",
+          "725"
+        ],
+        "Distinguishing features": [
+          "framed"
+        ],
+        "Material": [
+          "paper",
+          "board"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "print"
+        ],
+        "Object number": [
+          "DZSWS:2009.1001.14"
+        ],
+        "Object production date": [
+          "1978"
+        ],
+        "Object production person": [
+          "Munroe, Norman"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Object production place": [
+          "Avebury",
+          "Wiltshire"
+        ],
+        "Technique": [
+          "pencil with wash"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:e2f49477-9a74-340e-8309-2b806f9f3ea6",
+      "title": "Repaved stone & Earthwork, Avebury Stone Circle",
+      "url": "https://museumdata.uk/objects/e2f49477-9a74-340e-8309-2b806f9f3ea6",
+      "creator": "Munroe, Norman",
+      "date": "1978"
+    }
+  },
+  {
+    "id": "mds:f26922e9-daef-3b0e-b9e7-a3e1cf7983cd",
+    "_source": "mds",
+    "_sourceId": "TWCMS",
+    "_sourceUrl": "https://museumdata.uk/objects/f26922e9-daef-3b0e-b9e7-a3e1cf7983cd",
+    "title": "Castlerigg Stone Circle",
+    "description": "Hooked rag rug, made from recycled materials using a latchet hook on a hessian background. 'Castlerigg Stone Circle'. Mixed fibres.",
+    "date": "2001",
+    "subject": [
+      "textile",
+      "textile",
+      "Craft"
+    ],
+    "type": "Museum object",
+    "collection": "North East Museums",
+    "mds": {
+      "uuid": "f26922e9-daef-3b0e-b9e7-a3e1cf7983cd",
+      "objectNumber": "TWCMS",
+      "place": [
+        "UK, England, Yorkshire, York"
+      ],
+      "dimensions": [
+        "Width",
+        "Height",
+        "147.5",
+        "105"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Castlerigg Stone Circle"
+        ],
+        "Object name(s)": [
+          "textile"
+        ],
+        "Brief description": [
+          "Hooked rag rug, made from recycled materials using a latchet hook on a hessian background. 'Castlerigg Stone Circle'. Mixed fibres."
+        ],
+        "Collection": [
+          "North East Museums"
+        ],
+        "Associated concept": [
+          "Craft"
+        ],
+        "Dimension": [
+          "Width",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "147.5",
+          "105"
+        ],
+        "Object name": [
+          "textile"
+        ],
+        "Object number": [
+          "TWCMS : 2005.140"
+        ],
+        "Object production date": [
+          "2001"
+        ],
+        "Date - period": [
+          "20 century"
+        ],
+        "Object production place": [
+          "UK, England, Yorkshire, York"
+        ],
+        "Physical description": [
+          "Hooked rag rug, made from recycled materials using a latchet hook on a hessian background. 'Castlerigg Stone Circle'. Mixed fibres."
+        ],
+        "Responsible department/section": [
+          "Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:f26922e9-daef-3b0e-b9e7-a3e1cf7983cd",
+      "title": "Castlerigg Stone Circle",
+      "url": "https://museumdata.uk/objects/f26922e9-daef-3b0e-b9e7-a3e1cf7983cd",
+      "date": "2001"
+    }
+  },
+  {
+    "id": "mds:78c77fec-566a-38f0-95ee-6d7d0a9f7616",
+    "_source": "mds",
+    "_sourceId": "TRURI",
+    "_sourceUrl": "https://museumdata.uk/objects/78c77fec-566a-38f0-95ee-6d7d0a9f7616",
+    "title": "Stone Circle, near Boskednan, S.Cornwall",
+    "description": "watercolour of Stone Circle, near Boskednan, S.Cornwall, mounted in home made mount, signed",
+    "creator": "Pennington, G.F.",
+    "subject": [
+      "painting; watercolour",
+      "painting; watercolour",
+      "FINE ART",
+      "English School"
+    ],
+    "type": "Museum object",
+    "collection": "Cornwall Museum and Art Gallery",
+    "mds": {
+      "uuid": "78c77fec-566a-38f0-95ee-6d7d0a9f7616",
+      "objectNumber": "TRURI",
+      "place": [
+        "Cornwall",
+        "England"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "270 mm",
+        "375 mm",
+        "405 mm",
+        "560 mm"
+      ],
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone Circle, near Boskednan, S.Cornwall"
+        ],
+        "Object name(s)": [
+          "painting; watercolour"
+        ],
+        "Brief description": [
+          "watercolour of Stone Circle, near Boskednan, S.Cornwall, mounted in home made mount, signed",
+          "stone circle with heathery moor behind and carn, sea in distance"
+        ],
+        "Collection": [
+          "Cornwall Museum and Art Gallery"
+        ],
+        "Acquisition date": [
+          "1954"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "FINE ART",
+          "English School"
+        ],
+        "Content - description": [
+          "stone circle with heathery moor behind and carn, sea in distance"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "image",
+          "mount"
+        ],
+        "Dimension value": [
+          "270 mm",
+          "375 mm",
+          "405 mm",
+          "560 mm"
+        ],
+        "Object component name": [
+          "condition"
+        ],
+        "Object component information": [
+          "good",
+          "soiled"
+        ],
+        "Object name": [
+          "painting; watercolour"
+        ],
+        "Object number": [
+          "TRURI : 1954.68.2"
+        ],
+        "Object production person": [
+          "Pennington, G.F."
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Object production place": [
+          "Cornwall",
+          "England"
+        ],
+        "Place status": [
+          "County",
+          "Country"
+        ],
+        "Technique": [
+          "painted"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:78c77fec-566a-38f0-95ee-6d7d0a9f7616",
+      "title": "Stone Circle, near Boskednan, S.Cornwall",
+      "url": "https://museumdata.uk/objects/78c77fec-566a-38f0-95ee-6d7d0a9f7616",
+      "creator": "Pennington, G.F."
+    }
+  },
+  {
+    "id": "mds:d4c1d237-21fd-3c37-a836-ba42e4518298",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1986.7325",
+    "_sourceUrl": "https://museumdata.uk/objects/d4c1d237-21fd-3c37-a836-ba42e4518298",
+    "title": "Longdean Circle. East Kennet. 1922",
+    "description": "1 photograph of the stone circle at Longdean Bottom, East Kennett, Wiltshire, 1922",
+    "date": "1922",
+    "subject": [
+      "stone; hill; field; photograph; gelatine developed out print",
+      "stone; hill; field; photograph; gelatine developed out print",
+      "archaeology",
+      "neolithic",
+      "bronze age"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "d4c1d237-21fd-3c37-a836-ba42e4518298",
+      "objectNumber": "DZSWS:1986.7325",
+      "material": [
+        "photographic paper"
+      ],
+      "place": [
+        "East Kennett",
+        "Longdean Bottom",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "203",
+        "256"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Longdean Circle. East Kennet. 1922"
+        ],
+        "Object name(s)": [
+          "stone; hill; field; photograph; gelatine developed out print"
+        ],
+        "Brief description": [
+          "1 photograph of the stone circle at Longdean Bottom, East Kennett, Wiltshire, 1922"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "neolithic",
+          "bronze age"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - note": [
+          "written below the photograph:Longdean Circle. East Kennet. 1922"
+        ],
+        "Content - place": [
+          "East Kennett",
+          "Longdean Bottom",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "stone circle"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "203",
+          "256"
+        ],
+        "Material": [
+          "photographic paper"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "stone; hill; field; photograph; gelatine developed out print"
+        ],
+        "Object number": [
+          "DZSWS:1986.7325"
+        ],
+        "Object production date": [
+          "1922"
+        ],
+        "User's reference": [
+          "Album CC"
+        ],
+        "Reference note": [
+          "page 48"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:d4c1d237-21fd-3c37-a836-ba42e4518298",
+      "title": "Longdean Circle. East Kennet. 1922",
+      "url": "https://museumdata.uk/objects/d4c1d237-21fd-3c37-a836-ba42e4518298",
+      "date": "1922"
+    }
+  },
+  {
+    "id": "mds:22429e7d-35ed-303c-8675-6c50706f6f0a",
+    "_source": "mds",
+    "_sourceId": "SSL-ART-1653",
+    "_sourceUrl": "https://museumdata.uk/objects/22429e7d-35ed-303c-8675-6c50706f6f0a",
+    "title": "Watercolour mounted on page ??? of H.J. Moule \"In Girthon, Anwoth, &c\" View of a stone circle with hills in the background, Glen Quicken, Dumfries & Galloway.",
+    "description": "Watercolour mounted on page ??? of H.J. Moule \"In Girthon, Anwoth, &c\" View of a stone circle with hills in the background, Glen Quicken, Dumfries & Galloway.",
+    "creator": "Moule, Henry Joseph",
+    "date": "1872.10",
+    "subject": [
+      "painting; watercolour; Stone Circle. Glen Quicken",
+      "painting; watercolour; Stone Circle. Glen Quicken",
+      "stone circle"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "22429e7d-35ed-303c-8675-6c50706f6f0a",
+      "objectNumber": "SSL-ART-1653",
+      "material": [
+        "watercolour",
+        "paper (support)",
+        "album"
+      ],
+      "place": [
+        "Glen Quicken",
+        "Glen Quicken"
+      ],
+      "dimensions": [
+        "height (image) 135 mm",
+        "width (image) 280 mm",
+        "height (mount) 240 mm",
+        "width (mount) 340 mm"
+      ],
+      "inscriptionContent": "\"Oct.72\" \"Stone Circle. Glen Quicken\"",
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Watercolour mounted on page ??? of H.J. Moule \"In Girthon, Anwoth, &c\" View of a stone circle with hills in the background, Glen Quicken, Dumfries & Galloway."
+        ],
+        "Object name(s)": [
+          "painting; watercolour; Stone Circle. Glen Quicken"
+        ],
+        "Brief description": [
+          "Watercolour mounted on page ??? of H.J. Moule \"In Girthon, Anwoth, &c\" View of a stone circle with hills in the background, Glen Quicken, Dumfries & Galloway.",
+          "View of a stone circle with a large standing stone in the centre. There are more stones in the foreground than there arein the background. Hills in the background are of a brown colour. In the left middle ground is a group of trees amongst which are some ruins."
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "stone circle"
+        ],
+        "Associated date": [
+          "1872",
+          "late 19th Century",
+          "Victorian"
+        ],
+        "Associated person": [
+          "MOULE (Henry Joseph) 1825-1904"
+        ],
+        "Associated place": [
+          "Glen Quicken"
+        ],
+        "Dimension": [
+          "height (image) 135 mm",
+          "width (image) 280 mm",
+          "height (mount) 240 mm",
+          "width (mount) 340 mm"
+        ],
+        "Inscription content": [
+          "\"Oct.72\" \"Stone Circle. Glen Quicken\""
+        ],
+        "Inscription position": [
+          "on image bottom left on mount bottom middle"
+        ],
+        "Inscription type": [
+          "date",
+          "title"
+        ],
+        "Material": [
+          "watercolour",
+          "paper (support)",
+          "album"
+        ],
+        "Object name": [
+          "painting; watercolour; Stone Circle. Glen Quicken"
+        ],
+        "Object number": [
+          "1993.546.169"
+        ],
+        "Object production date": [
+          "1872.10",
+          "late 19th Century",
+          "Victorian"
+        ],
+        "Object production person": [
+          "Moule, Henry Joseph"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Object production place": [
+          "Glen Quicken"
+        ],
+        "Responsible department/section": [
+          "Art_Fine-Moule"
+        ],
+        "Technique": [
+          "painted"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:22429e7d-35ed-303c-8675-6c50706f6f0a",
+      "title": "Watercolour mounted on page ??? of H.J. Moule \"In Girthon, Anwoth, &c\" View of a stone circle with hills in the background, Glen Quicken, Dumfries & Galloway.",
+      "url": "https://museumdata.uk/objects/22429e7d-35ed-303c-8675-6c50706f6f0a",
+      "creator": "Moule, Henry Joseph",
+      "date": "1872.10"
+    }
+  },
+  {
+    "id": "mds:2c19433d-efd2-33ba-9446-dcad83f07b54",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1983.1783",
+    "_sourceUrl": "https://museumdata.uk/objects/2c19433d-efd2-33ba-9446-dcad83f07b54",
+    "title": "Hurlers and Classerniss",
+    "description": "three differing size stone circles (fig3) (fig2).  Twp parallel lines of stones culminating in a circle of stones, with three short, single lines of stones at 3,6 & 9 o'clock (fi1); as fig2, but 180deg not so defined",
+    "creator": "Day, W",
+    "subject": [
+      "print",
+      "print",
+      "Archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "2c19433d-efd2-33ba-9446-dcad83f07b54",
+      "objectNumber": "DZSWS:1983.1783",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Hurlers and Classerniss"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "244",
+        "202"
+      ],
+      "personAssociation": [
+        "pub"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Hurlers and Classerniss"
+        ],
+        "Object name(s)": [
+          "print"
+        ],
+        "Brief description": [
+          "three differing size stone circles (fig3) (fig2).  Twp parallel lines of stones culminating in a circle of stones, with three short, single lines of stones at 3,6 & 9 o'clock (fi1); as fig2, but 180deg not so defined"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "Archaeology"
+        ],
+        "Association type": [
+          "antecedant"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - place": [
+          "Hurlers and Classerniss"
+        ],
+        "Place status": [
+          "Site Name",
+          "stone setting, Stone circle"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "244",
+          "202"
+        ],
+        "Distinguishing features": [
+          "album"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "print"
+        ],
+        "Object number": [
+          "DZSWS:1983.1783"
+        ],
+        "Object production person": [
+          "Day, W"
+        ],
+        "Person's address": [
+          "59 Gt Queen Street"
+        ],
+        "Person's association": [
+          "pub"
+        ],
+        "Technique": [
+          "engraving"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:2c19433d-efd2-33ba-9446-dcad83f07b54",
+      "title": "Hurlers and Classerniss",
+      "url": "https://museumdata.uk/objects/2c19433d-efd2-33ba-9446-dcad83f07b54",
+      "creator": "Day, W"
+    }
+  },
+  {
+    "id": "mds:d7718110-a8c4-3b75-b4f8-95e6993e9d7a",
+    "_source": "mds",
+    "_sourceId": "O55616",
+    "_sourceUrl": "https://museumdata.uk/objects/d7718110-a8c4-3b75-b4f8-95e6993e9d7a",
+    "title": "Stone circles of the British Isles, The",
+    "creator": [
+      "BURL, Aubrey",
+      "Yale University Press"
+    ],
+    "date": "1977",
+    "subject": [
+      "Book",
+      "Book",
+      "Stone Circles: Great Britain",
+      "Archaeology: prehistory",
+      "Stonehenge"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "d7718110-a8c4-3b75-b4f8-95e6993e9d7a",
+      "objectNumber": "O55616",
+      "place": [
+        "London"
+      ],
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "410",
+        "25"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone circles of the British Isles, The"
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Stone Circles: Great Britain",
+          "Archaeology: prehistory",
+          "Stonehenge"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "410",
+          "25"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "L.1978.268"
+        ],
+        "Object production date": [
+          "1977"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production organisation": [
+          "Yale University Press"
+        ],
+        "Organisation's association": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "BURL, Aubrey"
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Object production place": [
+          "London"
+        ],
+        "Place association": [
+          "Published"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:d7718110-a8c4-3b75-b4f8-95e6993e9d7a",
+      "title": "Stone circles of the British Isles, The",
+      "url": "https://museumdata.uk/objects/d7718110-a8c4-3b75-b4f8-95e6993e9d7a",
+      "creator": [
+        "BURL, Aubrey",
+        "Yale University Press"
+      ],
+      "date": "1977"
+    }
+  },
+  {
+    "id": "mds:6b82502d-8d2e-346f-89af-633b9e355ec7",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.18705",
+    "_sourceUrl": "https://museumdata.uk/objects/6b82502d-8d2e-346f-89af-633b9e355ec7",
+    "title": "Stone Circles",
+    "description": "Stone Circles/ Hall, Kenneth/ 1996",
+    "creator": "Hall, Kenneth",
+    "date": "1996",
+    "subject": [
+      "book",
+      "book",
+      "neolithic",
+      "archaeology",
+      "stone circles",
+      "megaliths",
+      "astronomy",
+      "calendar"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "6b82502d-8d2e-346f-89af-633b9e355ec7",
+      "objectNumber": "DZSWS:Book.18705",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Avebury",
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "295mm",
+        "210mm"
+      ],
+      "objectHistory": "Lecture about stone circles given to The University of the Third Age",
+      "numberOfObjects": "1",
+      "inscriptionContent": "For John Stewart FRCS with compliments from the autho",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone Circles"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "Stone Circles/ Hall, Kenneth/ 1996",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "neolithic",
+          "archaeology",
+          "stone circles",
+          "megaliths",
+          "astronomy",
+          "calendar"
+        ],
+        "Content - date": [
+          "neolithic"
+        ],
+        "Content - note": [
+          "Lecture given to The University of the Third Age, signed by author"
+        ],
+        "Content - place": [
+          "Avebury",
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "295mm",
+          "210mm"
+        ],
+        "Inscription content": [
+          "For John Stewart FRCS with compliments from the autho"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Lecture about stone circles given to The University of the Third Age"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.18705"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "1996"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production person": [
+          "Hall, Kenneth"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:6b82502d-8d2e-346f-89af-633b9e355ec7",
+      "title": "Stone Circles",
+      "url": "https://museumdata.uk/objects/6b82502d-8d2e-346f-89af-633b9e355ec7",
+      "creator": "Hall, Kenneth",
+      "date": "1996"
+    }
+  },
+  {
+    "id": "mds:d3692611-5b78-3f60-8fbe-63c6f3103e83",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2020.7005.9",
+    "_sourceUrl": "https://museumdata.uk/objects/d3692611-5b78-3f60-8fbe-63c6f3103e83",
+    "title": "MDS Record 21",
+    "description": "colour photograph of Stonehenge looking out from inside the stone circle with van hire truck parked behind the stone circle",
+    "creator": "Daw, Tim",
+    "subject": [
+      "photograph",
+      "photograph",
+      "archaeology",
+      "stone circle",
+      "world heritage site",
+      "transport",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "d3692611-5b78-3f60-8fbe-63c6f3103e83",
+      "objectNumber": "DZSWS:2020.7005.9",
+      "material": [
+        "photographic paper"
+      ],
+      "place": [
+        "Wiltshire",
+        "Stonehenge",
+        "Amesbury"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "151mm",
+        "114mm"
+      ],
+      "objectHistory": "Stonehenge looking out from inside the stone circle with van hire truck parked behind the stone circle",
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "photographer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "photograph"
+        ],
+        "Brief description": [
+          "colour photograph of Stonehenge looking out from inside the stone circle with van hire truck parked behind the stone circle"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "stone circle",
+          "world heritage site",
+          "transport"
+        ],
+        "Content - date": [
+          "21st century"
+        ],
+        "Content - place": [
+          "Wiltshire",
+          "Stonehenge",
+          "Amesbury"
+        ],
+        "Place status": [
+          "County",
+          "Parish"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "151mm",
+          "114mm"
+        ],
+        "Material": [
+          "photographic paper"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "Stonehenge looking out from inside the stone circle with van hire truck parked behind the stone circle"
+        ],
+        "Object name": [
+          "photograph"
+        ],
+        "Object number": [
+          "DZSWS:2020.7005.9"
+        ],
+        "Object production person": [
+          "Daw, Tim"
+        ],
+        "Person's association": [
+          "photographer"
+        ],
+        "Related object number": [
+          "DZSWS:2020.7005.1-.11"
+        ],
+        "Technical attribute": [
+          "originalcopy"
+        ],
+        "Technical attribute measurement": [
+          "photo format",
+          "original/copy"
+        ],
+        "Technique": [
+          "photographer's number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:d3692611-5b78-3f60-8fbe-63c6f3103e83",
+      "title": "MDS Record 21",
+      "url": "https://museumdata.uk/objects/d3692611-5b78-3f60-8fbe-63c6f3103e83",
+      "creator": "Daw, Tim"
+    }
+  },
+  {
+    "id": "mds:11633136-94d7-36ca-a2f6-0041c58ce8c2",
+    "_source": "mds",
+    "_sourceId": "SSL-ART-1536",
+    "_sourceUrl": "https://museumdata.uk/objects/11633136-94d7-36ca-a2f6-0041c58ce8c2",
+    "title": "Watercolour mounted on page 127 of H.J. Moule \"Dorset Vol.6\". Poxwell Cairn Circle (1899).",
+    "description": "Watercolour mounted on page 127 of H.J. Moule \"Dorset Vol.6\". Poxwell Cairn Circle (1899).",
+    "creator": "Moule, Henry Joseph",
+    "date": "1899.05.25",
+    "subject": [
+      "painting; watercolour; Stone-circle, near Pokeswell; Poxwell",
+      "painting; watercolour; Stone-circle, near Pokeswell; Poxwell",
+      "stone circle"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "11633136-94d7-36ca-a2f6-0041c58ce8c2",
+      "objectNumber": "SSL-ART-1536",
+      "material": [
+        "watercolour",
+        "paper (support)",
+        "album"
+      ],
+      "place": [
+        "Poxwell Cairn Circle",
+        "Poxwell Cairn Circle"
+      ],
+      "dimensions": [
+        "height (image) 117 mm",
+        "width (image) 307 mm"
+      ],
+      "inscriptionContent": "\"May 25.99\" \"Stone-circle, near Poxwell\"",
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Watercolour mounted on page 127 of H.J. Moule \"Dorset Vol.6\". Poxwell Cairn Circle (1899)."
+        ],
+        "Object name(s)": [
+          "painting; watercolour; Stone-circle, near Pokeswell; Poxwell"
+        ],
+        "Brief description": [
+          "Watercolour mounted on page 127 of H.J. Moule \"Dorset Vol.6\". Poxwell Cairn Circle (1899).",
+          "Poxwell Cairn Circle, a shepherds crook and basket are in the foreground in front of the cairns. The sea, headlands and Portland are visiblein the background."
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "stone circle"
+        ],
+        "Associated date": [
+          "1899",
+          "late 19th Century",
+          "Victorian"
+        ],
+        "Associated person": [
+          "MOULE (Henry Joseph) 1825-1904"
+        ],
+        "Associated place": [
+          "Poxwell Cairn Circle"
+        ],
+        "Dimension": [
+          "height (image) 117 mm",
+          "width (image) 307 mm"
+        ],
+        "Inscription content": [
+          "\"May 25.99\" \"Stone-circle, near Poxwell\""
+        ],
+        "Inscription position": [
+          "on image bottom left on mount bottom left"
+        ],
+        "Inscription type": [
+          "date",
+          "title"
+        ],
+        "Material": [
+          "watercolour",
+          "paper (support)",
+          "album"
+        ],
+        "Object name": [
+          "painting; watercolour; Stone-circle, near Pokeswell; Poxwell"
+        ],
+        "Object number": [
+          "1993.543.84"
+        ],
+        "Object production date": [
+          "1899.05.25",
+          "late 19th Century",
+          "Victorian"
+        ],
+        "Object production person": [
+          "Moule, Henry Joseph"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Object production place": [
+          "Poxwell Cairn Circle"
+        ],
+        "Reproduction number": [
+          "2021AA02939",
+          "2021AA04321"
+        ],
+        "Responsible department/section": [
+          "Art_Fine-Moule"
+        ],
+        "Technique": [
+          "painted"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:11633136-94d7-36ca-a2f6-0041c58ce8c2",
+      "title": "Watercolour mounted on page 127 of H.J. Moule \"Dorset Vol.6\". Poxwell Cairn Circle (1899).",
+      "url": "https://museumdata.uk/objects/11633136-94d7-36ca-a2f6-0041c58ce8c2",
+      "creator": "Moule, Henry Joseph",
+      "date": "1899.05.25"
+    }
+  },
+  {
+    "id": "mds:47d290cf-3833-3883-aaf2-d764f2b7dd8d",
+    "_source": "mds",
+    "_sourceId": "SSL-PHP-16121",
+    "_sourceUrl": "https://museumdata.uk/objects/47d290cf-3833-3883-aaf2-d764f2b7dd8d",
+    "title": "MDS Record 23",
+    "description": "Valley of Stones. Stone circle? - hut circle? Bronze Age hut circle?",
+    "date": "1982",
+    "subject": [
+      "Photograph",
+      "Photograph"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "47d290cf-3833-3883-aaf2-d764f2b7dd8d",
+      "objectNumber": "SSL-PHP-16121",
+      "place": [
+        "Little Bredy"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Photograph"
+        ],
+        "Brief description": [
+          "Valley of Stones. Stone circle? - hut circle? Bronze Age hut circle?"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Content - place": [
+          "Little Bredy"
+        ],
+        "Object name": [
+          "Photograph"
+        ],
+        "Object number": [
+          "P.23784"
+        ],
+        "Object production date": [
+          "1982"
+        ],
+        "Object production note": [
+          "C J Bailey, Long Bredy House, Long Bredy, Dorchester"
+        ],
+        "Reproduction number": [
+          "2021AA23769"
+        ],
+        "Responsible department/section": [
+          "Photo"
+        ],
+        "Right holder": [
+          "DCM"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:47d290cf-3833-3883-aaf2-d764f2b7dd8d",
+      "title": "MDS Record 23",
+      "url": "https://museumdata.uk/objects/47d290cf-3833-3883-aaf2-d764f2b7dd8d",
+      "date": "1982"
+    }
+  },
+  {
+    "id": "mds:af3023d5-56ea-3b34-ab6e-26c749f1dbab",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.12202",
+    "_sourceUrl": "https://museumdata.uk/objects/af3023d5-56ea-3b34-ab6e-26c749f1dbab",
+    "title": "John Aubrey and Stone Circles",
+    "description": "John Aubrey and Stone Circles, Britain's First Archaeologist, from Avebury to Stonehenge/Burl, Aubrey/2010",
+    "creator": [
+      "Burl, Aubrey",
+      "Amberley Publishing"
+    ],
+    "subject": [
+      "book",
+      "book",
+      "archaeology",
+      "antiquarians",
+      "stone circles",
+      "history",
+      "Archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "af3023d5-56ea-3b34-ab6e-26c749f1dbab",
+      "objectNumber": "DZSWS:Book.12202",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Avebury",
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "antiquarian",
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "John Aubrey and Stone Circles"
+        ],
+        "Object name(s)": [
+          "book"
+        ],
+        "Brief description": [
+          "John Aubrey and Stone Circles, Britain's First Archaeologist, from Avebury to Stonehenge/Burl, Aubrey/2010"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "Archaeology"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "antiquarians",
+          "stone circles",
+          "history"
+        ],
+        "Content - person": [
+          "Aubrey, John"
+        ],
+        "Person's association": [
+          "antiquarian",
+          "Author"
+        ],
+        "Person's occupation": [
+          "antiquarian"
+        ],
+        "Content - place": [
+          "Avebury",
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "book"
+        ],
+        "Object number": [
+          "DZSWS:Book.12202"
+        ],
+        "Object production organisation": [
+          "Amberley Publishing"
+        ],
+        "Organisation's function": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "Burl, Aubrey"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:af3023d5-56ea-3b34-ab6e-26c749f1dbab",
+      "title": "John Aubrey and Stone Circles",
+      "url": "https://museumdata.uk/objects/af3023d5-56ea-3b34-ab6e-26c749f1dbab",
+      "creator": [
+        "Burl, Aubrey",
+        "Amberley Publishing"
+      ]
+    }
+  },
+  {
+    "id": "mds:491b8662-2eb7-3f59-aab4-379e7f0fc134",
+    "_source": "mds",
+    "_sourceId": "90189",
+    "_sourceUrl": "https://museumdata.uk/objects/491b8662-2eb7-3f59-aab4-379e7f0fc134",
+    "title": "Landscape with stone Circle",
+    "description": "Landscape with stone Circle",
+    "creator": "William Turner of Oxford",
+    "date": "1804 - 1862",
+    "subject": [
+      "visual representation > drawing",
+      "visual representation > drawing"
+    ],
+    "type": "Museum object",
+    "collection": "Ashmolean Museum",
+    "mds": {
+      "uuid": "491b8662-2eb7-3f59-aab4-379e7f0fc134",
+      "objectNumber": "90189",
+      "place": [
+        "Europe"
+      ],
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Landscape with stone Circle"
+        ],
+        "Object name(s)": [
+          "visual representation > drawing"
+        ],
+        "Brief description": [
+          "Landscape with stone Circle"
+        ],
+        "Collection": [
+          "Ashmolean Museum"
+        ],
+        "Associated place": [
+          "Europe"
+        ],
+        "Place association": [
+          "place of creation"
+        ],
+        "Object name": [
+          "visual representation > drawing"
+        ],
+        "Object number": [
+          "WA1948.41"
+        ],
+        "Object production date": [
+          "1804 - 1862"
+        ],
+        "Date - association": [
+          "date of creation"
+        ],
+        "Date - earliest / single": [
+          "1804"
+        ],
+        "Date - latest": [
+          "1862"
+        ],
+        "Object production person": [
+          "William Turner of Oxford"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Person's birth date": [
+          "1789 - 1862"
+        ],
+        "Responsible department/section": [
+          "Western Art"
+        ],
+        "Text": [
+          "https://collections.ashmolean.org/object/90189"
+        ],
+        "Text reason": [
+          "Collections online record"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:491b8662-2eb7-3f59-aab4-379e7f0fc134",
+      "title": "Landscape with stone Circle",
+      "url": "https://museumdata.uk/objects/491b8662-2eb7-3f59-aab4-379e7f0fc134",
+      "creator": "William Turner of Oxford",
+      "date": "1804 - 1862"
+    }
+  },
+  {
+    "id": "mds:7dc8897b-0989-3131-9157-91ff698ab6b5",
+    "_source": "mds",
+    "_sourceId": "O67813",
+    "_sourceUrl": "https://museumdata.uk/objects/7dc8897b-0989-3131-9157-91ff698ab6b5",
+    "title": "Long barrow, stone and earth circles and standing stones in South Dorset",
+    "creator": "Oliver, V.L.",
+    "date": "1942",
+    "subject": [
+      "Manuscript",
+      "Manuscript"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "7dc8897b-0989-3131-9157-91ff698ab6b5",
+      "objectNumber": "O67813",
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Long barrow, stone and earth circles and standing stones in South Dorset"
+        ],
+        "Object name(s)": [
+          "Manuscript"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Object name": [
+          "Manuscript"
+        ],
+        "Object number": [
+          "L.1942.50.1"
+        ],
+        "Object production date": [
+          "1942"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production person": [
+          "Oliver, V.L."
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:7dc8897b-0989-3131-9157-91ff698ab6b5",
+      "title": "Long barrow, stone and earth circles and standing stones in South Dorset",
+      "url": "https://museumdata.uk/objects/7dc8897b-0989-3131-9157-91ff698ab6b5",
+      "creator": "Oliver, V.L.",
+      "date": "1942"
+    }
+  },
+  {
+    "id": "mds:b8498670-aeea-3e4f-bdbc-f5a0a63b77df",
+    "_source": "mds",
+    "_sourceId": "SSL-ART-1674",
+    "_sourceUrl": "https://museumdata.uk/objects/b8498670-aeea-3e4f-bdbc-f5a0a63b77df",
+    "title": "Second of three watercolours mounted on page ??? of H.J. Moule \"In Girthon, Anwoth, &c\". A view of a stone circle in Glen Quicken with Cairnsmore of Fleet in the distance, Dumfries & Galloway.",
+    "description": "Second of three watercolours mounted on page ??? of H.J. Moule \"In Girthon, Anwoth, &c\". A view of a stone circle in Glen Quicken with Cairnsmore of Fleet in the distance, Dumfries & Galloway.",
+    "creator": "Moule, Henry Joseph",
+    "date": "1870.08.17",
+    "subject": [
+      "painting; watercolour; Glen Quicken Stone Circle & Cairnsmore",
+      "painting; watercolour; Glen Quicken Stone Circle & Cairnsmore",
+      "stone circle",
+      "mountain"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "b8498670-aeea-3e4f-bdbc-f5a0a63b77df",
+      "objectNumber": "SSL-ART-1674",
+      "material": [
+        "watercolour",
+        "paper (support)",
+        "album"
+      ],
+      "place": [
+        "Glen Quicken",
+        "Glen Quicken",
+        "Cairnsmore of Fleet"
+      ],
+      "dimensions": [
+        "height (image) 90 mm",
+        "width (image) 230 mm"
+      ],
+      "inscriptionContent": "\"Aug 17.70\" \"Glen Quicken Stone Circle & Cairnsmore\"",
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Second of three watercolours mounted on page ??? of H.J. Moule \"In Girthon, Anwoth, &c\". A view of a stone circle in Glen Quicken with Cairnsmore of Fleet in the distance, Dumfries & Galloway."
+        ],
+        "Object name(s)": [
+          "painting; watercolour; Glen Quicken Stone Circle & Cairnsmore"
+        ],
+        "Brief description": [
+          "Second of three watercolours mounted on page ??? of H.J. Moule \"In Girthon, Anwoth, &c\". A view of a stone circle in Glen Quicken with Cairnsmore of Fleet in the distance, Dumfries & Galloway.",
+          "View of a stone circle with a large stone in the centre. Cairnsmore of Fleet and foothills are visible in the background beneath a bluish sky. The foreground is flat, green and includes a few trees on the left."
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "stone circle",
+          "mountain"
+        ],
+        "Associated date": [
+          "1870",
+          "late 19th Century",
+          "Victorian"
+        ],
+        "Associated person": [
+          "MOULE (Henry Joseph) 1825-1904"
+        ],
+        "Associated place": [
+          "Glen Quicken",
+          "Cairnsmore of Fleet"
+        ],
+        "Dimension": [
+          "height (image) 90 mm",
+          "width (image) 230 mm"
+        ],
+        "Inscription content": [
+          "\"Aug 17.70\" \"Glen Quicken Stone Circle & Cairnsmore\""
+        ],
+        "Inscription position": [
+          "on image bottom left on mount bottom middle"
+        ],
+        "Inscription type": [
+          "date",
+          "title"
+        ],
+        "Material": [
+          "watercolour",
+          "paper (support)",
+          "album"
+        ],
+        "Object name": [
+          "painting; watercolour; Glen Quicken Stone Circle & Cairnsmore"
+        ],
+        "Object number": [
+          "1993.546.167"
+        ],
+        "Object production date": [
+          "1870.08.17",
+          "late 19th Century",
+          "Victorian"
+        ],
+        "Object production person": [
+          "Moule, Henry Joseph"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Object production place": [
+          "Glen Quicken"
+        ],
+        "Responsible department/section": [
+          "Art_Fine-Moule"
+        ],
+        "Technique": [
+          "painted"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:b8498670-aeea-3e4f-bdbc-f5a0a63b77df",
+      "title": "Second of three watercolours mounted on page ??? of H.J. Moule \"In Girthon, Anwoth, &c\". A view of a stone circle in Glen Quicken with Cairnsmore of Fleet in the distance, Dumfries & Galloway.",
+      "url": "https://museumdata.uk/objects/b8498670-aeea-3e4f-bdbc-f5a0a63b77df",
+      "creator": "Moule, Henry Joseph",
+      "date": "1870.08.17"
+    }
+  },
+  {
+    "id": "mds:ad1cffde-e028-3e62-b3a5-d0eada85f2fb",
+    "_source": "mds",
+    "_sourceId": "TRURI",
+    "_sourceUrl": "https://museumdata.uk/objects/ad1cffde-e028-3e62-b3a5-d0eada85f2fb",
+    "title": "Stone Circle, Wallabrook, Dartmoor",
+    "description": "watercolour of a stone circle, Wallabrook, Dartmoor, mounted in home made mount, signed",
+    "creator": "Pennington, G.F.",
+    "subject": [
+      "painting; watercolour",
+      "painting; watercolour",
+      "FINE ART",
+      "English School"
+    ],
+    "type": "Museum object",
+    "collection": "Cornwall Museum and Art Gallery",
+    "mds": {
+      "uuid": "ad1cffde-e028-3e62-b3a5-d0eada85f2fb",
+      "objectNumber": "TRURI",
+      "place": [
+        "Devon",
+        "England"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "280 mm",
+        "400 mm",
+        "560 mm",
+        "410 mm"
+      ],
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone Circle, Wallabrook, Dartmoor"
+        ],
+        "Object name(s)": [
+          "painting; watercolour"
+        ],
+        "Brief description": [
+          "watercolour of a stone circle, Wallabrook, Dartmoor, mounted in home made mount, signed",
+          "standing stones in moorland setting"
+        ],
+        "Collection": [
+          "Cornwall Museum and Art Gallery"
+        ],
+        "Acquisition date": [
+          "1954"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "FINE ART",
+          "English School"
+        ],
+        "Content - description": [
+          "standing stones in moorland setting"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "image",
+          "mount"
+        ],
+        "Dimension value": [
+          "280 mm",
+          "400 mm",
+          "560 mm",
+          "410 mm"
+        ],
+        "Object component name": [
+          "condition"
+        ],
+        "Object component information": [
+          "good",
+          "soiled"
+        ],
+        "Object name": [
+          "painting; watercolour"
+        ],
+        "Object number": [
+          "TRURI : 1954.68.8"
+        ],
+        "Object production person": [
+          "Pennington, G.F."
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Object production place": [
+          "Devon",
+          "England"
+        ],
+        "Place status": [
+          "County",
+          "Country"
+        ],
+        "Technique": [
+          "painted"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:ad1cffde-e028-3e62-b3a5-d0eada85f2fb",
+      "title": "Stone Circle, Wallabrook, Dartmoor",
+      "url": "https://museumdata.uk/objects/ad1cffde-e028-3e62-b3a5-d0eada85f2fb",
+      "creator": "Pennington, G.F."
+    }
+  },
+  {
+    "id": "mds:afe84819-a2e5-399b-a4f1-618acc0cabc5",
+    "_source": "mds",
+    "_sourceId": "co8656068",
+    "_sourceUrl": "https://museumdata.uk/objects/afe84819-a2e5-399b-a4f1-618acc0cabc5",
+    "title": "Photograph of stone circle base in front of a hill",
+    "description": "Photograph depicting stone circle base in front of a hill. From the Impressions Gallery exhibition, 'Industrial Decline - Stony Ground, Lead Mining in North Yorkshire' December 6 - January 17, 1987.",
+    "subject": [
+      "colour print; colour print",
+      "colour print; colour print",
+      "colour print"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "afe84819-a2e5-399b-a4f1-618acc0cabc5",
+      "objectNumber": "co8656068",
+      "material": [
+        "paper (fibre product)"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "9 7/16",
+        "240",
+        "12",
+        "305"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Photograph of stone circle base in front of a hill"
+        ],
+        "Object name(s)": [
+          "colour print; colour print"
+        ],
+        "Brief description": [
+          "Photograph depicting stone circle base in front of a hill. From the Impressions Gallery exhibition, 'Industrial Decline - Stony Ground, Lead Mining in North Yorkshire' December 6 - January 17, 1987."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "colour print"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "9 7/16",
+          "240",
+          "12",
+          "305"
+        ],
+        "Material": [
+          "paper (fibre product)"
+        ],
+        "Object name": [
+          "colour print; colour print"
+        ],
+        "Other number": [
+          "2015-5024/2267"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:afe84819-a2e5-399b-a4f1-618acc0cabc5",
+      "title": "Photograph of stone circle base in front of a hill",
+      "url": "https://museumdata.uk/objects/afe84819-a2e5-399b-a4f1-618acc0cabc5"
+    }
+  },
+  {
+    "id": "mds:da673c99-eac5-34aa-9aa4-a6daf3403b74",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1982.7435",
+    "_sourceUrl": "https://museumdata.uk/objects/da673c99-eac5-34aa-9aa4-a6daf3403b74",
+    "title": "MDS Record 30",
+    "description": "pen drawing of stone circle at Boscawen, also pen drawing of stone circle at Winterbourne Abbas",
+    "creator": "Meredith, E H",
+    "date": "1814",
+    "subject": [
+      "drawing; pen and ink drawing",
+      "drawing; pen and ink drawing",
+      "fine art",
+      "drawings"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "da673c99-eac5-34aa-9aa4-a6daf3403b74",
+      "objectNumber": "DZSWS:1982.7435",
+      "material": [
+        "ink",
+        "paper"
+      ],
+      "place": [
+        "Boscawen",
+        "Cornwall"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "90"
+      ],
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "drawing; pen and ink drawing"
+        ],
+        "Brief description": [
+          "pen drawing of stone circle at Boscawen, also pen drawing of stone circle at Winterbourne Abbas"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "fine art",
+          "drawings"
+        ],
+        "Associated object type": [
+          "after Aubrey, J (17th century)"
+        ],
+        "Association type": [
+          "antecedant"
+        ],
+        "Content - place": [
+          "Boscawen",
+          "Cornwall"
+        ],
+        "Place status": [
+          "Parish",
+          "County",
+          "stone circle"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "90"
+        ],
+        "Material": [
+          "ink",
+          "paper"
+        ],
+        "Object name": [
+          "drawing; pen and ink drawing"
+        ],
+        "Object number": [
+          "DZSWS:1982.7435"
+        ],
+        "Date - earliest / single": [
+          "1814"
+        ],
+        "Object production person": [
+          "Meredith, E H"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:da673c99-eac5-34aa-9aa4-a6daf3403b74",
+      "title": "MDS Record 30",
+      "url": "https://museumdata.uk/objects/da673c99-eac5-34aa-9aa4-a6daf3403b74",
+      "creator": "Meredith, E H",
+      "date": "1814"
+    }
+  },
+  {
+    "id": "mds:ca5ccd44-2fdb-3e9a-bfdf-e8c8e0a36ef3",
+    "_source": "mds",
+    "_sourceId": "O55615",
+    "_sourceUrl": "https://museumdata.uk/objects/ca5ccd44-2fdb-3e9a-bfdf-e8c8e0a36ef3",
+    "title": "Prehistoric stone circles. (Shire Archaeology, no. 9)",
+    "creator": [
+      "BURL, Aubrey",
+      "Shire Publications Ltd."
+    ],
+    "date": "1979",
+    "subject": [
+      "Book",
+      "Book",
+      "Stone Circles: Great Britain",
+      "Archaeology: Prehistory"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "ca5ccd44-2fdb-3e9a-bfdf-e8c8e0a36ef3",
+      "objectNumber": "O55615",
+      "place": [
+        "Aylesbury"
+      ],
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "48",
+        "21"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Prehistoric stone circles. (Shire Archaeology, no. 9)"
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Stone Circles: Great Britain",
+          "Archaeology: Prehistory"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "48",
+          "21"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "L.1990.376"
+        ],
+        "Object production date": [
+          "1979"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production organisation": [
+          "Shire Publications Ltd."
+        ],
+        "Organisation's association": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "BURL, Aubrey"
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Object production place": [
+          "Aylesbury"
+        ],
+        "Place association": [
+          "Published"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:ca5ccd44-2fdb-3e9a-bfdf-e8c8e0a36ef3",
+      "title": "Prehistoric stone circles. (Shire Archaeology, no. 9)",
+      "url": "https://museumdata.uk/objects/ca5ccd44-2fdb-3e9a-bfdf-e8c8e0a36ef3",
+      "creator": [
+        "BURL, Aubrey",
+        "Shire Publications Ltd."
+      ],
+      "date": "1979"
+    }
+  },
+  {
+    "id": "mds:261e75d9-65a0-3aad-8360-53144a70aa7e",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.18465.5",
+    "_sourceUrl": "https://museumdata.uk/objects/261e75d9-65a0-3aad-8360-53144a70aa7e",
+    "title": "The Age of Stone Circles",
+    "description": "The Age of Stone Circles/British Association/1922",
+    "creator": [
+      "British Association",
+      "Spottiswoode, Ballantyne & Co Ltd"
+    ],
+    "date": "1922",
+    "subject": [
+      "archaeological report",
+      "archaeological report",
+      "archaeology",
+      "stone circles",
+      "excavation",
+      "neolithic",
+      "bronze age"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "261e75d9-65a0-3aad-8360-53144a70aa7e",
+      "objectNumber": "DZSWS:Book.18465.5",
+      "material": [
+        "annual report"
+      ],
+      "place": [
+        "Avebury",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "objectHistory": "report on excavations to determine the date of the Avebury stone circle",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Age of Stone Circles"
+        ],
+        "Object name(s)": [
+          "archaeological report"
+        ],
+        "Brief description": [
+          "The Age of Stone Circles/British Association/1922",
+          "printed"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "stone circles",
+          "excavation",
+          "neolithic",
+          "bronze age"
+        ],
+        "Content - note": [
+          "also a newspaper cutting"
+        ],
+        "Content - place": [
+          "Avebury",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "216",
+          "134"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "annual report"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object history note": [
+          "report on excavations to determine the date of the Avebury stone circle"
+        ],
+        "Object name": [
+          "archaeological report"
+        ],
+        "Object number": [
+          "DZSWS:Book.18465.5"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "1922"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "British Association",
+          "Spottiswoode, Ballantyne & Co Ltd"
+        ],
+        "Organisation's function": [
+          "publisher",
+          "printer"
+        ],
+        "Other number": [
+          "ISBN"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "printed"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:261e75d9-65a0-3aad-8360-53144a70aa7e",
+      "title": "The Age of Stone Circles",
+      "url": "https://museumdata.uk/objects/261e75d9-65a0-3aad-8360-53144a70aa7e",
+      "creator": [
+        "British Association",
+        "Spottiswoode, Ballantyne & Co Ltd"
+      ],
+      "date": "1922"
+    }
+  },
+  {
+    "id": "mds:a795508c-a9c4-3a56-a519-11722b24ba40",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2004.297.2.10",
+    "_sourceUrl": "https://museumdata.uk/objects/a795508c-a9c4-3a56-a519-11722b24ba40",
+    "title": "MDS Record 33",
+    "description": "pencil and sepia wash drawing of the Druids Circle stone ring at Penmaenmawr, North Wales, by an unknown artist, c.1820. No 10 (4th row, left) of the illustrations in the front of John Britton's 'Celtic' Cabinet (DZSWS:2004.297.1).",
+    "creator": "unknown",
+    "subject": [
+      "stone circle; painting; watercolour",
+      "stone circle; painting; watercolour",
+      "fine art",
+      "paintings",
+      "environment"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "a795508c-a9c4-3a56-a519-11722b24ba40",
+      "objectNumber": "DZSWS:2004.297.2.10",
+      "material": [
+        "paint",
+        "watercolour",
+        "pencil",
+        "paper"
+      ],
+      "place": [
+        "Gwynedd",
+        "Druids Circle",
+        "Wales"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "82",
+        "252"
+      ],
+      "personAssociation": [
+        "artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "stone circle; painting; watercolour"
+        ],
+        "Brief description": [
+          "pencil and sepia wash drawing of the Druids Circle stone ring at Penmaenmawr, North Wales, by an unknown artist, c.1820. No 10 (4th row, left) of the illustrations in the front of John Britton's 'Celtic' Cabinet (DZSWS:2004.297.1)."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "fine art",
+          "paintings",
+          "environment"
+        ],
+        "Association type": [
+          "antecedant"
+        ],
+        "Content - place": [
+          "Gwynedd",
+          "Druids Circle",
+          "Wales"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "stone circle"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "82",
+          "252"
+        ],
+        "Material": [
+          "paint",
+          "watercolour",
+          "pencil",
+          "paper"
+        ],
+        "Object name": [
+          "stone circle; painting; watercolour"
+        ],
+        "Object number": [
+          "DZSWS:2004.297.2.10"
+        ],
+        "Object production person": [
+          "unknown"
+        ],
+        "Person's association": [
+          "artist"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:a795508c-a9c4-3a56-a519-11722b24ba40",
+      "title": "MDS Record 33",
+      "url": "https://museumdata.uk/objects/a795508c-a9c4-3a56-a519-11722b24ba40",
+      "creator": "unknown"
+    }
+  },
+  {
+    "id": "mds:972afd25-7a51-35d4-b25e-0321e05e95a5",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2001.5023",
+    "_sourceUrl": "https://museumdata.uk/objects/972afd25-7a51-35d4-b25e-0321e05e95a5",
+    "title": "10 black and white postcards. 9 coloured postcards. Avebury, Wiltshire.",
+    "description": "Various view in and around the Avebury complex. 1 x \"North west corner of the stone circle, Avebury. Excavated & re-discovered\", 1 x \"Adam and Eve druid stones, Avebury\", 1 x \"Druid's stone of outer circle (north) Avebury\",1 x \"Ancient landmarks.The diamond stone, north entrance, Avebury\", 2 x \"Remains of druids stone avenue, west Avebury\",  1 x \"Druidical remains, Avebury\", 1 x \"Avebury stones near Calne\", 2 x \"Avebury stones\", 1 x \"Avebury. Druid stones\", 1 x Remains of the Avebury stone circle. Looking south from Perry's Hotel\", 2 x \"Remains of druids stone avenue, inner and outer circle, south, Avebury, 1 x \"Remains of the inner circle, druids stones, Avebury\".",
+    "date": "unknown",
+    "subject": [
+      "postcard",
+      "postcard",
+      "environment",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "972afd25-7a51-35d4-b25e-0321e05e95a5",
+      "objectNumber": "DZSWS:2001.5023",
+      "place": [
+        "Avebury",
+        "Wiltshire",
+        "Avebury",
+        "Wiltshire"
+      ],
+      "numberOfObjects": "19",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "10 black and white postcards. 9 coloured postcards. Avebury, Wiltshire."
+        ],
+        "Object name(s)": [
+          "postcard"
+        ],
+        "Brief description": [
+          "Various view in and around the Avebury complex. 1 x \"North west corner of the stone circle, Avebury. Excavated & re-discovered\", 1 x \"Adam and Eve druid stones, Avebury\", 1 x \"Druid's stone of outer circle (north) Avebury\",1 x \"Ancient landmarks.The diamond stone, north entrance, Avebury\", 2 x \"Remains of druids stone avenue, west Avebury\",  1 x \"Druidical remains, Avebury\", 1 x \"Avebury stones near Calne\", 2 x \"Avebury stones\", 1 x \"Avebury. Druid stones\", 1 x Remains of the Avebury stone circle. Looking south from Perry's Hotel\", 2 x \"Remains of druids stone avenue, inner and outer circle, south, Avebury, 1 x \"Remains of the inner circle, druids stones, Avebury\"."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "environment",
+          "archaeology"
+        ],
+        "Content - note": [
+          "Correspondence written on reverse of 6 postcards.  1 postmarked OC.19. 04, 1 postmarked JU.9.06, 1 postmarked SP.26.06, 1 postmarked JY.2.07, 1 postmarked NO.11.03, 1 postmarked JU.10.06."
+        ],
+        "Content - place": [
+          "Avebury",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Number of objects": [
+          "19"
+        ],
+        "Object name": [
+          "postcard"
+        ],
+        "Object number": [
+          "DZSWS:2001.5023"
+        ],
+        "Object production date": [
+          "unknown"
+        ],
+        "Object production place": [
+          "Avebury",
+          "Wiltshire"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:972afd25-7a51-35d4-b25e-0321e05e95a5",
+      "title": "10 black and white postcards. 9 coloured postcards. Avebury, Wiltshire.",
+      "url": "https://museumdata.uk/objects/972afd25-7a51-35d4-b25e-0321e05e95a5",
+      "date": "unknown"
+    }
+  },
+  {
+    "id": "mds:dbd666c7-f471-3d13-8184-9de50f3fa55d",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1983.3820",
+    "_sourceUrl": "https://museumdata.uk/objects/dbd666c7-f471-3d13-8184-9de50f3fa55d",
+    "title": "Stonehenge",
+    "description": "View of stone circle from about 45 degrees above and to the side, mostly standing stones, hint of ditch surrounding circle.",
+    "subject": [
+      "print",
+      "print",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "dbd666c7-f471-3d13-8184-9de50f3fa55d",
+      "objectNumber": "DZSWS:1983.3820",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Amesbury",
+        "Wiltshire",
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "126",
+        "203"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stonehenge"
+        ],
+        "Object name(s)": [
+          "print"
+        ],
+        "Brief description": [
+          "View of stone circle from about 45 degrees above and to the side, mostly standing stones, hint of ditch surrounding circle."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "henge",
+          "stone circle"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "126",
+          "203"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "print"
+        ],
+        "Object number": [
+          "DZSWS:1983.3820"
+        ],
+        "Object production place": [
+          "Amesbury",
+          "Wiltshire"
+        ],
+        "Reproduction number": [
+          "to be photographed"
+        ],
+        "Technique": [
+          "engraving"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:dbd666c7-f471-3d13-8184-9de50f3fa55d",
+      "title": "Stonehenge",
+      "url": "https://museumdata.uk/objects/dbd666c7-f471-3d13-8184-9de50f3fa55d"
+    }
+  },
+  {
+    "id": "mds:114655fb-b814-318e-9093-0a05563a14c7",
+    "_source": "mds",
+    "_sourceId": "DZSWS:Book.18050.8",
+    "_sourceUrl": "https://museumdata.uk/objects/114655fb-b814-318e-9093-0a05563a14c7",
+    "title": "The Age of Stone Circles - Report of the Committee appointed to conduct Explorations with the object of ascertaining the Age of Stone Circles",
+    "description": "The Age of Stone Circles - Report of the Committee appointed to conduct Explorations with the object of ascertaining the Age of Stone Circles/Read, C Hercules et al/British Association/1912",
+    "creator": [
+      "Read, C Hercules",
+      "Balfour, H",
+      "Auden, G A",
+      "Avebury, Lord",
+      "Ridgeway, W",
+      "Garson, J G",
+      "Evans, A J",
+      "Munro, R",
+      "Dawkins, Boyd",
+      "Lewis, A L",
+      "British Association",
+      "Spottiswoode & Co Ltd"
+    ],
+    "date": "1912",
+    "subject": [
+      "journal article",
+      "journal article",
+      "archaeology",
+      "prehistory",
+      "stone circles"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "114655fb-b814-318e-9093-0a05563a14c7",
+      "objectNumber": "DZSWS:Book.18050.8",
+      "material": [
+        "paperback"
+      ],
+      "place": [
+        "Avebury",
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "good",
+      "dimensions": [
+        "height",
+        "width",
+        "mm"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "The Age of Stone Circles - Report of the Committee appointed to conduct Explorations with the object of ascertaining the Age of Stone Circles"
+        ],
+        "Object name(s)": [
+          "journal article"
+        ],
+        "Brief description": [
+          "The Age of Stone Circles - Report of the Committee appointed to conduct Explorations with the object of ascertaining the Age of Stone Circles/Read, C Hercules et al/British Association/1912",
+          "object"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Condition": [
+          "good"
+        ],
+        "Content - concept": [
+          "archaeology",
+          "prehistory",
+          "stone circles"
+        ],
+        "Content - place": [
+          "Avebury",
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "County"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "215",
+          "140"
+        ],
+        "Dimension value": [
+          "mm"
+        ],
+        "Material": [
+          "paperback"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "journal article"
+        ],
+        "Object number": [
+          "DZSWS:Book.18050.8"
+        ],
+        "Date - association": [
+          "publication date"
+        ],
+        "Object production date": [
+          "1912"
+        ],
+        "Object production note": [
+          "imprint/edition"
+        ],
+        "Object production organisation": [
+          "British Association",
+          "Spottiswoode & Co Ltd"
+        ],
+        "Organisation's function": [
+          "publisher",
+          "printer"
+        ],
+        "Object production person": [
+          "Read, C Hercules",
+          "Balfour, H",
+          "Auden, G A",
+          "Avebury, Lord",
+          "Ridgeway, W",
+          "Garson, J G",
+          "Evans, A J",
+          "Munro, R",
+          "Dawkins, Boyd",
+          "Lewis, A L"
+        ],
+        "Person's association": [
+          "author"
+        ],
+        "Other number": [
+          "ISBN"
+        ],
+        "Other number type": [
+          "ISBN number"
+        ],
+        "Physical description": [
+          "object"
+        ],
+        "Technical attribute measurement": [
+          "number of pages"
+        ],
+        "Technique": [
+          "ISBN number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:114655fb-b814-318e-9093-0a05563a14c7",
+      "title": "The Age of Stone Circles - Report of the Committee appointed to conduct Explorations with the object of ascertaining the Age of Stone Circles",
+      "url": "https://museumdata.uk/objects/114655fb-b814-318e-9093-0a05563a14c7",
+      "creator": [
+        "Read, C Hercules",
+        "Balfour, H",
+        "Auden, G A",
+        "Avebury, Lord",
+        "Ridgeway, W",
+        "Garson, J G",
+        "Evans, A J",
+        "Munro, R",
+        "Dawkins, Boyd",
+        "Lewis, A L",
+        "British Association",
+        "Spottiswoode & Co Ltd"
+      ],
+      "date": "1912"
+    }
+  },
+  {
+    "id": "mds:d90321ef-fe83-36ae-ba59-4dd608cded63",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2001.81.3.1",
+    "_sourceUrl": "https://museumdata.uk/objects/d90321ef-fe83-36ae-ba59-4dd608cded63",
+    "title": "MDS Record 37",
+    "description": "1 sarsen stone fragment from the Neolithic period, from Avebury, Wiltshire",
+    "subject": [
+      "Brooke Collection; stone; sarsen stone",
+      "Brooke Collection; stone; sarsen stone",
+      "archaeology",
+      "neolithic"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "d90321ef-fe83-36ae-ba59-4dd608cded63",
+      "objectNumber": "DZSWS:2001.81.3.1",
+      "material": [
+        "stone",
+        "flint"
+      ],
+      "place": [
+        "Avebury",
+        "Wiltshire",
+        "Avebury Stone Circle"
+      ],
+      "dimensions": [
+        "length",
+        "width",
+        "height"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Brooke Collection; stone; sarsen stone"
+        ],
+        "Brief description": [
+          "1 sarsen stone fragment from the Neolithic period, from Avebury, Wiltshire"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "neolithic"
+        ],
+        "Associated date": [
+          "Period"
+        ],
+        "Date - period": [
+          "neolithic"
+        ],
+        "Associated place": [
+          "Avebury",
+          "Wiltshire",
+          "Avebury Stone Circle"
+        ],
+        "Place status": [
+          "henge"
+        ],
+        "Completeness": [
+          "incomplete"
+        ],
+        "Dimension": [
+          "length",
+          "width",
+          "height"
+        ],
+        "Field collection place": [
+          "Wiltshire",
+          "Avebury",
+          "Avebury Stone Circle"
+        ],
+        "Material": [
+          "stone",
+          "flint"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Brooke Collection; stone; sarsen stone"
+        ],
+        "Object number": [
+          "DZSWS:2001.81.3.1"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:d90321ef-fe83-36ae-ba59-4dd608cded63",
+      "title": "MDS Record 37",
+      "url": "https://museumdata.uk/objects/d90321ef-fe83-36ae-ba59-4dd608cded63"
+    }
+  },
+  {
+    "id": "mds:dd2260e4-331a-3cb2-a0f8-093a6262de0e",
+    "_source": "mds",
+    "_sourceId": "SSL-ART-3015",
+    "_sourceUrl": "https://museumdata.uk/objects/dd2260e4-331a-3cb2-a0f8-093a6262de0e",
+    "title": "Stone Circle,",
+    "creator": "L.C.(L.Colfox)",
+    "date": "1880",
+    "subject": [
+      "painting, Unframed",
+      "painting, Unframed"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "dd2260e4-331a-3cb2-a0f8-093a6262de0e",
+      "objectNumber": "SSL-ART-3015",
+      "material": [
+        "Watercolour"
+      ],
+      "personAssociation": [
+        "Artist"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone Circle,"
+        ],
+        "Object name(s)": [
+          "painting, Unframed"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Material": [
+          "Watercolour"
+        ],
+        "Object name": [
+          "painting, Unframed"
+        ],
+        "Object number": [
+          "1993.54"
+        ],
+        "Object production date": [
+          "1880"
+        ],
+        "Object production person": [
+          "L.C.(L.Colfox)"
+        ],
+        "Person's association": [
+          "Artist"
+        ],
+        "Responsible department/section": [
+          "Art-Watercolours"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:dd2260e4-331a-3cb2-a0f8-093a6262de0e",
+      "title": "Stone Circle,",
+      "url": "https://museumdata.uk/objects/dd2260e4-331a-3cb2-a0f8-093a6262de0e",
+      "creator": "L.C.(L.Colfox)",
+      "date": "1880"
+    }
+  },
+  {
+    "id": "mds:2dee7003-e852-3495-8e30-0d96fca79fd8",
+    "_source": "mds",
+    "_sourceId": "ArchNum-145C2267-90A5-4C5A-AB58-0AD74A9ACCC7",
+    "_sourceUrl": "https://museumdata.uk/objects/2dee7003-e852-3495-8e30-0d96fca79fd8",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "2dee7003-e852-3495-8e30-0d96fca79fd8",
+      "objectNumber": "ArchNum-145C2267-90A5-4C5A-AB58-0AD74A9ACCC7",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 16"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/19",
+          "Micromusée V6 SN:39712"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:2dee7003-e852-3495-8e30-0d96fca79fd8",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/2dee7003-e852-3495-8e30-0d96fca79fd8"
+    }
+  },
+  {
+    "id": "mds:3fc14658-24e4-3472-b96f-fa1f099da1fa",
+    "_source": "mds",
+    "_sourceId": "ArchNum-B7366AC5-5E5F-4E75-BBA9-3E91D1B08AEC",
+    "_sourceUrl": "https://museumdata.uk/objects/3fc14658-24e4-3472-b96f-fa1f099da1fa",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "3fc14658-24e4-3472-b96f-fa1f099da1fa",
+      "objectNumber": "ArchNum-B7366AC5-5E5F-4E75-BBA9-3E91D1B08AEC",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 30"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/33",
+          "Micromusée V6 SN:39735"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:3fc14658-24e4-3472-b96f-fa1f099da1fa",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/3fc14658-24e4-3472-b96f-fa1f099da1fa"
+    }
+  },
+  {
+    "id": "mds:93726762-00a4-37a8-9198-39b9eaeafffd",
+    "_source": "mds",
+    "_sourceId": "ArchNum-75100F66-C3A2-44A5-82FA-4551943E0E72",
+    "_sourceUrl": "https://museumdata.uk/objects/93726762-00a4-37a8-9198-39b9eaeafffd",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "93726762-00a4-37a8-9198-39b9eaeafffd",
+      "objectNumber": "ArchNum-75100F66-C3A2-44A5-82FA-4551943E0E72",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 19"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/22",
+          "Micromusée V6 SN:39717"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:93726762-00a4-37a8-9198-39b9eaeafffd",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/93726762-00a4-37a8-9198-39b9eaeafffd"
+    }
+  },
+  {
+    "id": "mds:524ea1e9-7715-3338-9e58-7123d2ded91e",
+    "_source": "mds",
+    "_sourceId": "ArchNum-8C9A8979-930B-487B-BBEB-5D4F06F93061",
+    "_sourceUrl": "https://museumdata.uk/objects/524ea1e9-7715-3338-9e58-7123d2ded91e",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "524ea1e9-7715-3338-9e58-7123d2ded91e",
+      "objectNumber": "ArchNum-8C9A8979-930B-487B-BBEB-5D4F06F93061",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 11"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/14",
+          "Micromusée V6 SN:39704"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:524ea1e9-7715-3338-9e58-7123d2ded91e",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/524ea1e9-7715-3338-9e58-7123d2ded91e"
+    }
+  },
+  {
+    "id": "mds:e008f9e0-1722-35b6-a3c1-7ea3ea29be4d",
+    "_source": "mds",
+    "_sourceId": "ArchNum-08ADC79C-7625-443C-AF9D-7C0081FA6BA9",
+    "_sourceUrl": "https://museumdata.uk/objects/e008f9e0-1722-35b6-a3c1-7ea3ea29be4d",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "e008f9e0-1722-35b6-a3c1-7ea3ea29be4d",
+      "objectNumber": "ArchNum-08ADC79C-7625-443C-AF9D-7C0081FA6BA9",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 17"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/20",
+          "Micromusée V6 SN:39713"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:e008f9e0-1722-35b6-a3c1-7ea3ea29be4d",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/e008f9e0-1722-35b6-a3c1-7ea3ea29be4d"
+    }
+  },
+  {
+    "id": "mds:a2010642-f376-3e9a-b9e9-b60c9ffc0a83",
+    "_source": "mds",
+    "_sourceId": "ArchNum-F3C3C974-8820-4A50-95F4-55F6090F5020",
+    "_sourceUrl": "https://museumdata.uk/objects/a2010642-f376-3e9a-b9e9-b60c9ffc0a83",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "a2010642-f376-3e9a-b9e9-b60c9ffc0a83",
+      "objectNumber": "ArchNum-F3C3C974-8820-4A50-95F4-55F6090F5020",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 31"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/34",
+          "Micromusée V6 SN:39739"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:a2010642-f376-3e9a-b9e9-b60c9ffc0a83",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/a2010642-f376-3e9a-b9e9-b60c9ffc0a83"
+    }
+  },
+  {
+    "id": "mds:5cd92190-d6f0-3579-9f3a-0eee227b0ea5",
+    "_source": "mds",
+    "_sourceId": "ArchNum-C633A8AC-3443-4834-984E-652B6B2157D8",
+    "_sourceUrl": "https://museumdata.uk/objects/5cd92190-d6f0-3579-9f3a-0eee227b0ea5",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "5cd92190-d6f0-3579-9f3a-0eee227b0ea5",
+      "objectNumber": "ArchNum-C633A8AC-3443-4834-984E-652B6B2157D8",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 27"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/30",
+          "Micromusée V6 SN:39731"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:5cd92190-d6f0-3579-9f3a-0eee227b0ea5",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/5cd92190-d6f0-3579-9f3a-0eee227b0ea5"
+    }
+  },
+  {
+    "id": "mds:d529d29c-c496-329c-a1e2-c37261e5402c",
+    "_source": "mds",
+    "_sourceId": "ArchNum-6FB3847B-7B9E-4930-B452-669DFF417D04",
+    "_sourceUrl": "https://museumdata.uk/objects/d529d29c-c496-329c-a1e2-c37261e5402c",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "d529d29c-c496-329c-a1e2-c37261e5402c",
+      "objectNumber": "ArchNum-6FB3847B-7B9E-4930-B452-669DFF417D04",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 8"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/11",
+          "Micromusée V6 SN:39699"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:d529d29c-c496-329c-a1e2-c37261e5402c",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/d529d29c-c496-329c-a1e2-c37261e5402c"
+    }
+  },
+  {
+    "id": "mds:4bf83451-fc27-33cd-88a3-fabc34d47815",
+    "_source": "mds",
+    "_sourceId": "ArchNum-9287D6C3-35F7-4E18-98A3-7C7DF7D173E0",
+    "_sourceUrl": "https://museumdata.uk/objects/4bf83451-fc27-33cd-88a3-fabc34d47815",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "4bf83451-fc27-33cd-88a3-fabc34d47815",
+      "objectNumber": "ArchNum-9287D6C3-35F7-4E18-98A3-7C7DF7D173E0",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 29"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/32",
+          "Micromusée V6 SN:39734"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:4bf83451-fc27-33cd-88a3-fabc34d47815",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/4bf83451-fc27-33cd-88a3-fabc34d47815"
+    }
+  },
+  {
+    "id": "mds:51f54eb9-29bb-3d92-a4c5-4232ec7b1500",
+    "_source": "mds",
+    "_sourceId": "ArchNum-3FD271F3-EC4B-4398-8BCD-927B751BCB9B",
+    "_sourceUrl": "https://museumdata.uk/objects/51f54eb9-29bb-3d92-a4c5-4232ec7b1500",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "51f54eb9-29bb-3d92-a4c5-4232ec7b1500",
+      "objectNumber": "ArchNum-3FD271F3-EC4B-4398-8BCD-927B751BCB9B",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 12"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/15",
+          "Micromusée V6 SN:39706"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:51f54eb9-29bb-3d92-a4c5-4232ec7b1500",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/51f54eb9-29bb-3d92-a4c5-4232ec7b1500"
+    }
+  },
+  {
+    "id": "mds:4ac845b9-b7b0-3f86-86ee-bd9ec844c16a",
+    "_source": "mds",
+    "_sourceId": "ArchNum-F1D7007D-5802-47BE-83D3-B761395C7A8A",
+    "_sourceUrl": "https://museumdata.uk/objects/4ac845b9-b7b0-3f86-86ee-bd9ec844c16a",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "4ac845b9-b7b0-3f86-86ee-bd9ec844c16a",
+      "objectNumber": "ArchNum-F1D7007D-5802-47BE-83D3-B761395C7A8A",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 20"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/23",
+          "Micromusée V6 SN:39718"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:4ac845b9-b7b0-3f86-86ee-bd9ec844c16a",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/4ac845b9-b7b0-3f86-86ee-bd9ec844c16a"
+    }
+  },
+  {
+    "id": "mds:3cfeba6c-ddaf-3bed-82c1-9c126c688e21",
+    "_source": "mds",
+    "_sourceId": "ArchNum-D362AA49-CF4F-4C78-A666-BE654D30B7D3",
+    "_sourceUrl": "https://museumdata.uk/objects/3cfeba6c-ddaf-3bed-82c1-9c126c688e21",
+    "title": "Stone sample",
+    "description": "chip from circle stone",
+    "subject": [
+      "Stone sample; sample",
+      "Stone sample; sample",
+      "information from Prehistoric record sheets"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "3cfeba6c-ddaf-3bed-82c1-9c126c688e21",
+      "objectNumber": "ArchNum-D362AA49-CF4F-4C78-A666-BE654D30B7D3",
+      "material": [
+        "stone"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Stone sample"
+        ],
+        "Object name(s)": [
+          "Stone sample; sample"
+        ],
+        "Brief description": [
+          "chip from circle stone"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "10/3/1942"
+        ],
+        "Acquisition method": [
+          "donation"
+        ],
+        "Associated concept": [
+          "information from Prehistoric record sheets"
+        ],
+        "Entry date": [
+          "10/3/1942"
+        ],
+        "Field collection date": [
+          "1940"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Field collection note": [
+          "from Stone Circle, stone 14"
+        ],
+        "Field collection place": [
+          "Ynys Hir",
+          "Llanfihangel-Nant-Bran",
+          "Powys",
+          "Mid Wales",
+          "Wales",
+          "Place"
+        ],
+        "Material": [
+          "stone"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "Stone sample; sample"
+        ],
+        "Other number": [
+          "42.54/17",
+          "Micromusée V6 SN:39709"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "User's reference": [
+          "p969-94",
+          "No.489,p157",
+          "No.682,p219"
+        ],
+        "Reference type": [
+          "bibliography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-05-29T14:00:56.867Z",
+      "query": "stone circle",
+      "recordId": "mds:3cfeba6c-ddaf-3bed-82c1-9c126c688e21",
+      "title": "Stone sample",
+      "url": "https://museumdata.uk/objects/3cfeba6c-ddaf-3bed-82c1-9c126c688e21"
+    }
+  }
+]
