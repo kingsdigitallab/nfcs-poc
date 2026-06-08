@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
+import { createPortal } from 'react-dom'
 import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { setNodeResults } from '../store/resultsStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
@@ -40,6 +41,29 @@ const CORE_UNIFIED_FIELDS = new Set([
   'genus', 'species', 'eventDate', 'decimalLatitude', 'decimalLongitude',
   'basisOfRecord', 'institutionCode', 'datasetName',
 ])
+
+/** Ordered list of fields shown in the row hover summary popup. */
+const POPUP_FIELD_ORDER = [
+  '_source', 'title', 'description', 'creator', 'date', 'country',
+  'subject', 'language', 'type', 'collection', 'spatialCoverage',
+  'periodStart', 'periodEnd', 'periodName',
+  'scientificName', 'basisOfRecord', 'institutionCode', 'datasetName',
+  'decimalLatitude', 'decimalLongitude',
+]
+
+/** Format a field value as plain text for the hover popup card. */
+function formatPopupVal(v: unknown): string {
+  if (v === null || v === undefined) return ''
+  if (isReconciledValue(v)) return (v as ReconciliationResult).label ?? String(v)
+  if (Array.isArray(v)) {
+    if (v.length > 0 && isReconciledValue(v[0]))
+      return (v as ReconciliationResult[]).map(r => r.label ?? '').filter(Boolean).join(', ')
+    return v.filter(x => x != null).join(', ')
+  }
+  if (typeof v === 'object') return ''  // skip namespace sub-objects in popup
+  const s = String(v)
+  return s.length > 120 ? s.slice(0, 117) + '…' : s
+}
 
 /**
  * All displayable columns across records.
@@ -106,14 +130,26 @@ interface TableProps {
   sortDir?:  'asc' | 'desc'
   onSort?:   (col: string) => void
   onSelectCandidate?: (recordId: string, col: string, result: ReconciliationResult) => void
+  // F2: row selection
+  selectedIds:  Set<string>
+  onToggleRow:  (id: string) => void
+  onToggleAll:  (ids: string[], checked: boolean) => void
 }
 
 const DEFAULT_COL_W = 140
+const CHECKBOX_COL_W = 28
 
-function RecordTable({ records, columns, page, pageSize, compact = false, sortCol, sortDir, onSort, onSelectCandidate }: TableProps) {
+function RecordTable({ records, columns, page, pageSize, compact = false, sortCol, sortDir, onSort, onSelectCandidate, selectedIds, onToggleRow, onToggleAll }: TableProps) {
   const [colWidths, setColWidths] = useState<Record<string, number>>({})
   const resizingRef = useRef<{ col: string; startX: number; startW: number } | null>(null)
   const listenersRef = useRef<{ move: (e: MouseEvent) => void; up: (e: MouseEvent) => void } | null>(null)
+
+  // F1: hover popup state
+  const [hovered, setHovered] = useState<{ rec: UnifiedRecord; x: number; y: number } | null>(null)
+
+  // F2: header checkbox states
+  const allChecked = records.length > 0 && records.every(r => selectedIds.has(r.id))
+  const someChecked = records.some(r => selectedIds.has(r.id))
 
   // Clean up document listeners if the component unmounts mid-drag
   useEffect(() => () => {
@@ -154,75 +190,147 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
   const fs    = compact ? 11 : 12
   const pad   = compact ? '3px 6px' : '5px 8px'
 
+  // F1: fields for the popup card (only rows with a value)
+  const popupFields = hovered
+    ? POPUP_FIELD_ORDER
+        .map(f => ({ label: f, val: formatPopupVal((hovered.rec as Record<string, unknown>)[f]) }))
+        .filter(r => r.val !== '')
+    : []
+
   return (
-    <table style={{ borderCollapse: 'collapse', tableLayout: 'fixed', width: 'max-content', minWidth: '100%', fontSize: fs }}>
-      <thead>
-        <tr>
-          {columns.map(col => {
-            const w        = colWidths[col] ?? DEFAULT_COL_W
-            const isActive = sortCol === col
-            const isCore   = CORE_UNIFIED_FIELDS.has(col)
-            const title    = isActive
-              ? sortDir === 'asc' ? 'Sorted A→Z — click for Z→A' : 'Sorted Z→A — click to clear'
-              : `Sort by ${col}`
-            return (
-              <th
-                key={col}
-                style={{
-                  ...thStyle, padding: pad,
-                  width: w, minWidth: w, maxWidth: w,
-                  cursor: 'pointer', userSelect: 'none',
-                  background: isActive ? '#e5e7eb' : isCore ? '#f0fdf4' : '#f3f4f6',
-                }}
-                onClick={() => onSort?.(col)}
-                title={title}
-              >
-                <div style={{ display: 'flex', alignItems: 'center', gap: 4, overflow: 'hidden' }}>
-                  <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flexShrink: 1, minWidth: 0 }}>
-                    {col}
-                    {isActive && (
-                      <span style={{ marginLeft: 3, fontSize: '0.85em' }}>
-                        {sortDir === 'asc' ? '▲' : '▼'}
+    <>
+      <table style={{ borderCollapse: 'collapse', tableLayout: 'fixed', width: 'max-content', minWidth: '100%', fontSize: fs }}>
+        <thead>
+          <tr>
+            {/* F2: select-all checkbox */}
+            <th style={{ ...thStyle, width: CHECKBOX_COL_W, minWidth: CHECKBOX_COL_W, maxWidth: CHECKBOX_COL_W, padding: '4px 6px', textAlign: 'center', cursor: 'default' }}>
+              <input
+                type="checkbox"
+                className="nodrag"
+                style={{ cursor: 'pointer' }}
+                checked={allChecked}
+                ref={el => { if (el) el.indeterminate = someChecked && !allChecked }}
+                onChange={e => onToggleAll(records.map(r => r.id), e.target.checked)}
+                title={allChecked ? 'Deselect all' : 'Select all (filtered)'}
+              />
+            </th>
+            {columns.map(col => {
+              const w        = colWidths[col] ?? DEFAULT_COL_W
+              const isActive = sortCol === col
+              const isCore   = CORE_UNIFIED_FIELDS.has(col)
+              const title    = isActive
+                ? sortDir === 'asc' ? 'Sorted A→Z — click for Z→A' : 'Sorted Z→A — click to clear'
+                : `Sort by ${col}`
+              return (
+                <th
+                  key={col}
+                  style={{
+                    ...thStyle, padding: pad,
+                    width: w, minWidth: w, maxWidth: w,
+                    cursor: 'pointer', userSelect: 'none',
+                    background: isActive ? '#e5e7eb' : isCore ? '#f0fdf4' : '#f3f4f6',
+                  }}
+                  onClick={() => onSort?.(col)}
+                  title={title}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 4, overflow: 'hidden' }}>
+                    <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', flexShrink: 1, minWidth: 0 }}>
+                      {col}
+                      {isActive && (
+                        <span style={{ marginLeft: 3, fontSize: '0.85em' }}>
+                          {sortDir === 'asc' ? '▲' : '▼'}
+                        </span>
+                      )}
+                    </span>
+                    {isCore && (
+                      <span style={{ flexShrink: 0, fontSize: 9, lineHeight: 1.4, fontWeight: 600, background: '#bbf7d0', color: '#15803d', borderRadius: 3, padding: '1px 4px' }}>
+                        core
                       </span>
                     )}
-                  </span>
-                  {isCore && (
-                    <span style={{ flexShrink: 0, fontSize: 9, lineHeight: 1.4, fontWeight: 600, background: '#bbf7d0', color: '#15803d', borderRadius: 3, padding: '1px 4px' }}>
-                      core
-                    </span>
-                  )}
-                </div>
-                {/* Resize handle — stopPropagation prevents triggering the sort click */}
-                <div
-                  className="nodrag"
-                  style={resizeHandleStyle}
-                  onMouseDown={e => startResize(e, col)}
-                  title="Drag to resize"
-                />
-              </th>
-            )
-          })}
-        </tr>
-      </thead>
-      <tbody>
-        {rows.map((rec, i) => (
-          <tr key={start + i} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
-            {columns.map(col => {
-              const val = getColValue(rec, col)
-              const w   = colWidths[col] ?? DEFAULT_COL_W
-              const handleSelect = onSelectCandidate
-                ? (result: ReconciliationResult) => onSelectCandidate(rec.id, col, result)
-                : undefined
-              return (
-                <td key={col} style={{ ...tdStyle, padding: pad, width: w, maxWidth: w }}>
-                  {renderCell(val, handleSelect)}
-                </td>
+                  </div>
+                  {/* Resize handle — stopPropagation prevents triggering the sort click */}
+                  <div
+                    className="nodrag"
+                    style={resizeHandleStyle}
+                    onMouseDown={e => startResize(e, col)}
+                    title="Drag to resize"
+                  />
+                </th>
               )
             })}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {rows.map((rec, i) => (
+            <tr
+              key={start + i}
+              style={{ background: selectedIds.has(rec.id) ? '#eff6ff' : i % 2 === 0 ? '#fff' : '#f9fafb' }}
+              onMouseMove={e => setHovered({ rec, x: e.clientX, y: e.clientY })}
+              onMouseLeave={() => setHovered(null)}
+            >
+              {/* F2: per-row checkbox */}
+              <td style={{ ...tdStyle, width: CHECKBOX_COL_W, maxWidth: CHECKBOX_COL_W, padding: '2px 6px', textAlign: 'center', overflow: 'visible' }}>
+                <input
+                  type="checkbox"
+                  className="nodrag"
+                  style={{ cursor: 'pointer' }}
+                  checked={selectedIds.has(rec.id)}
+                  onChange={() => onToggleRow(rec.id)}
+                />
+              </td>
+              {columns.map(col => {
+                const val = getColValue(rec, col)
+                const w   = colWidths[col] ?? DEFAULT_COL_W
+                const handleSelect = onSelectCandidate
+                  ? (result: ReconciliationResult) => onSelectCandidate(rec.id, col, result)
+                  : undefined
+                return (
+                  <td key={col} style={{ ...tdStyle, padding: pad, width: w, maxWidth: w }}>
+                    {renderCell(val, handleSelect)}
+                  </td>
+                )
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* F1: hover summary popup — rendered into document.body to escape React Flow transforms */}
+      {hovered && popupFields.length > 0 && createPortal(
+        <div
+          className="nodrag nowheel"
+          style={{
+            position:      'fixed',
+            left:          Math.min(hovered.x + 18, window.innerWidth  - 270),
+            top:           Math.max(8,  Math.min(hovered.y - 12, window.innerHeight - 420)),
+            zIndex:        99999,
+            pointerEvents: 'none',
+            background:    '#1e2130',
+            color:         '#e2e8f0',
+            borderRadius:  8,
+            boxShadow:     '0 8px 24px rgba(0,0,0,0.45)',
+            padding:       '8px 10px',
+            minWidth:      200,
+            maxWidth:      260,
+            fontSize:      11,
+            fontFamily:    'system-ui, sans-serif',
+            lineHeight:    1.5,
+          }}
+        >
+          {popupFields.map(({ label, val }) => (
+            <div key={label} style={{ display: 'flex', gap: 6, borderBottom: '1px solid #2d3348', padding: '2px 0' }}>
+              <span style={{ color: '#6b7280', flexShrink: 0, width: 82, textAlign: 'right', fontFamily: 'monospace', fontSize: 10 }}>
+                {label}
+              </span>
+              <span style={{ color: '#e2e8f0', wordBreak: 'break-word', minWidth: 0 }}>
+                {val}
+              </span>
+            </div>
+          ))}
+        </div>,
+        document.body,
+      )}
+    </>
   )
 }
 
@@ -239,9 +347,12 @@ export function TableOutputNode({ id, data }: NodeProps) {
 
   const tableWrapRef = useRef<HTMLDivElement>(null)
 
-  // Selections live in node data so ExpandedOutputPanel can share them.
+  // Reconciliation candidate overrides — shared with ExpandedOutputPanel via node data.
   // Key = `${recordId}::${colName}`, value = the chosen ReconciliationResult.
   const selections = ((data as Record<string, unknown>).selections ?? {}) as Record<string, ReconciliationResult>
+
+  // F2: row selection (record IDs) — transient, not persisted to workflow file
+  const rowSelectionsArr = ((data as Record<string, unknown>).rowSelections ?? []) as string[]
 
   // Overlay user selections onto upstream records
   const effectiveRecords = useMemo<UnifiedRecord[] | null>(() => {
@@ -264,6 +375,29 @@ export function TableOutputNode({ id, data }: NodeProps) {
     updateNodeData(id, {
       selections: { ...selections, [`${recordId}::${col}`]: result },
     })
+  }
+
+  // F2: row-selection helpers
+  const rowSelectionSet = useMemo(() => new Set(rowSelectionsArr), [rowSelectionsArr])
+
+  // validSelected = IDs that still exist in the current result set
+  const validSelected = useMemo(() => {
+    if (!effectiveRecords) return []
+    const idSet = new Set(effectiveRecords.map(r => r.id))
+    return rowSelectionsArr.filter(sid => idSet.has(sid))
+  }, [effectiveRecords, rowSelectionsArr])
+
+  const handleToggleRow = (recId: string) => {
+    const cur = new Set(rowSelectionsArr)
+    cur.has(recId) ? cur.delete(recId) : cur.add(recId)
+    updateNodeData(id, { rowSelections: [...cur] })
+  }
+
+  const handleToggleAll = (ids: string[], checked: boolean) => {
+    const cur = new Set(rowSelectionsArr)
+    if (checked) ids.forEach(sid => cur.add(sid))
+    else ids.forEach(sid => cur.delete(sid))
+    updateNodeData(id, { rowSelections: [...cur] })
   }
 
   const filteredRecords = useMemo<UnifiedRecord[] | null>(() => {
@@ -315,27 +449,31 @@ export function TableOutputNode({ id, data }: NodeProps) {
   }
 
   // ── pass-through output ───────────────────────────────────────────────────
-  // Sync merged records into this node's own data so downstream nodes
-  // (e.g. MapOutputNode) can read them via useUpstreamRecords.
-  // Key includes selection state so downstream sees user overrides.
-  // Pass-through: write merged records to the out-of-band store so downstream
-  // nodes (Map, Timeline, Export) can read them. Uses a cheap fingerprint
-  // instead of joining all IDs — avoids O(n) string creation on every render.
+  // Sync merged (and optionally row-filtered) records into the out-of-band store
+  // so downstream nodes (Map, Timeline, Export) can read them.
+  // F2: when rows are selected, only those records flow downstream.
+  // Fingerprint includes the selection so downstream re-renders on tick changes.
   const prevFingerprintRef = useRef('')
   useEffect(() => {
     const recs   = effectiveRecords ?? []
     const selKey = Object.entries(selections).map(([k, v]) => `${k}=${v.qid}`).join(',')
-    const fp     = `${status}:${selKey}:${recs.length}:${recs[0]?.id ?? ''}:${recs[recs.length - 1]?.id ?? ''}`
+    const selFp  = validSelected.join(',')
+    const fp     = `${status}:${selKey}:${recs.length}:${recs[0]?.id ?? ''}:${recs[recs.length - 1]?.id ?? ''}:${selFp}`
     if (fp === prevFingerprintRef.current) return
     prevFingerprintRef.current = fp
 
-    const version = setNodeResults(id, recs as Record<string, unknown>[])
+    // F2: filter to selected rows if any are ticked; otherwise pass all
+    const passRecords = validSelected.length > 0
+      ? recs.filter(r => validSelected.includes(r.id))
+      : recs
+
+    const version = setNodeResults(id, passRecords as Record<string, unknown>[])
     updateNodeData(id, {
-      count:          recs.length,
+      count:          passRecords.length,
       status,
       resultsVersion: version,
     })
-  }, [effectiveRecords, selections, status, id, updateNodeData])
+  }, [effectiveRecords, selections, validSelected, status, id, updateNodeData])
 
   // Scroll the table back to the top whenever the page or sort changes
   useEffect(() => {
@@ -368,6 +506,20 @@ export function TableOutputNode({ id, data }: NodeProps) {
         {selectionCount > 0 && (
           <span style={{ ...styles.badge, color: '#fde68a' }}>
             {selectionCount} override{selectionCount !== 1 ? 's' : ''}
+          </span>
+        )}
+        {/* F2: selected-rows badge */}
+        {validSelected.length > 0 && (
+          <span style={{ ...styles.badge, color: '#a5f3fc', display: 'flex', alignItems: 'center', gap: 2 }}>
+            {validSelected.length} selected
+            <button
+              className="nodrag"
+              style={{ background: 'none', border: 'none', color: '#a5f3fc', cursor: 'pointer', padding: '0 0 0 3px', fontSize: 12, lineHeight: 1 }}
+              onClick={() => updateNodeData(id, { rowSelections: [] })}
+              title="Clear row selection (all rows will pass downstream)"
+            >
+              ×
+            </button>
           </span>
         )}
         {connected && status === 'loading' && (
@@ -467,6 +619,9 @@ export function TableOutputNode({ id, data }: NodeProps) {
               sortDir={sortDir}
               onSort={handleColSort}
               onSelectCandidate={handleSelectCandidate}
+              selectedIds={rowSelectionSet}
+              onToggleRow={handleToggleRow}
+              onToggleAll={handleToggleAll}
             />
           </div>
 

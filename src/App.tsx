@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { newId, bumpCounterPast } from './utils/nodeIdCounter'
 import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from './utils/kclConfig'
-import { buildWorkflowPayload, downloadWorkflow, parseWorkflowFile, hydrateNodes } from './utils/workflowIO'
+import { buildWorkflowPayload, downloadWorkflow, parseWorkflowFile, hydrateNodes, type WorkflowFile } from './utils/workflowIO'
 import {
   ReactFlow,
   Background,
@@ -25,6 +25,7 @@ import { ChatSidebar } from './components/ChatSidebar'
 import { ConnectionSuggestions, HandlePicker, NODE_PARAM_HANDLES, type Suggestion } from './components/ConnectionSuggestions'
 import { FixturePreflightPanel } from './components/FixturePreflightPanel'
 import { FixtureReferenceCard } from './components/FixtureReferenceCard'
+import { ExampleMenu } from './components/ExampleMenu'
 
 /**
  * Handle ids that must only ever carry ONE inbound connection. These are the
@@ -738,6 +739,48 @@ export default function App() {
     localStorage.setItem('show_ollama_nodes', String(showOllama))
   }, [showOllama])
 
+  // ── Author mode: click the version text 5× to unlock "Save as Example" ──
+  const [authorMode, setAuthorMode] = useState(
+    () => localStorage.getItem('nfcs_author_mode') === 'true',
+  )
+  const versionClicksRef = useRef(0)
+  const versionClickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const handleVersionClick = () => {
+    versionClicksRef.current += 1
+    if (versionClickTimerRef.current) clearTimeout(versionClickTimerRef.current)
+    versionClickTimerRef.current = setTimeout(() => { versionClicksRef.current = 0 }, 2000)
+    if (versionClicksRef.current >= 5) {
+      versionClicksRef.current = 0
+      setAuthorMode(m => {
+        const next = !m
+        localStorage.setItem('nfcs_author_mode', String(next))
+        return next
+      })
+    }
+  }
+
+  // ── Save-as-example dialog ──
+  const [exampleDialog, setExampleDialog] = useState<{ title: string; description: string } | null>(null)
+
+  async function handleSaveExample() {
+    if (!exampleDialog) return
+    const title = exampleDialog.title.trim()
+    if (!title) return
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    const workflow = buildWorkflowPayload(nodes, edges)
+    try {
+      const r = await fetch('/dev/write-example', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug, title, description: exampleDialog.description.trim(), workflow }),
+      })
+      if (!r.ok) throw new Error(await r.text())
+      setExampleDialog(null)
+    } catch (e) {
+      alert(`Failed to save example: ${e instanceof Error ? e.message : String(e)}`)
+    }
+  }
+
   const [connMenu, setConnMenu] = useState<{
     x: number; y: number
     sourceNodeId: string; sourceNodeType: string; sourceHandleId: string | null
@@ -908,6 +951,28 @@ export default function App() {
     }).catch(() => {})
   }, [nodes, edges])
 
+  // Shared workflow application logic — used by both file Load and Example load.
+  const applyWorkflow = useCallback((wf: WorkflowFile) => {
+    const hydrated = hydrateNodes(wf)
+    bumpCounterPast(hydrated.map(n => n.id))
+    setNodes(hydrated)
+    // Strip edges that reference proxy handles of expanded groups — these are
+    // stale refs left by incomplete collapse/expand cycles in a prior session.
+    const expandedGroupIds = new Set(
+      hydrated
+        .filter(n => n.type === 'group' && !(n.data as any).collapsed)
+        .map(n => n.id),
+    )
+    setEdges(
+      wf.edges.filter(
+        ed =>
+          !(ed.sourceHandle?.startsWith('proxy-out-') && expandedGroupIds.has(ed.source)) &&
+          !(ed.targetHandle?.startsWith('proxy-in-') && expandedGroupIds.has(ed.target)),
+      ),
+    )
+    setLoadError(null)
+  }, [setNodes, setEdges])
+
   const handleLoadFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
@@ -917,30 +982,13 @@ export default function App() {
     reader.onload = ev => {
       try {
         const wf = parseWorkflowFile(ev.target?.result as string)
-        const hydrated = hydrateNodes(wf)
-        bumpCounterPast(hydrated.map(n => n.id))
-        setNodes(hydrated)
-        // Strip edges that reference proxy handles of expanded groups — these are
-        // stale refs left by incomplete collapse/expand cycles in a prior session.
-        const expandedGroupIds = new Set(
-          hydrated
-            .filter(n => n.type === 'group' && !(n.data as any).collapsed)
-            .map(n => n.id),
-        )
-        setEdges(
-          wf.edges.filter(
-            ed =>
-              !(ed.sourceHandle?.startsWith('proxy-out-') && expandedGroupIds.has(ed.source)) &&
-              !(ed.targetHandle?.startsWith('proxy-in-') && expandedGroupIds.has(ed.target)),
-          ),
-        )
-        setLoadError(null)
+        applyWorkflow(wf)
       } catch (err) {
         setLoadError(err instanceof Error ? err.message : 'Failed to load workflow.')
       }
     }
     reader.readAsText(file)
-  }, [setNodes, setEdges])
+  }, [applyWorkflow])
 
   const onConnect = useCallback(
     (connection: Connection) => setEdges(eds => {
@@ -1108,9 +1156,16 @@ export default function App() {
             {' – '}
             <em style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontStyle: 'italic', fontWeight: 400 }}>Arts &amp; Humanities</em>
           </span>
-          <span style={{ fontSize: 9, color: '#9ca3af', letterSpacing: '0.02em' }}>Proof of Concept. V2.0</span>
+          <span
+            style={{ fontSize: 9, color: authorMode ? '#f59e0b' : '#9ca3af', letterSpacing: '0.02em', cursor: 'default', userSelect: 'none' }}
+            onClick={handleVersionClick}
+            title={authorMode ? 'Author mode ON — click 5× to toggle' : undefined}
+          >
+            Proof of Concept. V2.0{authorMode ? ' ★' : ''}
+          </span>
         </div>
         <div style={{ flex: 1 }} />
+        <ExampleMenu onLoad={wf => { try { applyWorkflow(wf) } catch (e) { setLoadError(e instanceof Error ? e.message : 'Failed to load example.') } }} />
         <button
           style={templateBtnStyle}
           onClick={handleSave}
@@ -1119,6 +1174,16 @@ export default function App() {
         >
           💾 Save
         </button>
+        {authorMode && (
+          <button
+            style={{ ...templateBtnStyle, background: '#78350f', color: '#fef3c7', borderColor: '#92400e' }}
+            onClick={() => setExampleDialog({ title: '', description: '' })}
+            title="Save current workflow as a loadable example (author mode)"
+            disabled={nodes.length === 0}
+          >
+            ★ Save as Example
+          </button>
+        )}
         <button
           style={templateBtnStyle}
           onClick={() => fileInputRef.current?.click()}
@@ -1133,6 +1198,57 @@ export default function App() {
           style={{ display: 'none' }}
           onChange={handleLoadFile}
         />
+        {/* Save-as-example dialog */}
+        {exampleDialog && (
+          <div style={{
+            position: 'fixed', inset: 0, zIndex: 99998,
+            background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center',
+          }}>
+            <div style={{
+              background: '#1e2130', border: '1px solid #2d3348', borderRadius: 10,
+              padding: 24, minWidth: 360, boxShadow: '0 12px 40px rgba(0,0,0,0.5)',
+              color: '#e2e8f0', fontFamily: 'system-ui, sans-serif', display: 'flex', flexDirection: 'column', gap: 12,
+            }}>
+              <div style={{ fontSize: 14, fontWeight: 700 }}>Save as Example Workflow</div>
+              <label style={{ fontSize: 12, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                Title *
+                <input
+                  autoFocus
+                  value={exampleDialog.title}
+                  onChange={e => setExampleDialog(d => d ? { ...d, title: e.target.value } : null)}
+                  placeholder="e.g. GBIF species search"
+                  style={{ fontSize: 12, padding: '5px 8px', borderRadius: 5, border: '1px solid #4b5563', background: '#111827', color: '#e2e8f0', outline: 'none' }}
+                  onKeyDown={e => { if (e.key === 'Enter') handleSaveExample(); if (e.key === 'Escape') setExampleDialog(null) }}
+                />
+              </label>
+              <label style={{ fontSize: 12, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                Description
+                <input
+                  value={exampleDialog.description}
+                  onChange={e => setExampleDialog(d => d ? { ...d, description: e.target.value } : null)}
+                  placeholder="One-line summary of what this workflow demonstrates"
+                  style={{ fontSize: 12, padding: '5px 8px', borderRadius: 5, border: '1px solid #4b5563', background: '#111827', color: '#e2e8f0', outline: 'none' }}
+                  onKeyDown={e => { if (e.key === 'Escape') setExampleDialog(null) }}
+                />
+              </label>
+              <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
+                <button
+                  onClick={() => setExampleDialog(null)}
+                  style={{ fontSize: 12, padding: '5px 14px', borderRadius: 5, border: '1px solid #4b5563', background: 'none', color: '#9ca3af', cursor: 'pointer' }}
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleSaveExample}
+                  disabled={!exampleDialog.title.trim()}
+                  style={{ fontSize: 12, padding: '5px 14px', borderRadius: 5, border: 'none', background: '#92400e', color: '#fef3c7', cursor: 'pointer', fontWeight: 600 }}
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
         {(() => {
           const selected = nodes.filter(n => n.selected && n.type !== 'group')
           const groupSelected = nodes.find(n => n.selected && n.type === 'group')

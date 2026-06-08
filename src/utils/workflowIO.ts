@@ -58,6 +58,7 @@ const TRANSIENT_FIELDS = new Set([
   'failed',
   'proxyInCount',     // runtime-only
   'proxyOutCount',    // runtime-only
+  'rowSelections',    // per-run row filter — meaningless without live record IDs
 ])
 
 export function stripTransient(data: Record<string, unknown>): Record<string, unknown> {
