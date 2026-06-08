@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import type { IncomingMessage, ServerResponse } from 'http'
-import { writeFileSync, mkdirSync, readdirSync } from 'fs'
+import { writeFileSync, readFileSync, mkdirSync, readdirSync } from 'fs'
 import { join } from 'path'
 
 // ── URL proxy helpers ─────────────────────────────────────────────────────────
@@ -570,6 +570,51 @@ export default defineConfig({
               res.setHeader('Content-Type', 'application/json')
               res.statusCode = 200
               res.end(JSON.stringify({ saved: filename }))
+            } catch (e) {
+              res.statusCode = 400
+              res.end(String(e))
+            }
+          })
+        })
+
+        // Dev endpoint: save the current canvas as a named example workflow.
+        // POST /dev/write-example  { slug, title, description, workflow }
+        // Writes public/examples/<slug>.json and regenerates manifest.json.
+        server.middlewares.use((req, res, next) => {
+          if (req.method !== 'POST' || !req.url?.startsWith('/dev/write-example')) { next(); return }
+          let body = ''
+          req.on('data', (chunk: Buffer) => { body += chunk.toString() })
+          req.on('end', () => {
+            try {
+              const { slug, title, description, workflow } =
+                JSON.parse(body) as { slug: string; title: string; description?: string; workflow: unknown }
+              if (!slug || !/^[\w-]+$/.test(slug)) {
+                res.statusCode = 400; res.end('Invalid slug'); return
+              }
+              if (!title || typeof title !== 'string') {
+                res.statusCode = 400; res.end('title is required'); return
+              }
+              if (!workflow || typeof workflow !== 'object' || !Array.isArray((workflow as any).nodes)) {
+                res.statusCode = 400; res.end('workflow must be a valid workflow object with a nodes array'); return
+              }
+              const dir = join(process.cwd(), 'public', 'examples')
+              mkdirSync(dir, { recursive: true })
+              const payload = { ...(workflow as object), title, description: description ?? '' }
+              writeFileSync(join(dir, `${slug}.json`), JSON.stringify(payload, null, 2))
+              // Regenerate manifest from all saved examples
+              const manifest: Array<{ slug: string; title: string; description: string }> = []
+              for (const f of readdirSync(dir).filter(f => f.endsWith('.json') && f !== 'manifest.json')) {
+                try {
+                  const parsed = JSON.parse(String(readFileSync(join(dir, f)))) as Record<string, unknown>
+                  const s = f.replace(/\.json$/, '')
+                  manifest.push({ slug: s, title: String(parsed.title ?? s), description: String(parsed.description ?? '') })
+                } catch { /* skip malformed files */ }
+              }
+              manifest.sort((a, b) => a.title.localeCompare(b.title))
+              writeFileSync(join(dir, 'manifest.json'), JSON.stringify(manifest, null, 2))
+              res.setHeader('Content-Type', 'application/json')
+              res.statusCode = 200
+              res.end(JSON.stringify({ saved: slug }))
             } catch (e) {
               res.statusCode = 400
               res.end(String(e))
