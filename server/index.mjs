@@ -3,6 +3,7 @@ import { createProxyMiddleware } from 'http-proxy-middleware'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
 import { mkdir, writeFile } from 'fs/promises'
+import { writeFileSync, readFileSync, mkdirSync, readdirSync } from 'fs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const PORT = process.env.PORT || 3001
@@ -451,6 +452,45 @@ app.use(adsLibrarySearchMiddleware)
 app.use(adsCatalogueSearchMiddleware)
 app.use(lldsSearchMiddleware)
 app.use(urlProxyMiddleware)
+
+// ── Example workflow authoring ───────────────────────────────────────────────
+// POST /dev/write-example — saves a canvas as a named loadable example.
+// Available in production so workshop facilitators can author examples on the
+// deployed instance (protected by obscurity of the author-mode easter egg).
+
+app.post('/dev/write-example', express.json({ limit: '10mb' }), (req, res) => {
+  try {
+    const { slug, title, description, workflow } = req.body ?? {}
+    if (!slug || !/^[\w-]+$/.test(slug)) {
+      res.status(400).json({ error: 'Invalid slug' }); return
+    }
+    if (!title || typeof title !== 'string') {
+      res.status(400).json({ error: 'title is required' }); return
+    }
+    if (!workflow || typeof workflow !== 'object' || !Array.isArray(workflow.nodes)) {
+      res.status(400).json({ error: 'workflow must be a valid workflow object with a nodes array' }); return
+    }
+    const dir = join(__dirname, '../dist/examples')
+    mkdirSync(dir, { recursive: true })
+    const payload = { ...workflow, title, description: description ?? '' }
+    writeFileSync(join(dir, `${slug}.json`), JSON.stringify(payload, null, 2))
+    // Regenerate manifest
+    const manifest = []
+    for (const f of readdirSync(dir).filter(f => f.endsWith('.json') && f !== 'manifest.json')) {
+      try {
+        const parsed = JSON.parse(String(readFileSync(join(dir, f))))
+        const s = f.replace(/\.json$/, '')
+        manifest.push({ slug: s, title: String(parsed.title ?? s), description: String(parsed.description ?? '') })
+      } catch { /* skip malformed */ }
+    }
+    manifest.sort((a, b) => a.title.localeCompare(b.title))
+    writeFileSync(join(dir, 'manifest.json'), JSON.stringify(manifest, null, 2))
+    console.log(`[example] Saved: ${slug}`)
+    res.status(200).json({ saved: slug })
+  } catch (e) {
+    res.status(500).json({ error: String(e) })
+  }
+})
 
 // ── Workshop workflow saves ───────────────────────────────────────────────────
 

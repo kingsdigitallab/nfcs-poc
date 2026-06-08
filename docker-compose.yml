@@ -18,6 +18,9 @@ services:
       # updates committed to the repo take effect after git pull + docker
       # compose restart — no image rebuild needed.
       - ./public/fixtures:/app/dist/fixtures:ro
+      # Same for example workflows — author on either local or deployed instance,
+      # commit public/examples/, then git pull + docker compose restart app.
+      - ./public/examples:/app/dist/examples
     restart: unless-stopped
 
   ollama:
