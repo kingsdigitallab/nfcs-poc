@@ -95,7 +95,7 @@ export function KCLOutputNode({ id }: NodeProps) {
       {/* Response cards */}
       {withResponse.length > 0 && (
         <div style={styles.cardList} className="nodrag nowheel">
-          {withResponse.map(rec => {
+          {withResponse.map((rec, i) => {
             const isExp    = expanded.has(rec.id)
             const response = rec.kclResponse ?? ''
             const preview  = isExp ? response : response.slice(0, 400)
@@ -103,7 +103,7 @@ export function KCLOutputNode({ id }: NodeProps) {
             const cardTitle = rec.title ?? (rec.kclField ? `[${rec.kclField}] ${rec.id}` : rec.id)
 
             return (
-              <div key={rec.id} style={styles.responseCard}>
+              <div key={rec.id ?? i} style={styles.responseCard}>
                 <div style={styles.cardTop}>
                   <div style={styles.cardTitle} title={String(cardTitle)}>{String(cardTitle)}</div>
                   <div style={styles.cardActions}>
