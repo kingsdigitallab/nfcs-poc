@@ -34,9 +34,12 @@ export interface ExtractOp   { id: string; type: 'extract';   field: string; new
 export interface ConcatOp    { id: string; type: 'concat';    field1: string; field2: string; newField: string; separator: string }
 export interface LowercaseOp { id: string; type: 'lowercase'; field: string }
 export interface UppercaseOp { id: string; type: 'uppercase'; field: string }
-export interface TruncateOp  { id: string; type: 'truncate';  field: string; maxLen: string }
+export interface TruncateOp    { id: string; type: 'truncate';    field: string; maxLen: string }
+export interface SplitToListOp { id: string; type: 'splitToList'; field: string; newField: string; mode: 'lines' | 'delimiter' | 'json' | 'jsonObjects'; delimiter: string; jsonKey: string }
+export interface DropFieldsOp  { id: string; type: 'dropFields';  fields: string[] }
+export interface KeepFieldsOp  { id: string; type: 'keepFields';  fields: string[] }
 
-export type TransformOp   = RenameOp | ExtractOp | ConcatOp | LowercaseOp | UppercaseOp | TruncateOp
+export type TransformOp   = RenameOp | ExtractOp | ConcatOp | LowercaseOp | UppercaseOp | TruncateOp | SplitToListOp | DropFieldsOp | KeepFieldsOp
 export type TransformType = TransformOp['type']
 export type FTMode        = 'filter' | 'transform' | 'both'
 
@@ -66,12 +69,15 @@ const OPERATORS: { value: FilterOperator; label: string; noValue?: true }[] = [
 ]
 
 const TRANSFORM_TYPES: { value: TransformType; label: string }[] = [
-  { value: 'rename',    label: 'Rename field' },
-  { value: 'lowercase', label: 'Lowercase' },
-  { value: 'uppercase', label: 'Uppercase' },
-  { value: 'truncate',  label: 'Truncate' },
-  { value: 'extract',   label: 'Extract' },
-  { value: 'concat',    label: 'Concatenate' },
+  { value: 'rename',      label: 'Rename field' },
+  { value: 'lowercase',   label: 'Lowercase' },
+  { value: 'uppercase',   label: 'Uppercase' },
+  { value: 'truncate',    label: 'Truncate' },
+  { value: 'extract',     label: 'Extract' },
+  { value: 'concat',      label: 'Concatenate' },
+  { value: 'splitToList', label: 'Split to list' },
+  { value: 'dropFields',  label: 'Drop fields' },
+  { value: 'keepFields',  label: 'Keep fields' },
 ]
 
 // ─── op factories ─────────────────────────────────────────────────────────────
@@ -85,12 +91,15 @@ function defaultFilterOp(): FilterOp {
 function defaultTransformOp(type: TransformType = 'rename'): TransformOp {
   const id = newOpId()
   switch (type) {
-    case 'rename':    return { id, type, field: '', newName: '', dropOriginal: false }
-    case 'extract':   return { id, type, field: '', newField: '', start: '', end: '', regex: '', useRegex: false }
-    case 'concat':    return { id, type, field1: '', field2: '', newField: '', separator: ' ' }
-    case 'lowercase': return { id, type, field: '' }
-    case 'uppercase': return { id, type, field: '' }
-    case 'truncate':  return { id, type, field: '', maxLen: '100' }
+    case 'rename':      return { id, type, field: '', newName: '', dropOriginal: false }
+    case 'extract':     return { id, type, field: '', newField: '', start: '', end: '', regex: '', useRegex: false }
+    case 'concat':      return { id, type, field1: '', field2: '', newField: '', separator: ' ' }
+    case 'lowercase':   return { id, type, field: '' }
+    case 'uppercase':   return { id, type, field: '' }
+    case 'truncate':    return { id, type, field: '', maxLen: '100' }
+    case 'splitToList': return { id, type, field: '', newField: '', mode: 'lines', delimiter: ',', jsonKey: '' }
+    case 'dropFields':  return { id, type, fields: [] }
+    case 'keepFields':  return { id, type, fields: [] }
   }
 }
 
@@ -298,6 +307,55 @@ function TransformRow({ op, fields, onChange, onDelete }: TransformRowProps) {
               <span style={S.unit}>sep</span>
               {textInp(op.separator, v => patch({ separator: v }), '', 34)}
             </div>
+          </div>
+        )}
+
+        {op.type === 'splitToList' && (
+          <div style={S.multiLineConfig}>
+            <div style={S.configLine}>
+              {fieldSel(op.field, v => onChange({ ...op, field: v }))}
+              <span style={S.arrow}>→</span>
+              {textInp(op.newField, v => onChange({ ...op, newField: v }), 'output field')}
+            </div>
+            <div style={S.configLine}>
+              <select
+                value={op.mode}
+                onChange={e => onChange({ ...op, mode: e.target.value as SplitToListOp['mode'] })}
+                style={{ ...S.sel, flex: 1 }}
+                className="nodrag"
+              >
+                <option value="lines">Lines (newline-split)</option>
+                <option value="delimiter">Delimiter</option>
+                <option value="json">JSON array</option>
+                <option value="jsonObjects">JSON objects</option>
+              </select>
+              {op.mode === 'delimiter'   && textInp(op.delimiter, v => onChange({ ...op, delimiter: v }), ',', 40)}
+              {op.mode === 'jsonObjects' && textInp(op.jsonKey,   v => onChange({ ...op, jsonKey: v }),   'key', 52)}
+            </div>
+          </div>
+        )}
+
+        {(op.type === 'dropFields' || op.type === 'keepFields') && (
+          <div style={{ width: '100%', maxHeight: 88, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: 2 }}>
+            {fields.length === 0 && (
+              <span style={S.emptyHint}>Connect upstream data to see fields</span>
+            )}
+            {fields.map(f => (
+              <label key={f} style={{ ...S.chkLabel, fontSize: 11 }} className="nodrag">
+                <input
+                  type="checkbox"
+                  checked={op.fields.includes(f)}
+                  onChange={e => {
+                    const next = e.target.checked
+                      ? [...op.fields, f]
+                      : op.fields.filter(x => x !== f)
+                    onChange({ ...op, fields: next } as TransformOp)
+                  }}
+                  className="nodrag"
+                />
+                {f}
+              </label>
+            ))}
           </div>
         )}
 

@@ -1,6 +1,8 @@
 /**
  * Runner for KCLFieldNode — sends a selected field from upstream records to
  * KCL's OpenAI-compatible inference API. Supports per-record and aggregate modes.
+ *
+ * Non-streaming (stream: false). Results written once at end, not per-record.
  */
 
 import type { NodeRunner } from './nodeRunners'
@@ -12,6 +14,8 @@ const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'
 const DEFAULT_PROMPT_PER = 'Summarise the following in 2–3 sentences:\n\n{{value}}'
 const DEFAULT_PROMPT_AGG = 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}'
+
+const CONTENT_MAX_CHARS = 12_000
 
 async function kclChat(
   apiKey: string,
@@ -29,7 +33,7 @@ async function kclChat(
     },
     body: JSON.stringify({
       model,
-      stream:      true,
+      stream:      false,
       temperature,
       max_tokens:  maxTokens,
       messages: [
@@ -37,38 +41,13 @@ async function kclChat(
         { role: 'user',   content: userPrompt },
       ],
     }),
-    signal: AbortSignal.timeout(120_000),
+    signal: AbortSignal.timeout(180_000),
   })
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
-  if (!res.body) throw new Error('No response body')
-
-  const reader  = res.body.getReader()
-  const decoder = new TextDecoder()
-  let buffer      = ''
-  let accumulated = ''
-
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) break
-    buffer += decoder.decode(value, { stream: true })
-    const lines = buffer.split('\n')
-    buffer = lines.pop() ?? ''
-
-    for (const line of lines) {
-      const trimmed = line.trim()
-      if (!trimmed.startsWith('data:')) continue
-      const payload = trimmed.slice(5).trim()
-      if (payload === '[DONE]') return accumulated
-      try {
-        const chunk = JSON.parse(payload) as {
-          choices?: Array<{ delta?: { content?: string }; finish_reason?: string | null }>
-        }
-        const content = chunk.choices?.[0]?.delta?.content
-        if (content) accumulated += content
-      } catch { /* malformed chunk — skip */ }
-    }
+  const json = await res.json() as {
+    choices?: Array<{ message?: { content?: string } }>
   }
-  return accumulated
+  return json.choices?.[0]?.message?.content ?? ''
 }
 
 export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updateNodeData) => {
@@ -130,6 +109,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
         })
         .filter(Boolean)
         .join('\n---\n')
+        .slice(0, CONTENT_MAX_CHARS * 2)
 
       updateNodeData(nodeId, { statusMessage: 'Sending aggregate prompt…' })
 
@@ -169,7 +149,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
       for (let i = 0; i < upstreamRecords.length; i++) {
         const record = upstreamRecords[i]
         const rawVal = record[selectedField]
-        const value  = Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()
+        const value  = (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, CONTENT_MAX_CHARS)
 
         updateNodeData(nodeId, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
@@ -196,9 +176,6 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
           kclResponse:    response,
           kclProcessedAt: new Date().toISOString(),
         })
-
-        const partialVersion = setNodeResults(nodeId, enriched)
-        updateNodeData(nodeId, { outputCount: enriched.length, resultsVersion: partialVersion })
       }
 
       const version = setNodeResults(nodeId, enriched)

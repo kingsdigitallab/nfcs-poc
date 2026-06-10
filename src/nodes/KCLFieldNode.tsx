@@ -12,6 +12,7 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { filterKCLModels, APEX_MODEL } from '../utils/kclConfig'
+import { useStaleResults } from '../hooks/useStaleResults'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -51,7 +52,9 @@ const STATUS_BORDER: Record<string, string> = {
   error:   '#ef4444',
 }
 
-// ── OpenAI SSE streaming helper ────────────────────────────────────────────────
+const CONTENT_MAX_CHARS = 12_000
+
+// ── Non-streaming KCL API helper ──────────────────────────────────────────────
 
 async function kclChat(
   apiKey: string,
@@ -61,7 +64,6 @@ async function kclChat(
   temperature: number,
   maxTokens: number,
   signal: AbortSignal,
-  onToken: (accumulated: string) => void,
 ): Promise<string> {
   const res = await fetch(KCL_CHAT, {
     method: 'POST',
@@ -71,7 +73,7 @@ async function kclChat(
     },
     body: JSON.stringify({
       model,
-      stream:      true,
+      stream:      false,
       temperature,
       max_tokens:  maxTokens,
       messages: [
@@ -82,38 +84,10 @@ async function kclChat(
     signal,
   })
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
-  if (!res.body) throw new Error('No response body')
-
-  const reader  = res.body.getReader()
-  const decoder = new TextDecoder()
-  let buffer      = ''
-  let accumulated = ''
-
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) break
-    buffer += decoder.decode(value, { stream: true })
-    const lines = buffer.split('\n')
-    buffer = lines.pop() ?? ''
-
-    for (const line of lines) {
-      const trimmed = line.trim()
-      if (!trimmed.startsWith('data:')) continue
-      const payload = trimmed.slice(5).trim()
-      if (payload === '[DONE]') return accumulated
-      try {
-        const chunk = JSON.parse(payload) as {
-          choices?: Array<{ delta?: { content?: string }; finish_reason?: string | null }>
-        }
-        const content = chunk.choices?.[0]?.delta?.content
-        if (content) {
-          accumulated += content
-          onToken(accumulated.slice(-200))
-        }
-      } catch { /* malformed chunk — skip */ }
-    }
+  const json = await res.json() as {
+    choices?: Array<{ message?: { content?: string } }>
   }
-  return accumulated
+  return json.choices?.[0]?.message?.content ?? ''
 }
 
 // ── Component ──────────────────────────────────────────────────────────────────
@@ -124,11 +98,9 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const allEdges = useEdges()
   const d = data as KCLFieldNodeData
 
-  const [models, setModels]             = useState<string[]>([])
-  const [apiOk, setApiOk]               = useState<boolean | null>(null)
-  const [liveTokens, setLiveTokens]     = useState('')
-  const [liveProgress, setLiveProgress] = useState('')
-  const [tokenInput, setTokenInput]     = useState(String((d.maxTokens as number | undefined) ?? 32768))
+  const [models, setModels]         = useState<string[]>([])
+  const [apiOk, setApiOk]           = useState<boolean | null>(null)
+  const [tokenInput, setTokenInput] = useState(String((d.maxTokens as number | undefined) ?? 32768))
   const abortRef       = useRef<AbortController | null>(null)
   const apexClickCount = useRef(0)
   const apexClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -205,7 +177,12 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const promptTemplate = (d.userPromptTemplate ?? (mode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER)) as string
   const temperature    = (d.temperature   ?? 0.7) as number
   const maxTokens      = (d.maxTokens     ?? 32768) as number
-  const isRunning      = d.status === 'running'
+  const isRunning = d.status === 'running'
+
+  const isStale = useStaleResults(d.status as string, {
+    model: selectedModel, systemPrompt, userPromptTemplate: promptTemplate,
+    temperature, maxTokens, mode, selectedField,
+  })
 
   useEffect(() => { setTokenInput(String(maxTokens)) }, [maxTokens])
 
@@ -243,8 +220,6 @@ export function KCLFieldNode({ id, data }: NodeProps) {
       status: 'running', statusMessage: 'Starting…',
       inputCount: upstreamRecords.length, outputCount: 0,
     })
-    setLiveTokens('')
-    setLiveProgress('')
 
     try {
       if (mode === 'aggregate') {
@@ -255,8 +230,8 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           })
           .filter(Boolean)
           .join('\n---\n')
+          .slice(0, CONTENT_MAX_CHARS * 2)
 
-        setLiveProgress(`Aggregating ${upstreamRecords.length} records…`)
         updateNodeData(id, { statusMessage: 'Sending aggregate prompt…' })
 
         const prompt = promptTemplate
@@ -268,7 +243,6 @@ export function KCLFieldNode({ id, data }: NodeProps) {
         const response = await kclChat(
           effectiveApiKey, selectedModel, systemPrompt, prompt,
           temperature, maxTokens, signal,
-          tok => setLiveTokens(tok),
         )
 
         const resultRecord = {
@@ -284,8 +258,6 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           kclProcessedAt:      new Date().toISOString(),
         }
 
-        setLiveTokens('')
-        setLiveProgress('')
         const version = setNodeResults(id, [resultRecord])
         updateNodeData(id, {
           status:         'success',
@@ -301,9 +273,8 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           if (signal.aborted) break
           const record = upstreamRecords[i]
           const rawVal = record[selectedField]
-          const value  = Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()
+          const value  = (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, CONTENT_MAX_CHARS)
 
-          setLiveProgress(`${i + 1} / ${upstreamRecords.length}`)
           updateNodeData(id, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
           const prompt = promptTemplate
@@ -314,7 +285,6 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           const response = await kclChat(
             effectiveApiKey, selectedModel, systemPrompt, prompt,
             temperature, maxTokens, signal,
-            tok => setLiveTokens(tok),
           )
 
           enriched.push({
@@ -326,11 +296,8 @@ export function KCLFieldNode({ id, data }: NodeProps) {
             kclResponse:    response,
             kclProcessedAt: new Date().toISOString(),
           })
-          updateNodeData(id, { outputCount: enriched.length })
         }
 
-        setLiveTokens('')
-        setLiveProgress('')
         const version = setNodeResults(id, enriched)
         updateNodeData(id, {
           status:         'success',
@@ -340,8 +307,6 @@ export function KCLFieldNode({ id, data }: NodeProps) {
         })
       }
     } catch (err) {
-      setLiveTokens('')
-      setLiveProgress('')
       if ((err as { name?: string }).name === 'AbortError') {
         updateNodeData(id, { status: 'idle', statusMessage: 'Cancelled' })
         return
@@ -365,7 +330,11 @@ export function KCLFieldNode({ id, data }: NodeProps) {
       {/* Header */}
       <div style={styles.header}>
         <span style={styles.headerTitle}>KCL Field</span>
-        {d.statusMessage ? (
+        {isRunning && <span className="node-spinner" />}
+        {!isRunning && isStale && (
+          <span style={styles.staleBadge}>⟳ settings changed</span>
+        )}
+        {!isRunning && !isStale && d.statusMessage ? (
           <span style={styles.headerStatus}>{d.statusMessage as string}</span>
         ) : null}
       </div>
@@ -497,13 +466,6 @@ export function KCLFieldNode({ id, data }: NodeProps) {
             placeholder="32768" className="nodrag" />
         </div>
 
-        {/* Live preview */}
-        {isRunning && (liveProgress || liveTokens) && (
-          <div style={styles.livePreview}>
-            <div style={styles.liveHeader}>⚙ {liveProgress}</div>
-            {liveTokens && <div style={styles.liveText}>…{liveTokens}</div>}
-          </div>
-        )}
       </div>
 
       <div style={styles.footer}>
@@ -549,6 +511,7 @@ const styles = {
   },
   headerTitle: { color: '#fff', fontWeight: 700, fontSize: 12, flexShrink: 0 },
   headerStatus: { fontSize: 10, fontWeight: 600, color: '#fecdd3', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const },
+  staleBadge: { fontSize: 9, fontWeight: 700, color: '#fbbf24', background: 'rgba(0,0,0,0.25)', borderRadius: 3, padding: '1px 5px', whiteSpace: 'nowrap' as const, flexShrink: 0 },
   warnBanner: { fontSize: 10, padding: '5px 10px', background: '#fef2f2', borderBottom: '1px solid #fecaca', color: '#991b1b', lineHeight: 1.4 },
   body: { padding: '10px 12px 6px', display: 'flex', flexDirection: 'column' as const, gap: 7 },
   row: { display: 'flex', alignItems: 'center', gap: 6 },

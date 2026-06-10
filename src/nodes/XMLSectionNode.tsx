@@ -1,18 +1,22 @@
 /**
- * XMLSectionNode — interrogates XML/TEI records via XPath, analogous to
- * HTMLSectionNode for HTML content.
+ * XMLSectionNode — interrogates XML/TEI records via XPath.
  *
- * Reads upstream records that have a `content` field containing XML text
- * (e.g. from LocalFolderSourceNode xml handle or LocalFileSourceNode xml mode),
+ * Reads upstream records with a `content` field containing XML text,
  * evaluates the XPath expression, and writes the result to `xmlContent`.
  * Records without `content` are passed through unchanged.
+ *
+ * Schema inspector: builds a proper collapsible tree by deduplicating
+ * children at each level (so `teiHeader` and `text` both appear as siblings
+ * under the root, not buried after 30 header paths). Depth-limited to 10
+ * rather than path-count-limited, so the tree always covers the full document.
+ *
+ * Preview: navigates across multiple upstream XML records.
  */
 
 import { useState, useCallback } from 'react'
-import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
+import { Handle, Position, useReactFlow, NodeProps, NodeResizer, useEdges } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { runXMLSectionNode } from '../utils/runXMLSectionNode'
-import { useEdges } from '@xyflow/react'
 
 // ── Node data ─────────────────────────────────────────────────────────────────
 
@@ -28,26 +32,165 @@ export interface XMLSectionNodeData {
   [key: string]: unknown
 }
 
-// ── Schema inspector ──────────────────────────────────────────────────────────
+// ── Schema tree types ─────────────────────────────────────────────────────────
 
-function buildSchema(xmlText: string): string[] {
+interface XmlSchemaNode {
+  tag:      string
+  xpath:    string      // //tag — click-to-insert suggestion
+  path:     string      // full path from root e.g. /TEI/text/body
+  count:    number      // sibling count (>1 means repeated element)
+  hasText:  boolean     // has direct text node content
+  attrs:    string[]    // first 3 attribute names
+  children: XmlSchemaNode[]
+}
+
+// ── Schema tree builder ────────────────────────────────────────────────────────
+//
+// Deduplicates children at each level: only one representative per unique tag
+// name is kept, with a `count` reflecting how many siblings share that name.
+// This means <teiHeader> and <text> both appear under the root regardless of
+// depth — no DFS path-count cutoff can hide a sibling.
+
+function buildXmlSchema(xmlText: string): XmlSchemaNode | null {
   try {
-    const stripped = xmlText.replace(/\sxmlns="[^"]*"/g, '')
-    const parser = new DOMParser()
-    const doc    = parser.parseFromString(stripped, 'application/xml')
-    if (doc.querySelector('parsererror')) return []
+    const stripped = xmlText.replace(/\s+xmlns(?::\w+)?="[^"]*"/g, '')
+    const doc = new DOMParser().parseFromString(stripped, 'application/xml')
+    if (doc.querySelector('parsererror')) return null
 
-    const paths = new Set<string>()
-    function walk(el: Element, prefix: string) {
-      const path = prefix ? `${prefix}/${el.localName}` : `//${el.localName}`
-      paths.add(path)
-      for (const child of el.children) walk(child, path)
+    function walk(el: Element, path: string, depth: number): XmlSchemaNode {
+      // Deduplicate children by localName; keep first representative + count
+      const seen = new Map<string, { el: Element; count: number }>()
+      for (const child of el.children) {
+        const t = child.localName
+        if (seen.has(t)) seen.get(t)!.count++
+        else seen.set(t, { el: child, count: 1 })
+      }
+
+      const children: XmlSchemaNode[] =
+        depth < 10
+          ? [...seen.values()].map(({ el: c, count }) => {
+              const n  = walk(c, `${path}/${c.localName}`, depth + 1)
+              n.count  = count
+              return n
+            })
+          : []
+
+      const hasText = Array.from(el.childNodes).some(
+        n => n.nodeType === Node.TEXT_NODE && (n.textContent?.trim().length ?? 0) > 0,
+      )
+
+      return {
+        tag:      el.localName,
+        xpath:    `//${el.localName}`,
+        path,
+        count:    1,
+        hasText,
+        attrs:    Array.from(el.attributes).map(a => a.name).slice(0, 3),
+        children,
+      }
     }
-    walk(doc.documentElement, '')
-    return [...paths].slice(0, 30)
+
+    return walk(doc.documentElement, `/${doc.documentElement.localName}`, 0)
   } catch {
-    return []
+    return null
   }
+}
+
+// ── Schema tree view component ─────────────────────────────────────────────────
+
+function SchemaTreeView({
+  root,
+  onSelect,
+}: {
+  root:     XmlSchemaNode
+  onSelect: (xpath: string) => void
+}) {
+  const [expanded, setExpanded] = useState<Set<string>>(
+    () => new Set([root.path, ...root.children.map(c => c.path)]),
+  )
+
+  function toggle(path: string) {
+    setExpanded(prev => {
+      const next = new Set(prev)
+      next.has(path) ? next.delete(path) : next.add(path)
+      return next
+    })
+  }
+
+  function renderNode(node: XmlSchemaNode, depth: number): React.ReactNode {
+    const hasChildren = node.children.length > 0
+    const isExpanded  = expanded.has(node.path)
+
+    return (
+      <div key={node.path}>
+        <div
+          style={{
+            display:     'flex',
+            alignItems:  'center',
+            paddingLeft: depth * 11 + 2,
+            minHeight:   20,
+            gap:         3,
+          }}
+        >
+          <span
+            style={{
+              width:      12,
+              flexShrink: 0,
+              cursor:     hasChildren ? 'pointer' : 'default',
+              color:      '#9ca3af',
+              fontSize:   9,
+              userSelect: 'none',
+            }}
+            onClick={() => hasChildren && toggle(node.path)}
+          >
+            {hasChildren ? (isExpanded ? '▾' : '▸') : '·'}
+          </span>
+
+          <span
+            style={{
+              color:      '#0f172a',
+              fontFamily: 'monospace',
+              fontSize:   10,
+              cursor:     'pointer',
+              flexShrink: 0,
+            }}
+            onClick={() => onSelect(node.xpath)}
+            title={`Insert XPath: ${node.xpath}`}
+          >
+            &lt;{node.tag}&gt;
+          </span>
+
+          {node.count > 1 && (
+            <span style={treeStyles.countBadge}>×{node.count}</span>
+          )}
+          {node.hasText && (
+            <span style={treeStyles.textBadge}>text</span>
+          )}
+          {node.attrs.map(a => (
+            <span key={a} style={treeStyles.attrBadge}>@{a}</span>
+          ))}
+        </div>
+
+        {isExpanded && node.children.map(c => renderNode(c, depth + 1))}
+      </div>
+    )
+  }
+
+  return <div style={{ userSelect: 'none' }}>{renderNode(root, 0)}</div>
+}
+
+const treeStyles = {
+  countBadge: {
+    fontSize: 9, color: '#6b7280',
+    background: '#f3f4f6', borderRadius: 3, padding: '0 3px',
+  },
+  textBadge: {
+    fontSize: 9, color: '#6b7280', fontStyle: 'italic' as const,
+  },
+  attrBadge: {
+    fontSize: 9, color: '#92400e',
+    background: '#fef3c7', borderRadius: 3, padding: '0 3px',
+  },
 }
 
 // ── Constants ─────────────────────────────────────────────────────────────────
@@ -64,46 +207,53 @@ const STATUS_BORDER: Record<string, string> = {
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
-export function XMLSectionNode({ id, data }: NodeProps) {
+export function XMLSectionNode({ id, data, selected }: NodeProps) {
   const { updateNodeData, getNodes } = useReactFlow()
   const allEdges = useEdges()
   const d = data as XMLSectionNodeData
 
   const upstream = useUpstreamRecords(id)
-  const [schemaLines, setSchemaLines] = useState<string[]>([])
-  const [showSchema, setShowSchema] = useState(false)
-  const [preview, setPreview] = useState<string>('')
 
-  const xpath      = (d.xpath      as string  | undefined) ?? ''
-  const outputMode = (d.outputMode as string  | undefined) ?? 'text'
-  const maxLength  = (d.maxLength  as number  | undefined) ?? 8000
-  const status     = (d.status     as string  | undefined) ?? 'idle'
+  const [schemaRoot,  setSchemaRoot]  = useState<XmlSchemaNode | null>(null)
+  const [showSchema,  setShowSchema]  = useState(false)
+  const [preview,     setPreview]     = useState<string>('')
+  const [recIdx,      setRecIdx]      = useState(0)
+
+  const xpath      = (d.xpath      as string | undefined) ?? ''
+  const outputMode = (d.outputMode as string | undefined) ?? 'text'
+  const maxLength  = (d.maxLength  as number | undefined) ?? 8000
+  const status     = (d.status     as string | undefined) ?? 'idle'
   const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
 
+  // All upstream records that have XML content
+  const xmlRecords = (upstream.records ?? []).filter(r => typeof r.content === 'string')
+  const safeIdx    = Math.min(recIdx, Math.max(0, xmlRecords.length - 1))
+  const xmlText    = (xmlRecords[safeIdx]?.content as string | undefined)
+
   const inspectSchema = useCallback(() => {
-    const recs = upstream.records
-    const xmlText = recs?.find(r => typeof r.content === 'string')?.content as string | undefined
-    if (!xmlText) { setSchemaLines(['No XML content found upstream']); setShowSchema(true); return }
-    const lines = buildSchema(xmlText)
-    setSchemaLines(lines.length > 0 ? lines : ['Could not parse XML'])
+    if (!xmlText) {
+      setSchemaRoot(null)
+      setShowSchema(true)
+      return
+    }
+    const root = buildXmlSchema(xmlText)
+    setSchemaRoot(root)
     setShowSchema(true)
-  }, [upstream.records])
+  }, [xmlText])
 
   const previewXPath = useCallback(() => {
-    const recs = upstream.records
-    const xmlText = recs?.find(r => typeof r.content === 'string')?.content as string | undefined
     if (!xmlText || !xpath.trim()) { setPreview('No content or XPath'); return }
     try {
-      const stripped = xmlText.replace(/\sxmlns="[^"]*"/g, '')
+      const stripped = xmlText.replace(/\s+xmlns(?::\w+)?="[^"]*"/g, '')
       const doc      = new DOMParser().parseFromString(stripped, 'application/xml')
       if (doc.querySelector('parsererror')) { setPreview('XML parse error'); return }
       if (outputMode === 'text') {
-        const r = document.evaluate(xpath, doc, null, XPathResult.STRING_TYPE, null)
+        const r   = document.evaluate(xpath, doc, null, XPathResult.STRING_TYPE, null)
         const val = (r.stringValue ?? '').replace(/\s+/g, ' ').trim()
         setPreview(val.slice(0, 500) || '(empty)')
       } else {
-        const snap = document.evaluate(xpath, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
-        const ser  = new XMLSerializer()
+        const snap  = document.evaluate(xpath, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
+        const ser   = new XMLSerializer()
         const parts: string[] = []
         for (let i = 0; i < snap.snapshotLength; i++) {
           const n = snap.snapshotItem(i)
@@ -114,7 +264,7 @@ export function XMLSectionNode({ id, data }: NodeProps) {
     } catch (err) {
       setPreview(`Error: ${err instanceof Error ? err.message : String(err)}`)
     }
-  }, [upstream.records, xpath, outputMode])
+  }, [xmlText, xpath, outputMode])
 
   const handleRun = useCallback(async () => {
     await runXMLSectionNode(
@@ -125,7 +275,21 @@ export function XMLSectionNode({ id, data }: NodeProps) {
     )
   }, [id, getNodes, allEdges, updateNodeData])
 
+  const handleRecNav = (delta: number) => {
+    const next = Math.max(0, Math.min(xmlRecords.length - 1, safeIdx + delta))
+    setRecIdx(next)
+    setShowSchema(false)
+    setPreview('')
+  }
+
   return (
+    <>
+    <NodeResizer
+      minWidth={260} minHeight={200}
+      isVisible={selected}
+      lineStyle={{ borderColor: HEADER_COLOR }}
+      handleStyle={{ background: HEADER_COLOR, borderColor: '#fff', width: 8, height: 8 }}
+    />
     <div style={{ ...styles.card, borderColor }}>
       {/* Header */}
       <div style={styles.header}>
@@ -144,7 +308,7 @@ export function XMLSectionNode({ id, data }: NodeProps) {
             type="text"
             style={styles.textInput}
             value={xpath}
-            placeholder="e.g. //tei:text"
+            placeholder="e.g. //body//p"
             onChange={e => updateNodeData(id, { xpath: e.target.value })}
             className="nodrag"
           />
@@ -188,11 +352,36 @@ export function XMLSectionNode({ id, data }: NodeProps) {
         {/* Upstream summary */}
         {upstream.connected && (
           <div style={styles.upstreamInfo}>
-            {upstream.records ? `${upstream.records.length} upstream records` : 'No records yet'}
+            {xmlRecords.length > 0
+              ? `${xmlRecords.length} XML record${xmlRecords.length !== 1 ? 's' : ''} upstream`
+              : upstream.records
+              ? `${upstream.records.length} records upstream (no XML content found)`
+              : 'No records yet'}
           </div>
         )}
 
-        {/* Schema inspector */}
+        {/* Record navigation (only when multiple XML records are present) */}
+        {xmlRecords.length > 1 && (
+          <div style={styles.recNav}>
+            <button
+              style={{ ...styles.recNavBtn, opacity: safeIdx === 0 ? 0.4 : 1 }}
+              disabled={safeIdx === 0}
+              onClick={() => handleRecNav(-1)}
+              className="nodrag"
+            >◀</button>
+            <span style={styles.recNavLabel}>
+              Record {safeIdx + 1} of {xmlRecords.length}
+            </span>
+            <button
+              style={{ ...styles.recNavBtn, opacity: safeIdx >= xmlRecords.length - 1 ? 0.4 : 1 }}
+              disabled={safeIdx >= xmlRecords.length - 1}
+              onClick={() => handleRecNav(1)}
+              className="nodrag"
+            >▶</button>
+          </div>
+        )}
+
+        {/* Action buttons */}
         <div style={styles.actionRow}>
           <button style={styles.actionBtn} onClick={inspectSchema} className="nodrag">
             Inspect schema
@@ -202,38 +391,52 @@ export function XMLSectionNode({ id, data }: NodeProps) {
           </button>
         </div>
 
-        {/* Schema lines */}
-        {showSchema && schemaLines.length > 0 && (
+        {/* Schema tree */}
+        {showSchema && (
           <div style={styles.schemaBox}>
             <div style={styles.schemaHeader}>
-              <span>Element paths</span>
+              <span>
+                Element tree
+                {xmlRecords.length > 1 && (
+                  <span style={{ marginLeft: 6, fontWeight: 400, color: '#9ca3af' }}>
+                    (record {safeIdx + 1})
+                  </span>
+                )}
+              </span>
               <button
                 style={styles.schemaClose}
                 onClick={() => setShowSchema(false)}
                 className="nodrag"
               >✕</button>
             </div>
-            {schemaLines.map((line, i) => (
-              <div
-                key={i}
-                style={styles.schemaLine}
-                onClick={() => {
-                  updateNodeData(id, { xpath: line })
-                  setShowSchema(false)
-                }}
-                className="nodrag"
-                title="Click to use as XPath"
-              >
-                {line}
-              </div>
-            ))}
+            <div style={{ padding: '4px 2px 4px 4px' }}>
+              {schemaRoot
+                ? (
+                  <SchemaTreeView
+                    key={safeIdx}
+                    root={schemaRoot}
+                    onSelect={x => { updateNodeData(id, { xpath: x }); setShowSchema(false) }}
+                  />
+                )
+                : <div style={{ fontSize: 10, color: '#6b7280', padding: '4px 6px' }}>
+                    {xmlText ? 'Could not parse XML' : 'No XML content found upstream'}
+                  </div>
+              }
+            </div>
           </div>
         )}
 
         {/* Preview box */}
         {preview && (
           <div style={styles.previewBox}>
-            <div style={styles.previewLabel}>Preview</div>
+            <div style={styles.previewLabel}>
+              Preview
+              {xmlRecords.length > 1 && (
+                <span style={{ marginLeft: 6, fontWeight: 400, color: '#9ca3af' }}>
+                  (record {safeIdx + 1})
+                </span>
+              )}
+            </div>
             <pre style={styles.previewText}>{preview}</pre>
           </div>
         )}
@@ -260,19 +463,10 @@ export function XMLSectionNode({ id, data }: NodeProps) {
       </div>
 
       {/* Handles */}
-      <Handle
-        type="target"
-        position={Position.Left}
-        id="data"
-        style={styles.inputHandle}
-      />
-      <Handle
-        type="source"
-        position={Position.Right}
-        id="results"
-        style={styles.outputHandle}
-      />
+      <Handle type="target" position={Position.Left}  id="data"    style={styles.inputHandle}  />
+      <Handle type="source" position={Position.Right} id="results" style={styles.outputHandle} />
     </div>
+    </>
   )
 }
 
@@ -283,10 +477,17 @@ const styles = {
     background: '#fff',
     border: '2px solid #d1d5db',
     borderRadius: 8,
+    width: '100%',
+    height: '100%',
     minWidth: 260,
+    minHeight: 200,
     boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
+    display: 'flex',
+    flexDirection: 'column' as const,
+    overflow: 'hidden',
+    boxSizing: 'border-box' as const,
   },
   header: {
     height: 32,
@@ -317,6 +518,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column' as const,
     gap: 7,
+    flex: 1,
+    overflowY: 'auto' as const,
   },
   row: {
     display: 'flex',
@@ -360,6 +563,28 @@ const styles = {
     color: '#9ca3af',
     fontStyle: 'italic' as const,
   },
+  recNav: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+  },
+  recNavBtn: {
+    background: '#f3f4f6',
+    border: '1px solid #d1d5db',
+    borderRadius: 3,
+    padding: '1px 7px',
+    fontSize: 10,
+    cursor: 'pointer',
+    color: '#374151',
+  },
+  recNavLabel: {
+    fontSize: 10,
+    fontWeight: 600,
+    color: '#374151',
+    minWidth: 90,
+    textAlign: 'center' as const,
+  },
   actionRow: {
     display: 'flex',
     gap: 6,
@@ -381,7 +606,7 @@ const styles = {
     borderRadius: 4,
     fontSize: 10,
     fontFamily: 'monospace',
-    maxHeight: 140,
+    maxHeight: 240,
     overflowY: 'auto' as const,
   },
   schemaHeader: {
@@ -394,6 +619,9 @@ const styles = {
     fontWeight: 700,
     color: '#6b7280',
     textTransform: 'uppercase' as const,
+    position: 'sticky' as const,
+    top: 0,
+    background: '#fafaf9',
   },
   schemaClose: {
     background: 'none',
@@ -402,12 +630,6 @@ const styles = {
     fontSize: 10,
     color: '#9ca3af',
     padding: 0,
-  },
-  schemaLine: {
-    padding: '2px 6px',
-    color: '#44403c',
-    cursor: 'pointer',
-    lineHeight: 1.6,
   },
   previewBox: {
     background: '#fafaf9',
@@ -428,7 +650,7 @@ const styles = {
     whiteSpace: 'pre-wrap' as const,
     wordBreak: 'break-word' as const,
     margin: 0,
-    maxHeight: 100,
+    maxHeight: 120,
     overflowY: 'auto' as const,
     color: '#292524',
   },
