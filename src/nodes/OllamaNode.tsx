@@ -13,6 +13,7 @@
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
+import { useStaleResults } from '../hooks/useStaleResults'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -139,6 +140,11 @@ export function OllamaNode({ id, data }: NodeProps) {
   const hasImageInputs = upstreamRecords.some(r => r.contentType === 'image')
   const showVisionWarn = hasImageInputs && !isVisionModel && upstreamRecords.length > 0
   const isRunning      = d.status === 'running'
+
+  const isStale = useStaleResults(d.status as string, {
+    model: selectedModel, systemPrompt, userPromptTemplate: promptTemplate,
+    temperature, maxTokens,
+  })
 
   // Field list for the {{field}} helper
   const sampleRecord = upstreamRecords[0]
@@ -344,7 +350,11 @@ export function OllamaNode({ id, data }: NodeProps) {
       {/* Header */}
       <div style={styles.header}>
         <span style={styles.headerTitle}>Ollama LLM</span>
-        {d.statusMessage ? (
+        {isRunning && <span className="node-spinner" />}
+        {!isRunning && isStale && (
+          <span style={styles.staleBadge}>⟳ settings changed</span>
+        )}
+        {!isRunning && !isStale && d.statusMessage ? (
           <span style={{
             fontSize: 10, fontWeight: 600, color: '#c7d2fe',
             overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
@@ -561,6 +571,16 @@ const styles = {
     color: '#fff',
     fontWeight: 700,
     fontSize: 12,
+    flexShrink: 0,
+  },
+  staleBadge: {
+    fontSize: 9,
+    fontWeight: 700,
+    color: '#fbbf24',
+    background: 'rgba(0,0,0,0.25)',
+    borderRadius: 3,
+    padding: '1px 5px',
+    whiteSpace: 'nowrap' as const,
     flexShrink: 0,
   },
   warnBanner: {

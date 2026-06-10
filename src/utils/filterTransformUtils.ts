@@ -124,6 +124,64 @@ export function applyTransform(
       return { ...r, [op.field]: str.length > maxLen ? `${str.slice(0, maxLen)}…` : str }
     }
 
+    case 'splitToList': {
+      if (!op.field) return r
+      const raw = toStr(resolveField(r, op.field))
+      if (!raw.trim()) return r
+      let items: string[] = []
+      try {
+        switch (op.mode) {
+          case 'lines':
+            items = raw
+              .split(/\r?\n/)
+              .map(s => s.trim().replace(/^[-*•\d]+[.)]\s*/, ''))
+              .filter(Boolean)
+            break
+          case 'delimiter':
+            items = raw.split(op.delimiter || ',').map(s => s.trim()).filter(Boolean)
+            break
+          case 'json': {
+            const parsed = JSON.parse(raw)
+            if (Array.isArray(parsed)) items = parsed.map(v => String(v).trim()).filter(Boolean)
+            break
+          }
+          case 'jsonObjects': {
+            const parsed = JSON.parse(raw)
+            if (Array.isArray(parsed) && op.jsonKey)
+              items = parsed
+                .map(obj => (obj && typeof obj === 'object'
+                  ? String((obj as Record<string, unknown>)[op.jsonKey] ?? '')
+                  : ''))
+                .filter(Boolean)
+            break
+          }
+        }
+      } catch { return r }
+      if (items.length === 0) return r
+      const seen = new Set<string>()
+      const deduped = items.filter(s => { if (seen.has(s)) return false; seen.add(s); return true })
+      const outField = op.newField || `${op.field}_list`
+      return { ...r, [outField]: deduped }
+    }
+
+    case 'dropFields': {
+      if (!op.fields?.length) return r
+      const out = { ...r }
+      op.fields.forEach(f => delete out[f])
+      return out
+    }
+
+    case 'keepFields': {
+      if (!op.fields?.length) return r
+      const kept: Record<string, unknown> = {}
+      op.fields.forEach(f => {
+        if (f in r) kept[f] = r[f]
+        const rc = `${f}_reconciled`
+        if (rc in r) kept[rc] = r[rc]
+      })
+      return kept
+    }
+
     default: return r
   }
 }
@@ -132,9 +190,11 @@ export function applyTransforms(
   records: UnifiedRecord[],
   ops: TransformOp[],
 ): UnifiedRecord[] {
-  const active = ops.filter(op =>
-    op.type === 'concat' ? !!(op.field1 || op.field2) : !!op.field,
-  )
+  const active = ops.filter(op => {
+    if (op.type === 'concat')                                 return !!(op.field1 || op.field2)
+    if (op.type === 'dropFields' || op.type === 'keepFields') return op.fields.length > 0
+    return !!op.field
+  })
   if (active.length === 0) return records
   return records.map(record => {
     let r = record as unknown as Record<string, unknown>

@@ -62,8 +62,50 @@ Items deposited with the Oxford Text Archive by Jeffery Triggs (North American R
 
 ---
 
+## Sample Data Source — `collections-manifest.json`
+
+The **Sample Data Source** node reads `collections-manifest.json` (this directory) to present a named-package catalogue of pre-packaged files. It fetches selected files over HTTP (no user gesture required) and emits `FileRecord[]` through the same typed handles as Local Folder Source, so all downstream nodes work unchanged. Unlike Local Folder Source, this node has a runner and is fully reproducible in saved and example workflows.
+
+### Manifest schema
+
+```json
+{
+  "packages": [
+    {
+      "slug":        "unique-kebab-slug",
+      "title":       "Display title shown in the node",
+      "service":     "LLDS",
+      "description": "One-sentence description shown under the selector",
+      "items": [
+        {
+          "label": "Human-readable item title (shown as a section header)",
+          "files": [
+            {
+              "label":     "Display label for this file (e.g. 'TEI-XML transcript')",
+              "type":      "xml | text | pdf | image",
+              "filename":  "filename.xml",
+              "sizeBytes": 290052,
+              "url":       "/fixtures/<path>/filename.xml"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Adding new packages** (e.g. ADS grey literature PDFs):
+1. Copy the `.pdf` file into an appropriate subdirectory under `public/fixtures/`.
+2. Add a new object to the `packages` array in `collections-manifest.json` with `"type": "pdf"` file entries.
+3. Commit both. `extractFileContent` already handles PDF text extraction via pdfjs-dist.
+
+---
+
 ## Usage at workshops
 
 The JSON fixtures are loaded automatically by the workflow when a search node's 📦 fixture toggle is enabled — no manual file handling needed. Simply wire up a query, check 📦, and click **▶ Load fixture**.
 
-The `LLDS Collections/` content is intended to be opened with the **Local Folder Source** node. Point the node at the relevant subdirectory (e.g. `public/fixtures/LLDS Collections/stonehenge`) after cloning this repository.
+The `LLDS Collections/` content can be accessed in two ways:
+- **Sample Data Source node** (recommended for demo workflows): no file picking needed — select the Stonehenge package and tick the files you want; works in Run All and saved/example workflows.
+- **Local Folder Source node** (live local folder): point the node at the relevant subdirectory (e.g. `public/fixtures/LLDS Collections/stonehenge`) after cloning this repository.

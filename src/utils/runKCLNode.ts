@@ -2,8 +2,9 @@
  * Runner for KCLNode — processes FileRecord / UnifiedRecord upstream records
  * through KCL's OpenAI-compatible inference API.
  *
- * Uses streaming (stream: true) so generation stops at the model's natural
- * end-of-sequence token. Per-record errors are caught individually.
+ * Non-streaming (stream: false) — waits for the full JSON response.
+ * Per-record errors are caught individually; no partial results are written
+ * mid-run so the store is only updated once the whole batch completes.
  */
 
 import type { NodeRunner } from './nodeRunners'
@@ -74,6 +75,10 @@ async function buildUserContent(
   ]
 }
 
+// Long text fields (content, xmlContent) can be megabytes; cap before sending to
+// small models whose context windows are easily exhausted.
+const CONTENT_MAX_CHARS = 12_000
+
 async function kclChat(
   apiKey: string,
   model: string,
@@ -90,7 +95,7 @@ async function kclChat(
     },
     body: JSON.stringify({
       model,
-      stream:      true,
+      stream:      false,
       temperature,
       max_tokens:  maxTokens,
       messages: [
@@ -98,41 +103,17 @@ async function kclChat(
         { role: 'user',   content: userContent },
       ],
     }),
-    signal: AbortSignal.timeout(120_000),
+    signal: AbortSignal.timeout(180_000),
   })
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
-  if (!res.body) throw new Error('No response body')
-
-  const reader  = res.body.getReader()
-  const decoder = new TextDecoder()
-  let buffer        = ''
-  let accumulated   = ''
-  let resolvedModel = model
-
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) break
-    buffer += decoder.decode(value, { stream: true })
-    const lines = buffer.split('\n')
-    buffer = lines.pop() ?? ''
-
-    for (const line of lines) {
-      const trimmed = line.trim()
-      if (!trimmed.startsWith('data:')) continue
-      const payload = trimmed.slice(5).trim()
-      if (payload === '[DONE]') return { text: accumulated, resolvedModel }
-      try {
-        const chunk = JSON.parse(payload) as {
-          model?: string
-          choices?: Array<{ delta?: { content?: string }; finish_reason?: string | null }>
-        }
-        if (chunk.model && chunk.model !== resolvedModel) resolvedModel = chunk.model
-        const content = chunk.choices?.[0]?.delta?.content
-        if (content) accumulated += content
-      } catch { /* malformed chunk — skip */ }
-    }
+  const json = await res.json() as {
+    model?: string
+    choices?: Array<{ message?: { content?: string } }>
   }
-  return { text: accumulated, resolvedModel }
+  return {
+    text:          json.choices?.[0]?.message?.content ?? '',
+    resolvedModel: json.model ?? model,
+  }
 }
 
 export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNodeData) => {
@@ -187,11 +168,12 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
     const record = upstreamRecords[i]
     updateNodeData(nodeId, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
-    const baseContent = visionMode
+    const rawContent = visionMode
       ? (record.description as string | undefined) ?? (record.title as string | undefined) ?? ''
       : (record.content     as string | undefined) ??
         (record.description as string | undefined) ??
         JSON.stringify(record)
+    const baseContent = rawContent.slice(0, CONTENT_MAX_CHARS)
 
     const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
     const userContent    = visionMode
@@ -218,9 +200,6 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
       kclResponse:      response,
       kclProcessedAt:   new Date().toISOString(),
     })
-
-    const partialVersion = setNodeResults(nodeId, enriched)
-    updateNodeData(nodeId, { outputCount: enriched.length, resultsVersion: partialVersion })
   }
 
   const version = setNodeResults(nodeId, enriched)

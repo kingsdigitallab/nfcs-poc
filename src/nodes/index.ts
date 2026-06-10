@@ -43,6 +43,7 @@ import { VASearchNode }             from './VASearchNode'
 import { GeocodingNode }            from './GeocodingNode'
 import { SmartGeocoderNode }       from './SmartGeocoderNode'
 import { FrameSenseSourceNode }     from './FrameSenseSourceNode'
+import { SampleDataSourceNode }    from './SampleDataSourceNode'
 import { SourceProfileNode }        from './SourceProfileNode'
 import { SmartFilterNode }          from './SmartFilterNode'
 import { QuickStartNode }           from './QuickStartNode'
@@ -96,6 +97,7 @@ export const nodeTypes = {
   geocoding:         withToolbar(GeocodingNode),
   smartGeocoder:     withToolbar(SmartGeocoderNode),
   frameSenseSource:  withToolbar(FrameSenseSourceNode),
+  sampleDataSource:  withToolbar(SampleDataSourceNode),
   sourceProfile:     withToolbar(SourceProfileNode),
   smartFilter:       withToolbar(SmartFilterNode),
   quickStart:        withToolbar(QuickStartNode),

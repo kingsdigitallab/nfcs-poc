@@ -1,0 +1,50 @@
+{
+  "packages": [
+    {
+      "slug": "stonehenge",
+      "title": "Stonehenge — antiquarian texts (LLDS / EEBO-TCP)",
+      "service": "LLDS",
+      "description": "Two 17th-century antiquarian works on Stonehenge from the Oxford Text Archive (EEBO-TCP Phase 1). CC0 1.0 Universal.",
+      "items": [
+        {
+          "label": "Jones 1655 — The most notable antiquity of Great Britain, Stone-Heng on Salisbury Plain, restored",
+          "files": [
+            {
+              "label": "TEI-XML transcript",
+              "type": "xml",
+              "filename": "A47049.xml",
+              "sizeBytes": 290052,
+              "url": "/fixtures/LLDS Collections/stonehenge/ITEM@20.500.12024-A47049/A47049.xml"
+            },
+            {
+              "label": "Plain text (TSV)",
+              "type": "text",
+              "filename": "A47049.tsv",
+              "sizeBytes": 2700788,
+              "url": "/fixtures/LLDS Collections/stonehenge/ITEM@20.500.12024-A47049/A47049.tsv"
+            }
+          ]
+        },
+        {
+          "label": "Charleton 1663 — Chorea gigantum, Stone-Heng standing on Salisbury Plain, restored to the Danes",
+          "files": [
+            {
+              "label": "TEI-XML transcript",
+              "type": "xml",
+              "filename": "A69727.xml",
+              "sizeBytes": 215733,
+              "url": "/fixtures/LLDS Collections/stonehenge/ITEM@20.500.12024-A69727/A69727.xml"
+            },
+            {
+              "label": "Plain text (TSV)",
+              "type": "text",
+              "filename": "A69727.tsv",
+              "sizeBytes": 2056084,
+              "url": "/fixtures/LLDS Collections/stonehenge/ITEM@20.500.12024-A69727/A69727.tsv"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -37,6 +37,7 @@ import { runSMGSearchNode }       from './runSMGSearchNode'
 import { runVASearchNode }        from './runVASearchNode'
 import { runGeocodingNode }       from './runGeocodingNode'
 import { runSmartGeocoderNode }  from './runSmartGeocoderNode'
+import { runSampleDataNode }     from './runSampleDataNode'
 import { withFixture }            from './fixtureUtils'
 
 /**
@@ -85,5 +86,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   vaSearch:          withFixture('vaSearch',  runVASearchNode),
   geocoding:         runGeocodingNode,
   smartGeocoder:     runSmartGeocoderNode,
+  sampleDataSource:  runSampleDataNode,
 }
 

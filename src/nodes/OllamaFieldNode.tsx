@@ -12,6 +12,7 @@
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
+import { useStaleResults } from '../hooks/useStaleResults'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 export interface OllamaFieldNodeData {
@@ -170,6 +171,11 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
   const maxTokens      = (d.maxTokens ?? 1024) as number
   const isRunning      = d.status === 'running'
 
+  const isStale = useStaleResults(d.status as string, {
+    model: selectedModel, systemPrompt, userPromptTemplate: promptTemplate,
+    temperature, maxTokens, mode, selectedField,
+  })
+
   // Keep local token input in sync when node data changes externally (e.g. file load)
   useEffect(() => { setTokenInput(String(maxTokens)) }, [maxTokens])
 
@@ -326,7 +332,11 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
       {/* Header */}
       <div style={styles.header}>
         <span style={styles.headerTitle}>Ollama Field</span>
-        {d.statusMessage ? (
+        {isRunning && <span className="node-spinner" />}
+        {!isRunning && isStale && (
+          <span style={styles.staleBadge}>⟳ settings changed</span>
+        )}
+        {!isRunning && !isStale && d.statusMessage ? (
           <span style={styles.headerStatus}>{d.statusMessage as string}</span>
         ) : null}
       </div>
@@ -502,6 +512,16 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap' as const,
+  },
+  staleBadge: {
+    fontSize: 9,
+    fontWeight: 700,
+    color: '#fbbf24',
+    background: 'rgba(0,0,0,0.25)',
+    borderRadius: 3,
+    padding: '1px 5px',
+    whiteSpace: 'nowrap' as const,
+    flexShrink: 0,
   },
   warnBanner: {
     fontSize: 10,

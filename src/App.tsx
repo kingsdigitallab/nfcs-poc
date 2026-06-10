@@ -82,6 +82,7 @@ import type { SMGSearchNodeData }          from './nodes/SMGSearchNode'
 import type { VASearchNodeData }           from './nodes/VASearchNode'
 import type { GeocodingNodeData }          from './nodes/GeocodingNode'
 import type { FrameSenseSourceNodeData }  from './nodes/FrameSenseSourceNode'
+import type { SampleDataSourceNodeData } from './nodes/SampleDataSourceNode'
 import type { SourceProfileNodeData }    from './nodes/SourceProfileNode'
 import type { SmartFilterNodeData }      from './nodes/SmartFilterNode'
 import type { SmartGeocoderNodeData }   from './nodes/SmartGeocoderNode'
@@ -135,6 +136,7 @@ type AppNode =
   | Node<VASearchNodeData>
   | Node<GeocodingNodeData>
   | Node<FrameSenseSourceNodeData>
+  | Node<SampleDataSourceNodeData>
   | Node<SourceProfileNodeData>
   | Node<SmartFilterNodeData>
   | Node<SmartGeocoderNodeData>
@@ -336,6 +338,21 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       gisLayers:     undefined,
       gisCount:      0,
     } satisfies LocalFolderSourceNodeData,
+  }),
+  sampleDataSource: pos => ({
+    id: newId('sample'), type: 'sampleDataSource', position: pos,
+    data: {
+      selectedPackage: '',
+      packageTitle:    '',
+      selectedFiles:   [],
+      status:          'idle',
+      statusMessage:   '',
+      count:           0,
+      pdfCount:        0,
+      xmlCount:        0,
+      textCount:       0,
+      imageCount:      0,
+    } satisfies SampleDataSourceNodeData,
   }),
   ollamaNode: pos => ({
     id: newId('ollama'), type: 'ollamaNode', position: pos,
@@ -575,6 +592,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   xmlSection: pos => ({
     id: newId('xml'), type: 'xmlSection', position: pos,
+    style: { width: 320, height: 370 },
     data: {
       xpath:         '',
       outputMode:    'text',
@@ -686,6 +704,7 @@ const SIDEBAR_ITEMS = [
   { type: 'frameSenseSource',  label: 'FrameSenseSource',      sub: 'Load pre-processed FrameSense video shots', color: '#1c2a3a', group: 'Local Content' },
   { type: 'localFileSource',   label: 'LocalFileSource',       sub: 'Single CSV, XML, image or PDF file',           color: '#0e7490', group: 'Local Content' },
   { type: 'localFolderSource', label: 'LocalFolderSource',     sub: 'Read files from local folder',            color: '#14532d', group: 'Local Content' },
+  { type: 'sampleDataSource', label: 'SampleDataSource',      sub: 'Load packaged collection data (XML, text, PDF)', color: '#1e3a5f', group: 'Local Content' },
   { type: 'loadSavedSearch',   label: 'LoadSavedSearch',       sub: 'Replay a .nfcs.json saved search',        color: '#4c1d95', group: 'Local Content' },
   { type: 'saveSearch',        label: 'SaveSearch',            sub: 'Save records + metadata to .nfcs.json',   color: '#1b4332', group: 'Local Content' },
   // ── Filters and Transforms ───────────────────────────────────────────────────

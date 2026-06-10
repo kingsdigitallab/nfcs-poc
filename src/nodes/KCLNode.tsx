@@ -14,6 +14,7 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { filterKCLModels, APEX_MODEL } from '../utils/kclConfig'
+import { useStaleResults } from '../hooks/useStaleResults'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -116,7 +117,9 @@ function renderTemplate(template: string, record: Record<string, unknown>): stri
   })
 }
 
-// ── OpenAI SSE streaming helper ────────────────────────────────────────────────
+const CONTENT_MAX_CHARS = 12_000
+
+// ── Non-streaming KCL API helper ──────────────────────────────────────────────
 
 async function kclChat(
   apiKey: string,
@@ -126,7 +129,6 @@ async function kclChat(
   temperature: number,
   maxTokens: number,
   signal: AbortSignal,
-  onToken: (accumulated: string) => void,
 ): Promise<{ text: string; resolvedModel: string }> {
   const res = await fetch(KCL_CHAT, {
     method: 'POST',
@@ -136,7 +138,7 @@ async function kclChat(
     },
     body: JSON.stringify({
       model,
-      stream:      true,
+      stream:      false,
       temperature,
       max_tokens:  maxTokens,
       messages: [
@@ -147,41 +149,14 @@ async function kclChat(
     signal,
   })
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
-  if (!res.body) throw new Error('No response body')
-
-  const reader  = res.body.getReader()
-  const decoder = new TextDecoder()
-  let buffer        = ''
-  let accumulated   = ''
-  let resolvedModel = model
-
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) break
-    buffer += decoder.decode(value, { stream: true })
-    const lines = buffer.split('\n')
-    buffer = lines.pop() ?? ''
-
-    for (const line of lines) {
-      const trimmed = line.trim()
-      if (!trimmed.startsWith('data:')) continue
-      const payload = trimmed.slice(5).trim()
-      if (payload === '[DONE]') return { text: accumulated, resolvedModel }
-      try {
-        const chunk = JSON.parse(payload) as {
-          model?: string
-          choices?: Array<{ delta?: { content?: string }; finish_reason?: string | null }>
-        }
-        if (chunk.model && chunk.model !== resolvedModel) resolvedModel = chunk.model
-        const content = chunk.choices?.[0]?.delta?.content
-        if (content) {
-          accumulated += content
-          onToken(accumulated.slice(-200))
-        }
-      } catch { /* malformed chunk — skip */ }
-    }
+  const json = await res.json() as {
+    model?: string
+    choices?: Array<{ message?: { content?: string } }>
   }
-  return { text: accumulated, resolvedModel }
+  return {
+    text:          json.choices?.[0]?.message?.content ?? '',
+    resolvedModel: json.model ?? model,
+  }
 }
 
 // ── Component ──────────────────────────────────────────────────────────────────
@@ -192,12 +167,9 @@ export function KCLNode({ id, data }: NodeProps) {
   const allEdges = useEdges()
   const d = data as KCLNodeData
 
-  const [models, setModels]             = useState<string[]>([])
-  const [apiOk, setApiOk]               = useState<boolean | null>(null)
-  const [liveFile, setLiveFile]         = useState('')
-  const [liveTokens, setLiveTokens]     = useState('')
-  const [liveProgress, setLiveProgress] = useState('')
-  const [showFields, setShowFields]     = useState(false)
+  const [models, setModels]   = useState<string[]>([])
+  const [apiOk, setApiOk]     = useState<boolean | null>(null)
+  const [showFields, setShowFields] = useState(false)
   const apexClickCount = useRef(0)
   const apexClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const apexUnlocked   = !!(d.apexUnlocked as boolean | undefined)
@@ -288,6 +260,11 @@ export function KCLNode({ id, data }: NodeProps) {
   const visionMode   = (d.visionMode  as boolean | undefined) ?? false
   const imageField   = (d.imageField  as string  | undefined) ?? ''
 
+  const isStale = useStaleResults(d.status as string, {
+    model: selectedModel, systemPrompt, userPromptTemplate: promptTemplate,
+    temperature, maxTokens, visionMode, imageField,
+  })
+
   // ── Run handler ───────────────────────────────────────────────────────────────
 
   const handleRun = useCallback(async () => {
@@ -314,27 +291,22 @@ export function KCLNode({ id, data }: NodeProps) {
       inputCount:    upstreamRecords.length,
       outputCount:   0,
     })
-    setLiveTokens('')
-    setLiveFile('')
 
     const enriched: Record<string, unknown>[] = []
 
     try {
       for (let i = 0; i < upstreamRecords.length; i++) {
         if (signal.aborted) break
-        const record   = upstreamRecords[i]
-        const filename = (record.filename as string | undefined) ?? (record.title as string | undefined) ?? `record-${i}`
+        const record = upstreamRecords[i]
 
-        setLiveFile(filename)
-        setLiveProgress(`${i + 1}/${upstreamRecords.length}`)
-        setLiveTokens('')
+        updateNodeData(id, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
-        const baseContent =
-          visionMode
-            ? (record.description as string | undefined) ?? (record.title as string | undefined) ?? ''
-            : (record.content     as string | undefined) ??
-              (record.description as string | undefined) ??
-              JSON.stringify(record)
+        const rawContent = visionMode
+          ? (record.description as string | undefined) ?? (record.title as string | undefined) ?? ''
+          : (record.content     as string | undefined) ??
+            (record.description as string | undefined) ??
+            JSON.stringify(record)
+        const baseContent = rawContent.slice(0, CONTENT_MAX_CHARS)
 
         const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
         const userContent    = visionMode
@@ -344,7 +316,6 @@ export function KCLNode({ id, data }: NodeProps) {
         const { text: response, resolvedModel } = await kclChat(
           effectiveApiKey, selectedModel, systemPrompt, userContent,
           temperature, maxTokens, signal,
-          tok => setLiveTokens(tok),
         )
 
         enriched.push({
@@ -355,16 +326,7 @@ export function KCLNode({ id, data }: NodeProps) {
           kclResponse:      response,
           kclProcessedAt:   new Date().toISOString(),
         })
-
-        updateNodeData(id, {
-          statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…`,
-          outputCount:   enriched.length,
-        })
       }
-
-      setLiveFile('')
-      setLiveTokens('')
-      setLiveProgress('')
 
       const version = setNodeResults(id, enriched)
       updateNodeData(id, {
@@ -375,9 +337,6 @@ export function KCLNode({ id, data }: NodeProps) {
         resultsVersion: version,
       })
     } catch (err) {
-      setLiveFile('')
-      setLiveTokens('')
-      setLiveProgress('')
       if ((err as { name?: string }).name === 'AbortError') {
         if (enriched.length > 0) setNodeResults(id, enriched)
         updateNodeData(id, { status: 'idle', statusMessage: 'Cancelled', outputCount: enriched.length })
@@ -405,7 +364,11 @@ export function KCLNode({ id, data }: NodeProps) {
       {/* Header */}
       <div style={styles.header}>
         <span style={styles.headerTitle}>KCL Inference</span>
-        {d.statusMessage ? (
+        {isRunning && <span className="node-spinner" />}
+        {!isRunning && isStale && (
+          <span style={styles.staleBadge}>⟳ settings changed</span>
+        )}
+        {!isRunning && !isStale && d.statusMessage ? (
           <span style={styles.headerStatus}>{d.statusMessage as string}</span>
         ) : null}
       </div>
@@ -578,13 +541,6 @@ export function KCLNode({ id, data }: NodeProps) {
           />
         </div>
 
-        {/* Live streaming preview */}
-        {isRunning && (liveFile || liveTokens) && (
-          <div style={styles.livePreview}>
-            <div style={styles.liveHeader}>⚙ {liveProgress} — {liveFile}</div>
-            {liveTokens && <div style={styles.liveText}>…{liveTokens}</div>}
-          </div>
-        )}
       </div>
 
       {/* Footer */}
@@ -646,6 +602,16 @@ const styles = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap' as const,
+  },
+  staleBadge: {
+    fontSize: 9,
+    fontWeight: 700,
+    color: '#fbbf24',
+    background: 'rgba(0,0,0,0.25)',
+    borderRadius: 3,
+    padding: '1px 5px',
+    whiteSpace: 'nowrap' as const,
+    flexShrink: 0,
   },
   warnBanner: {
     fontSize: 10,
