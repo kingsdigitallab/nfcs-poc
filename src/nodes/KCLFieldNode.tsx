@@ -99,6 +99,7 @@ async function kclChat(
   if (!reader) throw new Error('No response body')
   const decoder = new TextDecoder()
   let accumulated = ''
+  let fullText = ''
   let done = false
 
   while (!done) {
@@ -116,7 +117,10 @@ async function kclChat(
               choices?: Array<{ delta?: { content?: string } }>
             }
             const token = parsed.choices?.[0]?.delta?.content ?? ''
-            if (token) onToken(token)
+            if (token) {
+              fullText += token
+              onToken(token)
+            }
           } catch { /* ignore parse errors */ }
         }
       }
@@ -124,7 +128,7 @@ async function kclChat(
     }
     if (readerDone) done = true
   }
-  return '' // already accumulated via onToken callbacks
+  return fullText
 }
 
 // ── Component ──────────────────────────────────────────────────────────────────
@@ -299,7 +303,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           kclMode:             'aggregate',
           kclAggregatedFrom:   upstreamRecords.length,
           kclPrompt:           prompt,
-          kclResponse:         response || liveTokens,
+          kclResponse:         response,
           kclProcessedAt:      new Date().toISOString(),
         }
 
@@ -341,7 +345,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
             kclField:       selectedField,
             kclMode:        'per-record',
             kclPrompt:      prompt,
-            kclResponse:    response || liveTokens,
+            kclResponse:    response,
             kclProcessedAt: new Date().toISOString(),
           }
           enriched.push(enrichedRecord)
@@ -359,7 +363,6 @@ export function KCLFieldNode({ id, data }: NodeProps) {
         updateNodeData(id, {
           status:         'success',
           statusMessage:  `✓ ${enriched.length} records processed`,
-          resultsVersion: 0,
         })
       }
     } catch (err) {
