@@ -11,6 +11,10 @@
  * Unlike LocalFolderSourceNode this node has a real runner (no user gesture
  * required) and participates in Run All and saved example workflows.
  *
+ * Easter egg: includes a dummy input handle (left side) — unused, exists to
+ * illustrate the data-retrieval gap in example workflows (metadata easy, actual
+ * datasets hard).
+ *
  * Output handles (right side, same fixed positions as LocalFolderSourceNode):
  *   results — all file records
  *   pdf     — PDF text records only
@@ -199,6 +203,21 @@ export function SampleDataSourceNode({ id, data }: NodeProps) {
 
   return (
     <div style={{ ...styles.card, borderColor }}>
+      {/* Dummy input — easter egg to illustrate data-gap concept */}
+      <Handle
+        type="target"
+        position={Position.Left}
+        id="data"
+        style={{
+          width:     10,
+          height:    10,
+          background: '#cbd5e1',
+          border:    '2px solid #fff',
+          boxShadow: '0 0 0 1px #cbd5e1',
+        }}
+        title="Unused input (data-gap illustration)"
+      />
+
       {/* Header */}
       <div style={styles.header}>
         <span style={styles.headerTitle}>Sample Data</span>

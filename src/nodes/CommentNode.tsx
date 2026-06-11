@@ -1,10 +1,15 @@
 /**
  * CommentNode — a free-floating annotation label for the canvas.
- * No input or output handles. Drag to position; resize by dragging the
- * bottom-right corner of the text area.
+ *
+ * Easter egg: click the title field 5 times within 1.5 seconds to unlock hidden
+ * input/output handles. When unlocked, passes data through unaltered and shows
+ * input/output connectors — useful for illustrating conceptual workflow gaps
+ * that aren't yet implementable (e.g., "data retrieval" node between metadata
+ * source and processing nodes).
  */
 
-import { useReactFlow, NodeProps, NodeResizer } from '@xyflow/react'
+import { useState, useRef } from 'react'
+import { useReactFlow, NodeProps, NodeResizer, Handle, Position } from '@xyflow/react'
 
 export interface CommentNodeData {
   title: string
@@ -19,6 +24,15 @@ const BODY_BG       = '#fffbeb'
 export function CommentNode({ id, data, selected }: NodeProps) {
   const { updateNodeData } = useReactFlow()
   const d = data as CommentNodeData
+  const [clickCount, setClickCount] = useState(0)
+  const clickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const showHandles = clickCount >= 5
+
+  const handleTitleClick = () => {
+    setClickCount(c => c + 1)
+    if (clickTimer.current) clearTimeout(clickTimer.current)
+    clickTimer.current = setTimeout(() => setClickCount(0), 1500)
+  }
 
   return (
     <>
@@ -29,6 +43,12 @@ export function CommentNode({ id, data, selected }: NodeProps) {
         lineStyle={{ borderColor: BORDER_COLOR }}
         handleStyle={{ background: BORDER_COLOR, borderColor: '#fff', width: 8, height: 8 }}
       />
+      {showHandles && (
+        <>
+          <Handle type="target" position={Position.Left} id="data" style={{ top: '50%' }} />
+          <Handle type="source" position={Position.Right} id="results" style={{ top: '50%' }} />
+        </>
+      )}
       <div style={styles.card}>
         <div style={styles.dragHandle} title="Drag to move">
           <svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,10 +61,11 @@ export function CommentNode({ id, data, selected }: NodeProps) {
           </svg>
         </div>
         <input
-          style={styles.title}
+          style={{...styles.title, cursor: showHandles ? 'text' : 'pointer'}}
           value={(d.title as string) ?? ''}
           onChange={e => updateNodeData(id, { title: e.target.value })}
-          placeholder="Label…"
+          onClickCapture={handleTitleClick}
+          placeholder={showHandles ? 'Label…' : 'Label… (click 5x to unlock)'}
           className="nodrag"
           spellCheck={false}
         />
