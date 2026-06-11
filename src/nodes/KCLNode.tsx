@@ -13,8 +13,10 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
-import { filterKCLModels, APEX_MODEL } from '../utils/kclConfig'
+import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclConfig'
 import { useStaleResults } from '../hooks/useStaleResults'
+import { usePromptRecipes } from '../hooks/usePromptRecipes'
+import { PromptRecipeBar } from '../components/PromptRecipeBar'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -116,8 +118,6 @@ function renderTemplate(template: string, record: Record<string, unknown>): stri
     return String(val)
   })
 }
-
-const CONTENT_MAX_CHARS = 12_000
 
 // ── Non-streaming KCL API helper ──────────────────────────────────────────────
 
@@ -265,6 +265,8 @@ export function KCLNode({ id, data }: NodeProps) {
     temperature, maxTokens, visionMode, imageField,
   })
 
+  const { recipes, saveRecipe, deleteRecipe } = usePromptRecipes()
+
   // ── Run handler ───────────────────────────────────────────────────────────────
 
   const handleRun = useCallback(async () => {
@@ -306,7 +308,8 @@ export function KCLNode({ id, data }: NodeProps) {
           : (record.content     as string | undefined) ??
             (record.description as string | undefined) ??
             JSON.stringify(record)
-        const baseContent = rawContent.slice(0, CONTENT_MAX_CHARS)
+        const maxChars = getContentMaxChars(selectedModel)
+        const baseContent = rawContent.slice(0, maxChars)
 
         const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
         const userContent    = visionMode
@@ -438,6 +441,15 @@ export function KCLNode({ id, data }: NodeProps) {
             />
           )}
         </div>
+
+        {/* Prompt recipes bar */}
+        <PromptRecipeBar
+          nodeFamily="standard"
+          recipes={recipes}
+          onApply={r => updateNodeData(id, { systemPrompt: r.systemPrompt, userPromptTemplate: r.userPromptTemplate })}
+          onSave={name => saveRecipe({ name, nodeFamily: 'standard', systemPrompt, userPromptTemplate: promptTemplate })}
+          onDelete={deleteRecipe}
+        />
 
         {/* System prompt */}
         <div style={styles.colField}>
