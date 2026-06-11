@@ -10,6 +10,7 @@
 import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
+import { getContentMaxChars } from './kclConfig'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
@@ -74,10 +75,6 @@ async function buildUserContent(
     { type: 'image_url', image_url: { url: imageUrl, format } },
   ]
 }
-
-// Long text fields (content, xmlContent) can be megabytes; cap before sending to
-// small models whose context windows are easily exhausted.
-const CONTENT_MAX_CHARS = 12_000
 
 async function kclChat(
   apiKey: string,
@@ -163,6 +160,7 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
 
   const enriched: Record<string, unknown>[] = []
   let errCount = 0
+  const maxChars = getContentMaxChars(model)
 
   for (let i = 0; i < upstreamRecords.length; i++) {
     const record = upstreamRecords[i]
@@ -173,7 +171,7 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
       : (record.content     as string | undefined) ??
         (record.description as string | undefined) ??
         JSON.stringify(record)
-    const baseContent = rawContent.slice(0, CONTENT_MAX_CHARS)
+    const baseContent = rawContent.slice(0, maxChars)
 
     const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
     const userContent    = visionMode

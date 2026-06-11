@@ -11,8 +11,10 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
-import { filterKCLModels, APEX_MODEL } from '../utils/kclConfig'
+import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclConfig'
 import { useStaleResults } from '../hooks/useStaleResults'
+import { usePromptRecipes } from '../hooks/usePromptRecipes'
+import { PromptRecipeBar } from '../components/PromptRecipeBar'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -52,9 +54,7 @@ const STATUS_BORDER: Record<string, string> = {
   error:   '#ef4444',
 }
 
-const CONTENT_MAX_CHARS = 12_000
-
-// ── Non-streaming KCL API helper ──────────────────────────────────────────────
+// ── Streaming KCL API helper ──────────────────────────────────────────────
 
 async function kclChat(
   apiKey: string,
@@ -64,6 +64,7 @@ async function kclChat(
   temperature: number,
   maxTokens: number,
   signal: AbortSignal,
+  onToken?: (token: string) => void,
 ): Promise<string> {
   const res = await fetch(KCL_CHAT, {
     method: 'POST',
@@ -73,7 +74,7 @@ async function kclChat(
     },
     body: JSON.stringify({
       model,
-      stream:      false,
+      stream:      !!onToken,  // stream if onToken callback provided
       temperature,
       max_tokens:  maxTokens,
       messages: [
@@ -84,10 +85,46 @@ async function kclChat(
     signal,
   })
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
-  const json = await res.json() as {
-    choices?: Array<{ message?: { content?: string } }>
+
+  if (!onToken) {
+    // Non-streaming path
+    const json = await res.json() as {
+      choices?: Array<{ message?: { content?: string } }>
+    }
+    return json.choices?.[0]?.message?.content ?? ''
   }
-  return json.choices?.[0]?.message?.content ?? ''
+
+  // Streaming path: parse SSE
+  const reader = res.body?.getReader()
+  if (!reader) throw new Error('No response body')
+  const decoder = new TextDecoder()
+  let accumulated = ''
+  let done = false
+
+  while (!done) {
+    const { value, done: readerDone } = await reader.read()
+    if (value) {
+      accumulated += decoder.decode(value, { stream: true })
+      const lines = accumulated.split('\n')
+      for (let i = 0; i < lines.length - 1; i++) {
+        const line = lines[i].trim()
+        if (line.startsWith('data: ')) {
+          const data = line.slice(6)
+          if (data === '[DONE]') { done = true; break }
+          try {
+            const parsed = JSON.parse(data) as {
+              choices?: Array<{ delta?: { content?: string } }>
+            }
+            const token = parsed.choices?.[0]?.delta?.content ?? ''
+            if (token) onToken(token)
+          } catch { /* ignore parse errors */ }
+        }
+      }
+      accumulated = lines[lines.length - 1]
+    }
+    if (readerDone) done = true
+  }
+  return '' // already accumulated via onToken callbacks
 }
 
 // ── Component ──────────────────────────────────────────────────────────────────
@@ -101,6 +138,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const [models, setModels]         = useState<string[]>([])
   const [apiOk, setApiOk]           = useState<boolean | null>(null)
   const [tokenInput, setTokenInput] = useState(String((d.maxTokens as number | undefined) ?? 32768))
+  const [liveTokens, setLiveTokens] = useState('')
   const abortRef       = useRef<AbortController | null>(null)
   const apexClickCount = useRef(0)
   const apexClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -184,6 +222,8 @@ export function KCLFieldNode({ id, data }: NodeProps) {
     temperature, maxTokens, mode, selectedField,
   })
 
+  const { recipes, saveRecipe, deleteRecipe } = usePromptRecipes()
+
   useEffect(() => { setTokenInput(String(maxTokens)) }, [maxTokens])
 
   useEffect(() => {
@@ -223,15 +263,20 @@ export function KCLFieldNode({ id, data }: NodeProps) {
 
     try {
       if (mode === 'aggregate') {
+        const maxChars = getContentMaxChars(selectedModel)
+        const perValMax = Math.max(500, Math.floor(maxChars / Math.max(upstreamRecords.length, 1)))
+
         const values = upstreamRecords
           .map(r => {
             const v = r[selectedField]
-            return Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
+            const str = Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
+            return str.length > perValMax ? str.slice(0, perValMax) + '…' : str
           })
           .filter(Boolean)
           .join('\n---\n')
-          .slice(0, CONTENT_MAX_CHARS * 2)
+          .slice(0, maxChars)
 
+        setLiveTokens('')
         updateNodeData(id, { statusMessage: 'Sending aggregate prompt…' })
 
         const prompt = promptTemplate
@@ -242,7 +287,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
 
         const response = await kclChat(
           effectiveApiKey, selectedModel, systemPrompt, prompt,
-          temperature, maxTokens, signal,
+          temperature, maxTokens, signal, (token) => setLiveTokens(t => t + token)
         )
 
         const resultRecord = {
@@ -254,11 +299,12 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           kclMode:             'aggregate',
           kclAggregatedFrom:   upstreamRecords.length,
           kclPrompt:           prompt,
-          kclResponse:         response,
+          kclResponse:         response || liveTokens,
           kclProcessedAt:      new Date().toISOString(),
         }
 
         const version = setNodeResults(id, [resultRecord])
+        setLiveTokens('')
         updateNodeData(id, {
           status:         'success',
           statusMessage:  `✓ Aggregate summary (${upstreamRecords.length} records)`,
@@ -268,13 +314,15 @@ export function KCLFieldNode({ id, data }: NodeProps) {
 
       } else {
         const enriched: Record<string, unknown>[] = []
+        const maxChars = getContentMaxChars(selectedModel)
 
         for (let i = 0; i < upstreamRecords.length; i++) {
           if (signal.aborted) break
           const record = upstreamRecords[i]
           const rawVal = record[selectedField]
-          const value  = (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, CONTENT_MAX_CHARS)
+          const value  = (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, maxChars)
 
+          setLiveTokens('')
           updateNodeData(id, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
           const prompt = promptTemplate
@@ -284,26 +332,34 @@ export function KCLFieldNode({ id, data }: NodeProps) {
 
           const response = await kclChat(
             effectiveApiKey, selectedModel, systemPrompt, prompt,
-            temperature, maxTokens, signal,
+            temperature, maxTokens, signal, (token) => setLiveTokens(t => t + token)
           )
 
-          enriched.push({
+          const enrichedRecord = {
             ...record,
             kclModel:       selectedModel,
             kclField:       selectedField,
             kclMode:        'per-record',
             kclPrompt:      prompt,
-            kclResponse:    response,
+            kclResponse:    response || liveTokens,
             kclProcessedAt: new Date().toISOString(),
+          }
+          enriched.push(enrichedRecord)
+
+          // Partial results: write each record to store as it completes
+          const version = setNodeResults(id, [...enriched])
+          updateNodeData(id, {
+            outputCount: enriched.length,
+            resultsVersion: version,
+            statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…`,
           })
         }
 
-        const version = setNodeResults(id, enriched)
+        setLiveTokens('')
         updateNodeData(id, {
           status:         'success',
           statusMessage:  `✓ ${enriched.length} records processed`,
-          outputCount:    enriched.length,
-          resultsVersion: version,
+          resultsVersion: 0,
         })
       }
     } catch (err) {
@@ -422,6 +478,16 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           </select>
         </div>
 
+        {/* Prompt recipes bar */}
+        <PromptRecipeBar
+          nodeFamily="field"
+          mode={mode}
+          recipes={recipes}
+          onApply={r => updateNodeData(id, { systemPrompt: r.systemPrompt, userPromptTemplate: r.userPromptTemplate, ...(r.mode ? { mode: r.mode } : {}) })}
+          onSave={name => saveRecipe({ name, nodeFamily: 'field', mode, systemPrompt, userPromptTemplate: promptTemplate })}
+          onDelete={deleteRecipe}
+        />
+
         {/* System prompt */}
         <div style={styles.colField}>
           <span style={styles.label}>System</span>
@@ -467,6 +533,14 @@ export function KCLFieldNode({ id, data }: NodeProps) {
         </div>
 
       </div>
+
+      {/* Live streaming preview */}
+      {isRunning && liveTokens && (
+        <div style={styles.livePreview}>
+          <span style={styles.liveHeader}>Response (streaming…)</span>
+          <div style={styles.liveText}>{liveTokens}</div>
+        </div>
+      )}
 
       <div style={styles.footer}>
         {isRunning ? (

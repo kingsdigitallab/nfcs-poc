@@ -8,14 +8,13 @@
 import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
+import { getContentMaxChars } from './kclConfig'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'
 const DEFAULT_PROMPT_PER = 'Summarise the following in 2–3 sentences:\n\n{{value}}'
 const DEFAULT_PROMPT_AGG = 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}'
-
-const CONTENT_MAX_CHARS = 12_000
 
 async function kclChat(
   apiKey: string,
@@ -102,14 +101,18 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
 
   try {
     if (mode === 'aggregate') {
+      const maxChars = getContentMaxChars(model)
+      const perValMax = Math.max(500, Math.floor(maxChars / Math.max(upstreamRecords.length, 1)))
+
       const values = upstreamRecords
         .map(r => {
           const v = r[selectedField]
-          return Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
+          const str = Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
+          return str.length > perValMax ? str.slice(0, perValMax) + '…' : str
         })
         .filter(Boolean)
         .join('\n---\n')
-        .slice(0, CONTENT_MAX_CHARS * 2)
+        .slice(0, maxChars)
 
       updateNodeData(nodeId, { statusMessage: 'Sending aggregate prompt…' })
 
@@ -144,12 +147,13 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
 
     } else {
       const enriched: Record<string, unknown>[] = []
+      const maxChars = getContentMaxChars(model)
       let errCount = 0
 
       for (let i = 0; i < upstreamRecords.length; i++) {
         const record = upstreamRecords[i]
         const rawVal = record[selectedField]
-        const value  = (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, CONTENT_MAX_CHARS)
+        const value  = (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, maxChars)
 
         updateNodeData(nodeId, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
@@ -167,7 +171,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
           response = `[error: ${msg}]`
         }
 
-        enriched.push({
+        const enrichedRecord = {
           ...record,
           kclModel:       model,
           kclField:       selectedField,
@@ -175,15 +179,21 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
           kclPrompt:      prompt,
           kclResponse:    response,
           kclProcessedAt: new Date().toISOString(),
+        }
+        enriched.push(enrichedRecord)
+
+        // Partial results: write each record to store as it completes
+        const version = setNodeResults(nodeId, [...enriched])
+        updateNodeData(nodeId, {
+          outputCount: enriched.length,
+          resultsVersion: version,
+          statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…`,
         })
       }
 
-      const version = setNodeResults(nodeId, enriched)
       updateNodeData(nodeId, {
         status:         errCount > 0 && errCount === enriched.length ? 'error' : 'success',
         statusMessage:  `✓ ${enriched.length - errCount} processed${errCount > 0 ? `, ${errCount} errors` : ''}`,
-        outputCount:    enriched.length,
-        resultsVersion: version,
       })
     }
   } catch (err) {
