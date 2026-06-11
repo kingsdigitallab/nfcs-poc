@@ -17,9 +17,35 @@ Node-based visual workflow editor for federating UK Arts & Humanities research d
 | `/ads-proxy/*` | `https://archaeologydataservice.ac.uk/*` |
 | `/mds-proxy/*` | `https://museumdata.uk/*` |
 | `/reconcile-proxy/*` | `https://wikidata.reconci.link/*` (307 redirect strips CORS — proxy required) |
+| `/kcl-proxy/*` | `https://api.ai.create.kcl.ac.uk/*` (KCL OpenAI-compatible inference API) |
 | `/ollama/*` | `http://localhost:11434/*` |
 | `/url-proxy?url=<encoded>[&js=true][&wait=<strategy>]` | Custom Vite middleware (`configureServer`); simple path uses Node `fetch()`; `js=true` uses Puppeteer singleton (auto-reset on `disconnected`). Wait strategies: `networkidle2` (default), `networkidle0`, `domcontentloaded`. |
 | `/ads-library-search?q=<query>&size=<n>` | Custom Vite middleware; two-step JSF session (GET ViewState → POST search) for the ADS Library catalogue. Returns extracted CDATA HTML for client-side parsing. |
+
+## KCL Inference Configuration (`src/utils/kclConfig.ts`)
+
+**Model-dependent content truncation:**
+```ts
+MODEL_CHAR_LIMITS = {
+  'arc:nano':  12_000,   // small model — conservative limit
+  'arc:lite':  32_000,   // mid-tier
+  'arc:nexus': 64_000,   // large model
+  'arc:apex':  64_000,   // apex — same as nexus for safety
+}
+```
+
+Use `getContentMaxChars(model: string): number` to get the per-model limit. Applied in both runners and components. In KCLFieldNode aggregate mode, per-value truncation is applied **before** concatenation to prevent oversized payloads.
+
+**Streaming in KCLFieldNode (component path only):**
+- `kclChat(..., onToken?: (token: string) => void)` — if `onToken` is provided, `stream: true`; otherwise `stream: false`.
+- Streaming parser accumulates tokens via SSE (`data: {...}\n\n` format), firing `onToken` callback for live UI preview.
+- Returns full accumulated text (not empty string) so callers can store the response in results.
+- Runner (`runKCLFieldNode.ts`) stays non-streaming; partial results achieved via per-record `setNodeResults` calls.
+
+**Prompt recipes (`src/hooks/usePromptRecipes.ts`):**
+- Built-in recipes for standard and field-mode nodes (per-record and aggregate variants).
+- User recipes stored in `localStorage` with versioning (`nfcs_prompt_recipes` + `nfcs_prompt_recipes_version`).
+- Hook exported: `usePromptRecipes() → { recipes, saveRecipe, deleteRecipe }`.
 
 ## Project Structure
 
@@ -65,6 +91,8 @@ src/
 ### Process
 | Key | Component | Header |
 |-----|-----------|--------|
+| `kclNode` | `KCLNode` | `#881337`. Per-record KCL inference. Vision-capable. Model-dependent truncation (`getContentMaxChars`). |
+| `kclField` | `KCLFieldNode` | `#881337`. Single-field KCL inference. Per-record (live token preview, stream:true, partial results) or aggregate (per-value truncation). Prompt recipe bar. |
 | `filterTransform` | `FilterTransformNode` | `#4f46e5`. `TransformOp` is a discriminated union — **always replace full op on type change**. |
 | `spatialFilter` | `SpatialFilterNode` | `#0891b2`. Leaflet draw → bbox filter. |
 | `reconciliation` | `ReconciliationNode` | `#7c3aed`. Uses `/reconcile-proxy/en/api`. Scores normalised 0–1. |
@@ -161,3 +189,7 @@ type NodeRunner = (
 16. `LocalFolderSourceNode` handle positions (top: 70/94/118/142/166) are fixed — the Outputs section must remain FIRST in the body with consistent heights, or handles misalign.
 17. `LocalFolderSourceNode` typed store partitions: clear all 5 keys (`id`, `id:pdf`, `id:xml`, `id:text`, `id:image`) on re-scan.
 18. `upstreamRecords.ts` `TYPED_HANDLES = Set(['pdf','xml','text','image'])` — `results` and `data` are NOT in this set, so they fall through to plain `sourceId` lookup.
+19. KCL node truncation via `getContentMaxChars(model)` from `kclConfig.ts` — not a hard-coded constant. Per-value truncation in aggregate mode happens BEFORE joining values.
+20. KCLFieldNode streaming returns accumulated full text (not empty string) from `kclChat`. In component `handleRun`, `liveTokens` state must NOT be in the `useCallback` deps array for non-streaming to work (stale closure is expected in that narrow context). Runner path stays non-streaming; partial results via per-record `setNodeResults`.
+21. KCLFieldNode per-record mode: do NOT set `resultsVersion: 0` in the final `updateNodeData` after the loop — partial updates already track version correctly. Setting it to 0 resets reactivity and invisible results to downstream nodes.
+22. CommentNode easter egg: click title 5 times within 1.5 seconds to unlock input/output handles for illustrating data-flow gaps.

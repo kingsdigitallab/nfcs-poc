@@ -63,7 +63,7 @@ The sidebar groups nodes into collapsible categories. Click a group heading to c
 | Node | Description |
 |------|-------------|
 | **QuickStart** | AI workflow planner. Describe a research question in plain English; the node calls the KCL inference API (`arc:nexus`) and returns a structured plan listing the most appropriate data service nodes, suggested queries, and commentary on source relevance. Click **Instantiate workflow** to place all recommended nodes on the canvas — search nodes, a **SourceProfile** for each source (or a shared **Deduplicate** → **SourceProfile** chain when multiple nodes of the same type are suggested), and **TableOutput** / **MapOutput** as appropriate. Wiring is created automatically. No handles — this node is a standalone planner. Requires a KCL API key. |
-| **Comment** | A free-floating annotation label. Add a title and body text to document your workflow. No connectors. Select the node to reveal resize handles — drag any edge or corner to resize. |
+| **Comment** | A free-floating annotation label. Add a title and body text to document your workflow. No connectors by default. Select the node to reveal resize handles — drag any edge or corner to resize. **Easter egg:** click the title field 5 times within 1.5 seconds to unlock hidden input/output handles — useful for illustrating conceptual workflow gaps (e.g. marking a "data retrieval" step between metadata services and processing nodes). |
 
 ### Input
 
@@ -99,6 +99,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **LocalFileSource** | Local filesystem | Parses a single CSV, TSV, XML, or image file selected via a standard file picker (all browsers). Auto-detects the delimiter. **Cast numeric strings to numbers** toggle converts coordinate strings to floats. |
 | **LocalFolderSource** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction), XML/TEI, plain text, images, Shapefiles, and GeoJSON. Five typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`, plus a **GIS handle** for Shapefile/GeoJSON layers. Requires Chrome or Edge 86+. |
 | **FrameSenseSource** | Local filesystem | Reads a folder pre-processed by the [FrameSense](https://github.com/kingsdigitallab/framesense) CLI and emits one record per shot. Each record carries the representative frame as an `imageDataUrl` (base64 JPEG), enabling direct vision inference via **KingsInference**. Existing FrameSense analysis (shot scale classifications from `scale_frames_sssabet`, VLM answers from `answer_frames_vlm`) is surfaced as `framesense.*` fields. See [FrameSense workflows](#framesense-workflows) below. |
+| **SampleDataSource** | Local filesystem + fixtures | Loads pre-packaged collection samples from `public/fixtures/` (e.g. Stonehenge antiquarian texts and modern archaeology papers, LLDS items, etc.). Useful for demonstrations, workshops, and testing without live API access. Emits five typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`. |
 | ~~**ADSSearchAdvanced**~~ *(deprecated)* | Archaeology Data Service | **Currently unavailable** — blocked by Cloudflare. Use **ARIADNESearch** with `Contributor = Archaeology Data Service`. |
 | ~~**ADSLibrary**~~ *(deprecated)* | ADS Library catalogue | **Currently unavailable** — blocked by Cloudflare. |
 
@@ -117,8 +118,8 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 
 | Node | Description |
 |------|-------------|
-| **KingsInference** | Sends each upstream record to KCL's OpenAI-compatible inference API and enriches the record with the model's response. Requires an API key. Supports **vision mode** — when enabled, image data URLs in records (from LocalFolderSource, ImageView, or IIIF region capture) are sent as multipart image content. Auto-detects `contentType: 'image'` records; or specify a **field** to use a particular image field. See [KCL Inference](#kcl-inference) below. |
-| **KingsInferenceByField** | Lighter-weight KCL inference on a single chosen field. Two modes: **per-record** (enriches each record individually) and **aggregate** (collects all values into one prompt for a summary response). Template variables: `{{value}}`, `{{field}}`, `{{count}}`, `{{values}}`. |
+| **KingsInference** | Sends each upstream record to KCL's OpenAI-compatible inference API and enriches the record with the model's response. Requires an API key. Supports **vision mode** — when enabled, image data URLs in records (from LocalFolderSource, ImageView, or IIIF region capture) are sent as multipart image content. Auto-detects `contentType: 'image'` records; or specify a **field** to use a particular image field. Includes a **prompt recipe bar** — save and recall prompt strategies across workflows. See [KCL Inference](#kcl-inference) below. |
+| **KingsInferenceByField** | Lighter-weight KCL inference on a single chosen field. Two modes: **per-record** (enriches each record individually with live token preview) and **aggregate** (collects all values into one prompt for a summary response). Template variables: `{{value}}`, `{{field}}`, `{{count}}`, `{{values}}`. Model-dependent content truncation (arc:nano 12k, arc:lite 32k, arc:nexus 64k chars). Includes **prompt recipe bar**. |
 | **URLContentFetch** | Follows a URL field in each record, fetches the page (optionally via headless browser for JS-rendered pages), and adds `fetchedContent` (plain text) and `fetchedHtml` (cleaned body HTML). |
 | **HTMLExtract** | Extracts a targeted section from `fetchedHtml` using a CSS selector. Connect **HTMLPreview** to visually browse the page and click-capture selectors. Toggle **Preserve HTML structure** to write raw HTML rather than stripped text — useful for passing markup to an inference model. |
 | **Reconciliation** | Reconciles a chosen field against a Wikidata authority. See [Reconciliation](#reconciliation) below. |
@@ -269,6 +270,21 @@ Works identically but processes a single chosen field per record. **Per-record m
 ### Output
 
 Enriched records gain `kclResponse`, `kclModel`, `kclPrompt`, and `kclProcessedAt` fields. Connect a **KingsInferenceOutput** node to display responses as expandable cards, or pass to **TableOutput** or **Export**.
+
+### Prompt recipes
+
+Both **KingsInference** and **KingsInferenceByField** include a **prompt recipe bar** for saving and recalling prompt strategies. Built-in recipes are included (marked with ★):
+
+**Standard node recipes** (KingsInference):
+- Extract persons — JSON
+- Extract places — JSON
+- Summarise briefly
+
+**Field node recipes** (KingsInferenceByField):
+- *Per-record:* Extract persons from field — JSON, Extract places from field — JSON, Summarise record field
+- *Aggregate:* Thematic summary, List unique entities
+
+To use: select a recipe from the dropdown, click **Apply** to populate the system prompt and template. Click **Save…** to create custom recipes — they persist in localStorage and are available across sessions.
 
 ---
 
