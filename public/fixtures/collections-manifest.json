@@ -2,9 +2,9 @@
   "packages": [
     {
       "slug": "stonehenge",
-      "title": "Stonehenge — antiquarian texts (LLDS / EEBO-TCP)",
-      "service": "LLDS",
-      "description": "Two 17th-century antiquarian works on Stonehenge from the Oxford Text Archive (EEBO-TCP Phase 1). CC0 1.0 Universal.",
+      "title": "Stonehenge — antiquarian and modern texts (LLDS / EEBO-TCP / academic)",
+      "service": "LLDS + academic sources",
+      "description": "Two 17th-century antiquarian works on Stonehenge from the Oxford Text Archive (EEBO-TCP Phase 1), plus three modern archaeological research papers. CC0 1.0 Universal (antiquarian); academic papers.",
       "items": [
         {
           "label": "Jones 1655 — The most notable antiquity of Great Britain, Stone-Heng on Salisbury Plain, restored",
@@ -41,6 +41,42 @@
               "filename": "A69727.tsv",
               "sizeBytes": 2056084,
               "url": "/fixtures/LLDS Collections/stonehenge/ITEM@20.500.12024-A69727/A69727.tsv"
+            }
+          ]
+        },
+        {
+          "label": "Darvill & Wainwright 2009 — Stonehenge excavations and chronology",
+          "files": [
+            {
+              "label": "Plain text",
+              "type": "text",
+              "filename": "darvill_wainwright_2009_stonehenge_excavations_2008.txt",
+              "sizeBytes": 56054,
+              "url": "/fixtures/LLDS Collections/stonehenge/darvill_2009/darvill_wainwright_2009_stonehenge_excavations_2008.txt"
+            }
+          ]
+        },
+        {
+          "label": "Marshall et al. 2012 — Stonehenge chronological modelling",
+          "files": [
+            {
+              "label": "Plain text",
+              "type": "text",
+              "filename": "marshall_et_al_2012_stonehenge_chronological_modelling.txt",
+              "sizeBytes": 95817,
+              "url": "/fixtures/LLDS Collections/stonehenge/marshall_2012/marshall_et_al_2012_stonehenge_chronological_modelling.txt"
+            }
+          ]
+        },
+        {
+          "label": "Parker Pearson 2021 — Stonehenge archaeology and legend",
+          "files": [
+            {
+              "label": "Plain text",
+              "type": "text",
+              "filename": "parker_pearson_2021_archaeology_legend_stonehenge.txt",
+              "sizeBytes": 18531,
+              "url": "/fixtures/LLDS Collections/stonehenge/parker_pearson_2021/parker_pearson_2021_archaeology_legend_stonehenge.txt"
             }
           ]
         }
