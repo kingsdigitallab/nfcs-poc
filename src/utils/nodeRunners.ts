@@ -38,6 +38,7 @@ import { runVASearchNode }        from './runVASearchNode'
 import { runGeocodingNode }       from './runGeocodingNode'
 import { runSmartGeocoderNode }  from './runSmartGeocoderNode'
 import { runSampleDataNode }     from './runSampleDataNode'
+import runCommentNode            from './runCommentNode'
 import { withFixture }            from './fixtureUtils'
 
 /**
@@ -56,6 +57,7 @@ export type NodeRunner = (
 ) => Promise<void>
 
 export const nodeRunners: Record<string, NodeRunner> = {
+  comment:           runCommentNode,
   gbifSearch:        withFixture('gbifSearch',      runGBIFNode),
   lldsSearch:        withFixture('lldsSearch',      runLLDSNode),
   mdsSearch:         withFixture('mdsSearch',       runMDSNode),
