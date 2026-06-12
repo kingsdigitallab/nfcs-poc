@@ -176,9 +176,12 @@ export function CommentNode({ id, data, selected }: NodeProps) {
           <div
             style={{...styles.title, ...styles.titleDisplay}}
             onClickCapture={handleTitleClick}
-            onDoubleClick={() => setEditMode('title')}
+            onDoubleClick={() => {
+              // Only allow edit mode if not in the middle of easter egg sequence
+              if (clickCount === 0 && !isUnlocked) setEditMode('title')
+            }}
             className="nodrag"
-            title="Double-click to edit"
+            title={isUnlocked ? 'Double-click to edit' : 'Click 5 times to unlock connectors'}
           >
             {(d.title as string)?.trim() ? parseFormatted(d.title as string) : <span style={{color: '#d1d5db'}}>Label…</span>}
           </div>
