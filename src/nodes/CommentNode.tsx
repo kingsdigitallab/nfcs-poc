@@ -11,6 +11,13 @@
 import { useState, useRef } from 'react'
 import { useReactFlow, NodeProps, NodeResizer, Handle, Position } from '@xyflow/react'
 
+// Simple markdown to HTML: converts **bold** and *italic*
+function renderFormatted(text: string): string {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+}
+
 export interface CommentNodeData {
   title: string
   body: string
@@ -26,8 +33,44 @@ export function CommentNode({ id, data, selected }: NodeProps) {
   const d = data as CommentNodeData
   const [clickCount, setClickCount] = useState(0)
   const clickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const titleRef = useRef<HTMLInputElement>(null)
+  const bodyRef = useRef<HTMLTextAreaElement>(null)
   const isUnlocked = (d.handleUnlocked as boolean | undefined) ?? false
   const showHandles = isUnlocked || clickCount >= 5
+
+  const applyFormatting = (field: 'title' | 'body', format: 'bold' | 'italic') => {
+    const ref = field === 'title' ? titleRef : bodyRef
+    if (!ref.current) return
+    const textarea = ref.current
+    const start = textarea.selectionStart
+    const end = textarea.selectionEnd
+    const text = field === 'title' ? (d.title as string) ?? '' : (d.body as string) ?? ''
+    const before = text.slice(0, start)
+    const selected = text.slice(start, end)
+    const after = text.slice(end)
+
+    if (!selected) return
+    const wrapper = format === 'bold' ? '**' : '*'
+    const newText = before + wrapper + selected + wrapper + after
+    updateNodeData(id, { [field]: newText })
+
+    setTimeout(() => {
+      textarea.focus()
+      const newStart = start + wrapper.length
+      const newEnd = end + wrapper.length
+      textarea.setSelectionRange(newStart, newEnd)
+    }, 0)
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement | HTMLInputElement>, field: 'title' | 'body') => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'b') {
+      e.preventDefault()
+      applyFormatting(field, 'bold')
+    } else if ((e.ctrlKey || e.metaKey) && e.key === 'i') {
+      e.preventDefault()
+      applyFormatting(field, 'italic')
+    }
+  }
 
   const handleTitleClick = () => {
     if (isUnlocked) return
@@ -83,19 +126,41 @@ export function CommentNode({ id, data, selected }: NodeProps) {
           </svg>
         </div>
         <input
+          ref={titleRef}
           style={{...styles.title, cursor: 'text'}}
           value={(d.title as string) ?? ''}
           onChange={e => updateNodeData(id, { title: e.target.value })}
           onClickCapture={handleTitleClick}
+          onKeyDown={e => handleKeyDown(e, 'title')}
           placeholder="Label…"
           className="nodrag"
           spellCheck={false}
         />
+        <div style={styles.toolbar}>
+          <button
+            style={styles.formatBtn}
+            onMouseDown={() => applyFormatting('body', 'bold')}
+            title="Bold (Ctrl+B)"
+            className="nodrag"
+          >
+            <strong>B</strong>
+          </button>
+          <button
+            style={styles.formatBtn}
+            onMouseDown={() => applyFormatting('body', 'italic')}
+            title="Italic (Ctrl+I)"
+            className="nodrag"
+          >
+            <em>I</em>
+          </button>
+        </div>
         <textarea
+          ref={bodyRef}
           style={styles.body}
           value={(d.body as string) ?? ''}
           onChange={e => updateNodeData(id, { body: e.target.value })}
-          placeholder="Add a comment or note…"
+          onKeyDown={e => handleKeyDown(e, 'body')}
+          placeholder="Add a comment or note… Use **text** for bold, *text* for italic"
           className="nodrag nowheel"
           spellCheck={false}
         />
@@ -157,5 +222,26 @@ const styles = {
     userSelect:   'none' as const,
     borderTopLeftRadius: 6,
     borderTopRightRadius: 6,
+  },
+  toolbar: {
+    background:    HEADER_BG,
+    borderBottom:  `1px solid ${BORDER_COLOR}`,
+    padding:       '3px 4px',
+    display:       'flex',
+    gap:           '2px',
+    flexShrink:    0,
+  },
+  formatBtn: {
+    background:  '#fcd34d',
+    border:      '1px solid #f59e0b',
+    borderRadius: 2,
+    color:       '#92400e',
+    cursor:      'pointer',
+    fontSize:    11,
+    fontWeight:  700,
+    padding:     '2px 4px',
+    minWidth:    22,
+    height:      20,
+    transition:  'background 0.1s',
   },
 }
