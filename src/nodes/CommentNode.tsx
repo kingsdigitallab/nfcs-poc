@@ -11,11 +11,39 @@
 import { useState, useRef } from 'react'
 import { useReactFlow, NodeProps, NodeResizer, Handle, Position } from '@xyflow/react'
 
-// Simple markdown to HTML: converts **bold** and *italic*
-function renderFormatted(text: string): string {
-  return text
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+// Parse markdown to React elements: **bold** and *italic*
+function parseFormatted(text: string) {
+  const parts: (string | JSX.Element)[] = []
+  let lastIndex = 0
+
+  // Match **bold** and *italic* (non-greedy)
+  const regex = /\*\*(.+?)\*\*|\*(.+?)\*/g
+  let match
+
+  while ((match = regex.exec(text)) !== null) {
+    // Add text before the match
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index))
+    }
+
+    // Add formatted element
+    if (match[1]) {
+      // **bold**
+      parts.push(<strong key={match.index}>{match[1]}</strong>)
+    } else {
+      // *italic*
+      parts.push(<em key={match.index}>{match[2]}</em>)
+    }
+
+    lastIndex = regex.lastIndex
+  }
+
+  // Add remaining text
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex))
+  }
+
+  return parts.length === 0 ? text : parts
 }
 
 export interface CommentNodeData {
@@ -32,6 +60,7 @@ export function CommentNode({ id, data, selected }: NodeProps) {
   const { updateNodeData } = useReactFlow()
   const d = data as CommentNodeData
   const [clickCount, setClickCount] = useState(0)
+  const [editMode, setEditMode] = useState<'title' | 'body' | null>(null)
   const clickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const titleRef = useRef<HTMLInputElement>(null)
   const bodyRef = useRef<HTMLTextAreaElement>(null)
@@ -125,17 +154,36 @@ export function CommentNode({ id, data, selected }: NodeProps) {
             <circle cx="18" cy="6" r="1.5" fill={BORDER_COLOR} />
           </svg>
         </div>
-        <input
-          ref={titleRef}
-          style={{...styles.title, cursor: 'text'}}
-          value={(d.title as string) ?? ''}
-          onChange={e => updateNodeData(id, { title: e.target.value })}
-          onClickCapture={handleTitleClick}
-          onKeyDown={e => handleKeyDown(e, 'title')}
-          placeholder="Label…"
-          className="nodrag"
-          spellCheck={false}
-        />
+
+        {/* Title display or edit */}
+        {editMode === 'title' ? (
+          <input
+            ref={titleRef}
+            autoFocus
+            style={styles.title}
+            value={(d.title as string) ?? ''}
+            onChange={e => updateNodeData(id, { title: e.target.value })}
+            onKeyDown={e => {
+              handleKeyDown(e, 'title')
+              if (e.key === 'Enter' || e.key === 'Escape') setEditMode(null)
+            }}
+            onBlur={() => setEditMode(null)}
+            placeholder="Label…"
+            className="nodrag"
+            spellCheck={false}
+          />
+        ) : (
+          <div
+            style={{...styles.title, ...styles.titleDisplay}}
+            onClickCapture={handleTitleClick}
+            onDoubleClick={() => setEditMode('title')}
+            className="nodrag"
+            title="Double-click to edit"
+          >
+            {(d.title as string)?.trim() ? parseFormatted(d.title as string) : <span style={{color: '#d1d5db'}}>Label…</span>}
+          </div>
+        )}
+
         <div style={styles.toolbar}>
           <button
             style={styles.formatBtn}
@@ -153,17 +201,33 @@ export function CommentNode({ id, data, selected }: NodeProps) {
           >
             <em>I</em>
           </button>
+          <span style={{...styles.formatBtn, ...styles.editorHint, cursor: 'default'}}>Edit</span>
         </div>
-        <textarea
-          ref={bodyRef}
-          style={styles.body}
-          value={(d.body as string) ?? ''}
-          onChange={e => updateNodeData(id, { body: e.target.value })}
-          onKeyDown={e => handleKeyDown(e, 'body')}
-          placeholder="Add a comment or note… Use **text** for bold, *text* for italic"
-          className="nodrag nowheel"
-          spellCheck={false}
-        />
+
+        {/* Body display or edit */}
+        {editMode === 'body' ? (
+          <textarea
+            ref={bodyRef}
+            autoFocus
+            style={styles.body}
+            value={(d.body as string) ?? ''}
+            onChange={e => updateNodeData(id, { body: e.target.value })}
+            onKeyDown={e => handleKeyDown(e, 'body')}
+            onBlur={() => setEditMode(null)}
+            placeholder="Add a comment or note… Use **text** for bold, *text* for italic"
+            className="nodrag nowheel"
+            spellCheck={false}
+          />
+        ) : (
+          <div
+            style={{...styles.body, ...styles.bodyDisplay}}
+            onDoubleClick={() => setEditMode('body')}
+            className="nodrag"
+            title="Double-click to edit"
+          >
+            {(d.body as string)?.trim() ? parseFormatted(d.body as string) : <span style={{color: '#d1d5db'}}>Add a comment or note…</span>}
+          </div>
+        )}
       </div>
     </>
   )
@@ -243,5 +307,30 @@ const styles = {
     minWidth:    22,
     height:      20,
     transition:  'background 0.1s',
+  },
+  titleDisplay: {
+    cursor:      'pointer',
+    userSelect:  'text' as const,
+    wordBreak:   'break-word' as const,
+    overflow:    'hidden' as const,
+    textOverflow: 'ellipsis' as const,
+    whiteSpace:  'nowrap' as const,
+  },
+  bodyDisplay: {
+    cursor:      'pointer',
+    userSelect:  'text' as const,
+    wordBreak:   'break-word' as const,
+    lineHeight:  1.6,
+    whiteSpace:  'pre-wrap' as const,
+  },
+  editorHint: {
+    background:  'transparent',
+    border:      'none',
+    color:       '#9ca3af',
+    fontSize:    9,
+    padding:     '2px 3px',
+    minWidth:    'unset',
+    height:      'auto',
+    cursor:      'default',
   },
 }
