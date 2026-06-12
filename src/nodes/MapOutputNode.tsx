@@ -72,7 +72,7 @@ const MAP_W = 480
 const MAP_H = 300
 
 export function MapOutputNode({ id }: NodeProps) {
-  const { records, connected, status, sourceCount } = useUpstreamRecords(id)
+  const { records, connected, status, sourceCount, count } = useUpstreamRecords(id)
   const [clusteringEnabled, setClusteringEnabled] = useState(true)
   const [isDrawing, setIsDrawing] = useState(false)
   const [startLatLng, setStartLatLng] = useState<L.LatLng | null>(null)
@@ -103,6 +103,9 @@ export function MapOutputNode({ id }: NodeProps) {
   const clusterGroupRef = useRef<any>(null)
   const gisLayerGroupRef = useRef<L.LayerGroup | null>(null)
   const rectangleRef    = useRef<L.Rectangle | null>(null)
+  const fittedFpRef     = useRef<string | null>(null)   // prevents fitBounds on non-data re-renders
+  const lastRunFpRef    = useRef<string | null>(null)   // loop guard for auto pass-through
+  const panOverrideRef  = useRef(false)                 // true while Shift-to-pan is active
 
   // ── legend data ────────────────────────────────────────────────────────────
   const { mappableCount, bySource } = useMemo(() => {
@@ -219,10 +222,16 @@ export function MapOutputNode({ id }: NodeProps) {
     }
 
     if (bounds.length > 0) {
-      try {
-        map.fitBounds(L.latLngBounds(bounds), { padding: [24, 24], maxZoom: 12 })
-      } catch {
-        // ignore degenerate bounds
+      // Only fit when the plotted point set actually changes — not on bbox draws,
+      // clustering toggles, or unrelated re-renders (fingerprint pattern per CLAUDE.md gotcha #3).
+      const fp = `${bounds.length}:${bounds[0]?.join(',')}:${bounds[bounds.length - 1]?.join(',')}`
+      if (fittedFpRef.current !== fp) {
+        fittedFpRef.current = fp
+        try {
+          map.fitBounds(L.latLngBounds(bounds), { padding: [24, 24], maxZoom: 12 })
+        } catch {
+          // ignore degenerate bounds
+        }
       }
     }
   // nodeData?.bbox included so markers re-dim when bbox changes
@@ -308,7 +317,7 @@ export function MapOutputNode({ id }: NodeProps) {
 
   const handleMapMouseDown = useCallback(
     (e: L.LeafletMouseEvent) => {
-      if (!isDrawing) return
+      if (!isDrawing || panOverrideRef.current) return
       setStartLatLng(e.latlng)
     },
     [isDrawing],
@@ -367,6 +376,35 @@ export function MapOutputNode({ id }: NodeProps) {
     }
   }, [isDrawing, handleMapMouseDown, handleMapMouseMove, handleMapMouseUp])
 
+  // ── Shift-to-pan modifier during draw mode ────────────────────────────────
+  useEffect(() => {
+    const map = mapRef.current
+    const div = mapDivRef.current
+    if (!map || !div || !isDrawing) return
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== 'Shift' || panOverrideRef.current) return
+      panOverrideRef.current = true
+      map.dragging.enable()
+      div.style.cursor = 'grab'
+    }
+    const onKeyUp = (e: KeyboardEvent) => {
+      if (e.key !== 'Shift') return
+      panOverrideRef.current = false
+      map.dragging.disable()
+      div.style.cursor = 'crosshair'
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    window.addEventListener('keyup', onKeyUp)
+
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+      window.removeEventListener('keyup', onKeyUp)
+      panOverrideRef.current = false
+    }
+  }, [isDrawing])
+
   // ── run / clear ────────────────────────────────────────────────────────────
 
   const handleRun = useCallback(
@@ -381,6 +419,19 @@ export function MapOutputNode({ id }: NodeProps) {
       rectangleRef.current = null
     }
   }, [id, updateNodeData])
+
+  // ── auto pass-through / live bbox filter ──────────────────────────────────
+  // Runs the node automatically whenever upstream data or the bbox changes so
+  // downstream nodes always receive current results without requiring Run click.
+  // Fingerprint guards against the render-loop that updateNodeData would cause.
+  useEffect(() => {
+    if (!connected) return
+    const fp = `${records?.length ?? 0}|${count}|${JSON.stringify(nodeData?.bbox ?? null)}`
+    if (lastRunFpRef.current === fp) return
+    lastRunFpRef.current = fp
+    runMapOutputNode(id, getNodes, getEdges(), updateNodeData)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [records, count, connected, nodeData?.bbox, id, getNodes, getEdges, updateNodeData])
 
   // ── header badge text ──────────────────────────────────────────────────────
 
@@ -443,6 +494,10 @@ export function MapOutputNode({ id }: NodeProps) {
         >
           {isDrawing ? 'Cancel' : 'Draw bbox'}
         </button>
+
+        {isDrawing && (
+          <span style={styles.shiftHint}>⇧ Shift to pan</span>
+        )}
 
         {hasBbox && (
           <button className="nodrag" onClick={handleClear}
@@ -566,6 +621,7 @@ const styles = {
   btnDraw:     { background: '#3b82f6', color: '#fff' },
   btnCancel:   { background: '#ef4444', color: '#fff' },
   btnClear:    { background: '#e5e7eb', color: '#374151' },
+  shiftHint:   { fontSize: 10, color: '#6b7280', fontStyle: 'italic' as const },
   btnRun:      { background: '#15803d', color: '#fff' },
   btnDisabled: { opacity: 0.45, cursor: 'not-allowed' as const },
   countBadge: {
