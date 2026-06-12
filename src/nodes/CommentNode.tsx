@@ -26,12 +26,19 @@ export function CommentNode({ id, data, selected }: NodeProps) {
   const d = data as CommentNodeData
   const [clickCount, setClickCount] = useState(0)
   const clickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const showHandles = clickCount >= 5
+  const isUnlocked = (d.handleUnlocked as boolean | undefined) ?? false
+  const showHandles = isUnlocked || clickCount >= 5
 
   const handleTitleClick = () => {
-    setClickCount(c => c + 1)
+    if (isUnlocked) return
+    const newCount = clickCount + 1
+    setClickCount(newCount)
     if (clickTimer.current) clearTimeout(clickTimer.current)
-    clickTimer.current = setTimeout(() => setClickCount(0), 1500)
+    if (newCount >= 5) {
+      updateNodeData(id, { handleUnlocked: true })
+    } else {
+      clickTimer.current = setTimeout(() => setClickCount(0), 1500)
+    }
   }
 
   return (
@@ -61,11 +68,11 @@ export function CommentNode({ id, data, selected }: NodeProps) {
           </svg>
         </div>
         <input
-          style={{...styles.title, cursor: showHandles ? 'text' : 'pointer'}}
+          style={{...styles.title, cursor: 'text'}}
           value={(d.title as string) ?? ''}
           onChange={e => updateNodeData(id, { title: e.target.value })}
           onClickCapture={handleTitleClick}
-          placeholder={showHandles ? 'Label…' : 'Label… (click 5x to unlock)'}
+          placeholder="Label…"
           className="nodrag"
           spellCheck={false}
         />
