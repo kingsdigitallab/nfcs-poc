@@ -1,0 +1,616 @@
+[
+  {
+    "id": "llds:20.500.14106/3146",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/3146",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/3146",
+    "_pid": "https://hdl.handle.net/20.500.14106/3146",
+    "title": "Bartleby, the scrivener: a story of Wall-street",
+    "description": "Resource deposited with the Oxford Text Archive.",
+    "creator": "Melville, Herman, 1819-1891",
+    "date": "1853",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/3146",
+      "branding": "Oxford Text Archive Core Collection",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/3146",
+      "title": "Bartleby, the scrivener: a story of Wall-street",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/3146",
+      "pid": "https://hdl.handle.net/20.500.14106/3146",
+      "creator": "Melville, Herman, 1819-1891",
+      "date": "1853"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/0474",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/0474",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/0474",
+    "_pid": "https://hdl.handle.net/20.500.14106/0474",
+    "title": "Hadrian the Seventh : a play / Peter Luke",
+    "description": "Based on Rolfe, Frederick, 1860-1913.--Hadrian the Seventh : a romance.--Forms part of the Louvain Corpus of Modern English Drama",
+    "creator": "Luke, Peter",
+    "date": "1968",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/0474",
+      "branding": "Oxford Text Archive Legacy Collection",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/0474",
+      "title": "Hadrian the Seventh : a play / Peter Luke",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/0474",
+      "pid": "https://hdl.handle.net/20.500.14106/0474",
+      "creator": "Luke, Peter",
+      "date": "1968"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A40990",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A40990",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A40990",
+    "_pid": "https://hdl.handle.net/20.500.14106/A40990",
+    "title": "Fruit-walls improved, by inclining them to the horizon, or, A way to build walls for fruit-trees whereby they may receive more sun shine, and heat, than ordinary / by a member of the Royal Society.",
+    "description": "Attributed to Nicolas Fatio de Duillier. Cf. Halkett & Laing (2nd ed.). Reproduction of original in Cambridge University Library.",
+    "creator": "Fatio de Duillier, Nicolas, 1664-1753.",
+    "date": "1699",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A40990",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A40990",
+      "title": "Fruit-walls improved, by inclining them to the horizon, or, A way to build walls for fruit-trees whereby they may receive more sun shine, and heat, than ordinary / by a member of the Royal Society.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A40990",
+      "pid": "https://hdl.handle.net/20.500.14106/A40990",
+      "creator": "Fatio de Duillier, Nicolas, 1664-1753.",
+      "date": "1699"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A14160",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A14160",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A14160",
+    "_pid": "https://hdl.handle.net/20.500.14106/A14160",
+    "title": "Tyros roring Megge Planted against the walles of melancholy. One booke cut into two decads.",
+    "description": "\"To the curteous reader\" signed: T. Tyro. Partly in verse. Signatures: A-F⁴ G² . \"Tyronis epistolæ\", in Latin, and \"The meane in spending\" each have separate dated title pages; register is continuous. \"The meane in spending\" ...",
+    "creator": "Tyro, T.",
+    "date": "1598",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A14160",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A14160",
+      "title": "Tyros roring Megge Planted against the walles of melancholy. One booke cut into two decads.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A14160",
+      "pid": "https://hdl.handle.net/20.500.14106/A14160",
+      "creator": "Tyro, T.",
+      "date": "1598"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A47036",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A47036",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A47036",
+    "_pid": "https://hdl.handle.net/20.500.14106/A47036",
+    "title": "Jones of Hatton-Garden, two doors from the sign of the New-Hole in the Wall, his book of cures",
+    "description": "Caption title. Imprint from colophon. Imperfect: pages cropped, with some loss of print. Reproduction of original in the British Library.",
+    "creator": "Jones, of Hatton-Garden.",
+    "date": "1674",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A47036",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A47036",
+      "title": "Jones of Hatton-Garden, two doors from the sign of the New-Hole in the Wall, his book of cures",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A47036",
+      "pid": "https://hdl.handle.net/20.500.14106/A47036",
+      "creator": "Jones, of Hatton-Garden.",
+      "date": "1674"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A67311",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A67311",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A67311",
+    "_pid": "https://hdl.handle.net/20.500.14106/A67311",
+    "title": "A divine theater, or, A stage for Christians delivered in a sermon at Christ-Church in Oxford / by John Wall ...",
+    "description": "Reproduction of original in Bodleian Library.",
+    "creator": "Wall, John, 1588-1666.",
+    "date": "1662",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A67311",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A67311",
+      "title": "A divine theater, or, A stage for Christians delivered in a sermon at Christ-Church in Oxford / by John Wall ...",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A67311",
+      "pid": "https://hdl.handle.net/20.500.14106/A67311",
+      "creator": "Wall, John, 1588-1666.",
+      "date": "1662"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A97024",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A97024",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A97024",
+    "_pid": "https://hdl.handle.net/20.500.14106/A97024",
+    "title": "A comment on the times, or, A character of the enemies of the church. Written by Thomas Wall, Mr. in arts and minister of Jesus Christ.",
+    "description": "Reproduction of original in: Dulwich College Library.",
+    "creator": "Wall, Thomas.",
+    "date": "1657",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A97024",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A97024",
+      "title": "A comment on the times, or, A character of the enemies of the church. Written by Thomas Wall, Mr. in arts and minister of Jesus Christ.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A97024",
+      "pid": "https://hdl.handle.net/20.500.14106/A97024",
+      "creator": "Wall, Thomas.",
+      "date": "1657"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A17737",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A17737",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A17737",
+    "_pid": "https://hdl.handle.net/20.500.14106/A17737",
+    "title": "Whereas divers disordered people inhabiting amongst us, not regarding the good of this university, and town of Cambridge, do suffer their chanels, streets, and lanes, to lie unpaved, ungravelled, and uncleansed; and do lay their muck, mire, dung, dust, and other filth, in the open streets, or under colledge-walls, church-walls, or in other lanes within the town ...",
+    "description": "An order appointing overseers to enforce sanitary regulations. At foot of page: Given under our hands and seals, this [blank] of [blank] Ann. Dom. 163[blank]. Title from opening words of text. Publication information from ...",
+    "creator": "Cambridge (England)",
+    "date": "1635",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A17737",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A17737",
+      "title": "Whereas divers disordered people inhabiting amongst us, not regarding the good of this university, and town of Cambridge, do suffer their chanels, streets, and lanes, to lie unpaved, ungravelled, and uncleansed; and do lay their muck, mire, dung, dust, and other filth, in the open streets, or under colledge-walls, church-walls, or in other lanes within the town ...",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A17737",
+      "pid": "https://hdl.handle.net/20.500.14106/A17737",
+      "creator": "Cambridge (England)",
+      "date": "1635"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/N01869",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/N01869",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/N01869",
+    "_pid": "https://hdl.handle.net/20.500.14106/N01869",
+    "title": "Remarks upon Mr. Gales reflections on Mr. Walls History of infant baptism. In a letter to a friend. : [Five lines of Scripture texts]",
+    "description": "Attributed to Jonathan Dickinson by Evans. Ascribed to the press of William Bradford by Evans.",
+    "creator": "Dickinson, Jonathan, 1688-1747.",
+    "date": "1721",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/N01869",
+      "branding": "Evans-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/N01869",
+      "title": "Remarks upon Mr. Gales reflections on Mr. Walls History of infant baptism. In a letter to a friend. : [Five lines of Scripture texts]",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/N01869",
+      "pid": "https://hdl.handle.net/20.500.14106/N01869",
+      "creator": "Dickinson, Jonathan, 1688-1747.",
+      "date": "1721"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A67427",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A67427",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A67427",
+    "_pid": "https://hdl.handle.net/20.500.14106/A67427",
+    "title": "A sermon preached to the natives of the city and county of Worchester in the church of St Laurence Jewry at their solemn meeting, June 28. 1681 / by George Walls ...",
+    "description": "Reproduction of original in Union Theological Seminary Library, New York.",
+    "creator": "Walls, George, 1644 or 5-1727.",
+    "date": "1681",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A67427",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A67427",
+      "title": "A sermon preached to the natives of the city and county of Worchester in the church of St Laurence Jewry at their solemn meeting, June 28. 1681 / by George Walls ...",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A67427",
+      "pid": "https://hdl.handle.net/20.500.14106/A67427",
+      "creator": "Walls, George, 1644 or 5-1727.",
+      "date": "1681"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A67328",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A67328",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A67328",
+    "_pid": "https://hdl.handle.net/20.500.14106/A67328",
+    "title": "Tythes no Gospel-ministers maintenance proved in a seasonable answer to the arguments of Mr. John Crawford, minister of High-Holden in Kent. By Thomas Wall.",
+    "description": "Caption title. Place and date of publication conjectured by Wing. Reproduction of the original in the Harvard University Library.",
+    "creator": "Wall, Thomas.",
+    "date": "1681",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A67328",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A67328",
+      "title": "Tythes no Gospel-ministers maintenance proved in a seasonable answer to the arguments of Mr. John Crawford, minister of High-Holden in Kent. By Thomas Wall.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A67328",
+      "pid": "https://hdl.handle.net/20.500.14106/A67328",
+      "creator": "Wall, Thomas.",
+      "date": "1681"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A97020",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A97020",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A97020",
+    "_pid": "https://hdl.handle.net/20.500.14106/A97020",
+    "title": "Christian reconcilement or God at peace with man in Christ, delivered in a sermon at St Mary's in Oxford. / By John Wall, Dr in divinity and præbendary of Christ-Church in Oxford.",
+    "description": "Annotation on Thomason copy: \"August\". Reproduction of the original in the British Library.",
+    "creator": "Wall, John, 1588-1666.",
+    "date": "1658",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A97020",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A97020",
+      "title": "Christian reconcilement or God at peace with man in Christ, delivered in a sermon at St Mary's in Oxford. / By John Wall, Dr in divinity and præbendary of Christ-Church in Oxford.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A97020",
+      "pid": "https://hdl.handle.net/20.500.14106/A97020",
+      "creator": "Wall, John, 1588-1666.",
+      "date": "1658"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A13375",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A13375",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A13375",
+    "_pid": "https://hdl.handle.net/20.500.14106/A13375",
+    "title": "A prettie newe ballad, intytuled: the crowe sits vpon the wall, please one and please all To the tune of, please one and please all.",
+    "description": "Signed: R.T., i.e. Richard Tarlton. Publication date from STC. Verse - \"Please one and please all\". Reproduction of the original in the British Library.",
+    "creator": "Tarlton, Richard, d. 1588.",
+    "date": "1592",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A13375",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A13375",
+      "title": "A prettie newe ballad, intytuled: the crowe sits vpon the wall, please one and please all To the tune of, please one and please all.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A13375",
+      "pid": "https://hdl.handle.net/20.500.14106/A13375",
+      "creator": "Tarlton, Richard, d. 1588.",
+      "date": "1592"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A35711",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A35711",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A35711",
+    "_pid": "https://hdl.handle.net/20.500.14106/A35711",
+    "title": "The Deputies ghost, or, An Apparition to the Lord of Canterbury in the Tower with his complaint unto the wall after the ghosts departure : being an acrostick anagramme of his name.",
+    "description": "In verse. Reproduction of original in Bodleian Library.",
+    "date": "1641",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A35711",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A35711",
+      "title": "The Deputies ghost, or, An Apparition to the Lord of Canterbury in the Tower with his complaint unto the wall after the ghosts departure : being an acrostick anagramme of his name.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A35711",
+      "pid": "https://hdl.handle.net/20.500.14106/A35711",
+      "date": "1641"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A91074",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A91074",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A91074",
+    "_pid": "https://hdl.handle.net/20.500.14106/A91074",
+    "title": "A prophecy, said to be vvritten three hundred years ago, for this year lately found in a chest, hid in the wall behind the altar in the Temple-Church.",
+    "description": "Reproduction of original in the Lambeth Palace Library.",
+    "date": "1682",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A91074",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A91074",
+      "title": "A prophecy, said to be vvritten three hundred years ago, for this year lately found in a chest, hid in the wall behind the altar in the Temple-Church.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A91074",
+      "pid": "https://hdl.handle.net/20.500.14106/A91074",
+      "date": "1682"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A65320",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A65320",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A65320",
+    "_pid": "https://hdl.handle.net/20.500.14106/A65320",
+    "title": "Watten towns-end, or, A nosegay of pleasure which grew in the garden of Venus tune is Watten towns end, or lame leg next the wall.",
+    "description": "Reproduction of original in the Harvard University Library.",
+    "date": "1685",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A65320",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A65320",
+      "title": "Watten towns-end, or, A nosegay of pleasure which grew in the garden of Venus tune is Watten towns end, or lame leg next the wall.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A65320",
+      "pid": "https://hdl.handle.net/20.500.14106/A65320",
+      "date": "1685"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/N17220",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/N17220",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/N17220",
+    "_pid": "https://hdl.handle.net/20.500.14106/N17220",
+    "title": "Life, last words and dying confession, of Rachel Wall, who, with William Smith and William Dunogan, were executed at Boston, on Thursday, October 8, 1789, for high-way robbery.",
+    "description": "Signed: Rachel Wall. Text in four columns; printed area, including relief cut of hanging at head, measures 38.9 x 28.8 cm.",
+    "creator": "Wall, Rachel, 1760-1789.",
+    "date": "1789",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/N17220",
+      "branding": "Evans-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/N17220",
+      "title": "Life, last words and dying confession, of Rachel Wall, who, with William Smith and William Dunogan, were executed at Boston, on Thursday, October 8, 1789, for high-way robbery.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/N17220",
+      "pid": "https://hdl.handle.net/20.500.14106/N17220",
+      "creator": "Wall, Rachel, 1760-1789.",
+      "date": "1789"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A67316",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A67316",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A67316",
+    "_pid": "https://hdl.handle.net/20.500.14106/A67316",
+    "title": "A brief answer to an indictment presented by the jury upon oath at Surry-sessions held for that county at Croydon, against several of the inhabitants in Southwark. Together with a copy of the indictment. By Thomas Wall.",
+    "description": "The indicted were accused of failing to attend church services for two months. Reproduction of the original in St. Davids University College Library, Lampeter, Wales.",
+    "creator": "Wall, Thomas.",
+    "date": "1682",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A67316",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A67316",
+      "title": "A brief answer to an indictment presented by the jury upon oath at Surry-sessions held for that county at Croydon, against several of the inhabitants in Southwark. Together with a copy of the indictment. By Thomas Wall.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A67316",
+      "pid": "https://hdl.handle.net/20.500.14106/A67316",
+      "creator": "Wall, Thomas.",
+      "date": "1682"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A74686",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A74686",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A74686",
+    "_pid": "https://hdl.handle.net/20.500.14106/A74686",
+    "title": "The nonsuch professor in his Meridian splendor, or the singular actions of sanctified Christians. Laid open in seaven sermons at Allhallows church in the wall, London. / By William Secker preacher of the gospel.",
+    "description": "Text is continuous despite pagination. With a six page publisher's advertisement at end. Annotation on Thomason copy: \"Octob:\". Reproduction of the original in the British Library.",
+    "creator": "Secker, William, d. 1681?",
+    "date": "1660",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A74686",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/A74686",
+      "title": "The nonsuch professor in his Meridian splendor, or the singular actions of sanctified Christians. Laid open in seaven sermons at Allhallows church in the wall, London. / By William Secker preacher of the gospel.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A74686",
+      "pid": "https://hdl.handle.net/20.500.14106/A74686",
+      "creator": "Secker, William, d. 1681?",
+      "date": "1660"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/K011906.000",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/K011906.000",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/K011906.000",
+    "_pid": "https://hdl.handle.net/20.500.14106/K011906.000",
+    "title": "Plain directions, &c. for the cure of the venereal disease: ... Sufficient to enable persons to cure themselves, ... Designed, chiefly to rescue the poor, ... from the destructive hands of unskillful apothecaries and quack-doctors. By J. Wall, surgeon.",
+    "description": "With a half-title. Variant: there is no comma after \"Fetter-lane\" in the imprint. Reproduction of original from the National Library of Medicine. English Short Title Catalog, ESTCN20119. Electronic data. Farmington Hills, ...",
+    "creator": "Wall, J.",
+    "date": "1764",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/K011906.000",
+      "branding": "ECCO-TCP",
+      "itemType": "Text"
+    },
+    "_cached": true,
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:40.528Z",
+      "query": "donne",
+      "recordId": "llds:20.500.14106/K011906.000",
+      "title": "Plain directions, &c. for the cure of the venereal disease: ... Sufficient to enable persons to cure themselves, ... Designed, chiefly to rescue the poor, ... from the destructive hands of unskillful apothecaries and quack-doctors. By J. Wall, surgeon.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/K011906.000",
+      "pid": "https://hdl.handle.net/20.500.14106/K011906.000",
+      "creator": "Wall, J.",
+      "date": "1764"
+    }
+  }
+]

@@ -15,6 +15,8 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
 import { useStaleResults } from '../hooks/useStaleResults'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { usePromptRecipes } from '../hooks/usePromptRecipes'
+import { PromptRecipeBar } from '../components/PromptRecipeBar'
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 export interface OllamaNodeData {
@@ -145,6 +147,8 @@ export function OllamaNode({ id, data }: NodeProps) {
     model: selectedModel, systemPrompt, userPromptTemplate: promptTemplate,
     temperature, maxTokens,
   })
+
+  const { recipes, saveRecipe, deleteRecipe } = usePromptRecipes()
 
   // Field list for the {{field}} helper
   const sampleRecord = upstreamRecords[0]
@@ -419,6 +423,15 @@ export function OllamaNode({ id, data }: NodeProps) {
             <span style={{ fontSize: 10, color: '#6b7280', marginLeft: 4 }}>(auto-detected)</span>
           )}
         </label>
+
+        {/* Prompt recipes bar */}
+        <PromptRecipeBar
+          nodeFamily="standard"
+          recipes={recipes}
+          onApply={r => updateNodeData(id, { systemPrompt: r.systemPrompt, userPromptTemplate: r.userPromptTemplate })}
+          onSave={name => saveRecipe({ name, nodeFamily: 'standard', systemPrompt, userPromptTemplate: promptTemplate })}
+          onDelete={deleteRecipe}
+        />
 
         {/* System prompt */}
         <div style={styles.colField}>

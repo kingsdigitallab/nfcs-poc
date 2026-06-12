@@ -1,0 +1,524 @@
+[
+  {
+    "id": "hsds:917920",
+    "_source": "hsds",
+    "_sourceId": "917920",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/67c5f60d58b4fccd3434030832b20e4b9de2cf2bf0da23153e47bff6a0749a29",
+    "title": "Radiocarbon date, Sample number OxA-4743",
+    "description": "textile:linen<br>Vindolanda, England",
+    "creator": "Cork",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "tt/626"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "67c5f60d58b4fccd3434030832b20e4b9de2cf2bf0da23153e47bff6a0749a29",
+      "originalId": "917920",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "tt/626",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TT/626"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4743-2",
+        "Depositor ID: OxA-4743"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:18.755Z",
+      "query": "q:radiocarbon vindolanda",
+      "recordId": "hsds:917920",
+      "title": "Radiocarbon date, Sample number OxA-4743",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/67c5f60d58b4fccd3434030832b20e4b9de2cf2bf0da23153e47bff6a0749a29",
+      "creator": "Cork",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917918",
+    "_source": "hsds",
+    "_sourceId": "917918",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/02a58dcb01c216b253ca1e762feb2526f528a0b10b6bab52cc805ef59fc6023b",
+    "title": "Radiocarbon date, Sample number OxA-4741",
+    "description": "textile:wool<br>Vindolanda, England",
+    "creator": "Cork",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "tt/85/081"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "02a58dcb01c216b253ca1e762feb2526f528a0b10b6bab52cc805ef59fc6023b",
+      "originalId": "917918",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "tt/85/081",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TT/85/081"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4741-2",
+        "Depositor ID: OxA-4741"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:18.755Z",
+      "query": "q:radiocarbon vindolanda",
+      "recordId": "hsds:917918",
+      "title": "Radiocarbon date, Sample number OxA-4741",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/02a58dcb01c216b253ca1e762feb2526f528a0b10b6bab52cc805ef59fc6023b",
+      "creator": "Cork",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917919",
+    "_source": "hsds",
+    "_sourceId": "917919",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d512003d4875e61fe8d858515ebdab4427df14457c9ccd378f089e5bfe151569",
+    "title": "Radiocarbon date, Sample number OxA-4742",
+    "description": "textile:linen<br>Vindolanda, England",
+    "creator": "Cork",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "tt/87/285"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "d512003d4875e61fe8d858515ebdab4427df14457c9ccd378f089e5bfe151569",
+      "originalId": "917919",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "tt/87/285",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TT/87/285"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4742-2",
+        "Depositor ID: OxA-4742"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:18.755Z",
+      "query": "q:radiocarbon vindolanda",
+      "recordId": "hsds:917919",
+      "title": "Radiocarbon date, Sample number OxA-4742",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d512003d4875e61fe8d858515ebdab4427df14457c9ccd378f089e5bfe151569",
+      "creator": "Cork",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920270",
+    "_source": "hsds",
+    "_sourceId": "920270",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/51302efac94ec0a8e63918a33a691101075f43480be6792e481fc82bffc2518a",
+    "title": "Radiocarbon date, Sample number OxA-4741",
+    "description": "Fabric, id as wool, TT/85/081, from Roman fort at Vindolanda / Chesterholm, Northumberland, England. Subm C R Cork, W D Cooke and J P Wild (UMIST). Comment (subm CRC): a commonplace fabric which dates to the same period as OxA-4742, and isgenerally consistent with the site chronology.<br>",
+    "creator": "R E Birley",
+    "date": "1998-12-01",
+    "subject": [
+      "6c military site",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 54.7323,
+    "decimalLongitude": -2.674049,
+    "hsds": {
+      "elasticId": "51302efac94ec0a8e63918a33a691101075f43480be6792e481fc82bffc2518a",
+      "originalId": "920270",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.7323,
+            "lon": -2.674049
+          },
+          "centroid": {
+            "lat": 54.7323,
+            "lon": -2.674049
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6c military site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6C%20MILITARY%20SITE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4741-1",
+        "Depositor ID: OxA-4741"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:18.755Z",
+      "query": "q:radiocarbon vindolanda",
+      "recordId": "hsds:920270",
+      "title": "Radiocarbon date, Sample number OxA-4741",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/51302efac94ec0a8e63918a33a691101075f43480be6792e481fc82bffc2518a",
+      "creator": "R E Birley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920272",
+    "_source": "hsds",
+    "_sourceId": "920272",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/aeda7adc0dd690324ec6d2834b41928315a3f6102a442c433983d1cc8b720215",
+    "title": "Radiocarbon date, Sample number OxA-4743",
+    "description": "Fabric, id as wool, TT/626, from Period I of Roman fort at Vindolanda / Chesterholm, Northumberland, England. Subm C R Cork, W D Cooke and J P Wild (UMIST). Comment (subm CRC): was chosen to date an example of material from Period I, and is generally consistent with the site chronology.<br>",
+    "creator": "R E Birley",
+    "date": "1998-12-01",
+    "subject": [
+      "6c military site",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 54.7323,
+    "decimalLongitude": -2.674049,
+    "hsds": {
+      "elasticId": "aeda7adc0dd690324ec6d2834b41928315a3f6102a442c433983d1cc8b720215",
+      "originalId": "920272",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.7323,
+            "lon": -2.674049
+          },
+          "centroid": {
+            "lat": 54.7323,
+            "lon": -2.674049
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6c military site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6C%20MILITARY%20SITE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4743-1",
+        "Depositor ID: OxA-4743"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:18.755Z",
+      "query": "q:radiocarbon vindolanda",
+      "recordId": "hsds:920272",
+      "title": "Radiocarbon date, Sample number OxA-4743",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/aeda7adc0dd690324ec6d2834b41928315a3f6102a442c433983d1cc8b720215",
+      "creator": "R E Birley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920271",
+    "_source": "hsds",
+    "_sourceId": "920271",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/8e3cc503055f95196ef10186a09fb71566a3293c21424aa3de4c0819e088b775",
+    "title": "Radiocarbon date, Sample number OxA-4742",
+    "description": "Fabric, id as wool, TT/87/285, from Roman fort at Vindolanda / Chesterholm, Northumberland, England. Subm C R Cork, W D Cooke and J P Wild (UMIST). Comment (subm CRC): provenance is Room X of the Praetorium of Cerialis (Pd III), whence a number of unusual finds have been excavated. This one is an intricate fabric withseam- and hem-craftsmanship contrasting with some of the coarser stitchwork on other finds. Date shows it to have been at least 30 years old at the time of deposition, and probably imported.<br>",
+    "creator": "R E Birley",
+    "date": "1998-12-01",
+    "subject": [
+      "6c military site",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 54.7323,
+    "decimalLongitude": -2.674049,
+    "hsds": {
+      "elasticId": "8e3cc503055f95196ef10186a09fb71566a3293c21424aa3de4c0819e088b775",
+      "originalId": "920271",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.7323,
+            "lon": -2.674049
+          },
+          "centroid": {
+            "lat": 54.7323,
+            "lon": -2.674049
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6c military site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6C%20MILITARY%20SITE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4742-1",
+        "Depositor ID: OxA-4742"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:18.755Z",
+      "query": "q:radiocarbon vindolanda",
+      "recordId": "hsds:920271",
+      "title": "Radiocarbon date, Sample number OxA-4742",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/8e3cc503055f95196ef10186a09fb71566a3293c21424aa3de4c0819e088b775",
+      "creator": "R E Birley",
+      "date": "1998-12-01"
+    }
+  }
+]

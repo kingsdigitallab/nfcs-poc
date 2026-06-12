@@ -1,0 +1,1850 @@
+[
+  {
+    "id": "hsds:https://doi.org/10.83173/xr32-py95",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.83173/xr32-py95",
+    "_sourceUrl": "https://doi.org/10.83173/xr32-py95",
+    "title": "Conservation Data from 'Self-portrait' by Wilson, 2000 to 2025",
+    "description": "This collection includes textual documentation, high-resolution images, ultraviolet imaging, infrared imaging, and photomicrographs of Richard Wilson's 'Self-portrait'. The project was carried out as part of a conservation and restoration initiative by Amgueddfa Cymru - National Museum Wales. This work was undertaken between 2000 and 2025.",
+    "creator": "Amgueddfa Cymru - National Museum Wales",
+    "date": "2026-05-13",
+    "subject": [
+      "annotation data",
+      "art",
+      "art objects--conservation and restoration",
+      "assessment and analysis",
+      "detail view",
+      "energy dispersive x-ray spectrometry",
+      "heritage science",
+      "infrared photography",
+      "microscopy",
+      "museum archives",
+      "non intrusive event",
+      "painting",
+      "painting (visual work)",
+      "photographic survey",
+      "portrait",
+      "raking light",
+      "recto",
+      "richard wilson",
+      "sample",
+      "self-portrait",
+      "ultraviolet fluorescence",
+      "verso",
+      "wilson, richard"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Still Image",
+      "Text"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1701",
+    "periodEnd": "1800",
+    "periodName": "18th century",
+    "hsds": {
+      "elasticId": "e495127c05ea8e2121f92a00917cb484553be362c3fe9f95386474ba97143b06",
+      "originalId": "https://doi.org/10.83173/xr32-py95",
+      "landingPage": "https://doi.org/10.83173/xr32-py95",
+      "modified": "2026-05-13",
+      "contributor": [
+        "Amgueddfa Cymru - National Museum Wales"
+      ],
+      "publisherName": "Heritage Science Data Service",
+      "allSpatial": [],
+      "allPlaceNames": [],
+      "temporal": [
+        {
+          "from": "1701",
+          "periodName": "18th century",
+          "until": "1800",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsx6jf"
+        }
+      ],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "annotation data",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANNOTATION%20DATA"
+        },
+        {
+          "prefLabel": "art",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART"
+        },
+        {
+          "prefLabel": "art objects--conservation and restoration",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART%20OBJECTS--CONSERVATION%20AND%20RESTORATION"
+        },
+        {
+          "prefLabel": "assessment and analysis",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ASSESSMENT%20AND%20ANALYSIS"
+        },
+        {
+          "prefLabel": "detail view",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DETAIL%20VIEW"
+        },
+        {
+          "prefLabel": "energy dispersive x-ray spectrometry",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENERGY%20DISPERSIVE%20X-RAY%20SPECTROMETRY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "infrared photography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INFRARED%20PHOTOGRAPHY"
+        },
+        {
+          "prefLabel": "microscopy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MICROSCOPY"
+        },
+        {
+          "prefLabel": "museum archives",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM%20ARCHIVES"
+        },
+        {
+          "prefLabel": "non intrusive event",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NON%20INTRUSIVE%20EVENT"
+        },
+        {
+          "prefLabel": "painting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING"
+        },
+        {
+          "prefLabel": "painting (visual work)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING%20%28VISUAL%20WORK%29"
+        },
+        {
+          "prefLabel": "photographic survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PHOTOGRAPHIC%20SURVEY"
+        },
+        {
+          "prefLabel": "portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PORTRAIT"
+        },
+        {
+          "prefLabel": "raking light",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RAKING%20LIGHT"
+        },
+        {
+          "prefLabel": "recto",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RECTO"
+        },
+        {
+          "prefLabel": "richard wilson",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RICHARD%20WILSON"
+        },
+        {
+          "prefLabel": "sample",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SAMPLE"
+        },
+        {
+          "prefLabel": "self-portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SELF-PORTRAIT"
+        },
+        {
+          "prefLabel": "ultraviolet fluorescence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ULTRAVIOLET%20FLUORESCENCE"
+        },
+        {
+          "prefLabel": "verso",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VERSO"
+        },
+        {
+          "prefLabel": "wilson, richard",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WILSON%2C%20RICHARD"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Not provided"
+        }
+      ],
+      "dataType": [
+        "Still Image",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1009227",
+        "dcterms:DOI https://doi.org/10.83173/xr32-py95"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:53:14.019Z",
+      "query": "q:portrait",
+      "recordId": "hsds:https://doi.org/10.83173/xr32-py95",
+      "title": "Conservation Data from 'Self-portrait' by Wilson, 2000 to 2025",
+      "url": "https://doi.org/10.83173/xr32-py95",
+      "creator": "Amgueddfa Cymru - National Museum Wales",
+      "date": "2026-05-13"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.83173/x0fp-7f02",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.83173/x0fp-7f02",
+    "_sourceUrl": "https://doi.org/10.83173/x0fp-7f02",
+    "title": "Conservation Data from 'Portrait Of A Lady' by Unknown Netherlandish Artist, 2006 to 2025",
+    "description": "This collection includes textual documentation, high-resolution images, ultraviolet imaging, infrared imaging, and x-ray imaging of the painting 'Portrait of a Lady' by an Unknown Artist of the 17th Century Netherlandish School. The project was carried out as part of a conservation and restoration initiative by Amgueddfa Cymru - National Museum Wales. This work was undertaken between 2006 and 2025.",
+    "creator": "Amgueddfa Cymru - National Museum Wales",
+    "date": "2026-05-07",
+    "subject": [
+      "art",
+      "art objects--conservation and restoration",
+      "assessment and analysis",
+      "detail view",
+      "dutch",
+      "early netherlandish painting",
+      "heritage science",
+      "museum archives",
+      "netherlandish",
+      "non intrusive event",
+      "paint (coating)",
+      "painting",
+      "painting (visual work)",
+      "photographic survey",
+      "portrait",
+      "previous treatment",
+      "raking light",
+      "recto",
+      "ultraviolet fluorescence",
+      "unknown netherlandish",
+      "verso",
+      "x-radiography"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Still Image",
+      "Text"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1601",
+    "periodEnd": "1700",
+    "periodName": "17th century",
+    "hsds": {
+      "elasticId": "83d60d241cfe4bb3843dded331af574a3cb0dee8647f5c47b81074849c9a99b5",
+      "originalId": "https://doi.org/10.83173/x0fp-7f02",
+      "landingPage": "https://doi.org/10.83173/x0fp-7f02",
+      "modified": "2026-05-07",
+      "contributor": [
+        "Amgueddfa Cymru - National Museum Wales"
+      ],
+      "publisherName": "Heritage Science Data Service",
+      "allSpatial": [],
+      "allPlaceNames": [],
+      "temporal": [
+        {
+          "from": "1601",
+          "periodName": "17th century",
+          "until": "1700",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsn8dz"
+        }
+      ],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "art",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART"
+        },
+        {
+          "prefLabel": "art objects--conservation and restoration",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART%20OBJECTS--CONSERVATION%20AND%20RESTORATION"
+        },
+        {
+          "prefLabel": "assessment and analysis",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ASSESSMENT%20AND%20ANALYSIS"
+        },
+        {
+          "prefLabel": "detail view",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DETAIL%20VIEW"
+        },
+        {
+          "prefLabel": "dutch",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DUTCH"
+        },
+        {
+          "prefLabel": "early netherlandish painting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EARLY%20NETHERLANDISH%20PAINTING"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "museum archives",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM%20ARCHIVES"
+        },
+        {
+          "prefLabel": "netherlandish",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NETHERLANDISH"
+        },
+        {
+          "prefLabel": "non intrusive event",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NON%20INTRUSIVE%20EVENT"
+        },
+        {
+          "prefLabel": "paint (coating)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINT%20%28COATING%29"
+        },
+        {
+          "prefLabel": "painting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING"
+        },
+        {
+          "prefLabel": "painting (visual work)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING%20%28VISUAL%20WORK%29"
+        },
+        {
+          "prefLabel": "photographic survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PHOTOGRAPHIC%20SURVEY"
+        },
+        {
+          "prefLabel": "portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PORTRAIT"
+        },
+        {
+          "prefLabel": "previous treatment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PREVIOUS%20TREATMENT"
+        },
+        {
+          "prefLabel": "raking light",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RAKING%20LIGHT"
+        },
+        {
+          "prefLabel": "recto",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RECTO"
+        },
+        {
+          "prefLabel": "ultraviolet fluorescence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ULTRAVIOLET%20FLUORESCENCE"
+        },
+        {
+          "prefLabel": "unknown netherlandish",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/UNKNOWN%20NETHERLANDISH"
+        },
+        {
+          "prefLabel": "verso",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VERSO"
+        },
+        {
+          "prefLabel": "x-radiography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/X-RADIOGRAPHY"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Not provided"
+        }
+      ],
+      "dataType": [
+        "Still Image",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1009224",
+        "dcterms:DOI https://doi.org/10.83173/x0fp-7f02"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:53:14.019Z",
+      "query": "q:portrait",
+      "recordId": "hsds:https://doi.org/10.83173/x0fp-7f02",
+      "title": "Conservation Data from 'Portrait Of A Lady' by Unknown Netherlandish Artist, 2006 to 2025",
+      "url": "https://doi.org/10.83173/x0fp-7f02",
+      "creator": "Amgueddfa Cymru - National Museum Wales",
+      "date": "2026-05-07"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.5284/1139814",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1139814",
+    "_sourceUrl": "https://doi.org/10.5284/1139814",
+    "title": "Conservation Data from 'Boy With Apples' by Wilson, 2001 to 2025",
+    "description": "This collection includes textual documentation, high-resolution images, ultraviolet imaging, infrared imaging, x-ray imaging, and photomicrographs of 'Boy with Apples' by Wilson. The project was carried out as part of a conservation and restoration initiative by Amgueddfa Cymru - National Museum Wales. This work was undertaken between 2001 and 2025.",
+    "creator": "Amgueddfa Cymru - National Museum Wales",
+    "date": "2026-04-22",
+    "subject": [
+      "annotation data",
+      "art",
+      "art objects--conservation and restoration",
+      "children's portrait",
+      "detail view",
+      "energy dispersive x-ray spectrometry",
+      "heritage science",
+      "infrared photography",
+      "museum archives",
+      "painting",
+      "painting (visual work)",
+      "picture frame",
+      "portrait",
+      "previous treatment",
+      "raking light",
+      "recto",
+      "richard wilson",
+      "sample",
+      "ultraviolet fluorescence",
+      "verso",
+      "wilson, richard",
+      "x-radiography",
+      "picture frames"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Still Image",
+      "Text"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1701",
+    "periodEnd": "1800",
+    "periodName": "18th century",
+    "hsds": {
+      "elasticId": "cd01e85e2a49732704f019a62a2407d3d9f0bbaaad1cb6b5637c6a538608e1bd",
+      "originalId": "https://doi.org/10.5284/1139814",
+      "landingPage": "https://doi.org/10.5284/1139814",
+      "modified": "2026-04-22",
+      "contributor": [
+        "Amgueddfa Cymru - National Museum Wales"
+      ],
+      "publisherName": "Heritage Science Data Service",
+      "allSpatial": [],
+      "allPlaceNames": [],
+      "temporal": [
+        {
+          "from": "1701",
+          "periodName": "18th century",
+          "until": "1800",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsx6jf"
+        }
+      ],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "annotation data",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANNOTATION%20DATA"
+        },
+        {
+          "prefLabel": "art",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART"
+        },
+        {
+          "prefLabel": "art objects--conservation and restoration",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART%20OBJECTS--CONSERVATION%20AND%20RESTORATION"
+        },
+        {
+          "prefLabel": "children's portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CHILDREN%27S%20PORTRAIT"
+        },
+        {
+          "prefLabel": "detail view",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DETAIL%20VIEW"
+        },
+        {
+          "prefLabel": "energy dispersive x-ray spectrometry",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENERGY%20DISPERSIVE%20X-RAY%20SPECTROMETRY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "infrared photography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INFRARED%20PHOTOGRAPHY"
+        },
+        {
+          "prefLabel": "museum archives",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM%20ARCHIVES"
+        },
+        {
+          "prefLabel": "painting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING"
+        },
+        {
+          "prefLabel": "painting (visual work)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING%20%28VISUAL%20WORK%29"
+        },
+        {
+          "prefLabel": "picture frame",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PICTURE%20FRAME"
+        },
+        {
+          "prefLabel": "portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PORTRAIT"
+        },
+        {
+          "prefLabel": "previous treatment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PREVIOUS%20TREATMENT"
+        },
+        {
+          "prefLabel": "raking light",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RAKING%20LIGHT"
+        },
+        {
+          "prefLabel": "recto",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RECTO"
+        },
+        {
+          "prefLabel": "richard wilson",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RICHARD%20WILSON"
+        },
+        {
+          "prefLabel": "sample",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SAMPLE"
+        },
+        {
+          "prefLabel": "ultraviolet fluorescence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ULTRAVIOLET%20FLUORESCENCE"
+        },
+        {
+          "prefLabel": "verso",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VERSO"
+        },
+        {
+          "prefLabel": "wilson, richard",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WILSON%2C%20RICHARD"
+        },
+        {
+          "prefLabel": "x-radiography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/X-RADIOGRAPHY"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "picture frames",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300404391",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Not provided"
+        }
+      ],
+      "dataType": [
+        "Still Image",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1009213",
+        "dcterms:DOI https://doi.org/10.5284/1139814"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:53:14.019Z",
+      "query": "q:portrait",
+      "recordId": "hsds:https://doi.org/10.5284/1139814",
+      "title": "Conservation Data from 'Boy With Apples' by Wilson, 2001 to 2025",
+      "url": "https://doi.org/10.5284/1139814",
+      "creator": "Amgueddfa Cymru - National Museum Wales",
+      "date": "2026-04-22"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.83173/865m-b183",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.83173/865m-b183",
+    "_sourceUrl": "https://doi.org/10.83173/865m-b183",
+    "title": "Conservation Data from 'The Girl at the Shutter / A Girl at the Window' by Schalcken, 2015 to 2025",
+    "description": "This collection includes textual documentation, high-resolution images, ultraviolet imaging, and photomicrographs of 'The Girl at the Shutter' or 'A Girl at the Window' by Gottfried Schalcken. The project was carried out as part of a conservation and restoration initiative by Amgueddfa Cymru - National Museum Wales. This work was undertaken between 2015 and 2025. Prior to its loan, the painting also underwent a comprehensive condition assessment.",
+    "creator": "Amgueddfa Cymru - National Museum Wales",
+    "date": "2026-05-07",
+    "subject": [
+      "annotation data",
+      "art",
+      "art objects--conservation and restoration",
+      "assessment and analysis",
+      "detail view",
+      "dutch",
+      "godfried schalcken",
+      "heritage science",
+      "microscopy",
+      "museum archives",
+      "netherlandish",
+      "non intrusive event",
+      "painting",
+      "painting (visual work)",
+      "photographic survey",
+      "picture frame",
+      "portrait",
+      "previous treatment",
+      "raking light",
+      "recto",
+      "sample",
+      "schalcken, godfried",
+      "ultraviolet fluorescence",
+      "verso",
+      "picture frames"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Still Image",
+      "Text"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1601",
+    "periodEnd": "1700",
+    "periodName": [
+      "17th century",
+      "18th century"
+    ],
+    "hsds": {
+      "elasticId": "84b85b1124a18382dff41bbc61278663fc2ab0b398d4aa2d5649420a8515a74d",
+      "originalId": "https://doi.org/10.83173/865m-b183",
+      "landingPage": "https://doi.org/10.83173/865m-b183",
+      "modified": "2026-05-07",
+      "contributor": [
+        "Amgueddfa Cymru - National Museum Wales"
+      ],
+      "publisherName": "Heritage Science Data Service",
+      "allSpatial": [],
+      "allPlaceNames": [],
+      "temporal": [
+        {
+          "from": "1601",
+          "periodName": "17th century",
+          "until": "1700",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsn8dz"
+        },
+        {
+          "from": "1701",
+          "periodName": "18th century",
+          "until": "1800",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsx6jf"
+        }
+      ],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "annotation data",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANNOTATION%20DATA"
+        },
+        {
+          "prefLabel": "art",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART"
+        },
+        {
+          "prefLabel": "art objects--conservation and restoration",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART%20OBJECTS--CONSERVATION%20AND%20RESTORATION"
+        },
+        {
+          "prefLabel": "assessment and analysis",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ASSESSMENT%20AND%20ANALYSIS"
+        },
+        {
+          "prefLabel": "detail view",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DETAIL%20VIEW"
+        },
+        {
+          "prefLabel": "dutch",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DUTCH"
+        },
+        {
+          "prefLabel": "godfried schalcken",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/GODFRIED%20SCHALCKEN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "microscopy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MICROSCOPY"
+        },
+        {
+          "prefLabel": "museum archives",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM%20ARCHIVES"
+        },
+        {
+          "prefLabel": "netherlandish",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NETHERLANDISH"
+        },
+        {
+          "prefLabel": "non intrusive event",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NON%20INTRUSIVE%20EVENT"
+        },
+        {
+          "prefLabel": "painting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING"
+        },
+        {
+          "prefLabel": "painting (visual work)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING%20%28VISUAL%20WORK%29"
+        },
+        {
+          "prefLabel": "photographic survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PHOTOGRAPHIC%20SURVEY"
+        },
+        {
+          "prefLabel": "picture frame",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PICTURE%20FRAME"
+        },
+        {
+          "prefLabel": "portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PORTRAIT"
+        },
+        {
+          "prefLabel": "previous treatment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PREVIOUS%20TREATMENT"
+        },
+        {
+          "prefLabel": "raking light",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RAKING%20LIGHT"
+        },
+        {
+          "prefLabel": "recto",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RECTO"
+        },
+        {
+          "prefLabel": "sample",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SAMPLE"
+        },
+        {
+          "prefLabel": "schalcken, godfried",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SCHALCKEN%2C%20GODFRIED"
+        },
+        {
+          "prefLabel": "ultraviolet fluorescence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ULTRAVIOLET%20FLUORESCENCE"
+        },
+        {
+          "prefLabel": "verso",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VERSO"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "picture frames",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300404391",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Not provided"
+        }
+      ],
+      "dataType": [
+        "Still Image",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1009229",
+        "dcterms:DOI https://doi.org/10.83173/865m-b183"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:53:14.019Z",
+      "query": "q:portrait",
+      "recordId": "hsds:https://doi.org/10.83173/865m-b183",
+      "title": "Conservation Data from 'The Girl at the Shutter / A Girl at the Window' by Schalcken, 2015 to 2025",
+      "url": "https://doi.org/10.83173/865m-b183",
+      "creator": "Amgueddfa Cymru - National Museum Wales",
+      "date": "2026-05-07"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.83173/fcbq-pb30",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.83173/fcbq-pb30",
+    "_sourceUrl": "https://doi.org/10.83173/fcbq-pb30",
+    "title": "Conservation Data from 'Richard Owen' by Wilson, 2000 to 2025",
+    "description": "This collection includes textual documentation, high-resolution images, ultraviolet imaging, infrared imaging, x-ray imaging, and photomicrographs of Richard Wilson's painting 'Richard Owen'. The project was carried out as part of a conservation and restoration initiative by Amgueddfa Cymru - National Museum Wales. This work was undertaken between 2000 and 2025.",
+    "creator": "Amgueddfa Cymru - National Museum Wales",
+    "date": "2026-05-13",
+    "subject": [
+      "annotation data",
+      "art",
+      "art objects--conservation and restoration",
+      "assessment and analysis",
+      "detail view",
+      "energy dispersive x-ray spectrometry",
+      "heritage science",
+      "infrared photography",
+      "microscopy",
+      "museum archives",
+      "non intrusive event",
+      "painting",
+      "painting (visual work)",
+      "photographic survey",
+      "portrait",
+      "previous treatment",
+      "raking light",
+      "recto",
+      "richard wilson",
+      "sample",
+      "ultraviolet fluorescence",
+      "verso",
+      "wilson, richard",
+      "x-radiography"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Still Image",
+      "Text"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1701",
+    "periodEnd": "1800",
+    "periodName": "18th century",
+    "hsds": {
+      "elasticId": "63170d1f988dfa376e2987a975ef976dbdf3ee53874ee6ec9e39f2e212a5fff8",
+      "originalId": "https://doi.org/10.83173/fcbq-pb30",
+      "landingPage": "https://doi.org/10.83173/fcbq-pb30",
+      "modified": "2026-05-13",
+      "contributor": [
+        "Amgueddfa Cymru - National Museum Wales"
+      ],
+      "publisherName": "Heritage Science Data Service",
+      "allSpatial": [],
+      "allPlaceNames": [],
+      "temporal": [
+        {
+          "from": "1701",
+          "periodName": "18th century",
+          "until": "1800",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsx6jf"
+        }
+      ],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "annotation data",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANNOTATION%20DATA"
+        },
+        {
+          "prefLabel": "art",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART"
+        },
+        {
+          "prefLabel": "art objects--conservation and restoration",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART%20OBJECTS--CONSERVATION%20AND%20RESTORATION"
+        },
+        {
+          "prefLabel": "assessment and analysis",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ASSESSMENT%20AND%20ANALYSIS"
+        },
+        {
+          "prefLabel": "detail view",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DETAIL%20VIEW"
+        },
+        {
+          "prefLabel": "energy dispersive x-ray spectrometry",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENERGY%20DISPERSIVE%20X-RAY%20SPECTROMETRY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "infrared photography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INFRARED%20PHOTOGRAPHY"
+        },
+        {
+          "prefLabel": "microscopy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MICROSCOPY"
+        },
+        {
+          "prefLabel": "museum archives",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM%20ARCHIVES"
+        },
+        {
+          "prefLabel": "non intrusive event",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NON%20INTRUSIVE%20EVENT"
+        },
+        {
+          "prefLabel": "painting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING"
+        },
+        {
+          "prefLabel": "painting (visual work)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING%20%28VISUAL%20WORK%29"
+        },
+        {
+          "prefLabel": "photographic survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PHOTOGRAPHIC%20SURVEY"
+        },
+        {
+          "prefLabel": "portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PORTRAIT"
+        },
+        {
+          "prefLabel": "previous treatment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PREVIOUS%20TREATMENT"
+        },
+        {
+          "prefLabel": "raking light",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RAKING%20LIGHT"
+        },
+        {
+          "prefLabel": "recto",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RECTO"
+        },
+        {
+          "prefLabel": "richard wilson",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RICHARD%20WILSON"
+        },
+        {
+          "prefLabel": "sample",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SAMPLE"
+        },
+        {
+          "prefLabel": "ultraviolet fluorescence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ULTRAVIOLET%20FLUORESCENCE"
+        },
+        {
+          "prefLabel": "verso",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VERSO"
+        },
+        {
+          "prefLabel": "wilson, richard",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WILSON%2C%20RICHARD"
+        },
+        {
+          "prefLabel": "x-radiography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/X-RADIOGRAPHY"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Not provided"
+        }
+      ],
+      "dataType": [
+        "Still Image",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1009225",
+        "dcterms:DOI https://doi.org/10.83173/fcbq-pb30"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:53:14.019Z",
+      "query": "q:portrait",
+      "recordId": "hsds:https://doi.org/10.83173/fcbq-pb30",
+      "title": "Conservation Data from 'Richard Owen' by Wilson, 2000 to 2025",
+      "url": "https://doi.org/10.83173/fcbq-pb30",
+      "creator": "Amgueddfa Cymru - National Museum Wales",
+      "date": "2026-05-13"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.83173/krvq-3910",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.83173/krvq-3910",
+    "_sourceUrl": "https://doi.org/10.83173/krvq-3910",
+    "title": "Conservation data from 'Maid of Honour' by Wilson, 2001 to 2025",
+    "description": "This collection includes textual documentation, high-resolution images, ultraviolet imaging, infrared imaging, x-ray imaging, and photomicrographs of Richard Wilson's painting 'Maid of Honour'. The project was carried out as part of a conservation and restoration initiative by Amgueddfa Cymru - National Museum Wales. This work was undertaken between 2001 and 2025.",
+    "creator": "Amgueddfa Cymru - National Museum Wales",
+    "date": "2026-05-13",
+    "subject": [
+      "annotation data",
+      "art",
+      "art objects--conservation and restoration",
+      "assessment and analysis",
+      "detail view",
+      "energy dispersive x-ray spectrometry",
+      "heritage science",
+      "identification label",
+      "infrared photography",
+      "microscopy",
+      "museum archives",
+      "non intrusive event",
+      "painting",
+      "painting (visual work)",
+      "photographic survey",
+      "portrait",
+      "previous treatment",
+      "recto",
+      "richard wilson",
+      "sample",
+      "ultraviolet fluorescence",
+      "verso",
+      "wilson, richard",
+      "x-radiography"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Still Image",
+      "Text"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1701",
+    "periodEnd": "1800",
+    "periodName": "18th century",
+    "hsds": {
+      "elasticId": "7cbf83ffd8d528ce924e15048481f788039fc1093bcc9ff36cbb5a2ec8fe0f9c",
+      "originalId": "https://doi.org/10.83173/krvq-3910",
+      "landingPage": "https://doi.org/10.83173/krvq-3910",
+      "modified": "2026-05-13",
+      "contributor": [
+        "Amgueddfa Cymru - National Museum Wales"
+      ],
+      "publisherName": "Heritage Science Data Service",
+      "allSpatial": [],
+      "allPlaceNames": [],
+      "temporal": [
+        {
+          "from": "1701",
+          "periodName": "18th century",
+          "until": "1800",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsx6jf"
+        }
+      ],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "annotation data",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANNOTATION%20DATA"
+        },
+        {
+          "prefLabel": "art",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART"
+        },
+        {
+          "prefLabel": "art objects--conservation and restoration",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART%20OBJECTS--CONSERVATION%20AND%20RESTORATION"
+        },
+        {
+          "prefLabel": "assessment and analysis",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ASSESSMENT%20AND%20ANALYSIS"
+        },
+        {
+          "prefLabel": "detail view",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DETAIL%20VIEW"
+        },
+        {
+          "prefLabel": "energy dispersive x-ray spectrometry",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENERGY%20DISPERSIVE%20X-RAY%20SPECTROMETRY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "identification label",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/IDENTIFICATION%20LABEL"
+        },
+        {
+          "prefLabel": "infrared photography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INFRARED%20PHOTOGRAPHY"
+        },
+        {
+          "prefLabel": "microscopy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MICROSCOPY"
+        },
+        {
+          "prefLabel": "museum archives",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM%20ARCHIVES"
+        },
+        {
+          "prefLabel": "non intrusive event",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NON%20INTRUSIVE%20EVENT"
+        },
+        {
+          "prefLabel": "painting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING"
+        },
+        {
+          "prefLabel": "painting (visual work)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING%20%28VISUAL%20WORK%29"
+        },
+        {
+          "prefLabel": "photographic survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PHOTOGRAPHIC%20SURVEY"
+        },
+        {
+          "prefLabel": "portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PORTRAIT"
+        },
+        {
+          "prefLabel": "previous treatment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PREVIOUS%20TREATMENT"
+        },
+        {
+          "prefLabel": "recto",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RECTO"
+        },
+        {
+          "prefLabel": "richard wilson",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RICHARD%20WILSON"
+        },
+        {
+          "prefLabel": "sample",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SAMPLE"
+        },
+        {
+          "prefLabel": "ultraviolet fluorescence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ULTRAVIOLET%20FLUORESCENCE"
+        },
+        {
+          "prefLabel": "verso",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VERSO"
+        },
+        {
+          "prefLabel": "wilson, richard",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WILSON%2C%20RICHARD"
+        },
+        {
+          "prefLabel": "x-radiography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/X-RADIOGRAPHY"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Not provided"
+        }
+      ],
+      "dataType": [
+        "Still Image",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1009234",
+        "dcterms:DOI https://doi.org/10.83173/krvq-3910"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:53:14.019Z",
+      "query": "q:portrait",
+      "recordId": "hsds:https://doi.org/10.83173/krvq-3910",
+      "title": "Conservation data from 'Maid of Honour' by Wilson, 2001 to 2025",
+      "url": "https://doi.org/10.83173/krvq-3910",
+      "creator": "Amgueddfa Cymru - National Museum Wales",
+      "date": "2026-05-13"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.5284/1139904",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1139904",
+    "_sourceUrl": "https://doi.org/10.5284/1139904",
+    "title": "Conservation Data from 'Dolbadarn Castle' by Wilson, 1996 to 2025",
+    "description": "This collection includes textual documentation, high-resolution images, ultraviolet imaging, infrared imaging, x-ray imaging, and photomicrographs of 'Dolbadarn Castle' by Wilson. The project was carried out as part of a conservation and restoration initiative by Amgueddfa Cymru - National Museum Wales. This work was undertaken between 1996 and 2025.",
+    "creator": "Amgueddfa Cymru - National Museum Wales",
+    "date": "2026-05-07",
+    "subject": [
+      "annotation data",
+      "art",
+      "art objects--conservation and restoration",
+      "assessment and analysis",
+      "detail view",
+      "energy dispersive x-ray spectrometry",
+      "heritage science",
+      "infrared photography",
+      "landscape (visual works)",
+      "microscopy",
+      "museum archives",
+      "non intrusive event",
+      "painting",
+      "painting (visual work)",
+      "photographic survey",
+      "portrait",
+      "previous treatment",
+      "raking light",
+      "recto",
+      "richard wilson",
+      "sample",
+      "ultraviolet fluorescence",
+      "verso",
+      "wilson, richard",
+      "x-radiography"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Still Image",
+      "Text"
+    ],
+    "spatialCoverage": "Wales",
+    "country": [
+      "Wales",
+      "Wales"
+    ],
+    "decimalLatitude": 53.116673,
+    "decimalLongitude": -4.114425,
+    "periodStart": "1701",
+    "periodEnd": "1800",
+    "periodName": "18th century",
+    "hsds": {
+      "elasticId": "5d6dadf29cfd751f3bd90e0d4174b6977907f3975c67ad4bb88ca7ec7de02585",
+      "originalId": "https://doi.org/10.5284/1139904",
+      "landingPage": "https://doi.org/10.5284/1139904",
+      "modified": "2026-05-07",
+      "contributor": [
+        "Amgueddfa Cymru - National Museum Wales"
+      ],
+      "publisherName": "Heritage Science Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Wales",
+          "geopoint": {
+            "lat": 53.116673,
+            "lon": -4.114425
+          },
+          "centroid": {
+            "lat": 53.116673,
+            "lon": -4.114425
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Wales"
+      ],
+      "temporal": [
+        {
+          "from": "1701",
+          "periodName": "18th century",
+          "until": "1800",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsx6jf"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "annotation data",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANNOTATION%20DATA"
+        },
+        {
+          "prefLabel": "art",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART"
+        },
+        {
+          "prefLabel": "art objects--conservation and restoration",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART%20OBJECTS--CONSERVATION%20AND%20RESTORATION"
+        },
+        {
+          "prefLabel": "assessment and analysis",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ASSESSMENT%20AND%20ANALYSIS"
+        },
+        {
+          "prefLabel": "detail view",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DETAIL%20VIEW"
+        },
+        {
+          "prefLabel": "energy dispersive x-ray spectrometry",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENERGY%20DISPERSIVE%20X-RAY%20SPECTROMETRY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "infrared photography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INFRARED%20PHOTOGRAPHY"
+        },
+        {
+          "prefLabel": "landscape (visual works)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LANDSCAPE%20%28VISUAL%20WORKS%29"
+        },
+        {
+          "prefLabel": "microscopy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MICROSCOPY"
+        },
+        {
+          "prefLabel": "museum archives",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM%20ARCHIVES"
+        },
+        {
+          "prefLabel": "non intrusive event",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NON%20INTRUSIVE%20EVENT"
+        },
+        {
+          "prefLabel": "painting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING"
+        },
+        {
+          "prefLabel": "painting (visual work)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING%20%28VISUAL%20WORK%29"
+        },
+        {
+          "prefLabel": "photographic survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PHOTOGRAPHIC%20SURVEY"
+        },
+        {
+          "prefLabel": "portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PORTRAIT"
+        },
+        {
+          "prefLabel": "previous treatment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PREVIOUS%20TREATMENT"
+        },
+        {
+          "prefLabel": "raking light",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RAKING%20LIGHT"
+        },
+        {
+          "prefLabel": "recto",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RECTO"
+        },
+        {
+          "prefLabel": "richard wilson",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RICHARD%20WILSON"
+        },
+        {
+          "prefLabel": "sample",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SAMPLE"
+        },
+        {
+          "prefLabel": "ultraviolet fluorescence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ULTRAVIOLET%20FLUORESCENCE"
+        },
+        {
+          "prefLabel": "verso",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VERSO"
+        },
+        {
+          "prefLabel": "wilson, richard",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WILSON%2C%20RICHARD"
+        },
+        {
+          "prefLabel": "x-radiography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/X-RADIOGRAPHY"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Not provided"
+        }
+      ],
+      "dataType": [
+        "Still Image",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1009217",
+        "dcterms:DOI https://doi.org/10.5284/1139904"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:53:14.019Z",
+      "query": "q:portrait",
+      "recordId": "hsds:https://doi.org/10.5284/1139904",
+      "title": "Conservation Data from 'Dolbadarn Castle' by Wilson, 1996 to 2025",
+      "url": "https://doi.org/10.5284/1139904",
+      "creator": "Amgueddfa Cymru - National Museum Wales",
+      "date": "2026-05-07"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.83173/qsxn-bm35",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.83173/qsxn-bm35",
+    "_sourceUrl": "https://doi.org/10.83173/qsxn-bm35",
+    "title": "Conservation Data from 'Edward Lloyd' by Wilson, 2001 to 2025",
+    "description": "This collection includes textual documentation, high-resolution images, ultraviolet imaging, infrared imaging, x-ray imaging, and photomicrographs of Richard Wilson's 'Edward Lloyd'. The project was carried out as part of a conservation and restoration initiative by Amgueddfa Cymru - National Museum Wales. This work was undertaken between 2001 and 2025.",
+    "creator": "Amgueddfa Cymru - National Museum Wales",
+    "date": "2026-05-13",
+    "subject": [
+      "annotation data",
+      "art",
+      "art objects--conservation and restoration",
+      "assessment and analysis",
+      "detail view",
+      "energy dispersive x-ray spectrometry",
+      "heritage science",
+      "infrared photography",
+      "microscopy",
+      "museum archives",
+      "non intrusive event",
+      "painting",
+      "painting (visual work)",
+      "photographic survey",
+      "portrait",
+      "previous treatment",
+      "raking light",
+      "recto",
+      "richard wilson",
+      "sample",
+      "sir edward lloyd, 1st bt.",
+      "ultraviolet fluorescence",
+      "verso",
+      "wilson, richard",
+      "x-radiography"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Still Image",
+      "Text"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1701",
+    "periodEnd": "1800",
+    "periodName": "18th century",
+    "hsds": {
+      "elasticId": "18f50f7d5b251c045b71bb8cc01a511d341888f765b195a266c500fe3357eeb3",
+      "originalId": "https://doi.org/10.83173/qsxn-bm35",
+      "landingPage": "https://doi.org/10.83173/qsxn-bm35",
+      "modified": "2026-05-13",
+      "contributor": [
+        "Amgueddfa Cymru - National Museum Wales"
+      ],
+      "publisherName": "Heritage Science Data Service",
+      "allSpatial": [],
+      "allPlaceNames": [],
+      "temporal": [
+        {
+          "from": "1701",
+          "periodName": "18th century",
+          "until": "1800",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsx6jf"
+        }
+      ],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "annotation data",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANNOTATION%20DATA"
+        },
+        {
+          "prefLabel": "art",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART"
+        },
+        {
+          "prefLabel": "art objects--conservation and restoration",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART%20OBJECTS--CONSERVATION%20AND%20RESTORATION"
+        },
+        {
+          "prefLabel": "assessment and analysis",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ASSESSMENT%20AND%20ANALYSIS"
+        },
+        {
+          "prefLabel": "detail view",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DETAIL%20VIEW"
+        },
+        {
+          "prefLabel": "energy dispersive x-ray spectrometry",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ENERGY%20DISPERSIVE%20X-RAY%20SPECTROMETRY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "infrared photography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INFRARED%20PHOTOGRAPHY"
+        },
+        {
+          "prefLabel": "microscopy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MICROSCOPY"
+        },
+        {
+          "prefLabel": "museum archives",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM%20ARCHIVES"
+        },
+        {
+          "prefLabel": "non intrusive event",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NON%20INTRUSIVE%20EVENT"
+        },
+        {
+          "prefLabel": "painting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING"
+        },
+        {
+          "prefLabel": "painting (visual work)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING%20%28VISUAL%20WORK%29"
+        },
+        {
+          "prefLabel": "photographic survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PHOTOGRAPHIC%20SURVEY"
+        },
+        {
+          "prefLabel": "portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PORTRAIT"
+        },
+        {
+          "prefLabel": "previous treatment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PREVIOUS%20TREATMENT"
+        },
+        {
+          "prefLabel": "raking light",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RAKING%20LIGHT"
+        },
+        {
+          "prefLabel": "recto",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RECTO"
+        },
+        {
+          "prefLabel": "richard wilson",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RICHARD%20WILSON"
+        },
+        {
+          "prefLabel": "sample",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SAMPLE"
+        },
+        {
+          "prefLabel": "sir edward lloyd, 1st bt.",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SIR%20EDWARD%20LLOYD%2C%201ST%20BT."
+        },
+        {
+          "prefLabel": "ultraviolet fluorescence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ULTRAVIOLET%20FLUORESCENCE"
+        },
+        {
+          "prefLabel": "verso",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VERSO"
+        },
+        {
+          "prefLabel": "wilson, richard",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WILSON%2C%20RICHARD"
+        },
+        {
+          "prefLabel": "x-radiography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/X-RADIOGRAPHY"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Not provided"
+        }
+      ],
+      "dataType": [
+        "Still Image",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1009219",
+        "dcterms:DOI https://doi.org/10.83173/qsxn-bm35"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:53:14.019Z",
+      "query": "q:portrait",
+      "recordId": "hsds:https://doi.org/10.83173/qsxn-bm35",
+      "title": "Conservation Data from 'Edward Lloyd' by Wilson, 2001 to 2025",
+      "url": "https://doi.org/10.83173/qsxn-bm35",
+      "creator": "Amgueddfa Cymru - National Museum Wales",
+      "date": "2026-05-13"
+    }
+  },
+  {
+    "id": "hsds:https://doi.org/10.83173/6676-ct45",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.83173/6676-ct45",
+    "_sourceUrl": "https://doi.org/10.83173/6676-ct45",
+    "title": "Conservation Data from 'Saint Francis of Assisi Embracing a Crucifix' by Bernado Strozzi, 2023 to 2025",
+    "description": "This collection includes textual documentation, high-resolution images, ultraviolet imaging, infrared imaging, x-ray imaging and photomicrographs of Bernado Strozzi's Early 17th Century painting 'Saint Francis of Assisi Embracing a Crucifix'. The project was carried out as part of a conservation and restoration initiative by Amgueddfa Cymru - National Museum Wales. This work was undertaken between 2023 and 2025.",
+    "creator": "Amgueddfa Cymru - National Museum Wales",
+    "date": "2026-05-07",
+    "subject": [
+      "art",
+      "art objects--conservation and restoration",
+      "assessment and analysis",
+      "bernardo strozzi",
+      "detail view",
+      "francis of assisi",
+      "heritage science",
+      "human figures (visual works)",
+      "infrared photography",
+      "microscopy",
+      "museum archives",
+      "non intrusive event",
+      "paint (coating)",
+      "painting",
+      "painting (visual work)",
+      "photographic survey",
+      "photomicrographs",
+      "picture frame",
+      "picture varnish",
+      "portrait",
+      "previous treatment",
+      "recto",
+      "removal",
+      "sample",
+      "strozzi, bernardo",
+      "ultraviolet fluorescence",
+      "verso",
+      "x-radiography",
+      "picture frames"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Still Image",
+      "Text"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "1601",
+    "periodEnd": "1700",
+    "periodName": "17th century",
+    "hsds": {
+      "elasticId": "b5d7f46857f5b96aa1eb3cd1879b523465390ab9079bbe0ea8b87435747c8e4a",
+      "originalId": "https://doi.org/10.83173/6676-ct45",
+      "landingPage": "https://doi.org/10.83173/6676-ct45",
+      "modified": "2026-05-07",
+      "contributor": [
+        "Amgueddfa Cymru - National Museum Wales"
+      ],
+      "publisherName": "Heritage Science Data Service",
+      "allSpatial": [],
+      "allPlaceNames": [],
+      "temporal": [
+        {
+          "from": "1601",
+          "periodName": "17th century",
+          "until": "1700",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsn8dz"
+        }
+      ],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "art",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART"
+        },
+        {
+          "prefLabel": "art objects--conservation and restoration",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ART%20OBJECTS--CONSERVATION%20AND%20RESTORATION"
+        },
+        {
+          "prefLabel": "assessment and analysis",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ASSESSMENT%20AND%20ANALYSIS"
+        },
+        {
+          "prefLabel": "bernardo strozzi",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BERNARDO%20STROZZI"
+        },
+        {
+          "prefLabel": "detail view",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DETAIL%20VIEW"
+        },
+        {
+          "prefLabel": "francis of assisi",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FRANCIS%20OF%20ASSISI"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "human figures (visual works)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HUMAN%20FIGURES%20%28VISUAL%20WORKS%29"
+        },
+        {
+          "prefLabel": "infrared photography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/INFRARED%20PHOTOGRAPHY"
+        },
+        {
+          "prefLabel": "microscopy",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MICROSCOPY"
+        },
+        {
+          "prefLabel": "museum archives",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MUSEUM%20ARCHIVES"
+        },
+        {
+          "prefLabel": "non intrusive event",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NON%20INTRUSIVE%20EVENT"
+        },
+        {
+          "prefLabel": "paint (coating)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINT%20%28COATING%29"
+        },
+        {
+          "prefLabel": "painting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING"
+        },
+        {
+          "prefLabel": "painting (visual work)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PAINTING%20%28VISUAL%20WORK%29"
+        },
+        {
+          "prefLabel": "photographic survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PHOTOGRAPHIC%20SURVEY"
+        },
+        {
+          "prefLabel": "photomicrographs",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PHOTOMICROGRAPHS"
+        },
+        {
+          "prefLabel": "picture frame",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PICTURE%20FRAME"
+        },
+        {
+          "prefLabel": "picture varnish",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PICTURE%20VARNISH"
+        },
+        {
+          "prefLabel": "portrait",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PORTRAIT"
+        },
+        {
+          "prefLabel": "previous treatment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PREVIOUS%20TREATMENT"
+        },
+        {
+          "prefLabel": "recto",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RECTO"
+        },
+        {
+          "prefLabel": "removal",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/REMOVAL"
+        },
+        {
+          "prefLabel": "sample",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SAMPLE"
+        },
+        {
+          "prefLabel": "strozzi, bernardo",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/STROZZI%2C%20BERNARDO"
+        },
+        {
+          "prefLabel": "ultraviolet fluorescence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ULTRAVIOLET%20FLUORESCENCE"
+        },
+        {
+          "prefLabel": "verso",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/VERSO"
+        },
+        {
+          "prefLabel": "x-radiography",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/X-RADIOGRAPHY"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "picture frames",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300404391",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Not provided"
+        }
+      ],
+      "dataType": [
+        "Still Image",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1009164",
+        "dcterms:DOI https://doi.org/10.83173/6676-ct45"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:53:14.019Z",
+      "query": "q:portrait",
+      "recordId": "hsds:https://doi.org/10.83173/6676-ct45",
+      "title": "Conservation Data from 'Saint Francis of Assisi Embracing a Crucifix' by Bernado Strozzi, 2023 to 2025",
+      "url": "https://doi.org/10.83173/6676-ct45",
+      "creator": "Amgueddfa Cymru - National Museum Wales",
+      "date": "2026-05-07"
+    }
+  }
+]

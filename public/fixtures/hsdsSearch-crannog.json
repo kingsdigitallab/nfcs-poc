@@ -1,0 +1,3472 @@
+[
+  {
+    "id": "hsds:https://doi.org/10.5284/1100101",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1100101",
+    "_sourceUrl": "https://doi.org/10.5284/1100101",
+    "title": "Islands of Stone: Neolithic (and later) Crannogs in the Outer Hebrides, 2016-2026",
+    "description": "This collection comprises reports and database tables from the 'Islands of stone: Neolithic (and later) Crannogs in the Outer Hebrides' Project. A script Script for adding artificial scale bars in Agisoft Metashape is also available. This project, a collaboration between the University of Southampton, University of Reading and Historic Environment Scotland, was set up to explore a recently discovered set of crannogs in the Outer Hebrides dating to the Neolithic period. It sought to establish the extent to which Neolithic crannogs are widespread across these islands (and beyond) and to elucidate further their character through investigation of one 'showcase' site, Loch Bhorgastail, Lewis.",
+    "creator": [
+      "Angela Gannon",
+      "Duncan Garrow",
+      "Fraser Sturt",
+      "Stephanie Blankshein"
+    ],
+    "date": "2024-02-28",
+    "subject": [
+      "archaeology",
+      "artificial island",
+      "crannog",
+      "excavation",
+      "heritage science",
+      "radiocarbon dating",
+      "survey",
+      "underwater survey",
+      "crannogs"
+    ],
+    "language": "en",
+    "type": "collection",
+    "format": [
+      "Structured Data",
+      "Text"
+    ],
+    "spatialCoverage": "World, Europe, United Kingdom, Scotland, Eilean Siar, Outer Hebrides",
+    "country": [
+      "Scotland",
+      "Scotland"
+    ],
+    "decimalLatitude": 58.268529,
+    "decimalLongitude": -6.757173,
+    "periodStart": "-4000",
+    "periodEnd": "-2200",
+    "periodName": "neolithic",
+    "hsds": {
+      "elasticId": "8367833ac5c44c1fb24d7051513573e779e8c4a22f893e9fb89bdfd891581b04",
+      "originalId": "https://doi.org/10.5284/1100101",
+      "landingPage": "https://doi.org/10.5284/1100101",
+      "modified": "2026-02-13",
+      "contributor": [
+        "Angela Gannon",
+        "Duncan Garrow",
+        "Fraser Sturt",
+        "Stephanie Blankshein"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "World, Europe, United Kingdom, Scotland, Eilean Siar, Outer Hebrides"
+        },
+        {
+          "placeName": "Scotland"
+        },
+        {
+          "boundingbox": "polygon ((-7.7600190621 58.5372528508, -7.7600190621 56.7779957244, -5.8103513718 56.7779957244, -5.8103513718 58.5372528508, -7.7600190621 58.5372528508))",
+          "centroid": {
+            "lat": 57.657624287599994,
+            "lon": -6.785185216949999
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 58.268529,
+            "lon": -6.757173
+          },
+          "centroid": {
+            "lat": 58.268529,
+            "lon": -6.757173
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "World, Europe, United Kingdom, Scotland, Eilean Siar, Outer Hebrides",
+        "Scotland"
+      ],
+      "temporal": [
+        {
+          "from": "-4000",
+          "periodName": "neolithic",
+          "until": "-2200",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "artificial island",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARTIFICIAL%20ISLAND"
+        },
+        {
+          "prefLabel": "crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CRANNOG"
+        },
+        {
+          "prefLabel": "excavation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXCAVATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "radiocarbon dating",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/RADIOCARBON%20DATING"
+        },
+        {
+          "prefLabel": "survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/SURVEY"
+        },
+        {
+          "prefLabel": "underwater survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/UNDERWATER%20SURVEY"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "crannogs",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005679",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork archive"
+        }
+      ],
+      "dataType": [
+        "Structured Data",
+        "Text"
+      ],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1006332",
+        "dcterms:DOI https://doi.org/10.5284/1100101"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:https://doi.org/10.5284/1100101",
+      "title": "Islands of Stone: Neolithic (and later) Crannogs in the Outer Hebrides, 2016-2026",
+      "url": "https://doi.org/10.5284/1100101",
+      "creator": [
+        "Angela Gannon",
+        "Duncan Garrow",
+        "Fraser Sturt",
+        "Stephanie Blankshein"
+      ],
+      "date": "2024-02-28"
+    }
+  },
+  {
+    "id": "hsds:911948",
+    "_source": "hsds",
+    "_sourceId": "911948",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/852df7330186205002d8db06cb0b16bf4ebce18b9de58bfb948b67a52708d5df",
+    "title": "Radiocarbon date, Sample number D-56",
+    "description": "Wood from ultimate structure of crannog at Lough Gara, Crannog 61, Rathtinaun, Sligo, Ireland.<br>",
+    "creator": "J Raftery",
+    "date": "1998-12-01",
+    "subject": [
+      "5c crannog / 4a crannog / 8a medieval",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.952151,
+    "decimalLongitude": -8.415877,
+    "hsds": {
+      "elasticId": "852df7330186205002d8db06cb0b16bf4ebce18b9de58bfb948b67a52708d5df",
+      "originalId": "911948",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          },
+          "centroid": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5c crannog / 4a crannog / 8a medieval",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5C%20CRANNOG%20/%204A%20CRANNOG%20/%208A%20MEDIEVAL"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-56",
+        "Depositor ID: D-56"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:911948",
+      "title": "Radiocarbon date, Sample number D-56",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/852df7330186205002d8db06cb0b16bf4ebce18b9de58bfb948b67a52708d5df",
+      "creator": "J Raftery",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:911943",
+    "_source": "hsds",
+    "_sourceId": "911943",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d3bf9f92ac2d8b262576d84ebce3c3b3a834619b630a1bce9d288a452a97a7f6",
+    "title": "Radiocarbon date, Sample number D-55",
+    "description": "Wood from outermost piles at Lough Gara, Crannog 61, Rathtinaun, Sligo, Ireland.<br>",
+    "creator": "J Raftery",
+    "date": "1998-12-01",
+    "subject": [
+      "5c crannog / 4a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.952151,
+    "decimalLongitude": -8.415877,
+    "hsds": {
+      "elasticId": "d3bf9f92ac2d8b262576d84ebce3c3b3a834619b630a1bce9d288a452a97a7f6",
+      "originalId": "911943",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          },
+          "centroid": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5c crannog / 4a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5C%20CRANNOG%20/%204A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-55",
+        "Depositor ID: D-55"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:911943",
+      "title": "Radiocarbon date, Sample number D-55",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d3bf9f92ac2d8b262576d84ebce3c3b3a834619b630a1bce9d288a452a97a7f6",
+      "creator": "J Raftery",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:911940",
+    "_source": "hsds",
+    "_sourceId": "911940",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e7f3db39f0daa3af2d90469ef391f2bbff07e25e0a73754df6de23e84acf649d",
+    "title": "Radiocarbon date, Sample number D-61",
+    "description": "Charcoal from base of hearth at Lough Gara, Crannog 61, Rathtinaun, Sligo, Ireland.<br>",
+    "creator": "J Raftery",
+    "date": "1998-12-01",
+    "subject": [
+      "5c crannog / 4a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.952151,
+    "decimalLongitude": -8.415877,
+    "hsds": {
+      "elasticId": "e7f3db39f0daa3af2d90469ef391f2bbff07e25e0a73754df6de23e84acf649d",
+      "originalId": "911940",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          },
+          "centroid": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5c crannog / 4a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5C%20CRANNOG%20/%204A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-61",
+        "Depositor ID: D-61"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:911940",
+      "title": "Radiocarbon date, Sample number D-61",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e7f3db39f0daa3af2d90469ef391f2bbff07e25e0a73754df6de23e84acf649d",
+      "creator": "J Raftery",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:911941",
+    "_source": "hsds",
+    "_sourceId": "911941",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/37a7e5b7a30955be43d22f2280b837678654f6e8c2e6b6ae5effbd56c986242c",
+    "title": "Radiocarbon date, Sample number D-60",
+    "description": "Charred cereals from end of LBA at Lough Gara, Crannog 61, Rathtinaun, Sligo, Ireland.<br>",
+    "creator": "J Raftery",
+    "date": "1998-12-01",
+    "subject": [
+      "5c crannog / 4a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.952151,
+    "decimalLongitude": -8.415877,
+    "hsds": {
+      "elasticId": "37a7e5b7a30955be43d22f2280b837678654f6e8c2e6b6ae5effbd56c986242c",
+      "originalId": "911941",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          },
+          "centroid": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5c crannog / 4a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5C%20CRANNOG%20/%204A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-60",
+        "Depositor ID: D-60"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:911941",
+      "title": "Radiocarbon date, Sample number D-60",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/37a7e5b7a30955be43d22f2280b837678654f6e8c2e6b6ae5effbd56c986242c",
+      "creator": "J Raftery",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:911947",
+    "_source": "hsds",
+    "_sourceId": "911947",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/cdac8defbbdb49240af927e7998ab7cb359ade10fc9761e6e2c8f47747e42bac",
+    "title": "Radiocarbon date, Sample number D-58",
+    "description": "Wood from outer revetment piles, EIA period at Lough Gara, Crannog 61, Rathtinaun, Sligo, Ireland.<br>",
+    "creator": "J Raftery",
+    "date": "1998-12-01",
+    "subject": [
+      "5c crannog / 4a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.952151,
+    "decimalLongitude": -8.415877,
+    "hsds": {
+      "elasticId": "cdac8defbbdb49240af927e7998ab7cb359ade10fc9761e6e2c8f47747e42bac",
+      "originalId": "911947",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          },
+          "centroid": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5c crannog / 4a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5C%20CRANNOG%20/%204A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-58",
+        "Depositor ID: D-58"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:911947",
+      "title": "Radiocarbon date, Sample number D-58",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/cdac8defbbdb49240af927e7998ab7cb359ade10fc9761e6e2c8f47747e42bac",
+      "creator": "J Raftery",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:911942",
+    "_source": "hsds",
+    "_sourceId": "911942",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/93cc0050b779d2d408c9194af73f477324628fa28b6ec94b884422221cc1e516",
+    "title": "Radiocarbon date, Sample number D-59",
+    "description": "Wood, id as hazel twigs, from LBA fire basket at Lough Gara, Crannog 61, Rathtinaun, Sligo, Ireland.<br>",
+    "creator": "J Raftery",
+    "date": "1998-12-01",
+    "subject": [
+      "5c crannog / 4a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.952151,
+    "decimalLongitude": -8.415877,
+    "hsds": {
+      "elasticId": "93cc0050b779d2d408c9194af73f477324628fa28b6ec94b884422221cc1e516",
+      "originalId": "911942",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          },
+          "centroid": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5c crannog / 4a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5C%20CRANNOG%20/%204A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-59",
+        "Depositor ID: D-59"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:911942",
+      "title": "Radiocarbon date, Sample number D-59",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/93cc0050b779d2d408c9194af73f477324628fa28b6ec94b884422221cc1e516",
+      "creator": "J Raftery",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:911946",
+    "_source": "hsds",
+    "_sourceId": "911946",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/31b50d261ba6774d264580cd6a5d59ab4ebd98a065c62c725035642689f904db",
+    "title": "Radiocarbon date, Sample number D-53",
+    "description": "Wood, id as hazel twigs, from fire basket, LBA at Lough Gara, Crannog 61, Rathtinaun, Sligo, Ireland.<br>",
+    "creator": "J Raftery",
+    "date": "1998-12-01",
+    "subject": [
+      "5c crannog / 4a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.952151,
+    "decimalLongitude": -8.415877,
+    "hsds": {
+      "elasticId": "31b50d261ba6774d264580cd6a5d59ab4ebd98a065c62c725035642689f904db",
+      "originalId": "911946",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          },
+          "centroid": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5c crannog / 4a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5C%20CRANNOG%20/%204A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-53",
+        "Depositor ID: D-53"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:911946",
+      "title": "Radiocarbon date, Sample number D-53",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/31b50d261ba6774d264580cd6a5d59ab4ebd98a065c62c725035642689f904db",
+      "creator": "J Raftery",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:911944",
+    "_source": "hsds",
+    "_sourceId": "911944",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/48e2be6a4f0b0f201c1702b332340f47ae7e2150b63af419daa5504702d10de2",
+    "title": "Radiocarbon date, Sample number D-54",
+    "description": "Wood, id as hazel twigs, from end LBA fire basket at Lough Gara, Crannog 61, Rathtinaun, Sligo, Ireland.<br>",
+    "creator": "J Raftery",
+    "date": "1998-12-01",
+    "subject": [
+      "5c crannog / 4a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.952151,
+    "decimalLongitude": -8.415877,
+    "hsds": {
+      "elasticId": "48e2be6a4f0b0f201c1702b332340f47ae7e2150b63af419daa5504702d10de2",
+      "originalId": "911944",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          },
+          "centroid": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5c crannog / 4a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5C%20CRANNOG%20/%204A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-54",
+        "Depositor ID: D-54"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:911944",
+      "title": "Radiocarbon date, Sample number D-54",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/48e2be6a4f0b0f201c1702b332340f47ae7e2150b63af419daa5504702d10de2",
+      "creator": "J Raftery",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:911945",
+    "_source": "hsds",
+    "_sourceId": "911945",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/8681b9f48155b65faed963f9094aba80b3cb23ac22b37bc5dfcf75d211e0d6ab",
+    "title": "Radiocarbon date, Sample number D-57",
+    "description": "Wood, id as oak, from house posts of EIA phase at Lough Gara, Crannog 61, Rathtinaun, Sligo, Ireland.<br>",
+    "creator": "J Raftery",
+    "date": "1998-12-01",
+    "subject": [
+      "5c crannog / 4a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.952151,
+    "decimalLongitude": -8.415877,
+    "hsds": {
+      "elasticId": "8681b9f48155b65faed963f9094aba80b3cb23ac22b37bc5dfcf75d211e0d6ab",
+      "originalId": "911945",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          },
+          "centroid": {
+            "lat": 53.952151,
+            "lon": -8.415877
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5c crannog / 4a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5C%20CRANNOG%20/%204A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-57",
+        "Depositor ID: D-57"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:911945",
+      "title": "Radiocarbon date, Sample number D-57",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/8681b9f48155b65faed963f9094aba80b3cb23ac22b37bc5dfcf75d211e0d6ab",
+      "creator": "J Raftery",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915380",
+    "_source": "hsds",
+    "_sourceId": "915380",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c3268f46fa076ec564046941d0275f22f925aa959c163a8f7ab7b90a450bd6cd",
+    "title": "Radiocarbon date, Sample number GU-2636",
+    "description": "Wood stake from post-abandonment reconstruction at Buston Crannog, Kilmaurs, Ayrshire, Strathclyde, Scotland.<br>Multiphase occupation",
+    "creator": "Anne Crone",
+    "date": "1998-12-01",
+    "subject": [
+      "7a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 55.657308,
+    "decimalLongitude": -4.518083,
+    "hsds": {
+      "elasticId": "c3268f46fa076ec564046941d0275f22f925aa959c163a8f7ab7b90a450bd6cd",
+      "originalId": "915380",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.657308,
+            "lon": -4.518083
+          },
+          "centroid": {
+            "lat": 55.657308,
+            "lon": -4.518083
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-2636",
+        "Depositor ID: GU-2636"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:915380",
+      "title": "Radiocarbon date, Sample number GU-2636",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c3268f46fa076ec564046941d0275f22f925aa959c163a8f7ab7b90a450bd6cd",
+      "creator": "Anne Crone",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915376",
+    "_source": "hsds",
+    "_sourceId": "915376",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d8178a865c6037439f5efd9fac0d18f447a3f1f7ea849c66e6c55c5d89f9cb42",
+    "title": "Radiocarbon date, Sample number GU-3000",
+    "description": "Sample unspecified from earliest phase occupation at Buston Crannog, Kilmaurs, Ayrshire, Strathclyde, Scotland.<br>Multiphase occupation",
+    "creator": "Anne Crone",
+    "date": "1998-12-01",
+    "subject": [
+      "7a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 55.657308,
+    "decimalLongitude": -4.518083,
+    "hsds": {
+      "elasticId": "d8178a865c6037439f5efd9fac0d18f447a3f1f7ea849c66e6c55c5d89f9cb42",
+      "originalId": "915376",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.657308,
+            "lon": -4.518083
+          },
+          "centroid": {
+            "lat": 55.657308,
+            "lon": -4.518083
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-3000",
+        "Depositor ID: GU-3000"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:915376",
+      "title": "Radiocarbon date, Sample number GU-3000",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d8178a865c6037439f5efd9fac0d18f447a3f1f7ea849c66e6c55c5d89f9cb42",
+      "creator": "Anne Crone",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920220",
+    "_source": "hsds",
+    "_sourceId": "920220",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a9460385b3e92073199ce03c9a80f3f45e57caaee3ad1ea960d838c94da3f245",
+    "title": "Radiocarbon date, Sample number GU-1325",
+    "description": "Wood, id as pile from extension of crannog at Oakbank, Fearnan, Loch Tay, Tayside, Scotland.<br>",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "5d settlement - crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.572545,
+    "decimalLongitude": -4.072231,
+    "hsds": {
+      "elasticId": "a9460385b3e92073199ce03c9a80f3f45e57caaee3ad1ea960d838c94da3f245",
+      "originalId": "920220",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.572545,
+            "lon": -4.072231
+          },
+          "centroid": {
+            "lat": 56.572545,
+            "lon": -4.072231
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5d settlement - crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5D%20SETTLEMENT%20-%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1325",
+        "Depositor ID: GU-1325"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:920220",
+      "title": "Radiocarbon date, Sample number GU-1325",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a9460385b3e92073199ce03c9a80f3f45e57caaee3ad1ea960d838c94da3f245",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920215",
+    "_source": "hsds",
+    "_sourceId": "920215",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/92708bf3a85702b8ffec1808d77691cb7e9764e6fc2997884791790cce9cf627",
+    "title": "Radiocarbon date, Sample number GU-1322",
+    "description": "Material not specified, from site 300m from crannog at Oakbank, Fearnan, Loch Tay, Tayside, Scotland.<br>",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "5d settlement - crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.572545,
+    "decimalLongitude": -4.072231,
+    "hsds": {
+      "elasticId": "92708bf3a85702b8ffec1808d77691cb7e9764e6fc2997884791790cce9cf627",
+      "originalId": "920215",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.572545,
+            "lon": -4.072231
+          },
+          "centroid": {
+            "lat": 56.572545,
+            "lon": -4.072231
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5d settlement - crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5D%20SETTLEMENT%20-%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1322",
+        "Depositor ID: GU-1322"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:920215",
+      "title": "Radiocarbon date, Sample number GU-1322",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/92708bf3a85702b8ffec1808d77691cb7e9764e6fc2997884791790cce9cf627",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915378",
+    "_source": "hsds",
+    "_sourceId": "915378",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/aead5e0c93e18b5c49e2f0e2324620965187657be949bb40e04ff47ea4d0efce",
+    "title": "Radiocarbon date, Sample number GU-2688",
+    "description": "Charcoal from latest hearth of crannog's NW extension at Buston Crannog, Kilmaurs, Ayrshire, Strathclyde, Scotland.<br>Multiphase occupation",
+    "creator": "Anne Crone",
+    "date": "1998-12-01",
+    "subject": [
+      "7a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 55.657308,
+    "decimalLongitude": -4.518083,
+    "hsds": {
+      "elasticId": "aead5e0c93e18b5c49e2f0e2324620965187657be949bb40e04ff47ea4d0efce",
+      "originalId": "915378",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.657308,
+            "lon": -4.518083
+          },
+          "centroid": {
+            "lat": 55.657308,
+            "lon": -4.518083
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-2688",
+        "Depositor ID: GU-2688"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:915378",
+      "title": "Radiocarbon date, Sample number GU-2688",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/aead5e0c93e18b5c49e2f0e2324620965187657be949bb40e04ff47ea4d0efce",
+      "creator": "Anne Crone",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920212",
+    "_source": "hsds",
+    "_sourceId": "920212",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a223a4f2b812d74d1143d4e23f0b75a5c77e73f6ba549229db09e024ace8d862",
+    "title": "Radiocarbon date, Sample number GU-1323",
+    "description": "Wood, structural timber, from near crannog, probably from original structure atOakbank, Fearnan, Loch Tay, Tayside, Scotland.<br>",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "5d settlement - crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.572545,
+    "decimalLongitude": -4.072231,
+    "hsds": {
+      "elasticId": "a223a4f2b812d74d1143d4e23f0b75a5c77e73f6ba549229db09e024ace8d862",
+      "originalId": "920212",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.572545,
+            "lon": -4.072231
+          },
+          "centroid": {
+            "lat": 56.572545,
+            "lon": -4.072231
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5d settlement - crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5D%20SETTLEMENT%20-%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1323",
+        "Depositor ID: GU-1323"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:920212",
+      "title": "Radiocarbon date, Sample number GU-1323",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a223a4f2b812d74d1143d4e23f0b75a5c77e73f6ba549229db09e024ace8d862",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915377",
+    "_source": "hsds",
+    "_sourceId": "915377",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f58d7f1097655cc24b16d451752bbdf770daacc1cd69bcdb47fd51af1bedca2b",
+    "title": "Radiocarbon date, Sample number GU-3004",
+    "description": "Charcoal from latest hearth of (first? second?) phase occupation at Buston Crannog, Kilmaurs, Ayrshire, Strathclyde, Scotland.<br>Multiphase occupation",
+    "creator": "Anne Crone",
+    "date": "1998-12-01",
+    "subject": [
+      "7a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 55.657308,
+    "decimalLongitude": -4.518083,
+    "hsds": {
+      "elasticId": "f58d7f1097655cc24b16d451752bbdf770daacc1cd69bcdb47fd51af1bedca2b",
+      "originalId": "915377",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.657308,
+            "lon": -4.518083
+          },
+          "centroid": {
+            "lat": 55.657308,
+            "lon": -4.518083
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-3004",
+        "Depositor ID: GU-3004"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:915377",
+      "title": "Radiocarbon date, Sample number GU-3004",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f58d7f1097655cc24b16d451752bbdf770daacc1cd69bcdb47fd51af1bedca2b",
+      "creator": "Anne Crone",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912449",
+    "_source": "hsds",
+    "_sourceId": "912449",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e64b0c5ca2778b5a5f645b64d3232aa6bd7ae42b9a2030a49d1fd8ca05124077",
+    "title": "Radiocarbon date, Sample number UB-267",
+    "description": "Wood, id as oak, from outer part of trunk in `Fermanagh type' crannog at Mill Lough, Fermanagh, N Ireland.<br>",
+    "creator": "R Warner",
+    "date": "1998-12-01",
+    "subject": [
+      "8a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.228397,
+    "decimalLongitude": -7.286912,
+    "hsds": {
+      "elasticId": "e64b0c5ca2778b5a5f645b64d3232aa6bd7ae42b9a2030a49d1fd8ca05124077",
+      "originalId": "912449",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.228397,
+            "lon": -7.286912
+          },
+          "centroid": {
+            "lat": 54.228397,
+            "lon": -7.286912
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "8a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/8A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-267",
+        "Depositor ID: UB-267"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:912449",
+      "title": "Radiocarbon date, Sample number UB-267",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e64b0c5ca2778b5a5f645b64d3232aa6bd7ae42b9a2030a49d1fd8ca05124077",
+      "creator": "R Warner",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915379",
+    "_source": "hsds",
+    "_sourceId": "915379",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9a6d0ee8d79c57760999bc626d0bd3dc47af5d2104d44bd71eae2d9b6cefe623",
+    "title": "Radiocarbon date, Sample number GU-2637",
+    "description": "Wood from an outer ring of palisade timber of extension phase at Buston Crannog, Kilmaurs, Ayrshire, Strathclyde, Scotland.<br>Multiphase occupation",
+    "creator": "Anne Crone",
+    "date": "1998-12-01",
+    "subject": [
+      "7a crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 55.657308,
+    "decimalLongitude": -4.518083,
+    "hsds": {
+      "elasticId": "9a6d0ee8d79c57760999bc626d0bd3dc47af5d2104d44bd71eae2d9b6cefe623",
+      "originalId": "915379",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.657308,
+            "lon": -4.518083
+          },
+          "centroid": {
+            "lat": 55.657308,
+            "lon": -4.518083
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7a crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7A%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-2637",
+        "Depositor ID: GU-2637"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:915379",
+      "title": "Radiocarbon date, Sample number GU-2637",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9a6d0ee8d79c57760999bc626d0bd3dc47af5d2104d44bd71eae2d9b6cefe623",
+      "creator": "Anne Crone",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914411",
+    "_source": "hsds",
+    "_sourceId": "914411",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/01a32df1e14264aa66393a24f4143e4668f9c25c9b623d2faaf508f9a84c1818",
+    "title": "Radiocarbon date, Sample number GrN-12359",
+    "description": "Charcoal flecked black clay from LBA occupation layer, directly over open-watermud and preceding Early Christian crannog structure at Moynagh Lough, Brittas townland, Cruicetown parish, County Meath, Ireland. Comment (subm): Crannog itself has dendrodates indicating felling in 7th and 8th centuries AD.<br>Crannog site",
+    "creator": "J Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4a occupation and 2b occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.817049,
+    "decimalLongitude": -6.757876,
+    "hsds": {
+      "elasticId": "01a32df1e14264aa66393a24f4143e4668f9c25c9b623d2faaf508f9a84c1818",
+      "originalId": "914411",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.817049,
+            "lon": -6.757876
+          },
+          "centroid": {
+            "lat": 53.817049,
+            "lon": -6.757876
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a occupation and 2b occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20OCCUPATION%20AND%202B%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GRN-12359",
+        "Depositor ID: GrN-12359"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:914411",
+      "title": "Radiocarbon date, Sample number GrN-12359",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/01a32df1e14264aa66393a24f4143e4668f9c25c9b623d2faaf508f9a84c1818",
+      "creator": "J Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914409",
+    "_source": "hsds",
+    "_sourceId": "914409",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/217a6314726826c96ce55a8ee7968d0793745c8f099fad28a3820163fd9b12a4",
+    "title": "Radiocarbon date, Sample number GrN-11443",
+    "description": "Charcoal from charcoal-flecked mud on western knoll, Meso occupation layer below crannog at Moynagh Lough, Brittas townland, Cruicetown parish, County Meath, Ireland.<br>Crannog site",
+    "creator": "J Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "2b occupation and 4a occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.817049,
+    "decimalLongitude": -6.757876,
+    "hsds": {
+      "elasticId": "217a6314726826c96ce55a8ee7968d0793745c8f099fad28a3820163fd9b12a4",
+      "originalId": "914409",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.817049,
+            "lon": -6.757876
+          },
+          "centroid": {
+            "lat": 53.817049,
+            "lon": -6.757876
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "2b occupation and 4a occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/2B%20OCCUPATION%20AND%204A%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GRN-11443",
+        "Depositor ID: GrN-11443"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:914409",
+      "title": "Radiocarbon date, Sample number GrN-11443",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/217a6314726826c96ce55a8ee7968d0793745c8f099fad28a3820163fd9b12a4",
+      "creator": "J Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913949",
+    "_source": "hsds",
+    "_sourceId": "913949",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/46ffc5cd8a3bcfbe4a7cac8739e6ab12543df2263ab5c7c08a9a56d4697b337d",
+    "title": "Radiocarbon date, Sample number St-7622",
+    "description": "Wood from phosphate survey, test hole 26, sample 7, layer VIIIb at Carrowmore -Cloverhill Lough Crannog, Sligo, Ireland. Coll G Burenhult. Subm G Burenhult. Comment (subm): See monograph below.<br>Crannog",
+    "creator": "G Burenhult",
+    "date": "1998-12-01",
+    "subject": [
+      "7b settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 54.217266,
+    "decimalLongitude": -8.613242,
+    "hsds": {
+      "elasticId": "46ffc5cd8a3bcfbe4a7cac8739e6ab12543df2263ab5c7c08a9a56d4697b337d",
+      "originalId": "913949",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.217266,
+            "lon": -8.613242
+          },
+          "centroid": {
+            "lat": 54.217266,
+            "lon": -8.613242
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-ST-7622",
+        "Depositor ID: St-7622"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:913949",
+      "title": "Radiocarbon date, Sample number St-7622",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/46ffc5cd8a3bcfbe4a7cac8739e6ab12543df2263ab5c7c08a9a56d4697b337d",
+      "creator": "G Burenhult",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913948",
+    "_source": "hsds",
+    "_sourceId": "913948",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/61a08849de7ddabef18eb41568150f383cceec1716f61d05920db5506bd6c1db",
+    "title": "Radiocarbon date, Sample number Lu-1841",
+    "description": "Wood from phosphate survey, test hole 26, sample 5, layer VIIIa at Carrowmore -Cloverhill Lough Crannog, Sligo, Ireland. Coll G Burenhult. Subm G Burenhult. Comment (subm): See monograph below. [Ed: excavator's monograph and Radiocarbon 23 differ slightly].<br>Crannog",
+    "creator": "G Burenhult",
+    "date": "1998-12-01",
+    "subject": [
+      "7b settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 54.217266,
+    "decimalLongitude": -8.613242,
+    "hsds": {
+      "elasticId": "61a08849de7ddabef18eb41568150f383cceec1716f61d05920db5506bd6c1db",
+      "originalId": "913948",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.217266,
+            "lon": -8.613242
+          },
+          "centroid": {
+            "lat": 54.217266,
+            "lon": -8.613242
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-LU-1841",
+        "Depositor ID: Lu-1841"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:913948",
+      "title": "Radiocarbon date, Sample number Lu-1841",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/61a08849de7ddabef18eb41568150f383cceec1716f61d05920db5506bd6c1db",
+      "creator": "G Burenhult",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915108",
+    "_source": "hsds",
+    "_sourceId": "915108",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/416faca0bf5c63c774f467d74a4a20d8d65c0f971755e20dc670a2984490c53f",
+    "title": "Radiocarbon date, Sample number K-1394",
+    "description": "Wood, id as oak, from ard head at Milton Loch, Crannog 1, Kirkcudbrightshire, Scotland.<br>",
+    "creator": "C M Piggott",
+    "date": "1998-12-01",
+    "subject": [
+      "5e artefact - ard head",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 55.027075,
+    "decimalLongitude": -3.816459,
+    "hsds": {
+      "elasticId": "416faca0bf5c63c774f467d74a4a20d8d65c0f971755e20dc670a2984490c53f",
+      "originalId": "915108",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.027075,
+            "lon": -3.816459
+          },
+          "centroid": {
+            "lat": 55.027075,
+            "lon": -3.816459
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5e artefact - ard head",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5E%20ARTEFACT%20-%20ARD%20HEAD"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-K-1394",
+        "Depositor ID: K-1394"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:915108",
+      "title": "Radiocarbon date, Sample number K-1394",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/416faca0bf5c63c774f467d74a4a20d8d65c0f971755e20dc670a2984490c53f",
+      "creator": "C M Piggott",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916469",
+    "_source": "hsds",
+    "_sourceId": "916469",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/eb195f524caf48074bccfe9de80be7c8887bf8cab8c3d7e6dc329202ace19ce4",
+    "title": "Radiocarbon date, Sample number UB-1472",
+    "description": "Wood, id as Oak, from plank, Crannog A at Lough Eskragh, County Tyrone, Ireland.<br>",
+    "creator": "B B Williams",
+    "date": "1998-12-01",
+    "subject": [
+      "4a lakeside settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.498631,
+    "decimalLongitude": -6.805219,
+    "hsds": {
+      "elasticId": "eb195f524caf48074bccfe9de80be7c8887bf8cab8c3d7e6dc329202ace19ce4",
+      "originalId": "916469",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.498631,
+            "lon": -6.805219
+          },
+          "centroid": {
+            "lat": 54.498631,
+            "lon": -6.805219
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a lakeside settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20LAKESIDE%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-1472",
+        "Depositor ID: UB-1472"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:916469",
+      "title": "Radiocarbon date, Sample number UB-1472",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/eb195f524caf48074bccfe9de80be7c8887bf8cab8c3d7e6dc329202ace19ce4",
+      "creator": "B B Williams",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913568",
+    "_source": "hsds",
+    "_sourceId": "913568",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2d3afab7473c9c3c2b9857bc03625481060def3afd5b59e9929e572a253e91f3",
+    "title": "Radiocarbon date, Sample number Q-3142",
+    "description": "Wood from boat found in 1820 near crannog at Kinnordy, Tayside ?, Scotland. Coll R Switsur.<br>",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "8c boat",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.673504,
+    "decimalLongitude": -3.04453,
+    "hsds": {
+      "elasticId": "2d3afab7473c9c3c2b9857bc03625481060def3afd5b59e9929e572a253e91f3",
+      "originalId": "913568",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.673504,
+            "lon": -3.04453
+          },
+          "centroid": {
+            "lat": 56.673504,
+            "lon": -3.04453
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "8c boat",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/8C%20BOAT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-Q-3142",
+        "Depositor ID: Q-3142"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:913568",
+      "title": "Radiocarbon date, Sample number Q-3142",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2d3afab7473c9c3c2b9857bc03625481060def3afd5b59e9929e572a253e91f3",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914410",
+    "_source": "hsds",
+    "_sourceId": "914410",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/325d591f6d8a0e5c4965210b6b23ef0c9a569883cae45403ee0c4f9ec2683a5a",
+    "title": "Radiocarbon date, Sample number GrN-11442",
+    "description": "Charcoal from the larger of two EBA occupation spreads on pebbles placed on mudat Moynagh Lough, Brittas townland, Cruicetown parish, County Meath, Ireland.<br>Crannog site",
+    "creator": "J Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "4a occupation and 2b occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.817049,
+    "decimalLongitude": -6.757876,
+    "hsds": {
+      "elasticId": "325d591f6d8a0e5c4965210b6b23ef0c9a569883cae45403ee0c4f9ec2683a5a",
+      "originalId": "914410",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.817049,
+            "lon": -6.757876
+          },
+          "centroid": {
+            "lat": 53.817049,
+            "lon": -6.757876
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a occupation and 2b occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20OCCUPATION%20AND%202B%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GRN-11442",
+        "Depositor ID: GrN-11442"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:914410",
+      "title": "Radiocarbon date, Sample number GrN-11442",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/325d591f6d8a0e5c4965210b6b23ef0c9a569883cae45403ee0c4f9ec2683a5a",
+      "creator": "J Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919650",
+    "_source": "hsds",
+    "_sourceId": "919650",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c4ef16c8ff3ebddadcb621a45b0d534fb721420942ec9e0bcc8fb3d6222279ad",
+    "title": "Radiocarbon date, Sample number UB-3719",
+    "description": "Wood, id as alder, cut with sharp axe, from crannog structure tumble at Derryhowlaght Loch (East), Carry Bridge, Upper Erne Basin, Co Fermanagh, Northern Ireland. Comment (subm): site also yielded rotary quern, iron slag etc. Cal date range given.<br>",
+    "creator": "B B Williams",
+    "date": "1998-12-01",
+    "subject": [
+      "7b occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.27545,
+    "decimalLongitude": -7.539422,
+    "hsds": {
+      "elasticId": "c4ef16c8ff3ebddadcb621a45b0d534fb721420942ec9e0bcc8fb3d6222279ad",
+      "originalId": "919650",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.27545,
+            "lon": -7.539422
+          },
+          "centroid": {
+            "lat": 54.27545,
+            "lon": -7.539422
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-3719",
+        "Depositor ID: UB-3719"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:919650",
+      "title": "Radiocarbon date, Sample number UB-3719",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c4ef16c8ff3ebddadcb621a45b0d534fb721420942ec9e0bcc8fb3d6222279ad",
+      "creator": "B B Williams",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913512",
+    "_source": "hsds",
+    "_sourceId": "913512",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c2c30f9e52c57ef79e760a88f611739b05c92aa3c11343d7813332a5abbf4a7c",
+    "title": "Radiocarbon date, Sample number OxA-1720",
+    "description": "Wood, id as oak, from mainly Early Christian context in crannog: reference WAF 6 (National Museum of Ireland) at Lagore, Co Meath, Ireland. Subm B Coles. Comments (lab): Sample was reduced to cellulose to remove any contamination; (subm): Context was mainly Early Christian but date tends to confirm previously expressed doubts about figurine's association with context. National Museum of Ireland tends to view that this date is too old.<br>from heavily disturbed multiphase site",
+    "creator": "H Hencken",
+    "date": "1998-12-01",
+    "subject": [
+      "4e wooden anthropomorphic figurine",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.515912,
+    "decimalLongitude": -6.513393,
+    "hsds": {
+      "elasticId": "c2c30f9e52c57ef79e760a88f611739b05c92aa3c11343d7813332a5abbf4a7c",
+      "originalId": "913512",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.515912,
+            "lon": -6.513393
+          },
+          "centroid": {
+            "lat": 53.515912,
+            "lon": -6.513393
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4e wooden anthropomorphic figurine",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4E%20WOODEN%20ANTHROPOMORPHIC%20FIGURINE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1720-2",
+        "Depositor ID: OxA-1720"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:913512",
+      "title": "Radiocarbon date, Sample number OxA-1720",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c2c30f9e52c57ef79e760a88f611739b05c92aa3c11343d7813332a5abbf4a7c",
+      "creator": "H Hencken",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918978",
+    "_source": "hsds",
+    "_sourceId": "918978",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/3d0917b12c2579a67340819e65cd6f363aa5ad498761fe9d958b867c317ba382",
+    "title": "Radiocarbon date, Sample number OxA-3010",
+    "description": "Wood from trough, CE SHC9, found in Durness, Sutherland, Scotland. Subm C Earwood 1990. Comment (subm): artefact has a distinctive style paralleled by vessels from 6th-8th century crannog in Loch Glashan, Argyll and elsewhere, including Viking York. Date indicates the type in use for a considerable period of time. Also gives further chronology for practice of burying bog butter. [Ed: accurate NGRnot available for ancient bog find.]<br>Museum artefacts from Roy Mus Scotland",
+    "creator": "Caroline Earwood",
+    "date": "1998-12-01",
+    "subject": [
+      "7a artefact",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 58.495225,
+    "decimalLongitude": -4.917272,
+    "hsds": {
+      "elasticId": "3d0917b12c2579a67340819e65cd6f363aa5ad498761fe9d958b867c317ba382",
+      "originalId": "918978",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 58.495225,
+            "lon": -4.917272
+          },
+          "centroid": {
+            "lat": 58.495225,
+            "lon": -4.917272
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7a artefact",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7A%20ARTEFACT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3010-2",
+        "Depositor ID: OxA-3010"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:918978",
+      "title": "Radiocarbon date, Sample number OxA-3010",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/3d0917b12c2579a67340819e65cd6f363aa5ad498761fe9d958b867c317ba382",
+      "creator": "Caroline Earwood",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914361",
+    "_source": "hsds",
+    "_sourceId": "914361",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/04eccde72cb1a9dce1ca430552e0bd67ef0709de68d8ff11b0fa033e4571a798",
+    "title": "Radiocarbon date, Sample number HAR-6821",
+    "description": "Wood from piles below stone rubble containing BA pottery (preceding the dendro-dated phase) at Island MacHugh, Baronscourt, Co Tyrone, Ireland.<br>",
+    "creator": "R J Ivens, D D A Simpson and D Brown",
+    "date": "1998-12-01",
+    "subject": [
+      "4a crannog or 5c crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.699976,
+    "decimalLongitude": -7.435345,
+    "hsds": {
+      "elasticId": "04eccde72cb1a9dce1ca430552e0bd67ef0709de68d8ff11b0fa033e4571a798",
+      "originalId": "914361",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.699976,
+            "lon": -7.435345
+          },
+          "centroid": {
+            "lat": 54.699976,
+            "lon": -7.435345
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a crannog or 5c crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20CRANNOG%20OR%205C%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6821",
+        "Depositor ID: HAR-6821"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:914361",
+      "title": "Radiocarbon date, Sample number HAR-6821",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/04eccde72cb1a9dce1ca430552e0bd67ef0709de68d8ff11b0fa033e4571a798",
+      "creator": "R J Ivens, D D A Simpson and D Brown",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915126",
+    "_source": "hsds",
+    "_sourceId": "915126",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/40b76c4083f62dcd1fad02ce2738bc57ebc3afcec52b8e76c0241e54a1fbca29",
+    "title": "Radiocarbon date, Sample number UB-266",
+    "description": "Wood, id as oak beam, tied into floating tree-ring chronology at Teeshan no.9, Antrim, N Ireland. [Ed: date revised at 1970.]<br>",
+    "creator": "R Warner, A E P Collins",
+    "date": "1998-12-01",
+    "subject": [
+      "7b crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.906061,
+    "decimalLongitude": -6.311351,
+    "hsds": {
+      "elasticId": "40b76c4083f62dcd1fad02ce2738bc57ebc3afcec52b8e76c0241e54a1fbca29",
+      "originalId": "915126",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.906061,
+            "lon": -6.311351
+          },
+          "centroid": {
+            "lat": 54.906061,
+            "lon": -6.311351
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-266",
+        "Depositor ID: UB-266"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:915126",
+      "title": "Radiocarbon date, Sample number UB-266",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/40b76c4083f62dcd1fad02ce2738bc57ebc3afcec52b8e76c0241e54a1fbca29",
+      "creator": "R Warner, A E P Collins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915165",
+    "_source": "hsds",
+    "_sourceId": "915165",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d19539a64e25d6ff154ed19217ee4d7a89cd4a14047fd704bf8946c8856894cc",
+    "title": "Radiocarbon date, Sample number UB-743",
+    "description": "Wood from years 20-39 of 271-year-old tree at Teesham, Co Antrim, N Ireland.<br>",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "7b crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.906061,
+    "decimalLongitude": -6.311351,
+    "hsds": {
+      "elasticId": "d19539a64e25d6ff154ed19217ee4d7a89cd4a14047fd704bf8946c8856894cc",
+      "originalId": "915165",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.906061,
+            "lon": -6.311351
+          },
+          "centroid": {
+            "lat": 54.906061,
+            "lon": -6.311351
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-743",
+        "Depositor ID: UB-743"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:915165",
+      "title": "Radiocarbon date, Sample number UB-743",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d19539a64e25d6ff154ed19217ee4d7a89cd4a14047fd704bf8946c8856894cc",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915166",
+    "_source": "hsds",
+    "_sourceId": "915166",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b4af46b099c3c60cda7085a28d0d5ba181045da67b52f9435e8b68a1900520db",
+    "title": "Radiocarbon date, Sample number UB-742",
+    "description": "Wood from years 225-44 of 250-year-old tree at Teesham, Co Antrim, N Ireland.<br>",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "7b crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.906061,
+    "decimalLongitude": -6.311351,
+    "hsds": {
+      "elasticId": "b4af46b099c3c60cda7085a28d0d5ba181045da67b52f9435e8b68a1900520db",
+      "originalId": "915166",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.906061,
+            "lon": -6.311351
+          },
+          "centroid": {
+            "lat": 54.906061,
+            "lon": -6.311351
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-742",
+        "Depositor ID: UB-742"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:915166",
+      "title": "Radiocarbon date, Sample number UB-742",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b4af46b099c3c60cda7085a28d0d5ba181045da67b52f9435e8b68a1900520db",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915171",
+    "_source": "hsds",
+    "_sourceId": "915171",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9e6a2b5e21d89d514337073fbb81e8869c85b4a6cfb16efeb6506fa00a9af347",
+    "title": "Radiocarbon date, Sample number UB-769",
+    "description": "Wood, id as oak, from Lough Eyes, Co Fermanagh, N Ireland.<br>",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "7b crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.337289,
+    "decimalLongitude": -7.500291,
+    "hsds": {
+      "elasticId": "9e6a2b5e21d89d514337073fbb81e8869c85b4a6cfb16efeb6506fa00a9af347",
+      "originalId": "915171",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.337289,
+            "lon": -7.500291
+          },
+          "centroid": {
+            "lat": 54.337289,
+            "lon": -7.500291
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-769",
+        "Depositor ID: UB-769"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:915171",
+      "title": "Radiocarbon date, Sample number UB-769",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9e6a2b5e21d89d514337073fbb81e8869c85b4a6cfb16efeb6506fa00a9af347",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912022",
+    "_source": "hsds",
+    "_sourceId": "912022",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/702f0da7f48aca0ebc362b2856757ef6baaaeec645bb9adcf416009910294a32",
+    "title": "Radiocarbon date, Sample number K-2027",
+    "description": "Wood, id as oak, from structural pile at Milton Loch, Crocketford, Dumfries andGalloway, Scotland.<br>",
+    "creator": "D McArdle",
+    "date": "1998-12-01",
+    "subject": [
+      "5d crannog",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 55.027075,
+    "decimalLongitude": -3.816459,
+    "hsds": {
+      "elasticId": "702f0da7f48aca0ebc362b2856757ef6baaaeec645bb9adcf416009910294a32",
+      "originalId": "912022",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.027075,
+            "lon": -3.816459
+          },
+          "centroid": {
+            "lat": 55.027075,
+            "lon": -3.816459
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5d crannog",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5D%20CRANNOG"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-K-2027",
+        "Depositor ID: K-2027"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:38.715Z",
+      "query": "q:crannog",
+      "recordId": "hsds:912022",
+      "title": "Radiocarbon date, Sample number K-2027",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/702f0da7f48aca0ebc362b2856757ef6baaaeec645bb9adcf416009910294a32",
+      "creator": "D McArdle",
+      "date": "1998-12-01"
+    }
+  }
+]

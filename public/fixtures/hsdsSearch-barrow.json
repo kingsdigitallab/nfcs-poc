@@ -1,0 +1,4911 @@
+[
+  {
+    "id": "hsds:1158040",
+    "_source": "hsds",
+    "_sourceId": "1158040",
+    "_sourceUrl": "https://doi.org/10.5284/1046423",
+    "title": "Wor Barrow, Cranborne Chase, Dorset Chronological Modelling",
+    "description": "Wor Barrow is a well-known Neolithic 'long' barrow in Cranborne Chase, excavated  in 1893-4 by General Pitt Rivers, and first radiocarbon-dated by Richard Bradley.  Excavations were exceptionally well recorded and published by Pitt Rivers in 1898.  Many of the key artefacts were kept and are still curated at the Salisbury and South Wiltshire Museum, and are available for study along with the surviving original  field notebooks. The excavation itself was iconic, but the barrow's general plan and form have been discussed much more than the funerary element. As an oval barrow  it is traditionally thought to fall late within the currency of long barrows. This report examines the chronology, human remains, mortuary processes and development of the barrow in the Neolithic period.",
+    "creator": [
+      "C Bronk Ramsey",
+      "G Cook",
+      "Janet Montgomery",
+      "M Smith-Hughes",
+      "Mandy Jay",
+      "Michael Allen",
+      "Peter Marshall"
+    ],
+    "date": "2018-02-09",
+    "subject": [
+      "field survey",
+      "heritage science",
+      "human remains",
+      "long barrow",
+      "oval barrow",
+      "human remains",
+      "barrows",
+      "long barrows"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "Wor Barrow, Cranborne Chase, SIXPENNY HANDLEY, Dorset, Dorset, England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 50.9549756471074,
+    "decimalLongitude": -1.98373296078755,
+    "periodStart": "-4000",
+    "periodEnd": "-2200",
+    "periodName": "neolithic",
+    "hsds": {
+      "elasticId": "260185718b3770297f9d31f6d4510a1095fd30af7954fe8ec8156c822d34bd7b",
+      "originalId": "1158040",
+      "landingPage": "https://doi.org/10.5284/1046423",
+      "modified": "2025-08-11",
+      "contributor": [
+        "Historic England"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Wor Barrow, Cranborne Chase, SIXPENNY HANDLEY, Dorset, Dorset, England"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "geopoint": {
+            "lat": 50.9549756471074,
+            "lon": -1.98373296078755
+          },
+          "centroid": {
+            "lat": 50.9549756471074,
+            "lon": -1.98373296078755
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Wor Barrow, Cranborne Chase, SIXPENNY HANDLEY, Dorset, Dorset, England",
+        "England"
+      ],
+      "temporal": [
+        {
+          "from": "-4000",
+          "periodName": "neolithic",
+          "until": "-2200",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "field survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SURVEY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "human remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HUMAN%20REMAINS"
+        },
+        {
+          "prefLabel": "long barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LONG%20BARROW"
+        },
+        {
+          "prefLabel": "oval barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/OVAL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "human remains",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300379896",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "long barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391498",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": [
+        "OBIB 9/2016"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:1158040",
+      "title": "Wor Barrow, Cranborne Chase, Dorset Chronological Modelling",
+      "url": "https://doi.org/10.5284/1046423",
+      "creator": [
+        "C Bronk Ramsey",
+        "G Cook",
+        "Janet Montgomery",
+        "M Smith-Hughes",
+        "Mandy Jay",
+        "Michael Allen",
+        "Peter Marshall"
+      ],
+      "date": "2018-02-09"
+    }
+  },
+  {
+    "id": "hsds:1149900",
+    "_source": "hsds",
+    "_sourceId": "1149900",
+    "_sourceUrl": "https://doi.org/10.5284/1034238",
+    "title": "ROOSECOTE FARM,  DUNGEON LANE,  ROOSECOTE,  BARROW-IN-FURNESS,  CUMBRIA; TREE-RING ANALYSIS OF TIMBERS FROM THE BARN AND ADJACENT FARMHOUSE",
+    "description": "A total of 24 core samples were obtained from the timbers of these two adjacent buildings, 15 from the barn and nine from the farmhouse. Analysis by dendrochronology of these cores resulted in the production of a single dated site chronology comprising 11 samples. This site chronology is 207 rings long, these rings dated as spanning the years 1393-1599. Interpretation of the sapwood on the samples would indicate that timbers with different felling dates are to be found here. The earliest certain felling is represented by the south upper purlin to the west gable of the farmhouse, this being cut in 1504. The south lower purlin between trusses 2-3 may have been felled between 1531-56, but this is far from certain, while three other farmhouse purlins have an estimated felling date range of 1607-32. The earliest barn timber, the east lower purlin truss 1-2, has an estimated felling date range of 1516-41, while the west lower purlin truss 2-3 has an estimated felling date range of 1531-56. The east and west blades of truss 3 were probably felled together, these having an estimated felling date range of 1562-87. The latest felling found in the barn is represented by the tiebeams of truss 2 and 4, these having an estimated felling date range of 1603-28, again probably being felled together. It is possible that these tiebeams, and the three early-seventeenth century purlins of the farmhouse, were cut together as part of a single programme of felling.",
+    "creator": [
+      "Alison Arnold",
+      "Robert Howard"
+    ],
+    "date": "2015-05-11",
+    "subject": [
+      "barn",
+      "building survey",
+      "farmhouse",
+      "heritage science",
+      "tree-ring core samples",
+      "tree-ring core samples (phase 2)",
+      "agricultural buildings",
+      "farmhouses"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 54.1097760155558,
+    "decimalLongitude": -3.18492990652632,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": [
+      "medieval",
+      "post medieval"
+    ],
+    "hsds": {
+      "elasticId": "eb0a55a4da8307d650651600b41421335542c3e95eae9261432c39438040de76",
+      "originalId": "1149900",
+      "landingPage": "https://doi.org/10.5284/1034238",
+      "modified": "2025-08-21",
+      "contributor": [
+        "Nottingham Tree-ring Dating Laboratory"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Roosecote farm, Dungeon lane, Roosecote, Barrow-in-Furness, Cumbria, BARROW IN FURNESS, Cumbria, Barrow-in-Furness, England"
+        },
+        {
+          "geopoint": {
+            "lat": 54.1097760155558,
+            "lon": -3.18492990652632
+          },
+          "centroid": {
+            "lat": 54.1097760155558,
+            "lon": -3.18492990652632
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Roosecote farm, Dungeon lane, Roosecote, Barrow-in-Furness, Cumbria, BARROW IN FURNESS, Cumbria, Barrow-in-Furness, England"
+      ],
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        },
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1900",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARN"
+        },
+        {
+          "prefLabel": "building survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUILDING%20SURVEY"
+        },
+        {
+          "prefLabel": "farmhouse",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FARMHOUSE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "tree-ring core samples",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TREE-RING%20CORE%20SAMPLES"
+        },
+        {
+          "prefLabel": "tree-ring core samples (phase 2)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/TREE-RING%20CORE%20SAMPLES%20%28PHASE%202%29"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "agricultural buildings",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004900",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "farmhouses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005574",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": []
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:1149900",
+      "title": "ROOSECOTE FARM,  DUNGEON LANE,  ROOSECOTE,  BARROW-IN-FURNESS,  CUMBRIA; TREE-RING ANALYSIS OF TIMBERS FROM THE BARN AND ADJACENT FARMHOUSE",
+      "url": "https://doi.org/10.5284/1034238",
+      "creator": [
+        "Alison Arnold",
+        "Robert Howard"
+      ],
+      "date": "2015-05-11"
+    }
+  },
+  {
+    "id": "hsds:1187036",
+    "_source": "hsds",
+    "_sourceId": "1187036",
+    "_sourceUrl": "https://doi.org/10.5284/1089031",
+    "title": "Furness Abbey, Manor Road, Barrow-In-Furness, Cumbria: Tree-Ring Analysis and Radiocarbon Wiggle-Matching of the Presbytery Wall Foundation Raft Timbers",
+    "description": "Dendrochronological analysis was undertaken on 43 samples obtained as slices from a series of timbers used as a foundation raft for the presbytery walls at Furness Abbey, these timbers having being removed as part of emergency conservation works. This analysis produced one dated site chronology comprising 32 samples and having an overall length of 182 rings (BIFESQ01). These rings were dated as spanning the years AD 975-1156. Interpretation of the sapwood on the dated samples would suggest the likelihood that all the timbers were cut as part of a single programme of felling (though perhaps not all at exactly the same time) in the period AD 1165-90, and are thus likely to represent part of the earliest work on the extant Abbey. A second site chronology, BIFESQ02, comprising nine samples could also be created, this being 161 rings long. This site chronology could not be dated by dendrochronology, but the results of a radiocarbon wiggle match suggest it is likely that the sequence is broadly coeval with BIFESQ01. The remaining two samples were rejected from the analysis.",
+    "creator": [
+      "Alison Arnold",
+      "Cathy Tyers",
+      "E Dunbar",
+      "Peter Marshall",
+      "Robert Howard"
+    ],
+    "date": "2021-10-07",
+    "subject": [
+      "abbey",
+      "heritage science",
+      "wood",
+      "abbeys (monasteries)",
+      "wood (plant material)",
+      "wood by composition or origin"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 54.1372393234817,
+    "decimalLongitude": -3.19896945144328,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "hsds": {
+      "elasticId": "86858555ac3f40660c96e30b72c076bf31d96ee983a6af7bce36b7b5c34e991a",
+      "originalId": "1187036",
+      "landingPage": "https://doi.org/10.5284/1089031",
+      "modified": "2025-08-11",
+      "contributor": [
+        "Historic England"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Furness Abbey Presbytery, BARROW IN FURNESS, Cumbria, Barrow-in-Furness, England"
+        },
+        {
+          "geopoint": {
+            "lat": 54.1372393234817,
+            "lon": -3.19896945144328
+          },
+          "centroid": {
+            "lat": 54.1372393234817,
+            "lon": -3.19896945144328
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "Furness Abbey Presbytery, BARROW IN FURNESS, Cumbria, Barrow-in-Furness, England"
+      ],
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "abbey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ABBEY"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "wood",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WOOD"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "abbeys (monasteries)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300000642",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "wood (plant material)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300011914",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "wood by composition or origin",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300011915",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": [
+        "OBIB 47/2015"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:1187036",
+      "title": "Furness Abbey, Manor Road, Barrow-In-Furness, Cumbria: Tree-Ring Analysis and Radiocarbon Wiggle-Matching of the Presbytery Wall Foundation Raft Timbers",
+      "url": "https://doi.org/10.5284/1089031",
+      "creator": [
+        "Alison Arnold",
+        "Cathy Tyers",
+        "E Dunbar",
+        "Peter Marshall",
+        "Robert Howard"
+      ],
+      "date": "2021-10-07"
+    }
+  },
+  {
+    "id": "hsds:920160",
+    "_source": "hsds",
+    "_sourceId": "920160",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9eb77d6c07b7937635a688840cd238651f1a6d7f48520e891b4118f29f358bed",
+    "title": "Radiocarbon date, Sample number HAR-6227",
+    "description": "Charcoal, id as Fraxinus sp, from burnt area beneath barrow at Amesbury Barrow 61, Wiltshire, England.<br>Bowl barrow",
+    "creator": "Paul Ashbee",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.179136,
+    "decimalLongitude": -1.745322,
+    "hsds": {
+      "elasticId": "9eb77d6c07b7937635a688840cd238651f1a6d7f48520e891b4118f29f358bed",
+      "originalId": "920160",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.179136,
+            "lon": -1.745322
+          },
+          "centroid": {
+            "lat": 51.179136,
+            "lon": -1.745322
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6227",
+        "Depositor ID: HAR-6227"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920160",
+      "title": "Radiocarbon date, Sample number HAR-6227",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9eb77d6c07b7937635a688840cd238651f1a6d7f48520e891b4118f29f358bed",
+      "creator": "Paul Ashbee",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914769",
+    "_source": "hsds",
+    "_sourceId": "914769",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/af12da7a9df373c765e0d033fcd0a0c29db7a6b3c1fa0efcb0d9d56b256c9f27",
+    "title": "Radiocarbon date, Sample number HAR-5538",
+    "description": "Charcoal, AML 830775, from ditch surrounding barrow, antedating construction ofPhase 1 barrow and sealed by slumping from barrow at Church Lawton, Alsager, Cheshire, England. Subm R McNeil.<br>",
+    "creator": "R McNeil (Univ Liverpool Rescue Archaeol Comm) 1982",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.09786,
+    "decimalLongitude": -2.286773,
+    "hsds": {
+      "elasticId": "af12da7a9df373c765e0d033fcd0a0c29db7a6b3c1fa0efcb0d9d56b256c9f27",
+      "originalId": "914769",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.09786,
+            "lon": -2.286773
+          },
+          "centroid": {
+            "lat": 53.09786,
+            "lon": -2.286773
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5538",
+        "Depositor ID: HAR-5538"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:914769",
+      "title": "Radiocarbon date, Sample number HAR-5538",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/af12da7a9df373c765e0d033fcd0a0c29db7a6b3c1fa0efcb0d9d56b256c9f27",
+      "creator": "R McNeil (Univ Liverpool Rescue Archaeol Comm) 1982",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915466",
+    "_source": "hsds",
+    "_sourceId": "915466",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/44d892d96532c7650bde49fdeae9984122f008382b9f75224c2c9b196b7de176",
+    "title": "Radiocarbon date, Sample number BM-795",
+    "description": "Antler collagen in barrow ditch at Conquer Barrow, Mount Pleasant, Dorset, England.<br>",
+    "creator": "G J Wainwright",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 50.708336,
+    "decimalLongitude": -2.410755,
+    "hsds": {
+      "elasticId": "44d892d96532c7650bde49fdeae9984122f008382b9f75224c2c9b196b7de176",
+      "originalId": "915466",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 50.708336,
+            "lon": -2.410755
+          },
+          "centroid": {
+            "lat": 50.708336,
+            "lon": -2.410755
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-795",
+        "Depositor ID: BM-795"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:915466",
+      "title": "Radiocarbon date, Sample number BM-795",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/44d892d96532c7650bde49fdeae9984122f008382b9f75224c2c9b196b7de176",
+      "creator": "G J Wainwright",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918284",
+    "_source": "hsds",
+    "_sourceId": "918284",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e3520ad8c042fbdfc74f04edd4973f8ccf43dd65964ef366d86d875e374674e1",
+    "title": "Radiocarbon date, Sample number BM-2696",
+    "description": "Collagen from human long bone id by M Harman, ref F4906, from inhumation withinarc of burials assoc with pond barrow, F4866, from SW end of multiperiod cemetery site at Radley Barrow Hills, Abingdon, Oxfordshire, England. Comment (A Barclay, OAU): BM-2696 to -2698 come from 3 of 7 flat graves positioned with respect to pond barrow 4866. Collectively, suggest cemetery secondary to pond barrow.<br>Extensive ritual complex: oval barrow, ring ditches, pond barrows",
+    "creator": "Oxford Archaeol Unit 1983-5",
+    "date": "1998-12-01",
+    "subject": [
+      "4b pond barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.679747,
+    "decimalLongitude": -1.256498,
+    "hsds": {
+      "elasticId": "e3520ad8c042fbdfc74f04edd4973f8ccf43dd65964ef366d86d875e374674e1",
+      "originalId": "918284",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          },
+          "centroid": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b pond barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20POND%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2696",
+        "Depositor ID: BM-2696"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918284",
+      "title": "Radiocarbon date, Sample number BM-2696",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e3520ad8c042fbdfc74f04edd4973f8ccf43dd65964ef366d86d875e374674e1",
+      "creator": "Oxford Archaeol Unit 1983-5",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918285",
+    "_source": "hsds",
+    "_sourceId": "918285",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4a1e3102dd199159a87bc8296ae11aa34ce7ef4e3e82eb0bd140a48b5df1cd0b",
+    "title": "Radiocarbon date, Sample number BM-2697",
+    "description": "Collagen from human long bone id by M Harman, ref F4968 II, from adult inhumation overlain by infant inhumation, within arc of burials assoc with pond barrow, F4866, from SW end of multiperiod cemetery site at Radley Barrow Hills, Abingdon, Oxfordshire, England. Comment (A Barclay, OAU): BM-2696 to -2698 come from 3 of 7 flat graves positioned with respect to pond barrow 4866. Collectively, suggest cemetery secondary to pond barrow.<br>Extensive ritual complex: oval barrow, ring ditches, pond barrows",
+    "creator": "Oxford Archaeol Unit 1983-5",
+    "date": "1998-12-01",
+    "subject": [
+      "4b pond barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.679747,
+    "decimalLongitude": -1.256498,
+    "hsds": {
+      "elasticId": "4a1e3102dd199159a87bc8296ae11aa34ce7ef4e3e82eb0bd140a48b5df1cd0b",
+      "originalId": "918285",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          },
+          "centroid": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b pond barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20POND%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2697",
+        "Depositor ID: BM-2697"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918285",
+      "title": "Radiocarbon date, Sample number BM-2697",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4a1e3102dd199159a87bc8296ae11aa34ce7ef4e3e82eb0bd140a48b5df1cd0b",
+      "creator": "Oxford Archaeol Unit 1983-5",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918286",
+    "_source": "hsds",
+    "_sourceId": "918286",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/0d34744ee25b20ee1b6726385bc84263ddb45b0887ba97e49d522725e6f439e7",
+    "title": "Radiocarbon date, Sample number BM-2698",
+    "description": "Collagen from human long bone id by M Harman, ref F4970, from adult inhumation assoc with Food Vessel, within arc of burials assoc with pond barrow, F4866, from SW end of multiperiod cemetery site at Radley Barrow Hills, Abingdon, Oxfordshire, England. Comment (A Barclay, OAU): BM-2696 to -2698 come from 3 of 7 flat graves positioned with respect to pond barrow 4866. Collectively, suggest cemetery secondary to pond barrow.<br>Extensive ritual complex: oval barrow, ring ditches, pond barrows",
+    "creator": "Oxford Archaeol Unit 1983-5",
+    "date": "1998-12-01",
+    "subject": [
+      "4b pond barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.679747,
+    "decimalLongitude": -1.256498,
+    "hsds": {
+      "elasticId": "0d34744ee25b20ee1b6726385bc84263ddb45b0887ba97e49d522725e6f439e7",
+      "originalId": "918286",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          },
+          "centroid": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b pond barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20POND%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2698",
+        "Depositor ID: BM-2698"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918286",
+      "title": "Radiocarbon date, Sample number BM-2698",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/0d34744ee25b20ee1b6726385bc84263ddb45b0887ba97e49d522725e6f439e7",
+      "creator": "Oxford Archaeol Unit 1983-5",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920158",
+    "_source": "hsds",
+    "_sourceId": "920158",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e6911fc46762a03fdc5d16637615da0d5eee89c46c9427e8b84a8ed9772f3338",
+    "title": "Radiocarbon date, Sample number HAR-6226",
+    "description": "Charcoal, id as Acer sp, from occupation earth incorporated into loam core at Amesbury Barrow 58, Wiltshire, England.<br>Bell barrow",
+    "creator": "Paul Ashbee",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.178252,
+    "decimalLongitude": -1.752481,
+    "hsds": {
+      "elasticId": "e6911fc46762a03fdc5d16637615da0d5eee89c46c9427e8b84a8ed9772f3338",
+      "originalId": "920158",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.178252,
+            "lon": -1.752481
+          },
+          "centroid": {
+            "lat": 51.178252,
+            "lon": -1.752481
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6226",
+        "Depositor ID: HAR-6226"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920158",
+      "title": "Radiocarbon date, Sample number HAR-6226",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e6911fc46762a03fdc5d16637615da0d5eee89c46c9427e8b84a8ed9772f3338",
+      "creator": "Paul Ashbee",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920157",
+    "_source": "hsds",
+    "_sourceId": "920157",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f27da13b7f5c82c5b8bb79fdfe6f2ec51a5a580f80907a53f5a45fcd153904d0",
+    "title": "Radiocarbon date, Sample number HAR-1237",
+    "description": "Charcoal, id as Quercus sp, small sample, from oval area of burning at barrow centre, at Amesbury Barrow 39, Wiltshire, England.<br>",
+    "creator": "Paul Ashbee",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.176565,
+    "decimalLongitude": -1.812579,
+    "hsds": {
+      "elasticId": "f27da13b7f5c82c5b8bb79fdfe6f2ec51a5a580f80907a53f5a45fcd153904d0",
+      "originalId": "920157",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.176565,
+            "lon": -1.812579
+          },
+          "centroid": {
+            "lat": 51.176565,
+            "lon": -1.812579
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1237",
+        "Depositor ID: HAR-1237"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920157",
+      "title": "Radiocarbon date, Sample number HAR-1237",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f27da13b7f5c82c5b8bb79fdfe6f2ec51a5a580f80907a53f5a45fcd153904d0",
+      "creator": "Paul Ashbee",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913122",
+    "_source": "hsds",
+    "_sourceId": "913122",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1845b8bd5ead75355cb54eafbf4720ebdef3ef0ba4556bbeff806132ced255b6",
+    "title": "Radiocarbon date, Sample number HAR-8100",
+    "description": "Charcoal from Burial 3 under slate kerb at Treligga Barrow 2, Cornwall, England. Subm P Christie (1983). Comment (subm): Dates secondary burial in barrow.<br>",
+    "creator": "C K Croft Andrew (1941)",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 50.635707,
+    "decimalLongitude": -4.764995,
+    "hsds": {
+      "elasticId": "1845b8bd5ead75355cb54eafbf4720ebdef3ef0ba4556bbeff806132ced255b6",
+      "originalId": "913122",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 50.635707,
+            "lon": -4.764995
+          },
+          "centroid": {
+            "lat": 50.635707,
+            "lon": -4.764995
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8100",
+        "Depositor ID: HAR-8100"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:913122",
+      "title": "Radiocarbon date, Sample number HAR-8100",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1845b8bd5ead75355cb54eafbf4720ebdef3ef0ba4556bbeff806132ced255b6",
+      "creator": "C K Croft Andrew (1941)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912254",
+    "_source": "hsds",
+    "_sourceId": "912254",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/3d0a8b2ab5652727ea954cdca6c879ed66d0c29ab14d3b7053a7001ac8d44847",
+    "title": "Radiocarbon date, Sample number UB-2432",
+    "description": "Wood charcoal from pit under barrow at Ballygroll, Co Londonderry, Ireland. Comment [Ed]: grid ref. estimated only.<br>Earthen round barrow, stone-capped",
+    "creator": "B B Williams",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.961703,
+    "decimalLongitude": -7.172496,
+    "hsds": {
+      "elasticId": "3d0a8b2ab5652727ea954cdca6c879ed66d0c29ab14d3b7053a7001ac8d44847",
+      "originalId": "912254",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.961703,
+            "lon": -7.172496
+          },
+          "centroid": {
+            "lat": 54.961703,
+            "lon": -7.172496
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-2432",
+        "Depositor ID: UB-2432"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:912254",
+      "title": "Radiocarbon date, Sample number UB-2432",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/3d0a8b2ab5652727ea954cdca6c879ed66d0c29ab14d3b7053a7001ac8d44847",
+      "creator": "B B Williams",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918287",
+    "_source": "hsds",
+    "_sourceId": "918287",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/589c5226bf8075197b416a5c875bfba7b9ede679b2db9a97114247634c26783a",
+    "title": "Radiocarbon date, Sample number BM-2699",
+    "description": "Collagen from human bone, femur, id by M Harman, ref L607/2, from crouched inhumation, male, primary burial of Barrow 12, assoc with flint and bronze awl, fromSW end of multiperiod cemetery site at Radley Barrow Hills, Abingdon, Oxfordshire, England.<br>Extensive ritual complex: oval barrow, ring ditches, pond barrows",
+    "creator": "Oxford Archaeol Unit 1983-5",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.679747,
+    "decimalLongitude": -1.256498,
+    "hsds": {
+      "elasticId": "589c5226bf8075197b416a5c875bfba7b9ede679b2db9a97114247634c26783a",
+      "originalId": "918287",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          },
+          "centroid": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2699",
+        "Depositor ID: BM-2699"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918287",
+      "title": "Radiocarbon date, Sample number BM-2699",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/589c5226bf8075197b416a5c875bfba7b9ede679b2db9a97114247634c26783a",
+      "creator": "Oxford Archaeol Unit 1983-5",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920523",
+    "_source": "hsds",
+    "_sourceId": "920523",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/12d9a547ebe78d750960961f64361556a0a0fe5cb318966d8612af90a8a88560",
+    "title": "Radiocarbon date, Sample number HAR-8372",
+    "description": "Soil, AML 8650025, from F137, ritual pit containing cremated human bone and located towards periphery of mound at Buckskin II, Site I, Basingstoke, Hampshire, England. Subm M Morris, Winchester Archaeol Office. Comment (subm): unclear whether secondary burial; result provides chronological relationship with barrow mound and pre-barrow features.<br>Bell barrow",
+    "creator": "B Applin  1967/8",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 50.310312,
+    "decimalLongitude": -5.365637,
+    "hsds": {
+      "elasticId": "12d9a547ebe78d750960961f64361556a0a0fe5cb318966d8612af90a8a88560",
+      "originalId": "920523",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 50.310312,
+            "lon": -5.365637
+          },
+          "centroid": {
+            "lat": 50.310312,
+            "lon": -5.365637
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8372",
+        "Depositor ID: HAR-8372"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920523",
+      "title": "Radiocarbon date, Sample number HAR-8372",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/12d9a547ebe78d750960961f64361556a0a0fe5cb318966d8612af90a8a88560",
+      "creator": "B Applin  1967/8",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918519",
+    "_source": "hsds",
+    "_sourceId": "918519",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2185f07229ba4e3d2d8d54c6ea12c6a75726a9e8c35df727855011451a3c1a79",
+    "title": "Radiocarbon date, Sample number OxA-840",
+    "description": "Charcoal, id as oak, 600402, from pyre beneath bowl barrow G1 at Puncknowle, Dorset, England. Subm HBMC/Engl Herit 1986. Comment: is in close accord with the pottery chronology; suggests that this barrow and barrow G6 were constructed and used in period 3350-3250 BP.<br>",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "4b bowl barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 50.687398,
+    "decimalLongitude": -2.661164,
+    "hsds": {
+      "elasticId": "2185f07229ba4e3d2d8d54c6ea12c6a75726a9e8c35df727855011451a3c1a79",
+      "originalId": "918519",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 50.687398,
+            "lon": -2.661164
+          },
+          "centroid": {
+            "lat": 50.687398,
+            "lon": -2.661164
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BOWL%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-840-1",
+        "Depositor ID: OxA-840"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918519",
+      "title": "Radiocarbon date, Sample number OxA-840",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2185f07229ba4e3d2d8d54c6ea12c6a75726a9e8c35df727855011451a3c1a79",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920159",
+    "_source": "hsds",
+    "_sourceId": "920159",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d52cf77c818dd5d37c47bcf1ad3466cb673e30ba77e2759e497af5c95d031882",
+    "title": "Radiocarbon date, Sample number HAR-6225",
+    "description": "Charcoal, id as Fraxinus sp, from charcoal and burnt bone melange in Cremation Grave 2 at Amesbury Barrow 61, Wiltshire, England.<br>Bowl barrow",
+    "creator": "Paul Ashbee",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.179136,
+    "decimalLongitude": -1.745322,
+    "hsds": {
+      "elasticId": "d52cf77c818dd5d37c47bcf1ad3466cb673e30ba77e2759e497af5c95d031882",
+      "originalId": "920159",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.179136,
+            "lon": -1.745322
+          },
+          "centroid": {
+            "lat": 51.179136,
+            "lon": -1.745322
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6225",
+        "Depositor ID: HAR-6225"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920159",
+      "title": "Radiocarbon date, Sample number HAR-6225",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d52cf77c818dd5d37c47bcf1ad3466cb673e30ba77e2759e497af5c95d031882",
+      "creator": "Paul Ashbee",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918289",
+    "_source": "hsds",
+    "_sourceId": "918289",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d048d3e3624ad1729e53c91ee43eb258c46449057f9cc6ec3721e76929b1b9ed",
+    "title": "Radiocarbon date, Sample number BM-2701",
+    "description": "Collagen from human bone, femur, id by M Harman, ref L4583/C/1, from disarticulated inhumation laid in two deposits in pond barrow south of segmented ring ditch, from SW end of multiperiod cemetery site at Radley Barrow Hills, Abingdon, Oxfordshire, England. Comment (A Barclay, OAU): This and BM-2702 are for insertions into silted-up pond barrow 4583; results suggest burials are from Late Bronze Age with secondary insertions into monument; this is satisfactory, given their position high in pond barrow fill.<br>Extensive ritual complex: oval barrow, ringditches, pond barrows",
+    "creator": "Oxford Archaeol Unit 1983-5",
+    "date": "1998-12-01",
+    "subject": [
+      "4b pond barrow - secondaries",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.679747,
+    "decimalLongitude": -1.256498,
+    "hsds": {
+      "elasticId": "d048d3e3624ad1729e53c91ee43eb258c46449057f9cc6ec3721e76929b1b9ed",
+      "originalId": "918289",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          },
+          "centroid": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b pond barrow - secondaries",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20POND%20BARROW%20-%20SECONDARIES"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2701",
+        "Depositor ID: BM-2701"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918289",
+      "title": "Radiocarbon date, Sample number BM-2701",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d048d3e3624ad1729e53c91ee43eb258c46449057f9cc6ec3721e76929b1b9ed",
+      "creator": "Oxford Archaeol Unit 1983-5",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920522",
+    "_source": "hsds",
+    "_sourceId": "920522",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/def6d9d876fbdd4220da2ee879af4fd450d666c5831624b0885c5ea4c136feda",
+    "title": "Radiocarbon date, Sample number HAR-8371",
+    "description": "Fine charcoal and soil, AML 8650024, 2BS137, from F137, ritual pit containing cremated human bone and located towards periphery of mound at Buckskin II, Site I, Basingstoke, Hampshire, England. Subm M Morris, Winchester Archaeol Office. Comment (subm): pit may be secondary insertion; result provides chronological relationship with barrow mound and pre-barrow features.<br>Bell barrow",
+    "creator": "B Applin  1967/8",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 50.310312,
+    "decimalLongitude": -5.365637,
+    "hsds": {
+      "elasticId": "def6d9d876fbdd4220da2ee879af4fd450d666c5831624b0885c5ea4c136feda",
+      "originalId": "920522",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 50.310312,
+            "lon": -5.365637
+          },
+          "centroid": {
+            "lat": 50.310312,
+            "lon": -5.365637
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8371",
+        "Depositor ID: HAR-8371"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920522",
+      "title": "Radiocarbon date, Sample number HAR-8371",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/def6d9d876fbdd4220da2ee879af4fd450d666c5831624b0885c5ea4c136feda",
+      "creator": "B Applin  1967/8",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918814",
+    "_source": "hsds",
+    "_sourceId": "918814",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/5fa68dd53291f1a160e5e153bd432455c5d7bf601b76152c0834baa169e08058",
+    "title": "Radiocarbon date, Sample number OxA-1884",
+    "description": "Bone, id as human child, F605 I, crouched burial accompanied by Food Vessel in pit which cut central burial of barrow 12 in linear barrow cemetery at Barrow Hills, Radley, Oxfordshire, England. Subm C Halpin 1988. Comment (subm): satisfactory date; the earlier result for OxA-1887 on charcoal, perhaps long-lived. [Ed: see further comment in refs.]<br>",
+    "creator": "Oxford Archaeol Unit",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.678857,
+    "decimalLongitude": -1.257959,
+    "hsds": {
+      "elasticId": "5fa68dd53291f1a160e5e153bd432455c5d7bf601b76152c0834baa169e08058",
+      "originalId": "918814",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.678857,
+            "lon": -1.257959
+          },
+          "centroid": {
+            "lat": 51.678857,
+            "lon": -1.257959
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1884-2",
+        "Depositor ID: OxA-1884"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918814",
+      "title": "Radiocarbon date, Sample number OxA-1884",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/5fa68dd53291f1a160e5e153bd432455c5d7bf601b76152c0834baa169e08058",
+      "creator": "Oxford Archaeol Unit",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918293",
+    "_source": "hsds",
+    "_sourceId": "918293",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/7cf8a3c9749b9166d7b346adb52c97c5c828ee747184ed5c67c9ac318a476dc9",
+    "title": "Radiocarbon date, Sample number BM-2702",
+    "description": "Collagen from human bone, femur, id by M Harman, ref L4583/D/1, from articulated inhumation on edge of same pond barrow (south of segmented ring ditch) as thatdated by BM-2701, from SW end of multiperiod cemetery site at Radley Barrow Hills, Abingdon, Oxfordshire, England. Comment (A Barclay, OAU): This and BM-2701 are for insertions into silted-up pond barrow 4583; results suggest burials are from Late Bronze Age with secondary insertions into monument; this is satisfactory, given their position high in pond barrow fill.<br>Extensive ritual complex: oval barrow, ring ditches, pond barrows",
+    "creator": "Oxford Archaeol Unit 1983-5",
+    "date": "1998-12-01",
+    "subject": [
+      "4b pond barrow - secondaries",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.679747,
+    "decimalLongitude": -1.256498,
+    "hsds": {
+      "elasticId": "7cf8a3c9749b9166d7b346adb52c97c5c828ee747184ed5c67c9ac318a476dc9",
+      "originalId": "918293",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          },
+          "centroid": {
+            "lat": 51.679747,
+            "lon": -1.256498
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b pond barrow - secondaries",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20POND%20BARROW%20-%20SECONDARIES"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2702",
+        "Depositor ID: BM-2702"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918293",
+      "title": "Radiocarbon date, Sample number BM-2702",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/7cf8a3c9749b9166d7b346adb52c97c5c828ee747184ed5c67c9ac318a476dc9",
+      "creator": "Oxford Archaeol Unit 1983-5",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920830",
+    "_source": "hsds",
+    "_sourceId": "920830",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/24a91f2f1e31fa396501c7e732b5d6afb337c3e1cae558c3674ee946e0ff91e2",
+    "title": "Radiocarbon date, Sample number HAR-3362",
+    "description": "Peat overlying barrow section exposed in peat drain at Walcott (Witham Fen), Lincolnshire, England. Coll V Ancliffe, R Siddaway.<br>",
+    "creator": "peat overlying barrow",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.083686,
+    "decimalLongitude": -0.323165,
+    "hsds": {
+      "elasticId": "24a91f2f1e31fa396501c7e732b5d6afb337c3e1cae558c3674ee946e0ff91e2",
+      "originalId": "920830",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.083686,
+            "lon": -0.323165
+          },
+          "centroid": {
+            "lat": 53.083686,
+            "lon": -0.323165
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-3362",
+        "Depositor ID: HAR-3362"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920830",
+      "title": "Radiocarbon date, Sample number HAR-3362",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/24a91f2f1e31fa396501c7e732b5d6afb337c3e1cae558c3674ee946e0ff91e2",
+      "creator": "peat overlying barrow",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913121",
+    "_source": "hsds",
+    "_sourceId": "913121",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/241b7179f671a42ddca7aa083ec18d794e16f56111bc219850fe41da855392f4",
+    "title": "Radiocarbon date, Sample number HAR-8098",
+    "description": "Charcoal (AML 837122) from central deposit, Site XXIV, F2, sample DM 16 5/2 at Davidstow Moor Barrow 16, Cornwall, England. Subm P Christie (1983). Comment (subm): Gives primary date for barrow.<br>",
+    "creator": "C K Croft Andrew (1942)",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 50.639823,
+    "decimalLongitude": -4.626601,
+    "hsds": {
+      "elasticId": "241b7179f671a42ddca7aa083ec18d794e16f56111bc219850fe41da855392f4",
+      "originalId": "913121",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 50.639823,
+            "lon": -4.626601
+          },
+          "centroid": {
+            "lat": 50.639823,
+            "lon": -4.626601
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8098",
+        "Depositor ID: HAR-8098"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:913121",
+      "title": "Radiocarbon date, Sample number HAR-8098",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/241b7179f671a42ddca7aa083ec18d794e16f56111bc219850fe41da855392f4",
+      "creator": "C K Croft Andrew (1942)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918819",
+    "_source": "hsds",
+    "_sourceId": "918819",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d36a5789cb325ffa02f5045908949a321caa2dafd241e40cf7deb6a7aa22f183",
+    "title": "Radiocarbon date, Sample number OxA-1889",
+    "description": "Charcoal, id as oak and blackthorn, L611/C/2, indirectly associated with urned cremation (OxA-1873) in pond barrow F611/1-3 at Barrow Hills, Radley, Oxfordshire, England. Subm C Halpin 1988. Comment (subm): sample could have been associated with dispersed finds of flint and pottery recovered throughout pond barrow andNeolithic ring ditch. [Ed: see extended comment in refs.]<br>",
+    "creator": "Oxford Archaeol Unit",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.678857,
+    "decimalLongitude": -1.257959,
+    "hsds": {
+      "elasticId": "d36a5789cb325ffa02f5045908949a321caa2dafd241e40cf7deb6a7aa22f183",
+      "originalId": "918819",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.678857,
+            "lon": -1.257959
+          },
+          "centroid": {
+            "lat": 51.678857,
+            "lon": -1.257959
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1889-2",
+        "Depositor ID: OxA-1889"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918819",
+      "title": "Radiocarbon date, Sample number OxA-1889",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d36a5789cb325ffa02f5045908949a321caa2dafd241e40cf7deb6a7aa22f183",
+      "creator": "Oxford Archaeol Unit",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919007",
+    "_source": "hsds",
+    "_sourceId": "919007",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/94de8488934c9e053e5a3e865085878ac50c5c4c53d17a0a20d8170e82e3ab23",
+    "title": "Radiocarbon date, Sample number OxA-3001",
+    "description": "Seeds, waterlogged, ST128, from uppermost organic sediments in S ditch of long barrow at South Stanwick, Raunds, Northamptonshire, England. Subm M A Robinson 1991. Comment (subm and G Keevil): aim of date series was to date construction oflong barrow, establish whether this fell with date range of other earlier Neolithic monuments on Nene valley bottom, show whether the organic sediments in southern barrow ditch belonged to early life of barrow, date the secondary use of the monument as a focus for cremation burial, and establish whether this secondaryuse fell within date range of Bronze Age round barrow cemetery in valley bottom. All these aims were satisfactorily achieved. [Ed: see fuller comment in ref.] This date shows organic sediments of barrow ditch belong to earlier Neolithic [see ref for reconciliations of OxA-3001 to -3003].<br>",
+    "creator": "M A Robinson 1989",
+    "date": "1998-12-01",
+    "subject": [
+      "3c earthen long barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.328204,
+    "decimalLongitude": -0.583778,
+    "hsds": {
+      "elasticId": "94de8488934c9e053e5a3e865085878ac50c5c4c53d17a0a20d8170e82e3ab23",
+      "originalId": "919007",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.328204,
+            "lon": -0.583778
+          },
+          "centroid": {
+            "lat": 52.328204,
+            "lon": -0.583778
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3c earthen long barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3C%20EARTHEN%20LONG%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3001-2",
+        "Depositor ID: OxA-3001"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:919007",
+      "title": "Radiocarbon date, Sample number OxA-3001",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/94de8488934c9e053e5a3e865085878ac50c5c4c53d17a0a20d8170e82e3ab23",
+      "creator": "M A Robinson 1989",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918817",
+    "_source": "hsds",
+    "_sourceId": "918817",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f39d1afc3d51f5be545e6e51a29c11a5ed4af0b76f04f9b51f6ec1e5a7991ac5",
+    "title": "Radiocarbon date, Sample number OxA-1903",
+    "description": "Bone, id as human child, F5274, with associated blades etc, from outlier pit ofpond barrow F4866 at Barrow Hills, Radley, Oxfordshire, England. Subm C Halpin 1988. Comment (subm): compare OxA-1880. [Ed: see extended comment in refs.]<br>",
+    "creator": "Oxford Archaeol Unit",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.678857,
+    "decimalLongitude": -1.257959,
+    "hsds": {
+      "elasticId": "f39d1afc3d51f5be545e6e51a29c11a5ed4af0b76f04f9b51f6ec1e5a7991ac5",
+      "originalId": "918817",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.678857,
+            "lon": -1.257959
+          },
+          "centroid": {
+            "lat": 51.678857,
+            "lon": -1.257959
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1903-2",
+        "Depositor ID: OxA-1903"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918817",
+      "title": "Radiocarbon date, Sample number OxA-1903",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f39d1afc3d51f5be545e6e51a29c11a5ed4af0b76f04f9b51f6ec1e5a7991ac5",
+      "creator": "Oxford Archaeol Unit",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920095",
+    "_source": "hsds",
+    "_sourceId": "920095",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/7c4fc247606c5bb4598035f660e9dd3004b2a86234fb79245ab159fb52810d0f",
+    "title": "Radiocarbon date, Sample number OxA-4358",
+    "description": "Bone, RBH17(1), id as from male skeleton, unaccompanied, from pit 1, a grave within but eccentric to barrow 17 at Barrow Hills, Radley, Oxfordshire, England. Subm A Barclay 1993. Comment (F Healy): barrow excavated by Williams in 1944; relation of grave to monument remains uncertain; its location suggests that it may have been secondary. [Ed: NGR is from centre of complex.]<br>Neolithic - Bronze Age monument complex",
+    "creator": "A Barclay, C Halpin",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.680627,
+    "decimalLongitude": -1.25359,
+    "hsds": {
+      "elasticId": "7c4fc247606c5bb4598035f660e9dd3004b2a86234fb79245ab159fb52810d0f",
+      "originalId": "920095",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.680627,
+            "lon": -1.25359
+          },
+          "centroid": {
+            "lat": 51.680627,
+            "lon": -1.25359
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4358-2",
+        "Depositor ID: OxA-4358"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920095",
+      "title": "Radiocarbon date, Sample number OxA-4358",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/7c4fc247606c5bb4598035f660e9dd3004b2a86234fb79245ab159fb52810d0f",
+      "creator": "A Barclay, C Halpin",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914759",
+    "_source": "hsds",
+    "_sourceId": "914759",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/33ae40284d239266385b96133134d2c8636e8a154bc56460c91080ac966d64d6",
+    "title": "Radiocarbon date, Sample number HAR-5534",
+    "description": "Charcoal, AML 830769, from OGS sealed under barrow at Church Lawton, Alsager, Cheshire, England. Subm R McNeil. Comments (lab): Small sample accounts for larger than normal error term; (subm): Deposit associated with previous and early phase of barrow.<br>",
+    "creator": "R McNeil (Univ Liverpool Rescue Archaeol Comm) 1983",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.09786,
+    "decimalLongitude": -2.286773,
+    "hsds": {
+      "elasticId": "33ae40284d239266385b96133134d2c8636e8a154bc56460c91080ac966d64d6",
+      "originalId": "914759",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.09786,
+            "lon": -2.286773
+          },
+          "centroid": {
+            "lat": 53.09786,
+            "lon": -2.286773
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5534",
+        "Depositor ID: HAR-5534"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:914759",
+      "title": "Radiocarbon date, Sample number HAR-5534",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/33ae40284d239266385b96133134d2c8636e8a154bc56460c91080ac966d64d6",
+      "creator": "R McNeil (Univ Liverpool Rescue Archaeol Comm) 1983",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918818",
+    "_source": "hsds",
+    "_sourceId": "918818",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2b038d63d1203c56240d7a1244eb6e64aaed6bdf999dabaccea0d9b7def1932c",
+    "title": "Radiocarbon date, Sample number OxA-1873",
+    "description": "Charred bone, id as human, L611/D/2, from unidentified fragmentary urned cremation vessel in centre of pond barrow F611/1-3 at Barrow Hills, Radley, Oxfordshire, England. Subm C Halpin 1988. [Ed: see extended comment in refs.]<br>",
+    "creator": "Oxford Archaeol Unit",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.678857,
+    "decimalLongitude": -1.257959,
+    "hsds": {
+      "elasticId": "2b038d63d1203c56240d7a1244eb6e64aaed6bdf999dabaccea0d9b7def1932c",
+      "originalId": "918818",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.678857,
+            "lon": -1.257959
+          },
+          "centroid": {
+            "lat": 51.678857,
+            "lon": -1.257959
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1873-2",
+        "Depositor ID: OxA-1873"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:918818",
+      "title": "Radiocarbon date, Sample number OxA-1873",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2b038d63d1203c56240d7a1244eb6e64aaed6bdf999dabaccea0d9b7def1932c",
+      "creator": "Oxford Archaeol Unit",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914768",
+    "_source": "hsds",
+    "_sourceId": "914768",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4bcb526f7e2501dd2645aaf6575dda01d294a5108918a67821dcca15e5712ede",
+    "title": "Radiocarbon date, Sample number HAR-5537",
+    "description": "Charcoal, AML 830774, from burial lid of primary insertion into barrow at Church Lawton, Alsager, Cheshire, England. Subm R McNeil. Comment (subm): No skeleton(soil very acid); pit cuts OGS and is sealed by sand of Phase 1 barrow.<br>",
+    "creator": "R McNeil (Univ Liverpool Rescue Archaeol Comm) 1982",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.09786,
+    "decimalLongitude": -2.286773,
+    "hsds": {
+      "elasticId": "4bcb526f7e2501dd2645aaf6575dda01d294a5108918a67821dcca15e5712ede",
+      "originalId": "914768",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.09786,
+            "lon": -2.286773
+          },
+          "centroid": {
+            "lat": 53.09786,
+            "lon": -2.286773
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5537",
+        "Depositor ID: HAR-5537"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:914768",
+      "title": "Radiocarbon date, Sample number HAR-5537",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4bcb526f7e2501dd2645aaf6575dda01d294a5108918a67821dcca15e5712ede",
+      "creator": "R McNeil (Univ Liverpool Rescue Archaeol Comm) 1982",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913429",
+    "_source": "hsds",
+    "_sourceId": "913429",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/5d659ee52768fc6c0775b44c326394b080a37028aba9ba20ba87fb26384198ba",
+    "title": "Radiocarbon date, Sample number HAR-5262",
+    "description": "Charcoal, AML 824017, from Context 921, small pit under first phase mound of 2nd phase barrow at Southworth Hall Farm, Winwick, Cheshire, England. Coll D J Freke 1980. Subm D J Freke 1981. Comment (subm): Earliest date for barrow.<br>",
+    "creator": "D J Freke and R Holgate",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.437542,
+    "decimalLongitude": -2.573594,
+    "hsds": {
+      "elasticId": "5d659ee52768fc6c0775b44c326394b080a37028aba9ba20ba87fb26384198ba",
+      "originalId": "913429",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.437542,
+            "lon": -2.573594
+          },
+          "centroid": {
+            "lat": 53.437542,
+            "lon": -2.573594
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5262",
+        "Depositor ID: HAR-5262"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:913429",
+      "title": "Radiocarbon date, Sample number HAR-5262",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/5d659ee52768fc6c0775b44c326394b080a37028aba9ba20ba87fb26384198ba",
+      "creator": "D J Freke and R Holgate",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915509",
+    "_source": "hsds",
+    "_sourceId": "915509",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f226a2e66253a61fb50e6a7b7ab7873b7fdfbef9057c1576f6a94956f1ec163f",
+    "title": "Radiocarbon date, Sample number NPL-18",
+    "description": "Charcoal on pre-barrow surface at Codicote, Hertfordshire, England.<br>",
+    "creator": "E Greenfield",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.851572,
+    "decimalLongitude": -0.247376,
+    "hsds": {
+      "elasticId": "f226a2e66253a61fb50e6a7b7ab7873b7fdfbef9057c1576f6a94956f1ec163f",
+      "originalId": "915509",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.851572,
+            "lon": -0.247376
+          },
+          "centroid": {
+            "lat": 51.851572,
+            "lon": -0.247376
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-NPL-18",
+        "Depositor ID: NPL-18"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:915509",
+      "title": "Radiocarbon date, Sample number NPL-18",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f226a2e66253a61fb50e6a7b7ab7873b7fdfbef9057c1576f6a94956f1ec163f",
+      "creator": "E Greenfield",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913266",
+    "_source": "hsds",
+    "_sourceId": "913266",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/46a6ba472db81f80a0e8d0906ca974a11c71d93b04918fcd41eedbfa67dc8baf",
+    "title": "Radiocarbon date, Sample number HAR-8326",
+    "description": "Bone, id as human, AML 841214, from context 1L00131, tertiary burial cut through entirely filled barrow ditch in EBA Barrow Cemetery 1 at Heslerton, Vale of Pickering, Yorkshire North, England. Coll D Powlesland 1984. Comment (subm): Givestaq for stabilisation of ditch.<br>",
+    "creator": "D Powlesland",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 54.177686,
+    "decimalLongitude": -0.593356,
+    "hsds": {
+      "elasticId": "46a6ba472db81f80a0e8d0906ca974a11c71d93b04918fcd41eedbfa67dc8baf",
+      "originalId": "913266",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.177686,
+            "lon": -0.593356
+          },
+          "centroid": {
+            "lat": 54.177686,
+            "lon": -0.593356
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-8326",
+        "Depositor ID: HAR-8326"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:913266",
+      "title": "Radiocarbon date, Sample number HAR-8326",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/46a6ba472db81f80a0e8d0906ca974a11c71d93b04918fcd41eedbfa67dc8baf",
+      "creator": "D Powlesland",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913744",
+    "_source": "hsds",
+    "_sourceId": "913744",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e6e9bd101b042d10260fffe51749dff9364ab5a196948e2e93f29014fae4808b",
+    "title": "Radiocarbon date, Sample number HAR-3818",
+    "description": "Charcoal, id as mainly hawthorn, with fragments of blackthorn and hazel / alder, from unaccompanied cremation in pit F3, satellite burial? with minimum of 3 individuals represented, at Lambourn Barrow 19, Berkshire, England. Comment (subm): Gives approximate date of construction.<br>Bell barrow",
+    "creator": "Julian Richards",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.540843,
+    "decimalLongitude": -1.521226,
+    "hsds": {
+      "elasticId": "e6e9bd101b042d10260fffe51749dff9364ab5a196948e2e93f29014fae4808b",
+      "originalId": "913744",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.540843,
+            "lon": -1.521226
+          },
+          "centroid": {
+            "lat": 51.540843,
+            "lon": -1.521226
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-3818",
+        "Depositor ID: HAR-3818"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:913744",
+      "title": "Radiocarbon date, Sample number HAR-3818",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e6e9bd101b042d10260fffe51749dff9364ab5a196948e2e93f29014fae4808b",
+      "creator": "Julian Richards",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913359",
+    "_source": "hsds",
+    "_sourceId": "913359",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e48be6d2d9314bddb5829c5391054e60ee6fb0ebb563a1a20075312ae98362b3",
+    "title": "Radiocarbon date, Sample number HAR-5544",
+    "description": "Charcoal from context 65, loose chalk rubble derived from barrow, in ditch segment 6 with Neo pottery and human cranium (deliberate deposit?) at North Marden, Sussex West, England. Comment (subm): Dates barrow construction.<br>Denuded mound with Saxon intrusions",
+    "creator": "Peter Drewett",
+    "date": "1998-12-01",
+    "subject": [
+      "3d oval barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 50.933728,
+    "decimalLongitude": -0.859978,
+    "hsds": {
+      "elasticId": "e48be6d2d9314bddb5829c5391054e60ee6fb0ebb563a1a20075312ae98362b3",
+      "originalId": "913359",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 50.933728,
+            "lon": -0.859978
+          },
+          "centroid": {
+            "lat": 50.933728,
+            "lon": -0.859978
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3d oval barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3D%20OVAL%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5544",
+        "Depositor ID: HAR-5544"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:913359",
+      "title": "Radiocarbon date, Sample number HAR-5544",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e48be6d2d9314bddb5829c5391054e60ee6fb0ebb563a1a20075312ae98362b3",
+      "creator": "Peter Drewett",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920857",
+    "_source": "hsds",
+    "_sourceId": "920857",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/03846c8e97a40b22ffc4f0af629d1915bd14f994133213d6b84112c861b5c830",
+    "title": "Radiocarbon date, Sample number HAR-6471",
+    "description": "Charcoal from SE grave, Barrow 1 at Milton Lilbourne - Milton Hill Farm Barrow 1 -, Wiltshire, England. Subm Paul Ashbee 1984.<br>Barrow group",
+    "creator": "Paul Ashbee 1958",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrows",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.319354,
+    "decimalLongitude": -1.714409,
+    "hsds": {
+      "elasticId": "03846c8e97a40b22ffc4f0af629d1915bd14f994133213d6b84112c861b5c830",
+      "originalId": "920857",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.319354,
+            "lon": -1.714409
+          },
+          "centroid": {
+            "lat": 51.319354,
+            "lon": -1.714409
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrows",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROWS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6471",
+        "Depositor ID: HAR-6471"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920857",
+      "title": "Radiocarbon date, Sample number HAR-6471",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/03846c8e97a40b22ffc4f0af629d1915bd14f994133213d6b84112c861b5c830",
+      "creator": "Paul Ashbee 1958",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920860",
+    "_source": "hsds",
+    "_sourceId": "920860",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a31de83e4515f5ff5d9e66ea9f199c3ffb0acc67b572f7ee621f7b5e74ffe9ba",
+    "title": "Radiocarbon date, Sample number HAR-6453",
+    "description": "Charcoal from spread in Barrow 4 at Milton Lilbourne - Milton Hill Farm Barrow 4 -, Wiltshire, England. Subm Paul Ashbee 1984.<br>Barrow group",
+    "creator": "Paul Ashbee 1958",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrows",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.318454,
+    "decimalLongitude": -1.714415,
+    "hsds": {
+      "elasticId": "a31de83e4515f5ff5d9e66ea9f199c3ffb0acc67b572f7ee621f7b5e74ffe9ba",
+      "originalId": "920860",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          },
+          "centroid": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrows",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROWS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6453",
+        "Depositor ID: HAR-6453"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920860",
+      "title": "Radiocarbon date, Sample number HAR-6453",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a31de83e4515f5ff5d9e66ea9f199c3ffb0acc67b572f7ee621f7b5e74ffe9ba",
+      "creator": "Paul Ashbee 1958",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920845",
+    "_source": "hsds",
+    "_sourceId": "920845",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/79c2e79aaaf6ddda5319583904155fb55e00630d4229b66809f21cae31f3d2ce",
+    "title": "Radiocarbon date, Sample number HAR-6458",
+    "description": "Wood from timber baulk in Barrow 4 at Milton Lilbourne - Milton Hill Farm Barrow 4 -, Wiltshire, England. Subm Paul Ashbee 1984.<br>Barrow group",
+    "creator": "Paul Ashbee 1958",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrows",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.318454,
+    "decimalLongitude": -1.714415,
+    "hsds": {
+      "elasticId": "79c2e79aaaf6ddda5319583904155fb55e00630d4229b66809f21cae31f3d2ce",
+      "originalId": "920845",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          },
+          "centroid": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrows",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROWS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6458",
+        "Depositor ID: HAR-6458"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920845",
+      "title": "Radiocarbon date, Sample number HAR-6458",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/79c2e79aaaf6ddda5319583904155fb55e00630d4229b66809f21cae31f3d2ce",
+      "creator": "Paul Ashbee 1958",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920854",
+    "_source": "hsds",
+    "_sourceId": "920854",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/dd795f1413d26a385fc9c1053a2ccb47942a0aed772fc9b41ec736de21183244",
+    "title": "Radiocarbon date, Sample number HAR-6472",
+    "description": "Charcoal from loam core of bell barrow at Milton Lilbourne - Milton Hill Farm Barrow 2 -, Wiltshire, England. Subm Paul Ashbee 1984.<br>Barrow group",
+    "creator": "Paul Ashbee 1958",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrows",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.318454,
+    "decimalLongitude": -1.714415,
+    "hsds": {
+      "elasticId": "dd795f1413d26a385fc9c1053a2ccb47942a0aed772fc9b41ec736de21183244",
+      "originalId": "920854",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          },
+          "centroid": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrows",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROWS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6472",
+        "Depositor ID: HAR-6472"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920854",
+      "title": "Radiocarbon date, Sample number HAR-6472",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/dd795f1413d26a385fc9c1053a2ccb47942a0aed772fc9b41ec736de21183244",
+      "creator": "Paul Ashbee 1958",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920855",
+    "_source": "hsds",
+    "_sourceId": "920855",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/6ad8be1c8744e98fc6fd17acfcb69c8be128fa652d7ac95b948308299f7c8ad9",
+    "title": "Radiocarbon date, Sample number HAR-6456",
+    "description": "Charcoal from loam core of bell barrow at Milton Lilbourne - Milton Hill Farm Barrow 2 -, Wiltshire, England. Subm Paul Ashbee 1984.<br>Barrow group",
+    "creator": "Paul Ashbee 1958",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrows",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.318454,
+    "decimalLongitude": -1.714415,
+    "hsds": {
+      "elasticId": "6ad8be1c8744e98fc6fd17acfcb69c8be128fa652d7ac95b948308299f7c8ad9",
+      "originalId": "920855",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          },
+          "centroid": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrows",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROWS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6456",
+        "Depositor ID: HAR-6456"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920855",
+      "title": "Radiocarbon date, Sample number HAR-6456",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/6ad8be1c8744e98fc6fd17acfcb69c8be128fa652d7ac95b948308299f7c8ad9",
+      "creator": "Paul Ashbee 1958",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920858",
+    "_source": "hsds",
+    "_sourceId": "920858",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/05330bbaa60dfaa94c9979cb3c97bf148020897ce0161b4a3d7122882f5c2dbe",
+    "title": "Radiocarbon date, Sample number HAR-6454",
+    "description": "Wood from timber baulk in Barrow 4 at Milton Lilbourne - Milton Hill Farm Barrow 4 -, Wiltshire, England. Subm Paul Ashbee 1984.<br>Barrow group",
+    "creator": "Paul Ashbee 1958",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrows",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.318454,
+    "decimalLongitude": -1.714415,
+    "hsds": {
+      "elasticId": "05330bbaa60dfaa94c9979cb3c97bf148020897ce0161b4a3d7122882f5c2dbe",
+      "originalId": "920858",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          },
+          "centroid": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrows",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROWS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6454",
+        "Depositor ID: HAR-6454"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920858",
+      "title": "Radiocarbon date, Sample number HAR-6454",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/05330bbaa60dfaa94c9979cb3c97bf148020897ce0161b4a3d7122882f5c2dbe",
+      "creator": "Paul Ashbee 1958",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920859",
+    "_source": "hsds",
+    "_sourceId": "920859",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/953090ff4515c68e9f664a38e727823aea61dc72963b4ad4bc0315f1fb6a6528",
+    "title": "Radiocarbon date, Sample number HAR-6457",
+    "description": "Wood from timber baulk in Barrow 4 at Milton Lilbourne - Milton Hill Farm Barrow 4 -, Wiltshire, England. Subm Paul Ashbee 1984.<br>Barrow group",
+    "creator": "Paul Ashbee 1958",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrows",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.318454,
+    "decimalLongitude": -1.714415,
+    "hsds": {
+      "elasticId": "953090ff4515c68e9f664a38e727823aea61dc72963b4ad4bc0315f1fb6a6528",
+      "originalId": "920859",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          },
+          "centroid": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrows",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROWS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6457",
+        "Depositor ID: HAR-6457"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920859",
+      "title": "Radiocarbon date, Sample number HAR-6457",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/953090ff4515c68e9f664a38e727823aea61dc72963b4ad4bc0315f1fb6a6528",
+      "creator": "Paul Ashbee 1958",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920861",
+    "_source": "hsds",
+    "_sourceId": "920861",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/35f00811e882e8d9eaa75a0c59d7bddb8d84df4471fe0f24169e3e40e8661274",
+    "title": "Radiocarbon date, Sample number HAR-6455",
+    "description": "Charcoal from loam core of Barrow 4 at Milton Lilbourne - Milton Hill Farm Barrow 4 -, Wiltshire, England. Subm Paul Ashbee 1984.<br>Barrow group",
+    "creator": "Paul Ashbee 1958",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrows",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.318454,
+    "decimalLongitude": -1.714415,
+    "hsds": {
+      "elasticId": "35f00811e882e8d9eaa75a0c59d7bddb8d84df4471fe0f24169e3e40e8661274",
+      "originalId": "920861",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          },
+          "centroid": {
+            "lat": 51.318454,
+            "lon": -1.714415
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrows",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROWS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6455",
+        "Depositor ID: HAR-6455"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:920861",
+      "title": "Radiocarbon date, Sample number HAR-6455",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/35f00811e882e8d9eaa75a0c59d7bddb8d84df4471fe0f24169e3e40e8661274",
+      "creator": "Paul Ashbee 1958",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919237",
+    "_source": "hsds",
+    "_sourceId": "919237",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d9f662c443b1f24f59f7f6ee21f4e4e37133e933db082ff45d792f2eb804724e",
+    "title": "Radiocarbon date, Sample number OxA-3762",
+    "description": "Tooth, id as red deer, 2336/245/249, from primary fill of ditch of long barrow at Easton Down, Bishop's Canning, N Wiltshire, England. Subm A Whittle 1992. Comment (subm): eastern part of barrow had been dug into by J Thurnham (1850s) who recovered scattered remains (now lost) of four individuals. The 1991 samples come from buried turfline and barrow ditch fills. Date of barrow may be bracketed by OxA-3760 and -3759... perhaps c 3500--3400 [cal?] BC. Or OxA-3762 may better represent date of construction (c 3350--3100 [cal?] BC. [further discussion in ref. re related barrows in area.]<br>",
+    "creator": "A Whittle",
+    "date": "1998-12-01",
+    "subject": [
+      "3c earthen long barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.393406,
+    "decimalLongitude": -1.908003,
+    "hsds": {
+      "elasticId": "d9f662c443b1f24f59f7f6ee21f4e4e37133e933db082ff45d792f2eb804724e",
+      "originalId": "919237",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.393406,
+            "lon": -1.908003
+          },
+          "centroid": {
+            "lat": 51.393406,
+            "lon": -1.908003
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3c earthen long barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3C%20EARTHEN%20LONG%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3762-2",
+        "Depositor ID: OxA-3762"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:919237",
+      "title": "Radiocarbon date, Sample number OxA-3762",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d9f662c443b1f24f59f7f6ee21f4e4e37133e933db082ff45d792f2eb804724e",
+      "creator": "A Whittle",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919234",
+    "_source": "hsds",
+    "_sourceId": "919234",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/32e2f5a30c032668489bb5dc4384f29fab78c51577e0d00fa5c3d3ad8c8edcd4",
+    "title": "Radiocarbon date, Sample number OxA-3759",
+    "description": "Bone, id as Bos humerus, 2531/240, from surface of buried turfline of long barrow at Easton Down, Bishop's Canning, N Wiltshire, England. Subm A Whittle 1992. Comment (subm): eastern part of barrow had been dug into by J Thurnham (1850s) who recovered scattered remains (now lost) of four individuals. The 1991 samples come from buried turfline and barrow ditch fills. Date of barrow may be bracketed by OxA-3760 and -3759... perhaps c 3500--3400 [cal?] BC. Or OxA-3762 may better represent date of construction (c 3350--3100 [cal?] BC. [further discussion inref. re related barrows in area.]<br>",
+    "creator": "A Whittle",
+    "date": "1998-12-01",
+    "subject": [
+      "3c earthen long barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.393406,
+    "decimalLongitude": -1.908003,
+    "hsds": {
+      "elasticId": "32e2f5a30c032668489bb5dc4384f29fab78c51577e0d00fa5c3d3ad8c8edcd4",
+      "originalId": "919234",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.393406,
+            "lon": -1.908003
+          },
+          "centroid": {
+            "lat": 51.393406,
+            "lon": -1.908003
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3c earthen long barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3C%20EARTHEN%20LONG%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3759-2",
+        "Depositor ID: OxA-3759"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:919234",
+      "title": "Radiocarbon date, Sample number OxA-3759",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/32e2f5a30c032668489bb5dc4384f29fab78c51577e0d00fa5c3d3ad8c8edcd4",
+      "creator": "A Whittle",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919235",
+    "_source": "hsds",
+    "_sourceId": "919235",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/ea37b4d58d54631919ca80f929bc1ff448884c1ad3480c70bf9c1d1ac01c5551",
+    "title": "Radiocarbon date, Sample number OxA-3760",
+    "description": "Antler, id as red deer, 2450/249, from primary fill of ditch of long barrow at Easton Down, Bishop's Canning, N Wiltshire, England. Subm A Whittle 1992. Comment (subm): eastern part of barrow had been dug into by J Thurnham (1850s) who recovered scattered remains (now lost) of four individuals. The 1991 samples come from buried turfline and barrow ditch fills. Date of barrow may be bracketed by OxA-3760 and -3759... perhaps c 3500--3400 [cal?] BC. Or OxA-3762 may better represent date of construction (c 3350--3100 [cal?] BC. [further discussion in ref. re related barrows in area.]<br>",
+    "creator": "A Whittle",
+    "date": "1998-12-01",
+    "subject": [
+      "3c earthen long barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.393406,
+    "decimalLongitude": -1.908003,
+    "hsds": {
+      "elasticId": "ea37b4d58d54631919ca80f929bc1ff448884c1ad3480c70bf9c1d1ac01c5551",
+      "originalId": "919235",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.393406,
+            "lon": -1.908003
+          },
+          "centroid": {
+            "lat": 51.393406,
+            "lon": -1.908003
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3c earthen long barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3C%20EARTHEN%20LONG%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3760-2",
+        "Depositor ID: OxA-3760"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:919235",
+      "title": "Radiocarbon date, Sample number OxA-3760",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/ea37b4d58d54631919ca80f929bc1ff448884c1ad3480c70bf9c1d1ac01c5551",
+      "creator": "A Whittle",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919236",
+    "_source": "hsds",
+    "_sourceId": "919236",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/97dcbd40f03f84d90501251bfe7c27faea7b819507d4c73994626bc280c37d78",
+    "title": "Radiocarbon date, Sample number OxA-3761",
+    "description": "Tooth, id as Bos, 1191/116, from upper secondary ditch fill of long barrow at Easton Down, Bishop's Canning, N Wiltshire, England. Subm A Whittle 1992. Comment(subm): eastern part of barrow had been dug into by J Thurnham (1850s) who recovered scattered remains (now lost) of four individuals. The 1991 samples come from buried turfline and barrow ditch fills. Date of barrow may be bracketed by OxA-3760 and -3759... perhaps c 3500--3400 [cal?] BC. Or OxA-3762 may better represent date of construction (c 3350--3100 [cal?] BC. [further discussion in ref. re related barrows in area.]<br>",
+    "creator": "A Whittle",
+    "date": "1998-12-01",
+    "subject": [
+      "3c earthen long barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.393406,
+    "decimalLongitude": -1.908003,
+    "hsds": {
+      "elasticId": "97dcbd40f03f84d90501251bfe7c27faea7b819507d4c73994626bc280c37d78",
+      "originalId": "919236",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.393406,
+            "lon": -1.908003
+          },
+          "centroid": {
+            "lat": 51.393406,
+            "lon": -1.908003
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3c earthen long barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3C%20EARTHEN%20LONG%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3761-2",
+        "Depositor ID: OxA-3761"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:919236",
+      "title": "Radiocarbon date, Sample number OxA-3761",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/97dcbd40f03f84d90501251bfe7c27faea7b819507d4c73994626bc280c37d78",
+      "creator": "A Whittle",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919060",
+    "_source": "hsds",
+    "_sourceId": "919060",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/cb40a4a070d0439f748adb987d472e23e60da73b9d7a5ebd17b765799bd72427",
+    "title": "Radiocarbon date, Sample number OxA-2989",
+    "description": "Charcoal, id as oak, ST126, from cremation burial to NE of long barrow at SouthStanwick, Raunds, Northamptonshire, England. Subm M A Robinson 1991. Comment (subm and G Keevil): aim of date series was to date construction of long barrow, establish whether this fell with date range of other earlier Neolithic monuments on Nene valley bottom, show whether the organic sediments in southern barrow ditch belonged to early life of barrow, date the secondary use of the monument as afocus for cremation burial, and establish whether this secondary use fell within date range of Bronze Age round barrow cemetery in valley bottom. All these aims were satisfactorily achieved. [Ed: see fuller comment in ref.] This date fallswithin range of valley bottom barrows (cf OxA-3052).<br>",
+    "creator": "M A Robinson 1989",
+    "date": "1998-12-01",
+    "subject": [
+      "4b cremation near long barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.328204,
+    "decimalLongitude": -0.583778,
+    "hsds": {
+      "elasticId": "cb40a4a070d0439f748adb987d472e23e60da73b9d7a5ebd17b765799bd72427",
+      "originalId": "919060",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.328204,
+            "lon": -0.583778
+          },
+          "centroid": {
+            "lat": 52.328204,
+            "lon": -0.583778
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b cremation near long barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20CREMATION%20NEAR%20LONG%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2989-2",
+        "Depositor ID: OxA-2989"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:919060",
+      "title": "Radiocarbon date, Sample number OxA-2989",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/cb40a4a070d0439f748adb987d472e23e60da73b9d7a5ebd17b765799bd72427",
+      "creator": "M A Robinson 1989",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913257",
+    "_source": "hsds",
+    "_sourceId": "913257",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a5be55077712d33e22cf74540ac782331d56d4b7241c7e1ef8511ed102e3cfc7",
+    "title": "Radiocarbon date, Sample number HAR-6630",
+    "description": "Bone, id as human, AML 841216, from primary burial within EBA barrow. at Heslerton, Vale of Pickering, Yorkshire North, England. Coll D J Powlesland 1977-82. Comment (subm): Bones in this burial were disturbed for insertion of secondary burial IR304, HAR-6631 (3510 +/- 80).<br>Barrow cemetery",
+    "creator": "D J Powlesland",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 54.175907,
+    "decimalLongitude": -0.594948,
+    "hsds": {
+      "elasticId": "a5be55077712d33e22cf74540ac782331d56d4b7241c7e1ef8511ed102e3cfc7",
+      "originalId": "913257",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.175907,
+            "lon": -0.594948
+          },
+          "centroid": {
+            "lat": 54.175907,
+            "lon": -0.594948
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6630",
+        "Depositor ID: HAR-6630"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:913257",
+      "title": "Radiocarbon date, Sample number HAR-6630",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a5be55077712d33e22cf74540ac782331d56d4b7241c7e1ef8511ed102e3cfc7",
+      "creator": "D J Powlesland",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914699",
+    "_source": "hsds",
+    "_sourceId": "914699",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b63f43cb5e08bfaa0cd800da46a88138cb7e71f10846337a7fdcd1c6215e2a35",
+    "title": "Radiocarbon date, Sample number HAR-6569",
+    "description": "Charcoal, AML 842808, id as oak, from context 1304, secondary cremation inserted into mound of barrow, sample assoc with pot and spoon-like artefact at MintlynWood, Bawsey, Norfolk, England. Subm P Murphy 1984.<br>secondary cremations from barrow (primary burial had broken Beaker and stain of bier)",
+    "creator": "P Murphy",
+    "date": "1998-12-01",
+    "subject": [
+      "4b barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.749808,
+    "decimalLongitude": 0.464232,
+    "hsds": {
+      "elasticId": "b63f43cb5e08bfaa0cd800da46a88138cb7e71f10846337a7fdcd1c6215e2a35",
+      "originalId": "914699",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.749808,
+            "lon": 0.464232
+          },
+          "centroid": {
+            "lat": 52.749808,
+            "lon": 0.464232
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6569",
+        "Depositor ID: HAR-6569"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:36.147Z",
+      "query": "q:barrow",
+      "recordId": "hsds:914699",
+      "title": "Radiocarbon date, Sample number HAR-6569",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b63f43cb5e08bfaa0cd800da46a88138cb7e71f10846337a7fdcd1c6215e2a35",
+      "creator": "P Murphy",
+      "date": "1998-12-01"
+    }
+  }
+]

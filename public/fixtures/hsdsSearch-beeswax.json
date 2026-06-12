@@ -1,0 +1,176 @@
+[
+  {
+    "id": "hsds:917164",
+    "_source": "hsds",
+    "_sourceId": "917164",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a185c4d5144c31e4b0e7a13fc5a77fff80025310a9655eaf7beea3833e3a8105",
+    "title": "Radiocarbon date, Sample number OxA-2342",
+    "description": "other:Pine resin & beeswax<br>Lackford Heath, England",
+    "creator": "Roberts",
+    "date": "1998-12-01",
+    "subject": [
+      "bm# 1950.7-1",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "a185c4d5144c31e4b0e7a13fc5a77fff80025310a9655eaf7beea3833e3a8105",
+      "originalId": "917164",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "bm# 1950.7-1",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BM%23%201950.7-1"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2342-1",
+        "Depositor ID: OxA-2342"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:19.434Z",
+      "query": "q:beeswax",
+      "recordId": "hsds:917164",
+      "title": "Radiocarbon date, Sample number OxA-2342",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a185c4d5144c31e4b0e7a13fc5a77fff80025310a9655eaf7beea3833e3a8105",
+      "creator": "Roberts",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915218",
+    "_source": "hsds",
+    "_sourceId": "915218",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/51e20fdbc3dd7cb6a97632a8417dcbcd64dacc64cbbb511f4a8ac8aa321db509",
+    "title": "Radiocarbon date, Sample number BM-640",
+    "description": "Beeswax from iron lamp at Sutton Hoo, Suffolk, England.<br>",
+    "creator": "R L S Bruce-Mitford ?",
+    "date": "1998-12-01",
+    "subject": [
+      "7c ship burial",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.088745,
+    "decimalLongitude": 1.338766,
+    "hsds": {
+      "elasticId": "51e20fdbc3dd7cb6a97632a8417dcbcd64dacc64cbbb511f4a8ac8aa321db509",
+      "originalId": "915218",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.088745,
+            "lon": 1.338766
+          },
+          "centroid": {
+            "lat": 52.088745,
+            "lon": 1.338766
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c ship burial",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20SHIP%20BURIAL"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-640",
+        "Depositor ID: BM-640"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:19.434Z",
+      "query": "q:beeswax",
+      "recordId": "hsds:915218",
+      "title": "Radiocarbon date, Sample number BM-640",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/51e20fdbc3dd7cb6a97632a8417dcbcd64dacc64cbbb511f4a8ac8aa321db509",
+      "creator": "R L S Bruce-Mitford ?",
+      "date": "1998-12-01"
+    }
+  }
+]

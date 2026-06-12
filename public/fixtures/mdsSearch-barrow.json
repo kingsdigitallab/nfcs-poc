@@ -1,0 +1,4876 @@
+[
+  {
+    "id": "mds:b36af220-6246-3780-8f56-a137b70e8f31",
+    "_source": "mds",
+    "_sourceId": "HMCMS:SH2005.101",
+    "_sourceUrl": "https://museumdata.uk/objects/b36af220-6246-3780-8f56-a137b70e8f31",
+    "title": "MDS Record 1",
+    "description": "barrow, flat bed wooden barrow, two leaf sprung wheels, hard rubber tyres, two supporting legs at rear of barrow, two handles to help push it along",
+    "subject": [
+      "barrow; flat bed wooden barrow; barrow; flat bed wooden barrow",
+      "barrow; flat bed wooden barrow; barrow; flat bed wooden barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Hampshire Cultural Trust",
+    "mds": {
+      "uuid": "b36af220-6246-3780-8f56-a137b70e8f31",
+      "objectNumber": "HMCMS:SH2005.101",
+      "dimensions": [
+        "wxhxd",
+        "1187",
+        "624",
+        "735"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "barrow; flat bed wooden barrow; barrow; flat bed wooden barrow"
+        ],
+        "Brief description": [
+          "barrow, flat bed wooden barrow, two leaf sprung wheels, hard rubber tyres, two supporting legs at rear of barrow, two handles to help push it along"
+        ],
+        "Collection": [
+          "Hampshire Cultural Trust"
+        ],
+        "Credit line": [
+          "Part of the Hampshire County Collections managed by Hampshire Cultural Trust"
+        ],
+        "Dimension": [
+          "wxhxd"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "1187",
+          "624",
+          "735"
+        ],
+        "Object name": [
+          "barrow; flat bed wooden barrow; barrow; flat bed wooden barrow"
+        ],
+        "Object number": [
+          "HMCMS:SH2005.101"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:b36af220-6246-3780-8f56-a137b70e8f31",
+      "title": "MDS Record 1",
+      "url": "https://museumdata.uk/objects/b36af220-6246-3780-8f56-a137b70e8f31"
+    }
+  },
+  {
+    "id": "mds:de88ff47-2f27-39e2-a161-c12271a8fdf7",
+    "_source": "mds",
+    "_sourceId": "co8408013",
+    "_sourceUrl": "https://museumdata.uk/objects/de88ff47-2f27-39e2-a161-c12271a8fdf7",
+    "title": "Barrow",
+    "description": "Barrow for carrying coal to retorts.",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "de88ff47-2f27-39e2-a161-c12271a8fdf7",
+      "objectNumber": "co8408013",
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "57 1/16",
+        "1450",
+        "20 1/2",
+        "520",
+        "31 1/2",
+        "800",
+        "30 7/8",
+        "785",
+        "23 15/16",
+        "608",
+        "60 5/8",
+        "1540"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Barrow"
+        ],
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "Barrow for carrying coal to retorts."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Gift of North West Gas Archives"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "57 1/16",
+          "1450",
+          "20 1/2",
+          "520",
+          "31 1/2",
+          "800",
+          "30 7/8",
+          "785",
+          "23 15/16",
+          "608",
+          "60 5/8",
+          "1540"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Other number": [
+          "Y1991.122.35"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SIM - Gas Industry"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:de88ff47-2f27-39e2-a161-c12271a8fdf7",
+      "title": "Barrow",
+      "url": "https://museumdata.uk/objects/de88ff47-2f27-39e2-a161-c12271a8fdf7"
+    }
+  },
+  {
+    "id": "mds:a48d3558-1402-3fc5-a3c5-7c8af2ca26b9",
+    "_source": "mds",
+    "_sourceId": "co45457",
+    "_sourceUrl": "https://museumdata.uk/objects/a48d3558-1402-3fc5-a3c5-7c8af2ca26b9",
+    "title": "London Market Barrow, Single Rail",
+    "description": "London market barrow, single rail",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "a48d3558-1402-3fc5-a3c5-7c8af2ca26b9",
+      "objectNumber": "co45457",
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "42 1/2",
+        "1080",
+        "92 1/2",
+        "2350"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "London Market Barrow, Single Rail"
+        ],
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "London market barrow, single rail"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Howard, E. and Sons"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "42 1/2",
+          "1080",
+          "92 1/2",
+          "2350"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Other number": [
+          "1979-802",
+          "1006/45/053"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Hand and Machine Tools"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:a48d3558-1402-3fc5-a3c5-7c8af2ca26b9",
+      "title": "London Market Barrow, Single Rail",
+      "url": "https://museumdata.uk/objects/a48d3558-1402-3fc5-a3c5-7c8af2ca26b9"
+    }
+  },
+  {
+    "id": "mds:ef5a5487-fa64-3108-b3ca-dccabd43b2c5",
+    "_source": "mds",
+    "_sourceId": "co212301",
+    "_sourceUrl": "https://museumdata.uk/objects/ef5a5487-fa64-3108-b3ca-dccabd43b2c5",
+    "title": "Six Model Platform Barrows, c 1960",
+    "description": "Model platform barrows (6), OO gauge, 3 diecast by Dinky, 3 plastic, England, c 1960.",
+    "creator": "Dinky",
+    "date": "1955",
+    "subject": [
+      "model - representation; platform barrow; model - representation; platform barrow",
+      "model - representation; platform barrow; model - representation; platform barrow",
+      "model - representation",
+      "platform barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "ef5a5487-fa64-3108-b3ca-dccabd43b2c5",
+      "objectNumber": "co212301",
+      "material": [
+        "plastic (unidentified)",
+        "metal (unknown)"
+      ],
+      "place": [
+        "England, United Kingdom"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Six Model Platform Barrows, c 1960"
+        ],
+        "Object name(s)": [
+          "model - representation; platform barrow; model - representation; platform barrow"
+        ],
+        "Brief description": [
+          "Model platform barrows (6), OO gauge, 3 diecast by Dinky, 3 plastic, England, c 1960."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "model - representation",
+          "platform barrow"
+        ],
+        "Credit line": [
+          "Jeffrey, P.H."
+        ],
+        "Material": [
+          "plastic (unidentified)",
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "model - representation; platform barrow; model - representation; platform barrow"
+        ],
+        "Date - earliest / single": [
+          "1955"
+        ],
+        "Date - latest": [
+          "1965"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Dinky"
+        ],
+        "Object production place": [
+          "England, United Kingdom"
+        ],
+        "Other number": [
+          "1982-7072",
+          "38/2",
+          "82/18/2/30"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Railway Models"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:ef5a5487-fa64-3108-b3ca-dccabd43b2c5",
+      "title": "Six Model Platform Barrows, c 1960",
+      "url": "https://museumdata.uk/objects/ef5a5487-fa64-3108-b3ca-dccabd43b2c5",
+      "creator": "Dinky",
+      "date": "1955"
+    }
+  },
+  {
+    "id": "mds:8f8753d5-2e51-3549-9659-ff1c6e73f20e",
+    "_source": "mds",
+    "_sourceId": "RNSM",
+    "_sourceUrl": "https://museumdata.uk/objects/8f8753d5-2e51-3549-9659-ff1c6e73f20e",
+    "title": "Baxter",
+    "description": "Various S-class, T-class, U-class, V-class, X-craft, some foreign boats and A-class. 1. HMS/m 'Truculent' [T-class] (as 'P315') at Barrow, 1942. View from broad on starboard quarter. (5290). 2. HMS/m 'Taurus' [T-class]. On trials at Barrow. View from starboard bow. (5294). 3. HMS/m 'Tantalus' [T-class] under way at sea, at speed. Aerial view from starboard bow. (5298). 4. HMS/m 'Tally-Ho' [T-class]. On trials at Barrow. View from broad on starboard quarter. (5289). 5. Probably HMS/m 'Taurus' [T-class]. On trials at Barrow. View from port bow. (5295). 6. HMS/m 'Tantalus' [T-class]. Under way, at speed, from the air. (5297). 7. HMS/m 'Tantalus' [T-class] under way in harbour. View from port quarter. 8. HMS/m 'Taurus' [T-class] in harbour. View from almosgt port beam. (5293). 9. HMS/m 'Taurus' [T-class]. Close-up view of oerlikon gun. Barrow. (5302) 10. HMS/m 'Turbulent'(1) [T-class] on trials at Barrow. View from almost starboard beam. (5272). 11. Unidentified T-class submarine on trials at Barrow. (5273). 12. HMS/m 'P311' (unnamed) [T-class]. At Barrow on trials. Note her Jolly Roger flying. Probably because her Captain, R D Cayley had come from HMS/m 'Utmost' [U-class], from which flag it may be. View from broad on port quarter. (5271). 13. HMS/m 'Tactician' [T-class] on trials at Barrow. View from port quarter. (5305). 14. HMS/m 'Seraph' [1940 S-class] on trials at Barrow. View from starboard bow. (5260A) 15. HMS/m 'Seraph' [1940 S-class] on trials at Barrow. View from starboard quarter. (5260B). 16. HMS/m 'P222' (unnamed) [1940 S-class] on trials at Barrow. View from broad on port quarter. (5259). 17. HMS/m 'Shakespeare' [1940 S-class] on trials at Barrow. View from starboard quarter. (5258). 18. An unidentified XE-craft (Midget) on trials at Barrow. 1 crew member on casing. View from port beam. 19. An unidentified XE-craft (Midget) on trials at Barrow. Coming alongside. 2 men on casing. (5257). 20. An unidentified XE-craft (Midget) on trials at Barrow. 1 crew member on casing. View from broad on starboard bow. 21. HMS/m 'Sea Rover' [1940 S-class] on trials at Barrow. View from broad on port bow. (5254). 22. HMS/m 'Shakespeare' [1940 S-class] on trials at Barrow. View from starboard beam. (5256). 23. HMS/m 'Sirdar' [1940 S-class] on trials at Barrow. View from starboard bow. (5255). 24. HMS/m 'Sea Rover' [1940 S-class] on trials at Barrow. View from broad on port quarter. (5253). 25. HMS/m 'Sea Rover' [1940 S-class] on trials at Barrow. View from starboard quarter. (5254). 26. HMS/m 'Vigorous' [V-class] on trials at Barrow. View from port bow. (5296). 27. HMS/m 'Vigorous' [V-class] on trials at Barrow. View from port quarter. (5303). 28. Norwegian submarine 'Ula' [Ex-British U-class 'Varne'(1)] at Barrow. View from starboard bow. (5301). 29. HMS/m 'Vox'(1) [U-class] on trials at Barrow. View from high over starboard beam. (5300). 30. HMS/m 'Vampire' [U-class] on trials at Barrow. View from port beam. (5292). 31. HMS/m 'Vox'(2) (V-class) on trials at Barrow. View from starboard bow. (5299). 32. HMS/m 'Unshaken' [U-class] on trials at Barrow. View from almost starboard beam. (5288). 33. HMS/m 'Vandal' [V-class] on trials at Barrow. View from starboard beam. (5291). 34. HMS/m 'Vox'(1) [U-class] on trials at Barrow. View from port beam. (5280). 35. An unidentified U-class submarine on trials at Barrow. View from port bow. (5279). 36. HMS/m 'P48' (unnamed) (U-class) on trials at Barrow. View from almost starboard beam. (5287). 37. HMS/m 'P48' (unnamed) [U-class] on trials at Barrow. View from port quarter. (5285). 38. HMS/m 'P48' (unnamed) [U-class] on trials at Barrow. View from starboard quarter. (5281). 39. Dutch submarine HNethMS/m 'Dolfijn'(1) on trials at Barrow ('P47'). View from port beam. (5284). 40. HMS/m 'P38' (unnamed) [U-class] on trials at Barrow. View from broad on starboard quarter. (5282). 41. HMS/m 'P39' [U-class] leaving the Vickers yard at Barrow. View from broad on starboard bow. (5286). 42. Norwegian submarine 'Uredd' on trials at Barrow. View from almost starboard beam. (5277). 43. HMS/m 'Unrivalled' [U-class] on trials at Barrow. View from broad on port quarter. (5276). 44. HMS/m 'Undine' [U-class] on trials at Barrow. View from starboard beam. (5263). 45. HMS/m 'Unity' [U-class] on trials at Barrow. View from port beam. (5264). 46. Polish submarine 'Dzik' on trials at Barrow. Close up of midships from port.(5284). 47. Polish submarine 'Dzik' on trials at Barrow. View from port quarter. 49. An unidentified U-class submarine on trials at Barrow. View from starboard quarter. (5278). 50. HMS/m 'Ultor' [U-class] on trials at Barrow. View from almost starboard beam. (5304). 51. HMS/m 'Amphion' (A-class) under way. View from broad on port bow. 52. HMS/m 'Teredo' (T-class) under way at sea. View from broad on port quarter.",
+    "subject": [
+      "photographs; photograph",
+      "photographs; photograph"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "8f8753d5-2e51-3549-9659-ff1c6e73f20e",
+      "objectNumber": "RNSM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Baxter"
+        ],
+        "Object name(s)": [
+          "photographs; photograph"
+        ],
+        "Brief description": [
+          "Various S-class, T-class, U-class, V-class, X-craft, some foreign boats and A-class. 1. HMS/m 'Truculent' [T-class] (as 'P315') at Barrow, 1942. View from broad on starboard quarter. (5290). 2. HMS/m 'Taurus' [T-class]. On trials at Barrow. View from starboard bow. (5294). 3. HMS/m 'Tantalus' [T-class] under way at sea, at speed. Aerial view from starboard bow. (5298). 4. HMS/m 'Tally-Ho' [T-class]. On trials at Barrow. View from broad on starboard quarter. (5289). 5. Probably HMS/m 'Taurus' [T-class]. On trials at Barrow. View from port bow. (5295). 6. HMS/m 'Tantalus' [T-class]. Under way, at speed, from the air. (5297). 7. HMS/m 'Tantalus' [T-class] under way in harbour. View from port quarter. 8. HMS/m 'Taurus' [T-class] in harbour. View from almosgt port beam. (5293). 9. HMS/m 'Taurus' [T-class]. Close-up view of oerlikon gun. Barrow. (5302) 10. HMS/m 'Turbulent'(1) [T-class] on trials at Barrow. View from almost starboard beam. (5272). 11. Unidentified T-class submarine on trials at Barrow. (5273). 12. HMS/m 'P311' (unnamed) [T-class]. At Barrow on trials. Note her Jolly Roger flying. Probably because her Captain, R D Cayley had come from HMS/m 'Utmost' [U-class], from which flag it may be. View from broad on port quarter. (5271). 13. HMS/m 'Tactician' [T-class] on trials at Barrow. View from port quarter. (5305). 14. HMS/m 'Seraph' [1940 S-class] on trials at Barrow. View from starboard bow. (5260A) 15. HMS/m 'Seraph' [1940 S-class] on trials at Barrow. View from starboard quarter. (5260B). 16. HMS/m 'P222' (unnamed) [1940 S-class] on trials at Barrow. View from broad on port quarter. (5259). 17. HMS/m 'Shakespeare' [1940 S-class] on trials at Barrow. View from starboard quarter. (5258). 18. An unidentified XE-craft (Midget) on trials at Barrow. 1 crew member on casing. View from port beam. 19. An unidentified XE-craft (Midget) on trials at Barrow. Coming alongside. 2 men on casing. (5257). 20. An unidentified XE-craft (Midget) on trials at Barrow. 1 crew member on casing. View from broad on starboard bow. 21. HMS/m 'Sea Rover' [1940 S-class] on trials at Barrow. View from broad on port bow. (5254). 22. HMS/m 'Shakespeare' [1940 S-class] on trials at Barrow. View from starboard beam. (5256). 23. HMS/m 'Sirdar' [1940 S-class] on trials at Barrow. View from starboard bow. (5255). 24. HMS/m 'Sea Rover' [1940 S-class] on trials at Barrow. View from broad on port quarter. (5253). 25. HMS/m 'Sea Rover' [1940 S-class] on trials at Barrow. View from starboard quarter. (5254). 26. HMS/m 'Vigorous' [V-class] on trials at Barrow. View from port bow. (5296). 27. HMS/m 'Vigorous' [V-class] on trials at Barrow. View from port quarter. (5303). 28. Norwegian submarine 'Ula' [Ex-British U-class 'Varne'(1)] at Barrow. View from starboard bow. (5301). 29. HMS/m 'Vox'(1) [U-class] on trials at Barrow. View from high over starboard beam. (5300). 30. HMS/m 'Vampire' [U-class] on trials at Barrow. View from port beam. (5292). 31. HMS/m 'Vox'(2) (V-class) on trials at Barrow. View from starboard bow. (5299). 32. HMS/m 'Unshaken' [U-class] on trials at Barrow. View from almost starboard beam. (5288). 33. HMS/m 'Vandal' [V-class] on trials at Barrow. View from starboard beam. (5291). 34. HMS/m 'Vox'(1) [U-class] on trials at Barrow. View from port beam. (5280). 35. An unidentified U-class submarine on trials at Barrow. View from port bow. (5279). 36. HMS/m 'P48' (unnamed) (U-class) on trials at Barrow. View from almost starboard beam. (5287). 37. HMS/m 'P48' (unnamed) [U-class] on trials at Barrow. View from port quarter. (5285). 38. HMS/m 'P48' (unnamed) [U-class] on trials at Barrow. View from starboard quarter. (5281). 39. Dutch submarine HNethMS/m 'Dolfijn'(1) on trials at Barrow ('P47'). View from port beam. (5284). 40. HMS/m 'P38' (unnamed) [U-class] on trials at Barrow. View from broad on starboard quarter. (5282). 41. HMS/m 'P39' [U-class] leaving the Vickers yard at Barrow. View from broad on starboard bow. (5286). 42. Norwegian submarine 'Uredd' on trials at Barrow. View from almost starboard beam. (5277). 43. HMS/m 'Unrivalled' [U-class] on trials at Barrow. View from broad on port quarter. (5276). 44. HMS/m 'Undine' [U-class] on trials at Barrow. View from starboard beam. (5263). 45. HMS/m 'Unity' [U-class] on trials at Barrow. View from port beam. (5264). 46. Polish submarine 'Dzik' on trials at Barrow. Close up of midships from port.(5284). 47. Polish submarine 'Dzik' on trials at Barrow. View from port quarter. 49. An unidentified U-class submarine on trials at Barrow. View from starboard quarter. (5278). 50. HMS/m 'Ultor' [U-class] on trials at Barrow. View from almost starboard beam. (5304). 51. HMS/m 'Amphion' (A-class) under way. View from broad on port bow. 52. HMS/m 'Teredo' (T-class) under way at sea. View from broad on port quarter."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated person": [
+          "Cayley, Richard, Douglas (DSO**)"
+        ],
+        "Object name": [
+          "photographs; photograph"
+        ],
+        "Object number": [
+          "RNSM 99/R010(DP)(1-51)"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:8f8753d5-2e51-3549-9659-ff1c6e73f20e",
+      "title": "Baxter",
+      "url": "https://museumdata.uk/objects/8f8753d5-2e51-3549-9659-ff1c6e73f20e"
+    }
+  },
+  {
+    "id": "mds:34f56fa6-3008-39c4-aa1b-16426823c400",
+    "_source": "mds",
+    "_sourceId": "co210177",
+    "_sourceUrl": "https://museumdata.uk/objects/34f56fa6-3008-39c4-aa1b-16426823c400",
+    "title": "Sack barrow, Keighley Station",
+    "description": "Sack barrow, ex Keighley Station, two wheeled, marked M8833, 'Keighley 1-2-0'.",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "34f56fa6-3008-39c4-aa1b-16426823c400",
+      "objectNumber": "co210177",
+      "dimensions": [
+        "height",
+        "width",
+        "87",
+        "2209.8",
+        "36",
+        "914.4"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Sack barrow, Keighley Station"
+        ],
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "Sack barrow, ex Keighley Station, two wheeled, marked M8833, 'Keighley 1-2-0'."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "87",
+          "2209.8",
+          "36",
+          "914.4"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Other number": [
+          "1986-7313",
+          "NRM 86/17/34",
+          "147/466"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:34f56fa6-3008-39c4-aa1b-16426823c400",
+      "title": "Sack barrow, Keighley Station",
+      "url": "https://museumdata.uk/objects/34f56fa6-3008-39c4-aa1b-16426823c400"
+    }
+  },
+  {
+    "id": "mds:8851213b-fc07-3d27-aa90-8f22e1719883",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1983.673",
+    "_sourceUrl": "https://museumdata.uk/objects/8851213b-fc07-3d27-aa90-8f22e1719883",
+    "title": "British Barrows Near Stonehenge",
+    "description": "copper engraving, 13 drawings of Barrows by P.Crocker, engraving Swaine; published 1823",
+    "creator": [
+      "Crocker, P",
+      "Swaine, J",
+      "Nichols & Sons"
+    ],
+    "subject": [
+      "barrow; print; engraving",
+      "barrow; print; engraving",
+      "fine art",
+      "prints",
+      "environment",
+      "archaeology"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "8851213b-fc07-3d27-aa90-8f22e1719883",
+      "objectNumber": "DZSWS:1983.673",
+      "material": [
+        "paper"
+      ],
+      "place": [
+        "Amesbury",
+        "Stonehenge",
+        "Wiltshire"
+      ],
+      "condition": "fair",
+      "dimensions": [
+        "height",
+        "width",
+        "212",
+        "184"
+      ],
+      "personAssociation": [
+        "artist",
+        "engraver"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "British Barrows Near Stonehenge"
+        ],
+        "Object name(s)": [
+          "barrow; print; engraving"
+        ],
+        "Brief description": [
+          "copper engraving, 13 drawings of Barrows by P.Crocker, engraving Swaine; published 1823"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "fine art",
+          "prints",
+          "environment",
+          "archaeology"
+        ],
+        "Association type": [
+          "antecedant"
+        ],
+        "Condition": [
+          "fair"
+        ],
+        "Content - note": [
+          "1) Bell Barrow 2) Long Barrow 3) Bowl Barrow 4) Druid Barrow 5) Druid Barrow 6) Pond Barrow 7) Twin Barrow ; () West View of Stonehenge 8) Cone Barrow 9) Broad Barrow  10) Druid Barrow 11) Druid Barrow 12) Long Barrow"
+        ],
+        "Content - place": [
+          "Amesbury",
+          "Stonehenge",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County",
+          "stone circle"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "212",
+          "184"
+        ],
+        "Material": [
+          "paper"
+        ],
+        "Object name": [
+          "barrow; print; engraving"
+        ],
+        "Object number": [
+          "DZSWS:1983.673"
+        ],
+        "Object production organisation": [
+          "Nichols & Sons"
+        ],
+        "Organisation's function": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "Crocker, P",
+          "Swaine, J"
+        ],
+        "Person's association": [
+          "artist",
+          "engraver"
+        ],
+        "Use reference number": [
+          "previous number"
+        ],
+        "User's reference": [
+          "vol 1, p 170/171"
+        ],
+        "Reference author / editor": [
+          "Hoare, R C, Sir"
+        ],
+        "Reference publication date": [
+          "Ancient Wilts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:8851213b-fc07-3d27-aa90-8f22e1719883",
+      "title": "British Barrows Near Stonehenge",
+      "url": "https://museumdata.uk/objects/8851213b-fc07-3d27-aa90-8f22e1719883",
+      "creator": [
+        "Crocker, P",
+        "Swaine, J",
+        "Nichols & Sons"
+      ]
+    }
+  },
+  {
+    "id": "mds:34ffbacb-7f37-3305-b335-59fddbbbb6cf",
+    "_source": "mds",
+    "_sourceId": "co506254",
+    "_sourceUrl": "https://museumdata.uk/objects/34ffbacb-7f37-3305-b335-59fddbbbb6cf",
+    "title": "Sack Barrow, North Eastern Railway",
+    "description": "Sack barrow, North Eastern Railway, York No 6.",
+    "creator": "North Eastern Railway",
+    "date": "1854",
+    "subject": [
+      "sack barrow; sack barrow",
+      "sack barrow; sack barrow",
+      "sack barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "34ffbacb-7f37-3305-b335-59fddbbbb6cf",
+      "objectNumber": "co506254",
+      "material": [
+        "metal (unknown)",
+        "wood (unidentified)"
+      ],
+      "place": [
+        "unknown place"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "25 3/16",
+        "640",
+        "43 1/8",
+        "1095",
+        "20 1/16",
+        "510"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Sack Barrow, North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "sack barrow; sack barrow"
+        ],
+        "Brief description": [
+          "Sack barrow, North Eastern Railway, York No 6.",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "sack barrow",
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "25 3/16",
+          "640",
+          "43 1/8",
+          "1095",
+          "20 1/16",
+          "510"
+        ],
+        "Material": [
+          "metal (unknown)",
+          "wood (unidentified)"
+        ],
+        "Object name": [
+          "sack barrow; sack barrow"
+        ],
+        "Date - earliest / single": [
+          "1854"
+        ],
+        "Date - latest": [
+          "1922"
+        ],
+        "Object production person": [
+          "North Eastern Railway"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1999-7419"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:34ffbacb-7f37-3305-b335-59fddbbbb6cf",
+      "title": "Sack Barrow, North Eastern Railway",
+      "url": "https://museumdata.uk/objects/34ffbacb-7f37-3305-b335-59fddbbbb6cf",
+      "creator": "North Eastern Railway",
+      "date": "1854"
+    }
+  },
+  {
+    "id": "mds:ed79d45a-bee4-3824-bb3a-afd8224b4528",
+    "_source": "mds",
+    "_sourceId": "co210036",
+    "_sourceUrl": "https://museumdata.uk/objects/ed79d45a-bee4-3824-bb3a-afd8224b4528",
+    "title": "Sack Barrow, North Eastern Railway",
+    "description": "Sack barrow, North Eastern Railway, two wheeled barrow with sides and front added, marked \"NE 13853\", ex York Goods.",
+    "creator": "North Eastern Railway",
+    "date": "1854",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow",
+      "barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "ed79d45a-bee4-3824-bb3a-afd8224b4528",
+      "objectNumber": "co210036",
+      "material": [
+        "metal (unknown)",
+        "wood (unidentified)"
+      ],
+      "place": [
+        "unknown place",
+        "York Railway Station"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "31",
+        "787.4",
+        "47",
+        "1193.8",
+        "50",
+        "1270"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Sack Barrow, North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "Sack barrow, North Eastern Railway, two wheeled barrow with sides and front added, marked \"NE 13853\", ex York Goods.",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "barrow",
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Associated person": [
+          "North Eastern Railway"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Associated place": [
+          "York Railway Station"
+        ],
+        "Place association": [
+          "user"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "31",
+          "787.4",
+          "47",
+          "1193.8",
+          "50",
+          "1270"
+        ],
+        "Material": [
+          "metal (unknown)",
+          "wood (unidentified)"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Date - earliest / single": [
+          "1854"
+        ],
+        "Date - latest": [
+          "1923"
+        ],
+        "Object production person": [
+          "North Eastern Railway"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1981-7026",
+          "NRM 81/17/100"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:ed79d45a-bee4-3824-bb3a-afd8224b4528",
+      "title": "Sack Barrow, North Eastern Railway",
+      "url": "https://museumdata.uk/objects/ed79d45a-bee4-3824-bb3a-afd8224b4528",
+      "creator": "North Eastern Railway",
+      "date": "1854"
+    }
+  },
+  {
+    "id": "mds:b88301a0-532f-3f8d-9415-76c02a92115f",
+    "_source": "mds",
+    "_sourceId": "co210038",
+    "_sourceUrl": "https://museumdata.uk/objects/b88301a0-532f-3f8d-9415-76c02a92115f",
+    "title": "Barrow, North Eastern Railway",
+    "description": "Barrow, North Eastern Railway, 2 wheeled parcel barrow, boarded body and long metal bracket, marked 'York Passr', 'York 1-2-6', ex York Station.",
+    "creator": "North Eastern Railway",
+    "date": "1854",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow",
+      "barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "b88301a0-532f-3f8d-9415-76c02a92115f",
+      "objectNumber": "co210038",
+      "material": [
+        "wood (unidentified)",
+        "metal (unknown)",
+        "rubber (unidentified)"
+      ],
+      "place": [
+        "unknown place",
+        "York Railway Station"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "29 1/2",
+        "750",
+        "55 1/8",
+        "1400",
+        "64 3/16",
+        "1630"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Barrow, North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "Barrow, North Eastern Railway, 2 wheeled parcel barrow, boarded body and long metal bracket, marked 'York Passr', 'York 1-2-6', ex York Station.",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "barrow",
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Associated person": [
+          "North Eastern Railway"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Associated place": [
+          "York Railway Station"
+        ],
+        "Place association": [
+          "used at"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "29 1/2",
+          "750",
+          "55 1/8",
+          "1400",
+          "64 3/16",
+          "1630"
+        ],
+        "Material": [
+          "wood (unidentified)",
+          "metal (unknown)",
+          "rubber (unidentified)"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Date - earliest / single": [
+          "1854"
+        ],
+        "Date - latest": [
+          "1923"
+        ],
+        "Object production person": [
+          "North Eastern Railway"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1981-7028",
+          "NRM 81/17/102"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:b88301a0-532f-3f8d-9415-76c02a92115f",
+      "title": "Barrow, North Eastern Railway",
+      "url": "https://museumdata.uk/objects/b88301a0-532f-3f8d-9415-76c02a92115f",
+      "creator": "North Eastern Railway",
+      "date": "1854"
+    }
+  },
+  {
+    "id": "mds:f442f940-32c9-3a5f-b83f-0b8903741230",
+    "_source": "mds",
+    "_sourceId": "co210037",
+    "_sourceUrl": "https://museumdata.uk/objects/f442f940-32c9-3a5f-b83f-0b8903741230",
+    "title": "Sack Barrow, North Eastern Railway",
+    "description": "Sack barrow, North Eastern Railway. Large parcel barrow with 2-wheels, boarded body and tall end stock. Marked \"NER 4323\" with \"YORK (PASSR) 1-2-0\" painted on.",
+    "creator": "North Eastern Railway",
+    "date": "1854",
+    "subject": [
+      "sack barrow; sack barrow",
+      "sack barrow; sack barrow",
+      "sack barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "f442f940-32c9-3a5f-b83f-0b8903741230",
+      "objectNumber": "co210037",
+      "material": [
+        "wood (unidentified)",
+        "metal (unknown)"
+      ],
+      "place": [
+        "unknown place"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "27 15/16",
+        "710",
+        "53 3/8",
+        "1355",
+        "64 3/16",
+        "1630"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Sack Barrow, North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "sack barrow; sack barrow"
+        ],
+        "Brief description": [
+          "Sack barrow, North Eastern Railway. Large parcel barrow with 2-wheels, boarded body and tall end stock. Marked \"NER 4323\" with \"YORK (PASSR) 1-2-0\" painted on.",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "sack barrow",
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Associated person": [
+          "North Eastern Railway"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "27 15/16",
+          "710",
+          "53 3/8",
+          "1355",
+          "64 3/16",
+          "1630"
+        ],
+        "Material": [
+          "wood (unidentified)",
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "sack barrow; sack barrow"
+        ],
+        "Date - earliest / single": [
+          "1854"
+        ],
+        "Date - latest": [
+          "1923"
+        ],
+        "Object production person": [
+          "North Eastern Railway"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1981-7027",
+          "NRM 81/17/101"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:f442f940-32c9-3a5f-b83f-0b8903741230",
+      "title": "Sack Barrow, North Eastern Railway",
+      "url": "https://museumdata.uk/objects/f442f940-32c9-3a5f-b83f-0b8903741230",
+      "creator": "North Eastern Railway",
+      "date": "1854"
+    }
+  },
+  {
+    "id": "mds:354dbb96-4d1b-34e5-ad7a-1674fbd3a397",
+    "_source": "mds",
+    "_sourceId": "co210051",
+    "_sourceUrl": "https://museumdata.uk/objects/354dbb96-4d1b-34e5-ad7a-1674fbd3a397",
+    "title": "Hebden Bridge Platform Barrow",
+    "description": "Platform barrow, Lancashire & Yorkshire Railway, four-wheeled barrow marked \"20201 Tare 3-2-0\", ex- Hebden Bridge.",
+    "creator": "Lancashire & Yorkshire Railway",
+    "date": "1847",
+    "subject": [
+      "platform barrow; platform barrow",
+      "platform barrow; platform barrow",
+      "platform barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "354dbb96-4d1b-34e5-ad7a-1674fbd3a397",
+      "objectNumber": "co210051",
+      "material": [
+        "wood (unidentified)",
+        "metal (unknown)"
+      ],
+      "place": [
+        "unknown place",
+        "Hebden Bridge Railway station"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "72 5/8",
+        "1845",
+        "39 3/8",
+        "1000",
+        "45 11/16",
+        "1160"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Hebden Bridge Platform Barrow"
+        ],
+        "Object name(s)": [
+          "platform barrow; platform barrow"
+        ],
+        "Brief description": [
+          "Platform barrow, Lancashire & Yorkshire Railway, four-wheeled barrow marked \"20201 Tare 3-2-0\", ex- Hebden Bridge.",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "platform barrow",
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Associated person": [
+          "Lancashire & Yorkshire Railway"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Associated place": [
+          "Hebden Bridge Railway station"
+        ],
+        "Place association": [
+          "used at"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "72 5/8",
+          "1845",
+          "39 3/8",
+          "1000",
+          "45 11/16",
+          "1160"
+        ],
+        "Material": [
+          "wood (unidentified)",
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "platform barrow; platform barrow"
+        ],
+        "Date - earliest / single": [
+          "1847"
+        ],
+        "Date - latest": [
+          "1922"
+        ],
+        "Object production person": [
+          "Lancashire & Yorkshire Railway"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1981-7042",
+          "NRM 81/17/116"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:354dbb96-4d1b-34e5-ad7a-1674fbd3a397",
+      "title": "Hebden Bridge Platform Barrow",
+      "url": "https://museumdata.uk/objects/354dbb96-4d1b-34e5-ad7a-1674fbd3a397",
+      "creator": "Lancashire & Yorkshire Railway",
+      "date": "1847"
+    }
+  },
+  {
+    "id": "mds:df397ba8-33c7-323e-bbfa-cf17178e578e",
+    "_source": "mds",
+    "_sourceId": "co210050",
+    "_sourceUrl": "https://museumdata.uk/objects/df397ba8-33c7-323e-bbfa-cf17178e578e",
+    "title": "Four-Wheeled Barrow, North Eastern Railway",
+    "description": "Platform barrow, North Eastern Railway, four-wheeled barrow with flat wooden body and metal pull-along handle, marked \"NER 10958\".",
+    "creator": "North Eastern Railway",
+    "date": "1854",
+    "subject": [
+      "platform barrow; platform barrow",
+      "platform barrow; platform barrow",
+      "platform barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "df397ba8-33c7-323e-bbfa-cf17178e578e",
+      "objectNumber": "co210050",
+      "material": [
+        "wood (unidentified)",
+        "iron"
+      ],
+      "place": [
+        "unknown place"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "79 1/8",
+        "2010",
+        "48 7/16",
+        "1230",
+        "42 15/16",
+        "1090"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Four-Wheeled Barrow, North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "platform barrow; platform barrow"
+        ],
+        "Brief description": [
+          "Platform barrow, North Eastern Railway, four-wheeled barrow with flat wooden body and metal pull-along handle, marked \"NER 10958\".",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "platform barrow",
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Associated person": [
+          "North Eastern Railway"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "79 1/8",
+          "2010",
+          "48 7/16",
+          "1230",
+          "42 15/16",
+          "1090"
+        ],
+        "Material": [
+          "wood (unidentified)",
+          "iron"
+        ],
+        "Object name": [
+          "platform barrow; platform barrow"
+        ],
+        "Date - earliest / single": [
+          "1854"
+        ],
+        "Date - latest": [
+          "1923"
+        ],
+        "Object production person": [
+          "North Eastern Railway"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1981-7041",
+          "NRM 81/17/115"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:df397ba8-33c7-323e-bbfa-cf17178e578e",
+      "title": "Four-Wheeled Barrow, North Eastern Railway",
+      "url": "https://museumdata.uk/objects/df397ba8-33c7-323e-bbfa-cf17178e578e",
+      "creator": "North Eastern Railway",
+      "date": "1854"
+    }
+  },
+  {
+    "id": "mds:728864db-9ab1-30a1-ac0b-02f1453e1763",
+    "_source": "mds",
+    "_sourceId": "co210372",
+    "_sourceUrl": "https://museumdata.uk/objects/728864db-9ab1-30a1-ac0b-02f1453e1763",
+    "title": "Barrow, North Eastern Railway",
+    "description": "Barrow, North Eastern Railway, 2-wheeled wooden parcels barrow, boarded body with long metal bracket, marked 'NER 2068', 'Harrogate Passr', '1-1-16 E.2068', ex Harrogate Station.",
+    "creator": "North Eastern Railway",
+    "date": "1854",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow",
+      "barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "728864db-9ab1-30a1-ac0b-02f1453e1763",
+      "objectNumber": "co210372",
+      "material": [
+        "metal (unknown)",
+        "wood (unidentified)"
+      ],
+      "place": [
+        "unknown place",
+        "Harrogate Railway Station"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "28 15/16",
+        "735",
+        "52 9/16",
+        "1335",
+        "63",
+        "1600"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Barrow, North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "Barrow, North Eastern Railway, 2-wheeled wooden parcels barrow, boarded body with long metal bracket, marked 'NER 2068', 'Harrogate Passr', '1-1-16 E.2068', ex Harrogate Station.",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "barrow",
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Associated person": [
+          "North Eastern Railway"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Associated place": [
+          "Harrogate Railway Station"
+        ],
+        "Place association": [
+          "used"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "28 15/16",
+          "735",
+          "52 9/16",
+          "1335",
+          "63",
+          "1600"
+        ],
+        "Material": [
+          "metal (unknown)",
+          "wood (unidentified)"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Date - earliest / single": [
+          "1854"
+        ],
+        "Date - latest": [
+          "1922"
+        ],
+        "Object production person": [
+          "North Eastern Railway"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1988-7224",
+          "NRM 88/17/82"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:728864db-9ab1-30a1-ac0b-02f1453e1763",
+      "title": "Barrow, North Eastern Railway",
+      "url": "https://museumdata.uk/objects/728864db-9ab1-30a1-ac0b-02f1453e1763",
+      "creator": "North Eastern Railway",
+      "date": "1854"
+    }
+  },
+  {
+    "id": "mds:eef45261-88c2-3d0f-a3aa-f30dedf08a67",
+    "_source": "mds",
+    "_sourceId": "HMCMS:ACM1956.87.25",
+    "_sourceUrl": "https://museumdata.uk/objects/eef45261-88c2-3d0f-a3aa-f30dedf08a67",
+    "title": "MDS Record 15",
+    "description": "model sack barrow, wooden, painted blue",
+    "subject": [
+      "model sack barrow; sack barrow; model sack barrow; sack barrow",
+      "model sack barrow; sack barrow; model sack barrow; sack barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Hampshire Cultural Trust",
+    "mds": {
+      "uuid": "eef45261-88c2-3d0f-a3aa-f30dedf08a67",
+      "objectNumber": "HMCMS:ACM1956.87.25",
+      "dimensions": [
+        "h",
+        "14.5"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "model sack barrow; sack barrow; model sack barrow; sack barrow"
+        ],
+        "Brief description": [
+          "model sack barrow, wooden, painted blue"
+        ],
+        "Collection": [
+          "Hampshire Cultural Trust"
+        ],
+        "Credit line": [
+          "Part of the Hampshire County Collections managed by Hampshire Cultural Trust"
+        ],
+        "Dimension": [
+          "h"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "14.5"
+        ],
+        "Object name": [
+          "model sack barrow; sack barrow; model sack barrow; sack barrow"
+        ],
+        "Object number": [
+          "HMCMS:ACM1956.87.25"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:eef45261-88c2-3d0f-a3aa-f30dedf08a67",
+      "title": "MDS Record 15",
+      "url": "https://museumdata.uk/objects/eef45261-88c2-3d0f-a3aa-f30dedf08a67"
+    }
+  },
+  {
+    "id": "mds:3720af1c-06ed-3c41-b7da-44c079dba082",
+    "_source": "mds",
+    "_sourceId": "HAZFM:0154",
+    "_sourceUrl": "https://museumdata.uk/objects/3720af1c-06ed-3c41-b7da-44c079dba082",
+    "title": "MDS Record 16",
+    "description": "peat barrow used to transport cut peat",
+    "subject": [
+      "peat barrow; barrow",
+      "peat barrow; barrow",
+      "working life",
+      "agriculture",
+      "harvesting",
+      "gathering"
+    ],
+    "type": "Museum object",
+    "collection": "Dales Countryside Museum",
+    "mds": {
+      "uuid": "3720af1c-06ed-3c41-b7da-44c079dba082",
+      "objectNumber": "HAZFM:0154",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "peat barrow; barrow"
+        ],
+        "Brief description": [
+          "peat barrow used to transport cut peat"
+        ],
+        "Collection": [
+          "Dales Countryside Museum"
+        ],
+        "Associated concept": [
+          "working life",
+          "agriculture",
+          "harvesting",
+          "gathering"
+        ],
+        "Association type": [
+          "SHIC"
+        ],
+        "Object name": [
+          "peat barrow; barrow"
+        ],
+        "Object number": [
+          "HAZFM:0154"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:3720af1c-06ed-3c41-b7da-44c079dba082",
+      "title": "MDS Record 16",
+      "url": "https://museumdata.uk/objects/3720af1c-06ed-3c41-b7da-44c079dba082"
+    }
+  },
+  {
+    "id": "mds:a200cbfb-aa41-3a35-9341-d37fef05175f",
+    "_source": "mds",
+    "_sourceId": "Norwich_Social_History-157311",
+    "_sourceUrl": "https://museumdata.uk/objects/a200cbfb-aa41-3a35-9341-d37fef05175f",
+    "title": "MDS Record 17",
+    "description": "Infant's barrow or flannel with sort of stomacher front, tape shoulder straps, fastens with a tie behind, wavy decorative edges, machine finished, early 20th century",
+    "date": "1900-1950",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow",
+      "I.4.5 : BARROW",
+      "personal life",
+      "costume",
+      "infant's costume",
+      "barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "a200cbfb-aa41-3a35-9341-d37fef05175f",
+      "objectNumber": "Norwich_Social_History-157311",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "Infant's barrow or flannel with sort of stomacher front, tape shoulder straps, fastens with a tie behind, wavy decorative edges, machine finished, early 20th century"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition date": [
+          "1974"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "I.4.5 : BARROW",
+          "personal life",
+          "costume",
+          "infant's costume",
+          "barrow"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Object number": [
+          "NWHCM : 1974.420.5"
+        ],
+        "Object production date": [
+          "1900-1950"
+        ],
+        "Date - earliest / single": [
+          "1900"
+        ],
+        "Date - latest": [
+          "1950"
+        ],
+        "Other number": [
+          "420.974.5"
+        ],
+        "Other number type": [
+          "assigned number"
+        ],
+        "Responsible department/section": [
+          "Costume and Textiles : Norwich Castle Museum"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:a200cbfb-aa41-3a35-9341-d37fef05175f",
+      "title": "MDS Record 17",
+      "url": "https://museumdata.uk/objects/a200cbfb-aa41-3a35-9341-d37fef05175f",
+      "date": "1900-1950"
+    }
+  },
+  {
+    "id": "mds:6cc1b1eb-a77e-3c7f-9a84-12f4161586d5",
+    "_source": "mds",
+    "_sourceId": "PH",
+    "_sourceUrl": "https://museumdata.uk/objects/6cc1b1eb-a77e-3c7f-9a84-12f4161586d5",
+    "title": "barrow",
+    "description": "barrow, single magazine barrow, with reproduction keg, made by B P Ltd, 1841",
+    "creator": "B P Ltd.",
+    "subject": [
+      "weapons",
+      "weapons"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "6cc1b1eb-a77e-3c7f-9a84-12f4161586d5",
+      "objectNumber": "PH",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "barrow"
+        ],
+        "Object name(s)": [
+          "weapons"
+        ],
+        "Brief description": [
+          "barrow, single magazine barrow, with reproduction keg, made by B P Ltd, 1841"
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Object name": [
+          "weapons"
+        ],
+        "Object number": [
+          "PH 1993/1266"
+        ],
+        "Object production person": [
+          "B P Ltd."
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:6cc1b1eb-a77e-3c7f-9a84-12f4161586d5",
+      "title": "barrow",
+      "url": "https://museumdata.uk/objects/6cc1b1eb-a77e-3c7f-9a84-12f4161586d5",
+      "creator": "B P Ltd."
+    }
+  },
+  {
+    "id": "mds:8e69a8a6-d5e0-349f-8c8b-a2547cd99f4c",
+    "_source": "mds",
+    "_sourceId": "co212790",
+    "_sourceUrl": "https://museumdata.uk/objects/8e69a8a6-d5e0-349f-8c8b-a2547cd99f4c",
+    "title": "Model railway platform barrow",
+    "description": "Model railway platform barrow, approx. 1/8 scale, 2 wheeled sack barrow type, built by J. Bishop",
+    "subject": [
+      "model; model",
+      "model; model",
+      "model - representation"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "8e69a8a6-d5e0-349f-8c8b-a2547cd99f4c",
+      "objectNumber": "co212790",
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "5 3/8",
+        "136",
+        "2 5/16",
+        "58",
+        "2 3/16",
+        "55"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Model railway platform barrow"
+        ],
+        "Object name(s)": [
+          "model; model"
+        ],
+        "Brief description": [
+          "Model railway platform barrow, approx. 1/8 scale, 2 wheeled sack barrow type, built by J. Bishop"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "model - representation"
+        ],
+        "Credit line": [
+          "Bishop, J. (Devon)"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "5 3/8",
+          "136",
+          "2 5/16",
+          "58",
+          "2 3/16",
+          "55"
+        ],
+        "Object name": [
+          "model; model"
+        ],
+        "Other number": [
+          "1985-8775",
+          "26/122",
+          "85/18/52"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Railway Models"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:8e69a8a6-d5e0-349f-8c8b-a2547cd99f4c",
+      "title": "Model railway platform barrow",
+      "url": "https://museumdata.uk/objects/8e69a8a6-d5e0-349f-8c8b-a2547cd99f4c"
+    }
+  },
+  {
+    "id": "mds:d44e413a-0ff4-3bd6-9c7e-1b3f1fd7847f",
+    "_source": "mds",
+    "_sourceId": "Gressenhall_collections-78278",
+    "_sourceUrl": "https://museumdata.uk/objects/d44e413a-0ff4-3bd6-9c7e-1b3f1fd7847f",
+    "title": "MDS Record 20",
+    "description": "Maltings Barrow labelled \"Boby Barley Barrow\" Large weaved basket mounted on two wheels below the centre of the basket, with rope handles on two sides.",
+    "subject": [
+      "maltings barrow; barrow",
+      "maltings barrow; barrow",
+      "4.526"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "d44e413a-0ff4-3bd6-9c7e-1b3f1fd7847f",
+      "objectNumber": "Gressenhall_collections-78278",
+      "material": [
+        "metal",
+        "rope",
+        "rubber",
+        "wood"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "500",
+        "770",
+        "850"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "maltings barrow; barrow"
+        ],
+        "Brief description": [
+          "Maltings Barrow labelled \"Boby Barley Barrow\" Large weaved basket mounted on two wheels below the centre of the basket, with rope handles on two sides."
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "untraced find"
+        ],
+        "Associated concept": [
+          "4.526"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "500",
+          "770",
+          "850"
+        ],
+        "Material": [
+          "metal",
+          "rope",
+          "rubber",
+          "wood"
+        ],
+        "Object name": [
+          "maltings barrow; barrow"
+        ],
+        "Object number": [
+          "GRSRM : 2023.9.6"
+        ],
+        "Responsible department/section": [
+          "Gressenhall Farm and Workhouse"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:d44e413a-0ff4-3bd6-9c7e-1b3f1fd7847f",
+      "title": "MDS Record 20",
+      "url": "https://museumdata.uk/objects/d44e413a-0ff4-3bd6-9c7e-1b3f1fd7847f"
+    }
+  },
+  {
+    "id": "mds:50a1d4d1-eedb-3a8b-94d0-c2ff5d18bfb2",
+    "_source": "mds",
+    "_sourceId": "co210368",
+    "_sourceUrl": "https://museumdata.uk/objects/50a1d4d1-eedb-3a8b-94d0-c2ff5d18bfb2",
+    "title": "Three-Wheel Barrow, Sheffield",
+    "description": "Box wooden 3-wheel barrow from Darnall, Sheffield. 'M26806' 'Tare 1.3.26'.",
+    "creator": "Unknown maker",
+    "date": "1850",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow",
+      "barrow",
+      "fixtures and fittings from railway buildings",
+      "Running the Railway"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "50a1d4d1-eedb-3a8b-94d0-c2ff5d18bfb2",
+      "objectNumber": "co210368",
+      "material": [
+        "wood (unidentified)",
+        "metal (unknown)"
+      ],
+      "place": [
+        "unknown place",
+        "Darnall Railway Station"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "39 3/4",
+        "1010",
+        "45 7/8",
+        "1165",
+        "50 13/16",
+        "1290"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Three-Wheel Barrow, Sheffield"
+        ],
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "Box wooden 3-wheel barrow from Darnall, Sheffield. 'M26806' 'Tare 1.3.26'.",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "barrow",
+          "fixtures and fittings from railway buildings",
+          "Running the Railway"
+        ],
+        "Associated place": [
+          "Darnall Railway Station"
+        ],
+        "Place association": [
+          "used at"
+        ],
+        "Credit line": [
+          "British Rail, Darnall"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "39 3/4",
+          "1010",
+          "45 7/8",
+          "1165",
+          "50 13/16",
+          "1290"
+        ],
+        "Material": [
+          "wood (unidentified)",
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Date - earliest / single": [
+          "1850"
+        ],
+        "Date - latest": [
+          "1929"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1988-7220",
+          "NRM 88/17/78",
+          "147/544"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:50a1d4d1-eedb-3a8b-94d0-c2ff5d18bfb2",
+      "title": "Three-Wheel Barrow, Sheffield",
+      "url": "https://museumdata.uk/objects/50a1d4d1-eedb-3a8b-94d0-c2ff5d18bfb2",
+      "creator": "Unknown maker",
+      "date": "1850"
+    }
+  },
+  {
+    "id": "mds:6a15bda8-ce58-3635-965a-a55b0295e141",
+    "_source": "mds",
+    "_sourceId": "1432046",
+    "_sourceUrl": "https://museumdata.uk/objects/6a15bda8-ce58-3635-965a-a55b0295e141",
+    "title": "MDS Record 22",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Long Shop Museum",
+    "mds": {
+      "uuid": "6a15bda8-ce58-3635-965a-a55b0295e141",
+      "objectNumber": "1432046",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Collection": [
+          "Long Shop Museum"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Object number": [
+          "T2251"
+        ],
+        "Object status": [
+          "Physical Object"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:6a15bda8-ce58-3635-965a-a55b0295e141",
+      "title": "MDS Record 22",
+      "url": "https://museumdata.uk/objects/6a15bda8-ce58-3635-965a-a55b0295e141"
+    }
+  },
+  {
+    "id": "mds:e32dad4c-bb09-35c0-984a-853cc308656d",
+    "_source": "mds",
+    "_sourceId": "ARMCM.144.1989",
+    "_sourceUrl": "https://museumdata.uk/objects/e32dad4c-bb09-35c0-984a-853cc308656d",
+    "title": "MDS Record 23",
+    "description": "Toy trader's barrow, metal, stands on two rotating wheels and two rear legs, barrow painted green with red wheels.",
+    "subject": [
+      "Toy trader's barrow",
+      "Toy trader's barrow",
+      "TOYS & GAMES"
+    ],
+    "type": "Museum object",
+    "collection": "Armagh County Museum",
+    "mds": {
+      "uuid": "e32dad4c-bb09-35c0-984a-853cc308656d",
+      "objectNumber": "ARMCM.144.1989",
+      "material": [
+        "metal"
+      ],
+      "dimensions": [
+        "length : 8.6 cm;width : 3.3 cm;height : 4.1 cm"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "Toy trader's barrow"
+        ],
+        "Brief description": [
+          "Toy trader's barrow, metal, stands on two rotating wheels and two rear legs, barrow painted green with red wheels."
+        ],
+        "Collection": [
+          "Armagh County Museum"
+        ],
+        "Associated concept": [
+          "TOYS & GAMES"
+        ],
+        "Dimension": [
+          "length : 8.6 cm;width : 3.3 cm;height : 4.1 cm"
+        ],
+        "Material": [
+          "metal"
+        ],
+        "Object name": [
+          "Toy trader's barrow"
+        ],
+        "Object number": [
+          "ARMCM.144.1989"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:e32dad4c-bb09-35c0-984a-853cc308656d",
+      "title": "MDS Record 23",
+      "url": "https://museumdata.uk/objects/e32dad4c-bb09-35c0-984a-853cc308656d"
+    }
+  },
+  {
+    "id": "mds:1515ba6d-7e47-3145-bb83-dc3db16220d2",
+    "_source": "mds",
+    "_sourceId": "co210039",
+    "_sourceUrl": "https://museumdata.uk/objects/1515ba6d-7e47-3145-bb83-dc3db16220d2",
+    "title": "Sack Barrow, North Eastern Railway",
+    "description": "Sack barrow, North Eastern Railway, wooden frame with two small wheels, marked \"NE 81\" and \"York\".",
+    "creator": "North Eastern Railway",
+    "date": "1854",
+    "subject": [
+      "sack barrow; sack barrow",
+      "sack barrow; sack barrow",
+      "sack barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "1515ba6d-7e47-3145-bb83-dc3db16220d2",
+      "objectNumber": "co210039",
+      "material": [
+        "wood (unidentified)",
+        "metal (unknown)"
+      ],
+      "place": [
+        "unknown place"
+      ],
+      "dimensions": [
+        "depth",
+        "width",
+        "19",
+        "482.6",
+        "48",
+        "1219.2"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Sack Barrow, North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "sack barrow; sack barrow"
+        ],
+        "Brief description": [
+          "Sack barrow, North Eastern Railway, wooden frame with two small wheels, marked \"NE 81\" and \"York\".",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "sack barrow",
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Associated person": [
+          "North Eastern Railway"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "19",
+          "482.6",
+          "48",
+          "1219.2"
+        ],
+        "Material": [
+          "wood (unidentified)",
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "sack barrow; sack barrow"
+        ],
+        "Date - earliest / single": [
+          "1854"
+        ],
+        "Date - latest": [
+          "1923"
+        ],
+        "Object production person": [
+          "North Eastern Railway"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1981-7029",
+          "NRM 81/17/103"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:1515ba6d-7e47-3145-bb83-dc3db16220d2",
+      "title": "Sack Barrow, North Eastern Railway",
+      "url": "https://museumdata.uk/objects/1515ba6d-7e47-3145-bb83-dc3db16220d2",
+      "creator": "North Eastern Railway",
+      "date": "1854"
+    }
+  },
+  {
+    "id": "mds:8c89d3ac-d153-3791-9d26-1bdd24f83f55",
+    "_source": "mds",
+    "_sourceId": "co210033",
+    "_sourceUrl": "https://museumdata.uk/objects/8c89d3ac-d153-3791-9d26-1bdd24f83f55",
+    "title": "Sack Barrow, Midland & Great Northern Joint Railway",
+    "description": "Sack barrow, Midland & Great Northern Joint Railway. Two wheeled with ratchet and chain lift attached.",
+    "creator": "Midland & Great Northern Joint Railway",
+    "date": "1893",
+    "subject": [
+      "sack barrow; sack barrow",
+      "sack barrow; sack barrow",
+      "sack barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "8c89d3ac-d153-3791-9d26-1bdd24f83f55",
+      "objectNumber": "co210033",
+      "material": [
+        "metal (unknown)",
+        "wood (unidentified)"
+      ],
+      "place": [
+        "unknown place"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "35 1/4",
+        "895",
+        "62 5/8",
+        "1590",
+        "25 9/16",
+        "650"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Sack Barrow, Midland & Great Northern Joint Railway"
+        ],
+        "Object name(s)": [
+          "sack barrow; sack barrow"
+        ],
+        "Brief description": [
+          "Sack barrow, Midland & Great Northern Joint Railway. Two wheeled with ratchet and chain lift attached.",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "sack barrow",
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Associated person": [
+          "Midland & Great Northern Joint Railway"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "35 1/4",
+          "895",
+          "62 5/8",
+          "1590",
+          "25 9/16",
+          "650"
+        ],
+        "Material": [
+          "metal (unknown)",
+          "wood (unidentified)"
+        ],
+        "Object name": [
+          "sack barrow; sack barrow"
+        ],
+        "Date - earliest / single": [
+          "1893"
+        ],
+        "Date - latest": [
+          "1948"
+        ],
+        "Object production person": [
+          "Midland & Great Northern Joint Railway"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1981-7023",
+          "NRM 81/17/97"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:8c89d3ac-d153-3791-9d26-1bdd24f83f55",
+      "title": "Sack Barrow, Midland & Great Northern Joint Railway",
+      "url": "https://museumdata.uk/objects/8c89d3ac-d153-3791-9d26-1bdd24f83f55",
+      "creator": "Midland & Great Northern Joint Railway",
+      "date": "1893"
+    }
+  },
+  {
+    "id": "mds:94952c5a-af7a-362e-9a87-9528a7b30a74",
+    "_source": "mds",
+    "_sourceId": "co210035",
+    "_sourceUrl": "https://museumdata.uk/objects/94952c5a-af7a-362e-9a87-9528a7b30a74",
+    "title": "Sack Barrow, London, Midland & Scottish Railway",
+    "description": "Sack barrow, London, Midland & Scottish Railway. Wooden frame with two small wheels and metal bars at top and bottom rung.",
+    "creator": "London Midland & Scottish Railway Company",
+    "date": "1923",
+    "subject": [
+      "sack barrow; sack barrow",
+      "sack barrow; sack barrow",
+      "sack barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "94952c5a-af7a-362e-9a87-9528a7b30a74",
+      "objectNumber": "co210035",
+      "material": [
+        "wood (unidentified)",
+        "metal (unknown)"
+      ],
+      "place": [
+        "unknown place"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "22 7/16",
+        "570",
+        "49 13/16",
+        "1265",
+        "16 1/8",
+        "410"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Sack Barrow, London, Midland & Scottish Railway"
+        ],
+        "Object name(s)": [
+          "sack barrow; sack barrow"
+        ],
+        "Brief description": [
+          "Sack barrow, London, Midland & Scottish Railway. Wooden frame with two small wheels and metal bars at top and bottom rung.",
+          "A variety of different size trolleys and barrows were needed to transport passenger luggage or goods safely around the station. As the railways could be asked to carry virtually anything, this wheeled transport needed to be robust and versatile to ensure the goods remained undamaged while moving around the station."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "sack barrow",
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Associated person": [
+          "London Midland & Scottish Railway Company"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "22 7/16",
+          "570",
+          "49 13/16",
+          "1265",
+          "16 1/8",
+          "410"
+        ],
+        "Material": [
+          "wood (unidentified)",
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "sack barrow; sack barrow"
+        ],
+        "Date - earliest / single": [
+          "1923"
+        ],
+        "Date - latest": [
+          "1948"
+        ],
+        "Object production person": [
+          "London Midland & Scottish Railway Company"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1981-7025",
+          "NRM 81/17/99"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:94952c5a-af7a-362e-9a87-9528a7b30a74",
+      "title": "Sack Barrow, London, Midland & Scottish Railway",
+      "url": "https://museumdata.uk/objects/94952c5a-af7a-362e-9a87-9528a7b30a74",
+      "creator": "London Midland & Scottish Railway Company",
+      "date": "1923"
+    }
+  },
+  {
+    "id": "mds:1a3382a7-8e00-3406-873c-2b70f6103313",
+    "_source": "mds",
+    "_sourceId": "co8068203",
+    "_sourceUrl": "https://museumdata.uk/objects/1a3382a7-8e00-3406-873c-2b70f6103313",
+    "title": "Pocket Tide Tables for Barrow-in-Furness for the year 1883",
+    "description": "Pocket tide tables for Barrow-in-Furness, for the year 1883.  Blue leatherette cover, lettered in gold.  29 pp",
+    "creator": "Barrow Times",
+    "date": "1883",
+    "subject": [
+      "book; book",
+      "book; book",
+      "Documents and Publicity Material"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "1a3382a7-8e00-3406-873c-2b70f6103313",
+      "objectNumber": "co8068203",
+      "material": [
+        "cardboard",
+        "paper (fibre product)"
+      ],
+      "place": [
+        "Barrow-in-Furness"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "9",
+        "3 9/16",
+        "6.5",
+        "2 9/16"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Pocket Tide Tables for Barrow-in-Furness for the year 1883"
+        ],
+        "Object name(s)": [
+          "book; book"
+        ],
+        "Brief description": [
+          "Pocket tide tables for Barrow-in-Furness, for the year 1883.  Blue leatherette cover, lettered in gold.  29 pp"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "Documents and Publicity Material"
+        ],
+        "Credit line": [
+          "Dixon, Norman S H"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "in"
+        ],
+        "Dimension value": [
+          "9",
+          "3 9/16",
+          "6.5",
+          "2 9/16"
+        ],
+        "Material": [
+          "cardboard",
+          "paper (fibre product)"
+        ],
+        "Object name": [
+          "book; book"
+        ],
+        "Date - earliest / single": [
+          "1883"
+        ],
+        "Date - latest": [
+          "1883"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Barrow Times"
+        ],
+        "Object production place": [
+          "Barrow-in-Furness"
+        ],
+        "Other number": [
+          "2005-7659"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Documents"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:1a3382a7-8e00-3406-873c-2b70f6103313",
+      "title": "Pocket Tide Tables for Barrow-in-Furness for the year 1883",
+      "url": "https://museumdata.uk/objects/1a3382a7-8e00-3406-873c-2b70f6103313",
+      "creator": "Barrow Times",
+      "date": "1883"
+    }
+  },
+  {
+    "id": "mds:b0bd8076-4a7c-3722-a46f-1239e0ece1cf",
+    "_source": "mds",
+    "_sourceId": "co55095",
+    "_sourceUrl": "https://museumdata.uk/objects/b0bd8076-4a7c-3722-a46f-1239e0ece1cf",
+    "title": "Herschel actinometer by Robinson & Barrow, 1842",
+    "description": "Herschel actinometer by Robinson & Barrow, 1842",
+    "creator": "Robinson & Barrow; Herschel, Sir John Frederick William",
+    "date": "1842",
+    "subject": [
+      "actinometer; actinometer",
+      "actinometer; actinometer",
+      "actinometer"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "b0bd8076-4a7c-3722-a46f-1239e0ece1cf",
+      "objectNumber": "co55095",
+      "material": [
+        "wood",
+        "metal",
+        "glass",
+        "bone"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "8.3",
+        "3 1/4",
+        "5.7",
+        "2 1/4",
+        "69.3",
+        "27 5/16"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Herschel actinometer by Robinson & Barrow, 1842"
+        ],
+        "Object name(s)": [
+          "actinometer; actinometer"
+        ],
+        "Brief description": [
+          "Herschel actinometer by Robinson & Barrow, 1842"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "actinometer"
+        ],
+        "Credit line": [
+          "Meteorological Office, Berkshire"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "in"
+        ],
+        "Dimension value": [
+          "8.3",
+          "3 1/4",
+          "5.7",
+          "2 1/4",
+          "69.3",
+          "27 5/16"
+        ],
+        "Material": [
+          "wood",
+          "metal",
+          "glass",
+          "bone"
+        ],
+        "Object name": [
+          "actinometer; actinometer"
+        ],
+        "Date - earliest / single": [
+          "1842"
+        ],
+        "Date - latest": [
+          "1842"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Robinson & Barrow; Herschel, Sir John Frederick William"
+        ],
+        "Other number": [
+          "1995-822",
+          "60201",
+          "Met 105",
+          "ScM1993/0652"
+        ],
+        "Other number type": [
+          "accession number",
+          "Meteorological Office number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Meteorology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:b0bd8076-4a7c-3722-a46f-1239e0ece1cf",
+      "title": "Herschel actinometer by Robinson & Barrow, 1842",
+      "url": "https://museumdata.uk/objects/b0bd8076-4a7c-3722-a46f-1239e0ece1cf",
+      "creator": "Robinson & Barrow; Herschel, Sir John Frederick William",
+      "date": "1842"
+    }
+  },
+  {
+    "id": "mds:e759df8b-ea12-3c18-b6f3-fb4cb9f2a891",
+    "_source": "mds",
+    "_sourceId": "co54308",
+    "_sourceUrl": "https://museumdata.uk/objects/e759df8b-ea12-3c18-b6f3-fb4cb9f2a891",
+    "title": "Dip circle by Robinson & Barrow, London, c.1840",
+    "description": "Dip circle by Robinson & Barrow, London, c.1840",
+    "creator": "Robinson & Barrow",
+    "date": "1842",
+    "subject": [
+      "inclinometer; inclinometer",
+      "inclinometer; inclinometer",
+      "inclinometer"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "e759df8b-ea12-3c18-b6f3-fb4cb9f2a891",
+      "objectNumber": "co54308",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Dip circle by Robinson & Barrow, London, c.1840"
+        ],
+        "Object name(s)": [
+          "inclinometer; inclinometer"
+        ],
+        "Brief description": [
+          "Dip circle by Robinson & Barrow, London, c.1840"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "inclinometer"
+        ],
+        "Credit line": [
+          "Meteorological Office, South Kensington"
+        ],
+        "Object name": [
+          "inclinometer; inclinometer"
+        ],
+        "Date - earliest / single": [
+          "1842"
+        ],
+        "Date - latest": [
+          "1845"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Robinson & Barrow"
+        ],
+        "Other number": [
+          "1915-145",
+          "15/525"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Terrestrial Magnetism"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:e759df8b-ea12-3c18-b6f3-fb4cb9f2a891",
+      "title": "Dip circle by Robinson & Barrow, London, c.1840",
+      "url": "https://museumdata.uk/objects/e759df8b-ea12-3c18-b6f3-fb4cb9f2a891",
+      "creator": "Robinson & Barrow",
+      "date": "1842"
+    }
+  },
+  {
+    "id": "mds:4860e2e6-9db7-317a-98f4-86daa7f8d239",
+    "_source": "mds",
+    "_sourceId": "MWL-823B11E3-6D0C-405B-9474-33C8BA18DF94",
+    "_sourceUrl": "https://museumdata.uk/objects/4860e2e6-9db7-317a-98f4-86daa7f8d239",
+    "title": "hand barrow",
+    "subject": [
+      "hand barrow; MAN AND ANIMAL",
+      "hand barrow; MAN AND ANIMAL (Transport)"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "4860e2e6-9db7-317a-98f4-86daa7f8d239",
+      "objectNumber": "MWL-823B11E3-6D0C-405B-9474-33C8BA18DF94",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "hand barrow"
+        ],
+        "Object name(s)": [
+          "hand barrow; MAN AND ANIMAL"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Object name": [
+          "hand barrow; MAN AND ANIMAL (Transport)"
+        ],
+        "Other number": [
+          "F89.106.1",
+          "Micromusée V6 SN:23927"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:4860e2e6-9db7-317a-98f4-86daa7f8d239",
+      "title": "hand barrow",
+      "url": "https://museumdata.uk/objects/4860e2e6-9db7-317a-98f4-86daa7f8d239"
+    }
+  },
+  {
+    "id": "mds:3fe510fc-e700-35bf-8e75-6c32015f508c",
+    "_source": "mds",
+    "_sourceId": "co39216",
+    "_sourceUrl": "https://museumdata.uk/objects/3fe510fc-e700-35bf-8e75-6c32015f508c",
+    "title": "Grass seed barrow",
+    "description": "Grass seed barrow",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "3fe510fc-e700-35bf-8e75-6c32015f508c",
+      "objectNumber": "co39216",
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "74 13/16",
+        "1900",
+        "31 1/2",
+        "800",
+        "27 9/16",
+        "700",
+        "73 7/16",
+        "1865",
+        "31 11/16",
+        "805",
+        "31 5/16",
+        "795"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Grass seed barrow"
+        ],
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "Grass seed barrow"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Brock, Mr."
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "74 13/16",
+          "1900",
+          "31 1/2",
+          "800",
+          "27 9/16",
+          "700",
+          "73 7/16",
+          "1865",
+          "31 11/16",
+          "805",
+          "31 5/16",
+          "795"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Other number": [
+          "1980-583",
+          "1007/34/13"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Agricultural Engineering"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:3fe510fc-e700-35bf-8e75-6c32015f508c",
+      "title": "Grass seed barrow",
+      "url": "https://museumdata.uk/objects/3fe510fc-e700-35bf-8e75-6c32015f508c"
+    }
+  },
+  {
+    "id": "mds:6d5d1b5f-930a-39b2-8dd4-7d371d997ac8",
+    "_source": "mds",
+    "_sourceId": "32744",
+    "_sourceUrl": "https://museumdata.uk/objects/6d5d1b5f-930a-39b2-8dd4-7d371d997ac8",
+    "title": "Wash-House Barrow",
+    "description": "Works barrow/truck formerly used in tthe washing process at grandholm mills.",
+    "subject": [
+      "Barrow",
+      "Barrow",
+      "Textile Industry"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "6d5d1b5f-930a-39b2-8dd4-7d371d997ac8",
+      "objectNumber": "32744",
+      "material": [
+        "wood, steel, cast iron"
+      ],
+      "dimensions": [
+        "182 x 86.5 x 109cm"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Wash-House Barrow"
+        ],
+        "Object name(s)": [
+          "Barrow"
+        ],
+        "Brief description": [
+          "Works barrow/truck formerly used in tthe washing process at grandholm mills."
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Accession date": [
+          "1992-09"
+        ],
+        "Acquisition method": [
+          "Loan"
+        ],
+        "Associated concept": [
+          "Textile Industry"
+        ],
+        "Associated person": [
+          "Crombie"
+        ],
+        "Current location": [
+          "View by Appointment"
+        ],
+        "Dimension": [
+          "182 x 86.5 x 109cm"
+        ],
+        "Material": [
+          "wood, steel, cast iron"
+        ],
+        "Object name": [
+          "Barrow"
+        ],
+        "Object number": [
+          "ABDMS026673"
+        ],
+        "Object status": [
+          "Loan In"
+        ],
+        "Responsible department/section": [
+          "Science and Industry"
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/60205"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:6d5d1b5f-930a-39b2-8dd4-7d371d997ac8",
+      "title": "Wash-House Barrow",
+      "url": "https://museumdata.uk/objects/6d5d1b5f-930a-39b2-8dd4-7d371d997ac8"
+    }
+  },
+  {
+    "id": "mds:b0c2422e-fddb-365f-9a11-c34df8de85e4",
+    "_source": "mds",
+    "_sourceId": "co11299",
+    "_sourceUrl": "https://museumdata.uk/objects/b0c2422e-fddb-365f-9a11-c34df8de85e4",
+    "title": "Discharging hot coke into barrows",
+    "description": "Discharging hot coke into barrows.",
+    "subject": [
+      "photograph; photograph",
+      "photograph; photograph",
+      "photograph"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "b0c2422e-fddb-365f-9a11-c34df8de85e4",
+      "objectNumber": "co11299",
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "3/16",
+        "4",
+        "11 7/16",
+        "290",
+        "14 9/16",
+        "370"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Discharging hot coke into barrows"
+        ],
+        "Object name(s)": [
+          "photograph; photograph"
+        ],
+        "Brief description": [
+          "Discharging hot coke into barrows."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "photograph"
+        ],
+        "Credit line": [
+          "Drakes Ltd."
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "3/16",
+          "4",
+          "11 7/16",
+          "290",
+          "14 9/16",
+          "370"
+        ],
+        "Object name": [
+          "photograph; photograph"
+        ],
+        "Other number": [
+          "1913-135/4 Pt2",
+          "13/1601"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Gas Industry"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:b0c2422e-fddb-365f-9a11-c34df8de85e4",
+      "title": "Discharging hot coke into barrows",
+      "url": "https://museumdata.uk/objects/b0c2422e-fddb-365f-9a11-c34df8de85e4"
+    }
+  },
+  {
+    "id": "mds:14496c37-aadf-3762-9141-391578f32b24",
+    "_source": "mds",
+    "_sourceId": "Gressenhall_collections-22063",
+    "_sourceUrl": "https://museumdata.uk/objects/14496c37-aadf-3762-9141-391578f32b24",
+    "title": "MDS Record 34",
+    "description": "Part of a sack barrow; handles missing; curved iron blade attached to wooden axle and wooden wheels",
+    "subject": [
+      "sack barrow; barrow",
+      "sack barrow; barrow",
+      "4.11.26",
+      "working life",
+      "agriculture",
+      "transport and materials handling"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "14496c37-aadf-3762-9141-391578f32b24",
+      "objectNumber": "Gressenhall_collections-22063",
+      "material": [
+        "iron",
+        "wood"
+      ],
+      "condition": "incomplete",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "sack barrow; barrow"
+        ],
+        "Brief description": [
+          "Part of a sack barrow; handles missing; curved iron blade attached to wooden axle and wooden wheels"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "4.11.26",
+          "working life",
+          "agriculture",
+          "transport and materials handling"
+        ],
+        "Condition": [
+          "incomplete"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Material": [
+          "iron",
+          "wood"
+        ],
+        "Object component name": [
+          "barrow"
+        ],
+        "Object component information": [
+          "incomplete"
+        ],
+        "Object name": [
+          "sack barrow; barrow"
+        ],
+        "Object number": [
+          "GRSRM : 1993.145"
+        ],
+        "Responsible department/section": [
+          "Gressenhall Farm and Workhouse"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:14496c37-aadf-3762-9141-391578f32b24",
+      "title": "MDS Record 34",
+      "url": "https://museumdata.uk/objects/14496c37-aadf-3762-9141-391578f32b24"
+    }
+  },
+  {
+    "id": "mds:730ef028-0794-31ed-9436-e994dd088747",
+    "_source": "mds",
+    "_sourceId": "co11596",
+    "_sourceUrl": "https://museumdata.uk/objects/730ef028-0794-31ed-9436-e994dd088747",
+    "title": "Coal charging barrow 9' long 3 1/2' wide 3' high weighing 5 cwt. made of sheet steel",
+    "description": "Coal charging barrow 9' long 3 1/2' wide 3' high weighing 5 cwt. made of sheet steel, with cast iron wheels.",
+    "subject": [
+      "barrow, trolley; barrow, trolley",
+      "barrow, trolley; barrow, trolley"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "730ef028-0794-31ed-9436-e994dd088747",
+      "objectNumber": "co11596",
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "90 9/16",
+        "2300",
+        "57 7/8",
+        "1470",
+        "48 7/16",
+        "1230"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Coal charging barrow 9' long 3 1/2' wide 3' high weighing 5 cwt. made of sheet steel"
+        ],
+        "Object name(s)": [
+          "barrow, trolley; barrow, trolley"
+        ],
+        "Brief description": [
+          "Coal charging barrow 9' long 3 1/2' wide 3' high weighing 5 cwt. made of sheet steel, with cast iron wheels."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Scottish Gas"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "90 9/16",
+          "2300",
+          "57 7/8",
+          "1470",
+          "48 7/16",
+          "1230"
+        ],
+        "Object name": [
+          "barrow, trolley; barrow, trolley"
+        ],
+        "Other number": [
+          "1976-204",
+          "7941/64/2"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Gas Industry"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:730ef028-0794-31ed-9436-e994dd088747",
+      "title": "Coal charging barrow 9' long 3 1/2' wide 3' high weighing 5 cwt. made of sheet steel",
+      "url": "https://museumdata.uk/objects/730ef028-0794-31ed-9436-e994dd088747"
+    }
+  },
+  {
+    "id": "mds:3e9f5a58-5600-386a-b4cb-b7306c256c2d",
+    "_source": "mds",
+    "_sourceId": "TRURI",
+    "_sourceUrl": "https://museumdata.uk/objects/3e9f5a58-5600-386a-b4cb-b7306c256c2d",
+    "title": "MDS Record 36",
+    "description": "excavation material from C.K. Croft Andrew's excavations at Treligga Barrows, Treligga Common, consisting of a food vessel (from Treligga 7), a cup (from Treligga 5), a box of pottery, flint and stone, some charcoal, a copper-alloy pin, plus several miscellaneous pieces of shillet which could have been from either Treligga or Davidstow Moor",
+    "date": "1.1941",
+    "subject": [
+      "archaeological archive; archaeological archive",
+      "archaeological archive; archaeological archive (finds)",
+      "EUROPEAN ARCHAEOLOGY"
+    ],
+    "type": "Museum object",
+    "collection": "Cornwall Museum and Art Gallery",
+    "mds": {
+      "uuid": "3e9f5a58-5600-386a-b4cb-b7306c256c2d",
+      "objectNumber": "TRURI",
+      "material": [
+        "mixed"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "archaeological archive; archaeological archive"
+        ],
+        "Brief description": [
+          "excavation material from C.K. Croft Andrew's excavations at Treligga Barrows, Treligga Common, consisting of a food vessel (from Treligga 7), a cup (from Treligga 5), a box of pottery, flint and stone, some charcoal, a copper-alloy pin, plus several miscellaneous pieces of shillet which could have been from either Treligga or Davidstow Moor"
+        ],
+        "Collection": [
+          "Cornwall Museum and Art Gallery"
+        ],
+        "Acquisition date": [
+          "1.10.1982"
+        ],
+        "Acquisition method": [
+          "bequest"
+        ],
+        "Associated concept": [
+          "EUROPEAN ARCHAEOLOGY"
+        ],
+        "Date - earliest / single": [
+          "1.1941"
+        ],
+        "Date - latest": [
+          "4.1941"
+        ],
+        "Field collection method": [
+          "excavated"
+        ],
+        "Place note": [
+          "SMR : Treligga Barrow 1 : SX 08NW, 4",
+          "SMR : Treligga Barrow 2 : SX 08NW, 5",
+          "SMR : Treligga Barrow 5 : SX 08NW, 8",
+          "SMR : Treligga Barrow 7 : SX 08NW, 10"
+        ],
+        "Field collection place": [
+          "Cornwall",
+          "Treligga Common",
+          "Treligga",
+          "England"
+        ],
+        "Place status": [
+          "County",
+          "Country"
+        ],
+        "Material": [
+          "mixed"
+        ],
+        "Object name": [
+          "archaeological archive; archaeological archive (finds)"
+        ],
+        "Object number": [
+          "TRURI : 1982.13.4"
+        ],
+        "Other number": [
+          "1700.473",
+          "1701.98 (cup)",
+          "1701.113 (food vessel)"
+        ],
+        "Other number type": [
+          "previous number"
+        ],
+        "Reference": [
+          "14"
+        ],
+        "Reference author / editor": [
+          "Christie, P."
+        ],
+        "Reference note": [
+          "23-122",
+          "covers St Eval Barrow (pp.27-31); Penhale Barrow, Nancekuke (pp.31-41); Trevellas Barrow, Trevellas Down (pp.41-46); Lousey Barrow, St Juliot (pp.46-60); Treligga Common (pp.61-93); Cataclews (pp.93-106)"
+        ],
+        "Reference publication date": [
+          "1985"
+        ],
+        "Reference publisher": [
+          "Cornish Archaeology"
+        ],
+        "Reference title": [
+          "Barrows on the North Cornish Coast - Wartime Excavations by C.K. Croft Andrew 1939-1944"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:3e9f5a58-5600-386a-b4cb-b7306c256c2d",
+      "title": "MDS Record 36",
+      "url": "https://museumdata.uk/objects/3e9f5a58-5600-386a-b4cb-b7306c256c2d",
+      "date": "1.1941"
+    }
+  },
+  {
+    "id": "mds:240642f1-6785-3963-8cf3-b76719f07566",
+    "_source": "mds",
+    "_sourceId": "Gressenhall_collections-22673",
+    "_sourceUrl": "https://museumdata.uk/objects/240642f1-6785-3963-8cf3-b76719f07566",
+    "title": "MDS Record 37",
+    "description": "Sack Barrow. Iron and wood, painted bright red",
+    "subject": [
+      "sack barrow; barrow",
+      "sack barrow; barrow",
+      "4.11.26",
+      "working life",
+      "agriculture",
+      "transport and materials handling"
+    ],
+    "type": "Museum object",
+    "collection": "Norfolk Museums Service",
+    "mds": {
+      "uuid": "240642f1-6785-3963-8cf3-b76719f07566",
+      "objectNumber": "Gressenhall_collections-22673",
+      "material": [
+        "iron",
+        "wood"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "sack barrow; barrow"
+        ],
+        "Brief description": [
+          "Sack Barrow. Iron and wood, painted bright red"
+        ],
+        "Collection": [
+          "Norfolk Museums Service"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "4.11.26",
+          "working life",
+          "agriculture",
+          "transport and materials handling"
+        ],
+        "Current location": [
+          "Not on display - In store"
+        ],
+        "Material": [
+          "iron",
+          "wood"
+        ],
+        "Object name": [
+          "sack barrow; barrow"
+        ],
+        "Object number": [
+          "GRSRM : 1993.250"
+        ],
+        "Responsible department/section": [
+          "Gressenhall Farm and Workhouse"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:240642f1-6785-3963-8cf3-b76719f07566",
+      "title": "MDS Record 37",
+      "url": "https://museumdata.uk/objects/240642f1-6785-3963-8cf3-b76719f07566"
+    }
+  },
+  {
+    "id": "mds:ec1ba391-b24e-3aba-8b62-ee81f5d321ff",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2001.126.1",
+    "_sourceUrl": "https://museumdata.uk/objects/ec1ba391-b24e-3aba-8b62-ee81f5d321ff",
+    "title": "MDS Record 38",
+    "description": "3 flint scrapers from the Neolithic period, inscribed 'near WKB' (near West Kennet Long Barrow), from near West Kennet Long Barrow, Avebury, Wiltshire",
+    "subject": [
+      "scraper; flint scraper",
+      "scraper; flint scraper",
+      "archaeology",
+      "neolithic"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "ec1ba391-b24e-3aba-8b62-ee81f5d321ff",
+      "objectNumber": "DZSWS:2001.126.1",
+      "material": [
+        "stone",
+        "flint"
+      ],
+      "place": [
+        "West Kennett",
+        "Wiltshire",
+        "West Kennett Long Barrow (near)"
+      ],
+      "dimensions": [
+        "length",
+        "width",
+        "height"
+      ],
+      "numberOfObjects": "3",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "scraper; flint scraper"
+        ],
+        "Brief description": [
+          "3 flint scrapers from the Neolithic period, inscribed 'near WKB' (near West Kennet Long Barrow), from near West Kennet Long Barrow, Avebury, Wiltshire"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "neolithic"
+        ],
+        "Associated date": [
+          "Period"
+        ],
+        "Date - period": [
+          "neolithic"
+        ],
+        "Associated place": [
+          "West Kennett",
+          "Wiltshire",
+          "West Kennett Long Barrow (near)"
+        ],
+        "Place status": [
+          "long barrow"
+        ],
+        "Dimension": [
+          "length",
+          "width",
+          "height"
+        ],
+        "Field collection place": [
+          "Wiltshire",
+          "West Kennett",
+          "West Kennett Long Barrow (near)"
+        ],
+        "Material": [
+          "stone",
+          "flint"
+        ],
+        "Number of objects": [
+          "3"
+        ],
+        "Object name": [
+          "scraper; flint scraper"
+        ],
+        "Object number": [
+          "DZSWS:2001.126.1"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:ec1ba391-b24e-3aba-8b62-ee81f5d321ff",
+      "title": "MDS Record 38",
+      "url": "https://museumdata.uk/objects/ec1ba391-b24e-3aba-8b62-ee81f5d321ff"
+    }
+  },
+  {
+    "id": "mds:c6b34ed0-16ce-3159-875b-7d93456a5e94",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2001.126.3",
+    "_sourceUrl": "https://museumdata.uk/objects/c6b34ed0-16ce-3159-875b-7d93456a5e94",
+    "title": "MDS Record 39",
+    "description": "3 flint scrapers from the Neolithic period, inscribed in pencil 'WKB' (West Kennet Barrow), from West Kennet Long Barrow, Avebury, Wiltshire",
+    "subject": [
+      "scraper; flint scraper",
+      "scraper; flint scraper",
+      "archaeology",
+      "neolithic"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "c6b34ed0-16ce-3159-875b-7d93456a5e94",
+      "objectNumber": "DZSWS:2001.126.3",
+      "material": [
+        "stone",
+        "flint"
+      ],
+      "place": [
+        "West Kennett",
+        "Wiltshire",
+        "West Kennett Long Barrow"
+      ],
+      "dimensions": [
+        "length",
+        "width",
+        "height"
+      ],
+      "numberOfObjects": "3",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "scraper; flint scraper"
+        ],
+        "Brief description": [
+          "3 flint scrapers from the Neolithic period, inscribed in pencil 'WKB' (West Kennet Barrow), from West Kennet Long Barrow, Avebury, Wiltshire"
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "neolithic"
+        ],
+        "Associated date": [
+          "Period"
+        ],
+        "Date - period": [
+          "neolithic"
+        ],
+        "Associated place": [
+          "West Kennett",
+          "Wiltshire",
+          "West Kennett Long Barrow"
+        ],
+        "Place status": [
+          "long barrow"
+        ],
+        "Dimension": [
+          "length",
+          "width",
+          "height"
+        ],
+        "Field collection place": [
+          "Wiltshire",
+          "West Kennett",
+          "West Kennett Long Barrow"
+        ],
+        "Material": [
+          "stone",
+          "flint"
+        ],
+        "Number of objects": [
+          "3"
+        ],
+        "Object name": [
+          "scraper; flint scraper"
+        ],
+        "Object number": [
+          "DZSWS:2001.126.3"
+        ],
+        "Use reference number": [
+          "previous number"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:c6b34ed0-16ce-3159-875b-7d93456a5e94",
+      "title": "MDS Record 39",
+      "url": "https://museumdata.uk/objects/c6b34ed0-16ce-3159-875b-7d93456a5e94"
+    }
+  },
+  {
+    "id": "mds:b3188a17-00f4-3279-9364-71e3af5c643a",
+    "_source": "mds",
+    "_sourceId": "TWCMS",
+    "_sourceUrl": "https://museumdata.uk/objects/b3188a17-00f4-3279-9364-71e3af5c643a",
+    "title": "MDS Record 40",
+    "description": "Sack barrow/hoist",
+    "subject": [
+      "sack barrow; hoist",
+      "sack barrow; hoist",
+      "Science & Industry"
+    ],
+    "type": "Museum object",
+    "collection": "North East Museums",
+    "mds": {
+      "uuid": "b3188a17-00f4-3279-9364-71e3af5c643a",
+      "objectNumber": "TWCMS",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "sack barrow; hoist"
+        ],
+        "Brief description": [
+          "Sack barrow/hoist"
+        ],
+        "Collection": [
+          "North East Museums"
+        ],
+        "Associated concept": [
+          "Science & Industry"
+        ],
+        "Object name": [
+          "sack barrow; hoist"
+        ],
+        "Object number": [
+          "TWCMS : 1993.2115"
+        ],
+        "Physical description": [
+          "Sack barrow/hoist"
+        ],
+        "Responsible department/section": [
+          "History"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:b3188a17-00f4-3279-9364-71e3af5c643a",
+      "title": "MDS Record 40",
+      "url": "https://museumdata.uk/objects/b3188a17-00f4-3279-9364-71e3af5c643a"
+    }
+  },
+  {
+    "id": "mds:6d9e00bf-8a8c-3a7e-8720-0114aaa14bf2",
+    "_source": "mds",
+    "_sourceId": "co210055",
+    "_sourceUrl": "https://museumdata.uk/objects/6d9e00bf-8a8c-3a7e-8720-0114aaa14bf2",
+    "title": "LNER Calf Barrow, King's Cross For Livestock Only",
+    "description": "Calf barrow, London & North Eastern Railway, 2 axles / 4 wheels / solid tyres, 2 end doors. Marked \"E124 King's Cross For Livestock Only\".",
+    "creator": "London & North Eastern Railway",
+    "date": "1923",
+    "subject": [
+      "calf barrow; calf barrow",
+      "calf barrow; calf barrow",
+      "calf barrow",
+      "fixtures and fittings from railway buildings",
+      "Running the Railway"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "6d9e00bf-8a8c-3a7e-8720-0114aaa14bf2",
+      "objectNumber": "co210055",
+      "material": [
+        "wood (unidentified)",
+        "metal (unknown)"
+      ],
+      "place": [
+        "unknown place"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "39",
+        "990",
+        "59 1/16",
+        "1500",
+        "64 9/16",
+        "1640"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "LNER Calf Barrow, King's Cross For Livestock Only"
+        ],
+        "Object name(s)": [
+          "calf barrow; calf barrow"
+        ],
+        "Brief description": [
+          "Calf barrow, London & North Eastern Railway, 2 axles / 4 wheels / solid tyres, 2 end doors. Marked \"E124 King's Cross For Livestock Only\".",
+          "From the mid-nineteenth century to the 1970s, the railways provided an essential link for transporting livestock between farm, port and market. Many stations had cattle docks for loading livestock into vans. Barrows such as this provided the means to transport calves between van and pen."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "calf barrow",
+          "fixtures and fittings from railway buildings",
+          "Running the Railway"
+        ],
+        "Associated person": [
+          "London & North Eastern Railway"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "39",
+          "990",
+          "59 1/16",
+          "1500",
+          "64 9/16",
+          "1640"
+        ],
+        "Material": [
+          "wood (unidentified)",
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "calf barrow; calf barrow"
+        ],
+        "Date - earliest / single": [
+          "1923"
+        ],
+        "Date - latest": [
+          "1947"
+        ],
+        "Object production person": [
+          "London & North Eastern Railway"
+        ],
+        "Object production place": [
+          "unknown place"
+        ],
+        "Other number": [
+          "1983-7152",
+          "NRM 83/17/3",
+          "147/323"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:6d9e00bf-8a8c-3a7e-8720-0114aaa14bf2",
+      "title": "LNER Calf Barrow, King's Cross For Livestock Only",
+      "url": "https://museumdata.uk/objects/6d9e00bf-8a8c-3a7e-8720-0114aaa14bf2",
+      "creator": "London & North Eastern Railway",
+      "date": "1923"
+    }
+  },
+  {
+    "id": "mds:bee10bf2-9446-399e-ba53-89f5182e9542",
+    "_source": "mds",
+    "_sourceId": "ANSFM",
+    "_sourceUrl": "https://museumdata.uk/objects/bee10bf2-9446-399e-ba53-89f5182e9542",
+    "title": "MDS Record 42",
+    "description": "Green, wooden net barrow with single tyre. Tips of handles painted black.",
+    "subject": [
+      "net barrow",
+      "net barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Scottish Fisheries Museum",
+    "mds": {
+      "uuid": "bee10bf2-9446-399e-ba53-89f5182e9542",
+      "objectNumber": "ANSFM",
+      "dimensions": [
+        "Height",
+        "Width",
+        "1800mm",
+        "585mm"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "net barrow"
+        ],
+        "Brief description": [
+          "Green, wooden net barrow with single tyre. Tips of handles painted black."
+        ],
+        "Collection": [
+          "Scottish Fisheries Museum"
+        ],
+        "Dimension": [
+          "Height",
+          "Width"
+        ],
+        "Dimension value": [
+          "1800mm",
+          "585mm"
+        ],
+        "Object name": [
+          "net barrow"
+        ],
+        "Object number": [
+          "ANSFM : 2001.70"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:bee10bf2-9446-399e-ba53-89f5182e9542",
+      "title": "MDS Record 42",
+      "url": "https://museumdata.uk/objects/bee10bf2-9446-399e-ba53-89f5182e9542"
+    }
+  },
+  {
+    "id": "mds:0e94bff6-3f7b-3b8a-968b-417f79de340a",
+    "_source": "mds",
+    "_sourceId": "co210257",
+    "_sourceUrl": "https://museumdata.uk/objects/0e94bff6-3f7b-3b8a-968b-417f79de340a",
+    "title": "Sack barrow",
+    "description": "Sack barrow. Two wheeled sack barrow with wooden rungs. Repaired in 1986. Dimensions 51\"  high x 19\" wide",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "0e94bff6-3f7b-3b8a-968b-417f79de340a",
+      "objectNumber": "co210257",
+      "material": [
+        "wood (unidentified)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Sack barrow"
+        ],
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "Sack barrow. Two wheeled sack barrow with wooden rungs. Repaired in 1986. Dimensions 51\"  high x 19\" wide"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "Running the Railway",
+          "fixtures and fittings from railway buildings"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Material": [
+          "wood (unidentified)"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Other number": [
+          "1987-7263",
+          "NRTM 87/17/58"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:0e94bff6-3f7b-3b8a-968b-417f79de340a",
+      "title": "Sack barrow",
+      "url": "https://museumdata.uk/objects/0e94bff6-3f7b-3b8a-968b-417f79de340a"
+    }
+  },
+  {
+    "id": "mds:8512303a-2669-3bb3-8dc3-b6225a41e3e6",
+    "_source": "mds",
+    "_sourceId": "O58737",
+    "_sourceUrl": "https://museumdata.uk/objects/8512303a-2669-3bb3-8dc3-b6225a41e3e6",
+    "title": "Long barrows of the Cotswolds, The. A description of long barrows, stone circles and other megalithic remains in the area covered by Sheet 8 of the quarter-inch Ordnance Survey comprising the Cotswolds and the Welsh Marches",
+    "creator": [
+      "CRAWFORD, O.G.S.",
+      "John Bellows"
+    ],
+    "date": "1925",
+    "subject": [
+      "Book",
+      "Book",
+      "Archaeology: prehistory",
+      "Barrows: long",
+      "Long Barrows",
+      "Burial mounds"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "8512303a-2669-3bb3-8dc3-b6225a41e3e6",
+      "objectNumber": "O58737",
+      "place": [
+        "Gloucester"
+      ],
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "246",
+        "27"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Long barrows of the Cotswolds, The. A description of long barrows, stone circles and other megalithic remains in the area covered by Sheet 8 of the quarter-inch Ordnance Survey comprising the Cotswolds and the Welsh Marches"
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Archaeology: prehistory",
+          "Barrows: long",
+          "Long Barrows",
+          "Burial mounds"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "246",
+          "27"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "L.2006.150"
+        ],
+        "Object production date": [
+          "1925"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production organisation": [
+          "John Bellows"
+        ],
+        "Organisation's association": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "CRAWFORD, O.G.S."
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Object production place": [
+          "Gloucester"
+        ],
+        "Place association": [
+          "Published"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:8512303a-2669-3bb3-8dc3-b6225a41e3e6",
+      "title": "Long barrows of the Cotswolds, The. A description of long barrows, stone circles and other megalithic remains in the area covered by Sheet 8 of the quarter-inch Ordnance Survey comprising the Cotswolds and the Welsh Marches",
+      "url": "https://museumdata.uk/objects/8512303a-2669-3bb3-8dc3-b6225a41e3e6",
+      "creator": [
+        "CRAWFORD, O.G.S.",
+        "John Bellows"
+      ],
+      "date": "1925"
+    }
+  },
+  {
+    "id": "mds:7757e27f-2904-3203-a26c-d5dd4d538823",
+    "_source": "mds",
+    "_sourceId": "DZSWS:2013.5027",
+    "_sourceUrl": "https://museumdata.uk/objects/7757e27f-2904-3203-a26c-d5dd4d538823",
+    "title": "West Kennet Long Barrowl, Avebury, Wiltshire",
+    "description": "1 black and white and 1 colour postcard of West Kennet Long Barrow, Avebury, Wiltshire. 1 - A print of the Stukeley drawing,  \"An Archdruid's Barrow\", The Long Barrow of Silbury Hill. The West Kennet Long Barrow in c. 1724. Stukeley called it the \"archdruid's barrow\" because he was convinced Avebury was a Druid Temple.  2 - Inteior view f West Kennet Long Barrow looking west.",
+    "creator": [
+      "Press, Beacon The",
+      "Wilsons"
+    ],
+    "subject": [
+      "postcard",
+      "postcard",
+      "archaeology",
+      "monument"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "7757e27f-2904-3203-a26c-d5dd4d538823",
+      "objectNumber": "DZSWS:2013.5027",
+      "place": [
+        "Avebury",
+        "Wiltshire",
+        "Avebury",
+        "West Kennet Long Barrow",
+        "Wiltshire"
+      ],
+      "numberOfObjects": "2",
+      "personAssociation": [
+        "Printer"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "West Kennet Long Barrowl, Avebury, Wiltshire"
+        ],
+        "Object name(s)": [
+          "postcard"
+        ],
+        "Brief description": [
+          "1 black and white and 1 colour postcard of West Kennet Long Barrow, Avebury, Wiltshire. 1 - A print of the Stukeley drawing,  \"An Archdruid's Barrow\", The Long Barrow of Silbury Hill. The West Kennet Long Barrow in c. 1724. Stukeley called it the \"archdruid's barrow\" because he was convinced Avebury was a Druid Temple.  2 - Inteior view f West Kennet Long Barrow looking west."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "monument"
+        ],
+        "Content - place": [
+          "Avebury",
+          "West Kennet Long Barrow",
+          "Wiltshire"
+        ],
+        "Place status": [
+          "Parish",
+          "Site Name",
+          "County"
+        ],
+        "Number of objects": [
+          "2"
+        ],
+        "Object name": [
+          "postcard"
+        ],
+        "Object number": [
+          "DZSWS:2013.5027"
+        ],
+        "Object production person": [
+          "Press, Beacon The",
+          "Wilsons"
+        ],
+        "Person's association": [
+          "Printer"
+        ],
+        "Object production place": [
+          "Avebury",
+          "Wiltshire"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:7757e27f-2904-3203-a26c-d5dd4d538823",
+      "title": "West Kennet Long Barrowl, Avebury, Wiltshire",
+      "url": "https://museumdata.uk/objects/7757e27f-2904-3203-a26c-d5dd4d538823",
+      "creator": [
+        "Press, Beacon The",
+        "Wilsons"
+      ]
+    }
+  },
+  {
+    "id": "mds:ff8232bc-3e88-3019-b98b-e790de3f8009",
+    "_source": "mds",
+    "_sourceId": "DZSWS:1988.270.131",
+    "_sourceUrl": "https://museumdata.uk/objects/ff8232bc-3e88-3019-b98b-e790de3f8009",
+    "title": "MDS Record 46",
+    "description": "3 fragments of animal bone, from the bell barrow G4 at Milton Hill, Milton Lilbourne, Wiltshire, excavated by Paul Ashbee et all in 1958.",
+    "subject": [
+      "animal remains; bone",
+      "animal remains; bone",
+      "archaeology",
+      "bronze age",
+      "neolithic"
+    ],
+    "type": "Museum object",
+    "collection": "Wiltshire Museum",
+    "mds": {
+      "uuid": "ff8232bc-3e88-3019-b98b-e790de3f8009",
+      "objectNumber": "DZSWS:1988.270.131",
+      "material": [
+        "bone"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "depth"
+      ],
+      "numberOfObjects": "3",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "animal remains; bone"
+        ],
+        "Brief description": [
+          "3 fragments of animal bone, from the bell barrow G4 at Milton Hill, Milton Lilbourne, Wiltshire, excavated by Paul Ashbee et all in 1958."
+        ],
+        "Collection": [
+          "Wiltshire Museum"
+        ],
+        "Associated concept": [
+          "archaeology",
+          "bronze age",
+          "neolithic"
+        ],
+        "Comments": [
+          "5 boxes of finds- all need repacking. Each barrow has different accession number- 1988.267-271 (5 barrows in total)"
+        ],
+        "Dimension": [
+          "height",
+          "width",
+          "depth"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Field collection date": [
+          "1958"
+        ],
+        "Field collection method": [
+          "excavation"
+        ],
+        "Place context": [
+          "ancient soil beneath barrow 4 \"538 / 66\""
+        ],
+        "Field collection place": [
+          "Wiltshire",
+          "Milton Lilbourne",
+          "Milton Hill",
+          "Barrow G4"
+        ],
+        "Place status": [
+          "bell barrow"
+        ],
+        "Material": [
+          "bone"
+        ],
+        "Number of objects": [
+          "3"
+        ],
+        "Object name": [
+          "animal remains; bone"
+        ],
+        "Object number": [
+          "DZSWS:1988.270.131"
+        ],
+        "User's reference": [
+          "WANHM"
+        ],
+        "Reference publication date": [
+          "1986"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:ff8232bc-3e88-3019-b98b-e790de3f8009",
+      "title": "MDS Record 46",
+      "url": "https://museumdata.uk/objects/ff8232bc-3e88-3019-b98b-e790de3f8009"
+    }
+  },
+  {
+    "id": "mds:2621568a-234e-3a21-91e6-a4adc9d4c0b9",
+    "_source": "mds",
+    "_sourceId": "co50033",
+    "_sourceUrl": "https://museumdata.uk/objects/2621568a-234e-3a21-91e6-a4adc9d4c0b9",
+    "title": "Mason's barrow, 19th century",
+    "description": "Mason's barrow, 19th century",
+    "date": "1801",
+    "subject": [
+      "barrow; barrow",
+      "barrow; barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "2621568a-234e-3a21-91e6-a4adc9d4c0b9",
+      "objectNumber": "co50033",
+      "place": [
+        "Middlesex"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "103 9/16",
+        "2630",
+        "20 1/16",
+        "510",
+        "30 5/16",
+        "770"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Mason's barrow, 19th century"
+        ],
+        "Object name(s)": [
+          "barrow; barrow"
+        ],
+        "Brief description": [
+          "Mason's barrow, 19th century"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated place": [
+          "Middlesex"
+        ],
+        "Place association": [
+          "association"
+        ],
+        "Credit line": [
+          "British Museum"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "103 9/16",
+          "2630",
+          "20 1/16",
+          "510",
+          "30 5/16",
+          "770"
+        ],
+        "Object name": [
+          "barrow; barrow"
+        ],
+        "Date - earliest / single": [
+          "1801"
+        ],
+        "Date - latest": [
+          "1900"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1977-385",
+          "1006/49/02"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Building Construction"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:2621568a-234e-3a21-91e6-a4adc9d4c0b9",
+      "title": "Mason's barrow, 19th century",
+      "url": "https://museumdata.uk/objects/2621568a-234e-3a21-91e6-a4adc9d4c0b9",
+      "date": "1801"
+    }
+  },
+  {
+    "id": "mds:15d7c9f1-7944-3ae1-9d66-44c5474547f1",
+    "_source": "mds",
+    "_sourceId": "HMCMS:SH1998.712",
+    "_sourceUrl": "https://museumdata.uk/objects/15d7c9f1-7944-3ae1-9d66-44c5474547f1",
+    "title": "MDS Record 48",
+    "description": "knife grinding barrow, or barrow, wood, two wheeled with handles for pushing barrow along, two grinding wheels which are turned using a belt mechanism attached to a large wheel in the centre of the barrow and driven using two foot pedals, used by David J Postin, made 1900-1924",
+    "subject": [
+      "knife grinding barrow; barrow; knife grinding barrow; barrow",
+      "knife grinding barrow; barrow; knife grinding barrow; barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Hampshire Cultural Trust",
+    "mds": {
+      "uuid": "15d7c9f1-7944-3ae1-9d66-44c5474547f1",
+      "objectNumber": "HMCMS:SH1998.712",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "knife grinding barrow; barrow; knife grinding barrow; barrow"
+        ],
+        "Brief description": [
+          "knife grinding barrow, or barrow, wood, two wheeled with handles for pushing barrow along, two grinding wheels which are turned using a belt mechanism attached to a large wheel in the centre of the barrow and driven using two foot pedals, used by David J Postin, made 1900-1924"
+        ],
+        "Collection": [
+          "Hampshire Cultural Trust"
+        ],
+        "Credit line": [
+          "Part of the Hampshire County Collections managed by Hampshire Cultural Trust"
+        ],
+        "Object name": [
+          "knife grinding barrow; barrow; knife grinding barrow; barrow"
+        ],
+        "Object number": [
+          "HMCMS:SH1998.712"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:15d7c9f1-7944-3ae1-9d66-44c5474547f1",
+      "title": "MDS Record 48",
+      "url": "https://museumdata.uk/objects/15d7c9f1-7944-3ae1-9d66-44c5474547f1"
+    }
+  },
+  {
+    "id": "mds:06986cc7-4344-3f89-a655-f23076135deb",
+    "_source": "mds",
+    "_sourceId": "O70508",
+    "_sourceUrl": "https://museumdata.uk/objects/06986cc7-4344-3f89-a655-f23076135deb",
+    "title": "Dorset barrows supplement.",
+    "creator": "GRINSELL, L.V.",
+    "date": "1980",
+    "subject": [
+      "Book",
+      "Book",
+      "Barrows"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "06986cc7-4344-3f89-a655-f23076135deb",
+      "objectNumber": "O70508",
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "78",
+        "41"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Dorset barrows supplement."
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Barrows"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "78",
+          "41"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "L.2010.66"
+        ],
+        "Object production date": [
+          "1980"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production person": [
+          "GRINSELL, L.V."
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:06986cc7-4344-3f89-a655-f23076135deb",
+      "title": "Dorset barrows supplement.",
+      "url": "https://museumdata.uk/objects/06986cc7-4344-3f89-a655-f23076135deb",
+      "creator": "GRINSELL, L.V.",
+      "date": "1980"
+    }
+  },
+  {
+    "id": "mds:6ca216c2-b42c-30cc-a1a6-52578d73f081",
+    "_source": "mds",
+    "_sourceId": "co210046",
+    "_sourceUrl": "https://museumdata.uk/objects/6ca216c2-b42c-30cc-a1a6-52578d73f081",
+    "title": "Wooden sack barrow, North Eastern Railway",
+    "description": "Sack barrow, North Eastern Railway. Small wooden barrow with metal wheels, marked \"YORK GOODS 18\". Overall: 1110 mm x 550 mm x 530 mm.",
+    "creator": "North Eastern Railway",
+    "subject": [
+      "sack barrow; sack barrow",
+      "sack barrow; sack barrow",
+      "Running the Railway",
+      "fixtures and fittings from railway buildings",
+      "sack barrow"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "6ca216c2-b42c-30cc-a1a6-52578d73f081",
+      "objectNumber": "co210046",
+      "material": [
+        "wood (unidentified)",
+        "metal (unknown)"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "20 7/8",
+        "530",
+        "43 11/16",
+        "1110",
+        "21 5/8",
+        "550"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Wooden sack barrow, North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "sack barrow; sack barrow"
+        ],
+        "Brief description": [
+          "Sack barrow, North Eastern Railway. Small wooden barrow with metal wheels, marked \"YORK GOODS 18\". Overall: 1110 mm x 550 mm x 530 mm."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "Running the Railway",
+          "fixtures and fittings from railway buildings",
+          "sack barrow"
+        ],
+        "Associated person": [
+          "North Eastern Railway"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Credit line": [
+          "British Rail, Historical Relics"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "20 7/8",
+          "530",
+          "43 11/16",
+          "1110",
+          "21 5/8",
+          "550"
+        ],
+        "Material": [
+          "wood (unidentified)",
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "sack barrow; sack barrow"
+        ],
+        "Object production person": [
+          "North Eastern Railway"
+        ],
+        "Other number": [
+          "1981-7037",
+          "NRM 81/17/111"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Fixtures & Fittings from Railway Buildings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:47:35.587Z",
+      "query": "barrow",
+      "recordId": "mds:6ca216c2-b42c-30cc-a1a6-52578d73f081",
+      "title": "Wooden sack barrow, North Eastern Railway",
+      "url": "https://museumdata.uk/objects/6ca216c2-b42c-30cc-a1a6-52578d73f081",
+      "creator": "North Eastern Railway"
+    }
+  }
+]

@@ -1,0 +1,1766 @@
+[
+  {
+    "id": "vam:O1476560",
+    "_source": "vam",
+    "_sourceId": "O1476560",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1476560",
+    "_pid": "RPS.764-2019",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1476560",
+      "title": "A portrait of a man",
+      "url": "https://collections.vam.ac.uk/item/O1476560",
+      "pid": "RPS.764-2019",
+      "creator": "Rolfe's Portrait Studio",
+      "date": "1875"
+    },
+    "title": "A portrait of a man",
+    "creator": "Rolfe's Portrait Studio",
+    "date": "1875",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "Old Haymarket",
+      "accessionNumber": "RPS.764-2019",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2026PP1985/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2026PP1985/"
+    }
+  },
+  {
+    "id": "vam:O1069351",
+    "_source": "vam",
+    "_sourceId": "O1069351",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069351",
+    "_pid": "P.37-1936",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069351",
+      "title": "Portrait",
+      "url": "https://collections.vam.ac.uk/item/O1069351",
+      "pid": "P.37-1936",
+      "creator": "William Hoare",
+      "date": "ca. 1750"
+    },
+    "title": "Portrait",
+    "creator": "William Hoare",
+    "date": "ca. 1750",
+    "subject": [
+      "Portrait"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait",
+      "place": "Britain",
+      "accessionNumber": "P.37-1936",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, room WS",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2015HT4290/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069351/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2015HT4290/"
+    }
+  },
+  {
+    "id": "vam:O1070003",
+    "_source": "vam",
+    "_sourceId": "O1070003",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1070003",
+    "_pid": "P.1-1917",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1070003",
+      "title": "Portrait miniature of a boy dressed in blue",
+      "url": "https://collections.vam.ac.uk/item/O1070003",
+      "pid": "P.1-1917",
+      "creator": "Unknown",
+      "date": "ca. 1775-1850"
+    },
+    "title": "Portrait miniature of a boy dressed in blue",
+    "creator": "Unknown",
+    "date": "ca. 1775-1850",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.1-1917",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2024NT9475/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1070003/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2024NT9475/"
+    }
+  },
+  {
+    "id": "vam:O1068937",
+    "_source": "vam",
+    "_sourceId": "O1068937",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1068937",
+    "_pid": "P.2-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1068937",
+      "title": "Lord Orford",
+      "url": "https://collections.vam.ac.uk/item/O1068937",
+      "pid": "P.2-1976",
+      "creator": "Carriera, Rosalba Giovanna",
+      "date": "ca. 1715-1720"
+    },
+    "title": "Lord Orford",
+    "creator": "Carriera, Rosalba Giovanna",
+    "date": "ca. 1715-1720",
+    "subject": [
+      "Portrait"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait",
+      "place": "Great Britain",
+      "accessionNumber": "P.2-1976",
+      "onDisplay": false,
+      "location": "In store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2023NN3490/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1068937/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2023NN3490/"
+    }
+  },
+  {
+    "id": "vam:O1042977",
+    "_source": "vam",
+    "_sourceId": "O1042977",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1042977",
+    "_pid": "APS.LOST.52",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1042977",
+      "title": "Portrait of Wellington",
+      "url": "https://collections.vam.ac.uk/item/O1042977",
+      "pid": "APS.LOST.52"
+    },
+    "title": "Portrait of Wellington",
+    "subject": [
+      "Portrait"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait",
+      "place": "UK",
+      "accessionNumber": "APS.LOST.52",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O77688",
+    "_source": "vam",
+    "_sourceId": "O77688",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O77688",
+    "_pid": "625-1882",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O77688",
+      "title": "Portrait of Mary Stuart, Queen of Scots",
+      "url": "https://collections.vam.ac.uk/item/O77688",
+      "pid": "625-1882",
+      "creator": "Clouet, François",
+      "date": "17th century"
+    },
+    "title": "Portrait of Mary Stuart, Queen of Scots",
+    "creator": "Clouet, François",
+    "date": "17th century",
+    "subject": [
+      "Portrait"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait",
+      "place": "England",
+      "accessionNumber": "625-1882",
+      "onDisplay": true,
+      "location": "British Galleries, Room 57",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AN2286/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O77688/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AN2286/"
+    }
+  },
+  {
+    "id": "vam:O82200",
+    "_source": "vam",
+    "_sourceId": "O82200",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O82200",
+    "_pid": "P.1-1929",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O82200",
+      "title": "Silhouette portrait of an unknown woman",
+      "url": "https://collections.vam.ac.uk/item/O82200",
+      "pid": "P.1-1929",
+      "creator": "Beetham, Isabella",
+      "date": "ca. 1785-1809"
+    },
+    "title": "Silhouette portrait of an unknown woman",
+    "creator": "Beetham, Isabella",
+    "date": "ca. 1785-1809",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.1-1929",
+      "onDisplay": true,
+      "location": "Portrait Miniatures, Room 90a, The International Music and Art Foundation Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AF8792/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O82200/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AF8792/"
+    }
+  },
+  {
+    "id": "vam:O1069981",
+    "_source": "vam",
+    "_sourceId": "O1069981",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069981",
+    "_pid": "P.34-1937",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069981",
+      "title": "Portrait miniature of Monsieur Tussaud",
+      "url": "https://collections.vam.ac.uk/item/O1069981",
+      "pid": "P.34-1937",
+      "creator": "Charles Samuel Hervé",
+      "date": "1854"
+    },
+    "title": "Portrait miniature of Monsieur Tussaud",
+    "creator": "Charles Samuel Hervé",
+    "date": "1854",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "London",
+      "accessionNumber": "P.34-1937",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017JV3105/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069981/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017JV3105/"
+    }
+  },
+  {
+    "id": "vam:O1677377",
+    "_source": "vam",
+    "_sourceId": "O1677377",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1677377",
+    "_pid": "WE.7523-2014",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1677377",
+      "title": "Portrait",
+      "url": "https://collections.vam.ac.uk/item/O1677377",
+      "pid": "WE.7523-2014",
+      "creator": "Josiah Wedgwood and Sons",
+      "date": "1780"
+    },
+    "title": "Portrait",
+    "creator": "Josiah Wedgwood and Sons",
+    "date": "1780",
+    "subject": [
+      "Portrait"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait",
+      "accessionNumber": "WE.7523-2014",
+      "onDisplay": true,
+      "location": "V&A Wedgwood Collection, Gallery 1, 18th century displays",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2023NN2396/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1677377/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2023NN2396/"
+    }
+  },
+  {
+    "id": "vam:O1069703",
+    "_source": "vam",
+    "_sourceId": "O1069703",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069703",
+    "_pid": "P.35-1921",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069703",
+      "title": "Portrait miniature of a lady ",
+      "url": "https://collections.vam.ac.uk/item/O1069703",
+      "pid": "P.35-1921",
+      "creator": "John Wright",
+      "date": "1815"
+    },
+    "title": "Portrait miniature of a lady ",
+    "creator": "John Wright",
+    "date": "1815",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.35-1921",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1069630",
+    "_source": "vam",
+    "_sourceId": "O1069630",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069630",
+    "_pid": "P.108-1922",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069630",
+      "title": "Portrait miniature of a lady",
+      "url": "https://collections.vam.ac.uk/item/O1069630",
+      "pid": "P.108-1922",
+      "creator": "Thomas Hull",
+      "date": "1797"
+    },
+    "title": "Portrait miniature of a lady",
+    "creator": "Thomas Hull",
+    "date": "1797",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.108-1922",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1069786",
+    "_source": "vam",
+    "_sourceId": "O1069786",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069786",
+    "_pid": "P.92-1922",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069786",
+      "title": "Portrait miniature of a gentleman ",
+      "url": "https://collections.vam.ac.uk/item/O1069786",
+      "pid": "P.92-1922",
+      "creator": "William Wood",
+      "date": "ca. 1790-1810"
+    },
+    "title": "Portrait miniature of a gentleman ",
+    "creator": "William Wood",
+    "date": "ca. 1790-1810",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.92-1922",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017JY2048/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069786/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017JY2048/"
+    }
+  },
+  {
+    "id": "vam:O1069782",
+    "_source": "vam",
+    "_sourceId": "O1069782",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069782",
+    "_pid": "P.53-1923",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069782",
+      "title": "Portrait miniature of a gentleman",
+      "url": "https://collections.vam.ac.uk/item/O1069782",
+      "pid": "P.53-1923",
+      "creator": "Edward Vaughan",
+      "date": "ca. 1772-1814"
+    },
+    "title": "Portrait miniature of a gentleman",
+    "creator": "Edward Vaughan",
+    "date": "ca. 1772-1814",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.53-1923",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017JU2139/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069782/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017JU2139/"
+    }
+  },
+  {
+    "id": "vam:O1067686",
+    "_source": "vam",
+    "_sourceId": "O1067686",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067686",
+    "_pid": "P.17-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067686",
+      "title": "Portrait miniature of a gentleman",
+      "url": "https://collections.vam.ac.uk/item/O1067686",
+      "pid": "P.17-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of a gentleman",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.17-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1067683",
+    "_source": "vam",
+    "_sourceId": "O1067683",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067683",
+    "_pid": "P.28-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067683",
+      "title": "Portrait miniature of a lady",
+      "url": "https://collections.vam.ac.uk/item/O1067683",
+      "pid": "P.28-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of a lady",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.28-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1070073",
+    "_source": "vam",
+    "_sourceId": "O1070073",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1070073",
+    "_pid": "P.15-1980",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1070073",
+      "title": "Portrait minaiture of a lady",
+      "url": "https://collections.vam.ac.uk/item/O1070073",
+      "pid": "P.15-1980",
+      "creator": "Unknown",
+      "date": "late 19th century"
+    },
+    "title": "Portrait minaiture of a lady",
+    "creator": "Unknown",
+    "date": "late 19th century",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "accessionNumber": "P.15-1980",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O243110",
+    "_source": "vam",
+    "_sourceId": "O243110",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O243110",
+    "_pid": "E.3705-2007",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O243110",
+      "title": "Portrait of William Bennett",
+      "url": "https://collections.vam.ac.uk/item/O243110",
+      "pid": "E.3705-2007",
+      "creator": "casket portrait co., ltd.",
+      "date": "ca. 1865"
+    },
+    "title": "Portrait of William Bennett",
+    "creator": "casket portrait co., ltd.",
+    "date": "ca. 1865",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "accessionNumber": "E.3705-2007",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level H",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2014HF9658/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O243110/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2014HF9658/"
+    }
+  },
+  {
+    "id": "vam:O1069643",
+    "_source": "vam",
+    "_sourceId": "O1069643",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069643",
+    "_pid": "P.35-1937",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069643",
+      "title": "Portrait Miniature of an Unknown Woman ",
+      "url": "https://collections.vam.ac.uk/item/O1069643",
+      "pid": "P.35-1937",
+      "creator": "Unknown",
+      "date": "early 17th century"
+    },
+    "title": "Portrait Miniature of an Unknown Woman ",
+    "creator": "Unknown",
+    "date": "early 17th century",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "England",
+      "accessionNumber": "P.35-1937",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2016JA2701/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069643/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2016JA2701/"
+    }
+  },
+  {
+    "id": "vam:O1069674",
+    "_source": "vam",
+    "_sourceId": "O1069674",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069674",
+    "_pid": "P.34-1930",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069674",
+      "title": "Portrait miniature of a gentleman",
+      "url": "https://collections.vam.ac.uk/item/O1069674",
+      "pid": "P.34-1930",
+      "creator": "Thomas Clement Thompson",
+      "date": "early 19th century"
+    },
+    "title": "Portrait miniature of a gentleman",
+    "creator": "Thomas Clement Thompson",
+    "date": "early 19th century",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Ireland",
+      "accessionNumber": "P.34-1930",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2019LX1847/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069674/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2019LX1847/"
+    }
+  },
+  {
+    "id": "vam:O1070302",
+    "_source": "vam",
+    "_sourceId": "O1070302",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1070302",
+    "_pid": "P.75-1928",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1070302",
+      "title": "Portrait miniature of a man",
+      "url": "https://collections.vam.ac.uk/item/O1070302",
+      "pid": "P.75-1928",
+      "creator": "Unknown",
+      "date": "1729"
+    },
+    "title": "Portrait miniature of a man",
+    "creator": "Unknown",
+    "date": "1729",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "accessionNumber": "P.75-1928",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2019MD6132/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1070302/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2019MD6132/"
+    }
+  },
+  {
+    "id": "vam:O1069995",
+    "_source": "vam",
+    "_sourceId": "O1069995",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069995",
+    "_pid": "P.76-1931",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069995",
+      "title": "Portrait miniature of a lady",
+      "url": "https://collections.vam.ac.uk/item/O1069995",
+      "pid": "P.76-1931",
+      "creator": "Unknown",
+      "date": "ca. 1820"
+    },
+    "title": "Portrait miniature of a lady",
+    "creator": "Unknown",
+    "date": "ca. 1820",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.76-1931",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017JX8694/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069995/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017JX8694/"
+    }
+  },
+  {
+    "id": "vam:O1069578",
+    "_source": "vam",
+    "_sourceId": "O1069578",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069578",
+    "_pid": "P.81-1928",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069578",
+      "title": "Portrait miniature of a gentleman",
+      "url": "https://collections.vam.ac.uk/item/O1069578",
+      "pid": "P.81-1928",
+      "creator": "Frederick Cruickshank",
+      "date": "ca. 1825-1865"
+    },
+    "title": "Portrait miniature of a gentleman",
+    "creator": "Frederick Cruickshank",
+    "date": "ca. 1825-1865",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.81-1928",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017KA5834/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069578/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017KA5834/"
+    }
+  },
+  {
+    "id": "vam:O1069670",
+    "_source": "vam",
+    "_sourceId": "O1069670",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069670",
+    "_pid": "P.17-1932",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069670",
+      "title": "Portrait miniature of a gentleman",
+      "url": "https://collections.vam.ac.uk/item/O1069670",
+      "pid": "P.17-1932",
+      "creator": "John Wright",
+      "date": "ca. 1770-1820"
+    },
+    "title": "Portrait miniature of a gentleman",
+    "creator": "John Wright",
+    "date": "ca. 1770-1820",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.17-1932",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017JX3978/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069670/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017JX3978/"
+    }
+  },
+  {
+    "id": "vam:O1069747",
+    "_source": "vam",
+    "_sourceId": "O1069747",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069747",
+    "_pid": "P.68-1930",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069747",
+      "title": "Anonymous portrait miniature of a lady",
+      "url": "https://collections.vam.ac.uk/item/O1069747",
+      "pid": "P.68-1930",
+      "creator": "Unknown",
+      "date": "ca. 1773"
+    },
+    "title": "Anonymous portrait miniature of a lady",
+    "creator": "Unknown",
+    "date": "ca. 1773",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.68-1930",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O82326",
+    "_source": "vam",
+    "_sourceId": "O82326",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O82326",
+    "_pid": "P.139-1929",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O82326",
+      "title": "Portrait Miniature of an Unknown Girl",
+      "url": "https://collections.vam.ac.uk/item/O82326",
+      "pid": "P.139-1929",
+      "creator": "Hill, Diana",
+      "date": "ca. 1785-1790"
+    },
+    "title": "Portrait Miniature of an Unknown Girl",
+    "creator": "Hill, Diana",
+    "date": "ca. 1785-1790",
+    "subject": [
+      "Portrait Miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait Miniature",
+      "place": "India",
+      "accessionNumber": "P.139-1929",
+      "onDisplay": true,
+      "location": "Portrait Miniatures, Room 90a, The International Music and Art Foundation Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AF8923/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O82326/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AF8923/"
+    }
+  },
+  {
+    "id": "vam:O1070203",
+    "_source": "vam",
+    "_sourceId": "O1070203",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1070203",
+    "_pid": "P.77-1931",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1070203",
+      "title": "Anonymous portrait miniature of a lady",
+      "url": "https://collections.vam.ac.uk/item/O1070203",
+      "pid": "P.77-1931",
+      "creator": "Unknown",
+      "date": "19th century"
+    },
+    "title": "Anonymous portrait miniature of a lady",
+    "creator": "Unknown",
+    "date": "19th century",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "England",
+      "accessionNumber": "P.77-1931",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1046018",
+    "_source": "vam",
+    "_sourceId": "O1046018",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1046018",
+    "_pid": "P.22-1928",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1046018",
+      "title": "Portrait miniature of a gentleman",
+      "url": "https://collections.vam.ac.uk/item/O1046018",
+      "pid": "P.22-1928",
+      "creator": "Thomas Clement Thompson",
+      "date": "ca. early 19th century"
+    },
+    "title": "Portrait miniature of a gentleman",
+    "creator": "Thomas Clement Thompson",
+    "date": "ca. early 19th century",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Ireland",
+      "accessionNumber": "P.22-1928",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1067791",
+    "_source": "vam",
+    "_sourceId": "O1067791",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067791",
+    "_pid": "P.94-1931",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067791",
+      "title": "Portrait miniature of a gentleman in grey",
+      "url": "https://collections.vam.ac.uk/item/O1067791",
+      "pid": "P.94-1931",
+      "creator": "Unknown",
+      "date": "ca. 1795"
+    },
+    "title": "Portrait miniature of a gentleman in grey",
+    "creator": "Unknown",
+    "date": "ca. 1795",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Sweden",
+      "accessionNumber": "P.94-1931",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017JY0295/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1067791/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017JY0295/"
+    }
+  },
+  {
+    "id": "vam:O1069991",
+    "_source": "vam",
+    "_sourceId": "O1069991",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069991",
+    "_pid": "P.107-1931",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069991",
+      "title": "Portrait miniature of a lady, in a brooch",
+      "url": "https://collections.vam.ac.uk/item/O1069991",
+      "pid": "P.107-1931",
+      "creator": "Unknown",
+      "date": "ca. 1785"
+    },
+    "title": "Portrait miniature of a lady, in a brooch",
+    "creator": "Unknown",
+    "date": "ca. 1785",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.107-1931",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017JU0942/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069991/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017JU0942/"
+    }
+  },
+  {
+    "id": "vam:O1069509",
+    "_source": "vam",
+    "_sourceId": "O1069509",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069509",
+    "_pid": "P.76-1928",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069509",
+      "title": "Oval portrait miniature of a gentleman",
+      "url": "https://collections.vam.ac.uk/item/O1069509",
+      "pid": "P.76-1928",
+      "creator": "Borckhardt",
+      "date": "ca. 1784-1825"
+    },
+    "title": "Oval portrait miniature of a gentleman",
+    "creator": "Borckhardt",
+    "date": "ca. 1784-1825",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "London",
+      "accessionNumber": "P.76-1928",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1067700",
+    "_source": "vam",
+    "_sourceId": "O1067700",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067700",
+    "_pid": "P.47-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067700",
+      "title": "Portrait miniature of an unknown woman",
+      "url": "https://collections.vam.ac.uk/item/O1067700",
+      "pid": "P.47-1984",
+      "creator": "Arlaud",
+      "date": "1728"
+    },
+    "title": "Portrait miniature of an unknown woman",
+    "creator": "Arlaud",
+    "date": "1728",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Switzerland",
+      "accessionNumber": "P.47-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1059237",
+    "_source": "vam",
+    "_sourceId": "O1059237",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1059237",
+    "_pid": "P.22-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1059237",
+      "title": "Portrait miniature of Colonel Reynolds ",
+      "url": "https://collections.vam.ac.uk/item/O1059237",
+      "pid": "P.22-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of Colonel Reynolds ",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.22-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1059234",
+    "_source": "vam",
+    "_sourceId": "O1059234",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1059234",
+    "_pid": "P.21-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1059234",
+      "title": "Portrait miniature of Master Impey ",
+      "url": "https://collections.vam.ac.uk/item/O1059234",
+      "pid": "P.21-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of Master Impey ",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.21-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1059233",
+    "_source": "vam",
+    "_sourceId": "O1059233",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1059233",
+    "_pid": "P.24-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1059233",
+      "title": "Portrait miniature of Miss Keating",
+      "url": "https://collections.vam.ac.uk/item/O1059233",
+      "pid": "P.24-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of Miss Keating",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.24-1984",
+      "onDisplay": false,
+      "location": "In store"
+    }
+  },
+  {
+    "id": "vam:O1059231",
+    "_source": "vam",
+    "_sourceId": "O1059231",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1059231",
+    "_pid": "P.7-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1059231",
+      "title": "Portrait miniature of Mary Stuart ",
+      "url": "https://collections.vam.ac.uk/item/O1059231",
+      "pid": "P.7-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of Mary Stuart ",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.7-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1059230",
+    "_source": "vam",
+    "_sourceId": "O1059230",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1059230",
+    "_pid": "P.25-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1059230",
+      "title": "Portrait miniature of Miss Holland ",
+      "url": "https://collections.vam.ac.uk/item/O1059230",
+      "pid": "P.25-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of Miss Holland ",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.25-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1069992",
+    "_source": "vam",
+    "_sourceId": "O1069992",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069992",
+    "_pid": "P.102-1931",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069992",
+      "title": "Portrait of a lady in the lid of a box",
+      "url": "https://collections.vam.ac.uk/item/O1069992",
+      "pid": "P.102-1931",
+      "creator": "Engleheart",
+      "date": "ca. 1770-1825"
+    },
+    "title": "Portrait of a lady in the lid of a box",
+    "creator": "Engleheart",
+    "date": "ca. 1770-1825",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.102-1931",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1067687",
+    "_source": "vam",
+    "_sourceId": "O1067687",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067687",
+    "_pid": "P.15-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067687",
+      "title": "Portrait miniature of Peter Beckford ",
+      "url": "https://collections.vam.ac.uk/item/O1067687",
+      "pid": "P.15-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of Peter Beckford ",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.15-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1067684",
+    "_source": "vam",
+    "_sourceId": "O1067684",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067684",
+    "_pid": "P.27-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067684",
+      "title": "Portrait miniature of Mr Aguilar",
+      "url": "https://collections.vam.ac.uk/item/O1067684",
+      "pid": "P.27-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of Mr Aguilar",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.27-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1067682",
+    "_source": "vam",
+    "_sourceId": "O1067682",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067682",
+    "_pid": "P.29-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067682",
+      "title": "Portrait miniature of Lady Salisbury",
+      "url": "https://collections.vam.ac.uk/item/O1067682",
+      "pid": "P.29-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of Lady Salisbury",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.29-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1067681",
+    "_source": "vam",
+    "_sourceId": "O1067681",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067681",
+    "_pid": "P.33-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067681",
+      "title": "Portrait miniature drawing of a lady",
+      "url": "https://collections.vam.ac.uk/item/O1067681",
+      "pid": "P.33-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature drawing of a lady",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.33-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1067680",
+    "_source": "vam",
+    "_sourceId": "O1067680",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067680",
+    "_pid": "P.34-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067680",
+      "title": "Portrait miniature drawing of a lady",
+      "url": "https://collections.vam.ac.uk/item/O1067680",
+      "pid": "P.34-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature drawing of a lady",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.34-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1067676",
+    "_source": "vam",
+    "_sourceId": "O1067676",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067676",
+    "_pid": "P.30-1984",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067676",
+      "title": "Portrait miniature of Mrs Peters",
+      "url": "https://collections.vam.ac.uk/item/O1067676",
+      "pid": "P.30-1984",
+      "creator": "John Smart",
+      "date": "ca. 1760-1811"
+    },
+    "title": "Portrait miniature of Mrs Peters",
+    "creator": "John Smart",
+    "date": "ca. 1760-1811",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.30-1984",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1067452",
+    "_source": "vam",
+    "_sourceId": "O1067452",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1067452",
+    "_pid": "P.29-1931",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1067452",
+      "title": "Portrait miniature of a man",
+      "url": "https://collections.vam.ac.uk/item/O1067452",
+      "pid": "P.29-1931",
+      "date": "19th century"
+    },
+    "title": "Portrait miniature of a man",
+    "date": "19th century",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.29-1931",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2019LX1860/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1067452/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2019LX1860/"
+    }
+  },
+  {
+    "id": "vam:O1069659",
+    "_source": "vam",
+    "_sourceId": "O1069659",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069659",
+    "_pid": "P.83-1938",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069659",
+      "title": "Portrait miniature of a young man",
+      "url": "https://collections.vam.ac.uk/item/O1069659",
+      "pid": "P.83-1938",
+      "creator": "George Hayter",
+      "date": "ca. mid 19th century"
+    },
+    "title": "Portrait miniature of a young man",
+    "creator": "George Hayter",
+    "date": "ca. mid 19th century",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.83-1938",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017JV0643/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069659/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017JV0643/"
+    }
+  },
+  {
+    "id": "vam:O243109",
+    "_source": "vam",
+    "_sourceId": "O243109",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O243109",
+    "_pid": "E.3706-2007",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O243109",
+      "title": "Portrait of Sarah Anne Bennett",
+      "url": "https://collections.vam.ac.uk/item/O243109",
+      "pid": "E.3706-2007",
+      "creator": "Casket Portrait co. ltd.",
+      "date": "ca. 1865"
+    },
+    "title": "Portrait of Sarah Anne Bennett",
+    "creator": "Casket Portrait co. ltd.",
+    "date": "ca. 1865",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "accessionNumber": "E.3706-2007",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level H",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2008BU4341/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O243109/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2008BU4341/"
+    }
+  },
+  {
+    "id": "vam:O1069771",
+    "_source": "vam",
+    "_sourceId": "O1069771",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069771",
+    "_pid": "P.27-1928",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069771",
+      "title": "Portrait miniature of Miss Reynolds",
+      "url": "https://collections.vam.ac.uk/item/O1069771",
+      "pid": "P.27-1928",
+      "creator": "Engleheart",
+      "date": "ca. early 19th century"
+    },
+    "title": "Portrait miniature of Miss Reynolds",
+    "creator": "Engleheart",
+    "date": "ca. early 19th century",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.27-1928",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017JX4560/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1069771/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017JX4560/"
+    }
+  },
+  {
+    "id": "vam:O1069935",
+    "_source": "vam",
+    "_sourceId": "O1069935",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069935",
+    "_pid": "P.31-1928",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069935",
+      "title": "Portrait miniature of a man",
+      "url": "https://collections.vam.ac.uk/item/O1069935",
+      "pid": "P.31-1928",
+      "creator": "Peter Paillou",
+      "date": "ca. 1780-1830"
+    },
+    "title": "Portrait miniature of a man",
+    "creator": "Peter Paillou",
+    "date": "ca. 1780-1830",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.31-1928",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1070054",
+    "_source": "vam",
+    "_sourceId": "O1070054",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1070054",
+    "_pid": "P.32-1924",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1070054",
+      "title": "Self-portrait of the artist",
+      "url": "https://collections.vam.ac.uk/item/O1070054",
+      "pid": "P.32-1924",
+      "creator": "Hobday, William Armfield",
+      "date": "1793"
+    },
+    "title": "Self-portrait of the artist",
+    "creator": "Hobday, William Armfield",
+    "date": "1793",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "Britain",
+      "accessionNumber": "P.32-1924",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017KB1999/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1070054/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017KB1999/"
+    }
+  },
+  {
+    "id": "vam:O1069994",
+    "_source": "vam",
+    "_sourceId": "O1069994",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1069994",
+    "_pid": "P.86-1931",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:53:13.721Z",
+      "query": "portrait",
+      "recordId": "vam:O1069994",
+      "title": "Portrait miniature of a man in a purplish coat",
+      "url": "https://collections.vam.ac.uk/item/O1069994",
+      "pid": "P.86-1931",
+      "creator": "Unknown",
+      "date": "ca. 1790"
+    },
+    "title": "Portrait miniature of a man in a purplish coat",
+    "creator": "Unknown",
+    "date": "ca. 1790",
+    "subject": [
+      "Portrait miniature"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Portrait miniature",
+      "place": "France",
+      "accessionNumber": "P.86-1931",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  }
+]

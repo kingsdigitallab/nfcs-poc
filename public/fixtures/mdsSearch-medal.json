@@ -1,0 +1,3406 @@
+[
+  {
+    "id": "mds:622dfb27-30a0-3313-a63d-6e6c3c034657",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/622dfb27-30a0-3313-a63d-6e6c3c034657",
+    "title": "MDS Record 1",
+    "description": "medal group awarded to Cpl. Thomas Dann. Group comprises China War Medal 1842, Crimea Medal, Baltic Medal, Turkish Crimea Medal.",
+    "date": "1842",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "China Medal (1842)",
+      "Crimea Medal (1854-1856)",
+      "Medals and Awards (Turkey)",
+      "China War Medal (1842)",
+      "Crimea Medal",
+      "Baltic Medal",
+      "Turkish Crimea Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "622dfb27-30a0-3313-a63d-6e6c3c034657",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Cpl. Thomas Dann. Group comprises China War Medal 1842, Crimea Medal, Baltic Medal, Turkish Crimea Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "China Medal (1842)",
+          "Crimea Medal (1854-1856)",
+          "Medals and Awards (Turkey)",
+          "China War Medal (1842)",
+          "Crimea Medal",
+          "Baltic Medal",
+          "Turkish Crimea Medal"
+        ],
+        "Date - earliest / single": [
+          "1842"
+        ],
+        "Date - latest": [
+          "1842"
+        ],
+        "Associated person": [
+          "Dann, Thomas, Cpl.",
+          "Thomas Dann"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1981/126"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:622dfb27-30a0-3313-a63d-6e6c3c034657",
+      "title": "MDS Record 1",
+      "url": "https://museumdata.uk/objects/622dfb27-30a0-3313-a63d-6e6c3c034657",
+      "date": "1842"
+    }
+  },
+  {
+    "id": "mds:c5a53918-8804-3887-a6d4-dc05ba6bec84",
+    "_source": "mds",
+    "_sourceId": "CHIYH:2014.101",
+    "_sourceUrl": "https://museumdata.uk/objects/c5a53918-8804-3887-a6d4-dc05ba6bec84",
+    "title": "MDS Record 2",
+    "description": "41 medal ribbons for military medals: 1914-1918 Victory Medal, 1939-1945 star, 1939-45 Star, Africa Star, Ashanti Medal Ashanti Medal 1873 - East West Africa 1887, Ashanti Star 1896, Atlantic Star, Bagur and Palamos Medal, BSA Co's Medal, Burma Star, China War 1842, Second China War 1857-60, Coronation Medal 1937, Crimea Medal 1854, Defence Medal, France and Germany Star, General Service 1918 and General Service 1962, India General Service, India General Service 1908-1935, Indian General Service 1936-39, Jubilee 1935, Jummo and Kashmir, Kabul to Kandahar Star, Khedive's Medal 1896, Kings South African Medal, Long service and good conduct, Army, Long service and good conduct, RAF, Naval General Service Medal 1915-1962, Naval General Service 1915, Pacific Star, Queen Elizabeth II 1977 Silver Jubilee , Queen South Africa medal or Mediterranean Medal, South Africa War Service Medal, Tibet Medal, Transport Medal 1899, Turkish Crimea 1855, WWI Victory Medal, WWI War Medal, WWII War Medal, WWII War Medal",
+    "date": "1880",
+    "subject": [
+      "medal ribbon",
+      "medal ribbon",
+      "arms",
+      "medals",
+      "uniform"
+    ],
+    "type": "Museum object",
+    "collection": "Chippenham Museum",
+    "mds": {
+      "uuid": "c5a53918-8804-3887-a6d4-dc05ba6bec84",
+      "objectNumber": "CHIYH:2014.101",
+      "material": [
+        "textile"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "depth",
+        "circumference"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medal ribbon"
+        ],
+        "Brief description": [
+          "41 medal ribbons for military medals: 1914-1918 Victory Medal, 1939-1945 star, 1939-45 Star, Africa Star, Ashanti Medal Ashanti Medal 1873 - East West Africa 1887, Ashanti Star 1896, Atlantic Star, Bagur and Palamos Medal, BSA Co's Medal, Burma Star, China War 1842, Second China War 1857-60, Coronation Medal 1937, Crimea Medal 1854, Defence Medal, France and Germany Star, General Service 1918 and General Service 1962, India General Service, India General Service 1908-1935, Indian General Service 1936-39, Jubilee 1935, Jummo and Kashmir, Kabul to Kandahar Star, Khedive's Medal 1896, Kings South African Medal, Long service and good conduct, Army, Long service and good conduct, RAF, Naval General Service Medal 1915-1962, Naval General Service 1915, Pacific Star, Queen Elizabeth II 1977 Silver Jubilee , Queen South Africa medal or Mediterranean Medal, South Africa War Service Medal, Tibet Medal, Transport Medal 1899, Turkish Crimea 1855, WWI Victory Medal, WWI War Medal, WWII War Medal, WWII War Medal"
+        ],
+        "Collection": [
+          "Chippenham Museum"
+        ],
+        "Acquisition method": [
+          "untraced find"
+        ],
+        "Associated concept": [
+          "arms",
+          "medals",
+          "uniform"
+        ],
+        "Associated date": [
+          "1880"
+        ],
+        "Date - earliest / single": [
+          "1880"
+        ],
+        "Dimension": [
+          "height",
+          "width",
+          "depth",
+          "circumference"
+        ],
+        "Material": [
+          "textile"
+        ],
+        "Object name": [
+          "medal ribbon"
+        ],
+        "Object number": [
+          "CHIYH:2014.101"
+        ],
+        "Date - latest": [
+          "1980"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:c5a53918-8804-3887-a6d4-dc05ba6bec84",
+      "title": "MDS Record 2",
+      "url": "https://museumdata.uk/objects/c5a53918-8804-3887-a6d4-dc05ba6bec84",
+      "date": "1880"
+    }
+  },
+  {
+    "id": "mds:310c9257-5193-3cca-9e4a-98a3fff85763",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/310c9257-5193-3cca-9e4a-98a3fff85763",
+    "title": "MDS Record 3",
+    "description": "medal group awarded to CSgt. Harry Sheppard BEM MSM, Royal Marines. Group comprises British Empire Medal (Military Division), 1914 Star with clasp: 5th Aug - 22nd Nov 1914, British War Medal 1914-20, Victory Medal, Royal Naval Long Service and Good Conduct Medal, Royal Marines Meritorious Service Medal, Defence Medal, War Medal 1939-45.",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "1914 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Defence Medal",
+      "War Medal (1939-1945)",
+      "Long Service and Good Conduct Medal (Navy)",
+      "British Empire Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "310c9257-5193-3cca-9e4a-98a3fff85763",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to CSgt. Harry Sheppard BEM MSM, Royal Marines. Group comprises British Empire Medal (Military Division), 1914 Star with clasp: 5th Aug - 22nd Nov 1914, British War Medal 1914-20, Victory Medal, Royal Naval Long Service and Good Conduct Medal, Royal Marines Meritorious Service Medal, Defence Medal, War Medal 1939-45."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "1914 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Defence Medal",
+          "War Medal (1939-1945)",
+          "Long Service and Good Conduct Medal (Navy)",
+          "British Empire Medal"
+        ],
+        "Associated person": [
+          "Sheppard, Harry C/Sgt (BEM MSM)"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1983/27a"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:310c9257-5193-3cca-9e4a-98a3fff85763",
+      "title": "MDS Record 3",
+      "url": "https://museumdata.uk/objects/310c9257-5193-3cca-9e4a-98a3fff85763"
+    }
+  },
+  {
+    "id": "mds:b041b71a-cf3d-3d7e-8e70-c0e1793f3d09",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/b041b71a-cf3d-3d7e-8e70-c0e1793f3d09",
+    "title": "MDS Record 4",
+    "description": "medal group awarded to Sgt. W E Elliott. Group comprises: 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal, Police Long Service and Good Conduct Medal.",
+    "date": "1939",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Defence Medal",
+      "War Medal (1939-1945)",
+      "Long Service and Good Conduct Medal (Navy)",
+      "Police Long Service and Good Conduct Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "b041b71a-cf3d-3d7e-8e70-c0e1793f3d09",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Sgt. W E Elliott. Group comprises: 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal, Police Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Defence Medal",
+          "War Medal (1939-1945)",
+          "Long Service and Good Conduct Medal (Navy)",
+          "Police Long Service and Good Conduct Medal"
+        ],
+        "Date - earliest / single": [
+          "1939"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Elliott, William Edward, Sgt"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1984/37"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:b041b71a-cf3d-3d7e-8e70-c0e1793f3d09",
+      "title": "MDS Record 4",
+      "url": "https://museumdata.uk/objects/b041b71a-cf3d-3d7e-8e70-c0e1793f3d09",
+      "date": "1939"
+    }
+  },
+  {
+    "id": "mds:89f071f4-2ddf-3a9a-8d9d-a582951c1474",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/89f071f4-2ddf-3a9a-8d9d-a582951c1474",
+    "title": "MDS Record 5",
+    "description": "medals, German, acquired at Kiel, Germany, 1945, group includes: Iron Cross 1st class (came with ribbon), Iron Cross 2nd class (came with ribbon), U Boat medal, Flak Ship medal, Destroyer medal, E Boat medal, Minesweeper medal, Battleship medal, Blockade Runner medal, Crimea medal, Narvik medal",
+    "date": "1945",
+    "subject": [
+      "medals; commemorative medal",
+      "medals; commemorative medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "89f071f4-2ddf-3a9a-8d9d-a582951c1474",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; commemorative medal"
+        ],
+        "Brief description": [
+          "medals, German, acquired at Kiel, Germany, 1945, group includes: Iron Cross 1st class (came with ribbon), Iron Cross 2nd class (came with ribbon), U Boat medal, Flak Ship medal, Destroyer medal, E Boat medal, Minesweeper medal, Battleship medal, Blockade Runner medal, Crimea medal, Narvik medal"
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Date - earliest / single": [
+          "1945"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Object name": [
+          "medals; commemorative medal"
+        ],
+        "Object number": [
+          "RMM 1967/563b"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:89f071f4-2ddf-3a9a-8d9d-a582951c1474",
+      "title": "MDS Record 5",
+      "url": "https://museumdata.uk/objects/89f071f4-2ddf-3a9a-8d9d-a582951c1474",
+      "date": "1945"
+    }
+  },
+  {
+    "id": "mds:7622171a-d866-3a3f-96db-b5e9b105915b",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/7622171a-d866-3a3f-96db-b5e9b105915b",
+    "title": "MDS Record 6",
+    "description": "medal group awarded to CSgt Harry Wright DSM MSM. Group comprises Distinguished Service Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, 1939-1945 Star, Atlantic Star, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal, Royal Marines Meritorious Service Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Distinguished Service Medal",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "1939-45 Star",
+      "Long Service and Good Conduct Medal (Navy)",
+      "Medal for Meritorious Service"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "7622171a-d866-3a3f-96db-b5e9b105915b",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to CSgt Harry Wright DSM MSM. Group comprises Distinguished Service Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, 1939-1945 Star, Atlantic Star, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal, Royal Marines Meritorious Service Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Distinguished Service Medal",
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "1939-45 Star",
+          "Long Service and Good Conduct Medal (Navy)",
+          "Medal for Meritorious Service"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Wright, Harry (DSM, MSM)"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1969/118a"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:7622171a-d866-3a3f-96db-b5e9b105915b",
+      "title": "MDS Record 6",
+      "url": "https://museumdata.uk/objects/7622171a-d866-3a3f-96db-b5e9b105915b",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:818f1c22-0816-38d4-af83-8a64d7791db7",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/818f1c22-0816-38d4-af83-8a64d7791db7",
+    "title": "MDS Record 7",
+    "description": "medal group awarded to Lt Charles Alfred Harvey. Group comprises Queen's South Africa Medal with clasps: Johannesburg, Cape Colony, Orange Free State, British War Medal 1914-20, Victory Medal, Imperial Service Medal (Civilian).",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Queen's South Africa Medal (1899-1902)",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Imperial Service Medal",
+      "Queen's South Africa Medal",
+      "Johannesburg",
+      "Cape Colony",
+      "Orange Free State",
+      "Victory Medal (South Africa)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "818f1c22-0816-38d4-af83-8a64d7791db7",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Lt Charles Alfred Harvey. Group comprises Queen's South Africa Medal with clasps: Johannesburg, Cape Colony, Orange Free State, British War Medal 1914-20, Victory Medal, Imperial Service Medal (Civilian)."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Queen's South Africa Medal (1899-1902)",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Imperial Service Medal",
+          "Queen's South Africa Medal",
+          "Johannesburg",
+          "Cape Colony",
+          "Orange Free State",
+          "Victory Medal (South Africa)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1920"
+        ],
+        "Associated person": [
+          "Harvey, Charles Alfred"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1983/235"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:818f1c22-0816-38d4-af83-8a64d7791db7",
+      "title": "MDS Record 7",
+      "url": "https://museumdata.uk/objects/818f1c22-0816-38d4-af83-8a64d7791db7",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:5251b092-8fb1-3ac6-bd5b-d9be7311e8c2",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/5251b092-8fb1-3ac6-bd5b-d9be7311e8c2",
+    "title": "MDS Record 8",
+    "description": "medal group awarded to Gnr J Messum DSM, group comprises Royal Marine Artillery, Distinguished Service Medal, 1914 Star, British War Medal 1914-20, Victory Medal, Defence Medal, Royal Navy Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "1914 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Defence Medal",
+      "Long Service and Good Conduct Medal (Navy)",
+      "Distinguished Service Medal (United Kingdom)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "5251b092-8fb1-3ac6-bd5b-d9be7311e8c2",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Gnr J Messum DSM, group comprises Royal Marine Artillery, Distinguished Service Medal, 1914 Star, British War Medal 1914-20, Victory Medal, Defence Medal, Royal Navy Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "1914 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Defence Medal",
+          "Long Service and Good Conduct Medal (Navy)",
+          "Distinguished Service Medal (United Kingdom)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1920"
+        ],
+        "Associated person": [
+          "Messum, J, Gnr",
+          "Royal Naval Division"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1965/40a"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:5251b092-8fb1-3ac6-bd5b-d9be7311e8c2",
+      "title": "MDS Record 8",
+      "url": "https://museumdata.uk/objects/5251b092-8fb1-3ac6-bd5b-d9be7311e8c2",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:7607d031-207e-3135-8ce8-e6169d842635",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/7607d031-207e-3135-8ce8-e6169d842635",
+    "title": "MDS Record 9",
+    "description": "medal group awarded to Major M J Stacey. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, Jubilee Medal 1935, Royal Naval Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "1914-15 Star",
+      "Victory Medal",
+      "British War Medal (1914-1920)",
+      "Defence Medal",
+      "King George V's Silver Jubilee Medal (1935)",
+      "Long Service and Good Conduct Medal (Navy)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "7607d031-207e-3135-8ce8-e6169d842635",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Major M J Stacey. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, Jubilee Medal 1935, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "1914-15 Star",
+          "Victory Medal",
+          "British War Medal (1914-1920)",
+          "Defence Medal",
+          "King George V's Silver Jubilee Medal (1935)",
+          "Long Service and Good Conduct Medal (Navy)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1935"
+        ],
+        "Associated person": [
+          "Stacey, Matthew John"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1974/123/350"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:7607d031-207e-3135-8ce8-e6169d842635",
+      "title": "MDS Record 9",
+      "url": "https://museumdata.uk/objects/7607d031-207e-3135-8ce8-e6169d842635",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:f6284353-dd94-3665-ae7e-d35cef8b9f30",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/f6284353-dd94-3665-ae7e-d35cef8b9f30",
+    "title": "MDS Record 10",
+    "description": "medal group awarded to Captain James Frederick Maynard, Royal Marine Artillery. Group comprises Queen's Sudan Medal, 1914 Star, British War Medal, Victory Medal, Defence Medal, War Medal, Royal Navy Long Service and Good Conduct Medal, Khedive's Sudan Medal with clasps: Khartoum, Sudan 1899, Bahr-El-Ghazal 1900-02, Royal Humane Society Medal (Silver).",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Sudan Medal (1896-1897)",
+      "Royal Humane Society Medals"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "f6284353-dd94-3665-ae7e-d35cef8b9f30",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Captain James Frederick Maynard, Royal Marine Artillery. Group comprises Queen's Sudan Medal, 1914 Star, British War Medal, Victory Medal, Defence Medal, War Medal, Royal Navy Long Service and Good Conduct Medal, Khedive's Sudan Medal with clasps: Khartoum, Sudan 1899, Bahr-El-Ghazal 1900-02, Royal Humane Society Medal (Silver)."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Sudan Medal (1896-1897)",
+          "Royal Humane Society Medals"
+        ],
+        "Associated person": [
+          "Maynard, James, Frederick"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 2010/85/1/1"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:f6284353-dd94-3665-ae7e-d35cef8b9f30",
+      "title": "MDS Record 10",
+      "url": "https://museumdata.uk/objects/f6284353-dd94-3665-ae7e-d35cef8b9f30"
+    }
+  },
+  {
+    "id": "mds:a53eccc6-22ec-3f05-8189-e40aab026430",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/a53eccc6-22ec-3f05-8189-e40aab026430",
+    "title": "MDS Record 11",
+    "description": "medal group awarded to Sgt B C Gibbard Royal Marines. Group comprises 1914-15 Star, British War Medal, Victory Medal, 1939-45 Star, Defence Medal, War Medal, Royal Naval Long Service and Good Conduct Medal.",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "1939-45 Star",
+      "Defence Medal",
+      "War Medal (1939-1945)",
+      "Long Service and Good Conduct Medal (Navy)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "a53eccc6-22ec-3f05-8189-e40aab026430",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Sgt B C Gibbard Royal Marines. Group comprises 1914-15 Star, British War Medal, Victory Medal, 1939-45 Star, Defence Medal, War Medal, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "1939-45 Star",
+          "Defence Medal",
+          "War Medal (1939-1945)",
+          "Long Service and Good Conduct Medal (Navy)"
+        ],
+        "Associated person": [
+          "Gibbard, Bertram Cecil"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 2011/122/2"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:a53eccc6-22ec-3f05-8189-e40aab026430",
+      "title": "MDS Record 11",
+      "url": "https://museumdata.uk/objects/a53eccc6-22ec-3f05-8189-e40aab026430"
+    }
+  },
+  {
+    "id": "mds:3e075182-0389-30bb-8995-fb4fe197f9e8",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/3e075182-0389-30bb-8995-fb4fe197f9e8",
+    "title": "MDS Record 12",
+    "description": "miniature medal group awarded to Captain James Frederick Maynard, Royal Marine Artillery. Group comprises Queen's Sudan Medal, 1914 Star, British War Medal, Victory Medal, Defence Medal, War Medal, Khedive's Sudan Medal with clasps: Khartoum, Sudan 1899, Bahr-El-Ghazal 1900-02, Royal Humane Society Medal (Silver), Royal Humane Soicety Medal (Stanhope).",
+    "subject": [
+      "medals; miniature medal group",
+      "medals; miniature medal group",
+      "Sudan Medal (1896-1897)",
+      "Royal Humane Society Medals"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "3e075182-0389-30bb-8995-fb4fe197f9e8",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; miniature medal group"
+        ],
+        "Brief description": [
+          "miniature medal group awarded to Captain James Frederick Maynard, Royal Marine Artillery. Group comprises Queen's Sudan Medal, 1914 Star, British War Medal, Victory Medal, Defence Medal, War Medal, Khedive's Sudan Medal with clasps: Khartoum, Sudan 1899, Bahr-El-Ghazal 1900-02, Royal Humane Society Medal (Silver), Royal Humane Soicety Medal (Stanhope)."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Sudan Medal (1896-1897)",
+          "Royal Humane Society Medals"
+        ],
+        "Associated person": [
+          "Maynard, James, Frederick"
+        ],
+        "Object name": [
+          "medals; miniature medal group"
+        ],
+        "Object number": [
+          "RMM 2010/85/2"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:3e075182-0389-30bb-8995-fb4fe197f9e8",
+      "title": "MDS Record 12",
+      "url": "https://museumdata.uk/objects/3e075182-0389-30bb-8995-fb4fe197f9e8"
+    }
+  },
+  {
+    "id": "mds:67db9146-bc3d-37cc-8a44-6369fd25f86b",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/67db9146-bc3d-37cc-8a44-6369fd25f86b",
+    "title": "Medals awarded to WO2 Dennis Smith",
+    "description": "Group of medals awarded to WO2 Dennis Smith (POO7626U) including the Naval General Service Medal with Brunei and Malaya clasps; General Service Medal with Borneo clasp; Queen Elizabeth II Silver Jubilee Medal; Meritorious Service Medal; Naval Long Service and Good Conduct Medal; Pingat Perjuangan (Brunei campaign medal).",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Naval General Service Medal (1915-1962)",
+      "General Service Medal (1962)",
+      "Queen Elizabeth II's Silver Jubilee Medal (1977)",
+      "Medal for Meritorious Service",
+      "Long Service and Good Conduct Medal (Navy)",
+      "Foreign Medals & Awards",
+      "Malayan Emergency (1948-1960)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "67db9146-bc3d-37cc-8a44-6369fd25f86b",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Medals awarded to WO2 Dennis Smith"
+        ],
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "Group of medals awarded to WO2 Dennis Smith (POO7626U) including the Naval General Service Medal with Brunei and Malaya clasps; General Service Medal with Borneo clasp; Queen Elizabeth II Silver Jubilee Medal; Meritorious Service Medal; Naval Long Service and Good Conduct Medal; Pingat Perjuangan (Brunei campaign medal)."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Naval General Service Medal (1915-1962)",
+          "General Service Medal (1962)",
+          "Queen Elizabeth II's Silver Jubilee Medal (1977)",
+          "Medal for Meritorious Service",
+          "Long Service and Good Conduct Medal (Navy)",
+          "Foreign Medals & Awards",
+          "Malayan Emergency (1948-1960)"
+        ],
+        "Associated person": [
+          "Smith, Dennis"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 2015/135/1"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:67db9146-bc3d-37cc-8a44-6369fd25f86b",
+      "title": "Medals awarded to WO2 Dennis Smith",
+      "url": "https://museumdata.uk/objects/67db9146-bc3d-37cc-8a44-6369fd25f86b"
+    }
+  },
+  {
+    "id": "mds:f3e89930-7261-3083-b7d8-02f62d547c0c",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/f3e89930-7261-3083-b7d8-02f62d547c0c",
+    "title": "MDS Record 14",
+    "description": "medal group awarded to Mne. T Wigley DSM, Royal Marine Light Infantry. Group comprises Distinguished Service Medal, Africa General Service Medal with clasp: Somaliland 1908-10, Naval General Service Medal 1915-62 with clasp: Persian Gulf 1909-1914, 1914-15 Star, British War Medal 1914-20, Victory Medal, Croix de Guerre (France), Messina Earthquake Commemorative Medal.",
+    "date": "1908",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Medals and Awards (France)",
+      "Distinguished Service Medal",
+      "Africa General Service Medal (1902)",
+      "Naval General Service Medal (1915-1962)",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Foreign Medals & Awards",
+      "Croix de Guerre"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "f3e89930-7261-3083-b7d8-02f62d547c0c",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Mne. T Wigley DSM, Royal Marine Light Infantry. Group comprises Distinguished Service Medal, Africa General Service Medal with clasp: Somaliland 1908-10, Naval General Service Medal 1915-62 with clasp: Persian Gulf 1909-1914, 1914-15 Star, British War Medal 1914-20, Victory Medal, Croix de Guerre (France), Messina Earthquake Commemorative Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Medals and Awards (France)",
+          "Distinguished Service Medal",
+          "Africa General Service Medal (1902)",
+          "Naval General Service Medal (1915-1962)",
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Foreign Medals & Awards",
+          "Croix de Guerre"
+        ],
+        "Date - earliest / single": [
+          "1908"
+        ],
+        "Date - latest": [
+          "1920"
+        ],
+        "Associated person": [
+          "Wigley, Thomas Henry"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1972/120/1"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:f3e89930-7261-3083-b7d8-02f62d547c0c",
+      "title": "MDS Record 14",
+      "url": "https://museumdata.uk/objects/f3e89930-7261-3083-b7d8-02f62d547c0c",
+      "date": "1908"
+    }
+  },
+  {
+    "id": "mds:3e0c1762-c9ac-3650-af45-3d43bc569b66",
+    "_source": "mds",
+    "_sourceId": "co69492",
+    "_sourceUrl": "https://museumdata.uk/objects/3e0c1762-c9ac-3650-af45-3d43bc569b66",
+    "title": "Brass(?) medal, commemorates Antonius, medal is co",
+    "description": "Brass(?) medal, commemorates Antonius, medal is copy, possibly of medieval medal, artist and provenance unknown, copy European(?), 1800-1900",
+    "date": "1800",
+    "subject": [
+      "commemorative medal; commemorative medal",
+      "commemorative medal; commemorative medal",
+      "commemorative medal"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "3e0c1762-c9ac-3650-af45-3d43bc569b66",
+      "objectNumber": "co69492",
+      "material": [
+        "brass, ? material"
+      ],
+      "place": [
+        "Europe"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Brass(?) medal, commemorates Antonius, medal is co"
+        ],
+        "Object name(s)": [
+          "commemorative medal; commemorative medal"
+        ],
+        "Brief description": [
+          "Brass(?) medal, commemorates Antonius, medal is copy, possibly of medieval medal, artist and provenance unknown, copy European(?), 1800-1900"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "commemorative medal"
+        ],
+        "Associated place": [
+          "Europe"
+        ],
+        "Place association": [
+          "production or association role production details"
+        ],
+        "Material": [
+          "brass, ? material"
+        ],
+        "Object name": [
+          "commemorative medal; commemorative medal"
+        ],
+        "Date - earliest / single": [
+          "1800"
+        ],
+        "Date - latest": [
+          "1900"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "A679543"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Wellcome Medals"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:3e0c1762-c9ac-3650-af45-3d43bc569b66",
+      "title": "Brass(?) medal, commemorates Antonius, medal is co",
+      "url": "https://museumdata.uk/objects/3e0c1762-c9ac-3650-af45-3d43bc569b66",
+      "date": "1800"
+    }
+  },
+  {
+    "id": "mds:6691b2c1-acb8-304b-a8b9-e84994119509",
+    "_source": "mds",
+    "_sourceId": "co72175",
+    "_sourceUrl": "https://museumdata.uk/objects/6691b2c1-acb8-304b-a8b9-e84994119509",
+    "title": "Medal, Victory Medal 1914-1918",
+    "description": "Medal, Victory Medal 1914-1918, gilt bronze, with watered rainbow ribbon, English, 1918-1919",
+    "date": "1918",
+    "subject": [
+      "military medals; military medals",
+      "military medals; military medals"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "6691b2c1-acb8-304b-a8b9-e84994119509",
+      "objectNumber": "co72175",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Medal, Victory Medal 1914-1918"
+        ],
+        "Object name(s)": [
+          "military medals; military medals"
+        ],
+        "Brief description": [
+          "Medal, Victory Medal 1914-1918, gilt bronze, with watered rainbow ribbon, English, 1918-1919"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Object name": [
+          "military medals; military medals"
+        ],
+        "Date - earliest / single": [
+          "1918"
+        ],
+        "Date - latest": [
+          "1919"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "A87737 Pt3"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Wellcome Medals"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:6691b2c1-acb8-304b-a8b9-e84994119509",
+      "title": "Medal, Victory Medal 1914-1918",
+      "url": "https://museumdata.uk/objects/6691b2c1-acb8-304b-a8b9-e84994119509",
+      "date": "1918"
+    }
+  },
+  {
+    "id": "mds:57da711d-80f0-34de-bcfd-7d28b9fa6741",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/57da711d-80f0-34de-bcfd-7d28b9fa6741",
+    "title": "Medals awarded to David Brodie Goodsir",
+    "description": "Group of medals awarded to David Brodie Goodsir including a Most Excellent Order of the British Empire, Defence Medal, War Medal 1939-45, Malaya General Service Medal, Colonial Police Medal, Order of the Defender of the Realm, Sultan Ibrahim Coronation Medal, Malaysian Commemorative Medal, Malaysian General Service Medal, Sultan Ismail Coronation Medal.",
+    "subject": [
+      "medals; medal",
+      "medals; medal",
+      "Member of the Most Excellent Order of the British Empire (MBE)",
+      "Defence Medal",
+      "War Medal (1939-1945)",
+      "Foreign Medals & Awards"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "57da711d-80f0-34de-bcfd-7d28b9fa6741",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Medals awarded to David Brodie Goodsir"
+        ],
+        "Object name(s)": [
+          "medals; medal"
+        ],
+        "Brief description": [
+          "Group of medals awarded to David Brodie Goodsir including a Most Excellent Order of the British Empire, Defence Medal, War Medal 1939-45, Malaya General Service Medal, Colonial Police Medal, Order of the Defender of the Realm, Sultan Ibrahim Coronation Medal, Malaysian Commemorative Medal, Malaysian General Service Medal, Sultan Ismail Coronation Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Member of the Most Excellent Order of the British Empire (MBE)",
+          "Defence Medal",
+          "War Medal (1939-1945)",
+          "Foreign Medals & Awards"
+        ],
+        "Associated person": [
+          "Goodsir, David Brodie"
+        ],
+        "Object name": [
+          "medals; medal"
+        ],
+        "Object number": [
+          "RMM 2015/126/1"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:57da711d-80f0-34de-bcfd-7d28b9fa6741",
+      "title": "Medals awarded to David Brodie Goodsir",
+      "url": "https://museumdata.uk/objects/57da711d-80f0-34de-bcfd-7d28b9fa6741"
+    }
+  },
+  {
+    "id": "mds:4995f57c-c292-3f24-b8a4-248bd5457e93",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/4995f57c-c292-3f24-b8a4-248bd5457e93",
+    "title": "medal group awarded to Lt N A Finch VC MSM.",
+    "description": "medal group awarded to Lt N A Finch VC MSM. Group comprises replica Victoria Cross, 1914-15 Star, British War Medal 1914-20, Victory Medal with Oak Leaf, Defence Medal, War Medal 1939-45, Royal Victorian Medal, Jubilee Medal 1935, Coronation Medal 1937, Coronation Medal 1953, Long Service and Good Conduct Medal, Royal Marines Meritorious Service Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Medal for Meritorious Service",
+      "Victoria Cross"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "4995f57c-c292-3f24-b8a4-248bd5457e93",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "medal group awarded to Lt N A Finch VC MSM."
+        ],
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Lt N A Finch VC MSM. Group comprises replica Victoria Cross, 1914-15 Star, British War Medal 1914-20, Victory Medal with Oak Leaf, Defence Medal, War Medal 1939-45, Royal Victorian Medal, Jubilee Medal 1935, Coronation Medal 1937, Coronation Medal 1953, Long Service and Good Conduct Medal, Royal Marines Meritorious Service Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Medal for Meritorious Service",
+          "Victoria Cross"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Finch, Norman, Augustus Lt (VC, MSM)"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1967/384/1"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:4995f57c-c292-3f24-b8a4-248bd5457e93",
+      "title": "medal group awarded to Lt N A Finch VC MSM.",
+      "url": "https://museumdata.uk/objects/4995f57c-c292-3f24-b8a4-248bd5457e93",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:d98e0f17-afc0-3986-935c-2694c3ba0703",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/d98e0f17-afc0-3986-935c-2694c3ba0703",
+    "title": "MDS Record 19",
+    "description": "medal group awarded to Cpl. B H Rich RVM, Royal Marines. Group comprises Royal Victorian Medal, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Jubilee Medal 1935, Coronation Medal 1937, Royal Naval Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "d98e0f17-afc0-3986-935c-2694c3ba0703",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Cpl. B H Rich RVM, Royal Marines. Group comprises Royal Victorian Medal, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Jubilee Medal 1935, Coronation Medal 1937, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1937"
+        ],
+        "Associated person": [
+          "Rich, B H, Cpl"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1984/12"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:d98e0f17-afc0-3986-935c-2694c3ba0703",
+      "title": "MDS Record 19",
+      "url": "https://museumdata.uk/objects/d98e0f17-afc0-3986-935c-2694c3ba0703",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:a761c215-357d-3487-9c8e-4ab75cece8c2",
+    "_source": "mds",
+    "_sourceId": "co8080188",
+    "_sourceUrl": "https://museumdata.uk/objects/a761c215-357d-3487-9c8e-4ab75cece8c2",
+    "title": "Medal, Police Long Service and Good Conduct medal",
+    "description": "Medal, Police Long Service and Good Conduct medal, awarded to Constable Vivien Saunders, British Transport Police, September 1970.",
+    "subject": [
+      "medal; medal",
+      "medal; medal",
+      "medal"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "a761c215-357d-3487-9c8e-4ab75cece8c2",
+      "objectNumber": "co8080188",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Medal, Police Long Service and Good Conduct medal"
+        ],
+        "Object name(s)": [
+          "medal; medal"
+        ],
+        "Brief description": [
+          "Medal, Police Long Service and Good Conduct medal, awarded to Constable Vivien Saunders, British Transport Police, September 1970."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "medal"
+        ],
+        "Credit line": [
+          "Saunders, E.E. Mrs"
+        ],
+        "Object name": [
+          "medal; medal"
+        ],
+        "Other number": [
+          "2006-7499",
+          "E2006.178.1"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "NRM - Coins and Medals"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:a761c215-357d-3487-9c8e-4ab75cece8c2",
+      "title": "Medal, Police Long Service and Good Conduct medal",
+      "url": "https://museumdata.uk/objects/a761c215-357d-3487-9c8e-4ab75cece8c2"
+    }
+  },
+  {
+    "id": "mds:e97b1300-34b1-38a0-a352-12a157bff096",
+    "_source": "mds",
+    "_sourceId": "NAM.",
+    "_sourceUrl": "https://museumdata.uk/objects/e97b1300-34b1-38a0-a352-12a157bff096",
+    "title": "Coronation Medal 1953 awarded to Captain Falak Sher of the 14th Punjab Regiment, 1933 (c)-1948 (c). From a medal group including Order of British India, 2nd Class, Military Cross, 1939-45 Star, Africa Star 1940-43, Burma Star 1941-45, British War Medal 1939-45, India Service Medal 1908-35 with clasp, India Service Medal 1936-39 with clasp, Jubilee Medal 1935, Coronation Medal 1953, Independence Medal, Pakistan 1950.",
+    "description": "Coronation Medal 1953 awarded to Captain Falak Sher of the 14th Punjab Regiment, 1933 (c)-1948 (c).  Issued to mark the coronation of Queen Elizabeth II on 2 June 1953.\n\nFrom a medal group including Order of British India, 2nd Class, Military Cross, 1939-45 Star, Africa Star 1940-43, Burma Star 1941-45, British War Medal 1939-45, India Service Medal 1908-35 with clasp, India Service Medal 1936-39 with clasp, Jubilee Medal 1935, Coronation Medal 1953, Independence Medal, Pakistan 1950.",
+    "subject": [
+      "Coronation Medal 1953, Elizabeth II",
+      "Coronation Medal 1953, Elizabeth II",
+      "Medals"
+    ],
+    "type": "Museum object",
+    "collection": "National Army Museum",
+    "mds": {
+      "uuid": "e97b1300-34b1-38a0-a352-12a157bff096",
+      "objectNumber": "NAM.",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Coronation Medal 1953 awarded to Captain Falak Sher of the 14th Punjab Regiment, 1933 (c)-1948 (c). From a medal group including Order of British India, 2nd Class, Military Cross, 1939-45 Star, Africa Star 1940-43, Burma Star 1941-45, British War Medal 1939-45, India Service Medal 1908-35 with clasp, India Service Medal 1936-39 with clasp, Jubilee Medal 1935, Coronation Medal 1953, Independence Medal, Pakistan 1950."
+        ],
+        "Object name(s)": [
+          "Coronation Medal 1953, Elizabeth II"
+        ],
+        "Brief description": [
+          "Coronation Medal 1953 awarded to Captain Falak Sher of the 14th Punjab Regiment, 1933 (c)-1948 (c).  Issued to mark the coronation of Queen Elizabeth II on 2 June 1953.\n\nFrom a medal group including Order of British India, 2nd Class, Military Cross, 1939-45 Star, Africa Star 1940-43, Burma Star 1941-45, British War Medal 1939-45, India Service Medal 1908-35 with clasp, India Service Medal 1936-39 with clasp, Jubilee Medal 1935, Coronation Medal 1953, Independence Medal, Pakistan 1950."
+        ],
+        "Collection": [
+          "National Army Museum"
+        ],
+        "Associated concept": [
+          "Medals"
+        ],
+        "Current location": [
+          "National Army Museum, Study collection"
+        ],
+        "Object name": [
+          "Coronation Medal 1953, Elizabeth II"
+        ],
+        "Object number": [
+          "NAM. 2003-01-71-11"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:e97b1300-34b1-38a0-a352-12a157bff096",
+      "title": "Coronation Medal 1953 awarded to Captain Falak Sher of the 14th Punjab Regiment, 1933 (c)-1948 (c). From a medal group including Order of British India, 2nd Class, Military Cross, 1939-45 Star, Africa Star 1940-43, Burma Star 1941-45, British War Medal 1939-45, India Service Medal 1908-35 with clasp, India Service Medal 1936-39 with clasp, Jubilee Medal 1935, Coronation Medal 1953, Independence Medal, Pakistan 1950.",
+      "url": "https://museumdata.uk/objects/e97b1300-34b1-38a0-a352-12a157bff096"
+    }
+  },
+  {
+    "id": "mds:b1004989-6ab4-30df-b3d2-6852a8b7f94c",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/b1004989-6ab4-30df-b3d2-6852a8b7f94c",
+    "title": "MDS Record 22",
+    "description": "medal group awarded to Sgt. W D Wood. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal, Police Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Defence Medal",
+      "1939-45 Star",
+      "Police Long Service and Good Conduct Medal",
+      "Long Service and Good Conduct Medal (Navy)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "b1004989-6ab4-30df-b3d2-6852a8b7f94c",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Sgt. W D Wood. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal, Police Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Defence Medal",
+          "1939-45 Star",
+          "Police Long Service and Good Conduct Medal",
+          "Long Service and Good Conduct Medal (Navy)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Wood, W D, Sgt."
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1974/135/1"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:b1004989-6ab4-30df-b3d2-6852a8b7f94c",
+      "title": "MDS Record 22",
+      "url": "https://museumdata.uk/objects/b1004989-6ab4-30df-b3d2-6852a8b7f94c",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:ad216a14-1f42-3a5e-9dda-c647434f0b3f",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/ad216a14-1f42-3a5e-9dda-c647434f0b3f",
+    "title": "MDS Record 23",
+    "description": "medal group awarded to Sgt. James Emsden Kersey MBE DSM MSM, Royal Marine Artillery. Group comprises The Most Excellent Order of the British Empire (Member, 2nd Type), Distinguished Service Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-1945, Royal Marines Meritorious Service Medal, Royal Naval Long Service and Good Conduct Medal, Croix de Guerre (Belgium).",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Order of the British Empire",
+      "Distinguished Service Medal",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Medal for Meritorious Service",
+      "Long Service and Good Conduct Medal (Navy)",
+      "Medals and Awards (Belgium)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "ad216a14-1f42-3a5e-9dda-c647434f0b3f",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Sgt. James Emsden Kersey MBE DSM MSM, Royal Marine Artillery. Group comprises The Most Excellent Order of the British Empire (Member, 2nd Type), Distinguished Service Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-1945, Royal Marines Meritorious Service Medal, Royal Naval Long Service and Good Conduct Medal, Croix de Guerre (Belgium)."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Order of the British Empire",
+          "Distinguished Service Medal",
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Medal for Meritorious Service",
+          "Long Service and Good Conduct Medal (Navy)",
+          "Medals and Awards (Belgium)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Kersey, James Emsden (MBE, DSM, MSM)"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1989/197"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:ad216a14-1f42-3a5e-9dda-c647434f0b3f",
+      "title": "MDS Record 23",
+      "url": "https://museumdata.uk/objects/ad216a14-1f42-3a5e-9dda-c647434f0b3f",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:9fabf81a-fa7b-37d8-a65c-ac53f7315826",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/9fabf81a-fa7b-37d8-a65c-ac53f7315826",
+    "title": "MDS Record 24",
+    "description": "box for medal group awarded to Captain James Frederick Maynard, Royal Marine Artillery. Group comprises Queen's Sudan Medal, 1914 Star, British War Medal, Victory Medal, Defence Medal, War Medal, Royal Navy Long Service and Good Conduct Medal, Khedive's Sudan Medal with clasps: Khartoum, Sudan 1899, Bahr-El-Ghazal 1900-02, Royal Humane Society Medal (Silver).",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Sudan Medal (1896-1897)",
+      "Royal Humane Society Medals"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "9fabf81a-fa7b-37d8-a65c-ac53f7315826",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "box for medal group awarded to Captain James Frederick Maynard, Royal Marine Artillery. Group comprises Queen's Sudan Medal, 1914 Star, British War Medal, Victory Medal, Defence Medal, War Medal, Royal Navy Long Service and Good Conduct Medal, Khedive's Sudan Medal with clasps: Khartoum, Sudan 1899, Bahr-El-Ghazal 1900-02, Royal Humane Society Medal (Silver)."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Sudan Medal (1896-1897)",
+          "Royal Humane Society Medals"
+        ],
+        "Associated person": [
+          "Maynard, James, Frederick"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 2010/85/1/2"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:9fabf81a-fa7b-37d8-a65c-ac53f7315826",
+      "title": "MDS Record 24",
+      "url": "https://museumdata.uk/objects/9fabf81a-fa7b-37d8-a65c-ac53f7315826"
+    }
+  },
+  {
+    "id": "mds:1b2f9f81-aaff-3485-bae9-f8e779d7b755",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/1b2f9f81-aaff-3485-bae9-f8e779d7b755",
+    "title": "MDS Record 25",
+    "description": "medal group awarded to Pte. Walter Edmund Peckham, Royal Marine Light Infantry. Group comprises Naval General Service Medal 1915-62 with clasp: Persian Gulf 1909-1914, 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45.",
+    "date": "1939",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Naval General Service Medal (1915-1962)",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Defence Medal",
+      "War Medal (1939-1945)",
+      "Persian Gulf"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "1b2f9f81-aaff-3485-bae9-f8e779d7b755",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Pte. Walter Edmund Peckham, Royal Marine Light Infantry. Group comprises Naval General Service Medal 1915-62 with clasp: Persian Gulf 1909-1914, 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Naval General Service Medal (1915-1962)",
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Defence Medal",
+          "War Medal (1939-1945)",
+          "Persian Gulf"
+        ],
+        "Date - earliest / single": [
+          "1939"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Peckham, Walter Edmund, Pte"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1993/71"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:1b2f9f81-aaff-3485-bae9-f8e779d7b755",
+      "title": "MDS Record 25",
+      "url": "https://museumdata.uk/objects/1b2f9f81-aaff-3485-bae9-f8e779d7b755",
+      "date": "1939"
+    }
+  },
+  {
+    "id": "mds:0dd559c2-6fed-3b0b-9fef-531e9b650064",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/0dd559c2-6fed-3b0b-9fef-531e9b650064",
+    "title": "MDS Record 26",
+    "description": "medal group awarded to Pte W W Hopkins Royal Marine Light Infantry. Group comprises Africa General Service Medal with clasp: Somaliland 1902-04, 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, Royal Naval Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Africa General Service Medal (1902)",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Defence Medal",
+      "Long Service and Good Conduct Medal (Navy)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "0dd559c2-6fed-3b0b-9fef-531e9b650064",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Pte W W Hopkins Royal Marine Light Infantry. Group comprises Africa General Service Medal with clasp: Somaliland 1902-04, 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Africa General Service Medal (1902)",
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Defence Medal",
+          "Long Service and Good Conduct Medal (Navy)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1920"
+        ],
+        "Associated person": [
+          "Hopkins, W W, Pte"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM M/1/24"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:0dd559c2-6fed-3b0b-9fef-531e9b650064",
+      "title": "MDS Record 26",
+      "url": "https://museumdata.uk/objects/0dd559c2-6fed-3b0b-9fef-531e9b650064",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:bdaeedb1-5246-329d-800f-13f993a22127",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/bdaeedb1-5246-329d-800f-13f993a22127",
+    "title": "MDS Record 27",
+    "description": "medal group awarded to Lt-Col M H Collet OBE MC. Group comprises The Most Excellent Order of the British Empire (Officer), Military Cross, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Coronation Medal 1937.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Order of the British Empire",
+      "Military Cross",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Defence Medal",
+      "War Medal (1939-1945)",
+      "King George VI's Coronation Medal (1937)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "bdaeedb1-5246-329d-800f-13f993a22127",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Lt-Col M H Collet OBE MC. Group comprises The Most Excellent Order of the British Empire (Officer), Military Cross, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Coronation Medal 1937."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Order of the British Empire",
+          "Military Cross",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Defence Medal",
+          "War Medal (1939-1945)",
+          "King George VI's Coronation Medal (1937)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Collet, Mark Harold (OBE, MC)"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1969/7"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:bdaeedb1-5246-329d-800f-13f993a22127",
+      "title": "MDS Record 27",
+      "url": "https://museumdata.uk/objects/bdaeedb1-5246-329d-800f-13f993a22127",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:286b6811-60bd-3f19-8ed3-c4ebe6e90575",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/286b6811-60bd-3f19-8ed3-c4ebe6e90575",
+    "title": "MDS Record 28",
+    "description": "medal group awarded to Cpl E C Gosling, Royal Marine Artillery. Group comprises Queen's South Africa Medal with clasps: Belmont, Modder River, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Queen's South Africa Medal (1899-1902)",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Long Service and Good Conduct Medal (Navy)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "286b6811-60bd-3f19-8ed3-c4ebe6e90575",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Cpl E C Gosling, Royal Marine Artillery. Group comprises Queen's South Africa Medal with clasps: Belmont, Modder River, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Queen's South Africa Medal (1899-1902)",
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Long Service and Good Conduct Medal (Navy)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Gosling, Arthur Edwin Charles"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1970/142a"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:286b6811-60bd-3f19-8ed3-c4ebe6e90575",
+      "title": "MDS Record 28",
+      "url": "https://museumdata.uk/objects/286b6811-60bd-3f19-8ed3-c4ebe6e90575",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:a620acf1-7535-3ae6-87df-0ab91995ac3f",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/a620acf1-7535-3ae6-87df-0ab91995ac3f",
+    "title": "MDS Record 29",
+    "description": "medal group awarded to Sgt J M Masters, Royal Marine Artillery. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Jubilee Medal 1935, Coronation Medal 1937, Royal Naval Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "King George V's Silver Jubilee Medal (1935)",
+      "King George VI's Coronation Medal (1937)",
+      "Long Service and Good Conduct Medal (Navy)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "a620acf1-7535-3ae6-87df-0ab91995ac3f",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Sgt J M Masters, Royal Marine Artillery. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Jubilee Medal 1935, Coronation Medal 1937, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "King George V's Silver Jubilee Medal (1935)",
+          "King George VI's Coronation Medal (1937)",
+          "Long Service and Good Conduct Medal (Navy)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1937"
+        ],
+        "Associated person": [
+          "Masters, J M"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1997/102"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:a620acf1-7535-3ae6-87df-0ab91995ac3f",
+      "title": "MDS Record 29",
+      "url": "https://museumdata.uk/objects/a620acf1-7535-3ae6-87df-0ab91995ac3f",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:9ff5c6f0-fa52-3198-a054-175229187c07",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/9ff5c6f0-fa52-3198-a054-175229187c07",
+    "title": "MDS Record 30",
+    "description": "medal group awarded to Sgt G Shilling, Royal Marines. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, 1939-1945 Star, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "1939-45 Star",
+      "Defence Medal",
+      "War Medal (1939-1945)",
+      "Long Service and Good Conduct Medal (Navy)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "9ff5c6f0-fa52-3198-a054-175229187c07",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Sgt G Shilling, Royal Marines. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, 1939-1945 Star, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "1939-45 Star",
+          "Defence Medal",
+          "War Medal (1939-1945)",
+          "Long Service and Good Conduct Medal (Navy)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Shilling, George, Sgt"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1987/13/1"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:9ff5c6f0-fa52-3198-a054-175229187c07",
+      "title": "MDS Record 30",
+      "url": "https://museumdata.uk/objects/9ff5c6f0-fa52-3198-a054-175229187c07",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:8099d936-5bea-386d-804a-71416741a5bd",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/8099d936-5bea-386d-804a-71416741a5bd",
+    "title": "MDS Record 31",
+    "description": "medal group awarded to Mne. Bertram Percy Gardiner. Group comprises British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal with two bars.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Royal Naval Auxiliary Long Service Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "8099d936-5bea-386d-804a-71416741a5bd",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Mne. Bertram Percy Gardiner. Group comprises British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal with two bars."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Royal Naval Auxiliary Long Service Medal"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Gardiner, Bertram Percy, Mne."
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1989/93"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:8099d936-5bea-386d-804a-71416741a5bd",
+      "title": "MDS Record 31",
+      "url": "https://museumdata.uk/objects/8099d936-5bea-386d-804a-71416741a5bd",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:977339fb-43fb-38aa-94a8-8bd3a3991fba",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/977339fb-43fb-38aa-94a8-8bd3a3991fba",
+    "title": "MDS Record 32",
+    "description": "medal group awarded to Bugler C H Rogerson, Royal Marine Artillery. Group comprises British War Medal 1914-20, Victory Medal, Defence Medal, Police Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Defence Medal",
+      "Police Long Service and Good Conduct Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "977339fb-43fb-38aa-94a8-8bd3a3991fba",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Bugler C H Rogerson, Royal Marine Artillery. Group comprises British War Medal 1914-20, Victory Medal, Defence Medal, Police Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Defence Medal",
+          "Police Long Service and Good Conduct Medal"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1920"
+        ],
+        "Associated person": [
+          "Rogerson, C H, Bugler."
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1980/45"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:977339fb-43fb-38aa-94a8-8bd3a3991fba",
+      "title": "MDS Record 32",
+      "url": "https://museumdata.uk/objects/977339fb-43fb-38aa-94a8-8bd3a3991fba",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:53f680bd-05b7-372b-bbec-b7a654f011d0",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/53f680bd-05b7-372b-bbec-b7a654f011d0",
+    "title": "MDS Record 33",
+    "description": "medal group awarded to Cpl. John W Goodhall BEM. Group comprises British Empire Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, Atlantic Star, Defence Medal, War Medal 1939-45, Imperial Service Medal, Royal Naval Long Service and Good Conduct Medal, [Voluntary Medical Service Medal].",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "53f680bd-05b7-372b-bbec-b7a654f011d0",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Cpl. John W Goodhall BEM. Group comprises British Empire Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, Atlantic Star, Defence Medal, War Medal 1939-45, Imperial Service Medal, Royal Naval Long Service and Good Conduct Medal, [Voluntary Medical Service Medal]."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Goodhall, John W, Cpl."
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1976/545"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:53f680bd-05b7-372b-bbec-b7a654f011d0",
+      "title": "MDS Record 33",
+      "url": "https://museumdata.uk/objects/53f680bd-05b7-372b-bbec-b7a654f011d0",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:4b64db3f-b8c3-3eac-87a8-a6c2947cb6b1",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/4b64db3f-b8c3-3eac-87a8-a6c2947cb6b1",
+    "title": "MDS Record 34",
+    "description": "medal group awarded to QMS William Rogerson, Royal Marine Artillery. Group comprises East and West Africa Medal with clasp: Benin 1897, Queen's Sudan Medal, China War Medal 1900 with clasp: Relief of Pekin, British War Medal 1914-20, Royal Naval Long Service and Good Conduct Medal, Khedive's Sudan Medal 1896-1908 with clasps: Sudan 1899, Khartoum.",
+    "date": "1897",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "East and Central Africa Medal (1897-1899)",
+      "Sudan Medal (1896-1897)",
+      "China Medal (1900)",
+      "British War Medal (1914-1920)",
+      "Long Service and Good Conduct Medal (Navy)",
+      "Khedive's Sudan Medal 1896-1908"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "4b64db3f-b8c3-3eac-87a8-a6c2947cb6b1",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to QMS William Rogerson, Royal Marine Artillery. Group comprises East and West Africa Medal with clasp: Benin 1897, Queen's Sudan Medal, China War Medal 1900 with clasp: Relief of Pekin, British War Medal 1914-20, Royal Naval Long Service and Good Conduct Medal, Khedive's Sudan Medal 1896-1908 with clasps: Sudan 1899, Khartoum."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "East and Central Africa Medal (1897-1899)",
+          "Sudan Medal (1896-1897)",
+          "China Medal (1900)",
+          "British War Medal (1914-1920)",
+          "Long Service and Good Conduct Medal (Navy)",
+          "Khedive's Sudan Medal 1896-1908"
+        ],
+        "Date - earliest / single": [
+          "1897"
+        ],
+        "Date - latest": [
+          "1908"
+        ],
+        "Associated person": [
+          "Rogerson, William, QMS"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM M/1/127"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:4b64db3f-b8c3-3eac-87a8-a6c2947cb6b1",
+      "title": "MDS Record 34",
+      "url": "https://museumdata.uk/objects/4b64db3f-b8c3-3eac-87a8-a6c2947cb6b1",
+      "date": "1897"
+    }
+  },
+  {
+    "id": "mds:8c3929f5-8717-31f7-8bcb-b14e06deab3c",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/8c3929f5-8717-31f7-8bcb-b14e06deab3c",
+    "title": "MDS Record 35",
+    "description": "medal group awarded to QMS A H Turner DSM MSM, Royal Marine Artillery. Group comprises Distinguished Service Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, Imperial Service Medal, Royal Naval Long Service and Good Conduct Medal, Royal Marines Meritorious Service Medal, Serbian Medal for Bravery, Serbian Medal for Zeal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Distinguished Service Medal",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Imperial Service Medal",
+      "Long Service and Good Conduct Medal (Navy)",
+      "Meritorious Service Medal",
+      "Foreign Medals & Awards",
+      "Royal Naval Volunteer Reserve Long Service and Good Conduct Medal",
+      "Medal for Bravery (Serbia)",
+      "Serbian language"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "8c3929f5-8717-31f7-8bcb-b14e06deab3c",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to QMS A H Turner DSM MSM, Royal Marine Artillery. Group comprises Distinguished Service Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, Imperial Service Medal, Royal Naval Long Service and Good Conduct Medal, Royal Marines Meritorious Service Medal, Serbian Medal for Bravery, Serbian Medal for Zeal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Distinguished Service Medal",
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Imperial Service Medal",
+          "Long Service and Good Conduct Medal (Navy)",
+          "Meritorious Service Medal",
+          "Foreign Medals & Awards",
+          "Royal Naval Volunteer Reserve Long Service and Good Conduct Medal",
+          "Medal for Bravery (Serbia)",
+          "Serbian language"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1951"
+        ],
+        "Associated person": [
+          "Turner, Albian Henry (DSM, MSM)"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1966/137"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:8c3929f5-8717-31f7-8bcb-b14e06deab3c",
+      "title": "MDS Record 35",
+      "url": "https://museumdata.uk/objects/8c3929f5-8717-31f7-8bcb-b14e06deab3c",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:d79ea18c-0334-34f1-baa0-d09c787f1032",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/d79ea18c-0334-34f1-baa0-d09c787f1032",
+    "title": "MDS Record 36",
+    "description": "medal group awarded to Major G Underhill OBE DSC, Royal Marines. Group comprises The Most Excellent Order of the British Empire (Officer, Breast Badge of the Military Division), Distinguished Service Cross, Queen's South Africa Medal, 1914 Star with clasp: 5th Aug - 22nd Nov 1914, British War Medal 1914-20, Victory Medal with Oak Leaf, Defence Medal, War Medal 1939-45, Jubilee Medal 1935, Coronation Medal 1937.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Zeebrugge (1914-1918)",
+      "Order of the British Empire",
+      "Distinguished Service Cross (Conspicuous Service Cross)",
+      "Queen's South Africa Medal (1899-1902)",
+      "1914 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Defence Medal",
+      "War Medal (1939-1945)",
+      "King George V's Silver Jubilee Medal (1935)",
+      "King George VI's Coronation Medal (1937)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "d79ea18c-0334-34f1-baa0-d09c787f1032",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Major G Underhill OBE DSC, Royal Marines. Group comprises The Most Excellent Order of the British Empire (Officer, Breast Badge of the Military Division), Distinguished Service Cross, Queen's South Africa Medal, 1914 Star with clasp: 5th Aug - 22nd Nov 1914, British War Medal 1914-20, Victory Medal with Oak Leaf, Defence Medal, War Medal 1939-45, Jubilee Medal 1935, Coronation Medal 1937."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Zeebrugge (1914-1918)",
+          "Order of the British Empire",
+          "Distinguished Service Cross (Conspicuous Service Cross)",
+          "Queen's South Africa Medal (1899-1902)",
+          "1914 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Defence Medal",
+          "War Medal (1939-1945)",
+          "King George V's Silver Jubilee Medal (1935)",
+          "King George VI's Coronation Medal (1937)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Underhill, George (OBE, DSC)"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1974/123/23"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:d79ea18c-0334-34f1-baa0-d09c787f1032",
+      "title": "MDS Record 36",
+      "url": "https://museumdata.uk/objects/d79ea18c-0334-34f1-baa0-d09c787f1032",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:7e08988e-24a0-3f5a-8c2a-e15d3740c689",
+    "_source": "mds",
+    "_sourceId": "1023",
+    "_sourceUrl": "https://museumdata.uk/objects/7e08988e-24a0-3f5a-8c2a-e15d3740c689",
+    "title": "MDS Record 37",
+    "creator": "Öpik, E.J. (Subject)",
+    "date": "1960 - 1976",
+    "subject": [
+      "Medals awarded to E.J. Öpik: Lawrence Smith Medal, Kelper Medal, Bruce Medal and Leonard medal",
+      "Medals awarded to E.J. Öpik: Lawrence Smith Medal (1960), Kelper Medal (1972), Bruce Medal (1976) and Leonard medal (1968)"
+    ],
+    "type": "Museum object",
+    "collection": "Armagh Observatory & Planetarium",
+    "mds": {
+      "uuid": "7e08988e-24a0-3f5a-8c2a-e15d3740c689",
+      "objectNumber": "1023",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "Medals awarded to E.J. Öpik: Lawrence Smith Medal, Kelper Medal, Bruce Medal and Leonard medal"
+        ],
+        "Collection": [
+          "Armagh Observatory & Planetarium"
+        ],
+        "Object name": [
+          "Medals awarded to E.J. Öpik: Lawrence Smith Medal (1960), Kelper Medal (1972), Bruce Medal (1976) and Leonard medal (1968)"
+        ],
+        "Object number": [
+          "1023"
+        ],
+        "Object production date": [
+          "1960 - 1976"
+        ],
+        "Object production person": [
+          "Öpik, E.J. (Subject)"
+        ],
+        "Object status": [
+          "Object"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:7e08988e-24a0-3f5a-8c2a-e15d3740c689",
+      "title": "MDS Record 37",
+      "url": "https://museumdata.uk/objects/7e08988e-24a0-3f5a-8c2a-e15d3740c689",
+      "creator": "Öpik, E.J. (Subject)",
+      "date": "1960 - 1976"
+    }
+  },
+  {
+    "id": "mds:33e8946a-a4f8-3976-9084-4ea589597e24",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/33e8946a-a4f8-3976-9084-4ea589597e24",
+    "title": "MDS Record 38",
+    "description": "medal group awarded to Gnr. (A/Bombr) A W Waltham DSM, Royal Marine Artillery. Group comprises Distinguished Service Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, 1939-1945 Star, Atlantic Star, Africa Star, Defence Medal, War Medal 1939-45, Royal Fleet Reserve Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Distinguished Service Medal",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "1939-45 Star",
+      "Atlantic Star",
+      "Africa Star",
+      "Defence Medal",
+      "Royal Fleet Reserve Long Service and Good Conduct Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "33e8946a-a4f8-3976-9084-4ea589597e24",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Gnr. (A/Bombr) A W Waltham DSM, Royal Marine Artillery. Group comprises Distinguished Service Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, 1939-1945 Star, Atlantic Star, Africa Star, Defence Medal, War Medal 1939-45, Royal Fleet Reserve Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Distinguished Service Medal",
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "1939-45 Star",
+          "Atlantic Star",
+          "Africa Star",
+          "Defence Medal",
+          "Royal Fleet Reserve Long Service and Good Conduct Medal"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Waltham, Albert William (DSM)"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1971/260a"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:33e8946a-a4f8-3976-9084-4ea589597e24",
+      "title": "MDS Record 38",
+      "url": "https://museumdata.uk/objects/33e8946a-a4f8-3976-9084-4ea589597e24",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:656d8cb6-d948-3caf-87c8-0ebc655010d8",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/656d8cb6-d948-3caf-87c8-0ebc655010d8",
+    "title": "medal group awarded to CSgt Harry Whittingham",
+    "description": "medal group awarded to CSgt Harry Whittingham, Royal Marine Light Infantry. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Royal Naval Long Service and Good Conduct Medal, Medal for Zeal (Russia).",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Long Service and Good Conduct Medal (Navy)",
+      "Medals and Awards (Russia / USSR)",
+      "Royal Naval Volunteer Reserve Long Service and Good Conduct Medal",
+      "Russia",
+      "Medal \"For Courage\" (Russia)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "656d8cb6-d948-3caf-87c8-0ebc655010d8",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "medal group awarded to CSgt Harry Whittingham"
+        ],
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to CSgt Harry Whittingham, Royal Marine Light Infantry. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Royal Naval Long Service and Good Conduct Medal, Medal for Zeal (Russia)."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Long Service and Good Conduct Medal (Navy)",
+          "Medals and Awards (Russia / USSR)",
+          "Royal Naval Volunteer Reserve Long Service and Good Conduct Medal",
+          "Russia",
+          "Medal \"For Courage\" (Russia)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1920"
+        ],
+        "Associated person": [
+          "Whittingham, Harry, CSgt."
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 2002/7"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:656d8cb6-d948-3caf-87c8-0ebc655010d8",
+      "title": "medal group awarded to CSgt Harry Whittingham",
+      "url": "https://museumdata.uk/objects/656d8cb6-d948-3caf-87c8-0ebc655010d8",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:49f27638-db91-3024-bc82-33637df633cb",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/49f27638-db91-3024-bc82-33637df633cb",
+    "title": "medal group awarded to C/Sgt Charles Butler, RMA",
+    "description": "medal group awarded to C/Sgt Charles Butler, Royal Marine Artillery. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Royal Fleet Reserve Long Service and Good Conduct Medal, Medal Militaire (French), Medal of the Order of St. George (Russia)",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Royal Fleet Reserve Long Service and Good Conduct Medal",
+      "Medals and Awards (France)",
+      "Medals and Awards (Russia / USSR)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "49f27638-db91-3024-bc82-33637df633cb",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "medal group awarded to C/Sgt Charles Butler, RMA"
+        ],
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to C/Sgt Charles Butler, Royal Marine Artillery. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Royal Fleet Reserve Long Service and Good Conduct Medal, Medal Militaire (French), Medal of the Order of St. George (Russia)"
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Royal Fleet Reserve Long Service and Good Conduct Medal",
+          "Medals and Awards (France)",
+          "Medals and Awards (Russia / USSR)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1920"
+        ],
+        "Associated person": [
+          "Butler, Charles, Sgt"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1967/385"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:49f27638-db91-3024-bc82-33637df633cb",
+      "title": "medal group awarded to C/Sgt Charles Butler, RMA",
+      "url": "https://museumdata.uk/objects/49f27638-db91-3024-bc82-33637df633cb",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:0bc98ce7-575a-31a4-9a6c-c5ef92e1a5d0",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/0bc98ce7-575a-31a4-9a6c-c5ef92e1a5d0",
+    "title": "MDS Record 41",
+    "description": "medal group awarded to Lt. G Allan, Royal Marine Light Infantry. Group comprises Queen's South Africa Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Queen's South Africa Medal (1899-1902)",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Defence Medal",
+      "War Medal (1939-1945)",
+      "Queen's South Africa Medal",
+      "Victory Medal (South Africa)"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "0bc98ce7-575a-31a4-9a6c-c5ef92e1a5d0",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Lt. G Allan, Royal Marine Light Infantry. Group comprises Queen's South Africa Medal, 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Queen's South Africa Medal (1899-1902)",
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Defence Medal",
+          "War Medal (1939-1945)",
+          "Queen's South Africa Medal",
+          "Victory Medal (South Africa)"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Allan, George"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1974/123/398"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:0bc98ce7-575a-31a4-9a6c-c5ef92e1a5d0",
+      "title": "MDS Record 41",
+      "url": "https://museumdata.uk/objects/0bc98ce7-575a-31a4-9a6c-c5ef92e1a5d0",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:64516235-9200-3109-82ae-53c27ee51ee6",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/64516235-9200-3109-82ae-53c27ee51ee6",
+    "title": "MDS Record 42",
+    "description": "medal group awarded to Gnr. C Woods, Royal Marine Artillery. Group comprises Crimea Medal with clasp: Sebastopol, Baltic Medal, Second China War Medal, Turkish Crimea Medal (British Issue).",
+    "date": "1854",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Crimea Medal",
+      "Second China War Medal",
+      "Turkish Crimea Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "64516235-9200-3109-82ae-53c27ee51ee6",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Gnr. C Woods, Royal Marine Artillery. Group comprises Crimea Medal with clasp: Sebastopol, Baltic Medal, Second China War Medal, Turkish Crimea Medal (British Issue)."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Crimea Medal",
+          "Second China War Medal",
+          "Turkish Crimea Medal"
+        ],
+        "Date - earliest / single": [
+          "1854"
+        ],
+        "Date - latest": [
+          "1856"
+        ],
+        "Associated person": [
+          "Woods, C, Gnr."
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1974/33/18"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:64516235-9200-3109-82ae-53c27ee51ee6",
+      "title": "MDS Record 42",
+      "url": "https://museumdata.uk/objects/64516235-9200-3109-82ae-53c27ee51ee6",
+      "date": "1854"
+    }
+  },
+  {
+    "id": "mds:1a3a0696-5e60-3561-b249-51ab813ae34f",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/1a3a0696-5e60-3561-b249-51ab813ae34f",
+    "title": "MDS Record 43",
+    "description": "medal group awarded to CSgt. J Moyse. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Jubilee Medal 1935, Coronation Medal 1937, Royal Naval Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "1a3a0696-5e60-3561-b249-51ab813ae34f",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to CSgt. J Moyse. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Jubilee Medal 1935, Coronation Medal 1937, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Moyse, John, CSgt"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1969/76"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:1a3a0696-5e60-3561-b249-51ab813ae34f",
+      "title": "MDS Record 43",
+      "url": "https://museumdata.uk/objects/1a3a0696-5e60-3561-b249-51ab813ae34f",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:c1306417-688c-3f31-b4da-47867398d035",
+    "_source": "mds",
+    "_sourceId": "NAM.",
+    "_sourceUrl": "https://museumdata.uk/objects/c1306417-688c-3f31-b4da-47867398d035",
+    "title": "Jubilee Medal 1935 awarded to Captain Falak Sher of the 14th Punjab Regiment, 1933 (c)-1948 (c). From a medal group including Order of British India, 2nd Class, Military Cross, 1939-45 Star, Africa Star 1940-43, Burma Star 1941-45, British War Medal 1939-45, India Service Medal 1908-35 with clasp, India Service Medal 1936-39 with clasp, Jubilee Medal 1935, Coronation Medal 1953, Independence Medal, Pakistan 1950.",
+    "description": "Jubilee Medal 1935 awarded to Captain Falak Sher of the 14th Punjab Regiment, 1933 (c)-1948 (c). Designed by Sir William Goscombe John, RA, this medal was issued to celebrate the Silver Jubilee of King George V.  \n\nFrom a medal group including Order of British India, 2nd Class, Military Cross, 1939-45 Star, Africa Star 1940-43, Burma Star 1941-45, British War Medal 1939-45, India Service Medal 1908-35 with clasp, India Service Medal 1936-39 with clasp, Jubilee Medal 1935, Coronation Medal 1953, Independence Medal, Pakistan 1950.",
+    "subject": [
+      "King George V Silver Jubilee Medal 1935",
+      "King George V Silver Jubilee Medal 1935",
+      "Medals"
+    ],
+    "type": "Museum object",
+    "collection": "National Army Museum",
+    "mds": {
+      "uuid": "c1306417-688c-3f31-b4da-47867398d035",
+      "objectNumber": "NAM.",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Jubilee Medal 1935 awarded to Captain Falak Sher of the 14th Punjab Regiment, 1933 (c)-1948 (c). From a medal group including Order of British India, 2nd Class, Military Cross, 1939-45 Star, Africa Star 1940-43, Burma Star 1941-45, British War Medal 1939-45, India Service Medal 1908-35 with clasp, India Service Medal 1936-39 with clasp, Jubilee Medal 1935, Coronation Medal 1953, Independence Medal, Pakistan 1950."
+        ],
+        "Object name(s)": [
+          "King George V Silver Jubilee Medal 1935"
+        ],
+        "Brief description": [
+          "Jubilee Medal 1935 awarded to Captain Falak Sher of the 14th Punjab Regiment, 1933 (c)-1948 (c). Designed by Sir William Goscombe John, RA, this medal was issued to celebrate the Silver Jubilee of King George V.  \n\nFrom a medal group including Order of British India, 2nd Class, Military Cross, 1939-45 Star, Africa Star 1940-43, Burma Star 1941-45, British War Medal 1939-45, India Service Medal 1908-35 with clasp, India Service Medal 1936-39 with clasp, Jubilee Medal 1935, Coronation Medal 1953, Independence Medal, Pakistan 1950."
+        ],
+        "Collection": [
+          "National Army Museum"
+        ],
+        "Associated concept": [
+          "Medals"
+        ],
+        "Current location": [
+          "National Army Museum, Study collection"
+        ],
+        "Object name": [
+          "King George V Silver Jubilee Medal 1935"
+        ],
+        "Object number": [
+          "NAM. 2003-01-71-10"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:c1306417-688c-3f31-b4da-47867398d035",
+      "title": "Jubilee Medal 1935 awarded to Captain Falak Sher of the 14th Punjab Regiment, 1933 (c)-1948 (c). From a medal group including Order of British India, 2nd Class, Military Cross, 1939-45 Star, Africa Star 1940-43, Burma Star 1941-45, British War Medal 1939-45, India Service Medal 1908-35 with clasp, India Service Medal 1936-39 with clasp, Jubilee Medal 1935, Coronation Medal 1953, Independence Medal, Pakistan 1950.",
+      "url": "https://museumdata.uk/objects/c1306417-688c-3f31-b4da-47867398d035"
+    }
+  },
+  {
+    "id": "mds:eb1fb0bc-6cc5-321a-b7f6-b04dfe680918",
+    "_source": "mds",
+    "_sourceId": "NMRN",
+    "_sourceUrl": "https://museumdata.uk/objects/eb1fb0bc-6cc5-321a-b7f6-b04dfe680918",
+    "title": "MDS Record 45",
+    "description": "medal group awarded to Pte Robert Anderson RMLI, medals swing-mounted, group comprises 1914-15 Star, British War Medal, Victory Medal. Also with medal ribbons in sew-on tunic style and medal information card, all within original medal box.",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "First World War (1914-1918)",
+      "1914-15 Star",
+      "British War Medal (1914-1920)",
+      "Victory Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "eb1fb0bc-6cc5-321a-b7f6-b04dfe680918",
+      "objectNumber": "NMRN",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Pte Robert Anderson RMLI, medals swing-mounted, group comprises 1914-15 Star, British War Medal, Victory Medal. Also with medal ribbons in sew-on tunic style and medal information card, all within original medal box."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "First World War (1914-1918)",
+          "1914-15 Star",
+          "British War Medal (1914-1920)",
+          "Victory Medal"
+        ],
+        "Associated person": [
+          "Anderson, Robert"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "NMRN 2017/119/1"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:eb1fb0bc-6cc5-321a-b7f6-b04dfe680918",
+      "title": "MDS Record 45",
+      "url": "https://museumdata.uk/objects/eb1fb0bc-6cc5-321a-b7f6-b04dfe680918"
+    }
+  },
+  {
+    "id": "mds:3f9113aa-ff21-3d3f-8117-735d53b263ca",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/3f9113aa-ff21-3d3f-8117-735d53b263ca",
+    "title": "MDS Record 46",
+    "description": "medal group awarded to C/Sgt. J Hoy BEM, Royal Marine Light Infantry. Group comprises British Empire Medal, British War Medal 1914-20, Victory Medal, Defence Medal, Royal Naval Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "British War Medal (1914-1920)",
+      "British Empire Medal",
+      "Royal Naval Volunteer Reserve Long Service and Good Conduct Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "3f9113aa-ff21-3d3f-8117-735d53b263ca",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to C/Sgt. J Hoy BEM, Royal Marine Light Infantry. Group comprises British Empire Medal, British War Medal 1914-20, Victory Medal, Defence Medal, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "British War Medal (1914-1920)",
+          "British Empire Medal",
+          "Royal Naval Volunteer Reserve Long Service and Good Conduct Medal"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1920"
+        ],
+        "Associated person": [
+          "Hoy, J, C/Sgt."
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1986/169"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:3f9113aa-ff21-3d3f-8117-735d53b263ca",
+      "title": "MDS Record 46",
+      "url": "https://museumdata.uk/objects/3f9113aa-ff21-3d3f-8117-735d53b263ca",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:a312ba6b-86d1-309a-857a-50a5e0dc6e21",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/a312ba6b-86d1-309a-857a-50a5e0dc6e21",
+    "title": "MDS Record 47",
+    "description": "medal group awarded to Mne. M C Jory. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Imperial Service Medal, Royal Naval Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "British War Medal (1914-1920)",
+      "Royal Naval Volunteer Reserve Long Service and Good Conduct Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "a312ba6b-86d1-309a-857a-50a5e0dc6e21",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Mne. M C Jory. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Imperial Service Medal, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "British War Medal (1914-1920)",
+          "Royal Naval Volunteer Reserve Long Service and Good Conduct Medal"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Jory, M C, Mne."
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1969/160a"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:a312ba6b-86d1-309a-857a-50a5e0dc6e21",
+      "title": "MDS Record 47",
+      "url": "https://museumdata.uk/objects/a312ba6b-86d1-309a-857a-50a5e0dc6e21",
+      "date": "1914"
+    }
+  },
+  {
+    "id": "mds:7070137a-32ec-3c68-9365-ca45f43346bf",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/7070137a-32ec-3c68-9365-ca45f43346bf",
+    "title": "MDS Record 48",
+    "description": "medal group awarded to Major H S H Richmond, Royal Marine Light Infantry. Group comprises: China War Medal 1900, 1914-15 Star, British War Medal 1914-20, Victory Medal.",
+    "date": "1900",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "China Medal (1900)",
+      "First World War 1914-1918",
+      "Medals",
+      "Victory Medal",
+      "China War Medal (1900)",
+      "British War Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "7070137a-32ec-3c68-9365-ca45f43346bf",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Major H S H Richmond, Royal Marine Light Infantry. Group comprises: China War Medal 1900, 1914-15 Star, British War Medal 1914-20, Victory Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "China Medal (1900)",
+          "First World War 1914-1918",
+          "Medals",
+          "Victory Medal",
+          "China War Medal (1900)",
+          "British War Medal"
+        ],
+        "Date - earliest / single": [
+          "1900"
+        ],
+        "Date - latest": [
+          "1900"
+        ],
+        "Associated person": [
+          "Richmond, Henry Spencer Hamilton"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1974/123/375"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:7070137a-32ec-3c68-9365-ca45f43346bf",
+      "title": "MDS Record 48",
+      "url": "https://museumdata.uk/objects/7070137a-32ec-3c68-9365-ca45f43346bf",
+      "date": "1900"
+    }
+  },
+  {
+    "id": "mds:a8155be4-92d4-328d-a0d8-3ba0d3b0010b",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/a8155be4-92d4-328d-a0d8-3ba0d3b0010b",
+    "title": "medal group awarded to Bugler G R Linford",
+    "description": "medal group awarded to Bugler G R Linford. Group comprises Korea Medal, United Nations Korea Medal, Coronation Medal 1953.",
+    "date": "1953",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "Queen Elizabeth II Coronation Medal and Silver Jubilee Medal",
+      "Korea Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "a8155be4-92d4-328d-a0d8-3ba0d3b0010b",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "medal group awarded to Bugler G R Linford"
+        ],
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Bugler G R Linford. Group comprises Korea Medal, United Nations Korea Medal, Coronation Medal 1953."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "Queen Elizabeth II Coronation Medal and Silver Jubilee Medal",
+          "Korea Medal"
+        ],
+        "Date - earliest / single": [
+          "1953"
+        ],
+        "Date - latest": [
+          "1953"
+        ],
+        "Associated person": [
+          "Linford, G R, Bugler",
+          "United Nations Korea Medal"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 2000/110/1"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:a8155be4-92d4-328d-a0d8-3ba0d3b0010b",
+      "title": "medal group awarded to Bugler G R Linford",
+      "url": "https://museumdata.uk/objects/a8155be4-92d4-328d-a0d8-3ba0d3b0010b",
+      "date": "1953"
+    }
+  },
+  {
+    "id": "mds:3672a522-e5ef-380a-8025-b3c6740eef47",
+    "_source": "mds",
+    "_sourceId": "RMM",
+    "_sourceUrl": "https://museumdata.uk/objects/3672a522-e5ef-380a-8025-b3c6740eef47",
+    "title": "MDS Record 50",
+    "description": "medal group awarded to Sgt. S L Norris. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal.",
+    "date": "1914",
+    "subject": [
+      "medals; medal group",
+      "medals; medal group",
+      "British War Medal (1914-1920)",
+      "Victory Medal",
+      "Royal Naval Volunteer Reserve Long Service and Good Conduct Medal"
+    ],
+    "type": "Museum object",
+    "collection": "National Museum of the Royal Navy",
+    "mds": {
+      "uuid": "3672a522-e5ef-380a-8025-b3c6740eef47",
+      "objectNumber": "RMM",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "medals; medal group"
+        ],
+        "Brief description": [
+          "medal group awarded to Sgt. S L Norris. Group comprises 1914-15 Star, British War Medal 1914-20, Victory Medal, Defence Medal, War Medal 1939-45, Royal Naval Long Service and Good Conduct Medal."
+        ],
+        "Collection": [
+          "National Museum of the Royal Navy"
+        ],
+        "Associated concept": [
+          "British War Medal (1914-1920)",
+          "Victory Medal",
+          "Royal Naval Volunteer Reserve Long Service and Good Conduct Medal"
+        ],
+        "Date - earliest / single": [
+          "1914"
+        ],
+        "Date - latest": [
+          "1945"
+        ],
+        "Associated person": [
+          "Norris, Stanley Lewis",
+          "Frank Kingsley Norris"
+        ],
+        "Object name": [
+          "medals; medal group"
+        ],
+        "Object number": [
+          "RMM 1970/199"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:55.987Z",
+      "query": "medal",
+      "recordId": "mds:3672a522-e5ef-380a-8025-b3c6740eef47",
+      "title": "MDS Record 50",
+      "url": "https://museumdata.uk/objects/3672a522-e5ef-380a-8025-b3c6740eef47",
+      "date": "1914"
+    }
+  }
+]

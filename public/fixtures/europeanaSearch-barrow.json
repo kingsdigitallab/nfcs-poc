@@ -1,0 +1,2115 @@
+[
+  {
+    "id": "europeana:/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_15719",
+    "_source": "europeana",
+    "_sourceId": "/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_15719",
+    "_sourceUrl": "https://www.europeana.eu/item/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_15719?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Άνθρωπος που σέρνει καρότσι (1). Από τη σειρά \"Άνθρωπος που σέρνει καρότσι\"",
+    "creator": [
+      "Νικρίτιν, Σολομών",
+      "Nikritin, Solomon"
+    ],
+    "description": "Λίγο πριν ή περίπου στα μέσα της δεκαετίας του 1920 ο Nikritin εργάζεται πάνω στις θεματικές σειρές σχεδίων “Πόλεμος” και “Άνθρωπος που σέρνει το καρότσι”. Μεταξύ 1923-1924 ο Nikritin επεξεργάζεται τη θεωρία του Προβολισμού στα χειρόγραφα κείμενά του (Ι. Lebedeva, Solomon Nikritin, σ. 85), θεωρία που κατά την Μ. Τσαντσάνογλου διατυπώνεται από τον καλλιτέχνη ήδη από το 1922 (Μ. Τσαντσάνογλου, Solomon Nikritin, σ. 145). To 1924 στην “Πρώτη Διαλογική Έκθεση” της Μόσχας ο Nikritin παρουσιάζει έργα του μαζί με άλλους προβολιστές. Μέσα από συνθήματα της ομάδας του εκεί, ο Nikritin διακηρύσσει τα πιστεύω του ως προς την τέχνη ως συστήματος ή μεθόδου «δια μέσου του οποίου είναι δυνατή η οργάνωση των υλικών». (Ch. Douglas, Solomon Nikritin, σ. 45, σημ. 22). Την ίδια χρονιά ο Nikritin ανεβάζει στο θέατρο των Προβολιστών την παράσταση “1924” και το 1926 το έργο του Nikritin “Πόλεμος και Ειρήνη” που ωστόσο καταλήγει σε αποτυχία. Τον Απρίλιο του 1926 ο Nikritin εγκαταλείπει το θέατρο. (Ι. Leites, Solomon Nikritin, σ. 105 και εξ, 213). \nΤην ίδια εποχή και σε όλη τη δεκαετία του 1920 ιδιαίτερα διαδεδομένη στη Σοβιετική Ένωση ήταν η έρευνα και ανάλυση της ανθρώπινης εργασίας σε σχέση με το βιομηχανικό χρόνο καθώς και η προσπάθεια της επιστημονικής συστηματοποίησής της υπό την επιρροή και του σχετικού βιβλίου του F. Taylor, που το 1924 κυκλοφορεί στη ρωσική του μετάφραση. (Αυλωνίτου Χ., σσ. 63-65, σημ. 82).",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Greece"
+    ],
+    "europeana": {
+      "provider": [
+        "Greek Aggregator SearchCulture.gr"
+      ],
+      "dataProvider": [
+        "Metropolitan Organisation of Museums of Visual Arts of Thessaloniki – MOMus"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fwww.searchculture.gr%2Faggregator%2Fthumbnails%2Fedm-record%2Fmomus%2F000179-15719&type=IMAGE",
+      "shownAt": "https://www.momus.gr/collections/0015719",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_15719",
+      "title": "Άνθρωπος που σέρνει καρότσι (1). Από τη σειρά \"Άνθρωπος που σέρνει καρότσι\"",
+      "url": "https://www.europeana.eu/item/1316/https___www_searchculture_gr_aggregator_edm_momus_000179_15719?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Νικρίτιν, Σολομών",
+        "Nikritin, Solomon"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/298/item_3181744",
+    "_source": "europeana",
+    "_sourceId": "/298/item_3181744",
+    "_sourceUrl": "https://www.europeana.eu/item/298/item_3181744?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Kaart van een Gedeelte der Kust van Cochin-China: met de Baai en Haven van Turon, en het Eiland Kallao",
+    "creator": [
+      "Parish, Henry William, (approximately 1765-1800) (mapmaker)"
+    ],
+    "description": "Scale: Not given. With 1 bar scale.",
+    "date": "1793",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "Dutch Collections for Europe"
+      ],
+      "dataProvider": [
+        "Leiden University Libraries"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fiiif.universiteitleiden.nl%2Fiiif%2F2%2Fhdl%253A1887.1%252Fitem%253A3181744%2Ffull%2F800%2C%2F0%2Fdefault.jpg&type=IMAGE",
+      "shownAt": "http://hdl.handle.net/1887.1/item:3181744",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/298/item_3181744",
+      "title": "Kaart van een Gedeelte der Kust van Cochin-China: met de Baai en Haven van Turon, en het Eiland Kallao",
+      "url": "https://www.europeana.eu/item/298/item_3181744?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Parish, Henry William, (approximately 1765-1800) (mapmaker)"
+      ],
+      "date": "1793"
+    }
+  },
+  {
+    "id": "europeana:/298/item_3181773",
+    "_source": "europeana",
+    "_sourceId": "/298/item_3181773",
+    "_sourceUrl": "https://www.europeana.eu/item/298/item_3181773?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Kaart der Eilanden ten Zuiden van Chu-San, op de Oostkust van China",
+    "creator": [
+      "Allart, J. (1754-1816) (mapmaker)"
+    ],
+    "description": "Scale: Not given. With 1 bar scale: 10 Schaal van Zeemylen =  3 cm.",
+    "date": "1799",
+    "type": "IMAGE",
+    "language": "mul",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "Dutch Collections for Europe"
+      ],
+      "dataProvider": [
+        "Leiden University Libraries"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fiiif.universiteitleiden.nl%2Fiiif%2F2%2Fhdl%253A1887.1%252Fitem%253A3181773%2Ffull%2F800%2C%2F0%2Fdefault.jpg&type=IMAGE",
+      "shownAt": "http://hdl.handle.net/1887.1/item:3181773",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/298/item_3181773",
+      "title": "Kaart der Eilanden ten Zuiden van Chu-San, op de Oostkust van China",
+      "url": "https://www.europeana.eu/item/298/item_3181773?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Allart, J. (1754-1816) (mapmaker)"
+      ],
+      "date": "1799"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_0b91e92e_c615_4c94_b448_ef19a1231775",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_0b91e92e_c615_4c94_b448_ef19a1231775",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_0b91e92e_c615_4c94_b448_ef19a1231775?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restaurare bordei Drăghiceni în Muzeul Satului, București, 1960",
+    "creator": [
+      "Gheorghe Focșa",
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa"
+    ],
+    "description": "În imagine aspect privind restaurarea acoperișului bordeiul Drăghiceni, județul Olt, transferat în Muzeul Satului în anul 1949. Se observă \"mârtacii\" degradați ai șarpantei \"gârliciului\" (latura sudică). Începe așezarea un strat de stuf pe latura nordică. Se remarcă intrarea în bordei, străjuită de două capete de cai, tăiate în bârne de stejar și așezate pe cosorobii \"gârliciului\" și \"apărătorile\" din fruntar, de forma unor săgeți verticale, cu rol de susținere a învelitorii de paie. Cadrul intrării are o compoziție decorativă delimitată de o frânghie împletită în relief, ca element continuu de legătură, completată cu motive ca ochiul în formă romboidală și floarea în ghiveci.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F81CF8BC930314B80898FCC48ADA46895.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/0b91e92e-c615-4c94-b448-ef19a1231775/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_0b91e92e_c615_4c94_b448_ef19a1231775",
+      "title": "Restaurare bordei Drăghiceni în Muzeul Satului, București, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_0b91e92e_c615_4c94_b448_ef19a1231775?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe Focșa",
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_0c81cc4b_25cb_4181_ac17_c88594135e6e",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_0c81cc4b_25cb_4181_ac17_c88594135e6e",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_0c81cc4b_25cb_4181_ac17_c88594135e6e?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restoration of Drăghiceni Boulevard in Bucharest Village Museum, 1960",
+    "creator": [
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa",
+      "Gheorghe Focșa"
+    ],
+    "description": "In the picture about the restoration of the roof of Stefan D. Stanciu - Drăghiceni, Olt County, transferred to the Village Museum in 1949. We notice the restoration of the wrapping “gârlici” (south side). A consistent layer of reed is placed on the roof snake and fixed in a wooden frame (supported in turn by three pears). It is noted the entrance to the hut surrounded by two horse heads, cut into oak beams and placed on the cosorobies “gârlici” and “defenses” in the foliage, the shape of vertical arrows, supporting the straw covers. The frame of the entrance has a decorative composition delimited by an embossed rope, as a continuous connecting element, supplemented with motifs like a rhomboidal eye and a potted flower.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F3980D36684EA412A9BEE327F007C50A3.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/0c81cc4b-25cb-4181-ac17-c88594135e6e/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_0c81cc4b_25cb_4181_ac17_c88594135e6e",
+      "title": "Restoration of Drăghiceni Boulevard in Bucharest Village Museum, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_0c81cc4b_25cb_4181_ac17_c88594135e6e?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_128ff7da_f01d_4205_9c80_e277a17b8fe1",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_128ff7da_f01d_4205_9c80_e277a17b8fe1",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_128ff7da_f01d_4205_9c80_e277a17b8fe1?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Bordei, village of Grozesti, Drăghiceni commune, Olt county, 1949",
+    "creator": [
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa",
+      "Gheorghe Focșa"
+    ],
+    "description": "Pictured the entrance of a boardwalk from Grozvești, Olt County (side view of the entrance - “gârliciul”). The technique of building the semi-buried house involves first digging the pits for each unit of space and burning them for waterproofing, followed by padding them with wood. The longitudinal walls are made of half oak trunks called “pidvoare,” carved with barda, placed vertically next to each other, between “forks.” The “floats” lining the inner face of the longitudinal walls. Below the upper edge of the pit and above the “pidvours” are fixed horizontally and on the side, one below the other, one or two cosoroabe, supported on “forks.” The transverse walls, called “primezi” are walled either from brick, plastered and shed, or from the braid of woods glued with clay. Outside the walls of this hut are lined with plastered and shed brick. The main part of the construction is the oak forks - thick wooden parts with a crack at the top, fixed in the middle of the transverse walls, vertically strung in the ground on which rests a large longitudinal main beam. Grinda - craftsman placed horizontally on the middle line of the building and the one placed at right angles on the tin support the roof martyrs. The main beam is supported by “amnare” - carved oak pieces that are placed between the upper arms of the forks. The roof is in two waters, with a snake made of half spreads made of massive oak trunks carved with long barrow (marble), which fulfill the role of the rafters from the surface houses and are arranged with the convex part (“the spin”) to the outside and fixed in a sloping position. Their top ends fall freely on the beam and the bottom ones rest on the cosorobi, through wooden nails called “masseurs.” On the outside, a layer of wheat straw is laid, fixed in a frame of boards, supported laterally by four roasters, and at the entrance by the “defences” of the foliage (three pieces of plain vertical wood). In front of the hut are two buckets made of brass.",
+    "date": "1949",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2FC792D0DF39F447B7BBCDC32C9DE7201E.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/128ff7da-f01d-4205-9c80-e277a17b8fe1/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_128ff7da_f01d_4205_9c80_e277a17b8fe1",
+      "title": "Bordei, village of Grozesti, Drăghiceni commune, Olt county, 1949",
+      "url": "https://www.europeana.eu/item/936/Culturalia_128ff7da_f01d_4205_9c80_e277a17b8fe1?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa",
+        "Gheorghe Focșa"
+      ],
+      "date": "1949"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_1bdb266f_1f59_4d27_aed2_8a0315435b39",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_1bdb266f_1f59_4d27_aed2_8a0315435b39",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_1bdb266f_1f59_4d27_aed2_8a0315435b39?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restoration of Drăghiceni Boulevard in Bucharest Village Museum, 1960",
+    "creator": [
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa",
+      "Gheorghe Focșa"
+    ],
+    "description": "Bordeiul, dated 1800, is a semi-buried dwelling with a planimetry composed of: slope gârlici, tinde (“ogeac”) and living room (“stove”). The excavation of the pits for each unit of space was followed by their burning for waterproofing and their padding with wood. The longitudinal walls are made of half oak trunks called “pidvoare,” carved with barda, placed vertically next to each other, between “forks.” The “floats” lining the inner face of the longitudinal walls. Below the upper edge of the pit and above the “pidvours” are fixed horizontally and on the wide, the cosoroabas supported on “forks.” The transverse walls, called “primezi” are walled from brick, plastered and shed. The main part of the construction is the 3 oak forks - thick pieces of wood with a crack at the top, fixed in the middle of the transverse walls, vertically strung in the ground, on which rests a large longitudinal main beam. Grinda - craftsman placed horizontally on the middle line of the building and the one placed at right angles on the tin support the roof martyrs. The main beam is supported by “amnare” - carved oak pieces, which are placed between the upper arms of the forks. The roof is in two waters, with a snake made of half spreads made of massive oak trunks carved with long barrow (marble), which fulfill the role of the rafters from the surface houses and are arranged with the convex part (“the spin”) to the outside and fixed in a sloping position. Their top ends fall freely on the beam and the bottom ones rest on the cosorobi, through wooden nails called “masseurs.” A layer of reed, branches, then a thick layer of wheat straw is laid over the marshmallows.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F7617AF4B8C00403DB9042AE2A09A0182.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/1bdb266f-1f59-4d27-aed2-8a0315435b39/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_1bdb266f_1f59_4d27_aed2_8a0315435b39",
+      "title": "Restoration of Drăghiceni Boulevard in Bucharest Village Museum, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_1bdb266f_1f59_4d27_aed2_8a0315435b39?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_2d880e50_d42a_4b75_8a6d_54e5ce20adf5",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_2d880e50_d42a_4b75_8a6d_54e5ce20adf5",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_2d880e50_d42a_4b75_8a6d_54e5ce20adf5?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Secvențe din Muzeul Satului. Bordei Castranova (1991)",
+    "creator": [
+      "Dan Dinescu",
+      "Dan Dinescu"
+    ],
+    "description": "În imagine exteriorul bordeiului din Castranova, județul Dolj, aflat în expoziția în aer liber a Muzeului Național al Satului ”Dimitrie Gusti” din București, sectorul Oltenia. Este fotografiată latura sudică a bordeiului prevăzută cu o fereastră în dreptul cămării (”celar”). Se observă acoperișul în două ape cu șarpanta din ”mârtaci” de stejar, peste care s-a așezat brazdă de pământ pe care aset crescută iarbă. La capătul coamei, în unghiul format de cele două rame de lemn care mărginesc apele, este fixat un stâlp de mormânt, traforat antropomorf, la capătul superior. În prim plan se remarcă gardul care îl desparte de un alt bordei din Drăghiceni, județul Olt. Gardul este realizat din pari de salcâm ascuțiți la vârf, înfipți în pământ pe care se împletesc orizontal, ”în brâu”, nuiele de alun. În plan îndepărtat se observă gardul și cele două porți realizate din uluci, precum și stâlpii porților ciopliți geometric, la capătul superior.",
+    "date": "1991",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2020%2F04%2520Aprilie%25202020%2FArhiva%2520Documentara%2F2.%2520Mihaela%2520SOLTUZ%2520%2870%2520Fototeca%29%2FImagini%2FE4C44E5B48704FFEBEED01B65640EDF4.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/2d880e50-d42a-4b75-8a6d-54e5ce20adf5/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_2d880e50_d42a_4b75_8a6d_54e5ce20adf5",
+      "title": "Secvențe din Muzeul Satului. Bordei Castranova (1991)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_2d880e50_d42a_4b75_8a6d_54e5ce20adf5?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Dan Dinescu",
+        "Dan Dinescu"
+      ],
+      "date": "1991"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_38966c64_d0fa_4871_be0d_d88f051ac7c2",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_38966c64_d0fa_4871_be0d_d88f051ac7c2",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_38966c64_d0fa_4871_be0d_d88f051ac7c2?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restoration of Drăghiceni Boulevard in Bucharest Village Museum, 1960",
+    "creator": [
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa",
+      "Gheorghe Focșa"
+    ],
+    "description": "In the image of the Drăghiceni hut, Olt county, transferred to the Village Museum in 1949, during the restoration of the roof (revision of the snake and restoration of the covers). One can see: the entrance of the hut with the roof without the straw cover, the revised “martyrs” of the snake (east side), the brick chimney, the straw cap used for the roof covering, the fence of the uluces carved at the upper end in the shape of a spear, the pillar of the rhomboidal carved gate. The entrance to the hut, guarded by two horse heads, cut into oak beams and placed on the cosorobies of “gârlici” and “defenses” from the foliage, the shape of vertical arrows, with the role of fixing straw covers. The frame of the entrance has a decorative composition delimited by an embossed rope, as a continuous connecting element, supplemented with motifs like a rhomboidal eye and a potted flower.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F0FDF89343DE141C7973ACCAF15D740FA.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/38966c64-d0fa-4871-be0d-d88f051ac7c2/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_38966c64_d0fa_4871_be0d_d88f051ac7c2",
+      "title": "Restoration of Drăghiceni Boulevard in Bucharest Village Museum, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_38966c64_d0fa_4871_be0d_d88f051ac7c2?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_5b37f87e_c0ff_4978_88f7_09609223a1e9",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_5b37f87e_c0ff_4978_88f7_09609223a1e9",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_5b37f87e_c0ff_4978_88f7_09609223a1e9?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Secvențe din Muzeul Satului - restaurarea învelitorii din draniță a casei Berbești, jud. Maramureș (1980)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "The camera lens brings in front of the viewer a picture from the Village Museum - the household from Berbești village, jud. Maramures is erected on the foundation of rock stone, over which were laid massive planks, carved in oak wood with a hull and finished with a barrow. The roof is in four waters made of the stereal on which the dranita is beaten. Prispa is arranged on the facade of the house and consists of a succession of carved and ornate pillars linked in the upper part with “chitusi” (sherds) that make up beautiful arches, specific to the area. The house consists of tinde, pantry and loaf at the facade. The image presents us with a team of workers brought from the area working to replace the shells that have deteriorated.",
+    "date": "1980",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2F29F9FC7D6C1F45B2B18536515DB1D310.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/5b37f87e-c0ff-4978-88f7-09609223a1e9/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_5b37f87e_c0ff_4978_88f7_09609223a1e9",
+      "title": "Secvențe din Muzeul Satului - restaurarea învelitorii din draniță a casei Berbești, jud. Maramureș (1980)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_5b37f87e_c0ff_4978_88f7_09609223a1e9?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_7888c186_c16c_419c_9b2e_e085147f8eb5",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_7888c186_c16c_419c_9b2e_e085147f8eb5",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_7888c186_c16c_419c_9b2e_e085147f8eb5?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restoration of the Drăghiceni hut. Village Museum, Bucharest, 1960",
+    "creator": [
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa",
+      "Gheorghe Focșa"
+    ],
+    "description": "In the image of Drăghiceni, Olt County, transferred to the Village Museum in 1949, during the restoration of the roof. We observe the degraded “martyrs” of the gărlici (south side). The entrance to the hut, guarded by two horse heads, cut into oak beams and placed on the cosorobies “gârlici,” “defenses” from the foliage, in the form of vertical arrows, supporting the straw covers. The frame of the entrance has a decorative composition delimited by an embossed rope, as a continuous connecting element, supplemented with motifs like a rhomboidal eye and a potted flower.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F9011F76B5846469E8BF833B310424207.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/7888c186-c16c-419c-9b2e-e085147f8eb5/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_7888c186_c16c_419c_9b2e_e085147f8eb5",
+      "title": "Restoration of the Drăghiceni hut. Village Museum, Bucharest, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_7888c186_c16c_419c_9b2e_e085147f8eb5?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_7a927fc6_a016_435e_8859_8c6ca70744a8",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_7a927fc6_a016_435e_8859_8c6ca70744a8",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_7a927fc6_a016_435e_8859_8c6ca70744a8?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restoration of the Drăghiceni hut. Village Museum, Bucharest, 1960",
+    "creator": [
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa",
+      "Gheorghe Focșa"
+    ],
+    "description": "Bordeiul, dated 1800, is a semi-buried dwelling with a planimetry composed of: slope gârlici, tinde (“ogeac”) and living room (“stove”). The construction technique involves first digging the pits for each unit of space and burning them for waterproofing, followed by padding them with wood. The longitudinal walls are made of half oak trunks called “pidvoare,” carved with barda, placed vertically next to each other, between “forks.” The “floats” lining the inner face of the longitudinal walls. Below the upper edge of the pit and above the “pidvours” are fixed horizontally and on the wide, the cosoroabas supported on “forks.” The transverse walls, called “primezi” are walled from brick, plastered and shed. The main part of the construction is the 3 oak forks - thick pieces of wood with a crack at the top, fixed in the middle of the transverse walls, vertically strung in the ground, on which rests a large longitudinal main beam. Grinda - craftsman placed horizontally on the middle line of the building and the one placed at right angles on the tin support the roof martyrs. The main beam is supported by “amnare” - carved oak pieces, which are placed between the upper arms of the forks. The roof is in two waters, with a snake made of half spreads made of massive oak trunks carved with long barrow (marble), which fulfill the role of the rafters from the surface houses and are arranged with the convex part (“the spin”) to the outside and fixed in a sloping position. Their top ends fall freely on the beam and the bottom ones rest on the cosorobi, through wooden nails called “masseurs.” A layer of reed, branches, then a thick layer of wheat straw is laid over the marshmallows.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2FCE46097EE47349F5943325C23BABEE68.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/7a927fc6-a016-435e-8859-8c6ca70744a8/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_7a927fc6_a016_435e_8859_8c6ca70744a8",
+      "title": "Restoration of the Drăghiceni hut. Village Museum, Bucharest, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_7a927fc6_a016_435e_8859_8c6ca70744a8?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_8987b5f4_3b19_490e_90d0_3ecc8d597ff3",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_8987b5f4_3b19_490e_90d0_3ecc8d597ff3",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_8987b5f4_3b19_490e_90d0_3ecc8d597ff3?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Bordeiul Drăghiceni în Muzeul Satului, București",
+    "creator": [
+      "Gheorghe Focșa",
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa"
+    ],
+    "description": "În imagine fațada bordeiului Drăghiceni, județul Olt, transferat în Muzeul Satului în anul 1949. Bordeiul, datat 1800, este o locuință semiîngropată având o planimetrie compusă din: gârlici în pantă, tindă (“ogeac”) și cameră de locuit (“sobă”). Săparea gropilor pentru fiecare unitate de spațiu a fost urmată de arderea lor pentru impermeabilizare și de căptușirea lor cu lemn. Pereții longitudinali sunt făcuți din jumătăți de trunchiuri de stejar numite “pidvoare”, cioplite cu barda, așezate vertical, unele lângă altele, între “furculițe”. “Pidvoarele” căptușesc fața interioară a pereților longitudinali. Sub marginea superioară a gropii și deasupra “pidvoarelor” sunt fixate orizontal și pe lat, cosoroabele susținute pe „furculițe”. Pereții transversali, numiți “primezi” sunt zidiți din cărămidă, tencuiți și văruiți. Partea principală a construcției o constituie cele 3 furci din stejar – piese groase de slemn cu crăcană la partea superioară, fixate în mijlocul pereților transversali, înfipte vertical în pământ, pe care se sprijină o grindă principală longitudinală de dimensiuni mari. Grinda – meșter așezată orizontal pe linia mediană a clădirii și cea așezată în unghi drept pe tindă susțin mârtacii acoperișului. Grinda principală este susținută de „amnare” - bucăți de stejar cioplite, care sunt așezate între brațele superioare ale furcilor. Acoperișul este în două ape, cu șarpanta din jumătăți spintecate din trunchiuri masive de stejar cioplite cu barda în lung (mârtaci), care îndeplinesc rolul căpriorilor de la casele de suprafață si sunt dispuse cu partea convexă (“spinarea”) spre exterior și fixate în poziție înclinată. Capetele lor de sus cad liber pe grindă, iar cele de jos se sprijină pe cosorobi, prin cuie de lemn numite “măsele”. Peste mârtaci este așezat un strat de stuf, crengi, apoi un strat gros de paie de grâu. Paiele sunt susținute de aceste crengi așezate în neregulă peste mârtaci constituind, astfel, “păianjenii” care opresc strecurarea acestora printre mârtaci în interior și fixate contra vânturilor cu un strat de pământ, scos din groapă, peste care este crescută vegetație. Intrarea în bordei este străjuită de două capete de cai, tăiate în bârne de stejar și așezate pe cosorobii \"gârliciului\", iar învelitoarea este susținută de \"apărătorile\" din fruntar, de forma unor săgeți verticale. Cadrul intrării are o compoziție decorativă delimitată de o frânghie împletită în relief, ca element continuu de legătură, completată cu motive ca ochiul în formă romboidală și floarea în ghiveci.",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F34FB67EAFDAF40588FC69DD6BFE315ED.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/8987b5f4-3b19-490e-90d0-3ecc8d597ff3/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_8987b5f4_3b19_490e_90d0_3ecc8d597ff3",
+      "title": "Bordeiul Drăghiceni în Muzeul Satului, București",
+      "url": "https://www.europeana.eu/item/936/Culturalia_8987b5f4_3b19_490e_90d0_3ecc8d597ff3?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe Focșa",
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_8ccb1c69_7775_4009_bb5d_2353284c2598",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_8ccb1c69_7775_4009_bb5d_2353284c2598",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_8ccb1c69_7775_4009_bb5d_2353284c2598?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Secvențe din Muzeul Satului - casa Berbești, jud. Maramureș (1979)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "Obiectivul aparatului de fotografiat aduce în fața privitorului o imagine din Muzeul satului - casa din com. Berbești, jud. Maramureș. Gospodăria din satul Berbești, jud. Maramureș este ridicată din scânduri masive, cioplite în lemn de stejar cu securea și finisate cu barda. Acoperișul este în patru ape realizat din stereală pe care este bătută dranița. Prispa este dispusă pe fațada casei și este formată dintr-o succesiune de stâlpi ciopliți și ornamentați legați în partea superioară cu ”chituși” (contrafișe) care alcătuiesc frumoase arcade, specifice zonei.",
+    "date": "1979",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2FE532113FF1A9460DB7AC8FAED40066D8.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/8ccb1c69-7775-4009-bb5d-2353284c2598/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_8ccb1c69_7775_4009_bb5d_2353284c2598",
+      "title": "Secvențe din Muzeul Satului - casa Berbești, jud. Maramureș (1979)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_8ccb1c69_7775_4009_bb5d_2353284c2598?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1979"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_a0961f4f_9155_4882_ab35_1c631c0b58d8",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_a0961f4f_9155_4882_ab35_1c631c0b58d8",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_a0961f4f_9155_4882_ab35_1c631c0b58d8?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Bordei, village of Grozesti, Drăghiceni commune, Olt county, 1949",
+    "creator": [
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa",
+      "Gheorghe Focșa"
+    ],
+    "description": "Pictured Florea D. Voinescu - Grozvești, Olt County. The technique of building the semi-buried house involves first digging the pits for each unit of space (slope entrance or “gârlici,” tinde or “ogeac,” living room or “stove”) and burning them for waterproofing, followed by padding them with wood. The longitudinal walls are made of half oak trunks called “pidvoare,” carved with barda, placed vertically next to each other, between “forks.” The “floats” lining the inner face of the longitudinal walls. Below the upper edge of the pit and above the “pidvours” are fixed horizontally and on the side, one below the other, one or two cosoroabe, supported on “forks.” The transverse walls, called “primezi” are walled either from brick, plastered and shed, or from the braid of woods glued with clay. The main part of the construction is the oak forks - thick wooden parts with a crack at the top, fixed in the middle of the transverse walls, vertically strung in the ground on which rests a large longitudinal main beam. Grinda - craftsman placed horizontally on the middle line of the building and the one placed at right angles on the tin support the roof martyrs. The main beam is supported by “amnare” - carved oak pieces that are placed between the upper arms of the forks. The roof is in two waters, with a snake made of half spreads made of massive oak trunks carved with long barrow (marble), which fulfill the role of the rafters from the surface houses and are arranged with the convex part (“the spin”) to the outside and fixed in a sloping position. Their top ends fall freely on the beam and the bottom ones rest on the cosorobi, through wooden nails called “masseurs.” Over the marble, outside, there is a layer of wheat straw and, over it, possibly, a layer of land, removed from the pit, on which vegetation is grown (it is not very clear from the picture). The frame of the entrance is guarded by two horse heads, cut into large oak beams and placed on the cosorobies “gârlici” and has a decorative composition delimited by an embossed rope as a continuous connecting element. Here are ordained, with a high sense of symmetry, different decorative elements: wheels, colas, human masks. In the central space above the entrance is as a decorative element of first importance: the cross, and the cover is supported by the “defences” from the foliage (the central one being a piece of stylized trimmed vertical wood, representing the silhouette of man). Bordeiul is fenced with fence from round onions (on one side) and from a few ponds complete with onions (on another side).",
+    "date": "1949",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F46C86DB6133446F28D4616970E40D630.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/a0961f4f-9155-4882-ab35-1c631c0b58d8/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_a0961f4f_9155_4882_ab35_1c631c0b58d8",
+      "title": "Bordei, village of Grozesti, Drăghiceni commune, Olt county, 1949",
+      "url": "https://www.europeana.eu/item/936/Culturalia_a0961f4f_9155_4882_ab35_1c631c0b58d8?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa",
+        "Gheorghe Focșa"
+      ],
+      "date": "1949"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_a68c20c7_b6db_4f36_9660_161c29f086d4",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_a68c20c7_b6db_4f36_9660_161c29f086d4",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_a68c20c7_b6db_4f36_9660_161c29f086d4?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Bordeiul Castranova in Muzeul Satului, București",
+    "creator": [
+      "Gheorghe Focșa",
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa"
+    ],
+    "description": "În imagine fațada bordeiului Castranova, județul Dolj, aparținând lui Dumitru Gheorghe Măciucă (Mitru Terleanu), construit la jumătatea secolului al XIX-lea și transferat în Muzeul Satului la 1 octombrie1949. La remontare s-au folosit și piese de la bordeiul lui Ion B. Istrate, pentru completare. Din punct de vedere constructiv, conform planului însemnat cu țăruși, s-au săpat gropile pentru fiecare unitate de spațiu și s-au ars pentru impermeabilizare. Pereții longitudinali sunt făcuți din jumătăți de trunchiuri de stejar numite “pidvoare”, cioplite cu barda, așezate vertical, unele lângă altele, între “furculițe”, sprijinite cu capătul de sus în jgheabul tăiat în marginea inferioară a cosorobului de jos. Pereții transversali, numiți “primezi” sunt zidiți din cărămidă, tencuiți și văruiți. Partea principală a construcției o constituie furcile - un lemn cu crăcană la partea superioară, înfipte vertical în pământ pe care se sprijină o grindă principală longitudinală de dimensiuni mari. Grinda – meșter așezată orizontal pe linia mediană a clădirii și cea așezată în unghi drept pe tindă susțin mârtacii acoperișului. Grinda principală este susținută de amnare - bucăți de stejar cioplite. Cosorobii sunt fixați orizontal și pe lat, unul sub altul sub marginea superioară a gropii către pereții laterali, susținuți pe „furculițe”. Acoperișul este în două ape, cu șarpanta din trunchiuri de stejar cioplite cu barda în lung (mârtaci), care îndeplinesc rolul căpriorilor de la casele de suprafață și sunt dispuse cu partea convexă spre exterior și fixate în poziție înclinată. Peste mârtaci sunt puse un strat de stuf, crengi și apoi un strat de paie de grâu. În această fotografie, bordeiul are deasupra și un strat de pământ, pentru fixarea paielor. Planul, în formă de T, cuprinde 4 încăperi. Intrarea în bordei se face printr-un gârlici în pantă, ce se constituie ca o apărătoare împotriva apelor din ploi și zăpezi la intrarea locuinței și este flancat de două „cosoroabe” sculptate în formă de cap de cal, cu rol apotropaic, iar \"apărătorile\" fruntarului, cu rol de susținere a stratului gros de paie, sunt cioplite în formă de brad stilizat. Gârliciul are două portițe făcute din gratii, care închid intrarea de la nivelul pământului. Aici se află adăpostite sania și un jug de boi. Coborând pe panta gârliciului în groapă se intră în camera numită „la foc”, “ogeag” sau “cunie”, unde, în colțul din dreapta, se află vatra cu horn larg și două “corlate” (rame de lemn), fixate în perete, care servesc drept polițe pentru vase. Pe vatră și în restul încăperii se găsesc obiecte din lut, lemn, fier, scoarța curcubitaceelor și aramă legate de prepararea, păstrarea și servirea hranei lucrate de meșteri olari, căldărari și fierari, precum: țeste, frigări, pirostrii, clește pentru foc, tocător, linguri, solnițe, căuce, căldări, tigăi, tiugi, oale, ulcioare, căni, borcane și străchini produse în centrul de ceramică Oboga. Țestul era confecționat exclusiv de către femei din pământ framântat cu pleavă de grâu și balegă de cal, modelat pe mușuroi de pământ și uscat afară la soare. Având greutate de 50 – 60 de kilograme, țestul se mânuiește după principiul pârghiilor cu ajutorul unui drug de fier, “fierul țăstului”. El se sprijină oblic la foc cu “lanțul coșului”. Are formă de clopot și sub el se cocea pâinea nedospită sau mâncarea după ce era înfierbântat în prealabil. Tot aici se află masa mică rotundă cu trei picioare și scăunelele joase, cobilițe de cărat apa, iar sus, în cuie mari de lemn înfipte în pereți, căpisterea sau covata de mălai și de pâine. Din camera „la foc”, se intră în stânga în „celar” (cămară), ce servește ca depozit pentru unelte și pentru rezervele alimentare de iarnă. Aici găsim amnare pentru grindă, dărace, coșuri pentru paie, căldări de aramă, toarte de căldare, pinteni pentru călușari, fiare pentru cai, coasă, foarfece și custură, curățătoare de porumb, bardă, tiugă pentru sare, troc pentru păsări etc. În dreapta se află camera de locuit. În această încăpere se află o „sobă oarbă” (cu gura de alimentare a focului în peretele despărțitor), de formă prismatică și diverse piese de mobilier lucrate în zonă – paturi, lăzi de zestre și poliță. Cele două paturi late din scânduri prinse în pari bătuți în pământ acoperite cu rogojini și scoarțe ocupă unghiul opus intrării. Căpătâiele lungi și pernițe pătrate alese în război sau alese cu mâna completează decorul cromatic. La unghiul celor două paturi și la capătul dinspre fereastră sunt așezate lăzile de zestre. În ele se păstrează îmbrăcămintea de sărbătoare. Când a treia generație își aduce lada de zestre în bordei, cea mai veche dintre ele, lada bătrânei trece la păstrare sub pat. În lungul peretelui lateral, pe polița lungă sunt așezate icoana pictată pe lemn și piese de ceramică. Gospodăria din Castranova din Muzeul Satului mai cuprinde: pătul din nuiele pentru știuleți de porumb, fântână cu cumpănă, gard din uluci și poartă, troiță (nu sunt vizibile în fotografie)",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2FF30744DEF5894A7584A7506C2F118851.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/a68c20c7-b6db-4f36-9660-161c29f086d4/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_a68c20c7_b6db_4f36_9660_161c29f086d4",
+      "title": "Bordeiul Castranova in Muzeul Satului, București",
+      "url": "https://www.europeana.eu/item/936/Culturalia_a68c20c7_b6db_4f36_9660_161c29f086d4?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe Focșa",
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_a76fa0ce_c611_4504_abf1_cf2cd9b53281",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_a76fa0ce_c611_4504_abf1_cf2cd9b53281",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_a76fa0ce_c611_4504_abf1_cf2cd9b53281?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Architecture. Bordei, Caracal, Olt County, 1960",
+    "creator": [
+      "Georgeta Stoica",
+      "Georgeta Stoica"
+    ],
+    "description": "In the image of the well, semi-buried house with two rooms and “gârlici.” The construction technique involves digging the pits for each unit of space (slope entrance or “gârlici,” tinde or “ogeac,” living room or “stove”) and burning them for waterproofing, followed by padding them with wood. The longitudinal walls are made of half oak trunks called “pidvoare,” carved with barda, placed vertically next to each other, between “forks.” The “floats” lining the inner face of the longitudinal walls. Below the upper edge of the pit and above the “pidvours” are fixed horizontally and on the side, one below the other, one or two cosoroabe, supported on “forks.” The transverse walls, called “primezi” are walled either from brick, plastered and shed, or from the braid of woods glued with clay. The main part of the construction is 3 oak forks - thick wooden pieces with crack at the top, fixed in the middle of the transverse walls, vertically strung in the ground on which rests a large longitudinal main beam. Grinda - craftsman placed horizontally on the middle line of the building and the one placed at right angles on the tin support the roof martyrs. The main beam is supported by “amnare” - carved oak pieces that are placed between the upper arms of the forks. The walls are plastered and shed to the outside (the inner walls of the gallows are also plastered and shed). The roof is in two waters, with a snake made of half spreads made of massive oak trunks carved with long barrow (marble), which fulfill the role of the rafters from the surface houses and are arranged with the convex part (“the spin”) to the outside and fixed in a sloping position. Their top ends fall freely on the beam and the bottom ones rest on the cosorobi, through wooden nails called “masseurs.” Across the marshmallows, outside, a thick layer of wheat straw is laid, fixed against slipping, through vertical cakes (supported, at one end, in the ground). Bordeiul is provided with a brick chimney, to evacuate the smoke. An elk fence delimits the dwelling on one side.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F6AA1F947F8FF49C086844F5DEC1052DB.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/a76fa0ce-c611-4504-abf1-cf2cd9b53281/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_a76fa0ce_c611_4504_abf1_cf2cd9b53281",
+      "title": "Architecture. Bordei, Caracal, Olt County, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_a76fa0ce_c611_4504_abf1_cf2cd9b53281?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Georgeta Stoica",
+        "Georgeta Stoica"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_a90504c3_3cdb_4324_b1bd_990c813ec890",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_a90504c3_3cdb_4324_b1bd_990c813ec890",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_a90504c3_3cdb_4324_b1bd_990c813ec890?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restaurare bordei Drăghiceni. Muzeul Satului, București, 1960",
+    "creator": [
+      "Gheorghe Focșa",
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa"
+    ],
+    "description": "În imagine bordeiul Drăghiceni, județul Olt, transferat în Muzeul Satului în anul 1949, în timpul restaurării acoperișului: revizuirea șarpantei (latura vestică și latura sudică). Se observă și capetele superioare ale ulucilor gardului, fasonate în formă de suliță.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2FD21B6DE0CDD64206889DDFC22805753D.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/a90504c3-3cdb-4324-b1bd-990c813ec890/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_a90504c3_3cdb_4324_b1bd_990c813ec890",
+      "title": "Restaurare bordei Drăghiceni. Muzeul Satului, București, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_a90504c3_3cdb_4324_b1bd_990c813ec890?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe Focșa",
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_aba79b5e_c5a7_4901_880b_c2eb6f7585f0",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_aba79b5e_c5a7_4901_880b_c2eb6f7585f0",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_aba79b5e_c5a7_4901_880b_c2eb6f7585f0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Secvențe din Muzeul Satului - restaurarea învelitorii din draniță a casei Berbești, jud. Maramureș (1980)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "The camera lens brings in front of the viewer a picture from the Village Museum - the household from Berbești village, jud. Maramures is erected on the foundation of rock stone, over which were laid massive planks, carved in oak wood with a hull and finished with a barrow. The roof is in four waters made of the stereal on which the dranita is beaten. Prispa is arranged on the facade of the house and consists of a succession of carved and ornate pillars linked in the upper part with “chitusi” (sherds) that make up beautiful arches, specific to the area. The house consists of tinde, pantry and loaf at the facade. The image presents us with a team of workers brought from the area working to replace the shells that have deteriorated.",
+    "date": "1980",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2F27FD9627C1A747E0B08BC406A3980E6E.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/aba79b5e-c5a7-4901-880b-c2eb6f7585f0/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_aba79b5e_c5a7_4901_880b_c2eb6f7585f0",
+      "title": "Secvențe din Muzeul Satului - restaurarea învelitorii din draniță a casei Berbești, jud. Maramureș (1980)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_aba79b5e_c5a7_4901_880b_c2eb6f7585f0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_b1795dc9_94ae_4f58_89f0_27ef546339ba",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_b1795dc9_94ae_4f58_89f0_27ef546339ba",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_b1795dc9_94ae_4f58_89f0_27ef546339ba?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Secvențe din Muzeul Satului - restaurarea învelitorii din draniță a casei Berbești, jud. Maramureș (1980)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "The camera lens brings in front of the viewer a picture from the Village Museum - the household from Berbești village, jud. Maramures is erected on the foundation of rock stone, over which were laid massive planks, carved in oak wood with a hull and finished with a barrow. The roof is in four waters made of the stereal on which the dranita is beaten. Prispa is arranged on the facade of the house and consists of a succession of carved and ornate pillars linked in the upper part with “chitusi” (sherds) that make up beautiful arches, specific to the area. The house consists of tinde, pantry and loaf at the facade. The image presents us with a team of workers brought from the area working to replace the shells that have deteriorated.",
+    "date": "1980",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2FE7FC936A73764B3FA7A9DC3ADA06CDA6.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/b1795dc9-94ae-4f58-89f0-27ef546339ba/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_b1795dc9_94ae_4f58_89f0_27ef546339ba",
+      "title": "Secvențe din Muzeul Satului - restaurarea învelitorii din draniță a casei Berbești, jud. Maramureș (1980)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_b1795dc9_94ae_4f58_89f0_27ef546339ba?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_b3bb84f0_0eff_4a4f_8e95_ccb9ebee4ff4",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_b3bb84f0_0eff_4a4f_8e95_ccb9ebee4ff4",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_b3bb84f0_0eff_4a4f_8e95_ccb9ebee4ff4?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Bordei, comuna Drăghiceni, județul Olt, 1949",
+    "creator": [
+      "Gheorghe Focșa",
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa"
+    ],
+    "description": "În imagine bordeiul Ștefan D. Stanciu - Drăghiceni, județul Olt (vedere din spate), transferat în Muzeul Satului în anul 1949. Imaginea surprinde bordeiul în teren, înainte de transferarea lui. Datat 1800, bordeiul este o locuință semiîngropată având o planimetrie compusă din: gârlici în pantă, tindă (“ogeac”) și cameră de locuit (“sobă”). Săparea gropilor pentru fiecare unitate de spațiu a fost urmată de arderea lor pentru impermeabilizare și de căptușirea lor cu lemn. Pereții longitudinali sunt făcuți din jumătăți de trunchiuri de stejar numite “pidvoare”, cioplite cu barda, așezate vertical, unele lângă altele, între “furculițe”. “Pidvoarele” căptușesc fața interioară a pereților longitudinali. Sub marginea superioară a gropii și deasupra “pidvoarelor” sunt fixate orizontal și pe lat, una sub alta, două cosoroabe, pe latura estică și una pe latura vestică, susținute pe „furculițe”. Pereții transversali, numiți “primezi” sunt zidiți din cărămidă, tencuiți și văruiți, în trecutul îndepărtat aceștia făcându-se din împletitură de nuiele lipită cu lut. Partea principală a construcției o constituie cele 4 furci din stejar – piese groase de slemn cu crăcană la partea superioară, fixate în mijlocul pereților transversali, înfipte vertical în pământ pe care se sprijină o grindă principală longitudinală de dimensiuni mari. Grinda – meșter așezată orizontal pe linia mediană a clădirii și cea așezată în unghi drept pe tindă susțin mârtacii acoperișului. Grinda principală este susținută de „amnare” - bucăți de stejar cioplite care sunt așezate între brațele superioare ale furcilor. Acoperișul este în două ape, cu șarpanta din jumătăți spintecate din trunchiuri masive de stejar cioplite cu barda în lung (mârtaci), care îndeplinesc rolul căpriorilor de la casele de suprafață si sunt dispuse cu partea convexă (“spinarea”) spre exterior și fixate în poziție înclinată. Capetele lor de sus cad liber pe grindă, iar cele de jos se sprijină pe cosorobi, prin cuie de lemn numite “măsele”. Peste mârtaci este așezat un strat de stuf, crengi și mărăcini, tufe apoi un strat gros de paie de grâu, începând de la nivelul pământului în sus spre coama mediană. Paiele sunt susținute de aceste crengi așezate în neregulă peste mârtaci constituind, astfel, “păianjenii” care opresc strecurarea acestora printre mârtaci în interior și fixate contra vânturilor cu niște prăjini și cu un strat de pământ, scos din groapă, peste care a crescut vegetație. Acoperișul este prevăzut cu coș din cărămidă pentru evacuarea fumului.",
+    "date": "1949",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F4837663BC5F6493FBF49718F24346044.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/b3bb84f0-0eff-4a4f-8e95-ccb9ebee4ff4/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_b3bb84f0_0eff_4a4f_8e95_ccb9ebee4ff4",
+      "title": "Bordei, comuna Drăghiceni, județul Olt, 1949",
+      "url": "https://www.europeana.eu/item/936/Culturalia_b3bb84f0_0eff_4a4f_8e95_ccb9ebee4ff4?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe Focșa",
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa"
+      ],
+      "date": "1949"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_b44e4771_2375_4dc4_8c2a_afd7b9ef5f7b",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_b44e4771_2375_4dc4_8c2a_afd7b9ef5f7b",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_b44e4771_2375_4dc4_8c2a_afd7b9ef5f7b?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Colț de casă, județul Maramureș, 1961",
+    "creator": [
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa",
+      "Gheorghe Focșa"
+    ],
+    "description": "In the picture traditional constructions. In the foreground a corner of the house, having visible: the beam from the base of the “saddle” (prispă); the beam above the pillars, the pillar from the end of the “saddle,” centrally decorated in the shape of two pyramid trunks overlapped on the large base, to which the sherds are attached. In the continuation of the house is a fence of vertical ulucks carved to the upper part in the shape of an “arrow,” trapped by two rows of horizontal lefts fixed in turn by vertical pillars. Second plan: a sherd made of wooden joints, joined at the ends “round” (barrow made in the round back of the trunk), with a roof in four shingle waters; bevel built of four-sided carved beams, joined at the ends in the clots “two straight notches (two opposite sides of the bark carved in four edges) and” in the tail The roof in a water has the shingle covering.",
+    "date": "1961",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F11%2520Noiembrie%25202019%2FArhiva%2520Documentara%2FBaze%2520de%2520date%2F2.%2520Mihaela%2520SOLTUZ%2520%28280%2520FV%29%2FImagini%2F95B7BF17A7FF476680D0AD8A53AFAF88.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/b44e4771-2375-4dc4-8c2a-afd7b9ef5f7b/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_b44e4771_2375_4dc4_8c2a_afd7b9ef5f7b",
+      "title": "Colț de casă, județul Maramureș, 1961",
+      "url": "https://www.europeana.eu/item/936/Culturalia_b44e4771_2375_4dc4_8c2a_afd7b9ef5f7b?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa",
+        "Gheorghe Focșa"
+      ],
+      "date": "1961"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_ba216f06_a18c_4f4a_a1a9_c7993155e7a9",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_ba216f06_a18c_4f4a_a1a9_c7993155e7a9",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_ba216f06_a18c_4f4a_a1a9_c7993155e7a9?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restaurare bordei Drăghiceni. Muzeul Satului, București, 1960",
+    "creator": [
+      "Gheorghe Focșa",
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa"
+    ],
+    "description": "În imagine bordeiul Drăghiceni, județul Olt, transferat în Muzeul Satului în anul 1949, în timpul restaurării acoperișului: revizuire șarpantă (latura estică) și învelitoare \"gârlici\" (latura sudică) - un strat consistent de stuf este așezat pe șarpanta acoperișului și fixat într-o ramă de lemn. Se observă și capetele superioare ale ulucilor gardului, fasonate în formă de suliță.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F252B262D6724490592B0E76DB964FA9A.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/ba216f06-a18c-4f4a-a1a9-c7993155e7a9/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_ba216f06_a18c_4f4a_a1a9_c7993155e7a9",
+      "title": "Restaurare bordei Drăghiceni. Muzeul Satului, București, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_ba216f06_a18c_4f4a_a1a9_c7993155e7a9?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe Focșa",
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_ba413757_a282_4c6d_95ce_87e6b450dadc",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_ba413757_a282_4c6d_95ce_87e6b450dadc",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_ba413757_a282_4c6d_95ce_87e6b450dadc?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Bordeiul Drăghiceni. Village Museum, Bucharest, 1961",
+    "creator": [
+      "Georgeta Stoica",
+      "Georgeta Stoica"
+    ],
+    "description": "In the image of Drăghiceni, Olt County, transferred to the Village Museum in 1949. Bordeiul, dated 1800, is a semi-buried dwelling with a planimetry composed of: slope gârlici, tinde (“ogeac”) and living room (“stove”). The excavation of the pits for each unit of space was followed by their burning for waterproofing and their padding with wood. The longitudinal walls are made of half oak trunks called “pidvoare,” carved with barda, placed vertically next to each other, between “forks.” The “floats” lining the inner face of the longitudinal walls. Below the upper edge of the pit and above the “pidvours” are fixed horizontally and on the wide, the cosoroabas supported on “forks.” The transverse walls, called “primezi” are walled from brick, plastered and shed. The main part of the construction is the 3 oak forks - thick pieces of wood with a crack at the top, fixed in the middle of the transverse walls, vertically strung in the ground, on which rests a large longitudinal main beam. Grinda - craftsman placed horizontally on the middle line of the building and the one placed at right angles on the tin support the roof martyrs. The main beam is supported by “amnare” - carved oak pieces, which are placed between the upper arms of the forks. The roof is in two waters, with a snake made of half spreads made of massive oak trunks carved with long barrow (marble), which fulfill the role of the rafters from the surface houses and are arranged with the convex part (“the spin”) to the outside and fixed in a sloping position. Their top ends fall freely on the beam and the bottom ones rest on the cosorobi, through wooden nails called “masseurs.” A layer of reed, branches, then a thick layer of wheat straw is laid over the marshmallows. On the south side the wide eaves, which allows the protection of the outer wall, is supported by pears stuck in the forest. The entrance to the hut is guarded by two horse heads, cut into oak beams and placed on the cosorobies of “gârlici,” and the cover is supported by the “defenses” from the foliage, by the shape of vertical arrows. The frame of the entrance has a decorative composition delimited by an embossed rope, as a continuous connecting element, supplemented with motifs like a rhomboidal eye and a potted flower. In the picture are also seen the upper ends of the fence nuts, carved in the shape of a spear.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F0DC82E302DB945E390B7C8E12CBF8AFC.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/ba413757-a282-4c6d-95ce-87e6b450dadc/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_ba413757_a282_4c6d_95ce_87e6b450dadc",
+      "title": "Bordeiul Drăghiceni. Village Museum, Bucharest, 1961",
+      "url": "https://www.europeana.eu/item/936/Culturalia_ba413757_a282_4c6d_95ce_87e6b450dadc?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Georgeta Stoica",
+        "Georgeta Stoica"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_ba68fb33_9ccf_4e17_a2fc_80fe3ffd198e",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_ba68fb33_9ccf_4e17_a2fc_80fe3ffd198e",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_ba68fb33_9ccf_4e17_a2fc_80fe3ffd198e?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restaurare bordei Drăghiceni în Muzeul Satului, București, 1960",
+    "creator": [
+      "Gheorghe Focșa",
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa"
+    ],
+    "description": "În imagine bordeiul Drăghiceni, județul Olt, transferat în Muzeul Satului în anul 1949, în timpul restaurării acoperișului: revizuirea șarpantei \"gârliciului\" (latura sudică). Se remarcă intrarea în bordei, străjuită de două capete de cai, tăiate în bârne de stejar și așezate pe cosorobii \"gârliciului\", și \"apărătorile\" din fruntar, de forma unor săgeți verticale, cu rol de susținere a învelitorii de paie. Cadrul intrării are o compoziție decorativă delimitată de o frânghie împletită în relief, ca element continuu de legătură, completată cu motive ca ochiul în formă romboidală și floarea în ghiveci.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F6B2FF6C0E8644F81B0D02381C83E9AE1.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/ba68fb33-9ccf-4e17-a2fc-80fe3ffd198e/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_ba68fb33_9ccf_4e17_a2fc_80fe3ffd198e",
+      "title": "Restaurare bordei Drăghiceni în Muzeul Satului, București, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_ba68fb33_9ccf_4e17_a2fc_80fe3ffd198e?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe Focșa",
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_c19c9520_c22d_4273_847a_02f0c157eece",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_c19c9520_c22d_4273_847a_02f0c157eece",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_c19c9520_c22d_4273_847a_02f0c157eece?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Secvențe din Muzeul Satului - restaurarea învelitorii din draniță a casei Berbești, jud. Maramureș (1980)",
+    "creator": [
+      "Ioan George Andron",
+      "Ioan George Andron"
+    ],
+    "description": "Obiectivul aparatului de fotografiat aduce în fața privitorului o imagine din Muzeul satului - gospodăria din satul Berbești, jud. Maramureș este ridicată pe temelie de piatră de stâncă, peste care s-au pus scânduri masive, cioplite în lemn de stejar cu securea și finisate cu barda. Acoperișul este în patru ape realizat din stereală pe care este bătută dranița. Prispa este dispusă pe fațada casei și este formată dintr-o succesiune de stâlpi ciopliți și ornamentați legați în partea superioară cu ”chituși” (contrafișe) care alcătuiesc frumoase arcade, specifice zonei. Casa se compune din tindă, cămară și prispă la fațadă. Imaginea ne prezintă o echipă de muncitori aduși din zonă care lucrează la înlocuirea învelitorii care s-a deteriorat.",
+    "date": "1980",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F1.%2520Dorina%2520IONITA%2520%28280%2520C%29%2FImagini%2F6E06ABF3504446EDB5ACD4ABEC5E37EF.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/c19c9520-c22d-4273-847a-02f0c157eece/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_c19c9520_c22d_4273_847a_02f0c157eece",
+      "title": "Secvențe din Muzeul Satului - restaurarea învelitorii din draniță a casei Berbești, jud. Maramureș (1980)",
+      "url": "https://www.europeana.eu/item/936/Culturalia_c19c9520_c22d_4273_847a_02f0c157eece?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Ioan George Andron",
+        "Ioan George Andron"
+      ],
+      "date": "1980"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_ca4b1856_5cbe_4ed6_b746_c2e720689cb3",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_ca4b1856_5cbe_4ed6_b746_c2e720689cb3",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_ca4b1856_5cbe_4ed6_b746_c2e720689cb3?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Bordeiul Drăghiceni in Muzeul Satului, București, 1961",
+    "creator": [
+      "Boris Zderciuc",
+      "Boris Zderciuc"
+    ],
+    "description": "În imagine bordeiul Drăghiceni, județul Olt (vedere din față), transferat în Muzeul Satului în anul 1949. Bordeiul, datat 1800, este o locuință semiîngropată având o planimetrie compusă din: \"gârlici\" în pantă, tindă (“ogeac”) și cameră de locuit (“sobă”). Săparea gropilor pentru fiecare unitate de spațiu a fost urmată de arderea lor pentru impermeabilizare și de căptușirea lor cu lemn. Pereții longitudinali sunt făcuți din jumătăți de trunchiuri de stejar numite “pidvoare”, cioplite cu barda, așezate vertical, unele lângă altele, între “furculițe”. “Pidvoarele” căptușesc fața interioară a pereților longitudinali. Sub marginea superioară a gropii și deasupra “pidvoarelor” sunt fixate orizontal și pe lat, una sub alta, două cosoroabe, pe latura estică și una pe latura vestică, susținute pe „furculițe”. Pereții transversali, numiți “primezi” sunt zidiți din cărămidă, tencuiți și văruiți. Partea principală a construcției o constituie cele 3 furci din stejar – piese groase de slemn cu crăcană la partea superioară, fixate în mijlocul pereților transversali, înfipte vertical în pământ, pe care se sprijină o grindă principală longitudinală de dimensiuni mari. Grinda – meșter așezată orizontal pe linia mediană a clădirii și cea așezată în unghi drept pe tindă susțin mârtacii acoperișului. Grinda principală este susținută de „amnare” - bucăți de stejar cioplite care sunt așezate între brațele superioare ale furcilor. Acoperișul este în două ape, cu șarpanta din jumătăți spintecate din trunchiuri masive de stejar cioplite cu barda în lung (mârtaci), care îndeplinesc rolul căpriorilor de la casele de suprafață și sunt dispuse cu partea convexă (“spinarea”) spre exterior și fixate în poziție înclinată. Capetele lor de sus cad liber pe grindă, iar cele de jos se sprijină pe cosorobi, prin cuie de lemn numite “măsele”. Peste mârtaci este așezat un strat de stuf, crengi și mărăcini apoi un strat gros de paie de grâu. Intrarea în bordei este străjuită de două capete de cai, tăiate în bârne de stejar și așezate pe cosorobii \"gârliciului\", iar învelitoarea este susținută de \"apărătorile\" din fruntar, de forma unor săgeți verticale. Cadrul intrării are o compoziție decorativă delimitată de o frânghie împletită în relief, ca element continuu de legătură, completată cu motive ca ochiul în formă romboidală și floarea în ghiveci. Coborând pe panta gârliciului în groapă se intră în camera numită „la foc”, “ogeag”, unde, în colțul din dreapta, se află vatra cu horn larg și două “corlate” (rame de lemn), fixate în perete, care servesc drept polițe pentru vase. Pe vatră și în restul încăperii se găsesc obiecte din lut, lemn, fier, scoarța curcubitaceelor și aramă legate de prepararea, păstrarea și servirea hranei: țeste, frigări, căuce, masa mică rotundă cu trei picioare și scăunelele joase, lada pentru făină. În dreapta se află camera de locuit. În această încăpere se află o „sobă oarbă” (cu gura de alimentare a focului în peretele despărțitor) de formă prismatică și diverse piese de mobilier - paturi, lăzi de zestre și polițe. Două paturi late dispuse în unghi drept sunt acoperite cu rogojini, scoarțe, căpătâie lungi și pernițe. La capetele paturilor sunt așezate lăzile de zestre. Bordeiul este împrejmuit cu un gard de uluci, pe trei laturi și se compune din stâlpi cu profil paralelipipidic, pe care sunt fixate două rânduri de lețuri de care sunt prinse ulucile în poziție verticală și fasonate, la capătul superior ,în formă de săgeată. Cele două porți sunt susținute de stâlpi fasonați la partea superioară în formă de trunchiuri de piramidă suprapuse. Pe una din laturi se află un gard din nuiele orizontale împletite pe pari de salcâm, care îl delimitează de gospodăria Castranova, județul Dolj.",
+    "date": "1961",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2FC724B8C6E84646699A70BF3A1332D703.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/ca4b1856-5cbe-4ed6-b746-c2e720689cb3/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_ca4b1856_5cbe_4ed6_b746_c2e720689cb3",
+      "title": "Bordeiul Drăghiceni in Muzeul Satului, București, 1961",
+      "url": "https://www.europeana.eu/item/936/Culturalia_ca4b1856_5cbe_4ed6_b746_c2e720689cb3?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Boris Zderciuc",
+        "Boris Zderciuc"
+      ],
+      "date": "1961"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_cdf33763_de13_4aea_b077_65a50e8371be",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_cdf33763_de13_4aea_b077_65a50e8371be",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_cdf33763_de13_4aea_b077_65a50e8371be?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Bordeiul Castranova in Muzeul Satului, București, 1961",
+    "creator": [
+      "Georgeta Stoica",
+      "Georgeta Stoica"
+    ],
+    "description": "În imagine bordeiul Castranova, județul Dolj aparținând lui Dumitru Gheorghe Măciucă (Mitru Terleanu), construit la jumătatea secolului al XIX-lea și transferat în Muzeul Satului la 1 octombrie1949. La remontare s-au folosit și piese de la bordeiul lui Ion B. Istrate, pentru completare. Din punct de vedere constructiv, conform planului însemnat cu țăruși, s-au săpat gropile pentru fiecare unitate de spațiu și s-au ars pentru impermeabilizare. Pereții longitudinali sunt făcuți din jumătăți de trunchiuri de stejar numite “pidvoare”, cioplite cu barda, așezate vertical, unele lângă altele, între “furculițe”, sprijinite cu capătul de sus în jgheabul tăiat în marginea inferioară a cosorobului de jos. Pereții transversali, numiți “primezi” sunt zidiți din cărămidă, tencuiți și văruiți, Partea principală a construcției o constituie furcile - un lemn cu crăcană la partea superioară, înfipte vertical în pământ pe care se sprijină o grindă principală longitudinală de dimensiuni mari. Grinda – meșter așezată orizontal pe linia mediană a clădirii și cea așezată în unghi drept pe tindă susțin mârtacii acoperișului. Grinda principală este susținută de amnare - bucăți de stejar cioplite. Cosorobii sunt fixați orizontal și pe lat, unul sub altul sub marginea superioară a gropii către pereții laterali, susținuți pe „furculițe”. Acoperișul este în două ape, cu șarpanta din trunchiuri de stejar cioplite cu barda în lung (mârtaci), care îndeplinesc rolul căpriorilor de la casele de suprafață și sunt dispuse cu partea convexă spre exterior și fixate în poziție înclinată. Peste mârtaci sunt puse un strat de stuf, crengi și apoi un strat de paie de grâu. Pardoselile sunt din pământ bătut și lipitură cu lut. Planul, în formă de T, cuprinde 4 încăperi. Intrarea în bordei se face printr-un gârlici în pantă, ce se constituie ca o apărătoare împotriva apelor din ploi și zăpezi la intrarea locuinței și este flancat de două „cosoroabe” sculptate în formă de cap de cal, cu rol apotropaic, iar \"apărătorile\" fruntarului, cu rol de susținere a stratului gros de paie, sunt cioplite în formă de brad stilizat. Gârliciul are două portițe făcute din gratii, care închid intrarea de la nivelul pământului. Aici se află adăpostite sania și un jug de boi. Coborând pe panta gârliciului în groapă se intră în camera numită „la foc”, “ogeag” sau “cunie”, unde, în colțul din dreapta, se află vatra cu horn larg și două “corlate” (rame de lemn), fixate în perete, care servesc drept polițe pentru vase. Pe vatră și în restul încăperii se găsesc obiecte din lut, lemn, fier, scoarța curcubitaceelor și aramă legate de prepararea, păstrarea și servirea hranei lucrate de meșteri olari, căldărari și fierari, precum: țeste, frigări, pirostrii, clește pentru foc, tocător, linguri, solnițe, căuce, căldări, tigăi, tiugi, oale, ulcioare, căni, borcane și străchini produse în centrul de ceramică Oboga. Țestul era confecționat exclusiv de către femei din pământ framântat cu pleavă de grâu și balegă de cal, modelat pe mușuroi de pământ și uscat afară la soare. Având greutate de 50 – 60 de kilograme, țestul se mânuiește după principiul pârghiilor cu ajutorul unui drug de fier, “fierul țăstului”. El se sprijină oblic la foc cu “lanțul coșului”. Are formă de clopot și sub el se cocea pâinea nedospită sau mâncarea după ce era înfierbântat în prealabil. Tot aici se află masa mică rotundă cu trei picioare și scăunelele joase, cobilițe de cărat apa, iar sus, în cuie mari de lemn înfipte în pereți, căpisterea sau covata de mălai și de pâine. Din camera „la foc”, se intră în stânga în „celar” (cămară), ce servește ca depozit pentru unelte și pentru rezervele alimentare de iarnă. Aici găsim amnare pentru grindă, dărace, coșuri pentru paie, căldări de aramă, toarte de căldare, pinteni pentru călușari, fiare pentru cai, coasă, foarfece și custură, curățătoare de porumb, bardă, tiugă pentru sare, troc pentru păsări etc. În dreapta se află camera de locuit. În această încăpere se află o „sobă oarbă” (cu gura de alimentare a focului în peretele despărțitor), de formă prismatică și diverse piese de mobilier lucrate în zonă – paturi, lăzi de zestre și poliță. Cele două paturi late din scânduri prinse în pari bătuți în pământ acoperite cu rogojini și scoarțe ocupă unghiul opus intrării. Căpătâiele lungi și pernițe pătrate alese în război sau alese cu mâna completează decorul cromatic. La unghiul celor două paturi și la capătul dinspre fereastră sunt așezate lăzile de zestre. În ele se păstrează îmbrăcămintea de sărbătoare. Când a treia generație își aduce lada de zestre în bordei, cea mai veche dintre ele, lada bătrânei trece la păstrare sub pat. În lungul peretelui lateral, pe polița lungă sunt așezate icoana pictată pe lemn și piese de ceramică. Gospodăria Castranova din Muzeul Satului mai cuprinde: pătul din nuiele pentru știuleți de porumb, fântână cu cumpănă, gard din uluci și poartă, troiță (nu sunt vizibile în imagine). În imagine se observă capetele ulucilor, frumos fasonate la capătul superior, în formă de suliță.",
+    "date": "1961",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F39D1B7E557244B8D90F261BCEB06DE25.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/cdf33763-de13-4aea-b077-65a50e8371be/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_cdf33763_de13_4aea_b077_65a50e8371be",
+      "title": "Bordeiul Castranova in Muzeul Satului, București, 1961",
+      "url": "https://www.europeana.eu/item/936/Culturalia_cdf33763_de13_4aea_b077_65a50e8371be?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Georgeta Stoica",
+        "Georgeta Stoica"
+      ],
+      "date": "1961"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_d3c218fe_26d5_4c0b_aa32_c9dfd3eb415c",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_d3c218fe_26d5_4c0b_aa32_c9dfd3eb415c",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_d3c218fe_26d5_4c0b_aa32_c9dfd3eb415c?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restoration of Drăghiceni Boulevard in Bucharest Village Museum, 1960",
+    "creator": [
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa",
+      "Gheorghe Focșa"
+    ],
+    "description": "In the image of the Drăghiceni hut, Olt county, transferred to the Village Museum in 1949, during the restoration of the roof: the revision by the craftsmen of the “gârliciului” snake, made of oak “maltese.” It is noted: the entrance to the hut, guarded by two heads of horses, cut into oak beams and placed on the cosorobies “gârlici” and “the defenders” in the foliage, in the form of vertical arrows, supporting the straw wrappers; the entrance with a decorative composition delimited by an embossed rope, as a continuous connecting element, supplemented with motifs like the rhomboidal eye and the flower in the pot; garages.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F3F6247175629409E9A990A630C7805C8.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/d3c218fe-26d5-4c0b-aa32-c9dfd3eb415c/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_d3c218fe_26d5_4c0b_aa32_c9dfd3eb415c",
+      "title": "Restoration of Drăghiceni Boulevard in Bucharest Village Museum, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_d3c218fe_26d5_4c0b_aa32_c9dfd3eb415c?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_d40aa6c1_0918_45a6_b4d3_6f3c41eb09d9",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_d40aa6c1_0918_45a6_b4d3_6f3c41eb09d9",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_d40aa6c1_0918_45a6_b4d3_6f3c41eb09d9?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Restoration of the Drăghiceni hut. Village Museum, Bucharest, 1960",
+    "creator": [
+      "Gheorghe FocGheorghe",
+      "Gheorghe Focșa",
+      "Gheorghe Focșa"
+    ],
+    "description": "Pictured the Drăghiceni boardwalk, Olt county, transferred to the Village Museum in 1949, during the restoration of the roof: the revision of the snake made of oak “martyrs” (west side). The brick chimney is noted for the evacuation of smoke and the fence of uluci that fences the hut.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2FDFC69E48A055453F9217D1BACA9CB09B.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/d40aa6c1-0918-45a6-b4d3-6f3c41eb09d9/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_d40aa6c1_0918_45a6_b4d3_6f3c41eb09d9",
+      "title": "Restoration of the Drăghiceni hut. Village Museum, Bucharest, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_d40aa6c1_0918_45a6_b4d3_6f3c41eb09d9?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Gheorghe FocGheorghe",
+        "Gheorghe Focșa",
+        "Gheorghe Focșa"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_dd399ca7_e5d6_423f_87cf_bd562288a68c",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_dd399ca7_e5d6_423f_87cf_bd562288a68c",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_dd399ca7_e5d6_423f_87cf_bd562288a68c?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Architecture. Bordei, Caracal, Olt County, 1960",
+    "creator": [
+      "Georgeta Stoica",
+      "Georgeta Stoica"
+    ],
+    "description": "In the image of the well, semi-buried house with two rooms and “gârlici.” The construction technique involves digging the pits for each unit of space (slope entrance or “gârlici,” tinde or “ogeac,” living room or “stove”) and burning them for waterproofing, followed by padding them with wood. The longitudinal walls are made of half oak trunks called “pidvoare,” carved with barda, placed vertically next to each other, between “forks.” The “floats” lining the inner face of the longitudinal walls. Below the upper edge of the pit and above the “pidvours” are fixed horizontally and on the side, one below the other, one or two cosoroabe, supported on “forks.” The transverse walls, called “primezi” are walled either from brick, plastered and shed, or from the braid of woods glued with clay. The main part of the construction is the 3 oak forks - thick wooden pieces with crack at the top, fixed in the middle of the transverse walls, vertically strung in the ground on which rests a large longitudinal main beam. Grinda - craftsman placed horizontally on the middle line of the building and the one placed at right angles on the tin support the roof martyrs. The main beam is supported by “amnare” - carved oak pieces that are placed between the upper arms of the forks. The walls are plastered and shed to the outside (the inner walls of the gallows are also plastered and shed). The roof is in two waters, with a snake made of half spreads made of massive oak trunks carved with long barrow (marble), which fulfill the role of the rafters from the surface houses and are arranged with the convex part (“the spin”) to the outside and fixed in a sloping position. Their top ends fall freely on the beam and the bottom ones rest on the cosorobi, through wooden nails called “masseurs.” On the outside, a thick layer of wheat straw is laid, fixed against slipping, through vertical (resting, at one end, in the ground) and horizontal (arranged at the base of the roof to the right of the living room) cakes.",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2F2B08517C626B49EF9CD31FAD4F3D1844.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/dd399ca7-e5d6-423f-87cf-bd562288a68c/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_dd399ca7_e5d6_423f_87cf_bd562288a68c",
+      "title": "Architecture. Bordei, Caracal, Olt County, 1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_dd399ca7_e5d6_423f_87cf_bd562288a68c?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Georgeta Stoica",
+        "Georgeta Stoica"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/936/Culturalia_e55bc747_9dd1_4ce4_ba72_8af7820369a6",
+    "_source": "europeana",
+    "_sourceId": "/936/Culturalia_e55bc747_9dd1_4ce4_ba72_8af7820369a6",
+    "_sourceUrl": "https://www.europeana.eu/item/936/Culturalia_e55bc747_9dd1_4ce4_ba72_8af7820369a6?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Arhitectură. Bordei, Caracal, județul Olt,1960",
+    "creator": [
+      "Georgeta Stoica",
+      "Georgeta Stoica"
+    ],
+    "description": "În imagine bordei, locuință semiîngropată cu două încăperi și \"gârlici\". Tehnica de construire presupune săparea gropilor pentru fiecare unitate de spațiu (intrarea în pantă sau \"gârlici\", tindă sau \"ogeac\", cameră de locuit sau \"sobă\") și arderea lor pentru impermeabilizare, urmată de căptușirea lor cu lemn. Pereții longitudinali sunt făcuți din jumătăți de trunchiuri de stejar numite “pidvoare”, cioplite cu barda, așezate vertical, unele lângă altele, între “furculițe”. “Pidvoarele” căptușesc fața interioară a pereților longitudinali. Sub marginea superioară a gropii și deasupra “pidvoarelor” sunt fixate orizontal și pe lat, una sub alta, una sau două cosoroabe, susținute pe „furculițe”. Pereții transversali, numiți “primezi” sunt zidiți fie din cărămidă, tencuiți și văruiți, fie din împletitură de nuiele lipită cu lut. Partea principală a construcției o constituie furcile din stejar – piese groase de lemn cu crăcană la partea superioară, fixate în mijlocul pereților transversali, înfipte vertical în pământ pe care se sprijină o grindă principală longitudinală de dimensiuni mari. Grinda – meșter așezată orizontal pe linia mediană a clădirii și cea așezată în unghi drept pe tindă susțin mârtacii acoperișului. Grinda principală este susținută de „amnare” - bucăți de stejar cioplite care sunt așezate între brațele superioare ale furcilor. Pereții sunt tencuiți și văruiți la exterior (pereții interiori ai gârliciului sunt, de asemenea, tencuiți și văruiți). Acoperișul este în două ape, cu șarpanta din jumătăți spintecate din trunchiuri masive de stejar cioplite cu barda în lung (mârtaci), care îndeplinesc rolul căpriorilor de la casele de suprafață si sunt dispuse cu partea convexă (“spinarea”) spre exterior și fixate în poziție înclinată. Capetele lor de sus cad liber pe grindă, iar cele de jos se sprijină pe cosorobi, prin cuie de lemn numite “măsele”. Peste mârtaci, în exterior, este așezat un strat gros de paie de grâu, fixat contra alunecărilor, prin prăjini verticale (sprijinite, la un capăt, în pământ) și orizontale (dispuse la baza acoperișului în dreptul camerei de locuit).",
+    "date": "1960",
+    "type": "IMAGE",
+    "language": "ro",
+    "country": [
+      "Romania"
+    ],
+    "europeana": {
+      "provider": [
+        "National Heritage Institute, Bucharest"
+      ],
+      "dataProvider": [
+        "\"Dimitrie Gusti\" National Village Museum"
+      ],
+      "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fresource.culturalia.ro%2Fpublic%2F2000%2F01%2F01%2F_B-MS-documentare%2F2019%2F12%2520Decembrie%25202019%2FArhiva%2520Documentara%2F3.%2520Mihaela%2520SOLTUZ%2FDocpat%2520Decembrie%25202019%2FImagini%2FEBC803BB459143039BC5DA13059D7549.tif&type=IMAGE",
+      "shownAt": "https://culturalia.ro/entities/e55bc747-9dd1-4ce4-ba72-8af7820369a6/view",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/936/Culturalia_e55bc747_9dd1_4ce4_ba72_8af7820369a6",
+      "title": "Arhitectură. Bordei, Caracal, județul Olt,1960",
+      "url": "https://www.europeana.eu/item/936/Culturalia_e55bc747_9dd1_4ce4_ba72_8af7820369a6?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Georgeta Stoica",
+        "Georgeta Stoica"
+      ],
+      "date": "1960"
+    }
+  },
+  {
+    "id": "europeana:/109/https___hispana_mcu_es_lod_oai_bvpb_mcu_es_420296_ent0",
+    "_source": "europeana",
+    "_sourceId": "/109/https___hispana_mcu_es_lod_oai_bvpb_mcu_es_420296_ent0",
+    "_sourceUrl": "https://www.europeana.eu/item/109/https___hispana_mcu_es_lod_oai_bvpb_mcu_es_420296_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Euclidis elementorum libri XV",
+    "creator": [
+      "http://data.europeana.eu/agent/147262",
+      "http://data.europeana.eu/agent/166663",
+      "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:420296#ent3",
+      "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:420296#ent4"
+    ],
+    "description": "Digital copy. Madrid: Ministry of Culture. General Branch of Library Coordination, 2010",
+    "date": "1678",
+    "type": "TEXT",
+    "language": "es",
+    "country": [
+      "Spain"
+    ],
+    "europeana": {
+      "provider": [
+        "Hispana"
+      ],
+      "dataProvider": [
+        "Virtual Library of Bibliographical Heritage"
+      ],
+      "rights": "http://creativecommons.org/licenses/by/4.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fbvpb.mcu.es%2Fi18n%2Fcatalogo_imagenes%2Fimagen_id.do%3FidImagen%3D2156123&type=TEXT",
+      "shownAt": "https://bvpb.mcu.es/es/consulta/registro.do?id=420296",
+      "completeness": 7
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/109/https___hispana_mcu_es_lod_oai_bvpb_mcu_es_420296_ent0",
+      "title": "Euclidis elementorum libri XV",
+      "url": "https://www.europeana.eu/item/109/https___hispana_mcu_es_lod_oai_bvpb_mcu_es_420296_ent0?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "http://data.europeana.eu/agent/147262",
+        "http://data.europeana.eu/agent/166663",
+        "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:420296#ent3",
+        "https://hispana.mcu.es/lod/oai:bvpb.mcu.es:420296#ent4"
+      ],
+      "date": "1678"
+    }
+  },
+  {
+    "id": "europeana:/15409/_v4065w384",
+    "_source": "europeana",
+    "_sourceId": "/15409/_v4065w384",
+    "_sourceUrl": "https://www.europeana.eu/item/15409/_v4065w384?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "View of the tumulus or barrow at Douth [Dowth], Co. of E[ast] Meath, 25 miles from Dublin [...]",
+    "creator": [
+      "Beranger, Gabriel, ca.1729-1817"
+    ],
+    "description": "A view of  the mound at Dowth, Co. Meath with a path shown spiralling its way to a stone building or 'modern temple' (Beranger) on the top. Two men, one standing and one seated look towards the mound from its base.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Ireland"
+    ],
+    "europeana": {
+      "provider": [
+        "Digital Repository of Ireland"
+      ],
+      "dataProvider": [
+        "Royal Irish Academy"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Frepository.dri.ie%2Fimages%2Fv4065w384%3A251525512%2Ffull%2F500%2C%2F0%2Fdefault.jpg&type=IMAGE",
+      "shownAt": "https://doi.org/10.7486/DRI.v4065w384",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/15409/_v4065w384",
+      "title": "View of the tumulus or barrow at Douth [Dowth], Co. of E[ast] Meath, 25 miles from Dublin [...]",
+      "url": "https://www.europeana.eu/item/15409/_v4065w384?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Beranger, Gabriel, ca.1729-1817"
+      ]
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1588697",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1588697",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1588697?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1588697%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1588697",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1390/BOTANYXLX1588697",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1588697?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1588930",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1588930",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1588930?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1588930%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1588930",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1390/BOTANYXLX1588930",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1588930?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1588946",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1588946",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1588946?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1588946%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1588946",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1390/BOTANYXLX1588946",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1588946?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX1588955",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX1588955",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX1588955?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1588955%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1588955",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1390/BOTANYXLX1588955",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX1588955?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX3706165",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX3706165",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX3706165?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.3706165%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.3706165",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1390/BOTANYXLX3706165",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX3706165?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX3706189",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX3706189",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX3706189?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.3706189%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.3706189",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1390/BOTANYXLX3706189",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX3706189?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1390/BOTANYXLX3706196",
+    "_source": "europeana",
+    "_sourceId": "/1390/BOTANYXLX3706196",
+    "_sourceUrl": "https://www.europeana.eu/item/1390/BOTANYXLX3706196?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.3706196%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.3706196",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1390/BOTANYXLX3706196",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1390/BOTANYXLX3706196?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1389/BOTANYXLX1588689",
+    "_source": "europeana",
+    "_sourceId": "/1389/BOTANYXLX1588689",
+    "_sourceUrl": "https://www.europeana.eu/item/1389/BOTANYXLX1588689?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1588689%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1588689",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1389/BOTANYXLX1588689",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1389/BOTANYXLX1588689?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1389/BOTANYXLX1588690",
+    "_source": "europeana",
+    "_sourceId": "/1389/BOTANYXLX1588690",
+    "_sourceUrl": "https://www.europeana.eu/item/1389/BOTANYXLX1588690?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1588690%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1588690",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1389/BOTANYXLX1588690",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1389/BOTANYXLX1588690?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1389/BOTANYXLX1589296",
+    "_source": "europeana",
+    "_sourceId": "/1389/BOTANYXLX1589296",
+    "_sourceUrl": "https://www.europeana.eu/item/1389/BOTANYXLX1589296?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.1589296%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.1589296",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1389/BOTANYXLX1589296",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1389/BOTANYXLX1589296?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1389/BOTANYXLX2587943",
+    "_source": "europeana",
+    "_sourceId": "/1389/BOTANYXLX2587943",
+    "_sourceUrl": "https://www.europeana.eu/item/1389/BOTANYXLX2587943?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Oenanthe fistulosa L.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.2587943%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.2587943",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1389/BOTANYXLX2587943",
+      "title": "Oenanthe fistulosa L.",
+      "url": "https://www.europeana.eu/item/1389/BOTANYXLX2587943?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1389/BOTANYXLX3766908",
+    "_source": "europeana",
+    "_sourceId": "/1389/BOTANYXLX3766908",
+    "_sourceUrl": "https://www.europeana.eu/item/1389/BOTANYXLX3766908?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FL.3766908%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/L.3766908",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1389/BOTANYXLX3766908",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1389/BOTANYXLX3766908?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1389/BOTANYXWAGX1439250",
+    "_source": "europeana",
+    "_sourceId": "/1389/BOTANYXWAGX1439250",
+    "_sourceUrl": "https://www.europeana.eu/item/1389/BOTANYXWAGX1439250?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Synedrella nodiflora (L.) Gaertn.",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "OpenUp!"
+      ],
+      "dataProvider": [
+        "Naturalis Biodiversity Center"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fmedialib.naturalis.nl%2Ffile%2Fid%2FWAG.1439250%2Fformat%2Flarge&type=IMAGE",
+      "shownAt": "https://data.biodiversitydata.nl/naturalis/specimen/WAG.1439250",
+      "completeness": 5
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1389/BOTANYXWAGX1439250",
+      "title": "Synedrella nodiflora (L.) Gaertn.",
+      "url": "https://www.europeana.eu/item/1389/BOTANYXWAGX1439250?utm_source=api&utm_medium=api&utm_campaign=polinaleg"
+    }
+  },
+  {
+    "id": "europeana:/1417/https___archief_nl_id_foto_aea436be_d0b4_102d_bcf8_003048976d84",
+    "_source": "europeana",
+    "_sourceId": "/1417/https___archief_nl_id_foto_aea436be_d0b4_102d_bcf8_003048976d84",
+    "_sourceUrl": "https://www.europeana.eu/item/1417/https___archief_nl_id_foto_aea436be_d0b4_102d_bcf8_003048976d84?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "De meeste van de 'barrow boys' rond Piccadilly Circus zijn helers",
+    "creator": [
+      "Poll, Willem van de"
+    ],
+    "description": "De meeste van de 'barrow boys' rond Piccadilly Circus zijn helers",
+    "date": "1947",
+    "type": "IMAGE",
+    "language": "nl",
+    "country": [
+      "Netherlands"
+    ],
+    "europeana": {
+      "provider": [
+        "Dutch Collections for Europe"
+      ],
+      "dataProvider": [
+        "National Archives of the Netherlands"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Fservice.archief.nl%2Fiip%2F70%2F3c%2Fc7%2Fb8%2Faf%2F11%2F41%2Ff3%2Fae%2F8e%2F48%2Fda%2F4c%2Fb1%2Fd1%2F9f%2Ffa543fd6-6d58-4e88-a252-31a3bb47ee52.jp2%2Ffull%2Fmax%2F0%2Fdefault.jpg&type=IMAGE",
+      "shownAt": "http://hdl.handle.net/10648/aea436be-d0b4-102d-bcf8-003048976d84",
+      "completeness": 0
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/1417/https___archief_nl_id_foto_aea436be_d0b4_102d_bcf8_003048976d84",
+      "title": "De meeste van de 'barrow boys' rond Piccadilly Circus zijn helers",
+      "url": "https://www.europeana.eu/item/1417/https___archief_nl_id_foto_aea436be_d0b4_102d_bcf8_003048976d84?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "creator": [
+        "Poll, Willem van de"
+      ],
+      "date": "1947"
+    }
+  },
+  {
+    "id": "europeana:/2059209/data_sounds_10999880435",
+    "_source": "europeana",
+    "_sourceId": "/2059209/data_sounds_10999880435",
+    "_sourceUrl": "https://www.europeana.eu/item/2059209/data_sounds_10999880435?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Image from page 231 of [Travels in China: containing descriptions, observations and comparisons made and collected in the course of a short residence at the Imperial Palace of Yuen-min-yuen, and on a subsequent journey from Pekin to Canton.]",
+    "description": "This image is from a selection of images that have either been tagged as musical content, or are taken from books which are musical in nature. They were digitised as part of the Microsoft books project, a collaboration between Microsoft and the British Library. Some of these images have been tagged by users of the image sharing site, flickr.",
+    "date": "1805",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Sounds"
+      ],
+      "dataProvider": [
+        "The British Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Ffarm4.staticflickr.com%2F3734%2F10999880435_6298f344ae_o.jpg&type=IMAGE",
+      "shownAt": "https://www.flickr.com/photos/britishlibrary/10999880435",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/2059209/data_sounds_10999880435",
+      "title": "Image from page 231 of [Travels in China: containing descriptions, observations and comparisons made and collected in the course of a short residence at the Imperial Palace of Yuen-min-yuen, and on a subsequent journey from Pekin to Canton.]",
+      "url": "https://www.europeana.eu/item/2059209/data_sounds_10999880435?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1805"
+    }
+  },
+  {
+    "id": "europeana:/2059209/data_sounds_11219556254",
+    "_source": "europeana",
+    "_sourceId": "/2059209/data_sounds_11219556254",
+    "_sourceUrl": "https://www.europeana.eu/item/2059209/data_sounds_11219556254?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+    "title": "Image from page 362 of Travels in China: containing descriptions, observations and comparisons made and collected in the course of a short residence at the Imperial Palace of Yuen-min-yuen, and on a subsequent journey from Pekin to Canton",
+    "description": "This image is from a selection of images that have either been tagged as musical content, or are taken from books which are musical in nature. They were digitised as part of the Microsoft books project, a collaboration between Microsoft and the British Library. Some of these images have been tagged by users of the image sharing site, flickr.",
+    "date": "1804",
+    "type": "IMAGE",
+    "language": "en",
+    "country": [
+      "United Kingdom"
+    ],
+    "europeana": {
+      "provider": [
+        "Europeana Sounds"
+      ],
+      "dataProvider": [
+        "The British Library"
+      ],
+      "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+      "thumbnail": "https://api.europeana.eu/thumbnail/v2/url.json?uri=https%3A%2F%2Ffarm4.staticflickr.com%2F3682%2F11219556254_2089d3470c_o.jpg&type=IMAGE",
+      "shownAt": "https://www.flickr.com/photos/britishlibrary/11219556254",
+      "completeness": 10
+    },
+    "_citation": {
+      "service": "Europeana",
+      "serviceUrl": "https://www.europeana.eu",
+      "publisher": "Europeana Foundation",
+      "query": "barrow",
+      "accessDate": "2026-06-12T17:47:36.141Z",
+      "recordId": "europeana:/2059209/data_sounds_11219556254",
+      "title": "Image from page 362 of Travels in China: containing descriptions, observations and comparisons made and collected in the course of a short residence at the Imperial Palace of Yuen-min-yuen, and on a subsequent journey from Pekin to Canton",
+      "url": "https://www.europeana.eu/item/2059209/data_sounds_11219556254?utm_source=api&utm_medium=api&utm_campaign=polinaleg",
+      "date": "1804"
+    }
+  }
+]

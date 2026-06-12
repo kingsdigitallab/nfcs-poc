@@ -1,0 +1,4438 @@
+[
+  {
+    "id": "hsds:1167344",
+    "_source": "hsds",
+    "_sourceId": "1167344",
+    "_sourceUrl": "https://doi.org/10.5284/1053763",
+    "title": "Beckfoot Roman Cemetery, Beckfoot, Cumbria Radiocarbon Dating",
+    "description": "This report contains details of the radiocarbon determinations obtained on samples of cremated human bone and charcoal from Beckfoot Roman Cemetery.",
+    "creator": "Peter Marshall",
+    "date": "2019-07-15",
+    "subject": [
+      "cemetery",
+      "charcoal",
+      "field survey",
+      "frontier defence",
+      "heritage science",
+      "human remains",
+      "cemeteries",
+      "human remains",
+      "frontiers",
+      "defense structures"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Text",
+    "spatialCoverage": "Beckfoot Roman Cemetery, HOLME ST CUTHBERT, Cumbria, Allerdale, England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 54.8246215408717,
+    "decimalLongitude": -3.42167065614576,
+    "periodStart": "43",
+    "periodEnd": "400",
+    "periodName": "roman",
+    "hsds": {
+      "elasticId": "f1c1470245dad884ae252db6cebde2c54e955f90f967ee0013bd9f610361620f",
+      "originalId": "1167344",
+      "landingPage": "https://doi.org/10.5284/1053763",
+      "modified": "2025-08-11",
+      "contributor": [
+        "Historic England"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Beckfoot Roman Cemetery, HOLME ST CUTHBERT, Cumbria, Allerdale, England"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "geopoint": {
+            "lat": 54.8246215408717,
+            "lon": -3.42167065614576
+          },
+          "centroid": {
+            "lat": 54.8246215408717,
+            "lon": -3.42167065614576
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Beckfoot Roman Cemetery, HOLME ST CUTHBERT, Cumbria, Allerdale, England",
+        "England"
+      ],
+      "temporal": [
+        {
+          "from": "43",
+          "periodName": "roman",
+          "until": "400",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds9nsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cemetery",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CEMETERY"
+        },
+        {
+          "prefLabel": "charcoal",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CHARCOAL"
+        },
+        {
+          "prefLabel": "field survey",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SURVEY"
+        },
+        {
+          "prefLabel": "frontier defence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FRONTIER%20DEFENCE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "human remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HUMAN%20REMAINS"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "cemeteries",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300266755",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "human remains",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300379896",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "frontiers",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300387507",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "defense structures",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300424383",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "dataType": [
+        "Text"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "otherId": [
+        "OBIB 78/2015"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:1167344",
+      "title": "Beckfoot Roman Cemetery, Beckfoot, Cumbria Radiocarbon Dating",
+      "url": "https://doi.org/10.5284/1053763",
+      "creator": "Peter Marshall",
+      "date": "2019-07-15"
+    }
+  },
+  {
+    "id": "hsds:912166",
+    "_source": "hsds",
+    "_sourceId": "912166",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/32dd246e4b52676ad3c723d0547aac81ddb86d0ccefb1ee07d59a2ba48e005a1",
+    "title": "Radiocarbon date, Sample number HAR-414",
+    "description": "Charcoal from charcoal burial at Hereford (Castle Green), Herefordshire, England.<br>",
+    "creator": "R Shoesmith",
+    "date": "1998-12-01",
+    "subject": [
+      "7c burial ground",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.051318,
+    "decimalLongitude": -2.711733,
+    "hsds": {
+      "elasticId": "32dd246e4b52676ad3c723d0547aac81ddb86d0ccefb1ee07d59a2ba48e005a1",
+      "originalId": "912166",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.051318,
+            "lon": -2.711733
+          },
+          "centroid": {
+            "lat": 52.051318,
+            "lon": -2.711733
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c burial ground",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20BURIAL%20GROUND"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-414",
+        "Depositor ID: HAR-414"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:912166",
+      "title": "Radiocarbon date, Sample number HAR-414",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/32dd246e4b52676ad3c723d0547aac81ddb86d0ccefb1ee07d59a2ba48e005a1",
+      "creator": "R Shoesmith",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912168",
+    "_source": "hsds",
+    "_sourceId": "912168",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b22c7e24101d07206d16b6c46498e0cda8a9b6baaf3274cffc5f17c4ba23cb12",
+    "title": "Radiocarbon date, Sample number HAR-413",
+    "description": "Charcoal from burial S80 (charcoal burial) at Hereford (Castle Green), Herefordshire, England.<br>",
+    "creator": "R Shoesmith",
+    "date": "1998-12-01",
+    "subject": [
+      "7c burial ground",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.051318,
+    "decimalLongitude": -2.711733,
+    "hsds": {
+      "elasticId": "b22c7e24101d07206d16b6c46498e0cda8a9b6baaf3274cffc5f17c4ba23cb12",
+      "originalId": "912168",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.051318,
+            "lon": -2.711733
+          },
+          "centroid": {
+            "lat": 52.051318,
+            "lon": -2.711733
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c burial ground",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20BURIAL%20GROUND"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-413",
+        "Depositor ID: HAR-413"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:912168",
+      "title": "Radiocarbon date, Sample number HAR-413",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b22c7e24101d07206d16b6c46498e0cda8a9b6baaf3274cffc5f17c4ba23cb12",
+      "creator": "R Shoesmith",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915247",
+    "_source": "hsds",
+    "_sourceId": "915247",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/dfb725930bcdae8ca8a38adb6fe31df71507620800f76f8cde4c22a05a0b0ecf",
+    "title": "Radiocarbon date, Sample number HAR-190",
+    "description": "Charcoal from Grave 2, charcoal burial outside W end at Christchurch Cathedral,Oxford, England.<br>",
+    "creator": "T Hassall",
+    "date": "1998-12-01",
+    "subject": [
+      "7c burial",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.748981,
+    "decimalLongitude": -1.255361,
+    "hsds": {
+      "elasticId": "dfb725930bcdae8ca8a38adb6fe31df71507620800f76f8cde4c22a05a0b0ecf",
+      "originalId": "915247",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.748981,
+            "lon": -1.255361
+          },
+          "centroid": {
+            "lat": 51.748981,
+            "lon": -1.255361
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c burial",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20BURIAL"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-190",
+        "Depositor ID: HAR-190"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:915247",
+      "title": "Radiocarbon date, Sample number HAR-190",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/dfb725930bcdae8ca8a38adb6fe31df71507620800f76f8cde4c22a05a0b0ecf",
+      "creator": "T Hassall",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919599",
+    "_source": "hsds",
+    "_sourceId": "919599",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/8eda7076530ca8a1c3652a8e7e49050117c1699e8f3080ea75d65fe9b9f3ab96",
+    "title": "Radiocarbon date, Sample number HAR-9142",
+    "description": "Charcoal from charcoal-and-ashy layer of ring ditch 417 at Field Farm, Burghfield, West Berkshire, England.<br>",
+    "creator": "C A Butterworth and S J Lobb",
+    "date": "1998-12-01",
+    "subject": [
+      "4b ring ditch / barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.428088,
+    "decimalLongitude": -1.02898,
+    "hsds": {
+      "elasticId": "8eda7076530ca8a1c3652a8e7e49050117c1699e8f3080ea75d65fe9b9f3ab96",
+      "originalId": "919599",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.428088,
+            "lon": -1.02898
+          },
+          "centroid": {
+            "lat": 51.428088,
+            "lon": -1.02898
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b ring ditch / barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20RING%20DITCH%20/%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-9142",
+        "Depositor ID: HAR-9142"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:919599",
+      "title": "Radiocarbon date, Sample number HAR-9142",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/8eda7076530ca8a1c3652a8e7e49050117c1699e8f3080ea75d65fe9b9f3ab96",
+      "creator": "C A Butterworth and S J Lobb",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916288",
+    "_source": "hsds",
+    "_sourceId": "916288",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/0fa5cb7fbd6fc611a7db47290a9d180c273447b5ef42bcbefd9c9cb19bcdc43a",
+    "title": "Radiocarbon date, Sample number UB-693",
+    "description": "Charcoal from Chamber 3 of gallery with Neo sherds at Ballymacdermot, Armagh. Comment (subm): clearly not Neo charcoal.<br>",
+    "creator": "A E P Collins & B C S Wilson",
+    "date": "1998-12-01",
+    "subject": [
+      "3e chambered cairn",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.152118,
+    "decimalLongitude": -6.372809,
+    "hsds": {
+      "elasticId": "0fa5cb7fbd6fc611a7db47290a9d180c273447b5ef42bcbefd9c9cb19bcdc43a",
+      "originalId": "916288",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.152118,
+            "lon": -6.372809
+          },
+          "centroid": {
+            "lat": 54.152118,
+            "lon": -6.372809
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3e chambered cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3E%20CHAMBERED%20CAIRN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-693",
+        "Depositor ID: UB-693"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:916288",
+      "title": "Radiocarbon date, Sample number UB-693",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/0fa5cb7fbd6fc611a7db47290a9d180c273447b5ef42bcbefd9c9cb19bcdc43a",
+      "creator": "A E P Collins & B C S Wilson",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918484",
+    "_source": "hsds",
+    "_sourceId": "918484",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2c69aa48fae58a86467535703ea949dd42456e1e03699d79a3b9f6896baea907",
+    "title": "Radiocarbon date, Sample number CAR-721",
+    "description": "Wood charcoal, from patch of burnt stones and charcoal sealed by Layer M 2S andcut by the central pit M14 of burnt mound at Graeanog, Clynnog, Gwynedd, Wales.Comment: this very early date may reflect small amount of charcoal.<br>",
+    "creator": "R S Kelly 1983",
+    "date": "1998-12-01",
+    "subject": [
+      "3b occupation ?",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 53.019396,
+    "decimalLongitude": -4.294658,
+    "hsds": {
+      "elasticId": "2c69aa48fae58a86467535703ea949dd42456e1e03699d79a3b9f6896baea907",
+      "originalId": "918484",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.019396,
+            "lon": -4.294658
+          },
+          "centroid": {
+            "lat": 53.019396,
+            "lon": -4.294658
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3b occupation ?",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3B%20OCCUPATION%20%3F"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-721",
+        "Depositor ID: CAR-721"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:918484",
+      "title": "Radiocarbon date, Sample number CAR-721",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2c69aa48fae58a86467535703ea949dd42456e1e03699d79a3b9f6896baea907",
+      "creator": "R S Kelly 1983",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914562",
+    "_source": "hsds",
+    "_sourceId": "914562",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/bea28451f022c0e58d3c87806592fbaac44f434be3598229250a537bb97de674",
+    "title": "Radiocarbon date, Sample number UB-2674",
+    "description": "Charcoal from 3.22, charcoal spread from industrial hearth at Tullylish, Waringsford, County Down, Ireland. Comment (subm): CAL dates given.<br>",
+    "creator": "R J Ivens",
+    "date": "1998-12-01",
+    "subject": [
+      "7b monastic enclosure and 8d occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.371255,
+    "decimalLongitude": -6.117905,
+    "hsds": {
+      "elasticId": "bea28451f022c0e58d3c87806592fbaac44f434be3598229250a537bb97de674",
+      "originalId": "914562",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.371255,
+            "lon": -6.117905
+          },
+          "centroid": {
+            "lat": 54.371255,
+            "lon": -6.117905
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b monastic enclosure and 8d occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20MONASTIC%20ENCLOSURE%20AND%208D%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-2674",
+        "Depositor ID: UB-2674"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:914562",
+      "title": "Radiocarbon date, Sample number UB-2674",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/bea28451f022c0e58d3c87806592fbaac44f434be3598229250a537bb97de674",
+      "creator": "R J Ivens",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919700",
+    "_source": "hsds",
+    "_sourceId": "919700",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f2021c90e05192bd17542b2e9c161eec7ba1094be9267a5e52a91b712f3642c6",
+    "title": "Radiocarbon date, Sample number HAR-3968",
+    "description": "Charcoal, S163 from pit F247 with Neolithic pottery, much charcoal and soot-stained occupation soil, at Bromfield, Shropshire, England.<br>",
+    "creator": "S C Stanford 1978",
+    "date": "1998-12-01",
+    "subject": [
+      "3b occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.392717,
+    "decimalLongitude": -2.756895,
+    "hsds": {
+      "elasticId": "f2021c90e05192bd17542b2e9c161eec7ba1094be9267a5e52a91b712f3642c6",
+      "originalId": "919700",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.392717,
+            "lon": -2.756895
+          },
+          "centroid": {
+            "lat": 52.392717,
+            "lon": -2.756895
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3b occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3B%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-3968",
+        "Depositor ID: HAR-3968"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:919700",
+      "title": "Radiocarbon date, Sample number HAR-3968",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f2021c90e05192bd17542b2e9c161eec7ba1094be9267a5e52a91b712f3642c6",
+      "creator": "S C Stanford 1978",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920188",
+    "_source": "hsds",
+    "_sourceId": "920188",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1c65341afc77571e901ec0dc98fec37d3b556fb00c604dbd61f34fe6de570b9c",
+    "title": "Radiocarbon date, Sample number HAR-5556",
+    "description": "Charcoal from soil in charcoal layer, AA766.1 at Northampton - St Peter's Gardens, Northamptonshire, England. Comment (subm): See refs below.<br>",
+    "creator": "J H Williams et al",
+    "date": "1998-12-01",
+    "subject": [
+      "7c urban settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.232682,
+    "decimalLongitude": -0.901685,
+    "hsds": {
+      "elasticId": "1c65341afc77571e901ec0dc98fec37d3b556fb00c604dbd61f34fe6de570b9c",
+      "originalId": "920188",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.232682,
+            "lon": -0.901685
+          },
+          "centroid": {
+            "lat": 52.232682,
+            "lon": -0.901685
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c urban settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20URBAN%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5556",
+        "Depositor ID: HAR-5556"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:920188",
+      "title": "Radiocarbon date, Sample number HAR-5556",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1c65341afc77571e901ec0dc98fec37d3b556fb00c604dbd61f34fe6de570b9c",
+      "creator": "J H Williams et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916014",
+    "_source": "hsds",
+    "_sourceId": "916014",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b8303c84dcc3ad921b029bcc371afbb46d14421b070c33faac7d28476042317c",
+    "title": "Radiocarbon date, Sample number HAR-3208",
+    "description": "Charcoal, id as charcoal & cremated bone, from deposit above primary fill in inner ditch segment at Briar Hill, Northamptonshire, England.<br>",
+    "creator": "H Bamford",
+    "date": "1998-12-01",
+    "subject": [
+      "3a causewayed camp",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.22749,
+    "decimalLongitude": -0.923778,
+    "hsds": {
+      "elasticId": "b8303c84dcc3ad921b029bcc371afbb46d14421b070c33faac7d28476042317c",
+      "originalId": "916014",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.22749,
+            "lon": -0.923778
+          },
+          "centroid": {
+            "lat": 52.22749,
+            "lon": -0.923778
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3a causewayed camp",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3A%20CAUSEWAYED%20CAMP"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-3208",
+        "Depositor ID: HAR-3208"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:916014",
+      "title": "Radiocarbon date, Sample number HAR-3208",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b8303c84dcc3ad921b029bcc371afbb46d14421b070c33faac7d28476042317c",
+      "creator": "H Bamford",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914635",
+    "_source": "hsds",
+    "_sourceId": "914635",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/3a9ceca2aa4a44e6b973bb2172bc78321c85e1109578d8eaad0a2c703db095f1",
+    "title": "Radiocarbon date, Sample number HAR-5668",
+    "description": "Charcoal, AML 8211180, id as Quercus sp (mainly), from charcoal-rich Meso feature at Windmill Farm, Predannack Moor, Lizard, Cornwall, England.<br>",
+    "creator": "not given",
+    "date": "1998-12-01",
+    "subject": [
+      "2b occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 49.989698,
+    "decimalLongitude": -5.218975,
+    "hsds": {
+      "elasticId": "3a9ceca2aa4a44e6b973bb2172bc78321c85e1109578d8eaad0a2c703db095f1",
+      "originalId": "914635",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 49.989698,
+            "lon": -5.218975
+          },
+          "centroid": {
+            "lat": 49.989698,
+            "lon": -5.218975
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "2b occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/2B%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5668",
+        "Depositor ID: HAR-5668"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:914635",
+      "title": "Radiocarbon date, Sample number HAR-5668",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/3a9ceca2aa4a44e6b973bb2172bc78321c85e1109578d8eaad0a2c703db095f1",
+      "creator": "not given",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914442",
+    "_source": "hsds",
+    "_sourceId": "914442",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a097c1b9de0ce109f9e0fb843a9061f2e857fb20d0323dd01b366202f90f3d8c",
+    "title": "Radiocarbon date, Sample number CAR-1250",
+    "description": "Charcoal from one of charcoal-filled pits of presumed MBA-Later BA date at Pennant Melangell Church, Llangynog, Montgomeryshire, Wales.<br>metalworking activity ?",
+    "creator": "W J Britnell (Clwyd-Powys Archaeol Trust)",
+    "date": "1998-12-01",
+    "subject": [
+      "4a occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.826826,
+    "decimalLongitude": -3.450197,
+    "hsds": {
+      "elasticId": "a097c1b9de0ce109f9e0fb843a9061f2e857fb20d0323dd01b366202f90f3d8c",
+      "originalId": "914442",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.826826,
+            "lon": -3.450197
+          },
+          "centroid": {
+            "lat": 52.826826,
+            "lon": -3.450197
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-1250",
+        "Depositor ID: CAR-1250"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:914442",
+      "title": "Radiocarbon date, Sample number CAR-1250",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a097c1b9de0ce109f9e0fb843a9061f2e857fb20d0323dd01b366202f90f3d8c",
+      "creator": "W J Britnell (Clwyd-Powys Archaeol Trust)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914443",
+    "_source": "hsds",
+    "_sourceId": "914443",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4c3649c3055e33acf8f4ab4db86973f4f3c3d935de66abb607da2a7464c24d3f",
+    "title": "Radiocarbon date, Sample number CAR-1249",
+    "description": "Charcoal from one of charcoal-filled pits of presumed MBA-Later BA date at Pennant Melangell Church, Llangynog, Montgomeryshire, Wales.<br>metalworking activity ?",
+    "creator": "W J Britnell (Clwyd-Powys Archaeol Trust)",
+    "date": "1998-12-01",
+    "subject": [
+      "4a occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.826826,
+    "decimalLongitude": -3.450197,
+    "hsds": {
+      "elasticId": "4c3649c3055e33acf8f4ab4db86973f4f3c3d935de66abb607da2a7464c24d3f",
+      "originalId": "914443",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.826826,
+            "lon": -3.450197
+          },
+          "centroid": {
+            "lat": 52.826826,
+            "lon": -3.450197
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-1249",
+        "Depositor ID: CAR-1249"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:914443",
+      "title": "Radiocarbon date, Sample number CAR-1249",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4c3649c3055e33acf8f4ab4db86973f4f3c3d935de66abb607da2a7464c24d3f",
+      "creator": "W J Britnell (Clwyd-Powys Archaeol Trust)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914855",
+    "_source": "hsds",
+    "_sourceId": "914855",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/30123e41d99751a472b161b4ca1df1356437d386083526d4759a46e9f40ba2c7",
+    "title": "Radiocarbon date, Sample number GU-1281",
+    "description": "Charcoal? from charcoal-rich layer, top silt layer, Ditch 2 (Columban ditch?) at Iona, Reilig Odhran, Strathclyde, Scotland. Coll J W Barber.<br>",
+    "creator": "J W Barber",
+    "date": "1998-12-01",
+    "subject": [
+      "7a monastic site",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.335401,
+    "decimalLongitude": -6.391841,
+    "hsds": {
+      "elasticId": "30123e41d99751a472b161b4ca1df1356437d386083526d4759a46e9f40ba2c7",
+      "originalId": "914855",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.335401,
+            "lon": -6.391841
+          },
+          "centroid": {
+            "lat": 56.335401,
+            "lon": -6.391841
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7a monastic site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7A%20MONASTIC%20SITE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1281",
+        "Depositor ID: GU-1281"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:914855",
+      "title": "Radiocarbon date, Sample number GU-1281",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/30123e41d99751a472b161b4ca1df1356437d386083526d4759a46e9f40ba2c7",
+      "creator": "J W Barber",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913773",
+    "_source": "hsds",
+    "_sourceId": "913773",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/ee10629f1aa7783f2d58a6e69631559f6b5357724d8ed1e8fae3c70a499929ac",
+    "title": "Radiocarbon date, Sample number CAR-1288",
+    "description": "Charcoal from deposit of burnt stones and charcoal, similar to burnt mounds, atMeyllteyrn Uchaf, Botwnnog, Gwynedd, Wales.<br>double ditched with two houses",
+    "creator": "R S Kelly",
+    "date": "1998-12-01",
+    "subject": [
+      "4a enclosure / burnt mound ?",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.865111,
+    "decimalLongitude": -4.622337,
+    "hsds": {
+      "elasticId": "ee10629f1aa7783f2d58a6e69631559f6b5357724d8ed1e8fae3c70a499929ac",
+      "originalId": "913773",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.865111,
+            "lon": -4.622337
+          },
+          "centroid": {
+            "lat": 52.865111,
+            "lon": -4.622337
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a enclosure / burnt mound ?",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20ENCLOSURE%20/%20BURNT%20MOUND%20%3F"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-1288",
+        "Depositor ID: CAR-1288"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:913773",
+      "title": "Radiocarbon date, Sample number CAR-1288",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/ee10629f1aa7783f2d58a6e69631559f6b5357724d8ed1e8fae3c70a499929ac",
+      "creator": "R S Kelly",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920197",
+    "_source": "hsds",
+    "_sourceId": "920197",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2ea603373a9ca2395765a11017c01373e7504b5cbf1f40f58fc387d2901076af",
+    "title": "Radiocarbon date, Sample number UB-2170",
+    "description": "Charcoal from furnace pit in structure G at Reask, Co Kerry, Ireland. Comment (subm): unreliable because contained peat charcoal.<br>Settlement and cemetery",
+    "creator": "T Fanning",
+    "date": "1998-12-01",
+    "subject": [
+      "7b monastic settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.166785,
+    "decimalLongitude": -10.389972,
+    "hsds": {
+      "elasticId": "2ea603373a9ca2395765a11017c01373e7504b5cbf1f40f58fc387d2901076af",
+      "originalId": "920197",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.166785,
+            "lon": -10.389972
+          },
+          "centroid": {
+            "lat": 52.166785,
+            "lon": -10.389972
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b monastic settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20MONASTIC%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-2170",
+        "Depositor ID: UB-2170"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:920197",
+      "title": "Radiocarbon date, Sample number UB-2170",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2ea603373a9ca2395765a11017c01373e7504b5cbf1f40f58fc387d2901076af",
+      "creator": "T Fanning",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920198",
+    "_source": "hsds",
+    "_sourceId": "920198",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/308bd85b62c33f1e70b4b28c4558341f2f28f825082ecaa5131184c36362ce36",
+    "title": "Radiocarbon date, Sample number UB-2169",
+    "description": "Charcoal from furnace pit in structure G at Reask, Co Kerry, Ireland. Comment (subm): unreliable because contained peat charcoal.<br>Settlement and cemetery",
+    "creator": "T Fanning",
+    "date": "1998-12-01",
+    "subject": [
+      "7b monastic settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.166785,
+    "decimalLongitude": -10.389972,
+    "hsds": {
+      "elasticId": "308bd85b62c33f1e70b4b28c4558341f2f28f825082ecaa5131184c36362ce36",
+      "originalId": "920198",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.166785,
+            "lon": -10.389972
+          },
+          "centroid": {
+            "lat": 52.166785,
+            "lon": -10.389972
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b monastic settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20MONASTIC%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-2169",
+        "Depositor ID: UB-2169"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:920198",
+      "title": "Radiocarbon date, Sample number UB-2169",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/308bd85b62c33f1e70b4b28c4558341f2f28f825082ecaa5131184c36362ce36",
+      "creator": "T Fanning",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920159",
+    "_source": "hsds",
+    "_sourceId": "920159",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d52cf77c818dd5d37c47bcf1ad3466cb673e30ba77e2759e497af5c95d031882",
+    "title": "Radiocarbon date, Sample number HAR-6225",
+    "description": "Charcoal, id as Fraxinus sp, from charcoal and burnt bone melange in Cremation Grave 2 at Amesbury Barrow 61, Wiltshire, England.<br>Bowl barrow",
+    "creator": "Paul Ashbee",
+    "date": "1998-12-01",
+    "subject": [
+      "4b round barrow",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.179136,
+    "decimalLongitude": -1.745322,
+    "hsds": {
+      "elasticId": "d52cf77c818dd5d37c47bcf1ad3466cb673e30ba77e2759e497af5c95d031882",
+      "originalId": "920159",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.179136,
+            "lon": -1.745322
+          },
+          "centroid": {
+            "lat": 51.179136,
+            "lon": -1.745322
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4b round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4B%20ROUND%20BARROW"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6225",
+        "Depositor ID: HAR-6225"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:920159",
+      "title": "Radiocarbon date, Sample number HAR-6225",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d52cf77c818dd5d37c47bcf1ad3466cb673e30ba77e2759e497af5c95d031882",
+      "creator": "Paul Ashbee",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913992",
+    "_source": "hsds",
+    "_sourceId": "913992",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/900913469992accf5d50191a47c6af86ebbd2c4e9ba3c77568368db8c47b5d8f",
+    "title": "Radiocarbon date, Sample number GU-2410",
+    "description": "Charcoal [?] from large pit B5, with decayed wood, stones, burnt soil and charcoal at Achnasavil, Saddell and Skipness parish, Strathclyde, Scotland.<br>Pits, hearths, ironmaking",
+    "creator": "G Siggins",
+    "date": "1998-12-01",
+    "subject": [
+      "5b occupation ?",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 55.590676,
+    "decimalLongitude": -5.504499,
+    "hsds": {
+      "elasticId": "900913469992accf5d50191a47c6af86ebbd2c4e9ba3c77568368db8c47b5d8f",
+      "originalId": "913992",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.590676,
+            "lon": -5.504499
+          },
+          "centroid": {
+            "lat": 55.590676,
+            "lon": -5.504499
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5b occupation ?",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5B%20OCCUPATION%20%3F"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-2410",
+        "Depositor ID: GU-2410"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:913992",
+      "title": "Radiocarbon date, Sample number GU-2410",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/900913469992accf5d50191a47c6af86ebbd2c4e9ba3c77568368db8c47b5d8f",
+      "creator": "G Siggins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916273",
+    "_source": "hsds",
+    "_sourceId": "916273",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1130a797562d234602034047b5caa7db6f133f40254e13c6c6c0f81f62f85711",
+    "title": "Radiocarbon date, Sample number UB-357",
+    "description": "Charcoal from same source as UB-358 (humic acid from basal sod-like layer) at Knowth, Meath, Ireland. Comment (lab): two combined charcoal samples<br>",
+    "creator": "G Eogan, P Q Dresser",
+    "date": "1998-12-01",
+    "subject": [
+      "3e boyne passage grave",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.700765,
+    "decimalLongitude": -6.491741,
+    "hsds": {
+      "elasticId": "1130a797562d234602034047b5caa7db6f133f40254e13c6c6c0f81f62f85711",
+      "originalId": "916273",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.700765,
+            "lon": -6.491741
+          },
+          "centroid": {
+            "lat": 53.700765,
+            "lon": -6.491741
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3e boyne passage grave",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3E%20BOYNE%20PASSAGE%20GRAVE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-357",
+        "Depositor ID: UB-357"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:916273",
+      "title": "Radiocarbon date, Sample number UB-357",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1130a797562d234602034047b5caa7db6f133f40254e13c6c6c0f81f62f85711",
+      "creator": "G Eogan, P Q Dresser",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914409",
+    "_source": "hsds",
+    "_sourceId": "914409",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/217a6314726826c96ce55a8ee7968d0793745c8f099fad28a3820163fd9b12a4",
+    "title": "Radiocarbon date, Sample number GrN-11443",
+    "description": "Charcoal from charcoal-flecked mud on western knoll, Meso occupation layer below crannog at Moynagh Lough, Brittas townland, Cruicetown parish, County Meath, Ireland.<br>Crannog site",
+    "creator": "J Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "2b occupation and 4a occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.817049,
+    "decimalLongitude": -6.757876,
+    "hsds": {
+      "elasticId": "217a6314726826c96ce55a8ee7968d0793745c8f099fad28a3820163fd9b12a4",
+      "originalId": "914409",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.817049,
+            "lon": -6.757876
+          },
+          "centroid": {
+            "lat": 53.817049,
+            "lon": -6.757876
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "2b occupation and 4a occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/2B%20OCCUPATION%20AND%204A%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GRN-11443",
+        "Depositor ID: GrN-11443"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:914409",
+      "title": "Radiocarbon date, Sample number GrN-11443",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/217a6314726826c96ce55a8ee7968d0793745c8f099fad28a3820163fd9b12a4",
+      "creator": "J Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:918744",
+    "_source": "hsds",
+    "_sourceId": "918744",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/72c16ca064bad06ebc72304dedfb35c984c0395cf88765e9dee265b79a757343",
+    "title": "Radiocarbon date, Sample number I-14083",
+    "description": "Charcoal, id as ling stems, from stone and charcoal mound of fulacht fiadh at Main Escarpment, Imlagh Basin, Valentia / Valencia, Co Kerry, Ireland.<br>Burnt mound",
+    "creator": "Frank Mitchell",
+    "date": "1998-12-01",
+    "subject": [
+      "4a occupation - burnt mound",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 51.856954,
+    "decimalLongitude": -10.467886,
+    "hsds": {
+      "elasticId": "72c16ca064bad06ebc72304dedfb35c984c0395cf88765e9dee265b79a757343",
+      "originalId": "918744",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.856954,
+            "lon": -10.467886
+          },
+          "centroid": {
+            "lat": 51.856954,
+            "lon": -10.467886
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a occupation - burnt mound",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20OCCUPATION%20-%20BURNT%20MOUND"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-I-14083",
+        "Depositor ID: I-14083"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:918744",
+      "title": "Radiocarbon date, Sample number I-14083",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/72c16ca064bad06ebc72304dedfb35c984c0395cf88765e9dee265b79a757343",
+      "creator": "Frank Mitchell",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916275",
+    "_source": "hsds",
+    "_sourceId": "916275",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b9cd9a1b6c9445e8e60747d507ab871e43a01776fe44f6b9cafab37723951c00",
+    "title": "Radiocarbon date, Sample number UB-319",
+    "description": "Charcoal from similar location to UB-318 (charcoal, pretreated, from scatter beneath mound of small passage grave to E of main mound) at Knowth, Meath, Ireland.<br>",
+    "creator": "G Eogan, P Q Dresser",
+    "date": "1998-12-01",
+    "subject": [
+      "3e boyne passage grave",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.700765,
+    "decimalLongitude": -6.491741,
+    "hsds": {
+      "elasticId": "b9cd9a1b6c9445e8e60747d507ab871e43a01776fe44f6b9cafab37723951c00",
+      "originalId": "916275",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.700765,
+            "lon": -6.491741
+          },
+          "centroid": {
+            "lat": 53.700765,
+            "lon": -6.491741
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "3e boyne passage grave",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/3E%20BOYNE%20PASSAGE%20GRAVE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-319",
+        "Depositor ID: UB-319"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:916275",
+      "title": "Radiocarbon date, Sample number UB-319",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b9cd9a1b6c9445e8e60747d507ab871e43a01776fe44f6b9cafab37723951c00",
+      "creator": "G Eogan, P Q Dresser",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919635",
+    "_source": "hsds",
+    "_sourceId": "919635",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/93df726545a21c28fa64107684d22a2ac8ffd58dc9399bcbf062fb4bb2b4e5f7",
+    "title": "Radiocarbon date, Sample number BM-2812",
+    "description": "Charcoal from among wood and charcoal in situ on ledge at 6m depth in Comet Lode, Copa Hill, Cwmystwyth, Ceredigion, Wales. [Ed: Cal dates are given.]<br>",
+    "creator": "S Timberlake and T Mighall",
+    "date": "1998-12-01",
+    "subject": [
+      "4g copper mines",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.360648,
+    "decimalLongitude": -3.746263,
+    "hsds": {
+      "elasticId": "93df726545a21c28fa64107684d22a2ac8ffd58dc9399bcbf062fb4bb2b4e5f7",
+      "originalId": "919635",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.360648,
+            "lon": -3.746263
+          },
+          "centroid": {
+            "lat": 52.360648,
+            "lon": -3.746263
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4g copper mines",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4G%20COPPER%20MINES"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-2812",
+        "Depositor ID: BM-2812"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:919635",
+      "title": "Radiocarbon date, Sample number BM-2812",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/93df726545a21c28fa64107684d22a2ac8ffd58dc9399bcbf062fb4bb2b4e5f7",
+      "creator": "S Timberlake and T Mighall",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920416",
+    "_source": "hsds",
+    "_sourceId": "920416",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/74b1ad3cdace37a8697fce81d5c2d0dc4a5c1cf67b2b48156283005b14f3054d",
+    "title": "Radiocarbon date, Sample number HAR-3892",
+    "description": "Charcoal, id as peat/charcoal, SLP8007, from peat monolith, 3.10 to 3.12m at Northern Mound, Meare Lake Village West, Somerset Levels, England. Subm 1980.<br>Peat monolith",
+    "creator": "J M Coles",
+    "date": "1998-12-01",
+    "subject": [
+      "5d settlement - lake village",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.175818,
+    "decimalLongitude": -2.794027,
+    "hsds": {
+      "elasticId": "74b1ad3cdace37a8697fce81d5c2d0dc4a5c1cf67b2b48156283005b14f3054d",
+      "originalId": "920416",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.175818,
+            "lon": -2.794027
+          },
+          "centroid": {
+            "lat": 51.175818,
+            "lon": -2.794027
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5d settlement - lake village",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5D%20SETTLEMENT%20-%20LAKE%20VILLAGE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-3892",
+        "Depositor ID: HAR-3892"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:920416",
+      "title": "Radiocarbon date, Sample number HAR-3892",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/74b1ad3cdace37a8697fce81d5c2d0dc4a5c1cf67b2b48156283005b14f3054d",
+      "creator": "J M Coles",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914376",
+    "_source": "hsds",
+    "_sourceId": "914376",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/8941b5c49208ca7e15091e822ef2e0951ce0c30606f64f05ff4d45755d5532cf",
+    "title": "Radiocarbon date, Sample number CAR-803",
+    "description": "Charcoal, id as very small sample, combined from two deposits of charcoal on OGS and below rampart (Context 38A) at Llwyn Bryn Dinas, Llangedwyn, Clwyd, Wales.<br>univallate",
+    "creator": "C R Musson and others",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.813145,
+    "decimalLongitude": -3.228635,
+    "hsds": {
+      "elasticId": "8941b5c49208ca7e15091e822ef2e0951ce0c30606f64f05ff4d45755d5532cf",
+      "originalId": "914376",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.813145,
+            "lon": -3.228635
+          },
+          "centroid": {
+            "lat": 52.813145,
+            "lon": -3.228635
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-803",
+        "Depositor ID: CAR-803"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:914376",
+      "title": "Radiocarbon date, Sample number CAR-803",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/8941b5c49208ca7e15091e822ef2e0951ce0c30606f64f05ff4d45755d5532cf",
+      "creator": "C R Musson and others",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920196",
+    "_source": "hsds",
+    "_sourceId": "920196",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/403db919a22010041c22cbe72063a99a2d89dafc6e13777650e8115bc20ab445",
+    "title": "Radiocarbon date, Sample number UB-2168",
+    "description": "Charcoal from mixed layer over ash layer in furnace pit, structure G at Reask, Co Kerry, Ireland. Comment (subm): unreliable because contained peat charcoal.<br>Settlement and cemetery",
+    "creator": "T Fanning",
+    "date": "1998-12-01",
+    "subject": [
+      "7b monastic settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.166785,
+    "decimalLongitude": -10.389972,
+    "hsds": {
+      "elasticId": "403db919a22010041c22cbe72063a99a2d89dafc6e13777650e8115bc20ab445",
+      "originalId": "920196",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.166785,
+            "lon": -10.389972
+          },
+          "centroid": {
+            "lat": 52.166785,
+            "lon": -10.389972
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b monastic settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20MONASTIC%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-2168",
+        "Depositor ID: UB-2168"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:920196",
+      "title": "Radiocarbon date, Sample number UB-2168",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/403db919a22010041c22cbe72063a99a2d89dafc6e13777650e8115bc20ab445",
+      "creator": "T Fanning",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917104",
+    "_source": "hsds",
+    "_sourceId": "917104",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a5ba1522d05c6785cf1adec6868bc2aa4a81ac79a07e31de6deaf77b8a642e16",
+    "title": "Radiocarbon date, Sample number OxA-2203",
+    "description": "charcoal:-<br>Liscahane, Ireland",
+    "creator": "O'Donnabhain",
+    "date": "1998-12-01",
+    "subject": [
+      "e:235:/ss 205",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "a5ba1522d05c6785cf1adec6868bc2aa4a81ac79a07e31de6deaf77b8a642e16",
+      "originalId": "917104",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "e:235:/ss 205",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/E%3A235%3A/SS%20205"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2203-1",
+        "Depositor ID: OxA-2203"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917104",
+      "title": "Radiocarbon date, Sample number OxA-2203",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a5ba1522d05c6785cf1adec6868bc2aa4a81ac79a07e31de6deaf77b8a642e16",
+      "creator": "O'Donnabhain",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917105",
+    "_source": "hsds",
+    "_sourceId": "917105",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b8b19f6b7fb1beafcb7b06343209c323c5411466b5b7e6ca2e98e845d8674df5",
+    "title": "Radiocarbon date, Sample number OxA-2204",
+    "description": "charcoal:-<br>Liscahane, Ireland",
+    "creator": "O'Donnabhain",
+    "date": "1998-12-01",
+    "subject": [
+      "e:235:ss 217",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "b8b19f6b7fb1beafcb7b06343209c323c5411466b5b7e6ca2e98e845d8674df5",
+      "originalId": "917105",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "e:235:ss 217",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/E%3A235%3ASS%20217"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2204-1",
+        "Depositor ID: OxA-2204"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917105",
+      "title": "Radiocarbon date, Sample number OxA-2204",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b8b19f6b7fb1beafcb7b06343209c323c5411466b5b7e6ca2e98e845d8674df5",
+      "creator": "O'Donnabhain",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917554",
+    "_source": "hsds",
+    "_sourceId": "917554",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/051a3997954f0a288fe6fafcdc96d918ab61944519ad1d937a514f20704d550e",
+    "title": "Radiocarbon date, Sample number OxA-3582",
+    "description": "charcoal:-<br>Runnymede, England",
+    "creator": "Needham",
+    "date": "1998-12-01",
+    "subject": [
+      "erb89,a20,957.7",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "051a3997954f0a288fe6fafcdc96d918ab61944519ad1d937a514f20704d550e",
+      "originalId": "917554",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "erb89,a20,957.7",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ERB89%2CA20%2C957.7"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3582-1",
+        "Depositor ID: OxA-3582"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917554",
+      "title": "Radiocarbon date, Sample number OxA-3582",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/051a3997954f0a288fe6fafcdc96d918ab61944519ad1d937a514f20704d550e",
+      "creator": "Needham",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917639",
+    "_source": "hsds",
+    "_sourceId": "917639",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/dbf33fbefa479908c45b100e62d372cb2166a0b94532f4024a9eadf3f1fcb8a0",
+    "title": "Radiocarbon date, Sample number OxA-376",
+    "description": "charcoal:-<br>Longmoor, UK",
+    "creator": "Jacobi",
+    "date": "1998-12-01",
+    "subject": "heritage science",
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "dbf33fbefa479908c45b100e62d372cb2166a0b94532f4024a9eadf3f1fcb8a0",
+      "originalId": "917639",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-376-1",
+        "Depositor ID: OxA-376"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917639",
+      "title": "Radiocarbon date, Sample number OxA-376",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/dbf33fbefa479908c45b100e62d372cb2166a0b94532f4024a9eadf3f1fcb8a0",
+      "creator": "Jacobi",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917647",
+    "_source": "hsds",
+    "_sourceId": "917647",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/49ea57bb8f1bb9f6279c1924b148e13eb5f437726b00bb46af554c94cc22570e",
+    "title": "Radiocarbon date, Sample number OxA-377",
+    "description": "charcoal:-<br>Longmoor, UK",
+    "creator": "Jacobi",
+    "date": "1998-12-01",
+    "subject": "heritage science",
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "49ea57bb8f1bb9f6279c1924b148e13eb5f437726b00bb46af554c94cc22570e",
+      "originalId": "917647",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-377-1",
+        "Depositor ID: OxA-377"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917647",
+      "title": "Radiocarbon date, Sample number OxA-377",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/49ea57bb8f1bb9f6279c1924b148e13eb5f437726b00bb46af554c94cc22570e",
+      "creator": "Jacobi",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917648",
+    "_source": "hsds",
+    "_sourceId": "917648",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/37904a4edd11053e6a7a6781515cc5a5bdeb9c73a1b3396a07c6c6f4964a1a51",
+    "title": "Radiocarbon date, Sample number OxA-378",
+    "description": "charcoal:-<br>Kettlebury, UK",
+    "creator": "Jacobi",
+    "date": "1998-12-01",
+    "subject": "heritage science",
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "37904a4edd11053e6a7a6781515cc5a5bdeb9c73a1b3396a07c6c6f4964a1a51",
+      "originalId": "917648",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-378-1",
+        "Depositor ID: OxA-378"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917648",
+      "title": "Radiocarbon date, Sample number OxA-378",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/37904a4edd11053e6a7a6781515cc5a5bdeb9c73a1b3396a07c6c6f4964a1a51",
+      "creator": "Jacobi",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917653",
+    "_source": "hsds",
+    "_sourceId": "917653",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b7dbed3a1e85f58f5a1802ea7d800593f20c2c0af2040040b9074ab8423082a0",
+    "title": "Radiocarbon date, Sample number OxA-379",
+    "description": "charcoal:-<br>Kettlebury, UK",
+    "creator": "Jacobi",
+    "date": "1998-12-01",
+    "subject": "heritage science",
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "b7dbed3a1e85f58f5a1802ea7d800593f20c2c0af2040040b9074ab8423082a0",
+      "originalId": "917653",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-379-1",
+        "Depositor ID: OxA-379"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917653",
+      "title": "Radiocarbon date, Sample number OxA-379",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b7dbed3a1e85f58f5a1802ea7d800593f20c2c0af2040040b9074ab8423082a0",
+      "creator": "Jacobi",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917361",
+    "_source": "hsds",
+    "_sourceId": "917361",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e5354c92408b69adb241358aa65fb9d512a826703e750cb1e506f2d270c5ae8b",
+    "title": "Radiocarbon date, Sample number OxA-3054",
+    "description": "charcoal:-<br>Irthlingborough, England",
+    "creator": "Humble",
+    "date": "1998-12-01",
+    "subject": [
+      "291-33308",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "e5354c92408b69adb241358aa65fb9d512a826703e750cb1e506f2d270c5ae8b",
+      "originalId": "917361",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "291-33308",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/291-33308"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3054-1",
+        "Depositor ID: OxA-3054"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917361",
+      "title": "Radiocarbon date, Sample number OxA-3054",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e5354c92408b69adb241358aa65fb9d512a826703e750cb1e506f2d270c5ae8b",
+      "creator": "Humble",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917364",
+    "_source": "hsds",
+    "_sourceId": "917364",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c76beebe5b2f3ca834a63024d909b31d4c7e1df6825cee1d03794d3ed0fbc292",
+    "title": "Radiocarbon date, Sample number OxA-3057",
+    "description": "charcoal:-<br>Irthlingborough, England",
+    "creator": "Humble",
+    "date": "1998-12-01",
+    "subject": [
+      "291-33047",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "c76beebe5b2f3ca834a63024d909b31d4c7e1df6825cee1d03794d3ed0fbc292",
+      "originalId": "917364",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "291-33047",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/291-33047"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3057-1",
+        "Depositor ID: OxA-3057"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917364",
+      "title": "Radiocarbon date, Sample number OxA-3057",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c76beebe5b2f3ca834a63024d909b31d4c7e1df6825cee1d03794d3ed0fbc292",
+      "creator": "Humble",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917366",
+    "_source": "hsds",
+    "_sourceId": "917366",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/82d92de44b9f641f6834b92a6ab16096c053edf9ca731ba0b6d6102b2c611a7b",
+    "title": "Radiocarbon date, Sample number OxA-3059",
+    "description": "charcoal:-<br>Irthlingborough, England",
+    "creator": "Humble",
+    "date": "1998-12-01",
+    "subject": [
+      "291-33037",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "82d92de44b9f641f6834b92a6ab16096c053edf9ca731ba0b6d6102b2c611a7b",
+      "originalId": "917366",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "291-33037",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/291-33037"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3059-1",
+        "Depositor ID: OxA-3059"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917366",
+      "title": "Radiocarbon date, Sample number OxA-3059",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/82d92de44b9f641f6834b92a6ab16096c053edf9ca731ba0b6d6102b2c611a7b",
+      "creator": "Humble",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916965",
+    "_source": "hsds",
+    "_sourceId": "916965",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b97977febc9f1af33de6133b6ce0c83ee027aac77f5795759743c5e7b4d666cc",
+    "title": "Radiocarbon date, Sample number OxA-1761",
+    "description": "charcoal:-<br>Lambscott, England",
+    "creator": "Darvill",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "layer 1"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "b97977febc9f1af33de6133b6ce0c83ee027aac77f5795759743c5e7b4d666cc",
+      "originalId": "916965",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "layer 1",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LAYER%201"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1761-1",
+        "Depositor ID: OxA-1761"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:916965",
+      "title": "Radiocarbon date, Sample number OxA-1761",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b97977febc9f1af33de6133b6ce0c83ee027aac77f5795759743c5e7b4d666cc",
+      "creator": "Darvill",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916966",
+    "_source": "hsds",
+    "_sourceId": "916966",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/0acd9c4637c4870eb114c4ad323a72c34a248a11f229bff8db0fee4b4ee3edf6",
+    "title": "Radiocarbon date, Sample number OxA-1762",
+    "description": "charcoal:-<br>Lambscott, England",
+    "creator": "Darvill",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "layer 8, f3"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "0acd9c4637c4870eb114c4ad323a72c34a248a11f229bff8db0fee4b4ee3edf6",
+      "originalId": "916966",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "layer 8, f3",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LAYER%208%2C%20F3"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-1762-1",
+        "Depositor ID: OxA-1762"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:916966",
+      "title": "Radiocarbon date, Sample number OxA-1762",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/0acd9c4637c4870eb114c4ad323a72c34a248a11f229bff8db0fee4b4ee3edf6",
+      "creator": "Darvill",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917233",
+    "_source": "hsds",
+    "_sourceId": "917233",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/12789816663ee7843911e728b7f29936e5626db4f853391111cebe97eb6a3e56",
+    "title": "Radiocarbon date, Sample number OxA-2542",
+    "description": "charcoal:-<br>Thwing, England",
+    "creator": "Manby",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "t83/j10/f2"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "12789816663ee7843911e728b7f29936e5626db4f853391111cebe97eb6a3e56",
+      "originalId": "917233",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "t83/j10/f2",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/T83/J10/F2"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2542-1",
+        "Depositor ID: OxA-2542"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917233",
+      "title": "Radiocarbon date, Sample number OxA-2542",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/12789816663ee7843911e728b7f29936e5626db4f853391111cebe97eb6a3e56",
+      "creator": "Manby",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917234",
+    "_source": "hsds",
+    "_sourceId": "917234",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/257539a475e7c278437fcc564db84a36f50fe333ecae646cb87483191cbac3ee",
+    "title": "Radiocarbon date, Sample number OxA-2543",
+    "description": "charcoal:-<br>Thwing, England",
+    "creator": "Manby",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "t83/j12/f6"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "257539a475e7c278437fcc564db84a36f50fe333ecae646cb87483191cbac3ee",
+      "originalId": "917234",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "t83/j12/f6",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/T83/J12/F6"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2543-1",
+        "Depositor ID: OxA-2543"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917234",
+      "title": "Radiocarbon date, Sample number OxA-2543",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/257539a475e7c278437fcc564db84a36f50fe333ecae646cb87483191cbac3ee",
+      "creator": "Manby",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917237",
+    "_source": "hsds",
+    "_sourceId": "917237",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c8f758bcddd87baa589c45621bf2f8f83bcc4413509987f259d869e0aa8a33de",
+    "title": "Radiocarbon date, Sample number OxA-2575",
+    "description": "charcoal:-<br>Woolbeding, England",
+    "creator": "Wood",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "p5/c8"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "c8f758bcddd87baa589c45621bf2f8f83bcc4413509987f259d869e0aa8a33de",
+      "originalId": "917237",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "p5/c8",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/P5/C8"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2575",
+        "Depositor ID: OxA-2575"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917237",
+      "title": "Radiocarbon date, Sample number OxA-2575",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c8f758bcddd87baa589c45621bf2f8f83bcc4413509987f259d869e0aa8a33de",
+      "creator": "Wood",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917239",
+    "_source": "hsds",
+    "_sourceId": "917239",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f8f3b72f539a3a443081d0fc4da95ac7ff4ef53e55656b09230db7682d171707",
+    "title": "Radiocarbon date, Sample number OxA-2579",
+    "description": "charcoal:-<br>Thwing, England",
+    "creator": "Manby",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "t83/j8/f14"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "f8f3b72f539a3a443081d0fc4da95ac7ff4ef53e55656b09230db7682d171707",
+      "originalId": "917239",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "t83/j8/f14",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/T83/J8/F14"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2579-1",
+        "Depositor ID: OxA-2579"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917239",
+      "title": "Radiocarbon date, Sample number OxA-2579",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f8f3b72f539a3a443081d0fc4da95ac7ff4ef53e55656b09230db7682d171707",
+      "creator": "Manby",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917242",
+    "_source": "hsds",
+    "_sourceId": "917242",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/8b164815caf98d68a8199bb538372fda3de47206357fd7eba4d77484231b2f8a",
+    "title": "Radiocarbon date, Sample number OxA-2582",
+    "description": "charcoal:-<br>Thwing, England",
+    "creator": "Manby",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "t83/j8(343)2"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "8b164815caf98d68a8199bb538372fda3de47206357fd7eba4d77484231b2f8a",
+      "originalId": "917242",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "t83/j8(343)2",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/T83/J8%28343%292"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2582-1",
+        "Depositor ID: OxA-2582"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917242",
+      "title": "Radiocarbon date, Sample number OxA-2582",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/8b164815caf98d68a8199bb538372fda3de47206357fd7eba4d77484231b2f8a",
+      "creator": "Manby",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917243",
+    "_source": "hsds",
+    "_sourceId": "917243",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f81a5270c42dede7ec1b26aba2f6284ff651e94fbd26c888815a0c3e0f595695",
+    "title": "Radiocarbon date, Sample number OxA-2583",
+    "description": "charcoal:-<br>Thwing, England",
+    "creator": "Manby",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "t83/j8(373)2"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "f81a5270c42dede7ec1b26aba2f6284ff651e94fbd26c888815a0c3e0f595695",
+      "originalId": "917243",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "t83/j8(373)2",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/T83/J8%28373%292"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2583-1",
+        "Depositor ID: OxA-2583"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917243",
+      "title": "Radiocarbon date, Sample number OxA-2583",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f81a5270c42dede7ec1b26aba2f6284ff651e94fbd26c888815a0c3e0f595695",
+      "creator": "Manby",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917262",
+    "_source": "hsds",
+    "_sourceId": "917262",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/cce78855789d3dc469e490d9bb2458ca4c673163becac06a89c6f4c8d8c8114c",
+    "title": "Radiocarbon date, Sample number OxA-2687",
+    "description": "charcoal:-<br>Thwing, England",
+    "creator": "Manby",
+    "date": "1998-12-01",
+    "subject": [
+      "heritage science",
+      "t83/j10/f2"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "cce78855789d3dc469e490d9bb2458ca4c673163becac06a89c6f4c8d8c8114c",
+      "originalId": "917262",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "t83/j10/f2",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/T83/J10/F2"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2687-1",
+        "Depositor ID: OxA-2687"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917262",
+      "title": "Radiocarbon date, Sample number OxA-2687",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/cce78855789d3dc469e490d9bb2458ca4c673163becac06a89c6f4c8d8c8114c",
+      "creator": "Manby",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917759",
+    "_source": "hsds",
+    "_sourceId": "917759",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/dc8b87d871ce8c01746b027e653d65b76a08c23587ddc891e16bd34a85460229",
+    "title": "Radiocarbon date, Sample number OxA-4209",
+    "description": "charcoal:-<br>Bromfield, England",
+    "creator": "Hughes",
+    "date": "1998-12-01",
+    "subject": [
+      "bf91, 58-f22(2016)",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "dc8b87d871ce8c01746b027e653d65b76a08c23587ddc891e16bd34a85460229",
+      "originalId": "917759",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "bf91, 58-f22(2016)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BF91%2C%2058-F22%282016%29"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4209-1",
+        "Depositor ID: OxA-4209"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917759",
+      "title": "Radiocarbon date, Sample number OxA-4209",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/dc8b87d871ce8c01746b027e653d65b76a08c23587ddc891e16bd34a85460229",
+      "creator": "Hughes",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917761",
+    "_source": "hsds",
+    "_sourceId": "917761",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/fb3a33e994137da8174dad152b2d3974aedda267b80681c38ab7d45c68025712",
+    "title": "Radiocarbon date, Sample number OxA-4210",
+    "description": "charcoal:-<br>Bromfield, England",
+    "creator": "Hughes",
+    "date": "1998-12-01",
+    "subject": [
+      "bf91, 59(2034)",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "fb3a33e994137da8174dad152b2d3974aedda267b80681c38ab7d45c68025712",
+      "originalId": "917761",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "bf91, 59(2034)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BF91%2C%2059%282034%29"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4210-1",
+        "Depositor ID: OxA-4210"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917761",
+      "title": "Radiocarbon date, Sample number OxA-4210",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/fb3a33e994137da8174dad152b2d3974aedda267b80681c38ab7d45c68025712",
+      "creator": "Hughes",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:917757",
+    "_source": "hsds",
+    "_sourceId": "917757",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c77803584d5c9f5637bccbc111b7285e423535ed148e0ba46b9666900c96e1cf",
+    "title": "Radiocarbon date, Sample number OxA-4207",
+    "description": "charcoal:-<br>Bromfield, England",
+    "creator": "Hughes",
+    "date": "1998-12-01",
+    "subject": [
+      "bf91, 55-f6(1009)",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "hsds": {
+      "elasticId": "c77803584d5c9f5637bccbc111b7285e423535ed148e0ba46b9666900c96e1cf",
+      "originalId": "917757",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [],
+      "nativeSubject": [
+        {
+          "prefLabel": "bf91, 55-f6(1009)",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BF91%2C%2055-F6%281009%29"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-4207-1",
+        "Depositor ID: OxA-4207"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:51:20.082Z",
+      "query": "q:charcoal",
+      "recordId": "hsds:917757",
+      "title": "Radiocarbon date, Sample number OxA-4207",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c77803584d5c9f5637bccbc111b7285e423535ed148e0ba46b9666900c96e1cf",
+      "creator": "Hughes",
+      "date": "1998-12-01"
+    }
+  }
+]

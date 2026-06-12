@@ -1,0 +1,152 @@
+[
+  {
+    "_id": "fd179259-ae2d-4a32-a182-28ecda656178",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/fd179259-ae2d-4a32-a182-28ecda656178/",
+    "_service": "bodleian",
+    "title": "Head-stop of William Tyndale (c. 1494–1536)",
+    "date": "1900",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d5174a17-f170-4ca9-bf05-03becb14af89/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "fd179259-ae2d-4a32-a182-28ecda656178",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/fd179259-ae2d-4a32-a182-28ecda656178.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d5174a17-f170-4ca9-bf05-03becb14af89/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 785",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:45:46.679Z",
+      "query": "tyndale",
+      "title": "Head-stop of William Tyndale (c. 1494–1536)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/fd179259-ae2d-4a32-a182-28ecda656178/",
+      "date": "1900"
+    }
+  },
+  {
+    "_id": "04ac35de-b48d-4bac-ba67-e8ac4912fd8a",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/04ac35de-b48d-4bac-ba67-e8ac4912fd8a/",
+    "_service": "bodleian",
+    "title": "Tyndale Bible.",
+    "date": "1549",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/bd456292-8672-48e1-9228-e77e7aeb7dae/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "04ac35de-b48d-4bac-ba67-e8ac4912fd8a",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/04ac35de-b48d-4bac-ba67-e8ac4912fd8a.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/bd456292-8672-48e1-9228-e77e7aeb7dae/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Denyer Bible Eng. d. 1549",
+      "origins": "England, London",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 2
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:45:46.679Z",
+      "query": "tyndale",
+      "title": "Tyndale Bible.",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/04ac35de-b48d-4bac-ba67-e8ac4912fd8a/",
+      "date": "1549"
+    }
+  },
+  {
+    "_id": "a785e002-1cff-4257-a621-633e72785c59",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/a785e002-1cff-4257-a621-633e72785c59/",
+    "_service": "bodleian",
+    "title": "Letters to John Aubrey, 1644-1695",
+    "date": "Written in 1644-1695",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/2aba430f-1742-4b49-9cea-1e7d8656a9fa/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "a785e002-1cff-4257-a621-633e72785c59",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/a785e002-1cff-4257-a621-633e72785c59.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/2aba430f-1742-4b49-9cea-1e7d8656a9fa/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Aubrey 13",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 574
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:45:46.679Z",
+      "query": "tyndale",
+      "title": "Letters to John Aubrey, 1644-1695",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/a785e002-1cff-4257-a621-633e72785c59/",
+      "date": "Written in 1644-1695"
+    }
+  },
+  {
+    "_id": "d0cd36ec-3bf8-476a-842b-d0062e2c543f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d0cd36ec-3bf8-476a-842b-d0062e2c543f/",
+    "_service": "bodleian",
+    "title": "Diary",
+    "date": "1810–12",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/78a0cea6-bdcf-4aff-bd84-f132f64af2f4/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "d0cd36ec-3bf8-476a-842b-d0062e2c543f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d0cd36ec-3bf8-476a-842b-d0062e2c543f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/78a0cea6-bdcf-4aff-bd84-f132f64af2f4/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Abinger e. 16",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": true,
+      "surfaceCount": 80
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:45:46.679Z",
+      "query": "tyndale",
+      "title": "Diary",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/d0cd36ec-3bf8-476a-842b-d0062e2c543f/",
+      "date": "1810–12"
+    }
+  },
+  {
+    "_id": "65cb1810-6c8a-4d8b-b997-feaeb3251614",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/65cb1810-6c8a-4d8b-b997-feaeb3251614/",
+    "_service": "bodleian",
+    "title": "Roll of arms (Powell's Roll).",
+    "date": "c. 1345-1351",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/837ed1fe-2365-415a-a739-47326a0dfb87/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "65cb1810-6c8a-4d8b-b997-feaeb3251614",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/65cb1810-6c8a-4d8b-b997-feaeb3251614.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/837ed1fe-2365-415a-a739-47326a0dfb87/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. Ashmole 804, pt. IV",
+      "origins": "England",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 30
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:45:46.679Z",
+      "query": "tyndale",
+      "title": "Roll of arms (Powell's Roll).",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/65cb1810-6c8a-4d8b-b997-feaeb3251614/",
+      "date": "c. 1345-1351"
+    }
+  }
+]

@@ -1,0 +1,1378 @@
+[
+  {
+    "id": "llds:20.500.14106/1508",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/1508",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1508",
+    "_pid": "https://hdl.handle.net/20.500.14106/1508",
+    "title": "Aesop's fables. English. Selections",
+    "description": "Title proper taken from title at the beginning of the electronic text (N.B. after the small print.) Contents: Fables, followed by Life of Aesop, Preface, and Footnotes all by Townsend The Source Description in this header ...",
+    "creator": "Aesop",
+    "date": "1867",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/1508",
+      "branding": "Oxford Text Archive Core Collection",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/1508",
+      "title": "Aesop's fables. English. Selections",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/1508",
+      "pid": "https://hdl.handle.net/20.500.14106/1508",
+      "creator": "Aesop",
+      "date": "1867"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26539",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26539",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26539",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26539",
+    "title": "Aesop's last will and testament",
+    "description": "Caption title. Imprint from colophon. In verse. Reproduction of the original in the Harvard University Library.",
+    "creator": "Aesop.",
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26539",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26539",
+      "title": "Aesop's last will and testament",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26539",
+      "pid": "https://hdl.handle.net/20.500.14106/A26539",
+      "creator": "Aesop.",
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26534",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26534",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26534",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26534",
+    "title": "Æsop from Islington",
+    "description": "In verse. \"The preface to the reader\" signed: Æsop. Place of publication from Wing. Reproduction of original in British Library.",
+    "date": "1699",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26534",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26534",
+      "title": "Æsop from Islington",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26534",
+      "pid": "https://hdl.handle.net/20.500.14106/A26534",
+      "date": "1699"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26527",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26527",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26527",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26527",
+    "title": "Aesop at Amsterdam, balancing the Aesops at Tunbridg, Bathe, Whitehal, &c. by Ludlow Redivivus.",
+    "description": "Eleven fables in verse ridiculing monarchial government. Cf. BM. Reproduction of original in Huntington Library.",
+    "creator": "Ludlow Redivivus.",
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26527",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26527",
+      "title": "Aesop at Amsterdam, balancing the Aesops at Tunbridg, Bathe, Whitehal, &c. by Ludlow Redivivus.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26527",
+      "pid": "https://hdl.handle.net/20.500.14106/A26527",
+      "creator": "Ludlow Redivivus.",
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26533",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26533",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26533",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26533",
+    "title": "Aesop at Westminster, or, A tale of the jack-daws",
+    "description": "In verse. Caption title. Reproduction of original in the Harvard University Library.",
+    "date": "1691",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26533",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26533",
+      "title": "Aesop at Westminster, or, A tale of the jack-daws",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26533",
+      "pid": "https://hdl.handle.net/20.500.14106/A26533",
+      "date": "1691"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26538",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26538",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26538",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26538",
+    "title": "Æsop return'd from Tunbridge, or, Aesop out of his wits in a few select fables in verse.",
+    "description": "Reproduction of original in Huntington Library.",
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26538",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26538",
+      "title": "Æsop return'd from Tunbridge, or, Aesop out of his wits in a few select fables in verse.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26538",
+      "pid": "https://hdl.handle.net/20.500.14106/A26538",
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A53256",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A53256",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A53256",
+    "_pid": "https://hdl.handle.net/20.500.14106/A53256",
+    "title": "Old Æsop at White-hall giving advice to the young Æsops at Tunbridge and Bath, or, Some fables relating to government",
+    "description": "In verse. Reproduction of original in the Bristol Public Library.",
+    "creator": "Person of what quality you please.",
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A53256",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A53256",
+      "title": "Old Æsop at White-hall giving advice to the young Æsops at Tunbridge and Bath, or, Some fables relating to government",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A53256",
+      "pid": "https://hdl.handle.net/20.500.14106/A53256",
+      "creator": "Person of what quality you please.",
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A65052",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A65052",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A65052",
+    "_pid": "https://hdl.handle.net/20.500.14106/A65052",
+    "title": "Aesop a comedy as it is acted at the Theatre-Royal in Drury-Lane.",
+    "description": "A translation and adaptation of Boursault's \"Les fables d'Esope\" and \"Esope à la cour\". Reproduction of original in the Bodleian Library.",
+    "creator": [
+      "Vanbrugh, John, Sir, 1664-1726.",
+      "Boursault, M. (Edme), 1638-1701. Fables d'Esope."
+    ],
+    "date": "1697",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A65052",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A65052",
+      "title": "Aesop a comedy as it is acted at the Theatre-Royal in Drury-Lane.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A65052",
+      "pid": "https://hdl.handle.net/20.500.14106/A65052",
+      "creator": [
+        "Vanbrugh, John, Sir, 1664-1726.",
+        "Boursault, M. (Edme), 1638-1701. Fables d'Esope."
+      ],
+      "date": "1697"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26529",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26529",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26529",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26529",
+    "title": "Æsop at Epsom, or, A few select fables in verse by a cit.",
+    "description": "Reproduction of original in Bodleian Library.",
+    "creator": "Cit.",
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26529",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26529",
+      "title": "Æsop at Epsom, or, A few select fables in verse by a cit.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26529",
+      "pid": "https://hdl.handle.net/20.500.14106/A26529",
+      "creator": "Cit.",
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A75932",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A75932",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A75932",
+    "_pid": "https://hdl.handle.net/20.500.14106/A75932",
+    "title": "The fables of Æsop paraphras'd in verse, and adorn'd with sculpture, by John Ogilby.",
+    "description": "In verse. With an additional title page, engraved: The fables of Æsop paraphras'd in vers and adornd with sculpture by Iohn Ogilby. Imprimatur: Na: Brent July, 1. 1651. The second book begins new pagination on 2B1r (missigned ...",
+    "creator": [
+      "Ogilby, John, 1600-1676.",
+      "Aesop."
+    ],
+    "date": "1651",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A75932",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A75932",
+      "title": "The fables of Æsop paraphras'd in verse, and adorn'd with sculpture, by John Ogilby.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A75932",
+      "pid": "https://hdl.handle.net/20.500.14106/A75932",
+      "creator": [
+        "Ogilby, John, 1600-1676.",
+        "Aesop."
+      ],
+      "date": "1651"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A87162",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A87162",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A87162",
+    "_pid": "https://hdl.handle.net/20.500.14106/A87162",
+    "title": "The parliament of bees a fable / by the author of The fables of young Æsop, lately published.",
+    "description": "Contains one illustration. Printed in two columns, with verse, \"The Fable' in left column, and explanation, \"The Epithymium\" in right column. Dated in ms. below title: 13. Dec. 1697. Imperfect: stained, and creased, with ...",
+    "creator": "B. H.",
+    "date": "1697",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A87162",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A87162",
+      "title": "The parliament of bees a fable / by the author of The fables of young Æsop, lately published.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A87162",
+      "pid": "https://hdl.handle.net/20.500.14106/A87162",
+      "creator": "B. H.",
+      "date": "1697"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26505",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26505",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26505",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26505",
+    "title": "Fables of Æsop and other eminent mythologists with morals and reflexions / by Sir Roger L'Estrange, Kt.",
+    "description": "Reproduction of original in Cambridge University Library. Imperfect: film lacks vol. 2 with t.p.: Fables and storyes moralized, being a second part of the Fables of Aesop. London, 1699. Preface -- Alphabetical table -- ...",
+    "creator": [
+      "L'Estrange, Roger, Sir, 1616-1704.",
+      "Baarland, Adriaan van, 1486-1538.",
+      "Avianus. Fabulae. English.",
+      "Astemio, Lorenzo. Fabulae. English.",
+      "Bracciolini, Poggio, 1380-1459. Facetiae. English. Selections."
+    ],
+    "date": "1692",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26505",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26505",
+      "title": "Fables of Æsop and other eminent mythologists with morals and reflexions / by Sir Roger L'Estrange, Kt.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26505",
+      "pid": "https://hdl.handle.net/20.500.14106/A26505",
+      "creator": [
+        "L'Estrange, Roger, Sir, 1616-1704.",
+        "Baarland, Adriaan van, 1486-1538.",
+        "Avianus. Fabulae. English.",
+        "Astemio, Lorenzo. Fabulae. English.",
+        "Bracciolini, Poggio, 1380-1459. Facetiae. English. Selections."
+      ],
+      "date": "1692"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26536",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26536",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26536",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26536",
+    "title": "Æsop in select fables ... with A dialogue between Bow-steeple dragon and the Exchange grashoper.",
+    "description": "The six pieces were also published separately in 1698. Cf. NUC pre-1956. Reproduction of original in Bodleian Library. (from t.p.) I. At Tunbridge -- II. At Bathe -- III. At Epsom -- IV. At Whitehall -- V. From Tunbridge ...",
+    "creator": "Aesop.",
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26536",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26536",
+      "title": "Æsop in select fables ... with A dialogue between Bow-steeple dragon and the Exchange grashoper.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26536",
+      "pid": "https://hdl.handle.net/20.500.14106/A26536",
+      "creator": "Aesop.",
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A27425",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A27425",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A27425",
+    "_pid": "https://hdl.handle.net/20.500.14106/A27425",
+    "title": "A dissertation upon the Epistles of Phalaris, Themistocles, Socrates, Euripides, and others, and the Fables of AEsop by Richard Bentley.",
+    "description": "Reproduction of original in Thomason Collection, British Library.",
+    "creator": "Bentley, Richard, 1662-1742.",
+    "date": "1697",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A27425",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A27425",
+      "title": "A dissertation upon the Epistles of Phalaris, Themistocles, Socrates, Euripides, and others, and the Fables of AEsop by Richard Bentley.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A27425",
+      "pid": "https://hdl.handle.net/20.500.14106/A27425",
+      "creator": "Bentley, Richard, 1662-1742.",
+      "date": "1697"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26532",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26532",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26532",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26532",
+    "title": "Aesop at Tunbridge, or, A few select fables in verse by no person of quality.",
+    "description": "Attributed to Edward Ward. cf. Harvard University Libraries. There appear to be at least two versions of this work bearing the same imprint. This version differs in pagination and in the \"To the reader.\" Reproduction of ...",
+    "creator": [
+      "No person of quality.",
+      "Ward, Edward, 1667-1731."
+    ],
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26532",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26532",
+      "title": "Aesop at Tunbridge, or, A few select fables in verse by no person of quality.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26532",
+      "pid": "https://hdl.handle.net/20.500.14106/A26532",
+      "creator": [
+        "No person of quality.",
+        "Ward, Edward, 1667-1731."
+      ],
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26530",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26530",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26530",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26530",
+    "title": "Æsop at Richmond, recovered of his late illness a poem in burlesque, dedicated to His Royal Highness the Duke.",
+    "description": "Dedication signed: Jacob Dash [pseud.] Reproduction of original in Huntington Library.",
+    "creator": "Dash, Jacob, fl. 1698.",
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26530",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26530",
+      "title": "Æsop at Richmond, recovered of his late illness a poem in burlesque, dedicated to His Royal Highness the Duke.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26530",
+      "pid": "https://hdl.handle.net/20.500.14106/A26530",
+      "creator": "Dash, Jacob, fl. 1698.",
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A75955",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A75955",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A75955",
+    "_pid": "https://hdl.handle.net/20.500.14106/A75955",
+    "title": "Æsop at Tunbridge. Or, A few select fables in verse. By No person of quality",
+    "description": "Attributed to Edward Ward by Harvard University Libraries. Reproduction of original in the Folger Shakespeare Library.",
+    "creator": [
+      "No person of quality.",
+      "Ward, Edward, 1667-1731, attributed name."
+    ],
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A75955",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A75955",
+      "title": "Æsop at Tunbridge. Or, A few select fables in verse. By No person of quality",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A75955",
+      "pid": "https://hdl.handle.net/20.500.14106/A75955",
+      "creator": [
+        "No person of quality.",
+        "Ward, Edward, 1667-1731, attributed name."
+      ],
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26488",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26488",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26488",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26488",
+    "title": "Æsops fables, with the fables of Phaedrus moralized, translated verbatim, according to the Latine, for the use of grammar schooles, and for children ... / published by H.P.",
+    "description": "Reproduction of original in British Library.",
+    "creator": [
+      "Aesop.",
+      "Phaedrus. Fabulae.",
+      "H. P."
+    ],
+    "date": "1646",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26488",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26488",
+      "title": "Æsops fables, with the fables of Phaedrus moralized, translated verbatim, according to the Latine, for the use of grammar schooles, and for children ... / published by H.P.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26488",
+      "pid": "https://hdl.handle.net/20.500.14106/A26488",
+      "creator": [
+        "Aesop.",
+        "Phaedrus. Fabulae.",
+        "H. P."
+      ],
+      "date": "1646"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26537",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26537",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26537",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26537",
+    "title": "Æsop naturaliz'd and expos'd to the publick view in his own shape and dress by way of essay on a hundred fables.",
+    "description": "Reproduction of original in Harvard University Libraries.",
+    "creator": "Aesop.",
+    "date": "1697",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26537",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26537",
+      "title": "Æsop naturaliz'd and expos'd to the publick view in his own shape and dress by way of essay on a hundred fables.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26537",
+      "pid": "https://hdl.handle.net/20.500.14106/A26537",
+      "creator": "Aesop.",
+      "date": "1697"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A53450",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A53450",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A53450",
+    "_pid": "https://hdl.handle.net/20.500.14106/A53450",
+    "title": "Dr. Bentley's Dissertations on the Epistles of Phalaris, and the fables of Æsop, examin'd by the Honourable Charles Boyle, Esq.",
+    "description": "Errata on p. 290. Reproduction of original in Cambridge University Library. Marginal notes. Includes index.",
+    "creator": "Orrery, Charles Boyle, Earl of, 1676-1731.",
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A53450",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A53450",
+      "title": "Dr. Bentley's Dissertations on the Epistles of Phalaris, and the fables of Æsop, examin'd by the Honourable Charles Boyle, Esq.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A53450",
+      "pid": "https://hdl.handle.net/20.500.14106/A53450",
+      "creator": "Orrery, Charles Boyle, Earl of, 1676-1731.",
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A75953",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A75953",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A75953",
+    "_pid": "https://hdl.handle.net/20.500.14106/A75953",
+    "title": "The Phrygian fabulist or, The fables of Æsop: extracted from the Latine copie, and moraliz'd. By Leonard Willan Gent.",
+    "description": "In verse. The portrait of Willan is signed: T: Cross sculpsit. Annotation on Thomason copy: \"Nou: 8 1649\"; 50 in imprint date crossed through. Reproduction of the original in the British Library.",
+    "creator": [
+      "Willan, Leonard.",
+      "Cross, Thomas, fl. 1632-1682, engraver."
+    ],
+    "date": "1649",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A75953",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A75953",
+      "title": "The Phrygian fabulist or, The fables of Æsop: extracted from the Latine copie, and moraliz'd. By Leonard Willan Gent.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A75953",
+      "pid": "https://hdl.handle.net/20.500.14106/A75953",
+      "creator": [
+        "Willan, Leonard.",
+        "Cross, Thomas, fl. 1632-1682, engraver."
+      ],
+      "date": "1649"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/B09592",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/B09592",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/B09592",
+    "_pid": "https://hdl.handle.net/20.500.14106/B09592",
+    "title": "The new-years-gift being a paraphrase on a fable in Æsop to his honoured friend John Matthew, Esq.",
+    "description": "In verse. Imperfect: pages cropped with slight loss of print. Reproduction of original in: Bodleian Library.",
+    "creator": "Matthews, John.",
+    "date": "1690",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/B09592",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/B09592",
+      "title": "The new-years-gift being a paraphrase on a fable in Æsop to his honoured friend John Matthew, Esq.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/B09592",
+      "pid": "https://hdl.handle.net/20.500.14106/B09592",
+      "creator": "Matthews, John.",
+      "date": "1690"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26535",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26535",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26535",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26535",
+    "title": "Æsop improved, or, Above three hundred and fifty fables, mostly Æsop's with their morals paraphrased in English verse : amounting to about one hundred and fifty more than do appear to have been so rendered by any other hand.",
+    "description": "\"To the reader\" signed: Tho. Singleton and Tho. Houghton. Advertisement: [2] p. at end. Reproduction of original in Huntington Library. Includes index.",
+    "creator": "Aesop.",
+    "date": "1673",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26535",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26535",
+      "title": "Æsop improved, or, Above three hundred and fifty fables, mostly Æsop's with their morals paraphrased in English verse : amounting to about one hundred and fifty more than do appear to have been so rendered by any other hand.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26535",
+      "pid": "https://hdl.handle.net/20.500.14106/A26535",
+      "creator": "Aesop.",
+      "date": "1673"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A45463",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A45463",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A45463",
+    "_pid": "https://hdl.handle.net/20.500.14106/A45463",
+    "title": "The fables of young Æsop, with their morals with a moral history of his life and death, illustrated with forty curious cuts applicable to each fable.",
+    "description": "Imperfect: stained, with print show-through. Reproduction of original in the British Library.",
+    "creator": [
+      "Aesop.",
+      "Harris, Benjamin, d. 1716?"
+    ],
+    "date": "1700",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A45463",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A45463",
+      "title": "The fables of young Æsop, with their morals with a moral history of his life and death, illustrated with forty curious cuts applicable to each fable.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A45463",
+      "pid": "https://hdl.handle.net/20.500.14106/A45463",
+      "creator": [
+        "Aesop.",
+        "Harris, Benjamin, d. 1716?"
+      ],
+      "date": "1700"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/K075478.000",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/K075478.000",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/K075478.000",
+    "_pid": "https://hdl.handle.net/20.500.14106/K075478.000",
+    "title": "Proverbs exemplified, and illustrated by pictures from real life. Teaching morality and a knowledge of the world; with prints. Designed as a succession-book to Æsop's Fables.",
+    "description": "Preface signed: J. Trusler. Woodcut illustrations by John Bewick. Vertical chainlines. Reproduction of original from the British Library. English Short Title Catalog, ESTCT93463. Electronic data. Farmington Hills, Mich. : ...",
+    "creator": "Trusler, John, 1735-1820.",
+    "date": "1790",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/K075478.000",
+      "branding": "ECCO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/K075478.000",
+      "title": "Proverbs exemplified, and illustrated by pictures from real life. Teaching morality and a knowledge of the world; with prints. Designed as a succession-book to Æsop's Fables.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/K075478.000",
+      "pid": "https://hdl.handle.net/20.500.14106/K075478.000",
+      "creator": "Trusler, John, 1735-1820.",
+      "date": "1790"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26496",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26496",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26496",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26496",
+    "title": "Æsop's fables with his life in English, French & Latin / the English by Tho. Philipott Esq. ; the French and Latin by Rob. Codrington M.A. ; illustrated with one hundred and twelve sculptures by Francis Barlow.",
+    "description": "Reproduction of original in Huntington Library. Includes 110 fables in French and Latin prose and English verse, the latter (by several poets) etched below the illustrations. Table of contents: p. [1]-[2] at end.",
+    "creator": [
+      "Barlow, Francis, 1626?-1702.",
+      "Codrington, Robert, 1601-1665.",
+      "Philipot, Thomas, d. 1682."
+    ],
+    "date": "1666",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26496",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26496",
+      "title": "Æsop's fables with his life in English, French & Latin / the English by Tho. Philipott Esq. ; the French and Latin by Rob. Codrington M.A. ; illustrated with one hundred and twelve sculptures by Francis Barlow.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26496",
+      "pid": "https://hdl.handle.net/20.500.14106/A26496",
+      "creator": [
+        "Barlow, Francis, 1626?-1702.",
+        "Codrington, Robert, 1601-1665.",
+        "Philipot, Thomas, d. 1682."
+      ],
+      "date": "1666"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A25590",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A25590",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A25590",
+    "_pid": "https://hdl.handle.net/20.500.14106/A25590",
+    "title": "An Answer to the dragon and grashopper in a dialogue between an old monkey and a young weazel at the Three Cranes Tavern in the Poultry, where they are daily to be seen : as also some remarks upon the Amsterdam and London Æsop's.",
+    "description": "Reproduction of original in British Library.",
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A25590",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A25590",
+      "title": "An Answer to the dragon and grashopper in a dialogue between an old monkey and a young weazel at the Three Cranes Tavern in the Poultry, where they are daily to be seen : as also some remarks upon the Amsterdam and London Æsop's.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A25590",
+      "pid": "https://hdl.handle.net/20.500.14106/A25590",
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/B06713",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/B06713",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/B06713",
+    "_pid": "https://hdl.handle.net/20.500.14106/B06713",
+    "title": "Reflections upon ancient and modern learning. The second part, With a dissertation upon the epistles of Phalaris, Themistocles, Socrates, Euripides; &c. and fables of Æsop. / By Richard Bentley, D.D. ... These additions compleat the want of the former eddition.",
+    "description": "\"Additions to the second edition of Mr. Wotton's reflections upon ancient and modern learning\" has separate pagination. \"Dissertation upon the epistles\" has special t.p. with imprint: London, Printed by J. Leake for Peter ...",
+    "creator": [
+      "Wotton, William, 1666-1727.",
+      "Bentley, Richard, d. 1697. Dissertation upon the epistles of Phalaris, Themistocles, Socrates, Euripides; &c. and fables of Æsop."
+    ],
+    "date": "1698",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/B06713",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/B06713",
+      "title": "Reflections upon ancient and modern learning. The second part, With a dissertation upon the epistles of Phalaris, Themistocles, Socrates, Euripides; &c. and fables of Æsop. / By Richard Bentley, D.D. ... These additions compleat the want of the former eddition.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/B06713",
+      "pid": "https://hdl.handle.net/20.500.14106/B06713",
+      "creator": [
+        "Wotton, William, 1666-1727.",
+        "Bentley, Richard, d. 1697. Dissertation upon the epistles of Phalaris, Themistocles, Socrates, Euripides; &c. and fables of Æsop."
+      ],
+      "date": "1698"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26524",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26524",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26524",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26524",
+    "title": "Mythologia ethica, or, Three centuries of Æsopian fables in English prose done from Æsop, Phædrus, Camerarius, and all other eminent authors on this subject : illustrated with moral, philosophical, and political precepts : also with aphorisms and proverbs in several languages, and adorned with many curious sculptures cut on copper plates / by Philip Ayres, Esq.",
+    "description": "Added engraved t.p. Reproduction of original in the Harvard University Library.",
+    "creator": [
+      "Ayres, Philip, 1638-1712.",
+      "Aesop."
+    ],
+    "date": "1689",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26524",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26524",
+      "title": "Mythologia ethica, or, Three centuries of Æsopian fables in English prose done from Æsop, Phædrus, Camerarius, and all other eminent authors on this subject : illustrated with moral, philosophical, and political precepts : also with aphorisms and proverbs in several languages, and adorned with many curious sculptures cut on copper plates / by Philip Ayres, Esq.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26524",
+      "pid": "https://hdl.handle.net/20.500.14106/A26524",
+      "creator": [
+        "Ayres, Philip, 1638-1712.",
+        "Aesop."
+      ],
+      "date": "1689"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A35673",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A35673",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A35673",
+    "_pid": "https://hdl.handle.net/20.500.14106/A35673",
+    "title": "Miscellany poems by Mr. Dennis with select translations of Horace, Juvenal, Mons. Boileau's Epistles, Satyrs, &c., and Æsop's Fables, in burlesque verse ; to which is added, The passion of Byblis, with some critical reflections on Mr. Oldham, and his writings ; with letters and poems.",
+    "description": "Added t.p. on prelim. p. [39]: The passion of Byblis. Errata and advertisement: p. [37] Reproduction of original in Huntington Library.",
+    "creator": [
+      "Ovid, 43 B.C.-17 or 18 A.D. Metamorphoses. Liber 9. English. Selections.",
+      "Dennis, John, 1657-1734."
+    ],
+    "date": "1697",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A35673",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A35673",
+      "title": "Miscellany poems by Mr. Dennis with select translations of Horace, Juvenal, Mons. Boileau's Epistles, Satyrs, &c., and Æsop's Fables, in burlesque verse ; to which is added, The passion of Byblis, with some critical reflections on Mr. Oldham, and his writings ; with letters and poems.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A35673",
+      "pid": "https://hdl.handle.net/20.500.14106/A35673",
+      "creator": [
+        "Ovid, 43 B.C.-17 or 18 A.D. Metamorphoses. Liber 9. English. Selections.",
+        "Dennis, John, 1657-1734."
+      ],
+      "date": "1697"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A81445",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A81445",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A81445",
+    "_pid": "https://hdl.handle.net/20.500.14106/A81445",
+    "title": "Dialogues of the dead in imitation of Lucian, and the French. I. Between Jevon and the whale. II. Æsop and an English Lady. III. Butler and Tartufe. IV. Hobbs and poet Bays[.] V. Cardinal Richlieu and Anthony Earl of Shaftsbury. VI. Clelia [sic], and Monsieur de Scudery. VII. Moliere and a lady. VIII. Ben. Johnson, Virgil, two ladies.",
+    "description": "Gathered in 4's. Signatures: A-D⁴. Reproduction of original in the Folger Shakespeare Library.",
+    "date": "1699",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A81445",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A81445",
+      "title": "Dialogues of the dead in imitation of Lucian, and the French. I. Between Jevon and the whale. II. Æsop and an English Lady. III. Butler and Tartufe. IV. Hobbs and poet Bays[.] V. Cardinal Richlieu and Anthony Earl of Shaftsbury. VI. Clelia [sic], and Monsieur de Scudery. VII. Moliere and a lady. VIII. Ben. Johnson, Virgil, two ladies.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A81445",
+      "pid": "https://hdl.handle.net/20.500.14106/A81445",
+      "date": "1699"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A26506",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A26506",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26506",
+    "_pid": "https://hdl.handle.net/20.500.14106/A26506",
+    "title": "Aesop's fables English and Latin : every one whereof is divided into its distinct periods, marked with figures : so that little children being used to write and translate them may not only more exactly understand all the rules of grammar but also learn to imitate the right composition of words and the proper forms of speech belonging to both languages / by Charles Hoole.",
+    "description": "English and Latin on facing pages. Includes index. Imperfect: pages cropped and tightly bound with loss of print. Reproduction of original in the British Library.",
+    "creator": [
+      "Hoole, Charles, 1610-1667.",
+      "Aesop."
+    ],
+    "date": "1700",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A26506",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A26506",
+      "title": "Aesop's fables English and Latin : every one whereof is divided into its distinct periods, marked with figures : so that little children being used to write and translate them may not only more exactly understand all the rules of grammar but also learn to imitate the right composition of words and the proper forms of speech belonging to both languages / by Charles Hoole.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A26506",
+      "pid": "https://hdl.handle.net/20.500.14106/A26506",
+      "creator": [
+        "Hoole, Charles, 1610-1667.",
+        "Aesop."
+      ],
+      "date": "1700"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A41556",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A41556",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A41556",
+    "_pid": "https://hdl.handle.net/20.500.14106/A41556",
+    "title": "Some observations on the fables of Æsop as commented upon by Sir Roger L'Estrange, kt.  Yet not on all, for some need not any addition or review, and there be many of them which are coincident as to the individual scope, I mean the same moral instruction, which is couched in them. Illustrated with several pertinent stories of antient and modern history. By a divine of the Church of Scotland.",
+    "description": "\"A divine of the Church of Scotland\" = James Gordon. Reproduction of the original in the National Library of Scotland.",
+    "creator": "Gordon, James, 1640?-1714.",
+    "date": "1700",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A41556",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A41556",
+      "title": "Some observations on the fables of Æsop as commented upon by Sir Roger L'Estrange, kt.  Yet not on all, for some need not any addition or review, and there be many of them which are coincident as to the individual scope, I mean the same moral instruction, which is couched in them. Illustrated with several pertinent stories of antient and modern history. By a divine of the Church of Scotland.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A41556",
+      "pid": "https://hdl.handle.net/20.500.14106/A41556",
+      "creator": "Gordon, James, 1640?-1714.",
+      "date": "1700"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A55879",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A55879",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A55879",
+    "_pid": "https://hdl.handle.net/20.500.14106/A55879",
+    "title": "Primula veris: a brighter gem, Æsop's cock never found, teaching (ne'r taught yet) speech's perfect ground Or, the third part of Calverleys notes: which notes (after discovery of the wonderous mistakes, needless difficulties, and prolixity of the common grammar) initiate a method which may be a glory to the nation, and an encouragement to the learning youth of Europe: then all must learn this true distinction's glance, else babes will jear us for our ignorance.",
+    "description": "Reproduction of the original in the Bodleian Library.",
+    "date": "1681",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A55879",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A55879",
+      "title": "Primula veris: a brighter gem, Æsop's cock never found, teaching (ne'r taught yet) speech's perfect ground Or, the third part of Calverleys notes: which notes (after discovery of the wonderous mistakes, needless difficulties, and prolixity of the common grammar) initiate a method which may be a glory to the nation, and an encouragement to the learning youth of Europe: then all must learn this true distinction's glance, else babes will jear us for our ignorance.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A55879",
+      "pid": "https://hdl.handle.net/20.500.14106/A55879",
+      "date": "1681"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/B08870",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/B08870",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/B08870",
+    "_pid": "https://hdl.handle.net/20.500.14106/B08870",
+    "title": "Delightful fables in prose and verse. None of them to be found in Aesop; but collected from divers ancient and modern authors, with pictures and proper morals to every fable, some very pertinent to the present times. Published as a means which in all ages hath been found useful for pleasure, and likewise for instruction in the prudent conduct of our lives and actions. / By R.B.",
+    "description": "\"A catalogue of books printed for Nath. Crouch ...\": [12] p. at end. Reproduction of original in the Bodleian Library.",
+    "creator": "R. B., 1632?-1725?",
+    "date": "1691",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/B08870",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/B08870",
+      "title": "Delightful fables in prose and verse. None of them to be found in Aesop; but collected from divers ancient and modern authors, with pictures and proper morals to every fable, some very pertinent to the present times. Published as a means which in all ages hath been found useful for pleasure, and likewise for instruction in the prudent conduct of our lives and actions. / By R.B.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/B08870",
+      "pid": "https://hdl.handle.net/20.500.14106/B08870",
+      "creator": "R. B., 1632?-1725?",
+      "date": "1691"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A53243",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A53243",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A53243",
+    "_pid": "https://hdl.handle.net/20.500.14106/A53243",
+    "title": "The translation of Homers Works into English verse being undertaken by John Ogilby translator of Virgil and paraphrasor on Æsop which work will be of greater charge then [sic] can be expected to be born by him; it being found by computation to amount to neer [sic] 5000 l. He herefore being desirous to spend his time and pains to bring that great and ancient poem into our English version; doth humbly propose to all honorable personages, encouragers of art and learning, an expedient for the publishing of the said work, as followeth.",
+    "description": "Imprint from Wing. Title from opening words of text. Reproduction of the original in the Bodleian Library, Oxford.",
+    "creator": [
+      "Homer.",
+      "Homer. Odyssey. English. Prospectus.",
+      "Ogilby, John, 1600-1676."
+    ],
+    "date": "1660",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A53243",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A53243",
+      "title": "The translation of Homers Works into English verse being undertaken by John Ogilby translator of Virgil and paraphrasor on Æsop which work will be of greater charge then [sic] can be expected to be born by him; it being found by computation to amount to neer [sic] 5000 l. He herefore being desirous to spend his time and pains to bring that great and ancient poem into our English version; doth humbly propose to all honorable personages, encouragers of art and learning, an expedient for the publishing of the said work, as followeth.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A53243",
+      "pid": "https://hdl.handle.net/20.500.14106/A53243",
+      "creator": [
+        "Homer.",
+        "Homer. Odyssey. English. Prospectus.",
+        "Ogilby, John, 1600-1676."
+      ],
+      "date": "1660"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A08136",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A08136",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A08136",
+    "_pid": "https://hdl.handle.net/20.500.14106/A08136",
+    "title": "The morall fabillis of Esope the phrygian, compylit in eloquent, and ornate Scottis meter, be Maister Robert Henrisone, scholemaister of Dunfermeling",
+    "description": "Running title reads: The fabillis of Esope. In verse. Signatures: A-N⁴. Reproduction of the original in the British Library.",
+    "creator": [
+      "Aesop.",
+      "Henryson, Robert, 1430?-1506?"
+    ],
+    "date": "1570",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A08136",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A08136",
+      "title": "The morall fabillis of Esope the phrygian, compylit in eloquent, and ornate Scottis meter, be Maister Robert Henrisone, scholemaister of Dunfermeling",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A08136",
+      "pid": "https://hdl.handle.net/20.500.14106/A08136",
+      "creator": [
+        "Aesop.",
+        "Henryson, Robert, 1430?-1506?"
+      ],
+      "date": "1570"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A07095",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A07095",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A07095",
+    "_pid": "https://hdl.handle.net/20.500.14106/A07095",
+    "title": "Here begynneth the book of the subtyl historyes and fables of Esope whiche were translated out of Frensshe in to Englysshe by wylliam Caxton at westmynstre in the yere of oure Lorde M. CCCC. lxxxiij",
+    "description": "Translated by William Caxton. Caption title, a2r. Publication date at colophon reads: M CCCC lxxxiiij Reproduction of the original in the British Library.",
+    "creator": [
+      "Aesop.",
+      "Caxton, William, ca. 1422-1491."
+    ],
+    "date": "1484",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A07095",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A07095",
+      "title": "Here begynneth the book of the subtyl historyes and fables of Esope whiche were translated out of Frensshe in to Englysshe by wylliam Caxton at westmynstre in the yere of oure Lorde M. CCCC. lxxxiij",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A07095",
+      "pid": "https://hdl.handle.net/20.500.14106/A07095",
+      "creator": [
+        "Aesop.",
+        "Caxton, William, ca. 1422-1491."
+      ],
+      "date": "1484"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A08375",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A08375",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A08375",
+    "_pid": "https://hdl.handle.net/20.500.14106/A08375",
+    "title": "Esops eables [sic] translated grammatically, and also in propriety of our English phrase; and, euery way, in such sort as may bee most profitable for the grammar-schoole",
+    "description": "Translator's dedication signed: I. Brinsley. Printer's name from STC. Reproduction of the original in the Henry E. Huntington Library and Art Gallery.",
+    "creator": [
+      "Aesop.",
+      "Brinsley, John, fl. 1581-1624."
+    ],
+    "date": "1617",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A08375",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A08375",
+      "title": "Esops eables [sic] translated grammatically, and also in propriety of our English phrase; and, euery way, in such sort as may bee most profitable for the grammar-schoole",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A08375",
+      "pid": "https://hdl.handle.net/20.500.14106/A08375",
+      "creator": [
+        "Aesop.",
+        "Brinsley, John, fl. 1581-1624."
+      ],
+      "date": "1617"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/A65606",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/A65606",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A65606",
+    "_pid": "https://hdl.handle.net/20.500.14106/A65606",
+    "title": "An answer to a late book written against the learned and reverend Dr. Bentley, relating to some manuscript notes on Callimachus together with an examination of Mr. Bennet's appendix to the said book.",
+    "description": "Attributed to Whately by Wing and BM. Errata: p. 209. Reproduction of original in the Cambridge University Library. Includes bibliographical references.",
+    "creator": "Whately, Solomon.",
+    "date": "1699",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/A65606",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/A65606",
+      "title": "An answer to a late book written against the learned and reverend Dr. Bentley, relating to some manuscript notes on Callimachus together with an examination of Mr. Bennet's appendix to the said book.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/A65606",
+      "pid": "https://hdl.handle.net/20.500.14106/A65606",
+      "creator": "Whately, Solomon.",
+      "date": "1699"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/B00463",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/B00463",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/B00463",
+    "_pid": "https://hdl.handle.net/20.500.14106/B00463",
+    "title": "The fabulous tales of Esope the Phrygian, compiled moste eloquently in Scottishe metre by Master Robert Henrison, & now lately Englished. ; Euery tale moralized most aptly to this present time, worthy to be read..",
+    "description": "English translation attributed to Richard Smith by STC (2nd ed.). \"Finished in the vale of Aylesburie the thirteenth of August. Anno Domini. 1574.\"--p. [115]. Printers' device on t.p. (McK. 186). Signatures: A-G⁸, H². ...",
+    "creator": [
+      "Aesop.",
+      "Henryson, Robert, 1430?-1506?",
+      "Smith, Richard, fl. 1587."
+    ],
+    "date": "1577",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/B00463",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/B00463",
+      "title": "The fabulous tales of Esope the Phrygian, compiled moste eloquently in Scottishe metre by Master Robert Henrison, & now lately Englished. ; Euery tale moralized most aptly to this present time, worthy to be read..",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/B00463",
+      "pid": "https://hdl.handle.net/20.500.14106/B00463",
+      "creator": [
+        "Aesop.",
+        "Henryson, Robert, 1430?-1506?",
+        "Smith, Richard, fl. 1587."
+      ],
+      "date": "1577"
+    }
+  },
+  {
+    "id": "llds:20.500.14106/B01490",
+    "_source": "llds",
+    "_sourceId": "20.500.14106/B01490",
+    "_sourceUrl": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/B01490",
+    "_pid": "https://hdl.handle.net/20.500.14106/B01490",
+    "title": "Æsopicks: or, A second collection of fables, paraphras'd in verse, adorn'd with sculpture, and illustrated with annotations. / By John Ogilby, esq; his Majesty's cosmographer, geographick printer, and master of revels in the kingdom of Ireland.",
+    "description": "Interleaved throughout with illustrated plates. \"Annotation on the second volume of Æsop's fables\" has separate pagination at end. Reproduction of original in: University of Chicago Library.",
+    "creator": [
+      "Aesop.",
+      "Ogilby, John, 1600-1676."
+    ],
+    "date": "1675",
+    "type": "Text",
+    "llds": {
+      "handle": "20.500.14106/B01490",
+      "branding": "EEBO-TCP",
+      "itemType": "Text"
+    },
+    "_citation": {
+      "service": "LLDS",
+      "serviceUrl": "https://llds.ling-phil.ox.ac.uk",
+      "publisher": "Linguistic Linked Data Service",
+      "accessDate": "2026-06-12T17:45:46.873Z",
+      "query": "aesop",
+      "recordId": "llds:20.500.14106/B01490",
+      "title": "Æsopicks: or, A second collection of fables, paraphras'd in verse, adorn'd with sculpture, and illustrated with annotations. / By John Ogilby, esq; his Majesty's cosmographer, geographick printer, and master of revels in the kingdom of Ireland.",
+      "url": "https://llds.ling-phil.ox.ac.uk/llds/xmlui/handle/20.500.14106/B01490",
+      "pid": "https://hdl.handle.net/20.500.14106/B01490",
+      "creator": [
+        "Aesop.",
+        "Ogilby, John, 1600-1676."
+      ],
+      "date": "1675"
+    }
+  }
+]
