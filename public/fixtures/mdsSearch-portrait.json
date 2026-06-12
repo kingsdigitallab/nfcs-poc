@@ -1,0 +1,3404 @@
+[
+  {
+    "id": "mds:e6cf05be-a1ba-3ebd-918a-2b6eabb56915",
+    "_source": "mds",
+    "_sourceId": "co51774",
+    "_sourceUrl": "https://museumdata.uk/objects/e6cf05be-a1ba-3ebd-918a-2b6eabb56915",
+    "title": "Portrait of Fairbairn",
+    "description": "Portrait of Fairbairn",
+    "subject": [
+      "portraits; portraits",
+      "portraits; portraits",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "e6cf05be-a1ba-3ebd-918a-2b6eabb56915",
+      "objectNumber": "co51774",
+      "personAssociation": [
+        "sitter"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of Fairbairn"
+        ],
+        "Object name(s)": [
+          "portraits; portraits"
+        ],
+        "Brief description": [
+          "Portrait of Fairbairn"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Associated person": [
+          "William Fairbairn"
+        ],
+        "Person's association": [
+          "sitter"
+        ],
+        "Credit line": [
+          "Bennet Woodcroft Bequest"
+        ],
+        "Object name": [
+          "portraits; portraits"
+        ],
+        "Other number": [
+          "1903-206",
+          "77"
+        ],
+        "Other number type": [
+          "accession number",
+          "nominal file"
+        ],
+        "Responsible department/section": [
+          "SCM - Motive Power"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:e6cf05be-a1ba-3ebd-918a-2b6eabb56915",
+      "title": "Portrait of Fairbairn",
+      "url": "https://museumdata.uk/objects/e6cf05be-a1ba-3ebd-918a-2b6eabb56915"
+    }
+  },
+  {
+    "id": "mds:ed6a27f9-768b-3ce9-a7f4-89828133a98f",
+    "_source": "mds",
+    "_sourceId": "co204472",
+    "_sourceUrl": "https://museumdata.uk/objects/ed6a27f9-768b-3ce9-a7f4-89828133a98f",
+    "title": "Portrait of Alec Guinness",
+    "description": "Portrait of Alec Guinness",
+    "subject": [
+      "portrait; portrait",
+      "portrait; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "ed6a27f9-768b-3ce9-a7f4-89828133a98f",
+      "objectNumber": "co204472",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of Alec Guinness"
+        ],
+        "Object name(s)": [
+          "portrait; portrait"
+        ],
+        "Brief description": [
+          "Portrait of Alec Guinness"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "National Portrait Gallery"
+        ],
+        "Object name": [
+          "portrait; portrait"
+        ],
+        "Other number": [
+          "1985-5076/2"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:ed6a27f9-768b-3ce9-a7f4-89828133a98f",
+      "title": "Portrait of Alec Guinness",
+      "url": "https://museumdata.uk/objects/ed6a27f9-768b-3ce9-a7f4-89828133a98f"
+    }
+  },
+  {
+    "id": "mds:7fb9b5bc-da9d-3c98-95da-62542046b52f",
+    "_source": "mds",
+    "_sourceId": "co67025",
+    "_sourceUrl": "https://museumdata.uk/objects/7fb9b5bc-da9d-3c98-95da-62542046b52f",
+    "title": "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc. Richard Roberts. Pencil",
+    "description": "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc. Richard Roberts. Pencil, by J. Stephenson, 1848",
+    "date": "1848",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "7fb9b5bc-da9d-3c98-95da-62542046b52f",
+      "objectNumber": "co67025",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc. Richard Roberts. Pencil"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc. Richard Roberts. Pencil, by J. Stephenson, 1848"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1848"
+        ],
+        "Date - latest": [
+          "1848"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1983-1121",
+          "1009/80/252"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:7fb9b5bc-da9d-3c98-95da-62542046b52f",
+      "title": "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc. Richard Roberts. Pencil",
+      "url": "https://museumdata.uk/objects/7fb9b5bc-da9d-3c98-95da-62542046b52f",
+      "date": "1848"
+    }
+  },
+  {
+    "id": "mds:adb60017-4970-3b9e-88c2-e73cbcb08b89",
+    "_source": "mds",
+    "_sourceId": "HMCMS:SH2002.456",
+    "_sourceUrl": "https://museumdata.uk/objects/adb60017-4970-3b9e-88c2-e73cbcb08b89",
+    "title": "MDS Record 4",
+    "description": "portrait attachment, Kodak no 5 portrait attachment, in tin",
+    "subject": [
+      "portrait attachment; Kodak no 5 portrait attachment; portrait attachment; Kodak no 5 portrait attachment",
+      "portrait attachment; Kodak no 5 portrait attachment; portrait attachment; Kodak no 5 portrait attachment"
+    ],
+    "type": "Museum object",
+    "collection": "Hampshire Cultural Trust",
+    "mds": {
+      "uuid": "adb60017-4970-3b9e-88c2-e73cbcb08b89",
+      "objectNumber": "HMCMS:SH2002.456",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "portrait attachment; Kodak no 5 portrait attachment; portrait attachment; Kodak no 5 portrait attachment"
+        ],
+        "Brief description": [
+          "portrait attachment, Kodak no 5 portrait attachment, in tin"
+        ],
+        "Collection": [
+          "Hampshire Cultural Trust"
+        ],
+        "Credit line": [
+          "Part of the Hampshire County Collections managed by Hampshire Cultural Trust"
+        ],
+        "Object name": [
+          "portrait attachment; Kodak no 5 portrait attachment; portrait attachment; Kodak no 5 portrait attachment"
+        ],
+        "Object number": [
+          "HMCMS:SH2002.456"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:adb60017-4970-3b9e-88c2-e73cbcb08b89",
+      "title": "MDS Record 4",
+      "url": "https://museumdata.uk/objects/adb60017-4970-3b9e-88c2-e73cbcb08b89"
+    }
+  },
+  {
+    "id": "mds:2116bea1-d45b-3a36-b82e-5b048a4d8c8e",
+    "_source": "mds",
+    "_sourceId": "co8782782",
+    "_sourceUrl": "https://museumdata.uk/objects/2116bea1-d45b-3a36-b82e-5b048a4d8c8e",
+    "title": "Portrait miniature of Thomas Tompion",
+    "description": "Portrait miniature of Thomas Tompion",
+    "subject": [
+      "portrait; portrait",
+      "portrait; portrait",
+      "portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "2116bea1-d45b-3a36-b82e-5b048a4d8c8e",
+      "objectNumber": "co8782782",
+      "place": [
+        "Unknown place"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait miniature of Thomas Tompion"
+        ],
+        "Object name(s)": [
+          "portrait; portrait"
+        ],
+        "Brief description": [
+          "Portrait miniature of Thomas Tompion"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portrait"
+        ],
+        "Object name": [
+          "portrait; portrait"
+        ],
+        "Object production place": [
+          "Unknown place"
+        ],
+        "Other number": [
+          "L2017-2126",
+          "1374"
+        ],
+        "Other number type": [
+          "accession number",
+          "Clockmakers' Museum number"
+        ],
+        "Responsible department/section": [
+          "SCM - Clockmakers"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:2116bea1-d45b-3a36-b82e-5b048a4d8c8e",
+      "title": "Portrait miniature of Thomas Tompion",
+      "url": "https://museumdata.uk/objects/2116bea1-d45b-3a36-b82e-5b048a4d8c8e"
+    }
+  },
+  {
+    "id": "mds:61288eb9-ad3b-3d85-a8e4-6bd3d853b691",
+    "_source": "mds",
+    "_sourceId": "co16986",
+    "_sourceUrl": "https://museumdata.uk/objects/61288eb9-ad3b-3d85-a8e4-6bd3d853b691",
+    "title": "Daguerreotype portrait (one-sixth plate) by Fehreubach",
+    "description": "Daguerreotype portrait (one-sixth plate) by Fehreubach.",
+    "creator": "Fehreubach (photographer)",
+    "subject": [
+      "portraits; portraits",
+      "portraits; portraits",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "61288eb9-ad3b-3d85-a8e4-6bd3d853b691",
+      "objectNumber": "co16986",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Daguerreotype portrait (one-sixth plate) by Fehreubach"
+        ],
+        "Object name(s)": [
+          "portraits; portraits"
+        ],
+        "Brief description": [
+          "Daguerreotype portrait (one-sixth plate) by Fehreubach."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Object name": [
+          "portraits; portraits"
+        ],
+        "Object production person": [
+          "Fehreubach (photographer)"
+        ],
+        "Other number": [
+          "1969-219",
+          "947/149/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Photography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:61288eb9-ad3b-3d85-a8e4-6bd3d853b691",
+      "title": "Daguerreotype portrait (one-sixth plate) by Fehreubach",
+      "url": "https://museumdata.uk/objects/61288eb9-ad3b-3d85-a8e4-6bd3d853b691",
+      "creator": "Fehreubach (photographer)"
+    }
+  },
+  {
+    "id": "mds:9383c4c9-0290-3b2d-a7ab-8f5c0606aac6",
+    "_source": "mds",
+    "_sourceId": "co67127",
+    "_sourceUrl": "https://museumdata.uk/objects/9383c4c9-0290-3b2d-a7ab-8f5c0606aac6",
+    "title": "Ink portrait, The Heavenly Body",
+    "description": "Ink portrait. The Heavenly Body. Portrait of Charles Pritchard FRS. 187-?",
+    "subject": [
+      "drawing; portrait; drawing; portrait",
+      "drawing; portrait; drawing; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "9383c4c9-0290-3b2d-a7ab-8f5c0606aac6",
+      "objectNumber": "co67127",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Ink portrait, The Heavenly Body"
+        ],
+        "Object name(s)": [
+          "drawing; portrait; drawing; portrait"
+        ],
+        "Brief description": [
+          "Ink portrait. The Heavenly Body. Portrait of Charles Pritchard FRS. 187-?"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "drawing; portrait; drawing; portrait"
+        ],
+        "Other number": [
+          "1984-82",
+          "1009/801294"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:9383c4c9-0290-3b2d-a7ab-8f5c0606aac6",
+      "title": "Ink portrait, The Heavenly Body",
+      "url": "https://museumdata.uk/objects/9383c4c9-0290-3b2d-a7ab-8f5c0606aac6"
+    }
+  },
+  {
+    "id": "mds:96adeaa2-2878-3233-860f-ad382ba1417e",
+    "_source": "mds",
+    "_sourceId": "co8016286",
+    "_sourceUrl": "https://museumdata.uk/objects/96adeaa2-2878-3233-860f-ad382ba1417e",
+    "title": "Photogravure portrait",
+    "description": "Portrait, photogravure, Rose / Photographische Gesellschaft Berlin",
+    "creator": "Photographische Gesellschaft Berlin",
+    "date": "1910",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait",
+      "print",
+      "portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "96adeaa2-2878-3233-860f-ad382ba1417e",
+      "objectNumber": "co8016286",
+      "material": [
+        "photogravure",
+        "paper"
+      ],
+      "place": [
+        "Berlin, Berlin state, Germany"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Photogravure portrait"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait, photogravure, Rose / Photographische Gesellschaft Berlin"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "print",
+          "portrait"
+        ],
+        "Material": [
+          "photogravure",
+          "paper"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1910"
+        ],
+        "Date - latest": [
+          "1919"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Photographische Gesellschaft Berlin"
+        ],
+        "Object production place": [
+          "Berlin, Berlin state, Germany"
+        ],
+        "Other number": [
+          "1982-1459/63"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:96adeaa2-2878-3233-860f-ad382ba1417e",
+      "title": "Photogravure portrait",
+      "url": "https://museumdata.uk/objects/96adeaa2-2878-3233-860f-ad382ba1417e",
+      "creator": "Photographische Gesellschaft Berlin",
+      "date": "1910"
+    }
+  },
+  {
+    "id": "mds:0a430869-3a58-3110-ab36-54f9804f3f35",
+    "_source": "mds",
+    "_sourceId": "co16848",
+    "_sourceUrl": "https://museumdata.uk/objects/0a430869-3a58-3110-ab36-54f9804f3f35",
+    "title": "Enamelled photographic portrait of Henry Peach Robinson.",
+    "description": "Enamelled photographic portrait of Henry Peach Robinson.",
+    "subject": [
+      "portrait; portrait",
+      "portrait; portrait",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "0a430869-3a58-3110-ab36-54f9804f3f35",
+      "objectNumber": "co16848",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Enamelled photographic portrait of Henry Peach Robinson."
+        ],
+        "Object name(s)": [
+          "portrait; portrait"
+        ],
+        "Brief description": [
+          "Enamelled photographic portrait of Henry Peach Robinson."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Credit line": [
+          "Tomkins, V."
+        ],
+        "Object name": [
+          "portrait; portrait"
+        ],
+        "Other number": [
+          "1972-412",
+          "5173/1/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:0a430869-3a58-3110-ab36-54f9804f3f35",
+      "title": "Enamelled photographic portrait of Henry Peach Robinson.",
+      "url": "https://museumdata.uk/objects/0a430869-3a58-3110-ab36-54f9804f3f35"
+    }
+  },
+  {
+    "id": "mds:2024af9f-d6a2-316e-aec7-e4b5636ea342",
+    "_source": "mds",
+    "_sourceId": "co66973",
+    "_sourceUrl": "https://museumdata.uk/objects/2024af9f-d6a2-316e-aec7-e4b5636ea342",
+    "title": "Portrait of Colin MacLaurin",
+    "description": "Portrait. Colin MacLaurin (1698-1746). mathematician. Engraving",
+    "date": "1740",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait",
+      "print",
+      "portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "2024af9f-d6a2-316e-aec7-e4b5636ea342",
+      "objectNumber": "co66973",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of Colin MacLaurin"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait. Colin MacLaurin (1698-1746). mathematician. Engraving"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "print",
+          "portrait"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1740"
+        ],
+        "Date - latest": [
+          "1749"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1983-655",
+          "1009/80/237"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:2024af9f-d6a2-316e-aec7-e4b5636ea342",
+      "title": "Portrait of Colin MacLaurin",
+      "url": "https://museumdata.uk/objects/2024af9f-d6a2-316e-aec7-e4b5636ea342",
+      "date": "1740"
+    }
+  },
+  {
+    "id": "mds:28ac4f8e-03ea-38bc-a3e5-5fae4490d832",
+    "_source": "mds",
+    "_sourceId": "co64847",
+    "_sourceUrl": "https://museumdata.uk/objects/28ac4f8e-03ea-38bc-a3e5-5fae4490d832",
+    "title": "Portrait. R.A.C. Esnault -Pelterie",
+    "description": "Portrait. Photograph, R.A.C. Esnault -Pelterie by Henri Manuel",
+    "date": "1910",
+    "subject": [
+      "photograph; portraits; photograph; portraits",
+      "photograph; portraits; photograph; portraits",
+      "portraits",
+      "photograph"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "28ac4f8e-03ea-38bc-a3e5-5fae4490d832",
+      "objectNumber": "co64847",
+      "personAssociation": [
+        "sitter"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait. R.A.C. Esnault -Pelterie"
+        ],
+        "Object name(s)": [
+          "photograph; portraits; photograph; portraits"
+        ],
+        "Brief description": [
+          "Portrait. Photograph, R.A.C. Esnault -Pelterie by Henri Manuel"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits",
+          "photograph"
+        ],
+        "Associated person": [
+          "Robert Albert Charles Esnault-Pelterie"
+        ],
+        "Person's association": [
+          "sitter"
+        ],
+        "Object name": [
+          "photograph; portraits; photograph; portraits"
+        ],
+        "Date - earliest / single": [
+          "1910"
+        ],
+        "Date - latest": [
+          "1930"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1986-558",
+          "85/1168"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:28ac4f8e-03ea-38bc-a3e5-5fae4490d832",
+      "title": "Portrait. R.A.C. Esnault -Pelterie",
+      "url": "https://museumdata.uk/objects/28ac4f8e-03ea-38bc-a3e5-5fae4490d832",
+      "date": "1910"
+    }
+  },
+  {
+    "id": "mds:736cf50a-4c01-3c83-a27c-e34f973e3ef2",
+    "_source": "mds",
+    "_sourceId": "co8002086",
+    "_sourceUrl": "https://museumdata.uk/objects/736cf50a-4c01-3c83-a27c-e34f973e3ef2",
+    "title": "Chromolithograph portrait of Herbert Spencer",
+    "description": "Chromolithograph. Vanity Fair Portrait of: Herbert Spencer with descriptive sheet, 1879.",
+    "date": "1879",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait",
+      "caricature",
+      "print",
+      "portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "736cf50a-4c01-3c83-a27c-e34f973e3ef2",
+      "objectNumber": "co8002086",
+      "dimensions": [
+        "height",
+        "width",
+        "15 3/4",
+        "400",
+        "10 5/8",
+        "270"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Chromolithograph portrait of Herbert Spencer"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Chromolithograph. Vanity Fair Portrait of: Herbert Spencer with descriptive sheet, 1879."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "caricature",
+          "print",
+          "portrait"
+        ],
+        "Credit line": [
+          "Purchased"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "15 3/4",
+          "400",
+          "10 5/8",
+          "270"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1879"
+        ],
+        "Date - latest": [
+          "1879"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1984-737/6"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:736cf50a-4c01-3c83-a27c-e34f973e3ef2",
+      "title": "Chromolithograph portrait of Herbert Spencer",
+      "url": "https://museumdata.uk/objects/736cf50a-4c01-3c83-a27c-e34f973e3ef2",
+      "date": "1879"
+    }
+  },
+  {
+    "id": "mds:b37eca1b-efda-301c-83da-cd1e22775d62",
+    "_source": "mds",
+    "_sourceId": "co204773",
+    "_sourceUrl": "https://museumdata.uk/objects/b37eca1b-efda-301c-83da-cd1e22775d62",
+    "title": "Portrait of Percy Willmer Pocock in gown",
+    "description": "Portrait of Percy Willmer Pocock in gown, by Gordon Chase",
+    "subject": [
+      "portraits; portraits",
+      "portraits; portraits",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "b37eca1b-efda-301c-83da-cd1e22775d62",
+      "objectNumber": "co204773",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of Percy Willmer Pocock in gown"
+        ],
+        "Object name(s)": [
+          "portraits; portraits"
+        ],
+        "Brief description": [
+          "Portrait of Percy Willmer Pocock in gown, by Gordon Chase"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Credit line": [
+          "National Media Museum, Bradford"
+        ],
+        "Object name": [
+          "portraits; portraits"
+        ],
+        "Other number": [
+          "1987-5075/11"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:b37eca1b-efda-301c-83da-cd1e22775d62",
+      "title": "Portrait of Percy Willmer Pocock in gown",
+      "url": "https://museumdata.uk/objects/b37eca1b-efda-301c-83da-cd1e22775d62"
+    }
+  },
+  {
+    "id": "mds:25645669-35ec-3c59-9de2-dd956c467912",
+    "_source": "mds",
+    "_sourceId": "MWL-BBCDFAD7-912F-447B-95F7-9061C556524B",
+    "_sourceUrl": "https://museumdata.uk/objects/25645669-35ec-3c59-9de2-dd956c467912",
+    "title": "portrait, miniature",
+    "description": "miniature portrait, pair with F72.68.118, portrait of a lady in oval frame",
+    "subject": [
+      "portrait, miniature; MINIATURES",
+      "portrait, miniature; MINIATURES"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "25645669-35ec-3c59-9de2-dd956c467912",
+      "objectNumber": "MWL-BBCDFAD7-912F-447B-95F7-9061C556524B",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "portrait, miniature"
+        ],
+        "Object name(s)": [
+          "portrait, miniature; MINIATURES"
+        ],
+        "Brief description": [
+          "miniature portrait, pair with F72.68.118, portrait of a lady in oval frame"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1972"
+        ],
+        "Acquisition method": [
+          "Bequest"
+        ],
+        "Object name": [
+          "portrait, miniature; MINIATURES"
+        ],
+        "Other number": [
+          "F72.68.117",
+          "Micromusée V6 SN:48606"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "Ownership place": [
+          "Porthcawl"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:25645669-35ec-3c59-9de2-dd956c467912",
+      "title": "portrait, miniature",
+      "url": "https://museumdata.uk/objects/25645669-35ec-3c59-9de2-dd956c467912"
+    }
+  },
+  {
+    "id": "mds:04fdbb6e-c3db-3c58-8b61-ccbf15c40088",
+    "_source": "mds",
+    "_sourceId": "MWL-8FC2D04A-1A18-4422-8F1A-DBEB03581C04",
+    "_sourceUrl": "https://museumdata.uk/objects/04fdbb6e-c3db-3c58-8b61-ccbf15c40088",
+    "title": "portrait, miniature",
+    "description": "miniature portrait, pair with F72.68.117, portrait of a gentleman in circular frame",
+    "subject": [
+      "portrait, miniature; MINIATURES",
+      "portrait, miniature; MINIATURES"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "04fdbb6e-c3db-3c58-8b61-ccbf15c40088",
+      "objectNumber": "MWL-8FC2D04A-1A18-4422-8F1A-DBEB03581C04",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "portrait, miniature"
+        ],
+        "Object name(s)": [
+          "portrait, miniature; MINIATURES"
+        ],
+        "Brief description": [
+          "miniature portrait, pair with F72.68.117, portrait of a gentleman in circular frame"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1972"
+        ],
+        "Acquisition method": [
+          "Bequest"
+        ],
+        "Object name": [
+          "portrait, miniature; MINIATURES"
+        ],
+        "Other number": [
+          "F72.68.118",
+          "Micromusée V6 SN:48607"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "Ownership place": [
+          "Porthcawl"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:04fdbb6e-c3db-3c58-8b61-ccbf15c40088",
+      "title": "portrait, miniature",
+      "url": "https://museumdata.uk/objects/04fdbb6e-c3db-3c58-8b61-ccbf15c40088"
+    }
+  },
+  {
+    "id": "mds:66320d3e-f00a-343f-b083-2da44c06883f",
+    "_source": "mds",
+    "_sourceId": "co8023242",
+    "_sourceUrl": "https://museumdata.uk/objects/66320d3e-f00a-343f-b083-2da44c06883f",
+    "title": "Two seated portrait photographs George Biddell Airy by Maull & Polyblank",
+    "description": "Two seated portrait photographs George Biddell Airy by Maull & Polyblank.",
+    "subject": [
+      "photograph; portrait; photograph; portrait",
+      "photograph; portrait; photograph; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "66320d3e-f00a-343f-b083-2da44c06883f",
+      "objectNumber": "co8023242",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Two seated portrait photographs George Biddell Airy by Maull & Polyblank"
+        ],
+        "Object name(s)": [
+          "photograph; portrait; photograph; portrait"
+        ],
+        "Brief description": [
+          "Two seated portrait photographs George Biddell Airy by Maull & Polyblank.",
+          "Two seated portrait photographs George Biddell Airy by Maull &\nPolyblank."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "National Portrait Gallery"
+        ],
+        "Object name": [
+          "photograph; portrait; photograph; portrait"
+        ],
+        "Other number": [
+          "1977-541/7"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:66320d3e-f00a-343f-b083-2da44c06883f",
+      "title": "Two seated portrait photographs George Biddell Airy by Maull & Polyblank",
+      "url": "https://museumdata.uk/objects/66320d3e-f00a-343f-b083-2da44c06883f"
+    }
+  },
+  {
+    "id": "mds:6b77d884-61f3-37a1-876f-5360a6e3b078",
+    "_source": "mds",
+    "_sourceId": "co65678",
+    "_sourceUrl": "https://museumdata.uk/objects/6b77d884-61f3-37a1-876f-5360a6e3b078",
+    "title": "Portrait - Sir William Herschel",
+    "description": "Portrait - Sir William Herschel, K.H., 1738-1822. (Photograph of the portrait in the National Portrait Gallery). In glazed frame 8 1/4\"x9 3/4\" outside. (see note in tech.file)",
+    "date": "1933",
+    "subject": [
+      "photograph; portrait; photograph; portrait",
+      "photograph; portrait; photograph; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "6b77d884-61f3-37a1-876f-5360a6e3b078",
+      "objectNumber": "co65678",
+      "personAssociation": [
+        "sitter"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait - Sir William Herschel"
+        ],
+        "Object name(s)": [
+          "photograph; portrait; photograph; portrait"
+        ],
+        "Brief description": [
+          "Portrait - Sir William Herschel, K.H., 1738-1822. (Photograph of the portrait in the National Portrait Gallery). In glazed frame 8 1/4\"x9 3/4\" outside. (see note in tech.file)"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated person": [
+          "William Herschel"
+        ],
+        "Person's association": [
+          "sitter"
+        ],
+        "Credit line": [
+          "Miss M.F. Hardcastle"
+        ],
+        "Object name": [
+          "photograph; portrait; photograph; portrait"
+        ],
+        "Date - earliest / single": [
+          "1933"
+        ],
+        "Date - latest": [
+          "1933"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1933-150",
+          "4662/1/1",
+          "1905"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:6b77d884-61f3-37a1-876f-5360a6e3b078",
+      "title": "Portrait - Sir William Herschel",
+      "url": "https://museumdata.uk/objects/6b77d884-61f3-37a1-876f-5360a6e3b078",
+      "date": "1933"
+    }
+  },
+  {
+    "id": "mds:7934dfdd-fcdd-3e96-83de-26412a1cfdc7",
+    "_source": "mds",
+    "_sourceId": "co67078",
+    "_sourceUrl": "https://museumdata.uk/objects/7934dfdd-fcdd-3e96-83de-26412a1cfdc7",
+    "title": "Portrait Photograph of Alexander Parkes",
+    "description": "Portrait Photograph of Alexander Parkes (c.1860s - 1870s) with copy photograph of Parkes' wife and family taken at Pembrial, Pembrokeshire",
+    "subject": [
+      "portraits; portraits",
+      "portraits; portraits",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "7934dfdd-fcdd-3e96-83de-26412a1cfdc7",
+      "objectNumber": "co67078",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait Photograph of Alexander Parkes"
+        ],
+        "Object name(s)": [
+          "portraits; portraits"
+        ],
+        "Brief description": [
+          "Portrait Photograph of Alexander Parkes (c.1860s - 1870s) with copy photograph of Parkes' wife and family taken at Pembrial, Pembrokeshire"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Object name": [
+          "portraits; portraits"
+        ],
+        "Other number": [
+          "1983-1473",
+          "1009/80/271"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:7934dfdd-fcdd-3e96-83de-26412a1cfdc7",
+      "title": "Portrait Photograph of Alexander Parkes",
+      "url": "https://museumdata.uk/objects/7934dfdd-fcdd-3e96-83de-26412a1cfdc7"
+    }
+  },
+  {
+    "id": "mds:7984db6e-da38-3dad-818e-79c2d9a96b6e",
+    "_source": "mds",
+    "_sourceId": "co8384349",
+    "_sourceUrl": "https://museumdata.uk/objects/7984db6e-da38-3dad-818e-79c2d9a96b6e",
+    "title": "Self Portrait Jabez Hogg",
+    "description": "Self portrait of Jabez Hogg.",
+    "creator": "Hogg, Jabez",
+    "date": "1840",
+    "subject": [
+      "self-portrait; self-portrait",
+      "self-portrait; self-portrait",
+      "self-portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "7984db6e-da38-3dad-818e-79c2d9a96b6e",
+      "objectNumber": "co8384349",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Self Portrait Jabez Hogg"
+        ],
+        "Object name(s)": [
+          "self-portrait; self-portrait"
+        ],
+        "Brief description": [
+          "Self portrait of Jabez Hogg."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "self-portraits"
+        ],
+        "Credit line": [
+          "The Ricketts Collection at the National Media Museum, Bradford"
+        ],
+        "Object name": [
+          "self-portrait; self-portrait"
+        ],
+        "Date - earliest / single": [
+          "1840"
+        ],
+        "Date - latest": [
+          "1850"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Hogg, Jabez"
+        ],
+        "Other number": [
+          "1990-5037/A8",
+          "RIC",
+          "A8"
+        ],
+        "Other number type": [
+          "accession number",
+          "Adlib Reference number",
+          "Ricketts Collection number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:7984db6e-da38-3dad-818e-79c2d9a96b6e",
+      "title": "Self Portrait Jabez Hogg",
+      "url": "https://museumdata.uk/objects/7984db6e-da38-3dad-818e-79c2d9a96b6e",
+      "creator": "Hogg, Jabez",
+      "date": "1840"
+    }
+  },
+  {
+    "id": "mds:316dd40d-0ad8-3c37-9174-fa4b00c2a498",
+    "_source": "mds",
+    "_sourceId": "co8782781",
+    "_sourceUrl": "https://museumdata.uk/objects/316dd40d-0ad8-3c37-9174-fa4b00c2a498",
+    "title": "Portrait of Lady Carter",
+    "description": "Portrait of Lady Carter",
+    "subject": [
+      "portrait; portrait",
+      "portrait; portrait",
+      "portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "316dd40d-0ad8-3c37-9174-fa4b00c2a498",
+      "objectNumber": "co8782781",
+      "place": [
+        "Unknown place"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of Lady Carter"
+        ],
+        "Object name(s)": [
+          "portrait; portrait"
+        ],
+        "Brief description": [
+          "Portrait of Lady Carter"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portrait"
+        ],
+        "Object name": [
+          "portrait; portrait"
+        ],
+        "Object production place": [
+          "Unknown place"
+        ],
+        "Other number": [
+          "L2017-2125",
+          "1373"
+        ],
+        "Other number type": [
+          "accession number",
+          "Clockmakers' Museum number"
+        ],
+        "Responsible department/section": [
+          "SCM - Clockmakers"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:316dd40d-0ad8-3c37-9174-fa4b00c2a498",
+      "title": "Portrait of Lady Carter",
+      "url": "https://museumdata.uk/objects/316dd40d-0ad8-3c37-9174-fa4b00c2a498"
+    }
+  },
+  {
+    "id": "mds:a1efde5f-2074-3bc4-8baf-9da54cfaa510",
+    "_source": "mds",
+    "_sourceId": "co419168",
+    "_sourceUrl": "https://museumdata.uk/objects/a1efde5f-2074-3bc4-8baf-9da54cfaa510",
+    "title": "Portrait of Robert Stephenson",
+    "description": "Portrait of Robert Stephenson",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "a1efde5f-2074-3bc4-8baf-9da54cfaa510",
+      "objectNumber": "co419168",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of Robert Stephenson"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait of Robert Stephenson"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Other number": [
+          "1977-7330",
+          "611/1/51",
+          "77/21/178"
+        ],
+        "Other number type": [
+          "accession number",
+          "Clapham number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Pictorial Collection (Railway)"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:a1efde5f-2074-3bc4-8baf-9da54cfaa510",
+      "title": "Portrait of Robert Stephenson",
+      "url": "https://museumdata.uk/objects/a1efde5f-2074-3bc4-8baf-9da54cfaa510"
+    }
+  },
+  {
+    "id": "mds:3d615ebc-91b9-3616-b227-5f7e7af3b1bd",
+    "_source": "mds",
+    "_sourceId": "co66978",
+    "_sourceUrl": "https://museumdata.uk/objects/3d615ebc-91b9-3616-b227-5f7e7af3b1bd",
+    "title": "Portrait. R.I. Murchison. Mezzotint",
+    "description": "Portrait. R.I. Murchison. Mezzotint",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "3d615ebc-91b9-3616-b227-5f7e7af3b1bd",
+      "objectNumber": "co66978",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait. R.I. Murchison. Mezzotint"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait. R.I. Murchison. Mezzotint"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Other number": [
+          "1983-660",
+          "1009/80/237"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:3d615ebc-91b9-3616-b227-5f7e7af3b1bd",
+      "title": "Portrait. R.I. Murchison. Mezzotint",
+      "url": "https://museumdata.uk/objects/3d615ebc-91b9-3616-b227-5f7e7af3b1bd"
+    }
+  },
+  {
+    "id": "mds:d13bdb4d-9bd2-349b-9033-741fdfd2df18",
+    "_source": "mds",
+    "_sourceId": "co67024",
+    "_sourceUrl": "https://museumdata.uk/objects/d13bdb4d-9bd2-349b-9033-741fdfd2df18",
+    "title": "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc. Wilson Lowry. Engraving by Linnell",
+    "description": "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc. Wilson Lowry. Engraving by Linnell, 1825",
+    "date": "1825",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "d13bdb4d-9bd2-349b-9033-741fdfd2df18",
+      "objectNumber": "co67024",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc. Wilson Lowry. Engraving by Linnell"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc. Wilson Lowry. Engraving by Linnell, 1825"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1825"
+        ],
+        "Date - latest": [
+          "1825"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1983-1120",
+          "1009/80/252"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:d13bdb4d-9bd2-349b-9033-741fdfd2df18",
+      "title": "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc. Wilson Lowry. Engraving by Linnell",
+      "url": "https://museumdata.uk/objects/d13bdb4d-9bd2-349b-9033-741fdfd2df18",
+      "date": "1825"
+    }
+  },
+  {
+    "id": "mds:797be4ed-440b-3da2-a516-5c91f0041a22",
+    "_source": "mds",
+    "_sourceId": "co205125",
+    "_sourceUrl": "https://museumdata.uk/objects/797be4ed-440b-3da2-a516-5c91f0041a22",
+    "title": "Two Dufaycolor family portraits",
+    "description": "Two Dufaycolor family portraits",
+    "subject": [
+      "group portraits; group portraits",
+      "group portraits; group portraits",
+      "group portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "797be4ed-440b-3da2-a516-5c91f0041a22",
+      "objectNumber": "co205125",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Two Dufaycolor family portraits"
+        ],
+        "Object name(s)": [
+          "group portraits; group portraits"
+        ],
+        "Brief description": [
+          "Two Dufaycolor family portraits"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "group portraits"
+        ],
+        "Credit line": [
+          "Normanton, R.V."
+        ],
+        "Object name": [
+          "group portraits; group portraits"
+        ],
+        "Other number": [
+          "1991-5049"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:797be4ed-440b-3da2-a516-5c91f0041a22",
+      "title": "Two Dufaycolor family portraits",
+      "url": "https://museumdata.uk/objects/797be4ed-440b-3da2-a516-5c91f0041a22"
+    }
+  },
+  {
+    "id": "mds:3f2c3c9e-d17b-3b9f-ad30-b5577eeda10b",
+    "_source": "mds",
+    "_sourceId": "co204471",
+    "_sourceUrl": "https://museumdata.uk/objects/3f2c3c9e-d17b-3b9f-ad30-b5577eeda10b",
+    "title": "Portrait of Francis Bacon",
+    "description": "Portrait of Francis Bacon",
+    "subject": [
+      "portrait; portrait",
+      "portrait; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "3f2c3c9e-d17b-3b9f-ad30-b5577eeda10b",
+      "objectNumber": "co204471",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of Francis Bacon"
+        ],
+        "Object name(s)": [
+          "portrait; portrait"
+        ],
+        "Brief description": [
+          "Portrait of Francis Bacon"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "National Portrait Gallery"
+        ],
+        "Object name": [
+          "portrait; portrait"
+        ],
+        "Other number": [
+          "1985-5076/1"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:3f2c3c9e-d17b-3b9f-ad30-b5577eeda10b",
+      "title": "Portrait of Francis Bacon",
+      "url": "https://museumdata.uk/objects/3f2c3c9e-d17b-3b9f-ad30-b5577eeda10b"
+    }
+  },
+  {
+    "id": "mds:6bb09189-a726-3e05-8320-277f94603aa7",
+    "_source": "mds",
+    "_sourceId": "co65024",
+    "_sourceUrl": "https://museumdata.uk/objects/6bb09189-a726-3e05-8320-277f94603aa7",
+    "title": "Portrait of  Sir Samuel Morland, Bart",
+    "description": "Engraving. Portrait of  Sir Samuel Morland, Bart (1625-1695). Sculpsit [sculpted by] P. Lombart, pinxit [painted by] P. Lilly",
+    "date": "1658",
+    "subject": [
+      "print; portraits; print; portraits",
+      "print; portraits; print; portraits",
+      "print",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "6bb09189-a726-3e05-8320-277f94603aa7",
+      "objectNumber": "co65024",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of  Sir Samuel Morland, Bart"
+        ],
+        "Object name(s)": [
+          "print; portraits; print; portraits"
+        ],
+        "Brief description": [
+          "Engraving. Portrait of  Sir Samuel Morland, Bart (1625-1695). Sculpsit [sculpted by] P. Lombart, pinxit [painted by] P. Lilly"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "print",
+          "portraits"
+        ],
+        "Object name": [
+          "print; portraits; print; portraits"
+        ],
+        "Date - earliest / single": [
+          "1658"
+        ],
+        "Date - latest": [
+          "1658"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1987-194"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:6bb09189-a726-3e05-8320-277f94603aa7",
+      "title": "Portrait of  Sir Samuel Morland, Bart",
+      "url": "https://museumdata.uk/objects/6bb09189-a726-3e05-8320-277f94603aa7",
+      "date": "1658"
+    }
+  },
+  {
+    "id": "mds:5de3836d-2839-3d0e-85a4-10e6612b0930",
+    "_source": "mds",
+    "_sourceId": "co65666",
+    "_sourceUrl": "https://museumdata.uk/objects/5de3836d-2839-3d0e-85a4-10e6612b0930",
+    "title": "Cabinet portrait photograph of John Ramsbottom",
+    "description": "Cabinet portrait photograph of John Ramsbottom, taken about 1871",
+    "date": "1871",
+    "subject": [
+      "photograph; portrait; photograph; portrait",
+      "photograph; portrait; photograph; portrait",
+      "portrait",
+      "photograph"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "5de3836d-2839-3d0e-85a4-10e6612b0930",
+      "objectNumber": "co65666",
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Cabinet portrait photograph of John Ramsbottom"
+        ],
+        "Object name(s)": [
+          "photograph; portrait; photograph; portrait"
+        ],
+        "Brief description": [
+          "Cabinet portrait photograph of John Ramsbottom, taken about 1871"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portrait",
+          "photograph"
+        ],
+        "Associated person": [
+          "John Ramsbottom"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "Ramsbottom, J.H."
+        ],
+        "Object name": [
+          "photograph; portrait; photograph; portrait"
+        ],
+        "Date - earliest / single": [
+          "1871"
+        ],
+        "Date - latest": [
+          "1871"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1928-969",
+          "2978/1/1",
+          "190"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:5de3836d-2839-3d0e-85a4-10e6612b0930",
+      "title": "Cabinet portrait photograph of John Ramsbottom",
+      "url": "https://museumdata.uk/objects/5de3836d-2839-3d0e-85a4-10e6612b0930",
+      "date": "1871"
+    }
+  },
+  {
+    "id": "mds:1522e5c4-2e75-3912-965a-a8e7ad9e03c1",
+    "_source": "mds",
+    "_sourceId": "co64894",
+    "_sourceUrl": "https://museumdata.uk/objects/1522e5c4-2e75-3912-965a-a8e7ad9e03c1",
+    "title": "Six portraits of Colonel Rookes Evelyn Bell Crompton (1845-1940)",
+    "description": "Six portraits of Colonel Rookes Evelyn Bell Crompton (1845-1940).",
+    "subject": [
+      "portraits; portraits",
+      "portraits; portraits",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "1522e5c4-2e75-3912-965a-a8e7ad9e03c1",
+      "objectNumber": "co64894",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Six portraits of Colonel Rookes Evelyn Bell Crompton (1845-1940)"
+        ],
+        "Object name(s)": [
+          "portraits; portraits"
+        ],
+        "Brief description": [
+          "Six portraits of Colonel Rookes Evelyn Bell Crompton (1845-1940)."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Credit line": [
+          "Crompton Parkinson Limited"
+        ],
+        "Object name": [
+          "portraits; portraits"
+        ],
+        "Other number": [
+          "1986-509",
+          "86/253"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:1522e5c4-2e75-3912-965a-a8e7ad9e03c1",
+      "title": "Six portraits of Colonel Rookes Evelyn Bell Crompton (1845-1940)",
+      "url": "https://museumdata.uk/objects/1522e5c4-2e75-3912-965a-a8e7ad9e03c1"
+    }
+  },
+  {
+    "id": "mds:4fb898c8-9640-34ea-9ac7-69f42e14f1b4",
+    "_source": "mds",
+    "_sourceId": "co8085621",
+    "_sourceUrl": "https://museumdata.uk/objects/4fb898c8-9640-34ea-9ac7-69f42e14f1b4",
+    "title": "Portrait of Bereford",
+    "description": "Portrait of Bereford, mounted on brown card by unattritubed photographer, no date.",
+    "subject": [
+      "portraits; portraits",
+      "portraits; portraits",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "4fb898c8-9640-34ea-9ac7-69f42e14f1b4",
+      "objectNumber": "co8085621",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of Bereford"
+        ],
+        "Object name(s)": [
+          "portraits; portraits"
+        ],
+        "Brief description": [
+          "Portrait of Bereford, mounted on brown card by unattritubed photographer, no date."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Object name": [
+          "portraits; portraits"
+        ],
+        "Other number": [
+          "2006-5033/13"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:4fb898c8-9640-34ea-9ac7-69f42e14f1b4",
+      "title": "Portrait of Bereford",
+      "url": "https://museumdata.uk/objects/4fb898c8-9640-34ea-9ac7-69f42e14f1b4"
+    }
+  },
+  {
+    "id": "mds:617fd157-45f1-3175-9b5e-411fac0a068f",
+    "_source": "mds",
+    "_sourceId": "co8782780",
+    "_sourceUrl": "https://museumdata.uk/objects/617fd157-45f1-3175-9b5e-411fac0a068f",
+    "title": "Portrait of Lord Mayor Carter",
+    "description": "Portrait of Lord Mayor Carter",
+    "subject": [
+      "portrait; portrait",
+      "portrait; portrait",
+      "portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "617fd157-45f1-3175-9b5e-411fac0a068f",
+      "objectNumber": "co8782780",
+      "place": [
+        "Unknown place"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of Lord Mayor Carter"
+        ],
+        "Object name(s)": [
+          "portrait; portrait"
+        ],
+        "Brief description": [
+          "Portrait of Lord Mayor Carter"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portrait"
+        ],
+        "Object name": [
+          "portrait; portrait"
+        ],
+        "Object production place": [
+          "Unknown place"
+        ],
+        "Other number": [
+          "L2017-2124",
+          "1372"
+        ],
+        "Other number type": [
+          "accession number",
+          "Clockmakers' Museum number"
+        ],
+        "Responsible department/section": [
+          "SCM - Clockmakers"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:617fd157-45f1-3175-9b5e-411fac0a068f",
+      "title": "Portrait of Lord Mayor Carter",
+      "url": "https://museumdata.uk/objects/617fd157-45f1-3175-9b5e-411fac0a068f"
+    }
+  },
+  {
+    "id": "mds:2f8e0d49-8cd4-38d1-b7df-242b628d7d06",
+    "_source": "mds",
+    "_sourceId": "MWL-7D8DC4DA-A25B-4634-B792-F7C10D20D6F0",
+    "_sourceUrl": "https://museumdata.uk/objects/2f8e0d49-8cd4-38d1-b7df-242b628d7d06",
+    "title": "portrait",
+    "description": "Portrait of Tegid.",
+    "subject": [
+      "portrait; PERSONS",
+      "portrait; PERSONS (by alphabet)"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "2f8e0d49-8cd4-38d1-b7df-242b628d7d06",
+      "objectNumber": "MWL-7D8DC4DA-A25B-4634-B792-F7C10D20D6F0",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "portrait"
+        ],
+        "Object name(s)": [
+          "portrait; PERSONS"
+        ],
+        "Brief description": [
+          "Portrait of Tegid."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition method": [
+          "Purchase"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "portrait; PERSONS (by alphabet)"
+        ],
+        "Other number": [
+          "65.84.2",
+          "Micromusée V6 SN:35466"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:2f8e0d49-8cd4-38d1-b7df-242b628d7d06",
+      "title": "portrait",
+      "url": "https://museumdata.uk/objects/2f8e0d49-8cd4-38d1-b7df-242b628d7d06"
+    }
+  },
+  {
+    "id": "mds:997d3753-8ca0-3552-94cf-3effc51dd7ee",
+    "_source": "mds",
+    "_sourceId": "co65267",
+    "_sourceUrl": "https://museumdata.uk/objects/997d3753-8ca0-3552-94cf-3effc51dd7ee",
+    "title": "11 prints: portraits",
+    "description": "11 prints: portraits, c.1840-1862 of HRH Queen Victoria and Albert, Prince Consort",
+    "subject": [
+      "portrait; portrait",
+      "portrait; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "997d3753-8ca0-3552-94cf-3effc51dd7ee",
+      "objectNumber": "co65267",
+      "personAssociation": [
+        "sitter"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "11 prints: portraits"
+        ],
+        "Object name(s)": [
+          "portrait; portrait"
+        ],
+        "Brief description": [
+          "11 prints: portraits, c.1840-1862 of HRH Queen Victoria and Albert, Prince Consort"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated person": [
+          "Albert"
+        ],
+        "Person's association": [
+          "sitter"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "portrait; portrait"
+        ],
+        "Other number": [
+          "1988-1483",
+          "88/605"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:997d3753-8ca0-3552-94cf-3effc51dd7ee",
+      "title": "11 prints: portraits",
+      "url": "https://museumdata.uk/objects/997d3753-8ca0-3552-94cf-3effc51dd7ee"
+    }
+  },
+  {
+    "id": "mds:79b330c6-2966-347a-aeaa-eafb31666111",
+    "_source": "mds",
+    "_sourceId": "co2453",
+    "_sourceUrl": "https://museumdata.uk/objects/79b330c6-2966-347a-aeaa-eafb31666111",
+    "title": "Portrait of Robert Boyle",
+    "description": "Portrait of Robert Boyle",
+    "subject": [
+      "portrait; portrait",
+      "portrait; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "79b330c6-2966-347a-aeaa-eafb31666111",
+      "objectNumber": "co2453",
+      "material": [
+        "paper",
+        "glass"
+      ],
+      "personAssociation": [
+        "association details"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of Robert Boyle"
+        ],
+        "Object name(s)": [
+          "portrait; portrait"
+        ],
+        "Brief description": [
+          "Portrait of Robert Boyle"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated person": [
+          "Robert Boyle"
+        ],
+        "Person's association": [
+          "association details"
+        ],
+        "Credit line": [
+          "King’s College London"
+        ],
+        "Material": [
+          "paper",
+          "glass"
+        ],
+        "Object name": [
+          "portrait; portrait"
+        ],
+        "Other number": [
+          "1927-2065/38",
+          "966/13/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - King George III"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:79b330c6-2966-347a-aeaa-eafb31666111",
+      "title": "Portrait of Robert Boyle",
+      "url": "https://museumdata.uk/objects/79b330c6-2966-347a-aeaa-eafb31666111"
+    }
+  },
+  {
+    "id": "mds:dfdcbe88-241a-34bf-8023-8148cc348d80",
+    "_source": "mds",
+    "_sourceId": "co66967",
+    "_sourceUrl": "https://museumdata.uk/objects/dfdcbe88-241a-34bf-8023-8148cc348d80",
+    "title": "Portrait. J. Hunter. Engraving 1788",
+    "description": "Portrait. J. Hunter. Engraving 1788",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "dfdcbe88-241a-34bf-8023-8148cc348d80",
+      "objectNumber": "co66967",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait. J. Hunter. Engraving 1788"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait. J. Hunter. Engraving 1788"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Other number": [
+          "1983-649",
+          "1009/80/237"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:dfdcbe88-241a-34bf-8023-8148cc348d80",
+      "title": "Portrait. J. Hunter. Engraving 1788",
+      "url": "https://museumdata.uk/objects/dfdcbe88-241a-34bf-8023-8148cc348d80"
+    }
+  },
+  {
+    "id": "mds:850b86f0-f87d-3ec8-b750-d106c96fb815",
+    "_source": "mds",
+    "_sourceId": "co66987",
+    "_sourceUrl": "https://museumdata.uk/objects/850b86f0-f87d-3ec8-b750-d106c96fb815",
+    "title": "Portrait. J. Sinclair. Engraving",
+    "description": "Portrait. J. Sinclair. Engraving",
+    "date": "1800",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "850b86f0-f87d-3ec8-b750-d106c96fb815",
+      "objectNumber": "co66987",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait. J. Sinclair. Engraving"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait. J. Sinclair. Engraving"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1800"
+        ],
+        "Date - latest": [
+          "1820"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1983-669",
+          "1009/80/237"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:850b86f0-f87d-3ec8-b750-d106c96fb815",
+      "title": "Portrait. J. Sinclair. Engraving",
+      "url": "https://museumdata.uk/objects/850b86f0-f87d-3ec8-b750-d106c96fb815",
+      "date": "1800"
+    }
+  },
+  {
+    "id": "mds:c60c29af-63d5-3ce7-8ca4-45c196fa9e80",
+    "_source": "mds",
+    "_sourceId": "co66986",
+    "_sourceUrl": "https://museumdata.uk/objects/c60c29af-63d5-3ce7-8ca4-45c196fa9e80",
+    "title": "Portrait. A. Senefelder. Lithograph",
+    "description": "Portrait. A. Senefelder. Lithograph",
+    "date": "1892",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "c60c29af-63d5-3ce7-8ca4-45c196fa9e80",
+      "objectNumber": "co66986",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait. A. Senefelder. Lithograph"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait. A. Senefelder. Lithograph"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1892"
+        ],
+        "Date - latest": [
+          "1892"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1983-668",
+          "1009/80/237"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:c60c29af-63d5-3ce7-8ca4-45c196fa9e80",
+      "title": "Portrait. A. Senefelder. Lithograph",
+      "url": "https://museumdata.uk/objects/c60c29af-63d5-3ce7-8ca4-45c196fa9e80",
+      "date": "1892"
+    }
+  },
+  {
+    "id": "mds:3afb9f3b-4e7c-32eb-8753-b0ce58b6e135",
+    "_source": "mds",
+    "_sourceId": "co66952",
+    "_sourceUrl": "https://museumdata.uk/objects/3afb9f3b-4e7c-32eb-8753-b0ce58b6e135",
+    "title": "Portrait. J. Bird. Engraving",
+    "description": "Portrait. J. Bird. Engraving",
+    "date": "1825",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "3afb9f3b-4e7c-32eb-8753-b0ce58b6e135",
+      "objectNumber": "co66952",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait. J. Bird. Engraving"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait. J. Bird. Engraving"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1825"
+        ],
+        "Date - latest": [
+          "1825"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1983-634",
+          "1009/80/237"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:3afb9f3b-4e7c-32eb-8753-b0ce58b6e135",
+      "title": "Portrait. J. Bird. Engraving",
+      "url": "https://museumdata.uk/objects/3afb9f3b-4e7c-32eb-8753-b0ce58b6e135",
+      "date": "1825"
+    }
+  },
+  {
+    "id": "mds:c525a781-2508-3596-a864-848b2436f019",
+    "_source": "mds",
+    "_sourceId": "co66964",
+    "_sourceUrl": "https://museumdata.uk/objects/c525a781-2508-3596-a864-848b2436f019",
+    "title": "Portrait. N. Grew. Engraving 1800",
+    "description": "Portrait. N. Grew. Engraving 1800",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "c525a781-2508-3596-a864-848b2436f019",
+      "objectNumber": "co66964",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait. N. Grew. Engraving 1800"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait. N. Grew. Engraving 1800"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Other number": [
+          "1983-646",
+          "1009/80/237"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:c525a781-2508-3596-a864-848b2436f019",
+      "title": "Portrait. N. Grew. Engraving 1800",
+      "url": "https://museumdata.uk/objects/c525a781-2508-3596-a864-848b2436f019"
+    }
+  },
+  {
+    "id": "mds:1f82d845-7d38-366d-8521-5ca1b0d0ffe8",
+    "_source": "mds",
+    "_sourceId": "co24314",
+    "_sourceUrl": "https://museumdata.uk/objects/1f82d845-7d38-366d-8521-5ca1b0d0ffe8",
+    "title": "Portrait photograph of Lord Nuffield",
+    "description": "Portrait photograph of Lord Nuffield, 1932",
+    "subject": [
+      "portraits; photographs; portraits; photographs",
+      "portraits; photographs; portraits; photographs"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "1f82d845-7d38-366d-8521-5ca1b0d0ffe8",
+      "objectNumber": "co24314",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait photograph of Lord Nuffield"
+        ],
+        "Object name(s)": [
+          "portraits; photographs; portraits; photographs"
+        ],
+        "Brief description": [
+          "Portrait photograph of Lord Nuffield, 1932"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Science Museum Photographer"
+        ],
+        "Object name": [
+          "portraits; photographs; portraits; photographs"
+        ],
+        "Other number": [
+          "1952-178",
+          "1210/492/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Road Transport"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:1f82d845-7d38-366d-8521-5ca1b0d0ffe8",
+      "title": "Portrait photograph of Lord Nuffield",
+      "url": "https://museumdata.uk/objects/1f82d845-7d38-366d-8521-5ca1b0d0ffe8"
+    }
+  },
+  {
+    "id": "mds:76288f3b-eccc-3f81-921e-fd2020672107",
+    "_source": "mds",
+    "_sourceId": "co66895",
+    "_sourceUrl": "https://museumdata.uk/objects/76288f3b-eccc-3f81-921e-fd2020672107",
+    "title": "Mezzotint portrait of man",
+    "description": "Mezzotint - portrait of man (unidentified) in industrial landscape 87x56cm.",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "76288f3b-eccc-3f81-921e-fd2020672107",
+      "objectNumber": "co66895",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Mezzotint portrait of man"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Mezzotint - portrait of man (unidentified) in industrial landscape 87x56cm."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Colin Lacy Gallery"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Other number": [
+          "1983-237",
+          "1009/80/237"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:76288f3b-eccc-3f81-921e-fd2020672107",
+      "title": "Mezzotint portrait of man",
+      "url": "https://museumdata.uk/objects/76288f3b-eccc-3f81-921e-fd2020672107"
+    }
+  },
+  {
+    "id": "mds:64d1ace2-8779-3c0c-a86b-4dc39404d738",
+    "_source": "mds",
+    "_sourceId": "co66951",
+    "_sourceUrl": "https://museumdata.uk/objects/64d1ace2-8779-3c0c-a86b-4dc39404d738",
+    "title": "Portrait. Peter Barlow. Mezzotint",
+    "description": "Portrait. Peter Barlow. Mezzotint",
+    "date": "1853",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "64d1ace2-8779-3c0c-a86b-4dc39404d738",
+      "objectNumber": "co66951",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait. Peter Barlow. Mezzotint"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait. Peter Barlow. Mezzotint"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1853"
+        ],
+        "Date - latest": [
+          "1853"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1983-633",
+          "1009/80/237"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:64d1ace2-8779-3c0c-a86b-4dc39404d738",
+      "title": "Portrait. Peter Barlow. Mezzotint",
+      "url": "https://museumdata.uk/objects/64d1ace2-8779-3c0c-a86b-4dc39404d738",
+      "date": "1853"
+    }
+  },
+  {
+    "id": "mds:6ecfbaf8-6f0a-3dd8-994b-0faebc175119",
+    "_source": "mds",
+    "_sourceId": "co66957",
+    "_sourceUrl": "https://museumdata.uk/objects/6ecfbaf8-6f0a-3dd8-994b-0faebc175119",
+    "title": "Portrait. C. Clavius. Engraving",
+    "description": "Portrait. C. Clavius. Engraving",
+    "date": "1606",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "6ecfbaf8-6f0a-3dd8-994b-0faebc175119",
+      "objectNumber": "co66957",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait. C. Clavius. Engraving"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait. C. Clavius. Engraving"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Grosvenor Prints"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1606"
+        ],
+        "Date - latest": [
+          "1606"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1983-639",
+          "1009/80/237"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:6ecfbaf8-6f0a-3dd8-994b-0faebc175119",
+      "title": "Portrait. C. Clavius. Engraving",
+      "url": "https://museumdata.uk/objects/6ecfbaf8-6f0a-3dd8-994b-0faebc175119",
+      "date": "1606"
+    }
+  },
+  {
+    "id": "mds:b3b49ac7-691e-3c0f-88cf-73b25ef5816d",
+    "_source": "mds",
+    "_sourceId": "co67022",
+    "_sourceUrl": "https://museumdata.uk/objects/b3b49ac7-691e-3c0f-88cf-73b25ef5816d",
+    "title": "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc John Guttemberg [Johannes Gutenberg] Etching",
+    "description": "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc John Guttemberg [Johannes Gutenberg] Etching, c. 1660",
+    "date": "1660",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "b3b49ac7-691e-3c0f-88cf-73b25ef5816d",
+      "objectNumber": "co67022",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc John Guttemberg [Johannes Gutenberg] Etching"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc John Guttemberg [Johannes Gutenberg] Etching, c. 1660"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1660"
+        ],
+        "Date - latest": [
+          "1660"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1983-1118",
+          "1009/80/252"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:b3b49ac7-691e-3c0f-88cf-73b25ef5816d",
+      "title": "Portrait, part of the Woodcroft Collection \"Gallery of Portraits\" etc John Guttemberg [Johannes Gutenberg] Etching",
+      "url": "https://museumdata.uk/objects/b3b49ac7-691e-3c0f-88cf-73b25ef5816d",
+      "date": "1660"
+    }
+  },
+  {
+    "id": "mds:8ca11b08-a55a-3f55-b31a-340282ef74e5",
+    "_source": "mds",
+    "_sourceId": "co8227976",
+    "_sourceUrl": "https://museumdata.uk/objects/8ca11b08-a55a-3f55-b31a-340282ef74e5",
+    "title": "Signed photo portrait, 'H.K. Anderson'",
+    "description": "Signed photo portrait, \"H.K. Anderson\", belonging to H.W. Florey.",
+    "subject": [
+      "portrait; portrait",
+      "portrait; portrait",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "8ca11b08-a55a-3f55-b31a-340282ef74e5",
+      "objectNumber": "co8227976",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Signed photo portrait, 'H.K. Anderson'"
+        ],
+        "Object name(s)": [
+          "portrait; portrait"
+        ],
+        "Brief description": [
+          "Signed photo portrait, \"H.K. Anderson\", belonging to H.W. Florey."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Credit line": [
+          "Florey, Margaret A."
+        ],
+        "Object name": [
+          "portrait; portrait"
+        ],
+        "Other number": [
+          "2014-206",
+          "E2006.83.41"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SCM - Microbiology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:8ca11b08-a55a-3f55-b31a-340282ef74e5",
+      "title": "Signed photo portrait, 'H.K. Anderson'",
+      "url": "https://museumdata.uk/objects/8ca11b08-a55a-3f55-b31a-340282ef74e5"
+    }
+  },
+  {
+    "id": "mds:35a124fb-b178-325c-9251-805be030f4db",
+    "_source": "mds",
+    "_sourceId": "co17359",
+    "_sourceUrl": "https://museumdata.uk/objects/35a124fb-b178-325c-9251-805be030f4db",
+    "title": "Portrait on opal glass",
+    "description": "Portrait on opal glass, c. 1880.",
+    "date": "1880",
+    "subject": [
+      "portraits; portraits",
+      "portraits; portraits",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "35a124fb-b178-325c-9251-805be030f4db",
+      "objectNumber": "co17359",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait on opal glass"
+        ],
+        "Object name(s)": [
+          "portraits; portraits"
+        ],
+        "Brief description": [
+          "Portrait on opal glass, c. 1880."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Credit line": [
+          "Manners-Smith, J.A."
+        ],
+        "Object name": [
+          "portraits; portraits"
+        ],
+        "Date - earliest / single": [
+          "1880"
+        ],
+        "Date - latest": [
+          "1880"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1957-35",
+          "9542/1/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:35a124fb-b178-325c-9251-805be030f4db",
+      "title": "Portrait on opal glass",
+      "url": "https://museumdata.uk/objects/35a124fb-b178-325c-9251-805be030f4db",
+      "date": "1880"
+    }
+  },
+  {
+    "id": "mds:864a9f50-2d81-3992-adbe-96314c9931de",
+    "_source": "mds",
+    "_sourceId": "co66710",
+    "_sourceUrl": "https://museumdata.uk/objects/864a9f50-2d81-3992-adbe-96314c9931de",
+    "title": "Seven portraits of scientists and engineers",
+    "description": "Seven portraits of scientists and engineers",
+    "subject": [
+      "portraits; portraits",
+      "portraits; portraits",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "864a9f50-2d81-3992-adbe-96314c9931de",
+      "objectNumber": "co66710",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Seven portraits of scientists and engineers"
+        ],
+        "Object name(s)": [
+          "portraits; portraits"
+        ],
+        "Brief description": [
+          "Seven portraits of scientists and engineers"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Object name": [
+          "portraits; portraits"
+        ],
+        "Other number": [
+          "1982-333",
+          "1009/80/158"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:864a9f50-2d81-3992-adbe-96314c9931de",
+      "title": "Seven portraits of scientists and engineers",
+      "url": "https://museumdata.uk/objects/864a9f50-2d81-3992-adbe-96314c9931de"
+    }
+  },
+  {
+    "id": "mds:eaaccdce-eac5-3617-9b2c-b70ded646fe5",
+    "_source": "mds",
+    "_sourceId": "co8066958",
+    "_sourceUrl": "https://museumdata.uk/objects/eaaccdce-eac5-3617-9b2c-b70ded646fe5",
+    "title": "Portrait of a young girl (confirmed as donor) by Brunton of Lancashire",
+    "description": "Portrait of a young girl (confirmed as donor) by Brunton of Lancashire, 1927.",
+    "subject": [
+      "portraits; portraits",
+      "portraits; portraits",
+      "portraits"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "eaaccdce-eac5-3617-9b2c-b70ded646fe5",
+      "objectNumber": "co8066958",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of a young girl (confirmed as donor) by Brunton of Lancashire"
+        ],
+        "Object name(s)": [
+          "portraits; portraits"
+        ],
+        "Brief description": [
+          "Portrait of a young girl (confirmed as donor) by Brunton of Lancashire, 1927."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "portraits"
+        ],
+        "Object name": [
+          "portraits; portraits"
+        ],
+        "Other number": [
+          "2000-5012"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:eaaccdce-eac5-3617-9b2c-b70ded646fe5",
+      "title": "Portrait of a young girl (confirmed as donor) by Brunton of Lancashire",
+      "url": "https://museumdata.uk/objects/eaaccdce-eac5-3617-9b2c-b70ded646fe5"
+    }
+  },
+  {
+    "id": "mds:43479140-bb22-3838-9657-94fee5784d2e",
+    "_source": "mds",
+    "_sourceId": "co204754",
+    "_sourceUrl": "https://museumdata.uk/objects/43479140-bb22-3838-9657-94fee5784d2e",
+    "title": "Photographic Portrait Album",
+    "description": "Photographic Portrait album in maroon velvet with 38 c.d.v. portraits, owned by Katie Grove. Portraits associated with Grove family, 1860-1890",
+    "date": "1860",
+    "subject": [
+      "photograph album; cabinet card; carte de visite; photograph album; cabinet card; carte de visite",
+      "photograph album; cabinet card; carte de visite; photograph album; cabinet card; carte de visite"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "43479140-bb22-3838-9657-94fee5784d2e",
+      "objectNumber": "co204754",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Photographic Portrait Album"
+        ],
+        "Object name(s)": [
+          "photograph album; cabinet card; carte de visite; photograph album; cabinet card; carte de visite"
+        ],
+        "Brief description": [
+          "Photographic Portrait album in maroon velvet with 38 c.d.v. portraits, owned by Katie Grove. Portraits associated with Grove family, 1860-1890"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "National Portrait Gallery"
+        ],
+        "Object name": [
+          "photograph album; cabinet card; carte de visite; photograph album; cabinet card; carte de visite"
+        ],
+        "Date - earliest / single": [
+          "1860"
+        ],
+        "Date - latest": [
+          "1890"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1987-5067"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Photographs"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:43479140-bb22-3838-9657-94fee5784d2e",
+      "title": "Photographic Portrait Album",
+      "url": "https://museumdata.uk/objects/43479140-bb22-3838-9657-94fee5784d2e",
+      "date": "1860"
+    }
+  },
+  {
+    "id": "mds:9ce3300c-c4e6-3732-8cda-49380a210d6c",
+    "_source": "mds",
+    "_sourceId": "co8002114",
+    "_sourceUrl": "https://museumdata.uk/objects/9ce3300c-c4e6-3732-8cda-49380a210d6c",
+    "title": "Portrait of  Sir Richard Douglas Powell",
+    "description": "Portrait. Chromolithograph. Sir Richard Douglas Powell. Vanity Fair with descriptive sheet, 28/4/1904",
+    "creator": "Ward, Sir Leslie",
+    "date": "1904",
+    "subject": [
+      "portrait; chromolithograph; portrait; chromolithograph",
+      "portrait; chromolithograph; portrait; chromolithograph",
+      "caricature",
+      "chromolithograph",
+      "portrait"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "9ce3300c-c4e6-3732-8cda-49380a210d6c",
+      "objectNumber": "co8002114",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Portrait of  Sir Richard Douglas Powell"
+        ],
+        "Object name(s)": [
+          "portrait; chromolithograph; portrait; chromolithograph"
+        ],
+        "Brief description": [
+          "Portrait. Chromolithograph. Sir Richard Douglas Powell. Vanity Fair with descriptive sheet, 28/4/1904"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "caricature",
+          "chromolithograph",
+          "portrait"
+        ],
+        "Credit line": [
+          "Purchased"
+        ],
+        "Object name": [
+          "portrait; chromolithograph; portrait; chromolithograph"
+        ],
+        "Date - earliest / single": [
+          "1904"
+        ],
+        "Date - latest": [
+          "1904"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Ward, Sir Leslie"
+        ],
+        "Other number": [
+          "1984-737/34"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:9ce3300c-c4e6-3732-8cda-49380a210d6c",
+      "title": "Portrait of  Sir Richard Douglas Powell",
+      "url": "https://museumdata.uk/objects/9ce3300c-c4e6-3732-8cda-49380a210d6c",
+      "creator": "Ward, Sir Leslie",
+      "date": "1904"
+    }
+  },
+  {
+    "id": "mds:48927182-0a73-363e-aff4-2149993a8e88",
+    "_source": "mds",
+    "_sourceId": "co8002104",
+    "_sourceUrl": "https://museumdata.uk/objects/48927182-0a73-363e-aff4-2149993a8e88",
+    "title": "Chromolithograph, Vanity Fair Portrait",
+    "description": "Chromolithograph. Vanity Fair Portrait of:  Dr. Thomas Stevenson with descriptive sheet.",
+    "date": "1899",
+    "subject": [
+      "print; portrait; print; portrait",
+      "print; portrait; print; portrait",
+      "caricature"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "48927182-0a73-363e-aff4-2149993a8e88",
+      "objectNumber": "co8002104",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Chromolithograph, Vanity Fair Portrait"
+        ],
+        "Object name(s)": [
+          "print; portrait; print; portrait"
+        ],
+        "Brief description": [
+          "Chromolithograph. Vanity Fair Portrait of:  Dr. Thomas Stevenson with descriptive sheet."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "caricature"
+        ],
+        "Credit line": [
+          "Purchased"
+        ],
+        "Object name": [
+          "print; portrait; print; portrait"
+        ],
+        "Date - earliest / single": [
+          "1899"
+        ],
+        "Date - latest": [
+          "1899"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1984-737/24"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Art"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:53:12.207Z",
+      "query": "portrait",
+      "recordId": "mds:48927182-0a73-363e-aff4-2149993a8e88",
+      "title": "Chromolithograph, Vanity Fair Portrait",
+      "url": "https://museumdata.uk/objects/48927182-0a73-363e-aff4-2149993a8e88",
+      "date": "1899"
+    }
+  }
+]

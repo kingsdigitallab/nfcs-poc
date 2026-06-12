@@ -1,0 +1,2001 @@
+[
+  {
+    "id": "ariadne:a185c4d5144c31e4b0e7a13fc5a77fff80025310a9655eaf7beea3833e3a8105",
+    "_source": "ariadne",
+    "_sourceId": "917164",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/a185c4d5144c31e4b0e7a13fc5a77fff80025310a9655eaf7beea3833e3a8105",
+    "title": "Radiocarbon date, Sample number OxA-2342",
+    "description": "other:Pine resin & beeswax<br>Lackford Heath, England",
+    "creator": "Roberts",
+    "date": "1998-12-01",
+    "subject": [
+      "bm# 1950.7-1",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Name not provided",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "a185c4d5144c31e4b0e7a13fc5a77fff80025310a9655eaf7beea3833e3a8105",
+      "temporal": [],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "Name not provided"
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Roberts",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Roberts"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bm# 1950.7-1",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BM%23%201950.7-1"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Council for British Archaeology",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/91FD984D-F616-3D46-AD50-AE4268097C69",
+      "otherId": [
+        "C14-OXA-2342-1",
+        "Depositor ID: OxA-2342"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:a185c4d5144c31e4b0e7a13fc5a77fff80025310a9655eaf7beea3833e3a8105",
+      "title": "Radiocarbon date, Sample number OxA-2342",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/a185c4d5144c31e4b0e7a13fc5a77fff80025310a9655eaf7beea3833e3a8105",
+      "creator": "Roberts",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "ariadne:51e20fdbc3dd7cb6a97632a8417dcbcd64dacc64cbbb511f4a8ac8aa321db509",
+    "_source": "ariadne",
+    "_sourceId": "915218",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/51e20fdbc3dd7cb6a97632a8417dcbcd64dacc64cbbb511f4a8ac8aa321db509",
+    "title": "Radiocarbon date, Sample number BM-640",
+    "description": "Beeswax from iron lamp at Sutton Hoo, Suffolk, England.<br>",
+    "creator": "R L S Bruce-Mitford ?",
+    "date": "1998-12-01",
+    "subject": [
+      "7c ship burial",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.088745,
+    "decimalLongitude": 1.338766,
+    "ariadne": {
+      "elasticId": "51e20fdbc3dd7cb6a97632a8417dcbcd64dacc64cbbb511f4a8ac8aa321db509",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.088745,
+            "lon": 1.338766
+          },
+          "centroid": {
+            "lat": 52.088745,
+            "lon": 1.338766
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "creatorDetails": [
+        {
+          "name": "R L S Bruce-Mitford ?",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/R%20L%20S%20Bruce-Mitford%20%3F"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c ship burial",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20SHIP%20BURIAL"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Council for British Archaeology",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/A6C6F1C2-A263-3097-B58B-BE5D56A2DFFD",
+      "otherId": [
+        "C14-BM-640",
+        "Depositor ID: BM-640"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:51e20fdbc3dd7cb6a97632a8417dcbcd64dacc64cbbb511f4a8ac8aa321db509",
+      "title": "Radiocarbon date, Sample number BM-640",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/51e20fdbc3dd7cb6a97632a8417dcbcd64dacc64cbbb511f4a8ac8aa321db509",
+      "creator": "R L S Bruce-Mitford ?",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "ariadne:3105a41086b04e7eb2fa10ea09c5765c112b0c7cc98c5639acc4031ea4c20495",
+    "_source": "ariadne",
+    "_sourceId": "YORYMB1168",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/3105a41086b04e7eb2fa10ea09c5765c112b0c7cc98c5639acc4031ea4c20495",
+    "title": "Iron NAIL",
+    "description": "truncated, split, mineralised, rectangular headed, rectangular sectioned shaft, spilt longtitudinally, dull brown, shiny patches of beeswax and metal varnish",
+    "creator": "Portable Antiquities Scheme",
+    "date": "2001-10-01",
+    "subject": [
+      "nail",
+      "nails (fasteners)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Strensall, York, York",
+    "country": "England",
+    "decimalLatitude": 54.0456892686358,
+    "decimalLongitude": -1.04698265844381,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "ariadne": {
+      "elasticId": "3105a41086b04e7eb2fa10ea09c5765c112b0c7cc98c5639acc4031ea4c20495",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/MEDIEVAL"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Strensall, York, York",
+          "boundingbox": "polygon ((-1.05472033796721 54.0501219511188, -1.05472033796721 54.0412565861528, -1.03924497892041 54.0412565861528, -1.03924497892041 54.0501219511188, -1.05472033796721 54.0501219511188))",
+          "centroid": {
+            "lat": 54.0456892686358,
+            "lon": -1.04698265844381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Strensall, York, York"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Portable Antiquities Scheme",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Portable%20Antiquities%20Scheme"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "nail",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/NAIL"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "nails (fasteners)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300033565",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Artefact"
+        }
+      ],
+      "publisher": "British Museum",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Still Image"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BMPAS/D269D287-9D38-3A48-991E-43C3D3B66664",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/BM/69F34212-FA39-3E9C-8A08-10DC106FB3D6"
+      ],
+      "accessRights": "CC-BY",
+      "nativePeriod": [
+        "medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:3105a41086b04e7eb2fa10ea09c5765c112b0c7cc98c5639acc4031ea4c20495",
+      "title": "Iron NAIL",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/3105a41086b04e7eb2fa10ea09c5765c112b0c7cc98c5639acc4031ea4c20495",
+      "creator": "Portable Antiquities Scheme",
+      "date": "2001-10-01"
+    }
+  },
+  {
+    "id": "ariadne:990d522f064608b9d6b5e06db484a255bcab44bed09f1332f5a0266b607d4860",
+    "_source": "ariadne",
+    "_sourceId": "YORYMB770",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/990d522f064608b9d6b5e06db484a255bcab44bed09f1332f5a0266b607d4860",
+    "title": "Copper alloy BUCKLE",
+    "description": "1 knop either end strap bar, recessed for pin, cu al wire pin mobile on frame, opaque brown-green colour, treated with beeswax and varnish",
+    "creator": "Portable Antiquities Scheme",
+    "date": "2000-08-24",
+    "subject": [
+      "buckle",
+      "buckles (strap accessories)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Strensall, York, York",
+    "country": "England",
+    "decimalLatitude": 54.03645718081061,
+    "decimalLongitude": -1.01665537725292,
+    "periodStart": "1250",
+    "periodEnd": "1400",
+    "periodName": "medieval",
+    "ariadne": {
+      "elasticId": "990d522f064608b9d6b5e06db484a255bcab44bed09f1332f5a0266b607d4860",
+      "temporal": [
+        {
+          "from": "1250",
+          "periodName": "medieval",
+          "until": "1400",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/MEDIEVAL"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Strensall, York, York",
+          "boundingbox": "polygon ((-1.02439453218436 54.0408879120499, -1.02439453218436 54.0320264495713, -1.00891622232148 54.0320264495713, -1.00891622232148 54.0408879120499, -1.02439453218436 54.0408879120499))",
+          "centroid": {
+            "lat": 54.03645718081061,
+            "lon": -1.01665537725292
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Strensall, York, York"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Portable Antiquities Scheme",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Portable%20Antiquities%20Scheme"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "buckle",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/BUCKLE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "buckles (strap accessories)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300239260",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Artefact"
+        }
+      ],
+      "publisher": "British Museum",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Still Image"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BMPAS/5612D8E3-1228-3C18-B9E3-3A26B40DD227",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/BM/69F34212-FA39-3E9C-8A08-10DC106FB3D6"
+      ],
+      "accessRights": "CC-BY",
+      "nativePeriod": [
+        "medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:990d522f064608b9d6b5e06db484a255bcab44bed09f1332f5a0266b607d4860",
+      "title": "Copper alloy BUCKLE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/990d522f064608b9d6b5e06db484a255bcab44bed09f1332f5a0266b607d4860",
+      "creator": "Portable Antiquities Scheme",
+      "date": "2000-08-24"
+    }
+  },
+  {
+    "id": "ariadne:33551965a0af0f5172935190800ffd86c02e27de46002c155bc51e7543211fcb",
+    "_source": "ariadne",
+    "_sourceId": "1778204",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/33551965a0af0f5172935190800ffd86c02e27de46002c155bc51e7543211fcb",
+    "title": "Middens - Whitford Burrows, North Gower Properties",
+    "description": "Rutter describes a midden on \"Llanmadoc Burrows\" that was investigated by J.D. Davies who recovered fragments of medieval pottery and \"cakes of beeswax\", all of which was then deposited at Swansea Museum. No other physical description of the midden is given and its exact location is unknown, Rutter only gives the grid reference listed above.",
+    "creator": "National Trust",
+    "date": "2010-06-25",
+    "subject": "midden",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Wales, Swansea Unitary Authority, Llanmadoc",
+    "country": "Wales",
+    "decimalLatitude": 51.622388,
+    "decimalLongitude": -4.268268,
+    "ariadne": {
+      "elasticId": "33551965a0af0f5172935190800ffd86c02e27de46002c155bc51e7543211fcb",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Wales, Swansea Unitary Authority, Llanmadoc",
+          "geopoint": {
+            "lat": 51.622388,
+            "lon": -4.268268
+          },
+          "centroid": {
+            "lat": 51.622388,
+            "lon": -4.268268
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Wales, Swansea Unitary Authority, Llanmadoc"
+      ],
+      "creatorDetails": [
+        {
+          "name": "National Trust",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/National%20Trust"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "midden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MIDDEN"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "National Trust",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F6FCE98F-5335-3A4E-9C5D-6F24239F7F64",
+      "otherId": [
+        "Associated ID: HBSMR Id: MNA134947",
+        "Depositor ID: 89243",
+        "NTSMR-MNA134947"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/57DB9A00-5856-3120-BE2A-2FFBD253CA04"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "1066 - 1539"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:33551965a0af0f5172935190800ffd86c02e27de46002c155bc51e7543211fcb",
+      "title": "Middens - Whitford Burrows, North Gower Properties",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/33551965a0af0f5172935190800ffd86c02e27de46002c155bc51e7543211fcb",
+      "creator": "National Trust",
+      "date": "2010-06-25"
+    }
+  },
+  {
+    "id": "ariadne:8a7a47d7c35decb5b39caae93f15a29b45c46f77cb91eb5f54b6da6b83f4f713",
+    "_source": "ariadne",
+    "_sourceId": "1962551",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/8a7a47d7c35decb5b39caae93f15a29b45c46f77cb91eb5f54b6da6b83f4f713",
+    "title": "MIDDEN ON WHITEFORD BURROWS",
+    "description": "Rutter describes a midden on \"Llanmadoc Burrows\" that was investigated by J.D. Davies who recovered fragments of medieval pottery and \"cakes of beeswax\", all of which was then deposited at Swansea Museum. No other physical description of the midden is given and its exact location is unknown, Rutter only gives the grid reference listed above. (01)",
+    "creator": "Glamorgan-Gwent Archaeological Trust Ltd",
+    "date": "2013-05-31",
+    "subject": "midden",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Wales, Llangennith, Llanmadoc and Cheriton, Swansea",
+    "country": "Wales",
+    "decimalLatitude": 51.622388,
+    "decimalLongitude": -4.268268,
+    "periodStart": "1066",
+    "periodEnd": "1540",
+    "periodName": "medieval",
+    "ariadne": {
+      "elasticId": "8a7a47d7c35decb5b39caae93f15a29b45c46f77cb91eb5f54b6da6b83f4f713",
+      "temporal": [
+        {
+          "from": "1066",
+          "periodName": "medieval",
+          "until": "1540",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dscbkd"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Wales, Llangennith, Llanmadoc and Cheriton, Swansea",
+          "geopoint": {
+            "lat": 51.622388,
+            "lon": -4.268268
+          },
+          "centroid": {
+            "lat": 51.622388,
+            "lon": -4.268268
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Wales, Llangennith, Llanmadoc and Cheriton, Swansea"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Glamorgan-Gwent Archaeological Trust Ltd",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Glamorgan-Gwent%20Archaeological%20Trust%20Ltd"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "midden",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MIDDEN"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Glamorgan-Gwent Archaeological Trust Ltd",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/9AC51A3D-2FF6-3DAF-8775-DA5AD8E1D1EB",
+      "otherId": [
+        "AW13-GGAT00046w",
+        "Depositor ID: GGAT00046w"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/F8FAC6C9-8E3D-355C-83E5-B162FC005EC2"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": [
+        "medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:8a7a47d7c35decb5b39caae93f15a29b45c46f77cb91eb5f54b6da6b83f4f713",
+      "title": "MIDDEN ON WHITEFORD BURROWS",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/8a7a47d7c35decb5b39caae93f15a29b45c46f77cb91eb5f54b6da6b83f4f713",
+      "creator": "Glamorgan-Gwent Archaeological Trust Ltd",
+      "date": "2013-05-31"
+    }
+  },
+  {
+    "id": "ariadne:2b177f91a038dcdfe2c9bc8eba90d6fd403e9e7d211dd5ecb9e02d67d9bf5128",
+    "_source": "ariadne",
+    "_sourceId": "HOB UID:895010",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2b177f91a038dcdfe2c9bc8eba90d6fd403e9e7d211dd5ecb9e02d67d9bf5128",
+    "title": "OGLE CASTLE",
+    "description": "\"Summary: 1825 wreck of English East Indiaman which stranded on the Goodwin Sands during a gale, while homeward bound to London from Bombay. She had called at St. Helena, and apparently Madeira, since sherry and Madeira formed part of her cargo. Laden with cotton, silk, beeswax, tortoiseshell, pepper, and gum, and carrying despatches, she was a wooden sailing vessel.\"",
+    "creator": "Historic England",
+    "date": "2012-12-19",
+    "subject": [
+      "cargo vessel",
+      "wreck",
+      "cargo vessels",
+      "wrecks (sites)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England,KENT,DOVER,GOODWIN SANDS,GOODWIN SANDS KENT",
+    "country": "Isle of Man",
+    "decimalLatitude": 51.266667,
+    "decimalLongitude": 1.533333,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "2b177f91a038dcdfe2c9bc8eba90d6fd403e9e7d211dd5ecb9e02d67d9bf5128",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q9676",
+          "name": "Isle of Man"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England,KENT,DOVER,GOODWIN SANDS,GOODWIN SANDS KENT",
+          "geopoint": {
+            "lat": 51.266667,
+            "lon": 1.533333
+          },
+          "centroid": {
+            "lat": 51.266667,
+            "lon": 1.533333
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England,KENT,DOVER,GOODWIN SANDS,GOODWIN SANDS KENT"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "cargo vessel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CARGO%20VESSEL"
+        },
+        {
+          "prefLabel": "wreck",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/WRECK"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "cargo vessels",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300212694",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "wrecks (sites)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300386973",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Maritime"
+        },
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Historic England",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/HE/9133E4D7-F68D-3669-B658-939AD351C4F2",
+      "otherId": [
+        "053351b5-5be6-478b-add6-a83b6675bc3c",
+        "TR 45 NE 504"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/HE/6B7AC8F6-50E5-3767-B40B-D31065478775"
+      ],
+      "accessRights": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:2b177f91a038dcdfe2c9bc8eba90d6fd403e9e7d211dd5ecb9e02d67d9bf5128",
+      "title": "OGLE CASTLE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2b177f91a038dcdfe2c9bc8eba90d6fd403e9e7d211dd5ecb9e02d67d9bf5128",
+      "creator": "Historic England",
+      "date": "2012-12-19"
+    }
+  },
+  {
+    "id": "ariadne:baef8368e6e937874f573bb5013f726bffe0ac260a1cf26df8f078fd6458924b",
+    "_source": "ariadne",
+    "_sourceId": "SF5803",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/baef8368e6e937874f573bb5013f726bffe0ac260a1cf26df8f078fd6458924b",
+    "title": "Copper alloy BOOK FITTING",
+    "description": "Hookplate from a book clasp, now in three pieces joined together by the finder with beeswax.  Basically rectangular, it has a slightly flared attachment end with three V-shaped nicks cut out of it.  Just above this are two copper-alloy rivets with a double circular groove around each.  About two-thirds of the way up to the broad turned-under hook is a third copper-alloy rivet with a double circular groove surrounding it, and from the circular groove some longitudinal engraved lines run towards the attachment end.  44 x 29 mm.",
+    "creator": "Portable Antiquities Scheme",
+    "date": "2001-06-06",
+    "subject": [
+      "book fitting",
+      "book fittings"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Stanstead, Babergh, Suffolk",
+    "country": "England",
+    "decimalLatitude": 52.072432450347236,
+    "decimalLongitude": 0.6979906821876215,
+    "periodStart": "1500",
+    "periodEnd": "1650",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "baef8368e6e937874f573bb5013f726bffe0ac260a1cf26df8f078fd6458924b",
+      "temporal": [
+        {
+          "from": "1500",
+          "periodName": "post medieval",
+          "until": "1650",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/POST%20MEDIEVAL"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Stanstead, Babergh, Suffolk",
+          "boundingbox": "polygon ((0.622415051015717 52.1156666009995, 0.622415051015717 52.029198299695, 0.773566313359526 52.029198299695, 0.773566313359526 52.1156666009995, 0.622415051015717 52.1156666009995))",
+          "centroid": {
+            "lat": 52.072432450347236,
+            "lon": 0.6979906821876215
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Stanstead, Babergh, Suffolk"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Portable Antiquities Scheme",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Portable%20Antiquities%20Scheme"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "book fitting",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/BOOK%20FITTING"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "book fittings",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300422128",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Artefact"
+        }
+      ],
+      "publisher": "British Museum",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Still Image"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BMPAS/960ADE68-AB05-37E1-93C6-C410BA34C4EE",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/BM/69F34212-FA39-3E9C-8A08-10DC106FB3D6"
+      ],
+      "accessRights": "CC-BY",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:baef8368e6e937874f573bb5013f726bffe0ac260a1cf26df8f078fd6458924b",
+      "title": "Copper alloy BOOK FITTING",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/baef8368e6e937874f573bb5013f726bffe0ac260a1cf26df8f078fd6458924b",
+      "creator": "Portable Antiquities Scheme",
+      "date": "2001-06-06"
+    }
+  },
+  {
+    "id": "ariadne:d276727d5072cd207a4fe238864ce5720ca65795475ac18e234f40818487eee1",
+    "_source": "ariadne",
+    "_sourceId": "PUBLIC-C25388",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/d276727d5072cd207a4fe238864ce5720ca65795475ac18e234f40818487eee1",
+    "title": "Lead WEIGHT",
+    "description": "A complete cast lead sounding weight. The weight is conical in shape with a piercing at the narrow end for attachment of a hemp line. The base is hollow with two opposing oblique piercings at the sides. Tallow or beeswax could be pressed into the hollow - an action known as 'arming the lead.' The tallow would pick up samples of the sea bottom to find out whether it was sand, mud, weed, rock or gravel, thereby allowing the Captain to decide which type of anchor to deploy. These style of sounding weights have been retrieved from the wreck ot the Mary Rose early 16th century and were possibly still in use until the late 18th - early 19th century.",
+    "creator": "Portable Antiquities Scheme",
+    "date": "2018-02-08",
+    "subject": [
+      "weight",
+      "weights (scale components)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Greenwich West, Greenwich, Greater London Authority",
+    "country": "England",
+    "decimalLatitude": 51.4578639675063,
+    "decimalLongitude": -0.058196640565811496,
+    "periodStart": "1600",
+    "periodEnd": "1800",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "d276727d5072cd207a4fe238864ce5720ca65795475ac18e234f40818487eee1",
+      "temporal": [
+        {
+          "from": "1600",
+          "periodName": "post medieval",
+          "until": "1800",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/POST%20MEDIEVAL"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Greenwich West, Greenwich, Greater London Authority",
+          "boundingbox": "polygon ((-0.132026716930674 51.5016044563954, -0.132026716930674 51.4141234786172, 0.015633435799051 51.4141234786172, 0.015633435799051 51.5016044563954, -0.132026716930674 51.5016044563954))",
+          "centroid": {
+            "lat": 51.4578639675063,
+            "lon": -0.058196640565811496
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Greenwich West, Greenwich, Greater London Authority"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Portable Antiquities Scheme",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Portable%20Antiquities%20Scheme"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "weight",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/WEIGHT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "weights (scale components)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300197555",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Artefact"
+        }
+      ],
+      "publisher": "British Museum",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Still Image"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BMPAS/5E0BEC40-376A-3E9A-B7A9-97D2EC8552F8",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/BM/69F34212-FA39-3E9C-8A08-10DC106FB3D6"
+      ],
+      "accessRights": "CC-BY",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:d276727d5072cd207a4fe238864ce5720ca65795475ac18e234f40818487eee1",
+      "title": "Lead WEIGHT",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/d276727d5072cd207a4fe238864ce5720ca65795475ac18e234f40818487eee1",
+      "creator": "Portable Antiquities Scheme",
+      "date": "2018-02-08"
+    }
+  },
+  {
+    "id": "ariadne:A6A42A48-30A4-30FD-9200-02670091D1FA",
+    "_source": "ariadne",
+    "_sourceId": "Border Cave, 18, age: 31000-41200",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/A6A42A48-30A4-30FD-9200-02670091D1FA",
+    "title": "ROAD - locality: Border Cave, finds: archaeology, culture: ELSA",
+    "description": "Border Cave is located in the Lebombo Mountains of Kwa Zulu-Natal, on the Eswanti border. The site is well known for its MSA, as well as for the earliest LSA strata in South Africa. At least eight individuals of anatomically modern humans were identified. The earliest examples dates up to 200 ka B.P. New excavations have uncovered grass bedding, accompanied by seeds, rhizomes and charcoal. Additionally, artifacts made of shell, bone, wood and OES are part of the assemblage.",
+    "creator": "Project \"The Role of Culture in Early Expansions of Humans\" (ROCEEH)",
+    "date": "2021-04-23",
+    "subject": [
+      "archaeology",
+      "bedding",
+      "beeswax",
+      "bone",
+      "mineral pigment",
+      "ostrich egg shell",
+      "rhyolite",
+      "shell",
+      "tusk",
+      "wood",
+      "bone (material)",
+      "shell (animal material)",
+      "tusk (material)",
+      "wood (plant material)",
+      "beeswax",
+      "ostrich eggshell",
+      "mineral pigment",
+      "bed mat"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "South Africa",
+    "decimalLatitude": -27.021443,
+    "decimalLongitude": 31.98875,
+    "periodStart": "-38000",
+    "periodEnd": "-16000",
+    "periodName": "elsa",
+    "ariadne": {
+      "elasticId": "A6A42A48-30A4-30FD-9200-02670091D1FA",
+      "temporal": [
+        {
+          "from": "-38000",
+          "periodName": "elsa",
+          "until": "-16000",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Time-Span/ELSA"
+        }
+      ],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "South Africa",
+          "geopoint": {
+            "lat": -27.021443,
+            "lon": 31.98875
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "South Africa"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Project \"The Role of Culture in Early Expansions of Humans\" (ROCEEH)",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Project%20%22The%20Role%20of%20Culture%20in%20Early%20Expansions%20of%20Humans%22%20%28ROCEEH%29"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/archaeology"
+        },
+        {
+          "prefLabel": "bedding",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/bedding"
+        },
+        {
+          "prefLabel": "beeswax",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/beeswax"
+        },
+        {
+          "prefLabel": "bone",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/bone"
+        },
+        {
+          "prefLabel": "mineral pigment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/mineral%20pigment"
+        },
+        {
+          "prefLabel": "ostrich egg shell",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/ostrich%20egg%20shell"
+        },
+        {
+          "prefLabel": "rhyolite",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/rhyolite"
+        },
+        {
+          "prefLabel": "shell",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/shell"
+        },
+        {
+          "prefLabel": "tusk",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/tusk"
+        },
+        {
+          "prefLabel": "wood",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/wood"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "bone (material)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300011798",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "shell (animal material)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300011829",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "tusk (material)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300011856",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "wood (plant material)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300011914",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "beeswax",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300014588",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "ostrich eggshell",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300263487",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "mineral pigment",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300375550",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "bed mat",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300421505",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Heidelberg Academy of Sciences and Humanities",
+      "contributor": "Project \"The Role of Culture in Early Expansions of Humans\" (ROCEEH)",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/A6A42A48-30A4-30FD-9200-02670091D1FA",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ROAD/1E2373FE-C708-3A0B-81BE-35F5593EBAA2"
+      ],
+      "accessRights": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "nativePeriod": [
+        "elsa"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:A6A42A48-30A4-30FD-9200-02670091D1FA",
+      "title": "ROAD - locality: Border Cave, finds: archaeology, culture: ELSA",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/A6A42A48-30A4-30FD-9200-02670091D1FA",
+      "creator": "Project \"The Role of Culture in Early Expansions of Humans\" (ROCEEH)",
+      "date": "2021-04-23"
+    }
+  },
+  {
+    "id": "ariadne:91DE6CBD-CF19-3784-9983-EAF23AAA2483",
+    "_source": "ariadne",
+    "_sourceId": "Border Cave, 18, age: 32000-40200",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/91DE6CBD-CF19-3784-9983-EAF23AAA2483",
+    "title": "ROAD - locality: Border Cave, finds: archaeology, culture: ELSA",
+    "description": "Border Cave is located in the Lebombo Mountains of Kwa Zulu-Natal, on the Eswanti border. The site is well known for its MSA, as well as for the earliest LSA strata in South Africa. At least eight individuals of anatomically modern humans were identified. The earliest examples dates up to 200 ka B.P. New excavations have uncovered grass bedding, accompanied by seeds, rhizomes and charcoal. Additionally, artifacts made of shell, bone, wood and OES are part of the assemblage.",
+    "creator": "Project \"The Role of Culture in Early Expansions of Humans\" (ROCEEH)",
+    "date": "2021-04-23",
+    "subject": [
+      "archaeology",
+      "bedding",
+      "beeswax",
+      "bone",
+      "mineral pigment",
+      "ostrich egg shell",
+      "rhyolite",
+      "shell",
+      "tusk",
+      "wood",
+      "bone (material)",
+      "shell (animal material)",
+      "tusk (material)",
+      "wood (plant material)",
+      "beeswax",
+      "ostrich eggshell",
+      "mineral pigment",
+      "bed mat"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "South Africa",
+    "decimalLatitude": -27.021443,
+    "decimalLongitude": 31.98875,
+    "periodStart": "-38000",
+    "periodEnd": "-16000",
+    "periodName": "elsa",
+    "ariadne": {
+      "elasticId": "91DE6CBD-CF19-3784-9983-EAF23AAA2483",
+      "temporal": [
+        {
+          "from": "-38000",
+          "periodName": "elsa",
+          "until": "-16000",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Time-Span/ELSA"
+        }
+      ],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "South Africa",
+          "geopoint": {
+            "lat": -27.021443,
+            "lon": 31.98875
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "South Africa"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Project \"The Role of Culture in Early Expansions of Humans\" (ROCEEH)",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Project%20%22The%20Role%20of%20Culture%20in%20Early%20Expansions%20of%20Humans%22%20%28ROCEEH%29"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/archaeology"
+        },
+        {
+          "prefLabel": "bedding",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/bedding"
+        },
+        {
+          "prefLabel": "beeswax",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/beeswax"
+        },
+        {
+          "prefLabel": "bone",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/bone"
+        },
+        {
+          "prefLabel": "mineral pigment",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/mineral%20pigment"
+        },
+        {
+          "prefLabel": "ostrich egg shell",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/ostrich%20egg%20shell"
+        },
+        {
+          "prefLabel": "rhyolite",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/rhyolite"
+        },
+        {
+          "prefLabel": "shell",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/shell"
+        },
+        {
+          "prefLabel": "tusk",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/tusk"
+        },
+        {
+          "prefLabel": "wood",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ROAD/wood"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "bone (material)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300011798",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "shell (animal material)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300011829",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "tusk (material)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300011856",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "wood (plant material)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300011914",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "beeswax",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300014588",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "ostrich eggshell",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300263487",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "mineral pigment",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300375550",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "bed mat",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300421505",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Heidelberg Academy of Sciences and Humanities",
+      "contributor": "Project \"The Role of Culture in Early Expansions of Humans\" (ROCEEH)",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/91DE6CBD-CF19-3784-9983-EAF23AAA2483",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ROAD/1E2373FE-C708-3A0B-81BE-35F5593EBAA2"
+      ],
+      "accessRights": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "nativePeriod": [
+        "elsa"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:91DE6CBD-CF19-3784-9983-EAF23AAA2483",
+      "title": "ROAD - locality: Border Cave, finds: archaeology, culture: ELSA",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/91DE6CBD-CF19-3784-9983-EAF23AAA2483",
+      "creator": "Project \"The Role of Culture in Early Expansions of Humans\" (ROCEEH)",
+      "date": "2021-04-23"
+    }
+  },
+  {
+    "id": "ariadne:03010fda6c5d8f41282eb312d13b967f698e5402dfb1d8378ac68f9348720671",
+    "_source": "ariadne",
+    "_sourceId": "HESH-912426",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/03010fda6c5d8f41282eb312d13b967f698e5402dfb1d8378ac68f9348720671",
+    "title": "Lead Alloy MOULD",
+    "description": "A lead alloy object possibly a forgers mould - possibly for making copies of gold guineas / coins of William and Mary (1689-1694). The object is a disc of lead with the impressed design of a double headed bust depicting both the portraits of William III (with long flowing hair tied at the back) and Mary II with a (sharp pointed nose). The inscription around the edge of the impression is indistinct - partially through wear and possibly from being a poor impression from a worn coin. The inscription - like the busts - is backwards and reads GVL[ILEM]VS ET MAR[IA DE]I  [GRATIA].  The reverse face is flat and undecorated. At the centre is a shield shaped depression which is surrounded by an irregular oval depression. Similar depressions have been described as key's for holding two parts of a mould together. It is unlikely that gold coins could be forged using this mould - but it is possibly for beeswax impressions to be fashioned and then cast using a lost wax process.\nThe object measures 23.9mm diameter is 2.9mm thick and weighs 7.19 grams\nFor a similar civil war piece see\nHESH-897C92\nhttp://finds.org.uk/database/artefacts/record/id/407047",
+    "creator": "Portable Antiquities Scheme",
+    "date": "2012-08-13",
+    "subject": [
+      "mould",
+      "molds (shaping equipment)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Tong, Shropshire, Shropshire",
+    "country": "England",
+    "decimalLatitude": 52.64250764046685,
+    "decimalLongitude": -2.2230385489825553,
+    "periodStart": "1689",
+    "periodEnd": "1750",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "03010fda6c5d8f41282eb312d13b967f698e5402dfb1d8378ac68f9348720671",
+      "temporal": [
+        {
+          "from": "1689",
+          "periodName": "post medieval",
+          "until": "1750",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/POST%20MEDIEVAL"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Tong, Shropshire, Shropshire",
+          "boundingbox": "polygon ((-2.29670215227402 52.6875950996613, -2.29670215227402 52.5974201812724, -2.14937494569109 52.5974201812724, -2.14937494569109 52.6875950996613, -2.29670215227402 52.6875950996613))",
+          "centroid": {
+            "lat": 52.64250764046685,
+            "lon": -2.2230385489825553
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Tong, Shropshire, Shropshire"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Portable Antiquities Scheme",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Portable%20Antiquities%20Scheme"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "mould",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/MOULD"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "molds (shaping equipment)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300024814",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Artefact"
+        }
+      ],
+      "publisher": "British Museum",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Still Image"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BMPAS/D9904A0C-E7CA-3646-9B15-359ED4D2BCD4",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/BM/69F34212-FA39-3E9C-8A08-10DC106FB3D6"
+      ],
+      "accessRights": "CC-BY",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:03010fda6c5d8f41282eb312d13b967f698e5402dfb1d8378ac68f9348720671",
+      "title": "Lead Alloy MOULD",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/03010fda6c5d8f41282eb312d13b967f698e5402dfb1d8378ac68f9348720671",
+      "creator": "Portable Antiquities Scheme",
+      "date": "2012-08-13"
+    }
+  },
+  {
+    "id": "ariadne:372dcffc7238de3f78f2f1746833c53dd0c39a240ce529b0e4a3e84459aed46e",
+    "_source": "ariadne",
+    "_sourceId": "1103180",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/372dcffc7238de3f78f2f1746833c53dd0c39a240ce529b0e4a3e84459aed46e",
+    "title": "Assessment Report on an Archaeological Excavation at New Cowper Quarry Northern Extension (Phase 1), Aspatria, Cumbria",
+    "description": "Between February and April 2005, NPA Ltd. carried out an archaeological excavation at New Cowper Quarry Northern Extension (Phase 1), Aspatria, Cumbria (NGR: NY 115 460) . This  work preceded two further stages of excavation in neighbouring fields, which have already been reported (NCF-B, Davies 2006 and NCF-C, Gaskell 2006). The excavation revealed significant archaeological remains of prehistoric date, including a series of Early Neolithic pits, an Early Bronze Age funerary cairn, a curvilinear boundary ditch, linear and curvilinear gullies, and a number of isolated pits and postholes of probable prehistoric date.  A sample of charcoal from one of the pits has provided an Early Neolithic date of 3650-3510 cal BC. A Bronze Age funerary monument was revealed on the east side of the excavation. Three Beaker vessels were deposited in or near the monument (one of which contained residues of beeswax), suggesting that ceremonial practices were taking place at the monument over a significant period of time. A thumbnail scraper was also recovered from near the monument. Two possible calibrated radiocarbon dates of 2400-2380 BC and 2360-2140 BC were produced for the monument, both of which fall within the Early Bronze Age. A number of linear features have been identified including a substantial boundary ditch on the east side of the site. Although no dating evidence has yet been obtained for these features, these are likely to date to the 1st millennium BC and represent part of a broader settled, agricultural landscape. Further work is required in order to further characterise the nature of these land divisions, which resemble the enclosures, field-systems or land divisions of a recognisably Iron Age or Romano-British pattern.",
+    "creator": "Martin Railton",
+    "date": "2016-11-23",
+    "subject": [
+      "beaker",
+      "cairn",
+      "excavation",
+      "field system",
+      "lithic implement",
+      "pit",
+      "pot",
+      "cairns",
+      "pits (earthworks)",
+      "agricultural land",
+      "beakers (drinking vessels)",
+      "pots (containers)",
+      "lithics"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "England",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "-2200",
+    "periodEnd": "-700",
+    "periodName": [
+      "bronze age",
+      "early bronze age",
+      "iron age",
+      "neolithic"
+    ],
+    "ariadne": {
+      "elasticId": "372dcffc7238de3f78f2f1746833c53dd0c39a240ce529b0e4a3e84459aed46e",
+      "temporal": [
+        {
+          "from": "-2200",
+          "periodName": "bronze age",
+          "until": "-700",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-2200",
+          "periodName": "early bronze age",
+          "until": "-1500",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dshs59"
+        },
+        {
+          "from": "-800",
+          "periodName": "iron age",
+          "until": "43",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsj33x"
+        },
+        {
+          "from": "-4000",
+          "periodName": "neolithic",
+          "until": "-2200",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsbz2g"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "New Cowper Farm, HOLME ST CUTHBERT, Cumbria, Allerdale, England"
+        },
+        {
+          "geopoint": {
+            "lat": 54.8010086999404,
+            "lon": -3.37277070465735
+          },
+          "centroid": {
+            "lat": 54.8010086999404,
+            "lon": -3.37277070465735
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "England",
+        "New Cowper Farm, HOLME ST CUTHBERT, Cumbria, Allerdale, England"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Martin Railton",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Martin%20Railton"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "beaker",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BEAKER"
+        },
+        {
+          "prefLabel": "cairn",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CAIRN"
+        },
+        {
+          "prefLabel": "excavation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/EXCAVATION"
+        },
+        {
+          "prefLabel": "field system",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/FIELD%20SYSTEM"
+        },
+        {
+          "prefLabel": "lithic implement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/LITHIC%20IMPLEMENT"
+        },
+        {
+          "prefLabel": "pit",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PIT"
+        },
+        {
+          "prefLabel": "pot",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/POT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "cairns",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300006960",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "pits (earthworks)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008027",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "agricultural land",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008631",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "beakers (drinking vessels)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300043198",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "pots (containers)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300045697",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "lithics",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300379567",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Fieldwork report"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "North Pennines Archaeology Ltd",
+      "dataType": [
+        "Text"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/ADS/026E1ECF-2B2E-335E-B8C7-2D3BE1EB5E13",
+      "otherId": [
+        "OBIB CP/162/04"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/5910411B-ED97-364E-8D28-6024558AA14B"
+      ],
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "nativePeriod": [
+        "bronze age",
+        "early bronze age",
+        "iron age",
+        "neolithic"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:372dcffc7238de3f78f2f1746833c53dd0c39a240ce529b0e4a3e84459aed46e",
+      "title": "Assessment Report on an Archaeological Excavation at New Cowper Quarry Northern Extension (Phase 1), Aspatria, Cumbria",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/372dcffc7238de3f78f2f1746833c53dd0c39a240ce529b0e4a3e84459aed46e",
+      "creator": "Martin Railton",
+      "date": "2016-11-23"
+    }
+  },
+  {
+    "id": "ariadne:b5920ef69b8ca618fcce31402832a08584b84d78ac6ce7d300a3bf7a1dd152d5",
+    "_source": "ariadne",
+    "_sourceId": "96506",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/b5920ef69b8ca618fcce31402832a08584b84d78ac6ce7d300a3bf7a1dd152d5",
+    "title": "George Hotel, Later Vicarage, now Abbeyfield House: No. 1 George Street, Llandeilo",
+    "description": "The present Abbeyfield House was built as the George Hotel in the eighteenth century. In 1839 the town's Mechanics Institute met in the Long Room and Rebecca rioters are said to have been held in the cellars in the 1840s. The hotel was remodelled in the 1840s-60s and an upper storey is thought to have been removed at this time. This was the Vicarage from at least the 1860s to 1905. The 1st edition OS County series (Carmarthen. XXXIII.15 1886) depicts the house and grounds at this time. An ironmongers shop built on the north side of the house has recently been demolished. This was later the Queen Bee Polish Factory (NPRN 407005). The house is now a home for the elderly. This is a two storey building with cellars and attics. It appears to have originally consisted of a main block with unequal ranges at the rear, forming a rough U plan, all with hipped roofs. The arrangements at the rear were greatly altered in the 1840-60s. The house faces east onto the street where it presents a symmetrical five bay facade with a central doorway. This is now in a heavy and elaborate Victorian classical style with laboured Gothic overtones and is of little interest. The fenestration is similar to that in the now demolished Beeswax factory and may be early twentieth century. In 1886 the return north elevation faced a small garden and drive, and it has/had a pedimented porch or portico supported by heavy columns. The slate roofs have tiled ridges and small gabled dormers with trefoil openings on the east and north sides. The house has a forest of tall dressed stone chimneys and several additional minor gables. Away from the streetfront some openings could be eighteenth century. The interior had a central hall continued in a broad corridor or narrow range between the two rear wings. There were two separate staircases.   Sources: CADW Listed Buildings Database (11062)                   Llandeilo Fawr Heritage Audit, Cambria Report No. 2004/26  John Wiles 20.11.07",
+    "creator": "Royal Commission Ancient and Historic Monuments Wales",
+    "date": "2023-09-07",
+    "subject": [
+      "house",
+      "houses"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Llandeilo, Carmarthenshire, Carmarthenshire",
+    "country": "Wales",
+    "decimalLatitude": 51.882218,
+    "decimalLongitude": -3.9951358,
+    "periodStart": "1540",
+    "periodEnd": "1901",
+    "periodName": "post medieval",
+    "ariadne": {
+      "elasticId": "b5920ef69b8ca618fcce31402832a08584b84d78ac6ce7d300a3bf7a1dd152d5",
+      "temporal": [
+        {
+          "from": "1540",
+          "periodName": "post medieval",
+          "until": "1901",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsctsj"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Llandeilo, Carmarthenshire, Carmarthenshire",
+          "geopoint": {
+            "lat": 51.882218,
+            "lon": -3.9951358
+          },
+          "centroid": {
+            "lat": 51.882218,
+            "lon": -3.9951358
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Llandeilo, Carmarthenshire, Carmarthenshire"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Royal Commission Ancient and Historic Monuments Wales",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Royal%20Commission%20Ancient%20and%20Historic%20Monuments%20Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "house",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HOUSE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "houses",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300005433",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Royal Commission on the Ancient and Historical Monuments of Wales",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/RCAHMW/33BB8029-1CC0-3CF6-8E02-5BE4DFADF00A",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/RCAHMW/8D520B07-78F5-3A8E-AD61-580FCFF7218E"
+      ],
+      "accessRights": "CC BY NC ND",
+      "nativePeriod": [
+        "post medieval"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:b5920ef69b8ca618fcce31402832a08584b84d78ac6ce7d300a3bf7a1dd152d5",
+      "title": "George Hotel, Later Vicarage, now Abbeyfield House: No. 1 George Street, Llandeilo",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/b5920ef69b8ca618fcce31402832a08584b84d78ac6ce7d300a3bf7a1dd152d5",
+      "creator": "Royal Commission Ancient and Historic Monuments Wales",
+      "date": "2023-09-07"
+    }
+  },
+  {
+    "id": "ariadne:135be767fe4f63f89bdfa4a6e9992dc22ede43657d3dbdb4dfd7afa520fb197a",
+    "_source": "ariadne",
+    "_sourceId": "ESS-648BF1",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/135be767fe4f63f89bdfa4a6e9992dc22ede43657d3dbdb4dfd7afa520fb197a",
+    "title": "Animal skeletal material GAMING PIECE",
+    "description": "A complete antler or bone gaming piece. An approximately circular gaming piece 30 -33.2mm in diameter and 6mm thick with a double-tapered central perforation 5mm in diameter at the faces of, and 3mm in the centre of the perforation. The face is decorated with two deeply incised concentric circular grooves; one around the central perforation, the second at the outside edge. Both are approx 1mm deep and triangular in profile. These concentric grooves delineate a circular band occupied by a series of ten (a decade?) equally spaced ring and dot decorative elements, all of which are approx 3mm in diameter and whose central dots are 0.5mm deep.\nThe piece has an overall irregularly circular profile which may suggest that a freehand cut was made from a flat section of marked out bone or antler and the circular profile a reduction made with files. Clear near vertical tooling marks visible all around the circumference seem to support this notion. The decoration of the face is equally irregular and must have been hand carved with chisels and boring tools The piece may well have been drawn out upon the blank by means of a compass, but it seems that no part of it was cut with one. The face of the piece has some wear that has produced a smooth surface, consequently tool marks are not nearly so easy to appreciate as they are around the edge. Closer examination may reveal more.\nThe fine grain of the substance runs across the face and reverse of the piece. On the reverse a dark band is visible across the approximate centre. At the edge an area is visible that shows a segment of concentric rings\nIt is thought that the perforation of circular game pieces was simply a means to a rather prosaic end - that of stringing a whole set together for secure storage. The central perforation of this example has the remains of a yellowish substance preserved deep in its interior. It is not clear what this substance might be but it has been suggested that it could be beeswax or other lubricant. Unfortunately, without analysis it is impossible to tell.\nLater Medieval examples of circular bone game pieces are well known. Some have similar decorative designs upon their faces but are usually cut entirely with compass guided tools. A broadly similar game piece of slightly larger dimensions with compass engraved decoration was found in deposits in Waterford, Ireland ( city centre excavations of 1986-92) and dated to the 12th century AD. In Waterford this object would be of late Viking age.\nThe example discussed here is not compass engraved and its execution has more in common with styles of freehand carving evident in Early Medieval bone and antler work. Therefore a similar date is proposed for it.",
+    "creator": "Portable Antiquities Scheme",
+    "date": "2006-07-25",
+    "subject": [
+      "gaming piece",
+      "game pieces (game elements)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "CITY OF LONDON, City and County of the City of London, Greater London Authority",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "ariadne": {
+      "elasticId": "135be767fe4f63f89bdfa4a6e9992dc22ede43657d3dbdb4dfd7afa520fb197a",
+      "temporal": [],
+      "country": [],
+      "allSpatial": [
+        {
+          "placeName": "CITY OF LONDON, City and County of the City of London, Greater London Authority"
+        }
+      ],
+      "allPlaceNames": [
+        "CITY OF LONDON, City and County of the City of London, Greater London Authority"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Portable Antiquities Scheme",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Portable%20Antiquities%20Scheme"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "gaming piece",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/GAMING%20PIECE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "game pieces (game elements)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300211101",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Artefact"
+        }
+      ],
+      "publisher": "British Museum",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Still Image"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BMPAS/AFABBB3F-3C75-320B-B259-BEC53F41DD30",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/BM/69F34212-FA39-3E9C-8A08-10DC106FB3D6"
+      ],
+      "accessRights": "CC-BY",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:135be767fe4f63f89bdfa4a6e9992dc22ede43657d3dbdb4dfd7afa520fb197a",
+      "title": "Animal skeletal material GAMING PIECE",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/135be767fe4f63f89bdfa4a6e9992dc22ede43657d3dbdb4dfd7afa520fb197a",
+      "creator": "Portable Antiquities Scheme",
+      "date": "2006-07-25"
+    }
+  },
+  {
+    "id": "ariadne:0c51cb063d2a60359e039a7a677ab8a1a6b6eada83e09dfccab74f32302387ce",
+    "_source": "ariadne",
+    "_sourceId": "LEIC-D9CD94",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0c51cb063d2a60359e039a7a677ab8a1a6b6eada83e09dfccab74f32302387ce",
+    "title": "Gold PENANNULAR RING",
+    "description": "Description:&nbsp;An incomplete fragment from a penannular &lsquo;lock ring. Originally the ring would have been C shaped in plan and bi-conical in form with the two opposing edges abutting forming a slight gap within the ring. It is formed of 25 or 26 individual square sectioned wires; all but two of these are twisted with an even clockwise turn creating a sinuous spiral like thread. Positioned on the upper and lower faces nearest the central hole are two plain wires acting as a border. The two terminals of the ring show evidence of direct heating that has melted the gold to form a single surface. There is little evidence of gold solder being used to hold the wires in place or to fill / flood the abutted terminals. Originally the C shaped ring would have been constructed around a similarly shaped organic core most probably created from Beeswax or wood &ndash; this element has been entirely lost. The centre is now partially filled with grey coloured soil &ndash; most probably from the burial environment. \nThe ring has been heavily distorted from its original shape. It is impossible to tell if this damage has occurred solely through movement within the ploughsoil. It is now an irregular shape of distorted elements; the ring has been opened and is now broadly two C shaped crescents conjoined along a single opposing edge. This movement has caused several the wires to snap especially those positioned at the centre of the ring. Many of the turned wires on the exterior edge have only distorted &ndash; which has kept the broad integrity of the object.\nLength: 24.92 mm\nWidth: 12.81 mm\nThickness: 3.24 mm\nWeight: 2.31 g\nDiscussion and Dating: \nThe form and nature of these bi-conical penannular rings known as &lsquo;lock-rings&rsquo; is well documented (Eogan 1969 &amp; 1994, Taylor 1984) in the archaeological record of the Late Bronze Age. This period is traditionally dated to c.1250-750 BC. The function of these rings is currently unknown; however, it is thought that the rings are best associated with personal dress and decoration possibly as hair or body (ear / nose / lip) ornaments. Of the examples recorded to date the majority are formed of gold sheet often shaped around an organic core (La Niece &amp; Cartwright 2009). Many examples are formed of plain sheet, whilst others are decorated with incised circumferential grooves or panels of applied repousse or incised linear decoration. This current example from Warwickshire is formed of conjoined (probably soldered or possibly heat fused) gold wires. The overall form of design echoes many other decorated examples with circumferential grooves for example a recently discovered ring from Wissendine, Rutland (Varndell &amp; Paites 2016). However, this style of wire goldworking decoration is relatively rare, it can be seen on two other lock-rings the first reported through the treasure act from Eldesborough, Buckinghamshire (Varndell &amp; Watters 2009) and the other from the antiquarian collection of the Rev. William Greenwell now housed in the British Museum but originally collected from Cheeseburn Grange, Northumberland (Eogan 1969: 111 Cat No. 37 / BM Accession Number WG:20). Similar gold wire work can also be seen in a Late Bronze Age gold ornament possibly from Rathfarnham, County Dublin, Ireland (Cahill 2009:102-4 - National Museum of Ireland: object reg. no. NMI W51) and in a composite gold wire ornament from La Rochepot, Burgundy, France noted as unusual, if not unique, in form and dated to the Atlantic Late Bronze Age (Armbruster 2021)\nMetal Composition:\nThe metal has not been tested but from appearance and complexity of form it is entirely consistent with the gold alloy used within the suggested period of construction (Bronze Age)\n&nbsp;\nTreasure Statement:\nAs the precious metal content has not been formerly tested for this artefact it should be considered as Treasure under the 2002 Treasure (Designation) Order to the Treasure Act 1996 (DCMS: 2002) which states that an object, other than a coin, of prehistoric date is treasure if any part of it is precious metal (paragraph 6 &amp; 11). \nBibliography:\nArmbruster B.R. 2021: Le Ors de l&rsquo;Europe Atlantique A la&rsquo;Age du Bronze / Gold from Atlantic Europe in the Bronze Age.&nbsp;Technology and workshops Association des Publications Chauvinoises APC \nCahill, M. 2009: &lsquo;Working with wire&mdash;the functional and decorative uses of gold wire in Bronze Age Ireland, 2200&ndash;700 BC&rsquo; in Cooney et al (eds) 2009: Relics of Old Decency: archaeological studies of later prehistory. Dublin: Wordwell 91-105\nEogan G. 1969: &#39;Lock-rings&#39; of the Late Bronze Age&rsquo; in Proceedings of the Royal Irish Academy 67C: 93-148\nEogan, G.&nbsp;1994: The accomplished art: gold and gold-working in Britain and Ireland during the Bronze Age (c. 2300-650-BC).&nbsp;Oxbow Monographs: 42 Oxford: Oxbow Books\nLa Niece, S. &amp; Cartwright, C. 2009: Bronze Age Gold Lock-rings with Cores of Wax and Wood in Kienlin T.L. &amp; Roberts B. (eds) 2009: Metals and Society; Studies&nbsp; in honour of Barbara S. Ottaway Universit&auml;tsforschungen zur pr&auml;historischen Arch&auml;ologie Habelt Bonn: 307-312\nTaylor, J. 1981: Bronze Age Goldwork of the British Isles. Cambridge: Cambridge University Press \nVarndell G. &amp; Paites, B. 2016:&nbsp;ESS-5ECCA2 A Late Bronze Age Gold Penannular &lsquo;Lock&rsquo; Ring from Wissendine, Rutland. Web page available at:&nbsp;https://finds.org.uk/database/artefacts/record/id/796973&nbsp;\nVarndell G. &amp; Watters, J. 2009:&nbsp;BH-8DC056: A Late Bronze Age Gold Penannular &lsquo;Lock&rsquo; Ring from Eldesborrough, Buckinghamshire. Web page available at:&nbsp;&nbsp;https://finds.org.uk/database/artefacts/record/id/269841\n--- : A Gold Lock ring from Cheeseburn Grange, Northumberland &ndash; Provenance the collection of Rev. William Greenwell BM Catalogue Number WG20&nbsp; British Museum Online Catalogue: https://www.britishmuseum.org/collection/object/H_WG-20 \nAcknowledgments:\nThanks are extended to Prof. Mary Cahill and Dr. Brendan O&rsquo;Connor for their opinions and expertise in producing this specialist treasure report.",
+    "creator": "Portable Antiquities Scheme",
+    "date": "2021-07-01",
+    "subject": [
+      "penannular ring",
+      "rings (object genres)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Leamington Hastings, Rugby, Warwickshire",
+    "country": "England",
+    "decimalLatitude": 52.2947522440896,
+    "decimalLongitude": -1.3342690608232797,
+    "periodStart": "-1150",
+    "periodEnd": "-800",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "0c51cb063d2a60359e039a7a677ab8a1a6b6eada83e09dfccab74f32302387ce",
+      "temporal": [
+        {
+          "from": "-1150",
+          "periodName": "bronze age",
+          "until": "-800",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/BRONZE%20AGE"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Leamington Hastings, Rugby, Warwickshire",
+          "boundingbox": "polygon ((-1.34166722842552 52.2992057564686, -1.34166722842552 52.2902987317106, -1.32687089322104 52.2902987317106, -1.32687089322104 52.2992057564686, -1.34166722842552 52.2992057564686))",
+          "centroid": {
+            "lat": 52.2947522440896,
+            "lon": -1.3342690608232797
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Leamington Hastings, Rugby, Warwickshire"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Portable Antiquities Scheme",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Portable%20Antiquities%20Scheme"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "penannular ring",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/PENANNULAR%20RING"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "rings (object genres)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300263678",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Artefact"
+        }
+      ],
+      "publisher": "British Museum",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Still Image"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BMPAS/1A0FCF5E-B0FF-3E10-9960-241269BCAC7E",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/BM/69F34212-FA39-3E9C-8A08-10DC106FB3D6"
+      ],
+      "accessRights": "CC-BY",
+      "nativePeriod": [
+        "bronze age"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:0c51cb063d2a60359e039a7a677ab8a1a6b6eada83e09dfccab74f32302387ce",
+      "title": "Gold PENANNULAR RING",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0c51cb063d2a60359e039a7a677ab8a1a6b6eada83e09dfccab74f32302387ce",
+      "creator": "Portable Antiquities Scheme",
+      "date": "2021-07-01"
+    }
+  },
+  {
+    "id": "ariadne:a188bac0caa8cf3f2c482930cb7757554e37a2cfe0b3c71fbec51483c0399fa8",
+    "_source": "ariadne",
+    "_sourceId": "HESH-43148A",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/a188bac0caa8cf3f2c482930cb7757554e37a2cfe0b3c71fbec51483c0399fa8",
+    "title": "Gold BULLA",
+    "description": "DRAFT Report on Potential Treasure for H.M. Coroner\n2018 T343: A Late Bronze Age Gold 'Bulla' from the 'Shropshire Marches'\nHM Coroner: Mr. John Ellery\nDistrict: Shropshire\nDate: Late Bronze Age, (c.1000-750 BC)\nFindspot: To be known as 'Shropshire Marches I'\nDate of discovery: 12th May 2018\nCircumstances of discovery: Whilst searching with a metal detector.\nDescription:\nForm and construction: \nThis object is called a 'bulla' (an antiquarian term derived from the Latin for bubble), a large, hollow pendant of sheet gold which would have been suspended and most probably worn for adornment (Taylor 1980, 64-6; Eogan 1994, 89; Murgia et al. 2014).\nIn shape the bulla is broadly a 'D' shaped crescent in plan and a trapezoidal wedge shape in profile. In overall form it could be described as keel shaped. The pendant is a composite being formed of at least two piece of gold sheet. On either side of the upper edge (at the widest part) are collars formed from gold sheet and filled with organic compacted soil. These flank a 'false' tube that acts as a long loop from which the pendant could have been suspended. The top of the bulla curves evenly along its length forming an even subtly elegant shape. A sheet of gold plate is rolled and fixed at its mid-point; it projects from either edge and descends to form the front and rear plates of the body of the pendant. If straightened the body plate would be broadly rectangular with a waisted mid-point and rounded C shaped external edges. The plate fits seamlessly with the tube collars and the fixing points are concealed. The external edges are slightly beaded. A base plate most probably a pointed oval shape closes the two sides. Again the joints are concealed and fixing points seamless within the construct. The space constructed by these sheets is box like with a hollow void contained within the pendant. It is likely that the separate components of the bulla were soldered together. When solder is used on Bronze Age objects, the composition of the gold is likely to be richer in copper and/or silver than the components being soldered together. It was not possible to identify the presence of solder categorically (from the compositional analysis undertaken using XRF-analysis). However, the use of soldering is well demonstrated among objects from Middle and Late Bronze Age Britain (La Niece pers comm.; La Niece et al. 2015; La Nice et al. 2009; cf. Armbruster et al. 2014), and its use is very probable in the case of the 'Shropshire Marches' bulla.\nDecoration:\nThe bulla has been highly decorated with engraved stylised geometric designs; every surface is covered with intricate and highly precise evenly proportioned patterns. These designs must have been marked out using compass or dividers and has been hand cut using a very fine graver with a 45 degree wedged cutting edge. The design is such that the decoration adds an additional texture which brings out the best reflective nature of the gold and makes the decorative design seem to be constantly moving with the play of light and reflection. The decoration is applied almost entirely through cutting or engraving - there seems to be no punched or repousse style patterns. This suggests that the gold plate from which the pendant is decorated is relatively thick and that the decoration is applied after construction of the form. The design can be broken into several zones:\nThe 'front' face - which is broadly D shaped in plan - is decorated with an external C shaped border which respects and takes it form from the external edge. This border is filled with ten evenly spaced grooves or channels which are evenly cut and are continuous around the edge. Within this area the space is divided unevenly by a slightly curved horizontal decorative band below which is a D shaped panel. The decorative band is delimitated by a pair of horizontal parallel engraved lines (similar to the border) each with five evenly spaced grooves. Within the area created by the paired bands are a series of tessellating broadly equilateral opposing triangles. Each triangle is filled with diagonal cut lines; the upper row are all cut with lines running top right to bottom left, whereas the lower are decorated top left to lower right. The only triangle which differs is that on the right hand edge where the lines are cut horizontally. In the area below this band - on the body of the pendant - the space is filled with further geometric panels - at the centre is a square shaped panel filled by a saltire / diagonal cross with the upper and lower triangular wedges decorated with lines engraved top right - bottom left; where-as, the triangles to the left and right are engraved with opposing lines. Flanking this central square on either side are right-angled triangles engraved with vertical lines and the rest of the area - to left and right is engraved with diagonal lines set in plane with the angle of the triangle. From careful viewing of the engraving under magnification it is clear that the external border was cut first and the internal decoration applied later during construction - this is because in several the engraving lines cut through and therefore overlay the border. The overall decorative effect can be described as 'solar' in character, a feature of other Bronze Age goldwork, especially from Early Bronze Age Ireland (Cahill 2015). An illustration of the now lost Irwell bulla shows that it's 'front' face was similarly decorated.\nThe 'back' plate is similarly decorated with a broad external border. However, the pattern within this differs to that previously described. Here the panel is decorated by three concentric semi-circular bands each of five grooves which emanate from a horizontal band of grooves aligned on the tube. Each of these concentric D shaped panels is decorated with geometric designs: in the smallest inner panel another much smaller saltire cross is present again decorated with opposing engraved lines as described above. Flanking this square are two sub-triangular panels filled with vertical incised lines. The two descending concentric panels are again entirely filled and decorated with tessellating opposed triangles as described before.\nThe decision to term the faces 'front' and 'back' is subjective, based on the greater complexity of the decoration on the 'front' when compared to the 'back'. However, an important point to stress is that the bulla was an example of reversible fashion: one face could be selected depending on the event, time or year or wearer. This is also true of several other bullae (see Cahill 2018), including the Irwell Canal example.\nThe area overlying the suspension tube is decorated differently. Here the space has been divided into two pairs of horizontal panels; each pair is separated by a spine of horizontal lines and is flanked by similar lines. The horizontal panels are again filled with opposing diagonal lines which fill the entire length of the panel in a feather like pattern. Again this decoration has been applied after the external borders as in places it overlaps the external border.\nThe final area of decoration is along the lower wedge shaped edge. Here the design is simpler with two flanking bands each of ten horizontal grooves with the middle panel being filled with very fine vertically cut lines. The fineness of these lines is astounding and unlike in other areas these do not cut through the border. The alternating directions in which the decoration has been engraved serves to define the edges of the decorative motifs and to enhance the effects of the play of light on all the bulla's surfaces.\nContents of the bulla:\nSome Irish bullae have been shown to have cores of baked clay and one had a core of lead (Cahill 2018). CT scanning of the bulla by the Scientific Department at the British Museum has shown that the bulla does not contain anything as dense as metal. It is more likely that it contained baked clay - or that it was empty at the time of deposition and has since filled with soil from the findspot. Loose material from the perforations of the bulla was analysed by the British Museum (using Fourier transform infrared spectroscopy and Pyrolysis gas chromatography - mass spectrometry) and was able to rule out the presence of beeswax and to identify quartz/silica consistent with soil/clay. Another substance was detected but at the time of writing requires further study before its identity can be fully resolved.\nCondition:\nThe bulla is formed of gold sheet and is unpatinated and in a clean state. The external edges have small areas of abrasion commensurate with movement in the soil. The front and rear faces have also been slightly crushed / depressed although the overall form is integrally sound. None of this distortion effects the overall decorative scheme although some abrasion cuts through the design.\nDimensions:\nWidth: 47.4mm; Height: 36.7mm; Thickness across base: 13.0mm; Thickness across upper edge: 6.8mm; External diameter of tube: 7.7mm Internal diameter of tube: 4.8mm; thickness of rolled rim; 1.8mm: Thickness of plate: 0.7mm.\nWeight: 26.6 grams.\nMetal composition: \nNon-destructive X-ray fluorescence analysis undertaken by the Department of Scientific Research, indicated a surface composition of approximately 79-81% gold, 14-16% silver, the rest being copper. Results of surface X-ray fluorescence analysis are qualitative as only the surface (and not the core) of the object was examined.\n\nDiscussion: This suggests very good agreement for all parts of the object. The values do not rule out a Late Bronze Age date and are consistent with other goldwork from this period.\nThis is only the eighth bulla discovered to date in Britain and Ireland (cf. Cahill 2018, for an overview of previous discoveries). It is only the second to have been found in England, the other seven being from Ireland, primarily from the north part of the island (Cahill 2018: 18). The other English example, found in the Irwell ship canal (Manchester, Lancashire) during the 18th-century in the course of dredging. In terms of form, the 'Shropshire Marches' bulla is best paralleled by the Irwell find. The workmanship of the construction and decoration of the 'Shropshire Marches' bulla represents the highest skill and expertise seen within decorated metalwork of the period being almost un-paralleled within a British context.\nDetails of the Irwell bulla are known from an antiquarian source from the later 18th century. This reports that in May 1772 a gold 'Roman Bulla' (Whitaker 1773: Book I, 79-81 & Fishwick 1894), was found whilst deepening the river channel close to the second lock of the River Irwell, Manchester (Lancashire). However, a different antiquarian source indicates that the Irwell find was made in 1758 (Timperley 1839: 48). It was possibly discovered in association with a sword or a Celt (axe) both of which were displayed in the Leverium Museum the contents of which were dispersed through sale in June 1806 (Donovan 1806: 202). The Irwell bulla was sold for £2 4S 4d (according to hand written notes in the volume in Biodiversity Heritage Library digitised by the Smithsonian, Washington), and has since been lost from the record. Phelps (1915) (correctly) identified the Irwell bulla as an object of Bronze Age date and indicated a potential connection with Ireland where bullae were known.\nThe Irish bullae are more 'heart-shaped' than the two English finds, with their more crescentic shape. The Irish corpus includes bulla formed around baked clay or lead cores over which a thick sometimes decorated gold foil has been applied; others have hollow cores, similar to the Shropshire find (Cahill 2018, 20, 23, fig. 4). The decoration on the Shropshire bulla is best paralleled with the gold foil covered lead bulla from the Bog of Allen, Co. Kildare. This example has a decorated lead core over which thin gold foil has been applied. The decoration is broadly similar with similar decorative motifs: interlocking triangles with fills applied in opposite directions in order to define the edges of the design.\nThe skills deployed in the construction and decoration represents the highest skill and expertise seen within decorated metalwork of the period being almost un-paralleled within a British context, although elements are known from other categories of goldwork, most notably lock-rings (Eogan 1969). Lock-rings are known from Britain, Ireland and North-West France (Eogan 1994, fig. 41), and date to the period c.1000 - 750 BC.\nA small number of them are decorated, and a subset of these are decorated with interlocking chevrons similar to the 'Shropshire Marches' bulla, including the recent find from Hambledon, Hampshire (Treasure case 2017 T349). The function of bullae is uncertain; they have been interpreted as reliquaries or charms (Taylor 1980, 66), but it has not been possible to link this suggestion to the analysis of their contents.\nThe nature and environment of the findspot of the bulla is the subject of on-going research.\nThe wider context of the discovery is also of note. The bulla forms the most south-westerly example of high quality Bronze Age goldwork production and deposition (from Early, Middle and Late periods, c.2000/1900 - 800 BC). The significance and context of the bulla relates to this tradition of goldworking excellence (or desire to obtain objects of the highest quality), and to the presence of rich mineral deposits (including copper, gold and lead) in this region of Britain. The find reflects important connections between England, Wales and Ireland during the latest phase of the Bronze Age.\nConclusion:\nAs an object made of more than 10% of precious metal, and being more than 300 years old, the 'Shropshire Marches' bulla qualifies as Treasure under the stipulations of the Treasure Act (1996).\nReferences:\nArmbruster, B. Blet-Lemarcquand, Fily, M., Gratuze. B. and Menez, Y. 2014, 'Un nouveau depot de parure en or de l'age du Bronze atlantique dans le Finistere', Bulletin Annuel de l'APRAB, no. 12, 7-16\nBradley, R. 2013, 'Hoards and the Deposition of Metalwork' In Fokkens, H. & Harding, A. (eds.), The Oxford Handbook of the European Bronze Age, Oxford: Oxford University Press\nBradley, R. 2017. A Geography of Offerings. Deposits of Valuables in the Landscapes of Ancient Europe, Oxford: Oxbow Books (Oxbow Insights in Archaeology, 2017)Cahill, M,, 2015 'Here Comes the SunSolar symbolism in early Bronze Age Ireland', Archaeology Ireland, Spring 2015, 26-33\nCahill, M: 2018, 'The man in the Bulla', Archaeology Ireland, 32 (3), 18-23\nDonovan E. 1806, 'Catalogue of the Leverian Museum : part I-VI' https://www.biodiversitylibrary.org/item/138543#page/202/mode/1up (accessed December 2018)\nEogan, G., 1969, 'Lock -Rings of the Late Bronze Age', Proceedings of the Royal Irish Academy\nEogan G., 1994, The Accomplished Art: Gold and Goldworking in Britain and Ireland during the Bronze Age, Oxford: Oxbow Books\nFishwick, H., 1894, A History of Lancashire: A Popular History Series, London\nLa Niece, S., Roberts, B. and Bullock, H. 'Bronze Age gold wire ornaments from Northern Europe: Joining technology', Paper presented at Archaeometallurgy in Europe 2015, Madrid\nLa Niece, S.; Cartwright, C. 2009, 'Bronze Age gold lock-rings with cores of wax and wood', In Metals and Societies. Studies in Honour of Barbara S. Ottaway; Kienlin, T.L., Roberts, B.W. (Eds); Verlag Dr. Rudolf Habelt: Bonn, 307-312.\nMurgia, A., Melkonian, M. and Roberts, B.W. European Bronze Age Gold in the British Museum, http://www.britishmuseum.org/research/publications/online_journals/bronze_age_review.aspx [Accessed December 2018]\nPhelps J.J., 1915: A gold pendant of early Irish Origin Transactions of the Lancashire and Cheshire Antiquarian Society Volume 33 pp191-200\nTaylor, J.J., 1980, Bronze Age Goldwork of the British Isles, Cambridge: Cambridge University Press\nTimperley C.H., 1839, Annals of Manchester; Biographical, historical ecclesiastical and commercial. From the earliest period to the close of the year 1839. Manchester\nWhitaker, J., 1773, The History of Manchester (Four volumes). London - 2nd edition.\nAuthors:\nPeter Reavill, Finds Liaison Officer, Portable Antiquities Scheme\nNeil Wilkin, Curator of Bronze Age collections, The British Museum\nBritish Museum Scientific Research: Daniel O'Flynn and Duncan Hook",
+    "creator": "Portable Antiquities Scheme",
+    "date": "2018-05-22",
+    "subject": [
+      "bulla",
+      "bullae (seals)"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "Hordley, Shropshire, Shropshire",
+    "country": "England",
+    "decimalLatitude": 52.90845868405854,
+    "decimalLongitude": -2.9678635769447053,
+    "periodStart": "-1000",
+    "periodEnd": "-750",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "a188bac0caa8cf3f2c482930cb7757554e37a2cfe0b3c71fbec51483c0399fa8",
+      "temporal": [
+        {
+          "from": "-1000",
+          "periodName": "bronze age",
+          "until": "-750",
+          "uri": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/BRONZE%20AGE"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "Hordley, Shropshire, Shropshire",
+          "boundingbox": "polygon ((-3.0411957785122 52.9540045610555, -3.0411957785122 52.8629128070616, -2.89453137537721 52.8629128070616, -2.89453137537721 52.9540045610555, -3.0411957785122 52.9540045610555))",
+          "centroid": {
+            "lat": 52.90845868405854,
+            "lon": -2.9678635769447053
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Hordley, Shropshire, Shropshire"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Portable Antiquities Scheme",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Portable%20Antiquities%20Scheme"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bulla",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/BMPAS/BULLA"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "bullae (seals)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300266223",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Artefact"
+        }
+      ],
+      "publisher": "British Museum",
+      "contributor": "Archaeology Data Service",
+      "dataType": [
+        "Still Image"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/BMPAS/6927A99D-CCB4-3876-A816-618EDCDEF801",
+      "otherId": [],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/BM/69F34212-FA39-3E9C-8A08-10DC106FB3D6"
+      ],
+      "accessRights": "CC-BY",
+      "nativePeriod": [
+        "bronze age"
+      ]
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:51:19.250Z",
+      "query": "q:beeswax",
+      "recordId": "ariadne:a188bac0caa8cf3f2c482930cb7757554e37a2cfe0b3c71fbec51483c0399fa8",
+      "title": "Gold BULLA",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/a188bac0caa8cf3f2c482930cb7757554e37a2cfe0b3c71fbec51483c0399fa8",
+      "creator": "Portable Antiquities Scheme",
+      "date": "2018-05-22"
+    }
+  }
+]

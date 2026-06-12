@@ -1,0 +1,5214 @@
+[
+  {
+    "id": "ariadne:cc88f811ec1745c7cfb558a616f58598a7e3982373de4a985998555869d4f0b8",
+    "_source": "ariadne",
+    "_sourceId": "1093432",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/cc88f811ec1745c7cfb558a616f58598a7e3982373de4a985998555869d4f0b8",
+    "title": "Barrow.",
+    "description": "Barrow.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "MAWGAN IN MENEAGE, KERRIER, CORNWALL, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.056539,
+    "decimalLongitude": -5.209614,
+    "ariadne": {
+      "elasticId": "cc88f811ec1745c7cfb558a616f58598a7e3982373de4a985998555869d4f0b8",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "MAWGAN IN MENEAGE, KERRIER, CORNWALL, ENGLAND",
+          "geopoint": {
+            "lat": 50.056539,
+            "lon": -5.209614
+          },
+          "centroid": {
+            "lat": 50.056539,
+            "lon": -5.209614
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "MAWGAN IN MENEAGE, KERRIER, CORNWALL, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/9E30CA63-C130-3FD8-9F92-E652413BD8BE",
+      "otherId": [
+        "Depositor ID: SW 72 SW 37",
+        "NMR_NATINV-427506"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:cc88f811ec1745c7cfb558a616f58598a7e3982373de4a985998555869d4f0b8",
+      "title": "Barrow.",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/cc88f811ec1745c7cfb558a616f58598a7e3982373de4a985998555869d4f0b8",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:89fc901712935768e7b6b5dabff6314c2c873162f7ac3931729891072381a5a3",
+    "_source": "ariadne",
+    "_sourceId": "1093430",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/89fc901712935768e7b6b5dabff6314c2c873162f7ac3931729891072381a5a3",
+    "title": "Barrow.",
+    "description": "Barrow.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "MAWGAN IN MENEAGE, KERRIER, CORNWALL, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.054008,
+    "decimalLongitude": -5.20679,
+    "ariadne": {
+      "elasticId": "89fc901712935768e7b6b5dabff6314c2c873162f7ac3931729891072381a5a3",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "MAWGAN IN MENEAGE, KERRIER, CORNWALL, ENGLAND",
+          "geopoint": {
+            "lat": 50.054008,
+            "lon": -5.20679
+          },
+          "centroid": {
+            "lat": 50.054008,
+            "lon": -5.20679
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "MAWGAN IN MENEAGE, KERRIER, CORNWALL, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/065219C1-26EE-3CAA-BA14-F57ACF2A6612",
+      "otherId": [
+        "Depositor ID: SW 72 SW 35",
+        "NMR_NATINV-427500"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:89fc901712935768e7b6b5dabff6314c2c873162f7ac3931729891072381a5a3",
+      "title": "Barrow.",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/89fc901712935768e7b6b5dabff6314c2c873162f7ac3931729891072381a5a3",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:dad7880a1e0390ed686e17d1d0006832f178160a98de85d40ffb8e77cbae2851",
+    "_source": "ariadne",
+    "_sourceId": "1093440",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/dad7880a1e0390ed686e17d1d0006832f178160a98de85d40ffb8e77cbae2851",
+    "title": "Barrow.",
+    "description": "Barrow.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "ST MARTIN IN MENEAGE, KERRIER, CORNWALL, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.046549,
+    "decimalLongitude": -5.17723,
+    "ariadne": {
+      "elasticId": "dad7880a1e0390ed686e17d1d0006832f178160a98de85d40ffb8e77cbae2851",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "ST MARTIN IN MENEAGE, KERRIER, CORNWALL, ENGLAND",
+          "geopoint": {
+            "lat": 50.046549,
+            "lon": -5.17723
+          },
+          "centroid": {
+            "lat": 50.046549,
+            "lon": -5.17723
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "ST MARTIN IN MENEAGE, KERRIER, CORNWALL, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/6FEAD64F-9D9F-33AD-B8FD-FDA834F975CF",
+      "otherId": [
+        "Depositor ID: SW 72 SW 45",
+        "NMR_NATINV-427526"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:dad7880a1e0390ed686e17d1d0006832f178160a98de85d40ffb8e77cbae2851",
+      "title": "Barrow.",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/dad7880a1e0390ed686e17d1d0006832f178160a98de85d40ffb8e77cbae2851",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:d0c66ce270665b546da32ed67f5a7e8315c5fe59d28d516ea07c1521d2f1627c",
+    "_source": "ariadne",
+    "_sourceId": "1167716",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/d0c66ce270665b546da32ed67f5a7e8315c5fe59d28d516ea07c1521d2f1627c",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "CARSINGTON, DERBYSHIRE DALES, DERBYSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 53.082549,
+    "decimalLongitude": -1.637182,
+    "ariadne": {
+      "elasticId": "d0c66ce270665b546da32ed67f5a7e8315c5fe59d28d516ea07c1521d2f1627c",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "CARSINGTON, DERBYSHIRE DALES, DERBYSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 53.082549,
+            "lon": -1.637182
+          },
+          "centroid": {
+            "lat": 53.082549,
+            "lon": -1.637182
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "CARSINGTON, DERBYSHIRE DALES, DERBYSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/94CC4B87-E678-303A-B74B-6E6E105C83B0",
+      "otherId": [
+        "Depositor ID: SK 25 SW 29",
+        "NMR_NATINV-607069"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:d0c66ce270665b546da32ed67f5a7e8315c5fe59d28d516ea07c1521d2f1627c",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/d0c66ce270665b546da32ed67f5a7e8315c5fe59d28d516ea07c1521d2f1627c",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:24608f7382778d087ec2245b5344cb94e9b753f0adb99bad39c09f57f842b729",
+    "_source": "ariadne",
+    "_sourceId": "1099178",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/24608f7382778d087ec2245b5344cb94e9b753f0adb99bad39c09f57f842b729",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "CHURCHSTOW, SOUTH HAMS, DEVON, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.304762,
+    "decimalLongitude": -3.829393,
+    "ariadne": {
+      "elasticId": "24608f7382778d087ec2245b5344cb94e9b753f0adb99bad39c09f57f842b729",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "CHURCHSTOW, SOUTH HAMS, DEVON, ENGLAND",
+          "geopoint": {
+            "lat": 50.304762,
+            "lon": -3.829393
+          },
+          "centroid": {
+            "lat": 50.304762,
+            "lon": -3.829393
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "CHURCHSTOW, SOUTH HAMS, DEVON, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/7C82E1B2-4E88-3A17-A63E-0E85B0EE014A",
+      "otherId": [
+        "Depositor ID: SX 64 NE 32",
+        "NMR_NATINV-440999"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:24608f7382778d087ec2245b5344cb94e9b753f0adb99bad39c09f57f842b729",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/24608f7382778d087ec2245b5344cb94e9b753f0adb99bad39c09f57f842b729",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:5ad6593f2bb1a9ec5927fbbdcbad23135980de458275dbbdbaa92272923cd06e",
+    "_source": "ariadne",
+    "_sourceId": "1097374",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/5ad6593f2bb1a9ec5927fbbdcbad23135980de458275dbbdbaa92272923cd06e",
+    "title": "Barrow.",
+    "description": "Barrow.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "CALSTOCK, CARADON, CORNWALL, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.518486,
+    "decimalLongitude": -4.25851,
+    "ariadne": {
+      "elasticId": "5ad6593f2bb1a9ec5927fbbdcbad23135980de458275dbbdbaa92272923cd06e",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "CALSTOCK, CARADON, CORNWALL, ENGLAND",
+          "geopoint": {
+            "lat": 50.518486,
+            "lon": -4.25851
+          },
+          "centroid": {
+            "lat": 50.518486,
+            "lon": -4.25851
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "CALSTOCK, CARADON, CORNWALL, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/98F3E219-4065-3C2E-B7C3-27B4D01343AF",
+      "otherId": [
+        "Depositor ID: SX 37 SE 28",
+        "NMR_NATINV-436865"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:5ad6593f2bb1a9ec5927fbbdcbad23135980de458275dbbdbaa92272923cd06e",
+      "title": "Barrow.",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/5ad6593f2bb1a9ec5927fbbdcbad23135980de458275dbbdbaa92272923cd06e",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:e576d64dd33569db336ccf99365e6144ea839d9c3bf2c2729ecee4c58a79fddd",
+    "_source": "ariadne",
+    "_sourceId": "1100528",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/e576d64dd33569db336ccf99365e6144ea839d9c3bf2c2729ecee4c58a79fddd",
+    "title": "?Barrow",
+    "description": "?Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "EAST PORTLEMOUTH, SOUTH HAMS, DEVON, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.233982,
+    "decimalLongitude": -3.758805,
+    "ariadne": {
+      "elasticId": "e576d64dd33569db336ccf99365e6144ea839d9c3bf2c2729ecee4c58a79fddd",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "EAST PORTLEMOUTH, SOUTH HAMS, DEVON, ENGLAND",
+          "geopoint": {
+            "lat": 50.233982,
+            "lon": -3.758805
+          },
+          "centroid": {
+            "lat": 50.233982,
+            "lon": -3.758805
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "EAST PORTLEMOUTH, SOUTH HAMS, DEVON, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/0C330549-58EC-342D-9AA8-08D48343891A",
+      "otherId": [
+        "Depositor ID: SX 73 NW 33",
+        "NMR_NATINV-444329"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:e576d64dd33569db336ccf99365e6144ea839d9c3bf2c2729ecee4c58a79fddd",
+      "title": "?Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/e576d64dd33569db336ccf99365e6144ea839d9c3bf2c2729ecee4c58a79fddd",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:ca4437c33f3c1d707932040f3b76d289da16d53108098eb5cbf956ec1d565864",
+    "_source": "ariadne",
+    "_sourceId": "1098259",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ca4437c33f3c1d707932040f3b76d289da16d53108098eb5cbf956ec1d565864",
+    "title": "?Barrow",
+    "description": "?Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WEMBURY, SOUTH HAMS, DEVON, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.317518,
+    "decimalLongitude": -4.076162,
+    "ariadne": {
+      "elasticId": "ca4437c33f3c1d707932040f3b76d289da16d53108098eb5cbf956ec1d565864",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WEMBURY, SOUTH HAMS, DEVON, ENGLAND",
+          "geopoint": {
+            "lat": 50.317518,
+            "lon": -4.076162
+          },
+          "centroid": {
+            "lat": 50.317518,
+            "lon": -4.076162
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "WEMBURY, SOUTH HAMS, DEVON, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/95E5CB90-563E-3418-BFF5-05C820E5B12B",
+      "otherId": [
+        "Depositor ID: SX 54 NW 27",
+        "NMR_NATINV-438384"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:ca4437c33f3c1d707932040f3b76d289da16d53108098eb5cbf956ec1d565864",
+      "title": "?Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ca4437c33f3c1d707932040f3b76d289da16d53108098eb5cbf956ec1d565864",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:e1b68d6bc6b2a61400046bc71aae1f2c13621c722f9fafe75b3869c3c51fe59c",
+    "_source": "ariadne",
+    "_sourceId": "1049385",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/e1b68d6bc6b2a61400046bc71aae1f2c13621c722f9fafe75b3869c3c51fe59c",
+    "title": "Barrow ?",
+    "description": "Barrow ?",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "KIDLINGTON, CHERWELL, OXFORDSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 51.838143,
+    "decimalLongitude": -1.338809,
+    "ariadne": {
+      "elasticId": "e1b68d6bc6b2a61400046bc71aae1f2c13621c722f9fafe75b3869c3c51fe59c",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "KIDLINGTON, CHERWELL, OXFORDSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 51.838143,
+            "lon": -1.338809
+          },
+          "centroid": {
+            "lat": 51.838143,
+            "lon": -1.338809
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "KIDLINGTON, CHERWELL, OXFORDSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/92939CA1-F20C-3A04-88C1-B51D49867CCF",
+      "otherId": [
+        "Depositor ID: SP 41 NE 7",
+        "NMR_NATINV-336596"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:e1b68d6bc6b2a61400046bc71aae1f2c13621c722f9fafe75b3869c3c51fe59c",
+      "title": "Barrow ?",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/e1b68d6bc6b2a61400046bc71aae1f2c13621c722f9fafe75b3869c3c51fe59c",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:1e38610c5571e1c040954e92bb06f29c776e4c5cbe9814dd75b5716e92ce6fa8",
+    "_source": "ariadne",
+    "_sourceId": "1040223",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/1e38610c5571e1c040954e92bb06f29c776e4c5cbe9814dd75b5716e92ce6fa8",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BAMFORD, HIGH PEAK, DERBYSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 53.367484,
+    "decimalLongitude": -1.684366,
+    "ariadne": {
+      "elasticId": "1e38610c5571e1c040954e92bb06f29c776e4c5cbe9814dd75b5716e92ce6fa8",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BAMFORD, HIGH PEAK, DERBYSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 53.367484,
+            "lon": -1.684366
+          },
+          "centroid": {
+            "lat": 53.367484,
+            "lon": -1.684366
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "BAMFORD, HIGH PEAK, DERBYSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/317C9B85-8203-3226-9E1B-35760327F8E2",
+      "otherId": [
+        "Depositor ID: SK 28 NW 21",
+        "NMR_NATINV-312281"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:1e38610c5571e1c040954e92bb06f29c776e4c5cbe9814dd75b5716e92ce6fa8",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/1e38610c5571e1c040954e92bb06f29c776e4c5cbe9814dd75b5716e92ce6fa8",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:8541f94f4ebe76f8b29e47df42e5298d5e9c70e847cb19a0bb261473c0c3c00e",
+    "_source": "ariadne",
+    "_sourceId": "1030193",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/8541f94f4ebe76f8b29e47df42e5298d5e9c70e847cb19a0bb261473c0c3c00e",
+    "title": "Barrow.",
+    "description": "Barrow.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "ASHMANSWORTH, BASINGSTOKE AND DEANE, HAMPSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 51.313309,
+    "decimalLongitude": -1.382829,
+    "ariadne": {
+      "elasticId": "8541f94f4ebe76f8b29e47df42e5298d5e9c70e847cb19a0bb261473c0c3c00e",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "ASHMANSWORTH, BASINGSTOKE AND DEANE, HAMPSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 51.313309,
+            "lon": -1.382829
+          },
+          "centroid": {
+            "lat": 51.313309,
+            "lon": -1.382829
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "ASHMANSWORTH, BASINGSTOKE AND DEANE, HAMPSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F843AAF9-95CC-368E-89BE-3F8C60C4F8D5",
+      "otherId": [
+        "Depositor ID: SU 45 NW 6",
+        "NMR_NATINV-232610"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:8541f94f4ebe76f8b29e47df42e5298d5e9c70e847cb19a0bb261473c0c3c00e",
+      "title": "Barrow.",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/8541f94f4ebe76f8b29e47df42e5298d5e9c70e847cb19a0bb261473c0c3c00e",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:4b6b3c6a8e6c1b1aa421e803ec22dc9ba37fa3aedc065c06a6335c2aa634c533",
+    "_source": "ariadne",
+    "_sourceId": "1267121",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/4b6b3c6a8e6c1b1aa421e803ec22dc9ba37fa3aedc065c06a6335c2aa634c533",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "barrow",
+      "cropmark"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "NORTON, DAVENTRY, NORTHAMPTONSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.253434,
+    "decimalLongitude": -1.125338,
+    "ariadne": {
+      "elasticId": "4b6b3c6a8e6c1b1aa421e803ec22dc9ba37fa3aedc065c06a6335c2aa634c533",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "NORTON, DAVENTRY, NORTHAMPTONSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 52.253434,
+            "lon": -1.125338
+          },
+          "centroid": {
+            "lat": 52.253434,
+            "lon": -1.125338
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "NORTON, DAVENTRY, NORTHAMPTONSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        },
+        {
+          "prefLabel": "cropmark",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CROPMARK"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/8080F055-F0BD-34FC-947E-A8D9A1742B56",
+      "otherId": [
+        "Depositor ID: SP 56 SE 58",
+        "NMR_NATINV-962733"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:4b6b3c6a8e6c1b1aa421e803ec22dc9ba37fa3aedc065c06a6335c2aa634c533",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/4b6b3c6a8e6c1b1aa421e803ec22dc9ba37fa3aedc065c06a6335c2aa634c533",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:8abf61fceed34bf4ad9a18a09a5dc85d4cc3747cd93a04a016f308095b8ac8b1",
+    "_source": "ariadne",
+    "_sourceId": "1111725",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/8abf61fceed34bf4ad9a18a09a5dc85d4cc3747cd93a04a016f308095b8ac8b1",
+    "title": "Barrow?",
+    "description": "Barrow?",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "barrow",
+      "cropmark"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "MINSTER, KENT, ENGLAND, THANET",
+    "country": "England",
+    "decimalLatitude": 51.338758,
+    "decimalLongitude": 1.329895,
+    "ariadne": {
+      "elasticId": "8abf61fceed34bf4ad9a18a09a5dc85d4cc3747cd93a04a016f308095b8ac8b1",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "MINSTER, KENT, ENGLAND, THANET",
+          "geopoint": {
+            "lat": 51.338758,
+            "lon": 1.329895
+          },
+          "centroid": {
+            "lat": 51.338758,
+            "lon": 1.329895
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "MINSTER, KENT, ENGLAND, THANET"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        },
+        {
+          "prefLabel": "cropmark",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/CROPMARK"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/01878294-3B6C-327B-B2EA-28910B7A5884",
+      "otherId": [
+        "Depositor ID: TR 36 NW 178",
+        "NMR_NATINV-469388"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:8abf61fceed34bf4ad9a18a09a5dc85d4cc3747cd93a04a016f308095b8ac8b1",
+      "title": "Barrow?",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/8abf61fceed34bf4ad9a18a09a5dc85d4cc3747cd93a04a016f308095b8ac8b1",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:ef0a6fc7c31bd1eef935bb8ff688013fe52552dc3e943cc49cb62512bae14814",
+    "_source": "ariadne",
+    "_sourceId": "1104695",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ef0a6fc7c31bd1eef935bb8ff688013fe52552dc3e943cc49cb62512bae14814",
+    "title": "Lord's Barrow - round barrow...",
+    "description": "Lord's Barrow - round barrow and probable barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "CHALDON HERRING, PURBECK, DORSET, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.655752,
+    "decimalLongitude": -2.314513,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "ef0a6fc7c31bd1eef935bb8ff688013fe52552dc3e943cc49cb62512bae14814",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "CHALDON HERRING, PURBECK, DORSET, ENGLAND",
+          "geopoint": {
+            "lat": 50.655752,
+            "lon": -2.314513
+          },
+          "centroid": {
+            "lat": 50.655752,
+            "lon": -2.314513
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "CHALDON HERRING, PURBECK, DORSET, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/0AAACCE5-C502-32F9-A7E9-BA3F7BDE5C73",
+      "otherId": [
+        "Depositor ID: SY 78 SE 30",
+        "NMR_NATINV-454223"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:ef0a6fc7c31bd1eef935bb8ff688013fe52552dc3e943cc49cb62512bae14814",
+      "title": "Lord's Barrow - round barrow...",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ef0a6fc7c31bd1eef935bb8ff688013fe52552dc3e943cc49cb62512bae14814",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:fb622893ba5bfdc78965f6063324e832c625a671f5f26619676b6f1395374a31",
+    "_source": "ariadne",
+    "_sourceId": "Depositor ID: MONID: 3238",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/fb622893ba5bfdc78965f6063324e832c625a671f5f26619676b6f1395374a31",
+    "title": "BARROW",
+    "description": "In the flat bottom of a small valley, an approx. circular earthen mound with rounded profile has been cast up from the quarry ditch. The barrow has recently been ploughed and its profile is badly disturbed. The barrow measures 17m N/S x 16m W/E. The ditch is 3.2m wide x 0.4m below the external ground surface. The ploughed out remains of a second barrow lie 68m due S. See SM7 file for details of recent disturbance.",
+    "creator": "Department for Communities Northern Ireland",
+    "date": "2022-10-27",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "MID AND EAST ANTRIM, BALLYHILL, Northern Ireland",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.757575,
+    "decimalLongitude": -5.757202,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "prehistoric"
+    ],
+    "ariadne": {
+      "elasticId": "fb622893ba5bfdc78965f6063324e832c625a671f5f26619676b6f1395374a31",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "MID AND EAST ANTRIM, BALLYHILL, Northern Ireland",
+          "geopoint": {
+            "lat": 54.757575,
+            "lon": -5.757202
+          },
+          "centroid": {
+            "lat": 54.757575,
+            "lon": -5.757202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "MID AND EAST ANTRIM, BALLYHILL, Northern Ireland"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Department for Communities Northern Ireland",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Department%20for%20Communities%20Northern%20Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Department for Communities Northern Ireland",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/HERoNI/C70DC924-899C-3B0B-B8CE-E57660C75DE6",
+      "otherId": [
+        "Depositor ID: MONID: 3238",
+        "Depositor ID: SMRNo: ANT047:013"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/B1E1FD6B-42C6-35B6-82E8-06E0082CCC71"
+      ],
+      "accessRights": "Not provided",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:fb622893ba5bfdc78965f6063324e832c625a671f5f26619676b6f1395374a31",
+      "title": "BARROW",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/fb622893ba5bfdc78965f6063324e832c625a671f5f26619676b6f1395374a31",
+      "creator": "Department for Communities Northern Ireland",
+      "date": "2022-10-27"
+    }
+  },
+  {
+    "id": "ariadne:b45aa54bc09618a1d92ad87a290270fe4245cfcab8cd1ccc03473eebd3a8eb4d",
+    "_source": "ariadne",
+    "_sourceId": "1085218",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/b45aa54bc09618a1d92ad87a290270fe4245cfcab8cd1ccc03473eebd3a8eb4d",
+    "title": "Barrow - either platform barrow...",
+    "description": "Barrow - either platform barrow or reduced bowl barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "ARLINGTON, WEALDEN, EAST SUSSEX, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.808488,
+    "decimalLongitude": 0.192829,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "b45aa54bc09618a1d92ad87a290270fe4245cfcab8cd1ccc03473eebd3a8eb4d",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "ARLINGTON, WEALDEN, EAST SUSSEX, ENGLAND",
+          "geopoint": {
+            "lat": 50.808488,
+            "lon": 0.192829
+          },
+          "centroid": {
+            "lat": 50.808488,
+            "lon": 0.192829
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "ARLINGTON, WEALDEN, EAST SUSSEX, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/C28EF224-E322-3A96-9DE4-DB2AEBC94288",
+      "otherId": [
+        "Depositor ID: TQ 50 SW 37",
+        "NMR_NATINV-408720"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:b45aa54bc09618a1d92ad87a290270fe4245cfcab8cd1ccc03473eebd3a8eb4d",
+      "title": "Barrow - either platform barrow...",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/b45aa54bc09618a1d92ad87a290270fe4245cfcab8cd1ccc03473eebd3a8eb4d",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:922d282469c37c5410d5ba0f413d705715b33793b39570dcc7d1868d7c692ad7",
+    "_source": "ariadne",
+    "_sourceId": "1095573",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/922d282469c37c5410d5ba0f413d705715b33793b39570dcc7d1868d7c692ad7",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "barrow",
+      "natural feature"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "TINTAGEL, NORTH CORNWALL, CORNWALL, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.66996,
+    "decimalLongitude": -4.754551,
+    "ariadne": {
+      "elasticId": "922d282469c37c5410d5ba0f413d705715b33793b39570dcc7d1868d7c692ad7",
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "TINTAGEL, NORTH CORNWALL, CORNWALL, ENGLAND",
+          "geopoint": {
+            "lat": 50.66996,
+            "lon": -4.754551
+          },
+          "centroid": {
+            "lat": 50.66996,
+            "lon": -4.754551
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "TINTAGEL, NORTH CORNWALL, CORNWALL, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        },
+        {
+          "prefLabel": "natural feature",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NATURAL%20FEATURE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/3874667D-6C7C-3A99-A65A-BFB10415837E",
+      "otherId": [
+        "Depositor ID: SX 08 NE 30",
+        "NMR_NATINV-431951"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:922d282469c37c5410d5ba0f413d705715b33793b39570dcc7d1868d7c692ad7",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/922d282469c37c5410d5ba0f413d705715b33793b39570dcc7d1868d7c692ad7",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:56f60681a1ace3b851f3fb4319083e4cb9afb1f4f6283fa1c7d18ea2b5816bc7",
+    "_source": "ariadne",
+    "_sourceId": "1093079",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/56f60681a1ace3b851f3fb4319083e4cb9afb1f4f6283fa1c7d18ea2b5816bc7",
+    "title": "Round barrow, doubtful barrow",
+    "description": "Round barrow, doubtful barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GRADE RUAN, KERRIER, CORNWALL, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "56f60681a1ace3b851f3fb4319083e4cb9afb1f4f6283fa1c7d18ea2b5816bc7",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GRADE RUAN, KERRIER, CORNWALL, ENGLAND"
+        },
+        {
+          "geopoint": {
+            "lat": 50.028607,
+            "lon": -5.198113
+          },
+          "centroid": {
+            "lat": 50.028607,
+            "lon": -5.198113
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 50.028748,
+            "lon": -5.199519
+          },
+          "centroid": {
+            "lat": 50.028748,
+            "lon": -5.199519
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "GRADE RUAN, KERRIER, CORNWALL, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/F9614EAE-9B22-3B92-831E-24F9BE190359",
+      "otherId": [
+        "Depositor ID: SW 71 NW 16",
+        "NMR_NATINV-426617"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:56f60681a1ace3b851f3fb4319083e4cb9afb1f4f6283fa1c7d18ea2b5816bc7",
+      "title": "Round barrow, doubtful barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/56f60681a1ace3b851f3fb4319083e4cb9afb1f4f6283fa1c7d18ea2b5816bc7",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:2f72d9b8a466c574e7e351200f11e819d8d7f2114cc08b78e93cc5dca54643e7",
+    "_source": "ariadne",
+    "_sourceId": "1094864",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2f72d9b8a466c574e7e351200f11e819d8d7f2114cc08b78e93cc5dca54643e7",
+    "title": "`Tregawne Barrow' - bowl barrow",
+    "description": "`Tregawne Barrow' - bowl barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bowl barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "WITHIEL, NORTH CORNWALL, CORNWALL, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.469143,
+    "decimalLongitude": -4.819256,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "2f72d9b8a466c574e7e351200f11e819d8d7f2114cc08b78e93cc5dca54643e7",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "WITHIEL, NORTH CORNWALL, CORNWALL, ENGLAND",
+          "geopoint": {
+            "lat": 50.469143,
+            "lon": -4.819256
+          },
+          "centroid": {
+            "lat": 50.469143,
+            "lon": -4.819256
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "WITHIEL, NORTH CORNWALL, CORNWALL, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOWL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/0DB9CE7D-AB93-3873-8AAB-BCF59017E7A8",
+      "otherId": [
+        "Depositor ID: SW 96 NE 17",
+        "NMR_NATINV-430326"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:2f72d9b8a466c574e7e351200f11e819d8d7f2114cc08b78e93cc5dca54643e7",
+      "title": "`Tregawne Barrow' - bowl barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2f72d9b8a466c574e7e351200f11e819d8d7f2114cc08b78e93cc5dca54643e7",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:b175c5ff33bb72c527dae9230a42d1b66e95a9e199e73b0188062d57e444c876",
+    "_source": "ariadne",
+    "_sourceId": "1104589",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/b175c5ff33bb72c527dae9230a42d1b66e95a9e199e73b0188062d57e444c876",
+    "title": "Tinker's Barrow - bowl barrow",
+    "description": "Tinker's Barrow - bowl barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bowl barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "OWERMOIGNE, WEST DORSET, DORSET, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.689303,
+    "decimalLongitude": -2.312897,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "b175c5ff33bb72c527dae9230a42d1b66e95a9e199e73b0188062d57e444c876",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "OWERMOIGNE, WEST DORSET, DORSET, ENGLAND",
+          "geopoint": {
+            "lat": 50.689303,
+            "lon": -2.312897
+          },
+          "centroid": {
+            "lat": 50.689303,
+            "lon": -2.312897
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "OWERMOIGNE, WEST DORSET, DORSET, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOWL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/53A41169-7154-3A4C-AFB2-1D3D09798C64",
+      "otherId": [
+        "Depositor ID: SY 78 NE 6",
+        "NMR_NATINV-453877"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:b175c5ff33bb72c527dae9230a42d1b66e95a9e199e73b0188062d57e444c876",
+      "title": "Tinker's Barrow - bowl barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/b175c5ff33bb72c527dae9230a42d1b66e95a9e199e73b0188062d57e444c876",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:afde814ded8753ddad2ea77faa416a9a482252d26482b2d00077cd6a031afcc4",
+    "_source": "ariadne",
+    "_sourceId": "1104677",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/afde814ded8753ddad2ea77faa416a9a482252d26482b2d00077cd6a031afcc4",
+    "title": "Wardstone Barrow - bowl barrow",
+    "description": "Wardstone Barrow - bowl barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bowl barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "CHALDON HERRING, PURBECK, DORSET, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.630717,
+    "decimalLongitude": -2.292145,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "afde814ded8753ddad2ea77faa416a9a482252d26482b2d00077cd6a031afcc4",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "CHALDON HERRING, PURBECK, DORSET, ENGLAND",
+          "geopoint": {
+            "lat": 50.630717,
+            "lon": -2.292145
+          },
+          "centroid": {
+            "lat": 50.630717,
+            "lon": -2.292145
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "CHALDON HERRING, PURBECK, DORSET, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOWL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/5B872ADB-C813-3940-8D59-AF0C05953BF0",
+      "otherId": [
+        "Depositor ID: SY 78 SE 12",
+        "NMR_NATINV-454155"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:afde814ded8753ddad2ea77faa416a9a482252d26482b2d00077cd6a031afcc4",
+      "title": "Wardstone Barrow - bowl barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/afde814ded8753ddad2ea77faa416a9a482252d26482b2d00077cd6a031afcc4",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:4037da01b9aa517e6100d6c6dd5054c675633e25da5255abb211a99d1f65098c",
+    "_source": "ariadne",
+    "_sourceId": "1104673",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/4037da01b9aa517e6100d6c6dd5054c675633e25da5255abb211a99d1f65098c",
+    "title": "Bush Barrow - bowl barrow",
+    "description": "Bush Barrow - bowl barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bowl barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "CHALDON HERRING, PURBECK, DORSET, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.636675,
+    "decimalLongitude": -2.283555,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "4037da01b9aa517e6100d6c6dd5054c675633e25da5255abb211a99d1f65098c",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "CHALDON HERRING, PURBECK, DORSET, ENGLAND",
+          "geopoint": {
+            "lat": 50.636675,
+            "lon": -2.283555
+          },
+          "centroid": {
+            "lat": 50.636675,
+            "lon": -2.283555
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "CHALDON HERRING, PURBECK, DORSET, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOWL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/117E2066-5CBA-3919-A5AB-7DA993BB6299",
+      "otherId": [
+        "Depositor ID: SY 78 SE 8",
+        "NMR_NATINV-454143"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:4037da01b9aa517e6100d6c6dd5054c675633e25da5255abb211a99d1f65098c",
+      "title": "Bush Barrow - bowl barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/4037da01b9aa517e6100d6c6dd5054c675633e25da5255abb211a99d1f65098c",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:0cdea3b0b965843158e5b16f4071bf107ecb888bcdbb3176b26e2e8482cd2099",
+    "_source": "ariadne",
+    "_sourceId": "1105659",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0cdea3b0b965843158e5b16f4071bf107ecb888bcdbb3176b26e2e8482cd2099",
+    "title": "Drinking Barrow - Bowl Barrow",
+    "description": "Drinking Barrow - Bowl Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bowl barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "STEEPLE, PURBECK, DORSET, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.647198,
+    "decimalLongitude": -2.131695,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "0cdea3b0b965843158e5b16f4071bf107ecb888bcdbb3176b26e2e8482cd2099",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "STEEPLE, PURBECK, DORSET, ENGLAND",
+          "geopoint": {
+            "lat": 50.647198,
+            "lon": -2.131695
+          },
+          "centroid": {
+            "lat": 50.647198,
+            "lon": -2.131695
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "STEEPLE, PURBECK, DORSET, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOWL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CF1178AE-B567-3FF5-8B9C-E6BD7C879AE1",
+      "otherId": [
+        "Depositor ID: SY 98 SW 28",
+        "NMR_NATINV-456975"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:0cdea3b0b965843158e5b16f4071bf107ecb888bcdbb3176b26e2e8482cd2099",
+      "title": "Drinking Barrow - Bowl Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0cdea3b0b965843158e5b16f4071bf107ecb888bcdbb3176b26e2e8482cd2099",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:8a703969f8b4fd4076d86c738e259fa8a6097f297737b60f0cc29142ab496a4a",
+    "_source": "ariadne",
+    "_sourceId": "1105093",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/8a703969f8b4fd4076d86c738e259fa8a6097f297737b60f0cc29142ab496a4a",
+    "title": "Povington Barrow - Bowl barrow",
+    "description": "Povington Barrow - Bowl barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bowl barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "TYNEHAM, PURBECK, DORSET, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.638156,
+    "decimalLongitude": -2.169148,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "8a703969f8b4fd4076d86c738e259fa8a6097f297737b60f0cc29142ab496a4a",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "TYNEHAM, PURBECK, DORSET, ENGLAND",
+          "geopoint": {
+            "lat": 50.638156,
+            "lon": -2.169148
+          },
+          "centroid": {
+            "lat": 50.638156,
+            "lon": -2.169148
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "TYNEHAM, PURBECK, DORSET, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOWL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/AF3E7309-146E-3711-B9BF-3915B9DC7D2D",
+      "otherId": [
+        "Depositor ID: SY 88 SE 17",
+        "NMR_NATINV-455433"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:8a703969f8b4fd4076d86c738e259fa8a6097f297737b60f0cc29142ab496a4a",
+      "title": "Povington Barrow - Bowl barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/8a703969f8b4fd4076d86c738e259fa8a6097f297737b60f0cc29142ab496a4a",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:dd239e014808c2b56ea9f607c6b5ae9619c68efe394520cba0bceac6ac05b048",
+    "_source": "ariadne",
+    "_sourceId": "1105094",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/dd239e014808c2b56ea9f607c6b5ae9619c68efe394520cba0bceac6ac05b048",
+    "title": "Thorn Barrow - bowl barrow",
+    "description": "Thorn Barrow - bowl barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bowl barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "TYNEHAM, PURBECK, DORSET, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.636889,
+    "decimalLongitude": -2.174376,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "dd239e014808c2b56ea9f607c6b5ae9619c68efe394520cba0bceac6ac05b048",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "TYNEHAM, PURBECK, DORSET, ENGLAND",
+          "geopoint": {
+            "lat": 50.636889,
+            "lon": -2.174376
+          },
+          "centroid": {
+            "lat": 50.636889,
+            "lon": -2.174376
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "TYNEHAM, PURBECK, DORSET, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOWL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/AD986063-3C76-3FB8-A164-47FEB9233466",
+      "otherId": [
+        "Depositor ID: SY 88 SE 18",
+        "NMR_NATINV-455436"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:dd239e014808c2b56ea9f607c6b5ae9619c68efe394520cba0bceac6ac05b048",
+      "title": "Thorn Barrow - bowl barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/dd239e014808c2b56ea9f607c6b5ae9619c68efe394520cba0bceac6ac05b048",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:8b5eee4b66e1e809a73e1cd80c790a21f8af1217903041849ca17da060c5f798",
+    "_source": "ariadne",
+    "_sourceId": "1105898",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/8b5eee4b66e1e809a73e1cd80c790a21f8af1217903041849ca17da060c5f798",
+    "title": "Fishing Barrow-bell barrow",
+    "description": "Fishing Barrow-bell barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bell barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "STUDLAND, PURBECK, DORSET, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 50.638006,
+    "decimalLongitude": -1.974402,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "8b5eee4b66e1e809a73e1cd80c790a21f8af1217903041849ca17da060c5f798",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "STUDLAND, PURBECK, DORSET, ENGLAND",
+          "geopoint": {
+            "lat": 50.638006,
+            "lon": -1.974402
+          },
+          "centroid": {
+            "lat": 50.638006,
+            "lon": -1.974402
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "STUDLAND, PURBECK, DORSET, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bell barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BELL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/8F52928A-00D5-3B0A-96FB-8B1248F8AE9E",
+      "otherId": [
+        "Depositor ID: SZ 08 SW 15",
+        "NMR_NATINV-457583"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:8b5eee4b66e1e809a73e1cd80c790a21f8af1217903041849ca17da060c5f798",
+      "title": "Fishing Barrow-bell barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/8b5eee4b66e1e809a73e1cd80c790a21f8af1217903041849ca17da060c5f798",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:ecfe5534b96534fa97978b74f119a00a302e945e76a5a55bfb43af36960be5ca",
+    "_source": "ariadne",
+    "_sourceId": "1039273",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ecfe5534b96534fa97978b74f119a00a302e945e76a5a55bfb43af36960be5ca",
+    "title": "Barrow Sedge-?barrow,unloc",
+    "description": "Barrow Sedge-?barrow,unloc",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "HARTINGTON TOWN QUARTER, DERBYSHIRE DALES, DERBYSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 53.136769,
+    "decimalLongitude": -1.850504,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "ecfe5534b96534fa97978b74f119a00a302e945e76a5a55bfb43af36960be5ca",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "HARTINGTON TOWN QUARTER, DERBYSHIRE DALES, DERBYSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 53.136769,
+            "lon": -1.850504
+          },
+          "centroid": {
+            "lat": 53.136769,
+            "lon": -1.850504
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "HARTINGTON TOWN QUARTER, DERBYSHIRE DALES, DERBYSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/8748FBEB-9F5B-34E3-8874-E834DB5B7461",
+      "otherId": [
+        "Depositor ID: SK 16 SW 34",
+        "NMR_NATINV-308944"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:ecfe5534b96534fa97978b74f119a00a302e945e76a5a55bfb43af36960be5ca",
+      "title": "Barrow Sedge-?barrow,unloc",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ecfe5534b96534fa97978b74f119a00a302e945e76a5a55bfb43af36960be5ca",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:12724b88c7a901bd1cb02384a448012c0edb52ee09a5433727a974172d1994d3",
+    "_source": "ariadne",
+    "_sourceId": "Depositor ID: MONID: 2509",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/12724b88c7a901bd1cb02384a448012c0edb52ee09a5433727a974172d1994d3",
+    "title": "BARROW",
+    "description": "Located on a platform on a gentle W-facing slope, this is the low remains of a barrow. Overall it measures 11m E-W & the enclosing ditch is 3m wide. It stands a max. of 0.4m high. The platform on which the barrow sits appears to have a slight lip, approx. 0.5m above the base of the ditch.",
+    "creator": "Department for Communities Northern Ireland",
+    "date": "2022-10-27",
+    "subject": "barrow",
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "MID AND EAST ANTRIM, BALLYCOOS, Northern Ireland",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.902396,
+    "decimalLongitude": -5.932375,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": [
+      "bronze age",
+      "prehistoric"
+    ],
+    "ariadne": {
+      "elasticId": "12724b88c7a901bd1cb02384a448012c0edb52ee09a5433727a974172d1994d3",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        },
+        {
+          "from": "-500000",
+          "periodName": "prehistoric",
+          "until": "0043",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dst7t7"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "MID AND EAST ANTRIM, BALLYCOOS, Northern Ireland",
+          "geopoint": {
+            "lat": 54.902396,
+            "lon": -5.932375
+          },
+          "centroid": {
+            "lat": 54.902396,
+            "lon": -5.932375
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "MID AND EAST ANTRIM, BALLYCOOS, Northern Ireland"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Department for Communities Northern Ireland",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Department%20for%20Communities%20Northern%20Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BARROW"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Department for Communities Northern Ireland",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/HERoNI/F3E64B52-A352-3804-ABFD-492BEE4B5389",
+      "otherId": [
+        "Depositor ID: MONID: 2509",
+        "Depositor ID: SMRNo: ANT035:077"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/B1E1FD6B-42C6-35B6-82E8-06E0082CCC71"
+      ],
+      "accessRights": "Not provided",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:12724b88c7a901bd1cb02384a448012c0edb52ee09a5433727a974172d1994d3",
+      "title": "BARROW",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/12724b88c7a901bd1cb02384a448012c0edb52ee09a5433727a974172d1994d3",
+      "creator": "Department for Communities Northern Ireland",
+      "date": "2022-10-27"
+    }
+  },
+  {
+    "id": "ariadne:0b50434f0c474af2a98ebfa0251ed3ec3cc868879aa12eb26cba68ec4e1e3f54",
+    "_source": "ariadne",
+    "_sourceId": "1047568",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/0b50434f0c474af2a98ebfa0251ed3ec3cc868879aa12eb26cba68ec4e1e3f54",
+    "title": "Little Barrow - round barrow...",
+    "description": "Little Barrow - round barrow (site) possibly natural.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "EVENLODE, COTSWOLD, GLOUCESTERSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 51.96306,
+    "decimalLongitude": -1.660264,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "0b50434f0c474af2a98ebfa0251ed3ec3cc868879aa12eb26cba68ec4e1e3f54",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "EVENLODE, COTSWOLD, GLOUCESTERSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 51.96306,
+            "lon": -1.660264
+          },
+          "centroid": {
+            "lat": 51.96306,
+            "lon": -1.660264
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "EVENLODE, COTSWOLD, GLOUCESTERSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/A3586959-9E29-370C-BADF-C45CAF40A036",
+      "otherId": [
+        "Depositor ID: SP 22 NW 1",
+        "NMR_NATINV-332538"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:0b50434f0c474af2a98ebfa0251ed3ec3cc868879aa12eb26cba68ec4e1e3f54",
+      "title": "Little Barrow - round barrow...",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/0b50434f0c474af2a98ebfa0251ed3ec3cc868879aa12eb26cba68ec4e1e3f54",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:b7786278bb06fc872a1d05e6266f190b94e1322d8dd0ae13c3e2e157df11db63",
+    "_source": "ariadne",
+    "_sourceId": "1034280",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/b7786278bb06fc872a1d05e6266f190b94e1322d8dd0ae13c3e2e157df11db63",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bell barrow",
+      "bowl barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "LANGRISH, HAMPSHIRE, ENGLAND, EAST HAMPSHIRE",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "b7786278bb06fc872a1d05e6266f190b94e1322d8dd0ae13c3e2e157df11db63",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "LANGRISH, HAMPSHIRE, ENGLAND, EAST HAMPSHIRE"
+        },
+        {
+          "geopoint": {
+            "lat": 50.975955,
+            "lon": -0.981743
+          },
+          "centroid": {
+            "lat": 50.975955,
+            "lon": -0.981743
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 50.976495,
+            "lon": -0.981731
+          },
+          "centroid": {
+            "lat": 50.976495,
+            "lon": -0.981731
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "LANGRISH, HAMPSHIRE, ENGLAND, EAST HAMPSHIRE"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bell barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BELL%20BARROW"
+        },
+        {
+          "prefLabel": "bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOWL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/9000058D-009A-3441-A284-69F2487E58F6",
+      "otherId": [
+        "Depositor ID: SU 72 SW 9",
+        "NMR_NATINV-243107"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:b7786278bb06fc872a1d05e6266f190b94e1322d8dd0ae13c3e2e157df11db63",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/b7786278bb06fc872a1d05e6266f190b94e1322d8dd0ae13c3e2e157df11db63",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:ce6806d1ddeff7b8c32d0e22d77ee32ff590306e337f3e43faad6009b3f79e85",
+    "_source": "ariadne",
+    "_sourceId": "1030216",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ce6806d1ddeff7b8c32d0e22d77ee32ff590306e337f3e43faad6009b3f79e85",
+    "title": "Barrow.",
+    "description": "Barrow.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bell barrow",
+      "bowl barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "LITCHFIELD AND WOODCOTT, BASINGSTOKE AND DEANE, HAMPSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "ce6806d1ddeff7b8c32d0e22d77ee32ff590306e337f3e43faad6009b3f79e85",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "LITCHFIELD AND WOODCOTT, BASINGSTOKE AND DEANE, HAMPSHIRE, ENGLAND"
+        },
+        {
+          "geopoint": {
+            "lat": 51.27241,
+            "lon": -1.336926
+          },
+          "centroid": {
+            "lat": 51.27241,
+            "lon": -1.336926
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 51.272228,
+            "lon": -1.336498
+          },
+          "centroid": {
+            "lat": 51.272228,
+            "lon": -1.336498
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "LITCHFIELD AND WOODCOTT, BASINGSTOKE AND DEANE, HAMPSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bell barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BELL%20BARROW"
+        },
+        {
+          "prefLabel": "bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOWL%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/8958C62E-A4C3-364F-BFFA-0BCAD6F62777",
+      "otherId": [
+        "Depositor ID: SU 45 SE 4",
+        "NMR_NATINV-232689"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:ce6806d1ddeff7b8c32d0e22d77ee32ff590306e337f3e43faad6009b3f79e85",
+      "title": "Barrow.",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ce6806d1ddeff7b8c32d0e22d77ee32ff590306e337f3e43faad6009b3f79e85",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:cc5827c484cdf74b14b97872ed16b5ae2b12e6e70f89019c802e420d4ab11ad7",
+    "_source": "ariadne",
+    "_sourceId": "1028497",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/cc5827c484cdf74b14b97872ed16b5ae2b12e6e70f89019c802e420d4ab11ad7",
+    "title": "Bowl barrow, alleged barrow -...",
+    "description": "Bowl barrow, alleged barrow - natural mound",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "bowl barrow",
+      "natural feature",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "ENGLAND, LECKFORD, TEST VALLEY, HAMPSHIRE",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "cc5827c484cdf74b14b97872ed16b5ae2b12e6e70f89019c802e420d4ab11ad7",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "ENGLAND, LECKFORD, TEST VALLEY, HAMPSHIRE"
+        },
+        {
+          "geopoint": {
+            "lat": 51.127877,
+            "lon": -1.437041
+          },
+          "centroid": {
+            "lat": 51.127877,
+            "lon": -1.437041
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 51.128043,
+            "lon": -1.434324
+          },
+          "centroid": {
+            "lat": 51.128043,
+            "lon": -1.434324
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "ENGLAND, LECKFORD, TEST VALLEY, HAMPSHIRE"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "bowl barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BOWL%20BARROW"
+        },
+        {
+          "prefLabel": "natural feature",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/NATURAL%20FEATURE"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/89B86E7E-CC4B-3518-A5CE-CEE37D4038F8",
+      "otherId": [
+        "Depositor ID: SU 33 NE 15",
+        "NMR_NATINV-227284"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:cc5827c484cdf74b14b97872ed16b5ae2b12e6e70f89019c802e420d4ab11ad7",
+      "title": "Bowl barrow, alleged barrow -...",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/cc5827c484cdf74b14b97872ed16b5ae2b12e6e70f89019c802e420d4ab11ad7",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:04061f34008fe464288fba67c40f87e379b323f730f565ebf8452088bfcdb1b1",
+    "_source": "ariadne",
+    "_sourceId": "1014069",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/04061f34008fe464288fba67c40f87e379b323f730f565ebf8452088bfcdb1b1",
+    "title": "? barrow.",
+    "description": "? barrow.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "LOXTON, NORTH SOMERSET, AVON, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 51.309262,
+    "decimalLongitude": -2.907385,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "04061f34008fe464288fba67c40f87e379b323f730f565ebf8452088bfcdb1b1",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "LOXTON, NORTH SOMERSET, AVON, ENGLAND",
+          "geopoint": {
+            "lat": 51.309262,
+            "lon": -2.907385
+          },
+          "centroid": {
+            "lat": 51.309262,
+            "lon": -2.907385
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "LOXTON, NORTH SOMERSET, AVON, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/2898F527-C66A-308A-9661-020BA5A4FB19",
+      "otherId": [
+        "Depositor ID: ST 35 NE 59",
+        "NMR_NATINV-192487"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:04061f34008fe464288fba67c40f87e379b323f730f565ebf8452088bfcdb1b1",
+      "title": "? barrow.",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/04061f34008fe464288fba67c40f87e379b323f730f565ebf8452088bfcdb1b1",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:e3321e87249be62ed6041be5d124767a7db3d04cb05707cbfdb96e7709c03adb",
+    "_source": "ariadne",
+    "_sourceId": "1040258",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/e3321e87249be62ed6041be5d124767a7db3d04cb05707cbfdb96e7709c03adb",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "SHEFFIELD, SHEFFIELD, SOUTH YORKSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 53.326613,
+    "decimalLongitude": -1.578355,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "e3321e87249be62ed6041be5d124767a7db3d04cb05707cbfdb96e7709c03adb",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "SHEFFIELD, SHEFFIELD, SOUTH YORKSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 53.326613,
+            "lon": -1.578355
+          },
+          "centroid": {
+            "lat": 53.326613,
+            "lon": -1.578355
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "SHEFFIELD, SHEFFIELD, SOUTH YORKSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/438A4714-E2DD-3E55-8B18-32ED141513AF",
+      "otherId": [
+        "Depositor ID: SK 28 SE 35",
+        "NMR_NATINV-312376"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:e3321e87249be62ed6041be5d124767a7db3d04cb05707cbfdb96e7709c03adb",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/e3321e87249be62ed6041be5d124767a7db3d04cb05707cbfdb96e7709c03adb",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:6e9bb69beb43310b94a34ae039ea97387c34f0e70bfd12deec005a7d99f03ff8",
+    "_source": "ariadne",
+    "_sourceId": "1040067",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/6e9bb69beb43310b94a34ae039ea97387c34f0e70bfd12deec005a7d99f03ff8",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "EYAM, DERBYSHIRE DALES, DERBYSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 53.295587,
+    "decimalLongitude": -1.692548,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "6e9bb69beb43310b94a34ae039ea97387c34f0e70bfd12deec005a7d99f03ff8",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "EYAM, DERBYSHIRE DALES, DERBYSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 53.295587,
+            "lon": -1.692548
+          },
+          "centroid": {
+            "lat": 53.295587,
+            "lon": -1.692548
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "EYAM, DERBYSHIRE DALES, DERBYSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/E9793BE5-90DF-3762-AA76-711F2E31CD38",
+      "otherId": [
+        "Depositor ID: SK 27 NW 14",
+        "NMR_NATINV-311835"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:6e9bb69beb43310b94a34ae039ea97387c34f0e70bfd12deec005a7d99f03ff8",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/6e9bb69beb43310b94a34ae039ea97387c34f0e70bfd12deec005a7d99f03ff8",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:efe8358e27476d21038f5db05cd38a97cc618037864a0cb52004d6c1fea07328",
+    "_source": "ariadne",
+    "_sourceId": "1043795",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/efe8358e27476d21038f5db05cd38a97cc618037864a0cb52004d6c1fea07328",
+    "title": "Barrow?",
+    "description": "Barrow?",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GAMSTON, BASSETLAW, NOTTINGHAMSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 53.285174,
+    "decimalLongitude": -0.902036,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "efe8358e27476d21038f5db05cd38a97cc618037864a0cb52004d6c1fea07328",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GAMSTON, BASSETLAW, NOTTINGHAMSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 53.285174,
+            "lon": -0.902036
+          },
+          "centroid": {
+            "lat": 53.285174,
+            "lon": -0.902036
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "GAMSTON, BASSETLAW, NOTTINGHAMSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/3930240E-75CC-347B-8377-AF8AB789B6F4",
+      "otherId": [
+        "Depositor ID: SK 77 NW 11",
+        "NMR_NATINV-322815"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:efe8358e27476d21038f5db05cd38a97cc618037864a0cb52004d6c1fea07328",
+      "title": "Barrow?",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/efe8358e27476d21038f5db05cd38a97cc618037864a0cb52004d6c1fea07328",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:a7da068353a988f4a70656246fae0f99effb2ae6cdb784d400062d1f7ba564c5",
+    "_source": "ariadne",
+    "_sourceId": "1051370",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/a7da068353a988f4a70656246fae0f99effb2ae6cdb784d400062d1f7ba564c5",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "LUTTERWORTH, HARBOROUGH, LEICESTERSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.445616,
+    "decimalLongitude": -1.220126,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "a7da068353a988f4a70656246fae0f99effb2ae6cdb784d400062d1f7ba564c5",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "LUTTERWORTH, HARBOROUGH, LEICESTERSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 52.445616,
+            "lon": -1.220126
+          },
+          "centroid": {
+            "lat": 52.445616,
+            "lon": -1.220126
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "LUTTERWORTH, HARBOROUGH, LEICESTERSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/B5823623-7862-368E-8E1F-E3D209F0CC2A",
+      "otherId": [
+        "Depositor ID: SP 58 SW 31",
+        "NMR_NATINV-340484"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:a7da068353a988f4a70656246fae0f99effb2ae6cdb784d400062d1f7ba564c5",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/a7da068353a988f4a70656246fae0f99effb2ae6cdb784d400062d1f7ba564c5",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:957fc899c7a25e185961ba12ad8f6836bf8b4fa603bf38b8d939b50a8eff8777",
+    "_source": "ariadne",
+    "_sourceId": "979321",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/957fc899c7a25e185961ba12ad8f6836bf8b4fa603bf38b8d939b50a8eff8777",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "DANBY, SCARBOROUGH, NORTH YORKSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.475012,
+    "decimalLongitude": -0.882603,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "957fc899c7a25e185961ba12ad8f6836bf8b4fa603bf38b8d939b50a8eff8777",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "DANBY, SCARBOROUGH, NORTH YORKSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 54.475012,
+            "lon": -0.882603
+          },
+          "centroid": {
+            "lat": 54.475012,
+            "lon": -0.882603
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "DANBY, SCARBOROUGH, NORTH YORKSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/CA774625-90FA-3F69-9571-818D04E39092",
+      "otherId": [
+        "Depositor ID: NZ 70 NW 1",
+        "NMR_NATINV-28788"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:957fc899c7a25e185961ba12ad8f6836bf8b4fa603bf38b8d939b50a8eff8777",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/957fc899c7a25e185961ba12ad8f6836bf8b4fa603bf38b8d939b50a8eff8777",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:e0a7862a0da95a16782b1b62811c3375abb53e165fa0e6d504f41e97265cfbb8",
+    "_source": "ariadne",
+    "_sourceId": "983813",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/e0a7862a0da95a16782b1b62811c3375abb53e165fa0e6d504f41e97265cfbb8",
+    "title": "?Barrow",
+    "description": "?Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "TORVER, SOUTH LAKELAND, CUMBRIA, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.352438,
+    "decimalLongitude": -3.114069,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "e0a7862a0da95a16782b1b62811c3375abb53e165fa0e6d504f41e97265cfbb8",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "TORVER, SOUTH LAKELAND, CUMBRIA, ENGLAND",
+          "geopoint": {
+            "lat": 54.352438,
+            "lon": -3.114069
+          },
+          "centroid": {
+            "lat": 54.352438,
+            "lon": -3.114069
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "TORVER, SOUTH LAKELAND, CUMBRIA, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/EB21A434-C1D2-38A8-9495-B4986CE4BA15",
+      "otherId": [
+        "Depositor ID: SD 29 NE 22",
+        "NMR_NATINV-38771"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:e0a7862a0da95a16782b1b62811c3375abb53e165fa0e6d504f41e97265cfbb8",
+      "title": "?Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/e0a7862a0da95a16782b1b62811c3375abb53e165fa0e6d504f41e97265cfbb8",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:c9221f3c614e06c371f5a89b9b8c3b4a7d5c0152eeafa6a35bec218cc87a27a9",
+    "_source": "ariadne",
+    "_sourceId": "978835",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/c9221f3c614e06c371f5a89b9b8c3b4a7d5c0152eeafa6a35bec218cc87a27a9",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GUISBOROUGH, REDCAR AND CLEVELAND, CLEVELAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.550275,
+    "decimalLongitude": -1.114031,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "c9221f3c614e06c371f5a89b9b8c3b4a7d5c0152eeafa6a35bec218cc87a27a9",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GUISBOROUGH, REDCAR AND CLEVELAND, CLEVELAND, ENGLAND",
+          "geopoint": {
+            "lat": 54.550275,
+            "lon": -1.114031
+          },
+          "centroid": {
+            "lat": 54.550275,
+            "lon": -1.114031
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "GUISBOROUGH, REDCAR AND CLEVELAND, CLEVELAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/2A06F83B-3583-3609-91A1-2FAFC7AEEC74",
+      "otherId": [
+        "Depositor ID: NZ 51 NE 40",
+        "NMR_NATINV-27591"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:c9221f3c614e06c371f5a89b9b8c3b4a7d5c0152eeafa6a35bec218cc87a27a9",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/c9221f3c614e06c371f5a89b9b8c3b4a7d5c0152eeafa6a35bec218cc87a27a9",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:1578424facd0c504595b9e0e069d3640c0b8c9e5726626b25ffc37ae100dd094",
+    "_source": "ariadne",
+    "_sourceId": "978834",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/1578424facd0c504595b9e0e069d3640c0b8c9e5726626b25ffc37ae100dd094",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GUISBOROUGH, REDCAR AND CLEVELAND, CLEVELAND, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.55743,
+    "decimalLongitude": -1.097019,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "1578424facd0c504595b9e0e069d3640c0b8c9e5726626b25ffc37ae100dd094",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GUISBOROUGH, REDCAR AND CLEVELAND, CLEVELAND, ENGLAND",
+          "geopoint": {
+            "lat": 54.55743,
+            "lon": -1.097019
+          },
+          "centroid": {
+            "lat": 54.55743,
+            "lon": -1.097019
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "GUISBOROUGH, REDCAR AND CLEVELAND, CLEVELAND, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/7076DED7-EBF1-369F-921F-88D6337A0B83",
+      "otherId": [
+        "Depositor ID: NZ 51 NE 39",
+        "NMR_NATINV-27588"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:1578424facd0c504595b9e0e069d3640c0b8c9e5726626b25ffc37ae100dd094",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/1578424facd0c504595b9e0e069d3640c0b8c9e5726626b25ffc37ae100dd094",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:2b026bdb32940e33bd7c4dced1c773057a25d6b03e5d500fe87850f27cc4e3ba",
+    "_source": "ariadne",
+    "_sourceId": "1000487",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2b026bdb32940e33bd7c4dced1c773057a25d6b03e5d500fe87850f27cc4e3ba",
+    "title": "?Barrow",
+    "description": "?Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "TIXALL, STAFFORD, STAFFORDSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.810496,
+    "decimalLongitude": -2.068252,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "2b026bdb32940e33bd7c4dced1c773057a25d6b03e5d500fe87850f27cc4e3ba",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "TIXALL, STAFFORD, STAFFORDSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 52.810496,
+            "lon": -2.068252
+          },
+          "centroid": {
+            "lat": 52.810496,
+            "lon": -2.068252
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "TIXALL, STAFFORD, STAFFORDSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/B1008D12-D4A8-35AC-944A-D1075019B82F",
+      "otherId": [
+        "Depositor ID: SJ 92 SE 26",
+        "NMR_NATINV-77447"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:2b026bdb32940e33bd7c4dced1c773057a25d6b03e5d500fe87850f27cc4e3ba",
+      "title": "?Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2b026bdb32940e33bd7c4dced1c773057a25d6b03e5d500fe87850f27cc4e3ba",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:ff8ca72a21a52aa98cf796ea6e82490289cef4d60cbd35d30e206c87b7f984d4",
+    "_source": "ariadne",
+    "_sourceId": "1001429",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/ff8ca72a21a52aa98cf796ea6e82490289cef4d60cbd35d30e206c87b7f984d4",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "FOLKTON, SCARBOROUGH, NORTH YORKSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.176162,
+    "decimalLongitude": -0.406307,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "ff8ca72a21a52aa98cf796ea6e82490289cef4d60cbd35d30e206c87b7f984d4",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "FOLKTON, SCARBOROUGH, NORTH YORKSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 54.176162,
+            "lon": -0.406307
+          },
+          "centroid": {
+            "lat": 54.176162,
+            "lon": -0.406307
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "FOLKTON, SCARBOROUGH, NORTH YORKSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/5CCEFDC0-8438-3595-8EC0-879C3AC4C341",
+      "otherId": [
+        "Depositor ID: TA 07 NW 28",
+        "NMR_NATINV-79784"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:ff8ca72a21a52aa98cf796ea6e82490289cef4d60cbd35d30e206c87b7f984d4",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/ff8ca72a21a52aa98cf796ea6e82490289cef4d60cbd35d30e206c87b7f984d4",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:f7677b3c867036ea75b3ee0cc2793631f198056b634f3858813ebfd42db44984",
+    "_source": "ariadne",
+    "_sourceId": "991126",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/f7677b3c867036ea75b3ee0cc2793631f198056b634f3858813ebfd42db44984",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "GREAT OUSEBURN, HARROGATE, NORTH YORKSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 54.049585,
+    "decimalLongitude": -1.316732,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "f7677b3c867036ea75b3ee0cc2793631f198056b634f3858813ebfd42db44984",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "GREAT OUSEBURN, HARROGATE, NORTH YORKSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 54.049585,
+            "lon": -1.316732
+          },
+          "centroid": {
+            "lat": 54.049585,
+            "lon": -1.316732
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "GREAT OUSEBURN, HARROGATE, NORTH YORKSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/36AE0766-602C-3FFB-AEED-A038826F76A0",
+      "otherId": [
+        "Depositor ID: SE 46 SW 4",
+        "NMR_NATINV-55291"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:f7677b3c867036ea75b3ee0cc2793631f198056b634f3858813ebfd42db44984",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/f7677b3c867036ea75b3ee0cc2793631f198056b634f3858813ebfd42db44984",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:36fcd6d3f5420d74fdb11c95bf89a7366f276a5bacd29f150893f84deef12625",
+    "_source": "ariadne",
+    "_sourceId": "1064210",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/36fcd6d3f5420d74fdb11c95bf89a7366f276a5bacd29f150893f84deef12625",
+    "title": "Barrow.",
+    "description": "Barrow.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "OFFLEY, NORTH HERTFORDSHIRE, HERTFORDSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 51.902377,
+    "decimalLongitude": -0.339895,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "36fcd6d3f5420d74fdb11c95bf89a7366f276a5bacd29f150893f84deef12625",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "OFFLEY, NORTH HERTFORDSHIRE, HERTFORDSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 51.902377,
+            "lon": -0.339895
+          },
+          "centroid": {
+            "lat": 51.902377,
+            "lon": -0.339895
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "OFFLEY, NORTH HERTFORDSHIRE, HERTFORDSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/C04D001A-C6AC-3959-9BF6-BA619FE2805C",
+      "otherId": [
+        "Depositor ID: TL 12 SW 14",
+        "NMR_NATINV-362416"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:36fcd6d3f5420d74fdb11c95bf89a7366f276a5bacd29f150893f84deef12625",
+      "title": "Barrow.",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/36fcd6d3f5420d74fdb11c95bf89a7366f276a5bacd29f150893f84deef12625",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:5e1391664652e287c02a4a2df64c5eb0a8e4c9f77ed46c3afdffe1ffbbdac32d",
+    "_source": "ariadne",
+    "_sourceId": "1065488",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/5e1391664652e287c02a4a2df64c5eb0a8e4c9f77ed46c3afdffe1ffbbdac32d",
+    "title": "Barrow.",
+    "description": "Barrow.",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "ASHWELL, NORTH HERTFORDSHIRE, HERTFORDSHIRE, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.032338,
+    "decimalLongitude": -0.165519,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "5e1391664652e287c02a4a2df64c5eb0a8e4c9f77ed46c3afdffe1ffbbdac32d",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "ASHWELL, NORTH HERTFORDSHIRE, HERTFORDSHIRE, ENGLAND",
+          "geopoint": {
+            "lat": 52.032338,
+            "lon": -0.165519
+          },
+          "centroid": {
+            "lat": 52.032338,
+            "lon": -0.165519
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "ASHWELL, NORTH HERTFORDSHIRE, HERTFORDSHIRE, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/D6A71A5A-846A-396C-960E-264EFC3A28C5",
+      "otherId": [
+        "Depositor ID: TL 23 NE 31",
+        "NMR_NATINV-365556"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:5e1391664652e287c02a4a2df64c5eb0a8e4c9f77ed46c3afdffe1ffbbdac32d",
+      "title": "Barrow.",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/5e1391664652e287c02a4a2df64c5eb0a8e4c9f77ed46c3afdffe1ffbbdac32d",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:521bae30281a1ae47cd79ab51f404a6eea9d48531c5ccc93318cb4be6b7e6ade",
+    "_source": "ariadne",
+    "_sourceId": "1072429",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/521bae30281a1ae47cd79ab51f404a6eea9d48531c5ccc93318cb4be6b7e6ade",
+    "title": "? Barrow",
+    "description": "? Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "MUNDFORD, BRECKLAND, NORFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.498853,
+    "decimalLongitude": 0.632897,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "521bae30281a1ae47cd79ab51f404a6eea9d48531c5ccc93318cb4be6b7e6ade",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "MUNDFORD, BRECKLAND, NORFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.498853,
+            "lon": 0.632897
+          },
+          "centroid": {
+            "lat": 52.498853,
+            "lon": 0.632897
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "MUNDFORD, BRECKLAND, NORFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/5DB18C13-3CE5-3533-BB2F-826F5AD86F74",
+      "otherId": [
+        "Depositor ID: TL 79 SE 18",
+        "NMR_NATINV-380545"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:521bae30281a1ae47cd79ab51f404a6eea9d48531c5ccc93318cb4be6b7e6ade",
+      "title": "? Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/521bae30281a1ae47cd79ab51f404a6eea9d48531c5ccc93318cb4be6b7e6ade",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:276f8ba096caa7d6272aebf1ade94d7330a590cbed254cc6cf0e26249f7db2e6",
+    "_source": "ariadne",
+    "_sourceId": "1087103",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/276f8ba096caa7d6272aebf1ade94d7330a590cbed254cc6cf0e26249f7db2e6",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "BIRLING, TONBRIDGE AND MALLING, ENGLAND, KENT",
+    "country": "England",
+    "decimalLatitude": 51.325501,
+    "decimalLongitude": 0.389534,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "276f8ba096caa7d6272aebf1ade94d7330a590cbed254cc6cf0e26249f7db2e6",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "BIRLING, TONBRIDGE AND MALLING, ENGLAND, KENT",
+          "geopoint": {
+            "lat": 51.325501,
+            "lon": 0.389534
+          },
+          "centroid": {
+            "lat": 51.325501,
+            "lon": 0.389534
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "BIRLING, TONBRIDGE AND MALLING, ENGLAND, KENT"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/A02F2A34-504A-31CC-8189-B19936A52CAE",
+      "otherId": [
+        "Depositor ID: TQ 66 SE 5",
+        "NMR_NATINV-413318"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:276f8ba096caa7d6272aebf1ade94d7330a590cbed254cc6cf0e26249f7db2e6",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/276f8ba096caa7d6272aebf1ade94d7330a590cbed254cc6cf0e26249f7db2e6",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:73769f4a49659f293ece2822bf0bfbeace905fd9e46832892ed198d35904c32c",
+    "_source": "ariadne",
+    "_sourceId": "1088151",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/73769f4a49659f293ece2822bf0bfbeace905fd9e46832892ed198d35904c32c",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "LANDEWEDNACK, KERRIER, CORNWALL, ENGLAND",
+    "country": "England",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "73769f4a49659f293ece2822bf0bfbeace905fd9e46832892ed198d35904c32c",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "LANDEWEDNACK, KERRIER, CORNWALL, ENGLAND"
+        },
+        {
+          "geopoint": {
+            "lat": 49.991127,
+            "lon": -5.21935
+          },
+          "centroid": {
+            "lat": 49.991127,
+            "lon": -5.21935
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 49.991319,
+            "lon": -5.218944
+          },
+          "centroid": {
+            "lat": 49.991319,
+            "lon": -5.218944
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "LANDEWEDNACK, KERRIER, CORNWALL, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/4DB1CA90-FA74-3F98-B582-EFC9890C633D",
+      "otherId": [
+        "Depositor ID: SW 61 NE 13",
+        "NMR_NATINV-425241"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:73769f4a49659f293ece2822bf0bfbeace905fd9e46832892ed198d35904c32c",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/73769f4a49659f293ece2822bf0bfbeace905fd9e46832892ed198d35904c32c",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  },
+  {
+    "id": "ariadne:2b8e690421faa42ba9ad6ae8e864eaab9f85b4e42de3c8d5a209b2d2df8a49a0",
+    "_source": "ariadne",
+    "_sourceId": "1077334",
+    "_sourceUrl": "https://portal.ariadne-infrastructure.eu/resource/2b8e690421faa42ba9ad6ae8e864eaab9f85b4e42de3c8d5a209b2d2df8a49a0",
+    "title": "Barrow",
+    "description": "Barrow",
+    "creator": "Historic England",
+    "date": "2004-09-15",
+    "subject": [
+      "round barrow",
+      "barrows"
+    ],
+    "language": "en",
+    "type": "dataset",
+    "spatialCoverage": "MARTLESHAM, SUFFOLK COASTAL, SUFFOLK, ENGLAND",
+    "country": "England",
+    "decimalLatitude": 52.053397,
+    "decimalLongitude": 1.28141,
+    "periodStart": "-2599",
+    "periodEnd": "-0699",
+    "periodName": "bronze age",
+    "ariadne": {
+      "elasticId": "2b8e690421faa42ba9ad6ae8e864eaab9f85b4e42de3c8d5a209b2d2df8a49a0",
+      "temporal": [
+        {
+          "from": "-2599",
+          "periodName": "bronze age",
+          "until": "-0699",
+          "uri": "http://n2t.net/ark:/99152/p0kh9ds7q8m"
+        }
+      ],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "allSpatial": [
+        {
+          "placeName": "MARTLESHAM, SUFFOLK COASTAL, SUFFOLK, ENGLAND",
+          "geopoint": {
+            "lat": 52.053397,
+            "lon": 1.28141
+          },
+          "centroid": {
+            "lat": 52.053397,
+            "lon": 1.28141
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "MARTLESHAM, SUFFOLK COASTAL, SUFFOLK, ENGLAND"
+      ],
+      "creatorDetails": [
+        {
+          "name": "Historic England",
+          "agentIdentifier": "https://ariadne-infrastructure.eu/aocat/Agent/Historic%20England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "round barrow",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ROUND%20BARROW"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "barrows",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300391494",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Site/monument"
+        }
+      ],
+      "publisher": "Archaeology Data Service",
+      "contributor": "Historic England",
+      "dataType": [
+        "Structured Data"
+      ],
+      "identifier": "https://ariadne-infrastructure.eu/aocat/Resource/0AC5E88A-AEBA-3C4D-80D6-90A8856C4741",
+      "otherId": [
+        "Depositor ID: TM 24 SW 22",
+        "NMR_NATINV-390002"
+      ],
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AAA81A6D-56F3-341C-BAF0-791C31BC7F73"
+      ],
+      "accessRights": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "nativePeriod": []
+    },
+    "_citation": {
+      "service": "ARIADNE",
+      "serviceUrl": "https://portal.ariadne-infrastructure.eu",
+      "publisher": "ARIADNE Research Infrastructure",
+      "accessDate": "2026-06-12T17:47:35.592Z",
+      "query": "q:barrow",
+      "recordId": "ariadne:2b8e690421faa42ba9ad6ae8e864eaab9f85b4e42de3c8d5a209b2d2df8a49a0",
+      "title": "Barrow",
+      "url": "https://portal.ariadne-infrastructure.eu/resource/2b8e690421faa42ba9ad6ae8e864eaab9f85b4e42de3c8d5a209b2d2df8a49a0",
+      "creator": "Historic England",
+      "date": "2004-09-15"
+    }
+  }
+]

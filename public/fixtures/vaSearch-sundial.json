@@ -1,0 +1,1726 @@
+[
+  {
+    "id": "vam:O75711",
+    "_source": "vam",
+    "_sourceId": "O75711",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O75711",
+    "_pid": "A.42-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O75711",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O75711",
+      "pid": "A.42-1910",
+      "creator": "Unknown",
+      "date": "ca. 1700"
+    },
+    "title": "Sundial",
+    "creator": "Unknown",
+    "date": "ca. 1700",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "place": "England",
+      "accessionNumber": "A.42-1910",
+      "onDisplay": false,
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AM5921/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O75711/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AM5921/"
+    }
+  },
+  {
+    "id": "vam:O374329",
+    "_source": "vam",
+    "_sourceId": "O374329",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O374329",
+    "_pid": "879-1882",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O374329",
+      "title": "Butterfield dial",
+      "url": "https://collections.vam.ac.uk/item/O374329",
+      "pid": "879-1882",
+      "creator": "Butterfield, Michael",
+      "date": "1680-1700"
+    },
+    "title": "Butterfield dial",
+    "creator": "Butterfield, Michael",
+    "date": "1680-1700",
+    "subject": [
+      "Sundial and case"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial and case",
+      "place": "Paris",
+      "accessionNumber": "879-1882",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2023NP0596/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O374329/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2023NP0596/"
+    }
+  },
+  {
+    "id": "vam:O179101",
+    "_source": "vam",
+    "_sourceId": "O179101",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O179101",
+    "_pid": "476-1905",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O179101",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O179101",
+      "pid": "476-1905",
+      "creator": "Unknown",
+      "date": "late 15th century"
+    },
+    "title": "Sundial",
+    "creator": "Unknown",
+    "date": "late 15th century",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "place": "France",
+      "accessionNumber": "476-1905",
+      "onDisplay": false,
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2009CR9157/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O179101/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2009CR9157/"
+    }
+  },
+  {
+    "id": "vam:O91845",
+    "_source": "vam",
+    "_sourceId": "O91845",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O91845",
+    "_pid": "CIRC.415-1923",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O91845",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O91845",
+      "pid": "CIRC.415-1923",
+      "date": "1680-1699"
+    },
+    "title": "Sundial",
+    "date": "1680-1699",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "place": "Paris",
+      "accessionNumber": "CIRC.415-1923",
+      "onDisplay": true,
+      "location": "Silver, Room 69",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AK0925/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O91845/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AK0925/"
+    }
+  },
+  {
+    "id": "vam:O375790",
+    "_source": "vam",
+    "_sourceId": "O375790",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O375790",
+    "_pid": "20-1879",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O375790",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O375790",
+      "pid": "20-1879",
+      "date": "17th century"
+    },
+    "title": "Sundial",
+    "date": "17th century",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "place": "Germany",
+      "accessionNumber": "20-1879",
+      "onDisplay": false,
+      "location": "In Store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2017KC2927/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O375790/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2017KC2927/"
+    }
+  },
+  {
+    "id": "vam:O299169",
+    "_source": "vam",
+    "_sourceId": "O299169",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O299169",
+    "_pid": "A.52-1923",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O299169",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O299169",
+      "pid": "A.52-1923",
+      "creator": "Unknown",
+      "date": "ca. 1650 - ca. 1700"
+    },
+    "title": "Sundial",
+    "creator": "Unknown",
+    "date": "ca. 1650 - ca. 1700",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "place": "Dieppe",
+      "accessionNumber": "A.52-1923",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2011FC2517/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O299169/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2011FC2517/"
+    }
+  },
+  {
+    "id": "vam:O299168",
+    "_source": "vam",
+    "_sourceId": "O299168",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O299168",
+    "_pid": "A.53-1923",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O299168",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O299168",
+      "pid": "A.53-1923",
+      "creator": "Henri, Robert",
+      "date": "ca. 1641 - ca. 1674"
+    },
+    "title": "Sundial",
+    "creator": "Henri, Robert",
+    "date": "ca. 1641 - ca. 1674",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "place": "Marseilles",
+      "accessionNumber": "A.53-1923",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2011FC2516/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O299168/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2011FC2516/"
+    }
+  },
+  {
+    "id": "vam:O382285",
+    "_source": "vam",
+    "_sourceId": "O382285",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O382285",
+    "_pid": "M.530-1926",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O382285",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O382285",
+      "pid": "M.530-1926",
+      "date": "17th century"
+    },
+    "title": "Sundial",
+    "date": "17th century",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "place": "France",
+      "accessionNumber": "M.530-1926",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O97901",
+    "_source": "vam",
+    "_sourceId": "O97901",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O97901",
+    "_pid": "M.168&A-1938",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O97901",
+      "title": "Sundial and case",
+      "url": "https://collections.vam.ac.uk/item/O97901",
+      "pid": "M.168&A-1938",
+      "date": "1695-1702"
+    },
+    "title": "Sundial and case",
+    "date": "1695-1702",
+    "subject": [
+      "Sundial and case"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial and case",
+      "place": "London",
+      "accessionNumber": "M.168&A-1938",
+      "onDisplay": true,
+      "location": "Metalware, Room 116, The Belinda Gentle Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AE3737/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O97901/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AE3737/"
+    }
+  },
+  {
+    "id": "vam:O125392",
+    "_source": "vam",
+    "_sourceId": "O125392",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O125392",
+    "_pid": "M.86-1921",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O125392",
+      "title": "Diptych compass and sundial",
+      "url": "https://collections.vam.ac.uk/item/O125392",
+      "pid": "M.86-1921",
+      "creator": "Schissler, Christopher",
+      "date": "1581"
+    },
+    "title": "Diptych compass and sundial",
+    "creator": "Schissler, Christopher",
+    "date": "1581",
+    "subject": [
+      "Diptych compass and sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Diptych compass and sundial",
+      "place": "Augsburg",
+      "accessionNumber": "M.86-1921",
+      "onDisplay": true,
+      "location": "Medieval & Renaissance, Room 62, The Foyle Foundation Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2008BT3116/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O125392/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2008BT3116/"
+    }
+  },
+  {
+    "id": "vam:O312630",
+    "_source": "vam",
+    "_sourceId": "O312630",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O312630",
+    "_pid": "A.42PART-1910",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O312630",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O312630",
+      "pid": "A.42PART-1910",
+      "date": "17th century"
+    },
+    "title": "Sundial",
+    "date": "17th century",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "A.42PART-1910",
+      "onDisplay": false
+    }
+  },
+  {
+    "id": "vam:O181333",
+    "_source": "vam",
+    "_sourceId": "O181333",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O181333",
+    "_pid": "48-1894",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O181333",
+      "title": "Tablet sundial",
+      "url": "https://collections.vam.ac.uk/item/O181333",
+      "pid": "48-1894",
+      "creator": "Bloud, Gabriel",
+      "date": "ca. 1650 - ca. 1680"
+    },
+    "title": "Tablet sundial",
+    "creator": "Bloud, Gabriel",
+    "date": "ca. 1650 - ca. 1680",
+    "subject": [
+      "Tablet sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Tablet sundial",
+      "place": "Dieppe",
+      "accessionNumber": "48-1894",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2011FC2505/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O181333/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2011FC2505/"
+    }
+  },
+  {
+    "id": "vam:O473546",
+    "_source": "vam",
+    "_sourceId": "O473546",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O473546",
+    "_pid": "06484(IS)",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O473546",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O473546",
+      "pid": "06484(IS)"
+    },
+    "title": "Sundial",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "06484(IS)",
+      "onDisplay": false,
+      "location": "In Store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2020MR2512/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O473546/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2020MR2512/"
+    }
+  },
+  {
+    "id": "vam:O382801",
+    "_source": "vam",
+    "_sourceId": "O382801",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O382801",
+    "_pid": "M.136-1923",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O382801",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O382801",
+      "pid": "M.136-1923"
+    },
+    "title": "Sundial",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "M.136-1923",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2023NP0607/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2023NP0607/"
+    }
+  },
+  {
+    "id": "vam:O382665",
+    "_source": "vam",
+    "_sourceId": "O382665",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O382665",
+    "_pid": "19-1879",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O382665",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O382665",
+      "pid": "19-1879"
+    },
+    "title": "Sundial",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "19-1879",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2022NG2157/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O382665/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2022NG2157/"
+    }
+  },
+  {
+    "id": "vam:O382527",
+    "_source": "vam",
+    "_sourceId": "O382527",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O382527",
+    "_pid": "M.185-1922",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O382527",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O382527",
+      "pid": "M.185-1922"
+    },
+    "title": "Sundial",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "M.185-1922",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O381042",
+    "_source": "vam",
+    "_sourceId": "O381042",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O381042",
+    "_pid": "1176-1893",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O381042",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O381042",
+      "pid": "1176-1893"
+    },
+    "title": "Sundial",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "1176-1893",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O375803",
+    "_source": "vam",
+    "_sourceId": "O375803",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O375803",
+    "_pid": "M.166-1938",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O375803",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O375803",
+      "pid": "M.166-1938"
+    },
+    "title": "Sundial",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "M.166-1938",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2023NP0609/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2023NP0609/"
+    }
+  },
+  {
+    "id": "vam:O375801",
+    "_source": "vam",
+    "_sourceId": "O375801",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O375801",
+    "_pid": "641-1865",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O375801",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O375801",
+      "pid": "641-1865"
+    },
+    "title": "Sundial",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "641-1865",
+      "onDisplay": true,
+      "location": "Metalware, Room 116, The Belinda Gentle Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AE2783/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O375801/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AE2783/"
+    }
+  },
+  {
+    "id": "vam:O375800",
+    "_source": "vam",
+    "_sourceId": "O375800",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O375800",
+    "_pid": "M.125-1953",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O375800",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O375800",
+      "pid": "M.125-1953"
+    },
+    "title": "Sundial",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "M.125-1953",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O375789",
+    "_source": "vam",
+    "_sourceId": "O375789",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O375789",
+    "_pid": "M.92-1953",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O375789",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O375789",
+      "pid": "M.92-1953"
+    },
+    "title": "Sundial",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "M.92-1953",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2023NP0460/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2023NP0460/"
+    }
+  },
+  {
+    "id": "vam:O403243",
+    "_source": "vam",
+    "_sourceId": "O403243",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O403243",
+    "_pid": "IM.471:1-1924",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O403243",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O403243",
+      "pid": "IM.471:1-1924",
+      "date": "19th century"
+    },
+    "title": "Sundial",
+    "date": "19th century",
+    "subject": [
+      "Sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial",
+      "accessionNumber": "IM.471:1-1924",
+      "onDisplay": false,
+      "location": "In Store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2020MR2505/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O403243/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2020MR2505/"
+    }
+  },
+  {
+    "id": "vam:O323655",
+    "_source": "vam",
+    "_sourceId": "O323655",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O323655",
+    "_pid": "M.370-1983",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O323655",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O323655",
+      "pid": "M.370-1983",
+      "creator": "Huntley, Boorne & Stevens",
+      "date": "1913"
+    },
+    "title": "Sundial",
+    "creator": "Huntley, Boorne & Stevens",
+    "date": "1913",
+    "subject": [
+      "Biscuit tin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Biscuit tin",
+      "place": "Reading",
+      "accessionNumber": "M.370-1983",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2019LL9848/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2019LL9848/"
+    }
+  },
+  {
+    "id": "vam:O644682",
+    "_source": "vam",
+    "_sourceId": "O644682",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O644682",
+    "_pid": "22787:1",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O644682",
+      "title": "Designs for Necklaces, Pendants and Earrings of the Highest Skill",
+      "url": "https://collections.vam.ac.uk/item/O644682",
+      "pid": "22787:1",
+      "creator": "Hans Collaert",
+      "date": "1581"
+    },
+    "title": "Designs for Necklaces, Pendants and Earrings of the Highest Skill",
+    "creator": "Hans Collaert",
+    "date": "1581",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Antwerp",
+      "accessionNumber": "22787:1",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level D",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2013GL5496/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O644682/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2013GL5496/"
+    }
+  },
+  {
+    "id": "vam:O577350",
+    "_source": "vam",
+    "_sourceId": "O577350",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O577350",
+    "_pid": "E.22040-1957",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O577350",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O577350",
+      "pid": "E.22040-1957",
+      "creator": "Jules Helleu",
+      "date": "1860s"
+    },
+    "title": "Sundial",
+    "creator": "Jules Helleu",
+    "date": "1860s",
+    "subject": [
+      "Fancy dress costume design"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Fancy dress costume design",
+      "place": "Paris",
+      "accessionNumber": "E.22040-1957",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level D"
+    }
+  },
+  {
+    "id": "vam:O1561127",
+    "_source": "vam",
+    "_sourceId": "O1561127",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1561127",
+    "_pid": "RPS.1152-2020",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O1561127",
+      "title": "The Sundial, Broadway",
+      "url": "https://collections.vam.ac.uk/item/O1561127",
+      "pid": "RPS.1152-2020",
+      "creator": "Warburg, John Cimon",
+      "date": "ca. 1910"
+    },
+    "title": "The Sundial, Broadway",
+    "creator": "Warburg, John Cimon",
+    "date": "ca. 1910",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "place": "broadway",
+      "accessionNumber": "RPS.1152-2020",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2021MX0769/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2021MX0769/"
+    }
+  },
+  {
+    "id": "vam:O1778546",
+    "_source": "vam",
+    "_sourceId": "O1778546",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1778546",
+    "_pid": "RPS.1164-2024",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O1778546",
+      "title": "Portrait of two boys outside with sundial",
+      "url": "https://collections.vam.ac.uk/item/O1778546",
+      "pid": "RPS.1164-2024",
+      "creator": "Evans, Clayton",
+      "date": "ca. mid 20th century"
+    },
+    "title": "Portrait of two boys outside with sundial",
+    "creator": "Evans, Clayton",
+    "date": "ca. mid 20th century",
+    "subject": [
+      "photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "photograph",
+      "accessionNumber": "RPS.1164-2024",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2025PJ4842/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2025PJ4842/"
+    }
+  },
+  {
+    "id": "vam:O375773",
+    "_source": "vam",
+    "_sourceId": "O375773",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O375773",
+    "_pid": "388-1906",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O375773",
+      "title": "Sundial and case",
+      "url": "https://collections.vam.ac.uk/item/O375773",
+      "pid": "388-1906",
+      "date": "ca. 1700"
+    },
+    "title": "Sundial and case",
+    "date": "ca. 1700",
+    "subject": [
+      "Sundial and case"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial and case",
+      "place": "France",
+      "accessionNumber": "388-1906",
+      "onDisplay": false,
+      "location": "in storage"
+    }
+  },
+  {
+    "id": "vam:O323892",
+    "_source": "vam",
+    "_sourceId": "O323892",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O323892",
+    "_pid": "M.148-1983",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O323892",
+      "title": "Sundial",
+      "url": "https://collections.vam.ac.uk/item/O323892",
+      "pid": "M.148-1983",
+      "creator": "William Crawford & Sons",
+      "date": "1926"
+    },
+    "title": "Sundial",
+    "creator": "William Crawford & Sons",
+    "date": "1926",
+    "subject": [
+      "Biscuit tin"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Biscuit tin",
+      "place": "England",
+      "accessionNumber": "M.148-1983",
+      "onDisplay": false,
+      "location": "In Store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2019MC8586/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2019MC8586/"
+    }
+  },
+  {
+    "id": "vam:O860381",
+    "_source": "vam",
+    "_sourceId": "O860381",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O860381",
+    "_pid": "D.1825-1904",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O860381",
+      "title": "Le Morte Darthur",
+      "url": "https://collections.vam.ac.uk/item/O860381",
+      "pid": "D.1825-1904",
+      "creator": "Aubrey Beardsley",
+      "date": "ca.1892-4"
+    },
+    "title": "Le Morte Darthur",
+    "creator": "Aubrey Beardsley",
+    "date": "ca.1892-4",
+    "subject": [
+      "Drawing"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Drawing",
+      "place": "London",
+      "accessionNumber": "D.1825-1904",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level E",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2013GA5137/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O860381/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2013GA5137/"
+    }
+  },
+  {
+    "id": "vam:O1768141",
+    "_source": "vam",
+    "_sourceId": "O1768141",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1768141",
+    "_pid": "E.1269-2023",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O1768141",
+      "title": "The Sundial Pillar at Seven Dials",
+      "url": "https://collections.vam.ac.uk/item/O1768141",
+      "pid": "E.1269-2023",
+      "creator": "Gentleman, David",
+      "date": "1989"
+    },
+    "title": "The Sundial Pillar at Seven Dials",
+    "creator": "Gentleman, David",
+    "date": "1989",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Britain",
+      "accessionNumber": "E.1269-2023",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level D"
+    }
+  },
+  {
+    "id": "vam:O1102196",
+    "_source": "vam",
+    "_sourceId": "O1102196",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102196",
+    "_pid": "CIRC.419-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O1102196",
+      "title": "Stonypath: Westwood-facing sundial, wood",
+      "url": "https://collections.vam.ac.uk/item/O1102196",
+      "pid": "CIRC.419-1976",
+      "creator": "Paterson, Dave",
+      "date": "20th century"
+    },
+    "title": "Stonypath: Westwood-facing sundial, wood",
+    "creator": "Paterson, Dave",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "accessionNumber": "CIRC.419-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O219700",
+    "_source": "vam",
+    "_sourceId": "O219700",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O219700",
+    "_pid": "E.416-1994",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O219700",
+      "title": "Alyssum New Dwarf Compact",
+      "url": "https://collections.vam.ac.uk/item/O219700",
+      "pid": "E.416-1994",
+      "creator": "Unknown",
+      "date": "ca. 1935-1940"
+    },
+    "title": "Alyssum New Dwarf Compact",
+    "creator": "Unknown",
+    "date": "ca. 1935-1940",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Great Britain",
+      "accessionNumber": "E.416-1994",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level D"
+    }
+  },
+  {
+    "id": "vam:O311030",
+    "_source": "vam",
+    "_sourceId": "O311030",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O311030",
+    "_pid": "A.46-1923",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O311030",
+      "title": "Compass",
+      "url": "https://collections.vam.ac.uk/item/O311030",
+      "pid": "A.46-1923",
+      "creator": "Hartmann, Georg",
+      "date": "1562"
+    },
+    "title": "Compass",
+    "creator": "Hartmann, Georg",
+    "date": "1562",
+    "subject": [
+      "Compass"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Compass",
+      "place": "Nuremberg",
+      "accessionNumber": "A.46-1923",
+      "onDisplay": true,
+      "location": "Imagine Gallery, Adventure, Case 10",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2011FC2512/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O311030/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2011FC2512/"
+    }
+  },
+  {
+    "id": "vam:O1263339",
+    "_source": "vam",
+    "_sourceId": "O1263339",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1263339",
+    "_pid": "B.864-2015",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O1263339",
+      "title": "Die Turm-Sonnenuhr",
+      "url": "https://collections.vam.ac.uk/item/O1263339",
+      "pid": "B.864-2015",
+      "creator": "Astromedia Verlag",
+      "date": "1998"
+    },
+    "title": "Die Turm-Sonnenuhr",
+    "creator": "Astromedia Verlag",
+    "date": "1998",
+    "subject": [
+      "Model"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Model",
+      "place": "Germany",
+      "accessionNumber": "B.864-2015",
+      "onDisplay": false,
+      "location": "In Store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2015HL8715/full/!100,100/0/default.jpg",
+      "manifest": null,
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2015HL8715/"
+    }
+  },
+  {
+    "id": "vam:O310802",
+    "_source": "vam",
+    "_sourceId": "O310802",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310802",
+    "_pid": "A.48-1923",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O310802",
+      "title": "Compass ",
+      "url": "https://collections.vam.ac.uk/item/O310802",
+      "pid": "A.48-1923",
+      "creator": "Unknown",
+      "date": "ca. 1700 - ca. 1750"
+    },
+    "title": "Compass ",
+    "creator": "Unknown",
+    "date": "ca. 1700 - ca. 1750",
+    "subject": [
+      "Compass "
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Compass ",
+      "place": "Nuremberg",
+      "accessionNumber": "A.48-1923",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2011FC2514/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310802/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2011FC2514/"
+    }
+  },
+  {
+    "id": "vam:O1102191",
+    "_source": "vam",
+    "_sourceId": "O1102191",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1102191",
+    "_pid": "CIRC.424-1976",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O1102191",
+      "title": "Stonypath: Sundial (from the 'Four Seasons' series)",
+      "url": "https://collections.vam.ac.uk/item/O1102191",
+      "pid": "CIRC.424-1976",
+      "creator": "Paterson, Dave",
+      "date": "20th century"
+    },
+    "title": "Stonypath: Sundial (from the 'Four Seasons' series)",
+    "creator": "Paterson, Dave",
+    "date": "20th century",
+    "subject": [
+      "Photograph"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Photograph",
+      "accessionNumber": "CIRC.424-1976",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level F"
+    }
+  },
+  {
+    "id": "vam:O1036881",
+    "_source": "vam",
+    "_sourceId": "O1036881",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1036881",
+    "_pid": "CIRC.232-1969",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O1036881",
+      "title": "Greek and Turkish Forms",
+      "url": "https://collections.vam.ac.uk/item/O1036881",
+      "pid": "CIRC.232-1969",
+      "creator": "Nicholson, Ben",
+      "date": "1968"
+    },
+    "title": "Greek and Turkish Forms",
+    "creator": "Nicholson, Ben",
+    "date": "1968",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Locarno",
+      "accessionNumber": "CIRC.232-1969",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level E"
+    }
+  },
+  {
+    "id": "vam:O1036871",
+    "_source": "vam",
+    "_sourceId": "O1036871",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1036871",
+    "_pid": "CIRC.233-1969",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O1036871",
+      "title": "Greek and Turkish Forms",
+      "url": "https://collections.vam.ac.uk/item/O1036871",
+      "pid": "CIRC.233-1969",
+      "creator": "Nicholson, Ben",
+      "date": "1968"
+    },
+    "title": "Greek and Turkish Forms",
+    "creator": "Nicholson, Ben",
+    "date": "1968",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Locarno",
+      "accessionNumber": "CIRC.233-1969",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level C"
+    }
+  },
+  {
+    "id": "vam:O644679",
+    "_source": "vam",
+    "_sourceId": "O644679",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O644679",
+    "_pid": "22787:4",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O644679",
+      "title": "Designs for Necklaces, Pendants and Earrings of the Highest Skill",
+      "url": "https://collections.vam.ac.uk/item/O644679",
+      "pid": "22787:4",
+      "creator": "Hans Collaert",
+      "date": "1581"
+    },
+    "title": "Designs for Necklaces, Pendants and Earrings of the Highest Skill",
+    "creator": "Hans Collaert",
+    "date": "1581",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Antwerp",
+      "accessionNumber": "22787:4",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level D",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2011FB1269/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O644679/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2011FB1269/"
+    }
+  },
+  {
+    "id": "vam:O310801",
+    "_source": "vam",
+    "_sourceId": "O310801",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O310801",
+    "_pid": "A.49-1923",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O310801",
+      "title": "Compass ",
+      "url": "https://collections.vam.ac.uk/item/O310801",
+      "pid": "A.49-1923",
+      "creator": "Unknown",
+      "date": "ca. 1700 - ca. 1750"
+    },
+    "title": "Compass ",
+    "creator": "Unknown",
+    "date": "ca. 1700 - ca. 1750",
+    "subject": [
+      "Compass "
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Compass ",
+      "place": "Nuremberg",
+      "accessionNumber": "A.49-1923",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2011FC2507/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O310801/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2011FC2507/"
+    }
+  },
+  {
+    "id": "vam:O322198",
+    "_source": "vam",
+    "_sourceId": "O322198",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O322198",
+    "_pid": "M.167-1938",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O322198",
+      "title": "Astronomical compendium",
+      "url": "https://collections.vam.ac.uk/item/O322198",
+      "pid": "M.167-1938",
+      "date": "1557"
+    },
+    "title": "Astronomical compendium",
+    "date": "1557",
+    "subject": [
+      "Astronomical compendium"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Astronomical compendium",
+      "accessionNumber": "M.167-1938",
+      "onDisplay": true,
+      "location": "Metalware, Room 116, The Belinda Gentle Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AE2787/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O322198/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AE2787/"
+    }
+  },
+  {
+    "id": "vam:O1261949",
+    "_source": "vam",
+    "_sourceId": "O1261949",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1261949",
+    "_pid": "FE.48-2013",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O1261949",
+      "title": "The famous cylindrical sundial of corpus christi college",
+      "url": "https://collections.vam.ac.uk/item/O1261949",
+      "pid": "FE.48-2013",
+      "creator": "Chiang Yee",
+      "date": "1944"
+    },
+    "title": "The famous cylindrical sundial of corpus christi college",
+    "creator": "Chiang Yee",
+    "date": "1944",
+    "subject": [
+      "Illustration"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Illustration",
+      "place": "Great Britain",
+      "accessionNumber": "FE.48-2013",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2013GL9026/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O1261949/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2013GL9026/"
+    }
+  },
+  {
+    "id": "vam:O834427",
+    "_source": "vam",
+    "_sourceId": "O834427",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O834427",
+    "_pid": "E.107-1916",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O834427",
+      "title": "Architectural drawing (visual work)",
+      "url": "https://collections.vam.ac.uk/item/O834427",
+      "pid": "E.107-1916",
+      "creator": "Webb, Philip",
+      "date": "1885-6"
+    },
+    "title": "Architectural drawing (visual work)",
+    "creator": "Webb, Philip",
+    "date": "1885-6",
+    "subject": [
+      "Architectural drawing (visual work)"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Architectural drawing (visual work)",
+      "accessionNumber": "E.107-1916",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level D"
+    }
+  },
+  {
+    "id": "vam:O323011",
+    "_source": "vam",
+    "_sourceId": "O323011",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O323011",
+    "_pid": "258-1864",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O323011",
+      "title": "Compass and sundial",
+      "url": "https://collections.vam.ac.uk/item/O323011",
+      "pid": "258-1864"
+    },
+    "title": "Compass and sundial",
+    "subject": [
+      "Compass and sundial"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Compass and sundial",
+      "accessionNumber": "258-1864",
+      "onDisplay": false,
+      "location": "in storage",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2023NP0714/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O323011/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2023NP0714/"
+    }
+  },
+  {
+    "id": "vam:O374603",
+    "_source": "vam",
+    "_sourceId": "O374603",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O374603",
+    "_pid": "M.164-1938",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O374603",
+      "title": "Sundial and case",
+      "url": "https://collections.vam.ac.uk/item/O374603",
+      "pid": "M.164-1938"
+    },
+    "title": "Sundial and case",
+    "subject": [
+      "Sundial and case"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Sundial and case",
+      "accessionNumber": "M.164-1938",
+      "onDisplay": true,
+      "location": "Metalware, Room 116, The Belinda Gentle Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AE2780/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O374603/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AE2780/"
+    }
+  },
+  {
+    "id": "vam:O14716",
+    "_source": "vam",
+    "_sourceId": "O14716",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O14716",
+    "_pid": "T.102-1938",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O14716",
+      "title": "Patchwork quilt",
+      "url": "https://collections.vam.ac.uk/item/O14716",
+      "pid": "T.102-1938",
+      "creator": "Unknown",
+      "date": "1797"
+    },
+    "title": "Patchwork quilt",
+    "creator": "Unknown",
+    "date": "1797",
+    "subject": [
+      "Patchwork quilt"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Patchwork quilt",
+      "place": "England",
+      "accessionNumber": "T.102-1938",
+      "onDisplay": false,
+      "location": "In Store",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2007BR3618/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O14716/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2007BR3618/"
+    }
+  },
+  {
+    "id": "vam:O147835",
+    "_source": "vam",
+    "_sourceId": "O147835",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O147835",
+    "_pid": "2375-1855",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O147835",
+      "title": "Table clock",
+      "url": "https://collections.vam.ac.uk/item/O147835",
+      "pid": "2375-1855",
+      "creator": "Pichard, B",
+      "date": "ca. 1600"
+    },
+    "title": "Table clock",
+    "creator": "Pichard, B",
+    "date": "ca. 1600",
+    "subject": [
+      "Table clock"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Table clock",
+      "place": "Paris",
+      "accessionNumber": "2375-1855",
+      "onDisplay": true,
+      "location": "Metalware, Room 116, The Belinda Gentle Gallery",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006BC4419/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O147835/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006BC4419/"
+    }
+  },
+  {
+    "id": "vam:O1034132",
+    "_source": "vam",
+    "_sourceId": "O1034132",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O1034132",
+    "_pid": "CIRC.727-1971",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O1034132",
+      "title": "Ben Nicholson 3",
+      "url": "https://collections.vam.ac.uk/item/O1034132",
+      "pid": "CIRC.727-1971",
+      "creator": "Nicholson",
+      "date": "20th century"
+    },
+    "title": "Ben Nicholson 3",
+    "creator": "Nicholson",
+    "date": "20th century",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "England",
+      "accessionNumber": "CIRC.727-1971",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level E"
+    }
+  },
+  {
+    "id": "vam:O606124",
+    "_source": "vam",
+    "_sourceId": "O606124",
+    "_sourceUrl": "https://collections.vam.ac.uk/item/O606124",
+    "_pid": "E.2030-1946",
+    "_citation": {
+      "service": "Victoria and Albert Museum Collections",
+      "serviceUrl": "https://collections.vam.ac.uk",
+      "publisher": "Victoria and Albert Museum",
+      "accessDate": "2026-06-12T17:52:08.457Z",
+      "query": "sundial",
+      "recordId": "vam:O606124",
+      "title": "Bookplate of Mary Harmsworth",
+      "url": "https://collections.vam.ac.uk/item/O606124",
+      "pid": "E.2030-1946",
+      "creator": "W. Phillips Barrett",
+      "date": "1900"
+    },
+    "title": "Bookplate of Mary Harmsworth",
+    "creator": "W. Phillips Barrett",
+    "date": "1900",
+    "subject": [
+      "Print"
+    ],
+    "language": "eng",
+    "vam": {
+      "objectType": "Print",
+      "place": "Great Britain",
+      "accessionNumber": "E.2030-1946",
+      "onDisplay": false,
+      "location": "Prints & Drawings Study Room, level H",
+      "thumbnail": "https://framemark.vam.ac.uk/collections/2006AM5867/full/!100,100/0/default.jpg",
+      "manifest": "https://iiif.vam.ac.uk/collections/O606124/manifest.json",
+      "iiifImageBase": "https://framemark.vam.ac.uk/collections/2006AM5867/"
+    }
+  }
+]

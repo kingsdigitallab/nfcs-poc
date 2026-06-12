@@ -1,0 +1,1502 @@
+[
+  {
+    "_id": "2afc2a44-4a1f-4ac6-b8e2-160b1250f82e",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/2afc2a44-4a1f-4ac6-b8e2-160b1250f82e/",
+    "_service": "bodleian",
+    "title": "Imaginary Portrait",
+    "date": "1894",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0c2e9e87-6e03-4510-bc47-d59f6f61baae/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "2afc2a44-4a1f-4ac6-b8e2-160b1250f82e",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/2afc2a44-4a1f-4ac6-b8e2-160b1250f82e.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0c2e9e87-6e03-4510-bc47-d59f6f61baae/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Broxb. 51.8",
+      "origins": "Oxford",
+      "completeness": "partial",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Imaginary Portrait",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/2afc2a44-4a1f-4ac6-b8e2-160b1250f82e/",
+      "date": "1894"
+    }
+  },
+  {
+    "_id": "0c8498db-a442-4556-bed9-9a5e9c74d9fe",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/0c8498db-a442-4556-bed9-9a5e9c74d9fe/",
+    "_service": "bodleian",
+    "title": "Portrait of Thomas Alcock",
+    "date": "c. 1897",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0e86987a-d7d9-4027-9ca8-d6451525ad20/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "0c8498db-a442-4556-bed9-9a5e9c74d9fe",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/0c8498db-a442-4556-bed9-9a5e9c74d9fe.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0e86987a-d7d9-4027-9ca8-d6451525ad20/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 761",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Thomas Alcock",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/0c8498db-a442-4556-bed9-9a5e9c74d9fe/",
+      "date": "c. 1897"
+    }
+  },
+  {
+    "_id": "4cd634f8-cebe-4d83-97f4-3059d46d5a26",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/4cd634f8-cebe-4d83-97f4-3059d46d5a26/",
+    "_service": "bodleian",
+    "title": "Portrait of a man",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4fa683e0-05a2-462c-bbc8-621c4cb426f6/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "4cd634f8-cebe-4d83-97f4-3059d46d5a26",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/4cd634f8-cebe-4d83-97f4-3059d46d5a26.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4fa683e0-05a2-462c-bbc8-621c4cb426f6/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 21088 photogr. 1/15",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 2
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of a man",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/4cd634f8-cebe-4d83-97f4-3059d46d5a26/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "8b1d14a0-860a-4fc7-bb5b-05c11a2d5ece",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/8b1d14a0-860a-4fc7-bb5b-05c11a2d5ece/",
+    "_service": "bodleian",
+    "title": "Portrait of a man",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/71c18fc4-f2b7-48af-9984-62a3cd521ff6/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "8b1d14a0-860a-4fc7-bb5b-05c11a2d5ece",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/8b1d14a0-860a-4fc7-bb5b-05c11a2d5ece.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/71c18fc4-f2b7-48af-9984-62a3cd521ff6/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 21088 photogr. 1/16",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 2
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of a man",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/8b1d14a0-860a-4fc7-bb5b-05c11a2d5ece/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "ba462827-e85a-4a44-8d8e-3b8e15335c31",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ba462827-e85a-4a44-8d8e-3b8e15335c31/",
+    "_service": "bodleian",
+    "title": "Cinq Portraits de Femmes",
+    "date": "",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/210fd68e-a955-471b-820a-656f9e0123eb/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "ba462827-e85a-4a44-8d8e-3b8e15335c31",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ba462827-e85a-4a44-8d8e-3b8e15335c31.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/210fd68e-a955-471b-820a-656f9e0123eb/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Mus. 400 b.3 (73)",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 34
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Cinq Portraits de Femmes",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/ba462827-e85a-4a44-8d8e-3b8e15335c31/",
+      "date": ""
+    }
+  },
+  {
+    "_id": "72f5a4b7-420e-49a8-9656-35d2ce5a52a7",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/72f5a4b7-420e-49a8-9656-35d2ce5a52a7/",
+    "_service": "bodleian",
+    "title": "Portrait of Joseph Addison (1672–1719)",
+    "date": "18th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f1e34b9e-b79c-4245-9352-20f9a1e8e3bb/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "72f5a4b7-420e-49a8-9656-35d2ce5a52a7",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/72f5a4b7-420e-49a8-9656-35d2ce5a52a7.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f1e34b9e-b79c-4245-9352-20f9a1e8e3bb/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 213",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Joseph Addison (1672–1719)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/72f5a4b7-420e-49a8-9656-35d2ce5a52a7/",
+      "date": "18th century"
+    }
+  },
+  {
+    "_id": "a56ba0ea-833f-4ee0-ba1b-3d464bce2628",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/a56ba0ea-833f-4ee0-ba1b-3d464bce2628/",
+    "_service": "bodleian",
+    "title": "Portrait of Samuel Butler (1612–1680)",
+    "date": "17th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/455fd3d3-555a-4f08-aaa0-c787089f725d/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "a56ba0ea-833f-4ee0-ba1b-3d464bce2628",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/a56ba0ea-833f-4ee0-ba1b-3d464bce2628.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/455fd3d3-555a-4f08-aaa0-c787089f725d/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 155",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Samuel Butler (1612–1680)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/a56ba0ea-833f-4ee0-ba1b-3d464bce2628/",
+      "date": "17th century"
+    }
+  },
+  {
+    "_id": "12bed24e-3ed1-486d-b6b3-f9a27657a3f3",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/12bed24e-3ed1-486d-b6b3-f9a27657a3f3/",
+    "_service": "bodleian",
+    "title": "Portrait of Swaminarayan (1781–1830)",
+    "date": "2004",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/6482f866-5af6-4778-a287-26cfc3c7879e/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "12bed24e-3ed1-486d-b6b3-f9a27657a3f3",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/12bed24e-3ed1-486d-b6b3-f9a27657a3f3.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/6482f866-5af6-4778-a287-26cfc3c7879e/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 908",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Swaminarayan (1781–1830)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/12bed24e-3ed1-486d-b6b3-f9a27657a3f3/",
+      "date": "2004"
+    }
+  },
+  {
+    "_id": "2e14b0a5-c398-4e62-862f-60c0e9081e9e",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/2e14b0a5-c398-4e62-862f-60c0e9081e9e/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Harold Pinter",
+    "date": "1967",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/33cdb92d-8603-44ba-acda-51744363c359/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "2e14b0a5-c398-4e62-862f-60c0e9081e9e",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/2e14b0a5-c398-4e62-862f-60c0e9081e9e.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/33cdb92d-8603-44ba-acda-51744363c359/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/5/3",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Harold Pinter",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/2e14b0a5-c398-4e62-862f-60c0e9081e9e/",
+      "date": "1967"
+    }
+  },
+  {
+    "_id": "cd63a405-de42-4ba0-bb4d-559a810bf2ef",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/cd63a405-de42-4ba0-bb4d-559a810bf2ef/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Paul Scofield",
+    "date": "1948",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/e1550004-393d-4174-8f36-dcff3c14a86d/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "cd63a405-de42-4ba0-bb4d-559a810bf2ef",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/cd63a405-de42-4ba0-bb4d-559a810bf2ef.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/e1550004-393d-4174-8f36-dcff3c14a86d/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/6/1",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Paul Scofield",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/cd63a405-de42-4ba0-bb4d-559a810bf2ef/",
+      "date": "1948"
+    }
+  },
+  {
+    "_id": "1f625cdb-bdaa-4943-91a9-6ad2b1158938",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/1f625cdb-bdaa-4943-91a9-6ad2b1158938/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Arnold Wesker",
+    "date": "1988",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4f2943bb-9732-43f1-94e2-55022d1a069e/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "1f625cdb-bdaa-4943-91a9-6ad2b1158938",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/1f625cdb-bdaa-4943-91a9-6ad2b1158938.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4f2943bb-9732-43f1-94e2-55022d1a069e/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/6/7",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Arnold Wesker",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/1f625cdb-bdaa-4943-91a9-6ad2b1158938/",
+      "date": "1988"
+    }
+  },
+  {
+    "_id": "aa81255f-d302-454b-8e59-c40680f52b72",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/aa81255f-d302-454b-8e59-c40680f52b72/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Zoé Wanamaker",
+    "date": "1989",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/943b1ba9-dba2-489b-b5fb-d33205558c43/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "aa81255f-d302-454b-8e59-c40680f52b72",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/aa81255f-d302-454b-8e59-c40680f52b72.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/943b1ba9-dba2-489b-b5fb-d33205558c43/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/6/8",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Zoé Wanamaker",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/aa81255f-d302-454b-8e59-c40680f52b72/",
+      "date": "1989"
+    }
+  },
+  {
+    "_id": "334d534b-4044-4440-b0d7-8c50dc47d721",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/334d534b-4044-4440-b0d7-8c50dc47d721/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Jeffrey Archer",
+    "date": "n.d. [c. 1989]",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/33f540f5-b892-4061-9dd6-bd768d3fb1e8/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "334d534b-4044-4440-b0d7-8c50dc47d721",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/334d534b-4044-4440-b0d7-8c50dc47d721.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/33f540f5-b892-4061-9dd6-bd768d3fb1e8/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/6/9",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Jeffrey Archer",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/334d534b-4044-4440-b0d7-8c50dc47d721/",
+      "date": "n.d. [c. 1989]"
+    }
+  },
+  {
+    "_id": "52766264-75d4-4c92-b649-36e0dbd5e841",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/52766264-75d4-4c92-b649-36e0dbd5e841/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Germaine Greer",
+    "date": "1984",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/29e1e968-10ab-4405-92b7-2e37db5d21df/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "52766264-75d4-4c92-b649-36e0dbd5e841",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/52766264-75d4-4c92-b649-36e0dbd5e841.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/29e1e968-10ab-4405-92b7-2e37db5d21df/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/6/12",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Germaine Greer",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/52766264-75d4-4c92-b649-36e0dbd5e841/",
+      "date": "1984"
+    }
+  },
+  {
+    "_id": "18c5927c-16b6-4d35-888f-c6dec0d25697",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/18c5927c-16b6-4d35-888f-c6dec0d25697/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of William Golding",
+    "date": "1984",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d41347ea-3051-4b14-a06f-4988f958a913/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "18c5927c-16b6-4d35-888f-c6dec0d25697",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/18c5927c-16b6-4d35-888f-c6dec0d25697.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d41347ea-3051-4b14-a06f-4988f958a913/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/7/1",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of William Golding",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/18c5927c-16b6-4d35-888f-c6dec0d25697/",
+      "date": "1984"
+    }
+  },
+  {
+    "_id": "5458b247-d47a-4252-a133-c4a353ae12f4",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/5458b247-d47a-4252-a133-c4a353ae12f4/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Leo McKern",
+    "date": "1984",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0dc87586-2906-42e2-b00e-c324eebbf864/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "5458b247-d47a-4252-a133-c4a353ae12f4",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/5458b247-d47a-4252-a133-c4a353ae12f4.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0dc87586-2906-42e2-b00e-c324eebbf864/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/7/2",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Leo McKern",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/5458b247-d47a-4252-a133-c4a353ae12f4/",
+      "date": "1984"
+    }
+  },
+  {
+    "_id": "f7beb930-66e8-4f98-8953-35b88a6bf203",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f7beb930-66e8-4f98-8953-35b88a6bf203/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Tony Harrison",
+    "date": "1987",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/95bd34ea-4f89-4e15-9976-dadf4ab8e10f/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "f7beb930-66e8-4f98-8953-35b88a6bf203",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/f7beb930-66e8-4f98-8953-35b88a6bf203.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/95bd34ea-4f89-4e15-9976-dadf4ab8e10f/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/7/3",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Tony Harrison",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/f7beb930-66e8-4f98-8953-35b88a6bf203/",
+      "date": "1987"
+    }
+  },
+  {
+    "_id": "0d2a109c-57df-4887-8bfc-758143e34d51",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/0d2a109c-57df-4887-8bfc-758143e34d51/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Kingsley Amis",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0007a10d-6d87-4cd6-8198-d1daac3e0948/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "0d2a109c-57df-4887-8bfc-758143e34d51",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/0d2a109c-57df-4887-8bfc-758143e34d51.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0007a10d-6d87-4cd6-8198-d1daac3e0948/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/8/1",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Kingsley Amis",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/0d2a109c-57df-4887-8bfc-758143e34d51/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "e42e106d-08f8-47d4-a882-5b9dd884deb6",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e42e106d-08f8-47d4-a882-5b9dd884deb6/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Alan Bennett",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f0324ff4-5019-4fd3-b3a4-ae684cb5dd33/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "e42e106d-08f8-47d4-a882-5b9dd884deb6",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e42e106d-08f8-47d4-a882-5b9dd884deb6.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f0324ff4-5019-4fd3-b3a4-ae684cb5dd33/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/8/2",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Alan Bennett",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e42e106d-08f8-47d4-a882-5b9dd884deb6/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "42fb0171-3968-4928-849f-7520f2e8739e",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/42fb0171-3968-4928-849f-7520f2e8739e/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Melvyn Bragg",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/42d325f0-f127-4219-bdc0-63f2b075a2d2/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "42fb0171-3968-4928-849f-7520f2e8739e",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/42fb0171-3968-4928-849f-7520f2e8739e.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/42d325f0-f127-4219-bdc0-63f2b075a2d2/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/8/3",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Melvyn Bragg",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/42fb0171-3968-4928-849f-7520f2e8739e/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "7705507c-4d82-466e-9372-c527621961cc",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/7705507c-4d82-466e-9372-c527621961cc/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of David Hare",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/8c98eb8f-bcdb-42a6-af08-d9c0f4ff9ee4/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "7705507c-4d82-466e-9372-c527621961cc",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/7705507c-4d82-466e-9372-c527621961cc.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/8c98eb8f-bcdb-42a6-af08-d9c0f4ff9ee4/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/8/4",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of David Hare",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/7705507c-4d82-466e-9372-c527621961cc/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "545807aa-a86f-4933-b0a2-364c221141a2",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/545807aa-a86f-4933-b0a2-364c221141a2/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of P.D. James",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/b7aad917-4c75-467c-973d-4bba37d9f5f1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "545807aa-a86f-4933-b0a2-364c221141a2",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/545807aa-a86f-4933-b0a2-364c221141a2.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/b7aad917-4c75-467c-973d-4bba37d9f5f1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/8/5",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of P.D. James",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/545807aa-a86f-4933-b0a2-364c221141a2/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "445aa95a-f521-4e18-8e64-d939cf06b596",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/445aa95a-f521-4e18-8e64-d939cf06b596/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Laurie Lee",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ea6ebd64-1781-4d92-ac00-4a137a989f96/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "445aa95a-f521-4e18-8e64-d939cf06b596",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/445aa95a-f521-4e18-8e64-d939cf06b596.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ea6ebd64-1781-4d92-ac00-4a137a989f96/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/8/6",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Laurie Lee",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/445aa95a-f521-4e18-8e64-d939cf06b596/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "54dec85a-49eb-4f62-96f5-057600b06cca",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/54dec85a-49eb-4f62-96f5-057600b06cca/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Stephen Poliakoff",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/21c45482-0229-4a91-b3aa-1b816c22561b/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "54dec85a-49eb-4f62-96f5-057600b06cca",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/54dec85a-49eb-4f62-96f5-057600b06cca.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/21c45482-0229-4a91-b3aa-1b816c22561b/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/8/7",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Stephen Poliakoff",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/54dec85a-49eb-4f62-96f5-057600b06cca/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "8f06e8f4-4688-452c-a460-1fe8d12260f9",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/8f06e8f4-4688-452c-a460-1fe8d12260f9/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Tom Stoppard",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/2a78b6ed-cf98-4c43-b0d4-58ec3b8e5979/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "8f06e8f4-4688-452c-a460-1fe8d12260f9",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/8f06e8f4-4688-452c-a460-1fe8d12260f9.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/2a78b6ed-cf98-4c43-b0d4-58ec3b8e5979/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/8/8",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Tom Stoppard",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/8f06e8f4-4688-452c-a460-1fe8d12260f9/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "5b9c2289-37e8-49b4-ba3f-e039a42ff579",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/5b9c2289-37e8-49b4-ba3f-e039a42ff579/",
+    "_service": "bodleian",
+    "title": "Photographic portrait of Angus Wilson",
+    "date": "n.d.",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ff08c7f1-600c-4f3f-be70-7b7641eb5f11/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "5b9c2289-37e8-49b4-ba3f-e039a42ff579",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/5b9c2289-37e8-49b4-ba3f-e039a42ff579.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/ff08c7f1-600c-4f3f-be70-7b7641eb5f11/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library MS. 16177/8/9",
+      "origins": "England",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Photographic portrait of Angus Wilson",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/5b9c2289-37e8-49b4-ba3f-e039a42ff579/",
+      "date": "n.d."
+    }
+  },
+  {
+    "_id": "700e6fc8-7af5-4d79-844a-3c4771f059ce",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/700e6fc8-7af5-4d79-844a-3c4771f059ce/",
+    "_service": "bodleian",
+    "title": "Portrait of Michel de Montaigne (1533–1592)",
+    "date": "16th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/08420e84-1703-4859-a5ed-6e85cb550b01/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "700e6fc8-7af5-4d79-844a-3c4771f059ce",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/700e6fc8-7af5-4d79-844a-3c4771f059ce.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/08420e84-1703-4859-a5ed-6e85cb550b01/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 49",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Michel de Montaigne (1533–1592)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/700e6fc8-7af5-4d79-844a-3c4771f059ce/",
+      "date": "16th century"
+    }
+  },
+  {
+    "_id": "d32e068e-4e1e-44b2-bf53-3a03df05f233",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d32e068e-4e1e-44b2-bf53-3a03df05f233/",
+    "_service": "bodleian",
+    "title": "Portrait of Henry Frederick (1594–1612), Prince of Wales",
+    "date": "17th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/29f9af6b-7e6e-4d64-a276-0eed39c0e6c2/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "d32e068e-4e1e-44b2-bf53-3a03df05f233",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/d32e068e-4e1e-44b2-bf53-3a03df05f233.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/29f9af6b-7e6e-4d64-a276-0eed39c0e6c2/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 66",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Henry Frederick (1594–1612), Prince of Wales",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/d32e068e-4e1e-44b2-bf53-3a03df05f233/",
+      "date": "17th century"
+    }
+  },
+  {
+    "_id": "e802302c-3a6f-44d7-96b6-97f22722cd2f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e802302c-3a6f-44d7-96b6-97f22722cd2f/",
+    "_service": "bodleian",
+    "title": "Portrait of John Taylor (1580–1653)",
+    "date": "1655",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/53faee9d-9d02-4deb-a97b-add652ff7cf5/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "e802302c-3a6f-44d7-96b6-97f22722cd2f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e802302c-3a6f-44d7-96b6-97f22722cd2f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/53faee9d-9d02-4deb-a97b-add652ff7cf5/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 117",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of John Taylor (1580–1653)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e802302c-3a6f-44d7-96b6-97f22722cd2f/",
+      "date": "1655"
+    }
+  },
+  {
+    "_id": "e687c162-2a73-4673-affc-a7eb03e883b5",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e687c162-2a73-4673-affc-a7eb03e883b5/",
+    "_service": "bodleian",
+    "title": "Portrait of James Bradley (1693–1762)",
+    "date": "18th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/e72c65d6-07ed-4f70-a8b5-82c79815d24b/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "e687c162-2a73-4673-affc-a7eb03e883b5",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e687c162-2a73-4673-affc-a7eb03e883b5.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/e72c65d6-07ed-4f70-a8b5-82c79815d24b/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 258",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of James Bradley (1693–1762)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e687c162-2a73-4673-affc-a7eb03e883b5/",
+      "date": "18th century"
+    }
+  },
+  {
+    "_id": "68a04bae-58d1-4967-87d7-648f5ddb5322",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/68a04bae-58d1-4967-87d7-648f5ddb5322/",
+    "_service": "bodleian",
+    "title": "Portrait of Charles II, King of England (1630–1685), as a boy",
+    "date": "17th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/573c2348-24ae-4165-a3e0-217c15d17cdf/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "68a04bae-58d1-4967-87d7-648f5ddb5322",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/68a04bae-58d1-4967-87d7-648f5ddb5322.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/573c2348-24ae-4165-a3e0-217c15d17cdf/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 160",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Charles II, King of England (1630–1685), as a boy",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/68a04bae-58d1-4967-87d7-648f5ddb5322/",
+      "date": "17th century"
+    }
+  },
+  {
+    "_id": "902117c3-8f0a-4a83-941e-a63c2d1f0d4f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/902117c3-8f0a-4a83-941e-a63c2d1f0d4f/",
+    "_service": "bodleian",
+    "title": "Portrait of a woman, called Margaret Clifford (1560‒1616)",
+    "date": "16th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/6bde3ea5-6919-4593-b2e4-64d8a9409ff3/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "902117c3-8f0a-4a83-941e-a63c2d1f0d4f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/902117c3-8f0a-4a83-941e-a63c2d1f0d4f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/6bde3ea5-6919-4593-b2e4-64d8a9409ff3/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 76",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of a woman, called Margaret Clifford (1560‒1616)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/902117c3-8f0a-4a83-941e-a63c2d1f0d4f/",
+      "date": "16th century"
+    }
+  },
+  {
+    "_id": "e7f4f616-4539-4f5b-a9d1-f041168c321b",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e7f4f616-4539-4f5b-a9d1-f041168c321b/",
+    "_service": "bodleian",
+    "title": "Portrait of Thomas Willis (1621–1675)",
+    "date": "17th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3ff13cbd-cd41-4671-8a41-5e6dc52ecc87/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "e7f4f616-4539-4f5b-a9d1-f041168c321b",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e7f4f616-4539-4f5b-a9d1-f041168c321b.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3ff13cbd-cd41-4671-8a41-5e6dc52ecc87/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 145",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Thomas Willis (1621–1675)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e7f4f616-4539-4f5b-a9d1-f041168c321b/",
+      "date": "17th century"
+    }
+  },
+  {
+    "_id": "acb761a4-a319-48ca-b771-2b5df4be3f5c",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/acb761a4-a319-48ca-b771-2b5df4be3f5c/",
+    "_service": "bodleian",
+    "title": "Portrait of a woman, called Lady Jane Grey (1537–1554)",
+    "date": "16th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/9490f6ab-45a8-42dd-bd98-29616ed04a48/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "acb761a4-a319-48ca-b771-2b5df4be3f5c",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/acb761a4-a319-48ca-b771-2b5df4be3f5c.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/9490f6ab-45a8-42dd-bd98-29616ed04a48/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 32",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of a woman, called Lady Jane Grey (1537–1554)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/acb761a4-a319-48ca-b771-2b5df4be3f5c/",
+      "date": "16th century"
+    }
+  },
+  {
+    "_id": "e84469c5-757a-4dd5-9c4d-5d3fe6f6aceb",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e84469c5-757a-4dd5-9c4d-5d3fe6f6aceb/",
+    "_service": "bodleian",
+    "title": "Portrait of Thomas White (1550–1624)",
+    "date": "17th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/a324a56e-84c0-4c13-98e1-ae31c94c374e/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "e84469c5-757a-4dd5-9c4d-5d3fe6f6aceb",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e84469c5-757a-4dd5-9c4d-5d3fe6f6aceb.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/a324a56e-84c0-4c13-98e1-ae31c94c374e/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 81",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Thomas White (1550–1624)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e84469c5-757a-4dd5-9c4d-5d3fe6f6aceb/",
+      "date": "17th century"
+    }
+  },
+  {
+    "_id": "0887ba8f-6634-478e-86f3-39e1ae1383da",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/0887ba8f-6634-478e-86f3-39e1ae1383da/",
+    "_service": "bodleian",
+    "title": "Portrait of Joseph Justus Scaliger (1540–1609)",
+    "date": "17th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/18c11581-d84f-4561-a420-3eb819143152/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "0887ba8f-6634-478e-86f3-39e1ae1383da",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/0887ba8f-6634-478e-86f3-39e1ae1383da.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/18c11581-d84f-4561-a420-3eb819143152/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 63",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Joseph Justus Scaliger (1540–1609)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/0887ba8f-6634-478e-86f3-39e1ae1383da/",
+      "date": "17th century"
+    }
+  },
+  {
+    "_id": "695bfcd7-090a-4980-8576-dde9927387a0",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/695bfcd7-090a-4980-8576-dde9927387a0/",
+    "_service": "bodleian",
+    "title": "Portrait of Edmond Halley (1656–1742)",
+    "date": "1712",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d9237713-6c79-422f-a1b4-995627b280e7/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "695bfcd7-090a-4980-8576-dde9927387a0",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/695bfcd7-090a-4980-8576-dde9927387a0.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d9237713-6c79-422f-a1b4-995627b280e7/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library LP 241",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Edmond Halley (1656–1742)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/695bfcd7-090a-4980-8576-dde9927387a0/",
+      "date": "1712"
+    }
+  },
+  {
+    "_id": "97b469e5-e0f9-459c-871e-ba71c2ad60ae",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/97b469e5-e0f9-459c-871e-ba71c2ad60ae/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "after 1821",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0fbb6963-e395-499e-a2aa-b93fea9091bc/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "97b469e5-e0f9-459c-871e-ba71c2ad60ae",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/97b469e5-e0f9-459c-871e-ba71c2ad60ae.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0fbb6963-e395-499e-a2aa-b93fea9091bc/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. a.1",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/97b469e5-e0f9-459c-871e-ba71c2ad60ae/",
+      "date": "after 1821"
+    }
+  },
+  {
+    "_id": "8ed09252-7a96-46ec-8973-fa1db144b477",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/8ed09252-7a96-46ec-8973-fa1db144b477/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "1819",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/96767885-6497-4bc3-b9f2-cdb37c42214d/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "8ed09252-7a96-46ec-8973-fa1db144b477",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/8ed09252-7a96-46ec-8973-fa1db144b477.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/96767885-6497-4bc3-b9f2-cdb37c42214d/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. a.2",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/8ed09252-7a96-46ec-8973-fa1db144b477/",
+      "date": "1819"
+    }
+  },
+  {
+    "_id": "dec14c3b-dba1-49cc-8aee-754b11418be0",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/dec14c3b-dba1-49cc-8aee-754b11418be0/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "19th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f6881e65-26b8-433c-8c76-46032f987706/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "dec14c3b-dba1-49cc-8aee-754b11418be0",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/dec14c3b-dba1-49cc-8aee-754b11418be0.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/f6881e65-26b8-433c-8c76-46032f987706/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. a.3",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/dec14c3b-dba1-49cc-8aee-754b11418be0/",
+      "date": "19th century"
+    }
+  },
+  {
+    "_id": "61a7fc9a-a7bd-4a71-a787-f9864b3ee889",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/61a7fc9a-a7bd-4a71-a787-f9864b3ee889/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "19th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/cb9a8e4a-6e50-44f5-8b92-9bdd105758ba/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "61a7fc9a-a7bd-4a71-a787-f9864b3ee889",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/61a7fc9a-a7bd-4a71-a787-f9864b3ee889.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/cb9a8e4a-6e50-44f5-8b92-9bdd105758ba/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. a.4",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/61a7fc9a-a7bd-4a71-a787-f9864b3ee889/",
+      "date": "19th century"
+    }
+  },
+  {
+    "_id": "752d32b4-df2f-45d0-a63f-95142e8baa13",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/752d32b4-df2f-45d0-a63f-95142e8baa13/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "c. 1821",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/449c4aab-ecfd-4ad9-97a6-e30f721b6b86/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "752d32b4-df2f-45d0-a63f-95142e8baa13",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/752d32b4-df2f-45d0-a63f-95142e8baa13.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/449c4aab-ecfd-4ad9-97a6-e30f721b6b86/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. a.6",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/752d32b4-df2f-45d0-a63f-95142e8baa13/",
+      "date": "c. 1821"
+    }
+  },
+  {
+    "_id": "18a2c5c5-5555-4c0e-a7ee-017863f5c1f5",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/18a2c5c5-5555-4c0e-a7ee-017863f5c1f5/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "1832",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/e05a9c44-f7eb-44c5-bdc3-4a8f10f5c64b/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "18a2c5c5-5555-4c0e-a7ee-017863f5c1f5",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/18a2c5c5-5555-4c0e-a7ee-017863f5c1f5.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/e05a9c44-f7eb-44c5-bdc3-4a8f10f5c64b/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. a.8",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/18a2c5c5-5555-4c0e-a7ee-017863f5c1f5/",
+      "date": "1832"
+    }
+  },
+  {
+    "_id": "5dc0ff7e-c094-41ec-bb46-dc3bd1e32cd2",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/5dc0ff7e-c094-41ec-bb46-dc3bd1e32cd2/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "1832",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0eb8d035-9f0f-49a6-9c8c-f17f93d254f5/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "5dc0ff7e-c094-41ec-bb46-dc3bd1e32cd2",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/5dc0ff7e-c094-41ec-bb46-dc3bd1e32cd2.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/0eb8d035-9f0f-49a6-9c8c-f17f93d254f5/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. a.13",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/5dc0ff7e-c094-41ec-bb46-dc3bd1e32cd2/",
+      "date": "1832"
+    }
+  },
+  {
+    "_id": "e34bf4a8-05de-4f29-949d-f4f92bdfd9f0",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e34bf4a8-05de-4f29-949d-f4f92bdfd9f0/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "19th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3e380ad3-a35f-4d09-bb95-74dc4b0f29a1/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "e34bf4a8-05de-4f29-949d-f4f92bdfd9f0",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e34bf4a8-05de-4f29-949d-f4f92bdfd9f0.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/3e380ad3-a35f-4d09-bb95-74dc4b0f29a1/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. a.14",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e34bf4a8-05de-4f29-949d-f4f92bdfd9f0/",
+      "date": "19th century"
+    }
+  },
+  {
+    "_id": "1a204c26-9e27-4d46-9e7f-a5776dddc621",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/1a204c26-9e27-4d46-9e7f-a5776dddc621/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "18th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/cb4c9938-7f97-419e-8661-fa8640e4d580/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "1a204c26-9e27-4d46-9e7f-a5776dddc621",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/1a204c26-9e27-4d46-9e7f-a5776dddc621.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/cb4c9938-7f97-419e-8661-fa8640e4d580/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. a.15",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/1a204c26-9e27-4d46-9e7f-a5776dddc621/",
+      "date": "18th century"
+    }
+  },
+  {
+    "_id": "e9f2df73-124c-441c-b32c-79bec862ec0d",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e9f2df73-124c-441c-b32c-79bec862ec0d/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "1797",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/5c6a7b83-7c2b-4047-a90c-09268e3bb89b/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "e9f2df73-124c-441c-b32c-79bec862ec0d",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/e9f2df73-124c-441c-b32c-79bec862ec0d.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/5c6a7b83-7c2b-4047-a90c-09268e3bb89b/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. b.1",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/e9f2df73-124c-441c-b32c-79bec862ec0d/",
+      "date": "1797"
+    }
+  },
+  {
+    "_id": "656816db-b8e5-4620-bb7a-f3dea74d7e6f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/656816db-b8e5-4620-bb7a-f3dea74d7e6f/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "19th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/b3d64682-8ad0-4728-976a-57cc1ccf0583/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "656816db-b8e5-4620-bb7a-f3dea74d7e6f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/656816db-b8e5-4620-bb7a-f3dea74d7e6f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/b3d64682-8ad0-4728-976a-57cc1ccf0583/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. b.5",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/656816db-b8e5-4620-bb7a-f3dea74d7e6f/",
+      "date": "19th century"
+    }
+  },
+  {
+    "_id": "f9c947c7-a57a-4140-b3f3-dcf1d25c8e0f",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f9c947c7-a57a-4140-b3f3-dcf1d25c8e0f/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "19th century",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4e4fe422-ffa2-44c5-baa8-c9dc7985f41e/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "f9c947c7-a57a-4140-b3f3-dcf1d25c8e0f",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/f9c947c7-a57a-4140-b3f3-dcf1d25c8e0f.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/4e4fe422-ffa2-44c5-baa8-c9dc7985f41e/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. b.6",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/f9c947c7-a57a-4140-b3f3-dcf1d25c8e0f/",
+      "date": "19th century"
+    }
+  },
+  {
+    "_id": "ab3c0f90-4d11-4bbf-bc0e-7b733c34faca",
+    "_source": "bodleian",
+    "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ab3c0f90-4d11-4bbf-bc0e-7b733c34faca/",
+    "_service": "bodleian",
+    "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+    "date": "1819",
+    "type": "Object",
+    "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d43e4e91-da30-4ac6-918f-960fbfa8263d/full/255,/0/default.jpg",
+    "bodleian": {
+      "uuid": "ab3c0f90-4d11-4bbf-bc0e-7b733c34faca",
+      "manifest": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/ab3c0f90-4d11-4bbf-bc0e-7b733c34faca.json",
+      "thumbnail": "https://iiif.bodleian.ox.ac.uk/iiif/image/d43e4e91-da30-4ac6-918f-960fbfa8263d/full/255,/0/default.jpg",
+      "shelfmark": "Bodleian Library Curzon F. P. b.7",
+      "origins": "",
+      "completeness": "complete",
+      "textAvailable": false,
+      "surfaceCount": 1
+    },
+    "_citation": {
+      "service": "Bodleian Digital Collections",
+      "serviceUrl": "https://digital.bodleian.ox.ac.uk",
+      "publisher": "Bodleian Libraries, University of Oxford",
+      "accessDate": "2026-06-12T17:53:12.689Z",
+      "query": "portrait",
+      "title": "Portrait of Napoleon Bonaparte (1769–1821)",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/ab3c0f90-4d11-4bbf-bc0e-7b733c34faca/",
+      "date": "1819"
+    }
+  }
+]

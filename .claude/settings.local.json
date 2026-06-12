@@ -69,7 +69,28 @@
       "WebFetch(domain:api.vam.ac.uk)",
       "Bash(Test-Path *)",
       "Bash(gh repo *)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(xargs grep -l \"availableFields\\\\|flattenRecord\")",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\neil_\\\\Repos\\\\nfcs-poc\" -Recurse -File)",
+      "Bash(Select-Object FullName)",
+      "PowerShell(head *)",
+      "Bash(echo \"EXIT $?\")",
+      "Bash(echo \"TS exit: $?\")",
+      "Bash(npx vitest *)",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); root=d['packages']['']; print\\('deps:', sorted\\(\\(root.get\\('dependencies'\\) or {}\\).keys\\(\\)\\)\\); print\\('devDeps:', sorted\\(\\(root.get\\('devDependencies'\\) or {}\\).keys\\(\\)\\)\\)\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('deps:', sorted\\(d.get\\('dependencies', {}\\).keys\\(\\)\\)\\); print\\('devDeps:', sorted\\(d.get\\('devDependencies', {}\\).keys\\(\\)\\)\\)\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); root=d['packages']['']; print\\('lock deps:', sorted\\(\\(root.get\\('dependencies'\\) or {}\\).keys\\(\\)\\)\\); print\\('lock devDeps:', sorted\\(\\(root.get\\('devDependencies'\\) or {}\\).keys\\(\\)\\)\\)\")",
+      "Bash(npm --version)",
+      "Bash(python -c \"import json; d=json.load\\(open\\('package-lock.json'\\)\\); r=d['packages'][''] ; print\\('deps:', sorted\\(\\(r.get\\('dependencies'\\) or {}\\).keys\\(\\)\\)\\); print\\('devDeps:', sorted\\(\\(r.get\\('devDependencies'\\) or {}\\).keys\\(\\)\\)\\)\")",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\neil_\\\\Repos\\\\nfcs-poc\" -Force | Select-Object Name, @{Name=\"Type\"; Expression={if \\($_.PSIsContainer\\) {\"DIR\"} else {\"FILE\"}}} | Sort-Object Type, Name)",
+      "Bash(grep -E '\\\\.\\(tsx|ts\\)$')",
+      "Bash(Sort-Object)",
+      "Bash(Get-ChildItem *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\neil_\\\\Repos\\\\nfcs-poc\\\\public\\\\fixtures\\\\\" -ErrorAction SilentlyContinue | ForEach-Object { $_.Name })",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Select-Object -First 20 FullName)",
+      "Bash(xargs grep -l \"hidden.*parentId\\\\|expandParent\\\\|edge.*hidden\")",
+      "Read(//c/Users/neil_/Repos/nfcs-poc/**)"
     ]
   }
 }

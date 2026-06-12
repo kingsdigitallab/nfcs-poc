@@ -1,0 +1,4826 @@
+[
+  {
+    "id": "hsds:https://doi.org/10.5284/1000156",
+    "_source": "hsds",
+    "_sourceId": "https://doi.org/10.5284/1000156",
+    "_sourceUrl": "https://doi.org/10.5284/1000156",
+    "title": "Butchery and Intra-Site Analysis of Animal Bone: A Case Study from Danebury Hillfort, Hampshire, England: PhD Thesis, University of Leicester (2002).",
+    "description": "This Phd thesis explores the questions of status divisions, specialised activity and task areas, meat consumption, ritual and structured deposition, and addresses a main theme: what was the status of hillforts in the Iron Age?",
+    "creator": "Stephanie Knight",
+    "date": "2007-11-06",
+    "subject": [
+      "agriculture and subsistence",
+      "animal remains",
+      "archaeology",
+      "bone",
+      "butchery site",
+      "defence",
+      "heritage science",
+      "mammal remains",
+      "pit",
+      "agricultural structures",
+      "pits (earthworks)",
+      "agriculture",
+      "farming (activity or system)",
+      "remains (object genre)",
+      "defense installations",
+      "defense structures",
+      "animal remains"
+    ],
+    "language": "en",
+    "type": "collection",
+    "spatialCoverage": "World, Europe, United Kingdom, England, Hampshire, Danebury",
+    "country": [
+      "England",
+      "England"
+    ],
+    "decimalLatitude": 51.136766,
+    "decimalLongitude": -1.53972,
+    "periodStart": "-800",
+    "periodEnd": "43",
+    "periodName": "iron age",
+    "hsds": {
+      "elasticId": "9edafe680842a8c97d5d6e3a829bfaae39dd4b4092cb5138b2aa7167c22188f6",
+      "originalId": "https://doi.org/10.5284/1000156",
+      "landingPage": "https://doi.org/10.5284/1000156",
+      "modified": "2007-11-06",
+      "contributor": [
+        "Stephanie Knight"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "World, Europe, United Kingdom, England, Hampshire, Danebury"
+        },
+        {
+          "placeName": "England"
+        },
+        {
+          "placeName": "Europe, United Kingdom, England, Hampshire, Stockbridge"
+        },
+        {
+          "boundingbox": "polygon ((-1.5447478071 51.1406892589, -1.5447478071 51.1343308825, -1.53290321 51.1343308825, -1.53290321 51.1406892589, -1.5447478071 51.1406892589))",
+          "centroid": {
+            "lat": 51.1375100707,
+            "lon": -1.53882550855
+          }
+        },
+        {
+          "geopoint": {
+            "lat": 51.136766,
+            "lon": -1.53972
+          },
+          "centroid": {
+            "lat": 51.136766,
+            "lon": -1.53972
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "World, Europe, United Kingdom, England, Hampshire, Danebury",
+        "England",
+        "Europe, United Kingdom, England, Hampshire, Stockbridge"
+      ],
+      "temporal": [
+        {
+          "from": "-800",
+          "periodName": "iron age",
+          "until": "43",
+          "uri": "http://n2t.net/ark:/99152/p0kh9dsj33x"
+        }
+      ],
+      "country": [
+        {
+          "id": "https://www.wikidata.org/entity/Q21",
+          "name": "England"
+        },
+        {
+          "id": "https://www.wikidata.org/wiki/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "agriculture and subsistence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/AGRICULTURE%20AND%20SUBSISTENCE"
+        },
+        {
+          "prefLabel": "animal remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ANIMAL%20REMAINS"
+        },
+        {
+          "prefLabel": "archaeology",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/ARCHAEOLOGY"
+        },
+        {
+          "prefLabel": "bone",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BONE"
+        },
+        {
+          "prefLabel": "butchery site",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/BUTCHERY%20SITE"
+        },
+        {
+          "prefLabel": "defence",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/DEFENCE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        },
+        {
+          "prefLabel": "mammal remains",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/MAMMAL%20REMAINS"
+        },
+        {
+          "prefLabel": "pit",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/PIT"
+        }
+      ],
+      "derivedSubject": [
+        {
+          "prefLabel": "agricultural structures",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300004895",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "pits (earthworks)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300008027",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "agriculture",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300054463",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "farming (activity or system)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300192802",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "remains (object genre)",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300265420",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "defense installations",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300386994",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "defense structures",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300424383",
+          "lang": "en"
+        },
+        {
+          "prefLabel": "animal remains",
+          "source": "Getty AAT",
+          "id": "http://vocab.getty.edu/aat/300451324",
+          "lang": "en"
+        }
+      ],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Scientific analysis"
+        }
+      ],
+      "dataType": [],
+      "hasType": "collection",
+      "accessPolicy": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/AC6671C7-FD6D-311D-98D0-F635D5EFAA4F"
+      ],
+      "otherId": [
+        "collection id 1000781",
+        "dcterms:DOI https://doi.org/10.5284/1000156"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:https://doi.org/10.5284/1000156",
+      "title": "Butchery and Intra-Site Analysis of Animal Bone: A Case Study from Danebury Hillfort, Hampshire, England: PhD Thesis, University of Leicester (2002).",
+      "url": "https://doi.org/10.5284/1000156",
+      "creator": "Stephanie Knight",
+      "date": "2007-11-06"
+    }
+  },
+  {
+    "id": "hsds:916623",
+    "_source": "hsds",
+    "_sourceId": "916623",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/367416e1b02725d2c9fd40dfbaf45e0f48dcfda10057a95b88d1635e51dbde93",
+    "title": "Radiocarbon date, Sample number CAR-126",
+    "description": "Charcoal from pit in hillfort interior at Dinorben, Clwyd, Wales.<br>",
+    "creator": "G Guilbert",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 53.267954,
+    "decimalLongitude": -3.547565,
+    "hsds": {
+      "elasticId": "367416e1b02725d2c9fd40dfbaf45e0f48dcfda10057a95b88d1635e51dbde93",
+      "originalId": "916623",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.267954,
+            "lon": -3.547565
+          },
+          "centroid": {
+            "lat": 53.267954,
+            "lon": -3.547565
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-126",
+        "Depositor ID: CAR-126"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:916623",
+      "title": "Radiocarbon date, Sample number CAR-126",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/367416e1b02725d2c9fd40dfbaf45e0f48dcfda10057a95b88d1635e51dbde93",
+      "creator": "G Guilbert",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916624",
+    "_source": "hsds",
+    "_sourceId": "916624",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e2c4177bf837c493833d6c1bcd778ca156f663b4b748133ce79ff8bad7197c5f",
+    "title": "Radiocarbon date, Sample number CAR-125",
+    "description": "Charcoal associated with hearth on Platform 39 in hillfort interior at Dinorben, Clwyd, Wales.<br>",
+    "creator": "G Guilbert",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 53.267954,
+    "decimalLongitude": -3.547565,
+    "hsds": {
+      "elasticId": "e2c4177bf837c493833d6c1bcd778ca156f663b4b748133ce79ff8bad7197c5f",
+      "originalId": "916624",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.267954,
+            "lon": -3.547565
+          },
+          "centroid": {
+            "lat": 53.267954,
+            "lon": -3.547565
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-125",
+        "Depositor ID: CAR-125"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:916624",
+      "title": "Radiocarbon date, Sample number CAR-125",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e2c4177bf837c493833d6c1bcd778ca156f663b4b748133ce79ff8bad7197c5f",
+      "creator": "G Guilbert",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912657",
+    "_source": "hsds",
+    "_sourceId": "912657",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a0c440c25a6c04e9959c03327cfe3c159b1475bceaa4cc852d8054c1ac537a7d",
+    "title": "Radiocarbon date, Sample number SRR-495",
+    "description": "Charcoal sealed beneath hillfort earthworks at Moel y Gaer, Rhosesmor, Clwyd, Wales.<br>",
+    "creator": "G Guilbert",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / 4a occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 53.212811,
+    "decimalLongitude": -3.18163,
+    "hsds": {
+      "elasticId": "a0c440c25a6c04e9959c03327cfe3c159b1475bceaa4cc852d8054c1ac537a7d",
+      "originalId": "912657",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.212811,
+            "lon": -3.18163
+          },
+          "centroid": {
+            "lat": 53.212811,
+            "lon": -3.18163
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / 4a occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%204A%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-SRR-495",
+        "Depositor ID: SRR-495"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912657",
+      "title": "Radiocarbon date, Sample number SRR-495",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a0c440c25a6c04e9959c03327cfe3c159b1475bceaa4cc852d8054c1ac537a7d",
+      "creator": "G Guilbert",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916621",
+    "_source": "hsds",
+    "_sourceId": "916621",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/4a632f65f147cb6d827414087a15712766c4dd6103224f81114ed4ebc100e634",
+    "title": "Radiocarbon date, Sample number CAR-123",
+    "description": "Charcoal, id as oak, from deposit on platform 38 in hillfort interior at Dinorben, Clwyd, Wales.<br>",
+    "creator": "G Guilbert",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 53.267954,
+    "decimalLongitude": -3.547565,
+    "hsds": {
+      "elasticId": "4a632f65f147cb6d827414087a15712766c4dd6103224f81114ed4ebc100e634",
+      "originalId": "916621",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.267954,
+            "lon": -3.547565
+          },
+          "centroid": {
+            "lat": 53.267954,
+            "lon": -3.547565
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-123",
+        "Depositor ID: CAR-123"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:916621",
+      "title": "Radiocarbon date, Sample number CAR-123",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/4a632f65f147cb6d827414087a15712766c4dd6103224f81114ed4ebc100e634",
+      "creator": "G Guilbert",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916581",
+    "_source": "hsds",
+    "_sourceId": "916581",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/fa865349c8d70ad9365d9cac291d53dee8d40908575157c4fb755e1e5936ae15",
+    "title": "Radiocarbon date, Sample number Birm-119",
+    "description": "Charcoal associated with pottery, from upper hearth of hut in hillfort at SouthBarrule, Isle of Man, [off] England.<br>",
+    "creator": "P S Gelling",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Isle of Man",
+    "decimalLatitude": 54.149096,
+    "decimalLongitude": -4.667636,
+    "hsds": {
+      "elasticId": "fa865349c8d70ad9365d9cac291d53dee8d40908575157c4fb755e1e5936ae15",
+      "originalId": "916581",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.149096,
+            "lon": -4.667636
+          },
+          "centroid": {
+            "lat": 54.149096,
+            "lon": -4.667636
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q9676",
+          "name": "Isle of Man"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BIRM-119",
+        "Depositor ID: Birm-119"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:916581",
+      "title": "Radiocarbon date, Sample number Birm-119",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/fa865349c8d70ad9365d9cac291d53dee8d40908575157c4fb755e1e5936ae15",
+      "creator": "P S Gelling",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913323",
+    "_source": "hsds",
+    "_sourceId": "913323",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c9589ab62c23ccf65a172fca05f239b49db57b66ffb251a0484b055b581ab20f",
+    "title": "Radiocarbon date, Sample number CAR-958",
+    "description": "Charcoal? from occupation possibly predating enlargement of hillfort at MerlinsHill, Abergwili, Dyfed, Wales.<br>Univallate enclosure with complex entrance",
+    "creator": "George Williams",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 51.78931,
+    "decimalLongitude": -4.240379,
+    "hsds": {
+      "elasticId": "c9589ab62c23ccf65a172fca05f239b49db57b66ffb251a0484b055b581ab20f",
+      "originalId": "913323",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.78931,
+            "lon": -4.240379
+          },
+          "centroid": {
+            "lat": 51.78931,
+            "lon": -4.240379
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-958",
+        "Depositor ID: CAR-958"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:913323",
+      "title": "Radiocarbon date, Sample number CAR-958",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c9589ab62c23ccf65a172fca05f239b49db57b66ffb251a0484b055b581ab20f",
+      "creator": "George Williams",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913324",
+    "_source": "hsds",
+    "_sourceId": "913324",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/53ca4bdc4752d88296ebc9a8606b17a721134f8c646c765fa6a9783a91ae971c",
+    "title": "Radiocarbon date, Sample number CAR-959",
+    "description": "Charcoal? from occupation possibly predating enlargement of hillfort at MerlinsHill, Abergwili, Carmarthenshire, Dyfed, Wales.<br>Univallate enclosure with complex entrance",
+    "creator": "George Williams",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 51.78931,
+    "decimalLongitude": -4.240379,
+    "hsds": {
+      "elasticId": "53ca4bdc4752d88296ebc9a8606b17a721134f8c646c765fa6a9783a91ae971c",
+      "originalId": "913324",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.78931,
+            "lon": -4.240379
+          },
+          "centroid": {
+            "lat": 51.78931,
+            "lon": -4.240379
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-959",
+        "Depositor ID: CAR-959"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:913324",
+      "title": "Radiocarbon date, Sample number CAR-959",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/53ca4bdc4752d88296ebc9a8606b17a721134f8c646c765fa6a9783a91ae971c",
+      "creator": "George Williams",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:916622",
+    "_source": "hsds",
+    "_sourceId": "916622",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b8d792251ba7ddd7095b66ca9de44d5a6e885d6415447e3d2ea72707924d337b",
+    "title": "Radiocarbon date, Sample number CAR-124",
+    "description": "Charcoal, id as mixed twigs, from deposit on platform 38 in hillfort interior at Dinorben, Clwyd, Wales. Comment (subm): as CAR-123.<br>",
+    "creator": "G Guilbert",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 53.267954,
+    "decimalLongitude": -3.547565,
+    "hsds": {
+      "elasticId": "b8d792251ba7ddd7095b66ca9de44d5a6e885d6415447e3d2ea72707924d337b",
+      "originalId": "916622",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.267954,
+            "lon": -3.547565
+          },
+          "centroid": {
+            "lat": 53.267954,
+            "lon": -3.547565
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-124",
+        "Depositor ID: CAR-124"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:916622",
+      "title": "Radiocarbon date, Sample number CAR-124",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b8d792251ba7ddd7095b66ca9de44d5a6e885d6415447e3d2ea72707924d337b",
+      "creator": "G Guilbert",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919694",
+    "_source": "hsds",
+    "_sourceId": "919694",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1117112e93b687383a99767b5de10f8cc6b1ea51a86375439b59beb36e376005",
+    "title": "Radiocarbon date, Sample number CAR-1353",
+    "description": "[Sample not specified] from peat deposits within hillfort at Llanymynech, Powys, Wales. Comment (subm): indicates peat deposition runs Late Glacial to Iron Age.<br>",
+    "creator": "Chris Martin",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.790224,
+    "decimalLongitude": -3.090058,
+    "hsds": {
+      "elasticId": "1117112e93b687383a99767b5de10f8cc6b1ea51a86375439b59beb36e376005",
+      "originalId": "919694",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.790224,
+            "lon": -3.090058
+          },
+          "centroid": {
+            "lat": 52.790224,
+            "lon": -3.090058
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-1353",
+        "Depositor ID: CAR-1353"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:919694",
+      "title": "Radiocarbon date, Sample number CAR-1353",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1117112e93b687383a99767b5de10f8cc6b1ea51a86375439b59beb36e376005",
+      "creator": "Chris Martin",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912314",
+    "_source": "hsds",
+    "_sourceId": "912314",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/877db7e8a5a60adc4464f3c8410e0954919d2c9aea8460132f0c9a857c2e91c9",
+    "title": "Radiocarbon date, Sample number HAR-467",
+    "description": "Charcoal, bulked sample from Roundhouse R8, porch postholes, 3704/70 at The Breiddin, Powys, Wales.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "877db7e8a5a60adc4464f3c8410e0954919d2c9aea8460132f0c9a857c2e91c9",
+      "originalId": "912314",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-467",
+        "Depositor ID: HAR-467"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912314",
+      "title": "Radiocarbon date, Sample number HAR-467",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/877db7e8a5a60adc4464f3c8410e0954919d2c9aea8460132f0c9a857c2e91c9",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912349",
+    "_source": "hsds",
+    "_sourceId": "912349",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/81c8e8ac9f9be0b406340bb35283e285b3fde77e51b445566e4cf038e8107137",
+    "title": "Radiocarbon date, Sample number CAR-998",
+    "description": "Charcoal, not identified, from pit containing iron torc No. 197, 7087 at The Breiddin, Powys, Wales.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "81c8e8ac9f9be0b406340bb35283e285b3fde77e51b445566e4cf038e8107137",
+      "originalId": "912349",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-998",
+        "Depositor ID: CAR-998"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912349",
+      "title": "Radiocarbon date, Sample number CAR-998",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/81c8e8ac9f9be0b406340bb35283e285b3fde77e51b445566e4cf038e8107137",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919695",
+    "_source": "hsds",
+    "_sourceId": "919695",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/326e0551c89e56d0792b5f0dea22256e57a4b594567be39380fd389d9d0a3072",
+    "title": "Radiocarbon date, Sample number CAR-1354",
+    "description": "[Sample not specified] from peat deposits within hillfort at Llanymynech, Powys, Wales. Comment (subm): indicates peat deposition runs Late Glacial to Iron Age.<br>",
+    "creator": "Chris Martin",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / late glacial deposits",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.790224,
+    "decimalLongitude": -3.090058,
+    "hsds": {
+      "elasticId": "326e0551c89e56d0792b5f0dea22256e57a4b594567be39380fd389d9d0a3072",
+      "originalId": "919695",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.790224,
+            "lon": -3.090058
+          },
+          "centroid": {
+            "lat": 52.790224,
+            "lon": -3.090058
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / late glacial deposits",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20LATE%20GLACIAL%20DEPOSITS"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-1354",
+        "Depositor ID: CAR-1354"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:919695",
+      "title": "Radiocarbon date, Sample number CAR-1354",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/326e0551c89e56d0792b5f0dea22256e57a4b594567be39380fd389d9d0a3072",
+      "creator": "Chris Martin",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912353",
+    "_source": "hsds",
+    "_sourceId": "912353",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/31bd529838fad198df5e6dad81345d79dd81bbc02b305fe4e3b7c9733bf3caf2",
+    "title": "Radiocarbon date, Sample number HAR-469",
+    "description": "Charcoal, id as oak, from ?four-poster F29, post-pipes, 3623 at The Breiddin, Powys, Wales. Comment (subm): Probably burnt in situ.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "31bd529838fad198df5e6dad81345d79dd81bbc02b305fe4e3b7c9733bf3caf2",
+      "originalId": "912353",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-469",
+        "Depositor ID: HAR-469"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912353",
+      "title": "Radiocarbon date, Sample number HAR-469",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/31bd529838fad198df5e6dad81345d79dd81bbc02b305fe4e3b7c9733bf3caf2",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912674",
+    "_source": "hsds",
+    "_sourceId": "912674",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/105af63096d5eee4c14d58958fa357706df389340d69936834b5d78d2c5c71b1",
+    "title": "Radiocarbon date, Sample number I-4542",
+    "description": "Wood, id as carbonised oak beam, from uppermost of series of rampart structuresat Castle Hill, Almondbury, Yorkshire West, England. [Ed: there are also two TLdates for this site.]<br>Hillfort with timberlaced rampart",
+    "creator": "W J Varley, A Havercroft",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.622083,
+    "decimalLongitude": -1.770168,
+    "hsds": {
+      "elasticId": "105af63096d5eee4c14d58958fa357706df389340d69936834b5d78d2c5c71b1",
+      "originalId": "912674",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.622083,
+            "lon": -1.770168
+          },
+          "centroid": {
+            "lat": 53.622083,
+            "lon": -1.770168
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-I-4542",
+        "Depositor ID: I-4542"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912674",
+      "title": "Radiocarbon date, Sample number I-4542",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/105af63096d5eee4c14d58958fa357706df389340d69936834b5d78d2c5c71b1",
+      "creator": "W J Varley, A Havercroft",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912350",
+    "_source": "hsds",
+    "_sourceId": "912350",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/36c8717add8fad34687b2ca2035c78da1743d31a57bc3cf2466060a746249da9",
+    "title": "Radiocarbon date, Sample number BM-1158",
+    "description": "Charcoal, id as oak, field maple, poplar, hazel, hawthorn type ident from same deposit, from occupation soil behind rampart 0491 at The Breiddin, Powys, Wales.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "36c8717add8fad34687b2ca2035c78da1743d31a57bc3cf2466060a746249da9",
+      "originalId": "912350",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-1158",
+        "Depositor ID: BM-1158"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912350",
+      "title": "Radiocarbon date, Sample number BM-1158",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/36c8717add8fad34687b2ca2035c78da1743d31a57bc3cf2466060a746249da9",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919740",
+    "_source": "hsds",
+    "_sourceId": "919740",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/cb859ce4e7875e3e9e41a026f5d2d9f4f89b2ed759c20c914da5fbe8b2336b0d",
+    "title": "Radiocarbon date, Sample number CAR-1341",
+    "description": "Charcoal, wood, from Context 71, isolated posthole at Pendinas Lochtyn, Llangranog, Dyfed / Ceredigion, Wales. Comment (subm): cal dates given; both this RB period date and CAR-1341 as Bronze Age are reasonable in hillfort contexts.<br>",
+    "creator": "N Scott and K Murphy (Dyfed Archaeol Trust)",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort ?",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.166156,
+    "decimalLongitude": -4.464019,
+    "hsds": {
+      "elasticId": "cb859ce4e7875e3e9e41a026f5d2d9f4f89b2ed759c20c914da5fbe8b2336b0d",
+      "originalId": "919740",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.166156,
+            "lon": -4.464019
+          },
+          "centroid": {
+            "lat": 52.166156,
+            "lon": -4.464019
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort ?",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20%3F"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-1341",
+        "Depositor ID: CAR-1341"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:919740",
+      "title": "Radiocarbon date, Sample number CAR-1341",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/cb859ce4e7875e3e9e41a026f5d2d9f4f89b2ed759c20c914da5fbe8b2336b0d",
+      "creator": "N Scott and K Murphy (Dyfed Archaeol Trust)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912352",
+    "_source": "hsds",
+    "_sourceId": "912352",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9b91fa1ef98eddfb530e87f54dbe668995dbde311c036e2a821ccc6048e2e3e6",
+    "title": "Radiocarbon date, Sample number BM-1161",
+    "description": "Charcoal, id as oak, gorse, ash, field maple and hawthorn up to 15 years' growth, from refuse outside roundhouse R3, 0459 at The Breiddin, Powys, Wales.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "9b91fa1ef98eddfb530e87f54dbe668995dbde311c036e2a821ccc6048e2e3e6",
+      "originalId": "912352",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-1161",
+        "Depositor ID: BM-1161"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912352",
+      "title": "Radiocarbon date, Sample number BM-1161",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9b91fa1ef98eddfb530e87f54dbe668995dbde311c036e2a821ccc6048e2e3e6",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912362",
+    "_source": "hsds",
+    "_sourceId": "912362",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/3fd2c4539959e7ae5ba30d34526a1adf7663a6957be017894d742f21a9cca5eb",
+    "title": "Radiocarbon date, Sample number HAR-1414",
+    "description": "Charcoal, id as mixed hazel and oak from twigs and small branches up to 10 years' growth, from pit filling in interior, 7017N at The Breiddin, Powys, Wales.<br>Pre-hillfort occupation",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "3fd2c4539959e7ae5ba30d34526a1adf7663a6957be017894d742f21a9cca5eb",
+      "originalId": "912362",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1414",
+        "Depositor ID: HAR-1414"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912362",
+      "title": "Radiocarbon date, Sample number HAR-1414",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/3fd2c4539959e7ae5ba30d34526a1adf7663a6957be017894d742f21a9cca5eb",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912354",
+    "_source": "hsds",
+    "_sourceId": "912354",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/15757d7b9b64fb01229e2fb260cfa8fd0993dc35a5c4234f5e38f6f2cc1e3a82",
+    "title": "Radiocarbon date, Sample number BM-1160",
+    "description": "Charcoal, id as similar to sample with oak, hazel, ash, hawthorn, all from under 10 years' growth, from roundhouse R3, floor, 0485 at The Breiddin, Powys, Wales.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "15757d7b9b64fb01229e2fb260cfa8fd0993dc35a5c4234f5e38f6f2cc1e3a82",
+      "originalId": "912354",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-1160",
+        "Depositor ID: BM-1160"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912354",
+      "title": "Radiocarbon date, Sample number BM-1160",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/15757d7b9b64fb01229e2fb260cfa8fd0993dc35a5c4234f5e38f6f2cc1e3a82",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912356",
+    "_source": "hsds",
+    "_sourceId": "912356",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9c4fe038df40f448f529258566289c62da4849b097e87d90d1ef4704d5b7e312",
+    "title": "Radiocarbon date, Sample number HAR-843",
+    "description": "Charcoal, id as ash, elm, pine, some only partly burnt, from buried soil on house-platform 0226 at The Breiddin, Powys, Wales. Comment (subm): Recent.<br>Intrusive in Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "9c4fe038df40f448f529258566289c62da4849b097e87d90d1ef4704d5b7e312",
+      "originalId": "912356",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-843",
+        "Depositor ID: HAR-843"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912356",
+      "title": "Radiocarbon date, Sample number HAR-843",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9c4fe038df40f448f529258566289c62da4849b097e87d90d1ef4704d5b7e312",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919739",
+    "_source": "hsds",
+    "_sourceId": "919739",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/0fe58cd1118f6811b25d90861e761a637c55a51c7af65e8a7811b54f7f9fed73",
+    "title": "Radiocarbon date, Sample number CAR-1340",
+    "description": "Charcoal, wood, from in situ post, Context 34, of round house at Pendinas Lochtyn, Llangranog, Dyfed / Ceredigion, Wales. Comment (subm): cal dates given; boththis RB period date and CAR-1341 as Bronze Age are reasonable in hillfort contexts.<br>",
+    "creator": "N Scott and K Murphy (Dyfed Archaeol Trust)",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort ?",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.166156,
+    "decimalLongitude": -4.464019,
+    "hsds": {
+      "elasticId": "0fe58cd1118f6811b25d90861e761a637c55a51c7af65e8a7811b54f7f9fed73",
+      "originalId": "919739",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.166156,
+            "lon": -4.464019
+          },
+          "centroid": {
+            "lat": 52.166156,
+            "lon": -4.464019
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort ?",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20%3F"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-CAR-1340",
+        "Depositor ID: CAR-1340"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:919739",
+      "title": "Radiocarbon date, Sample number CAR-1340",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/0fe58cd1118f6811b25d90861e761a637c55a51c7af65e8a7811b54f7f9fed73",
+      "creator": "N Scott and K Murphy (Dyfed Archaeol Trust)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:911898",
+    "_source": "hsds",
+    "_sourceId": "911898",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e29a2c040b903d6fc2572180ac360d43be9a4c49824ab3369478e861b800505d",
+    "title": "Radiocarbon date, Sample number BM-885",
+    "description": "Charcoal, diffuse scatter, mostly twigs of oak, hazel, ash, ?hawthorn with 5-10years' growth, etc, from soil with Neolithic finds, 1422/1617 from under hillfort ramparts at The Breiddin, Powys, Wales.<br>",
+    "creator": "C R Musson",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort and other occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "e29a2c040b903d6fc2572180ac360d43be9a4c49824ab3369478e861b800505d",
+      "originalId": "911898",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort and other occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20AND%20OTHER%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-885",
+        "Depositor ID: BM-885"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:911898",
+      "title": "Radiocarbon date, Sample number BM-885",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e29a2c040b903d6fc2572180ac360d43be9a4c49824ab3369478e861b800505d",
+      "creator": "C R Musson",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912313",
+    "_source": "hsds",
+    "_sourceId": "912313",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/02b9d2af0c452c5a235754392016553867c68b843cac145d8785323ca2838612",
+    "title": "Radiocarbon date, Sample number HAR-1415",
+    "description": "Charcoal, id as hazel, twigs and small branches; oak up to 50mm+ dia, about 25 years', from rampart core (same sample as produced HAR-1761) at The Breiddin, Powys, Wales.<br>Bronze Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "02b9d2af0c452c5a235754392016553867c68b843cac145d8785323ca2838612",
+      "originalId": "912313",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1415",
+        "Depositor ID: HAR-1415"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912313",
+      "title": "Radiocarbon date, Sample number HAR-1415",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/02b9d2af0c452c5a235754392016553867c68b843cac145d8785323ca2838612",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912347",
+    "_source": "hsds",
+    "_sourceId": "912347",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/d484d4f57b43e6024e87530a0ce2284d45bd79d15a049b9086d10fa00fd2b3a7",
+    "title": "Radiocarbon date, Sample number HAR-468",
+    "description": "Charcoal, id as mix of mature and immature wood from hazel, ash, oak, poplar, elder and hawthorn, from four-posters, combined sample, Area B3-4-5 at The Breiddin, Powys, Wales.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "d484d4f57b43e6024e87530a0ce2284d45bd79d15a049b9086d10fa00fd2b3a7",
+      "originalId": "912347",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-468",
+        "Depositor ID: HAR-468"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912347",
+      "title": "Radiocarbon date, Sample number HAR-468",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/d484d4f57b43e6024e87530a0ce2284d45bd79d15a049b9086d10fa00fd2b3a7",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912363",
+    "_source": "hsds",
+    "_sourceId": "912363",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/78a161f5e5ae0bd6949b0004fc58f7fd18a3a7b54e40cbfd4be055e47161b118",
+    "title": "Radiocarbon date, Sample number HAR-470",
+    "description": "Charcoal, combined sample, id as twigs and branches of oak and hazel, incl. oakof at least 50 years' growth, from bowl-hearths under rampart, 1618/22/24 at The Breiddin, Powys, Wales.<br>Pre-hillfort occupation",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "78a161f5e5ae0bd6949b0004fc58f7fd18a3a7b54e40cbfd4be055e47161b118",
+      "originalId": "912363",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-470",
+        "Depositor ID: HAR-470"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912363",
+      "title": "Radiocarbon date, Sample number HAR-470",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/78a161f5e5ae0bd6949b0004fc58f7fd18a3a7b54e40cbfd4be055e47161b118",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912367",
+    "_source": "hsds",
+    "_sourceId": "912367",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/53779f19c996f970b9b51534013d19240859b52952b9478e87ce1f1ad7e21bc2",
+    "title": "Radiocarbon date, Sample number HAR-1287",
+    "description": "Charcoal, id as ash c 60mm dia., hazel and hawthorn up to 40mm dia, from dense concentrations in four post-pipes of six-poster S1, 7080 at The Breiddin, Powys,Wales.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "53779f19c996f970b9b51534013d19240859b52952b9478e87ce1f1ad7e21bc2",
+      "originalId": "912367",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1287",
+        "Depositor ID: HAR-1287"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912367",
+      "title": "Radiocarbon date, Sample number HAR-1287",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/53779f19c996f970b9b51534013d19240859b52952b9478e87ce1f1ad7e21bc2",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912369",
+    "_source": "hsds",
+    "_sourceId": "912369",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/507caf18cf342c2371fd1d502fd93dad41cf1d0eaa001ad78980b472405c5de2",
+    "title": "Radiocarbon date, Sample number HAR-842",
+    "description": "Charcoal, id as oak, ash, hazel, hawthorn up to c 20mm dia., 5-10 years' growth, from Roundhouse R2, floor and wall-line, 0206/32/34 at The Breiddin, Powys, Wales.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "507caf18cf342c2371fd1d502fd93dad41cf1d0eaa001ad78980b472405c5de2",
+      "originalId": "912369",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-842",
+        "Depositor ID: HAR-842"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912369",
+      "title": "Radiocarbon date, Sample number HAR-842",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/507caf18cf342c2371fd1d502fd93dad41cf1d0eaa001ad78980b472405c5de2",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912351",
+    "_source": "hsds",
+    "_sourceId": "912351",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/91e2f2f805336e80444e4904df4920c0669fced8245308182f98c47594363f06",
+    "title": "Radiocarbon date, Sample number BM-1159",
+    "description": "Charcoal, id as mixed gorse, ?hornbeam, ash, hazel and hawthorn up to 15 years'growth, + oak from twigs and mature wood, from midden /occupation soil behind rampart, 0489 at The Breiddin, Powys, Wales.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "91e2f2f805336e80444e4904df4920c0669fced8245308182f98c47594363f06",
+      "originalId": "912351",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-BM-1159",
+        "Depositor ID: BM-1159"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912351",
+      "title": "Radiocarbon date, Sample number BM-1159",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/91e2f2f805336e80444e4904df4920c0669fced8245308182f98c47594363f06",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912154",
+    "_source": "hsds",
+    "_sourceId": "912154",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/ee61d4eb2a175ee3530a2d7058146e47b1dfaa9c19e9d1a791d36947fec94211",
+    "title": "Radiocarbon date, Sample number HAR-2207",
+    "description": "Bones from disturbed skeleton under barrow within hillfort at Harting Beacon, WSussex, England.<br>",
+    "creator": "O Bedwin",
+    "date": "1998-12-01",
+    "subject": [
+      "7c burial",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 50.955238,
+    "decimalLongitude": -0.852332,
+    "hsds": {
+      "elasticId": "ee61d4eb2a175ee3530a2d7058146e47b1dfaa9c19e9d1a791d36947fec94211",
+      "originalId": "912154",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 50.955238,
+            "lon": -0.852332
+          },
+          "centroid": {
+            "lat": 50.955238,
+            "lon": -0.852332
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7c burial",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7C%20BURIAL"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-2207",
+        "Depositor ID: HAR-2207"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912154",
+      "title": "Radiocarbon date, Sample number HAR-2207",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/ee61d4eb2a175ee3530a2d7058146e47b1dfaa9c19e9d1a791d36947fec94211",
+      "creator": "O Bedwin",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914754",
+    "_source": "hsds",
+    "_sourceId": "914754",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c24d4e4d9cf23b8aa4512d2ee30ed663d9e8136a3c9cbb75c80347d8b90ced50",
+    "title": "Radiocarbon date, Sample number HAR-5127",
+    "description": "Charcoal, AML 8112890, id as mostly Fraxinus sp (small qties Populus sp, Fagus sp, Quercus sp), from small pit in hillfort with early Iron Age pottery at Balksbury Camp, Andover, Hampshire, England. Subm N Balaam 1982.<br>",
+    "creator": "K Smith",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort and 4a occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.199018,
+    "decimalLongitude": -1.497582,
+    "hsds": {
+      "elasticId": "c24d4e4d9cf23b8aa4512d2ee30ed663d9e8136a3c9cbb75c80347d8b90ced50",
+      "originalId": "914754",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.199018,
+            "lon": -1.497582
+          },
+          "centroid": {
+            "lat": 51.199018,
+            "lon": -1.497582
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort and 4a occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20AND%204A%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-5127",
+        "Depositor ID: HAR-5127"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:914754",
+      "title": "Radiocarbon date, Sample number HAR-5127",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c24d4e4d9cf23b8aa4512d2ee30ed663d9e8136a3c9cbb75c80347d8b90ced50",
+      "creator": "K Smith",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912365",
+    "_source": "hsds",
+    "_sourceId": "912365",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1a8400b779fa4a22b507b36b05f26e7aeed82580ef4cc37aa47d59cc80c74461",
+    "title": "Radiocarbon date, Sample number HAR-1615",
+    "description": "Charcoal, id as oak, from rampart timbering, dense concentrations from three ofthe paired postholes, 0140/42/49, under BA rampart in B01, at The Breiddin, Powys, Wales. Comment (subm): This date preferred to HAR-1415.<br>Bronze Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "1a8400b779fa4a22b507b36b05f26e7aeed82580ef4cc37aa47d59cc80c74461",
+      "originalId": "912365",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1615",
+        "Depositor ID: HAR-1615"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912365",
+      "title": "Radiocarbon date, Sample number HAR-1615",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1a8400b779fa4a22b507b36b05f26e7aeed82580ef4cc37aa47d59cc80c74461",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912370",
+    "_source": "hsds",
+    "_sourceId": "912370",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a79715f5e94aeebe43bab2b531e58f487d7afbe3e37c4a210096644126d2a956",
+    "title": "Radiocarbon date, Sample number QL-1080",
+    "description": "Charcoal, id as oak, hazel and poplar up to 20mm dia., 5-10 years' growth, fromrampart core, rear, 0457 at The Breiddin, Powys, Wales. Comment (subm): Gives tpq for construction of this part of rampart.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "a79715f5e94aeebe43bab2b531e58f487d7afbe3e37c4a210096644126d2a956",
+      "originalId": "912370",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-QL-1080",
+        "Depositor ID: QL-1080"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912370",
+      "title": "Radiocarbon date, Sample number QL-1080",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a79715f5e94aeebe43bab2b531e58f487d7afbe3e37c4a210096644126d2a956",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:913825",
+    "_source": "hsds",
+    "_sourceId": "913825",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/055172172e67e5f731ebcbdcd7ebcbc8accb92b15ead680df2692c70e348b72e",
+    "title": "Radiocarbon date, Sample number HAR-6504",
+    "description": "Charcoal, id as oak (Quercus sp), from sample sealed into roadway leading into hillfort entrance at Beeston Castle, Bunbury, Cheshire, England. Coll P Hough 1984. Subm P Hough. Comment (subm): Roadway seals ditch from which HAR-6462 (5140 +/- 90) was taken; material may result from site clearance.<br>Occupation below medieval castle levels",
+    "creator": "P Hough",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 53.128567,
+    "decimalLongitude": -2.690542,
+    "hsds": {
+      "elasticId": "055172172e67e5f731ebcbdcd7ebcbc8accb92b15ead680df2692c70e348b72e",
+      "originalId": "913825",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.128567,
+            "lon": -2.690542
+          },
+          "centroid": {
+            "lat": 53.128567,
+            "lon": -2.690542
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-6504",
+        "Depositor ID: HAR-6504"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:913825",
+      "title": "Radiocarbon date, Sample number HAR-6504",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/055172172e67e5f731ebcbdcd7ebcbc8accb92b15ead680df2692c70e348b72e",
+      "creator": "P Hough",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919686",
+    "_source": "hsds",
+    "_sourceId": "919686",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/85da3e08a69ec2230defcd56f7ffd95f30fd24961b91b7ac56020fed63bfbab7",
+    "title": "Radiocarbon date, Sample number HAR-10568",
+    "description": "Charcoal, charred post within rampart, HHG, at Hunsbury hillfort, Northampton, England. Comment (subm): Cal date ranges plus small amount of pottery suggest that the box rampart was probably constructed at some time between 8th and 4th centuries BC, though bulk of pottery is of 2nd and 1st century BC. [further commentin ref.]<br>",
+    "creator": "Dennis Jackson",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.217602,
+    "decimalLongitude": -0.924017,
+    "hsds": {
+      "elasticId": "85da3e08a69ec2230defcd56f7ffd95f30fd24961b91b7ac56020fed63bfbab7",
+      "originalId": "919686",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.217602,
+            "lon": -0.924017
+          },
+          "centroid": {
+            "lat": 52.217602,
+            "lon": -0.924017
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-10568",
+        "Depositor ID: HAR-10568"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:919686",
+      "title": "Radiocarbon date, Sample number HAR-10568",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/85da3e08a69ec2230defcd56f7ffd95f30fd24961b91b7ac56020fed63bfbab7",
+      "creator": "Dennis Jackson",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912364",
+    "_source": "hsds",
+    "_sourceId": "912364",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c1e6fc94d120717905a265aa3c56eeabd03ba69c43dfb0f02ebefcaa6a2b7af2",
+    "title": "Radiocarbon date, Sample number HAR-1616",
+    "description": "Charcoal, id as oak of indeterminate size, but postpacking suggesting 150mm dia, about 75 years' growth, from rampart timbering, higher in post socket 0141B/D that produced BM-879, and from another socket (0141D) in same gully at The Breiddin, Powys, Wales.<br>Bronze Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "c1e6fc94d120717905a265aa3c56eeabd03ba69c43dfb0f02ebefcaa6a2b7af2",
+      "originalId": "912364",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1616",
+        "Depositor ID: HAR-1616"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912364",
+      "title": "Radiocarbon date, Sample number HAR-1616",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c1e6fc94d120717905a265aa3c56eeabd03ba69c43dfb0f02ebefcaa6a2b7af2",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919687",
+    "_source": "hsds",
+    "_sourceId": "919687",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/95b8bafca8f25933d0671d59102a04c49c3c75c4351be2c750164b41bdf67ea2",
+    "title": "Radiocarbon date, Sample number HAR-10569",
+    "description": "Charcoal from plank piece, HHB, layer 9 at Hunsbury hillfort, Northampton, England. Comment (subm): Cal date ranges plus small amount of pottery suggest that the box rampart was probably constructed at some time between 8th and 4th centuries BC, though bulk of pottery is of 2nd and 1st century BC. [further comment in ref.]<br>",
+    "creator": "Dennis Jackson",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.217602,
+    "decimalLongitude": -0.924017,
+    "hsds": {
+      "elasticId": "95b8bafca8f25933d0671d59102a04c49c3c75c4351be2c750164b41bdf67ea2",
+      "originalId": "919687",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.217602,
+            "lon": -0.924017
+          },
+          "centroid": {
+            "lat": 52.217602,
+            "lon": -0.924017
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-10569",
+        "Depositor ID: HAR-10569"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:919687",
+      "title": "Radiocarbon date, Sample number HAR-10569",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/95b8bafca8f25933d0671d59102a04c49c3c75c4351be2c750164b41bdf67ea2",
+      "creator": "Dennis Jackson",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919688",
+    "_source": "hsds",
+    "_sourceId": "919688",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f4e820c6fe5d0816aaa5cdea022dcb0c68828027b96f5f5964139f3cf66b13ff",
+    "title": "Radiocarbon date, Sample number HAR-10570",
+    "description": "Charcoal, post in rear revetment, HHH, at Hunsbury hillfort, Northampton, England. Comment (subm): Cal date ranges plus small amount of pottery suggest that the box rampart was probably constructed at some time between 8th and 4th centuries BC, though bulk of pottery is of 2nd and 1st century BC. [further comment in ref.]<br>",
+    "creator": "Dennis Jackson",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 52.217602,
+    "decimalLongitude": -0.924017,
+    "hsds": {
+      "elasticId": "f4e820c6fe5d0816aaa5cdea022dcb0c68828027b96f5f5964139f3cf66b13ff",
+      "originalId": "919688",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.217602,
+            "lon": -0.924017
+          },
+          "centroid": {
+            "lat": 52.217602,
+            "lon": -0.924017
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-10570",
+        "Depositor ID: HAR-10570"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:919688",
+      "title": "Radiocarbon date, Sample number HAR-10570",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f4e820c6fe5d0816aaa5cdea022dcb0c68828027b96f5f5964139f3cf66b13ff",
+      "creator": "Dennis Jackson",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912366",
+    "_source": "hsds",
+    "_sourceId": "912366",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c82b1095bff487f4a938170bd3cdf5276f928ef17c5cd670f8d5c5fdb18f7dcd",
+    "title": "Radiocarbon date, Sample number HAR-1761",
+    "description": "Charcoal, id as hazel, twigs to some branches; oak up to at least 50mm dia, approx 25 years' growth, from above paired postholes 0419 of BA rampart core at TheBreiddin, Powys, Wales. Comment (subm): Same sample as produced late date of HAR-1415.<br>Bronze Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "c82b1095bff487f4a938170bd3cdf5276f928ef17c5cd670f8d5c5fdb18f7dcd",
+      "originalId": "912366",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1761",
+        "Depositor ID: HAR-1761"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912366",
+      "title": "Radiocarbon date, Sample number HAR-1761",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c82b1095bff487f4a938170bd3cdf5276f928ef17c5cd670f8d5c5fdb18f7dcd",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912368",
+    "_source": "hsds",
+    "_sourceId": "912368",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/73da506591757aa25c8281bc6a10dbcbb476a6cd57548481e046f623e946a38f",
+    "title": "Radiocarbon date, Sample number HAR-1286",
+    "description": "Charcoal, id as oak and ash up to 60mm dia., about 30 years' growth, from four-poster F41, digging-out pit, 7050 at The Breiddin, Powys, Wales. Comment (subm):Gives tpq for refilling of pit, taq for post removal and end of building to which it belonged.<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "73da506591757aa25c8281bc6a10dbcbb476a6cd57548481e046f623e946a38f",
+      "originalId": "912368",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1286",
+        "Depositor ID: HAR-1286"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912368",
+      "title": "Radiocarbon date, Sample number HAR-1286",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/73da506591757aa25c8281bc6a10dbcbb476a6cd57548481e046f623e946a38f",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914538",
+    "_source": "hsds",
+    "_sourceId": "914538",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/0bfa61a117fb2fccb43eea4440c738927fe122dcba3fcaf843e6874f1749b274",
+    "title": "Radiocarbon date, Sample number GaK-4861",
+    "description": "Charcoal from fallen roof timber at Tor a'Chorcain, Langwell, Highland Region, Scotland. [Ed: See CAL dates and comment by Armit in second ref below].<br>builtover hillfort",
+    "creator": "H C Nisbet 1974",
+    "date": "1998-12-01",
+    "subject": [
+      "5b vitrified dun",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.968228,
+    "decimalLongitude": -4.688255,
+    "hsds": {
+      "elasticId": "0bfa61a117fb2fccb43eea4440c738927fe122dcba3fcaf843e6874f1749b274",
+      "originalId": "914538",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.968228,
+            "lon": -4.688255
+          },
+          "centroid": {
+            "lat": 57.968228,
+            "lon": -4.688255
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5b vitrified dun",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5B%20VITRIFIED%20DUN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GAK-4861",
+        "Depositor ID: GaK-4861"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:914538",
+      "title": "Radiocarbon date, Sample number GaK-4861",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/0bfa61a117fb2fccb43eea4440c738927fe122dcba3fcaf843e6874f1749b274",
+      "creator": "H C Nisbet 1974",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914139",
+    "_source": "hsds",
+    "_sourceId": "914139",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b66864bc97dbf50cd909e575b64ddcfbcf6856bf404d0d1b2425833d304fddb0",
+    "title": "Radiocarbon date, Sample number GU-2373",
+    "description": "Carbonised wood from house platform 1, episode 1 at Eildon Hill North, Borders,Scotland. Comment (subm): See monograph for corrected dates etc.<br>Multiphase:unenclosed platform settlement and hillfort",
+    "creator": "O A Owen 1986",
+    "date": "1998-12-01",
+    "subject": [
+      "4a settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 55.586803,
+    "decimalLongitude": -2.70607,
+    "hsds": {
+      "elasticId": "b66864bc97dbf50cd909e575b64ddcfbcf6856bf404d0d1b2425833d304fddb0",
+      "originalId": "914139",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.586803,
+            "lon": -2.70607
+          },
+          "centroid": {
+            "lat": 55.586803,
+            "lon": -2.70607
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "4a settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/4A%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-2373",
+        "Depositor ID: GU-2373"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:914139",
+      "title": "Radiocarbon date, Sample number GU-2373",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b66864bc97dbf50cd909e575b64ddcfbcf6856bf404d0d1b2425833d304fddb0",
+      "creator": "O A Owen 1986",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912348",
+    "_source": "hsds",
+    "_sourceId": "912348",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/439faed712f094b5c69a505cd167024c9d1aea9e0882695ad8dc4573b33df543",
+    "title": "Radiocarbon date, Sample number HAR-1413",
+    "description": "Charcoal, id as large sample, poplar over 20mm and oak over 60mm, c 25 years' growth, from four-poster F39, digging-out pit 7041 at The Breiddin, Powys, Wales.Comment (subm): gives tpg for refilling of pit and taq for post-removal and endof the building to which it belonged (see also HAR-1286 and HAR-1617).<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "439faed712f094b5c69a505cd167024c9d1aea9e0882695ad8dc4573b33df543",
+      "originalId": "912348",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1413",
+        "Depositor ID: HAR-1413"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912348",
+      "title": "Radiocarbon date, Sample number HAR-1413",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/439faed712f094b5c69a505cd167024c9d1aea9e0882695ad8dc4573b33df543",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912355",
+    "_source": "hsds",
+    "_sourceId": "912355",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/ef92ed12ea7e205f45d0d63d30ee56074c3cbeb456e6884535bc9234261d99a1",
+    "title": "Radiocarbon date, Sample number HAR-1617",
+    "description": "Charcoal, id as oak, hazel, sloe up to 30mm dia., of 15 years' growth, from four-poster F49, digging-out pit, 7117 at The Breiddin, Powys, Wales. Comment (subm): Gives tpq for filling of pit and taq for post removal and end of the buildingto which it belonged (see also HAR-1286 and HAR-1413).<br>Iron Age hillfort phase",
+    "creator": "C R Musson et al",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Wales",
+    "decimalLatitude": 52.722268,
+    "decimalLongitude": -3.048381,
+    "hsds": {
+      "elasticId": "ef92ed12ea7e205f45d0d63d30ee56074c3cbeb456e6884535bc9234261d99a1",
+      "originalId": "912355",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          },
+          "centroid": {
+            "lat": 52.722268,
+            "lon": -3.048381
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q25",
+          "name": "Wales"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-HAR-1617",
+        "Depositor ID: HAR-1617"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:912355",
+      "title": "Radiocarbon date, Sample number HAR-1617",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/ef92ed12ea7e205f45d0d63d30ee56074c3cbeb456e6884535bc9234261d99a1",
+      "creator": "C R Musson et al",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914424",
+    "_source": "hsds",
+    "_sourceId": "914424",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/f9a674953b5c1f08c637b08a9b327dead38eb604150b080f65a37e9b6f849458",
+    "title": "Radiocarbon date, Sample number GaK-4862",
+    "description": "Charcoal from foundation of inner wall at Tor a'Chorcain, Langwell, Highland Region, Scotland. [Ed: See CAL dates and comment by Armit in second ref below].<br>built over hillfort",
+    "creator": "H C Nisbet 1974",
+    "date": "1998-12-01",
+    "subject": [
+      "5b vitrified dun",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.968228,
+    "decimalLongitude": -4.688255,
+    "hsds": {
+      "elasticId": "f9a674953b5c1f08c637b08a9b327dead38eb604150b080f65a37e9b6f849458",
+      "originalId": "914424",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.968228,
+            "lon": -4.688255
+          },
+          "centroid": {
+            "lat": 57.968228,
+            "lon": -4.688255
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5b vitrified dun",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5B%20VITRIFIED%20DUN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GAK-4862",
+        "Depositor ID: GaK-4862"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:914424",
+      "title": "Radiocarbon date, Sample number GaK-4862",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/f9a674953b5c1f08c637b08a9b327dead38eb604150b080f65a37e9b6f849458",
+      "creator": "H C Nisbet 1974",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914425",
+    "_source": "hsds",
+    "_sourceId": "914425",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/ad71047cdf22a8b83d31e9131ec3e141801c7cff408b30e0b0605aae4aaa026f",
+    "title": "Radiocarbon date, Sample number GaK-3274",
+    "description": "Charcoal from same timber as GaK-4861 at Tor a'Chorcain, Langwell, Highland Region, Scotland. [Ed: See CAL dates and comment by Armit in second ref below].<br>built over hillfort",
+    "creator": "H C Nisbet 1974",
+    "date": "1998-12-01",
+    "subject": [
+      "5b vitrified dun",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.968228,
+    "decimalLongitude": -4.688255,
+    "hsds": {
+      "elasticId": "ad71047cdf22a8b83d31e9131ec3e141801c7cff408b30e0b0605aae4aaa026f",
+      "originalId": "914425",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.968228,
+            "lon": -4.688255
+          },
+          "centroid": {
+            "lat": 57.968228,
+            "lon": -4.688255
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5b vitrified dun",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5B%20VITRIFIED%20DUN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GAK-3274",
+        "Depositor ID: GaK-3274"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:914425",
+      "title": "Radiocarbon date, Sample number GaK-3274",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/ad71047cdf22a8b83d31e9131ec3e141801c7cff408b30e0b0605aae4aaa026f",
+      "creator": "H C Nisbet 1974",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914537",
+    "_source": "hsds",
+    "_sourceId": "914537",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a4120c444de5f4cf9f5f984489793a914b7398d6015344df300976d918d045e6",
+    "title": "Radiocarbon date, Sample number GaK-4860",
+    "description": "Charcoal from primary posthole at entrance to guard chamber at Tor a'Chorcain, Langwell, Highland Region, Scotland. [Ed: See CAL dates and comment by Armit in second ref below].<br>built over hillfort",
+    "creator": "H C Nisbet 1974",
+    "date": "1998-12-01",
+    "subject": [
+      "5b vitrified dun",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.968228,
+    "decimalLongitude": -4.688255,
+    "hsds": {
+      "elasticId": "a4120c444de5f4cf9f5f984489793a914b7398d6015344df300976d918d045e6",
+      "originalId": "914537",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.968228,
+            "lon": -4.688255
+          },
+          "centroid": {
+            "lat": 57.968228,
+            "lon": -4.688255
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5b vitrified dun",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5B%20VITRIFIED%20DUN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GAK-4860",
+        "Depositor ID: GaK-4860"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:914537",
+      "title": "Radiocarbon date, Sample number GaK-4860",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a4120c444de5f4cf9f5f984489793a914b7398d6015344df300976d918d045e6",
+      "creator": "H C Nisbet 1974",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919292",
+    "_source": "hsds",
+    "_sourceId": "919292",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/fa0b1adb45fdbf11a03dd75aae5ae24ee62504cdeb725740a9cf3bbad7d540b8",
+    "title": "Radiocarbon date, Sample number OxA-3652",
+    "description": "Bone, id as animal, 11905/29/1, from upper fill of ditch at `Ellacott', Camp Gardens, Stow-on-the-Wold, Gloucestershire, England. Subm C Parry 1992. Comment (subm): this date and OxA-3801 are earlier than expected, coming from a ditch of defensive dimensions aligned upon the postulated defences of an Iron Age hillfort. Dates suggest that the feature filled during Middle, or early part of Late, Bronze Age. [Further comment in ref. below].<br>",
+    "creator": "C Parry 1991",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / 4a occupation enclosure",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.930841,
+    "decimalLongitude": -1.717817,
+    "hsds": {
+      "elasticId": "fa0b1adb45fdbf11a03dd75aae5ae24ee62504cdeb725740a9cf3bbad7d540b8",
+      "originalId": "919292",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.930841,
+            "lon": -1.717817
+          },
+          "centroid": {
+            "lat": 51.930841,
+            "lon": -1.717817
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / 4a occupation enclosure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%204A%20OCCUPATION%20ENCLOSURE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3652-2",
+        "Depositor ID: OxA-3652"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:919292",
+      "title": "Radiocarbon date, Sample number OxA-3652",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/fa0b1adb45fdbf11a03dd75aae5ae24ee62504cdeb725740a9cf3bbad7d540b8",
+      "creator": "C Parry 1991",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919293",
+    "_source": "hsds",
+    "_sourceId": "919293",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a6d0541bbcb1ec5f5684a605280a8d2d61a34962b8750245747074e92e9b2328",
+    "title": "Radiocarbon date, Sample number OxA-3801",
+    "description": "Bone, id as animal, 11905/29/2, from upper fill of ditch at `Ellacott', Camp Gardens, Stow-on-the-Wold, Gloucestershire, England. Subm C Parry 1992. Comment (subm): this date and OxA-3652 are earlier than expected, coming from a ditch of defensive dimensions aligned upon the postulated defences of an Iron Age hillfort. Dates suggest that the feature filled during Middle, or early part of Late, Bronze Age. [Further comment in ref. below].<br>",
+    "creator": "C Parry 1991",
+    "date": "1998-12-01",
+    "subject": [
+      "5a hillfort / 4a occupation enclosure",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "England",
+    "decimalLatitude": 51.930841,
+    "decimalLongitude": -1.717817,
+    "hsds": {
+      "elasticId": "a6d0541bbcb1ec5f5684a605280a8d2d61a34962b8750245747074e92e9b2328",
+      "originalId": "919293",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 51.930841,
+            "lon": -1.717817
+          },
+          "centroid": {
+            "lat": 51.930841,
+            "lon": -1.717817
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q21",
+          "name": "England"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5a hillfort / 4a occupation enclosure",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5A%20HILLFORT%20/%204A%20OCCUPATION%20ENCLOSURE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-3801-2",
+        "Depositor ID: OxA-3801"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:919293",
+      "title": "Radiocarbon date, Sample number OxA-3801",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a6d0541bbcb1ec5f5684a605280a8d2d61a34962b8750245747074e92e9b2328",
+      "creator": "C Parry 1991",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914148",
+    "_source": "hsds",
+    "_sourceId": "914148",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e8b8508560baaa6bb4043a42538757bc0e85071ae95a48c1eacf0adba3088fea",
+    "title": "Radiocarbon date, Sample number GU-2372",
+    "description": "Carbonised wood, id as mixed spp (details given) by R P J McCullagh, from houseplatform 2, dispersed hearth at Eildon Hill North, Borders, Scotland. Comment (subm): See monograph for corrected dates etc.<br>Multiphase: unenclosed platformsettlement and hillfort",
+    "creator": "O A Owen 1986",
+    "date": "1998-12-01",
+    "subject": [
+      "6a hilltop settlement",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 55.586803,
+    "decimalLongitude": -2.70607,
+    "hsds": {
+      "elasticId": "e8b8508560baaa6bb4043a42538757bc0e85071ae95a48c1eacf0adba3088fea",
+      "originalId": "914148",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 55.586803,
+            "lon": -2.70607
+          },
+          "centroid": {
+            "lat": 55.586803,
+            "lon": -2.70607
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "6a hilltop settlement",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/6A%20HILLTOP%20SETTLEMENT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-2372",
+        "Depositor ID: GU-2372"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:31.425Z",
+      "query": "q:hillfort",
+      "recordId": "hsds:914148",
+      "title": "Radiocarbon date, Sample number GU-2372",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e8b8508560baaa6bb4043a42538757bc0e85071ae95a48c1eacf0adba3088fea",
+      "creator": "O A Owen 1986",
+      "date": "1998-12-01"
+    }
+  }
+]

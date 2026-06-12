@@ -1,0 +1,4614 @@
+[
+  {
+    "id": "mds:c4e0cc43-c93e-37cf-a190-342708d2f594",
+    "_source": "mds",
+    "_sourceId": "HMCMS:SH2002.598",
+    "_sourceUrl": "https://museumdata.uk/objects/c4e0cc43-c93e-37cf-a190-342708d2f594",
+    "title": "MDS Record 1",
+    "description": "teapot, Welware Thermal teapot, colour bronze, capacity 1.5 pints, pat no 61065/68 applied for, in printed box",
+    "subject": [
+      "teapot; Welware Thermal teapot; teapot; Welware Thermal teapot",
+      "teapot; Welware Thermal teapot; teapot; Welware Thermal teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Hampshire Cultural Trust",
+    "mds": {
+      "uuid": "c4e0cc43-c93e-37cf-a190-342708d2f594",
+      "objectNumber": "HMCMS:SH2002.598",
+      "dimensions": [
+        "h",
+        "diam",
+        "158",
+        "183"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "teapot; Welware Thermal teapot; teapot; Welware Thermal teapot"
+        ],
+        "Brief description": [
+          "teapot, Welware Thermal teapot, colour bronze, capacity 1.5 pints, pat no 61065/68 applied for, in printed box"
+        ],
+        "Collection": [
+          "Hampshire Cultural Trust"
+        ],
+        "Credit line": [
+          "Part of the Hampshire County Collections managed by Hampshire Cultural Trust"
+        ],
+        "Dimension": [
+          "h",
+          "diam"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "158",
+          "183"
+        ],
+        "Object name": [
+          "teapot; Welware Thermal teapot; teapot; Welware Thermal teapot"
+        ],
+        "Object number": [
+          "HMCMS:SH2002.598"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:c4e0cc43-c93e-37cf-a190-342708d2f594",
+      "title": "MDS Record 1",
+      "url": "https://museumdata.uk/objects/c4e0cc43-c93e-37cf-a190-342708d2f594"
+    }
+  },
+  {
+    "id": "mds:81265194-b910-3ff3-8934-adb84731d670",
+    "_source": "mds",
+    "_sourceId": "co8407992",
+    "_sourceUrl": "https://museumdata.uk/objects/81265194-b910-3ff3-8934-adb84731d670",
+    "title": "Transfer-printed souvenir teapot",
+    "description": "Transfer-printed souvenir teapot, decorated with view of Lewis's department store, Manchester, which opened in 1880.",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "81265194-b910-3ff3-8934-adb84731d670",
+      "objectNumber": "co8407992",
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "7 1/16",
+        "180",
+        "5 5/16",
+        "135",
+        "3 1/8",
+        "80"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Transfer-printed souvenir teapot"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Transfer-printed souvenir teapot, decorated with view of Lewis's department store, Manchester, which opened in 1880."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "7 1/16",
+          "180",
+          "5 5/16",
+          "135",
+          "3 1/8",
+          "80"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Other number": [
+          "Y1991.67.4"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SIM - Local History"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:81265194-b910-3ff3-8934-adb84731d670",
+      "title": "Transfer-printed souvenir teapot",
+      "url": "https://museumdata.uk/objects/81265194-b910-3ff3-8934-adb84731d670"
+    }
+  },
+  {
+    "id": "mds:cae765e5-66fa-3a0b-a53d-3ed99d1cca9f",
+    "_source": "mds",
+    "_sourceId": "SHMMT:",
+    "_sourceUrl": "https://museumdata.uk/objects/cae765e5-66fa-3a0b-a53d-3ed99d1cca9f",
+    "title": "MDS Record 3",
+    "description": "Teapot; plastic insulated teapot.",
+    "creator": "Welware",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "Domestic and Family life",
+      "travel and holidays",
+      "travelling accessory"
+    ],
+    "type": "Museum object",
+    "collection": "Sheringham Museum",
+    "mds": {
+      "uuid": "cae765e5-66fa-3a0b-a53d-3ed99d1cca9f",
+      "objectNumber": "SHMMT:",
+      "material": [
+        "plastic"
+      ],
+      "place": [
+        "Made in Gt Britain"
+      ],
+      "dimensions": [
+        "diameter",
+        "190"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC 0",
+      "allFields": {
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot; plastic insulated teapot.",
+          "Teapot; plastic insulated teapot, coloured red on the bottom half and white on the top half, white spout and handle, red lid with a silvered, blue plastic knob to lid.  Thought to be used by fishermen or possibly in a beachhut."
+        ],
+        "Collection": [
+          "Sheringham Museum"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "Domestic and Family life",
+          "travel and holidays",
+          "travelling accessory"
+        ],
+        "Dimension": [
+          "diameter"
+        ],
+        "Dimension measured part": [
+          "teapot"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "190"
+        ],
+        "Material": [
+          "plastic"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object component name": [
+          "teapot"
+        ],
+        "Object component information": [
+          "plastic"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object number": [
+          "SHMMT: 2006.372"
+        ],
+        "Object production note": [
+          "Thermal Welware insulated teapot, sold for use for caravaning and camping."
+        ],
+        "Object production organisation": [
+          "Welware"
+        ],
+        "Organisation's history": [
+          "Reg Design App 955121/71"
+        ],
+        "Object production place": [
+          "Made in Gt Britain"
+        ],
+        "Other number": [
+          "2.946"
+        ],
+        "Other number type": [
+          "SHIC"
+        ],
+        "Physical description": [
+          "Teapot; plastic insulated teapot, coloured red on the bottom half and white on the top half, white spout and handle, red lid with a silvered, blue plastic knob to lid.  Thought to be used by fishermen or possibly in a beachhut."
+        ],
+        "Responsible department/section": [
+          "Catalist social history"
+        ],
+        "Technique": [
+          "manufactured"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:cae765e5-66fa-3a0b-a53d-3ed99d1cca9f",
+      "title": "MDS Record 3",
+      "url": "https://museumdata.uk/objects/cae765e5-66fa-3a0b-a53d-3ed99d1cca9f",
+      "creator": "Welware"
+    }
+  },
+  {
+    "id": "mds:c05d572e-6d6f-3bd1-924b-7153d4f89dd4",
+    "_source": "mds",
+    "_sourceId": "co123718",
+    "_sourceUrl": "https://museumdata.uk/objects/c05d572e-6d6f-3bd1-924b-7153d4f89dd4",
+    "title": "Lid from teapot",
+    "description": "Earthenware lid from a teapot, Chinese",
+    "creator": "Unknown maker",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "c05d572e-6d6f-3bd1-924b-7153d4f89dd4",
+      "objectNumber": "co123718",
+      "material": [
+        "incomplete",
+        "earthenware (tin glazed)"
+      ],
+      "place": [
+        "China",
+        "China"
+      ],
+      "dimensions": [
+        "diameter",
+        "height",
+        "2 13/16",
+        "72",
+        "1 1/2",
+        "38"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Lid from teapot"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Earthenware lid from a teapot, Chinese"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated place": [
+          "China"
+        ],
+        "Place association": [
+          "association"
+        ],
+        "Credit line": [
+          "Hurcomb's"
+        ],
+        "Dimension": [
+          "diameter",
+          "height"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "2 13/16",
+          "72",
+          "1 1/2",
+          "38"
+        ],
+        "Material": [
+          "incomplete",
+          "earthenware (tin glazed)"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Object production place": [
+          "China"
+        ],
+        "Other number": [
+          "A134210",
+          "2026/1939"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Asian Medicine"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:c05d572e-6d6f-3bd1-924b-7153d4f89dd4",
+      "title": "Lid from teapot",
+      "url": "https://museumdata.uk/objects/c05d572e-6d6f-3bd1-924b-7153d4f89dd4",
+      "creator": "Unknown maker"
+    }
+  },
+  {
+    "id": "mds:40915b47-049e-37d1-a04e-c60849669636",
+    "_source": "mds",
+    "_sourceId": "56.015.4",
+    "_sourceUrl": "https://museumdata.uk/objects/40915b47-049e-37d1-a04e-c60849669636",
+    "title": "MDS Record 5",
+    "description": "Silver teapot, foliate knot teapot lid, embossed and chased with rose garlands, engraved monogram",
+    "creator": "Joseph & Albert Savoy",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Cyfarthfa Castle Museum & Art Gallery",
+    "mds": {
+      "uuid": "40915b47-049e-37d1-a04e-c60849669636",
+      "objectNumber": "56.015.4",
+      "material": [
+        "silver"
+      ],
+      "place": [
+        "Lodon",
+        "Joseph & Albert Savoy"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "length",
+        "170mm",
+        "300mm"
+      ],
+      "numberOfObjects": "2 (inc lid)",
+      "inscriptionContent": "'FRC' and Crawshay Cresw with motto 'Perserverance'",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Silver teapot, foliate knot teapot lid, embossed and chased with rose garlands, engraved monogram"
+        ],
+        "Collection": [
+          "Cyfarthfa Castle Museum & Art Gallery"
+        ],
+        "Acquisition date": [
+          "20/11/14"
+        ],
+        "Dimension": [
+          "height",
+          "width",
+          "length"
+        ],
+        "Dimension measured part": [
+          "teapot"
+        ],
+        "Dimension value": [
+          "170mm",
+          "300mm"
+        ],
+        "Inscription content": [
+          "'FRC' and Crawshay Cresw with motto 'Perserverance'"
+        ],
+        "Inscription method": [
+          "engraved"
+        ],
+        "Inscription position": [
+          "sides of teapot"
+        ],
+        "Material": [
+          "silver"
+        ],
+        "Number of objects": [
+          "2 (inc lid)"
+        ],
+        "Object component name": [
+          "teapot and lid"
+        ],
+        "Object component information": [
+          "silver"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object number": [
+          "56.015.4"
+        ],
+        "Object production organisation": [
+          "Joseph & Albert Savoy"
+        ],
+        "Organisation's association": [
+          "maker"
+        ],
+        "Object production place": [
+          "Lodon",
+          "Joseph & Albert Savoy"
+        ],
+        "Place status": [
+          "County"
+        ],
+        "Technique": [
+          "manufactured"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:40915b47-049e-37d1-a04e-c60849669636",
+      "title": "MDS Record 5",
+      "url": "https://museumdata.uk/objects/40915b47-049e-37d1-a04e-c60849669636",
+      "creator": "Joseph & Albert Savoy"
+    }
+  },
+  {
+    "id": "mds:8fa9cd62-9e36-3a86-b132-776bfefcf5ab",
+    "_source": "mds",
+    "_sourceId": "co122972",
+    "_sourceUrl": "https://museumdata.uk/objects/8fa9cd62-9e36-3a86-b132-776bfefcf5ab",
+    "title": "Teapot with mounts",
+    "description": "Earthenware teapot with brass mounts, Tibetan, 1701-1900",
+    "creator": "Unknown maker",
+    "date": "1701",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "8fa9cd62-9e36-3a86-b132-776bfefcf5ab",
+      "objectNumber": "co122972",
+      "material": [
+        "incomplete",
+        "earthenware",
+        "brass",
+        "copper"
+      ],
+      "place": [
+        "Tibet",
+        "Tibet"
+      ],
+      "dimensions": [
+        "diameter",
+        "height",
+        "width",
+        "7 5/16",
+        "185",
+        "8 1/16",
+        "205",
+        "9 7/16",
+        "240"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Teapot with mounts"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Earthenware teapot with brass mounts, Tibetan, 1701-1900"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated place": [
+          "Tibet"
+        ],
+        "Place association": [
+          "association"
+        ],
+        "Credit line": [
+          "Wellcome Trust (Purchased from Stevens)"
+        ],
+        "Dimension": [
+          "diameter",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "7 5/16",
+          "185",
+          "8 1/16",
+          "205",
+          "9 7/16",
+          "240"
+        ],
+        "Material": [
+          "incomplete",
+          "earthenware",
+          "brass",
+          "copper"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Date - earliest / single": [
+          "1701"
+        ],
+        "Date - latest": [
+          "1900"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Object production place": [
+          "Tibet"
+        ],
+        "Other number": [
+          "A20942"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Asian Medicine"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:8fa9cd62-9e36-3a86-b132-776bfefcf5ab",
+      "title": "Teapot with mounts",
+      "url": "https://museumdata.uk/objects/8fa9cd62-9e36-3a86-b132-776bfefcf5ab",
+      "creator": "Unknown maker",
+      "date": "1701"
+    }
+  },
+  {
+    "id": "mds:ed5bdd12-d45d-3081-982d-8d7ebd21e26c",
+    "_source": "mds",
+    "_sourceId": "TWCMS",
+    "_sourceUrl": "https://museumdata.uk/objects/ed5bdd12-d45d-3081-982d-8d7ebd21e26c",
+    "title": "Teapot",
+    "description": "Teapot - Rob Barnard (b. 1949), Teapot, c. 2004. Stoneware, thick crawling white glaze with looping willow handle. The John Christian Collection of Studio Ceramics, accepted in lieu of tax by H.M. Government and allocated to the Shipley Art Gallery, 2018.",
+    "date": "c. 2004",
+    "subject": [
+      "teapot",
+      "teapot",
+      "Craft"
+    ],
+    "type": "Museum object",
+    "collection": "North East Museums",
+    "mds": {
+      "uuid": "ed5bdd12-d45d-3081-982d-8d7ebd21e26c",
+      "objectNumber": "TWCMS",
+      "material": [
+        "stoneware",
+        "wood"
+      ],
+      "dimensions": [
+        "Diameter",
+        "Width",
+        "Height",
+        "12.5",
+        "22"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Teapot"
+        ],
+        "Object name(s)": [
+          "teapot"
+        ],
+        "Brief description": [
+          "Teapot - Rob Barnard (b. 1949), Teapot, c. 2004. Stoneware, thick crawling white glaze with looping willow handle. The John Christian Collection of Studio Ceramics, accepted in lieu of tax by H.M. Government and allocated to the Shipley Art Gallery, 2018."
+        ],
+        "Collection": [
+          "North East Museums"
+        ],
+        "Associated concept": [
+          "Craft"
+        ],
+        "Dimension": [
+          "Diameter",
+          "Width",
+          "Height"
+        ],
+        "Dimension value": [
+          "12.5",
+          "22"
+        ],
+        "Dimension measured part": [
+          "teapot"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Material": [
+          "stoneware",
+          "wood"
+        ],
+        "Object name": [
+          "teapot"
+        ],
+        "Object number": [
+          "TWCMS : 2020.722"
+        ],
+        "Object production date": [
+          "c. 2004"
+        ],
+        "Date - period": [
+          "21 century"
+        ],
+        "Physical description": [
+          "Teapot - Rob Barnard (b. 1949), Teapot, c. 2004. Stoneware, thick crawling white glaze with looping willow handle. The John Christian Collection of Studio Ceramics, accepted in lieu of tax by H.M. Government and allocated to the Shipley Art Gallery, 2018."
+        ],
+        "Responsible department/section": [
+          "Art"
+        ],
+        "Technique": [
+          "thrown"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:ed5bdd12-d45d-3081-982d-8d7ebd21e26c",
+      "title": "Teapot",
+      "url": "https://museumdata.uk/objects/ed5bdd12-d45d-3081-982d-8d7ebd21e26c",
+      "date": "c. 2004"
+    }
+  },
+  {
+    "id": "mds:2668c158-6e30-3ec1-aa41-3714058f49da",
+    "_source": "mds",
+    "_sourceId": "HARGM",
+    "_sourceUrl": "https://museumdata.uk/objects/2668c158-6e30-3ec1-aa41-3714058f49da",
+    "title": "MDS Record 8",
+    "description": "silver batchelor teapot with engraved classical figures. Henry Wilkinson & Co",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Royal Pump Room Museum",
+    "mds": {
+      "uuid": "2668c158-6e30-3ec1-aa41-3714058f49da",
+      "objectNumber": "HARGM",
+      "material": [
+        "silver"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "silver batchelor teapot with engraved classical figures. Henry Wilkinson & Co"
+        ],
+        "Collection": [
+          "Royal Pump Room Museum"
+        ],
+        "Colour": [
+          "silver"
+        ],
+        "Credit line": [
+          "This collection is part of North Yorkshire Council Museums."
+        ],
+        "Current reproduction location": [
+          "896.jpg"
+        ],
+        "Material": [
+          "silver"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object component name": [
+          "engraved"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object number": [
+          "HARGM : 896"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:2668c158-6e30-3ec1-aa41-3714058f49da",
+      "title": "MDS Record 8",
+      "url": "https://museumdata.uk/objects/2668c158-6e30-3ec1-aa41-3714058f49da"
+    }
+  },
+  {
+    "id": "mds:a0a916b6-0c6b-39cb-b661-c779475a0295",
+    "_source": "mds",
+    "_sourceId": "co8782107",
+    "_sourceUrl": "https://museumdata.uk/objects/a0a916b6-0c6b-39cb-b661-c779475a0295",
+    "title": "Red Cross branded teapot",
+    "description": "Red Cross branded teapot, one of a set of crockery made by Dunn Bennett and Co Ltd, Burslem, England.",
+    "creator": "Dunn, Bennett and Company Limited",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "a0a916b6-0c6b-39cb-b661-c779475a0295",
+      "objectNumber": "co8782107",
+      "material": [
+        "china"
+      ],
+      "place": [
+        "England, United Kingdom"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Red Cross branded teapot"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Red Cross branded teapot, one of a set of crockery made by Dunn Bennett and Co Ltd, Burslem, England."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Material": [
+          "china"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Dunn, Bennett and Company Limited"
+        ],
+        "Object production place": [
+          "England, United Kingdom"
+        ],
+        "Other number": [
+          "2013-55/1"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Nursing & Hospital Furnishings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:a0a916b6-0c6b-39cb-b661-c779475a0295",
+      "title": "Red Cross branded teapot",
+      "url": "https://museumdata.uk/objects/a0a916b6-0c6b-39cb-b661-c779475a0295",
+      "creator": "Dunn, Bennett and Company Limited"
+    }
+  },
+  {
+    "id": "mds:1d0560ce-3497-393e-9f17-5dd1ac24e936",
+    "_source": "mds",
+    "_sourceId": "co122543",
+    "_sourceUrl": "https://museumdata.uk/objects/1d0560ce-3497-393e-9f17-5dd1ac24e936",
+    "title": "Round teapot",
+    "description": "Large round silver(?) mounted bronze(?) teapot, with separate lid, handle and spout in form of horned dragons, Tibetan, 1801-1920",
+    "creator": "Unknown maker",
+    "date": "1801",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "1d0560ce-3497-393e-9f17-5dd1ac24e936",
+      "objectNumber": "co122543",
+      "material": [
+        "complete",
+        "bronze",
+        "silver"
+      ],
+      "place": [
+        "Tibet",
+        "Tibet"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "11 1/8",
+        "282",
+        "13 3/8",
+        "340"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Round teapot"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Large round silver(?) mounted bronze(?) teapot, with separate lid, handle and spout in form of horned dragons, Tibetan, 1801-1920"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated place": [
+          "Tibet"
+        ],
+        "Place association": [
+          "association"
+        ],
+        "Credit line": [
+          "Wellcome Trust (Purchased from Stevens)"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "11 1/8",
+          "282",
+          "13 3/8",
+          "340"
+        ],
+        "Material": [
+          "complete",
+          "bronze",
+          "silver"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Date - earliest / single": [
+          "1801"
+        ],
+        "Date - latest": [
+          "1920"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Object production place": [
+          "Tibet"
+        ],
+        "Other number": [
+          "A18040"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Asian Medicine"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:1d0560ce-3497-393e-9f17-5dd1ac24e936",
+      "title": "Round teapot",
+      "url": "https://museumdata.uk/objects/1d0560ce-3497-393e-9f17-5dd1ac24e936",
+      "creator": "Unknown maker",
+      "date": "1801"
+    }
+  },
+  {
+    "id": "mds:e57e8ad8-6580-32c4-ad26-2c3db45f5675",
+    "_source": "mds",
+    "_sourceId": "co126267",
+    "_sourceUrl": "https://museumdata.uk/objects/e57e8ad8-6580-32c4-ad26-2c3db45f5675",
+    "title": "Teapot with central brazier",
+    "description": "Brass teapot with central brazier, Kashmir, 1801-1900",
+    "creator": "Unknown maker",
+    "date": "1801",
+    "subject": [
+      "brazier - cooking equipment; teapot; brazier - cooking equipment; teapot",
+      "brazier - cooking equipment; teapot; brazier - cooking equipment; teapot",
+      "brazier - cooking equipment",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "e57e8ad8-6580-32c4-ad26-2c3db45f5675",
+      "objectNumber": "co126267",
+      "material": [
+        "complete",
+        "brass"
+      ],
+      "place": [
+        "Kashmir"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "7 3/16",
+        "182",
+        "13 1/16",
+        "331",
+        "12 1/16",
+        "306"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Teapot with central brazier"
+        ],
+        "Object name(s)": [
+          "brazier - cooking equipment; teapot; brazier - cooking equipment; teapot"
+        ],
+        "Brief description": [
+          "Brass teapot with central brazier, Kashmir, 1801-1900"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "brazier - cooking equipment",
+          "teapot"
+        ],
+        "Credit line": [
+          "Wellcome Trust (Purchased from Stevens)"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "7 3/16",
+          "182",
+          "13 1/16",
+          "331",
+          "12 1/16",
+          "306"
+        ],
+        "Material": [
+          "complete",
+          "brass"
+        ],
+        "Object name": [
+          "brazier - cooking equipment; teapot; brazier - cooking equipment; teapot"
+        ],
+        "Date - earliest / single": [
+          "1801"
+        ],
+        "Date - latest": [
+          "1900"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Object production place": [
+          "Kashmir"
+        ],
+        "Other number": [
+          "A1208"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Asian Medicine"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:e57e8ad8-6580-32c4-ad26-2c3db45f5675",
+      "title": "Teapot with central brazier",
+      "url": "https://museumdata.uk/objects/e57e8ad8-6580-32c4-ad26-2c3db45f5675",
+      "creator": "Unknown maker",
+      "date": "1801"
+    }
+  },
+  {
+    "id": "mds:ba9b44aa-1d43-3ecb-b62b-350172d54c98",
+    "_source": "mds",
+    "_sourceId": "co431892",
+    "_sourceUrl": "https://museumdata.uk/objects/ba9b44aa-1d43-3ecb-b62b-350172d54c98",
+    "title": "Silver plated teapot, British Railways Shipping",
+    "description": "Teapot, British Railways Shipping, white with silver line on rim, handle and spout, bearing shipping logo and makers mark.",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot",
+      "passenger comforts",
+      "Using the Railway"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "ba9b44aa-1d43-3ecb-b62b-350172d54c98",
+      "objectNumber": "co431892",
+      "material": [
+        "ceramic (unspecified)"
+      ],
+      "dimensions": [
+        "height",
+        "5.842",
+        "2 5/16"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, British Railways Shipping"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, British Railways Shipping, white with silver line on rim, handle and spout, bearing shipping logo and makers mark."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot",
+          "passenger comforts",
+          "Using the Railway"
+        ],
+        "Dimension": [
+          "height"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "in"
+        ],
+        "Dimension value": [
+          "5.842",
+          "2 5/16"
+        ],
+        "Material": [
+          "ceramic (unspecified)"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Other number": [
+          "1997-8682"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:ba9b44aa-1d43-3ecb-b62b-350172d54c98",
+      "title": "Silver plated teapot, British Railways Shipping",
+      "url": "https://museumdata.uk/objects/ba9b44aa-1d43-3ecb-b62b-350172d54c98"
+    }
+  },
+  {
+    "id": "mds:1e7cce04-00fc-366d-803f-9e0f8d565e24",
+    "_source": "mds",
+    "_sourceId": "co121906",
+    "_sourceUrl": "https://museumdata.uk/objects/1e7cce04-00fc-366d-803f-9e0f8d565e24",
+    "title": "Teapot and pedestal",
+    "description": "Creamware pedestal and teapot with pierced leaf pattern, made by Wedgwood, English, early 19th century",
+    "creator": "Wedgwood (maker)",
+    "date": "1801",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "1e7cce04-00fc-366d-803f-9e0f8d565e24",
+      "objectNumber": "co121906",
+      "material": [
+        "earthenware (glazed)"
+      ],
+      "place": [
+        "England, United Kingdom",
+        "England"
+      ],
+      "dimensions": [
+        "diameter",
+        "height",
+        "width",
+        "4 3/4",
+        "120",
+        "10 13/16",
+        "275",
+        "8 1/16",
+        "205"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Teapot and pedestal"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Creamware pedestal and teapot with pierced leaf pattern, made by Wedgwood, English, early 19th century"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated place": [
+          "England"
+        ],
+        "Place association": [
+          "production or association role maker"
+        ],
+        "Dimension": [
+          "diameter",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "4 3/4",
+          "120",
+          "10 13/16",
+          "275",
+          "8 1/16",
+          "205"
+        ],
+        "Material": [
+          "earthenware (glazed)"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Date - earliest / single": [
+          "1801"
+        ],
+        "Date - latest": [
+          "1850"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Wedgwood (maker)"
+        ],
+        "Object production place": [
+          "England, United Kingdom"
+        ],
+        "Other number": [
+          "A639871",
+          "25",
+          "656/1966"
+        ],
+        "Other number type": [
+          "accession number",
+          "Energy Hall Gallery Interpretation Number"
+        ],
+        "Responsible department/section": [
+          "SCM - Nursing & Hospital Furnishings"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:1e7cce04-00fc-366d-803f-9e0f8d565e24",
+      "title": "Teapot and pedestal",
+      "url": "https://museumdata.uk/objects/1e7cce04-00fc-366d-803f-9e0f8d565e24",
+      "creator": "Wedgwood (maker)",
+      "date": "1801"
+    }
+  },
+  {
+    "id": "mds:e99f678d-9d47-325e-9c4f-ccc4227f0865",
+    "_source": "mds",
+    "_sourceId": "MWL-84B73AA0-F5B6-4C6F-93E9-961496AA4115",
+    "_sourceUrl": "https://museumdata.uk/objects/e99f678d-9d47-325e-9c4f-ccc4227f0865",
+    "title": "teapot",
+    "description": "Bronw Betty teapot",
+    "subject": [
+      "teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "e99f678d-9d47-325e-9c4f-ccc4227f0865",
+      "objectNumber": "MWL-84B73AA0-F5B6-4C6F-93E9-961496AA4115",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "teapot"
+        ],
+        "Object name(s)": [
+          "teapot"
+        ],
+        "Brief description": [
+          "Bronw Betty teapot"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1992"
+        ],
+        "Acquisition method": [
+          "Collected Officially"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "teapot"
+        ],
+        "Other number": [
+          "N.A. 2311",
+          "Micromusée V6 SN:84179"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:e99f678d-9d47-325e-9c4f-ccc4227f0865",
+      "title": "teapot",
+      "url": "https://museumdata.uk/objects/e99f678d-9d47-325e-9c4f-ccc4227f0865"
+    }
+  },
+  {
+    "id": "mds:f861ece3-85b7-3362-b069-0429bccf3a3c",
+    "_source": "mds",
+    "_sourceId": "co442824",
+    "_sourceUrl": "https://museumdata.uk/objects/f861ece3-85b7-3362-b069-0429bccf3a3c",
+    "title": "Stainless steel teapot",
+    "description": "Stainless steel teapot, British Rail, marked underneath with BR double arrow and '18 - 8 Stainless Steel Foreign'.",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "Using the Railway",
+      "passenger comforts"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "f861ece3-85b7-3362-b069-0429bccf3a3c",
+      "objectNumber": "co442824",
+      "material": [
+        "stainless steel"
+      ],
+      "dimensions": [
+        "diameter",
+        "height",
+        "width",
+        "7.62",
+        "3",
+        "7.9375",
+        "3 1/8",
+        "3 11/16",
+        "93",
+        "3 3/8",
+        "85",
+        "5 7/8",
+        "149"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Stainless steel teapot"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Stainless steel teapot, British Rail, marked underneath with BR double arrow and '18 - 8 Stainless Steel Foreign'."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "Using the Railway",
+          "passenger comforts"
+        ],
+        "Dimension": [
+          "diameter",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "7.62",
+          "3",
+          "7.9375",
+          "3 1/8",
+          "3 11/16",
+          "93",
+          "3 3/8",
+          "85",
+          "5 7/8",
+          "149"
+        ],
+        "Material": [
+          "stainless steel"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Other number": [
+          "1998-9020"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:f861ece3-85b7-3362-b069-0429bccf3a3c",
+      "title": "Stainless steel teapot",
+      "url": "https://museumdata.uk/objects/f861ece3-85b7-3362-b069-0429bccf3a3c"
+    }
+  },
+  {
+    "id": "mds:645e9119-3c34-3420-861c-a983d6b39537",
+    "_source": "mds",
+    "_sourceId": "73.999",
+    "_sourceUrl": "https://museumdata.uk/objects/645e9119-3c34-3420-861c-a983d6b39537",
+    "title": "MDS Record 16",
+    "description": "Flower design teapot with sliding lid",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Cyfarthfa Castle Museum & Art Gallery",
+    "mds": {
+      "uuid": "645e9119-3c34-3420-861c-a983d6b39537",
+      "objectNumber": "73.999",
+      "material": [
+        "Earthenware"
+      ],
+      "dimensions": [
+        "size",
+        "width",
+        "length",
+        "124mm height x 235mm length x 115mm depth"
+      ],
+      "numberOfObjects": "2",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Flower design teapot with sliding lid"
+        ],
+        "Collection": [
+          "Cyfarthfa Castle Museum & Art Gallery"
+        ],
+        "Acquisition date": [
+          "5.1936"
+        ],
+        "Dimension": [
+          "size",
+          "width",
+          "length"
+        ],
+        "Dimension value": [
+          "124mm height x 235mm length x 115mm depth"
+        ],
+        "Material": [
+          "Earthenware"
+        ],
+        "Number of objects": [
+          "2"
+        ],
+        "Object component name": [
+          "mark"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object number": [
+          "73.999"
+        ],
+        "Other number": [
+          "2.666 Teapot"
+        ],
+        "Technique": [
+          "manufactured"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:645e9119-3c34-3420-861c-a983d6b39537",
+      "title": "MDS Record 16",
+      "url": "https://museumdata.uk/objects/645e9119-3c34-3420-861c-a983d6b39537"
+    }
+  },
+  {
+    "id": "mds:c5021054-5a36-3f66-9729-db2b19b8fc6e",
+    "_source": "mds",
+    "_sourceId": "co426318",
+    "_sourceUrl": "https://museumdata.uk/objects/c5021054-5a36-3f66-9729-db2b19b8fc6e",
+    "title": "Ceramic square teapot, Southern Railway",
+    "description": "Teapot, ceramic, by Cube Teapots Ltd, Leicester, Southern Railway, (marine), cubic, white with gold lines, SR ensign in red, white and blue printed on side, base marked The Cube, Regd No. 693783, Brit. Pat. 110951 & abroad, Made in England, U.S.A. Patent 1390060.  11.811 x 11.684 x 11.684 cm.",
+    "creator": "Cube Teapots Ltd",
+    "date": "1923",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot",
+      "passenger comforts",
+      "Using the Railway"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "c5021054-5a36-3f66-9729-db2b19b8fc6e",
+      "objectNumber": "co426318",
+      "material": [
+        "ceramic (unspecified)"
+      ],
+      "place": [
+        "Leicester, Leicester, England, United Kingdom"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "4 5/8",
+        "116.84",
+        "118.11"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Ceramic square teapot, Southern Railway"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, ceramic, by Cube Teapots Ltd, Leicester, Southern Railway, (marine), cubic, white with gold lines, SR ensign in red, white and blue printed on side, base marked The Cube, Regd No. 693783, Brit. Pat. 110951 & abroad, Made in England, U.S.A. Patent 1390060.  11.811 x 11.684 x 11.684 cm."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot",
+          "passenger comforts",
+          "Using the Railway"
+        ],
+        "Associated person": [
+          "Southern Railway"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "Hey, Arthur"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "4 5/8",
+          "116.84",
+          "118.11"
+        ],
+        "Material": [
+          "ceramic (unspecified)"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Date - earliest / single": [
+          "1923"
+        ],
+        "Date - latest": [
+          "1948"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Cube Teapots Ltd"
+        ],
+        "Object production place": [
+          "Leicester, Leicester, England, United Kingdom"
+        ],
+        "Other number": [
+          "1997-7640",
+          "83/37/78",
+          "611/32"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:c5021054-5a36-3f66-9729-db2b19b8fc6e",
+      "title": "Ceramic square teapot, Southern Railway",
+      "url": "https://museumdata.uk/objects/c5021054-5a36-3f66-9729-db2b19b8fc6e",
+      "creator": "Cube Teapots Ltd",
+      "date": "1923"
+    }
+  },
+  {
+    "id": "mds:a3fca950-05b7-3de2-a3d6-dd0fde3d9b90",
+    "_source": "mds",
+    "_sourceId": "co214722",
+    "_sourceUrl": "https://museumdata.uk/objects/a3fca950-05b7-3de2-a3d6-dd0fde3d9b90",
+    "title": "Silver teapot, British Railways (Eastern Region)",
+    "description": "Teapot, silver plate, British Railways (Eastern Region), marked on base BR (E), by Lambert & Blaber.",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "passenger comforts",
+      "Using the Railway",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "a3fca950-05b7-3de2-a3d6-dd0fde3d9b90",
+      "objectNumber": "co214722",
+      "material": [
+        "silver plated"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver teapot, British Railways (Eastern Region)"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, silver plate, British Railways (Eastern Region), marked on base BR (E), by Lambert & Blaber."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "passenger comforts",
+          "Using the Railway",
+          "teapot"
+        ],
+        "Associated person": [
+          "British Railways, Eastern Region"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "British Railways Board. Training & Adven"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Other number": [
+          "1990-7579",
+          "147/601"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:a3fca950-05b7-3de2-a3d6-dd0fde3d9b90",
+      "title": "Silver teapot, British Railways (Eastern Region)",
+      "url": "https://museumdata.uk/objects/a3fca950-05b7-3de2-a3d6-dd0fde3d9b90"
+    }
+  },
+  {
+    "id": "mds:a26ac257-4e25-3e5b-b3b1-a048f2ec40cd",
+    "_source": "mds",
+    "_sourceId": "co443119",
+    "_sourceUrl": "https://museumdata.uk/objects/a26ac257-4e25-3e5b-b3b1-a048f2ec40cd",
+    "title": "Silver plated teapot, British Rail",
+    "description": "Teapot, silver plate, British Rail, one pint, double arrow logo marked on one side, by British Silverware Limited, Sheffield, W90201.",
+    "creator": "British Silverware Limited",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "passenger comforts",
+      "Using the Railway",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "a26ac257-4e25-3e5b-b3b1-a048f2ec40cd",
+      "objectNumber": "co443119",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Sheffield, South Yorkshire, England, United Kingdom"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "3 15/16",
+        "100",
+        "4 5/16",
+        "110",
+        "7 5/16",
+        "185"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, British Rail"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, silver plate, British Rail, one pint, double arrow logo marked on one side, by British Silverware Limited, Sheffield, W90201."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "passenger comforts",
+          "Using the Railway",
+          "teapot"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "3 15/16",
+          "100",
+          "4 5/16",
+          "110",
+          "7 5/16",
+          "185"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "British Silverware Limited"
+        ],
+        "Object production place": [
+          "Sheffield, South Yorkshire, England, United Kingdom"
+        ],
+        "Other number": [
+          "1998-9079"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:a26ac257-4e25-3e5b-b3b1-a048f2ec40cd",
+      "title": "Silver plated teapot, British Rail",
+      "url": "https://museumdata.uk/objects/a26ac257-4e25-3e5b-b3b1-a048f2ec40cd",
+      "creator": "British Silverware Limited"
+    }
+  },
+  {
+    "id": "mds:91e99deb-24d5-371d-a4f8-d0092aca36f7",
+    "_source": "mds",
+    "_sourceId": "co443117",
+    "_sourceUrl": "https://museumdata.uk/objects/91e99deb-24d5-371d-a4f8-d0092aca36f7",
+    "title": "Silver plated teapot, British Rail",
+    "description": "Teapot, silver plate, British Rail, half pint, double arrow logo marked on one side, by British Silverware Limited, Sheffield, W90201.",
+    "creator": "British Silverware Limited",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "passenger comforts",
+      "Using the Railway",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "91e99deb-24d5-371d-a4f8-d0092aca36f7",
+      "objectNumber": "co443117",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Sheffield, South Yorkshire, England, United Kingdom"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "width",
+        "3 3/16",
+        "81",
+        "3 5/8",
+        "92",
+        "5 13/16",
+        "147"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, British Rail"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, silver plate, British Rail, half pint, double arrow logo marked on one side, by British Silverware Limited, Sheffield, W90201."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "passenger comforts",
+          "Using the Railway",
+          "teapot"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "3 3/16",
+          "81",
+          "3 5/8",
+          "92",
+          "5 13/16",
+          "147"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "British Silverware Limited"
+        ],
+        "Object production place": [
+          "Sheffield, South Yorkshire, England, United Kingdom"
+        ],
+        "Other number": [
+          "1998-9077"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:91e99deb-24d5-371d-a4f8-d0092aca36f7",
+      "title": "Silver plated teapot, British Rail",
+      "url": "https://museumdata.uk/objects/91e99deb-24d5-371d-a4f8-d0092aca36f7",
+      "creator": "British Silverware Limited"
+    }
+  },
+  {
+    "id": "mds:4063a369-6c83-3856-a3d0-55c77265ffe0",
+    "_source": "mds",
+    "_sourceId": "co443118",
+    "_sourceUrl": "https://museumdata.uk/objects/4063a369-6c83-3856-a3d0-55c77265ffe0",
+    "title": "Silver plated teapot",
+    "description": "Silver plated teapot, British Rail, half pint, stamped with W90201and T3. Made by British Silverware Limited. Overall: 100 mm x 145 mm 80 mm.",
+    "creator": "British Silverware Limited",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "passenger comforts",
+      "Using the Railway",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "4063a369-6c83-3856-a3d0-55c77265ffe0",
+      "objectNumber": "co443118",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Sheffield, South Yorkshire, England, United Kingdom"
+      ],
+      "dimensions": [
+        "height",
+        "diameter",
+        "width",
+        "7.62",
+        "3",
+        "3 1/8",
+        "80",
+        "3 15/16",
+        "100",
+        "5 11/16",
+        "145"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Silver plated teapot, British Rail, half pint, stamped with W90201and T3. Made by British Silverware Limited. Overall: 100 mm x 145 mm 80 mm."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "passenger comforts",
+          "Using the Railway",
+          "teapot"
+        ],
+        "Dimension": [
+          "height",
+          "diameter",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "7.62",
+          "3",
+          "3 1/8",
+          "80",
+          "3 15/16",
+          "100",
+          "5 11/16",
+          "145"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "British Silverware Limited"
+        ],
+        "Object production place": [
+          "Sheffield, South Yorkshire, England, United Kingdom"
+        ],
+        "Other number": [
+          "1998-9078"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:4063a369-6c83-3856-a3d0-55c77265ffe0",
+      "title": "Silver plated teapot",
+      "url": "https://museumdata.uk/objects/4063a369-6c83-3856-a3d0-55c77265ffe0",
+      "creator": "British Silverware Limited"
+    }
+  },
+  {
+    "id": "mds:d38d4aea-aa7e-3d89-a89b-6609dda9625b",
+    "_source": "mds",
+    "_sourceId": "co443449",
+    "_sourceUrl": "https://museumdata.uk/objects/d38d4aea-aa7e-3d89-a89b-6609dda9625b",
+    "title": "Silver plated teapot, Pullman",
+    "description": "Teapot, 1/2 pint, silver plated, made by L&B, Pullman block on front, (BTH 52P). Overall: 100 mm x 125 mm x 83 mm, 0.39kg.",
+    "creator": "L&B",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "Using the Railway",
+      "passenger comforts",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "d38d4aea-aa7e-3d89-a89b-6609dda9625b",
+      "objectNumber": "co443449",
+      "material": [
+        "silver plated"
+      ],
+      "dimensions": [
+        "diameter",
+        "height",
+        "weight",
+        "width",
+        "3 1/4",
+        "83",
+        "3 15/16",
+        "100",
+        "0.39",
+        "0.85981",
+        "4 15/16",
+        "125"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, Pullman"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, 1/2 pint, silver plated, made by L&B, Pullman block on front, (BTH 52P). Overall: 100 mm x 125 mm x 83 mm, 0.39kg."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "Using the Railway",
+          "passenger comforts",
+          "teapot"
+        ],
+        "Dimension": [
+          "diameter",
+          "height",
+          "weight",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm",
+          "kg",
+          "lbs"
+        ],
+        "Dimension value": [
+          "3 1/4",
+          "83",
+          "3 15/16",
+          "100",
+          "0.39",
+          "0.85981",
+          "4 15/16",
+          "125"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "L&B"
+        ],
+        "Other number": [
+          "1998-9303",
+          "BTH 52P"
+        ],
+        "Other number type": [
+          "accession number",
+          "Temporary number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:d38d4aea-aa7e-3d89-a89b-6609dda9625b",
+      "title": "Silver plated teapot, Pullman",
+      "url": "https://museumdata.uk/objects/d38d4aea-aa7e-3d89-a89b-6609dda9625b",
+      "creator": "L&B"
+    }
+  },
+  {
+    "id": "mds:b9247873-7c58-30b3-b340-20112281ede7",
+    "_source": "mds",
+    "_sourceId": "HC2018.35",
+    "_sourceUrl": "https://museumdata.uk/objects/b9247873-7c58-30b3-b340-20112281ede7",
+    "title": "Small brown Yixing clay teapot in presentation box",
+    "description": "Small brown porcelain teapot inside a square light wooden presentation box which is lined with burnt orange textile padding. The teapot is inside an oriental styled textile bag which is brown on the inside to match the teapot, with brown draw strings with",
+    "creator": "Jiangsu Ziyujinsha Teapot-Art",
+    "subject": [
+      "Miscellaneous material; teapot",
+      "Miscellaneous material; teapot"
+    ],
+    "type": "Museum object",
+    "collection": "University of St Andrews",
+    "mds": {
+      "uuid": "b9247873-7c58-30b3-b340-20112281ede7",
+      "objectNumber": "HC2018.35",
+      "material": [
+        "Yixing Clay\nWOOD\nmetal\ntextile\nWOOD"
+      ],
+      "inscriptionContent": "small symbol\nsymbol\nSymbol\nJiansu Ziyujinsha Teapot-Art",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Small brown Yixing clay teapot in presentation box"
+        ],
+        "Object name(s)": [
+          "Miscellaneous material; teapot"
+        ],
+        "Brief description": [
+          "Small brown porcelain teapot inside a square light wooden presentation box which is lined with burnt orange textile padding. The teapot is inside an oriental styled textile bag which is brown on the inside to match the teapot, with brown draw strings with"
+        ],
+        "Collection": [
+          "University of St Andrews"
+        ],
+        "Inscription content": [
+          "small symbol\nsymbol\nSymbol\nJiansu Ziyujinsha Teapot-Art"
+        ],
+        "Material": [
+          "Yixing Clay\nWOOD\nmetal\ntextile\nWOOD"
+        ],
+        "Object name": [
+          "Miscellaneous material; teapot"
+        ],
+        "Object number": [
+          "HC2018.35"
+        ],
+        "Object production person": [
+          "Jiangsu Ziyujinsha Teapot-Art"
+        ],
+        "Responsible department/section": [
+          "HC:C0, Heritage Collection"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:b9247873-7c58-30b3-b340-20112281ede7",
+      "title": "Small brown Yixing clay teapot in presentation box",
+      "url": "https://museumdata.uk/objects/b9247873-7c58-30b3-b340-20112281ede7",
+      "creator": "Jiangsu Ziyujinsha Teapot-Art"
+    }
+  },
+  {
+    "id": "mds:5bb6c98a-74c9-3568-9721-e7276ffe556e",
+    "_source": "mds",
+    "_sourceId": "JERSM/2021/00072/004",
+    "_sourceUrl": "https://museumdata.uk/objects/5bb6c98a-74c9-3568-9721-e7276ffe556e",
+    "title": "White and blue china teapot",
+    "description": "White china teapot with blue patterned border around the top and bottom. Inside the teapot, there is a strainer built in at the base of the spout. The lid is decorated with the same blue pattern as at the top of the teapot. There are small indented spots across the body of the teapot. On the base of the teapot, it is stamped with 'Made in China'.",
+    "subject": [
+      "Teapot",
+      "Teapot",
+      "Household"
+    ],
+    "type": "Museum object",
+    "collection": "Jersey Heritage",
+    "mds": {
+      "uuid": "5bb6c98a-74c9-3568-9721-e7276ffe556e",
+      "objectNumber": "JERSM/2021/00072/004",
+      "material": [
+        "China"
+      ],
+      "dimensions": [
+        "Height",
+        "14"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "White and blue china teapot"
+        ],
+        "Object name(s)": [
+          "Teapot"
+        ],
+        "Brief description": [
+          "White china teapot with blue patterned border around the top and bottom. Inside the teapot, there is a strainer built in at the base of the spout. The lid is decorated with the same blue pattern as at the top of the teapot. There are small indented spots across the body of the teapot. On the base of the teapot, it is stamped with 'Made in China'."
+        ],
+        "Collection": [
+          "Jersey Heritage"
+        ],
+        "Associated concept": [
+          "Household"
+        ],
+        "Associated person": [
+          "Chandlen, Dulcie"
+        ],
+        "Dimension": [
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "Cm"
+        ],
+        "Dimension value": [
+          "14"
+        ],
+        "Material": [
+          "China"
+        ],
+        "Object name": [
+          "Teapot"
+        ],
+        "Object number": [
+          "JERSM/2021/00072/004"
+        ],
+        "Responsible department/section": [
+          "Social history"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:5bb6c98a-74c9-3568-9721-e7276ffe556e",
+      "title": "White and blue china teapot",
+      "url": "https://museumdata.uk/objects/5bb6c98a-74c9-3568-9721-e7276ffe556e"
+    }
+  },
+  {
+    "id": "mds:99d82a87-c0a3-3a9e-ac90-83066df625d1",
+    "_source": "mds",
+    "_sourceId": "HMCMS:BWM1958.22.36",
+    "_sourceUrl": "https://museumdata.uk/objects/99d82a87-c0a3-3a9e-ac90-83066df625d1",
+    "title": "MDS Record 25",
+    "description": "doll's teapot, tin teapot with moulded handle and footring, decorated with scroll design",
+    "subject": [
+      "doll's teapot; teapot; doll's teapot; teapot",
+      "doll's teapot; teapot; doll's teapot; teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Hampshire Cultural Trust",
+    "mds": {
+      "uuid": "99d82a87-c0a3-3a9e-ac90-83066df625d1",
+      "objectNumber": "HMCMS:BWM1958.22.36",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "doll's teapot; teapot; doll's teapot; teapot"
+        ],
+        "Brief description": [
+          "doll's teapot, tin teapot with moulded handle and footring, decorated with scroll design"
+        ],
+        "Collection": [
+          "Hampshire Cultural Trust"
+        ],
+        "Credit line": [
+          "Part of the Hampshire County Collections managed by Hampshire Cultural Trust"
+        ],
+        "Object name": [
+          "doll's teapot; teapot; doll's teapot; teapot"
+        ],
+        "Object number": [
+          "HMCMS:BWM1958.22.36"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:99d82a87-c0a3-3a9e-ac90-83066df625d1",
+      "title": "MDS Record 25",
+      "url": "https://museumdata.uk/objects/99d82a87-c0a3-3a9e-ac90-83066df625d1"
+    }
+  },
+  {
+    "id": "mds:62ba0af4-bf87-33a9-aa27-db94331969e4",
+    "_source": "mds",
+    "_sourceId": "co441091",
+    "_sourceUrl": "https://museumdata.uk/objects/62ba0af4-bf87-33a9-aa27-db94331969e4",
+    "title": "Silver plated teapot, Manchester Sheffield & Lincolnshire Railway",
+    "description": "Teapot in the form of a kettle, silver plated, Manchester Sheffield & Lincolnshire Railway, two lugs on each side, hinged lid, engraved \"MS and L R C\".",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "passenger comforts",
+      "Using the Railway",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "62ba0af4-bf87-33a9-aa27-db94331969e4",
+      "objectNumber": "co441091",
+      "material": [
+        "silver plated"
+      ],
+      "dimensions": [
+        "height",
+        "22.86",
+        "9"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, Manchester Sheffield & Lincolnshire Railway"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot in the form of a kettle, silver plated, Manchester Sheffield & Lincolnshire Railway, two lugs on each side, hinged lid, engraved \"MS and L R C\"."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "passenger comforts",
+          "Using the Railway",
+          "teapot"
+        ],
+        "Associated person": [
+          "Manchester, Sheffield & Lincolnshire Railway"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Dimension": [
+          "height"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "in"
+        ],
+        "Dimension value": [
+          "22.86",
+          "9"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Other number": [
+          "1998-8367"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:62ba0af4-bf87-33a9-aa27-db94331969e4",
+      "title": "Silver plated teapot, Manchester Sheffield & Lincolnshire Railway",
+      "url": "https://museumdata.uk/objects/62ba0af4-bf87-33a9-aa27-db94331969e4"
+    }
+  },
+  {
+    "id": "mds:ee3f3c3a-a932-3f7f-895f-167cdc7540dc",
+    "_source": "mds",
+    "_sourceId": "co214749",
+    "_sourceUrl": "https://museumdata.uk/objects/ee3f3c3a-a932-3f7f-895f-167cdc7540dc",
+    "title": "Silver plated teapot, British Railways (Eastern Region)",
+    "description": "Teapot, British Railways, Eastern Region, stamped BR (E), EPNS A1, 2 ; 2 pints. Overall: 180 mm x 200 mm 116 mm.",
+    "creator": "Unidentified maker",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "ee3f3c3a-a932-3f7f-895f-167cdc7540dc",
+      "objectNumber": "co214749",
+      "material": [
+        "nickel silver (nickel, copper, zinc alloy)"
+      ],
+      "dimensions": [
+        "diameter",
+        "height",
+        "width",
+        "4 9/16",
+        "116",
+        "7 1/16",
+        "180",
+        "7 7/8",
+        "200"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, British Railways (Eastern Region)"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, British Railways, Eastern Region, stamped BR (E), EPNS A1, 2 ; 2 pints. Overall: 180 mm x 200 mm 116 mm."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated person": [
+          "British Railways, Eastern Region"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "Ferguson, A"
+        ],
+        "Dimension": [
+          "diameter",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "4 9/16",
+          "116",
+          "7 1/16",
+          "180",
+          "7 7/8",
+          "200"
+        ],
+        "Material": [
+          "nickel silver (nickel, copper, zinc alloy)"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Unidentified maker"
+        ],
+        "Other number": [
+          "1991-7301 Pt15"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:ee3f3c3a-a932-3f7f-895f-167cdc7540dc",
+      "title": "Silver plated teapot, British Railways (Eastern Region)",
+      "url": "https://museumdata.uk/objects/ee3f3c3a-a932-3f7f-895f-167cdc7540dc",
+      "creator": "Unidentified maker"
+    }
+  },
+  {
+    "id": "mds:0aa886fe-b117-348f-8f3d-e21cd161dba2",
+    "_source": "mds",
+    "_sourceId": "co8085002",
+    "_sourceUrl": "https://museumdata.uk/objects/0aa886fe-b117-348f-8f3d-e21cd161dba2",
+    "title": "Silver plated teapot, London & North Eastern Railway",
+    "description": "Teapot, 1/2 pint, silver plate, LNER block, by Walker & Hall (BTH 260E)",
+    "creator": "Walker & Hall",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "0aa886fe-b117-348f-8f3d-e21cd161dba2",
+      "objectNumber": "co8085002",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Sheffield, South Yorkshire, England, United Kingdom"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, London & North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, 1/2 pint, silver plate, LNER block, by Walker & Hall (BTH 260E)"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated person": [
+          "London & North Eastern Railway"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Walker & Hall"
+        ],
+        "Object production place": [
+          "Sheffield, South Yorkshire, England, United Kingdom"
+        ],
+        "Other number": [
+          "1993-7808/2",
+          "BTH 260E",
+          "153/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "Temporary number",
+          "File number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:0aa886fe-b117-348f-8f3d-e21cd161dba2",
+      "title": "Silver plated teapot, London & North Eastern Railway",
+      "url": "https://museumdata.uk/objects/0aa886fe-b117-348f-8f3d-e21cd161dba2",
+      "creator": "Walker & Hall"
+    }
+  },
+  {
+    "id": "mds:5d9f1450-bb12-3e0c-90cf-a1e3d9ce099f",
+    "_source": "mds",
+    "_sourceId": "co215372",
+    "_sourceUrl": "https://museumdata.uk/objects/5d9f1450-bb12-3e0c-90cf-a1e3d9ce099f",
+    "title": "Silver plated teapot, London & North Eastern Railway",
+    "description": "Teapot, 1 pint, silver plate, LNER block, by Walker & Hall (BTH 258E)",
+    "creator": "Walker & Hall",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "Using the Railway",
+      "passenger comforts",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "5d9f1450-bb12-3e0c-90cf-a1e3d9ce099f",
+      "objectNumber": "co215372",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Sheffield, South Yorkshire, England, United Kingdom"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, London & North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, 1 pint, silver plate, LNER block, by Walker & Hall (BTH 258E)"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "Using the Railway",
+          "passenger comforts",
+          "teapot"
+        ],
+        "Associated person": [
+          "London & North Eastern Railway"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "British Transport Hotels"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Walker & Hall"
+        ],
+        "Object production place": [
+          "Sheffield, South Yorkshire, England, United Kingdom"
+        ],
+        "Other number": [
+          "1993-7806",
+          "BTH 258E",
+          "153/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "Temporary number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:5d9f1450-bb12-3e0c-90cf-a1e3d9ce099f",
+      "title": "Silver plated teapot, London & North Eastern Railway",
+      "url": "https://museumdata.uk/objects/5d9f1450-bb12-3e0c-90cf-a1e3d9ce099f",
+      "creator": "Walker & Hall"
+    }
+  },
+  {
+    "id": "mds:a09b0a2c-5ea5-3933-92d5-70ab9f73bd61",
+    "_source": "mds",
+    "_sourceId": "co216495",
+    "_sourceUrl": "https://museumdata.uk/objects/a09b0a2c-5ea5-3933-92d5-70ab9f73bd61",
+    "title": "Silver plated teapot, Great Western Railway - Refreshment Department",
+    "description": "Teapot, silver plated, by Elkington & Co, 1907, Great Western Railway, straight-sided, garter, \"GWR REFRESHMENT DEPARTMENT\"",
+    "creator": "Elkington & Company Limited",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "a09b0a2c-5ea5-3933-92d5-70ab9f73bd61",
+      "objectNumber": "co216495",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Birmingham, Borough of Birmingham, West Midlands, England, United Kingdom"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, Great Western Railway - Refreshment Department"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, silver plated, by Elkington & Co, 1907, Great Western Railway, straight-sided, garter, \"GWR REFRESHMENT DEPARTMENT\""
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated person": [
+          "Great Western Railway"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "British Rail, Clapham"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Elkington & Company Limited"
+        ],
+        "Object production place": [
+          "Birmingham, Borough of Birmingham, West Midlands, England, United Kingdom"
+        ],
+        "Other number": [
+          "1994-7594"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:a09b0a2c-5ea5-3933-92d5-70ab9f73bd61",
+      "title": "Silver plated teapot, Great Western Railway - Refreshment Department",
+      "url": "https://museumdata.uk/objects/a09b0a2c-5ea5-3933-92d5-70ab9f73bd61",
+      "creator": "Elkington & Company Limited"
+    }
+  },
+  {
+    "id": "mds:ef375e0b-745d-370c-b768-89fd5a13669e",
+    "_source": "mds",
+    "_sourceId": "co443120",
+    "_sourceUrl": "https://museumdata.uk/objects/ef375e0b-745d-370c-b768-89fd5a13669e",
+    "title": "Silver plated teapot, British Rail",
+    "description": "Silver plated 1 pint teapot, British Rail, stamped W9020, 1 pint, and W17, made by British Silverware Limited. Overall: 113 mm x 188 mm 101 mm.",
+    "creator": "British Silverware Limited",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "Using the Railway",
+      "passenger comforts",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "ef375e0b-745d-370c-b768-89fd5a13669e",
+      "objectNumber": "co443120",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Sheffield, South Yorkshire, England, United Kingdom"
+      ],
+      "dimensions": [
+        "diameter",
+        "height",
+        "width",
+        "10.16",
+        "4",
+        "101",
+        "4 7/16",
+        "113",
+        "7 3/8",
+        "188"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, British Rail"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Silver plated 1 pint teapot, British Rail, stamped W9020, 1 pint, and W17, made by British Silverware Limited. Overall: 113 mm x 188 mm 101 mm."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "Using the Railway",
+          "passenger comforts",
+          "teapot"
+        ],
+        "Dimension": [
+          "diameter",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "10.16",
+          "4",
+          "101",
+          "4 7/16",
+          "113",
+          "7 3/8",
+          "188"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "British Silverware Limited"
+        ],
+        "Object production place": [
+          "Sheffield, South Yorkshire, England, United Kingdom"
+        ],
+        "Other number": [
+          "1998-9080"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:ef375e0b-745d-370c-b768-89fd5a13669e",
+      "title": "Silver plated teapot, British Rail",
+      "url": "https://museumdata.uk/objects/ef375e0b-745d-370c-b768-89fd5a13669e",
+      "creator": "British Silverware Limited"
+    }
+  },
+  {
+    "id": "mds:1903444f-c690-3e33-8c5a-97d620ecb7d4",
+    "_source": "mds",
+    "_sourceId": "co216329",
+    "_sourceUrl": "https://museumdata.uk/objects/1903444f-c690-3e33-8c5a-97d620ecb7d4",
+    "title": "Silver plated teapot, London & North Eastern Railway",
+    "description": "Teapot, silver plated, by Walker & Hall, London & North Eastern Railway, 1/2 pint, oval base, straight-sided, \"LNER\" coronation monogram on side",
+    "creator": "Walker & Hall",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "1903444f-c690-3e33-8c5a-97d620ecb7d4",
+      "objectNumber": "co216329",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Sheffield, South Yorkshire, England, United Kingdom"
+      ],
+      "personAssociation": [
+        "user"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, London & North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, silver plated, by Walker & Hall, London & North Eastern Railway, 1/2 pint, oval base, straight-sided, \"LNER\" coronation monogram on side"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated person": [
+          "London & North Eastern Railway"
+        ],
+        "Person's association": [
+          "user"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Walker & Hall"
+        ],
+        "Object production place": [
+          "Sheffield, South Yorkshire, England, United Kingdom"
+        ],
+        "Other number": [
+          "1994-7346"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:1903444f-c690-3e33-8c5a-97d620ecb7d4",
+      "title": "Silver plated teapot, London & North Eastern Railway",
+      "url": "https://museumdata.uk/objects/1903444f-c690-3e33-8c5a-97d620ecb7d4",
+      "creator": "Walker & Hall"
+    }
+  },
+  {
+    "id": "mds:87ae3bbf-e445-314b-9af7-c2ff323bf8fc",
+    "_source": "mds",
+    "_sourceId": "647.992",
+    "_sourceUrl": "https://museumdata.uk/objects/87ae3bbf-e445-314b-9af7-c2ff323bf8fc",
+    "title": "MDS Record 33",
+    "description": "Leeds Teapot and lid, open work laced design",
+    "date": "1770",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Cyfarthfa Castle Museum & Art Gallery",
+    "mds": {
+      "uuid": "87ae3bbf-e445-314b-9af7-c2ff323bf8fc",
+      "objectNumber": "647.992",
+      "material": [
+        "Ceramic"
+      ],
+      "place": [
+        "Leeds"
+      ],
+      "dimensions": [
+        "size",
+        "width",
+        "length",
+        "115mm height x 190mm width"
+      ],
+      "numberOfObjects": "2",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Leeds Teapot and lid, open work laced design"
+        ],
+        "Collection": [
+          "Cyfarthfa Castle Museum & Art Gallery"
+        ],
+        "Acquisition date": [
+          "7.1936"
+        ],
+        "Dimension": [
+          "size",
+          "width",
+          "length"
+        ],
+        "Dimension value": [
+          "115mm height x 190mm width"
+        ],
+        "Material": [
+          "Ceramic"
+        ],
+        "Number of objects": [
+          "2"
+        ],
+        "Object component name": [
+          "mark"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object number": [
+          "647.992"
+        ],
+        "Object production date": [
+          "1770"
+        ],
+        "Object production place": [
+          "Leeds"
+        ],
+        "Other number": [
+          "2.666 Teapot"
+        ],
+        "Technique": [
+          "manufactured"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:87ae3bbf-e445-314b-9af7-c2ff323bf8fc",
+      "title": "MDS Record 33",
+      "url": "https://museumdata.uk/objects/87ae3bbf-e445-314b-9af7-c2ff323bf8fc",
+      "date": "1770"
+    }
+  },
+  {
+    "id": "mds:f63885cd-8d3c-346a-ae73-8e31fdb7b89d",
+    "_source": "mds",
+    "_sourceId": "co214905",
+    "_sourceUrl": "https://museumdata.uk/objects/f63885cd-8d3c-346a-ae73-8e31fdb7b89d",
+    "title": "Silver plated teapot, Great Central Railway - Dining Car",
+    "description": "Railway tableware: Teapot, small, silver plate, GCR Dining Cars, from Hudson House, York, various companies, 1900-1985",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "passenger comforts",
+      "Using the Railway",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "f63885cd-8d3c-346a-ae73-8e31fdb7b89d",
+      "objectNumber": "co214905",
+      "material": [
+        "silver plated"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, Great Central Railway - Dining Car"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Railway tableware: Teapot, small, silver plate, GCR Dining Cars, from Hudson House, York, various companies, 1900-1985"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "passenger comforts",
+          "Using the Railway",
+          "teapot"
+        ],
+        "Associated person": [
+          "Great Central Railway"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "British Rail, Clapham"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Other number": [
+          "1991-7666",
+          "147/647"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:f63885cd-8d3c-346a-ae73-8e31fdb7b89d",
+      "title": "Silver plated teapot, Great Central Railway - Dining Car",
+      "url": "https://museumdata.uk/objects/f63885cd-8d3c-346a-ae73-8e31fdb7b89d"
+    }
+  },
+  {
+    "id": "mds:cc1ab678-5aaa-384b-9ca1-28817a84362d",
+    "_source": "mds",
+    "_sourceId": "co214901",
+    "_sourceUrl": "https://museumdata.uk/objects/cc1ab678-5aaa-384b-9ca1-28817a84362d",
+    "title": "Silver plated teapot, British Rail (Eastern Region)",
+    "description": "Teapot, small, silver plate BR(E), from Hudson House, York, various companies, 1900-1985, by Lambert & Blaber.",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "passenger comforts",
+      "Using the Railway",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "cc1ab678-5aaa-384b-9ca1-28817a84362d",
+      "objectNumber": "co214901",
+      "material": [
+        "silver plated"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, British Rail (Eastern Region)"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, small, silver plate BR(E), from Hudson House, York, various companies, 1900-1985, by Lambert & Blaber."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "passenger comforts",
+          "Using the Railway",
+          "teapot"
+        ],
+        "Associated person": [
+          "British Railways, Eastern Region"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "British Rail, Clapham"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Other number": [
+          "1991-7662",
+          "147/647"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:cc1ab678-5aaa-384b-9ca1-28817a84362d",
+      "title": "Silver plated teapot, British Rail (Eastern Region)",
+      "url": "https://museumdata.uk/objects/cc1ab678-5aaa-384b-9ca1-28817a84362d"
+    }
+  },
+  {
+    "id": "mds:c7476984-eb0d-34ac-8015-176f8d96fcc4",
+    "_source": "mds",
+    "_sourceId": "co431670",
+    "_sourceUrl": "https://museumdata.uk/objects/c7476984-eb0d-34ac-8015-176f8d96fcc4",
+    "title": "Metal teapot, British Transport Catering Services",
+    "description": "Teapot,  British Transport Catering Services, with infusion/strainer and hinged lid. Stamped BTCS on front. Strainer: 119 mm 103 mm; teapot: 150 mm x 310 mm 170 mm.",
+    "creator": "Unknown maker",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "passenger comforts",
+      "Using the Railway"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "c7476984-eb0d-34ac-8015-176f8d96fcc4",
+      "objectNumber": "co431670",
+      "material": [
+        "metal (unknown)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Metal teapot, British Transport Catering Services"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot,  British Transport Catering Services, with infusion/strainer and hinged lid. Stamped BTCS on front. Strainer: 119 mm 103 mm; teapot: 150 mm x 310 mm 170 mm."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "passenger comforts",
+          "Using the Railway"
+        ],
+        "Material": [
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Other number": [
+          "1997-8546"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:c7476984-eb0d-34ac-8015-176f8d96fcc4",
+      "title": "Metal teapot, British Transport Catering Services",
+      "url": "https://museumdata.uk/objects/c7476984-eb0d-34ac-8015-176f8d96fcc4",
+      "creator": "Unknown maker"
+    }
+  },
+  {
+    "id": "mds:ab1da2e3-e592-3a8a-bd79-782b0eeae591",
+    "_source": "mds",
+    "_sourceId": "co49520",
+    "_sourceUrl": "https://museumdata.uk/objects/ab1da2e3-e592-3a8a-bd79-782b0eeae591",
+    "title": "Royle's patent self-pouring teapot by John J Royle",
+    "description": "Royle's patent self-pouring teapot by John J Royle, 27 King Street West, Manchester, 1906.  Manufactured by James Dixon and Sons, Sheffield",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapots"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "ab1da2e3-e592-3a8a-bd79-782b0eeae591",
+      "objectNumber": "co49520",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Royle's patent self-pouring teapot by John J Royle"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Royle's patent self-pouring teapot by John J Royle, 27 King Street West, Manchester, 1906.  Manufactured by James Dixon and Sons, Sheffield"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapots"
+        ],
+        "Credit line": [
+          "Head, S."
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Other number": [
+          "1990-70",
+          "90/45"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Domestic Appliances"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:ab1da2e3-e592-3a8a-bd79-782b0eeae591",
+      "title": "Royle's patent self-pouring teapot by John J Royle",
+      "url": "https://museumdata.uk/objects/ab1da2e3-e592-3a8a-bd79-782b0eeae591"
+    }
+  },
+  {
+    "id": "mds:183b204d-a4f5-3c65-833b-cf16414dafce",
+    "_source": "mds",
+    "_sourceId": "650.992",
+    "_sourceUrl": "https://museumdata.uk/objects/183b204d-a4f5-3c65-833b-cf16414dafce",
+    "title": "MDS Record 38",
+    "description": "Ceramic teapot, with intertwined handles, buttercup to lid, polychrome glaze decoration.",
+    "date": "1800",
+    "subject": [
+      "teapot; leeds teapot",
+      "teapot; leeds teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Cyfarthfa Castle Museum & Art Gallery",
+    "mds": {
+      "uuid": "183b204d-a4f5-3c65-833b-cf16414dafce",
+      "objectNumber": "650.992",
+      "material": [
+        "Earthenware"
+      ],
+      "dimensions": [
+        "size",
+        "width",
+        "length",
+        "140mm height x 193mm width x 103mm depth"
+      ],
+      "numberOfObjects": "2",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "teapot; leeds teapot"
+        ],
+        "Brief description": [
+          "Ceramic teapot, with intertwined handles, buttercup to lid, polychrome glaze decoration."
+        ],
+        "Collection": [
+          "Cyfarthfa Castle Museum & Art Gallery"
+        ],
+        "Acquisition date": [
+          "7.1939"
+        ],
+        "Dimension": [
+          "size",
+          "width",
+          "length"
+        ],
+        "Dimension value": [
+          "140mm height x 193mm width x 103mm depth"
+        ],
+        "Material": [
+          "Earthenware"
+        ],
+        "Number of objects": [
+          "2"
+        ],
+        "Object component name": [
+          "mark"
+        ],
+        "Object name": [
+          "teapot; leeds teapot"
+        ],
+        "Object number": [
+          "650.992"
+        ],
+        "Object production date": [
+          "1800"
+        ],
+        "Other number": [
+          "2.666 Teapot"
+        ],
+        "Technique": [
+          "manufactured"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:183b204d-a4f5-3c65-833b-cf16414dafce",
+      "title": "MDS Record 38",
+      "url": "https://museumdata.uk/objects/183b204d-a4f5-3c65-833b-cf16414dafce",
+      "date": "1800"
+    }
+  },
+  {
+    "id": "mds:6b3efa5e-17f4-3ba9-b029-e519fe835469",
+    "_source": "mds",
+    "_sourceId": "HMCMS:ACM1951.208.2",
+    "_sourceUrl": "https://museumdata.uk/objects/6b3efa5e-17f4-3ba9-b029-e519fe835469",
+    "title": "MDS Record 39",
+    "description": "doll's teapot, metal teapot with curved handle, fluted decoration, hollow footring, and matching lid, c1860",
+    "date": "1860",
+    "subject": [
+      "doll's teapot; teapot; doll's teapot; teapot",
+      "doll's teapot; teapot; doll's teapot; teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Hampshire Cultural Trust",
+    "mds": {
+      "uuid": "6b3efa5e-17f4-3ba9-b029-e519fe835469",
+      "objectNumber": "HMCMS:ACM1951.208.2",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "doll's teapot; teapot; doll's teapot; teapot"
+        ],
+        "Brief description": [
+          "doll's teapot, metal teapot with curved handle, fluted decoration, hollow footring, and matching lid, c1860"
+        ],
+        "Collection": [
+          "Hampshire Cultural Trust"
+        ],
+        "Credit line": [
+          "Part of the Hampshire County Collections managed by Hampshire Cultural Trust"
+        ],
+        "Object name": [
+          "doll's teapot; teapot; doll's teapot; teapot"
+        ],
+        "Object number": [
+          "HMCMS:ACM1951.208.2"
+        ],
+        "Object production date": [
+          "1860"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:6b3efa5e-17f4-3ba9-b029-e519fe835469",
+      "title": "MDS Record 39",
+      "url": "https://museumdata.uk/objects/6b3efa5e-17f4-3ba9-b029-e519fe835469",
+      "date": "1860"
+    }
+  },
+  {
+    "id": "mds:37c5c46f-41de-39af-951a-a15ad561f5fe",
+    "_source": "mds",
+    "_sourceId": "Industry-D5232328-8BDA-42CC-813C-DE93A0CCA22C",
+    "_sourceUrl": "https://museumdata.uk/objects/37c5c46f-41de-39af-951a-a15ad561f5fe",
+    "title": "teapot",
+    "description": "Ceramic teapot (white with pattern)",
+    "subject": [
+      "teapot; 3-D object",
+      "teapot; 3-D object (small)",
+      "unknown date",
+      "slate"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "37c5c46f-41de-39af-951a-a15ad561f5fe",
+      "objectNumber": "Industry-D5232328-8BDA-42CC-813C-DE93A0CCA22C",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "teapot"
+        ],
+        "Object name(s)": [
+          "teapot; 3-D object"
+        ],
+        "Brief description": [
+          "Ceramic teapot (white with pattern)"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition method": [
+          "unknown"
+        ],
+        "Associated concept": [
+          "unknown date",
+          "slate"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "teapot; 3-D object (small)"
+        ],
+        "Other number": [
+          "LED 132",
+          "V6 system number:59240"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:37c5c46f-41de-39af-951a-a15ad561f5fe",
+      "title": "teapot",
+      "url": "https://museumdata.uk/objects/37c5c46f-41de-39af-951a-a15ad561f5fe"
+    }
+  },
+  {
+    "id": "mds:ed9ca641-39eb-36f7-98c6-73fac87fe152",
+    "_source": "mds",
+    "_sourceId": "co216035",
+    "_sourceUrl": "https://museumdata.uk/objects/ed9ca641-39eb-36f7-98c6-73fac87fe152",
+    "title": "Silver plated teapot, Great Western Railway - Hotels",
+    "description": "Teapot, large; silver plated, by Walker & Hall, Sheffield, Great Western Railway Hotels; straight-sided, GWR coat of arms on side with banner below \"GREAT WESTERN RAILWAY HOTELS\"",
+    "creator": "Walker & Hall",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "ed9ca641-39eb-36f7-98c6-73fac87fe152",
+      "objectNumber": "co216035",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Sheffield, South Yorkshire, England, United Kingdom"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, Great Western Railway - Hotels"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, large; silver plated, by Walker & Hall, Sheffield, Great Western Railway Hotels; straight-sided, GWR coat of arms on side with banner below \"GREAT WESTERN RAILWAY HOTELS\""
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated person": [
+          "Great Western Railway"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "Hey, Arthur"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Walker & Hall"
+        ],
+        "Object production place": [
+          "Sheffield, South Yorkshire, England, United Kingdom"
+        ],
+        "Other number": [
+          "1984-7921",
+          "84/37/26",
+          "611/32"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:ed9ca641-39eb-36f7-98c6-73fac87fe152",
+      "title": "Silver plated teapot, Great Western Railway - Hotels",
+      "url": "https://museumdata.uk/objects/ed9ca641-39eb-36f7-98c6-73fac87fe152",
+      "creator": "Walker & Hall"
+    }
+  },
+  {
+    "id": "mds:f2dd3ee5-e16d-3f17-a79c-b7ec75277fec",
+    "_source": "mds",
+    "_sourceId": "co434253",
+    "_sourceUrl": "https://museumdata.uk/objects/f2dd3ee5-e16d-3f17-a79c-b7ec75277fec",
+    "title": "Hotel Executive Cars teapot",
+    "description": "Two pint teapot, stamped Hotel Executive Cars, silver plated with hinged lid, bearing Mappin & Webb Limited mark on base. Also stamped C17/30, 9/52 and P3. Overall: 170 mm x 230 mm 138 mm.",
+    "creator": "Mappin & Webb",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "Using the Railway",
+      "passenger comforts",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "f2dd3ee5-e16d-3f17-a79c-b7ec75277fec",
+      "objectNumber": "co434253",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Sheffield, South Yorkshire, England, United Kingdom"
+      ],
+      "dimensions": [
+        "diameter",
+        "height",
+        "width",
+        "8.89",
+        "3 1/2",
+        "16.51",
+        "6 1/2",
+        "5 7/16",
+        "138",
+        "6 11/16",
+        "170",
+        "9 1/16",
+        "230"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Hotel Executive Cars teapot"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Two pint teapot, stamped Hotel Executive Cars, silver plated with hinged lid, bearing Mappin & Webb Limited mark on base. Also stamped C17/30, 9/52 and P3. Overall: 170 mm x 230 mm 138 mm."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "Using the Railway",
+          "passenger comforts",
+          "teapot"
+        ],
+        "Dimension": [
+          "diameter",
+          "height",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "cm",
+          "in",
+          "mm"
+        ],
+        "Dimension value": [
+          "8.89",
+          "3 1/2",
+          "16.51",
+          "6 1/2",
+          "5 7/16",
+          "138",
+          "6 11/16",
+          "170",
+          "9 1/16",
+          "230"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Mappin & Webb"
+        ],
+        "Object production place": [
+          "Sheffield, South Yorkshire, England, United Kingdom"
+        ],
+        "Other number": [
+          "1998-7002",
+          "84/37/344"
+        ],
+        "Other number type": [
+          "accession number",
+          "National Railway Museum number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:f2dd3ee5-e16d-3f17-a79c-b7ec75277fec",
+      "title": "Hotel Executive Cars teapot",
+      "url": "https://museumdata.uk/objects/f2dd3ee5-e16d-3f17-a79c-b7ec75277fec",
+      "creator": "Mappin & Webb"
+    }
+  },
+  {
+    "id": "mds:ee44746a-630a-3ace-9cb6-d8495b878688",
+    "_source": "mds",
+    "_sourceId": "co215104",
+    "_sourceUrl": "https://museumdata.uk/objects/ee44746a-630a-3ace-9cb6-d8495b878688",
+    "title": "Two silver plated teapots, Great Western Railway - Hotels",
+    "description": "Two teapots, 3/4 pint, silver plated, by Elkington & Co, Great Western Railway, GWR Hotels full crest, (BTH 215W).",
+    "creator": "Elkington & Co",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "ee44746a-630a-3ace-9cb6-d8495b878688",
+      "objectNumber": "co215104",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Birmingham, Borough of Birmingham, West Midlands, England, United Kingdom"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Two silver plated teapots, Great Western Railway - Hotels"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Two teapots, 3/4 pint, silver plated, by Elkington & Co, Great Western Railway, GWR Hotels full crest, (BTH 215W)."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated person": [
+          "Great Western Railway"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "British Transport Hotels"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Elkington & Co"
+        ],
+        "Object production place": [
+          "Birmingham, Borough of Birmingham, West Midlands, England, United Kingdom"
+        ],
+        "Other number": [
+          "1993-7538",
+          "BTH 215W",
+          "153/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "Temporary number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:ee44746a-630a-3ace-9cb6-d8495b878688",
+      "title": "Two silver plated teapots, Great Western Railway - Hotels",
+      "url": "https://museumdata.uk/objects/ee44746a-630a-3ace-9cb6-d8495b878688",
+      "creator": "Elkington & Co"
+    }
+  },
+  {
+    "id": "mds:d96633fb-a1d2-31ac-bae9-df519972b2d5",
+    "_source": "mds",
+    "_sourceId": "co215103",
+    "_sourceUrl": "https://museumdata.uk/objects/d96633fb-a1d2-31ac-bae9-df519972b2d5",
+    "title": "Two silver plated teapots, Great Western Railway - Hotels",
+    "description": "Two teapots, 3/4 pint, silver plated, by Elkington & Co, Great Western Railway, GWR Hotels roundel, (BTH 214W).",
+    "creator": "Elkington & Co",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "d96633fb-a1d2-31ac-bae9-df519972b2d5",
+      "objectNumber": "co215103",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Birmingham, Borough of Birmingham, West Midlands, England, United Kingdom"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Two silver plated teapots, Great Western Railway - Hotels"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Two teapots, 3/4 pint, silver plated, by Elkington & Co, Great Western Railway, GWR Hotels roundel, (BTH 214W)."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "teapot"
+        ],
+        "Associated person": [
+          "Great Western Railway"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "British Transport Hotels"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Elkington & Co"
+        ],
+        "Object production place": [
+          "Birmingham, Borough of Birmingham, West Midlands, England, United Kingdom"
+        ],
+        "Other number": [
+          "1993-7537",
+          "BTH 214W",
+          "153/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "Temporary number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:d96633fb-a1d2-31ac-bae9-df519972b2d5",
+      "title": "Two silver plated teapots, Great Western Railway - Hotels",
+      "url": "https://museumdata.uk/objects/d96633fb-a1d2-31ac-bae9-df519972b2d5",
+      "creator": "Elkington & Co"
+    }
+  },
+  {
+    "id": "mds:186c30c3-a6f4-31d5-ad97-5917852f5239",
+    "_source": "mds",
+    "_sourceId": "co215389",
+    "_sourceUrl": "https://museumdata.uk/objects/186c30c3-a6f4-31d5-ad97-5917852f5239",
+    "title": "Silver plated teapot, London & North Eastern Railway",
+    "description": "Teapot, 1/2 pint, silver plated, London & North Eastern Railway, made by Walker & Hall, Sheffield; LNER script.",
+    "creator": "Walker & Hall",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot",
+      "Using the Railway",
+      "passenger comforts",
+      "teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "186c30c3-a6f4-31d5-ad97-5917852f5239",
+      "objectNumber": "co215389",
+      "material": [
+        "silver plated"
+      ],
+      "place": [
+        "Sheffield, South Yorkshire, England, United Kingdom"
+      ],
+      "personAssociation": [
+        "association"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Silver plated teapot, London & North Eastern Railway"
+        ],
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot, 1/2 pint, silver plated, London & North Eastern Railway, made by Walker & Hall, Sheffield; LNER script."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "Using the Railway",
+          "passenger comforts",
+          "teapot"
+        ],
+        "Associated person": [
+          "London & North Eastern Railway"
+        ],
+        "Person's association": [
+          "association"
+        ],
+        "Credit line": [
+          "British Transport Hotels"
+        ],
+        "Material": [
+          "silver plated"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object production person": [
+          "Walker & Hall"
+        ],
+        "Object production place": [
+          "Sheffield, South Yorkshire, England, United Kingdom"
+        ],
+        "Other number": [
+          "1993-7823",
+          "BTH 371E",
+          "153/1"
+        ],
+        "Other number type": [
+          "accession number",
+          "Temporary number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "NRM - Passenger Comforts"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:186c30c3-a6f4-31d5-ad97-5917852f5239",
+      "title": "Silver plated teapot, London & North Eastern Railway",
+      "url": "https://museumdata.uk/objects/186c30c3-a6f4-31d5-ad97-5917852f5239",
+      "creator": "Walker & Hall"
+    }
+  },
+  {
+    "id": "mds:2db51903-b503-387a-aa0e-35b68fe42387",
+    "_source": "mds",
+    "_sourceId": "co123174",
+    "_sourceUrl": "https://museumdata.uk/objects/2db51903-b503-387a-aa0e-35b68fe42387",
+    "title": "Pottery teapot",
+    "description": "Pottery teapot, with very narrow neck, funnel-like rim, slender spour, decorated with two painted figures and Oriental calligraphy, probably Japanese, 19th century",
+    "date": "1801",
+    "subject": [
+      "teapots; teapots",
+      "teapots; teapots"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "2db51903-b503-387a-aa0e-35b68fe42387",
+      "objectNumber": "co123174",
+      "material": [
+        "pottery"
+      ],
+      "place": [
+        "Japan"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Pottery teapot"
+        ],
+        "Object name(s)": [
+          "teapots; teapots"
+        ],
+        "Brief description": [
+          "Pottery teapot, with very narrow neck, funnel-like rim, slender spour, decorated with two painted figures and Oriental calligraphy, probably Japanese, 19th century"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated place": [
+          "Japan"
+        ],
+        "Place association": [
+          "production or association role production details"
+        ],
+        "Material": [
+          "pottery"
+        ],
+        "Object name": [
+          "teapots; teapots"
+        ],
+        "Date - earliest / single": [
+          "1801"
+        ],
+        "Date - latest": [
+          "1900"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "A42754",
+          "17224",
+          "3245/505"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Asian Medicine"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:2db51903-b503-387a-aa0e-35b68fe42387",
+      "title": "Pottery teapot",
+      "url": "https://museumdata.uk/objects/2db51903-b503-387a-aa0e-35b68fe42387",
+      "date": "1801"
+    }
+  },
+  {
+    "id": "mds:f68780c7-0981-3956-bb74-92df16b0da28",
+    "_source": "mds",
+    "_sourceId": "666.992",
+    "_sourceUrl": "https://museumdata.uk/objects/f68780c7-0981-3956-bb74-92df16b0da28",
+    "title": "MDS Record 47",
+    "description": "Teapot with lid. hand-painted floral decoration, in green blue and red, some moulding to rim, spout and base.",
+    "subject": [
+      "teapot; teapot",
+      "teapot; teapot"
+    ],
+    "type": "Museum object",
+    "collection": "Cyfarthfa Castle Museum & Art Gallery",
+    "mds": {
+      "uuid": "f68780c7-0981-3956-bb74-92df16b0da28",
+      "objectNumber": "666.992",
+      "material": [
+        "Ceramic"
+      ],
+      "dimensions": [
+        "size",
+        "width",
+        "length",
+        "189mm Height x 250mm length x 100mm Base Diameter"
+      ],
+      "numberOfObjects": "2",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "teapot; teapot"
+        ],
+        "Brief description": [
+          "Teapot with lid. hand-painted floral decoration, in green blue and red, some moulding to rim, spout and base."
+        ],
+        "Collection": [
+          "Cyfarthfa Castle Museum & Art Gallery"
+        ],
+        "Dimension": [
+          "size",
+          "width",
+          "length"
+        ],
+        "Dimension value": [
+          "189mm Height x 250mm length x 100mm Base Diameter"
+        ],
+        "Material": [
+          "Ceramic"
+        ],
+        "Number of objects": [
+          "2"
+        ],
+        "Object component name": [
+          "mark"
+        ],
+        "Object name": [
+          "teapot; teapot"
+        ],
+        "Object number": [
+          "666.992"
+        ],
+        "Other number": [
+          "2.666 Teapot"
+        ],
+        "Technique": [
+          "manufactured"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:f68780c7-0981-3956-bb74-92df16b0da28",
+      "title": "MDS Record 47",
+      "url": "https://museumdata.uk/objects/f68780c7-0981-3956-bb74-92df16b0da28"
+    }
+  },
+  {
+    "id": "mds:ab84fdc5-beba-3188-9a21-212938b9db38",
+    "_source": "mds",
+    "_sourceId": "644.992",
+    "_sourceUrl": "https://museumdata.uk/objects/ab84fdc5-beba-3188-9a21-212938b9db38",
+    "title": "MDS Record 48",
+    "description": "Teapot with hand painted polychrome floral design and depiction of farming impliments. Text: Eliz.th Burton/1790",
+    "date": "1790",
+    "subject": [
+      "teapot; teapot & lid",
+      "teapot; teapot & lid"
+    ],
+    "type": "Museum object",
+    "collection": "Cyfarthfa Castle Museum & Art Gallery",
+    "mds": {
+      "uuid": "ab84fdc5-beba-3188-9a21-212938b9db38",
+      "objectNumber": "644.992",
+      "material": [
+        "Ceramic"
+      ],
+      "dimensions": [
+        "size",
+        "width",
+        "length",
+        "Height - 130mm Width 215mm"
+      ],
+      "numberOfObjects": "2",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "teapot; teapot & lid"
+        ],
+        "Brief description": [
+          "Teapot with hand painted polychrome floral design and depiction of farming impliments. Text: Eliz.th Burton/1790"
+        ],
+        "Collection": [
+          "Cyfarthfa Castle Museum & Art Gallery"
+        ],
+        "Acquisition date": [
+          "11.1939"
+        ],
+        "Dimension": [
+          "size",
+          "width",
+          "length"
+        ],
+        "Dimension value": [
+          "Height - 130mm Width 215mm"
+        ],
+        "Material": [
+          "Ceramic"
+        ],
+        "Number of objects": [
+          "2"
+        ],
+        "Object component name": [
+          "mark"
+        ],
+        "Object name": [
+          "teapot; teapot & lid"
+        ],
+        "Object number": [
+          "644.992"
+        ],
+        "Object production date": [
+          "1790"
+        ],
+        "Other number": [
+          "2.666 Teapot"
+        ],
+        "Technique": [
+          "manufactured"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:ab84fdc5-beba-3188-9a21-212938b9db38",
+      "title": "MDS Record 48",
+      "url": "https://museumdata.uk/objects/ab84fdc5-beba-3188-9a21-212938b9db38",
+      "date": "1790"
+    }
+  },
+  {
+    "id": "mds:5ae7505c-daf2-3a54-b89e-a1ca3b9bc3d9",
+    "_source": "mds",
+    "_sourceId": "MWL-FA4427BB-BF75-44A3-A6B8-6D7C1111429F",
+    "_sourceUrl": "https://museumdata.uk/objects/5ae7505c-daf2-3a54-b89e-a1ca3b9bc3d9",
+    "title": "teapot, miniature",
+    "description": "miniature teapot with lid - Tewkwesbury crest",
+    "subject": [
+      "teapot, miniature; CHINA AND EARTHENWARE",
+      "teapot, miniature; CHINA AND EARTHENWARE"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "5ae7505c-daf2-3a54-b89e-a1ca3b9bc3d9",
+      "objectNumber": "MWL-FA4427BB-BF75-44A3-A6B8-6D7C1111429F",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "teapot, miniature"
+        ],
+        "Object name(s)": [
+          "teapot, miniature; CHINA AND EARTHENWARE"
+        ],
+        "Brief description": [
+          "miniature teapot with lid - Tewkwesbury crest"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1975"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Object name": [
+          "teapot, miniature; CHINA AND EARTHENWARE"
+        ],
+        "Other number": [
+          "F75.74.16",
+          "Micromusée V6 SN:37252"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "Ownership place": [
+          "Casnewydd | Newport (Monmouthshire)"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:5ae7505c-daf2-3a54-b89e-a1ca3b9bc3d9",
+      "title": "teapot, miniature",
+      "url": "https://museumdata.uk/objects/5ae7505c-daf2-3a54-b89e-a1ca3b9bc3d9"
+    }
+  },
+  {
+    "id": "mds:7367d5b0-9564-3038-96bc-42d45d5a937d",
+    "_source": "mds",
+    "_sourceId": "30044",
+    "_sourceUrl": "https://museumdata.uk/objects/7367d5b0-9564-3038-96bc-42d45d5a937d",
+    "title": "Black Basalt Teapot",
+    "description": "Black basalt Wedgwood teapot.\n\nOriental style basalt teapot  with a moulded spaniel on the lid.",
+    "date": "1805",
+    "subject": [
+      "Teapot",
+      "Teapot",
+      "Ceramics"
+    ],
+    "type": "Museum object",
+    "collection": "Aberdeen Archives, Gallery and Museums",
+    "mds": {
+      "uuid": "7367d5b0-9564-3038-96bc-42d45d5a937d",
+      "objectNumber": "30044",
+      "material": [
+        "basalt"
+      ],
+      "dimensions": [
+        "Overall: height 12.5cm × width 15cm × depth 11cm\nHandle to Spout: 15cm"
+      ],
+      "inscriptionContent": "Stamped On Base:Wedgwood",
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Black Basalt Teapot"
+        ],
+        "Object name(s)": [
+          "Teapot"
+        ],
+        "Brief description": [
+          "Black basalt Wedgwood teapot.\n\nOriental style basalt teapot  with a moulded spaniel on the lid."
+        ],
+        "Collection": [
+          "Aberdeen Archives, Gallery and Museums"
+        ],
+        "Acquisition method": [
+          "Unknown"
+        ],
+        "Associated concept": [
+          "Ceramics"
+        ],
+        "Associated date": [
+          "c. 1810"
+        ],
+        "Associated person": [
+          "Wedgwood"
+        ],
+        "Current location": [
+          "On Display - Gallery 06"
+        ],
+        "Dimension": [
+          "Overall: height 12.5cm × width 15cm × depth 11cm\nHandle to Spout: 15cm"
+        ],
+        "Inscription content": [
+          "Stamped On Base:Wedgwood"
+        ],
+        "Inscription type": [
+          "maker's mark"
+        ],
+        "Material": [
+          "basalt"
+        ],
+        "Object name": [
+          "Teapot"
+        ],
+        "Object number": [
+          "ABDMS023830"
+        ],
+        "Date - earliest / single": [
+          "1805"
+        ],
+        "Date - latest": [
+          "1815"
+        ],
+        "Object status": [
+          "Accessioned object"
+        ],
+        "Responsible department/section": [
+          "Applied Art"
+        ],
+        "Text": [
+          "Oriental style basalt teapot  with a moulded spaniel on the lid.  As pale skin was fashionable for ladies in the 19th century, black teawares especially teapots were particularly popular, as they emphasised the whiteness of a lady's hands."
+        ],
+        "Text reference number": [
+          "https://emuseum.aberdeencity.gov.uk/objects/55021"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:09.437Z",
+      "query": "teapot",
+      "recordId": "mds:7367d5b0-9564-3038-96bc-42d45d5a937d",
+      "title": "Black Basalt Teapot",
+      "url": "https://museumdata.uk/objects/7367d5b0-9564-3038-96bc-42d45d5a937d",
+      "date": "1805"
+    }
+  }
+]

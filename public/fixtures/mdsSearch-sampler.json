@@ -1,0 +1,4232 @@
+[
+  {
+    "id": "mds:f1e9b72d-8f18-3537-9ab3-b76593cd8720",
+    "_source": "mds",
+    "_sourceId": "co8871839",
+    "_sourceUrl": "https://museumdata.uk/objects/f1e9b72d-8f18-3537-9ab3-b76593cd8720",
+    "title": "Akai S900 MIDI Digital Sampler used by Chris Huggett for development work on the S-series samplers",
+    "description": "Akai S900 sampler used by Chris Huggett for development work on the S-series samplers.",
+    "creator": "Huggett, Chris",
+    "date": "1986",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "f1e9b72d-8f18-3537-9ab3-b76593cd8720",
+      "objectNumber": "co8871839",
+      "dimensions": [
+        "depth",
+        "height",
+        "weight",
+        "width",
+        "16 1/8",
+        "410",
+        "5 1/4",
+        "133",
+        "10.8",
+        "23.81005",
+        "19",
+        "483"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Akai S900 MIDI Digital Sampler used by Chris Huggett for development work on the S-series samplers"
+        ],
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "Akai S900 sampler used by Chris Huggett for development work on the S-series samplers."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "weight",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm",
+          "kg",
+          "lbs"
+        ],
+        "Dimension value": [
+          "16 1/8",
+          "410",
+          "5 1/4",
+          "133",
+          "10.8",
+          "23.81005",
+          "19",
+          "483"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Date - earliest / single": [
+          "1986"
+        ],
+        "Date - latest": [
+          "1988"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Huggett, Chris"
+        ],
+        "Other number": [
+          "2024-525",
+          "E2022.0035.3"
+        ],
+        "Other number type": [
+          "accession number",
+          "previous number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Sound Technologies"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:f1e9b72d-8f18-3537-9ab3-b76593cd8720",
+      "title": "Akai S900 MIDI Digital Sampler used by Chris Huggett for development work on the S-series samplers",
+      "url": "https://museumdata.uk/objects/f1e9b72d-8f18-3537-9ab3-b76593cd8720",
+      "creator": "Huggett, Chris",
+      "date": "1986"
+    }
+  },
+  {
+    "id": "mds:8498a12d-0406-3cfd-afab-e1b39d4cbdcd",
+    "_source": "mds",
+    "_sourceId": "co8451214",
+    "_sourceUrl": "https://museumdata.uk/objects/8498a12d-0406-3cfd-afab-e1b39d4cbdcd",
+    "title": "Waveguide tube sampler",
+    "description": "waveguide tube sampler. \nmanufacturer unknown",
+    "subject": [
+      "waveguide tube sampler; waveguide tube sampler",
+      "waveguide tube sampler; waveguide tube sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "8498a12d-0406-3cfd-afab-e1b39d4cbdcd",
+      "objectNumber": "co8451214",
+      "material": [
+        "steel (metal)"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Waveguide tube sampler"
+        ],
+        "Object name(s)": [
+          "waveguide tube sampler; waveguide tube sampler"
+        ],
+        "Brief description": [
+          "waveguide tube sampler. \nmanufacturer unknown"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Material": [
+          "steel (metal)"
+        ],
+        "Object name": [
+          "waveguide tube sampler; waveguide tube sampler"
+        ],
+        "Other number": [
+          "YINH356"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SIM - Telecommunications"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:8498a12d-0406-3cfd-afab-e1b39d4cbdcd",
+      "title": "Waveguide tube sampler",
+      "url": "https://museumdata.uk/objects/8498a12d-0406-3cfd-afab-e1b39d4cbdcd"
+    }
+  },
+  {
+    "id": "mds:96740976-b304-33c3-8a3e-c66ef501d821",
+    "_source": "mds",
+    "_sourceId": "co9355063",
+    "_sourceUrl": "https://museumdata.uk/objects/96740976-b304-33c3-8a3e-c66ef501d821",
+    "title": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+    "description": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+    "creator": "Akai (UK) Ltd",
+    "date": "1988",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "96740976-b304-33c3-8a3e-c66ef501d821",
+      "objectNumber": "co9355063",
+      "dimensions": [
+        "depth",
+        "height",
+        "weight",
+        "width",
+        "16 3/4",
+        "425",
+        "5 1/4",
+        "133",
+        "9.5",
+        "20.94402",
+        "19",
+        "483"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers."
+        ],
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "weight",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm",
+          "kg",
+          "lbs"
+        ],
+        "Dimension value": [
+          "16 3/4",
+          "425",
+          "5 1/4",
+          "133",
+          "9.5",
+          "20.94402",
+          "19",
+          "483"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Date - earliest / single": [
+          "1988"
+        ],
+        "Date - latest": [
+          "1993"
+        ],
+        "Object production person": [
+          "Akai (UK) Ltd"
+        ],
+        "Other number": [
+          "2024-541/1",
+          "E2022.0035.19"
+        ],
+        "Other number type": [
+          "accession number",
+          "previous number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Sound Technologies"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:96740976-b304-33c3-8a3e-c66ef501d821",
+      "title": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+      "url": "https://museumdata.uk/objects/96740976-b304-33c3-8a3e-c66ef501d821",
+      "creator": "Akai (UK) Ltd",
+      "date": "1988"
+    }
+  },
+  {
+    "id": "mds:2b2274af-f46b-3343-8123-03cdbcc82045",
+    "_source": "mds",
+    "_sourceId": "co9355066",
+    "_sourceUrl": "https://museumdata.uk/objects/2b2274af-f46b-3343-8123-03cdbcc82045",
+    "title": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+    "description": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+    "creator": "Akai (UK) Ltd",
+    "date": "1988",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "2b2274af-f46b-3343-8123-03cdbcc82045",
+      "objectNumber": "co9355066",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers."
+        ],
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Date - earliest / single": [
+          "1988"
+        ],
+        "Date - latest": [
+          "1993"
+        ],
+        "Object production person": [
+          "Akai (UK) Ltd"
+        ],
+        "Other number": [
+          "2024-526/2",
+          "E2022.0035.4"
+        ],
+        "Other number type": [
+          "accession number",
+          "previous number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Sound Technologies"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:2b2274af-f46b-3343-8123-03cdbcc82045",
+      "title": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+      "url": "https://museumdata.uk/objects/2b2274af-f46b-3343-8123-03cdbcc82045",
+      "creator": "Akai (UK) Ltd",
+      "date": "1988"
+    }
+  },
+  {
+    "id": "mds:9298d341-edfa-39ae-b2ac-1d85c228e612",
+    "_source": "mds",
+    "_sourceId": "co9355064",
+    "_sourceUrl": "https://museumdata.uk/objects/9298d341-edfa-39ae-b2ac-1d85c228e612",
+    "title": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+    "description": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+    "creator": "Akai (UK) Ltd",
+    "date": "1988",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "9298d341-edfa-39ae-b2ac-1d85c228e612",
+      "objectNumber": "co9355064",
+      "dimensions": [
+        "depth",
+        "height",
+        "weight",
+        "width",
+        "16 3/4",
+        "425",
+        "5 1/4",
+        "133",
+        "9.5",
+        "20.94402",
+        "19",
+        "483"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers."
+        ],
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "weight",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm",
+          "kg",
+          "lbs"
+        ],
+        "Dimension value": [
+          "16 3/4",
+          "425",
+          "5 1/4",
+          "133",
+          "9.5",
+          "20.94402",
+          "19",
+          "483"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Date - earliest / single": [
+          "1988"
+        ],
+        "Date - latest": [
+          "1993"
+        ],
+        "Object production person": [
+          "Akai (UK) Ltd"
+        ],
+        "Other number": [
+          "2024-541/2",
+          "E2022.0035.19"
+        ],
+        "Other number type": [
+          "accession number",
+          "previous number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Sound Technologies"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:9298d341-edfa-39ae-b2ac-1d85c228e612",
+      "title": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+      "url": "https://museumdata.uk/objects/9298d341-edfa-39ae-b2ac-1d85c228e612",
+      "creator": "Akai (UK) Ltd",
+      "date": "1988"
+    }
+  },
+  {
+    "id": "mds:ad25cad7-2b3f-3eec-bf8a-1fd1e5e5dbb4",
+    "_source": "mds",
+    "_sourceId": "co9355065",
+    "_sourceUrl": "https://museumdata.uk/objects/ad25cad7-2b3f-3eec-bf8a-1fd1e5e5dbb4",
+    "title": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+    "description": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+    "creator": "Akai (UK) Ltd",
+    "date": "1988",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "ad25cad7-2b3f-3eec-bf8a-1fd1e5e5dbb4",
+      "objectNumber": "co9355065",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers."
+        ],
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Date - earliest / single": [
+          "1988"
+        ],
+        "Date - latest": [
+          "1993"
+        ],
+        "Object production person": [
+          "Akai (UK) Ltd"
+        ],
+        "Other number": [
+          "2024-526/1",
+          "E2022.0035.4"
+        ],
+        "Other number type": [
+          "accession number",
+          "previous number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Sound Technologies"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:ad25cad7-2b3f-3eec-bf8a-1fd1e5e5dbb4",
+      "title": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+      "url": "https://museumdata.uk/objects/ad25cad7-2b3f-3eec-bf8a-1fd1e5e5dbb4",
+      "creator": "Akai (UK) Ltd",
+      "date": "1988"
+    }
+  },
+  {
+    "id": "mds:4e64e249-e7c1-3572-be05-2e4852e17907",
+    "_source": "mds",
+    "_sourceId": "TRURI",
+    "_sourceUrl": "https://museumdata.uk/objects/4e64e249-e7c1-3572-be05-2e4852e17907",
+    "title": "MDS Record 7",
+    "description": "framed sampler worked by I.C. with bands of decoration and the dates November 6th 1667 at the bottom and June 27 1668 at the top (probably dates of commencing and finishing the work)",
+    "creator": "C., I.",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler",
+      "TEXTILES AND DRESS"
+    ],
+    "type": "Museum object",
+    "collection": "Cornwall Museum and Art Gallery",
+    "mds": {
+      "uuid": "4e64e249-e7c1-3572-be05-2e4852e17907",
+      "objectNumber": "TRURI",
+      "material": [
+        "fabric"
+      ],
+      "place": [
+        "U.K."
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "880 mm",
+        "190 mm",
+        "960 mm",
+        "255 mm"
+      ],
+      "personAssociation": [
+        "needlewoman"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "framed sampler worked by I.C. with bands of decoration and the dates November 6th 1667 at the bottom and June 27 1668 at the top (probably dates of commencing and finishing the work)"
+        ],
+        "Collection": [
+          "Cornwall Museum and Art Gallery"
+        ],
+        "Acquisition date": [
+          "31.10.1935"
+        ],
+        "Acquisition method": [
+          "bequest"
+        ],
+        "Associated concept": [
+          "TEXTILES AND DRESS"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "sampler",
+          "frame"
+        ],
+        "Dimension value": [
+          "880 mm",
+          "190 mm",
+          "960 mm",
+          "255 mm"
+        ],
+        "Material": [
+          "fabric"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Object number": [
+          "TRURI : 1935.121.4"
+        ],
+        "Object production person": [
+          "C., I."
+        ],
+        "Person's association": [
+          "needlewoman"
+        ],
+        "Object production place": [
+          "U.K."
+        ],
+        "Technique": [
+          "stitched"
+        ],
+        "Text": [
+          "two dates are very unusual in a sampler"
+        ],
+        "Text reason": [
+          "Brief description notes"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:4e64e249-e7c1-3572-be05-2e4852e17907",
+      "title": "MDS Record 7",
+      "url": "https://museumdata.uk/objects/4e64e249-e7c1-3572-be05-2e4852e17907",
+      "creator": "C., I."
+    }
+  },
+  {
+    "id": "mds:918a81db-a1ad-388a-b17f-b91b41d0bf31",
+    "_source": "mds",
+    "_sourceId": "co146439",
+    "_sourceUrl": "https://museumdata.uk/objects/918a81db-a1ad-388a-b17f-b91b41d0bf31",
+    "title": "Robotic sampler unit",
+    "description": "Robotic sampler unit",
+    "subject": [
+      "sampler unit; sampler unit",
+      "sampler unit; sampler unit"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "918a81db-a1ad-388a-b17f-b91b41d0bf31",
+      "objectNumber": "co146439",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Robotic sampler unit"
+        ],
+        "Object name(s)": [
+          "sampler unit; sampler unit"
+        ],
+        "Brief description": [
+          "Robotic sampler unit"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Edward Symmons and Partners"
+        ],
+        "Object name": [
+          "sampler unit; sampler unit"
+        ],
+        "Other number": [
+          "1994-657 Pt1"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Biochemistry"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:918a81db-a1ad-388a-b17f-b91b41d0bf31",
+      "title": "Robotic sampler unit",
+      "url": "https://museumdata.uk/objects/918a81db-a1ad-388a-b17f-b91b41d0bf31"
+    }
+  },
+  {
+    "id": "mds:c27fff98-e650-3977-848a-ec73f2161196",
+    "_source": "mds",
+    "_sourceId": "co8060630",
+    "_sourceUrl": "https://museumdata.uk/objects/c27fff98-e650-3977-848a-ec73f2161196",
+    "title": "Vacuum air sampler, 1970-1979",
+    "description": "Vacuum air sampler (resembling white spray can), with label, unsigned, 1970-1980",
+    "creator": "Unknown maker",
+    "date": "1970",
+    "subject": [
+      "air sampler; air sampler",
+      "air sampler; air sampler",
+      "air sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "c27fff98-e650-3977-848a-ec73f2161196",
+      "objectNumber": "co8060630",
+      "material": [
+        "metal (unknown)"
+      ],
+      "place": [
+        "Unknown place"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Vacuum air sampler, 1970-1979"
+        ],
+        "Object name(s)": [
+          "air sampler; air sampler"
+        ],
+        "Brief description": [
+          "Vacuum air sampler (resembling white spray can), with label, unsigned, 1970-1980"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "air sampler"
+        ],
+        "Material": [
+          "metal (unknown)"
+        ],
+        "Object name": [
+          "air sampler; air sampler"
+        ],
+        "Date - earliest / single": [
+          "1970"
+        ],
+        "Date - latest": [
+          "1979"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Object production place": [
+          "Unknown place"
+        ],
+        "Other number": [
+          "1997-1812 Pt2"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Environmental Science & Technology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:c27fff98-e650-3977-848a-ec73f2161196",
+      "title": "Vacuum air sampler, 1970-1979",
+      "url": "https://museumdata.uk/objects/c27fff98-e650-3977-848a-ec73f2161196",
+      "creator": "Unknown maker",
+      "date": "1970"
+    }
+  },
+  {
+    "id": "mds:669390c9-ff3d-324e-8489-d0cc0d05c584",
+    "_source": "mds",
+    "_sourceId": "MWL-B7CD5E41-EF4B-4FC7-8035-37927FF8936C",
+    "_sourceUrl": "https://museumdata.uk/objects/669390c9-ff3d-324e-8489-d0cc0d05c584",
+    "title": "sampler",
+    "description": "Sampler, alphabet, 1895.",
+    "date": "1895",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "669390c9-ff3d-324e-8489-d0cc0d05c584",
+      "objectNumber": "MWL-B7CD5E41-EF4B-4FC7-8035-37927FF8936C",
+      "dimensions": [
+        "height (mm):322",
+        "width (mm):268",
+        "depth (mm):17"
+      ],
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler, alphabet, 1895."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1965"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Dimension": [
+          "height (mm):322",
+          "width (mm):268",
+          "depth (mm):17"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Date - earliest / single": [
+          "1/1/1895"
+        ],
+        "Date - latest": [
+          "31/12/1895"
+        ],
+        "Object production date": [
+          "1895"
+        ],
+        "Other number": [
+          "65.412",
+          "Micromusée V6 SN:721"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:669390c9-ff3d-324e-8489-d0cc0d05c584",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/669390c9-ff3d-324e-8489-d0cc0d05c584",
+      "date": "1895"
+    }
+  },
+  {
+    "id": "mds:08ba82d7-221a-381e-b240-56464e1a7c0c",
+    "_source": "mds",
+    "_sourceId": "co431055",
+    "_sourceUrl": "https://museumdata.uk/objects/08ba82d7-221a-381e-b240-56464e1a7c0c",
+    "title": "Cryogenic \"freezout\" sampler",
+    "description": "Cryogenic \"freezeout\" sampler, c 1970s, marked \"Occupational Hygiene Department\".",
+    "date": "1970",
+    "subject": [
+      "cryogenic sampler; cryogenic sampler",
+      "cryogenic sampler; cryogenic sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "08ba82d7-221a-381e-b240-56464e1a7c0c",
+      "objectNumber": "co431055",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Cryogenic \"freezout\" sampler"
+        ],
+        "Object name(s)": [
+          "cryogenic sampler; cryogenic sampler"
+        ],
+        "Brief description": [
+          "Cryogenic \"freezeout\" sampler, c 1970s, marked \"Occupational Hygiene Department\"."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Mr. W. Pope"
+        ],
+        "Object name": [
+          "cryogenic sampler; cryogenic sampler"
+        ],
+        "Date - earliest / single": [
+          "1970"
+        ],
+        "Date - latest": [
+          "1979"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1997-1685",
+          "SCM/2002/0208"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Environmental Science & Technology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:08ba82d7-221a-381e-b240-56464e1a7c0c",
+      "title": "Cryogenic \"freezout\" sampler",
+      "url": "https://museumdata.uk/objects/08ba82d7-221a-381e-b240-56464e1a7c0c",
+      "date": "1970"
+    }
+  },
+  {
+    "id": "mds:0dd5e7a1-5b60-3a4e-9145-a3d811a29f42",
+    "_source": "mds",
+    "_sourceId": "SHMMT:",
+    "_sourceUrl": "https://museumdata.uk/objects/0dd5e7a1-5b60-3a4e-9145-a3d811a29f42",
+    "title": "MDS Record 12",
+    "description": "Sampler; school sampler produced by Hannah Grice, in 1884.",
+    "creator": "Hannah Grice,",
+    "date": "1884",
+    "subject": [
+      "sampler; needlework",
+      "sampler; needlework",
+      "Domestic Life",
+      "Hobbies and pastimes",
+      "Textile crafts"
+    ],
+    "type": "Museum object",
+    "collection": "Sheringham Museum",
+    "mds": {
+      "uuid": "0dd5e7a1-5b60-3a4e-9145-a3d811a29f42",
+      "objectNumber": "SHMMT:",
+      "material": [
+        "wool",
+        "scrim"
+      ],
+      "place": [
+        "Upper Sheringham School",
+        "Norfolk",
+        "Upper Sheringham"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "290",
+        "240"
+      ],
+      "numberOfObjects": "1",
+      "inscriptionContent": "Hannah Grice 1884 Sherringham school",
+      "personAssociation": [
+        "maker"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Object name(s)": [
+          "sampler; needlework"
+        ],
+        "Brief description": [
+          "Sampler; school sampler produced by Hannah Grice, in 1884.",
+          "Sampler; school sampler produced by Hannah Grice, in 1884. The school was known then as Sherringham school, so presumably that spelling was still current.",
+          "Worked on coarse scrim in blue and red wool, cross-stitched uppercase alphabet; numerals; lowercase alphabet and Hannah Grice 1884 Sherringham school."
+        ],
+        "Collection": [
+          "Sheringham Museum"
+        ],
+        "Date - earliest / single": [
+          "12.8.2014"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "Domestic Life",
+          "Hobbies and pastimes",
+          "Textile crafts"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "sampler"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "290",
+          "240"
+        ],
+        "Inscription content": [
+          "Hannah Grice 1884 Sherringham school"
+        ],
+        "Material": [
+          "wool",
+          "scrim"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object component name": [
+          "sampler"
+        ],
+        "Object component information": [
+          "wool",
+          "scrim"
+        ],
+        "Object name": [
+          "sampler; needlework"
+        ],
+        "Object number": [
+          "SHMMT: 2014.95.1"
+        ],
+        "Object production date": [
+          "1884"
+        ],
+        "Date - period": [
+          "1890s"
+        ],
+        "Object production note": [
+          "Sampler produced in a school sewing class in 1884"
+        ],
+        "Object production person": [
+          "Hannah Grice,"
+        ],
+        "Person's association": [
+          "maker"
+        ],
+        "Object production place": [
+          "Upper Sheringham School",
+          "Norfolk",
+          "Upper Sheringham"
+        ],
+        "Place status": [
+          "County"
+        ],
+        "Physical description": [
+          "Sampler; school sampler produced by Hannah Grice, in 1884. The school was known then as Sherringham school, so presumably that spelling was still current.",
+          "Worked on coarse scrim in blue and red wool, cross-stitched uppercase alphabet; numerals; lowercase alphabet and Hannah Grice 1884 Sherringham school."
+        ],
+        "Responsible department/section": [
+          "social history"
+        ],
+        "Technique": [
+          "handstitched"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:0dd5e7a1-5b60-3a4e-9145-a3d811a29f42",
+      "title": "MDS Record 12",
+      "url": "https://museumdata.uk/objects/0dd5e7a1-5b60-3a4e-9145-a3d811a29f42",
+      "creator": "Hannah Grice,",
+      "date": "1884"
+    }
+  },
+  {
+    "id": "mds:1c8566ae-0f65-3c96-b30c-19aea065222c",
+    "_source": "mds",
+    "_sourceId": "TRURI",
+    "_sourceUrl": "https://museumdata.uk/objects/1c8566ae-0f65-3c96-b30c-19aea065222c",
+    "title": "MDS Record 13",
+    "description": "sampler with mermaids, alphabet and inscription 'Anne S.Taynred, 1655' and many rows of floral and other decoration in coloured silks; mounted in a wooden frame",
+    "creator": "Taynred, Anne S.",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler",
+      "TEXTILES AND DRESS"
+    ],
+    "type": "Museum object",
+    "collection": "Cornwall Museum and Art Gallery",
+    "mds": {
+      "uuid": "1c8566ae-0f65-3c96-b30c-19aea065222c",
+      "objectNumber": "TRURI",
+      "material": [
+        "fabric"
+      ],
+      "place": [
+        "U.K."
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "1000 mm",
+        "190 mm",
+        "1095 mm",
+        "220 mm",
+        "1,095 mm"
+      ],
+      "personAssociation": [
+        "needlewoman"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "sampler with mermaids, alphabet and inscription 'Anne S.Taynred, 1655' and many rows of floral and other decoration in coloured silks; mounted in a wooden frame"
+        ],
+        "Collection": [
+          "Cornwall Museum and Art Gallery"
+        ],
+        "Acquisition date": [
+          "31.10.1935"
+        ],
+        "Acquisition method": [
+          "bequest"
+        ],
+        "Associated concept": [
+          "TEXTILES AND DRESS"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "sampler",
+          "frame"
+        ],
+        "Dimension value": [
+          "1000 mm",
+          "190 mm",
+          "1095 mm",
+          "220 mm",
+          "1,095 mm"
+        ],
+        "Material": [
+          "fabric"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Object number": [
+          "TRURI : 1935.121.7"
+        ],
+        "Object production person": [
+          "Taynred, Anne S."
+        ],
+        "Person's association": [
+          "needlewoman"
+        ],
+        "Object production place": [
+          "U.K."
+        ],
+        "Technique": [
+          "stitched"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:1c8566ae-0f65-3c96-b30c-19aea065222c",
+      "title": "MDS Record 13",
+      "url": "https://museumdata.uk/objects/1c8566ae-0f65-3c96-b30c-19aea065222c",
+      "creator": "Taynred, Anne S."
+    }
+  },
+  {
+    "id": "mds:681c8576-3391-33fa-9cc3-6b3fbb155d63",
+    "_source": "mds",
+    "_sourceId": "MWL-6A058968-A044-4739-8627-01B18EC38F4F",
+    "_sourceUrl": "https://museumdata.uk/objects/681c8576-3391-33fa-9cc3-6b3fbb155d63",
+    "title": "sampler",
+    "description": "Sampler with decorative panels.",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "681c8576-3391-33fa-9cc3-6b3fbb155d63",
+      "objectNumber": "MWL-6A058968-A044-4739-8627-01B18EC38F4F",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler with decorative panels."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1952"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Other number": [
+          "52.205.12",
+          "Micromusée V6 SN:51705"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:681c8576-3391-33fa-9cc3-6b3fbb155d63",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/681c8576-3391-33fa-9cc3-6b3fbb155d63"
+    }
+  },
+  {
+    "id": "mds:575aff1b-3199-3717-b71f-67c7e0174c9c",
+    "_source": "mds",
+    "_sourceId": "MWL-4A111A36-FDA4-49FB-B5FA-D0BD3AD9BA46",
+    "_sourceUrl": "https://museumdata.uk/objects/575aff1b-3199-3717-b71f-67c7e0174c9c",
+    "title": "sampler",
+    "description": "Sampler with decorative panels.",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "575aff1b-3199-3717-b71f-67c7e0174c9c",
+      "objectNumber": "MWL-4A111A36-FDA4-49FB-B5FA-D0BD3AD9BA46",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler with decorative panels."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1952"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Other number": [
+          "52.205.11",
+          "Micromusée V6 SN:51704"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:575aff1b-3199-3717-b71f-67c7e0174c9c",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/575aff1b-3199-3717-b71f-67c7e0174c9c"
+    }
+  },
+  {
+    "id": "mds:bb1ac68d-92d1-3ba1-8f75-44e57bc67e7e",
+    "_source": "mds",
+    "_sourceId": "co8871841",
+    "_sourceUrl": "https://museumdata.uk/objects/bb1ac68d-92d1-3ba1-8f75-44e57bc67e7e",
+    "title": "MDS Record 16",
+    "description": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+    "creator": "Akai (UK) Ltd",
+    "date": "1988",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "bb1ac68d-92d1-3ba1-8f75-44e57bc67e7e",
+      "objectNumber": "co8871841",
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Date - earliest / single": [
+          "1988"
+        ],
+        "Date - latest": [
+          "1993"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Akai (UK) Ltd"
+        ],
+        "Other number": [
+          "2024-526",
+          "E2022.0035.4"
+        ],
+        "Other number type": [
+          "accession number",
+          "previous number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Sound Technologies"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:bb1ac68d-92d1-3ba1-8f75-44e57bc67e7e",
+      "title": "MDS Record 16",
+      "url": "https://museumdata.uk/objects/bb1ac68d-92d1-3ba1-8f75-44e57bc67e7e",
+      "creator": "Akai (UK) Ltd",
+      "date": "1988"
+    }
+  },
+  {
+    "id": "mds:f3ecd8f9-e11a-3926-9058-4c5e505e9570",
+    "_source": "mds",
+    "_sourceId": "co8871938",
+    "_sourceUrl": "https://museumdata.uk/objects/f3ecd8f9-e11a-3926-9058-4c5e505e9570",
+    "title": "MDS Record 17",
+    "description": "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers.",
+    "creator": "Akai (UK) Ltd",
+    "date": "1988",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "f3ecd8f9-e11a-3926-9058-4c5e505e9570",
+      "objectNumber": "co8871938",
+      "dimensions": [
+        "depth",
+        "height",
+        "weight",
+        "width",
+        "16 3/4",
+        "425",
+        "5 1/4",
+        "133",
+        "9.5",
+        "20.94402",
+        "19",
+        "483"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "Akai S1000 sampler (1 of 2) used by Chris Huggett in the further development of the Akai S-series samplers."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "weight",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm",
+          "kg",
+          "lbs"
+        ],
+        "Dimension value": [
+          "16 3/4",
+          "425",
+          "5 1/4",
+          "133",
+          "9.5",
+          "20.94402",
+          "19",
+          "483"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Date - earliest / single": [
+          "1988"
+        ],
+        "Date - latest": [
+          "1993"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Akai (UK) Ltd"
+        ],
+        "Other number": [
+          "2024-541",
+          "E2022.0035.19"
+        ],
+        "Other number type": [
+          "accession number",
+          "previous number"
+        ],
+        "Responsible department/section": [
+          "NSMM - Sound Technologies"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:f3ecd8f9-e11a-3926-9058-4c5e505e9570",
+      "title": "MDS Record 17",
+      "url": "https://museumdata.uk/objects/f3ecd8f9-e11a-3926-9058-4c5e505e9570",
+      "creator": "Akai (UK) Ltd",
+      "date": "1988"
+    }
+  },
+  {
+    "id": "mds:3438c6a0-3244-3c92-95e0-b0e92a81b469",
+    "_source": "mds",
+    "_sourceId": "co8404931",
+    "_sourceUrl": "https://museumdata.uk/objects/3438c6a0-3244-3c92-95e0-b0e92a81b469",
+    "title": "W Ottway dust sampler",
+    "description": "A. H. Way dust sampler.",
+    "creator": "W Ottway and Company Limited",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "3438c6a0-3244-3c92-95e0-b0e92a81b469",
+      "objectNumber": "co8404931",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "W Ottway dust sampler"
+        ],
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "A. H. Way dust sampler."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Gift of Salford Museum and Art Gallery"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Object production person": [
+          "W Ottway and Company Limited"
+        ],
+        "Other number": [
+          "Y2002.19/T1791",
+          "T2061"
+        ],
+        "Other number type": [
+          "accession number",
+          "Previous number"
+        ],
+        "Responsible department/section": [
+          "SIM - Coal Mining"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:3438c6a0-3244-3c92-95e0-b0e92a81b469",
+      "title": "W Ottway dust sampler",
+      "url": "https://museumdata.uk/objects/3438c6a0-3244-3c92-95e0-b0e92a81b469",
+      "creator": "W Ottway and Company Limited"
+    }
+  },
+  {
+    "id": "mds:69a3acca-7d8b-37ba-b19c-eabc8cb2ffde",
+    "_source": "mds",
+    "_sourceId": "MWL-A8F12701-69E0-4D4F-9736-4ED8A34A2FD2",
+    "_sourceUrl": "https://museumdata.uk/objects/69a3acca-7d8b-37ba-b19c-eabc8cb2ffde",
+    "title": "sampler",
+    "description": "Sampler in memory of Moses Davies.",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "69a3acca-7d8b-37ba-b19c-eabc8cb2ffde",
+      "objectNumber": "MWL-A8F12701-69E0-4D4F-9736-4ED8A34A2FD2",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler in memory of Moses Davies."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1952"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Other number": [
+          "52.205.2",
+          "Micromusée V6 SN:51694"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:69a3acca-7d8b-37ba-b19c-eabc8cb2ffde",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/69a3acca-7d8b-37ba-b19c-eabc8cb2ffde"
+    }
+  },
+  {
+    "id": "mds:a4330852-2c1a-322e-bc3c-e91fa40c3169",
+    "_source": "mds",
+    "_sourceId": "MWL-547CD0FB-3EDE-4220-96A9-7D4E86360211",
+    "_sourceUrl": "https://museumdata.uk/objects/a4330852-2c1a-322e-bc3c-e91fa40c3169",
+    "title": "sampler",
+    "description": "Sampler, alphabet, 1842.",
+    "creator": "Tibbot, Jane Margaret",
+    "date": "1842",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "a4330852-2c1a-322e-bc3c-e91fa40c3169",
+      "objectNumber": "MWL-547CD0FB-3EDE-4220-96A9-7D4E86360211",
+      "dimensions": [
+        "length (mm):240",
+        "width (mm):186"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "maker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler, alphabet, 1842."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1954"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Dimension": [
+          "length (mm):240",
+          "width (mm):186"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Date - earliest / single": [
+          "1/1/1842"
+        ],
+        "Date - latest": [
+          "31/12/1842"
+        ],
+        "Object production date": [
+          "1842"
+        ],
+        "Object production person": [
+          "Tibbot, Jane Margaret"
+        ],
+        "Person's association": [
+          "maker"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "54.172.7",
+          "Micromusée V6 SN:709"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:a4330852-2c1a-322e-bc3c-e91fa40c3169",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/a4330852-2c1a-322e-bc3c-e91fa40c3169",
+      "creator": "Tibbot, Jane Margaret",
+      "date": "1842"
+    }
+  },
+  {
+    "id": "mds:7aa7adcb-c2d9-3dea-ac4c-9f51348d7802",
+    "_source": "mds",
+    "_sourceId": "co8019921",
+    "_sourceUrl": "https://museumdata.uk/objects/7aa7adcb-c2d9-3dea-ac4c-9f51348d7802",
+    "title": "Cannister for vacuum air sampler, 1970-1979",
+    "description": "Cannister from vacuum air sampler, unsigned, 1970-1979",
+    "creator": "Unknown maker",
+    "date": "1970",
+    "subject": [
+      "instrument component; air sampler; instrument component; air sampler",
+      "instrument component; air sampler; instrument component; air sampler",
+      "air sampler",
+      "instrument component"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "7aa7adcb-c2d9-3dea-ac4c-9f51348d7802",
+      "objectNumber": "co8019921",
+      "place": [
+        "Unknown place"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Cannister for vacuum air sampler, 1970-1979"
+        ],
+        "Object name(s)": [
+          "instrument component; air sampler; instrument component; air sampler"
+        ],
+        "Brief description": [
+          "Cannister from vacuum air sampler, unsigned, 1970-1979"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "air sampler",
+          "instrument component"
+        ],
+        "Object name": [
+          "instrument component; air sampler; instrument component; air sampler"
+        ],
+        "Date - earliest / single": [
+          "1970"
+        ],
+        "Date - latest": [
+          "1979"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Object production place": [
+          "Unknown place"
+        ],
+        "Other number": [
+          "1997-1812 Pt1"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Environmental Science & Technology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:7aa7adcb-c2d9-3dea-ac4c-9f51348d7802",
+      "title": "Cannister for vacuum air sampler, 1970-1979",
+      "url": "https://museumdata.uk/objects/7aa7adcb-c2d9-3dea-ac4c-9f51348d7802",
+      "creator": "Unknown maker",
+      "date": "1970"
+    }
+  },
+  {
+    "id": "mds:31e0c152-7adc-3b2e-bf89-cfb779c965fe",
+    "_source": "mds",
+    "_sourceId": "O63509",
+    "_sourceUrl": "https://museumdata.uk/objects/31e0c152-7adc-3b2e-bf89-cfb779c965fe",
+    "title": "the Victoria and Albert Museum, London]. Poster Art Series",
+    "creator": [
+      "MAYOR, Susan and FOWLE, Diana",
+      "Studio Editions Ltd."
+    ],
+    "date": "1990",
+    "subject": [
+      "Book",
+      "Book",
+      "Swametham Collection: samplers",
+      "Samplers: embroidery",
+      "Embroidery: samplers"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "31e0c152-7adc-3b2e-bf89-cfb779c965fe",
+      "objectNumber": "O63509",
+      "place": [
+        "London"
+      ],
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "8",
+        "38"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "the Victoria and Albert Museum, London]. Poster Art Series"
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Swametham Collection: samplers",
+          "Samplers: embroidery",
+          "Embroidery: samplers"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "8",
+          "38"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "L.2005.423"
+        ],
+        "Object production date": [
+          "1990"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production organisation": [
+          "Studio Editions Ltd."
+        ],
+        "Organisation's association": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "MAYOR, Susan and FOWLE, Diana"
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Object production place": [
+          "London"
+        ],
+        "Place association": [
+          "Published"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:31e0c152-7adc-3b2e-bf89-cfb779c965fe",
+      "title": "the Victoria and Albert Museum, London]. Poster Art Series",
+      "url": "https://museumdata.uk/objects/31e0c152-7adc-3b2e-bf89-cfb779c965fe",
+      "creator": [
+        "MAYOR, Susan and FOWLE, Diana",
+        "Studio Editions Ltd."
+      ],
+      "date": "1990"
+    }
+  },
+  {
+    "id": "mds:c63a8b39-c1e6-3235-b27a-d93a500ab6b9",
+    "_source": "mds",
+    "_sourceId": "co148238",
+    "_sourceUrl": "https://museumdata.uk/objects/c63a8b39-c1e6-3235-b27a-d93a500ab6b9",
+    "title": "MSA Electrostatic Sampler",
+    "description": "MSA Electrostatic Sampler, model F, in leather carrying case, from the Occupational Health Department of the London School of Hygiene and Tropical Medicine, by the Mine Safety Appliances Co, Pittsburgh, Pennsylvania, USA, 1960-1980",
+    "subject": [
+      "air sampler; air sampler",
+      "air sampler; air sampler",
+      "air sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "c63a8b39-c1e6-3235-b27a-d93a500ab6b9",
+      "objectNumber": "co148238",
+      "dimensions": [
+        "weight",
+        "17.2",
+        "37.91971"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "MSA Electrostatic Sampler"
+        ],
+        "Object name(s)": [
+          "air sampler; air sampler"
+        ],
+        "Brief description": [
+          "MSA Electrostatic Sampler, model F, in leather carrying case, from the Occupational Health Department of the London School of Hygiene and Tropical Medicine, by the Mine Safety Appliances Co, Pittsburgh, Pennsylvania, USA, 1960-1980"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "air sampler"
+        ],
+        "Credit line": [
+          "London School of Hygiene and Tropical Medicine"
+        ],
+        "Dimension": [
+          "weight"
+        ],
+        "Dimension measurement unit": [
+          "kg",
+          "lbs"
+        ],
+        "Dimension value": [
+          "17.2",
+          "37.91971"
+        ],
+        "Object name": [
+          "air sampler; air sampler"
+        ],
+        "Other number": [
+          "1992-557/22",
+          "ScM1991/0833"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Public Health & Hygiene"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:c63a8b39-c1e6-3235-b27a-d93a500ab6b9",
+      "title": "MSA Electrostatic Sampler",
+      "url": "https://museumdata.uk/objects/c63a8b39-c1e6-3235-b27a-d93a500ab6b9"
+    }
+  },
+  {
+    "id": "mds:ffcd54b3-e9e2-3927-9c7c-95caa933a268",
+    "_source": "mds",
+    "_sourceId": "TRURI",
+    "_sourceUrl": "https://museumdata.uk/objects/ffcd54b3-e9e2-3927-9c7c-95caa933a268",
+    "title": "MDS Record 24",
+    "description": "sampler worked in petit point with floral border, the Lord's Prayer and 'Mary Wyndlow her sampler in the year of our Lord 1717'",
+    "creator": "Wyndlow, Mary",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler",
+      "TEXTILES AND DRESS"
+    ],
+    "type": "Museum object",
+    "collection": "Cornwall Museum and Art Gallery",
+    "mds": {
+      "uuid": "ffcd54b3-e9e2-3927-9c7c-95caa933a268",
+      "objectNumber": "TRURI",
+      "material": [
+        "fabric"
+      ],
+      "place": [
+        "U.K."
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "375 mm",
+        "200 mm"
+      ],
+      "personAssociation": [
+        "needlewoman"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "sampler worked in petit point with floral border, the Lord's Prayer and 'Mary Wyndlow her sampler in the year of our Lord 1717'"
+        ],
+        "Collection": [
+          "Cornwall Museum and Art Gallery"
+        ],
+        "Acquisition date": [
+          "31.10.1935"
+        ],
+        "Acquisition method": [
+          "bequest"
+        ],
+        "Associated concept": [
+          "TEXTILES AND DRESS"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "375 mm",
+          "200 mm"
+        ],
+        "Material": [
+          "fabric"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Object number": [
+          "TRURI : 1935.121.10"
+        ],
+        "Object production person": [
+          "Wyndlow, Mary"
+        ],
+        "Person's association": [
+          "needlewoman"
+        ],
+        "Object production place": [
+          "U.K."
+        ],
+        "Technique": [
+          "stitched"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:ffcd54b3-e9e2-3927-9c7c-95caa933a268",
+      "title": "MDS Record 24",
+      "url": "https://museumdata.uk/objects/ffcd54b3-e9e2-3927-9c7c-95caa933a268",
+      "creator": "Wyndlow, Mary"
+    }
+  },
+  {
+    "id": "mds:72092f55-c603-3685-9b70-256efa3c97d2",
+    "_source": "mds",
+    "_sourceId": "MWL-8D0E9B20-BC34-42BB-B3EB-BA175B2754A2",
+    "_sourceUrl": "https://museumdata.uk/objects/72092f55-c603-3685-9b70-256efa3c97d2",
+    "title": "sampler",
+    "description": "Sampler with inscription.",
+    "creator": "Fielding, Martha",
+    "date": "1824",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "72092f55-c603-3685-9b70-256efa3c97d2",
+      "objectNumber": "MWL-8D0E9B20-BC34-42BB-B3EB-BA175B2754A2",
+      "dimensions": [
+        "length (mm):575",
+        "width (mm):470",
+        "depth (mm):20"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "maker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler with inscription."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1953"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Dimension": [
+          "length (mm):575",
+          "width (mm):470",
+          "depth (mm):20"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Date - earliest / single": [
+          "1/1/1824"
+        ],
+        "Date - latest": [
+          "31/12/1824"
+        ],
+        "Object production date": [
+          "1824"
+        ],
+        "Object production person": [
+          "Fielding, Martha"
+        ],
+        "Person's association": [
+          "maker"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "53.174.1",
+          "Micromusée V6 SN:640"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:72092f55-c603-3685-9b70-256efa3c97d2",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/72092f55-c603-3685-9b70-256efa3c97d2",
+      "creator": "Fielding, Martha",
+      "date": "1824"
+    }
+  },
+  {
+    "id": "mds:904d5a21-2e5a-3a99-a40c-38445dc3ce92",
+    "_source": "mds",
+    "_sourceId": "MWL-4A301EF5-FBDC-4D75-A009-00A39B97E639",
+    "_sourceUrl": "https://museumdata.uk/objects/904d5a21-2e5a-3a99-a40c-38445dc3ce92",
+    "title": "sampler",
+    "description": "Sampler with decorative panels.",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "904d5a21-2e5a-3a99-a40c-38445dc3ce92",
+      "objectNumber": "MWL-4A301EF5-FBDC-4D75-A009-00A39B97E639",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler with decorative panels."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1952"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Other number": [
+          "52.205.10",
+          "Micromusée V6 SN:51703"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "Ownership place": [
+          "Llanfyllin"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:904d5a21-2e5a-3a99-a40c-38445dc3ce92",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/904d5a21-2e5a-3a99-a40c-38445dc3ce92"
+    }
+  },
+  {
+    "id": "mds:ab64d8b7-710c-36b8-8600-9d7c6a94bc0d",
+    "_source": "mds",
+    "_sourceId": "MWL-8B1B0557-A8E6-4186-BB08-4617FB512120",
+    "_sourceUrl": "https://museumdata.uk/objects/ab64d8b7-710c-36b8-8600-9d7c6a94bc0d",
+    "title": "sampler",
+    "description": "Sampler, framed.  Alphabet.",
+    "creator": "Parry, Mary",
+    "date": "1825",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "ab64d8b7-710c-36b8-8600-9d7c6a94bc0d",
+      "objectNumber": "MWL-8B1B0557-A8E6-4186-BB08-4617FB512120",
+      "dimensions": [
+        "height (mm):390",
+        "width (mm):355",
+        "depth (mm):20"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "maker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler, framed.  Alphabet."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1959"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Dimension": [
+          "height (mm):390",
+          "width (mm):355",
+          "depth (mm):20"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Date - earliest / single": [
+          "1/1/1825"
+        ],
+        "Date - latest": [
+          "31/12/1825"
+        ],
+        "Object production date": [
+          "1825"
+        ],
+        "Object production person": [
+          "Parry, Mary"
+        ],
+        "Person's association": [
+          "maker"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "59.176.68",
+          "Micromusée V6 SN:652"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:ab64d8b7-710c-36b8-8600-9d7c6a94bc0d",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/ab64d8b7-710c-36b8-8600-9d7c6a94bc0d",
+      "creator": "Parry, Mary",
+      "date": "1825"
+    }
+  },
+  {
+    "id": "mds:52501adf-608e-3b9b-8026-71aad6ebea57",
+    "_source": "mds",
+    "_sourceId": "co431084",
+    "_sourceUrl": "https://museumdata.uk/objects/52501adf-608e-3b9b-8026-71aad6ebea57",
+    "title": "MSA electrostatic sampler",
+    "description": "MSA electrostatic sampler, Model F, serial no T36, by Mine Safety Appliances Co, Pittsburgh, PA 15208, 1970s.",
+    "date": "1970",
+    "subject": [
+      "electrostatic sampler; electrostatic sampler",
+      "electrostatic sampler; electrostatic sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "52501adf-608e-3b9b-8026-71aad6ebea57",
+      "objectNumber": "co431084",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "MSA electrostatic sampler"
+        ],
+        "Object name(s)": [
+          "electrostatic sampler; electrostatic sampler"
+        ],
+        "Brief description": [
+          "MSA electrostatic sampler, Model F, serial no T36, by Mine Safety Appliances Co, Pittsburgh, PA 15208, 1970s."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Casella Limited"
+        ],
+        "Object name": [
+          "electrostatic sampler; electrostatic sampler"
+        ],
+        "Date - earliest / single": [
+          "1970"
+        ],
+        "Date - latest": [
+          "1979"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1997-1714"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Environmental Science & Technology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:52501adf-608e-3b9b-8026-71aad6ebea57",
+      "title": "MSA electrostatic sampler",
+      "url": "https://museumdata.uk/objects/52501adf-608e-3b9b-8026-71aad6ebea57",
+      "date": "1970"
+    }
+  },
+  {
+    "id": "mds:47bfc13b-9b16-396b-8cdb-42b45bceb597",
+    "_source": "mds",
+    "_sourceId": "co148230",
+    "_sourceUrl": "https://museumdata.uk/objects/47bfc13b-9b16-396b-8cdb-42b45bceb597",
+    "title": "Personal Gravimeric Dust Sampler",
+    "description": "Personal Gravimeric Dust Sampler, model B T13040, from the Occupational Health Department of the London School of Hygiene and Tropical Medicine, by Casella and Co. Ltd, London, England, 1970-1990",
+    "subject": [
+      "air sampler; air sampler",
+      "air sampler; air sampler",
+      "battery",
+      "air sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "47bfc13b-9b16-396b-8cdb-42b45bceb597",
+      "objectNumber": "co148230",
+      "place": [
+        "London"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Personal Gravimeric Dust Sampler"
+        ],
+        "Object name(s)": [
+          "air sampler; air sampler"
+        ],
+        "Brief description": [
+          "Personal Gravimeric Dust Sampler, model B T13040, from the Occupational Health Department of the London School of Hygiene and Tropical Medicine, by Casella and Co. Ltd, London, England, 1970-1990"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Associated concept": [
+          "battery",
+          "air sampler"
+        ],
+        "Credit line": [
+          "London School of Hygiene and Tropical Medicine"
+        ],
+        "Object name": [
+          "air sampler; air sampler"
+        ],
+        "Object production place": [
+          "London"
+        ],
+        "Other number": [
+          "1992-557/14",
+          "ScM1991/0833"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Public Health & Hygiene"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:47bfc13b-9b16-396b-8cdb-42b45bceb597",
+      "title": "Personal Gravimeric Dust Sampler",
+      "url": "https://museumdata.uk/objects/47bfc13b-9b16-396b-8cdb-42b45bceb597"
+    }
+  },
+  {
+    "id": "mds:fb167d99-bf2f-3d44-8c20-d839ecc344fa",
+    "_source": "mds",
+    "_sourceId": "MWL-9FF97DBC-C8AE-4879-A082-B3E09FA4906D",
+    "_sourceUrl": "https://museumdata.uk/objects/fb167d99-bf2f-3d44-8c20-d839ecc344fa",
+    "title": "sampler",
+    "description": "Sampler made in memory of John Osborne Davies",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "fb167d99-bf2f-3d44-8c20-d839ecc344fa",
+      "objectNumber": "MWL-9FF97DBC-C8AE-4879-A082-B3E09FA4906D",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler made in memory of John Osborne Davies"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1952"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Other number": [
+          "52.205.6",
+          "Micromusée V6 SN:51698"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:fb167d99-bf2f-3d44-8c20-d839ecc344fa",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/fb167d99-bf2f-3d44-8c20-d839ecc344fa"
+    }
+  },
+  {
+    "id": "mds:d3eb747d-1dd8-3123-9810-615d1db8f62b",
+    "_source": "mds",
+    "_sourceId": "jersm/2018/00077/002",
+    "_sourceUrl": "https://museumdata.uk/objects/d3eb747d-1dd8-3123-9810-615d1db8f62b",
+    "title": "Motif Sampler, Elizabeth du Feu",
+    "description": "Sampler featuring Adam & Eve scene, as well as various floral motifs, made by Elizabeth du Feu, aged 10, on 8th February 1853. Sampler mounted on two wooden boards, with nails attaching the sampler.",
+    "creator": "Du Feu, Elizabeth",
+    "date": "1853-02-08",
+    "subject": [
+      "Sampler",
+      "Sampler",
+      "Textiles"
+    ],
+    "type": "Museum object",
+    "collection": "Jersey Heritage",
+    "mds": {
+      "uuid": "d3eb747d-1dd8-3123-9810-615d1db8f62b",
+      "objectNumber": "jersm/2018/00077/002",
+      "dimensions": [
+        "Length",
+        "44.5"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Motif Sampler, Elizabeth du Feu"
+        ],
+        "Object name(s)": [
+          "Sampler"
+        ],
+        "Brief description": [
+          "Sampler featuring Adam & Eve scene, as well as various floral motifs, made by Elizabeth du Feu, aged 10, on 8th February 1853. Sampler mounted on two wooden boards, with nails attaching the sampler."
+        ],
+        "Collection": [
+          "Jersey Heritage"
+        ],
+        "Associated concept": [
+          "Textiles"
+        ],
+        "Dimension": [
+          "Length"
+        ],
+        "Dimension measurement unit": [
+          "Cm"
+        ],
+        "Dimension value": [
+          "44.5"
+        ],
+        "Object name": [
+          "Sampler"
+        ],
+        "Object number": [
+          "jersm/2018/00077/002"
+        ],
+        "Date - earliest / single": [
+          "1853-02-08"
+        ],
+        "Object production person": [
+          "Du Feu, Elizabeth"
+        ],
+        "Responsible department/section": [
+          "Textiles"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:d3eb747d-1dd8-3123-9810-615d1db8f62b",
+      "title": "Motif Sampler, Elizabeth du Feu",
+      "url": "https://museumdata.uk/objects/d3eb747d-1dd8-3123-9810-615d1db8f62b",
+      "creator": "Du Feu, Elizabeth",
+      "date": "1853-02-08"
+    }
+  },
+  {
+    "id": "mds:c84dcfaf-9940-3f75-8b59-bb5b9ede3c2e",
+    "_source": "mds",
+    "_sourceId": "MWL-32562560-D99E-4410-B5BA-C5FDE0DDE170",
+    "_sourceUrl": "https://museumdata.uk/objects/c84dcfaf-9940-3f75-8b59-bb5b9ede3c2e",
+    "title": "sampler",
+    "description": "Sampler with inscription, 1831",
+    "creator": "Jones, Mary Ann",
+    "date": "1831",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "c84dcfaf-9940-3f75-8b59-bb5b9ede3c2e",
+      "objectNumber": "MWL-32562560-D99E-4410-B5BA-C5FDE0DDE170",
+      "dimensions": [
+        "length (mm):127",
+        "width (mm):175"
+      ],
+      "numberOfObjects": "1",
+      "personAssociation": [
+        "maker"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler with inscription, 1831"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1948"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Dimension": [
+          "length (mm):127",
+          "width (mm):175"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Date - earliest / single": [
+          "1/1/1831"
+        ],
+        "Date - latest": [
+          "31/12/1831"
+        ],
+        "Object production date": [
+          "1831"
+        ],
+        "Object production person": [
+          "Jones, Mary Ann"
+        ],
+        "Person's association": [
+          "maker"
+        ],
+        "Person's biographical note": [
+          "person"
+        ],
+        "Other number": [
+          "48.118.4",
+          "Micromusée V6 SN:26059"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:c84dcfaf-9940-3f75-8b59-bb5b9ede3c2e",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/c84dcfaf-9940-3f75-8b59-bb5b9ede3c2e",
+      "creator": "Jones, Mary Ann",
+      "date": "1831"
+    }
+  },
+  {
+    "id": "mds:daee70c5-5871-385b-905c-d90635bfa536",
+    "_source": "mds",
+    "_sourceId": "co431059",
+    "_sourceUrl": "https://museumdata.uk/objects/daee70c5-5871-385b-905c-d90635bfa536",
+    "title": "Air sampler hand pump. by Casella",
+    "description": "Air sampler hand pump. by Casella , unsigned, 1970s.",
+    "date": "1970",
+    "subject": [
+      "gas sampler; gas sampler",
+      "gas sampler; gas sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "daee70c5-5871-385b-905c-d90635bfa536",
+      "objectNumber": "co431059",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Air sampler hand pump. by Casella"
+        ],
+        "Object name(s)": [
+          "gas sampler; gas sampler"
+        ],
+        "Brief description": [
+          "Air sampler hand pump. by Casella , unsigned, 1970s."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Mr. W. Pope"
+        ],
+        "Object name": [
+          "gas sampler; gas sampler"
+        ],
+        "Date - earliest / single": [
+          "1970"
+        ],
+        "Date - latest": [
+          "1979"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1997-1689",
+          "SCM/2002/0208"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Environmental Science & Technology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:daee70c5-5871-385b-905c-d90635bfa536",
+      "title": "Air sampler hand pump. by Casella",
+      "url": "https://museumdata.uk/objects/daee70c5-5871-385b-905c-d90635bfa536",
+      "date": "1970"
+    }
+  },
+  {
+    "id": "mds:17c77ea7-37ef-3ad5-bd39-fd6e3cf95ec1",
+    "_source": "mds",
+    "_sourceId": "co53735",
+    "_sourceUrl": "https://museumdata.uk/objects/17c77ea7-37ef-3ad5-bd39-fd6e3cf95ec1",
+    "title": "Bottom sampler",
+    "description": "Bottom sampler, made in Venice, Italy. Marked S082 and NIO S97. Inscribed \"Officina del Magistrato alle Acque, STRA, Venezia\". With cable and messengers",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "17c77ea7-37ef-3ad5-bd39-fd6e3cf95ec1",
+      "objectNumber": "co53735",
+      "place": [
+        "Venice, Venezia province, Veneto, Italy"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Bottom sampler"
+        ],
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "Bottom sampler, made in Venice, Italy. Marked S082 and NIO S97. Inscribed \"Officina del Magistrato alle Acque, STRA, Venezia\". With cable and messengers"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Institute of Oceanographic Sciences, Deacon Laboratories"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Object production place": [
+          "Venice, Venezia province, Veneto, Italy"
+        ],
+        "Other number": [
+          "1990-765"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Oceanography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:17c77ea7-37ef-3ad5-bd39-fd6e3cf95ec1",
+      "title": "Bottom sampler",
+      "url": "https://museumdata.uk/objects/17c77ea7-37ef-3ad5-bd39-fd6e3cf95ec1"
+    }
+  },
+  {
+    "id": "mds:a56c6d93-e011-394c-aa31-0bc4d3ede592",
+    "_source": "mds",
+    "_sourceId": "co8414852",
+    "_sourceUrl": "https://museumdata.uk/objects/a56c6d93-e011-394c-aa31-0bc4d3ede592",
+    "title": "Akai S1000 digital sampler",
+    "description": "Akai professional S1000 midi stereo digital sampler; used by Julia Adamson as part of an electronic music set up",
+    "creator": "Akai Electric Company Limited",
+    "subject": [
+      "digital sampler; digital sampler",
+      "digital sampler; digital sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "a56c6d93-e011-394c-aa31-0bc4d3ede592",
+      "objectNumber": "co8414852",
+      "material": [
+        "plastic",
+        "metal"
+      ],
+      "dimensions": [
+        "depth",
+        "height",
+        "weight",
+        "width",
+        "16 15/16",
+        "430",
+        "5 1/4",
+        "134",
+        "9.95",
+        "21.93611",
+        "19 1/8",
+        "485"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Akai S1000 digital sampler"
+        ],
+        "Object name(s)": [
+          "digital sampler; digital sampler"
+        ],
+        "Brief description": [
+          "Akai professional S1000 midi stereo digital sampler; used by Julia Adamson as part of an electronic music set up"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Dimension": [
+          "depth",
+          "height",
+          "weight",
+          "width"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm",
+          "kg",
+          "lbs"
+        ],
+        "Dimension value": [
+          "16 15/16",
+          "430",
+          "5 1/4",
+          "134",
+          "9.95",
+          "21.93611",
+          "19 1/8",
+          "485"
+        ],
+        "Material": [
+          "plastic",
+          "metal"
+        ],
+        "Object name": [
+          "digital sampler; digital sampler"
+        ],
+        "Object production person": [
+          "Akai Electric Company Limited"
+        ],
+        "Other number": [
+          "Y2010.15.1",
+          "S1000",
+          "A9055-00133"
+        ],
+        "Other number type": [
+          "accession number",
+          "model number",
+          "serial number"
+        ],
+        "Responsible department/section": [
+          "SIM - Creative Industries"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:a56c6d93-e011-394c-aa31-0bc4d3ede592",
+      "title": "Akai S1000 digital sampler",
+      "url": "https://museumdata.uk/objects/a56c6d93-e011-394c-aa31-0bc4d3ede592",
+      "creator": "Akai Electric Company Limited"
+    }
+  },
+  {
+    "id": "mds:c2abb743-9eab-39f7-9739-3d049bd60e69",
+    "_source": "mds",
+    "_sourceId": "SHMMT:",
+    "_sourceUrl": "https://museumdata.uk/objects/c2abb743-9eab-39f7-9739-3d049bd60e69",
+    "title": "MDS Record 36",
+    "description": "Sampler; school sampler produced by Florence Grice, dated March 13, 1891 when she was 9 years old",
+    "creator": "Florence Grice",
+    "date": "1891",
+    "subject": [
+      "sampler; needlework",
+      "sampler; needlework",
+      "Domestic Life",
+      "Hobbies and pastimes",
+      "Textile crafts"
+    ],
+    "type": "Museum object",
+    "collection": "Sheringham Museum",
+    "mds": {
+      "uuid": "c2abb743-9eab-39f7-9739-3d049bd60e69",
+      "objectNumber": "SHMMT:",
+      "material": [
+        "wool",
+        "scrim"
+      ],
+      "place": [
+        "Upper Sheringham School",
+        "Norfolk",
+        "Upper Sheringham"
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "460",
+        "300"
+      ],
+      "numberOfObjects": "1",
+      "inscriptionContent": "'Christ shall give thee light'",
+      "personAssociation": [
+        "maker"
+      ],
+      "licence": "CC 0",
+      "allFields": {
+        "Object name(s)": [
+          "sampler; needlework"
+        ],
+        "Brief description": [
+          "Sampler; school sampler produced by Florence Grice, dated March 13, 1891 when she was 9 years old",
+          "Sampler; school sampler produced by Florence Grice, dated March 13, 1891 when she was 9 years old.",
+          "Coarse scrim fabric, cross stitched blue zigzag border: Uppercase alphabet in pink and blue cross stitch; numerals and lowercase alphabet in orange and red,  green and orange floral 'bud' border; 'Christ shall give thee light', worked in red. Bottom half of the sampler has 'Florence Grice, aged 9 Years, Sheringham School, March 13th 1891. Seperated by symmetrical floral roses and bird motifs."
+        ],
+        "Collection": [
+          "Sheringham Museum"
+        ],
+        "Date - earliest / single": [
+          "12.8.14"
+        ],
+        "Acquisition method": [
+          "gift"
+        ],
+        "Associated concept": [
+          "Domestic Life",
+          "Hobbies and pastimes",
+          "Textile crafts"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension measured part": [
+          "sampler"
+        ],
+        "Dimension measurement unit": [
+          "mm"
+        ],
+        "Dimension value": [
+          "460",
+          "300"
+        ],
+        "Inscription content": [
+          "'Christ shall give thee light'"
+        ],
+        "Material": [
+          "wool",
+          "scrim"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object component name": [
+          "sampler"
+        ],
+        "Object component information": [
+          "wool",
+          "scrim"
+        ],
+        "Object name": [
+          "sampler; needlework"
+        ],
+        "Object number": [
+          "SHMMT: 2014.95.3"
+        ],
+        "Object production date": [
+          "1891"
+        ],
+        "Date - period": [
+          "1890s"
+        ],
+        "Object production note": [
+          "Sampler produced in a school sewing class in 1891"
+        ],
+        "Object production person": [
+          "Florence Grice"
+        ],
+        "Person's association": [
+          "maker"
+        ],
+        "Object production place": [
+          "Upper Sheringham School",
+          "Norfolk",
+          "Upper Sheringham"
+        ],
+        "Place status": [
+          "County"
+        ],
+        "Physical description": [
+          "Sampler; school sampler produced by Florence Grice, dated March 13, 1891 when she was 9 years old.",
+          "Coarse scrim fabric, cross stitched blue zigzag border: Uppercase alphabet in pink and blue cross stitch; numerals and lowercase alphabet in orange and red,  green and orange floral 'bud' border; 'Christ shall give thee light', worked in red. Bottom half of the sampler has 'Florence Grice, aged 9 Years, Sheringham School, March 13th 1891. Seperated by symmetrical floral roses and bird motifs."
+        ],
+        "Responsible department/section": [
+          "social history"
+        ],
+        "Technique": [
+          "handstitched"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:c2abb743-9eab-39f7-9739-3d049bd60e69",
+      "title": "MDS Record 36",
+      "url": "https://museumdata.uk/objects/c2abb743-9eab-39f7-9739-3d049bd60e69",
+      "creator": "Florence Grice",
+      "date": "1891"
+    }
+  },
+  {
+    "id": "mds:93a6a939-a5c3-3eb9-9fc4-4ebac528b753",
+    "_source": "mds",
+    "_sourceId": "TRURI",
+    "_sourceUrl": "https://museumdata.uk/objects/93a6a939-a5c3-3eb9-9fc4-4ebac528b753",
+    "title": "MDS Record 37",
+    "description": "sampler in a wooden frame and glazed, closely worked with lines of aphorisms and alphabets and 'Ann Vayn, 8 years old. She made her Sampler in November the year of Our Lord 1720'",
+    "creator": "Vayn, Ann",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler",
+      "TEXTILES AND DRESS"
+    ],
+    "type": "Museum object",
+    "collection": "Cornwall Museum and Art Gallery",
+    "mds": {
+      "uuid": "93a6a939-a5c3-3eb9-9fc4-4ebac528b753",
+      "objectNumber": "TRURI",
+      "material": [
+        "fabric"
+      ],
+      "place": [
+        "U.K."
+      ],
+      "dimensions": [
+        "height",
+        "width",
+        "450 mm",
+        "228 mm"
+      ],
+      "personAssociation": [
+        "needlewoman"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "sampler in a wooden frame and glazed, closely worked with lines of aphorisms and alphabets and 'Ann Vayn, 8 years old. She made her Sampler in November the year of Our Lord 1720'"
+        ],
+        "Collection": [
+          "Cornwall Museum and Art Gallery"
+        ],
+        "Acquisition date": [
+          "31.10.1935"
+        ],
+        "Acquisition method": [
+          "bequest"
+        ],
+        "Associated concept": [
+          "TEXTILES AND DRESS"
+        ],
+        "Completeness": [
+          "complete"
+        ],
+        "Dimension": [
+          "height",
+          "width"
+        ],
+        "Dimension value": [
+          "450 mm",
+          "228 mm"
+        ],
+        "Material": [
+          "fabric"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Object number": [
+          "TRURI : 1935.121.11"
+        ],
+        "Object production person": [
+          "Vayn, Ann"
+        ],
+        "Person's association": [
+          "needlewoman"
+        ],
+        "Object production place": [
+          "U.K."
+        ],
+        "Technique": [
+          "stitched"
+        ],
+        "Text": [
+          "this sampler is interesting in that its shape and general style form a connecting link between the long samplers of the 17th and the squarer ones of the 18th centuries"
+        ],
+        "Text reason": [
+          "Brief description notes"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:93a6a939-a5c3-3eb9-9fc4-4ebac528b753",
+      "title": "MDS Record 37",
+      "url": "https://museumdata.uk/objects/93a6a939-a5c3-3eb9-9fc4-4ebac528b753",
+      "creator": "Vayn, Ann"
+    }
+  },
+  {
+    "id": "mds:93fd0088-243a-3c1c-ab72-e3063d4c6af3",
+    "_source": "mds",
+    "_sourceId": "42/1924",
+    "_sourceUrl": "https://museumdata.uk/objects/93fd0088-243a-3c1c-ab72-e3063d4c6af3",
+    "title": "MDS Record 38",
+    "description": "Sampler",
+    "subject": [
+      "sampler",
+      "sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Bradford District Museums and Galleries",
+    "mds": {
+      "uuid": "93fd0088-243a-3c1c-ab72-e3063d4c6af3",
+      "objectNumber": "42/1924",
+      "material": [
+        "textile"
+      ],
+      "condition": "?",
+      "dimensions": [
+        "height",
+        "width",
+        "depth"
+      ],
+      "objectHistory": "Sampler",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Object name(s)": [
+          "sampler"
+        ],
+        "Brief description": [
+          "Sampler"
+        ],
+        "Collection": [
+          "Bradford District Museums and Galleries"
+        ],
+        "Acquisition method": [
+          "purchase"
+        ],
+        "Condition": [
+          "?"
+        ],
+        "Dimension": [
+          "height",
+          "width",
+          "depth"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Material": [
+          "textile"
+        ],
+        "Object history note": [
+          "Sampler"
+        ],
+        "Object name": [
+          "sampler"
+        ],
+        "Object number": [
+          "42/1924"
+        ],
+        "Other number": [
+          "shic:2.8312"
+        ],
+        "Other number type": [
+          "SHIC"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:93fd0088-243a-3c1c-ab72-e3063d4c6af3",
+      "title": "MDS Record 38",
+      "url": "https://museumdata.uk/objects/93fd0088-243a-3c1c-ab72-e3063d4c6af3"
+    }
+  },
+  {
+    "id": "mds:e93b6d4d-934f-30c9-ac65-1297fd89682e",
+    "_source": "mds",
+    "_sourceId": "MWL-3F94DE8C-2DAB-441F-BD4B-FD3FA7AA08DD",
+    "_sourceUrl": "https://museumdata.uk/objects/e93b6d4d-934f-30c9-ac65-1297fd89682e",
+    "title": "sampler",
+    "description": "Sampler in memory of Moses Davies.",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "e93b6d4d-934f-30c9-ac65-1297fd89682e",
+      "objectNumber": "MWL-3F94DE8C-2DAB-441F-BD4B-FD3FA7AA08DD",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler in memory of Moses Davies."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1952"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Other number": [
+          "52.205.1",
+          "Micromusée V6 SN:51696"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ],
+        "Ownership place": [
+          "Llanfyllin"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:e93b6d4d-934f-30c9-ac65-1297fd89682e",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/e93b6d4d-934f-30c9-ac65-1297fd89682e"
+    }
+  },
+  {
+    "id": "mds:06471a75-eb86-3ae4-b320-897e8fa46a76",
+    "_source": "mds",
+    "_sourceId": "MWL-B16DAB6C-5F93-4074-9C59-BEECDE18350E",
+    "_sourceUrl": "https://museumdata.uk/objects/06471a75-eb86-3ae4-b320-897e8fa46a76",
+    "title": "sampler",
+    "description": "Sampler made in memory of John Osborne Davies",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "06471a75-eb86-3ae4-b320-897e8fa46a76",
+      "objectNumber": "MWL-B16DAB6C-5F93-4074-9C59-BEECDE18350E",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler made in memory of John Osborne Davies"
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1952"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Other number": [
+          "52.205.5",
+          "Micromusée V6 SN:51697"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:06471a75-eb86-3ae4-b320-897e8fa46a76",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/06471a75-eb86-3ae4-b320-897e8fa46a76"
+    }
+  },
+  {
+    "id": "mds:9624d46e-e2ca-37fe-986b-6517e7b3e743",
+    "_source": "mds",
+    "_sourceId": "MWL-C54A2605-04A3-4EE5-8E0D-777AB1E1BF68",
+    "_sourceUrl": "https://museumdata.uk/objects/9624d46e-e2ca-37fe-986b-6517e7b3e743",
+    "title": "sampler",
+    "description": "Sampler made in memory of John Osborne Davies.",
+    "subject": [
+      "sampler; EMBROIDERY",
+      "sampler; EMBROIDERY"
+    ],
+    "type": "Museum object",
+    "collection": "Amgueddfa Cymru - Museum Wales",
+    "mds": {
+      "uuid": "9624d46e-e2ca-37fe-986b-6517e7b3e743",
+      "objectNumber": "MWL-C54A2605-04A3-4EE5-8E0D-777AB1E1BF68",
+      "numberOfObjects": "1",
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "sampler"
+        ],
+        "Object name(s)": [
+          "sampler; EMBROIDERY"
+        ],
+        "Brief description": [
+          "Sampler made in memory of John Osborne Davies."
+        ],
+        "Collection": [
+          "Amgueddfa Cymru - Museum Wales"
+        ],
+        "Acquisition date": [
+          "1952"
+        ],
+        "Acquisition method": [
+          "Donation"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler; EMBROIDERY"
+        ],
+        "Other number": [
+          "52.205.4",
+          "Micromusée V6 SN:51702"
+        ],
+        "Other number type": [
+          "accession number",
+          "other"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:9624d46e-e2ca-37fe-986b-6517e7b3e743",
+      "title": "sampler",
+      "url": "https://museumdata.uk/objects/9624d46e-e2ca-37fe-986b-6517e7b3e743"
+    }
+  },
+  {
+    "id": "mds:691f9f66-1afd-39c6-9488-994674f900a6",
+    "_source": "mds",
+    "_sourceId": "co53738",
+    "_sourceUrl": "https://museumdata.uk/objects/691f9f66-1afd-39c6-9488-994674f900a6",
+    "title": "Water sampler by Max Marx",
+    "description": "Water sampler by Max Marx, Berlin. Numbered 152 by maker, S.88 by NIO, 130 on thermometer case",
+    "creator": "Max Marx (maker)",
+    "subject": [
+      "sampler; sampler",
+      "sampler; sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "691f9f66-1afd-39c6-9488-994674f900a6",
+      "objectNumber": "co53738",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Water sampler by Max Marx"
+        ],
+        "Object name(s)": [
+          "sampler; sampler"
+        ],
+        "Brief description": [
+          "Water sampler by Max Marx, Berlin. Numbered 152 by maker, S.88 by NIO, 130 on thermometer case"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Institute of Oceanographic Sciences, Deacon Laboratories"
+        ],
+        "Object name": [
+          "sampler; sampler"
+        ],
+        "Object production person": [
+          "Max Marx (maker)"
+        ],
+        "Other number": [
+          "1990-768"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Oceanography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:691f9f66-1afd-39c6-9488-994674f900a6",
+      "title": "Water sampler by Max Marx",
+      "url": "https://museumdata.uk/objects/691f9f66-1afd-39c6-9488-994674f900a6",
+      "creator": "Max Marx (maker)"
+    }
+  },
+  {
+    "id": "mds:47a2774a-48f5-3e71-bffb-5cc4268d8039",
+    "_source": "mds",
+    "_sourceId": "co431954",
+    "_sourceUrl": "https://museumdata.uk/objects/47a2774a-48f5-3e71-bffb-5cc4268d8039",
+    "title": "Vacuum Sampler, 1971-1980",
+    "description": "Vacuum sampler (resembling white spray can), unsigned, British, 1971-1980.",
+    "creator": "Unknown maker",
+    "date": "1971",
+    "subject": [
+      "air sampler; air sampler",
+      "air sampler; air sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "47a2774a-48f5-3e71-bffb-5cc4268d8039",
+      "objectNumber": "co431954",
+      "material": [
+        "steel (metal)"
+      ],
+      "place": [
+        "United Kingdom"
+      ],
+      "dimensions": [
+        "diameter",
+        "height",
+        "weight",
+        "2 1/16",
+        "53",
+        "7 1/2",
+        "190",
+        "0.075",
+        "0.16535"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Vacuum Sampler, 1971-1980"
+        ],
+        "Object name(s)": [
+          "air sampler; air sampler"
+        ],
+        "Brief description": [
+          "Vacuum sampler (resembling white spray can), unsigned, British, 1971-1980."
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Transport Research Laboratories Limited"
+        ],
+        "Dimension": [
+          "diameter",
+          "height",
+          "weight"
+        ],
+        "Dimension measurement unit": [
+          "in",
+          "mm",
+          "kg",
+          "lbs"
+        ],
+        "Dimension value": [
+          "2 1/16",
+          "53",
+          "7 1/2",
+          "190",
+          "0.075",
+          "0.16535"
+        ],
+        "Material": [
+          "steel (metal)"
+        ],
+        "Object name": [
+          "air sampler; air sampler"
+        ],
+        "Date - earliest / single": [
+          "1971"
+        ],
+        "Date - latest": [
+          "1980"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "Unknown maker"
+        ],
+        "Object production place": [
+          "United Kingdom"
+        ],
+        "Other number": [
+          "1997-1812"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Environmental Science & Technology"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:47a2774a-48f5-3e71-bffb-5cc4268d8039",
+      "title": "Vacuum Sampler, 1971-1980",
+      "url": "https://museumdata.uk/objects/47a2774a-48f5-3e71-bffb-5cc4268d8039",
+      "creator": "Unknown maker",
+      "date": "1971"
+    }
+  },
+  {
+    "id": "mds:921a1bde-fa05-3ca6-a8e1-51c104024c11",
+    "_source": "mds",
+    "_sourceId": "co53741",
+    "_sourceUrl": "https://museumdata.uk/objects/921a1bde-fa05-3ca6-a8e1-51c104024c11",
+    "title": "Surface water samplers",
+    "description": "Surface water samplers, three, by R.W. Munro of London, 1960s",
+    "creator": "R W Munro Limited",
+    "date": "1960",
+    "subject": [
+      "water samplers; water samplers",
+      "water samplers; water samplers"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "921a1bde-fa05-3ca6-a8e1-51c104024c11",
+      "objectNumber": "co53741",
+      "place": [
+        "London, Greater London, England, United Kingdom"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Surface water samplers"
+        ],
+        "Object name(s)": [
+          "water samplers; water samplers"
+        ],
+        "Brief description": [
+          "Surface water samplers, three, by R.W. Munro of London, 1960s"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Institute of Oceanographic Sciences, Deacon Laboratories"
+        ],
+        "Object name": [
+          "water samplers; water samplers"
+        ],
+        "Date - earliest / single": [
+          "1960"
+        ],
+        "Date - latest": [
+          "1969"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Object production person": [
+          "R W Munro Limited"
+        ],
+        "Object production place": [
+          "London, Greater London, England, United Kingdom"
+        ],
+        "Other number": [
+          "1990-771"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Oceanography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:921a1bde-fa05-3ca6-a8e1-51c104024c11",
+      "title": "Surface water samplers",
+      "url": "https://museumdata.uk/objects/921a1bde-fa05-3ca6-a8e1-51c104024c11",
+      "creator": "R W Munro Limited",
+      "date": "1960"
+    }
+  },
+  {
+    "id": "mds:7b42d8e2-67ac-34e9-aeb3-5a41162a5af6",
+    "_source": "mds",
+    "_sourceId": "co53747",
+    "_sourceUrl": "https://museumdata.uk/objects/7b42d8e2-67ac-34e9-aeb3-5a41162a5af6",
+    "title": "Surface water sampler c1954. NIO number S90",
+    "description": "Surface water sampler c1954. NIO number S90",
+    "date": "1954",
+    "subject": [
+      "water sampler; water sampler",
+      "water sampler; water sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "7b42d8e2-67ac-34e9-aeb3-5a41162a5af6",
+      "objectNumber": "co53747",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Surface water sampler c1954. NIO number S90"
+        ],
+        "Object name(s)": [
+          "water sampler; water sampler"
+        ],
+        "Brief description": [
+          "Surface water sampler c1954. NIO number S90"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Institute of Oceanographic Sciences, Deacon Laboratories"
+        ],
+        "Object name": [
+          "water sampler; water sampler"
+        ],
+        "Date - earliest / single": [
+          "1954"
+        ],
+        "Date - latest": [
+          "1954"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1990-777"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Oceanography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:7b42d8e2-67ac-34e9-aeb3-5a41162a5af6",
+      "title": "Surface water sampler c1954. NIO number S90",
+      "url": "https://museumdata.uk/objects/7b42d8e2-67ac-34e9-aeb3-5a41162a5af6",
+      "date": "1954"
+    }
+  },
+  {
+    "id": "mds:3802e829-6609-3542-be94-4e72c0012720",
+    "_source": "mds",
+    "_sourceId": "co53746",
+    "_sourceUrl": "https://museumdata.uk/objects/3802e829-6609-3542-be94-4e72c0012720",
+    "title": "Surface water sampler c1954. NIO number S89",
+    "description": "Surface water sampler c1954. NIO number S89",
+    "date": "1954",
+    "subject": [
+      "water sampler; water sampler",
+      "water sampler; water sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "3802e829-6609-3542-be94-4e72c0012720",
+      "objectNumber": "co53746",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Surface water sampler c1954. NIO number S89"
+        ],
+        "Object name(s)": [
+          "water sampler; water sampler"
+        ],
+        "Brief description": [
+          "Surface water sampler c1954. NIO number S89"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Institute of Oceanographic Sciences, Deacon Laboratories"
+        ],
+        "Object name": [
+          "water sampler; water sampler"
+        ],
+        "Date - earliest / single": [
+          "1954"
+        ],
+        "Date - latest": [
+          "1954"
+        ],
+        "Date - association": [
+          "made"
+        ],
+        "Other number": [
+          "1990-776"
+        ],
+        "Other number type": [
+          "accession number"
+        ],
+        "Responsible department/section": [
+          "SCM - Oceanography"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:3802e829-6609-3542-be94-4e72c0012720",
+      "title": "Surface water sampler c1954. NIO number S89",
+      "url": "https://museumdata.uk/objects/3802e829-6609-3542-be94-4e72c0012720",
+      "date": "1954"
+    }
+  },
+  {
+    "id": "mds:8a52b972-d420-303e-8a5b-c65af8f470b3",
+    "_source": "mds",
+    "_sourceId": "co14619",
+    "_sourceUrl": "https://museumdata.uk/objects/8a52b972-d420-303e-8a5b-c65af8f470b3",
+    "title": "Hewlett-Packard automatic sampler",
+    "description": "Hewlett-Packard automatic sampler, model 7670A, serial no.19150097, made in USA",
+    "creator": "Hewlett-Packard",
+    "subject": [
+      "automatic sampler; automatic sampler",
+      "automatic sampler; automatic sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Science Museum Group",
+    "mds": {
+      "uuid": "8a52b972-d420-303e-8a5b-c65af8f470b3",
+      "objectNumber": "co14619",
+      "place": [
+        "United States"
+      ],
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Hewlett-Packard automatic sampler"
+        ],
+        "Object name(s)": [
+          "automatic sampler; automatic sampler"
+        ],
+        "Brief description": [
+          "Hewlett-Packard automatic sampler, model 7670A, serial no.19150097, made in USA"
+        ],
+        "Collection": [
+          "Science Museum Group"
+        ],
+        "Credit line": [
+          "Roche Products Limited, Roche Research Centre"
+        ],
+        "Object name": [
+          "automatic sampler; automatic sampler"
+        ],
+        "Object production person": [
+          "Hewlett-Packard"
+        ],
+        "Object production place": [
+          "United States"
+        ],
+        "Other number": [
+          "1993-556",
+          "ScM1992/0473"
+        ],
+        "Other number type": [
+          "accession number",
+          "file number"
+        ],
+        "Responsible department/section": [
+          "SCM - Experimental Chemistry"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:8a52b972-d420-303e-8a5b-c65af8f470b3",
+      "title": "Hewlett-Packard automatic sampler",
+      "url": "https://museumdata.uk/objects/8a52b972-d420-303e-8a5b-c65af8f470b3",
+      "creator": "Hewlett-Packard"
+    }
+  },
+  {
+    "id": "mds:43e53a6d-5c22-39cc-a11b-a7316f318e25",
+    "_source": "mds",
+    "_sourceId": "SKIPM",
+    "_sourceUrl": "https://museumdata.uk/objects/43e53a6d-5c22-39cc-a11b-a7316f318e25",
+    "title": "Sampler",
+    "description": "Sampler worked by Jane Clough 1817. A-Z sampler in lower and higher case including numbers 1-0 with a love heart at the end of the row. The colours which are present within the sampler are red, orange,pale green,lavander blue and pastel pink. The sampler is finished off with the name of which the sampler was made by and the date in which it was made.",
+    "date": "1817",
+    "subject": [
+      "sampler",
+      "sampler",
+      "pictorial representation"
+    ],
+    "type": "Museum object",
+    "collection": "Craven Museum",
+    "mds": {
+      "uuid": "43e53a6d-5c22-39cc-a11b-a7316f318e25",
+      "objectNumber": "SKIPM",
+      "numberOfObjects": "1",
+      "licence": "CC BY",
+      "allFields": {
+        "Title": [
+          "Sampler"
+        ],
+        "Object name(s)": [
+          "sampler"
+        ],
+        "Brief description": [
+          "Sampler worked by Jane Clough 1817. A-Z sampler in lower and higher case including numbers 1-0 with a love heart at the end of the row. The colours which are present within the sampler are red, orange,pale green,lavander blue and pastel pink. The sampler is finished off with the name of which the sampler was made by and the date in which it was made."
+        ],
+        "Collection": [
+          "Craven Museum"
+        ],
+        "Associated concept": [
+          "pictorial representation"
+        ],
+        "Credit line": [
+          "This collection is part of North Yorkshire Council Museums."
+        ],
+        "Current reproduction location": [
+          "Objects\\G37.JPG"
+        ],
+        "Number of objects": [
+          "1"
+        ],
+        "Object name": [
+          "sampler"
+        ],
+        "Object number": [
+          "SKIPM : G37"
+        ],
+        "Object production date": [
+          "1817"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:43e53a6d-5c22-39cc-a11b-a7316f318e25",
+      "title": "Sampler",
+      "url": "https://museumdata.uk/objects/43e53a6d-5c22-39cc-a11b-a7316f318e25",
+      "date": "1817"
+    }
+  },
+  {
+    "id": "mds:2ce2cb8b-0a2d-30ad-b7e6-294f2e09ba5d",
+    "_source": "mds",
+    "_sourceId": "O64820",
+    "_sourceUrl": "https://museumdata.uk/objects/2ce2cb8b-0a2d-30ad-b7e6-294f2e09ba5d",
+    "title": "Goodhart samplers, The.",
+    "creator": [
+      "PHELAN, Dorothy Bromiley et al",
+      "Needleprint"
+    ],
+    "date": "2008",
+    "subject": [
+      "Book",
+      "Book",
+      "Samplers: Collections",
+      "Embroidery: Samplers",
+      "Needle Work: Samplers"
+    ],
+    "type": "Museum object",
+    "collection": "Dorset Museum & Art Gallery",
+    "mds": {
+      "uuid": "2ce2cb8b-0a2d-30ad-b7e6-294f2e09ba5d",
+      "objectNumber": "O64820",
+      "dimensions": [
+        "Number of pages",
+        "Height",
+        "264",
+        "31"
+      ],
+      "personAssociation": [
+        "Author"
+      ],
+      "licence": "CC BY-NC",
+      "allFields": {
+        "Title": [
+          "Goodhart samplers, The."
+        ],
+        "Object name(s)": [
+          "Book"
+        ],
+        "Collection": [
+          "Dorset Museum & Art Gallery"
+        ],
+        "Associated concept": [
+          "Samplers: Collections",
+          "Embroidery: Samplers",
+          "Needle Work: Samplers"
+        ],
+        "Dimension": [
+          "Number of pages",
+          "Height"
+        ],
+        "Dimension measurement unit": [
+          "cm"
+        ],
+        "Dimension value": [
+          "264",
+          "31"
+        ],
+        "Object name": [
+          "Book"
+        ],
+        "Object number": [
+          "L.2009.1"
+        ],
+        "Object production date": [
+          "2008"
+        ],
+        "Date - text": [
+          "Published"
+        ],
+        "Object production organisation": [
+          "Needleprint"
+        ],
+        "Organisation's association": [
+          "Publisher"
+        ],
+        "Object production person": [
+          "PHELAN, Dorothy Bromiley et al"
+        ],
+        "Person's association": [
+          "Author"
+        ],
+        "Responsible department/section": [
+          "Library"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:2ce2cb8b-0a2d-30ad-b7e6-294f2e09ba5d",
+      "title": "Goodhart samplers, The.",
+      "url": "https://museumdata.uk/objects/2ce2cb8b-0a2d-30ad-b7e6-294f2e09ba5d",
+      "creator": [
+        "PHELAN, Dorothy Bromiley et al",
+        "Needleprint"
+      ],
+      "date": "2008"
+    }
+  },
+  {
+    "id": "mds:5eac4fa7-2b49-3c58-9f87-468d05f6a58b",
+    "_source": "mds",
+    "_sourceId": "JERSM/1994/01089",
+    "_sourceUrl": "https://museumdata.uk/objects/5eac4fa7-2b49-3c58-9f87-468d05f6a58b",
+    "title": "Random Motif Sampler",
+    "description": "Unfinished sampler worked in cross stitch with coloured woolsConsists of large motifs of stylised flowers, with a 2 storey house in the centre",
+    "creator": "Unknown",
+    "date": "1800",
+    "subject": [
+      "Sampler",
+      "Sampler",
+      "Sampler"
+    ],
+    "type": "Museum object",
+    "collection": "Jersey Heritage",
+    "mds": {
+      "uuid": "5eac4fa7-2b49-3c58-9f87-468d05f6a58b",
+      "objectNumber": "JERSM/1994/01089",
+      "licence": "CC 0",
+      "allFields": {
+        "Title": [
+          "Random Motif Sampler"
+        ],
+        "Object name(s)": [
+          "Sampler"
+        ],
+        "Brief description": [
+          "Unfinished sampler worked in cross stitch with coloured woolsConsists of large motifs of stylised flowers, with a 2 storey house in the centre"
+        ],
+        "Collection": [
+          "Jersey Heritage"
+        ],
+        "Associated concept": [
+          "Sampler"
+        ],
+        "Object name": [
+          "Sampler"
+        ],
+        "Object number": [
+          "JERSM/1994/01089"
+        ],
+        "Date - earliest / single": [
+          "1800"
+        ],
+        "Date - latest": [
+          "1899"
+        ],
+        "Object production person": [
+          "Unknown"
+        ],
+        "Responsible department/section": [
+          "Social history"
+        ]
+      }
+    },
+    "_citation": {
+      "service": "MDS",
+      "serviceUrl": "https://museumdata.uk",
+      "publisher": "Museum Data Service",
+      "accessDate": "2026-06-12T17:52:07.114Z",
+      "query": "sampler",
+      "recordId": "mds:5eac4fa7-2b49-3c58-9f87-468d05f6a58b",
+      "title": "Random Motif Sampler",
+      "url": "https://museumdata.uk/objects/5eac4fa7-2b49-3c58-9f87-468d05f6a58b",
+      "creator": "Unknown",
+      "date": "1800"
+    }
+  }
+]

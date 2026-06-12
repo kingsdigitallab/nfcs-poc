@@ -1,0 +1,3010 @@
+[
+  {
+    "id": "hsds:914405",
+    "_source": "hsds",
+    "_sourceId": "914405",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/908896247826852ede830749c88ec8ea31334fa0a4d196133d8f2fb523e76564",
+    "title": "Radiocarbon date, Sample number UB-2572",
+    "description": "Charcoal from construction backfill over capstones of souterrain passage, with sherds of souterrain ware at Marshes Upper, Site 3, Dundalk, Co Louth, Ireland. Comment (subm): Both dates give only general indication for site (lack of stratified in-situ deposits) but correspond with E-ware dating of mid 6th to early 9thcentury.<br>Souterrain A on Site 3",
+    "creator": "M Gowen",
+    "date": "1998-12-01",
+    "subject": [
+      "7b souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.978756,
+    "decimalLongitude": -6.378049,
+    "hsds": {
+      "elasticId": "908896247826852ede830749c88ec8ea31334fa0a4d196133d8f2fb523e76564",
+      "originalId": "914405",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.978756,
+            "lon": -6.378049
+          },
+          "centroid": {
+            "lat": 53.978756,
+            "lon": -6.378049
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-2572",
+        "Depositor ID: UB-2572"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:914405",
+      "title": "Radiocarbon date, Sample number UB-2572",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/908896247826852ede830749c88ec8ea31334fa0a4d196133d8f2fb523e76564",
+      "creator": "M Gowen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914406",
+    "_source": "hsds",
+    "_sourceId": "914406",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/034518fd3106020dee2050124fe6a6a24bea05eb03b581d6724c6be4629431d5",
+    "title": "Radiocarbon date, Sample number UB-2573",
+    "description": "Charcoal assoc with souterrain ware, below 3 layers of secondary backfill [? text not clear but poss. also assoc with bronze stick pin and bone comb in souterrain entrance blocking] at Marshes Upper, Site 4, Dundalk, Co Louth, Ireland. Comment (subm): Both dates give only general indication for site (lack of stratified in-situ deposits) but correspond with E-ware dating of mid 6th to early 9th century.<br>Souterrain B on Site 4",
+    "creator": "M Gowen",
+    "date": "1998-12-01",
+    "subject": [
+      "7b souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.978756,
+    "decimalLongitude": -6.378049,
+    "hsds": {
+      "elasticId": "034518fd3106020dee2050124fe6a6a24bea05eb03b581d6724c6be4629431d5",
+      "originalId": "914406",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.978756,
+            "lon": -6.378049
+          },
+          "centroid": {
+            "lat": 53.978756,
+            "lon": -6.378049
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-2573",
+        "Depositor ID: UB-2573"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:914406",
+      "title": "Radiocarbon date, Sample number UB-2573",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/034518fd3106020dee2050124fe6a6a24bea05eb03b581d6724c6be4629431d5",
+      "creator": "M Gowen",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912109",
+    "_source": "hsds",
+    "_sourceId": "912109",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/906f46fb15ffaf296a7723e07f4d221ada3a59a7d23cefa68b2b2a62a7be6fd0",
+    "title": "Radiocarbon date, Sample number UB-2204",
+    "description": "Burnt oak from souterrain chamber at Balrenny, Slane, County Meath, Ireland.<br>",
+    "creator": "G Eogan, J Bradley",
+    "date": "1998-12-01",
+    "subject": [
+      "7b souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 53.73245,
+    "decimalLongitude": -6.510309,
+    "hsds": {
+      "elasticId": "906f46fb15ffaf296a7723e07f4d221ada3a59a7d23cefa68b2b2a62a7be6fd0",
+      "originalId": "912109",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 53.73245,
+            "lon": -6.510309
+          },
+          "centroid": {
+            "lat": 53.73245,
+            "lon": -6.510309
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-2204",
+        "Depositor ID: UB-2204"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:912109",
+      "title": "Radiocarbon date, Sample number UB-2204",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/906f46fb15ffaf296a7723e07f4d221ada3a59a7d23cefa68b2b2a62a7be6fd0",
+      "creator": "G Eogan, J Bradley",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915136",
+    "_source": "hsds",
+    "_sourceId": "915136",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/0095c0c4a3386b674523347ecacb4a81b5b697619ed797873fd2fe7eafc8dad0",
+    "title": "Radiocarbon date, Sample number D-66",
+    "description": "Charcoal assoc with souterrain ware at Antiville, Larne, Antrim, N Ireland.<br>",
+    "creator": "D Waterman",
+    "date": "1998-12-01",
+    "subject": [
+      "7b settlement with souterrain ware",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.857998,
+    "decimalLongitude": -5.83206,
+    "hsds": {
+      "elasticId": "0095c0c4a3386b674523347ecacb4a81b5b697619ed797873fd2fe7eafc8dad0",
+      "originalId": "915136",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.857998,
+            "lon": -5.83206
+          },
+          "centroid": {
+            "lat": 54.857998,
+            "lon": -5.83206
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b settlement with souterrain ware",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20SETTLEMENT%20WITH%20SOUTERRAIN%20WARE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-66",
+        "Depositor ID: D-66"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915136",
+      "title": "Radiocarbon date, Sample number D-66",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/0095c0c4a3386b674523347ecacb4a81b5b697619ed797873fd2fe7eafc8dad0",
+      "creator": "D Waterman",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915137",
+    "_source": "hsds",
+    "_sourceId": "915137",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e7bfd01dff3cc00c9d15bce3c9790393c901a3565e38209659909cb1c1d17de2",
+    "title": "Radiocarbon date, Sample number UB-589",
+    "description": "Charcoal assoc with souterrain ware at Antiville, Larne, Antrim, N Ireland.<br>",
+    "creator": "D Waterman",
+    "date": "1998-12-01",
+    "subject": [
+      "7b settlement with souterrain ware",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.857998,
+    "decimalLongitude": -5.83206,
+    "hsds": {
+      "elasticId": "e7bfd01dff3cc00c9d15bce3c9790393c901a3565e38209659909cb1c1d17de2",
+      "originalId": "915137",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.857998,
+            "lon": -5.83206
+          },
+          "centroid": {
+            "lat": 54.857998,
+            "lon": -5.83206
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b settlement with souterrain ware",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20SETTLEMENT%20WITH%20SOUTERRAIN%20WARE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-589",
+        "Depositor ID: UB-589"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915137",
+      "title": "Radiocarbon date, Sample number UB-589",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e7bfd01dff3cc00c9d15bce3c9790393c901a3565e38209659909cb1c1d17de2",
+      "creator": "D Waterman",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919817",
+    "_source": "hsds",
+    "_sourceId": "919817",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/309ee1eb96b47ffe161866bd6e334f84d7ec80339c7d10af3a298fdce3e4ce96",
+    "title": "Radiocarbon date, Sample number OxA-2203",
+    "description": "Charcoal, E:235:SS 205, from construction trench of souterrain within ringfort at Liscahane, Co Cork, Ireland. Subm B O'Donnabhain 1989. Comment (subm): Date is Early Christian, though a little earlier than expected for souterrain; and does not reflect any contamination from EBA activity shown by urn sherds in trench fill.<br>",
+    "creator": "B O'Donnabhain (Univ Chicago Dept Anthropol)",
+    "date": "1998-12-01",
+    "subject": [
+      "7b souterrain in ringfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.057889,
+    "decimalLongitude": -9.049842,
+    "hsds": {
+      "elasticId": "309ee1eb96b47ffe161866bd6e334f84d7ec80339c7d10af3a298fdce3e4ce96",
+      "originalId": "919817",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.057889,
+            "lon": -9.049842
+          },
+          "centroid": {
+            "lat": 52.057889,
+            "lon": -9.049842
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b souterrain in ringfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20SOUTERRAIN%20IN%20RINGFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-OXA-2203-2",
+        "Depositor ID: OxA-2203"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:919817",
+      "title": "Radiocarbon date, Sample number OxA-2203",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/309ee1eb96b47ffe161866bd6e334f84d7ec80339c7d10af3a298fdce3e4ce96",
+      "creator": "B O'Donnabhain (Univ Chicago Dept Anthropol)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915040",
+    "_source": "hsds",
+    "_sourceId": "915040",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/5968c111fbb97710f04444a77359438121f885fbf1d6af2af52b57e0f9c68c6c",
+    "title": "Radiocarbon date, Sample number GU-1021",
+    "description": "Charcoal from below floor of souterrain chamber at Newmill, Bankfoot, Perthshire, Scotland. Coll T Watkins.<br>",
+    "creator": "T Watkins",
+    "date": "1998-12-01",
+    "subject": [
+      "5e settlement and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.4749,
+    "decimalLongitude": -3.487202,
+    "hsds": {
+      "elasticId": "5968c111fbb97710f04444a77359438121f885fbf1d6af2af52b57e0f9c68c6c",
+      "originalId": "915040",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          },
+          "centroid": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5e settlement and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5E%20SETTLEMENT%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1021",
+        "Depositor ID: GU-1021"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915040",
+      "title": "Radiocarbon date, Sample number GU-1021",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/5968c111fbb97710f04444a77359438121f885fbf1d6af2af52b57e0f9c68c6c",
+      "creator": "T Watkins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915130",
+    "_source": "hsds",
+    "_sourceId": "915130",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9bbfcb6a7048d7bb3f507187b1f7b1929ecad1e87623d9e2f20f976907b7bfdc",
+    "title": "Radiocarbon date, Sample number U-244",
+    "description": "Charcoal from hearth above souterrain at Raheennamadra, Limerick, Ireland. [Ed:compare U-245 result.]<br>",
+    "creator": "M Stenberger",
+    "date": "1998-12-01",
+    "subject": [
+      "7b ringfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.42038,
+    "decimalLongitude": -8.391026,
+    "hsds": {
+      "elasticId": "9bbfcb6a7048d7bb3f507187b1f7b1929ecad1e87623d9e2f20f976907b7bfdc",
+      "originalId": "915130",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          },
+          "centroid": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b ringfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20RINGFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-U-244",
+        "Depositor ID: U-244"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915130",
+      "title": "Radiocarbon date, Sample number U-244",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9bbfcb6a7048d7bb3f507187b1f7b1929ecad1e87623d9e2f20f976907b7bfdc",
+      "creator": "M Stenberger",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915134",
+    "_source": "hsds",
+    "_sourceId": "915134",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b1773a2a9760716d509cc317f71f8e590147c84e42b56e09f2c935516554edad",
+    "title": "Radiocarbon date, Sample number U-242",
+    "description": "Wood from post supporting souterrain roof at Raheennamadra, Limerick, Ireland. [Ed: compare U-243 result.]<br>",
+    "creator": "M Stenberger",
+    "date": "1998-12-01",
+    "subject": [
+      "7b ringfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.42038,
+    "decimalLongitude": -8.391026,
+    "hsds": {
+      "elasticId": "b1773a2a9760716d509cc317f71f8e590147c84e42b56e09f2c935516554edad",
+      "originalId": "915134",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          },
+          "centroid": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b ringfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20RINGFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-U-242",
+        "Depositor ID: U-242"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915134",
+      "title": "Radiocarbon date, Sample number U-242",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b1773a2a9760716d509cc317f71f8e590147c84e42b56e09f2c935516554edad",
+      "creator": "M Stenberger",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915140",
+    "_source": "hsds",
+    "_sourceId": "915140",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/5d6a8ce410ffeb42bf85baafbb7c801bb4189f4395d85673811960fc87870228",
+    "title": "Radiocarbon date, Sample number D-65",
+    "description": "Charcoal from house site in cashel, with souterrain ware at White Fort, Drumaroad, Down, N Ireland.<br>",
+    "creator": "D Waterman",
+    "date": "1998-12-01",
+    "subject": [
+      "7b cashel",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.326342,
+    "decimalLongitude": -5.901638,
+    "hsds": {
+      "elasticId": "5d6a8ce410ffeb42bf85baafbb7c801bb4189f4395d85673811960fc87870228",
+      "originalId": "915140",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.326342,
+            "lon": -5.901638
+          },
+          "centroid": {
+            "lat": 54.326342,
+            "lon": -5.901638
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b cashel",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20CASHEL"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-D-65",
+        "Depositor ID: D-65"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915140",
+      "title": "Radiocarbon date, Sample number D-65",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/5d6a8ce410ffeb42bf85baafbb7c801bb4189f4395d85673811960fc87870228",
+      "creator": "D Waterman",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915135",
+    "_source": "hsds",
+    "_sourceId": "915135",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/96e53c8ebf962c7cb4032b76d75ae7753476b70e4d47b7f6f6eae93e4b04835d",
+    "title": "Radiocarbon date, Sample number U-246",
+    "description": "Charcoal from hearth in east end of souterrain at Raheennamadra, Limerick, Ireland. [Ed: compare U-247 result.]<br>",
+    "creator": "M Stenberger",
+    "date": "1998-12-01",
+    "subject": [
+      "7b ringfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.42038,
+    "decimalLongitude": -8.391026,
+    "hsds": {
+      "elasticId": "96e53c8ebf962c7cb4032b76d75ae7753476b70e4d47b7f6f6eae93e4b04835d",
+      "originalId": "915135",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          },
+          "centroid": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b ringfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20RINGFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-U-246",
+        "Depositor ID: U-246"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915135",
+      "title": "Radiocarbon date, Sample number U-246",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/96e53c8ebf962c7cb4032b76d75ae7753476b70e4d47b7f6f6eae93e4b04835d",
+      "creator": "M Stenberger",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915132",
+    "_source": "hsds",
+    "_sourceId": "915132",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/a82126c5931de9d0042e0c82daaff383ec84c1ebfbe3d9e7ed0b4c37cf5d2492",
+    "title": "Radiocarbon date, Sample number U-240",
+    "description": "Wood and charcoal from roof support of souterrain at Raheennamadra, Limerick, Ireland. [Ed: compare U-241 result.]<br>",
+    "creator": "M Stenberger",
+    "date": "1998-12-01",
+    "subject": [
+      "7b ringfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.42038,
+    "decimalLongitude": -8.391026,
+    "hsds": {
+      "elasticId": "a82126c5931de9d0042e0c82daaff383ec84c1ebfbe3d9e7ed0b4c37cf5d2492",
+      "originalId": "915132",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          },
+          "centroid": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b ringfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20RINGFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-U-240",
+        "Depositor ID: U-240"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915132",
+      "title": "Radiocarbon date, Sample number U-240",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/a82126c5931de9d0042e0c82daaff383ec84c1ebfbe3d9e7ed0b4c37cf5d2492",
+      "creator": "M Stenberger",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:914949",
+    "_source": "hsds",
+    "_sourceId": "914949",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/c6035a568013b160f0f96f78bc71b42f588e6400f971bbb2f4e00dce657673f9",
+    "title": "Radiocarbon date, Sample number UB-2623",
+    "description": "Wood, burnt planking from souterrain-like feature (context 10) at Killyliss Rath, near Fintona, Tyrone, Ireland. Coll R Ivens.<br>",
+    "creator": "Richard Ivens",
+    "date": "1998-12-01",
+    "subject": [
+      "7b rath",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.494729,
+    "decimalLongitude": -7.354829,
+    "hsds": {
+      "elasticId": "c6035a568013b160f0f96f78bc71b42f588e6400f971bbb2f4e00dce657673f9",
+      "originalId": "914949",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.494729,
+            "lon": -7.354829
+          },
+          "centroid": {
+            "lat": 54.494729,
+            "lon": -7.354829
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b rath",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20RATH"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-2623",
+        "Depositor ID: UB-2623"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:914949",
+      "title": "Radiocarbon date, Sample number UB-2623",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/c6035a568013b160f0f96f78bc71b42f588e6400f971bbb2f4e00dce657673f9",
+      "creator": "Richard Ivens",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915131",
+    "_source": "hsds",
+    "_sourceId": "915131",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/24d886a7a4296e967517d23062c08982cba549822ae48075446ab4460f5af9f5",
+    "title": "Radiocarbon date, Sample number U-245",
+    "description": "Charcoal, from hearth above souterrain at Raheennamadra, Limerick, Ireland. Comment (lab): same sample as U-244 but given further pretreatment.<br>",
+    "creator": "M Stenberger",
+    "date": "1998-12-01",
+    "subject": [
+      "7b ringfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.42038,
+    "decimalLongitude": -8.391026,
+    "hsds": {
+      "elasticId": "24d886a7a4296e967517d23062c08982cba549822ae48075446ab4460f5af9f5",
+      "originalId": "915131",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          },
+          "centroid": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b ringfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20RINGFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-U-245",
+        "Depositor ID: U-245"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915131",
+      "title": "Radiocarbon date, Sample number U-245",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/24d886a7a4296e967517d23062c08982cba549822ae48075446ab4460f5af9f5",
+      "creator": "M Stenberger",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:920168",
+    "_source": "hsds",
+    "_sourceId": "920168",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/fae20801cd9690dccd4da3268570c5d99fdf250eac1a293e3e44009341fe6466",
+    "title": "Radiocarbon date, Sample number UB-2525",
+    "description": "Wood, id as charred branch, from infill of souterrain at Rathmullan, Co Down, Ireland. Comment (lab): is high precision date.<br>",
+    "creator": "C J Lynn",
+    "date": "1998-12-01",
+    "subject": [
+      "7b rath and motte",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.263038,
+    "decimalLongitude": -5.731383,
+    "hsds": {
+      "elasticId": "fae20801cd9690dccd4da3268570c5d99fdf250eac1a293e3e44009341fe6466",
+      "originalId": "920168",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.263038,
+            "lon": -5.731383
+          },
+          "centroid": {
+            "lat": 54.263038,
+            "lon": -5.731383
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b rath and motte",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20RATH%20AND%20MOTTE"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-2525",
+        "Depositor ID: UB-2525"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:920168",
+      "title": "Radiocarbon date, Sample number UB-2525",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/fae20801cd9690dccd4da3268570c5d99fdf250eac1a293e3e44009341fe6466",
+      "creator": "C J Lynn",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915133",
+    "_source": "hsds",
+    "_sourceId": "915133",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/8f8b626ecd8a5647c977f28f395413549ecf4ae0def010a01559e50243c9d337",
+    "title": "Radiocarbon date, Sample number U-243",
+    "description": "Wood from post supporting souterrain root at Raheennamadra, Limerick, Ireland. Comment (lab): same sample as U-242 but given further pretreatment.<br>",
+    "creator": "M Stenberger",
+    "date": "1998-12-01",
+    "subject": [
+      "7b ringfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.42038,
+    "decimalLongitude": -8.391026,
+    "hsds": {
+      "elasticId": "8f8b626ecd8a5647c977f28f395413549ecf4ae0def010a01559e50243c9d337",
+      "originalId": "915133",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          },
+          "centroid": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b ringfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20RINGFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-U-243",
+        "Depositor ID: U-243"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915133",
+      "title": "Radiocarbon date, Sample number U-243",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/8f8b626ecd8a5647c977f28f395413549ecf4ae0def010a01559e50243c9d337",
+      "creator": "M Stenberger",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915129",
+    "_source": "hsds",
+    "_sourceId": "915129",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/927f9c9f9463a11531d44662bc558ce5ccaa0d483b137cae47972f617b7391fe",
+    "title": "Radiocarbon date, Sample number U-247",
+    "description": "Charcoal, from hearth in east end of souterrain at Raheennamadra, Limerick, Ireland. Comment (lab): same sample as U-246 but given further pretreatment.<br>",
+    "creator": "M Stenberger",
+    "date": "1998-12-01",
+    "subject": [
+      "7b ringfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.42038,
+    "decimalLongitude": -8.391026,
+    "hsds": {
+      "elasticId": "927f9c9f9463a11531d44662bc558ce5ccaa0d483b137cae47972f617b7391fe",
+      "originalId": "915129",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          },
+          "centroid": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b ringfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20RINGFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-U-247",
+        "Depositor ID: U-247"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915129",
+      "title": "Radiocarbon date, Sample number U-247",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/927f9c9f9463a11531d44662bc558ce5ccaa0d483b137cae47972f617b7391fe",
+      "creator": "M Stenberger",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915128",
+    "_source": "hsds",
+    "_sourceId": "915128",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/8ac0515c145f98cd69f8cd2d9497132bf27c2ada785fed792199b21a50904cee",
+    "title": "Radiocarbon date, Sample number U-241",
+    "description": "Wood and charcoal from roof support of souterrain at Raheennamadra, Limerick, Ireland. Comment (lab): same sample as UB-240 but given further pre-treatment.<br>",
+    "creator": "M Stenberger",
+    "date": "1998-12-01",
+    "subject": [
+      "7b ringfort",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Ireland",
+    "decimalLatitude": 52.42038,
+    "decimalLongitude": -8.391026,
+    "hsds": {
+      "elasticId": "8ac0515c145f98cd69f8cd2d9497132bf27c2ada785fed792199b21a50904cee",
+      "originalId": "915128",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          },
+          "centroid": {
+            "lat": 52.42038,
+            "lon": -8.391026
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q27",
+          "name": "Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b ringfort",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20RINGFORT"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-U-241",
+        "Depositor ID: U-241"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915128",
+      "title": "Radiocarbon date, Sample number U-241",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/8ac0515c145f98cd69f8cd2d9497132bf27c2ada785fed792199b21a50904cee",
+      "creator": "M Stenberger",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919510",
+    "_source": "hsds",
+    "_sourceId": "919510",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/3241a3b6725be7de751b3cba99f81292016fe13fafc8b3eb8a6c21c6a6d402c1",
+    "title": "Radiocarbon date, Sample number UB-3603",
+    "description": "Charcoal from lower ditch fill, context 30, of main curvilinear ditch at Ballyrea, Navan, Co Armagh, Ireland. Comment (subm): date accords well with the souterrain ware from the ditch fill and bronze brooches of 9th century from the neighbourhood of Navan Fort.<br>",
+    "creator": "Norman Crothers",
+    "date": "1998-12-01",
+    "subject": [
+      "7b occupation",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Northern Ireland",
+    "decimalLatitude": 54.34668,
+    "decimalLongitude": -6.708121,
+    "hsds": {
+      "elasticId": "3241a3b6725be7de751b3cba99f81292016fe13fafc8b3eb8a6c21c6a6d402c1",
+      "originalId": "919510",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 54.34668,
+            "lon": -6.708121
+          },
+          "centroid": {
+            "lat": 54.34668,
+            "lon": -6.708121
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q26",
+          "name": "Northern Ireland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "7b occupation",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/7B%20OCCUPATION"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-UB-3603",
+        "Depositor ID: UB-3603"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:919510",
+      "title": "Radiocarbon date, Sample number UB-3603",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/3241a3b6725be7de751b3cba99f81292016fe13fafc8b3eb8a6c21c6a6d402c1",
+      "creator": "Norman Crothers",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912007",
+    "_source": "hsds",
+    "_sourceId": "912007",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/04614c300701e567b275d939f4938da9210c25f575aa2b475b8a83186ca925ce",
+    "title": "Radiocarbon date, Sample number GU-1022",
+    "description": "Charcoal from under entrance ramp at Newmill, Auchtergaven Parish, Perthshire, Scotland.<br>",
+    "creator": "T Watkins",
+    "date": "1998-12-01",
+    "subject": [
+      "5d souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.4749,
+    "decimalLongitude": -3.487202,
+    "hsds": {
+      "elasticId": "04614c300701e567b275d939f4938da9210c25f575aa2b475b8a83186ca925ce",
+      "originalId": "912007",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          },
+          "centroid": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5d souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5D%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1022-2",
+        "Depositor ID: GU-1022"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:912007",
+      "title": "Radiocarbon date, Sample number GU-1022",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/04614c300701e567b275d939f4938da9210c25f575aa2b475b8a83186ca925ce",
+      "creator": "T Watkins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:912008",
+    "_source": "hsds",
+    "_sourceId": "912008",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/3405fdaad79e14b4d3a7088f13b6683b2a81cdbfdd68af54dfcbe13e6eac0a35",
+    "title": "Radiocarbon date, Sample number GU-1019",
+    "description": "Charcoal from fire part-way through filling of chamber at Newmill, AuchtergavenParish, Perthshire, Scotland.<br>",
+    "creator": "T Watkins",
+    "date": "1998-12-01",
+    "subject": [
+      "5d souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.4749,
+    "decimalLongitude": -3.487202,
+    "hsds": {
+      "elasticId": "3405fdaad79e14b4d3a7088f13b6683b2a81cdbfdd68af54dfcbe13e6eac0a35",
+      "originalId": "912008",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          },
+          "centroid": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5d souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5D%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1019-2",
+        "Depositor ID: GU-1019"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:912008",
+      "title": "Radiocarbon date, Sample number GU-1019",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/3405fdaad79e14b4d3a7088f13b6683b2a81cdbfdd68af54dfcbe13e6eac0a35",
+      "creator": "T Watkins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915038",
+    "_source": "hsds",
+    "_sourceId": "915038",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/36d014cd4c5f9278d0594f89429ce0dd2e4425625e14d35daa1201b94126c8e0",
+    "title": "Radiocarbon date, Sample number GU-1023",
+    "description": "Black soil with charcoal fragments from ramp of axial entrance at Newmill, Bankfoot, Perthshire, Scotland. Coll T Watkins.<br>",
+    "creator": "T Watkins",
+    "date": "1998-12-01",
+    "subject": [
+      "5e settlement and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.4749,
+    "decimalLongitude": -3.487202,
+    "hsds": {
+      "elasticId": "36d014cd4c5f9278d0594f89429ce0dd2e4425625e14d35daa1201b94126c8e0",
+      "originalId": "915038",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          },
+          "centroid": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5e settlement and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5E%20SETTLEMENT%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1023",
+        "Depositor ID: GU-1023"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915038",
+      "title": "Radiocarbon date, Sample number GU-1023",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/36d014cd4c5f9278d0594f89429ce0dd2e4425625e14d35daa1201b94126c8e0",
+      "creator": "T Watkins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915039",
+    "_source": "hsds",
+    "_sourceId": "915039",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/37bd1451dde4621b0aaaf44d81a82cd2f63ba8f9aa9ba1b3eb12bf1f74aafec3",
+    "title": "Radiocarbon date, Sample number GU-1022",
+    "description": "Charcoal from below ramp of axial entrance at Newmill, Bankfoot, Perthshire, Scotland. Coll T Watkins.<br>",
+    "creator": "Council for British Archaeology (CBA)",
+    "date": "1998-12-01",
+    "subject": [
+      "5e settlement and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.4749,
+    "decimalLongitude": -3.487202,
+    "hsds": {
+      "elasticId": "37bd1451dde4621b0aaaf44d81a82cd2f63ba8f9aa9ba1b3eb12bf1f74aafec3",
+      "originalId": "915039",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          },
+          "centroid": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5e settlement and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5E%20SETTLEMENT%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1022-1",
+        "Depositor ID: GU-1022"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915039",
+      "title": "Radiocarbon date, Sample number GU-1022",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/37bd1451dde4621b0aaaf44d81a82cd2f63ba8f9aa9ba1b3eb12bf1f74aafec3",
+      "creator": "Council for British Archaeology (CBA)",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915041",
+    "_source": "hsds",
+    "_sourceId": "915041",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/1b10eba0fb89fafd53a1699593510a748aba5f1336d10e15475fd291ec057a58",
+    "title": "Radiocarbon date, Sample number GU-1020",
+    "description": "Charcoal from post packing at Newmill, Bankfoot, Perthshire, Scotland. Coll T Watkins.<br>",
+    "creator": "T Watkins",
+    "date": "1998-12-01",
+    "subject": [
+      "5e settlement and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.4749,
+    "decimalLongitude": -3.487202,
+    "hsds": {
+      "elasticId": "1b10eba0fb89fafd53a1699593510a748aba5f1336d10e15475fd291ec057a58",
+      "originalId": "915041",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          },
+          "centroid": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5e settlement and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5E%20SETTLEMENT%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1020",
+        "Depositor ID: GU-1020"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915041",
+      "title": "Radiocarbon date, Sample number GU-1020",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/1b10eba0fb89fafd53a1699593510a748aba5f1336d10e15475fd291ec057a58",
+      "creator": "T Watkins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915045",
+    "_source": "hsds",
+    "_sourceId": "915045",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/184af84e8182d37de8e87e8c4816bd15b50d8f3d966fe6aac796dadbdb0f8740",
+    "title": "Radiocarbon date, Sample number GU-1025",
+    "description": "Charcoal from post-packing at Newmill, Bankfoot, Perthshire, Scotland. Coll T Watkins.<br>",
+    "creator": "T Watkins",
+    "date": "1998-12-01",
+    "subject": [
+      "5e settlement and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.4749,
+    "decimalLongitude": -3.487202,
+    "hsds": {
+      "elasticId": "184af84e8182d37de8e87e8c4816bd15b50d8f3d966fe6aac796dadbdb0f8740",
+      "originalId": "915045",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          },
+          "centroid": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5e settlement and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5E%20SETTLEMENT%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1025",
+        "Depositor ID: GU-1025"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915045",
+      "title": "Radiocarbon date, Sample number GU-1025",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/184af84e8182d37de8e87e8c4816bd15b50d8f3d966fe6aac796dadbdb0f8740",
+      "creator": "T Watkins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915046",
+    "_source": "hsds",
+    "_sourceId": "915046",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/2a0b8be14a0ff08282ba163371f1e275811a22d08d31bf268148c2ccb8ebb947",
+    "title": "Radiocarbon date, Sample number GU-1024",
+    "description": "Charcoal from post-packing at Newmill, Bankfoot, Perthshire, Scotland. Coll T Watkins.<br>",
+    "creator": "T Watkins",
+    "date": "1998-12-01",
+    "subject": [
+      "5e settlement and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.4749,
+    "decimalLongitude": -3.487202,
+    "hsds": {
+      "elasticId": "2a0b8be14a0ff08282ba163371f1e275811a22d08d31bf268148c2ccb8ebb947",
+      "originalId": "915046",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          },
+          "centroid": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5e settlement and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5E%20SETTLEMENT%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1024",
+        "Depositor ID: GU-1024"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915046",
+      "title": "Radiocarbon date, Sample number GU-1024",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/2a0b8be14a0ff08282ba163371f1e275811a22d08d31bf268148c2ccb8ebb947",
+      "creator": "T Watkins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915047",
+    "_source": "hsds",
+    "_sourceId": "915047",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/95546dba51a57725802a370bc34dd3001a82fd017fd628942b79af4c079b1588",
+    "title": "Radiocarbon date, Sample number GU-1019",
+    "description": "Charcoal from chamber fill at Newmill, Bankfoot, Perthshire, Scotland. Coll T Watkins.<br>",
+    "creator": "T Watkins",
+    "date": "1998-12-01",
+    "subject": [
+      "5e settlement and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.4749,
+    "decimalLongitude": -3.487202,
+    "hsds": {
+      "elasticId": "95546dba51a57725802a370bc34dd3001a82fd017fd628942b79af4c079b1588",
+      "originalId": "915047",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          },
+          "centroid": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5e settlement and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5E%20SETTLEMENT%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1019-1",
+        "Depositor ID: GU-1019"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915047",
+      "title": "Radiocarbon date, Sample number GU-1019",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/95546dba51a57725802a370bc34dd3001a82fd017fd628942b79af4c079b1588",
+      "creator": "T Watkins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:915048",
+    "_source": "hsds",
+    "_sourceId": "915048",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/15be46768e705212a18ba2d807099359e461bbb42d9758ac4a36985b548a66b5",
+    "title": "Radiocarbon date, Sample number GU-1018",
+    "description": "Charcoal from fire-pit at Newmill, Bankfoot, Perthshire, Scotland. Coll T Watkins.<br>",
+    "creator": "T Watkins",
+    "date": "1998-12-01",
+    "subject": [
+      "5e settlement and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 56.4749,
+    "decimalLongitude": -3.487202,
+    "hsds": {
+      "elasticId": "15be46768e705212a18ba2d807099359e461bbb42d9758ac4a36985b548a66b5",
+      "originalId": "915048",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          },
+          "centroid": {
+            "lat": 56.4749,
+            "lon": -3.487202
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5e settlement and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5E%20SETTLEMENT%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-1018",
+        "Depositor ID: GU-1018"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:915048",
+      "title": "Radiocarbon date, Sample number GU-1018",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/15be46768e705212a18ba2d807099359e461bbb42d9758ac4a36985b548a66b5",
+      "creator": "T Watkins",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919646",
+    "_source": "hsds",
+    "_sourceId": "919646",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/821a7e45c3e0404bf0b4668b2e89b1b56c524504cc372cecf9fa0c9208dbdbb3",
+    "title": "Radiocarbon date, Sample number GU-2650",
+    "description": "Carbonised wood, id as oak post, in situ in posthole 343 of round house at Cyderhall Farm, Dornoch, Highland, Scotland. [Ed: Cal range given.]<br>",
+    "creator": "Robert W Pollock",
+    "date": "1998-12-01",
+    "subject": [
+      "5b occupation -- round house and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.866992,
+    "decimalLongitude": -4.102277,
+    "hsds": {
+      "elasticId": "821a7e45c3e0404bf0b4668b2e89b1b56c524504cc372cecf9fa0c9208dbdbb3",
+      "originalId": "919646",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.866992,
+            "lon": -4.102277
+          },
+          "centroid": {
+            "lat": 57.866992,
+            "lon": -4.102277
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5b occupation -- round house and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5B%20OCCUPATION%20--%20ROUND%20HOUSE%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-2650",
+        "Depositor ID: GU-2650"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:919646",
+      "title": "Radiocarbon date, Sample number GU-2650",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/821a7e45c3e0404bf0b4668b2e89b1b56c524504cc372cecf9fa0c9208dbdbb3",
+      "creator": "Robert W Pollock",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919647",
+    "_source": "hsds",
+    "_sourceId": "919647",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/9da90d7763f04e3d0f168cbc6736572c1014789c3bcdcb79e58fa37c86c192a5",
+    "title": "Radiocarbon date, Sample number GU-2631",
+    "description": "Carbonised wood, from destruction layer 350 of round house (Phase 1) at Cyderhall Farm, Dornoch, Highland, Scotland. [Ed: Cal range given.]<br>",
+    "creator": "Robert W Pollock",
+    "date": "1998-12-01",
+    "subject": [
+      "5b occupation -- round house and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.866992,
+    "decimalLongitude": -4.102277,
+    "hsds": {
+      "elasticId": "9da90d7763f04e3d0f168cbc6736572c1014789c3bcdcb79e58fa37c86c192a5",
+      "originalId": "919647",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.866992,
+            "lon": -4.102277
+          },
+          "centroid": {
+            "lat": 57.866992,
+            "lon": -4.102277
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5b occupation -- round house and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5B%20OCCUPATION%20--%20ROUND%20HOUSE%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-2631",
+        "Depositor ID: GU-2631"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:919647",
+      "title": "Radiocarbon date, Sample number GU-2631",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/9da90d7763f04e3d0f168cbc6736572c1014789c3bcdcb79e58fa37c86c192a5",
+      "creator": "Robert W Pollock",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919648",
+    "_source": "hsds",
+    "_sourceId": "919648",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/b95d474d6cb7b947238a2e3fdfc8d92057e4352c58569e75a8665623ba68b353",
+    "title": "Radiocarbon date, Sample number GU-2630",
+    "description": "Carbonised wood, from destruction layer 329 (collapsed roof timbers?) of Phase 2 round house at Cyderhall Farm, Dornoch, Highland, Scotland. [Ed: Cal range given. Also, text and 14C appendix are discrepant, this taken from appendix.]<br>",
+    "creator": "Robert W Pollock",
+    "date": "1998-12-01",
+    "subject": [
+      "5b occupation -- round house and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.866992,
+    "decimalLongitude": -4.102277,
+    "hsds": {
+      "elasticId": "b95d474d6cb7b947238a2e3fdfc8d92057e4352c58569e75a8665623ba68b353",
+      "originalId": "919648",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.866992,
+            "lon": -4.102277
+          },
+          "centroid": {
+            "lat": 57.866992,
+            "lon": -4.102277
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5b occupation -- round house and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5B%20OCCUPATION%20--%20ROUND%20HOUSE%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-2630",
+        "Depositor ID: GU-2630"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:919648",
+      "title": "Radiocarbon date, Sample number GU-2630",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/b95d474d6cb7b947238a2e3fdfc8d92057e4352c58569e75a8665623ba68b353",
+      "creator": "Robert W Pollock",
+      "date": "1998-12-01"
+    }
+  },
+  {
+    "id": "hsds:919649",
+    "_source": "hsds",
+    "_sourceId": "919649",
+    "_sourceUrl": "https://hsds.ac.uk/data-catalogue/resource/e094ed0ae26d62a9de10f191340b88695143a1712424bfdded81c4b0c8553980",
+    "title": "Radiocarbon date, Sample number GU-2633",
+    "description": "Carbonised grain, id as barley (Hordeum vulgare), from pit fill 200 of grain pit at Cyderhall Farm, Dornoch, Highland, Scotland. Comment (subm): is statistically equivalent to destruction of round house Phase 1 [GU-2631]. [Ed: Cal range given.]<br>",
+    "creator": "Robert W Pollock",
+    "date": "1998-12-01",
+    "subject": [
+      "5b occupation -- round house and souterrain",
+      "heritage science"
+    ],
+    "language": "en",
+    "type": "provided record",
+    "format": "Structured Data",
+    "spatialCoverage": "Name not provided",
+    "country": "Scotland",
+    "decimalLatitude": 57.866992,
+    "decimalLongitude": -4.102277,
+    "hsds": {
+      "elasticId": "e094ed0ae26d62a9de10f191340b88695143a1712424bfdded81c4b0c8553980",
+      "originalId": "919649",
+      "modified": "2012-12-07",
+      "contributor": [
+        "Council for British Archaeology"
+      ],
+      "publisherName": "Archaeology Data Service",
+      "allSpatial": [
+        {
+          "placeName": "Name not provided",
+          "geopoint": {
+            "lat": 57.866992,
+            "lon": -4.102277
+          },
+          "centroid": {
+            "lat": 57.866992,
+            "lon": -4.102277
+          }
+        }
+      ],
+      "allPlaceNames": [
+        "Name not provided"
+      ],
+      "temporal": [],
+      "country": [
+        {
+          "id": "http://www.wikidata.org/entity/Q22",
+          "name": "Scotland"
+        }
+      ],
+      "nativeSubject": [
+        {
+          "prefLabel": "5b occupation -- round house and souterrain",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/5B%20OCCUPATION%20--%20ROUND%20HOUSE%20AND%20SOUTERRAIN"
+        },
+        {
+          "prefLabel": "heritage science",
+          "rdfAbout": "https://ariadne-infrastructure.eu/aocat/Concept/ADS/HERITAGE%20SCIENCE"
+        }
+      ],
+      "derivedSubject": [],
+      "ariadneSubject": [
+        {
+          "prefLabel": "Date"
+        }
+      ],
+      "dataType": [
+        "Structured Data"
+      ],
+      "hasType": "provided record",
+      "accessPolicy": "http://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess",
+      "accessRights": "https://archaeologydataservice.ac.uk/advice/termsOfUseAndAccess.xhtml",
+      "isPartOf": [
+        "https://ariadne-infrastructure.eu/aocat/Collection/ADS/2B68BB7A-60F1-3768-B46E-C80F8423601B"
+      ],
+      "otherId": [
+        "C14-GU-2633",
+        "Depositor ID: GU-2633"
+      ]
+    },
+    "_citation": {
+      "service": "HSDS",
+      "serviceUrl": "https://hsds.ac.uk",
+      "publisher": "Heritage Science Data Service",
+      "accessDate": "2026-06-12T17:47:33.717Z",
+      "query": "q:souterrain",
+      "recordId": "hsds:919649",
+      "title": "Radiocarbon date, Sample number GU-2633",
+      "url": "https://hsds.ac.uk/data-catalogue/resource/e094ed0ae26d62a9de10f191340b88695143a1712424bfdded81c4b0c8553980",
+      "creator": "Robert W Pollock",
+      "date": "1998-12-01"
+    }
+  }
+]

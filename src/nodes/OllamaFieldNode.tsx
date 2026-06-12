@@ -14,6 +14,8 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
 import { useStaleResults } from '../hooks/useStaleResults'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { usePromptRecipes } from '../hooks/usePromptRecipes'
+import { PromptRecipeBar } from '../components/PromptRecipeBar'
 
 export interface OllamaFieldNodeData {
   model: string
@@ -175,6 +177,8 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
     model: selectedModel, systemPrompt, userPromptTemplate: promptTemplate,
     temperature, maxTokens, mode, selectedField,
   })
+
+  const { recipes, saveRecipe, deleteRecipe } = usePromptRecipes()
 
   // Keep local token input in sync when node data changes externally (e.g. file load)
   useEffect(() => { setTokenInput(String(maxTokens)) }, [maxTokens])
@@ -391,6 +395,16 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
             <option value="aggregate">Aggregate all</option>
           </select>
         </div>
+
+        {/* Prompt recipes bar */}
+        <PromptRecipeBar
+          nodeFamily="field"
+          mode={mode}
+          recipes={recipes}
+          onApply={r => updateNodeData(id, { systemPrompt: r.systemPrompt, userPromptTemplate: r.userPromptTemplate, ...(r.mode ? { mode: r.mode } : {}) })}
+          onSave={name => saveRecipe({ name, nodeFamily: 'field', mode, systemPrompt, userPromptTemplate: promptTemplate })}
+          onDelete={deleteRecipe}
+        />
 
         {/* System prompt */}
         <div style={styles.colField}>
