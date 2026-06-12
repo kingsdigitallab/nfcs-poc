@@ -50,12 +50,27 @@ export function CommentNode({ id, data, selected }: NodeProps) {
         lineStyle={{ borderColor: BORDER_COLOR }}
         handleStyle={{ background: BORDER_COLOR, borderColor: '#fff', width: 8, height: 8 }}
       />
-      {showHandles && (
-        <>
-          <Handle type="target" position={Position.Left} id="data" style={{ top: '50%' }} />
-          <Handle type="source" position={Position.Right} id="results" style={{ top: '50%' }} />
-        </>
-      )}
+      {/* Handles always present for @xyflow/react connection registration; visibility controlled by opacity */}
+      <Handle
+        type="target"
+        position={Position.Left}
+        id="data"
+        style={{
+          top: '50%',
+          opacity: showHandles ? 1 : 0,
+          pointerEvents: showHandles ? 'auto' : 'none',
+        }}
+      />
+      <Handle
+        type="source"
+        position={Position.Right}
+        id="results"
+        style={{
+          top: '50%',
+          opacity: showHandles ? 1 : 0,
+          pointerEvents: showHandles ? 'auto' : 'none',
+        }}
+      />
       <div style={styles.card}>
         <div style={styles.dragHandle} title="Drag to move">
           <svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg">
