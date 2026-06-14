@@ -1,7 +1,8 @@
 [
   {
-    "_id": "892d9f00-4ae3-4810-bed0-8719a949fc72",
+    "id": "bodleian:892d9f00-4ae3-4810-bed0-8719a949fc72",
     "_source": "bodleian",
+    "_sourceId": "892d9f00-4ae3-4810-bed0-8719a949fc72",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/892d9f00-4ae3-4810-bed0-8719a949fc72/",
     "_service": "bodleian",
     "title": "Fabulae; Sententiae",
@@ -30,8 +31,9 @@
     }
   },
   {
-    "_id": "27aec3d0-51e5-4caf-a240-b7fff4f7da86",
+    "id": "bodleian:27aec3d0-51e5-4caf-a240-b7fff4f7da86",
     "_source": "bodleian",
+    "_sourceId": "27aec3d0-51e5-4caf-a240-b7fff4f7da86",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/27aec3d0-51e5-4caf-a240-b7fff4f7da86/",
     "_service": "bodleian",
     "title": "Fabule..",
@@ -60,8 +62,9 @@
     }
   },
   {
-    "_id": "b79b0712-2e88-4fc2-9df0-16183ab2f789",
+    "id": "bodleian:b79b0712-2e88-4fc2-9df0-16183ab2f789",
     "_source": "bodleian",
+    "_sourceId": "b79b0712-2e88-4fc2-9df0-16183ab2f789",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/b79b0712-2e88-4fc2-9df0-16183ab2f789/",
     "_service": "bodleian",
     "title": "Jupiter Bon[ney] granting unto the Dutch frogs a king",
@@ -90,8 +93,9 @@
     }
   },
   {
-    "_id": "e6fbec57-8424-4898-be28-5d4d222befde",
+    "id": "bodleian:e6fbec57-8424-4898-be28-5d4d222befde",
     "_source": "bodleian",
+    "_sourceId": "e6fbec57-8424-4898-be28-5d4d222befde",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e6fbec57-8424-4898-be28-5d4d222befde/",
     "_service": "bodleian",
     "title": "Vita et fabulae",
@@ -120,8 +124,9 @@
     }
   },
   {
-    "_id": "2f713336-8cbc-466d-8f2a-af947b68de12",
+    "id": "bodleian:2f713336-8cbc-466d-8f2a-af947b68de12",
     "_source": "bodleian",
+    "_sourceId": "2f713336-8cbc-466d-8f2a-af947b68de12",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/2f713336-8cbc-466d-8f2a-af947b68de12/",
     "_service": "bodleian",
     "title": "況義 耶穌教經書目錄",
@@ -150,8 +155,9 @@
     }
   },
   {
-    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "id": "bodleian:390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_source": "bodleian",
+    "_sourceId": "390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
     "_service": "bodleian",
     "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",

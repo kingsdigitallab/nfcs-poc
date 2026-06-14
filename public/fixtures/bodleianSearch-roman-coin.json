@@ -1,7 +1,8 @@
 [
   {
-    "_id": "59ae8d29-bfec-41bd-8ab1-04dfbdbc3e75",
+    "id": "bodleian:59ae8d29-bfec-41bd-8ab1-04dfbdbc3e75",
     "_source": "bodleian",
+    "_sourceId": "59ae8d29-bfec-41bd-8ab1-04dfbdbc3e75",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/59ae8d29-bfec-41bd-8ab1-04dfbdbc3e75/",
     "_service": "bodleian",
     "title": "Collectanea rerum mirabilium.",
@@ -30,8 +31,9 @@
     }
   },
   {
-    "_id": "cdbbc3ca-0a2b-4c78-b0b7-b1c17de222e7",
+    "id": "bodleian:cdbbc3ca-0a2b-4c78-b0b7-b1c17de222e7",
     "_source": "bodleian",
+    "_sourceId": "cdbbc3ca-0a2b-4c78-b0b7-b1c17de222e7",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/cdbbc3ca-0a2b-4c78-b0b7-b1c17de222e7/",
     "_service": "bodleian",
     "title": "Catalogue of the coins in Christ Church Library",
@@ -60,8 +62,9 @@
     }
   },
   {
-    "_id": "50b4b99b-1fb7-4ce9-be13-d29f553c0c28",
+    "id": "bodleian:50b4b99b-1fb7-4ce9-be13-d29f553c0c28",
     "_source": "bodleian",
+    "_sourceId": "50b4b99b-1fb7-4ce9-be13-d29f553c0c28",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/50b4b99b-1fb7-4ce9-be13-d29f553c0c28/",
     "_service": "bodleian",
     "title": "Catalogue of the coins in Christ Church Library",
@@ -90,8 +93,9 @@
     }
   },
   {
-    "_id": "289e6dfd-d9da-4e8a-8ab0-9e0eeb525a7b",
+    "id": "bodleian:289e6dfd-d9da-4e8a-8ab0-9e0eeb525a7b",
     "_source": "bodleian",
+    "_sourceId": "289e6dfd-d9da-4e8a-8ab0-9e0eeb525a7b",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/289e6dfd-d9da-4e8a-8ab0-9e0eeb525a7b/",
     "_service": "bodleian",
     "title": "Monumenta Britannica",
@@ -120,8 +124,9 @@
     }
   },
   {
-    "_id": "ca49c07b-cfb5-41cc-ab66-c215e1268a05",
+    "id": "bodleian:ca49c07b-cfb5-41cc-ab66-c215e1268a05",
     "_source": "bodleian",
+    "_sourceId": "ca49c07b-cfb5-41cc-ab66-c215e1268a05",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ca49c07b-cfb5-41cc-ab66-c215e1268a05/",
     "_service": "bodleian",
     "title": "Cosmographia Scoti, Notitia dignitatum. Etc.",
@@ -150,8 +155,9 @@
     }
   },
   {
-    "_id": "74a59c79-c781-4994-9ff2-8e9aa3ea4e00",
+    "id": "bodleian:74a59c79-c781-4994-9ff2-8e9aa3ea4e00",
     "_source": "bodleian",
+    "_sourceId": "74a59c79-c781-4994-9ff2-8e9aa3ea4e00",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/74a59c79-c781-4994-9ff2-8e9aa3ea4e00/",
     "_service": "bodleian",
     "title": "John Pointer, Musæum Pointerianum, Vol. 4 [part 1]",
@@ -180,8 +186,9 @@
     }
   },
   {
-    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "id": "bodleian:390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_source": "bodleian",
+    "_sourceId": "390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
     "_service": "bodleian",
     "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
@@ -210,8 +217,9 @@
     }
   },
   {
-    "_id": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
+    "id": "bodleian:52f0a31a-1478-40e4-b05b-fddb1ad076ff",
     "_source": "bodleian",
+    "_sourceId": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
     "_service": "bodleian",
     "title": "The Vernon Manuscript",

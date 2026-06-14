@@ -1,7 +1,8 @@
 [
   {
-    "_id": "bf4c4549-0984-469a-8235-801ef259990c",
+    "id": "bodleian:bf4c4549-0984-469a-8235-801ef259990c",
     "_source": "bodleian",
+    "_sourceId": "bf4c4549-0984-469a-8235-801ef259990c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/bf4c4549-0984-469a-8235-801ef259990c/",
     "_service": "bodleian",
     "title": "Macbeth.",
@@ -30,8 +31,9 @@
     }
   },
   {
-    "_id": "3b90125c-b7fb-420f-8019-f2ceb212e434",
+    "id": "bodleian:3b90125c-b7fb-420f-8019-f2ceb212e434",
     "_source": "bodleian",
+    "_sourceId": "3b90125c-b7fb-420f-8019-f2ceb212e434",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/3b90125c-b7fb-420f-8019-f2ceb212e434/",
     "_service": "bodleian",
     "title": "The first part of the Contention betwixt the two famous houses of Yorke and Lancaster [forming pt. 2 of Shakespeare's King Henry vi].",
@@ -60,8 +62,9 @@
     }
   },
   {
-    "_id": "97656870-8c26-497a-9f6b-e67e9140f99d",
+    "id": "bodleian:97656870-8c26-497a-9f6b-e67e9140f99d",
     "_source": "bodleian",
+    "_sourceId": "97656870-8c26-497a-9f6b-e67e9140f99d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/97656870-8c26-497a-9f6b-e67e9140f99d/",
     "_service": "bodleian",
     "title": "The Seven Ages from Shakspeare",
@@ -90,8 +93,9 @@
     }
   },
   {
-    "_id": "f1e35d14-e1b5-420d-b161-d2a11e06f5a2",
+    "id": "bodleian:f1e35d14-e1b5-420d-b161-d2a11e06f5a2",
     "_source": "bodleian",
+    "_sourceId": "f1e35d14-e1b5-420d-b161-d2a11e06f5a2",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f1e35d14-e1b5-420d-b161-d2a11e06f5a2/",
     "_service": "bodleian",
     "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
@@ -120,8 +124,9 @@
     }
   },
   {
-    "_id": "da3dea76-5d41-42f4-b2cb-650df6489eee",
+    "id": "bodleian:da3dea76-5d41-42f4-b2cb-650df6489eee",
     "_source": "bodleian",
+    "_sourceId": "da3dea76-5d41-42f4-b2cb-650df6489eee",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/da3dea76-5d41-42f4-b2cb-650df6489eee/",
     "_service": "bodleian",
     "title": "Shakespeare's seven ages",
@@ -150,8 +155,9 @@
     }
   },
   {
-    "_id": "466a0c77-d8de-4bc7-9633-76fcdcafad3c",
+    "id": "bodleian:466a0c77-d8de-4bc7-9633-76fcdcafad3c",
     "_source": "bodleian",
+    "_sourceId": "466a0c77-d8de-4bc7-9633-76fcdcafad3c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/466a0c77-d8de-4bc7-9633-76fcdcafad3c/",
     "_service": "bodleian",
     "title": "Everyman, a morality. Sheet C only.",
@@ -180,8 +186,9 @@
     }
   },
   {
-    "_id": "d5edd0e6-0e08-4399-8021-c462f7576d07",
+    "id": "bodleian:d5edd0e6-0e08-4399-8021-c462f7576d07",
     "_source": "bodleian",
+    "_sourceId": "d5edd0e6-0e08-4399-8021-c462f7576d07",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d5edd0e6-0e08-4399-8021-c462f7576d07/",
     "_service": "bodleian",
     "title": "Exhibition",
@@ -210,8 +217,9 @@
     }
   },
   {
-    "_id": "cb24be17-9812-41b6-9c20-655d9a5100e5",
+    "id": "bodleian:cb24be17-9812-41b6-9c20-655d9a5100e5",
     "_source": "bodleian",
+    "_sourceId": "cb24be17-9812-41b6-9c20-655d9a5100e5",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/cb24be17-9812-41b6-9c20-655d9a5100e5/",
     "_service": "bodleian",
     "title": "Mr. William Shakespeares comedies, histories, & tragedies. : Published according to the true originall copies.",
@@ -240,8 +248,9 @@
     }
   },
   {
-    "_id": "01358891-fb5f-498c-a96c-47084e37d7a4",
+    "id": "bodleian:01358891-fb5f-498c-a96c-47084e37d7a4",
     "_source": "bodleian",
+    "_sourceId": "01358891-fb5f-498c-a96c-47084e37d7a4",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/01358891-fb5f-498c-a96c-47084e37d7a4/",
     "_service": "bodleian",
     "title": "[Ticket of [Stratford?], [6 + 7 Sept 1769], announcing the Shakespeare Jubilee Festival ]",
@@ -270,8 +279,9 @@
     }
   },
   {
-    "_id": "8928e5e6-1045-4d2e-b992-4531c30282b0",
+    "id": "bodleian:8928e5e6-1045-4d2e-b992-4531c30282b0",
     "_source": "bodleian",
+    "_sourceId": "8928e5e6-1045-4d2e-b992-4531c30282b0",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/8928e5e6-1045-4d2e-b992-4531c30282b0/",
     "_service": "bodleian",
     "title": "The tragedie of King Richard the third. : b Conteining his treacherous plots against his brother Clarence: the pitiful murther of his innocent nephewes: his tyrannicall vsurpation: with the whole course of his detested life, and most deserued death. As it hath beene lately acted by the Right honourable the Lord Chamberlaine his seruants. By William Shake-speare.",
@@ -300,8 +310,9 @@
     }
   },
   {
-    "_id": "29eba082-6fbb-4ff6-a84f-1f0a97373510",
+    "id": "bodleian:29eba082-6fbb-4ff6-a84f-1f0a97373510",
     "_source": "bodleian",
+    "_sourceId": "29eba082-6fbb-4ff6-a84f-1f0a97373510",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/29eba082-6fbb-4ff6-a84f-1f0a97373510/",
     "_service": "bodleian",
     "title": "The tragedie of King Richard the third. : Conteining his treacherous plots against his brother Clarence: the pittifull murther of his innocent nephewes: his tyrannicall vsurpation: with the whole course of his detested life, and most deserued death. As it hath bin lately acted by the Right Honourable the Lord Chamberlaine his seruants. Newly augmented, by William Shake-speare.",
@@ -330,8 +341,9 @@
     }
   },
   {
-    "_id": "b3fbee17-8d69-49dd-ab08-16ccd20bef15",
+    "id": "bodleian:b3fbee17-8d69-49dd-ab08-16ccd20bef15",
     "_source": "bodleian",
+    "_sourceId": "b3fbee17-8d69-49dd-ab08-16ccd20bef15",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/b3fbee17-8d69-49dd-ab08-16ccd20bef15/",
     "_service": "bodleian",
     "title": "The tragedie of King Richard the Second. The history of Henrie the fourth, with the battell at Shrewseburie, betweene the King, and Lord Henrie Percy, surnamed Henrie Hotspur of the North. The cronicle history of Henry the fift. The chronicle history of Henry the fift. The vvhole contention betvveene the tvvo famous houses, Lancaster and Yorke. The tragedie of King Richard the third.",
@@ -360,8 +372,9 @@
     }
   },
   {
-    "_id": "1744b7ca-493e-48e2-968a-493cd03b8bf0",
+    "id": "bodleian:1744b7ca-493e-48e2-968a-493cd03b8bf0",
     "_source": "bodleian",
+    "_sourceId": "1744b7ca-493e-48e2-968a-493cd03b8bf0",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/1744b7ca-493e-48e2-968a-493cd03b8bf0/",
     "_service": "bodleian",
     "title": "The lamentable and true tragedie of M. Arden of Feuersham in Kent. : Who was most wickedlye murdered, by the meanes of his disloyall and wanton wyfe, who for the loue she bare to one Mosbie, hyred two desperat ruffins Blackwill and Shakbag, to kill him. VVherin is shewed the great malice and discimulation of a wicked woman, the vnsatiable desire of filthie lust and the shamefull end of all murderers.",
@@ -390,8 +403,9 @@
     }
   },
   {
-    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "id": "bodleian:390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_source": "bodleian",
+    "_sourceId": "390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
     "_service": "bodleian",
     "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
@@ -420,8 +434,9 @@
     }
   },
   {
-    "_id": "dbd332f7-1011-41fc-a66b-1016bb996734",
+    "id": "bodleian:dbd332f7-1011-41fc-a66b-1016bb996734",
     "_source": "bodleian",
+    "_sourceId": "dbd332f7-1011-41fc-a66b-1016bb996734",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/dbd332f7-1011-41fc-a66b-1016bb996734/",
     "_service": "bodleian",
     "title": "Portrait of Sir Thomas Overbury (1581–1613)",
@@ -450,8 +465,9 @@
     }
   },
   {
-    "_id": "d1f62192-6161-4aa5-9e63-ec2907413864",
+    "id": "bodleian:d1f62192-6161-4aa5-9e63-ec2907413864",
     "_source": "bodleian",
+    "_sourceId": "d1f62192-6161-4aa5-9e63-ec2907413864",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d1f62192-6161-4aa5-9e63-ec2907413864/",
     "_service": "bodleian",
     "title": "Johnny Bull's defiance to Bonaparte!: A parody on Shakespeare's Richard 3rd.",
@@ -480,8 +496,9 @@
     }
   },
   {
-    "_id": "6397bb62-981a-48bd-aafe-dd6cc3a981bb",
+    "id": "bodleian:6397bb62-981a-48bd-aafe-dd6cc3a981bb",
     "_source": "bodleian",
+    "_sourceId": "6397bb62-981a-48bd-aafe-dd6cc3a981bb",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/6397bb62-981a-48bd-aafe-dd6cc3a981bb/",
     "_service": "bodleian",
     "title": "Rape of Lucrece. Sonnets. Hamlet. Love's labour's lost. Pericles. Pericles. A Yorkshire tragedy.",
@@ -510,8 +527,9 @@
     }
   },
   {
-    "_id": "23cb08cf-4e91-4325-8f06-2365abb58161",
+    "id": "bodleian:23cb08cf-4e91-4325-8f06-2365abb58161",
     "_source": "bodleian",
+    "_sourceId": "23cb08cf-4e91-4325-8f06-2365abb58161",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/23cb08cf-4e91-4325-8f06-2365abb58161/",
     "_service": "bodleian",
     "title": "Licia or Poems of love. Venus and Adonis.",
@@ -540,8 +558,9 @@
     }
   },
   {
-    "_id": "e38f4132-1266-4bda-842c-ddcd469825bc",
+    "id": "bodleian:e38f4132-1266-4bda-842c-ddcd469825bc",
     "_source": "bodleian",
+    "_sourceId": "e38f4132-1266-4bda-842c-ddcd469825bc",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e38f4132-1266-4bda-842c-ddcd469825bc/",
     "_service": "bodleian",
     "title": "Eight or Nine Wise Words about Letter-Writing",
@@ -570,8 +589,9 @@
     }
   },
   {
-    "_id": "db4cfa20-9611-4836-9b94-3404510f9fc1",
+    "id": "bodleian:db4cfa20-9611-4836-9b94-3404510f9fc1",
     "_source": "bodleian",
+    "_sourceId": "db4cfa20-9611-4836-9b94-3404510f9fc1",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/db4cfa20-9611-4836-9b94-3404510f9fc1/",
     "_service": "bodleian",
     "title": "Venus and Adonis. Lucrece. Shake-speares Sonnets. Neuer before imprinted.",
@@ -600,8 +620,9 @@
     }
   },
   {
-    "_id": "8c672adf-a71a-44d3-a479-3deb5779ef9b",
+    "id": "bodleian:8c672adf-a71a-44d3-a479-3deb5779ef9b",
     "_source": "bodleian",
+    "_sourceId": "8c672adf-a71a-44d3-a479-3deb5779ef9b",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/8c672adf-a71a-44d3-a479-3deb5779ef9b/",
     "_service": "bodleian",
     "title": "Poster: ‘“So distribution should undo excess, and each man have enough.” Shakespeare. (King Lear)’, with sepia photograph of a child in rags. Brown background, brown text. Part of the Bother Poster series.",
@@ -630,8 +651,9 @@
     }
   },
   {
-    "_id": "1449a6bc-32b5-465f-b407-6a8107f363fd",
+    "id": "bodleian:1449a6bc-32b5-465f-b407-6a8107f363fd",
     "_source": "bodleian",
+    "_sourceId": "1449a6bc-32b5-465f-b407-6a8107f363fd",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/1449a6bc-32b5-465f-b407-6a8107f363fd/",
     "_service": "bodleian",
     "title": "[Ticket of Wynnstay Theatre ]",
@@ -660,8 +682,9 @@
     }
   },
   {
-    "_id": "047a6ab4-9b3b-4d89-8377-40860550b0dd",
+    "id": "bodleian:047a6ab4-9b3b-4d89-8377-40860550b0dd",
     "_source": "bodleian",
+    "_sourceId": "047a6ab4-9b3b-4d89-8377-40860550b0dd",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/047a6ab4-9b3b-4d89-8377-40860550b0dd/",
     "_service": "bodleian",
     "title": "Spring Gardens",
@@ -690,8 +713,9 @@
     }
   },
   {
-    "_id": "f05568e1-b93a-411c-ac92-fc67fb406395",
+    "id": "bodleian:f05568e1-b93a-411c-ac92-fc67fb406395",
     "_source": "bodleian",
+    "_sourceId": "f05568e1-b93a-411c-ac92-fc67fb406395",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f05568e1-b93a-411c-ac92-fc67fb406395/",
     "_service": "bodleian",
     "title": "Illustrated Times",
@@ -720,8 +744,9 @@
     }
   },
   {
-    "_id": "210d093c-ddd1-4e98-aef6-cf75f14d40d4",
+    "id": "bodleian:210d093c-ddd1-4e98-aef6-cf75f14d40d4",
     "_source": "bodleian",
+    "_sourceId": "210d093c-ddd1-4e98-aef6-cf75f14d40d4",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/210d093c-ddd1-4e98-aef6-cf75f14d40d4/",
     "_service": "bodleian",
     "title": "Poster: ‘“So distribution should undo excess, and each man have enough.” Shakespeare. (King Lear)’, with sepia photograph of a child in rags. Brown background, brown text. With an information sheet on the reverse. Part of the Bother Poster series.",
@@ -750,8 +775,9 @@
     }
   },
   {
-    "_id": "76f44832-61fd-4a70-a028-660c7adf1988",
+    "id": "bodleian:76f44832-61fd-4a70-a028-660c7adf1988",
     "_source": "bodleian",
+    "_sourceId": "76f44832-61fd-4a70-a028-660c7adf1988",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/76f44832-61fd-4a70-a028-660c7adf1988/",
     "_service": "bodleian",
     "title": "[Tickets of Wynnstay Theatre ]",
@@ -780,8 +806,9 @@
     }
   },
   {
-    "_id": "fc695056-8cb0-47a6-8da1-29e135b5899f",
+    "id": "bodleian:fc695056-8cb0-47a6-8da1-29e135b5899f",
     "_source": "bodleian",
+    "_sourceId": "fc695056-8cb0-47a6-8da1-29e135b5899f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/fc695056-8cb0-47a6-8da1-29e135b5899f/",
     "_service": "bodleian",
     "title": "[Playbill of Drury Lane Theatre, Friday, April 25, 1788, announcing Twelfth night &c.]",
@@ -810,8 +837,9 @@
     }
   },
   {
-    "_id": "78a92541-481a-4065-b6ef-32ed22b11c4b",
+    "id": "bodleian:78a92541-481a-4065-b6ef-32ed22b11c4b",
     "_source": "bodleian",
+    "_sourceId": "78a92541-481a-4065-b6ef-32ed22b11c4b",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/78a92541-481a-4065-b6ef-32ed22b11c4b/",
     "_service": "bodleian",
     "title": "Diary",
@@ -840,8 +868,9 @@
     }
   },
   {
-    "_id": "dab4bd2a-7499-4df9-99a7-253697481cce",
+    "id": "bodleian:dab4bd2a-7499-4df9-99a7-253697481cce",
     "_source": "bodleian",
+    "_sourceId": "dab4bd2a-7499-4df9-99a7-253697481cce",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/dab4bd2a-7499-4df9-99a7-253697481cce/",
     "_service": "bodleian",
     "title": "[Playbill of Covent Garden, Saturday, December 11, 1784, announcing The merry wives of Windsor &c.]",
@@ -870,8 +899,9 @@
     }
   },
   {
-    "_id": "dca7784b-31bf-4742-b75a-12b634f3188e",
+    "id": "bodleian:dca7784b-31bf-4742-b75a-12b634f3188e",
     "_source": "bodleian",
+    "_sourceId": "dca7784b-31bf-4742-b75a-12b634f3188e",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/dca7784b-31bf-4742-b75a-12b634f3188e/",
     "_service": "bodleian",
     "title": "[Playbill of Drury Lane Theatre, Wednesday, June 4, 1788, announcing Hamlet &c.]",
@@ -900,8 +930,9 @@
     }
   },
   {
-    "_id": "9f413809-65d6-45e2-a225-4d17c40b9043",
+    "id": "bodleian:9f413809-65d6-45e2-a225-4d17c40b9043",
     "_source": "bodleian",
+    "_sourceId": "9f413809-65d6-45e2-a225-4d17c40b9043",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/9f413809-65d6-45e2-a225-4d17c40b9043/",
     "_service": "bodleian",
     "title": "Diary",
@@ -930,8 +961,9 @@
     }
   },
   {
-    "_id": "a151ae23-ebd0-46dc-ac07-c6a0b2e4ec1e",
+    "id": "bodleian:a151ae23-ebd0-46dc-ac07-c6a0b2e4ec1e",
     "_source": "bodleian",
+    "_sourceId": "a151ae23-ebd0-46dc-ac07-c6a0b2e4ec1e",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/a151ae23-ebd0-46dc-ac07-c6a0b2e4ec1e/",
     "_service": "bodleian",
     "title": "[Playbill of Covent Garden, Monday, November 22, 1784, announcing Macbeth &c.]",
@@ -960,8 +992,9 @@
     }
   },
   {
-    "_id": "28d2ab33-983c-4a39-9f58-6a546c6e859f",
+    "id": "bodleian:28d2ab33-983c-4a39-9f58-6a546c6e859f",
     "_source": "bodleian",
+    "_sourceId": "28d2ab33-983c-4a39-9f58-6a546c6e859f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/28d2ab33-983c-4a39-9f58-6a546c6e859f/",
     "_service": "bodleian",
     "title": "[Playbill of Covent Garden, Monday, May 10, 1784, announcing Too loving by half &c.]",
@@ -990,8 +1023,9 @@
     }
   },
   {
-    "_id": "4354ffbe-7d5b-44a8-994e-2587bbd6877c",
+    "id": "bodleian:4354ffbe-7d5b-44a8-994e-2587bbd6877c",
     "_source": "bodleian",
+    "_sourceId": "4354ffbe-7d5b-44a8-994e-2587bbd6877c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/4354ffbe-7d5b-44a8-994e-2587bbd6877c/",
     "_service": "bodleian",
     "title": "[Playbill of Covent Garden, Monday, December 6, 1784, announcing Romeo and Juliet &c.]",
@@ -1020,8 +1054,9 @@
     }
   },
   {
-    "_id": "51b6cb57-173f-42fe-9a7a-8e8e0c210374",
+    "id": "bodleian:51b6cb57-173f-42fe-9a7a-8e8e0c210374",
     "_source": "bodleian",
+    "_sourceId": "51b6cb57-173f-42fe-9a7a-8e8e0c210374",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/51b6cb57-173f-42fe-9a7a-8e8e0c210374/",
     "_service": "bodleian",
     "title": "[Playbill of Theatre, Monday, August 12, 1799, announcing The school for scandal &c.]",
@@ -1050,8 +1085,9 @@
     }
   },
   {
-    "_id": "f1fa2c90-4f4b-4f15-99c4-f1abd7cdb3a3",
+    "id": "bodleian:f1fa2c90-4f4b-4f15-99c4-f1abd7cdb3a3",
     "_source": "bodleian",
+    "_sourceId": "f1fa2c90-4f4b-4f15-99c4-f1abd7cdb3a3",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f1fa2c90-4f4b-4f15-99c4-f1abd7cdb3a3/",
     "_service": "bodleian",
     "title": "[Playbill of Covent Garden, Tuesday, May 24, 1785, announcing The merry wives of Windsor &c.]",
@@ -1080,8 +1116,9 @@
     }
   },
   {
-    "_id": "9e600de5-5179-4fdc-86fe-0b1b38c70e4d",
+    "id": "bodleian:9e600de5-5179-4fdc-86fe-0b1b38c70e4d",
     "_source": "bodleian",
+    "_sourceId": "9e600de5-5179-4fdc-86fe-0b1b38c70e4d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/9e600de5-5179-4fdc-86fe-0b1b38c70e4d/",
     "_service": "bodleian",
     "title": "[Playbill of Haymarket Theatre, Tuesday next, May 7th, 1793, announcing Tempest; or, The enchanted island &c.]",
@@ -1110,8 +1147,9 @@
     }
   },
   {
-    "_id": "725bddb2-3cca-4480-b333-be93b310476e",
+    "id": "bodleian:725bddb2-3cca-4480-b333-be93b310476e",
     "_source": "bodleian",
+    "_sourceId": "725bddb2-3cca-4480-b333-be93b310476e",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/725bddb2-3cca-4480-b333-be93b310476e/",
     "_service": "bodleian",
     "title": "[Playbill of Drury Lane Theatre, Tuesday, Sept. 29, 1795, announcing Macbeth &c.]",
@@ -1140,8 +1178,9 @@
     }
   },
   {
-    "_id": "3e60098b-b5e0-485f-a312-4a5b6b98a12b",
+    "id": "bodleian:3e60098b-b5e0-485f-a312-4a5b6b98a12b",
     "_source": "bodleian",
+    "_sourceId": "3e60098b-b5e0-485f-a312-4a5b6b98a12b",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/3e60098b-b5e0-485f-a312-4a5b6b98a12b/",
     "_service": "bodleian",
     "title": "The genius of France nursing her darling",
@@ -1170,8 +1209,9 @@
     }
   },
   {
-    "_id": "d8bbd4c1-3e20-4fcb-ae97-9456a0c9c066",
+    "id": "bodleian:d8bbd4c1-3e20-4fcb-ae97-9456a0c9c066",
     "_source": "bodleian",
+    "_sourceId": "d8bbd4c1-3e20-4fcb-ae97-9456a0c9c066",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d8bbd4c1-3e20-4fcb-ae97-9456a0c9c066/",
     "_service": "bodleian",
     "title": "[Playbill of Goodman's Fields, Friday, being the 19th day of September [1736], announcing Hamlet, prince of Denmark &c.]",
@@ -1200,8 +1240,9 @@
     }
   },
   {
-    "_id": "76eda35d-fac2-44fa-a467-2d55a2f59281",
+    "id": "bodleian:76eda35d-fac2-44fa-a467-2d55a2f59281",
     "_source": "bodleian",
+    "_sourceId": "76eda35d-fac2-44fa-a467-2d55a2f59281",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/76eda35d-fac2-44fa-a467-2d55a2f59281/",
     "_service": "bodleian",
     "title": "Wallis's new game of universal history and chronology",
@@ -1230,8 +1271,9 @@
     }
   },
   {
-    "_id": "7638dbbe-4f9a-4a7c-b958-9304135faa61",
+    "id": "bodleian:7638dbbe-4f9a-4a7c-b958-9304135faa61",
     "_source": "bodleian",
+    "_sourceId": "7638dbbe-4f9a-4a7c-b958-9304135faa61",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/7638dbbe-4f9a-4a7c-b958-9304135faa61/",
     "_service": "bodleian",
     "title": "Collection of Caroline music, containing religious and secular songs and dialogues, copied over a period of years",
@@ -1260,8 +1302,9 @@
     }
   },
   {
-    "_id": "42297dea-5610-45d8-9b89-17eaa85fb3c4",
+    "id": "bodleian:42297dea-5610-45d8-9b89-17eaa85fb3c4",
     "_source": "bodleian",
+    "_sourceId": "42297dea-5610-45d8-9b89-17eaa85fb3c4",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/42297dea-5610-45d8-9b89-17eaa85fb3c4/",
     "_service": "bodleian",
     "title": "[Playbill of Drury Lane Theatre, Tuesday, March 10, 1795, announcing The merchant of Venice &c.]",
@@ -1290,8 +1333,9 @@
     }
   },
   {
-    "_id": "83da8b9c-3708-47d9-9922-dd34316e88ef",
+    "id": "bodleian:83da8b9c-3708-47d9-9922-dd34316e88ef",
     "_source": "bodleian",
+    "_sourceId": "83da8b9c-3708-47d9-9922-dd34316e88ef",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/83da8b9c-3708-47d9-9922-dd34316e88ef/",
     "_service": "bodleian",
     "title": "Historical pastime. A new game of the history of England from William 1st to William 4th",
@@ -1320,8 +1364,9 @@
     }
   },
   {
-    "_id": "a9f412bd-4acc-4cf3-8934-d13aa72cd93f",
+    "id": "bodleian:a9f412bd-4acc-4cf3-8934-d13aa72cd93f",
     "_source": "bodleian",
+    "_sourceId": "a9f412bd-4acc-4cf3-8934-d13aa72cd93f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/a9f412bd-4acc-4cf3-8934-d13aa72cd93f/",
     "_service": "bodleian",
     "title": "Diary",
@@ -1350,8 +1395,9 @@
     }
   },
   {
-    "_id": "ef0019a5-3658-4661-8e97-5e601b9c31db",
+    "id": "bodleian:ef0019a5-3658-4661-8e97-5e601b9c31db",
     "_source": "bodleian",
+    "_sourceId": "ef0019a5-3658-4661-8e97-5e601b9c31db",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ef0019a5-3658-4661-8e97-5e601b9c31db/",
     "_service": "bodleian",
     "title": "Historical pastime",
@@ -1380,8 +1426,9 @@
     }
   },
   {
-    "_id": "32bb9aa4-43ce-4bf7-b0fb-c9452ca8e40c",
+    "id": "bodleian:32bb9aa4-43ce-4bf7-b0fb-c9452ca8e40c",
     "_source": "bodleian",
+    "_sourceId": "32bb9aa4-43ce-4bf7-b0fb-c9452ca8e40c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/32bb9aa4-43ce-4bf7-b0fb-c9452ca8e40c/",
     "_service": "bodleian",
     "title": "Historical pastime or a new game of the history of England from the Conquest to the Accession of George the Third",

@@ -1,7 +1,8 @@
 [
   {
-    "_id": "059a858f-000e-4c51-bb00-82fb807d840e",
+    "id": "bodleian:059a858f-000e-4c51-bb00-82fb807d840e",
     "_source": "bodleian",
+    "_sourceId": "059a858f-000e-4c51-bb00-82fb807d840e",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/059a858f-000e-4c51-bb00-82fb807d840e/",
     "_service": "bodleian",
     "title": "Epigraphical and archaeological collections including copies of drawings by Ciriaco d'Ancona ('Codex Ashmolensis').",
@@ -30,8 +31,9 @@
     }
   },
   {
-    "_id": "32638ab9-c0b2-4258-9ca7-980b4b9268f2",
+    "id": "bodleian:32638ab9-c0b2-4258-9ca7-980b4b9268f2",
     "_source": "bodleian",
+    "_sourceId": "32638ab9-c0b2-4258-9ca7-980b4b9268f2",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/32638ab9-c0b2-4258-9ca7-980b4b9268f2/",
     "_service": "bodleian",
     "title": "‘The Gough Map’.",
@@ -60,8 +62,9 @@
     }
   },
   {
-    "_id": "ca49c07b-cfb5-41cc-ab66-c215e1268a05",
+    "id": "bodleian:ca49c07b-cfb5-41cc-ab66-c215e1268a05",
     "_source": "bodleian",
+    "_sourceId": "ca49c07b-cfb5-41cc-ab66-c215e1268a05",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ca49c07b-cfb5-41cc-ab66-c215e1268a05/",
     "_service": "bodleian",
     "title": "Cosmographia Scoti, Notitia dignitatum. Etc.",

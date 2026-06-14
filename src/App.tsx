@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { newId, bumpCounterPast } from './utils/nodeIdCounter'
 import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from './utils/kclConfig'
 import { buildWorkflowPayload, downloadWorkflow, parseWorkflowFile, hydrateNodes, type WorkflowFile } from './utils/workflowIO'
+import { setNodeResults } from './store/resultsStore'
 import {
   ReactFlow,
   Background,
@@ -411,6 +412,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       apiKey:              DEFAULT_KCL_API_KEY,
       model:               'arc:nano',
       selectedField:       '',
+      outputField:         '',
       mode:                'per-record',
       systemPrompt:        'You are a research assistant helping to analyse humanities research data.',
       userPromptTemplate:  'Summarise the following in 2–3 sentences:\n\n{{value}}',
@@ -733,9 +735,9 @@ const SIDEBAR_ITEMS = [
   // ── Hidden ───────────────────────────────────────────────────────────────────
   { type: 'adsLibrarySearch',  label: 'ADSLibrary',            sub: 'ADS Library catalogue',                   color: '#1e3a5f', group: 'Output', hidden: true },
   { type: 'adsSearchAdvanced', label: 'ADSSearch',             sub: 'Archaeology Data Services',                color: '#7c2d12', group: 'Output', hidden: true },
-  { type: 'ollamaNode',        label: 'Ollama',                sub: 'Local LLM — file/content records',        color: '#312e81', group: 'Extraction and Enrichment', hidden: true },
-  { type: 'ollamaField',       label: 'OllamaByField',         sub: 'LLM inference on a chosen field',        color: '#1e1b4b', group: 'Extraction and Enrichment', hidden: true },
-  { type: 'ollamaOutput',      label: 'OllamaOutput',          sub: 'Display Ollama inference text',           color: '#0f172a', group: 'Output', hidden: true },
+  { type: 'ollamaNode',        label: 'Ollama',                sub: 'Local LLM — file/content records',        color: '#312e81', group: 'Extraction and Enrichment' },
+  { type: 'ollamaField',       label: 'OllamaByField',         sub: 'LLM inference on a chosen field',        color: '#1e1b4b', group: 'Extraction and Enrichment' },
+  { type: 'ollamaOutput',      label: 'OllamaOutput',          sub: 'Display Ollama inference text',           color: '#0f172a', group: 'Output' },
 ]
 
 // ─── App ──────────────────────────────────────────────────────────────────────
@@ -750,13 +752,13 @@ export default function App() {
   const [runningAll, setRunningAll] = useState(false)
   const [expandedNodeId, setExpandedNodeId] = useState<string | null>(null)
   const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set(['Data Services', 'Local Content', 'Filters and Transforms', 'Extraction and Enrichment', 'Output']))
-  const [chatOpen, setChatOpen] = useState(true)
-  const [showOllama, setShowOllama] = useState(
-    () => localStorage.getItem('show_ollama_nodes') === 'true',
+  const [chatOpen, setChatOpen] = useState(false)
+  const [simpleMode, setSimpleMode] = useState(
+    () => (localStorage.getItem('nfcs_simple_mode') ?? 'true') === 'true',
   )
   useEffect(() => {
-    localStorage.setItem('show_ollama_nodes', String(showOllama))
-  }, [showOllama])
+    localStorage.setItem('nfcs_simple_mode', String(simpleMode))
+  }, [simpleMode])
 
   // ── Author mode: click the version text 5× to unlock "Save as Example" ──
   const [authorMode, setAuthorMode] = useState(
@@ -1057,6 +1059,32 @@ export default function App() {
     [rfInstance, setNodes],
   )
 
+  const instantiateCachedSearch = useCallback(async (service: string, slug: string) => {
+    const factory = NODE_DEFAULTS[service]
+    if (!factory) return
+    // Place near viewport centre, slightly randomised so repeated picks don't overlap
+    const screen = { x: window.innerWidth / 2 + Math.random() * 80, y: 180 + Math.random() * 120 }
+    const pos = rfInstance ? rfInstance.screenToFlowPosition(screen) : { x: 0, y: 0 }
+    const node = factory(pos) as AppNode
+    const term = slug.replace(/-/g, ' ')  // "roman-coin" → "roman coin"
+    const queryField = service === 'gbifSearch' ? 'inlineQ' : 'inlineQuery'
+    node.data = { ...node.data, [queryField]: term, useFixture: true }
+    try {
+      const res = await fetch(`/fixtures/${service}-${slug}.json`)
+      if (res.ok) {
+        const records = await res.json()
+        const version = setNodeResults(node.id, records)
+        node.data = { ...node.data, status: 'cached',
+          statusMessage: `📦 ${records.length} (fixture)`, count: records.length, resultsVersion: version }
+      } else {
+        node.data = { ...node.data, status: 'error', statusMessage: `Fixture not found (HTTP ${res.status})` }
+      }
+    } catch (e) {
+      node.data = { ...node.data, status: 'error', statusMessage: String(e) }
+    }
+    setNodes(nds => [...nds, node])
+  }, [rfInstance, setNodes])
+
   const onNodeDoubleClick = useCallback((_: React.MouseEvent, node: Node) => {
     if (node.type === 'tableOutput' || node.type === 'jsonOutput') {
       setExpandedNodeId(prev => (prev === node.id ? null : node.id))
@@ -1304,14 +1332,16 @@ export default function App() {
             ⚠ {loadError}
           </span>
         )}
-        <FixtureReferenceCard />
+        <FixtureReferenceCard onPick={instantiateCachedSearch} />
         {import.meta.env.DEV && <FixturePreflightPanel />}
         <button
-          style={{ ...templateBtnStyle, background: showOllama ? '#312e81' : undefined, color: showOllama ? '#fff' : undefined, borderColor: showOllama ? '#312e81' : undefined }}
-          onClick={() => setShowOllama(v => !v)}
-          title={showOllama ? 'Hide Ollama nodes (local LLM)' : 'Show Ollama nodes — use this if KCL inference is unavailable'}
+          style={{ ...templateBtnStyle, background: !simpleMode ? '#312e81' : undefined, color: !simpleMode ? '#fff' : undefined, borderColor: !simpleMode ? '#312e81' : undefined }}
+          onClick={() => setSimpleMode(v => !v)}
+          title={simpleMode
+            ? 'Simple mode — specialised/alpha nodes hidden. Click for Advanced.'
+            : 'Advanced mode — all nodes shown. Click for Simple.'}
         >
-          🦙 Ollama
+          {simpleMode ? '◐ Simple' : '◑ Advanced'}
         </button>
         <button
           style={{ ...templateBtnStyle, background: chatOpen ? '#881337' : undefined, color: chatOpen ? '#fff' : undefined, borderColor: chatOpen ? '#881337' : undefined }}
@@ -1333,9 +1363,9 @@ export default function App() {
         {/* Sidebar */}
         <div style={sidebarStyle}>
           {(['Canvas', 'Input', 'Inspection', 'Data Services', 'Local Content', 'Filters and Transforms', 'Extraction and Enrichment', 'Output'] as const).map(group => {
-            const OLLAMA_TYPES = new Set(['ollamaNode', 'ollamaField', 'ollamaOutput'])
+            const ADVANCED_TYPES = new Set(['frameSenseSource', 'smartFilter', 'smartGeocoder', 'ollamaNode', 'ollamaField', 'ollamaOutput'])
             const items = SIDEBAR_ITEMS.filter(
-              i => i.group === group && (!i.hidden || (showOllama && OLLAMA_TYPES.has(i.type))),
+              i => i.group === group && !i.hidden && (!simpleMode || !ADVANCED_TYPES.has(i.type)),
             )
             const isCollapsed = collapsedGroups.has(group)
             const toggleGroup = () => setCollapsedGroups(prev => {
@@ -1417,7 +1447,7 @@ export default function App() {
               <Controls />
               <MiniMap />
               <Panel position="bottom-left" style={attributionStyle}>
-                Conceptualised by Neil Jakeman, King&#39;s Digital Lab
+                Conceptualised at King&#39;s Digital Lab
               </Panel>
               {/* Expanded output panel — lives inside RF so it can use RF hooks */}
               {expandedNodeId && (
@@ -1429,7 +1459,7 @@ export default function App() {
             </ReactFlow>
           </div>
 
-          <DebugPanel nodes={nodes} />
+          {import.meta.env.DEV && <DebugPanel nodes={nodes} />}
         </div>
 
         {/* Right chat sidebar — outside ReactFlow so it doesn't scale with canvas zoom */}

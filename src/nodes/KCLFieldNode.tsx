@@ -22,6 +22,7 @@ export interface KCLFieldNodeData {
   apiKey: string
   model: string
   selectedField: string
+  outputField?: string
   mode: 'per-record' | 'aggregate'
   systemPrompt: string
   userPromptTemplate: string
@@ -214,6 +215,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const apiKey         = (d.apiKey        ?? '') as string
   const selectedModel  = (d.model         ?? '') as string
   const selectedField  = (d.selectedField ?? availableFields[0] ?? '') as string
+  const outputField    = (d.outputField  ?? '') as string
   const mode           = (d.mode ?? 'per-record') as 'per-record' | 'aggregate'
   const systemPrompt   = (d.systemPrompt  ?? DEFAULT_SYSTEM) as string
   const promptTemplate = (d.userPromptTemplate ?? (mode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER)) as string
@@ -304,6 +306,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           kclAggregatedFrom:   upstreamRecords.length,
           kclPrompt:           prompt,
           kclResponse:         response,
+          ...(outputField ? { [outputField]: response } : {}),
           kclProcessedAt:      new Date().toISOString(),
         }
 
@@ -346,6 +349,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
             kclMode:        'per-record',
             kclPrompt:      prompt,
             kclResponse:    response,
+            ...(outputField ? { [outputField]: response } : {}),
             kclProcessedAt: new Date().toISOString(),
           }
           enriched.push(enrichedRecord)
@@ -479,6 +483,17 @@ export function KCLFieldNode({ id, data }: NodeProps) {
             <option value="per-record">Per record</option>
             <option value="aggregate">Aggregate all</option>
           </select>
+        </div>
+
+        {/* Output field name */}
+        <div style={styles.row}>
+          <span style={styles.label}>Output →</span>
+          <input style={styles.input} value={outputField}
+            onChange={e => updateNodeData(id, { outputField: e.target.value })}
+            placeholder="kclResponse (default)" className="nodrag" />
+        </div>
+        <div style={{ fontSize: 9, color: '#9ca3af', paddingLeft: 4, marginTop: -4 }}>
+          New column name for the response. Blank → kclResponse only.
         </div>
 
         {/* Prompt recipes bar */}

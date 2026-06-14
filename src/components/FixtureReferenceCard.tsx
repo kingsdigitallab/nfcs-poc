@@ -3,6 +3,9 @@
  * available in public/fixtures/. Reads manifest.json once and caches it.
  * Visible to all users (not dev-only) so workshop participants can see what
  * search terms are available before going offline.
+ *
+ * Clicking a ✓ tick calls onPick(service, slug) so the parent can instantiate
+ * the matching search node with the cached results pre-loaded.
  */
 import { useState, useEffect } from 'react'
 
@@ -25,7 +28,7 @@ type Manifest = Record<string, string[]>
 
 let _cached: Manifest | null = null
 
-export function FixtureReferenceCard() {
+export function FixtureReferenceCard({ onPick }: { onPick: (service: string, slug: string) => void }) {
   const [open, setOpen]         = useState(false)
   const [manifest, setManifest] = useState<Manifest | null>(_cached)
   const [error, setError]       = useState<string | null>(null)
@@ -40,8 +43,8 @@ export function FixtureReferenceCard() {
 
   if (!open) {
     return (
-      <button style={styles.trigger} onClick={() => setOpen(true)} title="Show available offline fixture terms">
-        📦 Offline
+      <button style={styles.trigger} onClick={() => setOpen(true)} title="Show available cached search results">
+        📦 Cached searches
       </button>
     )
   }
@@ -54,7 +57,7 @@ export function FixtureReferenceCard() {
   return (
     <div style={styles.panel}>
       <div style={styles.header}>
-        <span style={{ fontWeight: 700, fontSize: 12 }}>📦 Offline Fixtures</span>
+        <span style={{ fontWeight: 700, fontSize: 12 }}>📦 Cached searches</span>
         <button style={styles.closeBtn} onClick={() => setOpen(false)}>✕</button>
       </div>
 
@@ -64,7 +67,7 @@ export function FixtureReferenceCard() {
         {manifest && (
           <>
             <p style={styles.hint}>
-              Tick <strong>📦</strong> on any search node and type one of these terms to load results offline.
+              Click a <strong>✓</strong> to add that search node to the canvas with its cached results loaded.
             </p>
 
             {/* Term × service grid */}
@@ -88,7 +91,15 @@ export function FixtureReferenceCard() {
                         .filter(k => manifest[k])
                         .map(k => (
                           <td key={k} style={styles.tick}>
-                            {manifest[k]?.includes(slug) ? '✓' : ''}
+                            {manifest[k]?.includes(slug)
+                              ? (
+                                <button
+                                  style={styles.tickBtn}
+                                  title={`Add ${SERVICE_LABELS[k]} "${slugToLabel(slug)}" with cached results`}
+                                  onClick={() => onPick(k, slug)}
+                                >✓</button>
+                              )
+                              : ''}
                           </td>
                         ))}
                     </tr>
@@ -150,5 +161,10 @@ const styles: Record<string, React.CSSProperties> = {
   },
   tick: {
     padding: '3px 6px', textAlign: 'center', color: '#22c55e', fontWeight: 700,
+  },
+  tickBtn: {
+    background: 'none', border: 'none', color: '#22c55e', fontWeight: 700,
+    cursor: 'pointer', padding: '2px 4px', fontSize: 12,
+    borderRadius: 3, lineHeight: 1,
   },
 }
