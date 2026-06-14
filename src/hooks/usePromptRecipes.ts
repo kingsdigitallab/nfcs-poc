@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { FIELD_STARTERS } from '../utils/promptStarters'
 
 export interface PromptRecipe {
   id:                 string
@@ -8,9 +9,14 @@ export interface PromptRecipe {
   systemPrompt:       string
   userPromptTemplate: string
   builtIn?:           true
+  /** Recommended model for this recipe (applied only if available in live model list) */
+  model?:             string
+  /** Recommended temperature for this recipe */
+  temperature?:       number
 }
 
-const RECIPES_VERSION = '2026-06-11-v1'
+// Bump version when built-in recipes change so the stored user-recipe cache is reset
+const RECIPES_VERSION = '2026-06-14-v2'
 
 const BUILT_IN_RECIPES: PromptRecipe[] = [
   // Standard nodes (KCLNode, OllamaNode)
@@ -39,54 +45,8 @@ const BUILT_IN_RECIPES: PromptRecipe[] = [
     userPromptTemplate: 'Summarise the following in 2–3 sentences:\n\n{{content}}',
   },
 
-  // Field nodes, per-record
-  {
-    id: 'builtin-extract-persons-field-per',
-    name: 'Extract persons from field — JSON',
-    nodeFamily: 'field',
-    mode: 'per-record',
-    builtIn: true,
-    systemPrompt: 'You are a precise data extraction assistant. Return only valid JSON, no explanation.',
-    userPromptTemplate: 'Identify every person mentioned in the following {{field}} text. Return a JSON array of objects with "name" and "type" (historical/contemporary/mythological/unknown). Return [] if none.\n\n{{value}}',
-  },
-  {
-    id: 'builtin-extract-places-field-per',
-    name: 'Extract places from field — JSON',
-    nodeFamily: 'field',
-    mode: 'per-record',
-    builtIn: true,
-    systemPrompt: 'You are a precise data extraction assistant. Return only valid JSON, no explanation.',
-    userPromptTemplate: 'Identify every place mentioned in the following {{field}} text. Return a JSON array with "name" and "type" (settlement/region/country/landmark/mythological/unknown). Return [] if none.\n\n{{value}}',
-  },
-  {
-    id: 'builtin-summarise-field-per',
-    name: 'Summarise record field',
-    nodeFamily: 'field',
-    mode: 'per-record',
-    builtIn: true,
-    systemPrompt: 'You are a concise research assistant.',
-    userPromptTemplate: 'Summarise the following {{field}} in 2–3 sentences:\n\n{{value}}',
-  },
-
-  // Field nodes, aggregate
-  {
-    id: 'builtin-thematic-summary-agg',
-    name: 'Thematic summary',
-    nodeFamily: 'field',
-    mode: 'aggregate',
-    builtIn: true,
-    systemPrompt: 'You are a concise research assistant.',
-    userPromptTemplate: 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}',
-  },
-  {
-    id: 'builtin-list-entities-agg',
-    name: 'List unique entities',
-    nodeFamily: 'field',
-    mode: 'aggregate',
-    builtIn: true,
-    systemPrompt: 'You are a precise data extraction assistant. Return only valid JSON, no explanation.',
-    userPromptTemplate: 'The following are {{count}} {{field}} values from research records. List the distinct named entities (persons, places, organisations) mentioned across all values, grouped by type.\n\n{{values}}',
-  },
+  // Field node starters (17 tasks from prompt-template reference)
+  ...FIELD_STARTERS,
 ]
 
 export function usePromptRecipes() {

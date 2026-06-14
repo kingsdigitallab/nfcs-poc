@@ -15,6 +15,8 @@ import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclCon
 import { useStaleResults } from '../hooks/useStaleResults'
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
+import { SYSTEM_PROMPT_FLAVOURS } from '../utils/promptStarters'
+import { formatDuration } from '../utils/formatDuration'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -144,6 +146,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const [apiOk, setApiOk]           = useState<boolean | null>(null)
   const [tokenInput, setTokenInput] = useState(String((d.maxTokens as number | undefined) ?? 32768))
   const [liveTokens, setLiveTokens] = useState('')
+  const [modelHint, setModelHint]   = useState<string | null>(null)
   const abortRef       = useRef<AbortController | null>(null)
   const apexClickCount = useRef(0)
   const apexClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -267,6 +270,8 @@ export function KCLFieldNode({ id, data }: NodeProps) {
       inputCount: upstreamRecords.length, outputCount: 0,
     })
 
+    const t0 = performance.now()
+
     try {
       if (mode === 'aggregate') {
         const maxChars = getContentMaxChars(selectedModel)
@@ -291,10 +296,12 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           .replace(/\{\{value\}\}/g,  values)
           .replace(/\{\{count\}\}/g,  String(upstreamRecords.length))
 
+        const callT0 = performance.now()
         const response = await kclChat(
           effectiveApiKey, selectedModel, systemPrompt, prompt,
           temperature, maxTokens, signal, (token) => setLiveTokens(t => t + token)
         )
+        const inferenceMs = Math.round(performance.now() - callT0)
 
         const resultRecord = {
           id:                  `kcl-agg-${Date.now()}`,
@@ -306,17 +313,20 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           kclAggregatedFrom:   upstreamRecords.length,
           kclPrompt:           prompt,
           kclResponse:         response,
+          inferenceMs,
           ...(outputField ? { [outputField]: response } : {}),
           kclProcessedAt:      new Date().toISOString(),
         }
 
         const version = setNodeResults(id, [resultRecord])
+        const elapsedMs = Math.round(performance.now() - t0)
         setLiveTokens('')
         updateNodeData(id, {
           status:         'success',
-          statusMessage:  `✓ Aggregate summary (${upstreamRecords.length} records)`,
+          statusMessage:  `✓ Aggregate summary (${upstreamRecords.length} records) in ${formatDuration(elapsedMs)}`,
           outputCount:    1,
           resultsVersion: version,
+          elapsedMs,
         })
 
       } else {
@@ -337,10 +347,12 @@ export function KCLFieldNode({ id, data }: NodeProps) {
             .replace(/\{\{field\}\}/g, selectedField)
             .replace(/\{\{(\w+)\}\}/g, (_, k: string) => String(record[k] ?? ''))
 
+          const callT0 = performance.now()
           const response = await kclChat(
             effectiveApiKey, selectedModel, systemPrompt, prompt,
             temperature, maxTokens, signal, (token) => setLiveTokens(t => t + token)
           )
+          const inferenceMs = Math.round(performance.now() - callT0)
 
           const enrichedRecord = {
             ...record,
@@ -349,12 +361,14 @@ export function KCLFieldNode({ id, data }: NodeProps) {
             kclMode:        'per-record',
             kclPrompt:      prompt,
             kclResponse:    response,
+            inferenceMs,
             ...(outputField ? { [outputField]: response } : {}),
             kclProcessedAt: new Date().toISOString(),
           }
           enriched.push(enrichedRecord)
 
           // Partial results: write each record to store as it completes
+          // NOTE: must NOT set resultsVersion: 0 here (gotcha #21)
           const version = setNodeResults(id, [...enriched])
           updateNodeData(id, {
             outputCount: enriched.length,
@@ -363,10 +377,13 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           })
         }
 
+        // NOTE: do NOT set resultsVersion here (gotcha #21)
+        const elapsedMs = Math.round(performance.now() - t0)
         setLiveTokens('')
         updateNodeData(id, {
-          status:         'success',
-          statusMessage:  `✓ ${enriched.length} records processed`,
+          status:      'success',
+          statusMessage: `✓ ${enriched.length} records processed in ${formatDuration(elapsedMs)}`,
+          elapsedMs,
         })
       }
     } catch (err) {
@@ -454,6 +471,11 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           )}
         </div>
 
+        {/* Model hint (shown when a starter recommends a model that isn't available) */}
+        {modelHint && (
+          <div style={styles.modelHint}>⚠ {modelHint}</div>
+        )}
+
         {/* Field picker */}
         <div style={styles.row}>
           <span style={styles.label}>Field</span>
@@ -501,10 +523,52 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           nodeFamily="field"
           mode={mode}
           recipes={recipes}
-          onApply={r => updateNodeData(id, { systemPrompt: r.systemPrompt, userPromptTemplate: r.userPromptTemplate, ...(r.mode ? { mode: r.mode } : {}) })}
+          onApply={r => {
+            const patch: Record<string, unknown> = {
+              systemPrompt:       r.systemPrompt,
+              userPromptTemplate: r.userPromptTemplate,
+            }
+            if (r.mode)        patch.mode        = r.mode
+            if (r.temperature !== undefined) patch.temperature = r.temperature
+            if (r.model) {
+              if (models.includes(r.model)) {
+                patch.model = r.model
+                setModelHint(null)
+              } else {
+                setModelHint(`recommends ${r.model} — not available`)
+              }
+            } else {
+              setModelHint(null)
+            }
+            updateNodeData(id, patch)
+          }}
           onSave={name => saveRecipe({ name, nodeFamily: 'field', mode, systemPrompt, userPromptTemplate: promptTemplate })}
           onDelete={deleteRecipe}
         />
+
+        {/* Voice — system-prompt flavour picker */}
+        {(() => {
+          const matchedFlavour = SYSTEM_PROMPT_FLAVOURS.find(f => f.systemPrompt === systemPrompt)
+          return (
+            <div style={styles.row}>
+              <span style={styles.label}>Voice</span>
+              <select
+                style={styles.select}
+                value={matchedFlavour?.label ?? ''}
+                onChange={e => {
+                  const f = SYSTEM_PROMPT_FLAVOURS.find(fl => fl.label === e.target.value)
+                  if (f) updateNodeData(id, { systemPrompt: f.systemPrompt })
+                }}
+                className="nodrag"
+              >
+                {!matchedFlavour && <option value="">— custom —</option>}
+                {SYSTEM_PROMPT_FLAVOURS.map(f => (
+                  <option key={f.label} value={f.label}>{f.label}</option>
+                ))}
+              </select>
+            </div>
+          )
+        })()}
 
         {/* System prompt */}
         <div style={styles.colField}>
@@ -605,6 +669,7 @@ const styles = {
   headerStatus: { fontSize: 10, fontWeight: 600, color: '#fecdd3', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const },
   staleBadge: { fontSize: 9, fontWeight: 700, color: '#fbbf24', background: 'rgba(0,0,0,0.25)', borderRadius: 3, padding: '1px 5px', whiteSpace: 'nowrap' as const, flexShrink: 0 },
   warnBanner: { fontSize: 10, padding: '5px 10px', background: '#fef2f2', borderBottom: '1px solid #fecaca', color: '#991b1b', lineHeight: 1.4 },
+  modelHint:  { fontSize: 9, color: '#92400e', background: '#fef3c7', borderRadius: 3, padding: '2px 6px', marginTop: -3 },
   body: { padding: '10px 12px 6px', display: 'flex', flexDirection: 'column' as const, gap: 7 },
   row: { display: 'flex', alignItems: 'center', gap: 6 },
   colField: { display: 'flex', flexDirection: 'column' as const, gap: 3 },
