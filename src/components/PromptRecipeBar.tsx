@@ -15,14 +15,16 @@ export function PromptRecipeBar({ nodeFamily, mode, onApply, onSave, onDelete, r
   const [saving, setSaving] = useState(false)
   const [saveName, setSaveName] = useState('')
 
-  // Filter recipes for this node type
+  // Filter recipes for this node type, split into starters (built-in) and user recipes
   const filtered = recipes.filter(r => {
     if (r.nodeFamily !== nodeFamily) return false
     if (nodeFamily === 'field' && mode && r.mode !== mode) return false
     return true
   })
+  const starters    = filtered.filter(r => r.builtIn)
+  const userRecipes = filtered.filter(r => !r.builtIn)
 
-  const selected = filtered.find(r => r.id === selectedId)
+  const selected  = filtered.find(r => r.id === selectedId)
   const isBuiltIn = selected?.builtIn === true
 
   const handleApply = () => {
@@ -64,16 +66,21 @@ export function PromptRecipeBar({ nodeFamily, mode, onApply, onSave, onDelete, r
         style={S.select}
         className="nodrag"
       >
-        <option value="">
-          {filtered.length === 0
-            ? '— no recipes saved —'
-            : '— select a recipe —'}
-        </option>
-        {filtered.map(r => (
-          <option key={r.id} value={r.id}>
-            {r.builtIn ? '★ ' : ''}{r.name}
-          </option>
-        ))}
+        <option value="">— select a starter or recipe —</option>
+        {starters.length > 0 && (
+          <optgroup label="★ Starters">
+            {starters.map(r => (
+              <option key={r.id} value={r.id}>{r.name}</option>
+            ))}
+          </optgroup>
+        )}
+        {userRecipes.length > 0 && (
+          <optgroup label="Your recipes">
+            {userRecipes.map(r => (
+              <option key={r.id} value={r.id}>{r.name}</option>
+            ))}
+          </optgroup>
+        )}
       </select>
 
       {saving ? (

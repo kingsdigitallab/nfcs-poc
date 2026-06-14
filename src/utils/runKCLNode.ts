@@ -11,6 +11,7 @@ import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars } from './kclConfig'
+import { formatDuration } from './formatDuration'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
@@ -161,6 +162,7 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
   const enriched: Record<string, unknown>[] = []
   let errCount = 0
   const maxChars = getContentMaxChars(model)
+  const t0 = performance.now()
 
   for (let i = 0; i < upstreamRecords.length; i++) {
     const record = upstreamRecords[i]
@@ -180,11 +182,15 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
 
     let response      = ''
     let resolvedModel = model
+    let inferenceMs   = 0
+    const callT0 = performance.now()
     try {
       const result  = await kclChat(apiKey, model, systemPrompt, userContent, temperature, maxTokens)
       response      = result.text
       resolvedModel = result.resolvedModel
+      inferenceMs   = Math.round(performance.now() - callT0)
     } catch (err) {
+      inferenceMs = Math.round(performance.now() - callT0)
       errCount++
       const msg = err instanceof Error ? err.message : String(err)
       response = `[error: ${msg}]`
@@ -196,16 +202,19 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
       kclModelResolved: resolvedModel,
       kclPrompt:        renderedPrompt,
       kclResponse:      response,
+      inferenceMs,
       kclProcessedAt:   new Date().toISOString(),
     })
   }
 
+  const elapsedMs = Math.round(performance.now() - t0)
   const version = setNodeResults(nodeId, enriched)
   updateNodeData(nodeId, {
     status:         errCount > 0 && errCount === enriched.length ? 'error' : 'success',
-    statusMessage:  `✓ ${enriched.length - errCount} processed${errCount > 0 ? `, ${errCount} errors` : ''}`,
+    statusMessage:  `✓ ${enriched.length - errCount} processed in ${formatDuration(elapsedMs)}${errCount > 0 ? `, ${errCount} errors` : ''}`,
     inputCount:     upstreamRecords.length,
     outputCount:    enriched.length,
     resultsVersion: version,
+    elapsedMs,
   })
 }

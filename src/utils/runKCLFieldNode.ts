@@ -9,6 +9,7 @@ import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars } from './kclConfig'
+import { formatDuration } from './formatDuration'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
@@ -100,6 +101,8 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
     outputCount:   0,
   })
 
+  const t0 = performance.now()
+
   try {
     if (mode === 'aggregate') {
       const maxChars = getContentMaxChars(model)
@@ -123,7 +126,9 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
         .replace(/\{\{value\}\}/g,  values)
         .replace(/\{\{count\}\}/g,  String(upstreamRecords.length))
 
+      const callT0 = performance.now()
       const response = await kclChat(apiKey, model, systemPrompt, prompt, temperature, maxTokens)
+      const inferenceMs = Math.round(performance.now() - callT0)
 
       const resultRecord = {
         id:                `kcl-agg-${Date.now()}`,
@@ -135,16 +140,19 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
         kclAggregatedFrom: upstreamRecords.length,
         kclPrompt:         prompt,
         kclResponse:       response,
+        inferenceMs,
         ...(outputField ? { [outputField]: response } : {}),
         kclProcessedAt:    new Date().toISOString(),
       }
 
       const version = setNodeResults(nodeId, [resultRecord])
+      const elapsedMs = Math.round(performance.now() - t0)
       updateNodeData(nodeId, {
         status:         'success',
-        statusMessage:  `✓ Aggregate summary (${upstreamRecords.length} records)`,
+        statusMessage:  `✓ Aggregate summary (${upstreamRecords.length} records) in ${formatDuration(elapsedMs)}`,
         outputCount:    1,
         resultsVersion: version,
+        elapsedMs,
       })
 
     } else {
@@ -165,9 +173,13 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
           .replace(/\{\{(\w+)\}\}/g, (_, k: string) => String(record[k] ?? ''))
 
         let response: string
+        let inferenceMs = 0
+        const callT0 = performance.now()
         try {
           response = await kclChat(apiKey, model, systemPrompt, prompt, temperature, maxTokens)
+          inferenceMs = Math.round(performance.now() - callT0)
         } catch (err) {
+          inferenceMs = Math.round(performance.now() - callT0)
           errCount++
           const msg = err instanceof Error ? err.message : String(err)
           response = `[error: ${msg}]`
@@ -180,6 +192,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
           kclMode:        'per-record',
           kclPrompt:      prompt,
           kclResponse:    response,
+          inferenceMs,
           ...(outputField ? { [outputField]: response } : {}),
           kclProcessedAt: new Date().toISOString(),
         }
@@ -194,9 +207,11 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
         })
       }
 
+      const elapsedMs = Math.round(performance.now() - t0)
       updateNodeData(nodeId, {
         status:         errCount > 0 && errCount === enriched.length ? 'error' : 'success',
-        statusMessage:  `✓ ${enriched.length - errCount} processed${errCount > 0 ? `, ${errCount} errors` : ''}`,
+        statusMessage:  `✓ ${enriched.length - errCount} processed in ${formatDuration(elapsedMs)}${errCount > 0 ? `, ${errCount} errors` : ''}`,
+        elapsedMs,
       })
     }
   } catch (err) {

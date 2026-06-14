@@ -8,6 +8,7 @@
 import { useState } from 'react'
 import { Handle, Position, NodeProps } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
+import { formatDuration } from '../utils/formatDuration'
 
 const HEADER_COLOR = '#3b0764'  // purple-950 — distinct from both KCL node shades
 
@@ -20,6 +21,7 @@ interface KCLRecord {
   kclMode?: string
   kclAggregatedFrom?: number
   kclProcessedAt?: string
+  inferenceMs?: number
   [key: string]: unknown
 }
 
@@ -31,6 +33,7 @@ export function KCLOutputNode({ id }: NodeProps) {
   const allRecords   = (records ?? []) as KCLRecord[]
   const withResponse = allRecords.filter(r => r.kclResponse)
   const isAggregate  = withResponse.length === 1 && withResponse[0].kclMode === 'aggregate'
+  const totalInferenceMs = withResponse.reduce((sum, r) => sum + (r.inferenceMs ?? 0), 0)
 
   function toggleExpand(recId: string) {
     setExpanded(prev => {
@@ -69,6 +72,11 @@ export function KCLOutputNode({ id }: NodeProps) {
               {isAggregate
                 ? `aggregate · ${withResponse[0].kclAggregatedFrom ?? '?'} records`
                 : `${withResponse.length} response${withResponse.length !== 1 ? 's' : ''}`}
+            </span>
+          )}
+          {totalInferenceMs > 0 && (
+            <span style={{ ...styles.badge, color: '#86efac' }}>
+              ⏱ {formatDuration(totalInferenceMs)}
             </span>
           )}
           {status === 'loading' && (
@@ -130,6 +138,11 @@ export function KCLOutputNode({ id }: NodeProps) {
                   {rec.kclMode === 'aggregate' && (
                     <span style={{ ...styles.metaPill, background: '#fef3c7', color: '#92400e' }}>
                       {rec.kclAggregatedFrom} records aggregated
+                    </span>
+                  )}
+                  {rec.inferenceMs !== undefined && rec.inferenceMs > 0 && (
+                    <span style={{ ...styles.metaPill, background: '#f0fdf4', color: '#166534' }}>
+                      ⏱ {formatDuration(rec.inferenceMs)}
                     </span>
                   )}
                 </div>
