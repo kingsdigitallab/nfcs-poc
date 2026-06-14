@@ -79,8 +79,9 @@ function adaptMember(member: BodleianMember): UnifiedRecord {
   const manifest  = member.manifest?.id ?? ''
 
   return {
-    _id:        uuid || url,
+    id:         `bodleian:${uuid || url}`,
     _source:    'bodleian',
+    _sourceId:  uuid || url,
     _sourceUrl: url,
     _service:   'bodleian',
     title,

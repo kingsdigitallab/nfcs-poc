@@ -65,6 +65,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
   const apiKey         = resolveParam('apiKey', (d.apiKey as string | undefined) ?? '').trim()
   const model          = (d.model          as string | undefined) ?? ''
   const selectedField  = (d.selectedField  as string | undefined) ?? ''
+  const outputField    = (d.outputField    as string | undefined) ?? ''
   const mode           = (d.mode           as string | undefined) ?? 'per-record'
   const systemPrompt   = (d.systemPrompt   as string | undefined) ?? DEFAULT_SYSTEM
   const promptTemplate = (d.userPromptTemplate as string | undefined)
@@ -134,6 +135,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
         kclAggregatedFrom: upstreamRecords.length,
         kclPrompt:         prompt,
         kclResponse:       response,
+        ...(outputField ? { [outputField]: response } : {}),
         kclProcessedAt:    new Date().toISOString(),
       }
 
@@ -178,6 +180,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
           kclMode:        'per-record',
           kclPrompt:      prompt,
           kclResponse:    response,
+          ...(outputField ? { [outputField]: response } : {}),
           kclProcessedAt: new Date().toISOString(),
         }
         enriched.push(enrichedRecord)

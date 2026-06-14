@@ -1,7 +1,8 @@
 [
   {
-    "_id": "064e049b-bef1-4973-a752-d1b5d026d4a4",
+    "id": "bodleian:064e049b-bef1-4973-a752-d1b5d026d4a4",
     "_source": "bodleian",
+    "_sourceId": "064e049b-bef1-4973-a752-d1b5d026d4a4",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/064e049b-bef1-4973-a752-d1b5d026d4a4/",
     "_service": "bodleian",
     "title": "Glass Plate negative collection: Arnold Fairbairns for Stephen Warner’s book Lincoln College, Oxford",
@@ -30,8 +31,9 @@
     }
   },
   {
-    "_id": "385c0fdd-03ce-42c7-b43f-369003bee8f3",
+    "id": "bodleian:385c0fdd-03ce-42c7-b43f-369003bee8f3",
     "_source": "bodleian",
+    "_sourceId": "385c0fdd-03ce-42c7-b43f-369003bee8f3",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/385c0fdd-03ce-42c7-b43f-369003bee8f3/",
     "_service": "bodleian",
     "title": "‘The Tudor Pattern Book’",
@@ -60,8 +62,9 @@
     }
   },
   {
-    "_id": "0c5c47e6-a6cf-4b8c-9680-3a8309f67964",
+    "id": "bodleian:0c5c47e6-a6cf-4b8c-9680-3a8309f67964",
     "_source": "bodleian",
+    "_sourceId": "0c5c47e6-a6cf-4b8c-9680-3a8309f67964",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/0c5c47e6-a6cf-4b8c-9680-3a8309f67964/",
     "_service": "bodleian",
     "title": "Prose paraphrase of Le pèlerinage de l'âme (second part of the Trois Pèlerinages).",
@@ -90,8 +93,9 @@
     }
   },
   {
-    "_id": "eb0735a3-e8ee-4104-b111-51d18a13b78b",
+    "id": "bodleian:eb0735a3-e8ee-4104-b111-51d18a13b78b",
     "_source": "bodleian",
+    "_sourceId": "eb0735a3-e8ee-4104-b111-51d18a13b78b",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/eb0735a3-e8ee-4104-b111-51d18a13b78b/",
     "_service": "bodleian",
     "title": "Bestiary (known as 'The Ashmole Bestiary').",
@@ -120,8 +124,9 @@
     }
   },
   {
-    "_id": "2b06f496-3092-43fb-b0c1-fd0b377dabbd",
+    "id": "bodleian:2b06f496-3092-43fb-b0c1-fd0b377dabbd",
     "_source": "bodleian",
+    "_sourceId": "2b06f496-3092-43fb-b0c1-fd0b377dabbd",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/2b06f496-3092-43fb-b0c1-fd0b377dabbd/",
     "_service": "bodleian",
     "title": "Codex Bodley’ (also called 'Codex Ñuu Tnoo').",
@@ -150,8 +155,9 @@
     }
   },
   {
-    "_id": "9b55903d-af7b-4224-a3d2-0b9fe422592d",
+    "id": "bodleian:9b55903d-af7b-4224-a3d2-0b9fe422592d",
     "_source": "bodleian",
+    "_sourceId": "9b55903d-af7b-4224-a3d2-0b9fe422592d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/9b55903d-af7b-4224-a3d2-0b9fe422592d/",
     "_service": "bodleian",
     "title": "Diary",
@@ -180,8 +186,9 @@
     }
   },
   {
-    "_id": "800ee953-8af1-4b97-9a12-9d179331d3a8",
+    "id": "bodleian:800ee953-8af1-4b97-9a12-9d179331d3a8",
     "_source": "bodleian",
+    "_sourceId": "800ee953-8af1-4b97-9a12-9d179331d3a8",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/800ee953-8af1-4b97-9a12-9d179331d3a8/",
     "_service": "bodleian",
     "title": "Apocalypse with commentary (known as the 'Douce Apocalypse').",
@@ -210,8 +217,9 @@
     }
   },
   {
-    "_id": "ab35e336-a471-4cf0-a9a7-592dbb8695d8",
+    "id": "bodleian:ab35e336-a471-4cf0-a9a7-592dbb8695d8",
     "_source": "bodleian",
+    "_sourceId": "ab35e336-a471-4cf0-a9a7-592dbb8695d8",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ab35e336-a471-4cf0-a9a7-592dbb8695d8/",
     "_service": "bodleian",
     "title": "Divine Comedy.",
@@ -240,8 +248,9 @@
     }
   },
   {
-    "_id": "8460b5a0-9879-4989-86f4-fbd2f09264d6",
+    "id": "bodleian:8460b5a0-9879-4989-86f4-fbd2f09264d6",
     "_source": "bodleian",
+    "_sourceId": "8460b5a0-9879-4989-86f4-fbd2f09264d6",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/8460b5a0-9879-4989-86f4-fbd2f09264d6/",
     "_service": "bodleian",
     "title": "Bible.",
@@ -270,8 +279,9 @@
     }
   },
   {
-    "_id": "4a0c575c-0cad-4dd2-8fd4-a6689c0ae1e8",
+    "id": "bodleian:4a0c575c-0cad-4dd2-8fd4-a6689c0ae1e8",
     "_source": "bodleian",
+    "_sourceId": "4a0c575c-0cad-4dd2-8fd4-a6689c0ae1e8",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/4a0c575c-0cad-4dd2-8fd4-a6689c0ae1e8/",
     "_service": "bodleian",
     "title": "Psalter.",
@@ -300,8 +310,9 @@
     }
   },
   {
-    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "id": "bodleian:390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_source": "bodleian",
+    "_sourceId": "390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
     "_service": "bodleian",
     "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
@@ -330,8 +341,9 @@
     }
   },
   {
-    "_id": "8d17bc13-14b6-4a56-b3b5-d2e1a935c60d",
+    "id": "bodleian:8d17bc13-14b6-4a56-b3b5-d2e1a935c60d",
     "_source": "bodleian",
+    "_sourceId": "8d17bc13-14b6-4a56-b3b5-d2e1a935c60d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/8d17bc13-14b6-4a56-b3b5-d2e1a935c60d/",
     "_service": "bodleian",
     "title": "Romance of Alexander.",

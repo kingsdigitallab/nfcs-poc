@@ -1,7 +1,8 @@
 [
   {
-    "_id": "a7a89544-dc43-461d-8f38-008ba54d7b46",
+    "id": "bodleian:a7a89544-dc43-461d-8f38-008ba54d7b46",
     "_source": "bodleian",
+    "_sourceId": "a7a89544-dc43-461d-8f38-008ba54d7b46",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/a7a89544-dc43-461d-8f38-008ba54d7b46/",
     "_service": "bodleian",
     "title": "Schutzgebiet der Neu-Guinea-Kompanie. [Inset] Neu Guinea, Bismarck Archipel.. at 1:10M",
@@ -30,8 +31,9 @@
     }
   },
   {
-    "_id": "f6790785-0513-4fa2-9dd4-fa9d214d406a",
+    "id": "bodleian:f6790785-0513-4fa2-9dd4-fa9d214d406a",
     "_source": "bodleian",
+    "_sourceId": "f6790785-0513-4fa2-9dd4-fa9d214d406a",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f6790785-0513-4fa2-9dd4-fa9d214d406a/",
     "_service": "bodleian",
     "title": "Rough Sketch of 200 miles of the western portion of British New Guinea, including rivers",
@@ -60,8 +62,9 @@
     }
   },
   {
-    "_id": "cee84920-8cef-42f4-afa3-7fcd97ea55f1",
+    "id": "bodleian:cee84920-8cef-42f4-afa3-7fcd97ea55f1",
     "_source": "bodleian",
+    "_sourceId": "cee84920-8cef-42f4-afa3-7fcd97ea55f1",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/cee84920-8cef-42f4-afa3-7fcd97ea55f1/",
     "_service": "bodleian",
     "title": "Romance of Lancelot du Lac (branches 3. Lancelot; 4. Queste; 5. Mort Artu).",
@@ -90,8 +93,9 @@
     }
   },
   {
-    "_id": "f9031601-4fd2-4ae6-a0f5-3a229cd27452",
+    "id": "bodleian:f9031601-4fd2-4ae6-a0f5-3a229cd27452",
     "_source": "bodleian",
+    "_sourceId": "f9031601-4fd2-4ae6-a0f5-3a229cd27452",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f9031601-4fd2-4ae6-a0f5-3a229cd27452/",
     "_service": "bodleian",
     "title": "A new map of the County of Oxford: from an actual survey; on which are delineated; the course of the rivers and roads, the parks, gentlemens seats, heaths, woods, forests, commons &c &c.",
@@ -120,8 +124,9 @@
     }
   },
   {
-    "_id": "969cccd4-3ece-474f-80ea-47fb8fc1e855",
+    "id": "bodleian:969cccd4-3ece-474f-80ea-47fb8fc1e855",
     "_source": "bodleian",
+    "_sourceId": "969cccd4-3ece-474f-80ea-47fb8fc1e855",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/969cccd4-3ece-474f-80ea-47fb8fc1e855/",
     "_service": "bodleian",
     "title": "A new and accurate map of the East India Islands. Laid down according to the latest discoveries, and agreeable to the most approved maps & charts. The whole being regulated by astron. observations. By Eman. Bowen..",
@@ -150,8 +155,9 @@
     }
   },
   {
-    "_id": "f9a037d6-7f33-4442-b616-46ab1ef7d10e",
+    "id": "bodleian:f9a037d6-7f33-4442-b616-46ab1ef7d10e",
     "_source": "bodleian",
+    "_sourceId": "f9a037d6-7f33-4442-b616-46ab1ef7d10e",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f9a037d6-7f33-4442-b616-46ab1ef7d10e/",
     "_service": "bodleian",
     "title": "Miscellany of state papers and letters, 1375-1752.",
@@ -180,8 +186,9 @@
     }
   },
   {
-    "_id": "32638ab9-c0b2-4258-9ca7-980b4b9268f2",
+    "id": "bodleian:32638ab9-c0b2-4258-9ca7-980b4b9268f2",
     "_source": "bodleian",
+    "_sourceId": "32638ab9-c0b2-4258-9ca7-980b4b9268f2",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/32638ab9-c0b2-4258-9ca7-980b4b9268f2/",
     "_service": "bodleian",
     "title": "‘The Gough Map’.",
@@ -210,8 +217,9 @@
     }
   },
   {
-    "_id": "06414505-79c2-4ce8-915a-00a281d95d58",
+    "id": "bodleian:06414505-79c2-4ce8-915a-00a281d95d58",
     "_source": "bodleian",
+    "_sourceId": "06414505-79c2-4ce8-915a-00a281d95d58",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/06414505-79c2-4ce8-915a-00a281d95d58/",
     "_service": "bodleian",
     "title": "Diary",
@@ -240,8 +248,9 @@
     }
   },
   {
-    "_id": "3bb1b2f5-199c-49a9-a221-2b5702120e38",
+    "id": "bodleian:3bb1b2f5-199c-49a9-a221-2b5702120e38",
     "_source": "bodleian",
+    "_sourceId": "3bb1b2f5-199c-49a9-a221-2b5702120e38",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/3bb1b2f5-199c-49a9-a221-2b5702120e38/",
     "_service": "bodleian",
     "title": "Diary",
@@ -270,8 +279,9 @@
     }
   },
   {
-    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "id": "bodleian:390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_source": "bodleian",
+    "_sourceId": "390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
     "_service": "bodleian",
     "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
@@ -300,8 +310,9 @@
     }
   },
   {
-    "_id": "4d7ce21a-805b-4576-a55d-1d7023c8e2e0",
+    "id": "bodleian:4d7ce21a-805b-4576-a55d-1d7023c8e2e0",
     "_source": "bodleian",
+    "_sourceId": "4d7ce21a-805b-4576-a55d-1d7023c8e2e0",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/4d7ce21a-805b-4576-a55d-1d7023c8e2e0/",
     "_service": "bodleian",
     "title": "Diary",
@@ -330,8 +341,9 @@
     }
   },
   {
-    "_id": "e2e12af1-720c-4b99-b564-d5f026305f2d",
+    "id": "bodleian:e2e12af1-720c-4b99-b564-d5f026305f2d",
     "_source": "bodleian",
+    "_sourceId": "e2e12af1-720c-4b99-b564-d5f026305f2d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e2e12af1-720c-4b99-b564-d5f026305f2d/",
     "_service": "bodleian",
     "title": "Diary",
@@ -360,8 +372,9 @@
     }
   },
   {
-    "_id": "19d3829a-521d-4fad-9414-e51bc2a1866e",
+    "id": "bodleian:19d3829a-521d-4fad-9414-e51bc2a1866e",
     "_source": "bodleian",
+    "_sourceId": "19d3829a-521d-4fad-9414-e51bc2a1866e",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/19d3829a-521d-4fad-9414-e51bc2a1866e/",
     "_service": "bodleian",
     "title": "Diary",
@@ -390,8 +403,9 @@
     }
   },
   {
-    "_id": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
+    "id": "bodleian:52f0a31a-1478-40e4-b05b-fddb1ad076ff",
     "_source": "bodleian",
+    "_sourceId": "52f0a31a-1478-40e4-b05b-fddb1ad076ff",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/52f0a31a-1478-40e4-b05b-fddb1ad076ff/",
     "_service": "bodleian",
     "title": "The Vernon Manuscript",

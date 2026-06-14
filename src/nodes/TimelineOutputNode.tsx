@@ -11,6 +11,7 @@ import { Handle, Position, NodeProps, NodeResizer, useReactFlow } from '@xyflow/
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults } from '../store/resultsStore'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
+import { candidateFields } from '../utils/reconciliationService'
 
 // ─── source appearance ────────────────────────────────────────────────────────
 
@@ -131,6 +132,7 @@ export interface TimelineOutputNodeData {
   filterEnd:   number | null
   filterCount?: number
   totalCount?:  number
+  dateField?:  string
   [key: string]: unknown
 }
 
@@ -173,6 +175,23 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
 
   const fitToRange = d.fitToRange ?? false
   const nodeWidth  = measuredWidth ?? DEFAULT_W
+  const dateField  = (d.dateField ?? '') as string
+
+  const availableFields = useMemo(
+    () => records?.length ? candidateFields(records as Record<string, unknown>[], true) : [],
+    [records],
+  )
+
+  // Resolve year from a record using the selected dateField or default date/eventDate logic
+  const recordYear = useCallback((r: UnifiedRecord): number | null => {
+    if (dateField) {
+      const raw = dateField.includes('.')
+        ? dateField.split('.').reduce<unknown>((o, k) => (o as Record<string, unknown> | undefined)?.[k], r)
+        : (r as Record<string, unknown>)[dateField]
+      return toYear(raw as string | undefined)
+    }
+    return toYear(r.date as string | undefined) ?? toYear(r.eventDate as string | undefined)
+  }, [dateField])
 
   const scheduleHide = useCallback(() => {
     dismissTimer.current = setTimeout(() => setHovered(null), 180)
@@ -188,7 +207,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
     let noDateCount = 0
 
     for (const r of records ?? []) {
-      const year = toYear(r.date as string | undefined) ?? toYear(r.eventDate as string | undefined)
+      const year = recordYear(r)
       if (year === null) { noDateCount++; continue }
       items.push({ record: r, year })
       const src = r._source ?? 'unknown'
@@ -206,7 +225,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
       yearMap.get(item.year)!.push(item)
     }
     return { items, minYear, maxYear, yearMap, bySource, noDateCount }
-  }, [records])
+  }, [records, recordYear])
 
   // ── SVG geometry ──────────────────────────────────────────────────────────
   const yearRange   = Math.max(maxYear - minYear, 1)
@@ -259,7 +278,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
     const filtered = (slo === null && shi === null)
       ? upstream
       : upstream.filter(r => {
-          const year = toYear(r.date as string | undefined) ?? toYear(r.eventDate as string | undefined) ?? null
+          const year = recordYear(r) ?? null
           if (year === null) return false
           if (slo !== null && year < slo) return false
           if (shi !== null && year > shi) return false
@@ -276,9 +295,12 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
     })
     setLocalStartTxt(start !== null ? String(start) : '')
     setLocalEndTxt(end   !== null ? String(end)   : '')
-  }, [records, id, updateNodeData])
+  }, [records, id, updateNodeData, recordYear])
 
   useEffect(() => { applyRef.current = applyFilterValues }, [applyFilterValues])
+
+  // Re-apply active filter when the date field changes so output stays consistent
+  useEffect(() => { applyRef.current(savedStartRef.current, savedEndRef.current) }, [dateField]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Auto-initialise range handles to full data extent when data first arrives.
   // Uses refs (not state) to avoid stale closures; runs only when data range changes.
@@ -520,6 +542,16 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
 
       {/* ── Filter bar ── */}
       <div style={styles.filterBar} className="nodrag">
+        <select
+          style={styles.dateSelect}
+          value={dateField}
+          onChange={e => updateNodeData(id, { dateField: e.target.value })}
+          className="nodrag"
+          title="Field used as the date source (blank = auto: date / eventDate)"
+        >
+          <option value="">date: auto</option>
+          {availableFields.map(f => <option key={f} value={f}>{f}</option>)}
+        </select>
         <span style={styles.filterLabel}>Filter</span>
         <input
           style={styles.yearInput}
@@ -658,6 +690,17 @@ const styles = {
     borderTop:      '1px solid #e5e7eb',
     background:     '#f8fafc',
     flexShrink:     0,
+  },
+  dateSelect: {
+    fontSize:     10,
+    padding:      '2px 4px',
+    border:       '1px solid #d1d5db',
+    borderRadius: 4,
+    height:       22,
+    color:        '#374151',
+    background:   '#fff',
+    maxWidth:     110,
+    cursor:       'pointer',
   },
   filterLabel: {
     fontSize:   10,

@@ -1,7 +1,8 @@
 [
   {
-    "_id": "5a7bbe3d-8fe2-4539-8cf2-614aa54932db",
+    "id": "bodleian:5a7bbe3d-8fe2-4539-8cf2-614aa54932db",
     "_source": "bodleian",
+    "_sourceId": "5a7bbe3d-8fe2-4539-8cf2-614aa54932db",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/5a7bbe3d-8fe2-4539-8cf2-614aa54932db/",
     "_service": "bodleian",
     "title": "The British Banner Galop",
@@ -30,8 +31,9 @@
     }
   },
   {
-    "_id": "45983f12-ca52-4b29-8f61-fea0a31f36dd",
+    "id": "bodleian:45983f12-ca52-4b29-8f61-fea0a31f36dd",
     "_source": "bodleian",
+    "_sourceId": "45983f12-ca52-4b29-8f61-fea0a31f36dd",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/45983f12-ca52-4b29-8f61-fea0a31f36dd/",
     "_service": "bodleian",
     "title": "Lettera consolatoria ad una monaca ammalata. Operetta de duo epistole de lo Eterno Padre.",
@@ -60,8 +62,9 @@
     }
   },
   {
-    "_id": "65cb1810-6c8a-4d8b-b997-feaeb3251614",
+    "id": "bodleian:65cb1810-6c8a-4d8b-b997-feaeb3251614",
     "_source": "bodleian",
+    "_sourceId": "65cb1810-6c8a-4d8b-b997-feaeb3251614",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/65cb1810-6c8a-4d8b-b997-feaeb3251614/",
     "_service": "bodleian",
     "title": "Roll of arms (Powell's Roll).",
@@ -90,8 +93,9 @@
     }
   },
   {
-    "_id": "bdd6f26f-b46a-41dd-b81d-5e592a503721",
+    "id": "bodleian:bdd6f26f-b46a-41dd-b81d-5e592a503721",
     "_source": "bodleian",
+    "_sourceId": "bdd6f26f-b46a-41dd-b81d-5e592a503721",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/bdd6f26f-b46a-41dd-b81d-5e592a503721/",
     "_service": "bodleian",
     "title": "Anticipation -- ways and means -- or: Buonaparte really taken",
@@ -120,8 +124,9 @@
     }
   },
   {
-    "_id": "62b8814b-d059-47f5-96ce-b72c1104f257",
+    "id": "bodleian:62b8814b-d059-47f5-96ce-b72c1104f257",
     "_source": "bodleian",
+    "_sourceId": "62b8814b-d059-47f5-96ce-b72c1104f257",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/62b8814b-d059-47f5-96ce-b72c1104f257/",
     "_service": "bodleian",
     "title": "The noble Spaniards or: Britannia assisting the cause of freedom all over the world, whither friend, or foe",
@@ -150,8 +155,9 @@
     }
   },
   {
-    "_id": "23bc8e8e-a6e2-4f97-8fa0-509c97cdd909",
+    "id": "bodleian:23bc8e8e-a6e2-4f97-8fa0-509c97cdd909",
     "_source": "bodleian",
+    "_sourceId": "23bc8e8e-a6e2-4f97-8fa0-509c97cdd909",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/23bc8e8e-a6e2-4f97-8fa0-509c97cdd909/",
     "_service": "bodleian",
     "title": "Bodleian Library MS. Douce 291",
@@ -180,8 +186,9 @@
     }
   },
   {
-    "_id": "68aa52ca-0171-4b59-9e7e-96bb638e912b",
+    "id": "bodleian:68aa52ca-0171-4b59-9e7e-96bb638e912b",
     "_source": "bodleian",
+    "_sourceId": "68aa52ca-0171-4b59-9e7e-96bb638e912b",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/68aa52ca-0171-4b59-9e7e-96bb638e912b/",
     "_service": "bodleian",
     "title": "Joan of Arc",
@@ -210,8 +217,9 @@
     }
   },
   {
-    "_id": "9801a4e5-9aba-4984-8dd3-cd14edc81cf8",
+    "id": "bodleian:9801a4e5-9aba-4984-8dd3-cd14edc81cf8",
     "_source": "bodleian",
+    "_sourceId": "9801a4e5-9aba-4984-8dd3-cd14edc81cf8",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/9801a4e5-9aba-4984-8dd3-cd14edc81cf8/",
     "_service": "bodleian",
     "title": "Life of Richard Beauchamp; Roll of the Earls of Warwick.",
@@ -240,8 +248,9 @@
     }
   },
   {
-    "_id": "09a0c911-2b8f-40d3-b85c-cdb23f4f7b49",
+    "id": "bodleian:09a0c911-2b8f-40d3-b85c-cdb23f4f7b49",
     "_source": "bodleian",
+    "_sourceId": "09a0c911-2b8f-40d3-b85c-cdb23f4f7b49",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/09a0c911-2b8f-40d3-b85c-cdb23f4f7b49/",
     "_service": "bodleian",
     "title": "La sustance de la Passion de Jhesus Crist.",
@@ -270,8 +279,9 @@
     }
   },
   {
-    "_id": "a640cdb1-113b-403a-8589-4911106e8928",
+    "id": "bodleian:a640cdb1-113b-403a-8589-4911106e8928",
     "_source": "bodleian",
+    "_sourceId": "a640cdb1-113b-403a-8589-4911106e8928",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/a640cdb1-113b-403a-8589-4911106e8928/",
     "_service": "bodleian",
     "title": "Commissio of Doge Alvise Mocenigo (1570-1577) appointing the 'potestas' of Treviso.",
@@ -300,8 +310,9 @@
     }
   },
   {
-    "_id": "e38211bd-5854-4514-818d-ee9fba5ea15a",
+    "id": "bodleian:e38211bd-5854-4514-818d-ee9fba5ea15a",
     "_source": "bodleian",
+    "_sourceId": "e38211bd-5854-4514-818d-ee9fba5ea15a",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e38211bd-5854-4514-818d-ee9fba5ea15a/",
     "_service": "bodleian",
     "title": "Hesperides.",
@@ -330,8 +341,9 @@
     }
   },
   {
-    "_id": "5c213330-f09e-4ac1-992a-0fe871968ad5",
+    "id": "bodleian:5c213330-f09e-4ac1-992a-0fe871968ad5",
     "_source": "bodleian",
+    "_sourceId": "5c213330-f09e-4ac1-992a-0fe871968ad5",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/5c213330-f09e-4ac1-992a-0fe871968ad5/",
     "_service": "bodleian",
     "title": "Christian religious work, in Nahuatl.",
@@ -360,8 +372,9 @@
     }
   },
   {
-    "_id": "dc7ba08e-bd4e-4ed4-ba91-218b305b09df",
+    "id": "bodleian:dc7ba08e-bd4e-4ed4-ba91-218b305b09df",
     "_source": "bodleian",
+    "_sourceId": "dc7ba08e-bd4e-4ed4-ba91-218b305b09df",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/dc7ba08e-bd4e-4ed4-ba91-218b305b09df/",
     "_service": "bodleian",
     "title": "Christ's descent into Hell / Resurrection of Christ",
@@ -390,8 +403,9 @@
     }
   },
   {
-    "_id": "e3de1169-e849-4088-b82e-ea4da1315b2d",
+    "id": "bodleian:e3de1169-e849-4088-b82e-ea4da1315b2d",
     "_source": "bodleian",
+    "_sourceId": "e3de1169-e849-4088-b82e-ea4da1315b2d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e3de1169-e849-4088-b82e-ea4da1315b2d/",
     "_service": "bodleian",
     "title": "Register of the Honour of Richmond with other items concerning the Honour.",
@@ -420,8 +434,9 @@
     }
   },
   {
-    "_id": "bb4d59f6-6205-432e-9c8b-cfc2e41793d6",
+    "id": "bodleian:bb4d59f6-6205-432e-9c8b-cfc2e41793d6",
     "_source": "bodleian",
+    "_sourceId": "bb4d59f6-6205-432e-9c8b-cfc2e41793d6",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/bb4d59f6-6205-432e-9c8b-cfc2e41793d6/",
     "_service": "bodleian",
     "title": "Commentary on Valerius Maximus.",
@@ -450,8 +465,9 @@
     }
   },
   {
-    "_id": "e73d5af7-31ac-4fea-968d-295e56c49c35",
+    "id": "bodleian:e73d5af7-31ac-4fea-968d-295e56c49c35",
     "_source": "bodleian",
+    "_sourceId": "e73d5af7-31ac-4fea-968d-295e56c49c35",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e73d5af7-31ac-4fea-968d-295e56c49c35/",
     "_service": "bodleian",
     "title": "Book of directions and religious exercises for a monk during Easter-tide, with musical notes and illuminations.",
@@ -480,8 +496,9 @@
     }
   },
   {
-    "_id": "e655262b-b0e7-4d0d-8951-fba99712bb4a",
+    "id": "bodleian:e655262b-b0e7-4d0d-8951-fba99712bb4a",
     "_source": "bodleian",
+    "_sourceId": "e655262b-b0e7-4d0d-8951-fba99712bb4a",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e655262b-b0e7-4d0d-8951-fba99712bb4a/",
     "_service": "bodleian",
     "title": "Kitāb-i-Samak 'Iyār (pt.2)",
@@ -510,8 +527,9 @@
     }
   },
   {
-    "_id": "0d8ab37e-8024-4c50-80c8-49782f05e1ce",
+    "id": "bodleian:0d8ab37e-8024-4c50-80c8-49782f05e1ce",
     "_source": "bodleian",
+    "_sourceId": "0d8ab37e-8024-4c50-80c8-49782f05e1ce",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/0d8ab37e-8024-4c50-80c8-49782f05e1ce/",
     "_service": "bodleian",
     "title": "Missal. Use of Rome.",
@@ -540,8 +558,9 @@
     }
   },
   {
-    "_id": "01e75ac9-72e6-466e-8bca-5b645d68dc39",
+    "id": "bodleian:01e75ac9-72e6-466e-8bca-5b645d68dc39",
     "_source": "bodleian",
+    "_sourceId": "01e75ac9-72e6-466e-8bca-5b645d68dc39",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/01e75ac9-72e6-466e-8bca-5b645d68dc39/",
     "_service": "bodleian",
     "title": "Alchemical poem.",
@@ -570,8 +589,9 @@
     }
   },
   {
-    "_id": "1262866f-1924-463f-bfaa-bba6913b7a0f",
+    "id": "bodleian:1262866f-1924-463f-bfaa-bba6913b7a0f",
     "_source": "bodleian",
+    "_sourceId": "1262866f-1924-463f-bfaa-bba6913b7a0f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/1262866f-1924-463f-bfaa-bba6913b7a0f/",
     "_service": "bodleian",
     "title": "Dominican Processional and Troper.",
@@ -600,8 +620,9 @@
     }
   },
   {
-    "_id": "65a3756e-3b1f-48a7-8a22-0fa9d6f75998",
+    "id": "bodleian:65a3756e-3b1f-48a7-8a22-0fa9d6f75998",
     "_source": "bodleian",
+    "_sourceId": "65a3756e-3b1f-48a7-8a22-0fa9d6f75998",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/65a3756e-3b1f-48a7-8a22-0fa9d6f75998/",
     "_service": "bodleian",
     "title": "Tractatus summularum logice (etc.)",
@@ -630,8 +651,9 @@
     }
   },
   {
-    "_id": "3214aa58-7e54-4f8a-8392-4361c92d2ebe",
+    "id": "bodleian:3214aa58-7e54-4f8a-8392-4361c92d2ebe",
     "_source": "bodleian",
+    "_sourceId": "3214aa58-7e54-4f8a-8392-4361c92d2ebe",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/3214aa58-7e54-4f8a-8392-4361c92d2ebe/",
     "_service": "bodleian",
     "title": "Missal. Use of Rome.",
@@ -660,8 +682,9 @@
     }
   },
   {
-    "_id": "ef859acc-94b6-4fc9-b227-26fd55c30cea",
+    "id": "bodleian:ef859acc-94b6-4fc9-b227-26fd55c30cea",
     "_source": "bodleian",
+    "_sourceId": "ef859acc-94b6-4fc9-b227-26fd55c30cea",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ef859acc-94b6-4fc9-b227-26fd55c30cea/",
     "_service": "bodleian",
     "title": "Account of the funeral of Lord Williams of Thame",
@@ -690,8 +713,9 @@
     }
   },
   {
-    "_id": "e5cad4a8-cffe-4cb6-8f7e-6ebc987971bf",
+    "id": "bodleian:e5cad4a8-cffe-4cb6-8f7e-6ebc987971bf",
     "_source": "bodleian",
+    "_sourceId": "e5cad4a8-cffe-4cb6-8f7e-6ebc987971bf",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e5cad4a8-cffe-4cb6-8f7e-6ebc987971bf/",
     "_service": "bodleian",
     "title": "Treatise of German military organisation.",
@@ -720,8 +744,9 @@
     }
   },
   {
-    "_id": "be50435b-2dfc-4a4e-b0b8-bf10eebda04f",
+    "id": "bodleian:be50435b-2dfc-4a4e-b0b8-bf10eebda04f",
     "_source": "bodleian",
+    "_sourceId": "be50435b-2dfc-4a4e-b0b8-bf10eebda04f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/be50435b-2dfc-4a4e-b0b8-bf10eebda04f/",
     "_service": "bodleian",
     "title": "Statutes of England to 1495.",
@@ -750,8 +775,9 @@
     }
   },
   {
-    "_id": "01979694-9663-472b-97d5-3ed575dd89b2",
+    "id": "bodleian:01979694-9663-472b-97d5-3ed575dd89b2",
     "_source": "bodleian",
+    "_sourceId": "01979694-9663-472b-97d5-3ed575dd89b2",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/01979694-9663-472b-97d5-3ed575dd89b2/",
     "_service": "bodleian",
     "title": "Psalter.",
@@ -780,8 +806,9 @@
     }
   },
   {
-    "_id": "df30be47-ac71-4ebc-8996-69a699392c67",
+    "id": "bodleian:df30be47-ac71-4ebc-8996-69a699392c67",
     "_source": "bodleian",
+    "_sourceId": "df30be47-ac71-4ebc-8996-69a699392c67",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/df30be47-ac71-4ebc-8996-69a699392c67/",
     "_service": "bodleian",
     "title": "Book of Hours. Use of Sarum.",
@@ -810,8 +837,9 @@
     }
   },
   {
-    "_id": "ed938c33-910e-40ad-955e-b233dda42c36",
+    "id": "bodleian:ed938c33-910e-40ad-955e-b233dda42c36",
     "_source": "bodleian",
+    "_sourceId": "ed938c33-910e-40ad-955e-b233dda42c36",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ed938c33-910e-40ad-955e-b233dda42c36/",
     "_service": "bodleian",
     "title": "Album Amicorum of Jan va der Deck.",
@@ -840,8 +868,9 @@
     }
   },
   {
-    "_id": "5a7067a1-a61c-4bbc-bca7-f7b0fcee812c",
+    "id": "bodleian:5a7067a1-a61c-4bbc-bca7-f7b0fcee812c",
     "_source": "bodleian",
+    "_sourceId": "5a7067a1-a61c-4bbc-bca7-f7b0fcee812c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/5a7067a1-a61c-4bbc-bca7-f7b0fcee812c/",
     "_service": "bodleian",
     "title": "Book of Hours. Dominican Use. So-called 'Hours of Engelbert of Nassau'.",
@@ -870,8 +899,9 @@
     }
   },
   {
-    "_id": "9c2e7670-812a-4088-999d-60f98265f4a0",
+    "id": "bodleian:9c2e7670-812a-4088-999d-60f98265f4a0",
     "_source": "bodleian",
+    "_sourceId": "9c2e7670-812a-4088-999d-60f98265f4a0",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/9c2e7670-812a-4088-999d-60f98265f4a0/",
     "_service": "bodleian",
     "title": "De re militari.",
@@ -900,8 +930,9 @@
     }
   },
   {
-    "_id": "a42ec359-98f4-4ad0-85a3-5c85885deaf1",
+    "id": "bodleian:a42ec359-98f4-4ad0-85a3-5c85885deaf1",
     "_source": "bodleian",
+    "_sourceId": "a42ec359-98f4-4ad0-85a3-5c85885deaf1",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/a42ec359-98f4-4ad0-85a3-5c85885deaf1/",
     "_service": "bodleian",
     "title": "Psalter.",
@@ -930,8 +961,9 @@
     }
   },
   {
-    "_id": "ace062e8-c7a1-48be-9851-8fbd50a4b684",
+    "id": "bodleian:ace062e8-c7a1-48be-9851-8fbd50a4b684",
     "_source": "bodleian",
+    "_sourceId": "ace062e8-c7a1-48be-9851-8fbd50a4b684",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/ace062e8-c7a1-48be-9851-8fbd50a4b684/",
     "_service": "bodleian",
     "title": "Breviary. Cistercian use.",
@@ -960,8 +992,9 @@
     }
   },
   {
-    "_id": "dbf2161f-f8e5-415b-971d-d698e0727b33",
+    "id": "bodleian:dbf2161f-f8e5-415b-971d-d698e0727b33",
     "_source": "bodleian",
+    "_sourceId": "dbf2161f-f8e5-415b-971d-d698e0727b33",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/dbf2161f-f8e5-415b-971d-d698e0727b33/",
     "_service": "bodleian",
     "title": "Missal. Use of Sarum.",
@@ -990,8 +1023,9 @@
     }
   },
   {
-    "_id": "448e5259-2b54-4aa5-9372-846773264562",
+    "id": "bodleian:448e5259-2b54-4aa5-9372-846773264562",
     "_source": "bodleian",
+    "_sourceId": "448e5259-2b54-4aa5-9372-846773264562",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/448e5259-2b54-4aa5-9372-846773264562/",
     "_service": "bodleian",
     "title": "Bodleian Library MS. Rawl. D. 403",
@@ -1020,8 +1054,9 @@
     }
   },
   {
-    "_id": "9e98511b-9be7-46b8-8f15-f60d6770d54a",
+    "id": "bodleian:9e98511b-9be7-46b8-8f15-f60d6770d54a",
     "_source": "bodleian",
+    "_sourceId": "9e98511b-9be7-46b8-8f15-f60d6770d54a",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/9e98511b-9be7-46b8-8f15-f60d6770d54a/",
     "_service": "bodleian",
     "title": "Breviary. Carthusian use.",
@@ -1050,8 +1085,9 @@
     }
   },
   {
-    "_id": "2fb1d59c-d448-4727-a385-d31e7631ba78",
+    "id": "bodleian:2fb1d59c-d448-4727-a385-d31e7631ba78",
     "_source": "bodleian",
+    "_sourceId": "2fb1d59c-d448-4727-a385-d31e7631ba78",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/2fb1d59c-d448-4727-a385-d31e7631ba78/",
     "_service": "bodleian",
     "title": "Prophecies. Homilies. Philosophical texts. Etc.",
@@ -1080,8 +1116,9 @@
     }
   },
   {
-    "_id": "876930e7-0544-4c25-8592-fb055ef1e09c",
+    "id": "bodleian:876930e7-0544-4c25-8592-fb055ef1e09c",
     "_source": "bodleian",
+    "_sourceId": "876930e7-0544-4c25-8592-fb055ef1e09c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/876930e7-0544-4c25-8592-fb055ef1e09c/",
     "_service": "bodleian",
     "title": "Memorabilia",
@@ -1110,8 +1147,9 @@
     }
   },
   {
-    "_id": "929981ad-a1ee-4208-be65-148b55f8f4e6",
+    "id": "bodleian:929981ad-a1ee-4208-be65-148b55f8f4e6",
     "_source": "bodleian",
+    "_sourceId": "929981ad-a1ee-4208-be65-148b55f8f4e6",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/929981ad-a1ee-4208-be65-148b55f8f4e6/",
     "_service": "bodleian",
     "title": "Book of Hours. Use of Tournai.",
@@ -1140,8 +1178,9 @@
     }
   },
   {
-    "_id": "de17264c-b324-4577-942d-4d13050c9aae",
+    "id": "bodleian:de17264c-b324-4577-942d-4d13050c9aae",
     "_source": "bodleian",
+    "_sourceId": "de17264c-b324-4577-942d-4d13050c9aae",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/de17264c-b324-4577-942d-4d13050c9aae/",
     "_service": "bodleian",
     "title": "Psalter/Hours.",
@@ -1170,8 +1209,9 @@
     }
   },
   {
-    "_id": "44998e70-7e6b-4566-93f7-95ff2c2f9095",
+    "id": "bodleian:44998e70-7e6b-4566-93f7-95ff2c2f9095",
     "_source": "bodleian",
+    "_sourceId": "44998e70-7e6b-4566-93f7-95ff2c2f9095",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/44998e70-7e6b-4566-93f7-95ff2c2f9095/",
     "_service": "bodleian",
     "title": "Book of Hours. Use of Utrecht.",
@@ -1200,8 +1240,9 @@
     }
   },
   {
-    "_id": "0d5e9a9c-cd89-49b0-8d53-a7abd9c9990d",
+    "id": "bodleian:0d5e9a9c-cd89-49b0-8d53-a7abd9c9990d",
     "_source": "bodleian",
+    "_sourceId": "0d5e9a9c-cd89-49b0-8d53-a7abd9c9990d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/0d5e9a9c-cd89-49b0-8d53-a7abd9c9990d/",
     "_service": "bodleian",
     "title": "Book of Hours.",
@@ -1230,8 +1271,9 @@
     }
   },
   {
-    "_id": "cc03bca2-6e0e-425c-a1e5-551a6e969fe8",
+    "id": "bodleian:cc03bca2-6e0e-425c-a1e5-551a6e969fe8",
     "_source": "bodleian",
+    "_sourceId": "cc03bca2-6e0e-425c-a1e5-551a6e969fe8",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/cc03bca2-6e0e-425c-a1e5-551a6e969fe8/",
     "_service": "bodleian",
     "title": "Machines et ustensils de guerre'.",
@@ -1260,8 +1302,9 @@
     }
   },
   {
-    "_id": "260ba7d8-9ec1-4598-b749-78e54794ac7f",
+    "id": "bodleian:260ba7d8-9ec1-4598-b749-78e54794ac7f",
     "_source": "bodleian",
+    "_sourceId": "260ba7d8-9ec1-4598-b749-78e54794ac7f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/260ba7d8-9ec1-4598-b749-78e54794ac7f/",
     "_service": "bodleian",
     "title": "Book of Hours. Use of Sarum.",
@@ -1290,8 +1333,9 @@
     }
   },
   {
-    "_id": "e16412ca-c8be-461a-86ac-de59c6464fe6",
+    "id": "bodleian:e16412ca-c8be-461a-86ac-de59c6464fe6",
     "_source": "bodleian",
+    "_sourceId": "e16412ca-c8be-461a-86ac-de59c6464fe6",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e16412ca-c8be-461a-86ac-de59c6464fe6/",
     "_service": "bodleian",
     "title": "Histoire ancienne jusqu' à César.",
@@ -1320,8 +1364,9 @@
     }
   },
   {
-    "_id": "c7d33325-585c-4b2c-9a8b-e5689b58f893",
+    "id": "bodleian:c7d33325-585c-4b2c-9a8b-e5689b58f893",
     "_source": "bodleian",
+    "_sourceId": "c7d33325-585c-4b2c-9a8b-e5689b58f893",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/c7d33325-585c-4b2c-9a8b-e5689b58f893/",
     "_service": "bodleian",
     "title": "Bible",
@@ -1350,8 +1395,9 @@
     }
   },
   {
-    "_id": "6420cd56-c9f0-421c-a8dd-f49589510c59",
+    "id": "bodleian:6420cd56-c9f0-421c-a8dd-f49589510c59",
     "_source": "bodleian",
+    "_sourceId": "6420cd56-c9f0-421c-a8dd-f49589510c59",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/6420cd56-c9f0-421c-a8dd-f49589510c59/",
     "_service": "bodleian",
     "title": "Bible",
@@ -1380,8 +1426,9 @@
     }
   },
   {
-    "_id": "5a9b6fee-54d0-4398-ae4b-74f2ec2da405",
+    "id": "bodleian:5a9b6fee-54d0-4398-ae4b-74f2ec2da405",
     "_source": "bodleian",
+    "_sourceId": "5a9b6fee-54d0-4398-ae4b-74f2ec2da405",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/5a9b6fee-54d0-4398-ae4b-74f2ec2da405/",
     "_service": "bodleian",
     "title": "Bodleian Library MS. Barocci 170",
@@ -1410,8 +1457,9 @@
     }
   },
   {
-    "_id": "6ae78449-a166-439c-9c98-ddfc7b6c8bf8",
+    "id": "bodleian:6ae78449-a166-439c-9c98-ddfc7b6c8bf8",
     "_source": "bodleian",
+    "_sourceId": "6ae78449-a166-439c-9c98-ddfc7b6c8bf8",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/6ae78449-a166-439c-9c98-ddfc7b6c8bf8/",
     "_service": "bodleian",
     "title": "Bodleian Library MS. Canon. Misc. 554",
@@ -1440,8 +1488,9 @@
     }
   },
   {
-    "_id": "d9e6bda5-ac78-4bd3-858d-2e2c56401088",
+    "id": "bodleian:d9e6bda5-ac78-4bd3-858d-2e2c56401088",
     "_source": "bodleian",
+    "_sourceId": "d9e6bda5-ac78-4bd3-858d-2e2c56401088",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d9e6bda5-ac78-4bd3-858d-2e2c56401088/",
     "_service": "bodleian",
     "title": "Epistolae (selection)",
@@ -1470,8 +1519,9 @@
     }
   },
   {
-    "_id": "71d0bb38-067b-4362-ae5e-030f81099805",
+    "id": "bodleian:71d0bb38-067b-4362-ae5e-030f81099805",
     "_source": "bodleian",
+    "_sourceId": "71d0bb38-067b-4362-ae5e-030f81099805",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/71d0bb38-067b-4362-ae5e-030f81099805/",
     "_service": "bodleian",
     "title": "Book of Hours. Use of Sarum (known as 'Queen Mary's Psalter')",

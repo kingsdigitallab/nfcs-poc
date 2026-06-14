@@ -1,7 +1,8 @@
 [
   {
-    "_id": "f041c56f-7f55-42b4-8e60-8eea0fda0a0b",
+    "id": "bodleian:f041c56f-7f55-42b4-8e60-8eea0fda0a0b",
     "_source": "bodleian",
+    "_sourceId": "f041c56f-7f55-42b4-8e60-8eea0fda0a0b",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/f041c56f-7f55-42b4-8e60-8eea0fda0a0b/",
     "_service": "bodleian",
     "title": "[Playbill of Theatre Royal, Tuesday, the 19th of December, 1786, announcing Venice preserv'd; or, A plot discover'd &c.]",
@@ -30,8 +31,9 @@
     }
   },
   {
-    "_id": "2ec2826f-41a6-480d-bb78-7d0c3d2b329f",
+    "id": "bodleian:2ec2826f-41a6-480d-bb78-7d0c3d2b329f",
     "_source": "bodleian",
+    "_sourceId": "2ec2826f-41a6-480d-bb78-7d0c3d2b329f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/2ec2826f-41a6-480d-bb78-7d0c3d2b329f/",
     "_service": "bodleian",
     "title": "[Playbill of Theatre Royal, Thursday evening, January 17, 1782, announcing King John &c.]",
@@ -60,8 +62,9 @@
     }
   },
   {
-    "_id": "e0b1f21b-ae3b-4128-987b-1c7f7df68258",
+    "id": "bodleian:e0b1f21b-ae3b-4128-987b-1c7f7df68258",
     "_source": "bodleian",
+    "_sourceId": "e0b1f21b-ae3b-4128-987b-1c7f7df68258",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e0b1f21b-ae3b-4128-987b-1c7f7df68258/",
     "_service": "bodleian",
     "title": "Diary",
@@ -90,8 +93,9 @@
     }
   },
   {
-    "_id": "c0784cf6-64d1-4dcd-9d43-29c92f45182d",
+    "id": "bodleian:c0784cf6-64d1-4dcd-9d43-29c92f45182d",
     "_source": "bodleian",
+    "_sourceId": "c0784cf6-64d1-4dcd-9d43-29c92f45182d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/c0784cf6-64d1-4dcd-9d43-29c92f45182d/",
     "_service": "bodleian",
     "title": "Diary",
@@ -120,8 +124,9 @@
     }
   },
   {
-    "_id": "98b6e8ab-9402-4430-8d93-333ed20cb419",
+    "id": "bodleian:98b6e8ab-9402-4430-8d93-333ed20cb419",
     "_source": "bodleian",
+    "_sourceId": "98b6e8ab-9402-4430-8d93-333ed20cb419",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/98b6e8ab-9402-4430-8d93-333ed20cb419/",
     "_service": "bodleian",
     "title": "Scrapbook 1910-1928",
@@ -150,8 +155,9 @@
     }
   },
   {
-    "_id": "3c051d06-6959-49cd-b9af-fa3fc28a253f",
+    "id": "bodleian:3c051d06-6959-49cd-b9af-fa3fc28a253f",
     "_source": "bodleian",
+    "_sourceId": "3c051d06-6959-49cd-b9af-fa3fc28a253f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/3c051d06-6959-49cd-b9af-fa3fc28a253f/",
     "_service": "bodleian",
     "title": "Diary",
@@ -180,8 +186,9 @@
     }
   },
   {
-    "_id": "3bb1b2f5-199c-49a9-a221-2b5702120e38",
+    "id": "bodleian:3bb1b2f5-199c-49a9-a221-2b5702120e38",
     "_source": "bodleian",
+    "_sourceId": "3bb1b2f5-199c-49a9-a221-2b5702120e38",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/3bb1b2f5-199c-49a9-a221-2b5702120e38/",
     "_service": "bodleian",
     "title": "Diary",
@@ -210,8 +217,9 @@
     }
   },
   {
-    "_id": "d0cd36ec-3bf8-476a-842b-d0062e2c543f",
+    "id": "bodleian:d0cd36ec-3bf8-476a-842b-d0062e2c543f",
     "_source": "bodleian",
+    "_sourceId": "d0cd36ec-3bf8-476a-842b-d0062e2c543f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d0cd36ec-3bf8-476a-842b-d0062e2c543f/",
     "_service": "bodleian",
     "title": "Diary",
@@ -240,8 +248,9 @@
     }
   },
   {
-    "_id": "3e9e4a9d-c91c-4d21-b722-30b066a0ea1d",
+    "id": "bodleian:3e9e4a9d-c91c-4d21-b722-30b066a0ea1d",
     "_source": "bodleian",
+    "_sourceId": "3e9e4a9d-c91c-4d21-b722-30b066a0ea1d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/3e9e4a9d-c91c-4d21-b722-30b066a0ea1d/",
     "_service": "bodleian",
     "title": "Scrapbook 1920-1939",
@@ -270,8 +279,9 @@
     }
   },
   {
-    "_id": "5ef34ed3-defb-4c9d-ab4f-aa1440f8e266",
+    "id": "bodleian:5ef34ed3-defb-4c9d-ab4f-aa1440f8e266",
     "_source": "bodleian",
+    "_sourceId": "5ef34ed3-defb-4c9d-ab4f-aa1440f8e266",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/5ef34ed3-defb-4c9d-ab4f-aa1440f8e266/",
     "_service": "bodleian",
     "title": "Diary",
@@ -300,8 +310,9 @@
     }
   },
   {
-    "_id": "e6eefc89-9183-405a-a66f-15a31867d515",
+    "id": "bodleian:e6eefc89-9183-405a-a66f-15a31867d515",
     "_source": "bodleian",
+    "_sourceId": "e6eefc89-9183-405a-a66f-15a31867d515",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e6eefc89-9183-405a-a66f-15a31867d515/",
     "_service": "bodleian",
     "title": "Volume of AEW Calendars 1887-1893",
@@ -330,8 +341,9 @@
     }
   },
   {
-    "_id": "e2e12af1-720c-4b99-b564-d5f026305f2d",
+    "id": "bodleian:e2e12af1-720c-4b99-b564-d5f026305f2d",
     "_source": "bodleian",
+    "_sourceId": "e2e12af1-720c-4b99-b564-d5f026305f2d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/e2e12af1-720c-4b99-b564-d5f026305f2d/",
     "_service": "bodleian",
     "title": "Diary",
@@ -360,8 +372,9 @@
     }
   },
   {
-    "_id": "0cecbd8e-bc19-4acd-93cd-202ff38303e8",
+    "id": "bodleian:0cecbd8e-bc19-4acd-93cd-202ff38303e8",
     "_source": "bodleian",
+    "_sourceId": "0cecbd8e-bc19-4acd-93cd-202ff38303e8",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/0cecbd8e-bc19-4acd-93cd-202ff38303e8/",
     "_service": "bodleian",
     "title": "Diary",
@@ -390,8 +403,9 @@
     }
   },
   {
-    "_id": "bec7172d-d2d7-4f7e-ad59-7a9d84a1d1d2",
+    "id": "bodleian:bec7172d-d2d7-4f7e-ad59-7a9d84a1d1d2",
     "_source": "bodleian",
+    "_sourceId": "bec7172d-d2d7-4f7e-ad59-7a9d84a1d1d2",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/bec7172d-d2d7-4f7e-ad59-7a9d84a1d1d2/",
     "_service": "bodleian",
     "title": "Principals' Meeting Minutes 1903-17",
@@ -420,8 +434,9 @@
     }
   },
   {
-    "_id": "4d7ce21a-805b-4576-a55d-1d7023c8e2e0",
+    "id": "bodleian:4d7ce21a-805b-4576-a55d-1d7023c8e2e0",
     "_source": "bodleian",
+    "_sourceId": "4d7ce21a-805b-4576-a55d-1d7023c8e2e0",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/4d7ce21a-805b-4576-a55d-1d7023c8e2e0/",
     "_service": "bodleian",
     "title": "Diary",
@@ -450,8 +465,9 @@
     }
   },
   {
-    "_id": "371eb192-512f-4d32-b393-002d32216a0c",
+    "id": "bodleian:371eb192-512f-4d32-b393-002d32216a0c",
     "_source": "bodleian",
+    "_sourceId": "371eb192-512f-4d32-b393-002d32216a0c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/371eb192-512f-4d32-b393-002d32216a0c/",
     "_service": "bodleian",
     "title": "Diary",
@@ -480,8 +496,9 @@
     }
   },
   {
-    "_id": "700d292b-9bbf-4056-8057-4de1344012f5",
+    "id": "bodleian:700d292b-9bbf-4056-8057-4de1344012f5",
     "_source": "bodleian",
+    "_sourceId": "700d292b-9bbf-4056-8057-4de1344012f5",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/700d292b-9bbf-4056-8057-4de1344012f5/",
     "_service": "bodleian",
     "title": "Diary",
@@ -510,8 +527,9 @@
     }
   },
   {
-    "_id": "160e12bc-4a28-49e5-9bbe-fd09fdd418ff",
+    "id": "bodleian:160e12bc-4a28-49e5-9bbe-fd09fdd418ff",
     "_source": "bodleian",
+    "_sourceId": "160e12bc-4a28-49e5-9bbe-fd09fdd418ff",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/160e12bc-4a28-49e5-9bbe-fd09fdd418ff/",
     "_service": "bodleian",
     "title": "Diary",
@@ -540,8 +558,9 @@
     }
   },
   {
-    "_id": "b2d6e53c-8b80-4f7f-bd37-850f222a91ce",
+    "id": "bodleian:b2d6e53c-8b80-4f7f-bd37-850f222a91ce",
     "_source": "bodleian",
+    "_sourceId": "b2d6e53c-8b80-4f7f-bd37-850f222a91ce",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/b2d6e53c-8b80-4f7f-bd37-850f222a91ce/",
     "_service": "bodleian",
     "title": "Diary",
@@ -570,8 +589,9 @@
     }
   },
   {
-    "_id": "de4a8b6b-930b-4d8c-9fb7-2be4730554de",
+    "id": "bodleian:de4a8b6b-930b-4d8c-9fb7-2be4730554de",
     "_source": "bodleian",
+    "_sourceId": "de4a8b6b-930b-4d8c-9fb7-2be4730554de",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/de4a8b6b-930b-4d8c-9fb7-2be4730554de/",
     "_service": "bodleian",
     "title": "Diary",
@@ -600,8 +620,9 @@
     }
   },
   {
-    "_id": "d00a8061-ca51-48be-b107-f3ef9ce47d59",
+    "id": "bodleian:d00a8061-ca51-48be-b107-f3ef9ce47d59",
     "_source": "bodleian",
+    "_sourceId": "d00a8061-ca51-48be-b107-f3ef9ce47d59",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d00a8061-ca51-48be-b107-f3ef9ce47d59/",
     "_service": "bodleian",
     "title": "Diary",
@@ -630,8 +651,9 @@
     }
   },
   {
-    "_id": "82af1207-cce2-481b-b8d4-86751e44fbf0",
+    "id": "bodleian:82af1207-cce2-481b-b8d4-86751e44fbf0",
     "_source": "bodleian",
+    "_sourceId": "82af1207-cce2-481b-b8d4-86751e44fbf0",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/82af1207-cce2-481b-b8d4-86751e44fbf0/",
     "_service": "bodleian",
     "title": "Diary",
@@ -660,8 +682,9 @@
     }
   },
   {
-    "_id": "309f41b6-53ad-4227-982a-aee885afbfca",
+    "id": "bodleian:309f41b6-53ad-4227-982a-aee885afbfca",
     "_source": "bodleian",
+    "_sourceId": "309f41b6-53ad-4227-982a-aee885afbfca",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/309f41b6-53ad-4227-982a-aee885afbfca/",
     "_service": "bodleian",
     "title": "Diary",

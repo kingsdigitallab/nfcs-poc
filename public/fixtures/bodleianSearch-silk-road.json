@@ -1,7 +1,8 @@
 [
   {
-    "_id": "c10de3e0-0836-4008-83f0-05a6ae62b158",
+    "id": "bodleian:c10de3e0-0836-4008-83f0-05a6ae62b158",
     "_source": "bodleian",
+    "_sourceId": "c10de3e0-0836-4008-83f0-05a6ae62b158",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/c10de3e0-0836-4008-83f0-05a6ae62b158/",
     "_service": "bodleian",
     "title": "Three details from \"The description of such lands, roades, and harbours as weare obserued in the Riall Ann her first voyage, with their seuerall showes, appearing markes and depthes; by Will. Baffin and Rob. Sommersonn\"",
@@ -30,8 +31,9 @@
     }
   },
   {
-    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "id": "bodleian:390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_source": "bodleian",
+    "_sourceId": "390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
     "_service": "bodleian",
     "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",

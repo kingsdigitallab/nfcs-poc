@@ -1,7 +1,8 @@
 [
   {
-    "_id": "44797a0d-80ee-4cec-8cf4-1063294cfdd0",
+    "id": "bodleian:44797a0d-80ee-4cec-8cf4-1063294cfdd0",
     "_source": "bodleian",
+    "_sourceId": "44797a0d-80ee-4cec-8cf4-1063294cfdd0",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/44797a0d-80ee-4cec-8cf4-1063294cfdd0/",
     "_service": "bodleian",
     "title": "Account of Arnolf Van Harff's travels in 1496-1499.",
@@ -30,8 +31,9 @@
     }
   },
   {
-    "_id": "7cdd5238-59bf-4d78-954b-cc791af2988f",
+    "id": "bodleian:7cdd5238-59bf-4d78-954b-cc791af2988f",
     "_source": "bodleian",
+    "_sourceId": "7cdd5238-59bf-4d78-954b-cc791af2988f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/7cdd5238-59bf-4d78-954b-cc791af2988f/",
     "_service": "bodleian",
     "title": "Miroir du Monde. Universal history from the Creation to the birth of Christ. Vol. I.",
@@ -60,8 +62,9 @@
     }
   },
   {
-    "_id": "9e62854b-7dec-4087-b91d-1e0e89ae45d8",
+    "id": "bodleian:9e62854b-7dec-4087-b91d-1e0e89ae45d8",
     "_source": "bodleian",
+    "_sourceId": "9e62854b-7dec-4087-b91d-1e0e89ae45d8",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/9e62854b-7dec-4087-b91d-1e0e89ae45d8/",
     "_service": "bodleian",
     "title": "Épître d'Othéa.",
@@ -90,8 +93,9 @@
     }
   },
   {
-    "_id": "d85bec81-9a93-452d-a5fc-881dafa83536",
+    "id": "bodleian:d85bec81-9a93-452d-a5fc-881dafa83536",
     "_source": "bodleian",
+    "_sourceId": "d85bec81-9a93-452d-a5fc-881dafa83536",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d85bec81-9a93-452d-a5fc-881dafa83536/",
     "_service": "bodleian",
     "title": "Epitome of Pompeius Trogus.",
@@ -120,8 +124,9 @@
     }
   },
   {
-    "_id": "8d17bc13-14b6-4a56-b3b5-d2e1a935c60d",
+    "id": "bodleian:8d17bc13-14b6-4a56-b3b5-d2e1a935c60d",
     "_source": "bodleian",
+    "_sourceId": "8d17bc13-14b6-4a56-b3b5-d2e1a935c60d",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/8d17bc13-14b6-4a56-b3b5-d2e1a935c60d/",
     "_service": "bodleian",
     "title": "Romance of Alexander.",
@@ -150,8 +155,9 @@
     }
   },
   {
-    "_id": "d52e17b1-f82e-4392-ba52-022f5eba564f",
+    "id": "bodleian:d52e17b1-f82e-4392-ba52-022f5eba564f",
     "_source": "bodleian",
+    "_sourceId": "d52e17b1-f82e-4392-ba52-022f5eba564f",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/d52e17b1-f82e-4392-ba52-022f5eba564f/",
     "_service": "bodleian",
     "title": "F. Mendelssohn Bartholdy's Album containing autograph music, album leaves and pictures from various contributors, 1821-1847",
@@ -180,8 +186,9 @@
     }
   },
   {
-    "_id": "390fd0e8-9eae-475d-9564-ed916ab9035c",
+    "id": "bodleian:390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_source": "bodleian",
+    "_sourceId": "390fd0e8-9eae-475d-9564-ed916ab9035c",
     "_sourceUrl": "https://digital.bodleian.ox.ac.uk/objects/390fd0e8-9eae-475d-9564-ed916ab9035c/",
     "_service": "bodleian",
     "title": "Mr. William Shakespeares comedies, histories, & tragedies.: Published according to the true originall copies.",
