@@ -1,15 +1,13 @@
 import { useState } from 'react'
 import { TADIRAHMapping } from './TADIRAHMapping'
 
-const REPO_URL    = 'https://github.com/kingsdigitallab/nfcs-poc'
-const PDF_URL     = 'https://github.com/kingsdigitallab/nfcs-poc/blob/main/workshop-scenarios.pdf'
-const VIDEOS_URL  = 'https://media.kcl.ac.uk/playlist/dedicated/1_byz38x11/1_kx4vwr4g'
-
-type Tab = 'links' | 'tadirah'
+const REPO_URL   = 'https://github.com/kingsdigitallab/nfcs-poc'
+const PDF_URL    = 'https://github.com/kingsdigitallab/nfcs-poc/blob/main/workshop-scenarios.pdf'
+const VIDEOS_URL = 'https://media.kcl.ac.uk/playlist/dedicated/1_byz38x11/1_kx4vwr4g'
 
 export function UsefulLinksModal() {
-  const [open, setOpen] = useState(false)
-  const [tab, setTab]   = useState<Tab>('links')
+  const [open, setOpen]           = useState(false)
+  const [showTadirah, setShowTadirah] = useState(false)
 
   if (!open) {
     return (
@@ -20,58 +18,62 @@ export function UsefulLinksModal() {
   }
 
   return (
-    <div style={S.overlay} onClick={e => { if (e.target === e.currentTarget) setOpen(false) }}>
+    <div style={S.overlay} onClick={e => { if (e.target === e.currentTarget) { setOpen(false); setShowTadirah(false) } }}>
       <div style={S.modal}>
-        {/* Modal header */}
+        {/* Header */}
         <div style={S.header}>
-          <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-            <span style={S.headerTitle}>Useful links</span>
-            <div style={{ display: 'flex', gap: 4, marginLeft: 8 }}>
-              {([['links', '🔗 Links'], ['tadirah', '📊 TaDiRAH']] as [Tab, string][]).map(([t, label]) => (
-                <button
-                  key={t}
-                  style={{ ...S.tabBtn, ...(tab === t ? S.tabBtnActive : {}) }}
-                  onClick={() => setTab(t)}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            {showTadirah && (
+              <button style={S.backBtn} onClick={() => setShowTadirah(false)} title="Back to links">
+                ← Back
+              </button>
+            )}
+            <span style={S.headerTitle}>
+              {showTadirah ? 'PoC Node Registry → TaDiRAH Mapping' : 'Useful links'}
+            </span>
           </div>
-          <button style={S.closeBtn} onClick={() => setOpen(false)} title="Close">✕</button>
+          <button style={S.closeBtn} onClick={() => { setOpen(false); setShowTadirah(false) }} title="Close">✕</button>
         </div>
 
         {/* Content */}
-        {tab === 'links' ? (
+        {showTadirah ? (
+          <div style={{ overflowY: 'auto', flex: 1 }}>
+            <TADIRAHMapping />
+          </div>
+        ) : (
           <div style={S.linksBody}>
-            <LinkCard
+            <ExternalCard
               icon="💻"
               title="Source repository"
               url={REPO_URL}
               desc="GitHub — kingsdigitallab/nfcs-poc"
             />
-            <LinkCard
+            <ExternalCard
               icon="📄"
               title="Workshop scenarios"
               url={PDF_URL}
               desc="Step-by-step guided scenarios for the workshop (PDF)"
             />
-            <LinkCard
+            <ExternalCard
               icon="🎬"
               title="Instructional videos"
               url={VIDEOS_URL}
               desc="KCL Media — video walkthroughs of the proof-of-concept interface"
             />
+            <InternalCard
+              icon="📊"
+              title="TaDiRAH mapping"
+              desc="PoC nodes mapped to the Taxonomy of Digital Research Activities in the Humanities (TaDiRAH 2.0)"
+              onClick={() => setShowTadirah(true)}
+            />
           </div>
-        ) : (
-          <TADIRAHMapping />
         )}
       </div>
     </div>
   )
 }
 
-function LinkCard({ icon, title, url, desc }: { icon: string; title: string; url: string; desc: string }) {
+function ExternalCard({ icon, title, url, desc }: { icon: string; title: string; url: string; desc: string }) {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" style={S.card}>
       <span style={S.cardIcon}>{icon}</span>
@@ -82,6 +84,19 @@ function LinkCard({ icon, title, url, desc }: { icon: string; title: string; url
       </div>
       <span style={S.cardArrow}>↗</span>
     </a>
+  )
+}
+
+function InternalCard({ icon, title, desc, onClick }: { icon: string; title: string; desc: string; onClick: () => void }) {
+  return (
+    <button onClick={onClick} style={{ ...S.card, cursor: 'pointer', textAlign: 'left', width: '100%' }}>
+      <span style={S.cardIcon}>{icon}</span>
+      <div style={S.cardText}>
+        <div style={S.cardTitle}>{title}</div>
+        <div style={S.cardDesc}>{desc}</div>
+      </div>
+      <span style={S.cardArrow}>→</span>
+    </button>
   )
 }
 
@@ -111,14 +126,10 @@ const S: Record<string, React.CSSProperties> = {
     flexShrink: 0, background: '#1B2A4A',
   },
   headerTitle: { color: '#fff', fontWeight: 700, fontSize: 14 },
-  tabBtn: {
-    padding: '4px 12px', border: '1px solid rgba(255,255,255,0.25)',
-    borderRadius: 5, background: 'transparent', color: 'rgba(255,255,255,0.7)',
-    fontSize: 11, fontWeight: 600, cursor: 'pointer',
-  },
-  tabBtnActive: {
-    background: 'rgba(255,255,255,0.15)', color: '#fff',
-    borderColor: 'rgba(255,255,255,0.5)',
+  backBtn: {
+    background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.25)',
+    borderRadius: 5, color: 'rgba(255,255,255,0.85)', fontSize: 11, fontWeight: 600,
+    cursor: 'pointer', padding: '3px 10px',
   },
   closeBtn: {
     background: 'none', border: 'none', color: 'rgba(255,255,255,0.6)',
@@ -131,7 +142,6 @@ const S: Record<string, React.CSSProperties> = {
     display: 'flex', alignItems: 'flex-start', gap: 14,
     padding: '16px 18px', border: '1.5px solid #e5e7eb', borderRadius: 8,
     textDecoration: 'none', color: 'inherit', background: '#f9fafb',
-    transition: 'border-color 0.15s, background 0.15s',
   },
   cardIcon:  { fontSize: 24, flexShrink: 0, lineHeight: 1, marginTop: 2 },
   cardText:  { flex: 1, minWidth: 0 },
