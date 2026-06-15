@@ -26,6 +26,7 @@ import { ChatSidebar } from './components/ChatSidebar'
 import { ConnectionSuggestions, HandlePicker, NODE_PARAM_HANDLES, type Suggestion } from './components/ConnectionSuggestions'
 import { FixturePreflightPanel } from './components/FixturePreflightPanel'
 import { FixtureReferenceCard } from './components/FixtureReferenceCard'
+import { UsefulLinksModal } from './components/UsefulLinksModal'
 import { ExampleMenu } from './components/ExampleMenu'
 
 /**
@@ -1333,6 +1334,7 @@ export default function App() {
           </span>
         )}
         <FixtureReferenceCard onPick={instantiateCachedSearch} />
+        <UsefulLinksModal />
         {import.meta.env.DEV && <FixturePreflightPanel />}
         <button
           style={{ ...templateBtnStyle, background: !simpleMode ? '#312e81' : undefined, color: !simpleMode ? '#fff' : undefined, borderColor: !simpleMode ? '#312e81' : undefined }}
