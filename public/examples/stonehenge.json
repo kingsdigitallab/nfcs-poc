@@ -1,0 +1,790 @@
+{
+  "version": 2,
+  "savedAt": "2026-06-11T09:40:26.278Z",
+  "nodes": [
+    {
+      "id": "group-47",
+      "type": "group",
+      "position": {
+        "x": 2732.8346263620406,
+        "y": 585.2352084976341
+      },
+      "data": {
+        "name": "Group 10"
+      },
+      "width": 943.6651206820884,
+      "height": 622.1743791024826,
+      "style": {
+        "width": 943.6651206820884,
+        "height": 622.1743791024826
+      }
+    },
+    {
+      "id": "group-46",
+      "type": "group",
+      "position": {
+        "x": 2068.600593875953,
+        "y": 576.2500632692534
+      },
+      "data": {
+        "name": "Group 9"
+      },
+      "width": 561,
+      "height": 1305.3415834000907,
+      "style": {
+        "width": 561,
+        "height": 1305.3415834000907
+      }
+    },
+    {
+      "id": "group-45",
+      "type": "group",
+      "position": {
+        "x": 1490.4340706276762,
+        "y": 727.5787044779232
+      },
+      "data": {
+        "name": "Group 8"
+      },
+      "width": 481.27498534443725,
+      "height": 391.6522381083071,
+      "style": {
+        "width": 481.27498534443725,
+        "height": 391.6522381083071
+      }
+    },
+    {
+      "id": "group-44",
+      "type": "group",
+      "position": {
+        "x": 669.3192101144518,
+        "y": 661.1586421523394
+      },
+      "data": {
+        "name": "Group 7"
+      },
+      "width": 750,
+      "height": 342.5017609139313,
+      "style": {
+        "width": 750,
+        "height": 342.5017609139313
+      }
+    },
+    {
+      "id": "group-43",
+      "type": "group",
+      "position": {
+        "x": 1818.4419649190668,
+        "y": -178.45602982426976
+      },
+      "data": {
+        "name": "Group 6"
+      },
+      "width": 530,
+      "height": 685.2196970347087,
+      "style": {
+        "width": 530,
+        "height": 685.2196970347087
+      }
+    },
+    {
+      "id": "group-42",
+      "type": "group",
+      "position": {
+        "x": 1447.3883215673613,
+        "y": -176.23177797132195
+      },
+      "data": {
+        "name": "Group 5"
+      },
+      "width": 346.3202880754495,
+      "height": 451.97710394303266,
+      "style": {
+        "width": 346.3202880754495,
+        "height": 451.97710394303266
+      }
+    },
+    {
+      "id": "group-41",
+      "type": "group",
+      "position": {
+        "x": 664.6905672122085,
+        "y": -75.90467177833395
+      },
+      "data": {
+        "name": "Group 4"
+      },
+      "width": 742.3821281104151,
+      "height": 329.0015937957502,
+      "style": {
+        "width": 742.3821281104151,
+        "height": 329.0015937957502
+      }
+    },
+    {
+      "id": "group-40",
+      "type": "group",
+      "position": {
+        "x": 197.20419999661993,
+        "y": 656.5638488026366
+      },
+      "data": {
+        "name": "Group 3"
+      },
+      "width": 344,
+      "height": 805.4480924376641,
+      "style": {
+        "width": 344,
+        "height": 805.4480924376641
+      }
+    },
+    {
+      "id": "group-39",
+      "type": "group",
+      "position": {
+        "x": 216.36750083832004,
+        "y": -245.37639038416668
+      },
+      "data": {
+        "name": "Group 2"
+      },
+      "width": 318.75268126007404,
+      "height": 825.9615323315568,
+      "style": {
+        "width": 318.75268126007404,
+        "height": 825.9615323315568
+      }
+    },
+    {
+      "id": "group-38",
+      "type": "group",
+      "position": {
+        "x": -500.1556434440774,
+        "y": 26.388404879781433
+      },
+      "data": {
+        "name": "Group 1"
+      },
+      "width": 283.8597684854004,
+      "height": 572.7736867273924,
+      "style": {
+        "width": 283.8597684854004,
+        "height": 572.7736867273924
+      }
+    },
+    {
+      "id": "param-1",
+      "type": "param",
+      "position": {
+        "x": 30.226873298741168,
+        "y": 311.2936757909242
+      },
+      "data": {
+        "label": "Parameter",
+        "paramType": "Text",
+        "value": "stonehenge"
+      },
+      "parentId": "group-38",
+      "extent": "parent"
+    },
+    {
+      "id": "param-3",
+      "type": "param",
+      "position": {
+        "x": 32.85976848540045,
+        "y": 446.7736867273924
+      },
+      "data": {
+        "label": "Parameter",
+        "paramType": "Integer",
+        "value": "10"
+      },
+      "parentId": "group-38",
+      "extent": "parent"
+    },
+    {
+      "id": "ariadne-4",
+      "type": "ariadneSearch",
+      "position": {
+        "x": 23.12330953873868,
+        "y": 288.64308644214907
+      },
+      "data": {
+        "inlineQuery": "",
+        "inlineLimit": "20",
+        "fetchAll": false,
+        "ariadneSubject": "",
+        "derivedSubject": "",
+        "nativeSubject": "",
+        "country": "",
+        "dataType": "Structured Data",
+        "temporal": "",
+        "contributor": "",
+        "sort": "_score",
+        "order": "desc"
+      },
+      "parentId": "group-39",
+      "extent": "parent"
+    },
+    {
+      "id": "europeana-5",
+      "type": "europeanaSearch",
+      "position": {
+        "x": 28.75268126007404,
+        "y": 546.9615323315568
+      },
+      "data": {
+        "apiKey": "polinaleg",
+        "inlineQuery": "",
+        "inlineLimit": "20",
+        "typeFilter": "any",
+        "reusability": "any",
+        "mediaOnly": false
+      },
+      "parentId": "group-39",
+      "extent": "parent"
+    },
+    {
+      "id": "comment-6",
+      "type": "comment",
+      "position": {
+        "x": 20,
+        "y": 55
+      },
+      "data": {
+        "title": "Search parameters",
+        "body": "We begin with a single string search to send to 2 data providers. The search limit is seet to 10 to keep the result set small for demonstration purposes"
+      },
+      "width": 229,
+      "height": 207,
+      "parentId": "group-38",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-7",
+      "type": "comment",
+      "position": {
+        "x": 20,
+        "y": 54.999999999999986
+      },
+      "data": {
+        "title": "Data Providers",
+        "body": "We \"wire up\" the search terms to an ARIADNE node (Europe wide archaeological data) and a Europeana node (metadata from millions of digitized cultural heritage items).\n\nClick > RUN on both nodes"
+      },
+      "width": 257,
+      "height": 210,
+      "parentId": "group-39",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "table-8",
+      "type": "tableOutput",
+      "position": {
+        "x": 20,
+        "y": 211.00159379575015
+      },
+      "data": {},
+      "parentId": "group-41",
+      "extent": "parent"
+    },
+    {
+      "id": "comment-9",
+      "type": "comment",
+      "position": {
+        "x": 25.382128110415124,
+        "y": 55
+      },
+      "data": {
+        "title": "Tabular result display",
+        "body": "We connect both the data service nodes to a single 'TableOutput' node to bring them together. In this table we can sort by clicking on the column headings. Sort by date in reverse."
+      },
+      "width": 687,
+      "height": 130,
+      "parentId": "group-41",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "fdist-11",
+      "type": "fieldDistribution",
+      "position": {
+        "x": 20.320288075449525,
+        "y": 280.97710394303266
+      },
+      "data": {
+        "selectedField": "subject",
+        "maxBars": 20,
+        "expandArrays": true,
+        "filteredValues": [
+          "geophysical survey"
+        ]
+      },
+      "parentId": "group-42",
+      "extent": "parent"
+    },
+    {
+      "id": "comment-12",
+      "type": "comment",
+      "position": {
+        "x": 20,
+        "y": 55
+      },
+      "data": {
+        "title": "Simple facet by field values",
+        "body": "We can connect the table output to a Field Distribution node, selecting 'Subject' as the field to  filter further on. If we select 'geophysical survey' we can filter out just those records."
+      },
+      "width": 293,
+      "height": 209,
+      "parentId": "group-42",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "map-13",
+      "type": "mapOutput",
+      "position": {
+        "x": 20,
+        "y": 291.2196970347087
+      },
+      "data": {
+        "bbox": null
+      },
+      "parentId": "group-43",
+      "extent": "parent"
+    },
+    {
+      "id": "comment-14",
+      "type": "comment",
+      "position": {
+        "x": 22.781847860663675,
+        "y": 54.999999999999986
+      },
+      "data": {
+        "title": "Map remaining values",
+        "body": "Records with a decimal lat lng value can be mapped by connecting the upstream results to a Map Output node. The Map Output node has the option to apply a spatial filter to the mapped data. Click on RUN > to pass the records through to the next node."
+      },
+      "width": 473,
+      "height": 223,
+      "parentId": "group-43",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "mds-23",
+      "type": "mdsSearch",
+      "position": {
+        "x": 27.170554304695543,
+        "y": 186.77168226016363
+      },
+      "data": {
+        "inlineQuery": "",
+        "inlineLimit": "20"
+      },
+      "parentId": "group-40",
+      "extent": "parent"
+    },
+    {
+      "id": "smg-24",
+      "type": "smgSearch",
+      "position": {
+        "x": 29.05328900685072,
+        "y": 354.64919707168883
+      },
+      "data": {
+        "inlineQuery": "",
+        "inlineLimit": "20",
+        "fetchAll": false,
+        "museum": "",
+        "dateFrom": "",
+        "dateTo": "",
+        "searchType": "objects"
+      },
+      "parentId": "group-40",
+      "extent": "parent"
+    },
+    {
+      "id": "va-25",
+      "type": "vaSearch",
+      "position": {
+        "x": 26.803536116055227,
+        "y": 590.4480924376641
+      },
+      "data": {
+        "inlineQuery": "",
+        "inlineLimit": "20",
+        "fetchAll": false,
+        "imagesOnly": false,
+        "yearFrom": "",
+        "yearTo": "",
+        "objectType": ""
+      },
+      "parentId": "group-40",
+      "extent": "parent"
+    },
+    {
+      "id": "table-26",
+      "type": "tableOutput",
+      "position": {
+        "x": 23.84332109886759,
+        "y": 224.50176091393132
+      },
+      "data": {},
+      "parentId": "group-44",
+      "extent": "parent"
+    },
+    {
+      "id": "dedup-27",
+      "type": "deduplicate",
+      "position": {
+        "x": 20.274985344437255,
+        "y": 207.65223810830707
+      },
+      "data": {
+        "dedupeField": "_sourceId"
+      },
+      "parentId": "group-45",
+      "extent": "parent"
+    },
+    {
+      "id": "comment-28",
+      "type": "comment",
+      "position": {
+        "x": 20,
+        "y": 55
+      },
+      "data": {
+        "title": "Secondary search",
+        "body": "Let's send the 'Stonehenge' search term to a few other services. We'll not enforce a low limit this time... > RUN all the nodes"
+      },
+      "width": 294,
+      "height": 115,
+      "parentId": "group-40",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-30",
+      "type": "comment",
+      "position": {
+        "x": 20,
+        "y": 55
+      },
+      "data": {
+        "title": "Table output",
+        "body": "We have a few museums supplying data here - some records might be for the same thing, so..."
+      },
+      "width": 700,
+      "height": 144,
+      "parentId": "group-44",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-31",
+      "type": "comment",
+      "position": {
+        "x": 20,
+        "y": 55
+      },
+      "data": {
+        "title": "Deduplication",
+        "body": "Deduplicating by _sourceId column - press the > Deduplicate button."
+      },
+      "width": 429,
+      "height": 130,
+      "parentId": "group-45",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "imgview-32",
+      "type": "imageView",
+      "position": {
+        "x": 20,
+        "y": 214.3415834000907
+      },
+      "data": {
+        "mode": "iiif",
+        "selectedField": "",
+        "imageDirectUrl": "",
+        "manifestUrl": "https://iiif.vam.ac.uk/collections/O1106213/manifest.json",
+        "iiifRegions": [
+          {
+            "id": "r1780949277283",
+            "x": 0.1378013462944542,
+            "y": 0.05020875678812714,
+            "w": 0.837238506478919,
+            "h": 0.9205558660921977,
+            "label": "Region 1"
+          }
+        ]
+      },
+      "width": 511,
+      "height": 1061,
+      "parentId": "group-46",
+      "extent": "parent",
+      "style": {
+        "width": 400,
+        "height": 480
+      }
+    },
+    {
+      "id": "comment-33",
+      "type": "comment",
+      "position": {
+        "x": 25.223037606461276,
+        "y": 55
+      },
+      "data": {
+        "title": "Image view",
+        "body": "Some of these records have IIIF manifests in the result set. The '+Region' tool can be used to capture part of an image and send it to an LLM for inference."
+      },
+      "width": 429,
+      "height": 130,
+      "parentId": "group-46",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "kcl-34",
+      "type": "kclNode",
+      "position": {
+        "x": 20,
+        "y": 210.1743791024826
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "model": "arc:nano",
+        "systemPrompt": "You are a research assistant helping to analyse humanities research documents and data.",
+        "userPromptTemplate": "Summarise the contents of this page. Describe the images and transcribe the printed descriptions below them\n\n{{content}}",
+        "temperature": 0.7,
+        "maxTokens": 32768,
+        "visionMode": true,
+        "imageField": ""
+      },
+      "parentId": "group-47",
+      "extent": "parent"
+    },
+    {
+      "id": "kclOut-35",
+      "type": "kclOutput",
+      "position": {
+        "x": 394.7855600483849,
+        "y": 397.9829594918997
+      },
+      "data": {},
+      "parentId": "group-47",
+      "extent": "parent"
+    },
+    {
+      "id": "comment-36",
+      "type": "comment",
+      "position": {
+        "x": 23.583495144153858,
+        "y": 55
+      },
+      "data": {
+        "title": "Inference",
+        "body": "Some of the text is hard to make out. Can an AI assist?"
+      },
+      "width": 270,
+      "height": 127,
+      "parentId": "group-47",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-37",
+      "type": "comment",
+      "position": {
+        "x": 388.6651206820884,
+        "y": 206.42373937039292
+      },
+      "data": {
+        "title": "Inference result",
+        "body": "The inital results are patchy"
+      },
+      "width": 525,
+      "height": 138,
+      "parentId": "group-47",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-param-1-ariadne-4",
+      "source": "param-1",
+      "target": "ariadne-4",
+      "targetHandle": "query",
+      "selected": false
+    },
+    {
+      "source": "param-3",
+      "target": "ariadne-4",
+      "targetHandle": "limit",
+      "id": "xy-edge__param-3-ariadne-4limit",
+      "selected": false
+    },
+    {
+      "source": "param-1",
+      "target": "europeana-5",
+      "targetHandle": "query",
+      "id": "xy-edge__param-1-europeana-5query",
+      "selected": false
+    },
+    {
+      "source": "param-3",
+      "target": "europeana-5",
+      "targetHandle": "limit",
+      "id": "xy-edge__param-3-europeana-5limit",
+      "selected": false
+    },
+    {
+      "id": "e-ariadne-4-table-8",
+      "source": "ariadne-4",
+      "sourceHandle": "results",
+      "target": "table-8",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "source": "europeana-5",
+      "sourceHandle": "results",
+      "target": "table-8",
+      "targetHandle": "data",
+      "id": "xy-edge__europeana-5results-table-8data",
+      "selected": false
+    },
+    {
+      "source": "table-8",
+      "sourceHandle": "results",
+      "target": "fdist-11",
+      "targetHandle": "data",
+      "id": "xy-edge__table-8results-fdist-11data",
+      "selected": false
+    },
+    {
+      "id": "e-fdist-11-map-13",
+      "source": "fdist-11",
+      "sourceHandle": "results",
+      "target": "map-13",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "source": "param-1",
+      "target": "mds-23",
+      "targetHandle": "query",
+      "id": "xy-edge__param-1-mds-23query",
+      "selected": false
+    },
+    {
+      "source": "param-1",
+      "target": "smg-24",
+      "targetHandle": "query",
+      "id": "xy-edge__param-1-smg-24query",
+      "selected": false
+    },
+    {
+      "source": "param-1",
+      "target": "va-25",
+      "targetHandle": "query",
+      "id": "xy-edge__param-1-va-25query",
+      "selected": false
+    },
+    {
+      "id": "e-mds-23-table-26",
+      "source": "mds-23",
+      "sourceHandle": "results",
+      "target": "table-26",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "source": "smg-24",
+      "sourceHandle": "results",
+      "target": "table-26",
+      "targetHandle": "data",
+      "id": "xy-edge__smg-24results-table-26data",
+      "selected": false
+    },
+    {
+      "source": "va-25",
+      "sourceHandle": "results",
+      "target": "table-26",
+      "targetHandle": "data",
+      "id": "xy-edge__va-25results-table-26data",
+      "selected": false
+    },
+    {
+      "id": "e-table-26-dedup-27",
+      "source": "table-26",
+      "sourceHandle": "results",
+      "target": "dedup-27",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "id": "e-dedup-27-imgview-32",
+      "source": "dedup-27",
+      "sourceHandle": "results",
+      "target": "imgview-32",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "id": "e-imgview-32-kcl-34",
+      "source": "imgview-32",
+      "sourceHandle": "results",
+      "target": "kcl-34",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "id": "e-kcl-34-kclOut-35",
+      "source": "kcl-34",
+      "sourceHandle": "results",
+      "target": "kclOut-35",
+      "targetHandle": "data",
+      "selected": false
+    }
+  ],
+  "title": "Stonehenge",
+  "description": ""
+}

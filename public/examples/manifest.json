@@ -3,10 +3,5 @@
     "slug": "stonehenge",
     "title": "Stonehenge",
     "description": "A one-word search across 5 data providers"
-  },
-  {
-    "slug": "stonehenge-ii",
-    "title": "Stonehenge II",
-    "description": "Comparing different sources with LLMs"
   }
 ]
