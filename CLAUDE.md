@@ -7,9 +7,22 @@ Node-based visual workflow editor for federating UK Arts & Humanities research d
 - **Frontend only**: React 19 + TypeScript + Vite, port **5174**
 - **Node editor**: `@xyflow/react` (v12+) — import ONLY from `@xyflow/react`
 - **No Service Worker / PWA / workbox**
-- API calls client-side via `fetch()`. GBIF: direct. All others: Vite dev proxy.
+- API calls client-side via `fetch()`. GBIF: direct. All others: same-origin proxy.
 
-## Vite Proxy Rules (`vite.config.ts`)
+## Run Modes
+
+| Command | Server | Port |
+|---------|--------|------|
+| `npm run dev` | Vite dev server (hot-reload) | **5174** |
+| `docker compose up` | Express (`server/index.mjs`) | **3001** |
+
+Both modes expose identical proxy endpoints and custom middleware — the single source of truth is **`server/proxies.mjs`**, imported by both `vite.config.ts` (dev) and `server/index.mjs` (prod). `server/proxies.mjs` is plain ESM by design so Node can execute it directly in-container without a build step.
+
+**Adding a new data source:**
+- Simple reverse-proxy → add an entry to `PROXY_TABLE` in `server/proxies.mjs`
+- Custom middleware → export a new connect-style function from `server/proxies.mjs` and wire it into both `vite.config.ts` (under `configureServer`) and `server/index.mjs` (under `app.use`)
+
+## Proxy Rules (`server/proxies.mjs`)
 
 | Prefix | Target |
 |--------|--------|
@@ -18,9 +31,18 @@ Node-based visual workflow editor for federating UK Arts & Humanities research d
 | `/mds-proxy/*` | `https://museumdata.uk/*` |
 | `/reconcile-proxy/*` | `https://wikidata.reconci.link/*` (307 redirect strips CORS — proxy required) |
 | `/kcl-proxy/*` | `https://api.ai.create.kcl.ac.uk/*` (KCL OpenAI-compatible inference API) |
-| `/ollama/*` | `http://localhost:11434/*` |
-| `/url-proxy?url=<encoded>[&js=true][&wait=<strategy>]` | Custom Vite middleware (`configureServer`); simple path uses Node `fetch()`; `js=true` uses Puppeteer singleton (auto-reset on `disconnected`). Wait strategies: `networkidle2` (default), `networkidle0`, `domcontentloaded`. |
-| `/ads-library-search?q=<query>&size=<n>` | Custom Vite middleware; two-step JSF session (GET ViewState → POST search) for the ADS Library catalogue. Returns extracted CDATA HTML for client-side parsing. |
+| `/ollama/*` | `$OLLAMA_HOST` (default `http://localhost:11434`) |
+| `/bodleian-proxy/*` | `https://digital.bodleian.ox.ac.uk/*` |
+| `/smg-proxy/*` | `https://collection.sciencemuseumgroup.org.uk/*` |
+| `/vam-proxy/*` | `https://api.vam.ac.uk/*` |
+| `/tgn-proxy/*` | `https://vocab.getty.edu/*` |
+| `/getty-search-proxy/*` | `https://www.getty.edu/*` |
+| `/nominatim-proxy/*` | `https://nominatim.openstreetmap.org/*` |
+| `/hsds-proxy/*` | `https://hsds.ac.uk/*` |
+| `/url-proxy?url=<encoded>[&js=true][&wait=<strategy>]` | Custom middleware; simple path uses Node `fetch()`; `js=true` uses Puppeteer singleton (auto-reset on `disconnected`). Wait strategies: `networkidle2` (default), `networkidle0`, `domcontentloaded`. |
+| `/ads-library-search?q=<query>&size=<n>` | Custom middleware; two-step JSF session (GET ViewState → POST search) for the ADS Library catalogue. Returns extracted CDATA HTML for client-side parsing. |
+| `/ads-catalogue-search?<qs>` | Custom middleware; Cloudflare bypass via warmed Puppeteer page holding `cf_clearance`. |
+| `/llds-search?q=<query>&rpp=<n>` | Custom middleware; Puppeteer solves Anubis JS proof-of-work challenge. |
 
 ## KCL Inference Configuration (`src/utils/kclConfig.ts`)
 
