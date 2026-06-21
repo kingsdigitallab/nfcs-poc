@@ -1,0 +1,57 @@
+services:
+
+  app:
+    build:
+      context: .
+      args:
+        - VITE_KCL_API_KEY=${VITE_KCL_API_KEY}
+        - VITE_EUROPEANA_API_KEY=${VITE_EUROPEANA_API_KEY}
+    ports:
+      - "3001:3001"
+    environment:
+      # Points to the ollama service by its Docker Compose service name.
+      # Override with OLLAMA_HOST env var if Ollama is running elsewhere.
+      - OLLAMA_HOST=${OLLAMA_HOST:-http://ollama:11434}
+    volumes:
+      - workflow_saves:/app/data
+      # Mount host public/fixtures/ over the built dist/fixtures/ so fixture
+      # updates committed to the repo take effect after git pull + docker
+      # compose restart — no image rebuild needed.
+      - ./public/fixtures:/app/dist/fixtures:ro
+      # Same for example workflows — author on either local or deployed instance,
+      # commit public/examples/, then git pull + docker compose restart app.
+      - ./public/examples:/app/dist/examples
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama
+    environment:
+      - OLLAMA_ORIGINS=*
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+  # Cloudflare named tunnel — only starts when explicitly requested:
+  #   docker compose --profile tunnel up
+  #
+  # Setup (one-time):
+  #   1. Go to Cloudflare dashboard → Networking → Tunnels → nfcs-workshop
+  #   2. Add a route: nfcs-workshop.field.works → http://app:3001
+  #   3. Copy the tunnel token into a .env file:
+  #        CLOUDFLARE_TUNNEL_TOKEN=<your-token>
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      - app
+    restart: unless-stopped
+    profiles:
+      - tunnel
+
+volumes:
+  # Persists downloaded Ollama models across container restarts
+  ollama_data:
+  # Persists workshop workflow saves across container restarts
+  workflow_saves:
