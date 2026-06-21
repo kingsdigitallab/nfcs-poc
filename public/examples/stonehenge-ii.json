@@ -1,0 +1,943 @@
+{
+  "version": 2,
+  "savedAt": "2026-06-12T11:16:20.853Z",
+  "nodes": [
+    {
+      "id": "group-86",
+      "type": "group",
+      "position": {
+        "x": 2096.5766773849587,
+        "y": 1181.9166505944797
+      },
+      "data": {
+        "name": "Group 1"
+      },
+      "width": 1138.852226570029,
+      "height": 678.4714713592648,
+      "style": {
+        "width": 1138.852226570029,
+        "height": 678.4714713592648
+      }
+    },
+    {
+      "id": "group-80",
+      "type": "group",
+      "position": {
+        "x": 2515.069091513454,
+        "y": -911.9144359529183
+      },
+      "data": {
+        "name": "LLM Outputs"
+      },
+      "width": 591.2338796618133,
+      "height": 1069.9942027593393,
+      "style": {
+        "width": 591.2338796618133,
+        "height": 1069.9942027593393
+      }
+    },
+    {
+      "id": "group-73",
+      "type": "group",
+      "position": {
+        "x": 2347.7055195382327,
+        "y": 591.0981593984355
+      },
+      "data": {
+        "name": "Create an array for processing"
+      },
+      "width": 1122.0920159118,
+      "height": 324.2027731056438,
+      "style": {
+        "width": 1122.0920159118,
+        "height": 324.2027731056438
+      }
+    },
+    {
+      "id": "group-72",
+      "type": "group",
+      "position": {
+        "x": 1825.993598422287,
+        "y": -831.7109245041902
+      },
+      "data": {
+        "name": "LLM Stage 1"
+      },
+      "width": 362,
+      "height": 1534.3179072692205,
+      "style": {
+        "width": 362,
+        "height": 1534.3179072692205
+      }
+    },
+    {
+      "id": "group-58",
+      "type": "group",
+      "position": {
+        "x": -446.3497746918596,
+        "y": 288.4707664352724
+      },
+      "data": {
+        "name": "Functional Gap!"
+      },
+      "width": 266.09272193268464,
+      "height": 772.2335087631471,
+      "style": {
+        "width": 266.09272193268464,
+        "height": 772.2335087631471
+      }
+    },
+    {
+      "id": "group-53",
+      "type": "group",
+      "position": {
+        "x": -2000.1702735602316,
+        "y": 355.9505481416202
+      },
+      "data": {
+        "name": "Basic Search"
+      },
+      "width": 1386.1789581897833,
+      "height": 758.5003023930744,
+      "style": {
+        "width": 1386.1789581897833,
+        "height": 758.5003023930744
+      }
+    },
+    {
+      "id": "sample-1",
+      "type": "sampleDataSource",
+      "position": {
+        "x": -11.119366154273791,
+        "y": 147.46023887877254
+      },
+      "data": {
+        "selectedPackage": "stonehenge",
+        "packageTitle": "Stonehenge — antiquarian texts (LLDS / EEBO-TCP)",
+        "selectedFiles": [
+          {
+            "url": "/fixtures/LLDS Collections/stonehenge/ITEM@20.500.12024-A47049/A47049.xml",
+            "filename": "A47049.xml",
+            "label": "TEI-XML transcript",
+            "type": "xml"
+          },
+          {
+            "url": "/fixtures/LLDS Collections/stonehenge/ITEM@20.500.12024-A69727/A69727.xml",
+            "filename": "A69727.xml",
+            "label": "TEI-XML transcript",
+            "type": "xml"
+          }
+        ]
+      }
+    },
+    {
+      "id": "xml-2",
+      "type": "xmlSection",
+      "position": {
+        "x": 1152.7988493114588,
+        "y": 35.078084415179234
+      },
+      "data": {
+        "xpath": "//body",
+        "outputMode": "text",
+        "maxLength": 80000
+      },
+      "width": 320,
+      "height": 411,
+      "style": {
+        "width": 320,
+        "height": 370
+      }
+    },
+    {
+      "id": "kclField-4",
+      "type": "kclField",
+      "position": {
+        "x": 25.309002594662388,
+        "y": 261.39450680581535
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "model": "arc:nano",
+        "selectedField": "xmlContent",
+        "mode": "aggregate",
+        "systemPrompt": "You are a research assistant helping to analyse humanities research data.",
+        "userPromptTemplate": "These are two 17th century scholarly texts debating who built Stonehenge. One argues Romans, one argues Danes. Summarise the key arguments each author makes, how they use classical sources, and what assumptions about the ancient Britons underlie both positions\n\n{{values}}",
+        "temperature": 0.7,
+        "maxTokens": 32768
+      },
+      "parentId": "group-72",
+      "extent": "parent"
+    },
+    {
+      "id": "kclField-6",
+      "type": "kclField",
+      "position": {
+        "x": 20,
+        "y": 1063.3179072692205
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "model": "arc:nano",
+        "selectedField": "xmlContent",
+        "mode": "per-record",
+        "systemPrompt": "You are a research assistant helping to analyse humanities research data.",
+        "userPromptTemplate": "From this text, extract all references to named individual persons and to specific places. List each name once only; use the most informative context available. Reply only with the name separatd by a comma\n\n\n{{value}}",
+        "temperature": 0.7,
+        "maxTokens": 100000,
+        "apexUnlocked": true
+      },
+      "parentId": "group-72",
+      "extent": "parent"
+    },
+    {
+      "id": "kclOut-7",
+      "type": "kclOutput",
+      "position": {
+        "x": 20,
+        "y": 803.9942027593394
+      },
+      "data": {},
+      "parentId": "group-80",
+      "extent": "parent"
+    },
+    {
+      "id": "kclOut-8",
+      "type": "kclOutput",
+      "position": {
+        "x": 21.233879661813262,
+        "y": 228.31649198146408
+      },
+      "data": {},
+      "parentId": "group-80",
+      "extent": "parent"
+    },
+    {
+      "id": "llds-11",
+      "type": "lldsSearch",
+      "position": {
+        "x": 341.2972710679619,
+        "y": 69.25851768864243
+      },
+      "data": {
+        "inlineQuery": "stonehenge",
+        "inlineLimit": "20",
+        "useCache": false
+      },
+      "parentId": "group-53",
+      "extent": "parent"
+    },
+    {
+      "id": "table-12",
+      "type": "tableOutput",
+      "position": {
+        "x": 673.8502473886988,
+        "y": 70.5118695275587
+      },
+      "data": {},
+      "parentId": "group-53",
+      "extent": "parent"
+    },
+    {
+      "id": "table-13",
+      "type": "tableOutput",
+      "position": {
+        "x": 20,
+        "y": 55
+      },
+      "data": {},
+      "parentId": "group-73",
+      "extent": "parent"
+    },
+    {
+      "id": "recon-17",
+      "type": "reconciliation",
+      "position": {
+        "x": 3576.0352094148357,
+        "y": 709.9958795070208
+      },
+      "data": {
+        "selectedField": "person_list",
+        "selectedAuthority": "wikidata-item",
+        "confidenceThreshold": 0.8
+      }
+    },
+    {
+      "id": "table-18",
+      "type": "tableOutput",
+      "position": {
+        "x": 4159.4470399965485,
+        "y": 689.5978114019802
+      },
+      "data": {}
+    },
+    {
+      "id": "kclField-20",
+      "type": "kclField",
+      "position": {
+        "x": 3331.5609628587495,
+        "y": 1380.8922153442595
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "model": "arc:nano",
+        "selectedField": "content",
+        "mode": "per-record",
+        "systemPrompt": "You are a research assistant helping to analyse humanities research data.",
+        "userPromptTemplate": "This text makes an argument about the origins or purpose of Stonehenge. Summarise in three sentences: (1) the author's central claim about who built it or what it was for, (2) the main type of evidence they use to support that claim, and (3) any explicit disagreement with an alternative interpretation. If the text is primarily technical or data-driven, describe what the data is taken to show.\n\n{{value}}",
+        "temperature": 0.7,
+        "maxTokens": 32768
+      }
+    },
+    {
+      "id": "ariadne-22",
+      "type": "ariadneSearch",
+      "position": {
+        "x": 330.7212160020588,
+        "y": 289.9593333825103
+      },
+      "data": {
+        "inlineQuery": "",
+        "inlineLimit": "20",
+        "fetchAll": false,
+        "ariadneSubject": "",
+        "derivedSubject": "",
+        "nativeSubject": "",
+        "country": "",
+        "dataType": "",
+        "temporal": "",
+        "contributor": "",
+        "sort": "_score",
+        "order": "desc"
+      },
+      "parentId": "group-53",
+      "extent": "parent"
+    },
+    {
+      "id": "param-23",
+      "type": "param",
+      "position": {
+        "x": 20,
+        "y": 60.86855514764835
+      },
+      "data": {
+        "label": "Parameter",
+        "paramType": "Text",
+        "value": "stonehenge"
+      },
+      "parentId": "group-53",
+      "extent": "parent"
+    },
+    {
+      "id": "table-24",
+      "type": "tableOutput",
+      "position": {
+        "x": 408.85222657002896,
+        "y": 415.4714713592648
+      },
+      "data": {},
+      "parentId": "group-86",
+      "extent": "parent"
+    },
+    {
+      "id": "ft-26",
+      "type": "filterTransform",
+      "position": {
+        "x": 20,
+        "y": 193.56090898880097
+      },
+      "data": {
+        "mode": "transform",
+        "filterCombinator": "AND",
+        "filterOps": [],
+        "transformOps": [
+          {
+            "id": "op-1781193387965-9kaw",
+            "type": "rename",
+            "field": "xmlContent",
+            "newName": "content",
+            "dropOriginal": false
+          }
+        ]
+      },
+      "parentId": "group-86",
+      "extent": "parent"
+    },
+    {
+      "id": "kclOut-27",
+      "type": "kclOutput",
+      "position": {
+        "x": 3748.436893295278,
+        "y": 1696.447571087287
+      },
+      "data": {}
+    },
+    {
+      "id": "ft-28",
+      "type": "filterTransform",
+      "position": {
+        "x": 772.0920159118,
+        "y": 57.202773105643814
+      },
+      "data": {
+        "mode": "transform",
+        "filterCombinator": "AND",
+        "filterOps": [],
+        "transformOps": [
+          {
+            "id": "op-1781193959039-zmnw",
+            "type": "splitToList",
+            "field": "kclResponse",
+            "newField": "person_list",
+            "mode": "delimiter",
+            "delimiter": ",",
+            "jsonKey": ""
+          }
+        ]
+      },
+      "parentId": "group-73",
+      "extent": "parent"
+    },
+    {
+      "id": "kclField-30",
+      "type": "kclField",
+      "position": {
+        "x": 4359.871844712323,
+        "y": 1363.7342137592855
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "model": "arc:nano",
+        "selectedField": "kclResponse",
+        "mode": "aggregate",
+        "systemPrompt": "You are a research assistant helping to analyse humanities research data.",
+        "userPromptTemplate": "The following are summaries of five texts arguing about the origins or purpose of Stonehenge, spanning the mid-17th century to 2021. Compare the positions across all five: what is each author's central claim, and what kind of evidence do they treat as authoritative? How does the relationship between literary or historical sources and physical or scientific evidence change across the set? Is there anything that remains consistent across all five interpretations despite the differences in method and conclusion?\n\n{{values}}",
+        "temperature": 0.7,
+        "maxTokens": 32768
+      }
+    },
+    {
+      "id": "kclOut-37",
+      "type": "kclOutput",
+      "position": {
+        "x": 4792.612000132636,
+        "y": 1739.9940713830476
+      },
+      "data": {}
+    },
+    {
+      "id": "comment-46",
+      "type": "comment",
+      "position": {
+        "x": 20.09272193268464,
+        "y": 55
+      },
+      "data": {
+        "title": "Metadata to Data gap",
+        "body": "While searching metadata and surfacing records is potentially trivial, the constraints of the different approaches and bot protection mechanisms inhibit the options for performing analysis on the ",
+        "handleUnlocked": true
+      },
+      "width": 216,
+      "height": 318,
+      "parentId": "group-58",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "sampleDataSource-50",
+      "type": "sampleDataSource",
+      "position": {
+        "x": -0.9917588120964638,
+        "y": 1002.7611761094391
+      },
+      "data": {
+        "selectedPackage": "stonehenge",
+        "packageTitle": "Stonehenge — antiquarian texts (LLDS / EEBO-TCP)",
+        "selectedFiles": [
+          {
+            "url": "/fixtures/LLDS Collections/stonehenge/darvill_2009/darvill_wainwright_2009_stonehenge_excavations_2008.txt",
+            "filename": "darvill_wainwright_2009_stonehenge_excavations_2008.txt",
+            "label": "Plain text",
+            "type": "text"
+          },
+          {
+            "url": "/fixtures/LLDS Collections/stonehenge/marshall_2012/marshall_et_al_2012_stonehenge_chronological_modelling.txt",
+            "filename": "marshall_et_al_2012_stonehenge_chronological_modelling.txt",
+            "label": "Plain text",
+            "type": "text"
+          },
+          {
+            "url": "/fixtures/LLDS Collections/stonehenge/parker_pearson_2021/parker_pearson_2021_archaeology_legend_stonehenge.txt",
+            "filename": "parker_pearson_2021_archaeology_legend_stonehenge.txt",
+            "label": "Plain text",
+            "type": "text"
+          }
+        ]
+      }
+    },
+    {
+      "id": "table-51",
+      "type": "tableOutput",
+      "position": {
+        "x": 656.1789581897833,
+        "y": 342.50030239307443
+      },
+      "data": {},
+      "parentId": "group-53",
+      "extent": "parent"
+    },
+    {
+      "id": "comment-52",
+      "type": "comment",
+      "position": {
+        "x": 20,
+        "y": 484.23350876314714
+      },
+      "data": {
+        "title": "Metadata to Data gap",
+        "body": "While searching metadata and surfacing records is potentially trivial, the constraints of the different approaches and bot protection mechanisms inhibit the options for performing analysis on the ",
+        "handleUnlocked": true
+      },
+      "width": 216,
+      "height": 258,
+      "parentId": "group-58",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-54",
+      "type": "comment",
+      "position": {
+        "x": -1995.3908682409563,
+        "y": 46.81788310312322
+      },
+      "data": {
+        "title": "Search and forked processing",
+        "body": "\nFor demonstration purposes we first send a single search term to two different types of data service - a literature and language service and an archaeological service. This gives us two families of data type to process. ***NB. The results displayed here are indicative only to illustrate the potential flow of data***"
+      },
+      "width": 606,
+      "height": 274,
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-59",
+      "type": "comment",
+      "position": {
+        "x": -2.638405812650177,
+        "y": -115.37181978905254
+      },
+      "data": {
+        "title": "Linguistic data branch",
+        "body": "On this branch we look at two XML files of authors arguing about the provenance of Stonehenge. What is the summary of their different positions? How do they make their arguments?"
+      },
+      "width": 759,
+      "height": 233,
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-61",
+      "type": "comment",
+      "position": {
+        "x": 1.756990025604182,
+        "y": 754.422176809184
+      },
+      "data": {
+        "title": "Archaeological data branch",
+        "body": "On this branch we are looking at a more modern aspect to the argument - papers from 2009, 2012 and 2021. \nI'm a lay person in this domain - can an LLM help to render the scientific arguments more comprehensible to?"
+      },
+      "width": 898,
+      "height": 237,
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-62",
+      "type": "comment",
+      "position": {
+        "x": 1152.303981279067,
+        "y": -214.10669803545287
+      },
+      "data": {
+        "title": "XML extraction",
+        "body": "There is a lot of text here, much of which is TEI padder; useful for computational linguistics, but here we are just interested in the prose part, so we can extract the 'body' and not wory about filling up our LLM context with irrelevant noise.",
+        "handleUnlocked": true
+      },
+      "width": 317,
+      "height": 228,
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-67",
+      "type": "comment",
+      "position": {
+        "x": 22.474392736140544,
+        "y": 55
+      },
+      "data": {
+        "title": "LLM Prompt 1",
+        "body": "We can look at both the texts in a comparative way, using the '**Aggregate**' mode on the xmlContent we previously extracted...",
+        "handleUnlocked": true
+      },
+      "width": 223,
+      "height": 187,
+      "parentId": "group-72",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-69",
+      "type": "comment",
+      "position": {
+        "x": 25.722730964513175,
+        "y": 840.0564159157238
+      },
+      "data": {
+        "title": "LLM Prompt 2",
+        "body": "... or we could use '**per record**' mode to extract some specific information from each text - which people and places are employed to make the arguments?",
+        "handleUnlocked": true
+      },
+      "width": 223,
+      "height": 187,
+      "parentId": "group-72",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-74",
+      "type": "comment",
+      "position": {
+        "x": 2347.968053786418,
+        "y": 454.5818067070888
+      },
+      "data": {
+        "title": "Downstream post-processing of first-pass LLM output",
+        "body": "Using the requested comma seeparated list, we can use a **filter/transform** node to parse the response into a true list in a new field 'person_list' ....",
+        "handleUnlocked": true
+      },
+      "width": 1113,
+      "height": 121,
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-78",
+      "type": "comment",
+      "position": {
+        "x": 25.18803709423355,
+        "y": 55
+      },
+      "data": {
+        "title": "LLM outputs",
+        "body": "Two differnent applications of the LLM to the provided data - one explicitly generative and one extractive.",
+        "handleUnlocked": true
+      },
+      "width": 527,
+      "height": 150,
+      "parentId": "group-80",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-81",
+      "type": "comment",
+      "position": {
+        "x": 3573.8679024060734,
+        "y": 557.5671433572761
+      },
+      "data": {
+        "title": "Enrichment",
+        "body": "... a list we can pass to a reconciliation node to find possible matches in WikiData.",
+        "handleUnlocked": true
+      },
+      "width": 395,
+      "height": 130,
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-84",
+      "type": "comment",
+      "position": {
+        "x": 24.092755897047482,
+        "y": 58.79807521006546
+      },
+      "data": {
+        "title": "Renaming fields and reuniting data",
+        "body": "Some texts can be too big for the LLM to deal with in one hit, so we can attempt a two-phase process again. In order to use the **per record** mode we will rename the **xmlContent **field to **content** "
+      },
+      "width": 917,
+      "height": 125,
+      "parentId": "group-86",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-87",
+      "type": "comment",
+      "position": {
+        "x": 3338.419868441735,
+        "y": 1217.5534370998257
+      },
+      "data": {
+        "title": "Stage 1 prompt",
+        "body": "We can use a more generalisable prompt form to deal with the material from differnet centuries and domains on a **per record** basis"
+      },
+      "width": 307,
+      "height": 141,
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-89",
+      "type": "comment",
+      "position": {
+        "x": 4356.9297337437665,
+        "y": 1196.7842337387783
+      },
+      "data": {
+        "title": "Stage 2 prompt",
+        "body": "With the arguments in a more digestible size we can use the **aggregate ** mode again to make comparisons."
+      },
+      "width": 307,
+      "height": 141,
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "sample-1",
+      "sourceHandle": "xml",
+      "target": "xml-2",
+      "targetHandle": "data",
+      "id": "xy-edge__sample-1xml-xml-2data"
+    },
+    {
+      "id": "e-xml-2-kclField-4",
+      "source": "xml-2",
+      "sourceHandle": "results",
+      "target": "kclField-4",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "source": "xml-2",
+      "sourceHandle": "results",
+      "target": "kclField-6",
+      "targetHandle": "data",
+      "id": "xy-edge__xml-2results-kclField-6data",
+      "selected": false
+    },
+    {
+      "id": "e-kclField-6-kclOut-7",
+      "source": "kclField-6",
+      "sourceHandle": "results",
+      "target": "kclOut-7",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "id": "e-kclField-4-kclOut-8",
+      "source": "kclField-4",
+      "sourceHandle": "results",
+      "target": "kclOut-8",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "id": "e-llds-11-table-12",
+      "source": "llds-11",
+      "sourceHandle": "results",
+      "target": "table-12",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "id": "e-kclField-6-table-13",
+      "source": "kclField-6",
+      "sourceHandle": "results",
+      "target": "table-13",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "id": "e-recon-17-table-18",
+      "source": "recon-17",
+      "sourceHandle": "results",
+      "target": "table-18",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "id": "e-param-23-llds-11",
+      "source": "param-23",
+      "target": "llds-11",
+      "targetHandle": "query",
+      "selected": false
+    },
+    {
+      "source": "param-23",
+      "target": "ariadne-22",
+      "targetHandle": "query",
+      "id": "xy-edge__param-23-ariadne-22query",
+      "selected": false
+    },
+    {
+      "id": "e-xml-2-ft-26",
+      "source": "xml-2",
+      "sourceHandle": "results",
+      "target": "ft-26",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "source": "ft-26",
+      "sourceHandle": "results",
+      "target": "table-24",
+      "targetHandle": "data",
+      "id": "xy-edge__ft-26results-table-24data",
+      "selected": false
+    },
+    {
+      "source": "table-24",
+      "sourceHandle": "results",
+      "target": "kclField-20",
+      "targetHandle": "data",
+      "id": "xy-edge__table-24results-kclField-20data",
+      "selected": false
+    },
+    {
+      "id": "e-kclField-20-kclOut-27",
+      "source": "kclField-20",
+      "sourceHandle": "results",
+      "target": "kclOut-27",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "id": "e-table-13-ft-28",
+      "source": "table-13",
+      "sourceHandle": "results",
+      "target": "ft-28",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "source": "ft-28",
+      "sourceHandle": "results",
+      "target": "recon-17",
+      "targetHandle": "data",
+      "id": "xy-edge__ft-28results-recon-17data",
+      "selected": false
+    },
+    {
+      "source": "kclField-20",
+      "sourceHandle": "results",
+      "target": "kclField-30",
+      "targetHandle": "data",
+      "id": "xy-edge__kclField-20results-kclField-30data",
+      "selected": false
+    },
+    {
+      "id": "e-kclField-30-kclOut-37",
+      "source": "kclField-30",
+      "sourceHandle": "results",
+      "target": "kclOut-37",
+      "targetHandle": "data"
+    },
+    {
+      "source": "table-12",
+      "sourceHandle": "results",
+      "target": "comment-46",
+      "targetHandle": "data",
+      "id": "xy-edge__table-12results-comment-46data",
+      "selected": false
+    },
+    {
+      "source": "comment-46",
+      "sourceHandle": "results",
+      "target": "sample-1",
+      "targetHandle": "data",
+      "id": "xy-edge__comment-46results-sample-1data",
+      "selected": false
+    },
+    {
+      "id": "e-ariadne-22-table-51",
+      "source": "ariadne-22",
+      "sourceHandle": "results",
+      "target": "table-51",
+      "targetHandle": "data",
+      "selected": false
+    },
+    {
+      "source": "table-51",
+      "sourceHandle": "results",
+      "target": "comment-52",
+      "targetHandle": "data",
+      "id": "xy-edge__table-51results-comment-52data",
+      "selected": false
+    },
+    {
+      "source": "comment-52",
+      "sourceHandle": "results",
+      "target": "sampleDataSource-50",
+      "targetHandle": "data",
+      "id": "xy-edge__comment-52results-sampleDataSource-50data",
+      "selected": false
+    },
+    {
+      "source": "sampleDataSource-50",
+      "sourceHandle": "text",
+      "target": "table-24",
+      "targetHandle": "data",
+      "id": "xy-edge__sampleDataSource-50text-table-24data",
+      "selected": false
+    },
+    {
+      "source": "comment-74",
+      "sourceHandle": "results",
+      "target": "comment-81",
+      "targetHandle": "data",
+      "id": "xy-edge__comment-74results-comment-81data"
+    }
+  ],
+  "title": "Stonehenge II",
+  "description": "Comparing different sources with LLMs"
+}

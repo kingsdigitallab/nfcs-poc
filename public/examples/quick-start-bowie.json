@@ -1,0 +1,103 @@
+{
+  "version": 2,
+  "savedAt": "2026-06-15T16:26:32.230Z",
+  "nodes": [
+    {
+      "id": "qs-1",
+      "type": "quickStart",
+      "position": {
+        "x": -106.40686057091887,
+        "y": 0.06632643268068605
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "model": "arc:nano",
+        "researchQuestion": "I want to research the range of cultural influence of David Bowie",
+        "plan": {
+          "title": "Cultural Influence and Material Traces of David Bowie",
+          "summary": "This workflow gathers evidence of David Bowie's cultural reach by examining his artistic output, fashion, scientific/industrial connections, and literary mentions. It uses a combination of sources to trace his influence across art, design, science, and language.",
+          "searchNodes": [
+            {
+              "type": "vaSearch",
+              "params": {
+                "inlineQuery": "David Bowie",
+                "inlineLimit": "20"
+              },
+              "comment": {
+                "title": "Victoria and Albert Museum (V&A)",
+                "body": "Excellent for tracing fashion, costume design, textiles, and applied arts elements of his public persona."
+              }
+            },
+            {
+              "type": "smgSearch",
+              "params": {
+                "inlineQuery": "David Bowie",
+                "inlineLimit": "20"
+              },
+              "comment": {
+                "title": "Science Museum Group (SMG)",
+                "body": "Useful for finding connections to technology, scientific instruments, or industrial aspects of his career."
+              }
+            },
+            {
+              "type": "europeanaSearch",
+              "params": {
+                "inlineQuery": "David Bowie",
+                "inlineLimit": "20",
+                "typeFilter": "any"
+              },
+              "comment": {
+                "title": "Europeana",
+                "body": "A broad source for cross-national cultural artifacts, photographs, and historical documents related to his global influence."
+              }
+            },
+            {
+              "type": "lldsSearch",
+              "params": {
+                "inlineQuery": "David Bowie",
+                "inlineLimit": "20"
+              },
+              "comment": {
+                "title": "Literary and Linguistic Data Service (LLDS)",
+                "body": "To find linguistic traces, quotes, or mentions of his name in historical UK texts and corpora."
+              }
+            }
+          ],
+          "outputNodes": [
+            {
+              "type": "tableOutput",
+              "comment": {
+                "title": "Cultural Influence Overview",
+                "body": "A consolidated table showing the diverse material, linguistic, and artistic evidence of David Bowie's cultural impact."
+              }
+            }
+          ],
+          "edges": [
+            {
+              "fromSearchIndex": 0,
+              "toOutputIndex": 0
+            },
+            {
+              "fromSearchIndex": 1,
+              "toOutputIndex": 0
+            },
+            {
+              "fromSearchIndex": 2,
+              "toOutputIndex": 0
+            },
+            {
+              "fromSearchIndex": 3,
+              "toOutputIndex": 0
+            }
+          ]
+        },
+        "planStatus": "ready",
+        "planMessage": "",
+        "instantiated": false
+      }
+    }
+  ],
+  "edges": [],
+  "title": "Quick Start Bowie",
+  "description": "A tool to suggest discovery pathaways through unfamiliar data"
+}

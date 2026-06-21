@@ -1,7 +1,17 @@
 [
   {
+    "slug": "quick-start-bowie",
+    "title": "Quick Start Bowie",
+    "description": "A tool to suggest discovery pathaways through unfamiliar data"
+  },
+  {
     "slug": "stonehenge",
     "title": "Stonehenge",
     "description": "A one-word search across 5 data providers"
+  },
+  {
+    "slug": "stonehenge-ii",
+    "title": "Stonehenge II",
+    "description": "Comparing different sources with LLMs"
   }
 ]
