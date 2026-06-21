@@ -145,7 +145,7 @@ src/
 5. Factory in `NODE_DEFAULTS` (`App.tsx`)
 6. Sidebar entry in `SIDEBAR_ITEMS` (`App.tsx`)
 7. Data interface + union in `AppNode` (`App.tsx`)
-8. Proxy rule in `vite.config.ts` if needed
+8. Proxy rule in `server/proxies.mjs` (`PROXY_TABLE`) if needed — applies to both dev and prod automatically
 
 **Exceptions:** `localFolderSource` (user gesture) skips 1–2. `quickView`, `imageView`, `comment` (display-only) skip 1–2 and have no handles.
 
