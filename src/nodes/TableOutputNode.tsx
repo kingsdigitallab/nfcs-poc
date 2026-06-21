@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useMemo } from 'react'
 import { createPortal } from 'react-dom'
 import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { setNodeResults } from '../store/resultsStore'
+import { getAllNotes, setNote, subscribeNotes } from '../store/notesStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { ReconciliationResult } from '../utils/reconciliationService'
@@ -88,7 +89,7 @@ function allFlatColumns(records: UnifiedRecord[], expandNamespaces = false): str
   }
   const ordered = DEFAULT_COLS.filter(c => keys.has(c))
   const extras  = [...keys]
-    .filter(k => !(DEFAULT_COLS as readonly string[]).includes(k))
+    .filter(k => !(DEFAULT_COLS as readonly string[]).includes(k) && k !== '_note')
     .sort()
   return [...ordered, ...extras]
 }
@@ -134,15 +135,22 @@ interface TableProps {
   selectedIds:  Set<string>
   onToggleRow:  (id: string) => void
   onToggleAll:  (ids: string[], checked: boolean) => void
+  // Notes
+  notes:        Record<string, string>
+  onNoteChange: (recordId: string, text: string) => void
 }
 
 const DEFAULT_COL_W = 140
 const CHECKBOX_COL_W = 28
+const NOTES_COL_W   = 160
 
-function RecordTable({ records, columns, page, pageSize, compact = false, sortCol, sortDir, onSort, onSelectCandidate, selectedIds, onToggleRow, onToggleAll }: TableProps) {
+function RecordTable({ records, columns, page, pageSize, compact = false, sortCol, sortDir, onSort, onSelectCandidate, selectedIds, onToggleRow, onToggleAll, notes, onNoteChange }: TableProps) {
   const [colWidths, setColWidths] = useState<Record<string, number>>({})
   const resizingRef = useRef<{ col: string; startX: number; startW: number } | null>(null)
   const listenersRef = useRef<{ move: (e: MouseEvent) => void; up: (e: MouseEvent) => void } | null>(null)
+  const [noteEditId, setNoteEditId] = useState<string | null>(null)
+  const [noteDraft,  setNoteDraft]  = useState('')
+  const noteTextareaRef = useRef<HTMLTextAreaElement>(null)
 
   // F1: hover popup state
   const [hovered, setHovered] = useState<{ rec: UnifiedRecord; x: number; y: number } | null>(null)
@@ -159,6 +167,27 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
       document.body.style.cursor = ''
     }
   }, [])
+
+  // Auto-focus textarea when a note cell enters edit mode
+  useEffect(() => {
+    if (noteEditId) noteTextareaRef.current?.focus()
+  }, [noteEditId])
+
+  function openNoteEditor(recordId: string) {
+    setNoteDraft(notes[recordId] ?? '')
+    setNoteEditId(recordId)
+  }
+
+  function commitNote() {
+    if (noteEditId !== null) {
+      onNoteChange(noteEditId, noteDraft)
+      setNoteEditId(null)
+    }
+  }
+
+  function cancelNote() {
+    setNoteEditId(null)
+  }
 
   function startResize(e: React.MouseEvent, col: string) {
     e.preventDefault()
@@ -213,6 +242,14 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
                 onChange={e => onToggleAll(records.map(r => r.id), e.target.checked)}
                 title={allChecked ? 'Deselect all' : 'Select all (filtered)'}
               />
+            </th>
+            {/* Notes column */}
+            <th style={{ ...thStyle, width: NOTES_COL_W, minWidth: NOTES_COL_W, maxWidth: NOTES_COL_W, padding: pad, cursor: 'default' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                <span style={{ fontSize: 9, fontWeight: 700, background: '#fef3c7', color: '#92400e', borderRadius: 3, padding: '1px 4px' }}>
+                  notes
+                </span>
+              </div>
             </th>
             {columns.map(col => {
               const w        = colWidths[col] ?? DEFAULT_COL_W
@@ -277,6 +314,47 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
                   checked={selectedIds.has(rec.id)}
                   onChange={() => onToggleRow(rec.id)}
                 />
+              </td>
+              {/* Notes cell */}
+              <td
+                className="nodrag"
+                style={{ ...tdStyle, width: NOTES_COL_W, maxWidth: NOTES_COL_W, padding: '2px 4px', overflow: 'visible', whiteSpace: 'normal', verticalAlign: 'top' }}
+                onClick={() => { if (noteEditId !== rec.id) openNoteEditor(rec.id) }}
+              >
+                {noteEditId === rec.id ? (
+                  <textarea
+                    ref={noteTextareaRef}
+                    className="nodrag"
+                    value={noteDraft}
+                    onChange={e => setNoteDraft(e.target.value)}
+                    onBlur={commitNote}
+                    onKeyDown={e => {
+                      if (e.key === 'Escape') { e.preventDefault(); cancelNote() }
+                      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); commitNote() }
+                    }}
+                    style={{
+                      width: '100%', minHeight: 48, resize: 'vertical',
+                      fontSize: fs, fontFamily: 'system-ui, sans-serif',
+                      border: '1px solid #f59e0b', borderRadius: 3,
+                      padding: '2px 4px', outline: 'none', background: '#fffbeb',
+                      color: '#1f2937', lineHeight: 1.4,
+                    }}
+                    title="Enter to save · Shift+Enter for new line · Escape to cancel"
+                  />
+                ) : (
+                  <div
+                    title={notes[rec.id] ? notes[rec.id] : 'Click to add a note'}
+                    style={{
+                      minHeight: 18, cursor: 'text',
+                      color: notes[rec.id] ? '#1f2937' : '#d1d5db',
+                      fontSize: fs, lineHeight: 1.4,
+                      display: '-webkit-box', WebkitBoxOrient: 'vertical' as const,
+                      WebkitLineClamp: 3, overflow: 'hidden',
+                    }}
+                  >
+                    {notes[rec.id] ?? '✎'}
+                  </div>
+                )}
               </td>
               {columns.map(col => {
                 const val = getColValue(rec, col)
@@ -344,6 +422,9 @@ export function TableOutputNode({ id, data }: NodeProps) {
   const [sortCol,          setSortCol]          = useState<string | null>(null)
   const [sortDir,          setSortDir]          = useState<'asc' | 'desc'>('asc')
   const [filterText,       setFilterText]       = useState('')
+  const [notesVersion,     setNotesVersion]     = useState(0)
+
+  useEffect(() => subscribeNotes(() => setNotesVersion(v => v + 1)), [])
 
   const tableWrapRef = useRef<HTMLDivElement>(null)
 
@@ -370,6 +451,19 @@ export function TableOutputNode({ id, data }: NodeProps) {
       return Object.keys(patch).length > 0 ? { ...rec, ...patch } as UnifiedRecord : rec
     })
   }, [records, selections])
+
+  // Inject _note from notesStore into each record so it flows downstream and
+  // appears in field pickers of KCL/Ollama nodes for comparison prompts.
+  const effectiveRecordsWithNotes = useMemo<UnifiedRecord[] | null>(() => {
+    if (!effectiveRecords) return null
+    const allNotes = getAllNotes()
+    if (Object.keys(allNotes).length === 0) return effectiveRecords
+    return effectiveRecords.map(r =>
+      allNotes[r.id] ? { ...r, _note: allNotes[r.id] } : r,
+    )
+  // notesVersion triggers recompute when any note is saved/deleted
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [effectiveRecords, notesVersion])
 
   function handleSelectCandidate(recordId: string, col: string, result: ReconciliationResult) {
     updateNodeData(id, {
@@ -401,10 +495,10 @@ export function TableOutputNode({ id, data }: NodeProps) {
   }
 
   const filteredRecords = useMemo<UnifiedRecord[] | null>(() => {
-    if (!effectiveRecords) return null
+    if (!effectiveRecordsWithNotes) return null
     const q = filterText.trim().toLowerCase()
-    if (!q) return effectiveRecords
-    return effectiveRecords.filter(r =>
+    if (!q) return effectiveRecordsWithNotes
+    return effectiveRecordsWithNotes.filter(r =>
       Object.values(r).some(v => {
         if (v === null || v === undefined) return false
         if (isReconciledValue(v)) return (v as ReconciliationResult).label?.toLowerCase().includes(q) ?? false
@@ -419,7 +513,7 @@ export function TableOutputNode({ id, data }: NodeProps) {
         return String(v).toLowerCase().includes(q)
       }),
     )
-  }, [effectiveRecords, filterText])
+  }, [effectiveRecordsWithNotes, filterText])
 
   const sortedRecords = useMemo<UnifiedRecord[] | null>(() => {
     if (!filteredRecords || !sortCol) return filteredRecords
@@ -452,13 +546,13 @@ export function TableOutputNode({ id, data }: NodeProps) {
   // Sync merged (and optionally row-filtered) records into the out-of-band store
   // so downstream nodes (Map, Timeline, Export) can read them.
   // F2: when rows are selected, only those records flow downstream.
-  // Fingerprint includes the selection so downstream re-renders on tick changes.
+  // Fingerprint includes notesVersion so downstream re-renders when notes change.
   const prevFingerprintRef = useRef('')
   useEffect(() => {
-    const recs   = effectiveRecords ?? []
+    const recs   = effectiveRecordsWithNotes ?? []
     const selKey = Object.entries(selections).map(([k, v]) => `${k}=${v.qid}`).join(',')
     const selFp  = validSelected.join(',')
-    const fp     = `${status}:${selKey}:${recs.length}:${recs[0]?.id ?? ''}:${recs[recs.length - 1]?.id ?? ''}:${selFp}`
+    const fp     = `${status}:${selKey}:${recs.length}:${recs[0]?.id ?? ''}:${recs[recs.length - 1]?.id ?? ''}:${selFp}:${notesVersion}`
     if (fp === prevFingerprintRef.current) return
     prevFingerprintRef.current = fp
 
@@ -473,22 +567,23 @@ export function TableOutputNode({ id, data }: NodeProps) {
       status,
       resultsVersion: version,
     })
-  }, [effectiveRecords, selections, validSelected, status, id, updateNodeData])
+  }, [effectiveRecordsWithNotes, selections, validSelected, status, id, updateNodeData, notesVersion])
 
   // Scroll the table back to the top whenever the page or sort changes
   useEffect(() => {
     tableWrapRef.current?.scrollTo({ top: 0 })
   }, [page, sortCol, sortDir])
 
-  const columns = effectiveRecords
+  const columns = effectiveRecordsWithNotes
     ? showAll
-      ? allFlatColumns(effectiveRecords, expandNamespaces)
-      : DEFAULT_COLS.filter(c => effectiveRecords.some(r => r[c] != null))
+      ? allFlatColumns(effectiveRecordsWithNotes, expandNamespaces)
+      : DEFAULT_COLS.filter(c => effectiveRecordsWithNotes.some(r => r[c] != null))
     : []
 
-  const displayRecords = sortedRecords ?? effectiveRecords
+  const displayRecords = sortedRecords ?? effectiveRecordsWithNotes
   const totalPages = displayRecords ? Math.ceil(displayRecords.length / pageSize) : 0
   const selectionCount = Object.keys(selections).length
+  const currentNotes = getAllNotes()
 
   return (
     <div style={styles.card}>
@@ -497,9 +592,9 @@ export function TableOutputNode({ id, data }: NodeProps) {
 
       <div style={styles.header}>
         <span style={styles.title}>Table Output</span>
-        {connected && effectiveRecords && (
+        {connected && effectiveRecordsWithNotes && (
           <span style={styles.badge}>
-            {effectiveRecords.length} rows
+            {effectiveRecordsWithNotes.length} rows
             {sourceCount > 1 ? ` · ${sourceCount} sources` : ''}
           </span>
         )}
@@ -533,15 +628,15 @@ export function TableOutputNode({ id, data }: NodeProps) {
         </div>
       )}
 
-      {connected && !effectiveRecords && status !== 'loading' && (
+      {connected && !effectiveRecordsWithNotes && status !== 'loading' && (
         <div style={styles.placeholder}>Run the upstream node to see results</div>
       )}
 
-      {connected && effectiveRecords && effectiveRecords.length === 0 && (
+      {connected && effectiveRecordsWithNotes && effectiveRecordsWithNotes.length === 0 && (
         <div style={styles.placeholder}>Query returned 0 results</div>
       )}
 
-      {connected && effectiveRecords && effectiveRecords.length > 0 && (
+      {connected && effectiveRecordsWithNotes && effectiveRecordsWithNotes.length > 0 && (
         <>
           <div style={styles.toolbar}>
             <div style={styles.toggleGroup}>
@@ -622,6 +717,8 @@ export function TableOutputNode({ id, data }: NodeProps) {
               selectedIds={rowSelectionSet}
               onToggleRow={handleToggleRow}
               onToggleAll={handleToggleAll}
+              notes={currentNotes}
+              onNoteChange={setNote}
             />
           </div>
 

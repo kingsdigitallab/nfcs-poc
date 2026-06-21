@@ -47,6 +47,8 @@ export interface UnifiedRecord {
   _pid?: string
   /** True when this record was served from a local cache due to service unavailability */
   _cached?: boolean
+  /** Human-authored gold-standard annotation, stored in notesStore (localStorage). */
+  _note?: string
 
   // ── Cross-service normalised fields ─────────────────────────────────────────
   // These map the most useful field from each service to a common name.
