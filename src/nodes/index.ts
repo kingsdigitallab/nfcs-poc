@@ -36,6 +36,7 @@ import { BodleianSearchNode }      from './BodleianSearchNode'
 import { KCLNode }                  from './KCLNode'
 import { KCLFieldNode }             from './KCLFieldNode'
 import { KCLOutputNode }            from './KCLOutputNode'
+import { EvaluatorNode }            from './EvaluatorNode'
 import { HTMLPreviewNode }          from './HTMLPreviewNode'
 import { DeduplicateNode }          from './DeduplicateNode'
 import { SMGSearchNode }            from './SMGSearchNode'
@@ -48,6 +49,7 @@ import { SourceProfileNode }        from './SourceProfileNode'
 import { SmartFilterNode }          from './SmartFilterNode'
 import { QuickStartNode }           from './QuickStartNode'
 import { GroupNode }                from './GroupNode'
+import { QuickNoteNode }            from './QuickNoteNode'
 import { withToolbar }              from './withToolbar'
 
 export const nodeTypes = {
@@ -90,6 +92,7 @@ export const nodeTypes = {
   kclNode:           withToolbar(KCLNode),
   kclField:          withToolbar(KCLFieldNode),
   kclOutput:         withToolbar(KCLOutputNode),
+  evaluatorNode:     withToolbar(EvaluatorNode),
   htmlPreview:       withToolbar(HTMLPreviewNode),
   deduplicate:       withToolbar(DeduplicateNode),
   smgSearch:         withToolbar(SMGSearchNode),
@@ -102,4 +105,5 @@ export const nodeTypes = {
   smartFilter:       withToolbar(SmartFilterNode),
   quickStart:        withToolbar(QuickStartNode),
   group:             withToolbar(GroupNode),
+  quickNote:         withToolbar(QuickNoteNode),
 }

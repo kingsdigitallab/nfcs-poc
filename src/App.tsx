@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { newId, bumpCounterPast } from './utils/nodeIdCounter'
 import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from './utils/kclConfig'
 import { buildWorkflowPayload, downloadWorkflow, parseWorkflowFile, hydrateNodes, type WorkflowFile } from './utils/workflowIO'
+import { exportNotes, importNotes, clearAllNotes } from './store/notesStore'
 import { setNodeResults } from './store/resultsStore'
 import {
   ReactFlow,
@@ -52,6 +53,7 @@ import type { OllamaNodeData }            from './nodes/OllamaNode'
 import type { OllamaFieldNodeData }       from './nodes/OllamaFieldNode'
 import type { KCLNodeData }              from './nodes/KCLNode'
 import type { KCLFieldNodeData }         from './nodes/KCLFieldNode'
+import type { EvaluatorNodeData }        from './nodes/EvaluatorNode'
 import type { HTMLPreviewNodeData }      from './nodes/HTMLPreviewNode'
 import type { URLFetchNodeData }          from './nodes/URLFetchNode'
 import type { HTMLSectionNodeData }       from './nodes/HTMLSectionNode'
@@ -90,6 +92,7 @@ import type { SmartFilterNodeData }      from './nodes/SmartFilterNode'
 import type { SmartGeocoderNodeData }   from './nodes/SmartGeocoderNode'
 import type { QuickStartNodeData }      from './nodes/QuickStartNode'
 import type { GroupNodeData }           from './nodes/GroupNode'
+import type { QuickNoteNodeData }       from './nodes/QuickNoteNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -106,6 +109,7 @@ type AppNode =
   | Node<OllamaFieldNodeData>
   | Node<KCLNodeData>
   | Node<KCLFieldNodeData>
+  | Node<EvaluatorNodeData>
   | Node<HTMLPreviewNodeData>
   | Node<URLFetchNodeData>
   | Node<HTMLSectionNodeData>
@@ -144,11 +148,12 @@ type AppNode =
   | Node<SmartGeocoderNodeData>
   | Node<QuickStartNodeData>
   | Node<GroupNodeData>
+  | Node<QuickNoteNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
 
-const KCL_API_KEY_NODES = new Set(['kclNode', 'kclField', 'sourceProfile', 'smartFilter', 'smartGeocoder', 'quickStart'])
+const KCL_API_KEY_NODES = new Set(['kclNode', 'kclField', 'evaluatorNode', 'sourceProfile', 'smartFilter', 'smartGeocoder', 'quickStart'])
 
 function findSharedApiKey(nodes: Node[]): string {
   for (const node of nodes) {
@@ -426,6 +431,30 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       outputCount:         0,
     } satisfies KCLFieldNodeData,
   }),
+  evaluatorNode: pos => ({
+    id: newId('evaluator'), type: 'evaluatorNode', position: pos,
+    data: {
+      apiKey:          DEFAULT_KCL_API_KEY,
+      judgeModel:      'arc:nexus',
+      referenceField:  '',
+      candidateField:  '',
+      rubricPrompt:    '',
+      recipePreset:    'interpretive-agreement',
+      humanScoreField: '',
+      temperature:     0,
+      maxTokens:       32768,
+      status:          'idle',
+      statusMessage:   '',
+      results:         undefined,
+      inputCount:      0,
+      outputCount:     0,
+      scoredCount:     0,
+      skippedCount:    0,
+      parseErrCount:   0,
+      resultsVersion:  0,
+      elapsedMs:       0,
+    } satisfies EvaluatorNodeData,
+  }),
   kclOutput: pos => ({
     id: newId('kclOut'), type: 'kclOutput', position: pos,
     data: {},
@@ -540,6 +569,11 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   quickView: pos => ({
     id: newId('quickView'), type: 'quickView', position: pos,
     data: { selectedField: '' } satisfies QuickViewNodeData,
+  }),
+  quickNote: pos => ({
+    id: newId('quickNote'), type: 'quickNote', position: pos,
+    data: { selectedField: '' } satisfies QuickNoteNodeData,
+    style: { width: 340, height: 360 },
   }),
   comment: pos => ({
     id: newId('comment'), type: 'comment', position: pos,
@@ -719,12 +753,14 @@ const SIDEBAR_ITEMS = [
   // ── Extraction and Enrichment ────────────────────────────────────────────────
   { type: 'kclNode',           label: 'KingsInference',        sub: 'KCL inference — file/content records',    color: '#881337', group: 'Extraction and Enrichment' },
   { type: 'kclField',          label: 'KingsInferenceByField', sub: 'KCL inference on a chosen field',         color: '#7f1d1d', group: 'Extraction and Enrichment' },
+  { type: 'evaluatorNode',     label: 'Evaluator',             sub: 'LLM-as-judge — score candidate vs reference field', color: '#3f3f46', group: 'Extraction and Enrichment' },
   { type: 'urlFetch',          label: 'URLContentFetch',       sub: 'Fetch URL content into records',          color: '#0c4a6e', group: 'Extraction and Enrichment' },
   { type: 'htmlSection',       label: 'HTMLExtract',           sub: 'Extract page section by CSS selector',    color: '#065f46', group: 'Extraction and Enrichment' },
   { type: 'reconciliation',    label: 'Reconciliation',        sub: 'Wikidata field reconciler',               color: '#7c3aed', group: 'Extraction and Enrichment' },
   { type: 'wikidataEnrich',    label: 'WikidataEnrich',        sub: 'Fetch Wikidata properties for QIDs',      color: '#0369a1', group: 'Extraction and Enrichment' },
   { type: 'mergeByQID',        label: 'MergeByQID',            sub: 'Join records from multiple sources by QID', color: '#6b21a8', group: 'Extraction and Enrichment' },
   { type: 'xmlSection',        label: 'XMLExtract',            sub: 'Extract XML content by XPath',            color: '#44403c', group: 'Extraction and Enrichment' },
+  { type: 'quickNote',         label: 'QuickNote',             sub: 'Read a field in full and write per-record notes', color: '#0f766e', group: 'Extraction and Enrichment' },
   // ── Output ───────────────────────────────────────────────────────────────────
   { type: 'citation',          label: 'Citation',              sub: 'Data source citations for this workflow stage', color: '#78350f', group: 'Output' },
   { type: 'export',            label: 'Export',                sub: 'CSV / JSON / GeoJSON',                    color: '#b45309', group: 'Output' },
@@ -748,6 +784,9 @@ export default function App() {
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([])
   const reactFlowWrapper = useRef<HTMLDivElement>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  // Identity for the notes authored in this workflow; saved into the file so a
+  // reloaded/loaded workflow restores its notes, while a blank canvas is fresh.
+  const workflowIdRef = useRef<string>(crypto.randomUUID())
   const [rfInstance, setRfInstance] = useState<ReactFlowInstance | null>(null)
   const [loadError, setLoadError] = useState<string | null>(null)
   const [runningAll, setRunningAll] = useState(false)
@@ -964,8 +1003,9 @@ export default function App() {
   }, [rfInstance, setNodes])
 
   const handleSave = useCallback(() => {
-    const payload = buildWorkflowPayload(nodes, edges)
-    downloadWorkflow(nodes, edges)
+    const extras = { workflowId: workflowIdRef.current, notes: exportNotes() }
+    const payload = buildWorkflowPayload(nodes, edges, extras)
+    downloadWorkflow(nodes, edges, extras)
     fetch('/api/save-workflow', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -977,6 +1017,10 @@ export default function App() {
   const applyWorkflow = useCallback((wf: WorkflowFile) => {
     const hydrated = hydrateNodes(wf)
     bumpCounterPast(hydrated.map(n => n.id))
+    // Adopt the loaded workflow's identity and restore its notes (replacing any
+    // notes from the previously-open workflow in this session).
+    workflowIdRef.current = wf.workflowId ?? crypto.randomUUID()
+    importNotes(wf.notes)
     setNodes(hydrated)
     // Strip edges that reference proxy handles of expanded groups — these are
     // stale refs left by incomplete collapse/expand cycles in a prior session.
@@ -1246,6 +1290,17 @@ export default function App() {
           style={{ display: 'none' }}
           onChange={handleLoadFile}
         />
+        <button
+          style={templateBtnStyle}
+          onClick={() => {
+            if (window.confirm('Clear all notes in this workflow? This cannot be undone.')) {
+              clearAllNotes()
+            }
+          }}
+          title="Remove every per-record note in the current workflow"
+        >
+          🗑 Clear notes
+        </button>
         {/* Save-as-example dialog */}
         {exampleDialog && (
           <div style={{

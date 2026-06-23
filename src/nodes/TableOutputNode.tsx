@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useMemo } from 'react'
 import { createPortal } from 'react-dom'
 import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { setNodeResults } from '../store/resultsStore'
-import { getAllNotes, setNote, subscribeNotes } from '../store/notesStore'
+import { getNote, setNote, subscribeNotes } from '../store/notesStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { ReconciliationResult } from '../utils/reconciliationService'
@@ -232,7 +232,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
         <thead>
           <tr>
             {/* F2: select-all checkbox */}
-            <th style={{ ...thStyle, width: CHECKBOX_COL_W, minWidth: CHECKBOX_COL_W, maxWidth: CHECKBOX_COL_W, padding: '4px 6px', textAlign: 'center', cursor: 'default' }}>
+            <th style={{ ...thStyle, width: CHECKBOX_COL_W, minWidth: CHECKBOX_COL_W, maxWidth: CHECKBOX_COL_W, padding: '4px 6px', textAlign: 'center', cursor: 'default', left: 0, zIndex: 3 }}>
               <input
                 type="checkbox"
                 className="nodrag"
@@ -244,7 +244,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
               />
             </th>
             {/* Notes column */}
-            <th style={{ ...thStyle, width: NOTES_COL_W, minWidth: NOTES_COL_W, maxWidth: NOTES_COL_W, padding: pad, cursor: 'default' }}>
+            <th style={{ ...thStyle, width: NOTES_COL_W, minWidth: NOTES_COL_W, maxWidth: NOTES_COL_W, padding: pad, cursor: 'default', left: CHECKBOX_COL_W, zIndex: 3, borderRight: '2px solid #e5e7eb' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
                 <span style={{ fontSize: 9, fontWeight: 700, background: '#fef3c7', color: '#92400e', borderRadius: 3, padding: '1px 4px' }}>
                   notes
@@ -298,15 +298,17 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
           </tr>
         </thead>
         <tbody>
-          {rows.map((rec, i) => (
+          {rows.map((rec, i) => {
+            const rowBg = selectedIds.has(rec.id) ? '#eff6ff' : i % 2 === 0 ? '#fff' : '#f9fafb'
+            return (
             <tr
               key={start + i}
-              style={{ background: selectedIds.has(rec.id) ? '#eff6ff' : i % 2 === 0 ? '#fff' : '#f9fafb' }}
+              style={{ background: rowBg }}
               onMouseMove={e => setHovered({ rec, x: e.clientX, y: e.clientY })}
               onMouseLeave={() => setHovered(null)}
             >
               {/* F2: per-row checkbox */}
-              <td style={{ ...tdStyle, width: CHECKBOX_COL_W, maxWidth: CHECKBOX_COL_W, padding: '2px 6px', textAlign: 'center', overflow: 'visible' }}>
+              <td style={{ ...tdStyle, width: CHECKBOX_COL_W, maxWidth: CHECKBOX_COL_W, padding: '2px 6px', textAlign: 'center', overflow: 'visible', position: 'sticky', left: 0, zIndex: 1, background: rowBg }}>
                 <input
                   type="checkbox"
                   className="nodrag"
@@ -318,7 +320,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
               {/* Notes cell */}
               <td
                 className="nodrag"
-                style={{ ...tdStyle, width: NOTES_COL_W, maxWidth: NOTES_COL_W, padding: '2px 4px', overflow: 'visible', whiteSpace: 'normal', verticalAlign: 'top' }}
+                style={{ ...tdStyle, width: NOTES_COL_W, maxWidth: NOTES_COL_W, padding: '2px 4px', overflow: 'visible', whiteSpace: 'normal', verticalAlign: 'top', position: 'sticky', left: CHECKBOX_COL_W, zIndex: 1, background: rowBg, borderRight: '2px solid #e5e7eb' }}
                 onClick={() => { if (noteEditId !== rec.id) openNoteEditor(rec.id) }}
               >
                 {noteEditId === rec.id ? (
@@ -369,7 +371,8 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
                 )
               })}
             </tr>
-          ))}
+            )
+          })}
         </tbody>
       </table>
 
@@ -452,18 +455,20 @@ export function TableOutputNode({ id, data }: NodeProps) {
     })
   }, [records, selections])
 
-  // Inject _note from notesStore into each record so it flows downstream and
+  // Inject the resolved _note into each record so it flows downstream and
   // appears in field pickers of KCL/Ollama nodes for comparison prompts.
+  // Resolved = a note authored at THIS node overrides one inherited from
+  // upstream (carried in the record's _note field). This is forward-only.
   const effectiveRecordsWithNotes = useMemo<UnifiedRecord[] | null>(() => {
     if (!effectiveRecords) return null
-    const allNotes = getAllNotes()
-    if (Object.keys(allNotes).length === 0) return effectiveRecords
-    return effectiveRecords.map(r =>
-      allNotes[r.id] ? { ...r, _note: allNotes[r.id] } : r,
-    )
+    return effectiveRecords.map(r => {
+      const own = getNote(id, r.id)
+      const resolved = own ?? (r._note as string | undefined)
+      return resolved != null ? { ...r, _note: resolved } as UnifiedRecord : r
+    })
   // notesVersion triggers recompute when any note is saved/deleted
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [effectiveRecords, notesVersion])
+  }, [effectiveRecords, notesVersion, id])
 
   function handleSelectCandidate(recordId: string, col: string, result: ReconciliationResult) {
     updateNodeData(id, {
@@ -583,7 +588,25 @@ export function TableOutputNode({ id, data }: NodeProps) {
   const displayRecords = sortedRecords ?? effectiveRecordsWithNotes
   const totalPages = displayRecords ? Math.ceil(displayRecords.length / pageSize) : 0
   const selectionCount = Object.keys(selections).length
-  const currentNotes = getAllNotes()
+
+  // Resolved notes (own override ?? inherited) keyed by record id, for display.
+  const currentNotes = useMemo<Record<string, string>>(() => {
+    const m: Record<string, string> = {}
+    if (effectiveRecordsWithNotes) {
+      for (const r of effectiveRecordsWithNotes) {
+        if (r._note != null) m[r.id] = r._note as string
+      }
+    }
+    return m
+  }, [effectiveRecordsWithNotes])
+
+  // Editing writes an override at THIS node; text equal to the inherited note
+  // (or empty) clears the override so the inherited value shows through again.
+  const handleNoteChange = (recordId: string, text: string) => {
+    const rec = effectiveRecords?.find(r => r.id === recordId)
+    const inherited = (rec?._note as string | undefined) ?? ''
+    setNote(id, recordId, text === inherited ? '' : text)
+  }
 
   return (
     <div style={styles.card}>
@@ -718,7 +741,7 @@ export function TableOutputNode({ id, data }: NodeProps) {
               onToggleRow={handleToggleRow}
               onToggleAll={handleToggleAll}
               notes={currentNotes}
-              onNoteChange={setNote}
+              onNoteChange={handleNoteChange}
             />
           </div>
 
@@ -893,9 +916,9 @@ const thStyle: React.CSSProperties = {
   color:        '#374151',
   position:     'sticky',
   top:          0,
-  // zIndex required so sticky headers stay above tbody rows in the same
-  // stacking context — without it clicks on the header land on rows beneath
-  zIndex:       1,
+  // zIndex: 2 so sticky headers clear frozen body cells (zIndex: 1) on vertical scroll;
+  // frozen header corner cells use zIndex: 3 to sit above both.
+  zIndex:       2,
   overflow:     'hidden',
 }
 

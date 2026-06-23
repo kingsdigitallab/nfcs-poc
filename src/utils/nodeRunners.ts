@@ -39,6 +39,7 @@ import { runGeocodingNode }       from './runGeocodingNode'
 import { runSmartGeocoderNode }  from './runSmartGeocoderNode'
 import { runSampleDataNode }     from './runSampleDataNode'
 import runCommentNode            from './runCommentNode'
+import { runEvaluatorNode }      from './runEvaluatorNode'
 import { withFixture }            from './fixtureUtils'
 
 /**
@@ -76,6 +77,7 @@ export const nodeRunners: Record<string, NodeRunner> = {
   ollamaField:       runOllamaFieldNode,
   kclNode:           runKCLNode,
   kclField:          runKCLFieldNode,
+  evaluatorNode:     runEvaluatorNode,
   mergeByQID:        runMergeByQIDNode,
   wikidataEnrich:    runWikidataEnrichNode,
   xmlSection:        runXMLSectionNode,

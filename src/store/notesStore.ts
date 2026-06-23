@@ -1,68 +1,72 @@
 /**
  * notesStore — per-record human annotations ("gold standard" notes).
  *
- * Notes are keyed by record ID (e.g. "gbif:12345") which is stable across
- * re-runs of the same query. Persisted to localStorage so they survive refresh.
+ * Notes are keyed by `${nodeId}::${recordId}`, i.e. scoped to the node that
+ * AUTHORED them. Downstream nodes inherit a note via the `_note` field that the
+ * authoring node injects into the records it passes through, so sharing is
+ * forward-only and parallel branches stay isolated (the edges do the scoping).
  *
- * Reactivity: call subscribeNotes() to be notified on any change.
- * TableOutputNode uses this to bump a version counter and re-inject _note
- * into effectiveRecords before writing to the results store.
+ * In-memory only — notes belong to the workflow, not the browser. They are
+ * exported into / imported from the workflow JSON on save / load (see
+ * exportNotes / importNotes). The canvas itself is not persisted across a
+ * reload, so neither are notes.
+ *
+ * Reactivity: call subscribeNotes() to be notified on any change. Consumers use
+ * this to bump a version counter and re-resolve notes.
  */
 
-const STORAGE_KEY = 'nfcs_notes'
+// One-time cleanup of the legacy global-by-recordId persisted notes. The old
+// implementation wrote these to localStorage and re-hydrated them across
+// sessions; that behaviour is intentionally gone.
+try { localStorage.removeItem('nfcs_notes') } catch {}
 
 const _notes = new Map<string, string>()
 const _listeners = new Set<() => void>()
 
-// Hydrate from localStorage on module load
-try {
-  const stored = localStorage.getItem(STORAGE_KEY)
-  if (stored) {
-    const parsed = JSON.parse(stored) as Record<string, string>
-    for (const [k, v] of Object.entries(parsed)) {
-      if (v) _notes.set(k, v)
-    }
-  }
-} catch {}
-
-function _persist() {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(Object.fromEntries(_notes)))
-  } catch {}
+function noteKey(nodeId: string, recordId: string): string {
+  return `${nodeId}::${recordId}`
 }
 
 function _notify() {
   _listeners.forEach(fn => fn())
 }
 
-export function setNote(recordId: string, text: string): void {
+/** Set (or, with empty text, delete) the note authored at `nodeId` for `recordId`. */
+export function setNote(nodeId: string, recordId: string, text: string): void {
+  const key = noteKey(nodeId, recordId)
   const trimmed = text.trim()
   if (trimmed) {
-    _notes.set(recordId, trimmed)
+    _notes.set(key, trimmed)
   } else {
-    _notes.delete(recordId)
+    _notes.delete(key)
   }
-  _persist()
   _notify()
 }
 
-export function getNote(recordId: string): string | undefined {
-  return _notes.get(recordId)
+/** The note authored at `nodeId` for `recordId`, if any. */
+export function getNote(nodeId: string, recordId: string): string | undefined {
+  return _notes.get(noteKey(nodeId, recordId))
 }
 
-export function getAllNotes(): Record<string, string> {
+/** Dump all notes as a plain object (for embedding in a saved workflow). */
+export function exportNotes(): Record<string, string> {
   return Object.fromEntries(_notes)
 }
 
-export function deleteNote(recordId: string): void {
-  _notes.delete(recordId)
-  _persist()
+/** Replace all notes from a saved workflow blob. */
+export function importNotes(obj: Record<string, string> | undefined): void {
+  _notes.clear()
+  if (obj) {
+    for (const [k, v] of Object.entries(obj)) {
+      if (v) _notes.set(k, v)
+    }
+  }
   _notify()
 }
 
+/** Wipe every note (wired to the toolbar "Clear notes" control). */
 export function clearAllNotes(): void {
   _notes.clear()
-  _persist()
   _notify()
 }
 

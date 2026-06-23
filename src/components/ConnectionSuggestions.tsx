@@ -79,7 +79,7 @@ const INFERENCE_NODES = new Set([
   'kclNode', 'kclField', 'ollamaNode', 'ollamaField',
 ])
 
-const PASS_THROUGH = new Set(['tableOutput', 'mapOutput', 'fieldDistribution', 'timelineView', 'imageView', 'sourceProfile'])
+const PASS_THROUGH = new Set(['tableOutput', 'mapOutput', 'fieldDistribution', 'timelineView', 'imageView', 'sourceProfile', 'quickNote'])
 
 const OUTPUT_SUITE: Suggestion[] = [
   { type: 'tableOutput',      label: 'TableOutput',           sub: 'Paginated results table',       color: '#0d9488', targetHandle: 'data' },

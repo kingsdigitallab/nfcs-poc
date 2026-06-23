@@ -7,6 +7,16 @@ export interface WorkflowFile {
   savedAt: string
   nodes: SavedNode[]
   edges: Edge[]
+  /** Identity of the workflow that authored the notes blob below. */
+  workflowId?: string
+  /** Per-node human annotations, keyed `${nodeId}::${recordId}`. */
+  notes?: Record<string, string>
+}
+
+/** Extra payload threaded into a saved workflow alongside nodes/edges. */
+export interface WorkflowExtras {
+  workflowId?: string
+  notes?: Record<string, string>
 }
 
 interface SavedNode {
@@ -69,7 +79,7 @@ export function stripTransient(data: Record<string, unknown>): Record<string, un
   return out
 }
 
-export function buildWorkflowPayload(nodes: Node[], edges: Edge[]): WorkflowFile {
+export function buildWorkflowPayload(nodes: Node[], edges: Edge[], extras?: WorkflowExtras): WorkflowFile {
   return {
     version: 2,
     savedAt: new Date().toISOString(),
@@ -88,11 +98,13 @@ export function buildWorkflowPayload(nodes: Node[], edges: Edge[]): WorkflowFile
       return saved
     }),
     edges,
+    ...(extras?.workflowId ? { workflowId: extras.workflowId } : {}),
+    ...(extras?.notes && Object.keys(extras.notes).length > 0 ? { notes: extras.notes } : {}),
   }
 }
 
-export function downloadWorkflow(nodes: Node[], edges: Edge[]): void {
-  const file = buildWorkflowPayload(nodes, edges)
+export function downloadWorkflow(nodes: Node[], edges: Edge[], extras?: WorkflowExtras): void {
+  const file = buildWorkflowPayload(nodes, edges, extras)
   const blob = new Blob([JSON.stringify(file, null, 2)], { type: 'application/json' })
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
