@@ -93,6 +93,7 @@ import type { SmartGeocoderNodeData }   from './nodes/SmartGeocoderNode'
 import type { QuickStartNodeData }      from './nodes/QuickStartNode'
 import type { GroupNodeData }           from './nodes/GroupNode'
 import type { QuickNoteNodeData }       from './nodes/QuickNoteNode'
+import type { ComparisonReportNodeData } from './nodes/ComparisonReportNode'
 
 // ─── node data types (kept slim here; full types live in each node file) ─────
 
@@ -149,6 +150,7 @@ type AppNode =
   | Node<QuickStartNodeData>
   | Node<GroupNodeData>
   | Node<QuickNoteNodeData>
+  | Node<ComparisonReportNodeData>
   | Node<OutputNodeData>
 
 // ─── node factories ───────────────────────────────────────────────────────────
@@ -575,6 +577,14 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     data: { selectedField: '' } satisfies QuickNoteNodeData,
     style: { width: 340, height: 360 },
   }),
+  comparisonReport: pos => ({
+    id: newId('cmpreport'), type: 'comparisonReport', position: pos,
+    data: {
+      originalField: '', noteField: '', responseField: '',
+      judgeScoreField: '', humanScoreField: '',
+    } satisfies ComparisonReportNodeData,
+    style: { width: 520, height: 600 },
+  }),
   comment: pos => ({
     id: newId('comment'), type: 'comment', position: pos,
     data: { title: '', body: '' } satisfies CommentNodeData,
@@ -762,6 +772,7 @@ const SIDEBAR_ITEMS = [
   { type: 'xmlSection',        label: 'XMLExtract',            sub: 'Extract XML content by XPath',            color: '#44403c', group: 'Extraction and Enrichment' },
   { type: 'quickNote',         label: 'QuickNote',             sub: 'Read a field in full and write per-record notes', color: '#0f766e', group: 'Extraction and Enrichment' },
   // ── Output ───────────────────────────────────────────────────────────────────
+  { type: 'comparisonReport',  label: 'ComparisonReport',      sub: 'Judge-vs-human evaluation cards + agreement summary', color: '#3730a3', group: 'Output' },
   { type: 'citation',          label: 'Citation',              sub: 'Data source citations for this workflow stage', color: '#78350f', group: 'Output' },
   { type: 'export',            label: 'Export',                sub: 'CSV / JSON / GeoJSON',                    color: '#b45309', group: 'Output' },
   { type: 'jsonOutput',        label: 'JSONOutput',            sub: 'Formatted JSON viewer',                   color: '#6d28d9', group: 'Output' },
@@ -1131,7 +1142,7 @@ export default function App() {
   }, [rfInstance, setNodes])
 
   const onNodeDoubleClick = useCallback((_: React.MouseEvent, node: Node) => {
-    if (node.type === 'tableOutput' || node.type === 'jsonOutput') {
+    if (node.type === 'tableOutput' || node.type === 'jsonOutput' || node.type === 'comparisonReport') {
       setExpandedNodeId(prev => (prev === node.id ? null : node.id))
     }
   }, [])

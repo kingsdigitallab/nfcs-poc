@@ -12,6 +12,9 @@ import type { ReconciliationResult } from '../utils/reconciliationService'
 import { isReconciledValue } from '../utils/reconciliationService'
 import { renderCell }        from './ReconciledCell'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
+import { ComparisonReportView } from './ComparisonReportView'
+import type { ComparisonReportConfig } from './ComparisonReportView'
+import type { ComparisonReportNodeData } from './ComparisonReportNode'
 
 interface Props {
   nodeId: string
@@ -65,8 +68,9 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
   const [showAll, setShowAll] = useState(false)
 
   if (!node) return null
-  const isTable = node.type === 'tableOutput'
-  const accentColor = isTable ? '#0d9488' : '#6d28d9'
+  const isTable  = node.type === 'tableOutput'
+  const isReport = node.type === 'comparisonReport'
+  const accentColor = isTable ? '#0d9488' : isReport ? '#3730a3' : '#6d28d9'
 
   // Read user-overridden selections from the table node's own data (shared with TableOutputNode)
   const selections = ((node.data as Record<string, unknown>).selections ?? {}) as Record<string, ReconciliationResult>
@@ -95,7 +99,7 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
     })
   }
 
-  const displayRecords = isTable ? effectiveRecords : records
+  const displayRecords = isTable ? effectiveRecords : isReport ? records : records
   const columns = displayRecords
     ? showAll ? allFlatColumns(displayRecords) : DEFAULT_COLS.filter(c => displayRecords.some(r => r[c] != null))
     : []
@@ -128,7 +132,7 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
         flexShrink: 0,
       }}>
         <span style={{ color: '#fff', fontWeight: 700, fontSize: 13 }}>
-          {isTable ? 'Table Output' : 'JSON Output'} — expanded
+          {isTable ? 'Table Output' : isReport ? 'Comparison Report' : 'JSON Output'} — expanded
         </span>
         {displayRecords && (
           <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: 11 }}>
@@ -221,8 +225,25 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
         </>
       )}
 
+      {/* Comparison Report view — full-screen, projector-legible */}
+      {displayRecords && isReport && (() => {
+        const nodeData = node.data as ComparisonReportNodeData
+        const reportConfig: ComparisonReportConfig = {
+          originalField:   nodeData.originalField   ?? '',
+          noteField:       nodeData.noteField        ?? '',
+          responseField:   nodeData.responseField    ?? '',
+          judgeScoreField: nodeData.judgeScoreField  ?? '',
+          humanScoreField: nodeData.humanScoreField  ?? '',
+        }
+        return (
+          <div style={{ overflow: 'auto', flex: 1, background: '#fff' }}>
+            <ComparisonReportView records={displayRecords} config={reportConfig} fullscreen />
+          </div>
+        )
+      })()}
+
       {/* JSON view */}
-      {displayRecords && !isTable && (
+      {displayRecords && !isTable && !isReport && (
         <div style={{ overflow: 'auto', flex: 1 }}>
           <pre
             style={{

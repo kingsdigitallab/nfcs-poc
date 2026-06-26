@@ -50,6 +50,7 @@ import { SmartFilterNode }          from './SmartFilterNode'
 import { QuickStartNode }           from './QuickStartNode'
 import { GroupNode }                from './GroupNode'
 import { QuickNoteNode }            from './QuickNoteNode'
+import { ComparisonReportNode }     from './ComparisonReportNode'
 import { withToolbar }              from './withToolbar'
 
 export const nodeTypes = {
@@ -106,4 +107,5 @@ export const nodeTypes = {
   quickStart:        withToolbar(QuickStartNode),
   group:             withToolbar(GroupNode),
   quickNote:         withToolbar(QuickNoteNode),
+  comparisonReport:  withToolbar(ComparisonReportNode),
 }
