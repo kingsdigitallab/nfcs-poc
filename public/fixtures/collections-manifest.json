@@ -1,6 +1,26 @@
 {
   "packages": [
     {
+      "slug": "uk-world-heritage-sites",
+      "title": "UK World Heritage Sites",
+      "service": "UNESCO / UK Government",
+      "description": "35 UNESCO World Heritage Sites with a UK component: name, inscription year, category (Cultural / Natural / Mixed), and a brief description. Suitable for geocoding, reconciliation, or LLM-enrichment workflows.",
+      "items": [
+        {
+          "label": "UK World Heritage Sites — complete list (CSV)",
+          "files": [
+            {
+              "label": "CSV dataset",
+              "type": "text",
+              "filename": "uk_whs.csv",
+              "sizeBytes": 22457,
+              "url": "/fixtures/uk-world-heritage-sites/uk_whs.csv"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "slug": "stonehenge",
       "title": "Stonehenge — antiquarian and modern texts (LLDS / EEBO-TCP / academic)",
       "service": "LLDS + academic sources",
