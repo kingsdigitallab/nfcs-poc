@@ -48,6 +48,7 @@ export async function loadSampleFiles(
   clearNodeResults(`${nodeId}:xml`)
   clearNodeResults(`${nodeId}:text`)
   clearNodeResults(`${nodeId}:image`)
+  clearNodeResults(`${nodeId}:csv`)
 
   if (files.length === 0) {
     updateNodeData(nodeId, {
@@ -58,6 +59,7 @@ export async function loadSampleFiles(
       xmlCount:       0,
       textCount:      0,
       imageCount:     0,
+      csvCount:       0,
       resultsVersion: 0,
     })
     return
@@ -69,6 +71,7 @@ export async function loadSampleFiles(
   })
 
   const records: FileRecord[] = []
+  const csvRows: FileRecord[] = []
   const failed: string[]      = []
 
   for (const sf of files) {
@@ -76,11 +79,14 @@ export async function loadSampleFiles(
       const res = await fetch(sf.url)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
 
-      // CSV/TSV: parse into column-keyed row records, matching LocalFileSourceNode
+      // CSV/TSV: parse into column-keyed row records, matching LocalFileSourceNode.
+      // Rows are added to both the typed :csv partition and the plain "All" store.
       if (sf.type === 'csv' || /\.(csv|tsv)$/i.test(sf.filename)) {
         const text = await res.text()
         const { records: rows } = parseDelimited(text, 'auto', true, true, sf.filename)
-        records.push(...rows as unknown as FileRecord[])
+        const typed = rows as unknown as FileRecord[]
+        records.push(...typed)
+        csvRows.push(...typed)
       } else {
         const blob = await res.blob()
         const file = new File([blob], sf.filename, { type: blob.type || 'application/octet-stream' })
@@ -100,10 +106,11 @@ export async function loadSampleFiles(
   const images = records.filter(r => r.contentType === 'image')
 
   const version = setNodeResults(nodeId, records as unknown as Record<string, unknown>[])
-  setNodeResults(`${nodeId}:pdf`,   pdfs   as unknown as Record<string, unknown>[])
-  setNodeResults(`${nodeId}:xml`,   xmls   as unknown as Record<string, unknown>[])
-  setNodeResults(`${nodeId}:text`,  texts  as unknown as Record<string, unknown>[])
-  setNodeResults(`${nodeId}:image`, images as unknown as Record<string, unknown>[])
+  setNodeResults(`${nodeId}:pdf`,   pdfs     as unknown as Record<string, unknown>[])
+  setNodeResults(`${nodeId}:xml`,   xmls     as unknown as Record<string, unknown>[])
+  setNodeResults(`${nodeId}:text`,  texts    as unknown as Record<string, unknown>[])
+  setNodeResults(`${nodeId}:image`, images   as unknown as Record<string, unknown>[])
+  setNodeResults(`${nodeId}:csv`,   csvRows  as unknown as Record<string, unknown>[])
 
   const ok = records.length
   const nf = failed.length
@@ -116,6 +123,7 @@ export async function loadSampleFiles(
     xmlCount:       xmls.length,
     textCount:      texts.length,
     imageCount:     images.length,
+    csvCount:       csvRows.length,
     resultsVersion: version,
   })
 }

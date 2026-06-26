@@ -67,6 +67,7 @@ export interface SampleDataSourceNodeData {
   xmlCount:        number
   textCount:       number
   imageCount:      number
+  csvCount:        number
   resultsVersion?: number
   [key: string]:   unknown
 }
@@ -85,6 +86,7 @@ const OUTPUT_HANDLES = [
   { id: 'xml',     label: 'XML',   color: '#d97706', top: 118 },
   { id: 'text',    label: 'Text',  color: '#16a34a', top: 142 },
   { id: 'image',   label: 'Image', color: '#2563eb', top: 166 },
+  { id: 'csv',     label: 'CSV',   color: '#0d9488', top: 190 },
 ]
 
 const STATUS_BORDER: Record<string, string> = {
@@ -154,6 +156,7 @@ export function SampleDataSourceNode({ id, data }: NodeProps) {
   const xmlCount        = (d.xmlCount        as number   | undefined) ?? 0
   const textCount       = (d.textCount       as number   | undefined) ?? 0
   const imageCount      = (d.imageCount      as number   | undefined) ?? 0
+  const csvCount        = (d.csvCount        as number   | undefined) ?? 0
 
   const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
 
@@ -165,6 +168,7 @@ export function SampleDataSourceNode({ id, data }: NodeProps) {
     xml:     xmlCount,
     text:    textCount,
     image:   imageCount,
+    csv:     csvCount,
   }
 
   // ── Handlers ──────────────────────────────────────────────────────────────────
@@ -182,6 +186,7 @@ export function SampleDataSourceNode({ id, data }: NodeProps) {
       xmlCount:        0,
       textCount:       0,
       imageCount:      0,
+      csvCount:        0,
       resultsVersion:  0,
     })
   }, [id, manifest, updateNodeData])

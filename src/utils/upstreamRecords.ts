@@ -10,8 +10,8 @@
 import type { Edge, Node } from '@xyflow/react'
 import { getNodeResults } from '../store/resultsStore'
 
-/** Handles that map to type-partitioned store keys on LocalFolderSourceNode. */
-const TYPED_HANDLES = new Set(['pdf', 'xml', 'text', 'image'])
+/** Handles that map to type-partitioned store keys on LocalFolderSourceNode / SampleDataSourceNode. */
+const TYPED_HANDLES = new Set(['pdf', 'xml', 'text', 'image', 'csv'])
 
 export function collectUpstreamRecords(
   nodeId: string,

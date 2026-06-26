@@ -61,6 +61,7 @@ const TRANSIENT_FIELDS = new Set([
   'xmlCount',
   'textCount',
   'imageCount',
+  'csvCount',
   'filterCount',
   'totalCount',
   'resolved',

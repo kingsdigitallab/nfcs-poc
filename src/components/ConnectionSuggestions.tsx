@@ -138,7 +138,15 @@ const SUGGESTIONS: Record<string, Suggestion[]> = {
   ],
 }
 
+const SAMPLE_DATA_SUGGESTIONS: Suggestion[] = [
+  { type: 'tableOutput', label: 'TableOutput', sub: 'Paginated results table',       color: '#0d9488', targetHandle: 'data' },
+  { type: 'quickView',   label: 'QuickView',   sub: 'Inspect one field in full',     color: '#1e293b', targetHandle: 'data' },
+  { type: 'xmlSection',  label: 'XMLExtract',  sub: 'Extract XML content by XPath',  color: '#44403c', targetHandle: 'data' },
+  { type: 'imageView',   label: 'ImageView',   sub: 'Image + IIIF manifest viewer',  color: '#1c3144', targetHandle: 'data' },
+]
+
 export function getSuggestions(nodeType: string): Suggestion[] {
+  if (nodeType === 'sampleDataSource') return SAMPLE_DATA_SUGGESTIONS
   if (DATA_SOURCES.has(nodeType))    return SUGGESTIONS.dataSource
   if (PROCESS_NODES.has(nodeType))   return SUGGESTIONS.process
   if (PASS_THROUGH.has(nodeType))    return SUGGESTIONS.passThrough
