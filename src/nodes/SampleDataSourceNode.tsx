@@ -31,7 +31,7 @@ import { loadSampleFiles, type SelectedFile } from '../utils/runSampleDataNode'
 
 interface ManifestFile {
   label:     string
-  type:      'xml' | 'text' | 'pdf' | 'image'
+  type:      'xml' | 'text' | 'pdf' | 'image' | 'csv'
   filename:  string
   sizeBytes?: number
   url:       string
@@ -99,6 +99,7 @@ const TYPE_COLOR: Record<string, string> = {
   text:  '#16a34a',
   pdf:   '#dc2626',
   image: '#2563eb',
+  csv:   '#0d9488',
 }
 
 // ── Manifest fetch (module-level cache) ────────────────────────────────────────

@@ -15,6 +15,7 @@ import type { Edge, Node } from '@xyflow/react'
 import type { NodeRunner }  from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { extractFileContent, type FileRecord } from './fileReaders'
+import { parseDelimited } from './csvParser'
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -23,7 +24,7 @@ export interface SelectedFile {
   url:      string
   filename: string
   label:    string
-  type:     'xml' | 'text' | 'pdf' | 'image'
+  type:     'xml' | 'text' | 'pdf' | 'image' | 'csv'
 }
 
 // ── Shared loader ─────────────────────────────────────────────────────────────
@@ -72,12 +73,20 @@ export async function loadSampleFiles(
 
   for (const sf of files) {
     try {
-      const res  = await fetch(sf.url)
+      const res = await fetch(sf.url)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      const blob = await res.blob()
-      const file = new File([blob], sf.filename, { type: blob.type || 'application/octet-stream' })
-      const rec  = await extractFileContent(file, sf.filename, packageTitle)
-      if (rec) records.push(rec)
+
+      // CSV/TSV: parse into column-keyed row records, matching LocalFileSourceNode
+      if (sf.type === 'csv' || /\.(csv|tsv)$/i.test(sf.filename)) {
+        const text = await res.text()
+        const { records: rows } = parseDelimited(text, 'auto', true, true, sf.filename)
+        records.push(...rows as unknown as FileRecord[])
+      } else {
+        const blob = await res.blob()
+        const file = new File([blob], sf.filename, { type: blob.type || 'application/octet-stream' })
+        const rec  = await extractFileContent(file, sf.filename, packageTitle)
+        if (rec) records.push(rec)
+      }
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err)
       failed.push(`${sf.filename}: ${msg}`)

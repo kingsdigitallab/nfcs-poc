@@ -11,7 +11,7 @@
           "files": [
             {
               "label": "CSV dataset",
-              "type": "text",
+              "type": "csv",
               "filename": "uk_whs.csv",
               "sizeBytes": 22457,
               "url": "/fixtures/uk-world-heritage-sites/uk_whs.csv"
