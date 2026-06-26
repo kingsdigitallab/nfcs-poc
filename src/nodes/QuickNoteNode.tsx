@@ -315,7 +315,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
             <div style={s.toolbar}>
               {availableFields.length > 0 ? (
                 <select style={s.fieldSelect} value={selectedField} className="nodrag"
-                  onChange={e => { updateNodeData(id, { selectedField: e.target.value }); setRecordIndex(0) }}>
+                  onChange={e => updateNodeData(id, { selectedField: e.target.value })}>
                   {availableFields.map(f => <option key={f} value={f}>{f}</option>)}
                 </select>
               ) : (
