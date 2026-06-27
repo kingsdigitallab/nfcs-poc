@@ -95,6 +95,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
   const [noteDraft,      setNoteDraft]      = useState('')
   const [notesVersion,   setNotesVersion]   = useState(0)
   const [scoresVersion,  setScoresVersion]  = useState(0)
+  const [confirmClearAll, setConfirmClearAll] = useState(false)
   const [configExpanded, setConfigExpanded] = useState(false)
   const [reasonDrafts,   setReasonDrafts]   = useState<Record<string, string>>({})
   const textareaRef = useRef<HTMLTextAreaElement>(null)
@@ -202,6 +203,12 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
     const updated = { ...scoresByRecord }
     delete updated[currentRecordId]
     updateNodeData(id, { scoresByRecord: updated })
+    setScoresVersion(v => v + 1)
+  }
+
+  /** Clear ALL per-record scores on this node (scoped to this node's data only). */
+  function clearAllScores() {
+    updateNodeData(id, { scoresByRecord: {} })
     setScoresVersion(v => v + 1)
   }
 
@@ -510,12 +517,29 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
                         ? `Scored ${Object.keys(currentScore.scores).length}/${criteria.length} criteria`
                         : 'Not yet scored'}
                     </span>
-                    {currentScore && (
-                      <button style={s.clearScoreBtn} onClick={clearRecordScore}
-                        title="Clear all scores for this record">
-                        Clear
-                      </button>
-                    )}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                      {currentScore && (
+                        <button style={s.clearScoreBtn} onClick={clearRecordScore}
+                          title="Clear scores for this record only">
+                          Clear
+                        </button>
+                      )}
+                      {Object.keys(scoresByRecord).length > 0 && (
+                        <button
+                          style={confirmClearAll ? s.clearAllScoresBtnConfirm : s.clearAllScoresBtn}
+                          onClick={() => {
+                            if (confirmClearAll) { clearAllScores(); setConfirmClearAll(false) }
+                            else setConfirmClearAll(true)
+                          }}
+                          onBlur={() => setConfirmClearAll(false)}
+                          title="Clear human scores for ALL records on this node"
+                        >
+                          {confirmClearAll
+                            ? 'Confirm?'
+                            : `Clear all (${Object.keys(scoresByRecord).length})`}
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </>
               )}
@@ -702,5 +726,13 @@ const s = {
   clearScoreBtn: {
     background: 'none', border: '1px solid #fca5a5', color: '#ef4444',
     fontSize: 10, padding: '1px 7px', borderRadius: 3, cursor: 'pointer',
+  },
+  clearAllScoresBtn: {
+    background: '#ef4444', border: '1px solid #ef4444', color: '#fff',
+    fontSize: 10, padding: '1px 7px', borderRadius: 3, cursor: 'pointer',
+  },
+  clearAllScoresBtnConfirm: {
+    background: '#b91c1c', border: '1px solid #b91c1c', color: '#fff',
+    fontSize: 10, padding: '1px 7px', borderRadius: 3, cursor: 'pointer', fontWeight: 700,
   },
 }
