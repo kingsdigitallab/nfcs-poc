@@ -85,7 +85,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
   const criteria      = (d.criteria ?? [{ key: 'c1', label: 'criterion 1', scale: [0, 1, 2] }]) as CriterionConfig[]
   // Stable dep signal for the configured criterion keys — lets memos/effects recompute when
   // the rubric changes even though criteria editors only call updateNodeData({ criteria }).
-  const criteriaKeyStr = criteria.map(c => c.key).join('|')
+  const criteriaKeyStr = criteria.map(c => `${c.key}:${c.label}`).join('|')
   const targetField   = d.targetField ?? 'human_score'
   const displayFields = (d.displayFields ?? []) as string[]
   const scoresByRecord = (d.scoresByRecord ?? {}) as Record<string, RecordScore>
@@ -253,9 +253,9 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
         if (storedScore) {
           // Filter to only currently-configured criterion keys (non-destructive: scoresByRecord
           // is left intact so re-adding a criterion restores its values).
-          const allowed = new Set(
-            (((data as QuickNoteNodeData).criteria ?? []) as CriterionConfig[]).map(c => c.key)
-          )
+          const configuredCriteria = (((data as QuickNoteNodeData).criteria ?? []) as CriterionConfig[])
+          const allowed = new Set(configuredCriteria.map(c => c.key))
+          const labelByKey = new Map(configuredCriteria.map(c => [c.key, c.label]))
           const scores: Record<string, number> = {}
           for (const [k, v] of Object.entries(storedScore.scores)) {
             if (allowed.has(k)) scores[k] = v
@@ -265,9 +265,15 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
             for (const [k, v] of Object.entries(storedScore.reasons ?? {})) {
               if (allowed.has(k)) reasons[k] = v
             }
+            // Emit labels for scored keys so downstream nodes can show human-readable names
+            const labels: Record<string, string> = {}
+            for (const k of Object.keys(scores)) {
+              const lbl = labelByKey.get(k)
+              if (lbl) labels[k] = lbl
+            }
             const flatKeys: Record<string, number> = {}
             for (const [k, v] of Object.entries(scores)) flatKeys[`human_${k}`] = v
-            const scoped = { ...storedScore, scores, reasons }
+            const scoped = { ...storedScore, scores, reasons, labels }
             return { ...withNote, [tf]: scoped, ...flatKeys }
           }
         }

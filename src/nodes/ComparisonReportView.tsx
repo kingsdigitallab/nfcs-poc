@@ -21,6 +21,8 @@ export interface ComparisonReportConfig {
 
 interface CriterionStats {
   key:          string
+  /** Human-readable label from QuickNote criteria config, if available. */
+  label?:       string
   /** Records that have BOTH a judge AND human value for this criterion. */
   scoredPairs:  number
   agreed:       number
@@ -63,6 +65,14 @@ function getScores(record: UnifiedRecord, field: string): Record<string, number>
   return scores as Record<string, number>
 }
 
+function getLabels(record: UnifiedRecord, field: string): Record<string, string> | undefined {
+  const v = (record as Record<string, unknown>)[field]
+  if (v == null || typeof v !== 'object') return undefined
+  const labels = (v as Record<string, unknown>).labels
+  if (labels == null || typeof labels !== 'object') return undefined
+  return labels as Record<string, string>
+}
+
 function getReasons(record: UnifiedRecord, field: string): Record<string, string> | undefined {
   const v = (record as Record<string, unknown>)[field]
   if (v == null || typeof v !== 'object') return undefined
@@ -96,15 +106,19 @@ function computeAggregate(
 ): AggregateStats {
   const { judgeScoreField, humanScoreField } = config
 
-  // Gather all criterion keys across all records
+  // Gather all criterion keys + human-defined labels across all records
   const allKeys = new Set<string>()
   const judgeKeys = new Set<string>()
   const humanKeys = new Set<string>()
+  const labelByKey: Record<string, string> = {}
   for (const r of records) {
     const j = getScores(r, judgeScoreField)
     const h = getScores(r, humanScoreField)
     if (j) for (const k of Object.keys(j)) { allKeys.add(k); judgeKeys.add(k) }
     if (h) for (const k of Object.keys(h)) { allKeys.add(k); humanKeys.add(k) }
+    // Accumulate labels emitted by QuickNote (last non-empty wins)
+    const lbls = getLabels(r, humanScoreField)
+    if (lbls) for (const [k, v] of Object.entries(lbls)) { if (v) labelByKey[k] = v }
   }
 
   const sortedKeys = [...allKeys].sort()
@@ -135,6 +149,7 @@ function computeAggregate(
     const scoredPairs = agreed + diverged
     return {
       key,
+      label: labelByKey[key],
       scoredPairs,
       agreed,
       diverged,
@@ -354,7 +369,10 @@ export function ComparisonReportView({ records, config, fullscreen = false }: Co
               <tbody>
                 {stats.criteria.map(c => (
                   <tr key={c.key}>
-                    <td style={cv.td}><code style={cv.criterionCode}>{c.key}</code></td>
+                    <td style={cv.td}>
+                      <code style={cv.criterionCode}>{c.key}</code>
+                      {c.label && <span style={cv.criterionLabel}>{c.label}</span>}
+                    </td>
                     <td style={cv.td}>
                       {c.scoredPairs > 0
                         ? `${c.agreed}/${c.scoredPairs} (${c.agreePct}%)`
@@ -565,6 +583,7 @@ const cv = {
   },
   td: { padding: '4px 8px', borderBottom: '1px solid #f3f4f6', color: '#374151' },
   criterionCode: { fontSize: 10, background: '#ede9fe', color: '#3730a3', padding: '1px 4px', borderRadius: 3 },
+  criterionLabel: { marginLeft: 7, fontSize: 11, color: '#475569' },
   divergedBtn: {
     background: '#fee2e2', border: '1px solid #fca5a5', color: '#b91c1c',
     fontSize: 11, fontWeight: 700, padding: '1px 8px', borderRadius: 4,
