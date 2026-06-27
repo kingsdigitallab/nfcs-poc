@@ -316,11 +316,14 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
 
       if (m === 'structured') {
         const cfgFields = ((data as QuickNoteNodeData).fields ?? []) as FieldConfig[]
-        if (cfgFields.length > 0) {
-          const stored = strec[rid]
+        const stored    = strec[rid]
+        // Only inject for records the user has actually annotated (mirrors score mode — unscored
+        // records get no injection). Blank boxes within an entered record still serialize as ""
+        // for a stable schema shape; commitStructured already deletes all-blank entries.
+        if (stored && cfgFields.length > 0) {
           const obj: Record<string, string> = {}
-          for (const f of cfgFields) obj[f.key] = stored?.[f.key] ?? ''   // blanks → "" — stable schema shape
-          return { ...withNote, [stf]: obj }
+          for (const f of cfgFields) obj[f.key] = stored[f.key] ?? ''
+          return { ...withNote, [stf]: JSON.stringify(obj, null, 2) }   // string — honours _note's string contract
         }
         return withNote
       }
