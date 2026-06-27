@@ -4,6 +4,7 @@
  * (keyed by record.id) so they appear in TableOutputNode too.
  *
  * Mode 'note' (default): free-text note → _note field.
+ * Mode 'structured': per-field form → JSON object → configurable target field (default _note).
  * Mode 'score': constrained per-criterion human score → configurable target field
  *   (default 'human_score') plus flat human_c* keys. Scores persist in node data
  *   (scoresByRecord) and are saved via the standard workflow-save mechanism.
@@ -22,6 +23,11 @@ import { setNodeResults } from '../store/resultsStore'
 
 const HEADER_COLOR = '#0f766e'
 
+export interface FieldConfig {
+  key: string
+  label: string
+}
+
 export interface CriterionConfig {
   key: string
   label: string
@@ -36,7 +42,12 @@ export interface RecordScore {
 
 export interface QuickNoteNodeData {
   selectedField: string
-  mode?: 'note' | 'score'
+  mode?: 'note' | 'structured' | 'score'
+  // structured mode
+  fields?: FieldConfig[]
+  structuredByRecord?: Record<string, Record<string, string>>
+  structuredTargetField?: string
+  // score mode
   criteria?: CriterionConfig[]
   targetField?: string
   displayFields?: string[]
@@ -81,23 +92,32 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
   const { records, connected } = useUpstreamRecords(id)
   const d = data as QuickNoteNodeData
 
-  const mode          = d.mode ?? 'note'
-  const criteria      = (d.criteria ?? [{ key: 'c1', label: 'criterion 1', scale: [0, 1, 2] }]) as CriterionConfig[]
+  const mode           = d.mode ?? 'note'
+  const criteria       = (d.criteria ?? [{ key: 'c1', label: 'criterion 1', scale: [0, 1, 2] }]) as CriterionConfig[]
   // Stable dep signal for the configured criterion keys — lets memos/effects recompute when
   // the rubric changes even though criteria editors only call updateNodeData({ criteria }).
   const criteriaKeyStr = criteria.map(c => `${c.key}:${c.label}`).join('|')
-  const targetField   = d.targetField ?? 'human_score'
-  const displayFields = (d.displayFields ?? []) as string[]
+  const targetField    = d.targetField ?? 'human_score'
+  const displayFields  = (d.displayFields ?? []) as string[]
   const scoresByRecord = (d.scoresByRecord ?? {}) as Record<string, RecordScore>
 
+  // structured mode derived values
+  const fields               = (d.fields ?? [{ key: 'place', label: 'Place' }]) as FieldConfig[]
+  const structuredTargetField = d.structuredTargetField ?? '_note'
+  const structuredByRecord   = (d.structuredByRecord ?? {}) as Record<string, Record<string, string>>
+  // Stable dep signal — lets memos/effects recompute when the field schema changes.
+  const fieldsKeyStr         = fields.map(f => `${f.key}:${f.label}`).join('|')
+
   // ── Core state ───────────────────────────────────────────────────────────────
-  const [recordIndex,    setRecordIndex]    = useState(0)
-  const [noteDraft,      setNoteDraft]      = useState('')
-  const [notesVersion,   setNotesVersion]   = useState(0)
-  const [scoresVersion,  setScoresVersion]  = useState(0)
-  const [confirmClearAll, setConfirmClearAll] = useState(false)
-  const [configExpanded, setConfigExpanded] = useState(false)
-  const [reasonDrafts,   setReasonDrafts]   = useState<Record<string, string>>({})
+  const [recordIndex,       setRecordIndex]       = useState(0)
+  const [noteDraft,         setNoteDraft]         = useState('')
+  const [notesVersion,      setNotesVersion]      = useState(0)
+  const [scoresVersion,     setScoresVersion]     = useState(0)
+  const [structuredVersion, setStructuredVersion] = useState(0)
+  const [confirmClearAll,   setConfirmClearAll]   = useState(false)
+  const [configExpanded,    setConfigExpanded]    = useState(false)
+  const [reasonDrafts,      setReasonDrafts]      = useState<Record<string, string>>({})
+  const [structuredDrafts,  setStructuredDrafts]  = useState<Record<string, string>>({})
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   useEffect(() => subscribeNotes(() => setNotesVersion(v => v + 1)), [])
@@ -122,6 +142,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
   const fieldValue     = rawFieldValue != null && !isImage ? formatValue(rawFieldValue) : ''
   const inheritedNote  = (currentRecord?._note as string | undefined) ?? ''
   const currentScore   = currentRecordId ? scoresByRecord[currentRecordId] : undefined
+  const currentStructured = currentRecordId ? structuredByRecord[currentRecordId] : undefined
 
   const recordLabel = currentRecord
     ? String(
@@ -142,6 +163,12 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
   // ── Score-mode reason sync ───────────────────────────────────────────────────
   useEffect(() => {
     setReasonDrafts(currentScore?.reasons ?? {})
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentRecordId])
+
+  // ── Structured-mode draft sync ───────────────────────────────────────────────
+  useEffect(() => {
+    setStructuredDrafts(currentRecordId ? (structuredByRecord[currentRecordId] ?? {}) : {})
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentRecordId])
 
@@ -185,6 +212,20 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
     saveScoreEntry(existingScores, cleanReasons, true)
   }
 
+  /** Commit the current structured drafts to node data (called on blur / navigate). */
+  function commitStructured() {
+    if (!currentRecordId) return
+    const allBlank = Object.values(structuredDrafts).every(v => !v.trim())
+    const updated = { ...structuredByRecord }
+    if (allBlank) {
+      delete updated[currentRecordId]
+    } else {
+      updated[currentRecordId] = { ...structuredDrafts }
+    }
+    updateNodeData(id, { structuredByRecord: updated })
+    setStructuredVersion(v => v + 1)
+  }
+
   function handlePickerClick(criterionKey: string, value: number) {
     if (!currentRecordId) return
     const existingScores  = currentScore?.scores ?? {}
@@ -206,6 +247,15 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
     setScoresVersion(v => v + 1)
   }
 
+  function clearRecordStructured() {
+    if (!currentRecordId) return
+    const updated = { ...structuredByRecord }
+    delete updated[currentRecordId]
+    updateNodeData(id, { structuredByRecord: updated })
+    setStructuredDrafts({})
+    setStructuredVersion(v => v + 1)
+  }
+
   /** Clear ALL per-record scores on this node (scoped to this node's data only). */
   function clearAllScores() {
     updateNodeData(id, { scoresByRecord: {} })
@@ -215,6 +265,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
   function navigateTo(newIndex: number) {
     commitNote()
     commitReasons()
+    commitStructured()
     setRecordIndex(newIndex)
   }
 
@@ -230,23 +281,49 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
     updateNodeData(id, { criteria: criteria.filter((_, i) => i !== idx) })
   }
 
-  // ── Pass-through: inject _note and/or human scores into downstream records ───
-  // In score mode: also injects human_score object + flat human_c* keys.
-  // Unscored records: human_score and human_c* are ABSENT (not zero).
+  // ── Fields config helpers (structured mode) ──────────────────────────────────
+  function updateField(idx: number, patch: Partial<FieldConfig>) {
+    updateNodeData(id, { fields: fields.map((f, i) => i === idx ? { ...f, ...patch } : f) })
+  }
+  function addField() {
+    const n = fields.length + 1
+    updateNodeData(id, { fields: [...fields, { key: `field${n}`, label: `Field ${n}` }] })
+  }
+  function removeField(idx: number) {
+    updateNodeData(id, { fields: fields.filter((_, i) => i !== idx) })
+  }
+
+  // ── Pass-through: inject _note and/or scores/structured into downstream records
+  // In structured mode: injects assembled JSON object into structuredTargetField.
+  // In score mode: injects human_score object + flat human_c* keys.
+  // Unscored / unentered records: the injected field is ABSENT (not zero/empty).
   const effectiveRecordsWithNotes = useMemo(() => {
     if (!records) return null
-    // Read scoresByRecord from `data` directly inside the memo to avoid stale
-    // closure — scoresVersion in deps guarantees recomputation on every change.
-    const sbr = ((data as QuickNoteNodeData).scoresByRecord ?? {}) as Record<string, RecordScore>
-    const tf  = (data as QuickNoteNodeData).targetField ?? 'human_score'
-    const m   = (data as QuickNoteNodeData).mode ?? 'note'
+    // Read from `data` directly inside the memo to avoid stale closures —
+    // version counters in deps guarantee recomputation on every change.
+    const sbr   = ((data as QuickNoteNodeData).scoresByRecord    ?? {}) as Record<string, RecordScore>
+    const strec = ((data as QuickNoteNodeData).structuredByRecord ?? {}) as Record<string, Record<string, string>>
+    const tf    = (data as QuickNoteNodeData).targetField          ?? 'human_score'
+    const stf   = (data as QuickNoteNodeData).structuredTargetField ?? '_note'
+    const m     = (data as QuickNoteNodeData).mode ?? 'note'
 
     return records.map(r => {
       const rid = (r as Record<string, unknown>).id as string
-      // Always pass notes through (both modes)
+      // Always pass notes through (all modes)
       const ownNote  = getNote(id, rid)
       const resolved = ownNote ?? ((r as Record<string, unknown>)._note as string | undefined)
       const withNote = resolved != null ? { ...r, _note: resolved } : { ...r }
+
+      if (m === 'structured') {
+        const cfgFields = ((data as QuickNoteNodeData).fields ?? []) as FieldConfig[]
+        if (cfgFields.length > 0) {
+          const stored = strec[rid]
+          const obj: Record<string, string> = {}
+          for (const f of cfgFields) obj[f.key] = stored?.[f.key] ?? ''   // blanks → "" — stable schema shape
+          return { ...withNote, [stf]: obj }
+        }
+        return withNote
+      }
 
       if (m === 'score') {
         const storedScore = sbr[rid]
@@ -254,7 +331,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
           // Filter to only currently-configured criterion keys (non-destructive: scoresByRecord
           // is left intact so re-adding a criterion restores its values).
           const configuredCriteria = (((data as QuickNoteNodeData).criteria ?? []) as CriterionConfig[])
-          const allowed = new Set(configuredCriteria.map(c => c.key))
+          const allowed    = new Set(configuredCriteria.map(c => c.key))
           const labelByKey = new Map(configuredCriteria.map(c => [c.key, c.label]))
           const scores: Record<string, number> = {}
           for (const [k, v] of Object.entries(storedScore.scores)) {
@@ -279,22 +356,28 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
         }
         return withNote   // unscored or all stored keys de-configured: human_score absent
       }
+
       return withNote
     })
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [records, notesVersion, scoresVersion, criteriaKeyStr, id])
+  }, [records, notesVersion, scoresVersion, structuredVersion, criteriaKeyStr, fieldsKeyStr, id])
 
   const prevFingerprintRef = useRef('')
   useEffect(() => {
     const recs    = effectiveRecordsWithNotes ?? []
     const firstId = (recs[0]  as Record<string, unknown> | undefined)?.id ?? ''
     const lastId  = (recs[recs.length - 1] as Record<string, unknown> | undefined)?.id ?? ''
-    const fp      = `${recs.length}:${firstId}:${lastId}:${notesVersion}:${scoresVersion}:${criteriaKeyStr}`
+    const fp      = `${recs.length}:${firstId}:${lastId}:${notesVersion}:${scoresVersion}:${structuredVersion}:${criteriaKeyStr}:${fieldsKeyStr}`
     if (fp === prevFingerprintRef.current) return
     prevFingerprintRef.current = fp
     const version = setNodeResults(id, recs as Record<string, unknown>[])
     updateNodeData(id, { count: recs.length, status: recs.length > 0 ? 'success' : 'idle', resultsVersion: version })
-  }, [effectiveRecordsWithNotes, notesVersion, scoresVersion, criteriaKeyStr, id, updateNodeData])
+  }, [effectiveRecordsWithNotes, notesVersion, scoresVersion, structuredVersion, criteriaKeyStr, fieldsKeyStr, id, updateNodeData])
+
+  // count how many fields are filled (persisted) for the structured status row
+  const structuredFilledCount = currentRecordId
+    ? fields.filter(f => (structuredByRecord[currentRecordId]?.[f.key] ?? '').trim()).length
+    : 0
 
   // ── Render ───────────────────────────────────────────────────────────────────
   return (
@@ -312,14 +395,21 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
         <div style={s.header}>
           <div style={s.headerLeft}>
             <span style={s.headerTitle}>Quick Note</span>
-            {mode === 'score' && <span style={s.scoreBadge}>Score</span>}
+            {mode === 'structured' && <span style={s.modeBadge}>Structured</span>}
+            {mode === 'score'      && <span style={s.modeBadge}>Score</span>}
           </div>
           <div style={s.headerRight}>
+            {/* Note · Structured | Score  — reference modes adjacent, Score set apart */}
             <div style={s.modeToggle} className="nodrag">
               <button
                 style={{ ...s.modeBtn, ...(mode === 'note' ? s.modeBtnActive : {}) }}
                 onClick={() => updateNodeData(id, { mode: 'note' })}
               >Note</button>
+              <button
+                style={{ ...s.modeBtn, ...(mode === 'structured' ? s.modeBtnActive : {}) }}
+                onClick={() => updateNodeData(id, { mode: 'structured' })}
+              >Structured</button>
+              <span style={s.modeSep} />
               <button
                 style={{ ...s.modeBtn, ...(mode === 'score' ? s.modeBtnActive : {}) }}
                 onClick={() => updateNodeData(id, { mode: 'score' })}
@@ -395,6 +485,124 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
                 style={s.textarea}
                 title="Enter to save · Shift+Enter for new line"
               />
+            </div>
+          </>
+        ) : mode === 'structured' ? (
+          /* ── STRUCTURED MODE ────────────────────────────────────────────── */
+          <>
+            {/* Config section — collapsible, set once */}
+            <div style={s.configSection} className="nodrag">
+              <button style={s.configToggleBtn} onClick={() => setConfigExpanded(v => !v)}>
+                <span>{configExpanded ? '▾' : '▸'}</span>
+                {' '}Configure fields
+                <span style={s.configCountHint}> · {fields.length} {fields.length === 1 ? 'field' : 'fields'}</span>
+              </button>
+              {configExpanded && (
+                <div style={s.configBody}>
+                  <div style={s.configRow}>
+                    <label style={s.configLabel}>Target field</label>
+                    <input style={s.configInput} value={structuredTargetField} placeholder="_note"
+                      onChange={e => updateNodeData(id, { structuredTargetField: e.target.value })} />
+                  </div>
+                  <div style={s.configRow}>
+                    <label style={s.configLabel}>Display fields</label>
+                    <select multiple style={{ ...s.configInput, height: 54, fontSize: 10 }}
+                      value={displayFields}
+                      onChange={e => updateNodeData(id, {
+                        displayFields: Array.from(e.target.selectedOptions, o => o.value),
+                      })}>
+                      {availableFields.map(f => <option key={f} value={f}>{f}</option>)}
+                    </select>
+                  </div>
+                  <div style={{ ...s.configLabel, marginBottom: 4 }}>Fields
+                    <span style={{ fontWeight: 400, color: '#9ca3af' }}> (key · label)</span>
+                  </div>
+                  {fields.map((f, idx) => (
+                    <div key={idx} style={s.criterionEditRow}>
+                      <input style={{ ...s.configInput, width: 60 }} value={f.key}
+                        onChange={e => updateField(idx, { key: e.target.value })}
+                        placeholder="key" title="Short key, e.g. place" />
+                      <input style={{ ...s.configInput, flex: 1 }} value={f.label}
+                        onChange={e => updateField(idx, { label: e.target.value })}
+                        placeholder="label" />
+                      <button style={s.removeCriterionBtn} onClick={() => removeField(idx)} title="Remove">×</button>
+                    </div>
+                  ))}
+                  <button style={s.addCriterionBtn} onClick={addField}>+ Add field</button>
+                </div>
+              )}
+            </div>
+
+            {/* Context fields — read-only, scrollable */}
+            {displayFields.length > 0 ? (
+              <div style={s.displayFieldsArea} className="nodrag nowheel">
+                {displayFields.map(f => {
+                  const val = currentRecord?.[f]
+                  return (
+                    <div key={f} style={s.displayFieldBlock}>
+                      <div style={s.displayFieldLabel}>{f}</div>
+                      {isImageDataUrl(val) ? (
+                        <div style={{ padding: '4px 8px', color: '#9ca3af', fontSize: 10, fontStyle: 'italic' }}>
+                          Image — use ImageViewNode
+                        </div>
+                      ) : (
+                        <pre style={s.displayFieldContent}>{val != null ? formatValue(val) : '—'}</pre>
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+            ) : (
+              <div style={{ ...s.contentWrap, ...s.placeholder }}>
+                {!connected
+                  ? 'Connect a node to the input handle'
+                  : !records
+                  ? 'Run the upstream node to see results'
+                  : 'Select display fields in ▸ Configure fields above'}
+              </div>
+            )}
+
+            {recordLabel && <div style={s.recordLabel} title={recordLabel}>{recordLabel}</div>}
+            <div style={s.divider} />
+
+            {/* Entry form — one labelled input per configured field */}
+            <div style={s.scoreArea} className="nodrag nowheel">
+              {!connected ? (
+                <div style={s.placeholder}>Connect a node to the input handle</div>
+              ) : !records ? (
+                <div style={s.placeholder}>Run the upstream node to see results</div>
+              ) : fields.length === 0 ? (
+                <div style={s.placeholder}>Add fields in the config section above</div>
+              ) : (
+                <>
+                  {fields.map(f => (
+                    <div key={f.key} style={s.structuredFieldBlock}>
+                      <label style={s.structuredFieldLabel}>{f.label}</label>
+                      <input
+                        style={s.structuredFieldInput}
+                        value={structuredDrafts[f.key] ?? ''}
+                        placeholder={`Enter ${f.label.toLowerCase()}…`}
+                        onChange={e => setStructuredDrafts(prev => ({ ...prev, [f.key]: e.target.value }))}
+                        onBlur={commitStructured}
+                        disabled={!currentRecord}
+                      />
+                    </div>
+                  ))}
+                  <div style={s.scoreStatusRow}>
+                    <span style={s.scoreStatusText}>
+                      {structuredFilledCount > 0
+                        ? `${structuredFilledCount}/${fields.length} fields filled`
+                        : 'Not yet entered'}
+                    </span>
+                    {currentStructured && (
+                      <button style={s.clearScoreBtn} onClick={clearRecordStructured}
+                        title="Clear entries for this record only">
+                        Clear
+                      </button>
+                    )}
+                  </div>
+                </>
+              )}
             </div>
           </>
         ) : (
@@ -478,7 +686,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
             {recordLabel && <div style={s.recordLabel} title={recordLabel}>{recordLabel}</div>}
             <div style={s.divider} />
 
-            {/* Score pickers — pinned at bottom via flexShrink:0 */}
+            {/* Score pickers */}
             <div style={s.scoreArea} className="nodrag nowheel">
               {!connected ? (
                 <div style={s.placeholder}>Connect a node to the input handle</div>
@@ -560,7 +768,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
 // ── Styles ────────────────────────────────────────────────────────────────────
 
 const s = {
-  // ── Shared / note-mode (unchanged) ──────────────────────────────────────────
+  // ── Shared / note-mode ───────────────────────────────────────────────────────
   card: {
     background: '#fff', border: '1.5px solid #d1d5db', borderRadius: 8,
     width: '100%', height: '100%', boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
@@ -574,17 +782,24 @@ const s = {
   headerLeft: { display: 'flex', alignItems: 'center', gap: 6 },
   headerRight: { display: 'flex', alignItems: 'center', gap: 6 },
   headerTitle: { color: '#fff', fontWeight: 700, fontSize: 12 },
-  scoreBadge: {
+  modeBadge: {
     background: 'rgba(255,255,255,0.25)', color: '#fff', fontSize: 9,
     fontWeight: 700, padding: '1px 5px', borderRadius: 3, letterSpacing: '0.05em',
     textTransform: 'uppercase' as const,
   },
-  modeToggle: { display: 'flex', gap: 1, background: 'rgba(0,0,0,0.2)', borderRadius: 4, padding: 2 },
+  modeToggle: {
+    display: 'flex', gap: 1, alignItems: 'center',
+    background: 'rgba(0,0,0,0.2)', borderRadius: 4, padding: 2,
+  },
   modeBtn: {
     background: 'transparent', border: 'none', color: 'rgba(255,255,255,0.7)',
     fontSize: 10, fontWeight: 600, borderRadius: 3, padding: '2px 6px', cursor: 'pointer',
   },
   modeBtnActive: { background: 'rgba(255,255,255,0.25)', color: '#fff' },
+  modeSep: {
+    display: 'inline-block' as const, width: 1, height: 14,
+    background: 'rgba(255,255,255,0.3)', margin: '0 2px', flexShrink: 0,
+  },
   navGroup: { display: 'flex', alignItems: 'center', gap: 4 },
   navBtn: {
     background: 'rgba(255,255,255,0.15)', border: 'none', color: '#fff', borderRadius: 3,
@@ -645,7 +860,7 @@ const s = {
     border: '2px solid #fff', boxShadow: '0 0 0 1px #0d9488',
   },
 
-  // ── Score mode ───────────────────────────────────────────────────────────────
+  // ── Shared: score mode + structured mode config UI ───────────────────────────
   configSection: {
     flexShrink: 0, borderBottom: '1px solid #f1f5f9',
     background: '#f8fafc',
@@ -696,6 +911,31 @@ const s = {
     flexShrink: 0, overflowY: 'auto' as const, maxHeight: '55%',
     padding: '6px 10px 8px', display: 'flex', flexDirection: 'column' as const, gap: 8,
   },
+  scoreStatusRow: {
+    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+    paddingTop: 2,
+  },
+  scoreStatusText: { fontSize: 10, color: '#9ca3af', fontStyle: 'italic' as const },
+  clearScoreBtn: {
+    background: 'none', border: '1px solid #fca5a5', color: '#ef4444',
+    fontSize: 10, padding: '1px 7px', borderRadius: 3, cursor: 'pointer',
+  },
+
+  // ── Structured mode specific ─────────────────────────────────────────────────
+  structuredFieldBlock: {
+    display: 'flex', flexDirection: 'column' as const, gap: 3,
+    padding: '4px 0', borderBottom: '1px solid #f3f4f6',
+  },
+  structuredFieldLabel: {
+    fontSize: 10, fontWeight: 600, color: '#374151',
+  },
+  structuredFieldInput: {
+    width: '100%', fontSize: 11, padding: '3px 6px', border: '1px solid #d1d5db',
+    borderRadius: 4, outline: 'none', background: '#fffbeb', color: '#1f2937',
+    fontFamily: 'system-ui, sans-serif', boxSizing: 'border-box' as const,
+  },
+
+  // ── Score mode specific ───────────────────────────────────────────────────────
   criterionScoreBlock: {
     display: 'flex', flexDirection: 'column' as const, gap: 4,
     padding: '4px 0', borderBottom: '1px solid #f3f4f6',
@@ -723,15 +963,6 @@ const s = {
     border: '1px solid #e5e7eb', borderRadius: 3, padding: '3px 5px',
     outline: 'none', resize: 'vertical' as const, lineHeight: 1.4,
     color: '#374151', background: '#fafafa', boxSizing: 'border-box' as const,
-  },
-  scoreStatusRow: {
-    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-    paddingTop: 2,
-  },
-  scoreStatusText: { fontSize: 10, color: '#9ca3af', fontStyle: 'italic' as const },
-  clearScoreBtn: {
-    background: 'none', border: '1px solid #fca5a5', color: '#ef4444',
-    fontSize: 10, padding: '1px 7px', borderRadius: 3, cursor: 'pointer',
   },
   clearAllScoresBtn: {
     background: '#ef4444', border: '1px solid #ef4444', color: '#fff',
