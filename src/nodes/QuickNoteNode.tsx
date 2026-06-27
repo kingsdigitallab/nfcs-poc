@@ -83,6 +83,9 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
 
   const mode          = d.mode ?? 'note'
   const criteria      = (d.criteria ?? [{ key: 'c1', label: 'criterion 1', scale: [0, 1, 2] }]) as CriterionConfig[]
+  // Stable dep signal for the configured criterion keys — lets memos/effects recompute when
+  // the rubric changes even though criteria editors only call updateNodeData({ criteria }).
+  const criteriaKeyStr = criteria.map(c => c.key).join('|')
   const targetField   = d.targetField ?? 'human_score'
   const displayFields = (d.displayFields ?? []) as string[]
   const scoresByRecord = (d.scoresByRecord ?? {}) as Record<string, RecordScore>
@@ -240,31 +243,45 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
 
       if (m === 'score') {
         const storedScore = sbr[rid]
-        if (storedScore && Object.keys(storedScore.scores).length > 0) {
-          const flatKeys: Record<string, number> = {}
+        if (storedScore) {
+          // Filter to only currently-configured criterion keys (non-destructive: scoresByRecord
+          // is left intact so re-adding a criterion restores its values).
+          const allowed = new Set(
+            (((data as QuickNoteNodeData).criteria ?? []) as CriterionConfig[]).map(c => c.key)
+          )
+          const scores: Record<string, number> = {}
           for (const [k, v] of Object.entries(storedScore.scores)) {
-            flatKeys[`human_${k}`] = v
+            if (allowed.has(k)) scores[k] = v
           }
-          return { ...withNote, [tf]: storedScore, ...flatKeys }
+          if (Object.keys(scores).length > 0) {
+            const reasons: Record<string, string> = {}
+            for (const [k, v] of Object.entries(storedScore.reasons ?? {})) {
+              if (allowed.has(k)) reasons[k] = v
+            }
+            const flatKeys: Record<string, number> = {}
+            for (const [k, v] of Object.entries(scores)) flatKeys[`human_${k}`] = v
+            const scoped = { ...storedScore, scores, reasons }
+            return { ...withNote, [tf]: scoped, ...flatKeys }
+          }
         }
-        return withNote   // unscored: human_score absent
+        return withNote   // unscored or all stored keys de-configured: human_score absent
       }
       return withNote
     })
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [records, notesVersion, scoresVersion, id])
+  }, [records, notesVersion, scoresVersion, criteriaKeyStr, id])
 
   const prevFingerprintRef = useRef('')
   useEffect(() => {
     const recs    = effectiveRecordsWithNotes ?? []
     const firstId = (recs[0]  as Record<string, unknown> | undefined)?.id ?? ''
     const lastId  = (recs[recs.length - 1] as Record<string, unknown> | undefined)?.id ?? ''
-    const fp      = `${recs.length}:${firstId}:${lastId}:${notesVersion}:${scoresVersion}`
+    const fp      = `${recs.length}:${firstId}:${lastId}:${notesVersion}:${scoresVersion}:${criteriaKeyStr}`
     if (fp === prevFingerprintRef.current) return
     prevFingerprintRef.current = fp
     const version = setNodeResults(id, recs as Record<string, unknown>[])
     updateNodeData(id, { count: recs.length, status: recs.length > 0 ? 'success' : 'idle', resultsVersion: version })
-  }, [effectiveRecordsWithNotes, notesVersion, scoresVersion, id, updateNodeData])
+  }, [effectiveRecordsWithNotes, notesVersion, scoresVersion, criteriaKeyStr, id, updateNodeData])
 
   // ── Render ───────────────────────────────────────────────────────────────────
   return (
