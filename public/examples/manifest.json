@@ -1,5 +1,10 @@
 [
   {
+    "slug": "llm-extraction-task-comparison",
+    "title": "LLM Extraction task comparison",
+    "description": ""
+  },
+  {
     "slug": "quick-start-bowie",
     "title": "Quick Start Bowie",
     "description": "A tool to suggest discovery pathaways through unfamiliar data"
@@ -7,7 +12,7 @@
   {
     "slug": "stonehenge",
     "title": "Stonehenge",
-    "description": "A one-word search across 5 data providers"
+    "description": ""
   },
   {
     "slug": "stonehenge-ii",

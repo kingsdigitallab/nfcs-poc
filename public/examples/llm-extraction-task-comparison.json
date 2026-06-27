@@ -1,0 +1,983 @@
+{
+  "version": 2,
+  "savedAt": "2026-06-27T12:01:49.441Z",
+  "nodes": [
+    {
+      "id": "group-55",
+      "type": "group",
+      "position": {
+        "x": -162.65731737666783,
+        "y": 189.18378640751789
+      },
+      "data": {
+        "name": "Slimming down the task!"
+      },
+      "width": 346,
+      "height": 727.8135008139668,
+      "style": {
+        "width": 346,
+        "height": 727.8135008139668
+      }
+    },
+    {
+      "id": "group-50",
+      "type": "group",
+      "position": {
+        "x": 2700.027339138178,
+        "y": -641.2893008162873
+      },
+      "data": {
+        "name": "Final comparison"
+      },
+      "width": 1110.8819631416359,
+      "height": 1241.9606684187067,
+      "style": {
+        "width": 1110.8819631416359,
+        "height": 1241.9606684187067
+      }
+    },
+    {
+      "id": "group-48",
+      "type": "group",
+      "position": {
+        "x": 1977.9377202689739,
+        "y": -646.0519420357442
+      },
+      "data": {
+        "name": "Asessing the performance against the task"
+      },
+      "width": 562.933243977941,
+      "height": 3000.2922335867584,
+      "style": {
+        "width": 562.933243977941,
+        "height": 3000.2922335867584
+      }
+    },
+    {
+      "id": "group-37",
+      "type": "group",
+      "position": {
+        "x": 1453.3483615200535,
+        "y": -658.027129967807
+      },
+      "data": {
+        "name": "Extraction using different models"
+      },
+      "width": 375.48462539022285,
+      "height": 3700.0496041934557,
+      "style": {
+        "width": 375.48462539022285,
+        "height": 3700.0496041934557
+      }
+    },
+    {
+      "id": "group-31",
+      "type": "group",
+      "position": {
+        "x": 244.60432235017936,
+        "y": 145.36183579250851
+      },
+      "data": {
+        "name": "What are we aiming for?"
+      },
+      "width": 1122.0702382574123,
+      "height": 856.4636398626347,
+      "style": {
+        "width": 1122.0702382574123,
+        "height": 856.4636398626347
+      }
+    },
+    {
+      "id": "group-28",
+      "type": "group",
+      "position": {
+        "x": -1922.7697985171612,
+        "y": 231.89705545728896
+      },
+      "data": {
+        "name": "Loading Data"
+      },
+      "width": 1699.3238897938886,
+      "height": 702.3755594612853,
+      "style": {
+        "width": 1699.3238897938886,
+        "height": 702.3755594612853
+      }
+    },
+    {
+      "id": "sample-1",
+      "type": "sampleDataSource",
+      "position": {
+        "x": 20,
+        "y": 253.72083375066694
+      },
+      "data": {
+        "selectedPackage": "uk-world-heritage-sites",
+        "packageTitle": "UK World Heritage Sites",
+        "selectedFiles": [
+          {
+            "url": "/fixtures/uk-world-heritage-sites/uk_whs.csv",
+            "filename": "uk_whs.csv",
+            "label": "CSV dataset",
+            "type": "csv"
+          }
+        ]
+      },
+      "parentId": "group-28",
+      "extent": "parent"
+    },
+    {
+      "id": "table-2",
+      "type": "tableOutput",
+      "position": {
+        "x": 969.3238897938886,
+        "y": 258.3755594612853
+      },
+      "data": {},
+      "parentId": "group-28",
+      "extent": "parent"
+    },
+    {
+      "id": "kclField-3",
+      "type": "kclField",
+      "position": {
+        "x": 22.253601927340014,
+        "y": 442.60010004711376
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "model": "arc:nano",
+        "selectedField": "description",
+        "outputField": "",
+        "mode": "per-record",
+        "systemPrompt": "You are a named entity extractor. Return only valid JSON. Do not include explanation or prose.",
+        "userPromptTemplate": "Extract the following four fields from the site description. Use ONLY the\ntext provided. If a field is not stated, write \"not stated\".\n\nDescription: {{value}}\n\nRespond as JSON:\n{\"place\":\"\",\"period_or_date\":\"\",\"site_type\":\"\",\"nation\":\"\"}",
+        "temperature": 0,
+        "maxTokens": 8000,
+        "elapsedMs": 15965
+      },
+      "parentId": "group-37",
+      "extent": "parent"
+    },
+    {
+      "id": "quickNote-4",
+      "type": "quickNote",
+      "position": {
+        "x": 20,
+        "y": 438.6935004637792
+      },
+      "data": {
+        "selectedField": "description"
+      },
+      "parentId": "group-31",
+      "extent": "parent",
+      "style": {
+        "width": 340,
+        "height": 360
+      }
+    },
+    {
+      "id": "table-5",
+      "type": "tableOutput",
+      "position": {
+        "x": 392.07023825741226,
+        "y": 441.46363986263475
+      },
+      "data": {},
+      "parentId": "group-31",
+      "extent": "parent"
+    },
+    {
+      "id": "evaluator-8",
+      "type": "evaluatorNode",
+      "position": {
+        "x": 20,
+        "y": 251.7319586825779
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "judgeModel": "arc:lite",
+        "referenceField": "_note",
+        "candidateField": "kclResponse",
+        "rubricPrompt": "You are scoring a model's field extraction against a human annotation.\nJudge ONLY using the two texts provided. Do not use outside knowledge.\nLength and fluency are not criteria.\n\nHUMAN ANNOTATION (gold standard):\n{{__reference}}\n\nMODEL OUTPUT (to be judged):\n{{__candidate}}\n\nScore each criterion. Give a one-sentence reason, then the score.\n\nc1 place: 2 = same place; 1 = correct but broader/narrower; 0 = wrong or missing\n\nc2 period_or_date: 2 = same period; 1 = correct era, wrong specificity; 0 = wrong or missing\n\nc3 site_type: 2 = same type; 1 = related but less/more specific; 0 = wrong or missing\n\nc4 nation: 2 = same nation; 1 = related nation; 0= introduces a value absent from the annotation\n\nRespond with ONLY this JSON, no other text:\n{\"c1_reason\":\"\",\"c1\":0,\"c2_reason\":\"\",\"c2\":0,\"c3_reason\":\"\",\"c3\":0,\"c4_reason\":\"\",\"c4\":1}",
+        "recipePreset": "custom",
+        "humanScoreField": "human_score",
+        "temperature": 0,
+        "maxTokens": 32768,
+        "scoredCount": 5,
+        "skippedCount": 27,
+        "parseErrCount": 0,
+        "elapsedMs": 465
+      },
+      "parentId": "group-50",
+      "extent": "parent"
+    },
+    {
+      "id": "kclField-10",
+      "type": "kclField",
+      "position": {
+        "x": 20.379040227952146,
+        "y": 1258.3913198450787
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "model": "arc:lite",
+        "selectedField": "description",
+        "outputField": "",
+        "mode": "per-record",
+        "systemPrompt": "You are a named entity extractor. Return only valid JSON. Do not include explanation or prose.",
+        "userPromptTemplate": "Extract the following four fields from the site description. Use ONLY the\ntext provided. If a field is not stated, write \"not stated\".\n\nDescription: {{value}}\n\nRespond as JSON:\n{\"place\":\"\",\"period_or_date\":\"\",\"site_type\":\"\",\"nation\":\"\"}",
+        "temperature": 0,
+        "maxTokens": 8000,
+        "elapsedMs": 15025
+      },
+      "parentId": "group-37",
+      "extent": "parent"
+    },
+    {
+      "id": "cmpreport-23",
+      "type": "comparisonReport",
+      "position": {
+        "x": 439.8819631416359,
+        "y": 249.96066841870675
+      },
+      "data": {
+        "originalField": "description",
+        "noteField": "_note",
+        "responseField": "kclResponse",
+        "judgeScoreField": "eval",
+        "humanScoreField": "human_score"
+      },
+      "width": 641,
+      "height": 962,
+      "parentId": "group-50",
+      "extent": "parent",
+      "style": {
+        "width": 520,
+        "height": 600
+      }
+    },
+    {
+      "id": "comment-27",
+      "type": "comment",
+      "position": {
+        "x": 23.708607735416535,
+        "y": 55
+      },
+      "data": {
+        "title": "Load the sample data",
+        "body": "There are **32 ** records for World Heritage Sites in the UK** (UNESCO IDs licensing CC-BY-SA 3.0 IGO)**.\nThe data has been downloaded in XML and transformed to a CSV format.\nThe **Description** field contains a useful sample to text two modes of LLM inference - **Extraction **and **Interpretation**.\n**Load Selected** to bring the data into a Table and tick the **Show all columns** checkbox."
+      },
+      "width": 831,
+      "height": 187,
+      "parentId": "group-28",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-30",
+      "type": "comment",
+      "position": {
+        "x": 27.990687440274883,
+        "y": 55
+      },
+      "data": {
+        "title": "Adding 'Gold Standard' reference notes",
+        "body": "In order to check the performance of the LLM on the task we set, we need to provide a '**gold standard**' examples to test against'.\nFind a few records (5-6), and input what a correct extraction should look like. In this instance we are using a JSON format to capture:\n- place\n- period_or_data\n- site_type\n- nation\n\nWith the original **Description ** field displayed, we can record our ideal extraction content in the **Note ** field below\n"
+      },
+      "width": 452,
+      "height": 367,
+      "parentId": "group-31",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-32",
+      "type": "comment",
+      "position": {
+        "x": 24.584042659625084,
+        "y": 55
+      },
+      "data": {
+        "title": "Stage 1 Inference",
+        "body": "Using the same system prompt and prompt we can send the sample data to several different models to understand how they perform.\n**NB.** setting the LLM **Temp** to Zero should ensure reproducible results.\n\n**Hint:** Rather than typing out the prompt multiple times, you can set up the node once and then duplicate it."
+      },
+      "width": 302,
+      "height": 255,
+      "parentId": "group-37",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "kclField-33",
+      "type": "kclField",
+      "position": {
+        "x": 31.52628665905877,
+        "y": 2106.7761561168754
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "model": "arc:nexus",
+        "selectedField": "description",
+        "outputField": "",
+        "mode": "per-record",
+        "systemPrompt": "You are a named entity extractor. Return only valid JSON. Do not include explanation or prose.",
+        "userPromptTemplate": "Extract the following four fields from the site description. Use ONLY the\ntext provided. If a field is not stated, write \"not stated\".\n\nDescription: {{value}}\n\nRespond as JSON:\n{\"place\":\"\",\"period_or_date\":\"\",\"site_type\":\"\",\"nation\":\"\"}",
+        "temperature": 0,
+        "maxTokens": 8000,
+        "elapsedMs": 526980
+      },
+      "parentId": "group-37",
+      "extent": "parent"
+    },
+    {
+      "id": "comment-34",
+      "type": "comment",
+      "position": {
+        "x": 30.262110864780198,
+        "y": 325.28473673975725
+      },
+      "data": {
+        "title": "Nano test",
+        "body": "First using **nano**"
+      },
+      "width": 290,
+      "height": 96,
+      "parentId": "group-37",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-35",
+      "type": "comment",
+      "position": {
+        "x": 23.783045696356567,
+        "y": 1144.7029064871622
+      },
+      "data": {
+        "title": "Lite test",
+        "body": "Secondly using **lite**"
+      },
+      "width": 305,
+      "height": 101,
+      "parentId": "group-37",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-36",
+      "type": "comment",
+      "position": {
+        "x": 26.31619987408476,
+        "y": 1965.171727844541
+      },
+      "data": {
+        "title": "Nexus test",
+        "body": "Thirdly using **nexus**"
+      },
+      "width": 307,
+      "height": 101,
+      "parentId": "group-37",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "quickNote-38",
+      "type": "quickNote",
+      "position": {
+        "x": 22.54973723399621,
+        "y": 256.9501459837119
+      },
+      "data": {
+        "selectedField": "",
+        "mode": "score",
+        "displayFields": [
+          "_note",
+          "description",
+          "kclResponse"
+        ],
+        "criteria": [
+          {
+            "key": "c1",
+            "label": "place",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c2",
+            "label": "period_or_date",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c3",
+            "label": "site_type",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c4",
+            "label": "nation",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "scoresByRecord": {
+          "371": {
+            "scores": {
+              "c1": 2,
+              "c2": 1,
+              "c3": 0,
+              "c4": 2
+            },
+            "reasons": {
+              "c1": "Ironbridge is just as valid an answer as Coalbrookdale",
+              "c2": "Date a bit vague",
+              "c3": "Site can be inferred from text?",
+              "c4": "Only external context provides Nation. Model has done better than human"
+            },
+            "scoredAt": "2026-06-27T11:41:53.025Z"
+          },
+          "374": {
+            "scores": {
+              "c4": 0,
+              "c3": 2,
+              "c2": 2,
+              "c1": 2
+            },
+            "reasons": {},
+            "scoredAt": "2026-06-27T11:27:28.697Z"
+          },
+          "425": {
+            "scores": {
+              "c2": 1,
+              "c3": 1,
+              "c4": 2,
+              "c1": 1
+            },
+            "reasons": {},
+            "scoredAt": "2026-06-27T11:28:21.473Z"
+          },
+          "428": {
+            "scores": {
+              "c1": 2,
+              "c2": 1,
+              "c3": 1,
+              "c4": 2
+            },
+            "reasons": {},
+            "scoredAt": "2026-06-27T11:31:32.002Z"
+          },
+          "429": {
+            "scores": {
+              "c1": 2,
+              "c2": 2,
+              "c3": 2,
+              "c4": 1
+            },
+            "reasons": {},
+            "scoredAt": "2026-06-27T11:32:09.370Z"
+          }
+        }
+      },
+      "width": 321,
+      "height": 897,
+      "parentId": "group-48",
+      "extent": "parent",
+      "style": {
+        "width": 340,
+        "height": 360
+      }
+    },
+    {
+      "id": "comment-42",
+      "type": "comment",
+      "position": {
+        "x": 20,
+        "y": 55
+      },
+      "data": {
+        "title": "Manual review",
+        "body": "Using the **Quick Note - Score** mode, we can set up the human evaluation criteria - c1, c2, c3, c4 etc...\nWith the reference text in view, and the LLM response, how well did it do?"
+      },
+      "width": 316,
+      "height": 180,
+      "parentId": "group-48",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "quickNote-44",
+      "type": "quickNote",
+      "position": {
+        "x": 212.93324397794095,
+        "y": 1197.7440982060489
+      },
+      "data": {
+        "selectedField": "",
+        "mode": "score",
+        "displayFields": [
+          "description",
+          "kclResponse"
+        ],
+        "criteria": [
+          {
+            "key": "c1",
+            "label": "place",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c2",
+            "label": "period_or_date",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c3",
+            "label": "site_type",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c4",
+            "label": "nation",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "scoresByRecord": {}
+      },
+      "width": 320,
+      "height": 869,
+      "parentId": "group-48",
+      "extent": "parent",
+      "style": {
+        "width": 340,
+        "height": 360
+      }
+    },
+    {
+      "id": "quickNote-45",
+      "type": "quickNote",
+      "position": {
+        "x": 25.928689564646902,
+        "y": 2101.2922335867584
+      },
+      "data": {
+        "selectedField": "",
+        "mode": "score",
+        "displayFields": [
+          "description",
+          "kclResponse"
+        ],
+        "criteria": [
+          {
+            "key": "c1",
+            "label": "place",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c2",
+            "label": "period_or_date",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c3",
+            "label": "site_type",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c4",
+            "label": "nation",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "scoresByRecord": {}
+      },
+      "width": 320,
+      "height": 869,
+      "parentId": "group-48",
+      "extent": "parent",
+      "style": {
+        "width": 340,
+        "height": 360
+      }
+    },
+    {
+      "id": "kclField-46",
+      "type": "kclField",
+      "position": {
+        "x": 33.484625390222845,
+        "y": 3150.0496041934557
+      },
+      "data": {
+        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "model": "arc:apex",
+        "selectedField": "description",
+        "outputField": "",
+        "mode": "per-record",
+        "systemPrompt": "You are a named entity extractor. Return only valid JSON. Do not include explanation or prose.",
+        "userPromptTemplate": "Extract the following four fields from the site description. Use ONLY the\ntext provided. If a field is not stated, write \"not stated\".\n\nDescription: {{value}}\n\nRespond as JSON:\n{\"place\":\"\",\"period_or_date\":\"\",\"site_type\":\"\",\"nation\":\"\"}",
+        "temperature": 0,
+        "maxTokens": 8000,
+        "elapsedMs": 405292,
+        "apexUnlocked": true
+      },
+      "parentId": "group-37",
+      "extent": "parent"
+    },
+    {
+      "id": "quickNote-47",
+      "type": "quickNote",
+      "position": {
+        "x": 2019.4375361645698,
+        "y": 2488.0315714806097
+      },
+      "data": {
+        "selectedField": "",
+        "mode": "score",
+        "displayFields": [
+          "_note",
+          "description",
+          "kclResponse"
+        ],
+        "criteria": [
+          {
+            "key": "c1",
+            "label": "place",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c2",
+            "label": "period_or_date",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c3",
+            "label": "site_type",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "key": "c4",
+            "label": "nation",
+            "scale": [
+              0,
+              1,
+              2
+            ]
+          }
+        ],
+        "scoresByRecord": {
+          "429": {
+            "scores": {
+              "c4": 1,
+              "c1": 2,
+              "c2": 1,
+              "c3": 2
+            },
+            "reasons": {
+              "c4": "Model has used qualifier rather than the name of a nation",
+              "c1": "Model has outperformed human",
+              "c2": "Missed out the 18th -19th century span"
+            },
+            "scoredAt": "2026-06-27T11:45:54.153Z"
+          }
+        }
+      },
+      "width": 320,
+      "height": 869,
+      "style": {
+        "width": 340,
+        "height": 360
+      }
+    },
+    {
+      "id": "comment-49",
+      "type": "comment",
+      "position": {
+        "x": 20.03419084349389,
+        "y": 55
+      },
+      "data": {
+        "title": "Automatic evaluation and comparison report",
+        "body": "Now we are instructing *another* LLM to grade the performance of the first. In this case we are using arc:lite to judge how well arc:nano did in the assigned task, based on the gold standrad references we provided.\n\n\n\n"
+      },
+      "width": 1054,
+      "height": 176,
+      "parentId": "group-50",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-51",
+      "type": "comment",
+      "position": {
+        "x": -1925.2784732646028,
+        "y": -5.362801214724186
+      },
+      "data": {
+        "title": "Extraction task comparison",
+        "body": "**This workflow shows an entity and category extraction pipeline using different LLMs in parallel branches given the same instructions and the same data**"
+      },
+      "width": 1143,
+      "height": 208,
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "fdist-53",
+      "type": "fieldDistribution",
+      "position": {
+        "x": 20,
+        "y": 209.81350081396678
+      },
+      "data": {
+        "selectedField": "year",
+        "maxBars": 20,
+        "expandArrays": true,
+        "filteredValues": [
+          "2024",
+          "2021",
+          "2019",
+          "2017",
+          "2016",
+          "2015",
+          "2009",
+          "2006",
+          "2003",
+          "2000",
+          "2001"
+        ]
+      },
+      "parentId": "group-55",
+      "extent": "parent"
+    },
+    {
+      "id": "comment-54",
+      "type": "comment",
+      "position": {
+        "x": 23.786159106867842,
+        "y": 55
+      },
+      "data": {
+        "title": "Trimming the record set",
+        "body": "32 records is too many to be dealing with in a short workshop. Let's just retain the sites that gained WHS status since 2000"
+      },
+      "width": 286,
+      "height": 140,
+      "parentId": "group-55",
+      "extent": "parent",
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    },
+    {
+      "id": "comment-56",
+      "type": "comment",
+      "position": {
+        "x": 1809.0462564465327,
+        "y": -237.91699858210583
+      },
+      "data": {
+        "title": "NOTICE",
+        "body": "How long did it take for nano to process the extraction? And for Lite and Nexus?"
+      },
+      "width": 183,
+      "height": 244,
+      "style": {
+        "width": 220,
+        "height": 120
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-sample-1-table-2",
+      "source": "sample-1",
+      "sourceHandle": "results",
+      "target": "table-2",
+      "targetHandle": "data"
+    },
+    {
+      "id": "e-quickNote-4-table-5",
+      "source": "quickNote-4",
+      "sourceHandle": "results",
+      "target": "table-5",
+      "targetHandle": "data"
+    },
+    {
+      "source": "table-5",
+      "sourceHandle": "results",
+      "target": "kclField-3",
+      "targetHandle": "data",
+      "id": "xy-edge__table-5results-kclField-3data",
+      "selected": false
+    },
+    {
+      "source": "table-5",
+      "sourceHandle": "results",
+      "target": "kclField-10",
+      "targetHandle": "data",
+      "id": "xy-edge__table-5results-kclField-10data",
+      "selected": false
+    },
+    {
+      "source": "table-5",
+      "sourceHandle": "results",
+      "target": "kclField-33",
+      "targetHandle": "data",
+      "id": "xy-edge__table-5results-kclField-33data",
+      "selected": false
+    },
+    {
+      "source": "kclField-3",
+      "sourceHandle": "results",
+      "target": "quickNote-38",
+      "targetHandle": "data",
+      "id": "xy-edge__kclField-3results-quickNote-38data",
+      "selected": false
+    },
+    {
+      "source": "kclField-10",
+      "sourceHandle": "results",
+      "target": "quickNote-44",
+      "targetHandle": "data",
+      "id": "xy-edge__kclField-10results-quickNote-44data",
+      "selected": false
+    },
+    {
+      "source": "kclField-33",
+      "sourceHandle": "results",
+      "target": "quickNote-45",
+      "targetHandle": "data",
+      "id": "xy-edge__kclField-33results-quickNote-45data",
+      "selected": false
+    },
+    {
+      "source": "quickNote-38",
+      "sourceHandle": "results",
+      "target": "evaluator-8",
+      "targetHandle": "data",
+      "id": "xy-edge__quickNote-38results-evaluator-8data",
+      "selected": false
+    },
+    {
+      "source": "table-5",
+      "sourceHandle": "results",
+      "target": "kclField-46",
+      "targetHandle": "data",
+      "id": "xy-edge__table-5results-kclField-46data"
+    },
+    {
+      "source": "kclField-46",
+      "sourceHandle": "results",
+      "target": "quickNote-47",
+      "targetHandle": "data",
+      "id": "xy-edge__kclField-46results-quickNote-47data"
+    },
+    {
+      "source": "evaluator-8",
+      "sourceHandle": "results",
+      "target": "cmpreport-23",
+      "targetHandle": "data",
+      "id": "xy-edge__evaluator-8results-cmpreport-23data",
+      "selected": false
+    },
+    {
+      "source": "table-2",
+      "sourceHandle": "results",
+      "target": "fdist-53",
+      "targetHandle": "data",
+      "id": "xy-edge__table-2results-fdist-53data"
+    },
+    {
+      "source": "fdist-53",
+      "sourceHandle": "results",
+      "target": "quickNote-4",
+      "targetHandle": "data",
+      "id": "xy-edge__fdist-53results-quickNote-4data"
+    }
+  ],
+  "title": "LLM Extraction task comparison",
+  "description": ""
+}
