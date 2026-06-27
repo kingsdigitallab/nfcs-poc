@@ -105,15 +105,16 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
   const fields               = (d.fields ?? [{ key: 'place', label: 'Place' }]) as FieldConfig[]
   const structuredTargetField = d.structuredTargetField ?? '_note'
   const structuredByRecord   = (d.structuredByRecord ?? {}) as Record<string, Record<string, string>>
-  // Stable dep signal — lets memos/effects recompute when the field schema changes.
+  // Stable dep signals — let memos/effects recompute when field schema or structured data changes.
+  // structuredKeyStr is content-based so it also reacts to external clears (App.tsx Clear notes).
   const fieldsKeyStr         = fields.map(f => `${f.key}:${f.label}`).join('|')
+  const structuredKeyStr     = JSON.stringify(structuredByRecord)
 
   // ── Core state ───────────────────────────────────────────────────────────────
   const [recordIndex,       setRecordIndex]       = useState(0)
   const [noteDraft,         setNoteDraft]         = useState('')
   const [notesVersion,      setNotesVersion]      = useState(0)
   const [scoresVersion,     setScoresVersion]     = useState(0)
-  const [structuredVersion, setStructuredVersion] = useState(0)
   const [confirmClearAll,   setConfirmClearAll]   = useState(false)
   const [configExpanded,    setConfigExpanded]    = useState(false)
   const [reasonDrafts,      setReasonDrafts]      = useState<Record<string, string>>({})
@@ -158,7 +159,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
     const own = currentRecord?.id ? getNote(id, currentRecord.id as string) : undefined
     setNoteDraft(own ?? inheritedNote)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentRecord?.id, inheritedNote])
+  }, [currentRecord?.id, inheritedNote, notesVersion])
 
   // ── Score-mode reason sync ───────────────────────────────────────────────────
   useEffect(() => {
@@ -174,8 +175,15 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
 
   // ── Commit helpers ───────────────────────────────────────────────────────────
   function commitNote() {
-    if (currentRecord?.id) {
-      setNote(id, currentRecord.id as string, noteDraft === inheritedNote ? '' : noteDraft)
+    if (!currentRecord?.id) return
+    const rid = currentRecord.id as string
+    const isGenuineNote = noteDraft.trim() !== '' && noteDraft !== inheritedNote
+    setNote(id, rid, isGenuineNote ? noteDraft : '')
+    // Mutual exclusion: a genuine new prose note clears this record's structured entry
+    if (isGenuineNote && structuredByRecord[rid]) {
+      const updated = { ...structuredByRecord }
+      delete updated[rid]
+      updateNodeData(id, { structuredByRecord: updated })
     }
   }
 
@@ -221,9 +229,10 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
       delete updated[currentRecordId]
     } else {
       updated[currentRecordId] = { ...structuredDrafts }
+      // Mutual exclusion: a non-blank structured entry clears this record's prose note
+      if (getNote(id, currentRecordId)) setNote(id, currentRecordId, '')
     }
     updateNodeData(id, { structuredByRecord: updated })
-    setStructuredVersion(v => v + 1)
   }
 
   function handlePickerClick(criterionKey: string, value: number) {
@@ -253,7 +262,6 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
     delete updated[currentRecordId]
     updateNodeData(id, { structuredByRecord: updated })
     setStructuredDrafts({})
-    setStructuredVersion(v => v + 1)
   }
 
   /** Clear ALL per-record scores on this node (scoped to this node's data only). */
@@ -293,39 +301,39 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
     updateNodeData(id, { fields: fields.filter((_, i) => i !== idx) })
   }
 
-  // ── Pass-through: inject _note and/or scores/structured into downstream records
-  // In structured mode: injects assembled JSON object into structuredTargetField.
-  // In score mode: injects human_score object + flat human_c* keys.
-  // Unscored / unentered records: the injected field is ABSENT (not zero/empty).
+  // ── Pass-through: inject _note and/or scores into downstream records.
+  // _note authority is per-record and mode-independent: structured entry wins over prose over
+  // inherited. A recordset can hold a mix of formats — most-recent-wins is enforced at commit time.
+  // Score injection (separate target field) stays gated by mode === 'score'.
+  // Unannotated records: the injected field is ABSENT (not zero/empty).
   const effectiveRecordsWithNotes = useMemo(() => {
     if (!records) return null
     // Read from `data` directly inside the memo to avoid stale closures —
-    // version counters in deps guarantee recomputation on every change.
-    const sbr   = ((data as QuickNoteNodeData).scoresByRecord    ?? {}) as Record<string, RecordScore>
-    const strec = ((data as QuickNoteNodeData).structuredByRecord ?? {}) as Record<string, Record<string, string>>
-    const tf    = (data as QuickNoteNodeData).targetField          ?? 'human_score'
-    const stf   = (data as QuickNoteNodeData).structuredTargetField ?? '_note'
-    const m     = (data as QuickNoteNodeData).mode ?? 'note'
+    // structuredKeyStr in deps guarantees recomputation on every change, including external clears.
+    const sbr     = ((data as QuickNoteNodeData).scoresByRecord    ?? {}) as Record<string, RecordScore>
+    const strec   = ((data as QuickNoteNodeData).structuredByRecord ?? {}) as Record<string, Record<string, string>>
+    const tf      = (data as QuickNoteNodeData).targetField          ?? 'human_score'
+    const stf     = (data as QuickNoteNodeData).structuredTargetField ?? '_note'
+    const m       = (data as QuickNoteNodeData).mode ?? 'note'
+    const cfgFields = ((data as QuickNoteNodeData).fields ?? []) as FieldConfig[]
 
     return records.map(r => {
       const rid = (r as Record<string, unknown>).id as string
-      // Always pass notes through (all modes)
-      const ownNote  = getNote(id, rid)
-      const resolved = ownNote ?? ((r as Record<string, unknown>)._note as string | undefined)
-      const withNote = resolved != null ? { ...r, _note: resolved } : { ...r }
-
-      if (m === 'structured') {
-        const cfgFields = ((data as QuickNoteNodeData).fields ?? []) as FieldConfig[]
-        const stored    = strec[rid]
-        // Only inject for records the user has actually annotated (mirrors score mode — unscored
-        // records get no injection). Blank boxes within an entered record still serialize as ""
-        // for a stable schema shape; commitStructured already deletes all-blank entries.
-        if (stored && cfgFields.length > 0) {
-          const obj: Record<string, string> = {}
-          for (const f of cfgFields) obj[f.key] = stored[f.key] ?? ''
-          return { ...withNote, [stf]: JSON.stringify(obj, null, 2) }   // string — honours _note's string contract
-        }
-        return withNote
+      // Per-record _note resolution: structured entry wins over prose over inherited.
+      // Decoupled from the node's display mode — any record can hold either format,
+      // and a recordset can freely mix both.
+      const stored = strec[rid]
+      let withNote: Record<string, unknown>
+      if (stored && cfgFields.length > 0) {
+        const obj: Record<string, string> = {}
+        for (const f of cfgFields) obj[f.key] = stored[f.key] ?? ''
+        withNote = { ...(r as Record<string, unknown>), [stf]: JSON.stringify(obj, null, 2) }
+      } else {
+        const ownNote  = getNote(id, rid)
+        const resolved = ownNote ?? ((r as Record<string, unknown>)._note as string | undefined)
+        withNote = resolved != null
+          ? { ...(r as Record<string, unknown>), _note: resolved }
+          : { ...(r as Record<string, unknown>) }
       }
 
       if (m === 'score') {
@@ -357,25 +365,24 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
             return { ...withNote, [tf]: scoped, ...flatKeys }
           }
         }
-        return withNote   // unscored or all stored keys de-configured: human_score absent
       }
 
       return withNote
     })
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [records, notesVersion, scoresVersion, structuredVersion, criteriaKeyStr, fieldsKeyStr, id])
+  }, [records, notesVersion, scoresVersion, structuredKeyStr, criteriaKeyStr, fieldsKeyStr, id])
 
   const prevFingerprintRef = useRef('')
   useEffect(() => {
     const recs    = effectiveRecordsWithNotes ?? []
     const firstId = (recs[0]  as Record<string, unknown> | undefined)?.id ?? ''
     const lastId  = (recs[recs.length - 1] as Record<string, unknown> | undefined)?.id ?? ''
-    const fp      = `${recs.length}:${firstId}:${lastId}:${notesVersion}:${scoresVersion}:${structuredVersion}:${criteriaKeyStr}:${fieldsKeyStr}`
+    const fp      = `${recs.length}:${firstId}:${lastId}:${notesVersion}:${scoresVersion}:${structuredKeyStr}:${criteriaKeyStr}:${fieldsKeyStr}`
     if (fp === prevFingerprintRef.current) return
     prevFingerprintRef.current = fp
     const version = setNodeResults(id, recs as Record<string, unknown>[])
     updateNodeData(id, { count: recs.length, status: recs.length > 0 ? 'success' : 'idle', resultsVersion: version })
-  }, [effectiveRecordsWithNotes, notesVersion, scoresVersion, structuredVersion, criteriaKeyStr, fieldsKeyStr, id, updateNodeData])
+  }, [effectiveRecordsWithNotes, notesVersion, scoresVersion, structuredKeyStr, criteriaKeyStr, fieldsKeyStr, id, updateNodeData])
 
   // count how many fields are filled (persisted) for the structured status row
   const structuredFilledCount = currentRecordId
@@ -472,6 +479,11 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
                 {currentRecord && inheritedNote && noteDraft === inheritedNote && (
                   <span style={s.inheritedTag} title="This note was authored upstream; editing here creates a local override">
                     {' '}· inherited
+                  </span>
+                )}
+                {currentRecordId && structuredByRecord[currentRecordId] && (
+                  <span style={s.crossFormatTag} title="A structured note exists for this record — saving prose here will replace it">
+                    {' '}· structured
                   </span>
                 )}
               </div>
@@ -596,6 +608,11 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
                       {structuredFilledCount > 0
                         ? `${structuredFilledCount}/${fields.length} fields filled`
                         : 'Not yet entered'}
+                      {currentRecordId && getNote(id, currentRecordId) && (
+                        <span style={s.crossFormatTag} title="A prose note exists for this record — filling fields here will replace it">
+                          {' '}· note
+                        </span>
+                      )}
                     </span>
                     {currentStructured && (
                       <button style={s.clearScoreBtn} onClick={clearRecordStructured}
@@ -846,6 +863,12 @@ const s = {
   },
   inheritedTag: {
     fontWeight: 500, color: '#0f766e', fontStyle: 'italic' as const,
+    textTransform: 'none' as const, letterSpacing: 'normal',
+  },
+  // Shown in one mode when the other format already exists for this record —
+  // warns user that saving here will replace the other format (most-recent-wins safety net).
+  crossFormatTag: {
+    fontWeight: 500, color: '#b45309', fontStyle: 'italic' as const,
     textTransform: 'none' as const, letterSpacing: 'normal',
   },
   textarea: {

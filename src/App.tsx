@@ -1304,11 +1304,15 @@ export default function App() {
         <button
           style={templateBtnStyle}
           onClick={() => {
-            if (window.confirm('Clear all notes in this workflow? This cannot be undone.')) {
+            if (window.confirm('Clear all notes (prose and structured) in this workflow? This cannot be undone.')) {
               clearAllNotes()
+              setNodes(nds => nds.map(n =>
+                n.type === 'quickNote' && (n.data as { structuredByRecord?: unknown }).structuredByRecord
+                  ? { ...n, data: { ...n.data, structuredByRecord: {} } }
+                  : n))
             }
           }}
-          title="Remove every per-record note in the current workflow"
+          title="Remove every per-record note (prose and structured) in the current workflow"
         >
           🗑 Clear notes
         </button>
