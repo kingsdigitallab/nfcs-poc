@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useReactFlow, NodeProps } from '@xyflow/react'
 import type { Node, Edge } from '@xyflow/react'
-import { filterKCLModels, DEFAULT_EUROPEANA_API_KEY } from '../utils/kclConfig'
+import { filterKCLModels, APEX_MODEL, DEFAULT_EUROPEANA_API_KEY } from '../utils/kclConfig'
 import { newId, bumpCounterPast } from '../utils/nodeIdCounter'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
@@ -591,6 +591,9 @@ export function QuickStartNode({ id, data }: NodeProps) {
             style={styles.select}
           >
             {models.map(m => <option key={m} value={m}>{m}</option>)}
+            {!models.includes(APEX_MODEL) && (
+              <option key={APEX_MODEL} value={APEX_MODEL}>{APEX_MODEL}</option>
+            )}
           </select>
         ) : (
           <input

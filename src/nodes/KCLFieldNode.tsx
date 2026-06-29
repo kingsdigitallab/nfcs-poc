@@ -148,9 +148,6 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const [liveTokens, setLiveTokens] = useState('')
   const [modelHint, setModelHint]   = useState<string | null>(null)
   const abortRef       = useRef<AbortController | null>(null)
-  const apexClickCount = useRef(0)
-  const apexClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const apexUnlocked   = !!(d.apexUnlocked as boolean | undefined)
 
   // ── Resolve apiKey — inline field or connected Param node ───────────────────
 
@@ -178,7 +175,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const json = await res.json() as { data?: Array<{ id: string }> }
         if (cancelled) return
-        const ids = filterKCLModels((json.data ?? []).map(m => m.id), apexUnlocked).sort()
+        const ids = filterKCLModels((json.data ?? []).map(m => m.id)).sort()
         setModels(ids)
         setApiOk(true)
         if (!d.model && ids.length > 0) updateNodeData(id, { model: ids[0] })
@@ -441,26 +438,14 @@ export function KCLFieldNode({ id, data }: NodeProps) {
           </span>
         </div>
 
-        {/* Model — triple-click label to unlock arc:apex */}
+        {/* Model */}
         <div style={styles.row}>
-          <span
-            style={{ ...styles.label, cursor: 'default', userSelect: 'none' as const }}
-            className="nodrag"
-            onClick={() => {
-              apexClickCount.current += 1
-              if (apexClickTimer.current) clearTimeout(apexClickTimer.current)
-              apexClickTimer.current = setTimeout(() => { apexClickCount.current = 0 }, 600)
-              if (apexClickCount.current >= 3) {
-                apexClickCount.current = 0
-                updateNodeData(id, { apexUnlocked: !apexUnlocked })
-              }
-            }}
-          >Model{apexUnlocked ? ' ✦' : ''}</span>
+          <span style={styles.label}>Model</span>
           {models.length > 0 ? (
             <select style={styles.select} value={selectedModel}
               onChange={e => updateNodeData(id, { model: e.target.value })} className="nodrag">
               {models.map(m => <option key={m} value={m}>{m}</option>)}
-              {apexUnlocked && !models.includes(APEX_MODEL) && (
+              {!models.includes(APEX_MODEL) && (
                 <option key={APEX_MODEL} value={APEX_MODEL}>{APEX_MODEL}</option>
               )}
             </select>
