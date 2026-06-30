@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
 import { createPortal } from 'react-dom'
-import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
+import { Handle, Position, NodeProps, NodeResizer, useReactFlow } from '@xyflow/react'
 import { setNodeResults } from '../store/resultsStore'
 import { getNote, setNote, subscribeNotes } from '../store/notesStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
@@ -416,7 +416,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
   )
 }
 
-export function TableOutputNode({ id, data }: NodeProps) {
+export function TableOutputNode({ id, data, selected }: NodeProps) {
   const { records, count, status, connected, sourceCount } = useUpstreamRecords(id)
   const { updateNodeData } = useReactFlow()
   const [page,             setPage]             = useState(0)
@@ -610,7 +610,13 @@ export function TableOutputNode({ id, data }: NodeProps) {
   }
 
   return (
-    <div style={styles.card}>
+    <>
+      <NodeResizer
+        minWidth={520} minHeight={260} isVisible={selected}
+        lineStyle={{ borderColor: '#0d9488' }}
+        handleStyle={{ background: '#0d9488', borderColor: '#fff', width: 8, height: 8 }}
+      />
+      <div style={styles.card}>
       <Handle type="target" position={Position.Left}  id="data"    style={styles.inputHandle} />
       <Handle type="source" position={Position.Right} id="results" style={styles.outputHandle} />
 
@@ -762,6 +768,7 @@ export function TableOutputNode({ id, data }: NodeProps) {
         </>
       )}
     </div>
+    </>
   )
 }
 
@@ -772,10 +779,14 @@ const styles = {
     background: '#fff',
     border: '1.5px solid #d1d5db',
     borderRadius: 8,
+    width: '100%',
+    height: '100%',
     minWidth: 520,
-    maxWidth: 700,
+    minHeight: 260,
     boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
     overflow: 'hidden',
+    display: 'flex',
+    flexDirection: 'column' as const,
   },
   header: {
     background: '#0d9488',
@@ -868,7 +879,8 @@ const styles = {
   tableWrap: {
     overflowX: 'auto' as const,
     overflowY: 'auto' as const,
-    maxHeight: 300,
+    flex: 1,
+    minHeight: 0,
   },
   pager: {
     display: 'flex',

@@ -841,7 +841,7 @@ const s = {
     overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const,
     borderBottom: '1px solid #f1f5f9', flexShrink: 0,
   },
-  contentWrap: { flex: 1, overflowY: 'auto' as const, minHeight: 0 },
+  contentWrap: { flex: 1, overflowY: 'auto' as const, minHeight: 0, maxHeight: 280 },
   content: {
     margin: 0, padding: '10px 12px', fontSize: 11, lineHeight: 1.6,
     fontFamily: "'Consolas', 'Menlo', monospace", color: '#111827',
@@ -921,7 +921,7 @@ const s = {
     borderRadius: 3, cursor: 'pointer',
   },
   displayFieldsArea: {
-    flex: 1, overflowY: 'auto' as const, minHeight: 0,
+    minHeight: 0,
   },
   displayFieldBlock: { borderBottom: '1px solid #f1f5f9' },
   displayFieldLabel: {
@@ -934,7 +934,7 @@ const s = {
     whiteSpace: 'pre-wrap' as const, wordBreak: 'break-word' as const,
   },
   scoreArea: {
-    flexShrink: 0, overflowY: 'auto' as const, maxHeight: '55%',
+    flexShrink: 0,
     padding: '6px 10px 8px', display: 'flex', flexDirection: 'column' as const, gap: 8,
   },
   scoreStatusRow: {

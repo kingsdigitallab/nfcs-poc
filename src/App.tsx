@@ -416,6 +416,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   kclField: pos => ({
     id: newId('kclField'), type: 'kclField', position: pos,
+    style: { width: 300 },
     data: {
       apiKey:              DEFAULT_KCL_API_KEY,
       model:               'arc:nano',
@@ -435,6 +436,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   evaluatorNode: pos => ({
     id: newId('evaluator'), type: 'evaluatorNode', position: pos,
+    style: { width: 300 },
     data: {
       apiKey:          DEFAULT_KCL_API_KEY,
       judgeModel:      'arc:nexus',
@@ -575,7 +577,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   quickNote: pos => ({
     id: newId('quickNote'), type: 'quickNote', position: pos,
     data: { selectedField: '' } satisfies QuickNoteNodeData,
-    style: { width: 340, height: 360 },
+    style: { width: 340 },
   }),
   comparisonReport: pos => ({
     id: newId('cmpreport'), type: 'comparisonReport', position: pos,
@@ -662,6 +664,7 @@ const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   tableOutput: pos => ({
     id: newId('table'), type: 'tableOutput', position: pos,
+    style: { width: 560, height: 380 },
     data: {},
   }),
   jsonOutput: pos => ({

@@ -9,7 +9,8 @@
  */
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
-import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
+import { Handle, Position, NodeResizer, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
+import { useAutoGrowTextarea } from '../hooks/useAutoGrowTextarea'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclConfig'
 import { useStaleResults } from '../hooks/useStaleResults'
@@ -136,7 +137,7 @@ async function kclChat(
 
 // ── Component ──────────────────────────────────────────────────────────────────
 
-export function KCLFieldNode({ id, data }: NodeProps) {
+export function KCLFieldNode({ id, data, selected }: NodeProps) {
   const { updateNodeData } = useReactFlow()
   const allNodes = useNodes()
   const allEdges = useEdges()
@@ -148,6 +149,13 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const [liveTokens, setLiveTokens] = useState('')
   const [modelHint, setModelHint]   = useState<string | null>(null)
   const abortRef       = useRef<AbortController | null>(null)
+  const systemRef      = useRef<HTMLTextAreaElement | null>(null)
+  const promptRef      = useRef<HTMLTextAreaElement | null>(null)
+
+  const systemPromptVal   = (d.systemPrompt        ?? '') as string
+  const promptTemplateVal = (d.userPromptTemplate  ?? '') as string
+  useAutoGrowTextarea(systemRef, systemPromptVal, 40)
+  useAutoGrowTextarea(promptRef, promptTemplateVal, 56)
 
   // ── Resolve apiKey — inline field or connected Param node ───────────────────
 
@@ -400,7 +408,13 @@ export function KCLFieldNode({ id, data }: NodeProps) {
   const canRun      = !!effectiveApiKey && !!selectedModel && !isRunning
 
   return (
-    <div style={{ ...styles.card, borderColor }}>
+    <>
+      <NodeResizer
+        minWidth={272} minHeight={200} isVisible={selected}
+        lineStyle={{ borderColor: HEADER_COLOR }}
+        handleStyle={{ background: HEADER_COLOR, borderColor: '#fff', width: 8, height: 8 }}
+      />
+      <div style={{ ...styles.card, borderColor }}>
       <Handle type="target" position={Position.Left} id="data"   style={{ ...styles.inputHandle, top: 16 }} />
       <Handle type="target" position={Position.Left} id="apiKey" style={{ ...styles.inputHandle, top: 53, background: isApiKeyConnected ? '#3b82f6' : '#be123c', boxShadow: `0 0 0 1px ${isApiKeyConnected ? '#3b82f6' : '#be123c'}` }} />
 
@@ -558,7 +572,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
         {/* System prompt */}
         <div style={styles.colField}>
           <span style={styles.label}>System</span>
-          <textarea style={styles.textarea} value={systemPrompt}
+          <textarea ref={systemRef} style={{ ...styles.textarea, resize: 'none', overflow: 'hidden' }} value={systemPrompt}
             onChange={e => updateNodeData(id, { systemPrompt: e.target.value })}
             rows={2} className="nodrag" />
         </div>
@@ -571,7 +585,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
               {mode === 'aggregate' ? '{{values}} {{field}} {{count}}' : '{{value}} {{field}}'}
             </span>
           </div>
-          <textarea style={{ ...styles.textarea, minHeight: 56 }} value={promptTemplate}
+          <textarea ref={promptRef} style={{ ...styles.textarea, resize: 'none', overflow: 'hidden', minHeight: 56 }} value={promptTemplate}
             onChange={e => updateNodeData(id, { userPromptTemplate: e.target.value })}
             rows={3} className="nodrag" />
         </div>
@@ -624,6 +638,7 @@ export function KCLFieldNode({ id, data }: NodeProps) {
 
       <Handle type="source" position={Position.Right} id="results" style={styles.outputHandle} />
     </div>
+    </>
   )
 }
 
@@ -634,8 +649,8 @@ const styles = {
     background: '#fff',
     border: '2px solid #d1d5db',
     borderRadius: 8,
+    width: '100%',
     minWidth: 272,
-    maxWidth: 312,
     boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
