@@ -197,9 +197,10 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
     document.body.style.cursor = 'col-resize'
 
     const onMove = (mv: MouseEvent) => {
-      if (!resizingRef.current) return
-      const newW = Math.max(48, resizingRef.current.startW + (mv.clientX - resizingRef.current.startX))
-      setColWidths(prev => ({ ...prev, [resizingRef.current!.col]: newW }))
+      const r = resizingRef.current
+      if (!r) return
+      const newW = Math.max(48, r.startW + (mv.clientX - r.startX))
+      setColWidths(prev => ({ ...prev, [r.col]: newW }))
     }
     const onUp = () => {
       resizingRef.current = null
