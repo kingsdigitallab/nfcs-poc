@@ -9,9 +9,12 @@ function extractQIDInfo(record: UnifiedRecord): { qid: string; label: string } |
   const r = record as Record<string, unknown>
   for (const key of Object.keys(r)) {
     if (!key.endsWith('_reconciled')) continue
-    const val = r[key] as ReconciliationResult | null
-    if (val?.qid && (val.status === 'resolved' || val.status === 'review'))
-      return { qid: val.qid, label: val.label ?? val.qid }
+    const raw = r[key]
+    const candidates = Array.isArray(raw) ? raw as ReconciliationResult[] : [raw as ReconciliationResult | null]
+    for (const val of candidates) {
+      if (val?.qid && (val.status === 'resolved' || val.status === 'review'))
+        return { qid: val.qid, label: val.label ?? val.qid }
+    }
   }
   return null
 }
