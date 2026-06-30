@@ -420,7 +420,7 @@ export function TableOutputNode({ id, data, selected }: NodeProps) {
   const { records, count, status, connected, sourceCount } = useUpstreamRecords(id)
   const { updateNodeData } = useReactFlow()
   const [page,             setPage]             = useState(0)
-  const [showAll,          setShowAll]          = useState(false)
+  const [showAll,          setShowAll]          = useState(true)
   const [expandNamespaces, setExpandNamespaces] = useState(false)
   const [pageSize,         setPageSize]         = useState<number>(PAGE_SIZES[1])
   const [sortCol,          setSortCol]          = useState<string | null>(null)
