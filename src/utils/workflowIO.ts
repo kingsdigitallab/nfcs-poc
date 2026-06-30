@@ -170,6 +170,7 @@ export function hydrateNodes(saved: WorkflowFile): Node[] {
     if (n.height != null) node.height = n.height
     if (n.parentId) node.parentId = n.parentId
     if (n.extent) node.extent = n.extent
+    if (n.extent === 'parent') (node as any).expandParent = true
     if (n.style) {
       const clean = { ...n.style }
       // Only strip collapse-related styles if the parent is NOT collapsed.

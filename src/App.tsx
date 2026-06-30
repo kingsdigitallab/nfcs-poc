@@ -977,6 +977,7 @@ export default function App() {
           y: n.position.y - groupPos.y,
         },
         extent: 'parent' as const,
+        expandParent: true,
         selected: false,
       }
     })
@@ -1006,6 +1007,7 @@ export default function App() {
         ...n,
         parentId: undefined,
         extent: undefined,
+        expandParent: undefined,
         position: {
           x: n.position.x + groupPos.x,
           y: n.position.y + groupPos.y,

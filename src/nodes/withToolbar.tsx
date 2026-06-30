@@ -132,6 +132,7 @@ export function withToolbar(Wrapped: React.ComponentType<NodeProps>): React.Comp
                 ...n,
                 parentId: undefined,
                 extent: undefined,
+                expandParent: undefined,
                 position: {
                   x: n.position.x + groupPos.x,
                   y: n.position.y + groupPos.y,

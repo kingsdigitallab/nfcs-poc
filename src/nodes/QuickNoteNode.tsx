@@ -791,7 +791,7 @@ const s = {
   // ── Shared / note-mode ───────────────────────────────────────────────────────
   card: {
     background: '#fff', border: '1.5px solid #d1d5db', borderRadius: 8,
-    width: '100%', height: '100%', boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    width: '100%', boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
     display: 'flex', flexDirection: 'column' as const, overflow: 'hidden',
   },
   header: {
@@ -841,7 +841,7 @@ const s = {
     overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const,
     borderBottom: '1px solid #f1f5f9', flexShrink: 0,
   },
-  contentWrap: { flex: 1, overflowY: 'auto' as const, minHeight: 0, maxHeight: 280 },
+  contentWrap: { overflowY: 'auto' as const, maxHeight: 280 },
   content: {
     margin: 0, padding: '10px 12px', fontSize: 11, lineHeight: 1.6,
     fontFamily: "'Consolas', 'Menlo', monospace", color: '#111827',
@@ -921,7 +921,7 @@ const s = {
     borderRadius: 3, cursor: 'pointer',
   },
   displayFieldsArea: {
-    minHeight: 0,
+    flexShrink: 0,
   },
   displayFieldBlock: { borderBottom: '1px solid #f1f5f9' },
   displayFieldLabel: {

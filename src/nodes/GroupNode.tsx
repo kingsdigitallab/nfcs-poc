@@ -254,6 +254,7 @@ export function GroupNode({ id, data, selected }: NodeProps) {
                   overflow: 'hidden',
                 },
                 extent: undefined,
+                expandParent: undefined,
                 position: positions[n.id] ?? n.position,
               }
             }
@@ -348,6 +349,7 @@ export function GroupNode({ id, data, selected }: NodeProps) {
                   overflow: undefined,
                 },
                 extent: 'parent' as const,
+                expandParent: true,
                 position: (d.childPositions?.[n.id] ?? positions[n.id] ?? n.position),
               }
             }
