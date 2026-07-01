@@ -118,6 +118,9 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
   const [apiOk, setApiOk]           = useState<boolean | null>(null)
   const [tokenInput, setTokenInput] = useState(String((d.maxTokens as number | undefined) ?? 32768))
   const abortRef       = useRef<AbortController | null>(null)
+  const apexClickCount = useRef(0)
+  const apexClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const apexUnlocked   = !!(d.apexUnlocked as boolean | undefined)
   const rubricRef      = useRef<HTMLTextAreaElement | null>(null)
 
   const rubricPromptVal = (d.rubricPrompt ?? '') as string
@@ -149,7 +152,7 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const json = await res.json() as { data?: Array<{ id: string }> }
         if (cancelled) return
-        const ids = filterKCLModels((json.data ?? []).map(m => m.id)).sort()
+        const ids = filterKCLModels((json.data ?? []).map(m => m.id), apexUnlocked).sort()
         setModels(ids)
         setApiOk(true)
         if (!d.judgeModel && ids.length > 0) updateNodeData(id, { judgeModel: ids[0] })
@@ -521,14 +524,26 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
           </span>
         </div>
 
-        {/* Judge model */}
+        {/* Judge model — triple-click label to unlock arc:apex */}
         <div style={styles.row}>
-          <span style={styles.label}>Model</span>
+          <span
+            style={{ ...styles.label, cursor: 'default', userSelect: 'none' as const }}
+            className="nodrag"
+            onClick={() => {
+              apexClickCount.current += 1
+              if (apexClickTimer.current) clearTimeout(apexClickTimer.current)
+              apexClickTimer.current = setTimeout(() => { apexClickCount.current = 0 }, 600)
+              if (apexClickCount.current >= 3) {
+                apexClickCount.current = 0
+                updateNodeData(id, { apexUnlocked: !apexUnlocked })
+              }
+            }}
+          >Model{apexUnlocked ? ' ✦' : ''}</span>
           {models.length > 0 ? (
             <select style={styles.select} value={judgeModel}
               onChange={e => updateNodeData(id, { judgeModel: e.target.value })} className="nodrag">
               {models.map(m => <option key={m} value={m}>{m}</option>)}
-              {!models.includes(APEX_MODEL) && (
+              {apexUnlocked && !models.includes(APEX_MODEL) && (
                 <option key={APEX_MODEL} value={APEX_MODEL}>{APEX_MODEL}</option>
               )}
             </select>
