@@ -86,7 +86,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 
 | Node | Service | Notes |
 |------|---------|-------|
-| **ARIADNESearch** | [ARIADNE Infrastructure Portal](https://portal.ariadne-infrastructure.eu/) | Pan-European archaeology data aggregator covering 40+ institutions across 23 countries. Direct browser fetch (permissive CORS). Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type**, **Getty AAT subject**, **Native subject**, **Country**, **Data type**, **Period**, and **Contributor** (e.g. "Archaeology Data Service" to retrieve ADS records specifically). Citation metadata stamped on every record. |
+| **ARIADNESearch** | [ARIADNE Infrastructure Portal](https://portal.ariadne-infrastructure.eu/) | Pan-European archaeology data aggregator covering 40+ institutions across 23 countries. Direct browser fetch (permissive CORS). Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel provides dropdowns for **Resource type**, **Getty AAT subject**, **Native subject**, **Country**, **Data type**, **Period**, and **Contributor** (ARIADNE aggregates records from the Archaeology Data Service and 40+ other institutions — filter by contributor to narrow to a specific provider). Citation metadata stamped on every record. |
 | **HSDSSearch** | [Heritage Science Data Service](https://hsds.ac.uk/) | UK heritage science data service aggregating records from Historic England, Historic Environment Scotland, Cadw (Wales), and other national bodies. Fetched via Vite proxy (no Cloudflare protection). Inline fields: keyword query, limit, sort/order, and **Fetch all results** (paginates at 50 records/request). Collapsible **Filters** panel: **Resource type**, **Getty AAT subject**, **Native subject**, **Country** (England/Scotland/Wales/Northern Ireland/Isle of Man), **Data type**, **Period**, and **Contributor**. Records include `hsds.*` namespace with landingPage, contributor, temporal, spatial, and subject arrays. Best for: scheduled monuments, listed buildings, UK historic environment records, built heritage, maritime archaeology. |
 | **BodleianSearch** | [Bodleian Digital Collections](https://digital.bodleian.ox.ac.uk/) | Oxford's digital collections portal covering manuscripts, printed books, maps, photographs, coins, musical scores, and more. Inline fields: plain keyword query (e.g. `psalter`), limit (default 20), and sort order. Collapsible **Filters** panel: date range (from/to year), language (e.g. `Latin`), place of origin (e.g. `England`), completeness (fully digitised / partial), and musical notation presence. Records include `bodleian.*` namespace with shelfmark, date range, and IIIF manifest URL — connect output to **ImageView** in IIIF mode to browse manuscripts directly on the canvas. Fixture mode supported. |
 | **EuropeanaSearch** | [Europeana](https://www.europeana.eu/) | Pan-European cultural heritage aggregator covering museums, galleries, libraries and archives. Direct browser fetch (permissive CORS). API key is pre-configured (🔒 Configured); wire a **Param** node to the `apiKey` handle to override with your own key from [apis.europeana.eu](https://apis.europeana.eu/apikey). Inline fields: `query`, `limit` (up to 1 000 records via cursor-based pagination). Filters: Type, Reusability, media only. Records include `europeana.*` namespace with thumbnail, shownAt (original institution URL), rights, provider, and completeness. |
@@ -100,8 +100,6 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **LocalFolderSource** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction), XML/TEI, plain text, images, Shapefiles, and GeoJSON. Five typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`, plus a **GIS handle** for Shapefile/GeoJSON layers. Requires Chrome or Edge 86+. |
 | **FrameSenseSource** | Local filesystem | Reads a folder pre-processed by the [FrameSense](https://github.com/kingsdigitallab/framesense) CLI and emits one record per shot. Each record carries the representative frame as an `imageDataUrl` (base64 JPEG), enabling direct vision inference via **KingsInference**. Existing FrameSense analysis (shot scale classifications from `scale_frames_sssabet`, VLM answers from `answer_frames_vlm`) is surfaced as `framesense.*` fields. See [FrameSense workflows](#framesense-workflows) below. |
 | **SampleDataSource** | Local filesystem + fixtures | Loads pre-packaged collection samples from `public/fixtures/` (e.g. Stonehenge antiquarian texts and modern archaeology papers, LLDS items, etc.). Useful for demonstrations, workshops, and testing without live API access. Emits five typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`. |
-| ~~**ADSSearchAdvanced**~~ *(deprecated)* | Archaeology Data Service | **Currently unavailable** — blocked by Cloudflare. Use **ARIADNESearch** with `Contributor = Archaeology Data Service`. |
-| ~~**ADSLibrary**~~ *(deprecated)* | ADS Library catalogue | **Currently unavailable** — blocked by Cloudflare. |
 
 ### Filters and Transforms
 
@@ -120,6 +118,8 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 |------|-------------|
 | **KingsInference** | Sends each upstream record to KCL's OpenAI-compatible inference API and enriches the record with the model's response. Requires an API key. Supports **vision mode** — when enabled, image data URLs in records (from LocalFolderSource, ImageView, or IIIF region capture) are sent as multipart image content. Auto-detects `contentType: 'image'` records; or specify a **field** to use a particular image field. Includes a **prompt recipe bar** — save and recall prompt strategies across workflows. See [KCL Inference](#kcl-inference) below. |
 | **KingsInferenceByField** | Lighter-weight KCL inference on a single chosen field. Two modes: **per-record** (enriches each record individually with live token preview) and **aggregate** (collects all values into one prompt for a summary response). Template variables: `{{value}}`, `{{field}}`, `{{count}}`, `{{values}}`. Model-dependent content truncation (arc:nano 12k, arc:lite 32k, arc:nexus 64k chars). Includes **prompt recipe bar**. |
+| **QuickNote** | Human annotation node — display-only, no runner, pass-through. Three modes selectable via the **Note · Structured · Score** tab bar: **Note** — free-prose textarea writes to `_note` (shared across the workflow via the notes store and surfaced in TableOutput); **Structured** — configure named `{key, label}` fields once, then fill them per record in a clean form; the node assembles the values into a JSON gold-standard and writes it to a target field (default `_note`); **Score** — constrained per-criterion pickers (configurable scale) write `human_score` (+ flat `human_c*` keys and optional prose reasons per criterion). The human counterpart to **Evaluator**. |
+| **Evaluator** | LLM-as-judge node. Scores a `candidateField` against a `referenceField` on the **same record** using an ARC model (temperature 0). Emits **per-criterion** JSON scores — never a single aggregate. Built-in rubric presets: *Extraction agreement*, *Interpretive agreement*, *Rubric-from-note*. Template tokens `{{__reference}}` / `{{__candidate}}`; writes `record.eval` (scores, reasons, raw, status) plus flat `eval_c*` columns. Displays a judge-vs-human agreement readout when a human-score field is present. Tolerant JSON parsing — always recovers; marks failures as `parse_error` status rather than throwing. Requires a KCL API key. |
 | **URLContentFetch** | Follows a URL field in each record, fetches the page (optionally via headless browser for JS-rendered pages), and adds `fetchedContent` (plain text) and `fetchedHtml` (cleaned body HTML). |
 | **HTMLExtract** | Extracts a targeted section from `fetchedHtml` using a CSS selector. Connect **HTMLPreview** to visually browse the page and click-capture selectors. Toggle **Preserve HTML structure** to write raw HTML rather than stripped text — useful for passing markup to an inference model. |
 | **Reconciliation** | Reconciles a chosen field against a Wikidata authority. See [Reconciliation](#reconciliation) below. |
@@ -139,6 +139,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **KingsInferenceOutput** | Card-based display of KCL inference responses. Each record gets an expandable card showing the response, model used, and processing timestamp. Copy button per card. |
 | **MapOutput** | Leaflet map. Plots records with `decimalLatitude`/`decimalLongitude`. Click a marker for a popup with title, date, and source link. **Integrated spatial filter**: click **Draw bbox**, drag a bounding box on the map, then **Run ▶** — only records within the box are emitted; records outside are dimmed. A coordinate summary shows N/S/E/W bounds. A green **results** output handle pipes the filtered (or all) records to downstream nodes. Also accepts GIS vector layers via the GIS handle from LocalFolderSource. |
 | **TableOutput** | Paginated table. Merges records from multiple upstream nodes. Pass-through output handle for chaining to Map, Export, etc. Double-click to expand to full-screen. Toolbar: **show all columns** + **expand namespaces** (flattens service namespace objects into dot-notation columns). **Page size** selector (10 / 25 / 50 / 100 rows). **Column sort**: click any column header to sort ascending, click again for descending, third click clears the sort. **Text filter**: search box above the table filters across all fields (including namespace sub-objects) live as you type. |
+| **ComparisonReport** | Read-only evaluation report — no runner, skipped by Run All. Map five report roles (*original*, *note / reference*, *response / candidate*, *judge score*, *human score*) to upstream fields via dropdowns. Renders per-record side-by-side cards and an aggregate agreement matrix (counts, means, and percentage-agreement only — no inferential statistics). Divergence counts double as live card filters; click a count to show only divergent records. Double-click the node to open a full-screen projector view for presentations. Agreement is computed over scored records only. |
 | **SaveSearch** | Serialises upstream records with a metadata envelope to a `.nfcs.json` file. Shows record count, per-source breakdown, and auto-suggested filename. Native **Save As…** dialog on Chrome/Edge; auto-download on Firefox. |
 
 ---
@@ -189,6 +190,31 @@ The `useUpstreamRecords` hook merges records from **all** edges connected to a n
 - **▶▶ Run All** (top bar) — discovers every runnable node, builds a topological order using Kahn's algorithm, and executes nodes wave-by-wave: all source nodes in parallel first, then each processing layer in dependency order. If one node errors, downstream dependants are skipped but unrelated branches continue.
 
 All node types are included in Run All **except** `LocalFolderSource` and `LocalFileSource` (file/folder selection requires a user gesture and cannot be automated). Run those nodes manually before clicking Run All.
+
+---
+
+## Node grouping
+
+Nodes can be bundled into a labelled, collapsible **group** for visual organisation. Groups are purely cosmetic — they do not affect data flow.
+
+### Creating and managing groups
+
+1. Select two or more nodes on the canvas (click, Shift+click, or drag a selection box).
+2. Click **📦 Group (N)** in the top bar — the selected nodes are wrapped in a blue dashed container with a default label.
+3. Double-click the label to rename it.
+4. Select a group node and click **📤 Ungroup** to dissolve it — all children are returned to the canvas at their absolute positions.
+
+### Collapsing and expanding
+
+Each group has a small toolbar (▼ / ▶) at the top-right corner. Click ▼ to collapse the group into a compact pill; click ▶ to expand it again. Collapsed groups still participate in data flow — edges are re-routed through the group pill.
+
+### Auto-grow
+
+A group automatically expands its bounding box when a child node is resized or when a new node is dragged inside it (`expandParent`). Groups are also restored to their expanded state when a workflow is reloaded.
+
+### Duplicating groups
+
+The ⧉ toolbar button duplicates a group together with all its children and any internal edges. External edges (connecting group children to nodes outside the group) are not duplicated.
 
 ---
 
@@ -392,6 +418,55 @@ prominently. Then list 3-5 keywords suitable for archival indexing.
 [TableOutput]
 [Export]                   ← CSV/JSON for archival deposit
 ```
+
+---
+
+## Human evaluation and LLM-as-judge
+
+Three nodes work together to support rigorous human and model-based evaluation of AI-generated outputs:
+
+```
+[Source node]
+      ↓ data
+[KingsInference]          ← generate candidate responses (kclResponse)
+      ↓ results
+      ├──────────────────────────────────────────────────────────────────────┐
+      ▼                                                                      ▼
+[QuickNote — Note / Structured mode]    [QuickNote — Score mode]
+  Annotate records with a gold-standard    Rate each record's candidate against
+  reference (free prose or structured      human-defined criteria
+  JSON into _note or a custom field)       → human_score + human_c* keys
+      ↓                                              ↓
+      └────────────────────────┬────────────────────┘
+                               ▼
+                         [Evaluator]
+                   LLM-as-judge: scores candidateField
+                   vs referenceField, per-criterion
+                   → eval.scores, eval_c* keys
+                   + judge-vs-human agreement readout
+                               ↓
+                      [ComparisonReport]
+                   Side-by-side cards + aggregate matrix
+                   Judge score / human score comparison
+```
+
+### The three roles
+
+| Role | Node | Field written |
+|------|------|---------------|
+| **Candidate** | KingsInference / KingsInferenceByField | `kclResponse` (or any field) |
+| **Reference / gold standard** | QuickNote (Note or Structured mode) | `_note` or a custom field |
+| **Human score** | QuickNote (Score mode) | `human_score`, `human_c*` |
+| **Judge score** | Evaluator | `eval.scores`, `eval_c*` |
+| **Report** | ComparisonReport | — read-only display |
+
+### Criteria alignment
+
+Criteria are matched by **convention, not code**. The criterion keys in **QuickNote (Score mode)** must use the same names as the criteria in the **Evaluator** rubric for the agreement maths in ComparisonReport to be meaningful. A mismatch produces empty agreement cells, not an error.
+
+### Running the pipeline
+
+**QuickNote** nodes are annotation-only and do not appear in the **▶▶ Run All** execution graph. Fill them manually (or use **Structured** mode to speed up gold-standard entry). **Evaluator** runs automatically as part of Run All. **ComparisonReport** is also annotation-only and skipped by Run All — open it to review results after Evaluator has run.
 
 ---
 
@@ -634,9 +709,29 @@ The fixture filename derives from the search query (inline or wired from a Param
 | `/ollama/…` | `http://localhost:11434/…` | Cross-port CORS for local Ollama |
 | `/url-proxy?url=…` | *any URL* | Vite middleware; sidesteps CORS for arbitrary URL fetching |
 | `/hsds-proxy/…` | `https://hsds.ac.uk/…` | No CORS |
-| `/ads-proxy/…` | `https://archaeologydataservice.ac.uk/…` | Deprecated — ADS blocked by Cloudflare |
 
 > **Production note:** This proxy is development-only. The `deploy/express-server` branch includes an Express server that replicates all proxy routes for deployed instances.
+
+---
+
+## KCL Assistant
+
+The top bar contains a **💬 Assistant** button that toggles a right-hand chat panel backed by KCL inference.
+
+- **Model**: `arc:apex` via `/kcl-proxy/v1/chat/completions` (streaming, server-sent events).
+- **Rendering**: Responses are rendered as GitHub-Flavoured Markdown — tables, code blocks, and lists display correctly.
+- **Knowledge**: The assistant carries a full built-in node reference (all node types, handles, field names, prompt tokens, and architectural notes) so it can answer questions about the interface without needing any configuration.
+
+### What you can ask
+
+- *"What node should I use to extract text from a PDF?"*
+- *"How do I reconcile a field against Wikidata?"*
+- *"Suggest a workflow for comparing AI responses against human annotations."*
+- *"What fields does ARIADNESearch add to a record?"*
+
+### Setup
+
+A default KCL API key may be pre-configured. If the panel shows an API error, enter a valid key in any **KingsInference** node — the same key is used by the assistant panel. You can also override it directly in the `src/components/ChatSidebar.tsx` `API_KEY` constant.
 
 ---
 
@@ -727,8 +822,10 @@ nfcs-poc/
     │   ├── GBIFSearchNode.tsx
     │   ├── LLDSSearchNode.tsx
     │   ├── MDSSearchNode.tsx
-    │   ├── ADSSearchAdvancedNode.tsx   # (deprecated)
-    │   ├── ADSLibraryNode.tsx          # (deprecated)
+    │   ├── GroupNode.tsx               # Group container node
+    │   ├── EvaluatorNode.tsx           # LLM-as-judge evaluation
+    │   ├── QuickNoteNode.tsx           # Human annotation and scoring
+    │   ├── ComparisonReportNode.tsx    # Comparison report output
     │   ├── LocalFileSourceNode.tsx
     │   ├── LocalFolderSourceNode.tsx
     │   ├── SaveSearchNode.tsx
