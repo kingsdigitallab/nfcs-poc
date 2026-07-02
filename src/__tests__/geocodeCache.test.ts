@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 import type { GeoCandidate } from '../types/UnifiedRecord'
 
 // jsdom provides localStorage — reset between tests

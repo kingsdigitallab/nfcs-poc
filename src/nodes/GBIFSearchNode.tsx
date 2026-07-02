@@ -4,7 +4,7 @@ import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
-export type RunStatus = 'idle' | 'loading' | 'success' | 'error'
+export type RunStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface GBIFSearchNodeData {
   inlineQ: string
@@ -62,6 +62,7 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
     idle:    '#d1d5db',
     loading: '#3b82f6',
     success: '#22c55e',
+    cached:  '#22c55e',
     error:   '#ef4444',
   }[d.status as RunStatus] ?? '#d1d5db'
 
@@ -89,7 +90,7 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
         {d.statusMessage ? (
           <span style={{
             ...styles.statusBadge,
-            color: { loading: '#93c5fd', success: '#86efac', error: '#fca5a5' }[d.status as RunStatus] ?? '#9ca3af',
+            color: { idle: '#9ca3af', loading: '#93c5fd', success: '#86efac', error: '#fca5a5', cached: '#86efac' }[d.status as RunStatus] ?? '#9ca3af',
           }}>
             {d.statusMessage}
           </span>

@@ -198,6 +198,7 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       delimiter:     'auto',
       hasHeader:     true,
       autoCast:      true,
+      pdfRenderPages: false,
       fileName:      '',
       status:        'idle',
       statusMessage: '',
@@ -262,6 +263,7 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       xmlCount:        0,
       textCount:       0,
       imageCount:      0,
+      csvCount:        0,
     } satisfies SampleDataSourceNodeData,
   }),
   ollamaNode: pos => ({
@@ -583,12 +585,12 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   timelineOutput: pos => ({
     id: newId('timeline'), type: 'timelineOutput', position: pos,
-    data: { fitToRange: false } satisfies TimelineOutputNodeData,
+    data: { fitToRange: false, filterStart: null, filterEnd: null } satisfies TimelineOutputNodeData,
     style: { width: 520 },
   }),
   timelineView: pos => ({
     id: newId('timeline'), type: 'timelineView', position: pos,
-    data: { fitToRange: false } satisfies TimelineOutputNodeData,
+    data: { fitToRange: false, filterStart: null, filterEnd: null } satisfies TimelineOutputNodeData,
     style: { width: 520 },
   }),
   ollamaOutput: pos => ({

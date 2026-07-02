@@ -14,6 +14,7 @@
 import type { Edge, Node } from '@xyflow/react'
 import type { NodeRunner }  from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { fetchWithTimeout } from './fetchWithTimeout'
 import { extractFileContent, type FileRecord } from './fileReaders'
 import { parseDelimited } from './csvParser'
 

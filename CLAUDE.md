@@ -9,9 +9,9 @@ Node-based visual workflow editor for federating UK Arts & Humanities research d
 - **No Service Worker / PWA / workbox**
 - API calls client-side via `fetch()`. GBIF: direct. All others: same-origin proxy.
 
-## Tests
+## Tests & Typecheck
 
-`npx vitest run` (config in `vite.config.ts`, include `src/**/*.test.{ts,tsx}`, jsdom). Suites live in `src/__tests__/`:
+`npx vitest run` (config in `vite.config.ts`, include `src/**/*.test.{ts,tsx}`, jsdom) and `npm run build` (`tsc -b && vite build`) must BOTH stay green — the typecheck was repaired in refactor-v3 after a long period of drift; do not let it rot again. `UnifiedRecord` carries an `[key: string]: unknown` index signature by design (records are open — enrichment nodes add undeclared fields); adapter-output conformance is enforced at runtime by the fixture test, not the compiler. Test suites live in `src/__tests__/`:
 utility unit tests, plus `workflowIO.test.ts` (save/load round-trip), `runWorkflow.test.ts` (Kahn wave ordering + failure
 skipping, mocks `nodeRunners`), and `fixtureConformance.test.ts` — reads every `public/fixtures/*.json` from disk and asserts
 records conform to `UnifiedRecord` (its `ALLOWED_TOP_LEVEL` list must be kept in sync with the interface).

@@ -1,4 +1,4 @@
-import type { Edge, Node } from '@xyflow/react'
+import type { CoordinateExtent, Edge, Node } from '@xyflow/react'
 
 // ─── Schema ──────────────────────────────────────────────────────────────────
 
@@ -27,7 +27,7 @@ interface SavedNode {
   height?: number
   data: Record<string, unknown>
   parentId?: string
-  extent?: unknown
+  extent?: 'parent' | CoordinateExtent
   style?: { width?: number; height?: number }
 }
 

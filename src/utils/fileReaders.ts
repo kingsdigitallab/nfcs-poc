@@ -90,7 +90,7 @@ export async function extractPdfPages(
     canvas.width   = viewport.width
     canvas.height  = viewport.height
     const ctx = canvas.getContext('2d')!
-    await page.render({ canvasContext: ctx, viewport }).promise
+    await page.render({ canvasContext: ctx, viewport } as unknown as Parameters<typeof page.render>[0]).promise
     const dataUrl = canvas.toDataURL('image/jpeg', 0.85)
 
     const record: FileRecord & Record<string, unknown> = {

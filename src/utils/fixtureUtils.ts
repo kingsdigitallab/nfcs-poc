@@ -124,7 +124,7 @@ export function resolveFixtureQuery(
  */
 export function downloadAsFixture(nodeId: string, nodeType: string, query: string): void {
   const records = getNodeResults(nodeId)
-  if (!records.length) return
+  if (!records?.length) return
   const filename = fixtureFilename(nodeType, query)
   const blob = new Blob([JSON.stringify(records, null, 2)], { type: 'application/json' })
   const url  = URL.createObjectURL(blob)

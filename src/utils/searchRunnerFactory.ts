@@ -18,7 +18,6 @@
  *   _citation (query string from all non-paging params) → terminal
  *   success/error status. Never throws.
  */
-import type { Node, Edge } from '@xyflow/react'
 import type { NodeRunner } from './nodeRunners'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { clearNodeResults } from '../store/resultsStore'
@@ -131,7 +130,7 @@ export function makeSearchRunner<TResponse extends ESLikeResponse>(
 
     try {
       const { records, total } = await fetchPages(fetchAll ? Infinity : limit)
-      const citedRecords = addCitation(records as Record<string, unknown>[], citationBase)
+      const citedRecords = addCitation(records as unknown as Record<string, unknown>[], citationBase)
       finishRunnerSuccess(nodeId, citedRecords, total, updateNodeData)
     } catch (err) {
       finishRunnerError(nodeId, err, updateNodeData, logTag)

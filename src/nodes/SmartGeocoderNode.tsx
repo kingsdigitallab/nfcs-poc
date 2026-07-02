@@ -4,7 +4,7 @@ import { nodeRunners } from '../utils/nodeRunners'
 import { candidateFields } from '../utils/reconciliationService'
 import { getNodeResults, setNodeResults } from '../store/resultsStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
-import { filterKCLModels, DEFAULT_KCL_API_KEY } from '../utils/kclConfig'
+import { filterKCLModels } from '../utils/kclConfig'
 import type { GeoCandidate, GeoConfirmed } from '../types/UnifiedRecord'
 
 // ── Node data type ─────────────────────────────────────────────────────────────

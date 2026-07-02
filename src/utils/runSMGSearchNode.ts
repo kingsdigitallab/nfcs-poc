@@ -89,8 +89,8 @@ function adaptSMGRecord(raw: SMGRawRecord): UnifiedRecord {
     _sourceId:  raw.id,
     _sourceUrl: selfUrl,
     _pid:       accessionNumber,
-    _citation:  [title, museumName, accessionNumber && `Accession no. ${accessionNumber}`, selfUrl]
-      .filter(Boolean).join('. '),
+    // _citation is stamped by addCitation() in the runner — the adapter
+    // must not pre-fill it (the typed shape is an object, not a string).
     title,
     description,
     creator,

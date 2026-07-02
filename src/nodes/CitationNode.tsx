@@ -9,7 +9,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Handle, Position, NodeProps } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
-import { formatRecordCitation, formatAllCitations, type RecordCitation } from '../utils/citationUtils'
+import { formatAllCitations, type RecordCitation } from '../utils/citationUtils'
 
 const HEADER_COLOR = '#78350f'
 const PAGE_SIZE    = 10

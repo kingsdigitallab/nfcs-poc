@@ -33,6 +33,16 @@ export interface UnifiedRecord {
    */
   id: string
 
+  /**
+   * Records are OPEN: enrichment nodes add fields not declared here
+   * (kclResponse, ollamaResponse, wd_*, `${field}_reconciled`, human_*,
+   * eval_*, fetchedContent, …). The index signature models that honestly
+   * and lets records interchange with Record<string, unknown> (the results
+   * store's currency) without unsafe double-casts. Contract enforcement
+   * for adapter output happens at runtime in fixtureConformance.test.ts.
+   */
+  [key: string]: unknown
+
   // ── Citation metadata ───────────────────────────────────────────────────────
   /** Populated by source runners; consumed by CitationNode and ExportNode. */
   _citation?: {
@@ -110,10 +120,10 @@ export interface UnifiedRecord {
    */
   type?: string
   /**
-   * Format, e.g. "text/plain"
+   * Format, e.g. "text/plain" — may be an array (HSDS data-type labels)
    * @see https://schema.org/encodingFormat
    */
-  format?: string
+  format?: string | string[]
   /** Collection name — MDS and other cultural-heritage sources */
   collection?: string
 
@@ -204,7 +214,7 @@ export interface GeoCandidate {
 export interface GeoConfirmed {
   lat:    number
   lng:    number
-  source: 'tgn' | 'wikidata'
+  source: 'tgn' | 'wikidata' | 'nominatim'
   uri:    string
   label:  string
 }

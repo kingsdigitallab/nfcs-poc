@@ -4,7 +4,7 @@ import { runADSAdvancedNode } from '../utils/runADSAdvancedNode'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
-export type ADSAdvStatus = 'idle' | 'loading' | 'success' | 'error'
+export type ADSAdvStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface ADSSearchAdvancedNodeData {
   inlineQuery:    string
@@ -95,6 +95,7 @@ const STATUS_BORDER: Record<ADSAdvStatus, string> = {
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
+  cached:  '#22c55e',
 }
 
 const STATUS_BADGE: Record<ADSAdvStatus, string> = {
@@ -102,6 +103,7 @@ const STATUS_BADGE: Record<ADSAdvStatus, string> = {
   loading: '#93c5fd',
   success: '#86efac',
   error:   '#fca5a5',
+  cached:  '#86efac',
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────

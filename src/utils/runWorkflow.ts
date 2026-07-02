@@ -90,9 +90,8 @@ export async function runWorkflow(
 
     console.log(`[Workflow] wave — running: ${wave.map(n => n.id).join(', ')}`)
 
-    // Take a fresh node snapshot so this wave sees upstream outputs
-    const currentNodes = getNodes()
-
+    // Runners receive getNodes directly, so each wave reads a fresh node
+    // snapshot including upstream outputs written in previous waves.
     await Promise.all(
       wave.map(async n => {
         try {

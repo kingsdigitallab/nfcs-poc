@@ -3,7 +3,7 @@ import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/rea
 import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 
-export type VAStatus = 'idle' | 'loading' | 'success' | 'error'
+export type VAStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface VASearchNodeData {
   inlineQuery:   string
@@ -40,6 +40,7 @@ const STATUS_BORDER: Record<VAStatus, string> = {
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
+  cached:  '#22c55e',
 }
 
 const STATUS_BADGE: Record<VAStatus, string> = {
@@ -47,6 +48,7 @@ const STATUS_BADGE: Record<VAStatus, string> = {
   loading: '#93c5fd',
   success: '#86efac',
   error:   '#fca5a5',
+  cached:  '#86efac',
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────

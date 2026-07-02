@@ -420,7 +420,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
 }
 
 export function TableOutputNode({ id, data, selected }: NodeProps) {
-  const { records, count, status, connected, sourceCount } = useUpstreamRecords(id)
+  const { records, status, connected, sourceCount } = useUpstreamRecords(id)
   const { updateNodeData } = useReactFlow()
   const [page,             setPage]             = useState(0)
   const [showAll,          setShowAll]          = useState(true)

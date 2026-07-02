@@ -146,7 +146,7 @@ interface HoverState {
 
 export function TimelineViewNode({ id, data, width: measuredWidth, selected }: NodeProps) {
   const { updateNodeData }                            = useReactFlow()
-  const { records, connected, status, sourceCount }  = useUpstreamRecords(id)
+  const { records, connected, status }  = useUpstreamRecords(id)
 
   const [hovered,       setHovered]      = useState<HoverState | null>(null)
   const [dragging,      setDragging]     = useState<'start' | 'end' | null>(null)
@@ -241,7 +241,6 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
   const svgW  = fitToRange
     ? Math.max(plotW, PAD_L + PAD_R + 20)
     : Math.max(plotW, yearRange * autoPxPerYear + PAD_L + PAD_R)
-  const pxPerYear = fitToRange ? (svgW - PAD_L - PAD_R) / yearRange : autoPxPerYear
 
   const maxStack  = Math.max(0, ...Array.from(yearMap.values()).map(v => v.length))
   const stackRows = Math.min(maxStack, MAX_STACK)

@@ -24,8 +24,8 @@ const HEADER_BG    = '#fef3c7'
 const BODY_BG      = '#fffbeb'
 
 // Parse **bold** and *italic* markdown to React elements
-function parseFormatted(text: string): (string | JSX.Element)[] {
-  const parts: (string | JSX.Element)[] = []
+function parseFormatted(text: string): (string | React.JSX.Element)[] {
+  const parts: (string | React.JSX.Element)[] = []
   const regex = /\*\*(.+?)\*\*|\*(.+?)\*/g
   let lastIndex = 0
   let match
