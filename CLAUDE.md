@@ -80,7 +80,16 @@ Use `getContentMaxChars(model: string): number` to get the per-model limit. Appl
 
 ```
 src/
-├── App.tsx              # Canvas, collapsible sidebar, Run All, save/load — imports from config/
+├── App.tsx              # Canvas shell + state wiring only (~250 lines) — feature logic lives in hooks/ + components/
+├── components/
+│   ├── TopBar.tsx               # Title, save/load, notes, grouping, mode toggles, Run All (author-mode + example dialog internal)
+│   ├── Sidebar.tsx              # Node palette: search, collapsible TaDiRAH groups, Experimental section
+│   └── …                        # ChatSidebar, ConnectionSuggestions, modals, …
+├── hooks/
+│   ├── useWorkflowIO.ts         # save/applyWorkflow/load + workflowId + loadError
+│   ├── useGrouping.ts           # group/ungroup + auto-resize effect (debounce/tolerance comments preserved)
+│   ├── useCanvasConnections.ts  # onConnect/onDrop/onConnectEnd, SINGLETON_TARGET_HANDLES, suggestion + handle-picker popups
+│   └── useUpstreamRecords.ts    # merges records from all data-handle edges
 ├── config/
 │   ├── storageKeys.ts           # STORAGE_KEYS — all localStorage key constants
 │   ├── sidebarItems.ts          # SIDEBAR_ITEMS, SIDEBAR_GROUPS, DEFAULT_COLLAPSED_GROUPS,
