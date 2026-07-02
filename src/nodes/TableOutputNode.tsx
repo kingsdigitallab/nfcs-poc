@@ -27,9 +27,9 @@ const DEFAULT_COLS = [
   'country',
   'subject',
   'language',
-  'scientificName',
-  'basisOfRecord',
-  'institutionCode',
+  'gbif.scientificName',
+  'gbif.basisOfRecord',
+  'gbif.institutionCode',
 ] as const
 
 const PAGE_SIZES = [10, 25, 50, 100] as const
@@ -38,9 +38,7 @@ const CORE_UNIFIED_FIELDS = new Set([
   'id', 'title', 'description', 'creator', 'date', 'subject', 'language',
   'type', 'format', 'collection', 'spatialCoverage', 'country',
   'periodStart', 'periodEnd', 'periodName',
-  'scientificName', 'kingdom', 'phylum', 'class', 'order', 'family',
-  'genus', 'species', 'eventDate', 'decimalLatitude', 'decimalLongitude',
-  'basisOfRecord', 'institutionCode', 'datasetName',
+  'decimalLatitude', 'decimalLongitude',
 ])
 
 /** Ordered list of fields shown in the row hover summary popup. */
@@ -48,7 +46,7 @@ const POPUP_FIELD_ORDER = [
   '_source', 'title', 'description', 'creator', 'date', 'country',
   'subject', 'language', 'type', 'collection', 'spatialCoverage',
   'periodStart', 'periodEnd', 'periodName',
-  'scientificName', 'basisOfRecord', 'institutionCode', 'datasetName',
+  'gbif.scientificName', 'gbif.basisOfRecord', 'gbif.institutionCode', 'gbif.datasetName',
   'decimalLatitude', 'decimalLongitude',
 ]
 
@@ -87,7 +85,12 @@ function allFlatColumns(records: UnifiedRecord[], expandNamespaces = false): str
       }
     }
   }
-  const ordered = DEFAULT_COLS.filter(c => keys.has(c))
+  // Dot-notation defaults (e.g. gbif.scientificName) only appear in `keys`
+  // when expandNamespaces is on — resolve them against records directly so
+  // they surface in the default view too.
+  const ordered = DEFAULT_COLS.filter(
+    c => keys.has(c) || (c.includes('.') && records.some(r => getColValue(r, c) != null)),
+  )
   const extras  = [...keys]
     .filter(k => !(DEFAULT_COLS as readonly string[]).includes(k) && k !== '_note')
     .sort()
@@ -223,7 +226,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
   // F1: fields for the popup card (only rows with a value)
   const popupFields = hovered
     ? POPUP_FIELD_ORDER
-        .map(f => ({ label: f, val: formatPopupVal((hovered.rec as Record<string, unknown>)[f]) }))
+        .map(f => ({ label: f, val: formatPopupVal(getColValue(hovered.rec, f)) }))
         .filter(r => r.val !== '')
     : []
 

@@ -11,10 +11,10 @@
  *    Downstream processing nodes access them there without re-parsing raw responses.
  *
  * Namespace conventions:
- *  - `record.gbif.*` is the canonical home for raw GBIF occurrence fields
- *    (e.g. record.gbif.scientificName, record.gbif.datasetKey). The GBIF adapter
- *    dual-writes domain-specific fields here AND to the top-level normalised fields
- *    for backward compatibility. New code should read from record.gbif.*.
+ *  - `record.gbif.*` is the canonical (and only) home for raw GBIF occurrence
+ *    fields (e.g. record.gbif.scientificName, record.gbif.datasetKey). The
+ *    adapter stores the raw occurrence wholesale; there are no flat top-level
+ *    copies. Legacy records are normalised on load (recordNormalise.ts).
  *  - Similarly, record.llds.*, record.ads.*, etc. hold the raw service payload.
  *
  * Schema.org alignment:
@@ -131,23 +131,17 @@ export interface UnifiedRecord {
   /** Named period label, e.g. "Iron Age", "Medieval" */
   periodName?: string | string[]
 
-  // ── Biodiversity-specific (GBIF) ────────────────────────────────────────────
-  scientificName?: string
-  kingdom?: string
-  phylum?: string
-  class?: string
-  order?: string
-  family?: string
-  genus?: string
-  species?: string
-  eventDate?: string
+  // ── Coordinates (cross-service — consumed by MapOutput) ────────────────────
   /** @see https://schema.org/latitude */
   decimalLatitude?: number | null
   /** @see https://schema.org/longitude */
   decimalLongitude?: number | null
-  basisOfRecord?: string
-  institutionCode?: string
-  datasetName?: string
+
+  // Biodiversity-specific fields (scientificName, kingdom, phylum, class,
+  // order, family, genus, species, eventDate, basisOfRecord, institutionCode,
+  // datasetName) live ONLY under record.gbif.* — the adapter stores the raw
+  // occurrence wholesale there. Legacy records with flat copies are
+  // normalised on load (see src/utils/recordNormalise.ts).
 
   // ── Service namespace fields ─────────────────────────────────────────────────
   /** Full raw GBIF occurrence object */
@@ -168,6 +162,14 @@ export interface UnifiedRecord {
   smg?: Record<string, unknown>
   /** Victoria and Albert Museum namespace (objectType, place, manifest, iiifImageBase, thumbnail, …) */
   vam?: Record<string, unknown>
+  /** Heritage Science Data Service namespace (landingPage, contributor, temporal, spatial, subject arrays, …) */
+  hsds?: Record<string, unknown>
+  /** Bodleian Digital Collections namespace (uuid, manifest, thumbnail, shelfmark, origins, …) */
+  bodleian?: Record<string, unknown>
+  /** SmartGeocoder namespace (LLM-extracted place terms and resolution details) */
+  smartGeo?: Record<string, unknown>
+  /** FrameSense namespace (collection, video, clip, shot, frameFile, shotScale, VLM answers) */
+  framesense?: Record<string, unknown>
 
   // ── Geocoding enrichment ────────────────────────────────────────────────────
   /** Full geocoding result from GeocodingNode */

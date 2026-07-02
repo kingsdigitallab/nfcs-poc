@@ -89,7 +89,9 @@ src/
 ├── styles/
 │   └── appStyles.ts             # React.CSSProperties constants for App.tsx layout
 ├── types/
-│   ├── UnifiedRecord.ts         # Canonical inter-node data contract (schema.org annotated)
+│   ├── UnifiedRecord.ts         # Canonical inter-node data contract (schema.org annotated).
+│   │                            # Domain-specific GBIF fields live ONLY under gbif.* — no flat copies.
+│   │                            # periodStart/End/Name stay top-level (cross-service: ADS/ARIADNE/HSDS).
 │   └── AppNode.ts               # AppNode union type + inline *NodeData interfaces
 ├── store/resultsStore.ts        # Out-of-band Map store + version counter
 ├── hooks/useUpstreamRecords.ts  # Merges records from all data-handle edges
@@ -304,3 +306,4 @@ type NodeRunner = (
 22. CommentNode easter egg: click title 5 times within 1.5 seconds to unlock input/output handles for illustrating data-flow gaps.
 23. `runMergeByQIDNode.ts` `extractQIDInfo` must handle **array-valued** `*_reconciled` fields, not just a single `ReconciliationResult | null` — a field can carry multiple candidate reconciliations. Always normalise with `Array.isArray(raw) ? raw : [raw]` before scanning for a resolved/review QID.
 24. `TableOutputNode` column-resize drag handler: never re-read `resizingRef.current` more than once per `mousemove` after the initial null-check — cache it to a local (`const r = resizingRef.current; if (!r) return`) before use. Re-reading it later in the same handler risks a null dereference if the ref is cleared mid-drag (e.g. `mouseup` racing `mousemove`).
+25. GBIF domain fields (`scientificName`, `kingdom`, …, `datasetName`, `eventDate`, `basisOfRecord`, `institutionCode`) exist ONLY under `record.gbif.*` — the adapter stores the raw occurrence wholesale and writes no flat copies. Readers use dot-notation (`gbif.scientificName`); `authoritiesForField` matches namespaced fields by last segment so typed authorities still apply. `periodStart/End/Name` are intentionally top-level — they are cross-service temporal fields written by three adapters, NOT domain-specific.

@@ -45,22 +45,12 @@ export function adaptGBIFResponse(response: GBIFSearchResponse): UnifiedRecord[]
     title: hit.scientificName,
     date: hit.eventDate,
 
-    // Biodiversity-specific
-    scientificName: hit.scientificName,
-    kingdom: hit.kingdom,
-    phylum: hit.phylum,
-    class: hit.class,
-    order: hit.order,
-    family: hit.family,
-    genus: hit.genus,
-    species: hit.species,
     country: hit.country,
-    eventDate: hit.eventDate,
     decimalLatitude: hit.decimalLatitude ?? null,
     decimalLongitude: hit.decimalLongitude ?? null,
-    basisOfRecord: hit.basisOfRecord,
-    institutionCode: hit.institutionCode,
-    datasetName: hit.datasetName,
+    // Biodiversity-specific fields (scientificName, kingdom, …, datasetName)
+    // live ONLY under the gbif.* namespace — the raw occurrence is stored
+    // wholesale below. Read them as gbif.scientificName etc.
 
     // Full raw occurrence under namespace
     gbif: hit as Record<string, unknown>,

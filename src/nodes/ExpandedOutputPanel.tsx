@@ -23,10 +23,21 @@ interface Props {
 
 const DEFAULT_COLS = [
   '_source', 'title', 'creator', 'date', 'country',
-  'subject', 'language', 'scientificName', 'basisOfRecord', 'institutionCode',
+  'subject', 'language', 'gbif.scientificName', 'gbif.basisOfRecord', 'gbif.institutionCode',
 ] as const
 
 const PAGE_SIZE = 25
+
+/** Resolve a plain or dot-notation column key against a record. */
+function getColValue(rec: UnifiedRecord, col: string): unknown {
+  const dot = col.indexOf('.')
+  if (dot === -1) return rec[col as keyof UnifiedRecord]
+  const nsObj = rec[col.slice(0, dot) as keyof UnifiedRecord]
+  if (nsObj && typeof nsObj === 'object' && !Array.isArray(nsObj)) {
+    return (nsObj as Record<string, unknown>)[col.slice(dot + 1)]
+  }
+  return undefined
+}
 
 function allFlatColumns(records: UnifiedRecord[]): string[] {
   const keys = new Set<string>()
@@ -36,7 +47,11 @@ function allFlatColumns(records: UnifiedRecord[]): string[] {
       if (typeof v !== 'object' || Array.isArray(v) || isReconciledValue(v)) keys.add(k)
     }
   }
-  const ordered = DEFAULT_COLS.filter(c => keys.has(c))
+  // Dot-notation defaults (gbif.*) never appear as flat keys — resolve them
+  // against the records directly.
+  const ordered = DEFAULT_COLS.filter(
+    c => keys.has(c) || (c.includes('.') && records.some(r => getColValue(r, c) != null)),
+  )
   const extras = [...keys]
     .filter(k => !(DEFAULT_COLS as readonly string[]).includes(k))
     .sort()
@@ -196,7 +211,7 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
                 {pageRows.map((rec, i) => (
                   <tr key={rec.id} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
                     {columns.map(col => {
-                      const val = rec[col as keyof UnifiedRecord]
+                      const val = getColValue(rec, col)
                       const handleSelect = (result: ReconciliationResult) =>
                         handleSelectCandidate(rec.id, col, result)
                       return (

@@ -180,7 +180,7 @@ export function MapOutputNode({ id }: NodeProps) {
         ? lat >= bbox.south && lat <= bbox.north && lng >= bbox.west && lng <= bbox.east
         : true
 
-      const rawTitle = r.title ?? r.scientificName ?? '(no title)'
+      const rawTitle = r.title ?? String((r.gbif as Record<string, unknown> | undefined)?.scientificName ?? '') || '(no title)'
       const title    = rawTitle.length > 80 ? rawTitle.slice(0, 80) + '…' : rawTitle
       const rawDesc  = r.description ?? ''
       const desc     = rawDesc.length > 140 ? rawDesc.slice(0, 140) + '…' : rawDesc
