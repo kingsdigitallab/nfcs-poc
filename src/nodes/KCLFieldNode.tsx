@@ -307,7 +307,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
         const callT0 = performance.now()
         const response = await kclChat(
           effectiveApiKey, selectedModel, systemPrompt, prompt,
-          temperature, maxTokens, signal, (token) => setLiveTokens(t => t + token)
+          temperature, maxTokens, signal, (token) => setLiveTokens(t => (t + token).slice(-200))
         )
         const inferenceMs = Math.round(performance.now() - callT0)
 
@@ -358,7 +358,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
           const callT0 = performance.now()
           const response = await kclChat(
             effectiveApiKey, selectedModel, systemPrompt, prompt,
-            temperature, maxTokens, signal, (token) => setLiveTokens(t => t + token)
+            temperature, maxTokens, signal, (token) => setLiveTokens(t => (t + token).slice(-200))
           )
           const inferenceMs = Math.round(performance.now() - callT0)
 
@@ -413,7 +413,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
   return (
     <>
       <NodeResizer
-        minWidth={272} minHeight={200} isVisible={selected}
+        minWidth={272} minHeight={200} maxWidth={312} isVisible={selected}
         lineStyle={{ borderColor: HEADER_COLOR }}
         handleStyle={{ background: HEADER_COLOR, borderColor: '#fff', width: 8, height: 8 }}
       />
@@ -666,6 +666,7 @@ const styles = {
     borderRadius: 8,
     width: '100%',
     minWidth: 272,
+    maxWidth: 312,
     boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
@@ -696,7 +697,7 @@ const styles = {
   numLabel: { fontSize: 10, color: '#6b7280', width: 28, textAlign: 'right' as const },
   livePreview: { marginTop: 2, background: '#1e1e2e', borderRadius: 4, overflow: 'hidden', border: '1px solid #881337' },
   liveHeader: { fontSize: 10, color: '#fda4af', padding: '3px 6px', background: '#4c0519', fontFamily: 'monospace' },
-  liveText: { fontSize: 10, color: '#e2e8f0', padding: '4px 6px', fontFamily: 'monospace', lineHeight: 1.5, maxHeight: 60, overflowY: 'auto' as const, whiteSpace: 'pre-wrap' as const },
+  liveText: { fontSize: 10, color: '#e2e8f0', padding: '4px 6px', fontFamily: 'monospace', lineHeight: 1.5, maxHeight: 60, overflowY: 'auto' as const, overflowX: 'hidden' as const, whiteSpace: 'pre-wrap' as const, overflowWrap: 'anywhere' as const },
   footer: { padding: '6px 10px 8px', display: 'flex', justifyContent: 'flex-end' },
   btn: { color: '#fff', border: 'none', borderRadius: 5, padding: '4px 14px', fontSize: 12, fontWeight: 600, cursor: 'pointer' },
   inputHandle: { width: 8, height: 8, background: '#be123c', border: '2px solid #fff', boxShadow: '0 0 0 1px #be123c', position: 'absolute' as const, left: -5, borderRadius: '50%' },

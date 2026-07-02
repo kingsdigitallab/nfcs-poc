@@ -148,49 +148,64 @@ export default function App() {
   // large after expand, and the next collapse would briefly draw the old big
   // outline before the pill size took effect.
   // A 4px tolerance prevents setNodes/measured-resync feedback loops.
+  // Debounced (120ms): during token-by-token LLM streaming, a child's measured
+  // size can change many times per second — recomputing on every intermediate
+  // frame makes the group visibly chase the stream and can lock in a mid-stream
+  // width/height peak. Waiting for the content to settle before committing means
+  // the group sizes to the node's actual final footprint instead.
+  const groupResizeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   useEffect(() => {
     const groups = nodes.filter(n => n.type === 'group')
     if (groups.length === 0) return
 
-    const TOLERANCE = 4
-    const updated = nodes.map(node => {
-      if (node.type !== 'group') return node
-      if ((node.data as any).collapsed) return node
+    if (groupResizeTimerRef.current) clearTimeout(groupResizeTimerRef.current)
+    groupResizeTimerRef.current = setTimeout(() => {
+      setNodes(currentNodes => {
+        const TOLERANCE = 4
+        const updated = currentNodes.map(node => {
+          if (node.type !== 'group') return node
+          if ((node.data as any).collapsed) return node
 
-      const children = nodes.filter(n => n.parentId === node.id)
-      if (children.length === 0) return node
+          const children = currentNodes.filter(n => n.parentId === node.id)
+          if (children.length === 0) return node
 
-      let maxX = 0, maxY = 0
-      for (const child of children) {
-        const cw = Number(child.measured?.width ?? (child as any).style?.width ?? 220)
-        const ch = Number(child.measured?.height ?? (child as any).style?.height ?? 100)
-        maxX = Math.max(maxX, child.position.x + cw)
-        maxY = Math.max(maxY, child.position.y + ch)
-      }
+          let maxX = 0, maxY = 0
+          for (const child of children) {
+            const cw = Number(child.measured?.width ?? (child as any).style?.width ?? 220)
+            const ch = Number(child.measured?.height ?? (child as any).style?.height ?? 100)
+            maxX = Math.max(maxX, child.position.x + cw)
+            maxY = Math.max(maxY, child.position.y + ch)
+          }
 
-      const padding = 30
-      const targetW = Math.max(250, maxX + padding)
-      const targetH = Math.max(120, maxY + padding)
-      const currentW = Number((node as any).style?.width ?? 0)
-      const currentH = Number((node as any).style?.height ?? 0)
+          const padding = 30
+          const targetW = Math.max(250, maxX + padding)
+          const targetH = Math.max(120, maxY + padding)
+          const currentW = Number((node as any).style?.width ?? 0)
+          const currentH = Number((node as any).style?.height ?? 0)
 
-      if (Math.abs(targetW - currentW) <= TOLERANCE && Math.abs(targetH - currentH) <= TOLERANCE) {
-        return node
-      }
-      return {
-        ...node,
-        width: targetW,
-        height: targetH,
-        style: {
-          ...((node as any).style ?? {}),
-          width: targetW,
-          height: targetH,
-        },
-      } as AppNode
-    })
+          if (Math.abs(targetW - currentW) <= TOLERANCE && Math.abs(targetH - currentH) <= TOLERANCE) {
+            return node
+          }
+          return {
+            ...node,
+            width: targetW,
+            height: targetH,
+            style: {
+              ...((node as any).style ?? {}),
+              width: targetW,
+              height: targetH,
+            },
+          } as AppNode
+        })
 
-    const changed = updated.some((n, i) => n !== nodes[i])
-    if (changed) setNodes(updated)
+        const changed = updated.some((n, i) => n !== currentNodes[i])
+        return changed ? updated : currentNodes
+      })
+    }, 120)
+
+    return () => {
+      if (groupResizeTimerRef.current) clearTimeout(groupResizeTimerRef.current)
+    }
   }, [nodes, setNodes])
 
   const handleRunAll = useCallback(async () => {
