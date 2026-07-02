@@ -248,11 +248,11 @@ export function XMLSectionNode({ id, data, selected }: NodeProps) {
       const doc      = new DOMParser().parseFromString(stripped, 'application/xml')
       if (doc.querySelector('parsererror')) { setPreview('XML parse error'); return }
       if (outputMode === 'text') {
-        const r   = document.evaluate(xpath, doc, null, XPathResult.STRING_TYPE, null)
+        const r   = doc.evaluate(xpath, doc, null, XPathResult.STRING_TYPE, null)
         const val = (r.stringValue ?? '').replace(/\s+/g, ' ').trim()
         setPreview(val.slice(0, 500) || '(empty)')
       } else {
-        const snap  = document.evaluate(xpath, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
+        const snap  = doc.evaluate(xpath, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null)
         const ser   = new XMLSerializer()
         const parts: string[] = []
         for (let i = 0; i < snap.snapshotLength; i++) {

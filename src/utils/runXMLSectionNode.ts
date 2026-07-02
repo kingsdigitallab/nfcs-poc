@@ -18,13 +18,13 @@ function extractByXPath(
     if (parseErr) return ''
 
     if (outputMode === 'text') {
-      const result = document.evaluate(
+      const result = doc.evaluate(
         xpath, doc, null, XPathResult.STRING_TYPE, null,
       )
       return (result.stringValue ?? '').replace(/\s+/g, ' ').trim()
     }
 
-    const snapshot = document.evaluate(
+    const snapshot = doc.evaluate(
       xpath, doc, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null,
     )
     const serializer = new XMLSerializer()

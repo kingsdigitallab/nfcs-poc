@@ -1,3 +1,5 @@
+import { STORAGE_KEYS } from '../config/storageKeys'
+
 /**
  * notesStore — per-record human annotations ("gold standard" notes).
  *
@@ -18,7 +20,7 @@
 // One-time cleanup of the legacy global-by-recordId persisted notes. The old
 // implementation wrote these to localStorage and re-hydrated them across
 // sessions; that behaviour is intentionally gone.
-try { localStorage.removeItem('nfcs_notes') } catch {}
+try { localStorage.removeItem(STORAGE_KEYS.NOTES_LEGACY) } catch {}
 
 const _notes = new Map<string, string>()
 const _listeners = new Set<() => void>()
