@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { readdirSync, readFileSync } from 'fs'
 import { join } from 'path'
+import { normaliseRecord } from '../utils/recordNormalise'
 
 /**
  * Fixture conformance suite — treats every search fixture in public/fixtures/
@@ -39,9 +40,10 @@ const ALLOWED_TOP_LEVEL = new Set([
 ])
 
 /**
- * Legacy keys tolerated in committed fixtures until they are normalised on
- * load (task 6.4 normaliseRecord). The adapters no longer emit these after
- * task 3.2/3.2b:
+ * Legacy keys tolerated in committed fixture FILES only. Fixtures are
+ * normalised at load time (fixtureUtils → recordNormalise.ts), so the app
+ * never sees these — the "post-normalisation" test below proves it. The
+ * adapters no longer emit them after task 3.2/3.2b:
  *  - 12 GBIF flat fields (dual-write removed — canonical home is gbif.*)
  *  - Bodleian's stray _service / thumbnail (canonical: _source / bodleian.thumbnail)
  */
@@ -147,5 +149,28 @@ describe('fixture conformance (public/fixtures/*.json)', () => {
       .map(([f, ks]) => `${f}: ${[...ks].join(', ')}`)
       .join('\n')
     expect(unknownByFile.size, `unknown top-level keys found:\n${report}`).toBe(0)
+  })
+
+  it('after load-time normalisation, records carry ONLY contract keys (no legacy tolerance)', () => {
+    // This asserts the shape the app actually sees: fixtureUtils and
+    // LoadSavedSearchNode run normaliseRecord on everything they load.
+    const unknownByFile = new Map<string, Set<string>>()
+    for (const file of files) {
+      const records = loadRecords(file)
+      if (!records) continue
+      for (const raw of records) {
+        const r = normaliseRecord(raw) as Record<string, unknown>
+        for (const key of Object.keys(r)) {
+          if (!ALLOWED_TOP_LEVEL.has(key) && !key.endsWith('_reconciled')) {
+            if (!unknownByFile.has(file)) unknownByFile.set(file, new Set())
+            unknownByFile.get(file)!.add(key)
+          }
+        }
+      }
+    }
+    const report = [...unknownByFile.entries()]
+      .map(([f, ks]) => `${f}: ${[...ks].join(', ')}`)
+      .join('\n')
+    expect(unknownByFile.size, `keys surviving normalisation:\n${report}`).toBe(0)
   })
 })

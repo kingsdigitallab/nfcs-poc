@@ -24,6 +24,7 @@
 import type { Node, Edge } from '@xyflow/react'
 import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults, getNodeResults } from '../store/resultsStore'
+import { normaliseRecords } from './recordNormalise'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export function sanitizeQuery(q: string): string {
@@ -78,9 +79,12 @@ export function withFixture(nodeType: string, runner: NodeRunner): NodeRunner {
             : `HTTP ${res.status} fetching ${filename}`,
         )
       }
-      const records = await res.json() as UnifiedRecord[]
-      if (!Array.isArray(records)) throw new Error(`${filename} is not a JSON array`)
-      const version = setNodeResults(nodeId, records)
+      const raw = await res.json() as UnifiedRecord[]
+      if (!Array.isArray(raw)) throw new Error(`${filename} is not a JSON array`)
+      // Committed fixtures may predate schema changes — normalise to the
+      // current UnifiedRecord contract (e.g. flat GBIF fields → gbif.*).
+      const records = normaliseRecords(raw as Record<string, unknown>[])
+      const version = setNodeResults(nodeId, records as Record<string, unknown>[])
       updateNodeData(nodeId, {
         status:         'cached',
         statusMessage:  `📦 ${records.length.toLocaleString()} (fixture)`,

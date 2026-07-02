@@ -277,6 +277,7 @@ type NodeRunner = (
 - **`allFlatColumns`** in `TableOutputNode` — must include `isReconciledValue(v)` check or `*_reconciled` columns vanish.
 - **`newId(prefix)`** / **`bumpCounterPast(ids[])`** in `nodeIdCounter.ts` — call `bumpCounterPast` after workflow load.
 - **`TRANSIENT_FIELDS`** in `workflowIO.ts` strips `results`, `status`, counts, `resultsVersion`, `_capped`, `_total`, `folderName`, `pdfCount/xmlCount/textCount/imageCount` before save.
+- **`normaliseRecord`/`normaliseRecords`** in `recordNormalise.ts` — applied at the two legacy-record entry points (`fixtureUtils` fixture loads, `LoadSavedSearchNode`). Moves stale flat GBIF fields into `gbif.*` and drops Bodleian's old `_service`/`thumbnail` strays. Idempotent. Old fixtures and saved `.nfcs.json` files keep working without rewriting.
 - **`collectUpstreamRecords(nodeId, edges)`** in `upstreamRecords.ts` — shared utility used by all process runners. TYPED_HANDLES (`pdf`, `xml`, `text`, `image`) use partitioned store keys `${sourceId}:${handle}`; all others use plain `sourceId`.
 - **`useUpstreamRecords(nodeId)`** hook — same TYPED_HANDLES logic for reactivity; uses `${type}Count` key from node data.
 
