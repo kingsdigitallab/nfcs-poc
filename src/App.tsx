@@ -1,6 +1,15 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+﻿import { useCallback, useEffect, useRef, useState } from 'react'
 import { newId, bumpCounterPast } from './utils/nodeIdCounter'
-import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from './utils/kclConfig'
+
+import { STORAGE_KEYS } from './config/storageKeys'
+import { NODE_DEFAULTS, KCL_API_KEY_NODES, findSharedApiKey } from './config/nodeDefaults'
+import { SIDEBAR_ITEMS, SIDEBAR_GROUPS, DEFAULT_COLLAPSED_GROUPS, ADVANCED_TYPES } from './config/sidebarItems'
+import type { AppNode } from './types/AppNode'
+import {
+  attributionStyle, topBarStyle, templateBtnStyle, runAllBtnStyle,
+  sidebarStyle, sidebarHeading, sidebarItemStyle, sidebarDot,
+  debugOuter, debugToggle, debugPre,
+} from './styles/appStyles'
 import { buildWorkflowPayload, downloadWorkflow, parseWorkflowFile, hydrateNodes, type WorkflowFile } from './utils/workflowIO'
 import { exportNotes, importNotes, clearAllNotes } from './store/notesStore'
 import { setNodeResults } from './store/resultsStore'
@@ -16,7 +25,6 @@ import {
   type Connection,
   type Edge,
   type Node,
-  type XYPosition,
   type ReactFlowInstance,
   type FinalConnectionState,
 } from '@xyflow/react'
@@ -47,749 +55,8 @@ const SINGLETON_TARGET_HANDLES = new Set<string>([
 import { runWorkflow } from './utils/runWorkflow'
 import { invokeToggle } from './utils/groupToggleRegistry'
 import type { UnifiedRecord } from './types/UnifiedRecord'
-import type { LocalFolderSourceNodeData } from './nodes/LocalFolderSourceNode'
-import type { LocalFileSourceNodeData }   from './nodes/LocalFileSourceNode'
-import type { OllamaNodeData }            from './nodes/OllamaNode'
-import type { OllamaFieldNodeData }       from './nodes/OllamaFieldNode'
-import type { KCLNodeData }              from './nodes/KCLNode'
-import type { KCLFieldNodeData }         from './nodes/KCLFieldNode'
-import type { EvaluatorNodeData }        from './nodes/EvaluatorNode'
-import type { HTMLPreviewNodeData }      from './nodes/HTMLPreviewNode'
-import type { URLFetchNodeData }          from './nodes/URLFetchNode'
-import type { HTMLSectionNodeData }       from './nodes/HTMLSectionNode'
-import type { LLDSSearchNodeData }        from './nodes/LLDSSearchNode'
-import type { ADSSearchAdvancedNodeData }     from './nodes/ADSSearchAdvancedNode'
-import type { ADSLibraryNodeData }            from './nodes/ADSLibraryNode'
-import type { MDSSearchNodeData }         from './nodes/MDSSearchNode'
-import type { ReconciliationNodeData }    from './nodes/ReconciliationNode'
-import type { FilterTransformNodeData }   from './nodes/FilterTransformNode'
-import type { SpatialFilterNodeData }     from './nodes/SpatialFilterNode'
-import type { DeduplicateNodeData }       from './nodes/DeduplicateNode'
-import type { ExportNodeData }            from './nodes/ExportNode'
-import type { QuickViewNodeData }         from './nodes/QuickViewNode'
-import type { CommentNodeData }           from './nodes/CommentNode'
-import type { MergeByQIDNodeData }        from './nodes/MergeByQIDNode'
-import type { WikidataEnrichNodeData }    from './nodes/WikidataEnrichNode'
-import type { SaveSearchNodeData }        from './nodes/SaveSearchNode'
-import type { LoadSavedSearchNodeData }  from './nodes/LoadSavedSearchNode'
-import type { XMLSectionNodeData }       from './nodes/XMLSectionNode'
-import type { ImageViewNodeData }        from './nodes/ImageViewNode'
-import type { CitationNodeData }           from './nodes/CitationNode'
-import type { EuropeanaSearchNodeData }    from './nodes/EuropeanaSearchNode'
-import type { ARIADNESearchNodeData }      from './nodes/ARIADNESearchNode'
-import type { HSDSSearchNodeData }         from './nodes/HSDSSearchNode'
-import type { BodleianSearchNodeData }     from './nodes/BodleianSearchNode'
-import type { FieldDistributionNodeData }  from './nodes/FieldDistributionNode'
-import type { TimelineOutputNodeData }     from './nodes/TimelineOutputNode'
-import type { MapOutputNodeData }          from './nodes/MapOutputNode'
-import type { SMGSearchNodeData }          from './nodes/SMGSearchNode'
-import type { VASearchNodeData }           from './nodes/VASearchNode'
-import type { GeocodingNodeData }          from './nodes/GeocodingNode'
-import type { FrameSenseSourceNodeData }  from './nodes/FrameSenseSourceNode'
-import type { SampleDataSourceNodeData } from './nodes/SampleDataSourceNode'
-import type { SourceProfileNodeData }    from './nodes/SourceProfileNode'
-import type { SmartFilterNodeData }      from './nodes/SmartFilterNode'
-import type { SmartGeocoderNodeData }   from './nodes/SmartGeocoderNode'
-import type { QuickStartNodeData }      from './nodes/QuickStartNode'
-import type { GroupNodeData }           from './nodes/GroupNode'
-import type { QuickNoteNodeData }       from './nodes/QuickNoteNode'
-import type { ComparisonReportNodeData } from './nodes/ComparisonReportNode'
 
-// ─── node data types (kept slim here; full types live in each node file) ─────
-
-interface ParamNodeData  { label: string; paramType: string; value: string; [k: string]: unknown }
-interface SearchNodeData { status: string; statusMessage: string; results?: UnifiedRecord[]; count?: number; [k: string]: unknown }
-interface OutputNodeData { [k: string]: unknown }
-
-type AppNode =
-  | Node<ParamNodeData>
-  | Node<SearchNodeData>
-  | Node<LocalFolderSourceNodeData>
-  | Node<LocalFileSourceNodeData>
-  | Node<OllamaNodeData>
-  | Node<OllamaFieldNodeData>
-  | Node<KCLNodeData>
-  | Node<KCLFieldNodeData>
-  | Node<EvaluatorNodeData>
-  | Node<HTMLPreviewNodeData>
-  | Node<URLFetchNodeData>
-  | Node<HTMLSectionNodeData>
-  | Node<LLDSSearchNodeData>
-  | Node<ADSSearchAdvancedNodeData>
-  | Node<ADSLibraryNodeData>
-  | Node<MDSSearchNodeData>
-  | Node<ReconciliationNodeData>
-  | Node<FilterTransformNodeData>
-  | Node<SpatialFilterNodeData>
-  | Node<DeduplicateNodeData>
-  | Node<ExportNodeData>
-  | Node<QuickViewNodeData>
-  | Node<CommentNodeData>
-  | Node<MergeByQIDNodeData>
-  | Node<WikidataEnrichNodeData>
-  | Node<SaveSearchNodeData>
-  | Node<LoadSavedSearchNodeData>
-  | Node<XMLSectionNodeData>
-  | Node<ImageViewNodeData>
-  | Node<CitationNodeData>
-  | Node<EuropeanaSearchNodeData>
-  | Node<ARIADNESearchNodeData>
-  | Node<HSDSSearchNodeData>
-  | Node<BodleianSearchNodeData>
-  | Node<FieldDistributionNodeData>
-  | Node<TimelineOutputNodeData>
-  | Node<MapOutputNodeData>
-  | Node<SMGSearchNodeData>
-  | Node<VASearchNodeData>
-  | Node<GeocodingNodeData>
-  | Node<FrameSenseSourceNodeData>
-  | Node<SampleDataSourceNodeData>
-  | Node<SourceProfileNodeData>
-  | Node<SmartFilterNodeData>
-  | Node<SmartGeocoderNodeData>
-  | Node<QuickStartNodeData>
-  | Node<GroupNodeData>
-  | Node<QuickNoteNodeData>
-  | Node<ComparisonReportNodeData>
-  | Node<OutputNodeData>
-
-// ─── node factories ───────────────────────────────────────────────────────────
-
-const KCL_API_KEY_NODES = new Set(['kclNode', 'kclField', 'evaluatorNode', 'sourceProfile', 'smartFilter', 'smartGeocoder', 'quickStart'])
-
-function findSharedApiKey(nodes: Node[]): string {
-  for (const node of nodes) {
-    if (KCL_API_KEY_NODES.has(node.type ?? '')) {
-      const key = (node.data as { apiKey?: string }).apiKey ?? ''
-      if (key) return key
-    }
-  }
-  return ''
-}
-
-const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
-  param: pos => ({
-    id: newId('param'), type: 'param', position: pos,
-    data: { label: 'Parameter', paramType: 'Text', value: '' },
-  }),
-  gbifSearch: pos => ({
-    id: newId('gbif'), type: 'gbifSearch', position: pos,
-    data: {
-      inlineQ: '', inlineScientificName: '', inlineCountry: '',
-      inlineYear: '', inlineLimit: '20',
-      fetchAll: false,
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-    },
-  }),
-  lldsSearch: pos => ({
-    id: newId('llds'), type: 'lldsSearch', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20',
-      useCache: false,
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-    } satisfies LLDSSearchNodeData,
-  }),
-  adsLibrarySearch: pos => ({
-    id: newId('adslib'), type: 'adsLibrarySearch', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20',
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-      _capped: false, _total: 0,
-    } satisfies ADSLibraryNodeData,
-  }),
-  adsSearchAdvanced: pos => ({
-    id: newId('ads'), type: 'adsSearchAdvanced', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20', fetchAll: false,
-      ariadneSubject: '', derivedSubject: '', nativeSubject: '',
-      country: '', dataType: '', temporal: '',
-      sort: '_score', order: 'desc',
-      useFixture: false,
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-    } satisfies ADSSearchAdvancedNodeData,
-  }),
-  ariadneSearch: pos => ({
-    id: newId('ariadne'), type: 'ariadneSearch', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20', fetchAll: false,
-      ariadneSubject: '', derivedSubject: '', nativeSubject: '',
-      country: '', dataType: '', temporal: '', contributor: '',
-      sort: '_score', order: 'desc',
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-    } satisfies ARIADNESearchNodeData,
-  }),
-  hsdsSearch: pos => ({
-    id: newId('hsds'), type: 'hsdsSearch', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20', fetchAll: false,
-      ariadneSubject: '', derivedSubject: '', nativeSubject: '',
-      country: '', dataType: '', temporal: '', contributor: '',
-      sort: '_score', order: 'desc',
-      useFixture: false,
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-    } satisfies HSDSSearchNodeData,
-  }),
-  bodleianSearch: pos => ({
-    id: newId('bodleian'), type: 'bodleianSearch', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20', fetchAll: false,
-      sort: 'relevance',
-      fqCompleteness: '', fqOrigins: '', fqLanguages: '',
-      fqMusicalNotation: '', fqDateFrom: '', fqDateTo: '',
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-    } satisfies BodleianSearchNodeData,
-  }),
-  smgSearch: pos => ({
-    id: newId('smg'), type: 'smgSearch', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20', fetchAll: false,
-      museum: '', dateFrom: '', dateTo: '', searchType: 'objects',
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-    } satisfies SMGSearchNodeData,
-  }),
-  vaSearch: pos => ({
-    id: newId('va'), type: 'vaSearch', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20', fetchAll: false,
-      imagesOnly: false, yearFrom: '', yearTo: '', objectType: '',
-      status: 'idle', statusMessage: '', count: 0,
-    } satisfies VASearchNodeData,
-  }),
-  geocoding: pos => ({
-    id: newId('geo'), type: 'geocoding', position: pos,
-    data: {
-      placeField: '', confidenceThreshold: 0.75,
-      passNativeCoords: true, showReviewPanel: true,
-      confirmedChoices: {},
-      status: 'idle', statusMessage: '', resolved: 0, pending: 0, failed: 0,
-    } satisfies GeocodingNodeData,
-  }),
-  smartGeocoder: pos => ({
-    id: newId('sgeo'), type: 'smartGeocoder', position: pos,
-    data: {
-      apiKey:              DEFAULT_KCL_API_KEY,
-      model:               'arc:lite',
-      scanAllFields:       true,
-      selectedFields:      [],
-      confidenceThreshold: 0.6,
-      passNativeCoords:    true,
-      showReviewPanel:     true,
-      confirmedChoices:    {},
-      status:              'idle',
-      statusMessage:       '',
-      resolved:            0,
-      pending:             0,
-      failed:              0,
-    } satisfies SmartGeocoderNodeData,
-  }),
-  mdsSearch: pos => ({
-    id: newId('mds'), type: 'mdsSearch', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20',
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-      _capped: false, _total: 0,
-    } satisfies MDSSearchNodeData,
-  }),
-  localFileSource: pos => ({
-    id: newId('csvfile'), type: 'localFileSource', position: pos,
-    data: {
-      fileMode:      'csv',
-      delimiter:     'auto',
-      hasHeader:     true,
-      autoCast:      true,
-      fileName:      '',
-      status:        'idle',
-      statusMessage: '',
-      count:         0,
-      columnNames:   [],
-    } satisfies LocalFileSourceNodeData,
-  }),
-  frameSenseSource: pos => ({
-    id: newId('framesense'), type: 'frameSenseSource', position: pos,
-    data: {
-      folderName:      '',
-      status:          'idle',
-      statusMessage:   '',
-      collectionCount: 0,
-      videoCount:      0,
-      shotCount:       0,
-      frameCount:      0,
-      frameFilter:     'middle',
-      resultsVersion:  0,
-    } satisfies FrameSenseSourceNodeData,
-  }),
-  sourceProfile: pos => ({
-    id: newId('profile'), type: 'sourceProfile', position: pos,
-    data: {
-      apiKey:          DEFAULT_KCL_API_KEY,
-      model:           'arc:nano',
-      researchQuestion:'',
-      narrative:       '',
-      narrativeStatus: 'idle',
-      maxTokens:       16384,
-      resultsVersion:  0,
-    } satisfies SourceProfileNodeData,
-  }),
-  localFolderSource: pos => ({
-    id: newId('folder'), type: 'localFolderSource', position: pos,
-    data: {
-      fileTypes:     ['pdf', 'xml', 'text', 'image'],
-      maxFiles:      50,
-      folderName:    '',
-      status:        'idle',
-      statusMessage: '',
-      results:       undefined,
-      count:         0,
-      pdfCount:      0,
-      xmlCount:      0,
-      textCount:     0,
-      imageCount:    0,
-      gisLayers:     undefined,
-      gisCount:      0,
-    } satisfies LocalFolderSourceNodeData,
-  }),
-  sampleDataSource: pos => ({
-    id: newId('sample'), type: 'sampleDataSource', position: pos,
-    data: {
-      selectedPackage: '',
-      packageTitle:    '',
-      selectedFiles:   [],
-      status:          'idle',
-      statusMessage:   '',
-      count:           0,
-      pdfCount:        0,
-      xmlCount:        0,
-      textCount:       0,
-      imageCount:      0,
-    } satisfies SampleDataSourceNodeData,
-  }),
-  ollamaNode: pos => ({
-    id: newId('ollama'), type: 'ollamaNode', position: pos,
-    data: {
-      model:               '',
-      visionOverride:      false,
-      systemPrompt:        'You are a research assistant helping to analyse humanities research documents and data.',
-      userPromptTemplate:  'Summarise the key themes and subjects in 3-4 sentences:\n\n{{content}}',
-      temperature:         0.7,
-      maxTokens:           4096,
-      status:              'idle',
-      statusMessage:       '',
-      results:             undefined,
-      inputCount:          0,
-      outputCount:         0,
-    } satisfies OllamaNodeData,
-  }),
-  ollamaField: pos => ({
-    id: newId('ollamaField'), type: 'ollamaField', position: pos,
-    data: {
-      model:               '',
-      selectedField:       '',
-      mode:                'per-record',
-      systemPrompt:        'You are a research assistant helping to analyse humanities research data.',
-      userPromptTemplate:  'Summarise the following in 2–3 sentences:\n\n{{value}}',
-      temperature:         0.7,
-      maxTokens:           4096,
-      status:              'idle',
-      statusMessage:       '',
-      results:             undefined,
-      inputCount:          0,
-      outputCount:         0,
-    } satisfies OllamaFieldNodeData,
-  }),
-  kclNode: pos => ({
-    id: newId('kcl'), type: 'kclNode', position: pos,
-    data: {
-      apiKey:              DEFAULT_KCL_API_KEY,
-      model:               'arc:nano',
-      systemPrompt:        'You are a research assistant helping to analyse humanities research documents and data.',
-      userPromptTemplate:  'Summarise the key themes and subjects in 3-4 sentences:\n\n{{content}}',
-      temperature:         0.7,
-      maxTokens:           32768,
-      visionMode:          false,
-      imageField:          '',
-      status:              'idle',
-      statusMessage:       '',
-      results:             undefined,
-      inputCount:          0,
-      outputCount:         0,
-    } satisfies KCLNodeData,
-  }),
-  kclField: pos => ({
-    id: newId('kclField'), type: 'kclField', position: pos,
-    style: { width: 300 },
-    data: {
-      apiKey:              DEFAULT_KCL_API_KEY,
-      model:               'arc:nano',
-      selectedField:       '',
-      outputField:         '',
-      mode:                'per-record',
-      systemPrompt:        'You are a research assistant helping to analyse humanities research data.',
-      userPromptTemplate:  'Summarise the following in 2–3 sentences:\n\n{{value}}',
-      temperature:         0.7,
-      maxTokens:           32768,
-      status:              'idle',
-      statusMessage:       '',
-      results:             undefined,
-      inputCount:          0,
-      outputCount:         0,
-    } satisfies KCLFieldNodeData,
-  }),
-  evaluatorNode: pos => ({
-    id: newId('evaluator'), type: 'evaluatorNode', position: pos,
-    style: { width: 300 },
-    data: {
-      apiKey:          DEFAULT_KCL_API_KEY,
-      judgeModel:      'arc:nexus',
-      referenceField:  '',
-      candidateField:  '',
-      rubricPrompt:    '',
-      recipePreset:    'interpretive-agreement',
-      humanScoreField: '',
-      temperature:     0,
-      maxTokens:       32768,
-      status:          'idle',
-      statusMessage:   '',
-      results:         undefined,
-      inputCount:      0,
-      outputCount:     0,
-      scoredCount:     0,
-      skippedCount:    0,
-      parseErrCount:   0,
-      resultsVersion:  0,
-      elapsedMs:       0,
-    } satisfies EvaluatorNodeData,
-  }),
-  kclOutput: pos => ({
-    id: newId('kclOut'), type: 'kclOutput', position: pos,
-    data: {},
-  }),
-  urlFetch: pos => ({
-    id: newId('urlFetch'), type: 'urlFetch', position: pos,
-    data: {
-      urlField:      '_sourceUrl',
-      stripHtml:     true,
-      maxLength:     8000,
-      timeoutSecs:   10,
-      renderJs:      true,
-      waitStrategy:  'networkidle2',
-      status:        'idle',
-      statusMessage: '',
-      results:       undefined,
-      inputCount:    0,
-      outputCount:   0,
-    } satisfies URLFetchNodeData,
-  }),
-  htmlSection: pos => ({
-    id: newId('htmlSection'), type: 'htmlSection', position: pos,
-    data: {
-      selector:        'main, article',
-      separator:       '\n\n',
-      maxLength:       8000,
-      preserveHtml:    false,
-      extractSection:  false,
-      status:          'idle',
-      statusMessage:   '',
-      inputCount:      0,
-      outputCount:     0,
-    } satisfies HTMLSectionNodeData,
-  }),
-  htmlPreview: pos => ({
-    id: newId('htmlPreview'), type: 'htmlPreview', position: pos,
-    style: { width: 460, height: 540 },
-    data: {
-      mode:     'captured',
-      urlField: '_sourceUrl',
-    } satisfies HTMLPreviewNodeData,
-  }),
-  smartFilter: pos => ({
-    id: newId('smartFilter'), type: 'smartFilter', position: pos,
-    data: {
-      apiKey:          DEFAULT_KCL_API_KEY,
-      model:           'arc:nano',
-      nlQuery:         '',
-      generatedFilter:    null,
-      disabledConditions: [],
-      filterStatus:       'idle',
-      filterMessage:      '',
-      matchCount:         0,
-      totalCount:         0,
-      resultsVersion:     0,
-    } satisfies SmartFilterNodeData,
-  }),
-  filterTransform: pos => ({
-    id: newId('ft'), type: 'filterTransform', position: pos,
-    data: {
-      mode:             'filter',
-      filterCombinator: 'AND',
-      filterOps:        [],
-      transformOps:     [],
-      status:           'idle',
-      statusMessage:    '',
-      results:          undefined,
-      inputCount:       0,
-      outputCount:      0,
-    } satisfies FilterTransformNodeData,
-  }),
-  spatialFilter: pos => ({
-    id: newId('sf'), type: 'spatialFilter', position: pos,
-    data: {
-      bbox:           null,
-      status:         'idle',
-      statusMessage:  '',
-      results:        undefined,
-      inputCount:     0,
-      outputCount:    0,
-    } satisfies SpatialFilterNodeData,
-  }),
-  deduplicate: pos => ({
-    id: newId('dedup'), type: 'deduplicate', position: pos,
-    data: {
-      dedupeField:   'id',
-      status:        'idle',
-      statusMessage: '',
-      inputCount:    0,
-      outputCount:   0,
-      removedCount:  0,
-    } satisfies DeduplicateNodeData,
-  }),
-  reconciliation: pos => ({
-    id: newId('recon'), type: 'reconciliation', position: pos,
-    data: {
-      selectedField:       '',
-      selectedAuthority:   '',
-      confidenceThreshold: 0.8,
-      status:              'idle',
-      statusMessage:       '',
-      results:             undefined,
-      count:               0,
-      resolvedCount:       0,
-      reviewCount:         0,
-    } satisfies ReconciliationNodeData,
-  }),
-  export: pos => ({
-    id: newId('export'), type: 'export', position: pos,
-    data: { format: 'csv' } satisfies ExportNodeData,
-  }),
-  quickView: pos => ({
-    id: newId('quickView'), type: 'quickView', position: pos,
-    data: { selectedField: '' } satisfies QuickViewNodeData,
-  }),
-  quickNote: pos => ({
-    id: newId('quickNote'), type: 'quickNote', position: pos,
-    data: { selectedField: '' } satisfies QuickNoteNodeData,
-    style: { width: 340 },
-  }),
-  comparisonReport: pos => ({
-    id: newId('cmpreport'), type: 'comparisonReport', position: pos,
-    data: {
-      originalField: '', noteField: '', responseField: '',
-      judgeScoreField: '', humanScoreField: '',
-    } satisfies ComparisonReportNodeData,
-    style: { width: 520, height: 600 },
-  }),
-  comment: pos => ({
-    id: newId('comment'), type: 'comment', position: pos,
-    data: { title: '', body: '' } satisfies CommentNodeData,
-    style: { width: 220, height: 120 },
-  }),
-  mergeByQID: pos => ({
-    id: newId('merge'), type: 'mergeByQID', position: pos,
-    data: {
-      keepUnmatched:  false,
-      status:         'idle',
-      statusMessage:  '',
-      mergedCount:    0,
-      unmatchedCount: 0,
-      resultsVersion: 0,
-    } satisfies MergeByQIDNodeData,
-  }),
-  wikidataEnrich: pos => ({
-    id: newId('wdenrich'), type: 'wikidataEnrich', position: pos,
-    data: {
-      reconcileField:     '',
-      selectedProperties: [],
-      customProperties:   '',
-      status:             'idle',
-      statusMessage:      '',
-      count:              0,
-      resultsVersion:     0,
-    } satisfies WikidataEnrichNodeData,
-  }),
-  saveSearch: pos => ({
-    id: newId('save'), type: 'saveSearch', position: pos,
-    data: {
-      status:        'idle',
-      statusMessage: '',
-      lastSavedFile: '',
-      lastSavedAt:   '',
-    } satisfies SaveSearchNodeData,
-  }),
-  loadSavedSearch: pos => ({
-    id: newId('load'), type: 'loadSavedSearch', position: pos,
-    data: {
-      status:        'idle',
-      statusMessage: '',
-      savedAt:       '',
-      sources:       [],
-      sourceCounts:  {},
-      recordCount:   0,
-      searchParams:  {},
-      hasEnvelope:   false,
-      count:         0,
-      resultsVersion: 0,
-    } satisfies LoadSavedSearchNodeData,
-  }),
-  xmlSection: pos => ({
-    id: newId('xml'), type: 'xmlSection', position: pos,
-    style: { width: 320, height: 370 },
-    data: {
-      xpath:         '',
-      outputMode:    'text',
-      maxLength:     8000,
-      status:        'idle',
-      statusMessage: '',
-      inputCount:    0,
-      outputCount:   0,
-    } satisfies XMLSectionNodeData,
-  }),
-  imageView: pos => ({
-    id: newId('imgview'), type: 'imageView', position: pos,
-    data: {
-      mode: 'iiif',
-      selectedField: '',
-      imageDirectUrl: '',
-      manifestUrl: '',
-    } satisfies ImageViewNodeData,
-    style: { width: 400, height: 480 },
-  }),
-  tableOutput: pos => ({
-    id: newId('table'), type: 'tableOutput', position: pos,
-    style: { width: 560, height: 380 },
-    data: {},
-  }),
-  jsonOutput: pos => ({
-    id: newId('json'), type: 'jsonOutput', position: pos,
-    data: {},
-  }),
-  mapOutput: pos => ({
-    id: newId('map'), type: 'mapOutput', position: pos,
-    data: {
-      bbox:           null,
-      inputCount:     0,
-      outputCount:    0,
-      resultsVersion: 0,
-    } satisfies MapOutputNodeData,
-  }),
-  timelineOutput: pos => ({
-    id: newId('timeline'), type: 'timelineOutput', position: pos,
-    data: { fitToRange: false } satisfies TimelineOutputNodeData,
-    style: { width: 520 },
-  }),
-  timelineView: pos => ({
-    id: newId('timeline'), type: 'timelineView', position: pos,
-    data: { fitToRange: false } satisfies TimelineOutputNodeData,
-    style: { width: 520 },
-  }),
-  ollamaOutput: pos => ({
-    id: newId('ollamaOut'), type: 'ollamaOutput', position: pos,
-    data: {},
-  }),
-  citation: pos => ({
-    id: newId('citation'), type: 'citation', position: pos,
-    data: {} satisfies CitationNodeData,
-  }),
-  europeanaSearch: pos => ({
-    id: newId('europeana'), type: 'europeanaSearch', position: pos,
-    data: {
-      apiKey: DEFAULT_EUROPEANA_API_KEY, inlineQuery: '', inlineLimit: '20',
-      typeFilter: 'any', reusability: 'any', mediaOnly: false,
-      status: 'idle', statusMessage: '', count: 0,
-    } satisfies EuropeanaSearchNodeData,
-  }),
-  fieldDistribution: pos => ({
-    id: newId('fdist'), type: 'fieldDistribution', position: pos,
-    data: { selectedField: '', maxBars: 20, expandArrays: true, filteredValues: [] } satisfies FieldDistributionNodeData,
-  }),
-  quickStart: pos => ({
-    id: newId('qs'), type: 'quickStart', position: pos,
-    data: {
-      apiKey: DEFAULT_KCL_API_KEY, model: 'arc:nexus',
-      researchQuestion: '', plan: null,
-      planStatus: 'idle', planMessage: '', instantiated: false,
-    } satisfies QuickStartNodeData,
-  }),
-  group: pos => ({
-    id: newId('group'), type: 'group', position: pos,
-    style: { width: 400, height: 300 },
-    data: { name: 'Group' },
-  }),
-}
-
-// ─── sidebar definition ───────────────────────────────────────────────────────
-
-const SIDEBAR_ITEMS = [
-  // ── Canvas ──────────────────────────────────────────────────────────────────
-  { type: 'quickStart',  label: 'QuickStart',        sub: 'AI workflow planner — describe a question, auto-build a workflow', color: '#0c1445', group: 'Canvas' },
-  { type: 'comment',     label: 'Comment',           sub: 'Annotation label',          color: '#f59e0b', group: 'Canvas' },
-  // ── Input ───────────────────────────────────────────────────────────────────
-  { type: 'param',       label: 'Param',             sub: 'Text / Integer value',      color: '#3b82f6', group: 'Input' },
-  // ── Inspection ───────────────────────────────────────────────────────────────
-  { type: 'quickView',         label: 'QuickView',             sub: 'Inspect one field in full',               color: '#1e293b', group: 'Inspection' },
-  { type: 'imageView',         label: 'ImageView',             sub: 'Image + IIIF manifest viewer',            color: '#1c3144', group: 'Inspection' },
-  { type: 'htmlPreview',       label: 'HTMLPreview',           sub: 'Browse captured HTML, click to capture CSS selectors', color: '#0c4a6e', group: 'Inspection' },
-  { type: 'sourceProfile',     label: 'SourceProfile',         sub: 'Schema, field stats, completeness + AI narrative', color: '#1f2937', group: 'Inspection' },
-  // ── Data Services ────────────────────────────────────────────────────────────
-  { type: 'ariadneSearch',     label: 'ARIADNESearch',         sub: 'ARIADNE pan-European archaeology portal',  color: '#164e63', group: 'Data Services' },
-  { type: 'hsdsSearch',        label: 'HSDSSearch',            sub: 'Heritage Science Data Service',        color: '#134e4a', group: 'Data Services' },
-  { type: 'bodleianSearch',   label: 'BodleianSearch',        sub: 'Bodleian Digital Collections (Oxford)',    color: '#003865', group: 'Data Services' },
-  { type: 'europeanaSearch',   label: 'EuropeanaSearch',       sub: 'Europeana cultural heritage aggregator',  color: '#2563eb', group: 'Data Services' },
-  { type: 'gbifSearch',        label: 'GBIFSearch',            sub: 'GBIF occurrence search',                  color: '#0f4c81', group: 'Data Services' },
-  { type: 'lldsSearch',        label: 'LLDSSearch',            sub: 'Lit. & Linguistic Data',                  color: '#92400e', group: 'Data Services' },
-  { type: 'mdsSearch',         label: 'MDSSearch',             sub: 'Museum Data Services',                     color: '#1e3a8a', group: 'Data Services' },
-  { type: 'smgSearch',         label: 'SMGSearch',             sub: 'Science Museum Group collections',         color: '#701a75', group: 'Data Services' },
-  { type: 'vaSearch',          label: 'VASearch',              sub: 'Victoria and Albert Museum collections',    color: '#9f1239', group: 'Data Services' },
-  { type: 'geocoding',         label: 'Geocoding',             sub: 'TGN + Wikidata place enrichment',                   color: '#065f46', group: 'Extraction and Enrichment' },
-  { type: 'smartGeocoder',    label: 'SmartGeocoder',         sub: 'LLM place extraction → Nominatim + TGN + Wikidata',  color: '#1e3a5f', group: 'Extraction and Enrichment' },
-  // ── Local Content ────────────────────────────────────────────────────────────
-  { type: 'frameSenseSource',  label: 'FrameSenseSource',      sub: 'Load pre-processed FrameSense video shots', color: '#1c2a3a', group: 'Local Content' },
-  { type: 'localFileSource',   label: 'LocalFileSource',       sub: 'Single CSV, XML, image or PDF file',           color: '#0e7490', group: 'Local Content' },
-  { type: 'localFolderSource', label: 'LocalFolderSource',     sub: 'Read files from local folder',            color: '#14532d', group: 'Local Content' },
-  { type: 'sampleDataSource', label: 'SampleDataSource',      sub: 'Load packaged collection data (XML, text, PDF)', color: '#1e3a5f', group: 'Local Content' },
-  { type: 'loadSavedSearch',   label: 'LoadSavedSearch',       sub: 'Replay a .nfcs.json saved search',        color: '#4c1d95', group: 'Local Content' },
-  { type: 'saveSearch',        label: 'SaveSearch',            sub: 'Save records + metadata to .nfcs.json',   color: '#1b4332', group: 'Local Content' },
-  // ── Filters and Transforms ───────────────────────────────────────────────────
-  { type: 'fieldDistribution', label: 'FieldDistribution',     sub: 'Faceted bar chart — click bars to filter', color: '#047857', group: 'Filters and Transforms' },
-  { type: 'smartFilter',       label: 'SmartFilter',           sub: 'Natural language → filter records',         color: '#0f4c81', group: 'Filters and Transforms' },
-  { type: 'filterTransform',   label: 'FilterTransform',       sub: 'Filter + transform records',               color: '#4f46e5', group: 'Filters and Transforms' },
-  { type: 'spatialFilter',     label: 'SpatialFilter',         sub: 'Draw bounding box to filter by location',  color: '#0891b2', group: 'Filters and Transforms' },
-  { type: 'deduplicate',       label: 'Deduplicate',           sub: 'Remove duplicate records by field value',  color: '#0f766e', group: 'Filters and Transforms' },
-  // ── Extraction and Enrichment ────────────────────────────────────────────────
-  { type: 'kclNode',           label: 'KingsInference',        sub: 'KCL inference — file/content records',    color: '#881337', group: 'Extraction and Enrichment' },
-  { type: 'kclField',          label: 'KingsInferenceByField', sub: 'KCL inference on a chosen field',         color: '#7f1d1d', group: 'Extraction and Enrichment' },
-  { type: 'evaluatorNode',     label: 'Evaluator',             sub: 'LLM-as-judge — score candidate vs reference field', color: '#3f3f46', group: 'Extraction and Enrichment' },
-  { type: 'urlFetch',          label: 'URLContentFetch',       sub: 'Fetch URL content into records',          color: '#0c4a6e', group: 'Extraction and Enrichment' },
-  { type: 'htmlSection',       label: 'HTMLExtract',           sub: 'Extract page section by CSS selector',    color: '#065f46', group: 'Extraction and Enrichment' },
-  { type: 'reconciliation',    label: 'Reconciliation',        sub: 'Wikidata field reconciler',               color: '#7c3aed', group: 'Extraction and Enrichment' },
-  { type: 'wikidataEnrich',    label: 'WikidataEnrich',        sub: 'Fetch Wikidata properties for QIDs',      color: '#0369a1', group: 'Extraction and Enrichment' },
-  { type: 'mergeByQID',        label: 'MergeByQID',            sub: 'Join records from multiple sources by QID', color: '#6b21a8', group: 'Extraction and Enrichment' },
-  { type: 'xmlSection',        label: 'XMLExtract',            sub: 'Extract XML content by XPath',            color: '#44403c', group: 'Extraction and Enrichment' },
-  { type: 'quickNote',         label: 'QuickNote',             sub: 'Read a field in full and write per-record notes', color: '#0f766e', group: 'Extraction and Enrichment' },
-  // ── Output ───────────────────────────────────────────────────────────────────
-  { type: 'comparisonReport',  label: 'ComparisonReport',      sub: 'Judge-vs-human evaluation cards + agreement summary', color: '#3730a3', group: 'Output' },
-  { type: 'citation',          label: 'Citation',              sub: 'Data source citations for this workflow stage', color: '#78350f', group: 'Output' },
-  { type: 'export',            label: 'Export',                sub: 'CSV / JSON / GeoJSON',                    color: '#b45309', group: 'Output' },
-  { type: 'jsonOutput',        label: 'JSONOutput',            sub: 'Formatted JSON viewer',                   color: '#6d28d9', group: 'Output' },
-  { type: 'kclOutput',         label: 'KingsInferenceOutput',  sub: 'Display KCL inference text',              color: '#3b0764', group: 'Output' },
-  { type: 'mapOutput',         label: 'MapOutput',             sub: 'Geo map (lat/lon records)',                color: '#14532d', group: 'Inspection' },
-  { type: 'tableOutput',       label: 'TableOutput',           sub: 'Paginated results table',                 color: '#0d9488', group: 'Inspection' },
-  { type: 'timelineView',      label: 'TimelineView',          sub: 'Filter records by date range + timeline',  color: '#1e293b', group: 'Inspection' },
-  // ── Hidden ───────────────────────────────────────────────────────────────────
-  { type: 'adsLibrarySearch',  label: 'ADSLibrary',            sub: 'ADS Library catalogue',                   color: '#1e3a5f', group: 'Output', hidden: true },
-  { type: 'adsSearchAdvanced', label: 'ADSSearch',             sub: 'Archaeology Data Services',                color: '#7c2d12', group: 'Output', hidden: true },
-  { type: 'ollamaNode',        label: 'Ollama',                sub: 'Local LLM — file/content records',        color: '#312e81', group: 'Extraction and Enrichment' },
-  { type: 'ollamaField',       label: 'OllamaByField',         sub: 'LLM inference on a chosen field',        color: '#1e1b4b', group: 'Extraction and Enrichment' },
-  { type: 'ollamaOutput',      label: 'OllamaOutput',          sub: 'Display Ollama inference text',           color: '#0f172a', group: 'Output' },
-]
+const nodeColourMap = Object.fromEntries(SIDEBAR_ITEMS.map(i => [i.type, i.color]))
 
 // ─── App ──────────────────────────────────────────────────────────────────────
 
@@ -805,18 +72,25 @@ export default function App() {
   const [loadError, setLoadError] = useState<string | null>(null)
   const [runningAll, setRunningAll] = useState(false)
   const [expandedNodeId, setExpandedNodeId] = useState<string | null>(null)
-  const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(new Set(['Data Services', 'Local Content', 'Filters and Transforms', 'Extraction and Enrichment', 'Output']))
+  const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(() => new Set(DEFAULT_COLLAPSED_GROUPS))
   const [chatOpen, setChatOpen] = useState(false)
   const [simpleMode, setSimpleMode] = useState(
-    () => (localStorage.getItem('nfcs_simple_mode') ?? 'true') === 'true',
+    () => (localStorage.getItem(STORAGE_KEYS.SIMPLE_MODE) ?? 'true') === 'true',
   )
   useEffect(() => {
-    localStorage.setItem('nfcs_simple_mode', String(simpleMode))
+    localStorage.setItem(STORAGE_KEYS.SIMPLE_MODE, String(simpleMode))
   }, [simpleMode])
+
+  const [snapEnabled, setSnapEnabled] = useState(
+    () => localStorage.getItem(STORAGE_KEYS.SNAP_GRID) === 'true',
+  )
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEYS.SNAP_GRID, String(snapEnabled))
+  }, [snapEnabled])
 
   // ── Author mode: click the version text 5× to unlock "Save as Example" ──
   const [authorMode, setAuthorMode] = useState(
-    () => localStorage.getItem('nfcs_author_mode') === 'true',
+    () => localStorage.getItem(STORAGE_KEYS.AUTHOR_MODE) === 'true',
   )
   const versionClicksRef = useRef(0)
   const versionClickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -828,7 +102,7 @@ export default function App() {
       versionClicksRef.current = 0
       setAuthorMode(m => {
         const next = !m
-        localStorage.setItem('nfcs_author_mode', String(next))
+        localStorage.setItem(STORAGE_KEYS.AUTHOR_MODE, String(next))
         return next
       })
     }
@@ -1421,6 +695,13 @@ export default function App() {
           {simpleMode ? '◐ Simple' : '◑ Advanced'}
         </button>
         <button
+          style={{ ...templateBtnStyle, background: snapEnabled ? '#0f4c81' : undefined, color: snapEnabled ? '#fff' : undefined, borderColor: snapEnabled ? '#0f4c81' : undefined }}
+          onClick={() => setSnapEnabled(v => !v)}
+          title={snapEnabled ? 'Grid snap ON — click to disable' : 'Grid snap OFF — click to enable (20px grid)'}
+        >
+          {snapEnabled ? '⊞ Snap' : '⊟ Snap'}
+        </button>
+        <button
           style={{ ...templateBtnStyle, background: chatOpen ? '#881337' : undefined, color: chatOpen ? '#fff' : undefined, borderColor: chatOpen ? '#881337' : undefined }}
           onClick={() => setChatOpen(v => !v)}
           title="Toggle KCL Assistant chat"
@@ -1439,8 +720,10 @@ export default function App() {
       <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
         {/* Sidebar */}
         <div style={sidebarStyle}>
-          {(['Canvas', 'Input', 'Inspection', 'Data Services', 'Local Content', 'Filters and Transforms', 'Extraction and Enrichment', 'Output'] as const).map(group => {
-            const ADVANCED_TYPES = new Set(['frameSenseSource', 'smartFilter', 'smartGeocoder', 'ollamaNode', 'ollamaField', 'ollamaOutput'])
+          {SIDEBAR_GROUPS.map(group => {
+            const isExperimental = group === 'Experimental'
+            // Experimental group is entirely hidden in Simple mode
+            if (isExperimental && simpleMode) return null
             const items = SIDEBAR_ITEMS.filter(
               i => i.group === group && !i.hidden && (!simpleMode || !ADVANCED_TYPES.has(i.type)),
             )
@@ -1451,14 +734,19 @@ export default function App() {
               return next
             })
             return (
-              <div key={group}>
+              <div key={group} style={isExperimental ? { borderLeft: '3px solid #f59e0b', paddingLeft: 4, marginTop: 4 } : undefined}>
                 <div
                   style={{ ...sidebarHeading, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
                   onClick={toggleGroup}
                 >
-                  <span>{group}</span>
+                  <span>{isExperimental ? '⚗ Experimental' : group}</span>
                   <span style={{ fontSize: 9, color: '#d1d5db' }}>{isCollapsed ? '▶' : '▼'}</span>
                 </div>
+                {isExperimental && !isCollapsed && (
+                  <div style={{ fontSize: 9, color: '#d97706', fontStyle: 'italic', padding: '0 4px 4px', lineHeight: 1.4 }}>
+                    These nodes may change behaviour between releases.
+                  </div>
+                )}
                 {!isCollapsed && items.map(item => (
                   <div
                     key={item.type}
@@ -1519,10 +807,12 @@ export default function App() {
               multiSelectionKeyCode="Shift"
               minZoom={0.1}
               fitView
+              snapToGrid={snapEnabled}
+              snapGrid={[20, 20]}
             >
               <Background />
               <Controls />
-              <MiniMap />
+              <MiniMap nodeColor={node => nodeColourMap[node.type ?? ''] ?? '#888'} />
               <Panel position="bottom-left" style={attributionStyle}>
                 Conceptualised at King&#39;s Digital Lab
               </Panel>
@@ -1598,61 +888,3 @@ function DebugPanel({ nodes }: { nodes: AppNode[] }) {
   )
 }
 
-// ─── styles ───────────────────────────────────────────────────────────────────
-
-const attributionStyle: React.CSSProperties = {
-  background: 'rgba(255,255,255,0.75)', backdropFilter: 'blur(4px)',
-  border: '1px solid #e5e7eb', borderRadius: 4,
-  padding: '3px 8px', fontSize: 10, color: '#9ca3af',
-  fontFamily: 'inherit', letterSpacing: '0.01em',
-  pointerEvents: 'none',
-}
-
-const topBarStyle: React.CSSProperties = {
-  height: 40, background: '#fff', borderBottom: '1px solid #e5e7eb',
-  display: 'flex', alignItems: 'center', gap: 16, padding: '0 16px', flexShrink: 0,
-}
-
-const templateBtnStyle: React.CSSProperties = {
-  background: '#f3f4f6', color: '#374151', border: '1px solid #d1d5db', borderRadius: 6,
-  padding: '5px 12px', fontSize: 12, fontWeight: 600, cursor: 'pointer',
-}
-
-const runAllBtnStyle: React.CSSProperties = {
-  background: '#0f4c81', color: '#fff', border: 'none', borderRadius: 6,
-  padding: '5px 14px', fontSize: 12, fontWeight: 700, cursor: 'pointer',
-}
-
-const sidebarStyle: React.CSSProperties = {
-  width: 184, background: '#fff', borderRight: '1px solid #e5e7eb',
-  display: 'flex', flexDirection: 'column', padding: '12px 8px', gap: 6, flexShrink: 0,
-  overflowY: 'auto',
-}
-
-const sidebarHeading: React.CSSProperties = {
-  fontSize: 10, fontWeight: 700, color: '#9ca3af',
-  textTransform: 'uppercase', letterSpacing: '0.08em', padding: '0 4px', marginBottom: 2,
-}
-
-const sidebarItemStyle: React.CSSProperties = {
-  display: 'flex', alignItems: 'center', gap: 8, padding: '7px 8px',
-  borderRadius: 6, border: '1px solid #e5e7eb', cursor: 'grab', userSelect: 'none',
-}
-
-const sidebarDot: React.CSSProperties = {
-  width: 10, height: 10, borderRadius: '50%', flexShrink: 0,
-}
-
-const debugOuter: React.CSSProperties = {
-  background: '#1e1e1e', color: '#d4d4d4', borderTop: '1px solid #333',
-  flexShrink: 0, maxHeight: 200, display: 'flex', flexDirection: 'column',
-}
-
-const debugToggle: React.CSSProperties = {
-  background: '#2d2d2d', border: 'none', color: '#9ca3af', fontSize: 11,
-  padding: '4px 10px', cursor: 'pointer', textAlign: 'left', flexShrink: 0,
-}
-
-const debugPre: React.CSSProperties = {
-  fontSize: 11, padding: '6px 10px', overflowY: 'auto', flex: 1, margin: 0,
-}
