@@ -5,3 +5,14 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Scratch / working notes — never commit AI handoff prompts, spec drafts,
+# scraped session dumps, or stray office documents
+*.docx
+/*-spec.md
+/handoff*
+/tags
+/ariadne.json
+/europeana.json
+/node_routes.jpg
+/AGENTS.md
