@@ -16,6 +16,7 @@ import { useStaleResults } from '../hooks/useStaleResults'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
+import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from '../utils/promptTemplates'
 
 export interface OllamaFieldNodeData {
   model: string
@@ -229,11 +230,9 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
         setLiveProgress(`Aggregating ${upstreamRecords.length} records…`)
         updateNodeData(id, { statusMessage: 'Sending aggregate prompt…' })
 
-        const prompt = promptTemplate
-          .replace(/\{\{values\}\}/g, values)
-          .replace(/\{\{field\}\}/g,  selectedField)
-          .replace(/\{\{value\}\}/g,  values)
-          .replace(/\{\{count\}\}/g,  String(upstreamRecords.length))
+        const prompt = renderFieldTemplateAggregate(promptTemplate, {
+          values, field: selectedField, count: upstreamRecords.length,
+        })
 
         const response = await streamChat(
           selectedModel, systemPrompt, prompt, temperature, maxTokens, signal,
@@ -276,11 +275,9 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
           setLiveProgress(`${i + 1} / ${upstreamRecords.length}`)
           updateNodeData(id, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
-          // Substitute {{value}}, {{field}}, and any other {{key}} from record
-          const prompt = promptTemplate
-            .replace(/\{\{value\}\}/g, value)
-            .replace(/\{\{field\}\}/g, selectedField)
-            .replace(/\{\{(\w+)\}\}/g, (_, k: string) => String(record[k] ?? ''))
+          const prompt = renderFieldTemplatePerRecord(promptTemplate, {
+            value, field: selectedField, record,
+          })
 
           const response = await streamChat(
             selectedModel, systemPrompt, prompt, temperature, maxTokens, signal,

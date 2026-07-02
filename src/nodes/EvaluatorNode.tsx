@@ -18,6 +18,7 @@ import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclCon
 import { arcChat } from '../utils/arc'
 import { useStaleResults } from '../hooks/useStaleResults'
 import { formatDuration } from '../utils/formatDuration'
+import { renderTemplate } from '../utils/promptTemplates'
 import { EVALUATOR_RECIPES } from './evaluatorRecipes'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
@@ -66,15 +67,6 @@ const EVAL_SYSTEM =
   'Return ONLY valid JSON. No prose, no explanation outside the JSON object.'
 
 // ── Shared helpers (mirrored from runEvaluatorNode.ts) ──────────────────────
-
-function renderTemplate(template: string, record: Record<string, unknown>): string {
-  return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
-    const val = record[key]
-    if (val === undefined || val === null) return ''
-    if (typeof val === 'object') return JSON.stringify(val)
-    return String(val)
-  })
-}
 
 function parseJudgeJSON(raw: string): Record<string, unknown> | null {
   let s = raw.trim()

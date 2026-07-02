@@ -12,21 +12,13 @@ import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars } from './kclConfig'
 import { formatDuration } from './formatDuration'
+import { renderTemplate } from './promptTemplates'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
 type ContentPart =
   | { type: 'text'; text: string }
   | { type: 'image_url'; image_url: { url: string; format: string } }
-
-function renderTemplate(template: string, record: Record<string, unknown>): string {
-  return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
-    const val = record[key]
-    if (val === undefined || val === null) return ''
-    if (typeof val === 'object') return JSON.stringify(val)
-    return String(val)
-  })
-}
 
 const IMAGE_MAX_DIM = 1280
 

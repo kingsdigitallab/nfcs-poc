@@ -14,6 +14,7 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclConfig'
+import { renderTemplate } from '../utils/promptTemplates'
 import { useStaleResults } from '../hooks/useStaleResults'
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
@@ -106,17 +107,6 @@ const STATUS_BORDER: Record<string, string> = {
   running: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
-}
-
-// ── Template rendering ─────────────────────────────────────────────────────────
-
-function renderTemplate(template: string, record: Record<string, unknown>): string {
-  return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
-    const val = record[key]
-    if (val === undefined || val === null) return ''
-    if (typeof val === 'object') return JSON.stringify(val)
-    return String(val)
-  })
 }
 
 // ── Non-streaming KCL API helper ──────────────────────────────────────────────

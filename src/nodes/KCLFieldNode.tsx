@@ -18,6 +18,7 @@ import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
 import { SYSTEM_PROMPT_FLAVOURS } from '../utils/promptStarters'
 import { formatDuration } from '../utils/formatDuration'
+import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from '../utils/promptTemplates'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -298,11 +299,9 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
         setLiveTokens('')
         updateNodeData(id, { statusMessage: 'Sending aggregate prompt…' })
 
-        const prompt = promptTemplate
-          .replace(/\{\{values\}\}/g, values)
-          .replace(/\{\{field\}\}/g,  selectedField)
-          .replace(/\{\{value\}\}/g,  values)
-          .replace(/\{\{count\}\}/g,  String(upstreamRecords.length))
+        const prompt = renderFieldTemplateAggregate(promptTemplate, {
+          values, field: selectedField, count: upstreamRecords.length,
+        })
 
         const callT0 = performance.now()
         const response = await kclChat(
@@ -350,10 +349,9 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
           setLiveTokens('')
           updateNodeData(id, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
-          const prompt = promptTemplate
-            .replace(/\{\{value\}\}/g, value)
-            .replace(/\{\{field\}\}/g, selectedField)
-            .replace(/\{\{(\w+)\}\}/g, (_, k: string) => String(record[k] ?? ''))
+          const prompt = renderFieldTemplatePerRecord(promptTemplate, {
+            value, field: selectedField, record,
+          })
 
           const callT0 = performance.now()
           const response = await kclChat(
