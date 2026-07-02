@@ -88,6 +88,7 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
   { type: 'spatialFilter',     label: 'SpatialFilter',         sub: 'Draw bounding box to filter by location', color: '#0891b2', group: 'Analysing' },
   { type: 'deduplicate',       label: 'Deduplicate',           sub: 'Remove duplicate records by field value', color: '#0f766e', group: 'Analysing' },
   { type: 'sourceProfile',     label: 'SourceProfile',         sub: 'Schema, field stats, completeness + AI narrative', color: '#1f2937', group: 'Analysing' },
+  { type: 'evaluatorNode',     label: 'Evaluator',             sub: 'LLM-as-judge — score candidate vs reference field', color: '#3f3f46', group: 'Analysing' },
   // ── Visualising (TaDiRAH: Analysis > Visual Analysis; Dissemination > Sharing) ─
   { type: 'quickView',         label: 'QuickView',             sub: 'Inspect one field in full',               color: '#1e293b', group: 'Visualising' },
   { type: 'imageView',         label: 'ImageView',             sub: 'Image + IIIF manifest viewer',            color: '#1c3144', group: 'Visualising' },
@@ -95,6 +96,7 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
   { type: 'tableOutput',       label: 'TableOutput',           sub: 'Paginated results table',                 color: '#0d9488', group: 'Visualising' },
   { type: 'mapOutput',         label: 'MapOutput',             sub: 'Geo map (lat/lon records)',                color: '#14532d', group: 'Visualising' },
   { type: 'timelineView',      label: 'TimelineView',          sub: 'Filter records by date range + timeline', color: '#1e293b', group: 'Visualising' },
+  { type: 'timelineOutput',    label: 'TimelineOutput',        sub: 'Display-only timeline of records by date (no filtering)', color: '#475569', group: 'Visualising' },
   // ── Disseminating (TaDiRAH: Dissemination; Storage > Organizing/Archiving) ────
   { type: 'citation',          label: 'Citation',              sub: 'Data source citations for this workflow stage', color: '#78350f', group: 'Disseminating' },
   { type: 'export',            label: 'Export',                sub: 'CSV / JSON / GeoJSON',                    color: '#b45309', group: 'Disseminating' },
@@ -104,7 +106,6 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
   { type: 'saveSearch',        label: 'SaveSearch',            sub: 'Save records + metadata to .nfcs.json',   color: '#1b4332', group: 'Disseminating' },
   { type: 'loadSavedSearch',   label: 'LoadSavedSearch',       sub: 'Replay a .nfcs.json saved search',        color: '#4c1d95', group: 'Disseminating' },
   // ── Experimental (alpha nodes — hidden in Simple mode, collapsed by default) ───
-  { type: 'evaluatorNode',     label: 'Evaluator',             sub: 'LLM-as-judge — score candidate vs reference field', color: '#3f3f46', group: 'Experimental', alpha: true },
   { type: 'frameSenseSource',  label: 'FrameSenseSource',      sub: 'Load pre-processed FrameSense video shots', color: '#1c2a3a', group: 'Experimental', alpha: true },
   // ── Hidden (kept registered but not shown in sidebar) ────────────────────────
   { type: 'adsLibrarySearch',  label: 'ADSLibrary',            sub: 'ADS Library catalogue',                   color: '#1e3a5f', group: 'Disseminating', hidden: true },

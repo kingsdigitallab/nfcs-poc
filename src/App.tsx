@@ -73,6 +73,7 @@ export default function App() {
   const [runningAll, setRunningAll] = useState(false)
   const [expandedNodeId, setExpandedNodeId] = useState<string | null>(null)
   const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(() => new Set(DEFAULT_COLLAPSED_GROUPS))
+  const [nodeQuery, setNodeQuery] = useState('')
   const [chatOpen, setChatOpen] = useState(false)
   const [simpleMode, setSimpleMode] = useState(
     () => (localStorage.getItem(STORAGE_KEYS.SIMPLE_MODE) ?? 'true') === 'true',
@@ -720,14 +721,53 @@ export default function App() {
       <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
         {/* Sidebar */}
         <div style={sidebarStyle}>
+          {/* Node search — sticky, pinned while the list scrolls */}
+          <div style={{ position: 'sticky', top: 0, zIndex: 1, background: '#fff', paddingBottom: 6 }}>
+            <div style={{ position: 'relative' }}>
+              <input
+                type="text"
+                value={nodeQuery}
+                onChange={e => setNodeQuery(e.target.value)}
+                placeholder="Search nodes…"
+                style={{
+                  width: '100%', boxSizing: 'border-box',
+                  padding: '6px 22px 6px 8px', fontSize: 12,
+                  border: '1px solid #e5e7eb', borderRadius: 6, outline: 'none',
+                }}
+              />
+              {nodeQuery && (
+                <button
+                  type="button"
+                  onClick={() => setNodeQuery('')}
+                  title="Clear search"
+                  style={{
+                    position: 'absolute', right: 4, top: '50%', transform: 'translateY(-50%)',
+                    border: 'none', background: 'none', cursor: 'pointer',
+                    fontSize: 12, color: '#9ca3af', lineHeight: 1, padding: 2,
+                  }}
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+          </div>
           {SIDEBAR_GROUPS.map(group => {
+            const q = nodeQuery.trim().toLowerCase()
+            const searching = q.length > 0
             const isExperimental = group === 'Experimental'
             // Experimental group is entirely hidden in Simple mode
             if (isExperimental && simpleMode) return null
             const items = SIDEBAR_ITEMS.filter(
-              i => i.group === group && !i.hidden && (!simpleMode || !ADVANCED_TYPES.has(i.type)),
+              i => i.group === group && !i.hidden && (!simpleMode || !ADVANCED_TYPES.has(i.type)) &&
+                (!searching
+                  || i.label.toLowerCase().includes(q)
+                  || i.sub.toLowerCase().includes(q)
+                  || i.type.toLowerCase().includes(q)),
             )
-            const isCollapsed = collapsedGroups.has(group)
+            // While searching, hide groups with no matches for a clean list
+            if (searching && items.length === 0) return null
+            // While searching, force-expand so matches in collapsed groups show
+            const isCollapsed = searching ? false : collapsedGroups.has(group)
             const toggleGroup = () => setCollapsedGroups(prev => {
               const next = new Set(prev)
               next.has(group) ? next.delete(group) : next.add(group)
