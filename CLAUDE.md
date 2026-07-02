@@ -227,6 +227,11 @@ and `⚗` icon in the sidebar. When `simpleMode` is active the entire group is h
 
 ## Registration Checklist (new runnable node)
 
+`NodeTypeId` (exported from `src/nodes/index.ts`, derived from `nodeTypes`) links the registries: `nodeRunners`
+and `NODE_DEFAULTS` carry `satisfies Partial<Record<NodeTypeId, …>>` guards and `SidebarItem.type` is `NodeTypeId`,
+so a typo'd or unregistered type string in steps 2/5/6 is a compile error instead of a silently missing facet.
+Register the component (step 4) FIRST — the other registries type-check against it.
+
 1. `src/utils/run<Name>Node.ts` — implement `NodeRunner`
 2. Add to `src/utils/nodeRunners.ts`
 3. `src/nodes/<Name>Node.tsx`

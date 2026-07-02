@@ -1,6 +1,9 @@
-/** A single sidebar palette entry. */
+import type { NodeTypeId } from '../nodes'
+
+/** A single sidebar palette entry. `type` must be a registered node type —
+ * a typo here is a compile error, not a silently missing palette entry. */
 export interface SidebarItem {
-  type:        string
+  type:        NodeTypeId
   label:       string
   sub:         string
   color:       string
