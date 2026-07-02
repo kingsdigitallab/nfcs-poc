@@ -32,6 +32,23 @@ export interface GBIFSearchResponse {
   results: GBIFOccurrence[]
 }
 
+/**
+ * Every record must carry a display title — mixed-source tables, map popups
+ * and timelines all lean on it. Many GBIF occurrences lack scientificName
+ * (fossils, unidentified specimens), so fall through the taxonomy and then
+ * to dataset/record identity rather than leaving the title blank.
+ */
+function gbifTitle(hit: GBIFOccurrence): string {
+  return (
+    hit.scientificName
+    ?? hit.species
+    ?? hit.genus
+    ?? (hit.datasetName && hit.basisOfRecord ? `${hit.datasetName} (${hit.basisOfRecord})` : hit.datasetName)
+    ?? (hit.basisOfRecord ? `${hit.basisOfRecord} occurrence` : undefined)
+    ?? `GBIF occurrence ${hit.key ?? '(unknown)'}`
+  )
+}
+
 export function adaptGBIFResponse(response: GBIFSearchResponse): UnifiedRecord[] {
   return response.results.map(hit => ({
     id: `gbif:${hit.key ?? Math.random()}`,
@@ -42,7 +59,7 @@ export function adaptGBIFResponse(response: GBIFSearchResponse): UnifiedRecord[]
     _sourceUrl: hit.key ? `https://www.gbif.org/occurrence/${hit.key}` : undefined,
 
     // Cross-service fields — makes GBIF records work in mixed-source tables
-    title: hit.scientificName,
+    title: gbifTitle(hit),
     date: hit.eventDate,
 
     country: hit.country,
