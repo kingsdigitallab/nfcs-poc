@@ -752,7 +752,9 @@ const styles = {
     lineHeight: 1.5,
     maxHeight: 60,
     overflowY: 'auto' as const,
+    overflowX: 'hidden' as const,
     whiteSpace: 'pre-wrap' as const,
+    overflowWrap: 'anywhere' as const,
   },
   footer: {
     padding: '6px 10px 8px',

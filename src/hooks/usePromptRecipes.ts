@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FIELD_STARTERS } from '../utils/promptStarters'
+import { STORAGE_KEYS } from '../config/storageKeys'
 
 export interface PromptRecipe {
   id:                 string
@@ -54,8 +55,8 @@ export function usePromptRecipes() {
 
   // Load from localStorage on mount
   useEffect(() => {
-    const storedVersion = localStorage.getItem('nfcs_prompt_recipes_version')
-    const stored = localStorage.getItem('nfcs_prompt_recipes')
+    const storedVersion = localStorage.getItem(STORAGE_KEYS.PROMPT_RECIPES_VERSION)
+    const stored = localStorage.getItem(STORAGE_KEYS.PROMPT_RECIPES)
 
     if (storedVersion === RECIPES_VERSION && stored) {
       try {
@@ -63,7 +64,7 @@ export function usePromptRecipes() {
         setUserRecipes(parsed)
       } catch { setUserRecipes([]) }
     } else {
-      localStorage.removeItem('nfcs_prompt_recipes')
+      localStorage.removeItem(STORAGE_KEYS.PROMPT_RECIPES)
       setUserRecipes([])
     }
   }, [])
@@ -76,15 +77,15 @@ export function usePromptRecipes() {
     const recipe: PromptRecipe = { ...r, id }
     const next = [...userRecipes, recipe]
     setUserRecipes(next)
-    localStorage.setItem('nfcs_prompt_recipes', JSON.stringify(next))
-    localStorage.setItem('nfcs_prompt_recipes_version', RECIPES_VERSION)
+    localStorage.setItem(STORAGE_KEYS.PROMPT_RECIPES, JSON.stringify(next))
+    localStorage.setItem(STORAGE_KEYS.PROMPT_RECIPES_VERSION, RECIPES_VERSION)
   }
 
   const deleteRecipe = (id: string) => {
     if (BUILT_IN_RECIPES.some(r => r.id === id)) return // ignore built-ins
     const next = userRecipes.filter(r => r.id !== id)
     setUserRecipes(next)
-    localStorage.setItem('nfcs_prompt_recipes', JSON.stringify(next))
+    localStorage.setItem(STORAGE_KEYS.PROMPT_RECIPES, JSON.stringify(next))
   }
 
   return { recipes, saveRecipe, deleteRecipe }

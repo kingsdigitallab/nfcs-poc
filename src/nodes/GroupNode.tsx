@@ -78,6 +78,7 @@ export function GroupNode({ id, data, selected }: NodeProps) {
     getEdges,
     setEdges,
     updateNodeData,
+    fitView,
   } = useReactFlow()
 
   const updateInternals = useUpdateNodeInternals()
@@ -556,6 +557,16 @@ export function GroupNode({ id, data, selected }: NodeProps) {
             spellCheck={false}
             onClick={e => e.stopPropagation()}
           />
+          <button
+            style={{ ...styles.collapseBtn, marginLeft: 'auto' }}
+            onClick={e => {
+              e.stopPropagation()
+              fitView({ nodes: [{ id }], padding: 0.15, duration: 400 })
+            }}
+            title="Zoom to group"
+          >
+            ⤢
+          </button>
         </div>
 
         {/* Proxy handle slots (always rendered for registration, hidden when expanded) */}

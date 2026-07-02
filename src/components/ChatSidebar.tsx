@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback, createContext, useContext } f
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { filterKCLModels, DEFAULT_KCL_API_KEY } from '../utils/kclConfig'
+import { STORAGE_KEYS } from '../config/storageKeys'
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
@@ -186,10 +187,10 @@ function MdContent({ children }: { children: string }) {
 
 export function ChatSidebar({ isOpen, onToggle }: Props) {
   const apiKey                          = DEFAULT_KCL_API_KEY
-  const [model, setModel]               = useState(() => localStorage.getItem('kcl_chat_model') ?? '')
+  const [model, setModel]               = useState(() => localStorage.getItem(STORAGE_KEYS.CHAT_MODEL) ?? '')
   const [systemPrompt, setSystemPrompt] = useState(() => {
-    const storedVersion = localStorage.getItem('kcl_chat_system_version')
-    const stored        = localStorage.getItem('kcl_chat_system')
+    const storedVersion = localStorage.getItem(STORAGE_KEYS.CHAT_SYSTEM_VERSION)
+    const stored        = localStorage.getItem(STORAGE_KEYS.CHAT_SYSTEM_PROMPT)
     return (storedVersion === SYSTEM_VERSION && stored) ? stored : DEFAULT_SYSTEM
   })
   const [temperature, setTemperature]   = useState(0.7)
@@ -209,10 +210,10 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
   const messagesEnd   = useRef<HTMLDivElement>(null)
 
   // Persist config (API key is intentionally not persisted)
-  useEffect(() => { localStorage.setItem('kcl_chat_model', model) }, [model])
+  useEffect(() => { localStorage.setItem(STORAGE_KEYS.CHAT_MODEL, model) }, [model])
   useEffect(() => {
-    localStorage.setItem('kcl_chat_system', systemPrompt)
-    localStorage.setItem('kcl_chat_system_version', SYSTEM_VERSION)
+    localStorage.setItem(STORAGE_KEYS.CHAT_SYSTEM_PROMPT, systemPrompt)
+    localStorage.setItem(STORAGE_KEYS.CHAT_SYSTEM_VERSION, SYSTEM_VERSION)
   }, [systemPrompt])
 
   // Scroll to bottom

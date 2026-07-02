@@ -14,7 +14,7 @@ const NAMESPACE_KEYS = new Set([
 ])
 
 // Field name suffixes/patterns that carry no geographic signal
-const SKIP_NAME_RE = /(_id|url|uri|thumbnail|image|date|version|status|count|message|content|html|cached|pid|source)$/i
+const SKIP_NAME_RE = /(id|url|uri|thumbnail|image|date|version|status|count|message|content|html|cached|pid|source)$/i
 
 // Highest-signal fields — sent first, within character budget
 const PRIORITY_FIELDS = [
