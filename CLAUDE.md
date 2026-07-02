@@ -103,8 +103,7 @@ src/
 │   │                            # periodStart/End/Name stay top-level (cross-service: ADS/ARIADNE/HSDS).
 │   └── AppNode.ts               # AppNode union type + inline *NodeData interfaces
 ├── store/resultsStore.ts        # Out-of-band Map store + version counter
-├── hooks/useUpstreamRecords.ts  # Merges records from all data-handle edges
-├── nodes/               # One file per node + index.ts registry
+├── nodes/               # One file per node + index.ts registry (+ NodeTypeId)
 └── utils/
     ├── nodeRunners.ts           # Registry: nodeType → NodeRunner
     ├── runWorkflow.ts           # Topological executor (Kahn's algorithm)
