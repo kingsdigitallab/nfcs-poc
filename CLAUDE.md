@@ -9,6 +9,13 @@ Node-based visual workflow editor for federating UK Arts & Humanities research d
 - **No Service Worker / PWA / workbox**
 - API calls client-side via `fetch()`. GBIF: direct. All others: same-origin proxy.
 
+## Tests
+
+`npx vitest run` (config in `vite.config.ts`, include `src/**/*.test.{ts,tsx}`, jsdom). Suites live in `src/__tests__/`:
+utility unit tests, plus `workflowIO.test.ts` (save/load round-trip), `runWorkflow.test.ts` (Kahn wave ordering + failure
+skipping, mocks `nodeRunners`), and `fixtureConformance.test.ts` — reads every `public/fixtures/*.json` from disk and asserts
+records conform to `UnifiedRecord` (its `ALLOWED_TOP_LEVEL` list must be kept in sync with the interface).
+
 ## Run Modes
 
 | Command | Server | Port |
