@@ -1,3 +1,5 @@
+import { fetchWithTimeout } from './fetchWithTimeout'
+
 const BASE     = 'https://api.gbif.org/v1'
 const PAGE_SIZE = 300   // GBIF API maximum per request
 
@@ -24,7 +26,7 @@ export async function fetchGBIF(params: GBIFParams): Promise<unknown> {
   const url = buildGBIFUrl(params)
   console.log('[GBIF] GET', url)
   const t0 = performance.now()
-  const res = await fetch(url)
+  const res = await fetchWithTimeout(url)
   const ms = Math.round(performance.now() - t0)
   if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
   const json = await res.json()

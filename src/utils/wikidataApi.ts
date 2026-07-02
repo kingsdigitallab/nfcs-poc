@@ -3,6 +3,8 @@
  * CORS is permitted by Wikidata via the origin=* parameter — no proxy needed.
  */
 
+import { fetchWithTimeout } from './fetchWithTimeout'
+
 const WD_API   = 'https://www.wikidata.org/w/api.php'
 const BATCH_SZ = 50
 
@@ -135,7 +137,7 @@ async function fetchWDEntities(ids: string[]): Promise<Record<string, WDEntity>>
   url.searchParams.set('languages', 'en')
   url.searchParams.set('format',    'json')
   url.searchParams.set('origin',    '*')
-  const res = await fetch(url.toString())
+  const res = await fetchWithTimeout(url.toString())
   if (!res.ok) throw new Error(`Wikidata API ${res.status}`)
   const data = await res.json() as { entities: Record<string, WDEntity> }
   return data.entities

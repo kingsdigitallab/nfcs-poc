@@ -76,7 +76,7 @@ export async function loadSampleFiles(
 
   for (const sf of files) {
     try {
-      const res = await fetch(sf.url)
+      const res = await fetchWithTimeout(sf.url)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
 
       // CSV/TSV: parse into column-keyed row records, matching LocalFileSourceNode.
