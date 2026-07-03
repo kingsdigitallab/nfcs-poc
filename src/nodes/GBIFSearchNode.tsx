@@ -124,7 +124,7 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
       <div style={styles.footer}>
         <div style={styles.fixtureControls}>
           <label style={styles.fixtureToggle} className="nodrag"
-            title="Fetch all pages using offset pagination (max 100,000). API max 300/page.">
+            title="Fetch all pages (capped at ~12,000 to stay under GBIF rate limits; requests are paced and retried on 429). For large offline demos prefer 📦 fixtures.">
             <input type="checkbox" checked={!!d.fetchAll}
               onChange={e => updateNodeData(id, { fetchAll: e.target.checked })} className="nodrag" />
             <span style={{ fontSize: 10, color: d.fetchAll ? '#0f4c81' : '#9ca3af', fontWeight: 600 }}>ALL</span>

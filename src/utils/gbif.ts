@@ -1,7 +1,33 @@
 import { fetchWithTimeout } from './fetchWithTimeout'
 
-const BASE     = 'https://api.gbif.org/v1'
+// Routed through the same-origin proxy (server/proxies.mjs) so requests carry
+// the descriptive User-Agent GBIF asks for and share a single client IP —
+// both reduce the HTTP 429 rate-limiting seen on direct browser calls.
+const BASE     = '/gbif-proxy/v1'
 const PAGE_SIZE = 300   // GBIF API maximum per request
+
+/** HTTP error that preserves the status code (and Retry-After when present) so
+ *  the runner can branch on 429 and back off rather than failing outright. */
+export class GBIFHttpError extends Error {
+  status: number
+  retryAfterMs?: number
+  constructor(status: number, statusText: string, retryAfterMs?: number) {
+    super(`HTTP ${status} ${statusText}`)
+    this.name = 'GBIFHttpError'
+    this.status = status
+    this.retryAfterMs = retryAfterMs
+  }
+}
+
+/** Parse a Retry-After header (delta-seconds or HTTP-date) into ms, if present. */
+function parseRetryAfter(res: Response): number | undefined {
+  const h = res.headers.get('retry-after')
+  if (!h) return undefined
+  const secs = Number(h)
+  if (Number.isFinite(secs)) return Math.max(0, secs * 1000)
+  const date = Date.parse(h)
+  return Number.isFinite(date) ? Math.max(0, date - Date.now()) : undefined
+}
 
 export interface GBIFParams {
   q?: string
@@ -28,7 +54,7 @@ export async function fetchGBIF(params: GBIFParams): Promise<unknown> {
   const t0 = performance.now()
   const res = await fetchWithTimeout(url)
   const ms = Math.round(performance.now() - t0)
-  if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
+  if (!res.ok) throw new GBIFHttpError(res.status, res.statusText, parseRetryAfter(res))
   const json = await res.json()
   console.log(`[GBIF] response in ${ms}ms — count: ${(json as { count: number }).count}`, json)
   return json
