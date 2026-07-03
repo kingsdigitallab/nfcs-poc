@@ -110,6 +110,7 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
   { type: 'loadSavedSearch',   label: 'LoadSavedSearch',       sub: 'Replay a .nfcs.json saved search',        color: '#4c1d95', group: 'Disseminating' },
   // ── Experimental (alpha nodes — hidden in Simple mode, collapsed by default) ───
   { type: 'frameSenseSource',  label: 'FrameSenseSource',      sub: 'Load pre-processed FrameSense video shots', color: '#1c2a3a', group: 'Experimental', alpha: true },
+  { type: 'sparqlSearch',      label: 'SPARQLSearch',          sub: 'Wikidata SPARQL — query builder or raw query', color: '#4c1d95', group: 'Experimental', alpha: true },
   // ── Hidden (kept registered but not shown in sidebar) ────────────────────────
   { type: 'adsLibrarySearch',  label: 'ADSLibrary',            sub: 'ADS Library catalogue',                   color: '#1e3a5f', group: 'Disseminating', hidden: true },
   { type: 'adsSearchAdvanced', label: 'ADSSearch',             sub: 'Archaeology Data Services',               color: '#7c2d12', group: 'Disseminating', hidden: true },

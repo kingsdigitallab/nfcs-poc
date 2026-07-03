@@ -484,6 +484,17 @@ export const PROXY_TABLE = [
       'Accept':     'application/json, text/plain, */*',
     },
   },
+  {
+    // Wikidata Query Service (SPARQL). WDQS policy requires a descriptive
+    // User-Agent; Accept pins the JSON results format.
+    prefix:  '/wdqs-proxy',
+    target:  'https://query.wikidata.org',
+    rewrite: path => path.replace(/^\/wdqs-proxy/, ''),
+    headers: {
+      'User-Agent': 'iDAH-Federation-PoC/1.0 (https://github.com/kingsdigitallab/nfcs-poc)',
+      'Accept':     'application/sparql-results+json',
+    },
+  },
 ]
 
 // ── Vite proxy config builder ─────────────────────────────────────────────────

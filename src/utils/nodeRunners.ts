@@ -26,6 +26,7 @@ import { runXMLSectionNode }      from './runXMLSectionNode'
 import { runEuropeanaNode }       from './runEuropeanaNode'
 import { runARIADNENode }         from './runARIADNENode'
 import { runHSDSNode }            from './runHSDSNode'
+import { runSparqlNode }          from './runSparqlNode'
 import { runKCLNode }             from './runKCLNode'
 import { runKCLFieldNode }        from './runKCLFieldNode'
 import { runBodleianSearchNode }  from './runBodleianSearchNode'
@@ -69,6 +70,7 @@ export const nodeRunners: Record<string, NodeRunner> = {
   europeanaSearch:   withFixture('europeanaSearch', runEuropeanaNode),
   ariadneSearch:     withFixture('ariadneSearch',   runARIADNENode),
   hsdsSearch:        withFixture('hsdsSearch', runHSDSNode),
+  sparqlSearch:      withFixture('sparqlSearch', runSparqlNode),
   bodleianSearch:    withFixture('bodleianSearch',  runBodleianSearchNode),
   adsSearchAdvanced: withFixture('adsSearchAdvanced', runADSAdvancedNode),
   adsLibrarySearch:  runADSLibraryNode,

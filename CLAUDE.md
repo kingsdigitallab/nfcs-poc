@@ -46,6 +46,7 @@ Both modes expose identical proxy endpoints and custom middleware — the single
 | `/getty-search-proxy/*` | `https://www.getty.edu/*` |
 | `/nominatim-proxy/*` | `https://nominatim.openstreetmap.org/*` |
 | `/hsds-proxy/*` | `https://hsds.ac.uk/*` |
+| `/wdqs-proxy/*` | `https://query.wikidata.org/*` (SPARQL; proxy adds the descriptive User-Agent WDQS requires + Accept sparql-results+json) |
 | `/url-proxy?url=<encoded>[&js=true][&wait=<strategy>]` | Custom middleware; simple path uses Node `fetch()`; `js=true` uses Puppeteer singleton (auto-reset on `disconnected`). Wait strategies: `networkidle2` (default), `networkidle0`, `domcontentloaded`. |
 | `/ads-library-search?q=<query>&size=<n>` | Custom middleware; two-step JSF session (GET ViewState → POST search) for the ADS Library catalogue. Returns extracted CDATA HTML for client-side parsing. |
 | `/ads-catalogue-search?<qs>` | Custom middleware; Cloudflare bypass via warmed Puppeteer page holding `cf_clearance`. |
@@ -209,6 +210,7 @@ and must never be renamed.**
 ### Experimental (alpha — hidden in Simple mode, collapsed by default)
 | Key | Component | Notes |
 |-----|-----------|-------|
+| `sparqlSearch` | `SparqlSearchNode` | `#4c1d95`. Wikidata SPARQL search via `/wdqs-proxy`. Raw query editor (builder UI in task-SQ.2); wirable `query` (keyword — names fixtures) + `limit` handles at the shell contract offsets (51/78); a query without LIMIT gets the limit row appended. Bindings → `sparql.*` namespace; `?item`/`?itemLabel`/`?itemDescription` → id/title/description; `_qid` written for WikidataEnrich/MergeByQID; WKT `Point(lon lat)` → map coordinates. Fixture: `sparqlSearch-default.json` (Turner paintings). |
 | `evaluatorNode` | `EvaluatorNode` | `#3f3f46`. LLM-as-judge, runnable. Scores a `candidateField` against a `referenceField` on the **same record** using an ARC model at **temperature 0** for repeatability. Per-criterion scoring only (never one aggregate score) — built-in rubric presets (Extraction agreement, Interpretive agreement, Rubric-from-note). Template tokens: `{{__reference}}`, `{{__candidate}}`. Writes `record.eval = {scores, reasons, raw, status}` + flat `eval_c*` columns. Shows judge-vs-human agreement readout when a human score field is present. Tolerant JSON parsing — never throws; sets `status: 'parse_error'` on bad output. Requires KCL API key. |
 
 Experimental nodes carry `alpha: true` in `SIDEBAR_ITEMS`. The group renders with an amber left-border

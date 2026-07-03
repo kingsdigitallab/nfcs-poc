@@ -180,6 +180,11 @@ export interface UnifiedRecord {
   smartGeo?: Record<string, unknown>
   /** FrameSense namespace (collection, video, clip, shot, frameFile, shotScale, VLM answers) */
   framesense?: Record<string, unknown>
+  /** SPARQL namespace (raw result-binding values keyed by SELECT variable name) */
+  sparql?: Record<string, unknown>
+  /** Plain Wikidata Q-id. Written by MergeByQID (merged entities) and the
+   *  SPARQL source adapter; read by WikidataEnrich as the preferred QID source. */
+  _qid?: string
 
   // ── Geocoding enrichment ────────────────────────────────────────────────────
   /** Full geocoding result from GeocodingNode */

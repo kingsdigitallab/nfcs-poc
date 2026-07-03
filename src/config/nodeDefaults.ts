@@ -8,6 +8,7 @@ import type { ADSSearchAdvancedNodeData }  from '../nodes/ADSSearchAdvancedNode'
 import type { ADSLibraryNodeData }         from '../nodes/ADSLibraryNode'
 import type { ARIADNESearchNodeData }      from '../nodes/ARIADNESearchNode'
 import type { HSDSSearchNodeData }         from '../nodes/HSDSSearchNode'
+import { DEFAULT_SPARQL, type SparqlSearchNodeData } from '../nodes/SparqlSearchNode'
 import type { BodleianSearchNodeData }     from '../nodes/BodleianSearchNode'
 import type { SMGSearchNodeData }          from '../nodes/SMGSearchNode'
 import type { VASearchNodeData }           from '../nodes/VASearchNode'
@@ -210,6 +211,15 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       count:         0,
       columnNames:   [],
     } satisfies LocalFileSourceNodeData,
+  }),
+  sparqlSearch: pos => ({
+    id: newId('sparql'), type: 'sparqlSearch', position: pos,
+    data: {
+      inlineQuery: '', inlineLimit: '20',
+      sparqlQuery: DEFAULT_SPARQL,
+      useFixture: false,
+      status: 'idle', statusMessage: '', results: undefined, count: 0,
+    } satisfies SparqlSearchNodeData,
   }),
   frameSenseSource: pos => ({
     id: newId('framesense'), type: 'frameSenseSource', position: pos,

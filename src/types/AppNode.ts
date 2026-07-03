@@ -7,6 +7,7 @@ import type { OllamaFieldNodeData }       from '../nodes/OllamaFieldNode'
 import type { KCLNodeData }              from '../nodes/KCLNode'
 import type { KCLFieldNodeData }         from '../nodes/KCLFieldNode'
 import type { EvaluatorNodeData }        from '../nodes/EvaluatorNode'
+import type { SparqlSearchNodeData }      from '../nodes/SparqlSearchNode'
 import type { HTMLPreviewNodeData }      from '../nodes/HTMLPreviewNode'
 import type { URLFetchNodeData }          from '../nodes/URLFetchNode'
 import type { HTMLSectionNodeData }       from '../nodes/HTMLSectionNode'
@@ -66,6 +67,7 @@ export type AppNode =
   | Node<KCLNodeData>
   | Node<KCLFieldNodeData>
   | Node<EvaluatorNodeData>
+  | Node<SparqlSearchNodeData>
   | Node<HTMLPreviewNodeData>
   | Node<URLFetchNodeData>
   | Node<HTMLSectionNodeData>
