@@ -138,3 +138,120 @@ export function collectLineage(nodeId: string, nodes: Node[], edges: Edge[]): Li
 
   return { entries, edges: subEdges, stale }
 }
+
+// ─── Narrative rendering ──────────────────────────────────────────────────────
+
+const STALE_NOTE =
+  'Note: some upstream node settings may have changed since these records were retrieved.'
+
+interface Section {
+  header:  string | null   // null = un-headed common section
+  lines:   string[]        // operation sentences, in order
+  omitted: number          // steps dropped by the budget
+}
+
+function renderSections(sections: Section[], stale: boolean): string {
+  const out: string[] = []
+  if (stale) out.push(STALE_NOTE)
+  for (const s of sections) {
+    if (s.lines.length === 0 && s.omitted === 0) continue
+    const indent = s.header ? '  ' : ''
+    if (s.header) out.push(s.header)
+    if (s.omitted > 0) out.push(`${indent}(… ${s.omitted} earlier step${s.omitted === 1 ? '' : 's'} omitted)`)
+    s.lines.forEach((line, i) => out.push(`${indent}${i + 1}. ${line}`))
+  }
+  return out.join('\n')
+}
+
+/**
+ * Render a LineageGraph as an LLM-ready narrative (docs/context-accrual.md §5).
+ *
+ * Linear chains become a numbered list. Parallel branches feeding the target
+ * (or a join node such as MergeByQID) are rendered as lettered branch
+ * sections; steps shared by several branches are described once in a common
+ * section before them; the join and everything after it render under "Then:".
+ * The character budget drops the earliest steps first (sources downward) and
+ * never cuts mid-sentence.
+ */
+export function lineageToNarrative(graph: LineageGraph, opts?: { maxChars?: number }): string {
+  const maxChars = opts?.maxChars ?? 2000
+  const { entries, edges, stale } = graph
+  if (entries.length === 0) return ''
+
+  const order = new Map(entries.map((e, i) => [e.nodeId, i]))
+  const byId = new Map(entries.map(e => [e.nodeId, e]))
+  const parents = new Map<string, string[]>()
+  const children = new Map<string, string[]>()
+  for (const e of edges) {
+    parents.set(e.to, [...(parents.get(e.to) ?? []), e.from])
+    children.set(e.from, [...(children.get(e.from) ?? []), e.to])
+  }
+
+  // Join nodes (≥2 parents) and their descendants render after the branches.
+  const postJoin = new Set<string>()
+  for (const e of entries) if ((parents.get(e.nodeId) ?? []).length >= 2) postJoin.add(e.nodeId)
+  let grew = true
+  while (grew) {
+    grew = false
+    for (const e of entries) {
+      if (postJoin.has(e.nodeId)) continue
+      if ((parents.get(e.nodeId) ?? []).some(p => postJoin.has(p))) { postJoin.add(e.nodeId); grew = true }
+    }
+  }
+  const preJoin = entries.filter(e => !postJoin.has(e.nodeId))
+
+  // Branch terminals: pre-join nodes whose children all leave the pre-join set
+  // (they feed the target or a join node).
+  const terminals = preJoin.filter(e =>
+    (children.get(e.nodeId) ?? []).every(c => postJoin.has(c) || !byId.has(c)))
+
+  const sections: Section[] = []
+  if (terminals.length <= 1) {
+    // Linear (or single-strand) pipeline.
+    sections.push({ header: null, lines: preJoin.map(e => e.operationSummary), omitted: 0 })
+  } else {
+    // Ancestor sets per terminal (within pre-join), to split shared vs exclusive.
+    const reach = new Map<string, Set<string>>()
+    for (const t of terminals) {
+      const set = new Set<string>()
+      const stack = [t.nodeId]
+      while (stack.length > 0) {
+        const id = stack.pop() as string
+        if (set.has(id)) continue
+        set.add(id)
+        for (const p of parents.get(id) ?? []) if (!postJoin.has(p)) stack.push(p)
+      }
+      reach.set(t.nodeId, set)
+    }
+    const shared = preJoin.filter(e =>
+      terminals.filter(t => (reach.get(t.nodeId) as Set<string>).has(e.nodeId)).length >= 2)
+    const sharedIds = new Set(shared.map(e => e.nodeId))
+    if (shared.length > 0) {
+      sections.push({ header: null, lines: shared.map(e => e.operationSummary), omitted: 0 })
+    }
+    terminals
+      .sort((a, b) => (order.get(a.nodeId) ?? 0) - (order.get(b.nodeId) ?? 0))
+      .forEach((t, i) => {
+        const letter = String.fromCharCode(65 + i)
+        const own = preJoin.filter(e =>
+          (reach.get(t.nodeId) as Set<string>).has(e.nodeId) && !sharedIds.has(e.nodeId))
+        sections.push({ header: `Branch ${letter}:`, lines: own.map(e => e.operationSummary), omitted: 0 })
+      })
+  }
+  if (postJoin.size > 0) {
+    const post = entries.filter(e => postJoin.has(e.nodeId))
+    sections.push({ header: 'Then:', lines: post.map(e => e.operationSummary), omitted: 0 })
+  }
+
+  // Character budget: drop the earliest step of the earliest oversized section,
+  // repeatedly, keeping at least the last line of every section.
+  let text = renderSections(sections, stale)
+  while (text.length > maxChars) {
+    const victim = sections.find(s => s.lines.length > 1)
+    if (!victim) break
+    victim.lines.shift()
+    victim.omitted += 1
+    text = renderSections(sections, stale)
+  }
+  return text
+}

@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import type { Edge, Node } from '@xyflow/react'
-import { collectLineage } from '../utils/lineage'
+import { collectLineage, lineageToNarrative, type LineageGraph, type LineageEntry } from '../utils/lineage'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 function mkNode(id: string, type: string, data: Record<string, unknown> = {}): Node {
@@ -141,5 +141,81 @@ describe('collectLineage', () => {
     expect(g.entries).toEqual([])
     expect(g.edges).toEqual([])
     expect(g.stale).toBe(false)
+  })
+})
+
+// ─── lineageToNarrative ───────────────────────────────────────────────────────
+
+function mkEntry(nodeId: string, operationSummary: string): LineageEntry {
+  return { nodeId, nodeType: 'test', label: 'Test', operationSummary, params: {} }
+}
+
+function mkGraph(
+  entries: LineageEntry[],
+  edges: Array<{ from: string; to: string }>,
+  stale = false,
+): LineageGraph {
+  return { entries, edges, stale }
+}
+
+describe('lineageToNarrative', () => {
+  it('renders a linear chain as a numbered list', () => {
+    const g = mkGraph(
+      [mkEntry('s', 'Searched ARIADNE for "stonehenge".'), mkEntry('f', 'Filtered records.')],
+      [{ from: 's', to: 'f' }],
+    )
+    const text = lineageToNarrative(g)
+    expect(text).toBe('1. Searched ARIADNE for "stonehenge".\n2. Filtered records.')
+    expect(text).not.toContain('Branch')
+  })
+
+  it('renders parallel branches feeding a join as lettered sections + Then', () => {
+    const g = mkGraph(
+      [
+        mkEntry('a', 'Searched ARIADNE.'),
+        mkEntry('b', 'Searched HSDS.'),
+        mkEntry('m', 'Merged records by QID.'),
+      ],
+      [{ from: 'a', to: 'm' }, { from: 'b', to: 'm' }],
+    )
+    const text = lineageToNarrative(g)
+    expect(text).toContain('Branch A:\n  1. Searched ARIADNE.')
+    expect(text).toContain('Branch B:\n  1. Searched HSDS.')
+    expect(text).toContain('Then:\n  1. Merged records by QID.')
+  })
+
+  it('describes a shared diamond ancestor once, before the branches', () => {
+    const g = mkGraph(
+      [
+        mkEntry('s', 'Searched GBIF.'),
+        mkEntry('a', 'Filtered to England.'),
+        mkEntry('b', 'Deduplicated by title.'),
+      ],
+      [{ from: 's', to: 'a' }, { from: 's', to: 'b' }],
+    )
+    const text = lineageToNarrative(g)
+    expect(text.match(/Searched GBIF\./g)).toHaveLength(1)
+    expect(text.indexOf('Searched GBIF.')).toBeLessThan(text.indexOf('Branch A:'))
+    expect(text).toContain('Branch B:\n  1. Deduplicated by title.')
+  })
+
+  it('enforces the character budget by dropping the earliest steps whole', () => {
+    const entries = Array.from({ length: 8 }, (_, i) =>
+      mkEntry(`n${i}`, `Step number ${i} did a moderately verbose thing to the records.`))
+    const edges = entries.slice(1).map((e, i) => ({ from: `n${i}`, to: e.nodeId }))
+    const text = lineageToNarrative(mkGraph(entries, edges), { maxChars: 200 })
+    expect(text.length).toBeLessThanOrEqual(200)
+    expect(text).toContain('steps omitted')
+    // never cut mid-sentence — last line is the final full sentence
+    expect(text.trimEnd().endsWith('Step number 7 did a moderately verbose thing to the records.')).toBe(true)
+  })
+
+  it('prefixes the staleness note when the graph is stale', () => {
+    const g = mkGraph([mkEntry('s', 'Searched ARIADNE.')], [], true)
+    expect(lineageToNarrative(g)).toMatch(/^Note: some upstream node settings may have changed/)
+  })
+
+  it('returns an empty string for an empty graph', () => {
+    expect(lineageToNarrative(mkGraph([], []))).toBe('')
   })
 })
