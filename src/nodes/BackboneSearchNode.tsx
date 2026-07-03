@@ -83,15 +83,22 @@ export interface BackboneSearchConfig {
   /** Declarative filter panel; omit for no Filters toggle. */
   filters?: FilterSpec[]
   footer?: {
-    /** Small italic caption, e.g. MDS's scraper disclaimer */
+    /** Small italic caption, e.g. MDS's scraper disclaimer — renders left of the toggles */
     caption?: string
-    /** Amber badge when the runner set `_capped` on the node data */
-    showCappedBadge?: boolean
-    /** Extra footer toggle (LLDS cache mode). Bound to data[key] as boolean. */
-    extraToggle?: { key: string; label: string; title?: string; onColor?: string }
+    /** Extra footer toggle rendered BEFORE the fixture toggle (LLDS cache mode).
+     *  Bound to data[key] as boolean; `cachedLabel` shows while status === 'cached'. */
+    extraToggle?: {
+      key: string; label: string; cachedLabel?: string
+      title?: string; onColor?: string; offColor?: string
+    }
   }
-  /** Per-status border-colour overrides (e.g. Bodleian 'cached': '#0e7490') */
+  /** MDS-style capped indicator: statusMessage text turns amber when the
+   *  runner set `_capped` on the node data. */
+  cappedAmberStatus?: boolean
+  /** Per-status border-colour overrides (e.g. LLDS 'cached': '#f59e0b') */
   statusColours?: Partial<Record<string, string>>
+  /** Per-status statusMessage-colour overrides */
+  statusBadgeColours?: Partial<Record<string, string>>
   /** Card min-width (default 264; MDS/LLDS use 240) */
   minWidth?: number
 }
@@ -112,6 +119,7 @@ const STATUS_BORDER: Record<string, string> = {
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
+  cached:  '#22c55e',
 }
 
 const STATUS_BADGE: Record<string, string> = {
@@ -119,6 +127,7 @@ const STATUS_BADGE: Record<string, string> = {
   loading: '#93c5fd',
   success: '#86efac',
   error:   '#fca5a5',
+  cached:  '#86efac',
 }
 
 /** Data keys a FilterSpec writes (range specs own two). */
@@ -193,7 +202,12 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
       <div style={styles.header}>
         <span style={styles.headerTitle}>{config.title}</span>
         {d.statusMessage ? (
-          <span style={{ ...styles.statusBadge, color: STATUS_BADGE[status] ?? '#9ca3af' }}>
+          <span style={{
+            ...styles.statusBadge,
+            color: (config.cappedAmberStatus && d._capped === true)
+              ? '#fbbf24'
+              : config.statusBadgeColours?.[status] ?? STATUS_BADGE[status] ?? '#9ca3af',
+          }}>
             {d.statusMessage as string}
           </span>
         ) : null}
@@ -366,10 +380,9 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
 
       <div style={styles.footer}>
         <div style={styles.fixtureControls}>
-          <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
-            <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
-            <span style={{ color: d.useFixture ? config.theme.fixtureIcon : '#9ca3af' }}>📦</span>
-          </label>
+          {config.footer?.caption && (
+            <span style={styles.footerCaption}>{config.footer.caption}</span>
+          )}
           {config.footer?.extraToggle && (
             <label style={styles.extraToggle} className="nodrag" title={config.footer.extraToggle.title}>
               <input
@@ -378,11 +391,21 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
                 onChange={e => updateNodeData(id, { [config.footer!.extraToggle!.key]: e.target.checked })}
                 className="nodrag"
               />
-              <span style={{ color: d[config.footer.extraToggle.key] === true ? (config.footer.extraToggle.onColor ?? config.theme.fixtureIcon) : '#9ca3af' }}>
-                {config.footer.extraToggle.label}
+              <span style={{
+                color: d[config.footer.extraToggle.key] === true
+                  ? (config.footer.extraToggle.onColor ?? config.theme.fixtureIcon)
+                  : (config.footer.extraToggle.offColor ?? '#9ca3af'),
+              }}>
+                {status === 'cached' && config.footer.extraToggle.cachedLabel
+                  ? config.footer.extraToggle.cachedLabel
+                  : config.footer.extraToggle.label}
               </span>
             </label>
           )}
+          <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
+            <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
+            <span style={{ color: d.useFixture ? config.theme.fixtureIcon : '#9ca3af' }}>📦</span>
+          </label>
           {(d.status === 'success' || d.status === 'cached') && (
             <button
               style={styles.fixtureSaveBtn} className="nodrag"
@@ -390,18 +413,7 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
               onClick={() => downloadAsFixture(id, config.nodeType, resolveFixtureQuery(id, liveEdges, getNodes(), d))}
             >💾</button>
           )}
-          {config.footer?.showCappedBadge && d._capped === true && (
-            <span
-              style={styles.cappedBadge}
-              title={typeof d._total === 'number' ? `Results capped — ${d._total} available upstream` : 'Results capped'}
-            >
-              capped
-            </span>
-          )}
         </div>
-        {config.footer?.caption && (
-          <span style={styles.footerCaption}>{config.footer.caption}</span>
-        )}
         <button
           style={{ ...styles.runBtn, opacity: d.status === 'loading' ? 0.6 : 1 }}
           onClick={handleRun}
@@ -630,27 +642,12 @@ function buildStyles(config: BackboneSearchConfig) {
       fontSize: 10,
       fontWeight: 600,
     },
-    cappedBadge: {
-      fontSize: 9,
-      fontWeight: 700,
-      color: '#92400e',
-      background: '#fef3c7',
-      border: '1px solid #f59e0b',
-      borderRadius: 4,
-      padding: '1px 5px',
-      textTransform: 'uppercase' as const,
-      letterSpacing: '0.03em',
-    },
     footerCaption: {
       fontSize: 9,
       color: '#9ca3af',
       fontStyle: 'italic' as const,
-      flex: 1,
-      textAlign: 'left' as const,
-      minWidth: 0,
-      overflow: 'hidden',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap' as const,
+      lineHeight: 1.3,
+      maxWidth: 120,
     },
     fixtureSaveBtn: {
       background: 'none',

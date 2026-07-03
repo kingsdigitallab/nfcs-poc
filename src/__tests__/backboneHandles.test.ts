@@ -15,6 +15,8 @@ vi.mock('../utils/nodeRunners', () => ({ nodeRunners: {} }))
 import { handleTop, filterValueKeys, type BackboneSearchConfig } from '../nodes/BackboneSearchNode'
 import { ARIADNE_CONFIG } from '../nodes/ARIADNESearchNode'
 import { HSDS_CONFIG } from '../nodes/HSDSSearchNode'
+import { MDS_CONFIG } from '../nodes/MDSSearchNode'
+import { LLDS_CONFIG } from '../nodes/LLDSSearchNode'
 
 describe('backbone handle contract', () => {
   it('wirable-row offsets are byte-identical to the pre-shell components', () => {
@@ -47,6 +49,32 @@ describe('ARIADNE config (post-generalisation parity)', () => {
     expect(ARIADNE_CONFIG.fetchAll).toBe(true)
     expect(ARIADNE_CONFIG.nodeType).toBe('ariadneSearch')
     expect(ARIADNE_CONFIG.queryDataKey ?? 'inlineQuery').toBe('inlineQuery')
+  })
+})
+
+describe('MDS config (task-SN.2 parity)', () => {
+  it('keeps the pre-shell surface: q label, inlineQuery key, no sort/filters/fetchAll', () => {
+    expect(MDS_CONFIG.nodeType).toBe('mdsSearch')
+    expect(MDS_CONFIG.queryLabel).toBe('q')
+    expect(MDS_CONFIG.queryDataKey ?? 'inlineQuery').toBe('inlineQuery')
+    expect(MDS_CONFIG.sort).toBeUndefined()
+    expect(MDS_CONFIG.fetchAll).toBeUndefined()
+    expect(serialisedFilterKeys(MDS_CONFIG)).toEqual([])
+    expect(MDS_CONFIG.cappedAmberStatus).toBe(true)
+    expect(MDS_CONFIG.footer?.caption).toContain('museumdata.uk')
+  })
+})
+
+describe('LLDS config (task-SN.2 parity)', () => {
+  it('keeps the pre-shell surface: useCache toggle, amber cached status, no sort/filters', () => {
+    expect(LLDS_CONFIG.nodeType).toBe('lldsSearch')
+    expect(LLDS_CONFIG.queryDataKey ?? 'inlineQuery').toBe('inlineQuery')
+    expect(LLDS_CONFIG.sort).toBeUndefined()
+    expect(LLDS_CONFIG.fetchAll).toBeUndefined()
+    expect(serialisedFilterKeys(LLDS_CONFIG)).toEqual([])
+    expect(LLDS_CONFIG.footer?.extraToggle?.key).toBe('useCache')
+    expect(LLDS_CONFIG.footer?.extraToggle?.cachedLabel).toBe('📦 cached')
+    expect(LLDS_CONFIG.statusColours?.cached).toBe('#f59e0b')
   })
 })
 

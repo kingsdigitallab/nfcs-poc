@@ -137,7 +137,7 @@ and must never be renamed.**
 | Key | Component | CORS |
 |-----|-----------|------|
 | `gbifSearch` | `GBIFSearchNode` | Direct. `https://api.gbif.org/v1/occurrence/search`. Max 300/req. |
-| `lldsSearch` | `LLDSSearchNode` | `/llds-proxy/rest/items?expand=metadata`. No server search — filter client-side. 15s timeout → localStorage cache fallback. |
+| `lldsSearch` | `LLDSSearchNode` | `/llds-proxy/rest/items?expand=metadata`. No server search — filter client-side. 15s timeout → localStorage cache fallback. Thin config over `BackboneSearchNode` (useCache footer toggle). |
 | `ariadneSearch` | `ARIADNESearchNode` | Direct CORS fetch. Pan-European archaeology portal (40+ institutions, 23 countries). Filters: Resource type, Getty AAT subject, Native subject, Country, Data type, Period, Contributor (set Contributor = "Archaeology Data Service" for ADS records). |
 | `hsdsSearch` | `HSDSSearchNode` | Vite proxy, no Cloudflare. Heritage Science Data Service — UK heritage aggregator (Historic England, HES, Cadw). Same filter set as ARIADNESearch plus Country = England/Scotland/Wales/Northern Ireland. `hsds.*` namespace. |
 | `bodleianSearch` | `BodleianSearchNode` | `/bodleian-proxy/*`. Oxford Bodleian Digital Collections. Filters: date range, language, origins, completeness, musical notation. `bodleian.manifest` → feeds ImageView (IIIF mode). Fixture mode supported. |
@@ -146,7 +146,7 @@ and must never be renamed.**
 | `vaSearch` | `VASearchNode` | `/vam-proxy/*`. V&A collection (API v2). Filters: images only, object type, year made from/to. `vam.manifest`, `vam.iiifImageBase`, `vam.thumbnail`. |
 | `adsSearchAdvanced` | `ADSSearchAdvancedNode` | **DEPRECATED — blocked by Cloudflare.** Use ARIADNESearch (Contributor = "Archaeology Data Service") or HSDSSearch instead. |
 | `adsLibrarySearch` | `ADSLibraryNode` | **DEPRECATED — blocked by Cloudflare**, same as above. |
-| `mdsSearch` | `MDSSearchNode` | `/mds-proxy`. Two-step HTML scraper. Capped at 200 (amber badge). |
+| `mdsSearch` | `MDSSearchNode` | `/mds-proxy`. Two-step HTML scraper. Capped at 200 (amber status text). Thin config over `BackboneSearchNode`. |
 
 ### Gathering (TaDiRAH: Capture > Gathering)
 | Key | Component | Notes |
