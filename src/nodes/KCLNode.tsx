@@ -97,7 +97,7 @@ async function buildUserContent(
 const KCL_MODELS = '/kcl-proxy/v1/models'
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 
-const HEADER_COLOR = '#881337'  // rose-900 — KCL red
+const HEADER_COLOR = '#7a2f3a'  // rose-900 — KCL red
 const BTN_COLOR    = '#be123c'  // rose-700
 
 const DEFAULT_SYSTEM = 'You are a research assistant helping to analyse humanities research documents and data.'

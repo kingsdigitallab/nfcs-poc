@@ -195,7 +195,7 @@ const treeStyles = {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#44403c'
+const HEADER_COLOR = '#4a4640'
 const BTN_COLOR    = '#57534e'
 
 const STATUS_BORDER: Record<string, string> = {

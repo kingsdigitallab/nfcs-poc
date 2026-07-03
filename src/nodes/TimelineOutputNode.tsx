@@ -630,7 +630,7 @@ export const TimelineOutputNode = TimelineViewNode
 
 // ─── styles ───────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#1e293b'
+const HEADER_COLOR = '#2b3340'
 
 const styles = {
   card: {

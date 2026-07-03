@@ -8,7 +8,7 @@ export interface HTMLPreviewNodeData {
   [key: string]: unknown
 }
 
-const HEADER_COLOR = '#0c4a6e'
+const HEADER_COLOR = '#2b5265'
 
 // ── srcdoc builder ────────────────────────────────────────────────────────────
 // Wraps the stored fetchedHtml in a minimal readability stylesheet and injects

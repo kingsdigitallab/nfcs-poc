@@ -45,7 +45,7 @@ export interface QuickStartNodeData {
 
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const KCL_MODELS = '/kcl-proxy/v1/models'
-const HEADER_COLOR = '#0c1445'
+const HEADER_COLOR = '#202d47'
 
 const LAYOUT = {
   SEARCH_COL_X:    360,

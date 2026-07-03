@@ -30,7 +30,7 @@ export interface HTMLSectionNodeData {
   [key: string]: unknown
 }
 
-const HEADER_COLOR = '#065f46'
+const HEADER_COLOR = '#3a5a44'
 const BTN_COLOR    = '#047857'
 
 const STATUS_BORDER: Record<string, string> = {

@@ -51,7 +51,7 @@ export interface EvaluatorNodeData {
 
 const KCL_MODELS   = '/kcl-proxy/v1/models'
 
-const HEADER_COLOR = '#3f3f46'   // distinct teal-grey; unused in Extraction & Enrichment group
+const HEADER_COLOR = '#454138'   // distinct teal-grey; unused in Extraction & Enrichment group
 const BTN_COLOR    = '#52525b'
 
 const DEFAULT_RUBRIC = EVALUATOR_RECIPES.find(r => r.key === 'interpretive-agreement')?.prompt ?? ''

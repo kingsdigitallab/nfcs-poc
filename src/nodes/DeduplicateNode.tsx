@@ -29,7 +29,7 @@ export interface DeduplicateNodeData {
 
 // ─── component ────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#0f766e'  // teal-700
+const HEADER_COLOR = '#2f6660'  // teal-700
 
 export function DeduplicateNode({ id }: NodeProps) {
   const { updateNodeData, getNodes, getEdges: snap } = useReactFlow()

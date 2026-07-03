@@ -12,7 +12,7 @@ export interface MergeByQIDNodeData {
   [key: string]:  unknown
 }
 
-const HEADER_COLOR = '#6b21a8'
+const HEADER_COLOR = '#55396e'
 
 export function MergeByQIDNode({ id }: NodeProps) {
   const { updateNodeData, getNodes, getEdges } = useReactFlow()

@@ -19,7 +19,7 @@ export interface EuropeanaSearchNodeData {
   [key: string]: unknown
 }
 
-const HEADER_COLOR = '#2563eb'
+const HEADER_COLOR = '#3a5896'
 
 const WIRABLE_ROWS = [
   { handleId: 'query', dataKey: 'inlineQuery', label: 'query', placeholder: 'search terms…' },

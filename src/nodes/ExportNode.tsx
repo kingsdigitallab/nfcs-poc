@@ -28,7 +28,7 @@ const FORMAT_META: Record<ExportFormat, { label: string; ext: string; mime: stri
   geojson: { label: 'GeoJSON', ext: 'geojson', mime: 'application/geo+json',  desc: 'FeatureCollection (lat/lon records only)' },
 }
 
-const HEADER_COLOR = '#b45309'   // amber-700 — "output/export" identity
+const HEADER_COLOR = '#8a5a22'   // amber-700 — "output/export" identity
 
 // ─── component ────────────────────────────────────────────────────────────────
 

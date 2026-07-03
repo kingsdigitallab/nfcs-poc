@@ -355,7 +355,7 @@ export function ADSSearchAdvancedNode({ id, data }: NodeProps) {
 
 // ── Styles ────────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR  = '#78350f'  // amber-900 — distinct from basic ADS (#7c2d12)
+const HEADER_COLOR  = '#7c3b2e'  // amber-900 — distinct from basic ADS (#7c2d12)
 const RUN_BTN_COLOR = '#92400e'
 
 const styles = {

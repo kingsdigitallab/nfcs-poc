@@ -12,7 +12,7 @@ import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
-const HEADER_COLOR   = '#047857'   // emerald-700
+const HEADER_COLOR   = '#37624a'   // emerald-700
 const BAR_COLOR      = '#34d399'   // emerald-400
 const BAR_ACTIVE     = '#059669'   // emerald-600 — selected
 const BAR_DIM        = '#a7f3d0'   // emerald-200 — non-selected when some selected

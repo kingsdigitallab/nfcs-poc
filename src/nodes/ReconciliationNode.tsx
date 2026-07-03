@@ -246,7 +246,7 @@ export function ReconciliationNode({ id }: NodeProps) {
 
 // ─── styles ───────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR  = '#7c3aed'   // violet-600 — "transform" identity
+const HEADER_COLOR  = '#5a3f7a'   // violet-600 — "transform" identity
 const RUN_BTN_COLOR = '#6d28d9'   // violet-700
 
 const styles = {

@@ -14,7 +14,7 @@ import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { ComparisonReportView } from './ComparisonReportView'
 import type { ComparisonReportConfig } from './ComparisonReportView'
 
-const HEADER_COLOR = '#3730a3'
+const HEADER_COLOR = '#3a3a6e'
 
 export interface ComparisonReportNodeData {
   originalField:   string

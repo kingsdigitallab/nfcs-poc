@@ -74,7 +74,7 @@ export interface SampleDataSourceNodeData {
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#1e3a5f'
+const HEADER_COLOR = '#33465f'
 const BTN_COLOR    = '#1d4ed8'
 
 // Must exactly match LocalFolderSourceNode — handle top positions are computed

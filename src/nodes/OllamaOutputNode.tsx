@@ -13,7 +13,7 @@ import { useState } from 'react'
 import { Handle, Position, NodeProps } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 
-const HEADER_COLOR = '#0f172a'  // very dark slate
+const HEADER_COLOR = '#202d47'  // very dark slate
 
 interface OllamaRecord {
   id: string

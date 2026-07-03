@@ -481,7 +481,7 @@ export function SmartGeocoderNode({ id, data }: NodeProps) {
 
 // ── Styles ────────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#1e3a5f'
+const HEADER_COLOR = '#33465f'
 
 const STATUS_BORDER: Record<string, string> = {
   idle:    '#d1d5db',

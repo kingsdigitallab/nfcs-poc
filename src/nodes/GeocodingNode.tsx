@@ -411,7 +411,7 @@ export function GeocodingNode({ id, data }: NodeProps) {
 
 // ── Styles ─────────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#065f46'
+const HEADER_COLOR = '#2f5f57'
 
 const styles = {
   card: {

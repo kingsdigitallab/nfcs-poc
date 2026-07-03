@@ -557,7 +557,7 @@ export function MapOutputNode({ id }: NodeProps) {
 
 // ─── styles ───────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#14532d'
+const HEADER_COLOR = '#315a3f'
 
 const styles = {
   card: {

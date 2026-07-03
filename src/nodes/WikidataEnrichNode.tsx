@@ -15,7 +15,7 @@ export interface WikidataEnrichNodeData {
   [key: string]:      unknown
 }
 
-const HEADER_COLOR = '#0369a1'
+const HEADER_COLOR = '#2f5f7a'
 
 export function WikidataEnrichNode({ id }: NodeProps) {
   const { updateNodeData, getNodes, getEdges } = useReactFlow()

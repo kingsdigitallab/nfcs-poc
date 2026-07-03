@@ -616,8 +616,8 @@ export function TableOutputNode({ id, data, selected }: NodeProps) {
     <>
       <NodeResizer
         minWidth={520} minHeight={260} isVisible={selected}
-        lineStyle={{ borderColor: '#0d9488' }}
-        handleStyle={{ background: '#0d9488', borderColor: '#fff', width: 8, height: 8 }}
+        lineStyle={{ borderColor: '#2f5f57' }}
+        handleStyle={{ background: '#2f5f57', borderColor: '#fff', width: 8, height: 8 }}
       />
       <div style={styles.card}>
       <Handle type="target" position={Position.Left}  id="data"    style={styles.inputHandle} />
@@ -792,7 +792,7 @@ const styles = {
     flexDirection: 'column' as const,
   },
   header: {
-    background: '#0d9488',
+    background: '#2f5f57',
     padding: '6px 10px',
     display: 'flex',
     alignItems: 'center',
@@ -909,7 +909,7 @@ const styles = {
   inputHandle: {
     width:     10,
     height:    10,
-    background: '#0d9488',
+    background: '#2f5f57',
     border:    '2px solid #fff',
     boxShadow: '0 0 0 1px #0d9488',
   },
@@ -917,7 +917,7 @@ const styles = {
   outputHandle: {
     width:     10,
     height:    10,
-    background: '#0d9488',
+    background: '#2f5f57',
     border:    '2px solid #fff',
     boxShadow: '0 0 0 1px #0d9488',
     top:       13,

@@ -23,7 +23,7 @@ export interface SaveSearchNodeData {
   [key: string]: unknown
 }
 
-const HEADER_COLOR = '#1b4332'
+const HEADER_COLOR = '#2f5540'
 
 const STATUS_BORDER: Record<string, string> = {
   idle:   '#d1d5db',

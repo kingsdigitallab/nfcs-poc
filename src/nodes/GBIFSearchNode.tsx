@@ -127,11 +127,11 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
             title="Fetch all pages (capped at ~12,000 to stay under GBIF rate limits; requests are paced and retried on 429). For large offline demos prefer 📦 fixtures.">
             <input type="checkbox" checked={!!d.fetchAll}
               onChange={e => updateNodeData(id, { fetchAll: e.target.checked })} className="nodrag" />
-            <span style={{ fontSize: 10, color: d.fetchAll ? '#0f4c81' : '#9ca3af', fontWeight: 600 }}>ALL</span>
+            <span style={{ fontSize: 10, color: d.fetchAll ? '#2c5a74' : '#9ca3af', fontWeight: 600 }}>ALL</span>
           </label>
           <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
             <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
-            <span style={{ color: d.useFixture ? '#0f4c81' : '#9ca3af' }}>📦</span>
+            <span style={{ color: d.useFixture ? '#2c5a74' : '#9ca3af' }}>📦</span>
           </label>
           {(d.status === 'success' || d.status === 'cached') && (
             <button style={styles.fixtureSaveBtn} className="nodrag"
@@ -174,7 +174,7 @@ const styles = {
   },
   header: {
     height: HEADER_H,
-    background: '#0f4c81',
+    background: '#2c5a74',
     borderRadius: '6px 6px 0 0',
     padding: '0 10px',
     display: 'flex',
@@ -253,7 +253,7 @@ const styles = {
   fixtureToggle: { display: 'flex', alignItems: 'center', gap: 3, cursor: 'pointer', userSelect: 'none' as const, fontSize: 13 },
   fixtureSaveBtn: { background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: 13, color: '#6b7280', lineHeight: 1 },
   runBtn: {
-    background: '#0f4c81',
+    background: '#2c5a74',
     color: '#fff',
     border: 'none',
     borderRadius: 5,

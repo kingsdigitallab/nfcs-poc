@@ -37,7 +37,7 @@ export interface OllamaFieldNodeData {
 const OLLAMA_TAGS = '/ollama/api/tags'
 const OLLAMA_CHAT = '/ollama/api/chat'
 
-const HEADER_COLOR = '#1e1b4b'  // very dark indigo — distinct from OllamaNode's #312e81
+const HEADER_COLOR = '#2f2d52'  // very dark indigo — distinct from OllamaNode's #312e81
 const BTN_COLOR    = '#4338ca'
 
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'

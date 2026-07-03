@@ -10,7 +10,7 @@ import { Handle, Position, NodeProps } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { formatDuration } from '../utils/formatDuration'
 
-const HEADER_COLOR = '#3b0764'  // purple-950 — distinct from both KCL node shades
+const HEADER_COLOR = '#3d2f5c'  // purple-950 — distinct from both KCL node shades
 
 interface KCLRecord {
   id: string

@@ -45,7 +45,7 @@ const OLLAMA_TAGS    = '/ollama/api/tags'
 const OLLAMA_CHAT    = '/ollama/api/chat'
 const VISION_MARKERS = ['llava', 'vision', 'bakllava', 'moondream', 'cogvlm']
 
-const HEADER_COLOR  = '#312e81'  // deep indigo
+const HEADER_COLOR  = '#3a3a6e'  // deep indigo
 const BTN_COLOR     = '#4338ca'
 
 const DEFAULT_SYSTEM = 'You are a research assistant helping to analyse humanities research documents and data.'

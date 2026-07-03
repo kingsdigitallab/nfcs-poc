@@ -48,7 +48,7 @@ interface ShotRecord {
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#1c2a3a'
+const HEADER_COLOR = '#29394a'
 const BTN_COLOR    = '#2d4a6a'
 
 const STATUS_BORDER: Record<string, string> = {

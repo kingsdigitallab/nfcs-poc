@@ -3,7 +3,7 @@ import { Handle, Position, NodeProps, useReactFlow, NodeResizer } from '@xyflow/
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
-const HEADER_COLOR    = '#1c3144'
+const HEADER_COLOR    = '#29394a'
 const MAX_THUMB_DIM   = 1200
 const EXAMPLE_MANIFEST = 'https://iiif.wellcomecollection.org/presentation/b18035723'
 

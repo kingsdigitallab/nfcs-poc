@@ -31,7 +31,7 @@ export interface SourceProfileNodeData {
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const KCL_MODELS = '/kcl-proxy/v1/models'
 
-const HEADER_COLOR = '#1f2937'
+const HEADER_COLOR = '#2b3340'
 
 const SOURCE_COLORS: Record<string, string> = {
   ariadne:   '#78350f',

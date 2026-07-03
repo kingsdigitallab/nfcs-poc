@@ -11,7 +11,7 @@ import { Handle, Position, NodeProps } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { formatAllCitations, type RecordCitation } from '../utils/citationUtils'
 
-const HEADER_COLOR = '#78350f'
+const HEADER_COLOR = '#6f4a25'
 const PAGE_SIZE    = 10
 
 export interface CitationNodeData {

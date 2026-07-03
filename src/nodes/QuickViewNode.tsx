@@ -12,7 +12,7 @@ import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { isReconciledValue } from '../utils/reconciliationService'
 import type { ReconciliationResult } from '../utils/reconciliationService'
 
-const HEADER_COLOR = '#1e293b'
+const HEADER_COLOR = '#2b3340'
 const ROWS_PER_PAGE = 50
 const TEXT_LIMIT = 50_000
 

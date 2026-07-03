@@ -45,7 +45,7 @@ export interface KCLFieldNodeData {
 const KCL_MODELS = '/kcl-proxy/v1/models'
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 
-const HEADER_COLOR = '#7f1d1d'  // red-900 — slightly darker than KCLNode
+const HEADER_COLOR = '#6f2f2f'  // red-900 — slightly darker than KCLNode
 const BTN_COLOR    = '#be123c'
 
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'

@@ -699,7 +699,7 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
 
 // ── Styles ────────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR  = '#4c1d95'   // violet-900
+const HEADER_COLOR  = '#443a72'   // violet-900
 const RUN_BTN_COLOR = '#6d28d9'
 const ACCENT_BG     = '#f5f3ff'
 const ACCENT_BORDER = '#ddd6fe'

@@ -366,7 +366,7 @@ function TransformRow({ op, fields, onChange, onDelete }: TransformRowProps) {
 
 // ─── main component ───────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#4f46e5'  // indigo-600
+const HEADER_COLOR = '#454a8a'  // indigo-600
 
 export function FilterTransformNode({ id }: NodeProps) {
   const { updateNodeData, getNodes, getEdges: snap } = useReactFlow()

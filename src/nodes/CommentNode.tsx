@@ -19,9 +19,9 @@ export interface CommentNodeData {
   [key: string]: unknown
 }
 
-const BORDER_COLOR = '#fbbf24'
-const HEADER_BG    = '#fef3c7'
-const BODY_BG      = '#fffbeb'
+const BORDER_COLOR = '#b3862f'
+const HEADER_BG    = '#f6ecd6'
+const BODY_BG      = '#faf6ec'
 
 // Parse **bold** and *italic* markdown to React elements
 function parseFormatted(text: string): (string | React.JSX.Element)[] {
@@ -217,7 +217,7 @@ const styles = {
     padding:      '5px 10px',
     fontSize:     12,
     fontWeight:   700,
-    color:        '#92400e',
+    color:        '#6f4a25',
     outline:      'none',
     width:        '100%',
     boxSizing:    'border-box' as const,
@@ -232,10 +232,10 @@ const styles = {
     flexShrink:   0,
   },
   formatBtn: {
-    background:   '#fcd34d',
-    border:       '1px solid #f59e0b',
+    background:   '#e2c98a',
+    border:       '1px solid #b3862f',
     borderRadius: 2,
-    color:        '#92400e',
+    color:        '#6f4a25',
     cursor:       'pointer',
     fontSize:     11,
     fontWeight:   700,

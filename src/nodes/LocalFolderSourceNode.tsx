@@ -41,7 +41,7 @@ export interface LocalFolderSourceNodeData {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#14532d'
+const HEADER_COLOR = '#315a3f'
 const BTN_COLOR    = '#15803d'
 
 const FILE_TYPE_OPTIONS = [

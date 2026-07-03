@@ -35,7 +35,7 @@ export interface LocalFileSourceNodeData {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#0e7490'
+const HEADER_COLOR = '#2f5f57'
 const BTN_COLOR    = '#0891b2'
 
 const MODE_OPTIONS = [

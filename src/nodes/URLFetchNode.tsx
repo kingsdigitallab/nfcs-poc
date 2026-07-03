@@ -30,7 +30,7 @@ export interface URLFetchNodeData {
   [key: string]: unknown
 }
 
-const HEADER_COLOR = '#0c4a6e'
+const HEADER_COLOR = '#2b5265'
 const BTN_COLOR    = '#0369a1'
 
 const STATUS_BORDER: Record<string, string> = {

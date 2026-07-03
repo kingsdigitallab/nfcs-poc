@@ -44,7 +44,7 @@ const STATUS_BADGE: Record<ADSLibraryStatus, string> = {
   error:   '#fca5a5',
 }
 
-const HEADER_COLOR  = '#1e3a5f'
+const HEADER_COLOR  = '#33465f'
 const RUN_BTN_COLOR = '#162d4a'
 
 export function ADSLibraryNode({ id, data }: NodeProps) {

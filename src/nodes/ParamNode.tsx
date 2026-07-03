@@ -89,7 +89,7 @@ const styles = {
     position: 'relative' as const,
   },
   header: {
-    background: '#3b82f6',
+    background: '#3d6aa5',
     borderRadius: '7px 7px 0 0',
     padding: '6px 10px',
   },
@@ -139,8 +139,8 @@ const styles = {
   handle: {
     width: 10,
     height: 10,
-    background: '#3b82f6',
+    background: '#3d6aa5',
     border: '2px solid #fff',
-    boxShadow: '0 0 0 1px #3b82f6',
+    boxShadow: '0 0 0 1px #3d6aa5',
   },
 }

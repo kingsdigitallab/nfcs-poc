@@ -59,7 +59,7 @@ export interface SmartFilterNodeData {
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const KCL_MODELS = '/kcl-proxy/v1/models'
 
-const HEADER_COLOR = '#0f4c81'
+const HEADER_COLOR = '#2c5a74'
 
 const SYSTEM_PROMPT = `You are a data filter assistant for a humanities research database tool. Convert natural language filter requests into structured JSON filter specifications.
 

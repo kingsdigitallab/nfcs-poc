@@ -21,7 +21,7 @@ import type { ReconciliationResult } from '../utils/reconciliationService'
 import { getNote, setNote, subscribeNotes } from '../store/notesStore'
 import { setNodeResults } from '../store/resultsStore'
 
-const HEADER_COLOR = '#0f766e'
+const HEADER_COLOR = '#2f6660'
 
 export interface FieldConfig {
   key: string

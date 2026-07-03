@@ -216,11 +216,11 @@ export function SpatialFilterNode({ id }: { id: string }) {
         : '#6b7280'
 
   return (
-    <div className="bg-white border-l-4 rounded shadow-lg" style={{ borderLeftColor: '#0891b2' }}>
+    <div className="bg-white border-l-4 rounded shadow-lg" style={{ borderLeftColor: '#2f6673' }}>
       {/* Header */}
       <div
         className="px-4 py-2 font-semibold text-white text-sm"
-        style={{ backgroundColor: '#0891b2' }}
+        style={{ backgroundColor: '#2f6673' }}
       >
         Spatial Filter
       </div>
