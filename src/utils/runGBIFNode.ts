@@ -2,8 +2,9 @@ import type { Node, Edge } from '@xyflow/react'
 import { fetchGBIF, GBIF_PAGE_SIZE } from './gbif'
 import { adaptGBIFResponse, type GBIFSearchResponse } from './gbifAdapter'
 import type { GBIFSearchNodeData } from '../nodes/GBIFSearchNode'
-import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { clearNodeResults } from '../store/resultsStore'
 import { addCitation } from './citationUtils'
+import { resolveParamEdge, resolveLimit, finishRunnerSuccess, finishRunnerError } from './runnerHelpers'
 
 const MAX_OFFSET = 100_000
 
@@ -22,14 +23,8 @@ export async function runGBIFNode(
   updateNodeData(nodeId, { status: 'loading', statusMessage: 'Loading…', count: 0 })
 
   try {
-    const resolve = (handleId: string, dataKey: keyof GBIFSearchNodeData): string => {
-      const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
-      if (edge) {
-        const src = nodes.find(n => n.id === edge.source)
-        return (src?.data as { value?: string } | undefined)?.value ?? ''
-      }
-      return (d[dataKey] as string | undefined) ?? ''
-    }
+    const resolve = (handleId: string, dataKey: keyof GBIFSearchNodeData): string =>
+      resolveParamEdge(nodeId, handleId, nodes, edges) ?? (d[dataKey] as string | undefined) ?? ''
 
     const baseParams = {
       q:              resolve('q',              'inlineQ'),
@@ -38,8 +33,7 @@ export async function runGBIFNode(
       year:           resolve('year',           'inlineYear'),
     }
 
-    const rawLimit = parseInt(resolve('limit', 'inlineLimit') || '20', 10)
-    const limit    = isNaN(rawLimit) || rawLimit < 1 ? 20 : rawLimit
+    const limit    = resolveLimit(nodeId, nodes, edges, d.inlineLimit as string | undefined)
     const fetchAll = d.fetchAll ?? false
 
     const queryStr = Object.entries(baseParams)
@@ -88,20 +82,8 @@ export async function runGBIFNode(
 
     const trimmed = fetchAll ? allRecords : allRecords.slice(0, limit)
     const cited   = addCitation(trimmed as Record<string, unknown>[], citationBase)
-    const version = setNodeResults(nodeId, cited)
-    updateNodeData(nodeId, {
-      status:         'success',
-      statusMessage:  `✓ ${trimmed.length.toLocaleString()} of ${total.toLocaleString()}`,
-      count:          total,
-      resultsVersion: version,
-    })
+    finishRunnerSuccess(nodeId, cited, total, updateNodeData)
   } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err)
-    console.error('[GBIF] error', msg)
-    updateNodeData(nodeId, {
-      status:        'error',
-      statusMessage: `✗ ${msg}`,
-      count:         0,
-    })
+    finishRunnerError(nodeId, err, updateNodeData, '[GBIF]')
   }
 }
