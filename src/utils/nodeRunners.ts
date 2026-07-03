@@ -41,6 +41,7 @@ import { runSampleDataNode }     from './runSampleDataNode'
 import runCommentNode            from './runCommentNode'
 import { runEvaluatorNode }      from './runEvaluatorNode'
 import { withFixture }            from './fixtureUtils'
+import type { NodeTypeId }        from '../nodes'
 
 /**
  * Common signature for every node runner.
@@ -57,6 +58,9 @@ export type NodeRunner = (
   updateNodeData: (id: string, data: Record<string, unknown>) => void,
 ) => Promise<void>
 
+// Partial: display-only nodes (quickView, comment groups, outputs without
+// runners, user-gesture sources) legitimately have no runner. The satisfies
+// guard still rejects typos and entries for nonexistent node types.
 export const nodeRunners: Record<string, NodeRunner> = {
   comment:           runCommentNode,
   gbifSearch:        withFixture('gbifSearch',      runGBIFNode),
@@ -91,5 +95,5 @@ export const nodeRunners: Record<string, NodeRunner> = {
   geocoding:         runGeocodingNode,
   smartGeocoder:     runSmartGeocoderNode,
   sampleDataSource:  runSampleDataNode,
-}
+} satisfies Partial<Record<NodeTypeId, NodeRunner>>
 

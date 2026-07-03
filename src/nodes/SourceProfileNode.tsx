@@ -327,7 +327,6 @@ interface Suggestion { node: string; reason: string; color: string }
 function SuggestedConnections({ records }: { records: Record<string, unknown>[] }) {
   const suggestions = useMemo((): Suggestion[] => {
     const out: Suggestion[] = []
-    const first = records[0] ?? {}
 
     // TableOutput — always useful
     out.push({ node: 'TableOutput', reason: 'browse and filter all records', color: '#0d9488' })

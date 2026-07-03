@@ -11,18 +11,10 @@
 import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
+import { renderTemplate } from './promptTemplates'
 
 const OLLAMA_CHAT    = '/ollama/api/chat'
 const VISION_MARKERS = ['llava', 'vision', 'bakllava', 'moondream', 'cogvlm']
-
-function renderTemplate(template: string, record: Record<string, unknown>): string {
-  return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
-    const val = record[key]
-    if (val === undefined || val === null) return ''
-    if (typeof val === 'object') return JSON.stringify(val)
-    return String(val)
-  })
-}
 
 /**
  * Stream the Ollama chat response and return the accumulated text.

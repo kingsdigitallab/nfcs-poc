@@ -2,6 +2,7 @@ import type { XYPosition, Node } from '@xyflow/react'
 import { newId } from '../utils/nodeIdCounter'
 import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from '../utils/kclConfig'
 import type { AppNode } from '../types/AppNode'
+import type { NodeTypeId } from '../nodes'
 import type { LLDSSearchNodeData }        from '../nodes/LLDSSearchNode'
 import type { ADSSearchAdvancedNodeData }  from '../nodes/ADSSearchAdvancedNode'
 import type { ADSLibraryNodeData }         from '../nodes/ADSLibraryNode'
@@ -68,6 +69,10 @@ export function findSharedApiKey(nodes: Node[]): string {
 
 // ─── Node factories ────────────────────────────────────────────────────────────
 
+// The satisfies guard rejects factories for nonexistent node types (typos);
+// Partial because a few types (e.g. proxy-only 'group' children) could in
+// principle be created outside the palette. Missing palette factories are
+// caught by the SIDEBAR_ITEMS ↔ NODE_DEFAULTS check in App's drop handler.
 export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   param: pos => ({
     id: newId('param'), type: 'param', position: pos,
@@ -198,6 +203,7 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       delimiter:     'auto',
       hasHeader:     true,
       autoCast:      true,
+      pdfRenderPages: false,
       fileName:      '',
       status:        'idle',
       statusMessage: '',
@@ -262,6 +268,7 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       xmlCount:        0,
       textCount:       0,
       imageCount:      0,
+      csvCount:        0,
     } satisfies SampleDataSourceNodeData,
   }),
   ollamaNode: pos => ({
@@ -583,12 +590,12 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   timelineOutput: pos => ({
     id: newId('timeline'), type: 'timelineOutput', position: pos,
-    data: { fitToRange: false } satisfies TimelineOutputNodeData,
+    data: { fitToRange: false, filterStart: null, filterEnd: null } satisfies TimelineOutputNodeData,
     style: { width: 520 },
   }),
   timelineView: pos => ({
     id: newId('timeline'), type: 'timelineView', position: pos,
-    data: { fitToRange: false } satisfies TimelineOutputNodeData,
+    data: { fitToRange: false, filterStart: null, filterEnd: null } satisfies TimelineOutputNodeData,
     style: { width: 520 },
   }),
   ollamaOutput: pos => ({
@@ -624,4 +631,4 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     style: { width: 400, height: 300 },
     data: { name: 'Group' },
   }),
-}
+} satisfies Partial<Record<NodeTypeId, (pos: XYPosition) => AppNode>>

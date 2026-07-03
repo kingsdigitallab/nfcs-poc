@@ -9,6 +9,13 @@ Node-based visual workflow editor for federating UK Arts & Humanities research d
 - **No Service Worker / PWA / workbox**
 - API calls client-side via `fetch()`. GBIF: direct. All others: same-origin proxy.
 
+## Tests & Typecheck
+
+`npx vitest run` (config in `vite.config.ts`, include `src/**/*.test.{ts,tsx}`, jsdom) and `npm run build` (`tsc -b && vite build`) must BOTH stay green — the typecheck was repaired in refactor-v3 after a long period of drift; do not let it rot again. `UnifiedRecord` carries an `[key: string]: unknown` index signature by design (records are open — enrichment nodes add undeclared fields); adapter-output conformance is enforced at runtime by the fixture test, not the compiler. Test suites live in `src/__tests__/`:
+utility unit tests, plus `workflowIO.test.ts` (save/load round-trip), `runWorkflow.test.ts` (Kahn wave ordering + failure
+skipping, mocks `nodeRunners`), and `fixtureConformance.test.ts` — reads every `public/fixtures/*.json` from disk and asserts
+records conform to `UnifiedRecord` (its `ALLOWED_TOP_LEVEL` list must be kept in sync with the interface).
+
 ## Run Modes
 
 | Command | Server | Port |
@@ -73,7 +80,16 @@ Use `getContentMaxChars(model: string): number` to get the per-model limit. Appl
 
 ```
 src/
-├── App.tsx              # Canvas, collapsible sidebar, Run All, save/load — imports from config/
+├── App.tsx              # Canvas shell + state wiring only (~250 lines) — feature logic lives in hooks/ + components/
+├── components/
+│   ├── TopBar.tsx               # Title, save/load, notes, grouping, mode toggles, Run All (author-mode + example dialog internal)
+│   ├── Sidebar.tsx              # Node palette: search, collapsible TaDiRAH groups, Experimental section
+│   └── …                        # ChatSidebar, ConnectionSuggestions, modals, …
+├── hooks/
+│   ├── useWorkflowIO.ts         # save/applyWorkflow/load + workflowId + loadError
+│   ├── useGrouping.ts           # group/ungroup + auto-resize effect (debounce/tolerance comments preserved)
+│   ├── useCanvasConnections.ts  # onConnect/onDrop/onConnectEnd, SINGLETON_TARGET_HANDLES, suggestion + handle-picker popups
+│   └── useUpstreamRecords.ts    # merges records from all data-handle edges
 ├── config/
 │   ├── storageKeys.ts           # STORAGE_KEYS — all localStorage key constants
 │   ├── sidebarItems.ts          # SIDEBAR_ITEMS, SIDEBAR_GROUPS, DEFAULT_COLLAPSED_GROUPS,
@@ -82,11 +98,12 @@ src/
 ├── styles/
 │   └── appStyles.ts             # React.CSSProperties constants for App.tsx layout
 ├── types/
-│   ├── UnifiedRecord.ts         # Canonical inter-node data contract (schema.org annotated)
+│   ├── UnifiedRecord.ts         # Canonical inter-node data contract (schema.org annotated).
+│   │                            # Domain-specific GBIF fields live ONLY under gbif.* — no flat copies.
+│   │                            # periodStart/End/Name stay top-level (cross-service: ADS/ARIADNE/HSDS).
 │   └── AppNode.ts               # AppNode union type + inline *NodeData interfaces
 ├── store/resultsStore.ts        # Out-of-band Map store + version counter
-├── hooks/useUpstreamRecords.ts  # Merges records from all data-handle edges
-├── nodes/               # One file per node + index.ts registry
+├── nodes/               # One file per node + index.ts registry (+ NodeTypeId)
 └── utils/
     ├── nodeRunners.ts           # Registry: nodeType → NodeRunner
     ├── runWorkflow.ts           # Topological executor (Kahn's algorithm)
@@ -218,6 +235,11 @@ and `⚗` icon in the sidebar. When `simpleMode` is active the entire group is h
 
 ## Registration Checklist (new runnable node)
 
+`NodeTypeId` (exported from `src/nodes/index.ts`, derived from `nodeTypes`) links the registries: `nodeRunners`
+and `NODE_DEFAULTS` carry `satisfies Partial<Record<NodeTypeId, …>>` guards and `SidebarItem.type` is `NodeTypeId`,
+so a typo'd or unregistered type string in steps 2/5/6 is a compile error instead of a silently missing facet.
+Register the component (step 4) FIRST — the other registries type-check against it.
+
 1. `src/utils/run<Name>Node.ts` — implement `NodeRunner`
 2. Add to `src/utils/nodeRunners.ts`
 3. `src/nodes/<Name>Node.tsx`
@@ -268,6 +290,10 @@ type NodeRunner = (
 - **`allFlatColumns`** in `TableOutputNode` — must include `isReconciledValue(v)` check or `*_reconciled` columns vanish.
 - **`newId(prefix)`** / **`bumpCounterPast(ids[])`** in `nodeIdCounter.ts` — call `bumpCounterPast` after workflow load.
 - **`TRANSIENT_FIELDS`** in `workflowIO.ts` strips `results`, `status`, counts, `resultsVersion`, `_capped`, `_total`, `folderName`, `pdfCount/xmlCount/textCount/imageCount` before save.
+- **`makeSearchRunner(config)`** in `searchRunnerFactory.ts` — builds a NodeRunner for Elasticsearch-style services (`?q&size&page` + `{total:{value},hits}`); ARIADNE and HSDS runners are ~30-line configs over it. Shared pieces (`resolveParamEdge`, `resolveLimit`, `finishRunnerSuccess/Error`) live in `runnerHelpers.ts`. Europeana (cursor pagination, `_capped`), Bodleian (dual terminal paths), SMG, VA, GBIF, LLDS, MDS stay bespoke — do NOT force-fit non-page/size services into the factory.
+- **`renderTemplate` / `renderFieldTemplateAggregate` / `renderFieldTemplatePerRecord`** in `promptTemplates.ts` — the ONLY implementations of `{{token}}` prompt substitution. Do not re-inline them in runners or components. Reserved future token: `{{_lineage}}` (see the TODO(context-accrual) marker; injection point for pipeline-history summaries).
+- **`fetchWithTimeout(url, init?, timeoutMs?)`** in `fetchWithTimeout.ts` — AbortController + 30s default. Use for any new network call in runners/clients; a fetch without a timeout can hang a Run All wave indefinitely.
+- **`normaliseRecord`/`normaliseRecords`** in `recordNormalise.ts` — applied at the two legacy-record entry points (`fixtureUtils` fixture loads, `LoadSavedSearchNode`). Moves stale flat GBIF fields into `gbif.*` and drops Bodleian's old `_service`/`thumbnail` strays. Idempotent. Old fixtures and saved `.nfcs.json` files keep working without rewriting.
 - **`collectUpstreamRecords(nodeId, edges)`** in `upstreamRecords.ts` — shared utility used by all process runners. TYPED_HANDLES (`pdf`, `xml`, `text`, `image`) use partitioned store keys `${sourceId}:${handle}`; all others use plain `sourceId`.
 - **`useUpstreamRecords(nodeId)`** hook — same TYPED_HANDLES logic for reactivity; uses `${type}Count` key from node data.
 
@@ -297,3 +323,4 @@ type NodeRunner = (
 22. CommentNode easter egg: click title 5 times within 1.5 seconds to unlock input/output handles for illustrating data-flow gaps.
 23. `runMergeByQIDNode.ts` `extractQIDInfo` must handle **array-valued** `*_reconciled` fields, not just a single `ReconciliationResult | null` — a field can carry multiple candidate reconciliations. Always normalise with `Array.isArray(raw) ? raw : [raw]` before scanning for a resolved/review QID.
 24. `TableOutputNode` column-resize drag handler: never re-read `resizingRef.current` more than once per `mousemove` after the initial null-check — cache it to a local (`const r = resizingRef.current; if (!r) return`) before use. Re-reading it later in the same handler risks a null dereference if the ref is cleared mid-drag (e.g. `mouseup` racing `mousemove`).
+25. GBIF domain fields (`scientificName`, `kingdom`, …, `datasetName`, `eventDate`, `basisOfRecord`, `institutionCode`) exist ONLY under `record.gbif.*` — the adapter stores the raw occurrence wholesale and writes no flat copies. Readers use dot-notation (`gbif.scientificName`); `authoritiesForField` matches namespaced fields by last segment so typed authorities still apply. `periodStart/End/Name` are intentionally top-level — they are cross-service temporal fields written by three adapters, NOT domain-specific.

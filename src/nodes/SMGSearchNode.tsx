@@ -4,7 +4,7 @@ import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
-export type SMGStatus = 'idle' | 'loading' | 'success' | 'error'
+export type SMGStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface SMGSearchNodeData {
   inlineQuery:   string
@@ -59,6 +59,7 @@ const STATUS_BORDER: Record<SMGStatus, string> = {
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
+  cached:  '#22c55e',
 }
 
 const STATUS_BADGE: Record<SMGStatus, string> = {
@@ -66,6 +67,7 @@ const STATUS_BADGE: Record<SMGStatus, string> = {
   loading: '#93c5fd',
   success: '#86efac',
   error:   '#fca5a5',
+  cached:  '#86efac',
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────

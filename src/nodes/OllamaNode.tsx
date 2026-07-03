@@ -17,6 +17,7 @@ import { useStaleResults } from '../hooks/useStaleResults'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
+import { renderTemplate } from '../utils/promptTemplates'
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 export interface OllamaNodeData {
@@ -54,17 +55,6 @@ const STATUS_BORDER: Record<string, string> = {
   running: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
-}
-
-// ── Template rendering ────────────────────────────────────────────────────────
-
-function renderTemplate(template: string, record: Record<string, unknown>): string {
-  return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
-    const val = record[key]
-    if (val === undefined || val === null) return ''
-    if (typeof val === 'object') return JSON.stringify(val)
-    return String(val)
-  })
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────

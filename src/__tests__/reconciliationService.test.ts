@@ -51,6 +51,16 @@ describe('authoritiesForField', () => {
     expect(auths.some(a => a.value === 'wikidata-taxon')).toBe(true)
   })
 
+  it('matches namespaced fields by their last segment (gbif.scientificName)', () => {
+    const auths = authoritiesForField('gbif.scientificName')
+    expect(auths.some(a => a.value === 'wikidata-taxon')).toBe(true)
+  })
+
+  it('returns org authorities for "gbif.institutionCode"', () => {
+    const auths = authoritiesForField('gbif.institutionCode')
+    expect(auths.some(a => a.value === 'wikidata-org')).toBe(true)
+  })
+
   it('falls back to wikidata-item for unknown fields', () => {
     const auths = authoritiesForField('someRandomField')
     expect(auths.some(a => a.value === 'wikidata-item')).toBe(true)

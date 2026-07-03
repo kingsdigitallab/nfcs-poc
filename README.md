@@ -878,6 +878,17 @@ nfcs-poc/
 
 ---
 
+## Adding new nodes
+
+Two developer documents cover extension:
+
+- **[docs/federation-baseline.md](docs/federation-baseline.md)** — the checklist that makes an external data service a good federation candidate (open API, CORS, PIDs, licence metadata, pagination, field completeness), with GBIF and Europeana scored as worked reference implementations.
+- **[docs/context-accrual.md](docs/context-accrual.md)** — the design for workflow context accrual: how pipeline history (search terms, services combined, filters, transforms) will be derived from the node graph and surfaced to downstream LLM nodes via a `{{_lineage}}` prompt token.
+
+The step-by-step registration checklist for a new node lives in `CLAUDE.md`. Adapter output is contract-checked by the fixture conformance test suite (`npx vitest run`); `npm run build` must stay green.
+
+---
+
 ## Tech stack
 
 | Library | Purpose |

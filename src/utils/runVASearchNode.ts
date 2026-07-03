@@ -39,8 +39,8 @@ function adaptVARecord(raw: VARawRecord): UnifiedRecord {
     _sourceId:  raw.systemNumber,
     _sourceUrl: selfUrl,
     _pid:       raw.accessionNumber || undefined,
-    _citation:  [title, 'Victoria and Albert Museum', raw.accessionNumber && `Acc. no. ${raw.accessionNumber}`, selfUrl]
-      .filter(Boolean).join('. '),
+    // _citation is stamped by addCitation() in the runner — the adapter
+    // must not pre-fill it (the typed shape is an object, not a string).
     title,
     creator,
     date:    raw._primaryDate || undefined,

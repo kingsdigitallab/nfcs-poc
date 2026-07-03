@@ -4,7 +4,7 @@ import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
-export type MDSStatus = 'idle' | 'loading' | 'success' | 'error'
+export type MDSStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface MDSSearchNodeData {
   inlineQuery: string
@@ -41,6 +41,7 @@ const STATUS_BORDER: Record<MDSStatus, string> = {
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
+  cached:  '#22c55e',
 }
 
 const STATUS_BADGE: Record<MDSStatus, string> = {
@@ -48,6 +49,7 @@ const STATUS_BADGE: Record<MDSStatus, string> = {
   loading: '#93c5fd',
   success: '#86efac',
   error:   '#fca5a5',
+  cached:  '#86efac',
 }
 
 // ─── component ────────────────────────────────────────────────────────────────

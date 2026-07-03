@@ -7,6 +7,7 @@
 import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
+import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from './promptTemplates'
 
 const OLLAMA_CHAT = '/ollama/api/chat'
 
@@ -115,11 +116,9 @@ export const runOllamaFieldNode: NodeRunner = async (nodeId, getNodes, edges, up
 
       updateNodeData(nodeId, { statusMessage: 'Sending aggregate prompt…' })
 
-      const prompt = promptTemplate
-        .replace(/\{\{values\}\}/g, values)
-        .replace(/\{\{field\}\}/g,  selectedField)
-        .replace(/\{\{value\}\}/g,  values)
-        .replace(/\{\{count\}\}/g,  String(upstreamRecords.length))
+      const prompt = renderFieldTemplateAggregate(promptTemplate, {
+        values, field: selectedField, count: upstreamRecords.length,
+      })
 
       const response = await ollamaChat(model, systemPrompt, prompt, temperature, maxTokens)
 
@@ -157,10 +156,9 @@ export const runOllamaFieldNode: NodeRunner = async (nodeId, getNodes, edges, up
 
         updateNodeData(nodeId, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
-        const prompt = promptTemplate
-          .replace(/\{\{value\}\}/g, value)
-          .replace(/\{\{field\}\}/g, selectedField)
-          .replace(/\{\{(\w+)\}\}/g, (_, k: string) => String(record[k] ?? ''))
+        const prompt = renderFieldTemplatePerRecord(promptTemplate, {
+          value, field: selectedField, record,
+        })
 
         let response: string
         try {

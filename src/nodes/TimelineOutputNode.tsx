@@ -146,7 +146,7 @@ interface HoverState {
 
 export function TimelineViewNode({ id, data, width: measuredWidth, selected }: NodeProps) {
   const { updateNodeData }                            = useReactFlow()
-  const { records, connected, status, sourceCount }  = useUpstreamRecords(id)
+  const { records, connected, status }  = useUpstreamRecords(id)
 
   const [hovered,       setHovered]      = useState<HoverState | null>(null)
   const [dragging,      setDragging]     = useState<'start' | 'end' | null>(null)
@@ -190,7 +190,10 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
         : (r as Record<string, unknown>)[dateField]
       return toYear(raw as string | undefined)
     }
-    return toYear(r.date as string | undefined) ?? toYear(r.eventDate as string | undefined)
+    // gbif.eventDate fallback: the adapter mirrors it into `date`, but records
+    // filtered/transformed upstream may carry only the namespaced original.
+    return toYear(r.date as string | undefined)
+      ?? toYear((r.gbif as Record<string, unknown> | undefined)?.eventDate as string | undefined)
   }, [dateField])
 
   const scheduleHide = useCallback(() => {
@@ -238,7 +241,6 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
   const svgW  = fitToRange
     ? Math.max(plotW, PAD_L + PAD_R + 20)
     : Math.max(plotW, yearRange * autoPxPerYear + PAD_L + PAD_R)
-  const pxPerYear = fitToRange ? (svgW - PAD_L - PAD_R) / yearRange : autoPxPerYear
 
   const maxStack  = Math.max(0, ...Array.from(yearMap.values()).map(v => v.length))
   const stackRows = Math.min(maxStack, MAX_STACK)
@@ -515,8 +517,9 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
           const tipLeft    = Math.max(4, Math.min(visibleX + 10, visibleW - 224))
           const tipTop     = Math.max(4, hovered.svgY - 72)
           const r          = hovered.record
-          const title      = String(r.title ?? r.scientificName ?? '(no title)').slice(0, 60)
-          const date       = String(r.date ?? r.eventDate ?? '')
+          const g          = r.gbif as Record<string, unknown> | undefined
+          const title      = String(r.title ?? g?.scientificName ?? '(no title)').slice(0, 60)
+          const date       = String(r.date ?? g?.eventDate ?? '')
           const glyph      = SHAPE_GLYPHS[sourceShape(r._source as string | undefined)] ?? '●'
           return (
             <div
@@ -547,7 +550,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
           value={dateField}
           onChange={e => updateNodeData(id, { dateField: e.target.value })}
           className="nodrag"
-          title="Field used as the date source (blank = auto: date / eventDate)"
+          title="Field used as the date source (blank = auto: date / gbif.eventDate)"
         >
           <option value="">date: auto</option>
           {availableFields.map(f => <option key={f} value={f}>{f}</option>)}

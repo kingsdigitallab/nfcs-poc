@@ -39,7 +39,9 @@ export async function runTimelineViewNode(
     const filtered = (lo === null && hi === null)
       ? upstream
       : upstream.filter(r => {
-          const year = toYear(r.date as string | undefined) ?? toYear(r.eventDate as string | undefined) ?? null
+          const year = toYear(r.date as string | undefined)
+            ?? toYear((r.gbif as Record<string, unknown> | undefined)?.eventDate as string | undefined)
+            ?? null
           if (year === null) return false
           if (lo !== null && year < lo) return false
           if (hi !== null && year > hi) return false

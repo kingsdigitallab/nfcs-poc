@@ -3,7 +3,7 @@ import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/rea
 import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 
-export type EuropeanaStatus = 'idle' | 'loading' | 'success' | 'error'
+export type EuropeanaStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface EuropeanaSearchNodeData {
   apiKey:      string
@@ -42,6 +42,7 @@ const BORDER: Record<EuropeanaStatus, string> = {
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
+  cached:  '#22c55e',
 }
 
 export function EuropeanaSearchNode({ id, data }: NodeProps) {

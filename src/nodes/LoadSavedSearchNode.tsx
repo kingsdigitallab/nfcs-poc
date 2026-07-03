@@ -14,6 +14,7 @@ import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { isNfcsSavedSearch } from '../types/savedSearch'
 import type { NfcsSavedSearchMeta } from '../types/savedSearch'
+import { normaliseRecords } from '../utils/recordNormalise'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export interface LoadSavedSearchNodeData {
@@ -127,6 +128,10 @@ export function LoadSavedSearchNode({ id, data }: NodeProps) {
           if (records.length === 0) {
             throw new Error('File contains no records.')
           }
+
+          // Saved files may predate schema changes — normalise to the
+          // current UnifiedRecord contract (e.g. flat GBIF fields → gbif.*).
+          records = normaliseRecords(records as unknown as Record<string, unknown>[])
 
           const version = setNodeResults(id, records as unknown as Record<string, unknown>[])
 

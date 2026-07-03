@@ -83,11 +83,9 @@ function adaptMember(member: BodleianMember): UnifiedRecord {
     _source:    'bodleian',
     _sourceId:  uuid || url,
     _sourceUrl: url,
-    _service:   'bodleian',
     title,
     date,
     type:       member.type ?? '',
-    thumbnail,
     bodleian: {
       uuid,
       manifest,

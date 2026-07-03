@@ -109,3 +109,12 @@ export const nodeTypes = {
   quickNote:         withToolbar(QuickNoteNode),
   comparisonReport:  withToolbar(ComparisonReportNode),
 }
+
+/**
+ * Union of every canvas node type string — derived from the component
+ * registry above, which is the most complete of the four registries.
+ * The other registries (nodeRunners, NODE_DEFAULTS, SIDEBAR_ITEMS) apply
+ * `satisfies` guards against this union so a typo or missing registration
+ * fails compilation instead of silently dropping a node facet.
+ */
+export type NodeTypeId = keyof typeof nodeTypes
