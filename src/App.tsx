@@ -139,17 +139,17 @@ export default function App() {
         {/* Canvas */}
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div ref={reactFlowWrapper} style={{ flex: 1 }}>
-            {/* Prominent yellow selection ring */}
+            {/* Prominent selection ring */}
             <style>{`
               .react-flow__node.selectable.selected {
-                box-shadow: 0 0 0 3px #f59e0b !important;
+                box-shadow: 0 0 0 3px #3d6aa5 !important;
                 outline: none !important;
               }
               .react-flow__node-input.selectable.selected,
               .react-flow__node-default.selectable.selected,
               .react-flow__node-output.selectable.selected,
               .react-flow__node-group.selectable.selected {
-                box-shadow: 0 0 0 3px #f59e0b !important;
+                box-shadow: 0 0 0 3px #3d6aa5 !important;
                 outline: none !important;
               }
             `}</style>
@@ -172,9 +172,13 @@ export default function App() {
               snapToGrid={snapEnabled}
               snapGrid={[20, 20]}
             >
-              <Background />
+              <Background color="#d8cfba" gap={22} size={1.4} />
               <Controls />
-              <MiniMap nodeColor={node => nodeColourMap[node.type ?? ''] ?? '#888'} />
+              <MiniMap
+                nodeColor={node => nodeColourMap[node.type ?? ''] ?? '#888'}
+                maskColor="rgba(239,233,219,0.6)"
+                nodeStrokeColor="#d8cfba"
+              />
               <Panel position="bottom-left" style={attributionStyle}>
                 Conceptualised at King&#39;s Digital Lab
               </Panel>
