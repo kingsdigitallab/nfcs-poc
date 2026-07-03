@@ -18,6 +18,7 @@ import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resul
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
 import { renderTemplate } from '../utils/promptTemplates'
+import { collectLineage, lineageToNarrative } from '../utils/lineage'
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 export interface OllamaNodeData {
@@ -175,6 +176,10 @@ export function OllamaNode({ id, data }: NodeProps) {
     setLiveFile('')
 
     const enriched: Record<string, unknown>[] = []
+    // Lineage is derived once per run, not per record — only when opted in.
+    const lineageNarrative = promptTemplate.includes('{{_lineage}}')
+      ? lineageToNarrative(collectLineage(id, allNodes, allEdges))
+      : ''
 
     try {
       for (let i = 0; i < upstreamRecords.length; i++) {
@@ -198,7 +203,7 @@ export function OllamaNode({ id, data }: NodeProps) {
             (record.description as string | undefined) ??
             JSON.stringify(record)
 
-        const recordForTemplate: Record<string, unknown> = { ...record, content: baseContent }
+        const recordForTemplate: Record<string, unknown> = { ...record, content: baseContent, _lineage: lineageNarrative }
         const renderedPrompt = renderTemplate(promptTemplate, recordForTemplate)
 
         // Build messages
@@ -320,7 +325,7 @@ export function OllamaNode({ id, data }: NodeProps) {
       })
     }
   }, [
-    id, updateNodeData, upstreamRecords, selectedModel,
+    id, updateNodeData, upstreamRecords, allNodes, allEdges, selectedModel,
     systemPrompt, promptTemplate, temperature, maxTokens, isVisionModel,
   ])
 
@@ -454,6 +459,13 @@ export function OllamaNode({ id, data }: NodeProps) {
               {availableFields.map(f => (
                 <code key={f} style={styles.fieldChip}>{'{{' + f + '}}'}</code>
               ))}
+              <code
+                key="_lineage"
+                style={styles.fieldChip}
+                title="Pipeline history — a natural-language summary of the upstream workflow (searches, filters, merges) derived at run time"
+              >
+                {'{{_lineage}}'}
+              </code>
             </div>
           )}
           <textarea
