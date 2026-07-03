@@ -29,7 +29,7 @@ export interface ARIADNESearchNodeData {
   [key: string]:  unknown
 }
 
-const ARIADNE_CONFIG: BackboneSearchConfig = {
+export const ARIADNE_CONFIG: BackboneSearchConfig = {
   nodeType: 'ariadneSearch',
   title:    'ARIADNE Search',
   theme: {
@@ -41,58 +41,84 @@ const ARIADNE_CONFIG: BackboneSearchConfig = {
     clearBtn:     '#0e7490',
     fixtureIcon:  '#0e7490',
   },
-  sortOptions: [
-    { value: '_score', label: 'Relevance' },
-    { value: 'title',  label: 'Title' },
-    { value: 'issued', label: 'Date issued' },
+  fetchAll: true,
+  sort: {
+    options: [
+      { value: '_score', label: 'Relevance' },
+      { value: 'title',  label: 'Title' },
+      { value: 'issued', label: 'Date issued' },
+    ],
+  },
+  filters: [
+    {
+      key: 'ariadneSubject', label: 'Resource type', kind: 'select',
+      options: [
+        '', 'Site/monument', 'Artefact', 'Coin', 'Fieldwork', 'Fieldwork report',
+        'Maritime', 'Monument', 'Inscription', 'Date', 'Fieldwork archive',
+        'Rock Art', 'Building survey', 'E-Publication', 'Scientific analysis',
+        'Not provided', 'Burial',
+      ],
+    },
+    {
+      key: 'derivedSubject', label: 'Getty subject', kind: 'text',
+      placeholder: 'e.g. barrows',
+      suggestions: [
+        'early western world coins', 'houses', 'archaeological sites',
+        'vessels (containers)', 'earthworks (engineering works)', 'buckles (strap accessories)',
+        'brooches', 'penny coins', 'agricultural settlements', 'buildings (structures)',
+        'wrecks (sites)', 'farms', 'ditches', 'pits (earthworks)', 'glass (material)',
+        'windows', 'stained-glass windows', 'conservation (discipline)', 'boundaries',
+        'coins (money)',
+      ],
+    },
+    {
+      key: 'nativeSubject', label: 'Native subject', kind: 'text',
+      placeholder: 'e.g. bowl barrow',
+      suggestions: [
+        'coin', 'geophysical survey', 'house', 'vessel', 'extant building',
+        'findspot', 'buckle', 'site', 'brooch', 'building', 'wreck', 'earthwork',
+        'penny', 'enclosure', 'find', 'pit', 'farmstead', 'ditch', 'field system',
+        'cemetery',
+      ],
+    },
+    {
+      key: 'country', label: 'Country', kind: 'select',
+      options: [
+        '', 'England', 'Scotland', 'Wales', 'Ireland', 'Northern Ireland',
+        'United Kingdom', 'Isle of Man', 'Great Britain', 'Denmark', 'Sweden',
+        'Iceland', 'Germany', 'Finland', 'Austria', 'Hungary', 'Czech Republic',
+        'Bulgaria', 'Portugal', 'Italy', 'Greece', 'France', 'Spain',
+        'Netherlands', 'Belgium', 'Norway', 'Poland', 'Romania', 'Japan',
+        'Argentina', 'Unknown',
+      ],
+    },
+    {
+      key: 'dataType', label: 'Data type', kind: 'select',
+      options: [
+        '', 'Structured Data', 'Still Image', 'Text', 'Geospatial',
+        'CAD', 'Numeric', '3D', 'Video', 'Other', 'Audio', 'Software',
+      ],
+    },
+    {
+      key: 'temporal', label: 'Period', kind: 'select',
+      options: [
+        '', 'post medieval', 'roman', 'medieval', '19th century', 'bronze age',
+        '20th century', 'early medieval', 'iron age', 'neolithic', 'prehistoric',
+        'second world war', 'mesolithic', 'modern', '18th century',
+        'later prehistoric', 'unknown', 'palaeolithic', 'late iron age',
+        'early bronze age', 'late bronze age',
+      ],
+    },
+    {
+      key: 'contributor', label: 'Contributor', kind: 'select',
+      options: [
+        '', 'Archaeology Data Service', 'Historic England',
+        'Portable Antiquities Scheme',
+        'Historisk Museer ved Universitetet i Bergen',
+        'Arkæologi Viborg',
+      ],
+    },
   ],
-  resourceTypeOptions: [
-    '', 'Site/monument', 'Artefact', 'Coin', 'Fieldwork', 'Fieldwork report',
-    'Maritime', 'Monument', 'Inscription', 'Date', 'Fieldwork archive',
-    'Rock Art', 'Building survey', 'E-Publication', 'Scientific analysis',
-    'Not provided', 'Burial',
-  ],
-  dataTypeOptions: [
-    '', 'Structured Data', 'Still Image', 'Text', 'Geospatial',
-    'CAD', 'Numeric', '3D', 'Video', 'Other', 'Audio', 'Software',
-  ],
-  countryOptions: [
-    '', 'England', 'Scotland', 'Wales', 'Ireland', 'Northern Ireland',
-    'United Kingdom', 'Isle of Man', 'Great Britain', 'Denmark', 'Sweden',
-    'Iceland', 'Germany', 'Finland', 'Austria', 'Hungary', 'Czech Republic',
-    'Bulgaria', 'Portugal', 'Italy', 'Greece', 'France', 'Spain',
-    'Netherlands', 'Belgium', 'Norway', 'Poland', 'Romania', 'Japan',
-    'Argentina', 'Unknown',
-  ],
-  temporalOptions: [
-    '', 'post medieval', 'roman', 'medieval', '19th century', 'bronze age',
-    '20th century', 'early medieval', 'iron age', 'neolithic', 'prehistoric',
-    'second world war', 'mesolithic', 'modern', '18th century',
-    'later prehistoric', 'unknown', 'palaeolithic', 'late iron age',
-    'early bronze age', 'late bronze age',
-  ],
-  contributorOptions: [
-    '', 'Archaeology Data Service', 'Historic England',
-    'Portable Antiquities Scheme',
-    'Historisk Museer ved Universitetet i Bergen',
-    'Arkæologi Viborg',
-  ],
-  derivedSubjectSuggestions: [
-    'early western world coins', 'houses', 'archaeological sites',
-    'vessels (containers)', 'earthworks (engineering works)', 'buckles (strap accessories)',
-    'brooches', 'penny coins', 'agricultural settlements', 'buildings (structures)',
-    'wrecks (sites)', 'farms', 'ditches', 'pits (earthworks)', 'glass (material)',
-    'windows', 'stained-glass windows', 'conservation (discipline)', 'boundaries',
-    'coins (money)',
-  ],
-  nativeSubjectSuggestions: [
-    'coin', 'geophysical survey', 'house', 'vessel', 'extant building',
-    'findspot', 'buckle', 'site', 'brooch', 'building', 'wreck', 'earthwork',
-    'penny', 'enclosure', 'find', 'pit', 'farmstead', 'ditch', 'field system',
-    'cemetery',
-  ],
-  derivedPlaceholder: 'e.g. barrows',
-  nativePlaceholder:  'e.g. bowl barrow',
 }
 
 export function ARIADNESearchNode(props: NodeProps) {
