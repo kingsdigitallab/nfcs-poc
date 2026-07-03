@@ -46,8 +46,8 @@ export interface FilterSpec {
   key:   string
   label: string
   kind:  'select' | 'text' | 'checkbox' | 'range'
-  /** select — an empty-string option renders as '— any —' */
-  options?: string[]
+  /** select — plain strings ('' renders '— any —') or explicit value/label pairs */
+  options?: string[] | { value: string; label: string }[]
   /** text */
   placeholder?: string
   /** text — datalist suggestions */
@@ -308,9 +308,10 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
                 <span style={styles.filterLabel}>{spec.label}</span>
                 {spec.kind === 'select' && (
                   <select style={styles.select} value={(d[spec.key] as string) || ''} onChange={set(spec.key)} className="nodrag">
-                    {(spec.options ?? []).map(v => (
-                      <option key={v} value={v}>{v || '— any —'}</option>
-                    ))}
+                    {(spec.options ?? []).map(o => {
+                      const { value, label } = typeof o === 'string' ? { value: o, label: o || '— any —' } : o
+                      return <option key={value} value={value}>{label}</option>
+                    })}
                   </select>
                 )}
                 {spec.kind === 'text' && (

@@ -17,6 +17,8 @@ import { ARIADNE_CONFIG } from '../nodes/ARIADNESearchNode'
 import { HSDS_CONFIG } from '../nodes/HSDSSearchNode'
 import { MDS_CONFIG } from '../nodes/MDSSearchNode'
 import { LLDS_CONFIG } from '../nodes/LLDSSearchNode'
+import { VA_CONFIG } from '../nodes/VASearchNode'
+import { SMG_CONFIG } from '../nodes/SMGSearchNode'
 
 describe('backbone handle contract', () => {
   it('wirable-row offsets are byte-identical to the pre-shell components', () => {
@@ -75,6 +77,26 @@ describe('LLDS config (task-SN.2 parity)', () => {
     expect(LLDS_CONFIG.footer?.extraToggle?.key).toBe('useCache')
     expect(LLDS_CONFIG.footer?.extraToggle?.cachedLabel).toBe('📦 cached')
     expect(LLDS_CONFIG.statusColours?.cached).toBe('#f59e0b')
+  })
+})
+
+describe('V&A config (task-SN.3 parity)', () => {
+  it('keeps the pre-shell serialised keys: imagesOnly, objectType, yearFrom/yearTo', () => {
+    expect(VA_CONFIG.nodeType).toBe('vaSearch')
+    expect(serialisedFilterKeys(VA_CONFIG)).toEqual(['imagesOnly', 'objectType', 'yearFrom', 'yearTo'])
+    expect(VA_CONFIG.fetchAll).toBe(true)
+    expect(VA_CONFIG.sort).toBeUndefined()
+  })
+})
+
+describe('SMG config (task-SN.3 parity)', () => {
+  it('keeps the pre-shell serialised keys: searchType row, museum, dateFrom/dateTo', () => {
+    expect(SMG_CONFIG.nodeType).toBe('smgSearch')
+    expect(SMG_CONFIG.extraBodyRow?.key).toBe('searchType')
+    expect(SMG_CONFIG.extraBodyRow?.options[0]?.value).toBe('objects')  // runner default endpoint
+    expect(serialisedFilterKeys(SMG_CONFIG)).toEqual(['museum', 'dateFrom', 'dateTo'])
+    expect(SMG_CONFIG.fetchAll).toBe(true)
+    expect(SMG_CONFIG.sort).toBeUndefined()
   })
 })
 

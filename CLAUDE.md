@@ -142,8 +142,8 @@ and must never be renamed.**
 | `hsdsSearch` | `HSDSSearchNode` | Vite proxy, no Cloudflare. Heritage Science Data Service — UK heritage aggregator (Historic England, HES, Cadw). Same filter set as ARIADNESearch plus Country = England/Scotland/Wales/Northern Ireland. `hsds.*` namespace. |
 | `bodleianSearch` | `BodleianSearchNode` | `/bodleian-proxy/*`. Oxford Bodleian Digital Collections. Filters: date range, language, origins, completeness, musical notation. `bodleian.manifest` → feeds ImageView (IIIF mode). Fixture mode supported. |
 | `europeanaSearch` | `EuropeanaSearchNode` | Pre-configured API key (overridable via Param → apiKey handle). Cursor pagination up to 1,000 records. Adds `europeana.thumbnail`, `europeana.shownAt`, `europeana.rights`. |
-| `smgSearch` | `SMGSearchNode` | `/smg-proxy/*`. Science Museum Group collection. `smg.manifest` (IIIF) → ImageView. Fixture mode supported. |
-| `vaSearch` | `VASearchNode` | `/vam-proxy/*`. V&A collection (API v2). Filters: images only, object type, year made from/to. `vam.manifest`, `vam.iiifImageBase`, `vam.thumbnail`. |
+| `smgSearch` | `SMGSearchNode` | `/smg-proxy/*`. Science Museum Group collection. `smg.manifest` (IIIF) → ImageView. Fixture mode supported. Thin config over `BackboneSearchNode` (searchType body row switches endpoint). |
+| `vaSearch` | `VASearchNode` | `/vam-proxy/*`. V&A collection (API v2). Filters: images only, object type, year made from/to. `vam.manifest`, `vam.iiifImageBase`, `vam.thumbnail`. Thin config over `BackboneSearchNode`. |
 | `adsSearchAdvanced` | `ADSSearchAdvancedNode` | **DEPRECATED — blocked by Cloudflare.** Use ARIADNESearch (Contributor = "Archaeology Data Service") or HSDSSearch instead. |
 | `adsLibrarySearch` | `ADSLibraryNode` | **DEPRECATED — blocked by Cloudflare**, same as above. |
 | `mdsSearch` | `MDSSearchNode` | `/mds-proxy`. Two-step HTML scraper. Capped at 200 (amber status text). Thin config over `BackboneSearchNode`. |
