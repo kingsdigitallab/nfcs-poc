@@ -19,6 +19,7 @@ import { MDS_CONFIG } from '../nodes/MDSSearchNode'
 import { LLDS_CONFIG } from '../nodes/LLDSSearchNode'
 import { VA_CONFIG } from '../nodes/VASearchNode'
 import { SMG_CONFIG } from '../nodes/SMGSearchNode'
+import { BODLEIAN_CONFIG } from '../nodes/BodleianSearchNode'
 
 describe('backbone handle contract', () => {
   it('wirable-row offsets are byte-identical to the pre-shell components', () => {
@@ -97,6 +98,20 @@ describe('SMG config (task-SN.3 parity)', () => {
     expect(serialisedFilterKeys(SMG_CONFIG)).toEqual(['museum', 'dateFrom', 'dateTo'])
     expect(SMG_CONFIG.fetchAll).toBe(true)
     expect(SMG_CONFIG.sort).toBeUndefined()
+  })
+})
+
+describe('Bodleian config (task-SN.4 parity)', () => {
+  it('keeps the pre-shell serialised fq* keys and single-select sort', () => {
+    expect(BODLEIAN_CONFIG.nodeType).toBe('bodleianSearch')
+    expect(serialisedFilterKeys(BODLEIAN_CONFIG)).toEqual([
+      'fqCompleteness', 'fqOrigins', 'fqLanguages', 'fqMusicalNotation',
+      'fqDateFrom', 'fqDateTo',
+    ])
+    expect(BODLEIAN_CONFIG.sort?.singleSelect).toBe(true)
+    expect(BODLEIAN_CONFIG.sort?.defaultValue).toBe('relevance')
+    expect(BODLEIAN_CONFIG.fetchAll).toEqual({ label: 'Fetch all (up to 500)' })
+    expect(BODLEIAN_CONFIG.statusColours?.cached).toBe('#0e7490')
   })
 })
 
