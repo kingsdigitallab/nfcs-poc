@@ -90,6 +90,18 @@ export const lineageDescribers: Record<string, LineageDescriber> = {
   lldsSearch:      describeSearch('LLDS (Oxford linguistics data)'),
   mdsSearch:       describeSearch('Museum Data Service'),
 
+  sparqlSearch: d => {
+    const kw     = str(d.inlineQuery)
+    const cls    = str(d.builderInstanceOf)
+    const custom = d.builderCustom === true || d.queryMode === 'raw'
+    let s = 'Queried Wikidata (SPARQL)'
+    if (kw) s += ` for "${kw}"`
+    if (custom) s += ' with a hand-written query'
+    else if (cls) s += ` — instances of ${cls}`
+    s += countClause(d)
+    return `${s}.`
+  },
+
   filterTransform: d => {
     const parts: string[] = []
     const filterOps = Array.isArray(d.filterOps) ? d.filterOps as Array<Record<string, unknown>> : []

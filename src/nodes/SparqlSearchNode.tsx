@@ -1,31 +1,48 @@
 /**
  * SPARQLSearch (Experimental, alpha) — query the Wikidata Query Service and
- * map result bindings to UnifiedRecord[] (task-SQ.1). Raw-query mode in this
- * commit; the structured builder arrives in task-SQ.2.
+ * map result bindings to UnifiedRecord[] (tasks SQ.1–SQ.2).
+ *
+ * Two modes: **Builder** (structured — instance-of picker, property filter
+ * rows, output-column checkboxes; deterministically regenerates the query on
+ * every change into a read-only preview) and **Raw SPARQL** (hand-edit the
+ * query; any builder change overwrites it). A humanities researcher can use
+ * the builder without knowing SPARQL; the raw editor is the escape hatch.
  *
  * HANDLE CONTRACT (shared shell convention, frozen): `keyword` row 0 →
- * handle id `query` at top 51 (also names fixtures), `limit` row 1 at
- * top 78, output `results` on the right.
+ * handle id `query` at top 51 (names fixtures; in builder mode it also
+ * seeds a wikibase:mwapi EntitySearch), `limit` row 1 at top 78, output
+ * `results` on the right.
  *
  * Wikidata-only this pass: the runner talks to /wdqs-proxy, which adds the
  * User-Agent WDQS requires. Other SPARQL endpoints are a follow-up.
  */
-import { useCallback } from 'react'
+import { useCallback, useState } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
+import { PROPERTY_GROUPS } from '../utils/wikidataApi'
+import {
+  buildSparqlQuery, INSTANCE_CLASS_SUGGESTIONS,
+  type SparqlBuilderFilter, type SparqlBuilderState,
+} from '../utils/sparqlQueryBuilder'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type SparqlStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface SparqlSearchNodeData {
-  /** Keyword seed — optional; used for fixture naming and (task-SQ.2) the
-   *  mwapi EntitySearch seed in builder mode. */
+  /** Keyword seed — names fixtures; in builder mode also the mwapi EntitySearch seed. */
   inlineQuery:   string
   inlineLimit:   string
-  /** The SPARQL query executed by the runner (raw text; the builder
-   *  regenerates it in task-SQ.2). */
+  /** The SPARQL query the runner executes (builder-generated or hand-written). */
   sparqlQuery:   string
+  queryMode?:    'builder' | 'raw'
+  builderInstanceOf?:    string
+  builderSubclasses?:    boolean
+  builderFilters?:       SparqlBuilderFilter[]
+  builderColumns?:       string[]
+  builderCustomColumns?: string
+  /** True once the raw query was hand-edited (builder changes overwrite it). */
+  builderCustom?: boolean
   useFixture?:   boolean
   status:        SparqlStatus
   statusMessage: string
@@ -34,17 +51,6 @@ export interface SparqlSearchNodeData {
   [key: string]: unknown
 }
 
-/** Default example: paintings by J. M. W. Turner (no LIMIT — the limit row
- *  appends one). Doubles as the committed offline fixture's query. */
-export const DEFAULT_SPARQL = `SELECT ?item ?itemLabel ?itemDescription ?date ?coords ?image WHERE {
-  ?item wdt:P31 wd:Q3305213 .   # instance of: painting
-  ?item wdt:P170 wd:Q159758 .   # creator: J. M. W. Turner
-  OPTIONAL { ?item wdt:P571 ?date . }
-  OPTIONAL { ?item wdt:P625 ?coords . }
-  OPTIONAL { ?item wdt:P18 ?image . }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
-}`
-
 // ── Layout (matches the BackboneSearchNode handle contract) ──────────────────
 
 const HEADER_H = 32
@@ -52,7 +58,7 @@ const BODY_PAD = 8
 const ROW_H    = 27
 
 const WIRABLE_ROWS = [
-  { handleId: 'query', dataKey: 'inlineQuery', label: 'keyword', placeholder: 'optional — names fixtures', rowIndex: 0 },
+  { handleId: 'query', dataKey: 'inlineQuery', label: 'keyword', placeholder: 'optional — seeds search, names fixtures', rowIndex: 0 },
   { handleId: 'limit', dataKey: 'inlineLimit', label: 'limit', placeholder: '20', rowIndex: 1 },
 ] as const
 
@@ -61,19 +67,17 @@ function handleTop(rowIndex: number) {
 }
 
 const STATUS_BORDER: Record<SparqlStatus, string> = {
-  idle:    '#d1d5db',
-  loading: '#3b82f6',
-  success: '#22c55e',
-  error:   '#ef4444',
-  cached:  '#22c55e',
+  idle: '#d1d5db', loading: '#3b82f6', success: '#22c55e', error: '#ef4444', cached: '#22c55e',
 }
 
 const STATUS_BADGE: Record<SparqlStatus, string> = {
-  idle:    '#9ca3af',
-  loading: '#93c5fd',
-  success: '#86efac',
-  error:   '#fca5a5',
-  cached:  '#86efac',
+  idle: '#9ca3af', loading: '#93c5fd', success: '#86efac', error: '#fca5a5', cached: '#86efac',
+}
+
+const PID_LIST = /^\s*(P\d+\s*(,\s*P\d+\s*)*)?$/i
+
+function parseCustomColumns(raw: string): string[] {
+  return raw.split(',').map(s => s.trim().toUpperCase()).filter(s => /^P\d+$/.test(s))
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -82,6 +86,14 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
   const { updateNodeData, getNodes, getEdges: getEdgesSnap } = useReactFlow()
   const liveEdges = useEdges()
   const d = data as SparqlSearchNodeData
+  const [columnsOpen, setColumnsOpen] = useState(false)
+
+  const mode          = d.queryMode ?? 'raw'   // factory sets 'builder'; pre-builder saves stay raw
+  const instanceOf    = d.builderInstanceOf ?? ''
+  const subclasses    = d.builderSubclasses ?? false
+  const filters       = d.builderFilters ?? []
+  const columns       = d.builderColumns ?? []
+  const customColumns = d.builderCustomColumns ?? ''
 
   const isConnected = useCallback(
     (handleId: string) => liveEdges.some(e => e.target === id && e.targetHandle === handleId),
@@ -93,7 +105,22 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
     [id, updateNodeData, getNodes, getEdgesSnap],
   )
 
-  const status      = (d.status as SparqlStatus) ?? 'idle'
+  /** Apply a builder-state patch and regenerate the query in one update. */
+  const regen = useCallback((patch: Record<string, unknown>) => {
+    const next: SparqlBuilderState = {
+      keyword:    (patch.inlineQuery          as string   | undefined) ?? d.inlineQuery,
+      instanceOf: (patch.builderInstanceOf    as string   | undefined) ?? d.builderInstanceOf,
+      subclasses: (patch.builderSubclasses    as boolean  | undefined) ?? d.builderSubclasses,
+      filters:    (patch.builderFilters       as SparqlBuilderFilter[] | undefined) ?? d.builderFilters,
+      columns: [
+        ...(((patch.builderColumns as string[] | undefined) ?? d.builderColumns) ?? []),
+        ...parseCustomColumns((patch.builderCustomColumns as string | undefined) ?? d.builderCustomColumns ?? ''),
+      ],
+    }
+    updateNodeData(id, { ...patch, sparqlQuery: buildSparqlQuery(next), builderCustom: false })
+  }, [id, updateNodeData, d])
+
+  const status      = d.status ?? 'idle'
   const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
 
   return (
@@ -132,7 +159,11 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
               <input
                 style={styles.inlineInput}
                 value={(d[dataKey] as string | undefined) ?? ''}
-                onChange={e => updateNodeData(id, { [dataKey]: e.target.value })}
+                onChange={e => {
+                  // In builder mode the keyword feeds the mwapi seed — regenerate.
+                  if (dataKey === 'inlineQuery' && mode === 'builder') regen({ inlineQuery: e.target.value })
+                  else updateNodeData(id, { [dataKey]: e.target.value })
+                }}
                 placeholder={placeholder}
                 className="nodrag"
               />
@@ -140,20 +171,170 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
           </div>
         ))}
 
-        <span style={styles.sectionLabel}>SPARQL — Wikidata Query Service</span>
-        <textarea
-          style={styles.queryArea}
-          value={d.sparqlQuery ?? ''}
-          onChange={e => updateNodeData(id, { sparqlQuery: e.target.value })}
-          rows={9}
-          spellCheck={false}
-          className="nodrag"
-        />
-        <span style={styles.hint}>
-          Conventions: <code>?item</code> → link + QID, <code>?itemLabel</code> → title,{' '}
-          <code>?itemDescription</code> → description, <code>wdt:P625</code> points → map coordinates.
-          No LIMIT clause → the limit row applies.
-        </span>
+        {/* Mode tabs */}
+        <div style={styles.tabRow}>
+          <button
+            style={{ ...styles.tab, ...(mode === 'builder' ? styles.tabActive : {}) }}
+            onClick={() => updateNodeData(id, { queryMode: 'builder' })}
+            className="nodrag"
+          >◧ Builder</button>
+          <button
+            style={{ ...styles.tab, ...(mode === 'raw' ? styles.tabActive : {}) }}
+            onClick={() => updateNodeData(id, { queryMode: 'raw' })}
+            className="nodrag"
+          >⌨ Raw SPARQL</button>
+        </div>
+
+        {mode === 'builder' && (
+          <>
+            {/* Find: instance-of */}
+            <div style={styles.row}>
+              <span style={styles.paramLabel}>find</span>
+              <input
+                list={`${id}-classes`}
+                style={styles.inlineInput}
+                value={instanceOf}
+                onChange={e => regen({ builderInstanceOf: e.target.value })}
+                placeholder="type Q-id or pick, e.g. Q3305213"
+                className="nodrag"
+              />
+              <datalist id={`${id}-classes`}>
+                {INSTANCE_CLASS_SUGGESTIONS.map(c => (
+                  <option key={c.qid} value={c.qid}>{c.label}</option>
+                ))}
+              </datalist>
+            </div>
+            <label style={styles.checkLabel} className="nodrag">
+              <input
+                type="checkbox"
+                checked={subclasses}
+                onChange={e => regen({ builderSubclasses: e.target.checked })}
+                style={{ marginRight: 5 }}
+              />
+              include subclasses (P31/P279*)
+            </label>
+
+            {/* Property filter rows */}
+            {filters.map(f => (
+              <div key={f.id} style={styles.row}>
+                <select
+                  style={{ ...styles.select, flex: '0 0 118px' }}
+                  value={f.property}
+                  onChange={e => regen({ builderFilters: filters.map(x => x.id === f.id ? { ...x, property: e.target.value } : x) })}
+                  className="nodrag"
+                >
+                  <option value="">— property —</option>
+                  {PROPERTY_GROUPS.map(g => (
+                    <optgroup key={g.label} label={g.label}>
+                      {g.properties.map(p => (
+                        <option key={p.id} value={p.id}>{p.label} ({p.id})</option>
+                      ))}
+                    </optgroup>
+                  ))}
+                </select>
+                <input
+                  style={styles.inlineInput}
+                  value={f.value}
+                  onChange={e => regen({ builderFilters: filters.map(x => x.id === f.id ? { ...x, value: e.target.value } : x) })}
+                  placeholder="Q-id (exact) or text (contains)"
+                  className="nodrag"
+                />
+                <button
+                  style={styles.removeBtn}
+                  onClick={() => regen({ builderFilters: filters.filter(x => x.id !== f.id) })}
+                  className="nodrag"
+                  title="Remove filter"
+                >✕</button>
+              </div>
+            ))}
+            <button
+              style={styles.addBtn}
+              onClick={() => regen({ builderFilters: [...filters, { id: `f${Date.now()}`, property: '', value: '' }] })}
+              className="nodrag"
+            >+ Add property filter</button>
+
+            {/* Output columns */}
+            <button style={styles.sectionToggle} onClick={() => setColumnsOpen(o => !o)} className="nodrag">
+              {columnsOpen ? '▾' : '▸'} Output columns
+              {columns.length + parseCustomColumns(customColumns).length > 0 && (
+                <span style={styles.countBadge}>{columns.length + parseCustomColumns(customColumns).length}</span>
+              )}
+            </button>
+            {columnsOpen && (
+              <div style={styles.columnsSection}>
+                {PROPERTY_GROUPS.map(g => (
+                  <div key={g.label}>
+                    <div style={styles.groupLabel}>{g.label}</div>
+                    <div style={styles.checkGrid}>
+                      {g.properties.map(p => (
+                        <label key={p.id} style={styles.checkItem} className="nodrag" title={p.id}>
+                          <input
+                            type="checkbox"
+                            checked={columns.includes(p.id)}
+                            onChange={e => regen({
+                              builderColumns: e.target.checked
+                                ? [...columns, p.id]
+                                : columns.filter(c => c !== p.id),
+                            })}
+                          />
+                          {p.label}
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                <div style={styles.row}>
+                  <span style={{ ...styles.paramLabel, width: 70 }}>custom P-ids</span>
+                  <input
+                    style={{
+                      ...styles.inlineInput,
+                      borderColor: PID_LIST.test(customColumns) ? '#d1d5db' : '#ef4444',
+                    }}
+                    value={customColumns}
+                    onChange={e => regen({ builderCustomColumns: e.target.value })}
+                    placeholder="P217, P276"
+                    className="nodrag"
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Generated query preview */}
+            <span style={styles.sectionLabel}>
+              Generated SPARQL{d.builderCustom ? ' (superseded by raw edits)' : ''}
+            </span>
+            {d.sparqlQuery ? (
+              <pre style={styles.preview}>{d.sparqlQuery}</pre>
+            ) : (
+              <span style={styles.warnHint}>Add a type, keyword or filter — an unconstrained query would scan all of Wikidata.</span>
+            )}
+            <button
+              style={styles.linkBtn}
+              onClick={() => updateNodeData(id, { queryMode: 'raw' })}
+              className="nodrag"
+            >✎ Edit as raw SPARQL</button>
+          </>
+        )}
+
+        {mode === 'raw' && (
+          <>
+            <span style={styles.sectionLabel}>SPARQL — Wikidata Query Service</span>
+            <textarea
+              style={styles.queryArea}
+              value={d.sparqlQuery ?? ''}
+              onChange={e => updateNodeData(id, { sparqlQuery: e.target.value, builderCustom: true })}
+              rows={9}
+              spellCheck={false}
+              className="nodrag"
+            />
+            <span style={styles.hint}>
+              Conventions: <code>?item</code> → link + QID, <code>?itemLabel</code> → title,{' '}
+              <code>?itemDescription</code> → description, <code>wdt:P625</code> points → map coordinates.
+              No LIMIT clause → the limit row applies.
+              {d.builderCustom ? ' Switching to Builder keeps this query until a builder control changes.' : ''}
+            </span>
+          </>
+        )}
       </div>
 
       <div style={styles.footer}>
@@ -189,14 +370,16 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
 
 const HEADER_COLOR  = '#4c1d95'   // violet-900
 const RUN_BTN_COLOR = '#6d28d9'
+const ACCENT_BG     = '#f5f3ff'
+const ACCENT_BORDER = '#ddd6fe'
 
 const styles = {
   card: {
     background: '#fff',
     border: '2px solid #d1d5db',
     borderRadius: 8,
-    minWidth: 320,
-    maxWidth: 380,
+    minWidth: 340,
+    maxWidth: 400,
     boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
@@ -220,14 +403,69 @@ const styles = {
     paddingTop: BODY_PAD, paddingLeft: 14, paddingRight: 10, paddingBottom: 4,
     display: 'flex', flexDirection: 'column' as const, gap: 5,
   },
-  row: { display: 'flex', alignItems: 'center', gap: 6, height: ROW_H - 5 },
+  row: { display: 'flex', alignItems: 'center', gap: 6, minHeight: ROW_H - 5 },
   paramLabel: { fontSize: 11, color: '#6b7280', width: 52, flexShrink: 0, fontFamily: 'monospace' },
   inlineInput: {
     flex: 1, fontSize: 11, padding: '2px 5px',
     border: '1px solid #d1d5db', borderRadius: 4, outline: 'none', minWidth: 0, height: 22,
   },
+  select: {
+    fontSize: 11, padding: '2px 4px', border: '1px solid #d1d5db', borderRadius: 4,
+    outline: 'none', height: 22, background: '#fff', minWidth: 0,
+  },
   connectedBadge: { fontSize: 10, color: '#3b82f6', fontStyle: 'italic' as const },
+  tabRow: { display: 'flex', gap: 4, marginTop: 2 },
+  tab: {
+    flex: 1, fontSize: 11, fontWeight: 600, padding: '3px 8px',
+    border: `1px solid ${ACCENT_BORDER}`, borderRadius: 4,
+    background: '#fff', color: '#6b7280', cursor: 'pointer',
+  },
+  tabActive: { background: ACCENT_BG, color: HEADER_COLOR, borderColor: HEADER_COLOR },
+  checkLabel: {
+    display: 'flex', alignItems: 'center', fontSize: 10.5, color: '#374151',
+    cursor: 'pointer', userSelect: 'none' as const,
+  },
+  addBtn: {
+    fontSize: 10, color: HEADER_COLOR, background: 'none',
+    border: `1px dashed ${ACCENT_BORDER}`, borderRadius: 4,
+    padding: '2px 8px', cursor: 'pointer', textAlign: 'left' as const,
+  },
+  removeBtn: {
+    fontSize: 10, color: '#9ca3af', background: 'none', border: 'none',
+    cursor: 'pointer', padding: '0 2px', flexShrink: 0,
+  },
+  sectionToggle: {
+    display: 'flex', alignItems: 'center', gap: 4, fontSize: 11, fontWeight: 600,
+    color: HEADER_COLOR, background: ACCENT_BG, border: `1px solid ${ACCENT_BORDER}`,
+    borderRadius: 4, padding: '3px 8px', cursor: 'pointer', width: '100%',
+    textAlign: 'left' as const, marginTop: 2,
+  },
+  countBadge: {
+    fontSize: 10, fontWeight: 700, background: HEADER_COLOR, color: '#fff',
+    borderRadius: 8, padding: '0 5px', marginLeft: 2,
+  },
+  columnsSection: {
+    display: 'flex', flexDirection: 'column' as const, gap: 4,
+    padding: '6px 6px 4px', background: ACCENT_BG, borderRadius: 4,
+    border: `1px solid ${ACCENT_BORDER}`,
+  },
+  groupLabel: { fontSize: 9, fontWeight: 700, color: '#6b7280', textTransform: 'uppercase' as const, letterSpacing: '0.04em' },
+  checkGrid: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1px 8px' },
+  checkItem: {
+    display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: '#374151',
+    cursor: 'pointer', userSelect: 'none' as const,
+  },
   sectionLabel: { fontSize: 10, fontWeight: 600, color: HEADER_COLOR, marginTop: 2 },
+  preview: {
+    fontSize: 9.5, fontFamily: 'monospace', lineHeight: 1.45, margin: 0,
+    padding: '4px 6px', background: '#1e1b2e', color: '#ddd6fe', borderRadius: 4,
+    maxHeight: 170, overflow: 'auto', whiteSpace: 'pre' as const,
+  },
+  warnHint: { fontSize: 10, color: '#b45309', fontStyle: 'italic' as const },
+  linkBtn: {
+    fontSize: 10, color: HEADER_COLOR, background: 'none', border: 'none',
+    cursor: 'pointer', padding: '1px 0', textAlign: 'left' as const,
+  },
   queryArea: {
     fontSize: 10, fontFamily: 'monospace', lineHeight: 1.45,
     padding: '4px 6px', border: '1px solid #d1d5db', borderRadius: 4,

@@ -127,6 +127,19 @@ describe('lineageDescribers', () => {
     expect(describeNode(mk('xmlSection', { xpath: '//teiHeader' }))).toContain('"//teiHeader"')
   })
 
+  it('sparqlSearch: builder class, keyword, custom-query flag, count', () => {
+    const builder = describeNode(mk('sparqlSearch', {
+      inlineQuery: 'stonehenge', builderInstanceOf: 'Q839954', queryMode: 'builder', count: 15,
+    }))
+    expect(builder).toContain('Wikidata (SPARQL)')
+    expect(builder).toContain('"stonehenge"')
+    expect(builder).toContain('instances of Q839954')
+    expect(builder).toContain('15 results')
+
+    const raw = describeNode(mk('sparqlSearch', { queryMode: 'raw', builderCustom: true }))
+    expect(raw).toContain('hand-written query')
+  })
+
   it('unknown types fall back to label + counts', () => {
     const s = describeNode(mk('tableOutput', { count: 12 }))
     expect(s).toContain('12')
