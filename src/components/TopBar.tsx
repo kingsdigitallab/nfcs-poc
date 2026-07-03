@@ -118,7 +118,7 @@ export function TopBar({
       </button>
       {authorMode && (
         <button
-          style={{ ...templateBtnStyle, background: '#78350f', color: '#fef3c7', borderColor: '#92400e' }}
+          style={{ ...templateBtnStyle, background: '#6f4a25', color: '#fef3c7', borderColor: '#6f4a25' }}
           onClick={() => setExampleDialog({ title: '', description: '' })}
           title="Save current workflow as a loadable example (author mode)"
           disabled={nodes.length === 0}
@@ -198,7 +198,7 @@ export function TopBar({
               <button
                 onClick={handleSaveExample}
                 disabled={!exampleDialog.title.trim()}
-                style={{ fontSize: 12, padding: '5px 14px', borderRadius: 5, border: 'none', background: '#92400e', color: '#fef3c7', cursor: 'pointer', fontWeight: 600 }}
+                style={{ fontSize: 12, padding: '5px 14px', borderRadius: 5, border: 'none', background: '#6f4a25', color: '#fef3c7', cursor: 'pointer', fontWeight: 600 }}
               >
                 Save
               </button>
@@ -246,7 +246,7 @@ export function TopBar({
       <UsefulLinksModal />
       {import.meta.env.DEV && <FixturePreflightPanel />}
       <button
-        style={{ ...templateBtnStyle, background: !simpleMode ? '#312e81' : undefined, color: !simpleMode ? '#fff' : undefined, borderColor: !simpleMode ? '#312e81' : undefined }}
+        style={{ ...templateBtnStyle, background: !simpleMode ? '#2c3d54' : undefined, color: !simpleMode ? '#fff' : undefined, borderColor: !simpleMode ? '#2c3d54' : undefined }}
         onClick={onToggleSimpleMode}
         title={simpleMode
           ? 'Simple mode — specialised/alpha nodes hidden. Click for Advanced.'
@@ -255,14 +255,14 @@ export function TopBar({
         {simpleMode ? '◐ Simple' : '◑ Advanced'}
       </button>
       <button
-        style={{ ...templateBtnStyle, background: snapEnabled ? '#0f4c81' : undefined, color: snapEnabled ? '#fff' : undefined, borderColor: snapEnabled ? '#0f4c81' : undefined }}
+        style={{ ...templateBtnStyle, background: snapEnabled ? '#2f4a6b' : undefined, color: snapEnabled ? '#fff' : undefined, borderColor: snapEnabled ? '#2f4a6b' : undefined }}
         onClick={onToggleSnap}
         title={snapEnabled ? 'Grid snap ON — click to disable' : 'Grid snap OFF — click to enable (20px grid)'}
       >
         {snapEnabled ? '⊞ Snap' : '⊟ Snap'}
       </button>
       <button
-        style={{ ...templateBtnStyle, background: chatOpen ? '#881337' : undefined, color: chatOpen ? '#fff' : undefined, borderColor: chatOpen ? '#881337' : undefined }}
+        style={{ ...templateBtnStyle, background: chatOpen ? '#7a2f2f' : undefined, color: chatOpen ? '#fff' : undefined, borderColor: chatOpen ? '#7a2f2f' : undefined }}
         onClick={onToggleChat}
         title="Toggle KCL Assistant chat"
       >

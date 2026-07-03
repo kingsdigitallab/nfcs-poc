@@ -13,7 +13,7 @@ import { SIDEBAR_ITEMS } from '../config/sidebarItems'
 const KCL_MODELS = '/kcl-proxy/v1/models'
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 
-const HEADER_COLOR = '#881337'
+const HEADER_COLOR = '#7a2f2f'
 
 // Bump this string whenever DEFAULT_SYSTEM changes — clears stale localStorage copies.
 const SYSTEM_VERSION = '2026-06-29-v3'
@@ -582,8 +582,9 @@ const styles: Record<string, React.CSSProperties> = {
   },
   title: {
     color: '#fff',
-    fontWeight: 700,
+    fontWeight: 600,
     fontSize: 13,
+    fontFamily: "'Spectral', Georgia, 'Times New Roman', serif",
   },
   dot: {
     width: 7,
@@ -686,10 +687,12 @@ const styles: Record<string, React.CSSProperties> = {
   },
   emptyState: {
     fontSize: 12,
-    color: '#9ca3af',
+    color: '#a79f8a',
     textAlign: 'center',
     padding: '24px 16px',
     lineHeight: 1.6,
+    fontFamily: "'Spectral', Georgia, 'Times New Roman', serif",
+    fontStyle: 'italic',
   },
   userBubble: {
     alignSelf: 'flex-end',
