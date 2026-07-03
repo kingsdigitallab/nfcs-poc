@@ -56,7 +56,7 @@ import type { QuickStartNodeData }         from '../nodes/QuickStartNode'
 
 export const KCL_API_KEY_NODES = new Set([
   'kclNode', 'kclField', 'evaluatorNode', 'sourceProfile',
-  'smartFilter', 'smartGeocoder', 'quickStart',
+  'smartFilter', 'smartGeocoder', 'quickStart', 'sparqlSearch',
 ])
 
 export function findSharedApiKey(nodes: Node[]): string {
@@ -217,6 +217,7 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     id: newId('sparql'), type: 'sparqlSearch', position: pos,
     data: {
       inlineQuery: '', inlineLimit: '20',
+      apiKey: DEFAULT_KCL_API_KEY, nlQuery: '', nlExplanation: '',
       // Builder mode by default; the query is generated from the default
       // builder state (paintings by Turner) so preview and state agree.
       sparqlQuery: buildSparqlQuery(DEFAULT_BUILDER_STATE),

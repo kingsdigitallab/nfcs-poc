@@ -16,7 +16,7 @@
  * Wikidata-only this pass: the runner talks to /wdqs-proxy, which adds the
  * User-Agent WDQS requires. Other SPARQL endpoints are a follow-up.
  */
-import { useCallback, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
@@ -33,6 +33,11 @@ export interface SparqlSearchNodeData {
   /** Keyword seed — names fixtures; in builder mode also the mwapi EntitySearch seed. */
   inlineQuery:   string
   inlineLimit:   string
+  /** KCL API key for the NL→SPARQL assist (seeded from the shared key). */
+  apiKey:        string
+  /** NL assist input + the explanation of the last generated query. */
+  nlQuery:       string
+  nlExplanation?: string
   /** The SPARQL query the runner executes (builder-generated or hand-written). */
   sparqlQuery:   string
   queryMode?:    'builder' | 'raw'
@@ -80,6 +85,56 @@ function parseCustomColumns(raw: string): string[] {
   return raw.split(',').map(s => s.trim().toUpperCase()).filter(s => /^P\d+$/.test(s))
 }
 
+// ── NL → SPARQL assist (task-SQ.3) ───────────────────────────────────────────
+// Same inline KCL call pattern as SmartFilterNode.translateToFilter — the
+// kclChat helper is module-private elsewhere; consolidation is a follow-up.
+
+const KCL_CHAT     = '/kcl-proxy/v1/chat/completions'
+const ASSIST_MODEL = 'arc:lite'
+
+const ASSIST_SYSTEM = `You translate natural-language research questions into Wikidata SPARQL queries.
+Respond with ONLY a JSON object: {"sparql": "<query>", "explanation": "<one plain-English sentence describing what the query finds>"}.
+Rules for the query:
+- SELECT DISTINCT ?item ?itemLabel ?itemDescription plus any other useful variables.
+- Use wdt: property paths and wd: entities; include SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }.
+- Bind coordinates (wdt:P625) as ?coords and images (wdt:P18) as ?image when relevant.
+- Do NOT include a LIMIT clause — the caller appends one.
+- Prefer simple, fast patterns; avoid unbounded property paths on large classes.`
+
+async function translateToSparql(
+  apiKey: string,
+  request: string,
+  signal: AbortSignal,
+): Promise<{ sparql: string; explanation: string }> {
+  const res = await fetch(KCL_CHAT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
+    body: JSON.stringify({
+      model:           ASSIST_MODEL,
+      stream:          false,
+      temperature:     0.1,
+      max_tokens:      1024,
+      response_format: { type: 'json_object' },
+      messages: [
+        { role: 'system', content: ASSIST_SYSTEM },
+        { role: 'user',   content: request },
+      ],
+    }),
+    signal,
+  })
+  if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
+  const json = await res.json() as { choices?: Array<{ message?: { content?: string }; text?: string }> }
+  const raw = json.choices?.[0]?.message?.content ?? json.choices?.[0]?.text ?? ''
+  // Strip markdown fences some models emit despite response_format
+  const cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '').trim()
+  const parsed = JSON.parse(cleaned) as { sparql?: unknown; explanation?: unknown }
+  if (typeof parsed.sparql !== 'string' || !parsed.sparql.trim()) throw new Error('No SPARQL in model response')
+  return {
+    sparql:      parsed.sparql.trim(),
+    explanation: typeof parsed.explanation === 'string' ? parsed.explanation : '',
+  }
+}
+
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export function SparqlSearchNode({ id, data }: NodeProps) {
@@ -87,6 +142,9 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
   const liveEdges = useEdges()
   const d = data as SparqlSearchNodeData
   const [columnsOpen, setColumnsOpen] = useState(false)
+  const [assistBusy, setAssistBusy]   = useState(false)
+  const [assistError, setAssistError] = useState('')
+  const assistAbort = useRef<AbortController | null>(null)
 
   const mode          = d.queryMode ?? 'raw'   // factory sets 'builder'; pre-builder saves stay raw
   const instanceOf    = d.builderInstanceOf ?? ''
@@ -119,6 +177,27 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
     }
     updateNodeData(id, { ...patch, sparqlQuery: buildSparqlQuery(next), builderCustom: false })
   }, [id, updateNodeData, d])
+
+  const handleAssist = useCallback(async () => {
+    const request = (d.nlQuery ?? '').trim()
+    const apiKey  = (d.apiKey ?? '').trim()
+    if (!request) return
+    if (!apiKey) { setAssistError('KCL API key required'); return }
+    assistAbort.current = new AbortController()
+    setAssistBusy(true)
+    setAssistError('')
+    try {
+      const { sparql, explanation } = await translateToSparql(apiKey, request, assistAbort.current.signal)
+      // Land in Raw mode — the generated query is reviewable/editable before running.
+      updateNodeData(id, { sparqlQuery: sparql, nlExplanation: explanation, queryMode: 'raw', builderCustom: true })
+    } catch (err) {
+      if ((err as { name?: string }).name !== 'AbortError') {
+        setAssistError(err instanceof Error ? err.message : String(err))
+      }
+    } finally {
+      setAssistBusy(false)
+    }
+  }, [id, updateNodeData, d.nlQuery, d.apiKey])
 
   const status      = d.status ?? 'idle'
   const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
@@ -170,6 +249,34 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
             )}
           </div>
         ))}
+
+        {/* NL → SPARQL assist */}
+        <div style={styles.row}>
+          <input
+            style={styles.inlineInput}
+            value={d.nlQuery ?? ''}
+            onChange={e => updateNodeData(id, { nlQuery: e.target.value })}
+            onKeyDown={e => { if (e.key === 'Enter') handleAssist() }}
+            placeholder="✨ describe your query in plain English…"
+            className="nodrag"
+            disabled={assistBusy}
+          />
+          <button
+            style={{ ...styles.assistBtn, opacity: assistBusy || !(d.nlQuery ?? '').trim() ? 0.5 : 1 }}
+            onClick={handleAssist}
+            disabled={assistBusy || !(d.nlQuery ?? '').trim()}
+            className="nodrag"
+            title={(d.apiKey ?? '').trim()
+              ? `Generate SPARQL from your description (KCL ${ASSIST_MODEL}); lands in Raw mode for review`
+              : 'Requires a KCL API key (shared from other KCL nodes)'}
+          >
+            {assistBusy ? '…' : '✨'}
+          </button>
+        </div>
+        {assistError && <span style={styles.warnHint}>✗ {assistError}</span>}
+        {d.nlExplanation && !assistError && (
+          <span style={styles.explanation}>{d.nlExplanation}</span>
+        )}
 
         {/* Mode tabs */}
         <div style={styles.tabRow}>
@@ -462,6 +569,12 @@ const styles = {
     maxHeight: 170, overflow: 'auto', whiteSpace: 'pre' as const,
   },
   warnHint: { fontSize: 10, color: '#b45309', fontStyle: 'italic' as const },
+  assistBtn: {
+    fontSize: 12, background: ACCENT_BG, color: HEADER_COLOR,
+    border: `1px solid ${ACCENT_BORDER}`, borderRadius: 4,
+    padding: '1px 8px', height: 22, cursor: 'pointer', flexShrink: 0,
+  },
+  explanation: { fontSize: 10, color: '#4b5563', fontStyle: 'italic' as const, lineHeight: 1.4 },
   linkBtn: {
     fontSize: 10, color: HEADER_COLOR, background: 'none', border: 'none',
     cursor: 'pointer', padding: '1px 0', textAlign: 'left' as const,
