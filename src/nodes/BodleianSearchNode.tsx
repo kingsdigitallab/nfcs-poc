@@ -7,6 +7,7 @@
  */
 import type { NodeProps } from '@xyflow/react'
 import { BackboneSearchNode, type BackboneSearchConfig } from './BackboneSearchNode'
+import { NODE_IDENTITY, deriveBackboneTheme } from '../styles/theme'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type BodleianStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
@@ -33,15 +34,7 @@ export interface BodleianSearchNodeData {
 export const BODLEIAN_CONFIG: BackboneSearchConfig = {
   nodeType: 'bodleianSearch',
   title:    'Bodleian Digital Collections',
-  theme: {
-    header:       '#003865',  // Oxford blue
-    runBtn:       '#005a9e',
-    accentBg:     '#e8f0f8',
-    accentBorder: '#b3cde0',
-    sectionBg:    '#f0f5ff',
-    clearBtn:     '#003865',
-    fixtureIcon:  '#0e7490',
-  },
+  theme: deriveBackboneTheme(NODE_IDENTITY.bodleianSearch),
   queryPlaceholder: 'e.g. psalter',
   fetchAll: { label: 'Fetch all (up to 500)' },
   sort: {

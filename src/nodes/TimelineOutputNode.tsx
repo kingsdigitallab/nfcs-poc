@@ -416,15 +416,15 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
           )}
 
           {/* X-axis baseline */}
-          <line x1={PAD_L} y1={axisY} x2={svgW - PAD_R} y2={axisY} stroke="#e5e7eb" strokeWidth={1} />
+          <line x1={PAD_L} y1={axisY} x2={svgW - PAD_R} y2={axisY} stroke="#ece3d0" strokeWidth={1} />
 
           {/* Year ticks + labels */}
           {ticks.map(year => {
             const x = yearToX(year)
             return (
               <g key={year}>
-                <line x1={x} y1={axisY} x2={x} y2={axisY + 5} stroke="#d1d5db" strokeWidth={1} />
-                <text x={x} y={axisY + 16} textAnchor="middle" fontSize={9} fill="#9ca3af">
+                <line x1={x} y1={axisY} x2={x} y2={axisY + 5} stroke="#d6ccb5" strokeWidth={1} />
+                <text x={x} y={axisY + 16} textAnchor="middle" fontSize={9} fill="#b0a891">
                   {year < 0 ? `${-year} BCE` : String(year)}
                 </text>
               </g>
@@ -454,7 +454,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
             const x = Math.round(yearToX(year))
             const y = axisY - DOT_R - MAX_STACK * DOT_GAP - 4
             return (
-              <text key={`ovf-${year}`} x={x} y={y} textAnchor="middle" fontSize={8} fill="#6b7280">
+              <text key={`ovf-${year}`} x={x} y={y} textAnchor="middle" fontSize={8} fill="#8a8168">
                 +{v.length - MAX_STACK}
               </text>
             )
@@ -614,7 +614,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
             )
           })}
           {noDateCount > 0 && (
-            <span style={{ ...styles.legendItem, color: '#9ca3af' }}>
+            <span style={{ ...styles.legendItem, color: '#b0a891' }}>
               {noDateCount} undated
             </span>
           )}
@@ -630,14 +630,14 @@ export const TimelineOutputNode = TimelineViewNode
 
 // ─── styles ───────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#1e293b'
+const HEADER_COLOR = '#2b3340'
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '1.5px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '1.5px solid #d6ccb5',
     borderRadius: 8,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     overflow:     'hidden',
   },
   header: {
@@ -690,24 +690,24 @@ const styles = {
     alignItems:     'center',
     gap:            5,
     padding:        '5px 10px',
-    borderTop:      '1px solid #e5e7eb',
+    borderTop:      '1px solid #ece3d0',
     background:     '#f8fafc',
     flexShrink:     0,
   },
   dateSelect: {
     fontSize:     10,
     padding:      '2px 4px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
     height:       22,
-    color:        '#374151',
+    color:        '#33302a',
     background:   '#fff',
     maxWidth:     110,
     cursor:       'pointer',
   },
   filterLabel: {
     fontSize:   10,
-    color:      '#6b7280',
+    color:      '#8a8168',
     fontWeight: 600,
     flexShrink: 0,
   },
@@ -715,7 +715,7 @@ const styles = {
     width:        60,
     fontSize:     11,
     padding:      '2px 5px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
     outline:      'none',
     height:       22,
@@ -724,7 +724,7 @@ const styles = {
   },
   filterSep: {
     fontSize: 11,
-    color:    '#9ca3af',
+    color:    '#b0a891',
   },
   applyBtn: {
     background:   HEADER_COLOR,
@@ -745,8 +745,8 @@ const styles = {
   },
   clearBtn: {
     background:   'transparent',
-    color:        '#9ca3af',
-    border:       '1px solid #e5e7eb',
+    color:        '#b0a891',
+    border:       '1px solid #ece3d0',
     borderRadius: 4,
     padding:      '1px 6px',
     fontSize:     11,
@@ -788,7 +788,7 @@ const styles = {
     gap:        '3px 14px',
     padding:    '5px 10px 6px',
     background: '#f8fafc',
-    borderTop:  '1px solid #e5e7eb',
+    borderTop:  '1px solid #ece3d0',
   },
   legendItem: {
     display:    'flex',

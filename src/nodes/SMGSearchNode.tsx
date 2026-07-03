@@ -7,6 +7,7 @@
  */
 import type { NodeProps } from '@xyflow/react'
 import { BackboneSearchNode, type BackboneSearchConfig } from './BackboneSearchNode'
+import { NODE_IDENTITY, deriveBackboneTheme } from '../styles/theme'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type SMGStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
@@ -30,15 +31,7 @@ export interface SMGSearchNodeData {
 export const SMG_CONFIG: BackboneSearchConfig = {
   nodeType: 'smgSearch',
   title:    'Science Museum Group',
-  theme: {
-    header:       '#701a75',  // fuchsia-900
-    runBtn:       '#86198f',
-    accentBg:     '#fdf4ff',
-    accentBorder: '#e9d5ff',
-    sectionBg:    '#fdf4ff',
-    clearBtn:     '#701a75',
-    fixtureIcon:  '#701a75',
-  },
+  theme: deriveBackboneTheme(NODE_IDENTITY.smgSearch),
   queryPlaceholder: 'e.g. steam engine',
   extraBodyRow: {
     key: 'searchType',

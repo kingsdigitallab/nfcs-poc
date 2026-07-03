@@ -12,7 +12,7 @@ import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { isReconciledValue } from '../utils/reconciliationService'
 import type { ReconciliationResult } from '../utils/reconciliationService'
 
-const HEADER_COLOR = '#1e293b'
+const HEADER_COLOR = '#2b3340'
 const ROWS_PER_PAGE = 50
 const TEXT_LIMIT = 50_000
 
@@ -166,13 +166,13 @@ export function QuickViewNode({ id, data }: NodeProps) {
             ))}
           </select>
         ) : (
-          <span style={{ fontSize: 11, color: '#9ca3af', fontStyle: 'italic' }}>
+          <span style={{ fontSize: 11, color: '#b0a891', fontStyle: 'italic' }}>
             {connected ? 'Run upstream node first' : 'Connect a node'}
           </span>
         )}
         {fieldValue && (
           <button
-            style={{ ...styles.copyBtn, background: copied ? '#16a34a' : '#374151' }}
+            style={{ ...styles.copyBtn, background: copied ? '#16a34a' : '#33302a' }}
             onClick={handleCopy}
             className="nodrag"
             title="Copy value"
@@ -253,12 +253,12 @@ export function QuickViewNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '1.5px solid #d1d5db',
+    background: '#fffdf7',
+    border: '1.5px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 300,
     maxWidth: 400,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     display: 'flex',
     flexDirection: 'column' as const,
   },
@@ -318,7 +318,7 @@ const styles = {
     flex:        1,
     fontSize:    11,
     padding:     '2px 4px',
-    border:      '1px solid #d1d5db',
+    border:      '1px solid #d6ccb5',
     borderRadius: 4,
     outline:     'none',
     height:      24,
@@ -337,7 +337,7 @@ const styles = {
   },
   recordLabel: {
     fontSize:    11,
-    color:       '#374151',
+    color:       '#33302a',
     fontWeight:  600,
     padding:     '4px 10px 2px',
     overflow:    'hidden',
@@ -357,20 +357,20 @@ const styles = {
     fontSize:    11,
     lineHeight:  1.6,
     fontFamily:  "'Consolas', 'Menlo', monospace",
-    color:       '#111827',
+    color:       '#2c2a24',
     whiteSpace:  'pre-wrap' as const,
     wordBreak:   'break-word' as const,
   },
   placeholder: {
     padding:    '20px 16px',
-    color:      '#9ca3af',
+    color:      '#b0a891',
     fontSize:   11,
     fontStyle:  'italic' as const,
     textAlign:  'center' as const,
   },
   truncNotice: {
     padding:    '4px 12px 8px',
-    color:      '#9ca3af',
+    color:      '#b0a891',
     fontSize:   10,
     fontStyle:  'italic' as const,
     borderTop:  '1px solid #f1f5f9',
@@ -384,18 +384,18 @@ const styles = {
   th: {
     padding:        '3px 6px',
     background:     '#f1f5f9',
-    borderBottom:   '1px solid #d1d5db',
+    borderBottom:   '1px solid #d6ccb5',
     fontWeight:     700,
     textAlign:      'left' as const,
     whiteSpace:     'nowrap' as const,
     position:       'sticky' as const,
     top:            0,
-    color:          '#374151',
+    color:          '#33302a',
   },
   td: {
     padding:        '2px 6px',
     borderBottom:   '1px solid #f1f5f9',
-    color:          '#111827',
+    color:          '#2c2a24',
     maxWidth:       180,
     overflow:       'hidden',
     textOverflow:   'ellipsis',
@@ -411,7 +411,7 @@ const styles = {
     flexShrink:     0,
   },
   pageBtn: {
-    background:     '#374151',
+    background:     '#33302a',
     color:          '#fff',
     border:         'none',
     borderRadius:   3,
@@ -427,7 +427,7 @@ const styles = {
   },
   pageLabel: {
     fontSize:       10,
-    color:          '#6b7280',
+    color:          '#8a8168',
     fontFamily:     'monospace',
   },
   inputHandle: {

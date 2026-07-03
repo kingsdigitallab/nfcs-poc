@@ -6,6 +6,7 @@
  */
 import type { NodeProps } from '@xyflow/react'
 import { BackboneSearchNode, type BackboneSearchConfig } from './BackboneSearchNode'
+import { NODE_IDENTITY, deriveBackboneTheme } from '../styles/theme'
 
 export type VAStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
@@ -27,15 +28,7 @@ export interface VASearchNodeData {
 export const VA_CONFIG: BackboneSearchConfig = {
   nodeType: 'vaSearch',
   title:    'Victoria & Albert Museum',
-  theme: {
-    header:       '#9f1239',  // rose-800
-    runBtn:       '#be123c',
-    accentBg:     '#fff1f2',
-    accentBorder: '#fecdd3',
-    sectionBg:    '#fff1f2',
-    clearBtn:     '#9f1239',
-    fixtureIcon:  '#9f1239',
-  },
+  theme: deriveBackboneTheme(NODE_IDENTITY.vaSearch),
   queryPlaceholder: 'e.g. ceramics',
   fetchAll: true,
   filters: [

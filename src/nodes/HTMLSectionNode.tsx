@@ -30,11 +30,11 @@ export interface HTMLSectionNodeData {
   [key: string]: unknown
 }
 
-const HEADER_COLOR = '#065f46'
+const HEADER_COLOR = '#3a5a44'
 const BTN_COLOR    = '#047857'
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   running: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
@@ -329,7 +329,7 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
-  const borderColor = STATUS_BORDER[(d.status ?? 'idle') as string] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[(d.status ?? 'idle') as string] ?? '#d6ccb5'
   const hasHtml     = firstHtml.length > 0
 
   return (
@@ -418,8 +418,8 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
                 key={i}
                 style={{
                   ...styles.pickerItem,
-                  background: selector === item.selector ? '#d1fae5' : '#f9fafb',
-                  borderColor: selector === item.selector ? '#34d399' : '#e5e7eb',
+                  background: selector === item.selector ? '#d1fae5' : '#faf6ec',
+                  borderColor: selector === item.selector ? '#34d399' : '#ece3d0',
                 }}
                 onClick={() => updateNodeData(id, { selector: item.selector })}
                 className="nodrag"
@@ -508,12 +508,12 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 280,
     maxWidth: 320,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -554,7 +554,7 @@ const styles = {
   },
   label: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 60,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -562,7 +562,7 @@ const styles = {
   select: {
     fontSize: 11,
     padding: '2px 4px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -570,7 +570,7 @@ const styles = {
   input: {
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -578,7 +578,7 @@ const styles = {
   },
   hint: {
     fontSize: 10,
-    color: '#9ca3af',
+    color: '#b0a891',
     fontStyle: 'italic' as const,
     lineHeight: 1.5,
   },
@@ -620,14 +620,14 @@ const styles = {
     gap: 3,
     maxHeight: 180,
     overflowY: 'auto' as const,
-    border: '1px solid #e5e7eb',
+    border: '1px solid #ece3d0',
     borderRadius: 4,
     padding: '4px',
-    background: '#fff',
+    background: '#fffdf7',
   },
   pickerEmpty: {
     fontSize: 10,
-    color: '#9ca3af',
+    color: '#b0a891',
     textAlign: 'center' as const,
     padding: '8px',
   },
@@ -637,7 +637,7 @@ const styles = {
     alignItems: 'flex-start',
     gap: 2,
     padding: '4px 6px',
-    border: '1px solid #e5e7eb',
+    border: '1px solid #ece3d0',
     borderRadius: 4,
     cursor: 'pointer',
     textAlign: 'left' as const,
@@ -651,7 +651,7 @@ const styles = {
   },
   pickerPrev: {
     fontSize: 10,
-    color: '#6b7280',
+    color: '#8a8168',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap' as const,
@@ -673,7 +673,7 @@ const styles = {
   },
   previewText: {
     fontSize: 10,
-    color: '#374151',
+    color: '#33302a',
     lineHeight: 1.5,
     maxHeight: 80,
     overflowY: 'auto' as const,
@@ -691,13 +691,13 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     fontSize: 11,
-    color: '#374151',
+    color: '#33302a',
     cursor: 'pointer',
     userSelect: 'none' as const,
   },
   note: {
     fontSize: 10,
-    color: '#9ca3af',
+    color: '#b0a891',
     lineHeight: 1.5,
     paddingTop: 2,
   },

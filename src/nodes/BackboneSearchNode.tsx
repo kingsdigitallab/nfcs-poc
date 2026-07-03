@@ -20,6 +20,7 @@ import { useState, useCallback } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
+import { FONT, NEUTRAL, ACCENT, RADIUS, SHADOW, STATUS_BORDER, STATUS_BADGE } from '../styles/theme'
 
 export type BackboneStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
@@ -114,22 +115,6 @@ export function handleTop(rowIndex: number) {
   return HEADER_H + BODY_PAD + rowIndex * ROW_H + 11
 }
 
-const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
-  loading: '#3b82f6',
-  success: '#22c55e',
-  error:   '#ef4444',
-  cached:  '#22c55e',
-}
-
-const STATUS_BADGE: Record<string, string> = {
-  idle:    '#9ca3af',
-  loading: '#93c5fd',
-  success: '#86efac',
-  error:   '#fca5a5',
-  cached:  '#86efac',
-}
-
 /** Data keys a FilterSpec writes (range specs own two). */
 export function filterValueKeys(spec: FilterSpec): string[] {
   return spec.kind === 'range' ? [`${spec.key}From`, `${spec.key}To`] : [spec.key]
@@ -152,7 +137,7 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
   const hasFetchAll = config.fetchAll !== undefined
   const fetchAll    = hasFetchAll && ((d.fetchAll as boolean | undefined) ?? false)
   const status      = d.status as BackboneStatus
-  const borderColor = config.statusColours?.[status] ?? STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = config.statusColours?.[status] ?? STATUS_BORDER[status] ?? '#d6ccb5'
   const filters     = config.filters ?? []
 
   const wirableRows = [
@@ -193,8 +178,8 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
           style={{
             ...styles.inputHandle,
             top: handleTop(rowIndex),
-            background: isConnected(handleId) ? '#3b82f6' : '#9ca3af',
-            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#9ca3af'}`,
+            background: isConnected(handleId) ? '#3b82f6' : '#b0a891',
+            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#b0a891'}`,
           }}
         />
       ))}
@@ -206,7 +191,7 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
             ...styles.statusBadge,
             color: (config.cappedAmberStatus && d._capped === true)
               ? '#fbbf24'
-              : config.statusBadgeColours?.[status] ?? STATUS_BADGE[status] ?? '#9ca3af',
+              : config.statusBadgeColours?.[status] ?? STATUS_BADGE[status] ?? '#b0a891',
           }}>
             {d.statusMessage as string}
           </span>
@@ -395,7 +380,7 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
               <span style={{
                 color: d[config.footer.extraToggle.key] === true
                   ? (config.footer.extraToggle.onColor ?? config.theme.fixtureIcon)
-                  : (config.footer.extraToggle.offColor ?? '#9ca3af'),
+                  : (config.footer.extraToggle.offColor ?? '#b0a891'),
               }}>
                 {status === 'cached' && config.footer.extraToggle.cachedLabel
                   ? config.footer.extraToggle.cachedLabel
@@ -405,7 +390,7 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
           )}
           <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
             <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
-            <span style={{ color: d.useFixture ? config.theme.fixtureIcon : '#9ca3af' }}>📦</span>
+            <span style={{ color: d.useFixture ? config.theme.fixtureIcon : '#b0a891' }}>📦</span>
           </label>
           {(d.status === 'success' || d.status === 'cached') && (
             <button
@@ -452,229 +437,107 @@ function buildStyles(config: BackboneSearchConfig) {
   const theme = config.theme
   return {
     card: {
-      background: '#fff',
-      border: '2px solid #d1d5db',
-      borderRadius: 8,
+      background: NEUTRAL.card,
+      border: `1.5px solid ${NEUTRAL.cardBorder}`,
+      borderRadius: RADIUS.node,
       minWidth: config.minWidth ?? 264,
-      boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+      boxShadow: SHADOW.node,
       position: 'relative' as const,
       transition: 'border-color 0.25s',
+      fontFamily: FONT.sans,
     },
     header: {
       height: HEADER_H,
       background: theme.header,
       borderRadius: '6px 6px 0 0',
-      padding: '0 10px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      gap: 8,
+      padding: '0 11px',
+      display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8,
     },
     headerTitle: {
-      color: '#fff',
-      fontWeight: 700,
-      fontSize: 12,
-      flexShrink: 0,
+      color: '#fff', fontFamily: FONT.serif, fontWeight: 600, fontSize: 12.5, flexShrink: 0,
     },
     statusBadge: {
-      fontSize: 10,
-      fontWeight: 600,
-      overflow: 'hidden',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap' as const,
+      fontSize: 10, fontWeight: 600,
+      overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const,
     },
     body: {
-      paddingTop: BODY_PAD,
-      paddingLeft: 14,
-      paddingRight: 10,
-      paddingBottom: 4,
-      display: 'flex',
-      flexDirection: 'column' as const,
-      gap: 5,
+      paddingTop: BODY_PAD, paddingLeft: 14, paddingRight: 11, paddingBottom: 4,
+      display: 'flex', flexDirection: 'column' as const, gap: 6,
     },
-    row: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 6,
-      height: ROW_H - 5,
-    },
+    row: { display: 'flex', alignItems: 'center', gap: 6, height: ROW_H - 5 },
     paramLabel: {
-      fontSize: 11,
-      color: '#6b7280',
-      width: 40,
-      flexShrink: 0,
-      fontFamily: 'monospace',
+      fontSize: 11, color: NEUTRAL.muted, width: 40, flexShrink: 0, fontFamily: FONT.mono,
     },
     inlineInput: {
-      flex: 1,
-      fontSize: 11,
-      padding: '2px 5px',
-      border: '1px solid #d1d5db',
-      borderRadius: 4,
-      outline: 'none',
-      minWidth: 0,
-      height: 22,
+      flex: 1, fontSize: 11.5, padding: '2px 6px',
+      border: `1px solid ${NEUTRAL.inputBorder}`, borderRadius: RADIUS.input,
+      outline: 'none', minWidth: 0, height: 22, background: '#fff', color: NEUTRAL.body,
     },
     select: {
-      flex: 1,
-      fontSize: 11,
-      padding: '2px 4px',
-      border: '1px solid #d1d5db',
-      borderRadius: 4,
-      outline: 'none',
-      height: 22,
-      background: '#fff',
-      minWidth: 0,
+      flex: 1, fontSize: 11.5, padding: '2px 5px',
+      border: `1px solid ${NEUTRAL.inputBorder}`, borderRadius: RADIUS.input,
+      outline: 'none', height: 22, background: '#fff', color: NEUTRAL.body, minWidth: 0,
     },
-    connectedBadge: {
-      fontSize: 10,
-      color: '#3b82f6',
-      fontStyle: 'italic' as const,
-    },
-    disabledHint: {
-      fontSize: 10,
-      color: '#9ca3af',
-      fontStyle: 'italic' as const,
-    },
+    connectedBadge: { fontSize: 10.5, color: ACCENT.blue, fontStyle: 'italic' as const, fontFamily: FONT.serif },
+    disabledHint:   { fontSize: 10.5, color: NEUTRAL.faint, fontStyle: 'italic' as const },
     checkLabel: {
-      display: 'flex',
-      alignItems: 'center',
-      fontSize: 11,
-      color: '#374151',
-      cursor: 'pointer',
-      userSelect: 'none' as const,
-      paddingTop: 2,
+      display: 'flex', alignItems: 'center', fontSize: 11.5, color: '#4a4636',
+      cursor: 'pointer', userSelect: 'none' as const, paddingTop: 2,
     },
     filterToggle: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 4,
-      fontSize: 11,
-      fontWeight: 600,
-      color: theme.header,
-      background: theme.accentBg,
-      border: `1px solid ${theme.accentBorder}`,
-      borderRadius: 4,
-      padding: '3px 8px',
-      cursor: 'pointer',
-      marginTop: 2,
-      width: '100%',
-      textAlign: 'left' as const,
+      display: 'flex', alignItems: 'center', gap: 4, fontSize: 11.5, fontWeight: 600,
+      color: theme.header, background: theme.accentBg, border: `1px solid ${theme.accentBorder}`,
+      borderRadius: RADIUS.input, padding: '4px 9px', cursor: 'pointer', marginTop: 2,
+      width: '100%', textAlign: 'left' as const,
     },
     filterBadge: {
-      fontSize: 10,
-      fontWeight: 700,
-      background: theme.header,
-      color: '#fff',
-      borderRadius: 8,
-      padding: '0 5px',
-      marginLeft: 2,
+      fontSize: 10, fontWeight: 700, background: theme.header, color: '#fff',
+      borderRadius: 8, padding: '0 5px', marginLeft: 2,
     },
     filterSection: {
-      display: 'flex',
-      flexDirection: 'column' as const,
-      gap: 5,
-      padding: '6px 6px 4px',
-      background: theme.sectionBg,
-      borderRadius: 4,
-      border: `1px solid ${theme.accentBorder}`,
+      display: 'flex', flexDirection: 'column' as const, gap: 5, padding: '6px 6px 4px',
+      background: theme.sectionBg, borderRadius: RADIUS.input, border: `1px solid ${theme.accentBorder}`,
     },
-    filterRow: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 6,
-    },
-    filterLabel: {
-      fontSize: 10,
-      color: '#6b7280',
-      width: 74,
-      flexShrink: 0,
-      fontFamily: 'monospace',
-    },
-    rangeDash: {
-      fontSize: 10,
-      color: '#9ca3af',
-      flexShrink: 0,
-    },
+    filterRow: { display: 'flex', alignItems: 'center', gap: 6 },
+    filterLabel: { fontSize: 10, color: NEUTRAL.muted, width: 74, flexShrink: 0, fontFamily: FONT.mono },
+    rangeDash: { fontSize: 10, color: NEUTRAL.faint, flexShrink: 0 },
     clearBtn: {
-      fontSize: 10,
-      color: theme.clearBtn,
-      background: 'none',
-      border: 'none',
-      cursor: 'pointer',
-      padding: '2px 0',
-      textAlign: 'left' as const,
-      marginTop: 2,
+      fontSize: 10, color: theme.clearBtn, background: 'none', border: 'none',
+      cursor: 'pointer', padding: '2px 0', textAlign: 'left' as const, marginTop: 2,
     },
     inputHandle: {
-      width: 8,
-      height: 8,
-      border: '2px solid #fff',
-      position: 'absolute' as const,
-      left: -5,
-      borderRadius: '50%',
+      width: 8, height: 8, border: '2px solid ' + NEUTRAL.card,
+      position: 'absolute' as const, left: -5, borderRadius: '50%',
     },
     footer: {
-      padding: '6px 10px 8px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      gap: 6,
+      padding: '7px 11px 9px', display: 'flex', alignItems: 'center',
+      justifyContent: 'space-between', gap: 6,
     },
-    fixtureControls: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 4,
-    },
+    fixtureControls: { display: 'flex', alignItems: 'center', gap: 4 },
     fixtureToggle: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 3,
-      cursor: 'pointer',
-      userSelect: 'none' as const,
-      fontSize: 13,
+      display: 'flex', alignItems: 'center', gap: 3, cursor: 'pointer',
+      userSelect: 'none' as const, fontSize: 13,
     },
     extraToggle: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 3,
-      cursor: 'pointer',
-      userSelect: 'none' as const,
-      fontSize: 10,
-      fontWeight: 600,
+      display: 'flex', alignItems: 'center', gap: 3, cursor: 'pointer',
+      userSelect: 'none' as const, fontSize: 10, fontWeight: 600,
     },
     footerCaption: {
-      fontSize: 9,
-      color: '#9ca3af',
-      fontStyle: 'italic' as const,
-      lineHeight: 1.3,
-      maxWidth: 120,
+      fontSize: 9, color: NEUTRAL.faint, fontStyle: 'italic' as const,
+      fontFamily: FONT.serif, lineHeight: 1.3, maxWidth: 120,
     },
     fixtureSaveBtn: {
-      background: 'none',
-      border: 'none',
-      cursor: 'pointer',
-      padding: '0 2px',
-      fontSize: 13,
-      color: '#6b7280',
-      lineHeight: 1,
+      background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px',
+      fontSize: 13, color: NEUTRAL.muted, lineHeight: 1,
     },
     runBtn: {
-      background: theme.runBtn,
-      color: '#fff',
-      border: 'none',
-      borderRadius: 5,
-      padding: '4px 14px',
-      fontSize: 12,
-      fontWeight: 600,
-      cursor: 'pointer',
+      background: theme.runBtn, color: ACCENT.actionFg, border: 'none',
+      borderRadius: RADIUS.header, padding: '4px 14px', fontSize: 12, fontWeight: 600,
+      cursor: 'pointer', fontFamily: FONT.sans,
     },
     outputHandle: {
-      width: 10,
-      height: 10,
-      background: '#22c55e',
-      border: '2px solid #fff',
-      boxShadow: '0 0 0 1px #22c55e',
+      width: 10, height: 10, background: STATUS_BORDER.success,
+      border: '2px solid ' + NEUTRAL.card, boxShadow: `0 0 0 1px ${STATUS_BORDER.success}`,
     },
   }
 }

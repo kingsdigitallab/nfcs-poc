@@ -5,6 +5,7 @@
  */
 import type { NodeProps } from '@xyflow/react'
 import { BackboneSearchNode, type BackboneSearchConfig } from './BackboneSearchNode'
+import { NODE_IDENTITY, deriveBackboneTheme } from '../styles/theme'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type HSDSStatus = 'idle' | 'loading' | 'success' | 'error'
@@ -33,15 +34,7 @@ export interface HSDSSearchNodeData {
 export const HSDS_CONFIG: BackboneSearchConfig = {
   nodeType: 'hsdsSearch',
   title:    'HSDS Search',
-  theme: {
-    header:       '#134e4a',  // teal-900 — heritage data service
-    runBtn:       '#0f3d3a',
-    accentBg:     '#ccfbf1',
-    accentBorder: '#99f6e4',
-    sectionBg:    '#f0fdfa',
-    clearBtn:     '#0f3d3a',
-    fixtureIcon:  '#134e4a',
-  },
+  theme: deriveBackboneTheme(NODE_IDENTITY.hsdsSearch),
   fetchAll: true,
   sort: {
     options: [

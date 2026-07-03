@@ -24,7 +24,7 @@ export interface GeocodingNodeData {
 // ── Status colours ─────────────────────────────────────────────────────────────
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
@@ -232,7 +232,7 @@ export function GeocodingNode({ id, data }: NodeProps) {
     [records],
   )
 
-  const borderColor = STATUS_BORDER[d.status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[d.status] ?? '#d6ccb5'
 
   // Pending and failed records for review panel
   const pendingRecords = useMemo<GeocodingRecord[]>(() => {
@@ -411,15 +411,15 @@ export function GeocodingNode({ id, data }: NodeProps) {
 
 // ── Styles ─────────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#065f46'
+const HEADER_COLOR = '#2f5f57'
 
 const styles = {
   card: {
-    background:  '#fff',
-    border:      '2px solid #d1d5db',
+    background:  '#fffdf7',
+    border:      '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth:    280,
-    boxShadow:   '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:   '0 1px 4px rgba(50,42,26,0.10)',
     position:    'relative' as const,
     transition:  'border-color 0.25s',
   },
@@ -440,29 +440,29 @@ const styles = {
     display: 'flex', flexDirection: 'column' as const, gap: 6,
   },
   row:    { display: 'flex', alignItems: 'center', gap: 6 },
-  label:  { fontSize: 11, color: '#6b7280', width: 60, flexShrink: 0, fontFamily: 'monospace' },
-  hint:   { fontSize: 10, color: '#9ca3af', fontStyle: 'italic' as const },
+  label:  { fontSize: 11, color: '#8a8168', width: 60, flexShrink: 0, fontFamily: 'monospace' },
+  hint:   { fontSize: 10, color: '#b0a891', fontStyle: 'italic' as const },
   select: {
-    flex: 1, fontSize: 11, padding: '2px 4px', border: '1px solid #d1d5db',
+    flex: 1, fontSize: 11, padding: '2px 4px', border: '1px solid #d6ccb5',
     borderRadius: 4, outline: 'none', height: 22, background: '#fff', minWidth: 0,
   },
-  sliderVal: { fontSize: 10, color: '#374151', width: 30, textAlign: 'right' as const },
+  sliderVal: { fontSize: 10, color: '#33302a', width: 30, textAlign: 'right' as const },
   toggle: {
-    display: 'flex', alignItems: 'center', fontSize: 11, color: '#374151',
+    display: 'flex', alignItems: 'center', fontSize: 11, color: '#33302a',
     cursor: 'pointer', userSelect: 'none' as const,
   },
   summary: { display: 'flex', alignItems: 'center', gap: 5, paddingTop: 2 },
   countResolved: { fontSize: 11, fontWeight: 600, color: '#059669' },
   countPending:  { fontSize: 11, fontWeight: 600, color: '#d97706' },
   countFailed:   { fontSize: 11, fontWeight: 600, color: '#dc2626' },
-  dot:           { fontSize: 11, color: '#9ca3af' },
+  dot:           { fontSize: 11, color: '#b0a891' },
   footer: { padding: '6px 10px 8px', display: 'flex', justifyContent: 'flex-end' },
   runBtn: {
     background: HEADER_COLOR, color: '#fff', border: 'none', borderRadius: 5,
     padding: '4px 14px', fontSize: 12, fontWeight: 600, cursor: 'pointer',
   },
   inputHandle: {
-    width: 8, height: 8, border: '2px solid #fff', background: '#9ca3af',
+    width: 8, height: 8, border: '2px solid #fff', background: '#b0a891',
     position: 'absolute' as const, left: -5, borderRadius: '50%',
   },
   outputHandle: {
@@ -481,17 +481,17 @@ const rev = {
   },
   nav: { display: 'flex', alignItems: 'center', gap: 6 },
   navBtn: {
-    background: 'none', border: '1px solid #d1d5db', borderRadius: 4,
-    padding: '1px 6px', cursor: 'pointer', fontSize: 13, color: '#374151',
+    background: 'none', border: '1px solid #d6ccb5', borderRadius: 4,
+    padding: '1px 6px', cursor: 'pointer', fontSize: 13, color: '#33302a',
   },
-  navLabel: { fontSize: 11, color: '#6b7280', flex: 1, textAlign: 'center' as const },
+  navLabel: { fontSize: 11, color: '#8a8168', flex: 1, textAlign: 'center' as const },
   placeRow: { display: 'flex', alignItems: 'baseline', gap: 5, flexWrap: 'wrap' as const },
-  placeRaw:     { fontSize: 11, fontWeight: 600, color: '#111827' },
-  placeCleaned: { fontSize: 10, color: '#6b7280', fontStyle: 'italic' as const },
-  noResults: { fontSize: 11, color: '#9ca3af', textAlign: 'center' as const, padding: '4px 0' },
+  placeRaw:     { fontSize: 11, fontWeight: 600, color: '#2c2a24' },
+  placeCleaned: { fontSize: 10, color: '#8a8168', fontStyle: 'italic' as const },
+  noResults: { fontSize: 11, color: '#b0a891', textAlign: 'center' as const, padding: '4px 0' },
   candidates: { display: 'flex', flexDirection: 'column' as const, gap: 4 },
   card: {
-    background: '#fff', border: '1px solid #e5e7eb', borderRadius: 5, padding: '5px 7px',
+    background: '#fffdf7', border: '1px solid #ece3d0', borderRadius: 5, padding: '5px 7px',
     display: 'flex', flexDirection: 'column' as const, gap: 3,
   },
   cardHeader: { display: 'flex', alignItems: 'center', gap: 5 },
@@ -499,12 +499,12 @@ const rev = {
     fontSize: 9, fontWeight: 700, color: '#fff', borderRadius: 3,
     padding: '1px 4px', flexShrink: 0,
   },
-  cardLabel: { fontSize: 11, fontWeight: 600, color: '#111827', flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const },
-  scoreBar: { width: 40, height: 5, background: '#e5e7eb', borderRadius: 3, overflow: 'hidden', flexShrink: 0 },
+  cardLabel: { fontSize: 11, fontWeight: 600, color: '#2c2a24', flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const },
+  scoreBar: { width: 40, height: 5, background: '#ece3d0', borderRadius: 3, overflow: 'hidden', flexShrink: 0 },
   scoreFill: { display: 'block', height: '100%', background: '#059669', borderRadius: 3 },
-  scoreNum: { fontSize: 9, color: '#6b7280', width: 26, textAlign: 'right' as const, flexShrink: 0 },
-  cardMeta: { fontSize: 10, color: '#6b7280' },
-  coords:   { fontSize: 10, color: '#9ca3af', fontFamily: 'monospace' },
+  scoreNum: { fontSize: 9, color: '#8a8168', width: 26, textAlign: 'right' as const, flexShrink: 0 },
+  cardMeta: { fontSize: 10, color: '#8a8168' },
+  coords:   { fontSize: 10, color: '#b0a891', fontFamily: 'monospace' },
   confirmBtn: {
     alignSelf: 'flex-start' as const, fontSize: 10, fontWeight: 600,
     color: '#fff', background: '#059669', border: 'none', borderRadius: 4,
@@ -512,8 +512,8 @@ const rev = {
   },
   actions: { display: 'flex', gap: 6, paddingTop: 2 },
   skipBtn: {
-    fontSize: 10, color: '#6b7280', background: 'none',
-    border: '1px solid #d1d5db', borderRadius: 4, padding: '2px 8px', cursor: 'pointer',
+    fontSize: 10, color: '#8a8168', background: 'none',
+    border: '1px solid #d6ccb5', borderRadius: 4, padding: '2px 8px', cursor: 'pointer',
   },
   unresolBtn: {
     fontSize: 10, color: '#dc2626', background: 'none',
@@ -533,8 +533,8 @@ const conf = {
   headerRow: { display: 'flex', alignItems: 'center', justifyContent: 'space-between' },
   header: { fontSize: 10, fontWeight: 700, color: '#4338ca', textTransform: 'uppercase' as const, letterSpacing: '0.05em' },
   cacheBtn: {
-    fontSize: 9, color: '#6b7280', background: 'none',
-    border: '1px solid #d1d5db', borderRadius: 3, padding: '1px 5px', cursor: 'pointer',
+    fontSize: 9, color: '#8a8168', background: 'none',
+    border: '1px solid #d6ccb5', borderRadius: 3, padding: '1px 5px', cursor: 'pointer',
   },
   list: { display: 'flex', flexDirection: 'column' as const, gap: 2, maxHeight: 100, overflowY: 'auto' as const },
   row: { display: 'flex', alignItems: 'center', gap: 4, flexWrap: 'wrap' as const },
@@ -543,10 +543,10 @@ const conf = {
     padding: '1px 3px', flexShrink: 0,
   },
   toponym:     { fontSize: 10, fontWeight: 600, color: '#4338ca' },
-  arrow:       { fontSize: 10, color: '#9ca3af' },
-  choiceLabel: { fontSize: 10, color: '#374151', flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const },
+  arrow:       { fontSize: 10, color: '#b0a891' },
+  choiceLabel: { fontSize: 10, color: '#33302a', flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const },
   removeBtn: {
-    fontSize: 11, fontWeight: 700, color: '#9ca3af', background: 'none',
+    fontSize: 11, fontWeight: 700, color: '#b0a891', background: 'none',
     border: 'none', cursor: 'pointer', padding: '0 2px', lineHeight: 1, flexShrink: 0,
   },
 }
@@ -566,5 +566,5 @@ const fail = {
   list: { display: 'flex', flexDirection: 'column' as const, gap: 2, maxHeight: 120, overflowY: 'auto' as const },
   row:  { display: 'flex', alignItems: 'baseline', gap: 5, flexWrap: 'wrap' as const },
   raw:     { fontSize: 11, fontWeight: 600, color: '#991b1b' },
-  cleaned: { fontSize: 10, color: '#9ca3af', fontStyle: 'italic' as const },
+  cleaned: { fontSize: 10, color: '#b0a891', fontStyle: 'italic' as const },
 }

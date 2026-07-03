@@ -4,6 +4,7 @@
  */
 import type { NodeProps } from '@xyflow/react'
 import { BackboneSearchNode, type BackboneSearchConfig } from './BackboneSearchNode'
+import { NODE_IDENTITY, deriveBackboneTheme } from '../styles/theme'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type ARIADNEStatus = 'idle' | 'loading' | 'success' | 'error'
@@ -32,15 +33,7 @@ export interface ARIADNESearchNodeData {
 export const ARIADNE_CONFIG: BackboneSearchConfig = {
   nodeType: 'ariadneSearch',
   title:    'ARIADNE Search',
-  theme: {
-    header:       '#164e63',  // cyan-900 — distinct from all existing nodes
-    runBtn:       '#0e7490',  // cyan-600
-    accentBg:     '#ecfeff',
-    accentBorder: '#a5f3fc',
-    sectionBg:    '#f0fdff',
-    clearBtn:     '#0e7490',
-    fixtureIcon:  '#0e7490',
-  },
+  theme: deriveBackboneTheme(NODE_IDENTITY.ariadneSearch),
   fetchAll: true,
   sort: {
     options: [

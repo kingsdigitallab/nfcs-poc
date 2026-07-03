@@ -189,11 +189,11 @@ export function MapOutputNode({ id }: NodeProps) {
       const popup = `
         <div style="font-family:system-ui,sans-serif;min-width:180px;max-width:260px">
           <strong style="font-size:12px;line-height:1.4;display:block">${esc(title)}</strong>
-          <div style="margin-top:3px;font-size:11px;color:#6b7280;display:flex;align-items:center;gap:4px">
+          <div style="margin-top:3px;font-size:11px;color:#8a8168;display:flex;align-items:center;gap:4px">
             <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${color};flex-shrink:0"></span>
             ${esc(r._source ?? '')}${r.date ? ` · ${esc(String(r.date))}` : ''}
           </div>
-          ${desc ? `<div style="margin-top:5px;font-size:11px;color:#374151;line-height:1.4">${esc(desc)}</div>` : ''}
+          ${desc ? `<div style="margin-top:5px;font-size:11px;color:#33302a;line-height:1.4">${esc(desc)}</div>` : ''}
           ${r._sourceUrl
             ? `<a href="${esc(r._sourceUrl)}" target="_blank" rel="noopener noreferrer"
                 style="display:inline-block;margin-top:6px;font-size:11px;color:#0d9488;text-decoration:none">
@@ -557,14 +557,14 @@ export function MapOutputNode({ id }: NodeProps) {
 
 // ─── styles ───────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#14532d'
+const HEADER_COLOR = '#315a3f'
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '1.5px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '1.5px solid #d6ccb5',
     borderRadius: 8,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     overflow:     'hidden',
     width:        MAP_W,
   },
@@ -597,7 +597,7 @@ const styles = {
     gap:        6,
     padding:    '5px 8px',
     background: '#f3f4f6',
-    borderTop:  '1px solid #e5e7eb',
+    borderTop:  '1px solid #ece3d0',
     fontSize:   11,
   },
   clusterToggle: {
@@ -605,11 +605,11 @@ const styles = {
     alignItems: 'center',
     gap:        4,
     cursor:     'pointer' as const,
-    color:      '#374151',
+    color:      '#33302a',
     userSelect: 'none' as const,
   },
   checkbox: { cursor: 'pointer' as const, width: 13, height: 13 },
-  separator: { width: 1, height: 16, background: '#d1d5db' },
+  separator: { width: 1, height: 16, background: '#d6ccb5' },
   btn: {
     padding:      '2px 8px',
     borderRadius: 4,
@@ -621,22 +621,22 @@ const styles = {
   },
   btnDraw:     { background: '#3b82f6', color: '#fff' },
   btnCancel:   { background: '#ef4444', color: '#fff' },
-  btnClear:    { background: '#e5e7eb', color: '#374151' },
-  shiftHint:   { fontSize: 10, color: '#6b7280', fontStyle: 'italic' as const },
+  btnClear:    { background: '#ece3d0', color: '#33302a' },
+  shiftHint:   { fontSize: 10, color: '#8a8168', fontStyle: 'italic' as const },
   btnRun:      { background: '#15803d', color: '#fff' },
   btnDisabled: { opacity: 0.45, cursor: 'not-allowed' as const },
   countBadge: {
     fontSize:     10,
     fontWeight:   700,
-    color:        '#374151',
-    background:   '#e5e7eb',
+    color:        '#33302a',
+    background:   '#ece3d0',
     padding:      '1px 7px',
     borderRadius: 10,
     marginLeft:   'auto',
   },
   bboxInfo: {
     fontSize:   10,
-    color:      '#6b7280',
+    color:      '#8a8168',
     padding:    '3px 10px',
     background: '#fffbeb',
     borderTop:  '1px solid #fde68a',
@@ -646,8 +646,8 @@ const styles = {
     flexWrap:   'wrap' as const,
     gap:        '4px 12px',
     padding:    '5px 10px 6px',
-    background: '#f9fafb',
-    borderTop:  '1px solid #e5e7eb',
+    background: '#faf6ec',
+    borderTop:  '1px solid #ece3d0',
   },
   legendItem: {
     display:    'flex',

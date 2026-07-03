@@ -14,7 +14,7 @@ import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { ComparisonReportView } from './ComparisonReportView'
 import type { ComparisonReportConfig } from './ComparisonReportView'
 
-const HEADER_COLOR = '#3730a3'
+const HEADER_COLOR = '#3a3a6e'
 
 export interface ComparisonReportNodeData {
   originalField:   string
@@ -123,8 +123,8 @@ export function ComparisonReportNode({ id, data, selected }: NodeProps) {
 
 const s = {
   card: {
-    background: '#fff', border: '1.5px solid #d1d5db', borderRadius: 8,
-    width: '100%', height: '100%', boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    background: '#fffdf7', border: '1.5px solid #d6ccb5', borderRadius: 8,
+    width: '100%', height: '100%', boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     display: 'flex', flexDirection: 'column' as const, overflow: 'hidden',
   },
   header: {
@@ -135,25 +135,25 @@ const s = {
   headerTitle: { color: '#fff', fontWeight: 700, fontSize: 12 },
   headerMeta:  { color: 'rgba(255,255,255,0.65)', fontSize: 10 },
   configPanel: {
-    flexShrink: 0, padding: '8px 12px', borderBottom: '2px solid #e5e7eb',
+    flexShrink: 0, padding: '8px 12px', borderBottom: '2px solid #ece3d0',
     background: '#f8fafc', display: 'flex', flexDirection: 'column' as const, gap: 4,
   },
   configTitle: {
-    fontSize: 10, fontWeight: 700, color: '#374151', textTransform: 'uppercase' as const,
+    fontSize: 10, fontWeight: 700, color: '#33302a', textTransform: 'uppercase' as const,
     letterSpacing: '0.05em', marginBottom: 4,
   },
   configHint: {
-    fontWeight: 400, textTransform: 'none' as const, color: '#9ca3af', letterSpacing: 0,
+    fontWeight: 400, textTransform: 'none' as const, color: '#b0a891', letterSpacing: 0,
   },
   cfgRow: { display: 'flex', alignItems: 'center', gap: 8 },
-  cfgLabel: { fontSize: 10, color: '#6b7280', minWidth: 96, flexShrink: 0, fontWeight: 600 },
+  cfgLabel: { fontSize: 10, color: '#8a8168', minWidth: 96, flexShrink: 0, fontWeight: 600 },
   cfgSelect: {
-    flex: 1, fontSize: 10, padding: '2px 4px', border: '1px solid #d1d5db',
-    borderRadius: 3, outline: 'none', background: '#fff', color: '#111827',
+    flex: 1, fontSize: 10, padding: '2px 4px', border: '1px solid #d6ccb5',
+    borderRadius: 3, outline: 'none', background: '#fff', color: '#2c2a24',
     fontFamily: 'monospace', height: 22,
   },
   cfgInput: {
-    flex: 1, fontSize: 10, padding: '2px 5px', border: '1px solid #d1d5db',
+    flex: 1, fontSize: 10, padding: '2px 5px', border: '1px solid #d6ccb5',
     borderRadius: 3, outline: 'none', fontFamily: 'monospace', height: 22,
   },
   body: { flex: 1, overflowY: 'auto' as const, minHeight: 0 },

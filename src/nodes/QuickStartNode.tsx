@@ -45,7 +45,7 @@ export interface QuickStartNodeData {
 
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const KCL_MODELS = '/kcl-proxy/v1/models'
-const HEADER_COLOR = '#0c1445'
+const HEADER_COLOR = '#202d47'
 
 const LAYOUT = {
   SEARCH_COL_X:    360,
@@ -587,7 +587,7 @@ export function QuickStartNode({ id, data }: NodeProps) {
 
         {/* Model selector — triple-click label to unlock arc:apex */}
         <span
-          style={{ fontSize: 10, color: '#9ca3af', cursor: 'default', userSelect: 'none' as const, display: 'block', marginBottom: 2 }}
+          style={{ fontSize: 10, color: '#b0a891', cursor: 'default', userSelect: 'none' as const, display: 'block', marginBottom: 2 }}
           className="nodrag"
           onClick={() => {
             apexClickCount.current += 1
@@ -631,7 +631,7 @@ export function QuickStartNode({ id, data }: NodeProps) {
             ...styles.btn,
             opacity:    canPlan ? 1 : 0.45,
             cursor:     canPlan ? 'pointer' : 'default',
-            background: isPlanning ? '#374151' : HEADER_COLOR,
+            background: isPlanning ? '#33302a' : HEADER_COLOR,
           }}
         >
           {isPlanning ? (planMessage || 'Planning…') : 'Plan'}
@@ -686,33 +686,33 @@ export function QuickStartNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    width: 380, background: '#111827',
+    width: 380, background: '#2c2a24',
     border: '1px solid #1f2937', borderRadius: 6,
-    fontFamily: 'sans-serif', color: '#f9fafb', fontSize: 12,
+    fontFamily: 'sans-serif', color: '#faf6ec', fontSize: 12,
   },
   header: {
     background: HEADER_COLOR, padding: '6px 10px',
     borderRadius: '6px 6px 0 0',
     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
   },
-  headerTitle: { fontWeight: 700, fontSize: 13, color: '#f9fafb' },
+  headerTitle: { fontWeight: 700, fontSize: 13, color: '#faf6ec' },
   body: {
     padding: '8px 10px',
     display: 'flex', flexDirection: 'column' as const, gap: 6,
   },
   textarea: {
     width: '100%', boxSizing: 'border-box' as const, resize: 'vertical' as const,
-    background: '#1f2937', border: '1px solid #374151', borderRadius: 3,
-    color: '#f9fafb', fontSize: 11, padding: '5px 7px', fontFamily: 'sans-serif',
+    background: '#1f2937', border: '1px solid #33302a', borderRadius: 3,
+    color: '#faf6ec', fontSize: 11, padding: '5px 7px', fontFamily: 'sans-serif',
   },
   select: {
     width: '100%', boxSizing: 'border-box' as const,
-    background: '#1f2937', border: '1px solid #374151', borderRadius: 3,
-    color: '#f9fafb', fontSize: 10, padding: '3px 6px',
+    background: '#1f2937', border: '1px solid #33302a', borderRadius: 3,
+    color: '#faf6ec', fontSize: 10, padding: '3px 6px',
   },
   btn: {
     width: '100%', border: 'none', borderRadius: 3,
-    color: '#f9fafb', fontSize: 11, fontWeight: 600 as const, padding: '6px 0',
+    color: '#faf6ec', fontSize: 11, fontWeight: 600 as const, padding: '6px 0',
   },
   error: {
     fontSize: 10, color: '#fca5a5', background: '#450a0a',
@@ -722,10 +722,10 @@ const styles = {
     background: '#1f2937', borderRadius: 4, padding: '8px 10px',
     display: 'flex', flexDirection: 'column' as const, gap: 4,
   },
-  previewTitle:   { fontWeight: 700, fontSize: 11, color: '#f9fafb' },
-  previewSummary: { fontStyle: 'italic' as const, fontSize: 10, color: '#9ca3af' },
+  previewTitle:   { fontWeight: 700, fontSize: 11, color: '#faf6ec' },
+  previewSummary: { fontStyle: 'italic' as const, fontSize: 10, color: '#b0a891' },
   previewNodes:   { display: 'flex', flexDirection: 'column' as const, gap: 2, marginTop: 2 },
-  previewItem:    { fontSize: 10, color: '#d1d5db' },
-  previewType:    { color: '#6b7280' },
+  previewItem:    { fontSize: 10, color: '#d6ccb5' },
+  previewType:    { color: '#8a8168' },
   previewMeta:    { fontSize: 9, color: '#4b5563', marginTop: 2 },
 }

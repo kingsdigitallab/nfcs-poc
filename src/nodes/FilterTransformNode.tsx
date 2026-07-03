@@ -366,7 +366,7 @@ function TransformRow({ op, fields, onChange, onDelete }: TransformRowProps) {
 
 // ─── main component ───────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#4f46e5'  // indigo-600
+const HEADER_COLOR = '#454a8a'  // indigo-600
 
 export function FilterTransformNode({ id }: NodeProps) {
   const { updateNodeData, getNodes, getEdges: snap } = useReactFlow()
@@ -462,7 +462,7 @@ export function FilterTransformNode({ id }: NodeProps) {
             style={{
               ...S.modeTab,
               background: d.mode === m ? HEADER_COLOR : 'transparent',
-              color:      d.mode === m ? '#fff' : '#6b7280',
+              color:      d.mode === m ? '#fff' : '#8a8168',
               fontWeight: d.mode === m ? 700 : 400,
             }}
             onClick={() => updateNodeData(id, { mode: m })}
@@ -577,11 +577,11 @@ export function FilterTransformNode({ id }: NodeProps) {
 
 const S = {
   card: {
-    background:   '#fff',
-    border:       '1.5px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '1.5px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     320,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
   },
   header: {
@@ -609,8 +609,8 @@ const S = {
   },
   modeTabs: {
     display:         'flex',
-    borderBottom:    '1px solid #e5e7eb',
-    background:      '#f9fafb',
+    borderBottom:    '1px solid #ece3d0',
+    background:      '#faf6ec',
     borderRadius:    0,
   },
   modeTab: {
@@ -644,13 +644,13 @@ const S = {
   sectionTitle: {
     fontSize:      10,
     fontWeight:    700,
-    color:         '#374151',
+    color:         '#33302a',
     textTransform: 'uppercase' as const,
     letterSpacing: '0.06em',
   },
   divider: {
     border:    'none',
-    borderTop: '1px solid #e5e7eb',
+    borderTop: '1px solid #ece3d0',
     margin:    '2px 0',
   },
   // ── filter row ──
@@ -676,7 +676,7 @@ const S = {
   },
   // ── transform block ──
   transformBlock: {
-    border:        '1px solid #e5e7eb',
+    border:        '1px solid #ece3d0',
     borderRadius:  4,
     padding:       '5px 6px',
     display:       'flex',
@@ -710,26 +710,26 @@ const S = {
   sel: {
     fontSize:     11,
     padding:      '2px 3px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 3,
-    background:   '#f9fafb',
+    background:   '#faf6ec',
     outline:      'none',
     height:       22,
   },
   inp: {
     fontSize:     11,
     padding:      '2px 4px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 3,
-    background:   '#f9fafb',
+    background:   '#faf6ec',
     outline:      'none',
     height:       22,
   },
   deleteBtn: {
     background:   'none',
-    border:       '1px solid #e5e7eb',
+    border:       '1px solid #ece3d0',
     borderRadius: 3,
-    color:        '#9ca3af',
+    color:        '#b0a891',
     cursor:       'pointer',
     fontSize:     12,
     lineHeight:   1,
@@ -737,13 +737,13 @@ const S = {
     flexShrink:   0,
   },
   arrow: {
-    color:      '#9ca3af',
+    color:      '#b0a891',
     fontSize:   12,
     flexShrink: 0,
   },
   unit: {
     fontSize:   10,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     flexShrink: 0,
   },
   chkLabel: {
@@ -751,15 +751,15 @@ const S = {
     alignItems: 'center',
     gap:        3,
     fontSize:   10,
-    color:      '#6b7280',
+    color:      '#8a8168',
     flexShrink: 0,
     cursor:     'pointer',
   },
   addBtn: {
     background:   'none',
-    border:       '1px dashed #d1d5db',
+    border:       '1px dashed #d6ccb5',
     borderRadius: 4,
-    color:        '#6b7280',
+    color:        '#8a8168',
     cursor:       'pointer',
     fontSize:     10,
     padding:      '3px 8px',
@@ -767,7 +767,7 @@ const S = {
   },
   emptyHint: {
     fontSize:   10,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     fontStyle:  'italic' as const,
     margin:     '1px 0',
   },

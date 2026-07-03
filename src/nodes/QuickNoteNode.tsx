@@ -21,7 +21,7 @@ import type { ReconciliationResult } from '../utils/reconciliationService'
 import { getNote, setNote, subscribeNotes } from '../store/notesStore'
 import { setNodeResults } from '../store/resultsStore'
 
-const HEADER_COLOR = '#0f766e'
+const HEADER_COLOR = '#2f6660'
 
 export interface FieldConfig {
   key: string
@@ -530,7 +530,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
                     </select>
                   </div>
                   <div style={{ ...s.configLabel, marginBottom: 4 }}>Fields
-                    <span style={{ fontWeight: 400, color: '#9ca3af' }}> (key · label)</span>
+                    <span style={{ fontWeight: 400, color: '#b0a891' }}> (key · label)</span>
                   </div>
                   {fields.map((f, idx) => (
                     <div key={idx} style={s.criterionEditRow}>
@@ -557,7 +557,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
                     <div key={f} style={s.displayFieldBlock}>
                       <div style={s.displayFieldLabel}>{f}</div>
                       {isImageDataUrl(val) ? (
-                        <div style={{ padding: '4px 8px', color: '#9ca3af', fontSize: 10, fontStyle: 'italic' }}>
+                        <div style={{ padding: '4px 8px', color: '#b0a891', fontSize: 10, fontStyle: 'italic' }}>
                           Image — use ImageViewNode
                         </div>
                       ) : (
@@ -653,7 +653,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
                     </select>
                   </div>
                   <div style={{ ...s.configLabel, marginBottom: 4 }}>Criteria
-                    <span style={{ fontWeight: 400, color: '#9ca3af' }}> (key · label · scale)</span>
+                    <span style={{ fontWeight: 400, color: '#b0a891' }}> (key · label · scale)</span>
                   </div>
                   {criteria.map((c, idx) => (
                     <div key={idx} style={s.criterionEditRow}>
@@ -683,7 +683,7 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
                     <div key={f} style={s.displayFieldBlock}>
                       <div style={s.displayFieldLabel}>{f}</div>
                       {isImageDataUrl(val) ? (
-                        <div style={{ padding: '4px 8px', color: '#9ca3af', fontSize: 10, fontStyle: 'italic' }}>
+                        <div style={{ padding: '4px 8px', color: '#b0a891', fontSize: 10, fontStyle: 'italic' }}>
                           Image — use ImageViewNode
                         </div>
                       ) : (
@@ -790,8 +790,8 @@ export function QuickNoteNode({ id, data, selected }: NodeProps) {
 const s = {
   // ── Shared / note-mode ───────────────────────────────────────────────────────
   card: {
-    background: '#fff', border: '1.5px solid #d1d5db', borderRadius: 8,
-    width: '100%', boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    background: '#fffdf7', border: '1.5px solid #d6ccb5', borderRadius: 8,
+    width: '100%', boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     display: 'flex', flexDirection: 'column' as const, overflow: 'hidden',
   },
   header: {
@@ -832,33 +832,33 @@ const s = {
     borderBottom: '1px solid #f1f5f9', flexShrink: 0,
   },
   fieldSelect: {
-    flex: 1, fontSize: 11, padding: '2px 4px', border: '1px solid #d1d5db',
+    flex: 1, fontSize: 11, padding: '2px 4px', border: '1px solid #d6ccb5',
     borderRadius: 4, outline: 'none', height: 24, fontFamily: 'monospace',
   },
-  emptyHint: { fontSize: 11, color: '#9ca3af', fontStyle: 'italic' as const },
+  emptyHint: { fontSize: 11, color: '#b0a891', fontStyle: 'italic' as const },
   recordLabel: {
-    fontSize: 11, color: '#374151', fontWeight: 600, padding: '4px 10px 2px',
+    fontSize: 11, color: '#33302a', fontWeight: 600, padding: '4px 10px 2px',
     overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const,
     borderBottom: '1px solid #f1f5f9', flexShrink: 0,
   },
   contentWrap: { overflowY: 'auto' as const, maxHeight: 280 },
   content: {
     margin: 0, padding: '10px 12px', fontSize: 11, lineHeight: 1.6,
-    fontFamily: "'Consolas', 'Menlo', monospace", color: '#111827',
+    fontFamily: "'Consolas', 'Menlo', monospace", color: '#2c2a24',
     whiteSpace: 'pre-wrap' as const, wordBreak: 'break-word' as const,
   },
   placeholder: {
     display: 'flex', alignItems: 'center', justifyContent: 'center' as const,
-    padding: '20px 16px', color: '#9ca3af', fontSize: 11,
+    padding: '20px 16px', color: '#b0a891', fontSize: 11,
     fontStyle: 'italic' as const, textAlign: 'center' as const,
   },
-  divider: { height: 1, background: '#e5e7eb', flexShrink: 0 },
+  divider: { height: 1, background: '#ece3d0', flexShrink: 0 },
   notesArea: {
     flexShrink: 0, padding: '6px 10px 8px',
     display: 'flex', flexDirection: 'column' as const, gap: 4,
   },
   notesLabel: {
-    fontSize: 10, fontWeight: 600, color: '#6b7280',
+    fontSize: 10, fontWeight: 600, color: '#8a8168',
     textTransform: 'uppercase' as const, letterSpacing: '0.05em',
   },
   inheritedTag: {
@@ -873,7 +873,7 @@ const s = {
   },
   textarea: {
     width: '100%', minHeight: 72, resize: 'vertical' as const, fontSize: 11,
-    fontFamily: 'system-ui, sans-serif', border: '1px solid #d1d5db', borderRadius: 4,
+    fontFamily: 'system-ui, sans-serif', border: '1px solid #d6ccb5', borderRadius: 4,
     padding: '4px 6px', outline: 'none', background: '#fffbeb', color: '#1f2937',
     lineHeight: 1.5, boxSizing: 'border-box' as const,
   },
@@ -893,22 +893,22 @@ const s = {
   },
   configToggleBtn: {
     width: '100%', textAlign: 'left' as const, background: 'none', border: 'none',
-    padding: '5px 10px', fontSize: 10, fontWeight: 600, color: '#374151',
+    padding: '5px 10px', fontSize: 10, fontWeight: 600, color: '#33302a',
     cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4,
   },
-  configCountHint: { color: '#9ca3af', fontWeight: 400 },
+  configCountHint: { color: '#b0a891', fontWeight: 400 },
   configBody: {
     padding: '4px 10px 8px', display: 'flex', flexDirection: 'column' as const, gap: 6,
   },
   configRow: { display: 'flex', flexDirection: 'column' as const, gap: 2 },
   configLabel: {
-    fontSize: 10, fontWeight: 600, color: '#6b7280',
+    fontSize: 10, fontWeight: 600, color: '#8a8168',
     textTransform: 'uppercase' as const, letterSpacing: '0.04em',
   },
   configInput: {
-    fontSize: 10, padding: '2px 5px', border: '1px solid #d1d5db',
+    fontSize: 10, padding: '2px 5px', border: '1px solid #d6ccb5',
     borderRadius: 3, outline: 'none', fontFamily: 'monospace',
-    background: '#fff', color: '#111827',
+    background: '#fff', color: '#2c2a24',
   },
   criterionEditRow: { display: 'flex', alignItems: 'center', gap: 4 },
   removeCriterionBtn: {
@@ -925,12 +925,12 @@ const s = {
   },
   displayFieldBlock: { borderBottom: '1px solid #f1f5f9' },
   displayFieldLabel: {
-    fontSize: 9, fontWeight: 700, color: '#9ca3af', padding: '4px 10px 0',
+    fontSize: 9, fontWeight: 700, color: '#b0a891', padding: '4px 10px 0',
     textTransform: 'uppercase' as const, letterSpacing: '0.05em',
   },
   displayFieldContent: {
     margin: 0, padding: '2px 10px 6px', fontSize: 11, lineHeight: 1.55,
-    fontFamily: 'system-ui, sans-serif', color: '#111827',
+    fontFamily: 'system-ui, sans-serif', color: '#2c2a24',
     whiteSpace: 'pre-wrap' as const, wordBreak: 'break-word' as const,
   },
   scoreArea: {
@@ -941,7 +941,7 @@ const s = {
     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
     paddingTop: 2,
   },
-  scoreStatusText: { fontSize: 10, color: '#9ca3af', fontStyle: 'italic' as const },
+  scoreStatusText: { fontSize: 10, color: '#b0a891', fontStyle: 'italic' as const },
   clearScoreBtn: {
     background: 'none', border: '1px solid #fca5a5', color: '#ef4444',
     fontSize: 10, padding: '1px 7px', borderRadius: 3, cursor: 'pointer',
@@ -953,10 +953,10 @@ const s = {
     padding: '4px 0', borderBottom: '1px solid #f3f4f6',
   },
   structuredFieldLabel: {
-    fontSize: 10, fontWeight: 600, color: '#374151',
+    fontSize: 10, fontWeight: 600, color: '#33302a',
   },
   structuredFieldInput: {
-    width: '100%', fontSize: 11, padding: '3px 6px', border: '1px solid #d1d5db',
+    width: '100%', fontSize: 11, padding: '3px 6px', border: '1px solid #d6ccb5',
     borderRadius: 4, outline: 'none', background: '#fffbeb', color: '#1f2937',
     fontFamily: 'system-ui, sans-serif', boxSizing: 'border-box' as const,
   },
@@ -972,10 +972,10 @@ const s = {
     border: '1px solid #99f6e4', borderRadius: 3, padding: '1px 4px',
     fontFamily: 'monospace', textTransform: 'uppercase' as const,
   },
-  criterionLabelText: { fontSize: 11, color: '#374151', fontWeight: 500 },
+  criterionLabelText: { fontSize: 11, color: '#33302a', fontWeight: 500 },
   pickerRow: { display: 'flex', gap: 4, flexWrap: 'wrap' as const },
   pickerBtn: {
-    background: '#f9fafb', border: '1.5px solid #d1d5db', color: '#374151',
+    background: '#faf6ec', border: '1.5px solid #d6ccb5', color: '#33302a',
     fontSize: 12, fontWeight: 700, width: 32, height: 28, borderRadius: 4,
     cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center',
     padding: 0, fontFamily: 'monospace',
@@ -986,9 +986,9 @@ const s = {
   },
   reasonTextarea: {
     width: '100%', fontSize: 10, fontFamily: 'system-ui, sans-serif',
-    border: '1px solid #e5e7eb', borderRadius: 3, padding: '3px 5px',
+    border: '1px solid #ece3d0', borderRadius: 3, padding: '3px 5px',
     outline: 'none', resize: 'vertical' as const, lineHeight: 1.4,
-    color: '#374151', background: '#fafafa', boxSizing: 'border-box' as const,
+    color: '#33302a', background: '#fafafa', boxSizing: 'border-box' as const,
   },
   clearAllScoresBtn: {
     background: '#ef4444', border: '1px solid #ef4444', color: '#fff',

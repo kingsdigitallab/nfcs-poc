@@ -15,7 +15,7 @@ export interface WikidataEnrichNodeData {
   [key: string]:      unknown
 }
 
-const HEADER_COLOR = '#0369a1'
+const HEADER_COLOR = '#2f5f7a'
 
 export function WikidataEnrichNode({ id }: NodeProps) {
   const { updateNodeData, getNodes, getEdges } = useReactFlow()
@@ -61,7 +61,7 @@ export function WikidataEnrichNode({ id }: NodeProps) {
 
   const statusColor =
     d.status === 'error'   ? '#fca5a5' :
-    d.status === 'success' ? '#a5f3fc' : '#e5e7eb'
+    d.status === 'success' ? '#a5f3fc' : '#ece3d0'
 
   const totalSelected =
     d.selectedProperties.length +
@@ -108,7 +108,7 @@ export function WikidataEnrichNode({ id }: NodeProps) {
                   return (
                     <label
                       key={prop.id}
-                      style={{ ...S.propLabel, background: checked ? '#ede9fe' : '#f9fafb' }}
+                      style={{ ...S.propLabel, background: checked ? '#ede9fe' : '#faf6ec' }}
                       className="nodrag"
                     >
                       <input
@@ -163,11 +163,11 @@ export function WikidataEnrichNode({ id }: NodeProps) {
 
 const S = {
   card: {
-    background:   '#fff',
-    border:       '1.5px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '1.5px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     300,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
   },
   header: {
@@ -209,7 +209,7 @@ const S = {
   label: {
     fontSize:   10,
     fontWeight: 600,
-    color:      '#6b7280',
+    color:      '#8a8168',
     flexShrink: 0,
     width:      58,
     textTransform: 'uppercase' as const,
@@ -219,9 +219,9 @@ const S = {
     flex:         1,
     fontSize:     11,
     padding:      '2px 4px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 3,
-    background:   '#f9fafb',
+    background:   '#faf6ec',
     outline:      'none',
     height:       22,
   },
@@ -229,9 +229,9 @@ const S = {
     flex:         1,
     fontSize:     11,
     padding:      '2px 6px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 3,
-    background:   '#f9fafb',
+    background:   '#faf6ec',
     outline:      'none',
     height:       22,
   },
@@ -241,14 +241,14 @@ const S = {
     gap:           6,
   },
   group: {
-    border:        '1px solid #e5e7eb',
+    border:        '1px solid #ece3d0',
     borderRadius:  4,
     overflow:      'hidden',
   },
   groupLabel: {
     fontSize:      10,
     fontWeight:    700,
-    color:         '#374151',
+    color:         '#33302a',
     background:    '#f3f4f6',
     padding:       '3px 8px',
     textTransform: 'uppercase' as const,
@@ -279,7 +279,7 @@ const S = {
   },
   propId: {
     fontSize:    9,
-    color:       '#9ca3af',
+    color:       '#b0a891',
     fontFamily:  'monospace',
   },
   selCount: {

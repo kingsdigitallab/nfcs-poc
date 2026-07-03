@@ -12,7 +12,7 @@ export interface MergeByQIDNodeData {
   [key: string]:  unknown
 }
 
-const HEADER_COLOR = '#6b21a8'
+const HEADER_COLOR = '#55396e'
 
 export function MergeByQIDNode({ id }: NodeProps) {
   const { updateNodeData, getNodes, getEdges } = useReactFlow()
@@ -35,7 +35,7 @@ export function MergeByQIDNode({ id }: NodeProps) {
 
   const statusColor =
     d.status === 'error'   ? '#fca5a5' :
-    d.status === 'success' ? '#a5f3fc' : '#e5e7eb'
+    d.status === 'success' ? '#a5f3fc' : '#ece3d0'
 
   return (
     <div style={S.card}>
@@ -69,7 +69,7 @@ export function MergeByQIDNode({ id }: NodeProps) {
           <div style={S.stats}>
             <span style={S.statItem}>🔗 {d.mergedCount} merged</span>
             {d.keepUnmatched && (
-              <span style={{ ...S.statItem, color: '#9ca3af' }}>
+              <span style={{ ...S.statItem, color: '#b0a891' }}>
                 {d.unmatchedCount} unmatched
               </span>
             )}
@@ -88,11 +88,11 @@ export function MergeByQIDNode({ id }: NodeProps) {
 
 const S = {
   card: {
-    background:   '#fff',
-    border:       '1.5px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '1.5px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     260,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
   },
   header: {
@@ -126,7 +126,7 @@ const S = {
   },
   hint: {
     fontSize:  10,
-    color:     '#6b7280',
+    color:     '#8a8168',
     margin:    0,
     lineHeight: 1.4,
   },
@@ -135,7 +135,7 @@ const S = {
     alignItems: 'center',
     gap:        6,
     fontSize:   11,
-    color:      '#374151',
+    color:      '#33302a',
     cursor:     'pointer',
   },
   stats: {

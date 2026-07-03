@@ -70,8 +70,8 @@ export function EntityOptionPopover({
         top:          anchorRect.bottom + 4,
         left:         anchorRect.left,
         zIndex:       9999,
-        background:   '#fff',
-        border:       '1px solid #e5e7eb',
+        background:   '#fffdf7',
+        border:       '1px solid #ece3d0',
         borderRadius: 6,
         boxShadow:    '0 4px 16px rgba(0,0,0,0.15)',
         minWidth:     Math.max(anchorRect.width, 260),
@@ -80,15 +80,15 @@ export function EntityOptionPopover({
         overflowY:    'auto',
       }}>
         {header && (
-          <div style={{ fontSize: 10, color: '#6b7280', padding: '5px 10px', borderBottom: '1px solid #f3f4f6', fontWeight: 600 }}>
+          <div style={{ fontSize: 10, color: '#8a8168', padding: '5px 10px', borderBottom: '1px solid #f3f4f6', fontWeight: 600 }}>
             {header}
           </div>
         )}
         {loading && (
-          <div style={{ fontSize: 10, color: '#9ca3af', padding: '6px 10px', fontStyle: 'italic' }}>searching…</div>
+          <div style={{ fontSize: 10, color: '#b0a891', padding: '6px 10px', fontStyle: 'italic' }}>searching…</div>
         )}
         {!loading && options.length === 0 && emptyHint && (
-          <div style={{ fontSize: 10, color: '#9ca3af', padding: '6px 10px', fontStyle: 'italic' }}>{emptyHint}</div>
+          <div style={{ fontSize: 10, color: '#b0a891', padding: '6px 10px', fontStyle: 'italic' }}>{emptyHint}</div>
         )}
         {!loading && options.map((opt, i) => {
           const active = opt.qid === activeQid || i === activeIndex
@@ -103,18 +103,18 @@ export function EntityOptionPopover({
                 padding:      '5px 10px',
                 background:   active ? '#f5f3ff' : 'transparent',
                 border:       'none',
-                borderBottom: '1px solid #f9fafb',
+                borderBottom: '1px solid #faf6ec',
                 cursor:       'pointer',
                 textAlign:    'left',
               }}
             >
               <span style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
-                <span style={{ fontWeight: 600, fontSize: 11, color: '#111827' }}>{opt.label}</span>
-                <span style={{ fontFamily: 'monospace', fontSize: 10, color: '#9ca3af', flexShrink: 0 }}>{opt.qid}</span>
+                <span style={{ fontWeight: 600, fontSize: 11, color: '#2c2a24' }}>{opt.label}</span>
+                <span style={{ fontFamily: 'monospace', fontSize: 10, color: '#b0a891', flexShrink: 0 }}>{opt.qid}</span>
               </span>
               {opt.description && (
                 <span style={{
-                  display: 'block', fontSize: 10, color: '#6b7280',
+                  display: 'block', fontSize: 10, color: '#8a8168',
                   overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
                 }}>
                   {opt.description}
@@ -303,7 +303,7 @@ export function EntityAutocomplete({
         ref={inputRef}
         style={{
           flex: 1, fontSize: 11, padding: '2px 5px',
-          border: '1px solid #d1d5db', borderRadius: 4, outline: 'none', minWidth: 0, height: 22,
+          border: '1px solid #d6ccb5', borderRadius: 4, outline: 'none', minWidth: 0, height: 22,
           ...inputStyle,
         }}
         value={value}

@@ -7,6 +7,7 @@
  */
 import type { NodeProps } from '@xyflow/react'
 import { BackboneSearchNode, type BackboneSearchConfig } from './BackboneSearchNode'
+import { NODE_IDENTITY, deriveBackboneTheme, ACCENT } from '../styles/theme'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type LLDSStatus = 'idle' | 'loading' | 'success' | 'cached' | 'error'
@@ -28,18 +29,10 @@ export interface LLDSSearchNodeData {
 export const LLDS_CONFIG: BackboneSearchConfig = {
   nodeType: 'lldsSearch',
   title:    'LLDS Search',
-  theme: {
-    header:       '#92400e',  // amber-brown
-    runBtn:       '#78350f',
-    accentBg:     '#fef3c7',  // unused (no filter panel) — kept for theme completeness
-    accentBorder: '#fde68a',
-    sectionBg:    '#fffbeb',
-    clearBtn:     '#78350f',
-    fixtureIcon:  '#92400e',
-  },
+  theme: deriveBackboneTheme(NODE_IDENTITY.lldsSearch),
   minWidth: 240,
-  statusColours:      { cached: '#f59e0b' },
-  statusBadgeColours: { cached: '#fcd34d' },
+  statusColours:      { cached: ACCENT.amber },
+  statusBadgeColours: { cached: ACCENT.amber },
   footer: {
     extraToggle: {
       key:         'useCache',
@@ -47,7 +40,7 @@ export const LLDS_CONFIG: BackboneSearchConfig = {
       cachedLabel: '📦 cached',
       title:       'Reuse the locally cached result if less than 24 h old. Uncheck to force a live request.',
       onColor:     '#92400e',
-      offColor:    '#6b7280',
+      offColor:    '#8a8168',
     },
   },
 }

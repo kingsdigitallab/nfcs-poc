@@ -3,7 +3,7 @@ import { Handle, Position, NodeProps, useReactFlow, NodeResizer } from '@xyflow/
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
-const HEADER_COLOR    = '#1c3144'
+const HEADER_COLOR    = '#29394a'
 const MAX_THUMB_DIM   = 1200
 const EXAMPLE_MANIFEST = 'https://iiif.wellcomecollection.org/presentation/b18035723'
 
@@ -854,7 +854,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             )}
             <div style={{ flex: 1 }} />
             {iiifRegions.length > 0 && (
-              <button style={{ ...s.regionBtn, color: '#9ca3af', fontSize: 9 }} onClick={() => saveRegions([])}>
+              <button style={{ ...s.regionBtn, color: '#b0a891', fontSize: 9 }} onClick={() => saveRegions([])}>
                 Clear
               </button>
             )}
@@ -953,7 +953,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           <button style={s.zoomResetBtn} onClick={() => setZoom(1)}>Reset</button>
           <div style={{ flex: 1 }} />
           <button
-            style={{ ...s.zoomResetBtn, background: showMeta ? HEADER_COLOR : 'transparent', color: showMeta ? '#fff' : '#6b7280', borderColor: showMeta ? HEADER_COLOR : '#d1d5db' }}
+            style={{ ...s.zoomResetBtn, background: showMeta ? HEADER_COLOR : 'transparent', color: showMeta ? '#fff' : '#8a8168', borderColor: showMeta ? HEADER_COLOR : '#d6ccb5' }}
             onClick={() => setShowMeta(v => !v)}
           >ℹ Info</button>
         </div>
@@ -1018,8 +1018,8 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 function MRow({ k, v }: { k: string; v: string }) {
   return (
     <div style={{ display: 'flex', gap: 6, padding: '2px 10px', borderBottom: '1px solid #f8fafc', minHeight: 20 }}>
-      <span style={{ fontSize: 10, color: '#6b7280', fontWeight: 600, flexShrink: 0, width: 72, paddingTop: 1 }}>{k}</span>
-      <span style={{ fontSize: 10, color: '#111827', flex: 1, wordBreak: 'break-all', paddingTop: 1 }} title={v}>{v}</span>
+      <span style={{ fontSize: 10, color: '#8a8168', fontWeight: 600, flexShrink: 0, width: 72, paddingTop: 1 }}>{k}</span>
+      <span style={{ fontSize: 10, color: '#2c2a24', flex: 1, wordBreak: 'break-all', paddingTop: 1 }} title={v}>{v}</span>
     </div>
   )
 }
@@ -1029,8 +1029,8 @@ function MRow({ k, v }: { k: string; v: string }) {
 const s = {
   card: {
     width: '100%', height: '100%', minWidth: 280, minHeight: 260,
-    background: '#fff', border: '1.5px solid #d1d5db', borderRadius: 8,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)', display: 'flex',
+    background: '#fffdf7', border: '1.5px solid #d6ccb5', borderRadius: 8,
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)', display: 'flex',
     flexDirection: 'column' as const, overflow: 'hidden',
   },
   header: {
@@ -1046,7 +1046,7 @@ const s = {
   },
   modeBtnActive: { background: 'rgba(255,255,255,0.25)', color: '#fff' },
   exampleBtn: {
-    background: 'transparent', color: '#9ca3af', border: '1px solid #e5e7eb',
+    background: 'transparent', color: '#b0a891', border: '1px solid #ece3d0',
     borderRadius: 3, padding: '1px 8px', fontSize: 10, cursor: 'pointer',
     fontStyle: 'italic' as const,
   },
@@ -1055,26 +1055,26 @@ const s = {
     borderBottom: '1px solid #f1f5f9', flexShrink: 0,
   },
   toolbarRow: { display: 'flex', alignItems: 'center', gap: 6 },
-  srcLabel: { fontSize: 10, color: '#9ca3af', fontWeight: 600, width: 28, flexShrink: 0 },
+  srcLabel: { fontSize: 10, color: '#b0a891', fontWeight: 600, width: 28, flexShrink: 0 },
   clearBtn: {
-    background: 'transparent', color: '#9ca3af', border: 'none', borderRadius: 3,
+    background: 'transparent', color: '#b0a891', border: 'none', borderRadius: 3,
     width: 18, height: 18, fontSize: 14, cursor: 'pointer', padding: 0,
     display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
     lineHeight: 1, fontWeight: 700,
   },
   fieldSelect: {
-    flex: 1, fontSize: 11, padding: '2px 4px', border: '1px solid #d1d5db',
+    flex: 1, fontSize: 11, padding: '2px 4px', border: '1px solid #d6ccb5',
     borderRadius: 4, outline: 'none', height: 24, fontFamily: 'monospace',
   },
   urlInput: {
-    flex: 1, fontSize: 11, padding: '2px 6px', border: '1px solid #d1d5db',
+    flex: 1, fontSize: 11, padding: '2px 6px', border: '1px solid #d6ccb5',
     borderRadius: 4, outline: 'none', height: 24, fontFamily: 'monospace', minWidth: 0,
   },
   loadBtn: {
     background: HEADER_COLOR, color: '#fff', border: 'none', borderRadius: 4,
     padding: '2px 10px', fontSize: 11, fontWeight: 600, cursor: 'pointer', flexShrink: 0, height: 24,
   },
-  hint: { fontSize: 11, color: '#9ca3af', fontStyle: 'italic' as const },
+  hint: { fontSize: 11, color: '#b0a891', fontStyle: 'italic' as const },
   navBar: {
     display: 'flex', alignItems: 'center', gap: 4, padding: '3px 10px',
     borderBottom: '1px solid #f1f5f9', flexShrink: 0, minHeight: 26,
@@ -1083,20 +1083,20 @@ const s = {
     background: 'rgba(0,0,0,0.07)', border: 'none', borderRadius: 3,
     width: 18, height: 18, fontSize: 13, cursor: 'pointer', display: 'flex',
     alignItems: 'center', justifyContent: 'center', padding: 0, fontWeight: 700,
-    color: '#374151', flexShrink: 0,
+    color: '#33302a', flexShrink: 0,
   },
   navLabel: {
-    flex: 1, fontSize: 10, color: '#374151', fontWeight: 600,
+    flex: 1, fontSize: 10, color: '#33302a', fontWeight: 600,
     overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const,
   },
-  navCount:  { fontSize: 10, color: '#9ca3af', fontFamily: 'monospace', flexShrink: 0 },
+  navCount:  { fontSize: 10, color: '#b0a891', fontFamily: 'monospace', flexShrink: 0 },
   imageWrap: {
     flex: 1, overflowY: 'auto' as const, overflowX: 'auto' as const,
     display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
     minHeight: 0, background: '#f8fafc',
   },
   placeholder: {
-    padding: '30px 16px', color: '#9ca3af', fontSize: 11,
+    padding: '30px 16px', color: '#b0a891', fontSize: 11,
     fontStyle: 'italic' as const, textAlign: 'center' as const, alignSelf: 'center' as const,
   },
   errorMsg: {
@@ -1108,13 +1108,13 @@ const s = {
     borderTop: '1px solid #f1f5f9', flexShrink: 0,
   },
   zoomBtn: {
-    background: '#374151', color: '#fff', border: 'none', borderRadius: 3,
+    background: '#33302a', color: '#fff', border: 'none', borderRadius: 3,
     width: 20, height: 20, fontSize: 14, cursor: 'pointer', display: 'flex',
     alignItems: 'center', justifyContent: 'center', padding: 0, fontWeight: 700, lineHeight: 1,
   },
-  zoomLabel:    { fontSize: 10, color: '#374151', fontFamily: 'monospace', minWidth: 32, textAlign: 'center' as const },
+  zoomLabel:    { fontSize: 10, color: '#33302a', fontFamily: 'monospace', minWidth: 32, textAlign: 'center' as const },
   zoomResetBtn: {
-    background: 'transparent', color: '#6b7280', border: '1px solid #d1d5db',
+    background: 'transparent', color: '#8a8168', border: '1px solid #d6ccb5',
     borderRadius: 3, padding: '1px 6px', fontSize: 10, cursor: 'pointer', marginLeft: 2,
   },
   metaPanel: {
@@ -1125,14 +1125,14 @@ const s = {
     background:  '#fafafa',
   },
   metaHint: {
-    padding: '6px 10px', fontSize: 10, color: '#9ca3af', fontStyle: 'italic' as const,
+    padding: '6px 10px', fontSize: 10, color: '#b0a891', fontStyle: 'italic' as const,
   },
   regionBar: {
     display: 'flex', alignItems: 'center', gap: 6, padding: '4px 10px',
     borderBottom: '1px solid #f1f5f9', flexShrink: 0, background: '#f8fafc',
   },
   regionBtn: {
-    background: 'transparent', color: '#374151', border: '1px solid #d1d5db',
+    background: 'transparent', color: '#33302a', border: '1px solid #d6ccb5',
     borderRadius: 3, padding: '2px 8px', fontSize: 10, fontWeight: 600,
     cursor: 'pointer', flexShrink: 0,
   },

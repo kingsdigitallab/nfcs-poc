@@ -99,7 +99,7 @@ export function TopBar({
           <em style={{ fontFamily: 'Georgia, "Times New Roman", serif', fontStyle: 'italic', fontWeight: 400 }}>Arts &amp; Humanities</em>
         </span>
         <span
-          style={{ fontSize: 9, color: authorMode ? '#f59e0b' : '#9ca3af', letterSpacing: '0.02em', cursor: 'default', userSelect: 'none' }}
+          style={{ fontSize: 9, color: authorMode ? '#f59e0b' : '#b0a891', letterSpacing: '0.02em', cursor: 'default', userSelect: 'none' }}
           onClick={handleVersionClick}
           title={authorMode ? 'Author mode ON — click 5× to toggle' : undefined}
         >
@@ -118,7 +118,7 @@ export function TopBar({
       </button>
       {authorMode && (
         <button
-          style={{ ...templateBtnStyle, background: '#78350f', color: '#fef3c7', borderColor: '#92400e' }}
+          style={{ ...templateBtnStyle, background: '#6f4a25', color: '#fef3c7', borderColor: '#6f4a25' }}
           onClick={() => setExampleDialog({ title: '', description: '' })}
           title="Save current workflow as a loadable example (author mode)"
           disabled={nodes.length === 0}
@@ -174,7 +174,7 @@ export function TopBar({
                 value={exampleDialog.title}
                 onChange={e => setExampleDialog(d => d ? { ...d, title: e.target.value } : null)}
                 placeholder="e.g. GBIF species search"
-                style={{ fontSize: 12, padding: '5px 8px', borderRadius: 5, border: '1px solid #4b5563', background: '#111827', color: '#e2e8f0', outline: 'none' }}
+                style={{ fontSize: 12, padding: '5px 8px', borderRadius: 5, border: '1px solid #4b5563', background: '#2c2a24', color: '#e2e8f0', outline: 'none' }}
                 onKeyDown={e => { if (e.key === 'Enter') handleSaveExample(); if (e.key === 'Escape') setExampleDialog(null) }}
               />
             </label>
@@ -184,21 +184,21 @@ export function TopBar({
                 value={exampleDialog.description}
                 onChange={e => setExampleDialog(d => d ? { ...d, description: e.target.value } : null)}
                 placeholder="One-line summary of what this workflow demonstrates"
-                style={{ fontSize: 12, padding: '5px 8px', borderRadius: 5, border: '1px solid #4b5563', background: '#111827', color: '#e2e8f0', outline: 'none' }}
+                style={{ fontSize: 12, padding: '5px 8px', borderRadius: 5, border: '1px solid #4b5563', background: '#2c2a24', color: '#e2e8f0', outline: 'none' }}
                 onKeyDown={e => { if (e.key === 'Escape') setExampleDialog(null) }}
               />
             </label>
             <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
               <button
                 onClick={() => setExampleDialog(null)}
-                style={{ fontSize: 12, padding: '5px 14px', borderRadius: 5, border: '1px solid #4b5563', background: 'none', color: '#9ca3af', cursor: 'pointer' }}
+                style={{ fontSize: 12, padding: '5px 14px', borderRadius: 5, border: '1px solid #4b5563', background: 'none', color: '#b0a891', cursor: 'pointer' }}
               >
                 Cancel
               </button>
               <button
                 onClick={handleSaveExample}
                 disabled={!exampleDialog.title.trim()}
-                style={{ fontSize: 12, padding: '5px 14px', borderRadius: 5, border: 'none', background: '#92400e', color: '#fef3c7', cursor: 'pointer', fontWeight: 600 }}
+                style={{ fontSize: 12, padding: '5px 14px', borderRadius: 5, border: 'none', background: '#6f4a25', color: '#fef3c7', cursor: 'pointer', fontWeight: 600 }}
               >
                 Save
               </button>
@@ -230,7 +230,7 @@ export function TopBar({
               </button>
             )}
             {selected.length > 0 && (
-              <span style={{ fontSize: 11, color: '#6b7280', marginRight: 4 }}>
+              <span style={{ fontSize: 11, color: '#8a8168', marginRight: 4 }}>
                 {selected.length} selected
               </span>
             )}
@@ -246,7 +246,7 @@ export function TopBar({
       <UsefulLinksModal />
       {import.meta.env.DEV && <FixturePreflightPanel />}
       <button
-        style={{ ...templateBtnStyle, background: !simpleMode ? '#312e81' : undefined, color: !simpleMode ? '#fff' : undefined, borderColor: !simpleMode ? '#312e81' : undefined }}
+        style={{ ...templateBtnStyle, background: !simpleMode ? '#2c3d54' : undefined, color: !simpleMode ? '#fff' : undefined, borderColor: !simpleMode ? '#2c3d54' : undefined }}
         onClick={onToggleSimpleMode}
         title={simpleMode
           ? 'Simple mode — specialised/alpha nodes hidden. Click for Advanced.'
@@ -255,14 +255,14 @@ export function TopBar({
         {simpleMode ? '◐ Simple' : '◑ Advanced'}
       </button>
       <button
-        style={{ ...templateBtnStyle, background: snapEnabled ? '#0f4c81' : undefined, color: snapEnabled ? '#fff' : undefined, borderColor: snapEnabled ? '#0f4c81' : undefined }}
+        style={{ ...templateBtnStyle, background: snapEnabled ? '#2f4a6b' : undefined, color: snapEnabled ? '#fff' : undefined, borderColor: snapEnabled ? '#2f4a6b' : undefined }}
         onClick={onToggleSnap}
         title={snapEnabled ? 'Grid snap ON — click to disable' : 'Grid snap OFF — click to enable (20px grid)'}
       >
         {snapEnabled ? '⊞ Snap' : '⊟ Snap'}
       </button>
       <button
-        style={{ ...templateBtnStyle, background: chatOpen ? '#881337' : undefined, color: chatOpen ? '#fff' : undefined, borderColor: chatOpen ? '#881337' : undefined }}
+        style={{ ...templateBtnStyle, background: chatOpen ? '#7a2f2f' : undefined, color: chatOpen ? '#fff' : undefined, borderColor: chatOpen ? '#7a2f2f' : undefined }}
         onClick={onToggleChat}
         title="Toggle KCL Assistant chat"
       >

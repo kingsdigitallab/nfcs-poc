@@ -29,7 +29,7 @@ export interface DeduplicateNodeData {
 
 // ─── component ────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#0f766e'  // teal-700
+const HEADER_COLOR = '#2f6660'  // teal-700
 
 export function DeduplicateNode({ id }: NodeProps) {
   const { updateNodeData, getNodes, getEdges: snap } = useReactFlow()
@@ -116,11 +116,11 @@ export function DeduplicateNode({ id }: NodeProps) {
 
 const S = {
   card: {
-    background:   '#fff',
-    border:       '1.5px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '1.5px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     280,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
   },
   header: {
@@ -155,27 +155,27 @@ const S = {
   label: {
     fontSize:   11,
     fontWeight: 600,
-    color:      '#374151',
+    color:      '#33302a',
   },
   sel: {
     fontSize:     11,
     padding:      '3px 5px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 3,
-    background:   '#f9fafb',
+    background:   '#faf6ec',
     outline:      'none',
     height:       24,
     width:        '100%',
   },
   hint: {
     fontSize:  10,
-    color:     '#6b7280',
+    color:     '#8a8168',
     margin:    0,
     lineHeight: 1.4,
   },
   emptyHint: {
     fontSize:  10,
-    color:     '#9ca3af',
+    color:     '#b0a891',
     fontStyle: 'italic' as const,
     margin:    0,
   },

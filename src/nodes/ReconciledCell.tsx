@@ -148,14 +148,14 @@ export function SelectableReconciledPill({
             top:          pos.y,
             left:         pos.x,
             zIndex:       9999,
-            background:   '#fff',
-            border:       '1px solid #e5e7eb',
+            background:   '#fffdf7',
+            border:       '1px solid #ece3d0',
             borderRadius: 6,
             boxShadow:    '0 4px 16px rgba(0,0,0,0.15)',
             minWidth:     240,
             overflow:     'hidden',
           }}>
-            <div style={{ fontSize: 10, color: '#6b7280', padding: '5px 10px', borderBottom: '1px solid #f3f4f6', fontWeight: 600 }}>
+            <div style={{ fontSize: 10, color: '#8a8168', padding: '5px 10px', borderBottom: '1px solid #f3f4f6', fontWeight: 600 }}>
               Choose reconciliation match
             </div>
             {value.candidates.map(c => {
@@ -172,16 +172,16 @@ export function SelectableReconciledPill({
                     padding:    '6px 10px',
                     background: active ? '#f0fdf4' : 'transparent',
                     border:     'none',
-                    borderBottom: '1px solid #f9fafb',
+                    borderBottom: '1px solid #faf6ec',
                     cursor:     'pointer',
                     textAlign:  'left',
                     fontSize:   11,
                   }}
                 >
-                  <span style={{ flexShrink: 0, width: 8, height: 8, borderRadius: '50%', background: active ? '#22c55e' : '#d1d5db' }} />
-                  <span style={{ fontWeight: 600, color: '#111827', flexGrow: 1 }}>{c.label}</span>
-                  <span style={{ color: '#9ca3af', fontSize: 10, flexShrink: 0 }}>{c.qid}</span>
-                  <span style={{ color: '#6b7280', fontSize: 10, flexShrink: 0, marginLeft: 4 }}>
+                  <span style={{ flexShrink: 0, width: 8, height: 8, borderRadius: '50%', background: active ? '#22c55e' : '#d6ccb5' }} />
+                  <span style={{ fontWeight: 600, color: '#2c2a24', flexGrow: 1 }}>{c.label}</span>
+                  <span style={{ color: '#b0a891', fontSize: 10, flexShrink: 0 }}>{c.qid}</span>
+                  <span style={{ color: '#8a8168', fontSize: 10, flexShrink: 0, marginLeft: 4 }}>
                     {Math.round(c.score * 100)}%
                   </span>
                 </button>
@@ -230,7 +230,7 @@ export function renderCell(
       <>
         {val.map((item, i) => (
           <span key={i}>
-            {i > 0 && <span style={{ color: '#9ca3af' }}>, </span>}
+            {i > 0 && <span style={{ color: '#b0a891' }}>, </span>}
             {isUrl(item) ? <ExternalLink href={item} /> : String(item)}
           </span>
         ))}

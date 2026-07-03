@@ -13,7 +13,7 @@ import { useState } from 'react'
 import { Handle, Position, NodeProps } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 
-const HEADER_COLOR = '#0f172a'  // very dark slate
+const HEADER_COLOR = '#202d47'  // very dark slate
 
 interface OllamaRecord {
   id: string
@@ -125,7 +125,7 @@ export function OllamaOutputNode({ id }: NodeProps) {
                   </div>
                   <div style={styles.cardActions}>
                     <button
-                      style={{ ...styles.actionBtn, color: copied === rec.id ? '#16a34a' : '#6b7280' }}
+                      style={{ ...styles.actionBtn, color: copied === rec.id ? '#16a34a' : '#8a8168' }}
                       onClick={() => copyResponse(rec.id, response)}
                       title="Copy response"
                       className="nodrag"
@@ -175,12 +175,12 @@ export function OllamaOutputNode({ id }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '1.5px solid #d1d5db',
+    background: '#fffdf7',
+    border: '1.5px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 380,
     maxWidth: 540,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     overflow: 'hidden',
   },
   header: {
@@ -212,7 +212,7 @@ const styles = {
   },
   placeholder: {
     padding: '20px 16px',
-    color: '#9ca3af',
+    color: '#b0a891',
     fontSize: 12,
     fontStyle: 'italic' as const,
     textAlign: 'center' as const,
@@ -274,7 +274,7 @@ const styles = {
   },
   responseText: {
     fontSize: 12,
-    color: '#374151',
+    color: '#33302a',
     lineHeight: 1.65,
     whiteSpace: 'pre-wrap' as const,
     wordBreak: 'break-word' as const,
