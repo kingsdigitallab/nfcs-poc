@@ -6,6 +6,7 @@
  */
 import type { NodeProps } from '@xyflow/react'
 import { BackboneSearchNode, type BackboneSearchConfig } from './BackboneSearchNode'
+import { NODE_IDENTITY, deriveBackboneTheme } from '../styles/theme'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export type MDSStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
@@ -26,15 +27,7 @@ export interface MDSSearchNodeData {
 export const MDS_CONFIG: BackboneSearchConfig = {
   nodeType: 'mdsSearch',
   title:    'MDS Search',
-  theme: {
-    header:       '#1e3a8a',  // dark navy — distinct from all other nodes
-    runBtn:       '#1e40af',
-    accentBg:     '#eff6ff',  // unused (no filter panel) — kept for theme completeness
-    accentBorder: '#bfdbfe',
-    sectionBg:    '#eff6ff',
-    clearBtn:     '#1e40af',
-    fixtureIcon:  '#1e3a8a',
-  },
+  theme: deriveBackboneTheme(NODE_IDENTITY.mdsSearch),
   queryLabel:       'q',
   queryPlaceholder: 'e.g. Roman coin',
   minWidth:         240,

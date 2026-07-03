@@ -77,7 +77,7 @@ describe('LLDS config (task-SN.2 parity)', () => {
     expect(serialisedFilterKeys(LLDS_CONFIG)).toEqual([])
     expect(LLDS_CONFIG.footer?.extraToggle?.key).toBe('useCache')
     expect(LLDS_CONFIG.footer?.extraToggle?.cachedLabel).toBe('📦 cached')
-    expect(LLDS_CONFIG.statusColours?.cached).toBe('#f59e0b')
+    expect(LLDS_CONFIG.statusColours?.cached).toBe('#b3862f')
   })
 })
 
