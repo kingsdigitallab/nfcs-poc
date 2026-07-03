@@ -1,8 +1,31 @@
 # Workflow Context Accrual — Design
 
-**Status: design only.** Nothing in this document is implemented yet. It specifies a
-mechanism that can be built in a later pass with **zero changes to the `NodeRunner`
-signature** and no rewrites of existing runners.
+**Status: implemented** (refactor-v3 wave 2, tasks CA.1–CA.5) — with zero changes to
+the `NodeRunner` signature, exactly as designed. Corrections discovered during
+implementation, superseding the design text below where they conflict:
+
+- **Six opt-in sites, not three.** Each LLM node duplicates its run loop in the
+  component `handleRun` (components do NOT call the runner), so the `{{_lineage}}`
+  spread lives in `runKCLNode`/`runOllamaNode`/`runEvaluatorNode` **and**
+  `KCLNode`/`OllamaNode`/`EvaluatorNode`. Components derive lineage from
+  `useNodes()`/`useEdges()` values.
+- **ChatSidebar gets `nodes`/`edges` as props from App**, not via `useReactFlow` —
+  there is no `ReactFlowProvider` in the tree and the sidebar renders outside
+  `<ReactFlow>`. The CURRENT CANVAS section is appended to the outgoing system
+  message per send only (never persisted), so `SYSTEM_VERSION` needed no bump.
+- **`configFingerprint` exact staleness is deferred**: the LLM nodes bypass
+  `finishRunnerSuccess`, so a stamp there would miss precisely the nodes this
+  feature targets. The §7 heuristic (never-ran, or `resultsVersion` claimed with an
+  empty store) is what shipped.
+- **Count keys are inconsistent across runners** (reconciliation
+  `resolvedCount`/`reviewCount`, geocoding bare `resolved`/`pending`/`failed`, merge
+  `mergedCount`/`unmatchedCount`, search `count`); `lineageDescribers.ts` pins the
+  real names and its test suite fails if a runner renames one.
+- **KCLFieldNode/OllamaFieldNode are not wired** — their field-mode templates have
+  their own token sets; follow-up.
+
+Code: `src/utils/lineage.ts` (walker + narrative), `src/utils/lineageDescribers.ts`
+(registry), tests in `src/__tests__/lineage.test.ts` / `lineageDescribers.test.ts`.
 
 ## 1. Problem
 

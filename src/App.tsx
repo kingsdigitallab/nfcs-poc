@@ -192,7 +192,7 @@ export default function App() {
         </div>
 
         {/* Right chat sidebar — outside ReactFlow so it doesn't scale with canvas zoom */}
-        <ChatSidebar isOpen={chatOpen} onToggle={() => setChatOpen(v => !v)} />
+        <ChatSidebar isOpen={chatOpen} onToggle={() => setChatOpen(v => !v)} nodes={nodes} edges={edges} />
       </div>
 
       {/* Connection suggestion popup — fixed-position so it's unaffected by canvas zoom */}

@@ -84,7 +84,10 @@ src/
 ├── components/
 │   ├── TopBar.tsx               # Title, save/load, notes, grouping, mode toggles, Run All (author-mode + example dialog internal)
 │   ├── Sidebar.tsx              # Node palette: search, collapsible TaDiRAH groups, Experimental section
-│   └── …                        # ChatSidebar, ConnectionSuggestions, modals, …
+│   └── …                        # ChatSidebar (takes nodes/edges as props — no ReactFlowProvider
+│                                # exists, so RF hooks don't work there; appends a live CURRENT
+│                                # CANVAS lineage section to the system prompt per send),
+│                                # ConnectionSuggestions, modals, …
 ├── hooks/
 │   ├── useWorkflowIO.ts         # save/applyWorkflow/load + workflowId + loadError
 │   ├── useGrouping.ts           # group/ungroup + auto-resize effect (debounce/tolerance comments preserved)

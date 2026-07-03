@@ -1,8 +1,12 @@
 import { useState, useEffect, useRef, useCallback, createContext, useContext } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import type { Edge, Node } from '@xyflow/react'
 import { filterKCLModels, DEFAULT_KCL_API_KEY } from '../utils/kclConfig'
 import { STORAGE_KEYS } from '../config/storageKeys'
+import { collectLineage, lineageToNarrative } from '../utils/lineage'
+import { describeNode } from '../utils/lineageDescribers'
+import { SIDEBAR_ITEMS } from '../config/sidebarItems'
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
@@ -119,6 +123,54 @@ interface Message {
 interface Props {
   isOpen: boolean
   onToggle: () => void
+  /** Live canvas state, passed as props from App (there is no ReactFlowProvider
+   *  above this component, so useReactFlow/useNodes are not available here). */
+  nodes: Node[]
+  edges: Edge[]
+}
+
+// ── Live canvas grounding ──────────────────────────────────────────────────────
+// Appended to the outgoing system message on each send — NOT persisted into the
+// localStorage-cached systemPrompt, so SYSTEM_VERSION needs no bump.
+
+const CANVAS_CONTEXT_BUDGET = 1500
+const DATA_TARGET_HANDLES = new Set(['data', 'results'])
+const LABEL_BY_TYPE = new Map<string, string>(SIDEBAR_ITEMS.map(i => [i.type as string, i.label]))
+const NON_PIPELINE_TYPES = new Set(['comment', 'param', 'group', 'quickStart'])
+
+function buildCanvasContext(nodes: Node[], edges: Edge[]): string {
+  const pipelineNodes = nodes.filter(n => !NON_PIPELINE_TYPES.has(n.type ?? ''))
+  if (pipelineNodes.length === 0) return ''
+
+  const countByLabel = new Map<string, number>()
+  for (const n of pipelineNodes) {
+    const label = LABEL_BY_TYPE.get(n.type ?? '') ?? n.type ?? '?'
+    countByLabel.set(label, (countByLabel.get(label) ?? 0) + 1)
+  }
+  const inventory = [...countByLabel.entries()]
+    .map(([label, count]) => (count > 1 ? `${count}× ${label}` : label))
+    .join(', ')
+
+  // Terminal nodes: receive data but feed nothing further — pipeline endpoints.
+  const dataEdges = edges.filter(e => DATA_TARGET_HANDLES.has(e.targetHandle ?? ''))
+  const sources = new Set(dataEdges.map(e => e.source))
+  const targets = new Set(dataEdges.map(e => e.target))
+  const terminals = pipelineNodes.filter(n => targets.has(n.id) && !sources.has(n.id))
+
+  const blocks = [`CURRENT CANVAS (live workflow state, derived just now):\nNodes: ${inventory}.`]
+  const shown = terminals.slice(0, 3)
+  shown.forEach((t, i) => {
+    const narrative = lineageToNarrative(collectLineage(t.id, nodes, edges), { maxChars: 380 })
+    const label = LABEL_BY_TYPE.get(t.type ?? '') ?? t.type
+    blocks.push(`Pipeline ${i + 1} — ends at ${label} (${describeNode(t)})\n${narrative || '(no upstream steps recorded)'}`)
+  })
+  if (terminals.length > shown.length) {
+    blocks.push(`(+${terminals.length - shown.length} further pipeline endpoints not shown)`)
+  }
+
+  // Budget: drop trailing pipeline blocks whole; the inventory line always stays.
+  while (blocks.join('\n\n').length > CANVAS_CONTEXT_BUDGET && blocks.length > 1) blocks.pop()
+  return `\n\n${blocks.join('\n\n')}`
 }
 
 // ── Markdown renderer ──────────────────────────────────────────────────────────
@@ -185,7 +237,7 @@ function MdContent({ children }: { children: string }) {
 
 // ── Component ──────────────────────────────────────────────────────────────────
 
-export function ChatSidebar({ isOpen, onToggle }: Props) {
+export function ChatSidebar({ isOpen, onToggle, nodes, edges }: Props) {
   const apiKey                          = DEFAULT_KCL_API_KEY
   const [model, setModel]               = useState(() => localStorage.getItem(STORAGE_KEYS.CHAT_MODEL) ?? '')
   const [systemPrompt, setSystemPrompt] = useState(() => {
@@ -270,7 +322,7 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
           temperature,
           max_tokens:  maxTokens,
           messages: [
-            { role: 'system', content: systemPrompt },
+            { role: 'system', content: systemPrompt + buildCanvasContext(nodes, edges) },
             ...history.map(m => ({ role: m.role, content: m.content })),
           ],
         }),
@@ -335,7 +387,7 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
     } finally {
       setIsLoading(false)
     }
-  }, [inputText, isLoading, apiKey, model, systemPrompt, temperature, maxTokens, messages])
+  }, [inputText, isLoading, apiKey, model, systemPrompt, temperature, maxTokens, messages, nodes, edges])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
