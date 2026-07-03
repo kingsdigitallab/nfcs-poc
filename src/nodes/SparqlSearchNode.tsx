@@ -16,9 +16,13 @@
  * Wikidata-only this pass: the runner talks to /wdqs-proxy, which adds the
  * User-Agent WDQS requires. Other SPARQL endpoints are a follow-up.
  */
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/react'
 import { nodeRunners } from '../utils/nodeRunners'
+import { filterKCLModels, KCL_MODEL_IDS } from '../utils/kclConfig'
+import { EntityAutocomplete, EntityOptionPopover, type EntityOption } from '../components/EntityAutocomplete'
+import { groundSparqlEntities, substituteQids, type EntityCheck } from '../utils/sparqlEntityGround'
+import { SPARQL_ENDPOINTS, getEndpoint } from '../utils/sparqlEndpoints'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 import { PROPERTY_GROUPS } from '../utils/wikidataApi'
 import {
@@ -30,6 +34,9 @@ import type { UnifiedRecord } from '../types/UnifiedRecord'
 export type SparqlStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface SparqlSearchNodeData {
+  /** SPARQL endpoint id (see sparqlEndpoints.ts). Absent = Wikidata, so
+   *  workflows saved before the endpoint dropdown load unchanged. */
+  endpoint?:     string
   /** Keyword seed — names fixtures; in builder mode also the mwapi EntitySearch seed. */
   inlineQuery:   string
   inlineLimit:   string
@@ -38,6 +45,11 @@ export interface SparqlSearchNodeData {
   /** NL assist input + the explanation of the last generated query. */
   nlQuery:       string
   nlExplanation?: string
+  /** ARC model used for the NL→SPARQL assist (arc:nano | arc:lite | arc:nexus | arc:apex). */
+  assistModel?:  string
+  /** Per-entity verification report from the last NL assist run (✓/⚠/✗ rows).
+   *  Cleared by builder regen — a regenerated query invalidates the report. */
+  nlEntityReport?: EntityCheck[]
   /** The SPARQL query the runner executes (builder-generated or hand-written). */
   sparqlQuery:   string
   queryMode?:    'builder' | 'raw'
@@ -81,6 +93,10 @@ const STATUS_BADGE: Record<SparqlStatus, string> = {
 
 const PID_LIST = /^\s*(P\d+\s*(,\s*P\d+\s*)*)?$/i
 
+/** Curated properties as instant seed suggestions for the property search. */
+const PROPERTY_SEEDS = PROPERTY_GROUPS.flatMap(g =>
+  g.properties.map(p => ({ qid: p.id, label: p.label })))
+
 function parseCustomColumns(raw: string): string[] {
   return raw.split(',').map(s => s.trim().toUpperCase()).filter(s => /^P\d+$/.test(s))
 }
@@ -90,27 +106,37 @@ function parseCustomColumns(raw: string): string[] {
 // kclChat helper is module-private elsewhere; consolidation is a follow-up.
 
 const KCL_CHAT     = '/kcl-proxy/v1/chat/completions'
-const ASSIST_MODEL = 'arc:lite'
+const KCL_MODELS   = '/kcl-proxy/v1/models'
+const DEFAULT_ASSIST_MODEL = 'arc:lite'
 
 const ASSIST_SYSTEM = `You translate natural-language research questions into Wikidata SPARQL queries.
-Respond with ONLY a JSON object: {"sparql": "<query>", "explanation": "<one plain-English sentence describing what the query finds>"}.
+Respond with ONLY a JSON object: {"sparql": "<query>", "explanation": "<one plain-English sentence describing what the query finds>", "entities": {"<QID>": "<the real-world name you mean by that QID>"}}.
+The "entities" map MUST list every wd:Q… id used in the query — it is used to verify your QIDs against Wikidata.
 Rules for the query:
 - SELECT DISTINCT ?item ?itemLabel ?itemDescription plus any other useful variables.
-- Use wdt: property paths and wd: entities; include SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }.
+- Use ONLY these prefixes, all built into the Wikidata Query Service — NEVER invent or declare others:
+  wd: wdt: p: ps: pq: rdfs: schema: skos: wikibase: bd:. (In particular there is no "desc:" prefix.)
+- Get labels and descriptions ONLY from the label service — do NOT query schema:description or any "desc:" term directly:
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } automatically binds ?itemLabel and ?itemDescription.
+- Classify with wdt:P31 (instance of); add wdt:P279* only when subclasses are wanted.
 - Bind coordinates (wdt:P625) as ?coords and images (wdt:P18) as ?image when relevant.
 - Do NOT include a LIMIT clause — the caller appends one.
-- Prefer simple, fast patterns; avoid unbounded property paths on large classes.`
+- Prefer simple, fast patterns; avoid unbounded property paths on large classes.
+
+Example — "show me all hillforts in england":
+{"sparql":"SELECT DISTINCT ?item ?itemLabel ?itemDescription ?coords ?image WHERE {\\n  ?item wdt:P31 wd:Q1040131 ;\\n        wdt:P17 wd:Q21 .\\n  OPTIONAL { ?item wdt:P625 ?coords. }\\n  OPTIONAL { ?item wdt:P18 ?image. }\\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \\"en\\". }\\n}","explanation":"Finds items that are hillforts (P31=Q1040131) located in England (P17=Q21), with coordinates and images where available.","entities":{"Q1040131":"hillfort","Q21":"England"}}`
 
 async function translateToSparql(
   apiKey: string,
+  model: string,
   request: string,
   signal: AbortSignal,
-): Promise<{ sparql: string; explanation: string }> {
+): Promise<{ sparql: string; explanation: string; entities: Record<string, string> }> {
   const res = await fetch(KCL_CHAT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
     body: JSON.stringify({
-      model:           ASSIST_MODEL,
+      model,
       stream:          false,
       temperature:     0.1,
       max_tokens:      1024,
@@ -127,12 +153,97 @@ async function translateToSparql(
   const raw = json.choices?.[0]?.message?.content ?? json.choices?.[0]?.text ?? ''
   // Strip markdown fences some models emit despite response_format
   const cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '').trim()
-  const parsed = JSON.parse(cleaned) as { sparql?: unknown; explanation?: unknown }
+  const parsed = JSON.parse(cleaned) as { sparql?: unknown; explanation?: unknown; entities?: unknown }
   if (typeof parsed.sparql !== 'string' || !parsed.sparql.trim()) throw new Error('No SPARQL in model response')
+  // Tolerant entities parse — a missing/garbled map degrades grounding to an
+  // existence-only check, never blocks the query.
+  const entities: Record<string, string> = {}
+  if (parsed.entities && typeof parsed.entities === 'object' && !Array.isArray(parsed.entities)) {
+    for (const [k, v] of Object.entries(parsed.entities as Record<string, unknown>)) {
+      if (/^Q\d+$/i.test(k) && typeof v === 'string' && v.trim()) entities[k.toUpperCase()] = v.trim()
+    }
+  }
   return {
     sparql:      parsed.sparql.trim(),
     explanation: typeof parsed.explanation === 'string' ? parsed.explanation : '',
+    entities,
   }
+}
+
+// ── NL entity report row (✓ verified / ⚠ replaced / ✗ missing) ───────────────
+
+function qidLink(qid: string) {
+  return (
+    <a
+      href={`https://www.wikidata.org/wiki/${qid}`}
+      target="_blank" rel="noreferrer" className="nodrag"
+      style={{ fontFamily: 'monospace', color: 'inherit' }}
+    >{qid}</a>
+  )
+}
+
+function EntityReportRow({ check, onPickAlternate }: {
+  check: EntityCheck
+  onPickAlternate: (check: EntityCheck, opt: EntityOption) => void
+}) {
+  const [open, setOpen] = useState(false)
+  const [rect, setRect] = useState({ left: 0, bottom: 0, width: 0 })
+
+  const hasAlternates = (check.alternates?.length ?? 0) > 0
+
+  const openPicker = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    if (!hasAlternates) return
+    const r = (e.currentTarget as HTMLElement).getBoundingClientRect()
+    setRect({ left: r.left, bottom: r.bottom, width: r.width })
+    setOpen(o => !o)
+  }
+
+  const base: React.CSSProperties = { fontSize: 10, lineHeight: 1.5, display: 'block' }
+
+  if (check.status === 'ok') {
+    return (
+      <span style={{ ...base, color: '#15803d' }}>
+        ✓ {qidLink(check.qid)} {check.actualLabel}
+        {check.declaredName && check.declaredName.toLowerCase() !== (check.actualLabel ?? '').toLowerCase()
+          ? <span style={{ color: '#6b7280' }}> (for “{check.declaredName}”)</span> : null}
+      </span>
+    )
+  }
+
+  if (check.status === 'replaced') {
+    return (
+      <>
+        <span
+          style={{ ...base, color: '#b45309', cursor: hasAlternates ? 'pointer' : 'default' }}
+          onClick={openPicker}
+          className="nodrag"
+          title={hasAlternates ? 'Click to choose a different entity' : undefined}
+        >
+          ⚠ {qidLink(check.qid)}{check.actualLabel ? ` “${check.actualLabel}”` : ' (no such entity)'} → {' '}
+          {qidLink(check.activeQid)} {check.replacedWith?.label}
+          {check.declaredName ? <span style={{ color: '#6b7280' }}> (from “{check.declaredName}”)</span> : null}
+          {hasAlternates && <span style={{ opacity: 0.6 }}> ▾</span>}
+        </span>
+        {open && (
+          <EntityOptionPopover
+            anchorRect={rect}
+            options={(check.alternates ?? []).map(a => ({ qid: a.id, label: a.label, description: a.description }))}
+            activeQid={check.activeQid}
+            header={`Choose entity for “${check.declaredName ?? check.qid}”`}
+            onPick={opt => { setOpen(false); onPickAlternate(check, opt) }}
+            onClose={() => setOpen(false)}
+          />
+        )}
+      </>
+    )
+  }
+
+  return (
+    <span style={{ ...base, color: '#ef4444' }}>
+      ✗ {qidLink(check.qid)} — no such entity{check.declaredName ? ` (“${check.declaredName}”: no match found)` : ''}
+    </span>
+  )
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -144,9 +255,33 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
   const [columnsOpen, setColumnsOpen] = useState(false)
   const [assistBusy, setAssistBusy]   = useState(false)
   const [assistError, setAssistError] = useState('')
+  const [models, setModels]           = useState<string[]>([])
   const assistAbort = useRef<AbortController | null>(null)
 
-  const mode          = d.queryMode ?? 'raw'   // factory sets 'builder'; pre-builder saves stay raw
+  const assistModel = d.assistModel ?? DEFAULT_ASSIST_MODEL
+
+  // Fetch the live ARC model list once an API key is present; fall back to the
+  // static four (nano/lite/nexus/apex) when unavailable. Mirrors SmartFilter/KCLNode.
+  useEffect(() => {
+    const apiKey = (d.apiKey ?? '').trim()
+    if (!apiKey) return
+    let cancelled = false
+    fetch(KCL_MODELS, { headers: { Authorization: `Bearer ${apiKey}` } })
+      .then(r => r.json())
+      .then((j: { data?: Array<{ id: string }> }) => {
+        if (cancelled) return
+        setModels(filterKCLModels(j.data?.map(m => m.id) ?? [], true))
+      })
+      .catch(() => { /* offline — the static fallback below covers the picker */ })
+    return () => { cancelled = true }
+  }, [d.apiKey])
+
+  const modelOptions = models.length > 0 ? models : [...KCL_MODEL_IDS]
+
+  const endpoint   = getEndpoint(d.endpoint)
+  const isWikidata = endpoint.wikidataFeatures
+  // Builder + NL assist are Wikidata-specific — other endpoints are raw-only.
+  const mode          = isWikidata ? (d.queryMode ?? 'raw') : 'raw'   // factory sets 'builder'; pre-builder saves stay raw
   const instanceOf    = d.builderInstanceOf ?? ''
   const subclasses    = d.builderSubclasses ?? false
   const filters       = d.builderFilters ?? []
@@ -175,7 +310,8 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
         ...parseCustomColumns((patch.builderCustomColumns as string | undefined) ?? d.builderCustomColumns ?? ''),
       ],
     }
-    updateNodeData(id, { ...patch, sparqlQuery: buildSparqlQuery(next), builderCustom: false })
+    // Regeneration replaces the query — a stale NL entity report must not describe it.
+    updateNodeData(id, { ...patch, sparqlQuery: buildSparqlQuery(next), builderCustom: false, nlEntityReport: undefined })
   }, [id, updateNodeData, d])
 
   const handleAssist = useCallback(async () => {
@@ -187,9 +323,28 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
     setAssistBusy(true)
     setAssistError('')
     try {
-      const { sparql, explanation } = await translateToSparql(apiKey, request, assistAbort.current.signal)
+      const { sparql, explanation, entities } =
+        await translateToSparql(apiKey, assistModel, request, assistAbort.current.signal)
+
+      // Ground the model's QIDs against live Wikidata — hallucinated/mismatched
+      // entities are auto-substituted and reported. Tolerant: any failure keeps
+      // the raw query with no report rather than blocking the assist.
+      let finalSparql = sparql
+      let report: EntityCheck[] | undefined
+      try {
+        const grounded = await groundSparqlEntities(sparql, entities, { signal: assistAbort.current.signal })
+        finalSparql = grounded.sparql
+        report = grounded.report
+      } catch { /* verification unavailable — keep the generated query as-is */ }
+
       // Land in Raw mode — the generated query is reviewable/editable before running.
-      updateNodeData(id, { sparqlQuery: sparql, nlExplanation: explanation, queryMode: 'raw', builderCustom: true })
+      updateNodeData(id, {
+        sparqlQuery:    finalSparql,
+        nlExplanation:  explanation,
+        nlEntityReport: report,
+        queryMode:      'raw',
+        builderCustom:  true,
+      })
     } catch (err) {
       if ((err as { name?: string }).name !== 'AbortError') {
         setAssistError(err instanceof Error ? err.message : String(err))
@@ -197,7 +352,43 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
     } finally {
       setAssistBusy(false)
     }
-  }, [id, updateNodeData, d.nlQuery, d.apiKey])
+  }, [id, updateNodeData, d.nlQuery, d.apiKey, assistModel])
+
+  /** Switch SPARQL endpoint. Non-Wikidata endpoints run raw-only; an empty or
+   *  builder-generated query is replaced by the endpoint's sample so the user
+   *  isn't left pointing Wikidata-shaped SPARQL at a different vocabulary. */
+  const handleEndpointChange = useCallback((endpointId: string) => {
+    const next = getEndpoint(endpointId)
+    const patch: Record<string, unknown> = { endpoint: endpointId, nlEntityReport: undefined }
+    if (!next.wikidataFeatures) {
+      patch.queryMode = 'raw'
+      const keepHandWritten = d.builderCustom === true && (d.sparqlQuery ?? '').trim() !== ''
+      if (!keepHandWritten && next.sampleQuery) {
+        patch.sparqlQuery = next.sampleQuery
+        patch.builderCustom = true
+      }
+    }
+    updateNodeData(id, patch)
+  }, [id, d.builderCustom, d.sparqlQuery, updateNodeData])
+
+  /** Swap one report entity for a user-chosen alternate — rewrites the query
+   *  text and the report entry in a single update. */
+  const handlePickAlternate = useCallback((check: EntityCheck, opt: EntityOption) => {
+    if (opt.qid === check.activeQid) return
+    const nextQuery  = substituteQids((d.sparqlQuery ?? ''), { [check.activeQid]: opt.qid })
+    const nextReport = (d.nlEntityReport ?? []).map(c => c.qid === check.qid
+      ? {
+          ...c,
+          activeQid: opt.qid,
+          // Restoring the model's original QID flips the row back to ok.
+          status: (opt.qid === c.qid ? 'ok' : 'replaced') as EntityCheck['status'],
+          replacedWith: opt.qid === c.qid
+            ? undefined
+            : { id: opt.qid, label: opt.label, description: opt.description },
+        }
+      : c)
+    updateNodeData(id, { sparqlQuery: nextQuery, nlEntityReport: nextReport, builderCustom: true })
+  }, [id, updateNodeData, d.sparqlQuery, d.nlEntityReport])
 
   const status      = d.status ?? 'idle'
   const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
@@ -250,25 +441,56 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
           </div>
         ))}
 
-        {/* NL → SPARQL assist */}
+        {/* Endpoint selector */}
         <div style={styles.row}>
+          <span style={styles.paramLabel}>endpoint</span>
+          <select
+            style={{ ...styles.select, flex: 1 }}
+            value={endpoint.id}
+            onChange={e => handleEndpointChange(e.target.value)}
+            className="nodrag"
+            title={endpoint.note ?? 'SPARQL service to query'}
+          >
+            {SPARQL_ENDPOINTS.map(ep => (
+              <option key={ep.id} value={ep.id} disabled={!ep.available} title={ep.note}>
+                {ep.label}{ep.available ? '' : ' (offline)'}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* NL → SPARQL assist (Wikidata only — grounding + prompt are Wikidata-shaped) */}
+        <div style={styles.row} title={isWikidata ? undefined : `NL assist is Wikidata-only — write raw SPARQL for ${endpoint.label}`}>
           <input
-            style={styles.inlineInput}
+            style={{ ...styles.inlineInput, opacity: isWikidata ? 1 : 0.45 }}
             value={d.nlQuery ?? ''}
             onChange={e => updateNodeData(id, { nlQuery: e.target.value })}
             onKeyDown={e => { if (e.key === 'Enter') handleAssist() }}
             placeholder="✨ describe your query in plain English…"
             className="nodrag"
-            disabled={assistBusy}
+            disabled={assistBusy || !isWikidata}
           />
-          <button
-            style={{ ...styles.assistBtn, opacity: assistBusy || !(d.nlQuery ?? '').trim() ? 0.5 : 1 }}
-            onClick={handleAssist}
-            disabled={assistBusy || !(d.nlQuery ?? '').trim()}
+          <select
+            style={{ ...styles.select, flexShrink: 0, opacity: isWikidata ? 1 : 0.45 }}
+            value={assistModel}
+            onChange={e => updateNodeData(id, { assistModel: e.target.value })}
             className="nodrag"
-            title={(d.apiKey ?? '').trim()
-              ? `Generate SPARQL from your description (KCL ${ASSIST_MODEL}); lands in Raw mode for review`
-              : 'Requires a KCL API key (shared from other KCL nodes)'}
+            title="ARC model used for NL→SPARQL translation"
+            disabled={assistBusy || !isWikidata}
+          >
+            {(modelOptions.includes(assistModel) ? modelOptions : [assistModel, ...modelOptions])
+              .map(m => <option key={m} value={m}>{m}</option>)}
+          </select>
+          <button
+            style={{ ...styles.assistBtn, opacity: assistBusy || !isWikidata || !(d.nlQuery ?? '').trim() ? 0.5 : 1 }}
+            onClick={handleAssist}
+            disabled={assistBusy || !isWikidata || !(d.nlQuery ?? '').trim()}
+            className="nodrag"
+            title={!isWikidata
+              ? `NL assist is Wikidata-only — write raw SPARQL for ${endpoint.label}`
+              : (d.apiKey ?? '').trim()
+                ? `Generate SPARQL from your description (KCL ${assistModel}); lands in Raw mode for review`
+                : 'Requires a KCL API key (shared from other KCL nodes)'}
           >
             {assistBusy ? '…' : '✨'}
           </button>
@@ -277,13 +499,22 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
         {d.nlExplanation && !assistError && (
           <span style={styles.explanation}>{d.nlExplanation}</span>
         )}
+        {!assistError && (d.nlEntityReport?.length ?? 0) > 0 && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+            {d.nlEntityReport!.map(check => (
+              <EntityReportRow key={check.qid} check={check} onPickAlternate={handlePickAlternate} />
+            ))}
+          </div>
+        )}
 
-        {/* Mode tabs */}
+        {/* Mode tabs — the Builder writes Wikidata-shaped SPARQL only */}
         <div style={styles.tabRow}>
           <button
-            style={{ ...styles.tab, ...(mode === 'builder' ? styles.tabActive : {}) }}
-            onClick={() => updateNodeData(id, { queryMode: 'builder' })}
+            style={{ ...styles.tab, ...(mode === 'builder' ? styles.tabActive : {}), opacity: isWikidata ? 1 : 0.45 }}
+            onClick={() => { if (isWikidata) updateNodeData(id, { queryMode: 'builder' }) }}
+            disabled={!isWikidata}
             className="nodrag"
+            title={isWikidata ? undefined : `The builder is Wikidata-only — use Raw SPARQL for ${endpoint.label}`}
           >◧ Builder</button>
           <button
             style={{ ...styles.tab, ...(mode === 'raw' ? styles.tabActive : {}) }}
@@ -294,22 +525,18 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
 
         {mode === 'builder' && (
           <>
-            {/* Find: instance-of */}
+            {/* Find: instance-of — live Wikidata entity lookup */}
             <div style={styles.row}>
               <span style={styles.paramLabel}>find</span>
-              <input
-                list={`${id}-classes`}
-                style={styles.inlineInput}
+              <EntityAutocomplete
                 value={instanceOf}
-                onChange={e => regen({ builderInstanceOf: e.target.value })}
-                placeholder="type Q-id or pick, e.g. Q3305213"
-                className="nodrag"
+                onChange={v => regen({ builderInstanceOf: v })}
+                onSelect={o => regen({ builderInstanceOf: o.qid })}
+                placeholder="type a name, e.g. painting…"
+                seedSuggestions={INSTANCE_CLASS_SUGGESTIONS.map(c => ({ qid: c.qid, label: c.label }))}
+                emptyHint="no matching Wikidata class"
+                inputStyle={styles.inlineInput}
               />
-              <datalist id={`${id}-classes`}>
-                {INSTANCE_CLASS_SUGGESTIONS.map(c => (
-                  <option key={c.qid} value={c.qid}>{c.label}</option>
-                ))}
-              </datalist>
             </div>
             <label style={styles.checkLabel} className="nodrag">
               <input
@@ -321,30 +548,27 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
               include subclasses (P31/P279*)
             </label>
 
-            {/* Property filter rows */}
+            {/* Property filter rows — live property search (wbsearchentities
+                type=property); curated PROPERTY_GROUPS appear as instant seeds. */}
             {filters.map(f => (
               <div key={f.id} style={styles.row}>
-                <select
-                  style={{ ...styles.select, flex: '0 0 118px' }}
+                <EntityAutocomplete
                   value={f.property}
-                  onChange={e => regen({ builderFilters: filters.map(x => x.id === f.id ? { ...x, property: e.target.value } : x) })}
-                  className="nodrag"
-                >
-                  <option value="">— property —</option>
-                  {PROPERTY_GROUPS.map(g => (
-                    <optgroup key={g.label} label={g.label}>
-                      {g.properties.map(p => (
-                        <option key={p.id} value={p.id}>{p.label} ({p.id})</option>
-                      ))}
-                    </optgroup>
-                  ))}
-                </select>
-                <input
-                  style={styles.inlineInput}
+                  onChange={v => regen({ builderFilters: filters.map(x => x.id === f.id ? { ...x, property: v } : x) })}
+                  onSelect={o => regen({ builderFilters: filters.map(x => x.id === f.id ? { ...x, property: o.qid } : x) })}
+                  placeholder="property, e.g. time period"
+                  searchType="property"
+                  seedSuggestions={PROPERTY_SEEDS}
+                  emptyHint="no matching property"
+                  inputStyle={{ ...styles.inlineInput, flex: '0 0 96px' }}
+                />
+                <EntityAutocomplete
                   value={f.value}
-                  onChange={e => regen({ builderFilters: filters.map(x => x.id === f.id ? { ...x, value: e.target.value } : x) })}
-                  placeholder="Q-id (exact) or text (contains)"
-                  className="nodrag"
+                  onChange={v => regen({ builderFilters: filters.map(x => x.id === f.id ? { ...x, value: v } : x) })}
+                  onSelect={o => regen({ builderFilters: filters.map(x => x.id === f.id ? { ...x, value: o.qid } : x) })}
+                  placeholder="name, Q-id, or text (contains)"
+                  emptyHint="no entity match — text will filter as CONTAINS"
+                  inputStyle={styles.inlineInput}
                 />
                 <button
                   style={styles.removeBtn}
@@ -425,7 +649,7 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
 
         {mode === 'raw' && (
           <>
-            <span style={styles.sectionLabel}>SPARQL — Wikidata Query Service</span>
+            <span style={styles.sectionLabel}>SPARQL — {endpoint.citation.service}</span>
             <textarea
               style={styles.queryArea}
               value={d.sparqlQuery ?? ''}

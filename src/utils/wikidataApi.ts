@@ -88,8 +88,9 @@ interface WDStatement { mainsnak: WDSnak; rank: string }
 interface WDEntity    {
   id: string
   missing?: string
-  labels?: Record<string, { value: string }>
-  claims?: Record<string, WDStatement[]>
+  labels?:       Record<string, { value: string }>
+  descriptions?: Record<string, { value: string }>
+  claims?:       Record<string, WDStatement[]>
 }
 
 // ─── value parsing ────────────────────────────────────────────────────────────
@@ -128,19 +129,31 @@ function parseValue(dv: WDDatavalue): { raw: string; isQID: boolean } | null {
 
 // ─── API fetch helpers ────────────────────────────────────────────────────────
 
-async function fetchWDEntities(ids: string[]): Promise<Record<string, WDEntity>> {
-  if (ids.length === 0) return {}
+interface WDEntitiesBody {
+  entities?: Record<string, WDEntity>
+  /** Top-level error, e.g. code 'no-such-entity' with the offending `id` for
+   *  ids OUTSIDE Wikidata's valid range (in-range nonexistent ids get a
+   *  per-entity `missing` marker instead — both shapes verified live). */
+  error?: { code?: string; id?: string }
+}
+
+async function fetchWDEntitiesBody(ids: string[], props: string): Promise<WDEntitiesBody> {
+  if (ids.length === 0) return { entities: {} }
   const url = new URL(WD_API)
   url.searchParams.set('action',    'wbgetentities')
   url.searchParams.set('ids',       ids.join('|'))
-  url.searchParams.set('props',     'claims|labels')
+  url.searchParams.set('props',     props)
   url.searchParams.set('languages', 'en')
   url.searchParams.set('format',    'json')
   url.searchParams.set('origin',    '*')
   const res = await fetchWithTimeout(url.toString())
   if (!res.ok) throw new Error(`Wikidata API ${res.status}`)
-  const data = await res.json() as { entities: Record<string, WDEntity> }
-  return data.entities
+  return await res.json() as WDEntitiesBody
+}
+
+async function fetchWDEntities(ids: string[], props = 'claims|labels'): Promise<Record<string, WDEntity>> {
+  const body = await fetchWDEntitiesBody(ids, props)
+  return body.entities ?? {}
 }
 
 async function resolveLabels(qids: string[]): Promise<Map<string, string>> {
@@ -202,4 +215,115 @@ export async function fetchWikidataProperties(
   }
 
   return result
+}
+
+// ─── entity search (wbsearchentities) ─────────────────────────────────────────
+
+export interface EntitySuggestion {
+  id:           string
+  label:        string
+  description?: string
+}
+
+export interface EntityLabel {
+  label:        string
+  description?: string
+}
+
+// Session caches: labels are stable within a session, so repeated lookups
+// (chip re-renders, repeated grounding runs) never refetch. Missing entities
+// are cached as null — that IS the hallucination signal downstream.
+const searchCache = new Map<string, EntitySuggestion[]>()
+const labelCache  = new Map<string, EntityLabel | null>()
+
+/** Test hook — reset the module-level session caches. */
+export function __clearWikidataCaches(): void {
+  searchCache.clear()
+  labelCache.clear()
+}
+
+/**
+ * Live entity lookup — the same API behind Wikidata's own autocomplete box.
+ * Matches labels AND aliases server-side ("William Turner" finds Q159758,
+ * label "J. M. W. Turner"). Results are session-cached per query.
+ */
+export async function searchEntities(
+  query: string,
+  opts: { type?: 'item' | 'property'; limit?: number; signal?: AbortSignal } = {},
+): Promise<EntitySuggestion[]> {
+  const q = query.trim()
+  if (!q) return []
+  const type  = opts.type ?? 'item'
+  const limit = opts.limit ?? 8
+  const cacheKey = `${type}|${limit}|${q.toLowerCase()}`
+  const cached = searchCache.get(cacheKey)
+  if (cached) return cached
+
+  const url = new URL(WD_API)
+  url.searchParams.set('action',   'wbsearchentities')
+  url.searchParams.set('search',   q)
+  url.searchParams.set('language', 'en')
+  url.searchParams.set('uselang',  'en')
+  url.searchParams.set('type',     type)
+  url.searchParams.set('limit',    String(limit))
+  url.searchParams.set('format',   'json')
+  url.searchParams.set('origin',   '*')
+
+  const res = await fetchWithTimeout(url.toString(), opts.signal ? { signal: opts.signal } : undefined, 15_000)
+  if (!res.ok) throw new Error(`Wikidata search ${res.status}`)
+  const data = await res.json() as { search?: Array<{ id: string; label?: string; description?: string }> }
+  const results: EntitySuggestion[] = (data.search ?? []).map(r => ({
+    id:          r.id,
+    label:       r.label ?? r.id,
+    description: r.description,
+  }))
+  searchCache.set(cacheKey, results)
+  return results
+}
+
+/**
+ * Resolve QIDs to their English label + description. Entities that do not
+ * exist on Wikidata are ABSENT from the returned Map (and cached as missing).
+ * Throws on network failure — callers decide how tolerant to be.
+ */
+export async function fetchEntityLabels(qids: string[]): Promise<Map<string, EntityLabel>> {
+  const out = new Map<string, EntityLabel>()
+  const toFetch: string[] = []
+  for (const qid of qids) {
+    const cached = labelCache.get(qid)
+    if (cached === undefined) toFetch.push(qid)
+    else if (cached !== null) out.set(qid, cached)
+  }
+
+  for (let i = 0; i < toFetch.length; i += BATCH_SZ) {
+    let batch = toFetch.slice(i, i + BATCH_SZ)
+    // Ids beyond Wikidata's valid range (e.g. a hallucinated Q99999999999)
+    // fail the WHOLE request with a top-level no-such-entity error naming the
+    // offender — mark it missing, drop it, retry the rest of the batch.
+    while (batch.length > 0) {
+      const body = await fetchWDEntitiesBody(batch, 'labels|descriptions')
+      if (body.error) {
+        const bad = body.error.id
+        if (body.error.code === 'no-such-entity' && bad && batch.includes(bad)) {
+          labelCache.set(bad, null)
+          batch = batch.filter(q => q !== bad)
+          continue
+        }
+        throw new Error(`Wikidata API error: ${body.error.code ?? 'unknown'}`)
+      }
+      for (const [qid, entity] of Object.entries(body.entities ?? {})) {
+        if (entity.missing !== undefined) {
+          labelCache.set(qid, null)
+          continue
+        }
+        const label = entity.labels?.en?.value
+        if (!label) { labelCache.set(qid, null); continue }
+        const resolved: EntityLabel = { label, description: entity.descriptions?.en?.value }
+        labelCache.set(qid, resolved)
+        out.set(qid, resolved)
+      }
+      break
+    }
+  }
+  return out
 }
