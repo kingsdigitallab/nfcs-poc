@@ -12,6 +12,7 @@ import { resolveProxyEdges } from './upstreamRecords'
 import { stripTransient } from './workflowIO'
 import { getNodeResults } from '../store/resultsStore'
 import { SIDEBAR_ITEMS } from '../config/sidebarItems'
+import { describeNode } from './lineageDescribers'
 
 /** One node's contribution to the pipeline history. */
 export interface LineageEntry {
@@ -19,8 +20,8 @@ export interface LineageEntry {
   nodeType: string
   /** Sidebar label, e.g. 'ARIADNESearch'. */
   label:    string
-  /** One-sentence human-readable description of the operation.
-   *  Generic in task-CA.1; per-node-type describers arrive in task-CA.2. */
+  /** One-sentence human-readable description of the operation,
+   *  produced by the per-node-type registry in lineageDescribers.ts. */
   operationSummary: string
   /** The operation's key parameters — stripTransient(node.data). */
   params:   Record<string, unknown>
@@ -54,16 +55,6 @@ const DATA_TARGET_HANDLES = new Set(['data', 'results'])
 
 function asNumber(v: unknown): number | undefined {
   return typeof v === 'number' && Number.isFinite(v) ? v : undefined
-}
-
-function describeGeneric(node: Node): string {
-  const label = LABEL_BY_TYPE.get(node.type ?? '') ?? node.type ?? 'node'
-  const d = node.data as Record<string, unknown>
-  const inC  = asNumber(d.inputCount)
-  const outC = asNumber(d.outputCount) ?? asNumber(d.count)
-  if (inC !== undefined && outC !== undefined) return `${label}: ${inC} records in, ${outC} out.`
-  if (outC !== undefined) return `${label}: produced ${outC} records.`
-  return `${label}.`
 }
 
 /**
@@ -137,7 +128,7 @@ export function collectLineage(nodeId: string, nodes: Node[], edges: Edge[]): Li
       nodeId:   id,
       nodeType: node.type ?? 'unknown',
       label:    LABEL_BY_TYPE.get(node.type ?? '') ?? node.type ?? 'unknown',
-      operationSummary: describeGeneric(node),
+      operationSummary: describeNode(node),
       params:   stripTransient(d),
       inCount:  asNumber(d.inputCount),
       outCount: asNumber(d.outputCount) ?? asNumber(d.count),
