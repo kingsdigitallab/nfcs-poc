@@ -140,9 +140,34 @@ describe('lineageDescribers', () => {
     expect(raw).toContain('hand-written query')
   })
 
-  it('unknown types fall back to label + counts', () => {
-    const s = describeNode(mk('tableOutput', { count: 12 }))
-    expect(s).toContain('12')
+  it('unknown types fall back to label + counts (from node.data or resolved param)', () => {
+    // citation has no describer → describeGeneric
+    expect(describeNode(mk('citation', { count: 12 }))).toContain('12')
+    // resolved count param wins over node.data for the generic fallback
+    expect(describeNode(mk('citation', { count: 0 }), 9)).toContain('9')
+  })
+
+  it('source/display/viz describers use the resolved store count', () => {
+    expect(describeNode(mk('sampleDataSource', {}), 20)).toContain('20 record')
+    expect(describeNode(mk('sampleDataSource', { count: 7 }))).toContain('7 record')  // data fallback
+
+    const table = describeNode(mk('tableOutput', {}), 12)
+    expect(table).toContain('12 record')
+    expect(table.toLowerCase()).toContain('table')
+
+    const note = describeNode(mk('quickNote', {}), 5)
+    expect(note).toContain('5 record')
+    expect(note.toLowerCase()).toContain('annotation')
+
+    const fd = describeNode(mk('fieldDistribution', { selectedField: 'country' }), 15)
+    expect(fd).toContain('"country"')
+    expect(fd).toContain('15 record')
+  })
+
+  it('resolved count wins over a stale node.data count (Run All timing)', () => {
+    // display node stamped count:0 from an effect that has not flushed; the
+    // store-resolved count (8) is the truth.
+    expect(describeNode(mk('tableOutput', { count: 0 }), 8)).toContain('8 record')
   })
 
   it('registry keys are all real node types (compile-time guard is satisfies; spot-check one)', () => {

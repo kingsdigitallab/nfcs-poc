@@ -87,6 +87,30 @@ describe('runWorkflow wave ordering (Kahn)', () => {
     expect(waves[0].sort()).toEqual(['s1', 's2'])
   })
 
+  it('orders a runnable consumer after its source through a non-runnable pass-through node', async () => {
+    // Source → display (no runner, pass-through) → consumer. Without transitive
+    // deps the consumer has no runnable dependency and would run in Wave 0
+    // concurrently with the source; the fix must defer it to Wave 1.
+    const completed: string[] = []
+    mockRunners.source = async id => {
+      await Promise.resolve()
+      await Promise.resolve()   // let a same-wave consumer race ahead if misordered
+      completed.push(id)
+    }
+    mockRunners.consumer = async id => { completed.push(id) }
+
+    const nodes = [
+      makeNode('s1', 'source'),
+      makeNode('d1', 'display'),   // display-only: no entry in mockRunners
+      makeNode('c1', 'consumer'),
+    ]
+    const edges = [edge('s1', 'd1'), edge('d1', 'c1')]
+
+    await runWorkflow(() => nodes, edges, () => {})
+
+    expect(completed).toEqual(['s1', 'c1'])
+  })
+
   it('ignores non-runnable nodes for ordering', async () => {
     const order: string[] = []
     mockRunners.source = async id => { order.push(id) }

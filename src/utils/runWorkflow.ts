@@ -47,9 +47,36 @@ export async function runWorkflow(
   for (const node of runnableNodes) {
     deps.set(node.id, new Set())
   }
+
+  // (1) Direct runnable → runnable edges (unchanged).
   for (const edge of resolvedEdges) {
     if (runnableIds.has(edge.source) && runnableIds.has(edge.target)) {
       deps.get(edge.target)!.add(edge.source)
+    }
+  }
+
+  // (2) Transitive deps through non-runnable pass-through nodes. Display-only
+  // nodes (TableOutput/QuickNote/FieldDistribution) have no runner, so a chain
+  // like Source → TableOutput → KCL leaves no direct runnable→runnable edge and
+  // KCL would otherwise run in Wave 0 concurrently with its own source. Walk
+  // upstream along data-flow handles ('data'/'results' — param handles carry
+  // config, not records) through non-runnable nodes to the nearest runnable
+  // ancestors and depend on those. Mirrors the walk in lineage.ts.
+  const DATA_TARGET_HANDLES = new Set(['data', 'results'])
+  const dataInto = new Map<string, Edge[]>()
+  for (const edge of resolvedEdges) {
+    if (!DATA_TARGET_HANDLES.has(edge.targetHandle ?? '')) continue
+    dataInto.set(edge.target, [...(dataInto.get(edge.target) ?? []), edge])
+  }
+  for (const node of runnableNodes) {
+    const visited = new Set<string>()
+    const queue = (dataInto.get(node.id) ?? []).map(e => e.source)
+    while (queue.length > 0) {
+      const s = queue.shift() as string
+      if (s === node.id || visited.has(s)) continue
+      visited.add(s)
+      if (runnableIds.has(s)) { deps.get(node.id)!.add(s); continue }
+      for (const e of dataInto.get(s) ?? []) queue.push(e.source)
     }
   }
 

@@ -15,7 +15,11 @@ import type { NodeTypeId } from '../nodes'
 import { SIDEBAR_ITEMS } from '../config/sidebarItems'
 
 type NodeData = Record<string, unknown>
-export type LineageDescriber = (data: NodeData) => string
+/** `count` is the resolved output record count (from the results store, with
+ *  pass-through inheritance — see collectLineage). Describers should prefer it
+ *  over `data.count`/`data.outputCount`, which can be stale during a Run All
+ *  wave for display-only nodes that stamp counts from React effects. */
+export type LineageDescriber = (data: NodeData, count?: number) => string
 
 const LABEL_BY_TYPE = new Map<string, string>(SIDEBAR_ITEMS.map(i => [i.type as string, i.label]))
 
@@ -94,7 +98,12 @@ export const lineageDescribers: Record<string, LineageDescriber> = {
     const kw     = str(d.inlineQuery)
     const cls    = str(d.builderInstanceOf)
     const custom = d.builderCustom === true || d.queryMode === 'raw'
-    let s = 'Queried Wikidata (SPARQL)'
+    // Endpoint ids come from sparqlEndpoints.ts; absent = Wikidata.
+    const endpoint = str(d.endpoint)
+    const service  = endpoint === 'getty' ? 'Getty Vocabularies (SPARQL)'
+      : endpoint === 'bl-bnb' ? 'the British Library BNB (SPARQL)'
+      : 'Wikidata (SPARQL)'
+    let s = `Queried ${service}`
     if (kw) s += ` for "${kw}"`
     if (custom) s += ' with a hand-written query'
     else if (cls) s += ` — instances of ${cls}`
@@ -213,23 +222,66 @@ export const lineageDescribers: Record<string, LineageDescriber> = {
   htmlSection: d => `Extracted HTML sections matching CSS selector "${str(d.selector) || '?'}" into the record content.`,
 
   xmlSection: d => `Extracted XML via XPath "${str(d.xpath) || '?'}".`,
+
+  // Source / display / visualisation nodes. Several are display-only (no
+  // runner) and stamp their counts from React effects, so they prefer the
+  // resolved store count. Pass-through nodes are phrased as transparent views —
+  // they carry records forward, they do not consume or block them.
+  sampleDataSource: (d, count) => {
+    const n = count ?? num(d.count)
+    return `Loaded sample data${n !== undefined ? ` (${n} record${n === 1 ? '' : 's'})` : ''}.`
+  },
+
+  tableOutput: (_d, count) =>
+    count !== undefined
+      ? `Passed ${count} record${count === 1 ? '' : 's'} through a table view.`
+      : 'Passed records through a table view.',
+
+  quickNote: (_d, count) =>
+    count !== undefined
+      ? `Passed ${count} record${count === 1 ? '' : 's'} through with human annotations.`
+      : 'Passed records through with human annotations.',
+
+  fieldDistribution: (d, count) => {
+    const field = str(d.selectedField)
+    const n = count ?? num(d.outputCount)
+    return `Faceted records by "${field || '?'}"${n !== undefined ? ` (${n} record${n === 1 ? '' : 's'})` : ''}.`
+  },
+
+  mapOutput: (_d, count) =>
+    `Mapped ${count !== undefined ? `${count} record${count === 1 ? '' : 's'}` : 'records'} geographically.`,
+
+  timelineOutput: (_d, count) =>
+    `Placed ${count !== undefined ? `${count} record${count === 1 ? '' : 's'}` : 'records'} on a timeline.`,
+
+  jsonOutput: (_d, count) =>
+    `Displayed ${count !== undefined ? `${count} record${count === 1 ? '' : 's'}` : 'records'} as JSON.`,
+
+  export: (d, count) => {
+    const fmt = str(d.exportFormat) || str(d.format)
+    const n = count ?? num(d.count)
+    return `Exported ${n !== undefined ? `${n} record${n === 1 ? '' : 's'}` : 'records'}${fmt ? ` as ${fmt.toUpperCase()}` : ''}.`
+  },
 } satisfies Partial<Record<NodeTypeId, LineageDescriber>>
 
 // ── dispatch ─────────────────────────────────────────────────────────────────
 
-/** Generic fallback: sidebar label + whatever counts the node exposes. */
-function describeGeneric(node: Node): string {
+/** Generic fallback: sidebar label + whatever counts the node exposes. The
+ *  resolved store count (when known) wins over node.data, which can be stale. */
+function describeGeneric(node: Node, count?: number): string {
   const label = LABEL_BY_TYPE.get(node.type ?? '') ?? node.type ?? 'node'
   const d = node.data as NodeData
   const inC = num(d.inputCount)
-  const outC = num(d.outputCount) ?? num(d.count)
+  const outC = count ?? num(d.outputCount) ?? num(d.count)
   if (inC !== undefined && outC !== undefined) return `${label}: ${inC} records in, ${outC} out.`
   if (outC !== undefined) return `${label}: produced ${outC} records.`
   return `${label}.`
 }
 
-/** One-sentence description of what a node did, from its data alone. */
-export function describeNode(node: Node): string {
+/** One-sentence description of what a node did. `count` is the resolved output
+ *  record count from collectLineage (results store + pass-through inheritance);
+ *  omit it for callers that only have node.data (e.g. ChatSidebar terminals). */
+export function describeNode(node: Node, count?: number): string {
   const describer = lineageDescribers[node.type ?? '']
-  return describer ? describer(node.data as NodeData) : describeGeneric(node)
+  return describer ? describer(node.data as NodeData, count) : describeGeneric(node, count)
 }

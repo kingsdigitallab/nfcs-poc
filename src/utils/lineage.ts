@@ -112,6 +112,23 @@ export function collectLineage(nodeId: string, nodes: Node[], edges: Edge[]): Li
   // entry is silently dropped.
   for (const id of subIds) if (!ordered.includes(id)) ordered.push(id)
 
+  // Resolve a trustworthy output count per node from the results store, with
+  // pass-through inheritance. A display-only pass-through node stamps its count
+  // from a React effect that has NOT fired during a synchronous Run All wave,
+  // so its node.data count reads 0/stale; here it inherits the max count of its
+  // lineage parents instead. `ordered` is topological (sources first), so every
+  // parent is resolved before its child.
+  const parentsOf = new Map<string, string[]>()
+  for (const e of subEdges) parentsOf.set(e.to, [...(parentsOf.get(e.to) ?? []), e.from])
+  const resolvedCount = new Map<string, number>()
+  for (const id of ordered) {
+    const own = (getNodeResults(id) ?? []).length
+    if (own > 0) { resolvedCount.set(id, own); continue }
+    let inherited = 0
+    for (const p of parentsOf.get(id) ?? []) inherited = Math.max(inherited, resolvedCount.get(p) ?? 0)
+    resolvedCount.set(id, inherited)
+  }
+
   let stale = false
   const entries: LineageEntry[] = ordered.map(id => {
     const node = nodeById.get(id) as Node
@@ -128,7 +145,7 @@ export function collectLineage(nodeId: string, nodes: Node[], edges: Edge[]): Li
       nodeId:   id,
       nodeType: node.type ?? 'unknown',
       label:    LABEL_BY_TYPE.get(node.type ?? '') ?? node.type ?? 'unknown',
-      operationSummary: describeNode(node),
+      operationSummary: describeNode(node, resolvedCount.get(id)),
       params:   stripTransient(d),
       inCount:  asNumber(d.inputCount),
       outCount: asNumber(d.outputCount) ?? asNumber(d.count),
