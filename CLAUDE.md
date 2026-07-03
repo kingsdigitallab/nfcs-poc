@@ -296,6 +296,7 @@ type NodeRunner = (
 - **`normaliseRecord`/`normaliseRecords`** in `recordNormalise.ts` — applied at the two legacy-record entry points (`fixtureUtils` fixture loads, `LoadSavedSearchNode`). Moves stale flat GBIF fields into `gbif.*` and drops Bodleian's old `_service`/`thumbnail` strays. Idempotent. Old fixtures and saved `.nfcs.json` files keep working without rewriting.
 - **`collectUpstreamRecords(nodeId, edges)`** in `upstreamRecords.ts` — shared utility used by all process runners. TYPED_HANDLES (`pdf`, `xml`, `text`, `image`) use partitioned store keys `${sourceId}:${handle}`; all others use plain `sourceId`.
 - **`useUpstreamRecords(nodeId)`** hook — same TYPED_HANDLES logic for reactivity; uses `${type}Count` key from node data.
+- **`collectLineage(nodeId, nodes, edges)`** in `lineage.ts` — derive-on-demand pipeline history (docs/context-accrual.md). Walks the upstream subgraph over `data`/`results` target-handle edges (param handles are config, not data flow), applies `resolveProxyEdges` for collapsed groups, returns a topologically ordered `LineageGraph` with `stripTransient`'d params + counts read from raw data. Pure read — call from runners with `getNodes()`/`edges`, from components with `useNodes()`/`useEdges()` values. The `stale` flag is heuristic: an upstream node that never ran this session, or claims a `resultsVersion` its store no longer holds.
 
 ## Architectural Gotchas
 
