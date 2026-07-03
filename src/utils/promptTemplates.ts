@@ -6,10 +6,12 @@
  * stays consistent and so future cross-cutting tokens have one injection
  * point.
  *
- * TODO(context-accrual): reserved token {{_lineage}} — when the workflow
- * context-accrual mechanism lands (docs/context-accrual.md), renderTemplate
- * gains an optional lineage argument and substitutes a natural-language
- * summary of the upstream pipeline here. All LLM nodes inherit it for free.
+ * {{_lineage}} — the workflow context-accrual token (docs/context-accrual.md).
+ * Substitution is CALLER-SIDE, exactly like every other synthetic token: the
+ * KCL/Ollama/Evaluator runners and components derive the narrative once per
+ * run (collectLineage + lineageToNarrative, only when the template contains
+ * the token) and spread `_lineage` into the record argument. renderTemplate
+ * itself needs no lineage awareness and its signature never changed.
  *
  * NOTE: no truncation happens here. Content truncation is model-dependent
  * (getContentMaxChars in kclConfig.ts) and stays in the runners, applied

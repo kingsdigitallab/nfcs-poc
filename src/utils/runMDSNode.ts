@@ -11,6 +11,7 @@ import { adaptMDSRecords }  from './mdsAdapter'
 import type { MDSSearchNodeData } from '../nodes/MDSSearchNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { addCitation } from './citationUtils'
+import { resolveParamEdge, resolveLimit, finishRunnerError } from './runnerHelpers'
 
 export const runMDSNode: NodeRunner = async (
   nodeId,
@@ -24,18 +25,11 @@ export const runMDSNode: NodeRunner = async (
 
   const d = node.data as MDSSearchNodeData
 
-  const resolve = (handleId: string, dataKey: keyof MDSSearchNodeData): string => {
-    const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
-    if (edge) {
-      const src = nodes.find(n => n.id === edge.source)
-      return (src?.data as { value?: string } | undefined)?.value ?? ''
-    }
-    return (d[dataKey] as string | undefined) ?? ''
-  }
+  const resolve = (handleId: string, dataKey: keyof MDSSearchNodeData): string =>
+    resolveParamEdge(nodeId, handleId, nodes, edges) ?? (d[dataKey] as string | undefined) ?? ''
 
   const query    = resolve('query', 'inlineQuery').trim()
-  const rawLimit = parseInt(resolve('limit', 'inlineLimit') || '20', 10)
-  const limit    = isNaN(rawLimit) || rawLimit < 1 ? 20 : rawLimit
+  const limit    = resolveLimit(nodeId, nodes, edges, d.inlineLimit as string | undefined)
 
   if (!query) {
     updateNodeData(nodeId, {
@@ -81,12 +75,6 @@ export const runMDSNode: NodeRunner = async (
       resultsVersion: version,
     })
   } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err)
-    console.error('[MDS] runner error', msg)
-    updateNodeData(nodeId, {
-      status:        'error',
-      statusMessage: `✗ ${msg}`,
-      count:         0,
-    })
+    finishRunnerError(nodeId, err, updateNodeData, '[MDS] runner')
   }
 }

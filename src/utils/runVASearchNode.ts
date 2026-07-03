@@ -3,6 +3,7 @@ import type { VASearchNodeData } from '../nodes/VASearchNode'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { addCitation } from './citationUtils'
+import { resolveParamEdge, resolveLimit, finishRunnerSuccess, finishRunnerError } from './runnerHelpers'
 
 const VA_BASE      = '/vam-proxy/v2/objects/search'
 const PAGE_SIZE    = 100
@@ -99,18 +100,11 @@ export async function runVASearchNode(
   clearNodeResults(nodeId)
   updateNodeData(nodeId, { status: 'loading', statusMessage: 'Loading…', count: 0 })
 
-  const resolveHandle = (handleId: string, dataKey: keyof VASearchNodeData): string => {
-    const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
-    if (edge) {
-      const src = nodes.find(n => n.id === edge.source)
-      return (src?.data as { value?: string } | undefined)?.value ?? ''
-    }
-    return (d[dataKey] as string | undefined) ?? ''
-  }
+  const resolveHandle = (handleId: string, dataKey: keyof VASearchNodeData): string =>
+    resolveParamEdge(nodeId, handleId, nodes, edges) ?? (d[dataKey] as string | undefined) ?? ''
 
   const query    = resolveHandle('query', 'inlineQuery')
-  const rawLimit = parseInt(resolveHandle('limit', 'inlineLimit') || '20', 10)
-  const limit    = isNaN(rawLimit) || rawLimit < 1 ? 20 : Math.min(rawLimit, PAGE_SIZE)
+  const limit    = Math.min(resolveLimit(nodeId, nodes, edges, d.inlineLimit as string | undefined), PAGE_SIZE)
   const fetchAll = d.fetchAll ?? false
 
   const accessDate   = new Date().toISOString()
@@ -152,31 +146,17 @@ export async function runVASearchNode(
       }
 
       const cited   = addCitation(allRecords as Record<string, unknown>[], citationBase)
-      const version = setNodeResults(nodeId, cited)
-      updateNodeData(nodeId, {
-        status: 'success',
-        statusMessage: `✓ ${allRecords.length.toLocaleString()} of ${total.toLocaleString()}`,
-        count: total,
-        resultsVersion: version,
-      })
+      finishRunnerSuccess(nodeId, cited, total, updateNodeData)
     } else {
       const params  = buildParams(query, limit, 1, d)
       const resp    = await fetchVA(params)
       const records = (resp.records ?? []).map(adaptVARecord)
       const total   = resp.info?.record_count ?? records.length
       const cited   = addCitation(records as Record<string, unknown>[], citationBase)
-      const version = setNodeResults(nodeId, cited)
-      updateNodeData(nodeId, {
-        status: 'success',
-        statusMessage: `✓ ${records.length} of ${total.toLocaleString()}`,
-        count: total,
-        resultsVersion: version,
-      })
+      finishRunnerSuccess(nodeId, cited, total, updateNodeData)
     }
   } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err)
-    console.error('[V&A] error', msg)
-    updateNodeData(nodeId, { status: 'error', statusMessage: `✗ ${msg}`, count: 0 })
+    finishRunnerError(nodeId, err, updateNodeData, '[V&A]')
   }
 }
 

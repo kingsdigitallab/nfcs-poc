@@ -25,7 +25,7 @@ const SKIP_FILES = new Set(['manifest.json', 'collections-manifest.json'])
 const ALLOWED_TOP_LEVEL = new Set([
   'id',
   // provenance + citation
-  '_citation', '_source', '_sourceId', '_sourceUrl', '_pid', '_cached', '_note',
+  '_citation', '_source', '_sourceId', '_sourceUrl', '_pid', '_cached', '_note', '_qid',
   // cross-service normalised fields
   'title', 'description', 'creator', 'date', 'subject', 'language', 'type',
   'format', 'collection',
@@ -34,7 +34,7 @@ const ALLOWED_TOP_LEVEL = new Set([
   'decimalLatitude', 'decimalLongitude',
   // service namespaces
   'gbif', 'llds', 'ads', 'adsLibrary', 'mds', 'europeana', 'ariadne',
-  'hsds', 'bodleian', 'smg', 'vam',
+  'hsds', 'bodleian', 'smg', 'vam', 'sparql',
   // enrichment namespaces
   'geocoding', 'smartGeo', 'framesense',
 ])

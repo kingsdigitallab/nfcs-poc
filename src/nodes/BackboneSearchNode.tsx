@@ -1,8 +1,11 @@
 /**
- * BackboneSearchNode — shared shell for ARIADNE-backbone search services
- * (ARIADNE portal, HSDS). The two node components were ~82% identical; the
- * whole chrome lives here once and each service supplies a declarative
- * config (title, theme colours, facet option lists, sort options).
+ * BackboneSearchNode — shared shell for search-service nodes. Originally the
+ * ARIADNE/HSDS shell (the two components were ~82% identical); task-SN.1
+ * generalised the config so services with different filter panels, optional
+ * sort rows and footer extras (MDS, LLDS, V&A, SMG, Bodleian) fit without
+ * touching the chrome. Europeana and GBIF stay bespoke by design — their
+ * HANDLE LAYOUTS differ (extra apiKey row / five wirable rows) and the
+ * serialised-edge contract must not move for anyone else's sake.
  *
  * HANDLE CONTRACT — do not change: input handles `query` (row 0) and
  * `limit` (row 1) at handleTop(rowIndex), output handle `results` on the
@@ -18,7 +21,7 @@ import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/rea
 import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 
-export type BackboneStatus = 'idle' | 'loading' | 'success' | 'error'
+export type BackboneStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface BackboneTheme {
   /** Header bar + filter-toggle text + filter-count badge background */
@@ -37,22 +40,67 @@ export interface BackboneTheme {
   fixtureIcon: string
 }
 
+/** One declarative row in the Filters panel. `range` renders From/To inputs
+ *  backed by the `${key}From` / `${key}To` data keys. */
+export interface FilterSpec {
+  key:   string
+  label: string
+  kind:  'select' | 'text' | 'checkbox' | 'range'
+  /** select — plain strings ('' renders '— any —') or explicit value/label pairs */
+  options?: string[] | { value: string; label: string }[]
+  /** text */
+  placeholder?: string
+  /** text — datalist suggestions */
+  suggestions?: string[]
+  /** range — placeholders for the From / To inputs */
+  rangePlaceholders?: [string, string]
+}
+
 export interface BackboneSearchConfig {
   /** Node type string — nodeRunners registry key AND fixture filename prefix */
   nodeType: string
   /** Header label, e.g. 'ARIADNE Search' */
   title: string
   theme: BackboneTheme
-  sortOptions: { value: string; label: string }[]
-  resourceTypeOptions: string[]
-  dataTypeOptions: string[]
-  countryOptions: string[]
-  temporalOptions: string[]
-  contributorOptions: string[]
-  derivedSubjectSuggestions: string[]
-  nativeSubjectSuggestions: string[]
-  derivedPlaceholder: string
-  nativePlaceholder: string
+  /** Query row placeholder (default 'e.g. Stonehenge') */
+  queryPlaceholder?: string
+  /** Query row label (default 'query'; MDS shows 'q') */
+  queryLabel?: string
+  /** node.data key behind the query row (default 'inlineQuery') —
+   *  must match what the node's runner reads */
+  queryDataKey?: string
+  /** Sort row; omit for no sort UI. singleSelect drops the ↓/↑ order arrow. */
+  sort?: {
+    options: { value: string; label: string }[]
+    defaultValue?: string
+    singleSelect?: boolean
+  }
+  /** Fetch-all checkbox; omit to hide. Object form overrides the label. */
+  fetchAll?: true | { label: string }
+  /** Extra select row between the wirable rows and the fetch-all checkbox
+   *  (SMG search type). The value lives at data[key]. */
+  extraBodyRow?: { key: string; label: string; options: { value: string; label: string }[] }
+  /** Declarative filter panel; omit for no Filters toggle. */
+  filters?: FilterSpec[]
+  footer?: {
+    /** Small italic caption, e.g. MDS's scraper disclaimer — renders left of the toggles */
+    caption?: string
+    /** Extra footer toggle rendered BEFORE the fixture toggle (LLDS cache mode).
+     *  Bound to data[key] as boolean; `cachedLabel` shows while status === 'cached'. */
+    extraToggle?: {
+      key: string; label: string; cachedLabel?: string
+      title?: string; onColor?: string; offColor?: string
+    }
+  }
+  /** MDS-style capped indicator: statusMessage text turns amber when the
+   *  runner set `_capped` on the node data. */
+  cappedAmberStatus?: boolean
+  /** Per-status border-colour overrides (e.g. LLDS 'cached': '#f59e0b') */
+  statusColours?: Partial<Record<string, string>>
+  /** Per-status statusMessage-colour overrides */
+  statusBadgeColours?: Partial<Record<string, string>>
+  /** Card min-width (default 264; MDS/LLDS use 240) */
+  minWidth?: number
 }
 
 // ── Layout (shared by every backbone node — handle offsets depend on these) ──
@@ -61,27 +109,35 @@ const HEADER_H = 32
 const BODY_PAD = 8
 const ROW_H    = 27
 
-const WIRABLE_ROWS = [
-  { handleId: 'query', dataKey: 'inlineQuery', label: 'query', placeholder: 'e.g. Stonehenge', rowIndex: 0 },
-  { handleId: 'limit', dataKey: 'inlineLimit', label: 'limit', placeholder: '20',              rowIndex: 1 },
-] as const
-
-function handleTop(rowIndex: number) {
+/** Exported for the handle-contract regression test (backboneHandles.test.ts). */
+export function handleTop(rowIndex: number) {
   return HEADER_H + BODY_PAD + rowIndex * ROW_H + 11
 }
 
-const STATUS_BORDER: Record<BackboneStatus, string> = {
+const STATUS_BORDER: Record<string, string> = {
   idle:    '#d1d5db',
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
+  cached:  '#22c55e',
 }
 
-const STATUS_BADGE: Record<BackboneStatus, string> = {
+const STATUS_BADGE: Record<string, string> = {
   idle:    '#9ca3af',
   loading: '#93c5fd',
   success: '#86efac',
   error:   '#fca5a5',
+  cached:  '#86efac',
+}
+
+/** Data keys a FilterSpec writes (range specs own two). */
+export function filterValueKeys(spec: FilterSpec): string[] {
+  return spec.kind === 'range' ? [`${spec.key}From`, `${spec.key}To`] : [spec.key]
+}
+
+function isFilterActive(spec: FilterSpec, d: Record<string, unknown>): boolean {
+  if (spec.kind === 'checkbox') return d[spec.key] === true
+  return filterValueKeys(spec).some(k => Boolean(d[k]))
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -92,10 +148,23 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
   const d = data as Record<string, unknown>
   const [filtersOpen, setFiltersOpen] = useState(false)
 
-  const styles      = stylesFor(config.theme)
-  const fetchAll    = (d.fetchAll as boolean | undefined) ?? false
+  const styles      = stylesFor(config)
+  const hasFetchAll = config.fetchAll !== undefined
+  const fetchAll    = hasFetchAll && ((d.fetchAll as boolean | undefined) ?? false)
   const status      = d.status as BackboneStatus
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = config.statusColours?.[status] ?? STATUS_BORDER[status] ?? '#d1d5db'
+  const filters     = config.filters ?? []
+
+  const wirableRows = [
+    {
+      handleId:    'query',
+      dataKey:     config.queryDataKey ?? 'inlineQuery',
+      label:       config.queryLabel ?? 'query',
+      placeholder: config.queryPlaceholder ?? 'e.g. Stonehenge',
+      rowIndex:    0,
+    },
+    { handleId: 'limit', dataKey: 'inlineLimit', label: 'limit', placeholder: '20', rowIndex: 1 },
+  ]
 
   const isConnected = useCallback(
     (handleId: string) => liveEdges.some(e => e.target === id && e.targetHandle === handleId),
@@ -104,20 +173,18 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
 
   const handleRun = useCallback(
     () => nodeRunners[config.nodeType](id, getNodes, getEdgesSnap(), updateNodeData),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [id, updateNodeData, getNodes, getEdgesSnap],  // config is module-constant per node type
   )
 
   const set = (key: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
     updateNodeData(id, { [key]: e.target.value })
 
-  const activeFilterCount = [
-    d.ariadneSubject, d.derivedSubject, d.nativeSubject,
-    d.country, d.dataType, d.temporal, d.contributor,
-  ].filter(Boolean).length
+  const activeFilterCount = filters.filter(f => isFilterActive(f, d)).length
 
   return (
     <div style={{ ...styles.card, borderColor }}>
-      {WIRABLE_ROWS.map(({ handleId, rowIndex }) => (
+      {wirableRows.map(({ handleId, rowIndex }) => (
         <Handle
           key={handleId}
           type="target"
@@ -135,14 +202,19 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
       <div style={styles.header}>
         <span style={styles.headerTitle}>{config.title}</span>
         {d.statusMessage ? (
-          <span style={{ ...styles.statusBadge, color: STATUS_BADGE[status] ?? '#9ca3af' }}>
+          <span style={{
+            ...styles.statusBadge,
+            color: (config.cappedAmberStatus && d._capped === true)
+              ? '#fbbf24'
+              : config.statusBadgeColours?.[status] ?? STATUS_BADGE[status] ?? '#9ca3af',
+          }}>
             {d.statusMessage as string}
           </span>
         ) : null}
       </div>
 
       <div style={styles.body}>
-        {WIRABLE_ROWS.map(({ handleId, dataKey, label, placeholder }) => {
+        {wirableRows.map(({ handleId, dataKey, label, placeholder }) => {
           const isLimit   = handleId === 'limit'
           const disabled  = isLimit && fetchAll
           const connected = isConnected(handleId)
@@ -166,125 +238,138 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
           )
         })}
 
-        <label style={styles.checkLabel} className="nodrag">
-          <input
-            type="checkbox"
-            checked={fetchAll}
-            onChange={e => updateNodeData(id, { fetchAll: e.target.checked })}
-            style={{ marginRight: 5 }}
-          />
-          Fetch all results
-        </label>
+        {config.extraBodyRow && (
+          <div style={styles.row}>
+            <span style={styles.paramLabel}>{config.extraBodyRow.label}</span>
+            <select
+              style={styles.select}
+              value={(d[config.extraBodyRow.key] as string) || config.extraBodyRow.options[0]?.value || ''}
+              onChange={set(config.extraBodyRow.key)}
+              className="nodrag"
+            >
+              {config.extraBodyRow.options.map(o => (
+                <option key={o.value} value={o.value}>{o.label}</option>
+              ))}
+            </select>
+          </div>
+        )}
 
-        <div style={styles.row}>
-          <span style={styles.paramLabel}>sort</span>
-          <select style={styles.select} value={(d.sort as string) || '_score'} onChange={set('sort')} className="nodrag">
-            {config.sortOptions.map(o => (
-              <option key={o.value} value={o.value}>{o.label}</option>
-            ))}
-          </select>
-          <select style={{ ...styles.select, width: 52 }} value={(d.order as string) || 'desc'} onChange={set('order')} className="nodrag">
-            <option value="desc">↓</option>
-            <option value="asc">↑</option>
-          </select>
-        </div>
+        {hasFetchAll && (
+          <label style={styles.checkLabel} className="nodrag">
+            <input
+              type="checkbox"
+              checked={fetchAll}
+              onChange={e => updateNodeData(id, { fetchAll: e.target.checked })}
+              style={{ marginRight: 5 }}
+            />
+            {typeof config.fetchAll === 'object' ? config.fetchAll.label : 'Fetch all results'}
+          </label>
+        )}
 
-        <button
-          style={styles.filterToggle}
-          onClick={() => setFiltersOpen(o => !o)}
-          className="nodrag"
-        >
-          {filtersOpen ? '▾' : '▸'} Filters
-          {activeFilterCount > 0 && (
-            <span style={styles.filterBadge}>{activeFilterCount}</span>
-          )}
-        </button>
+        {config.sort && (
+          <div style={styles.row}>
+            <span style={styles.paramLabel}>sort</span>
+            <select
+              style={styles.select}
+              value={(d.sort as string) || config.sort.defaultValue || '_score'}
+              onChange={set('sort')}
+              className="nodrag"
+            >
+              {config.sort.options.map(o => (
+                <option key={o.value} value={o.value}>{o.label}</option>
+              ))}
+            </select>
+            {!config.sort.singleSelect && (
+              <select style={{ ...styles.select, width: 52 }} value={(d.order as string) || 'desc'} onChange={set('order')} className="nodrag">
+                <option value="desc">↓</option>
+                <option value="asc">↑</option>
+              </select>
+            )}
+          </div>
+        )}
 
-        {filtersOpen && (
+        {filters.length > 0 && (
+          <button
+            style={styles.filterToggle}
+            onClick={() => setFiltersOpen(o => !o)}
+            className="nodrag"
+          >
+            {filtersOpen ? '▾' : '▸'} Filters
+            {activeFilterCount > 0 && (
+              <span style={styles.filterBadge}>{activeFilterCount}</span>
+            )}
+          </button>
+        )}
+
+        {filtersOpen && filters.length > 0 && (
           <div style={styles.filterSection}>
-
-            <div style={styles.filterRow}>
-              <span style={styles.filterLabel}>Resource type</span>
-              <select style={styles.select} value={(d.ariadneSubject as string) || ''} onChange={set('ariadneSubject')} className="nodrag">
-                {config.resourceTypeOptions.map(v => (
-                  <option key={v} value={v}>{v || '— any —'}</option>
-                ))}
-              </select>
-            </div>
-
-            <div style={styles.filterRow}>
-              <span style={styles.filterLabel}>Getty subject</span>
-              <input
-                list={`${id}-derived`}
-                style={styles.inlineInput}
-                value={(d.derivedSubject as string) || ''}
-                onChange={set('derivedSubject')}
-                placeholder={config.derivedPlaceholder}
-                className="nodrag"
-              />
-              <datalist id={`${id}-derived`}>
-                {config.derivedSubjectSuggestions.map(v => <option key={v} value={v} />)}
-              </datalist>
-            </div>
-
-            <div style={styles.filterRow}>
-              <span style={styles.filterLabel}>Native subject</span>
-              <input
-                list={`${id}-native`}
-                style={styles.inlineInput}
-                value={(d.nativeSubject as string) || ''}
-                onChange={set('nativeSubject')}
-                placeholder={config.nativePlaceholder}
-                className="nodrag"
-              />
-              <datalist id={`${id}-native`}>
-                {config.nativeSubjectSuggestions.map(v => <option key={v} value={v} />)}
-              </datalist>
-            </div>
-
-            <div style={styles.filterRow}>
-              <span style={styles.filterLabel}>Country</span>
-              <select style={styles.select} value={(d.country as string) || ''} onChange={set('country')} className="nodrag">
-                {config.countryOptions.map(v => (
-                  <option key={v} value={v}>{v || '— any —'}</option>
-                ))}
-              </select>
-            </div>
-
-            <div style={styles.filterRow}>
-              <span style={styles.filterLabel}>Data type</span>
-              <select style={styles.select} value={(d.dataType as string) || ''} onChange={set('dataType')} className="nodrag">
-                {config.dataTypeOptions.map(v => (
-                  <option key={v} value={v}>{v || '— any —'}</option>
-                ))}
-              </select>
-            </div>
-
-            <div style={styles.filterRow}>
-              <span style={styles.filterLabel}>Period</span>
-              <select style={styles.select} value={(d.temporal as string) || ''} onChange={set('temporal')} className="nodrag">
-                {config.temporalOptions.map(v => (
-                  <option key={v} value={v}>{v || '— any —'}</option>
-                ))}
-              </select>
-            </div>
-
-            <div style={styles.filterRow}>
-              <span style={styles.filterLabel}>Contributor</span>
-              <select style={styles.select} value={(d.contributor as string) || ''} onChange={set('contributor')} className="nodrag">
-                {config.contributorOptions.map(v => (
-                  <option key={v} value={v}>{v || '— any —'}</option>
-                ))}
-              </select>
-            </div>
+            {filters.map(spec => (
+              <div key={spec.key} style={styles.filterRow}>
+                <span style={styles.filterLabel}>{spec.label}</span>
+                {spec.kind === 'select' && (
+                  <select style={styles.select} value={(d[spec.key] as string) || ''} onChange={set(spec.key)} className="nodrag">
+                    {(spec.options ?? []).map(o => {
+                      const { value, label } = typeof o === 'string' ? { value: o, label: o || '— any —' } : o
+                      return <option key={value} value={value}>{label}</option>
+                    })}
+                  </select>
+                )}
+                {spec.kind === 'text' && (
+                  <>
+                    <input
+                      list={spec.suggestions ? `${id}-${spec.key}` : undefined}
+                      style={styles.inlineInput}
+                      value={(d[spec.key] as string) || ''}
+                      onChange={set(spec.key)}
+                      placeholder={spec.placeholder}
+                      className="nodrag"
+                    />
+                    {spec.suggestions && (
+                      <datalist id={`${id}-${spec.key}`}>
+                        {spec.suggestions.map(v => <option key={v} value={v} />)}
+                      </datalist>
+                    )}
+                  </>
+                )}
+                {spec.kind === 'checkbox' && (
+                  <input
+                    type="checkbox"
+                    checked={d[spec.key] === true}
+                    onChange={e => updateNodeData(id, { [spec.key]: e.target.checked })}
+                    className="nodrag"
+                  />
+                )}
+                {spec.kind === 'range' && (
+                  <>
+                    <input
+                      style={{ ...styles.inlineInput, flex: 1 }}
+                      value={(d[`${spec.key}From`] as string) || ''}
+                      onChange={set(`${spec.key}From`)}
+                      placeholder={spec.rangePlaceholders?.[0] ?? 'from'}
+                      className="nodrag"
+                    />
+                    <span style={styles.rangeDash}>–</span>
+                    <input
+                      style={{ ...styles.inlineInput, flex: 1 }}
+                      value={(d[`${spec.key}To`] as string) || ''}
+                      onChange={set(`${spec.key}To`)}
+                      placeholder={spec.rangePlaceholders?.[1] ?? 'to'}
+                      className="nodrag"
+                    />
+                  </>
+                )}
+              </div>
+            ))}
 
             {activeFilterCount > 0 && (
               <button
                 style={styles.clearBtn}
-                onClick={() => updateNodeData(id, {
-                  ariadneSubject: '', derivedSubject: '', nativeSubject: '',
-                  country: '', dataType: '', temporal: '', contributor: '',
-                })}
+                onClick={() => updateNodeData(id, Object.fromEntries(
+                  filters.flatMap<[string, string | boolean]>(spec =>
+                    spec.kind === 'checkbox'
+                      ? [[spec.key, false]]
+                      : filterValueKeys(spec).map(k => [k, ''] as [string, string | boolean])),
+                ))}
                 className="nodrag"
               >
                 ✕ Clear all filters
@@ -296,6 +381,28 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
 
       <div style={styles.footer}>
         <div style={styles.fixtureControls}>
+          {config.footer?.caption && (
+            <span style={styles.footerCaption}>{config.footer.caption}</span>
+          )}
+          {config.footer?.extraToggle && (
+            <label style={styles.extraToggle} className="nodrag" title={config.footer.extraToggle.title}>
+              <input
+                type="checkbox"
+                checked={d[config.footer.extraToggle.key] === true}
+                onChange={e => updateNodeData(id, { [config.footer!.extraToggle!.key]: e.target.checked })}
+                className="nodrag"
+              />
+              <span style={{
+                color: d[config.footer.extraToggle.key] === true
+                  ? (config.footer.extraToggle.onColor ?? config.theme.fixtureIcon)
+                  : (config.footer.extraToggle.offColor ?? '#9ca3af'),
+              }}>
+                {status === 'cached' && config.footer.extraToggle.cachedLabel
+                  ? config.footer.extraToggle.cachedLabel
+                  : config.footer.extraToggle.label}
+              </span>
+            </label>
+          )}
           <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
             <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
             <span style={{ color: d.useFixture ? config.theme.fixtureIcon : '#9ca3af' }}>📦</span>
@@ -330,24 +437,25 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
 
 // ── Styles ────────────────────────────────────────────────────────────────────
 
-const styleCache = new Map<BackboneTheme, ReturnType<typeof buildStyles>>()
+const styleCache = new Map<BackboneSearchConfig, ReturnType<typeof buildStyles>>()
 
-function stylesFor(theme: BackboneTheme) {
-  let s = styleCache.get(theme)
+function stylesFor(config: BackboneSearchConfig) {
+  let s = styleCache.get(config)
   if (!s) {
-    s = buildStyles(theme)
-    styleCache.set(theme, s)
+    s = buildStyles(config)
+    styleCache.set(config, s)
   }
   return s
 }
 
-function buildStyles(theme: BackboneTheme) {
+function buildStyles(config: BackboneSearchConfig) {
+  const theme = config.theme
   return {
     card: {
       background: '#fff',
       border: '2px solid #d1d5db',
       borderRadius: 8,
-      minWidth: 264,
+      minWidth: config.minWidth ?? 264,
       boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
       position: 'relative' as const,
       transition: 'border-color 0.25s',
@@ -483,6 +591,11 @@ function buildStyles(theme: BackboneTheme) {
       flexShrink: 0,
       fontFamily: 'monospace',
     },
+    rangeDash: {
+      fontSize: 10,
+      color: '#9ca3af',
+      flexShrink: 0,
+    },
     clearBtn: {
       fontSize: 10,
       color: theme.clearBtn,
@@ -506,6 +619,7 @@ function buildStyles(theme: BackboneTheme) {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
+      gap: 6,
     },
     fixtureControls: {
       display: 'flex',
@@ -519,6 +633,22 @@ function buildStyles(theme: BackboneTheme) {
       cursor: 'pointer',
       userSelect: 'none' as const,
       fontSize: 13,
+    },
+    extraToggle: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 3,
+      cursor: 'pointer',
+      userSelect: 'none' as const,
+      fontSize: 10,
+      fontWeight: 600,
+    },
+    footerCaption: {
+      fontSize: 9,
+      color: '#9ca3af',
+      fontStyle: 'italic' as const,
+      lineHeight: 1.3,
+      maxWidth: 120,
     },
     fixtureSaveBtn: {
       background: 'none',

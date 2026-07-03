@@ -13,6 +13,7 @@ import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars } from './kclConfig'
 import { formatDuration } from './formatDuration'
 import { renderTemplate } from './promptTemplates'
+import { collectLineage, lineageToNarrative } from './lineage'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
@@ -154,6 +155,10 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
   const enriched: Record<string, unknown>[] = []
   let errCount = 0
   const maxChars = getContentMaxChars(model)
+  // Lineage is derived once per run, not per record — only when opted in.
+  const lineageNarrative = promptTemplate.includes('{{_lineage}}')
+    ? lineageToNarrative(collectLineage(nodeId, nodes, edges))
+    : ''
   const t0 = performance.now()
 
   for (let i = 0; i < upstreamRecords.length; i++) {
@@ -167,7 +172,7 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
         JSON.stringify(record)
     const baseContent = rawContent.slice(0, maxChars)
 
-    const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
+    const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent, _lineage: lineageNarrative })
     const userContent    = visionMode
       ? await buildUserContent(renderedPrompt, record, imageField)
       : renderedPrompt

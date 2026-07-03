@@ -15,6 +15,7 @@ import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclConfig'
 import { renderTemplate } from '../utils/promptTemplates'
+import { collectLineage, lineageToNarrative } from '../utils/lineage'
 import { useStaleResults } from '../hooks/useStaleResults'
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
@@ -285,6 +286,10 @@ export function KCLNode({ id, data }: NodeProps) {
     })
 
     const enriched: Record<string, unknown>[] = []
+    // Lineage is derived once per run, not per record — only when opted in.
+    const lineageNarrative = promptTemplate.includes('{{_lineage}}')
+      ? lineageToNarrative(collectLineage(id, allNodes, allEdges))
+      : ''
 
     try {
       for (let i = 0; i < upstreamRecords.length; i++) {
@@ -301,7 +306,7 @@ export function KCLNode({ id, data }: NodeProps) {
         const maxChars = getContentMaxChars(selectedModel)
         const baseContent = rawContent.slice(0, maxChars)
 
-        const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
+        const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent, _lineage: lineageNarrative })
         const userContent    = visionMode
           ? await buildUserContent(renderedPrompt, record, imageField)
           : renderedPrompt
@@ -339,7 +344,7 @@ export function KCLNode({ id, data }: NodeProps) {
       if (enriched.length > 0) setNodeResults(id, enriched)
       updateNodeData(id, { status: 'error', statusMessage: `✗ ${msg}`, outputCount: enriched.length })
     }
-  }, [id, updateNodeData, upstreamRecords, effectiveApiKey, selectedModel, systemPrompt, promptTemplate, temperature, maxTokens])
+  }, [id, updateNodeData, upstreamRecords, allNodes, allEdges, effectiveApiKey, selectedModel, systemPrompt, promptTemplate, temperature, maxTokens])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
@@ -467,6 +472,13 @@ export function KCLNode({ id, data }: NodeProps) {
               {availableFields.map(f => (
                 <code key={f} style={styles.fieldChip}>{'{{' + f + '}}'}</code>
               ))}
+              <code
+                key="_lineage"
+                style={styles.fieldChip}
+                title="Pipeline history — a natural-language summary of the upstream workflow (searches, filters, merges) derived at run time"
+              >
+                {'{{_lineage}}'}
+              </code>
             </div>
           )}
           <textarea

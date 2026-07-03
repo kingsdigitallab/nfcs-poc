@@ -43,6 +43,7 @@ import { SMGSearchNode }            from './SMGSearchNode'
 import { VASearchNode }             from './VASearchNode'
 import { GeocodingNode }            from './GeocodingNode'
 import { SmartGeocoderNode }       from './SmartGeocoderNode'
+import { SparqlSearchNode }        from './SparqlSearchNode'
 import { FrameSenseSourceNode }     from './FrameSenseSourceNode'
 import { SampleDataSourceNode }    from './SampleDataSourceNode'
 import { SourceProfileNode }        from './SourceProfileNode'
@@ -100,6 +101,7 @@ export const nodeTypes = {
   vaSearch:          withToolbar(VASearchNode),
   geocoding:         withToolbar(GeocodingNode),
   smartGeocoder:     withToolbar(SmartGeocoderNode),
+  sparqlSearch:      withToolbar(SparqlSearchNode),
   frameSenseSource:  withToolbar(FrameSenseSourceNode),
   sampleDataSource:  withToolbar(SampleDataSourceNode),
   sourceProfile:     withToolbar(SourceProfileNode),

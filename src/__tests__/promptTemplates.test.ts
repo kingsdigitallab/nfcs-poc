@@ -68,3 +68,20 @@ describe('renderFieldTemplatePerRecord', () => {
     expect(out).toBe("$' and $&")
   })
 })
+
+describe('the {{_lineage}} token (caller-side substitution)', () => {
+  it('leading-underscore tokens substitute like any other key', () => {
+    const out = renderTemplate('Context:\n{{_lineage}}\n\n{{content}}', {
+      content: 'record text',
+      _lineage: '1. Searched ARIADNE for "x".',
+    })
+    expect(out).toBe('Context:\n1. Searched ARIADNE for "x".\n\nrecord text')
+  })
+
+  it('an unused _lineage key changes nothing (prompt parity when not opted in)', () => {
+    const record = { content: 'record text', title: 'T' }
+    const withKey = renderTemplate('{{title}}: {{content}}', { ...record, _lineage: 'ignored' })
+    const without = renderTemplate('{{title}}: {{content}}', record)
+    expect(withKey).toBe(without)
+  })
+})

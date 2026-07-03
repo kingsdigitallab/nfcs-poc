@@ -30,7 +30,7 @@ export interface HSDSSearchNodeData {
   [key: string]:  unknown
 }
 
-const HSDS_CONFIG: BackboneSearchConfig = {
+export const HSDS_CONFIG: BackboneSearchConfig = {
   nodeType: 'hsdsSearch',
   title:    'HSDS Search',
   theme: {
@@ -42,52 +42,78 @@ const HSDS_CONFIG: BackboneSearchConfig = {
     clearBtn:     '#0f3d3a',
     fixtureIcon:  '#134e4a',
   },
-  sortOptions: [
-    { value: '_score',   label: 'Relevance' },
-    { value: 'title',    label: 'Title' },
-    { value: 'issued',   label: 'Date issued' },
-    { value: 'modified', label: 'Last modified' },
+  fetchAll: true,
+  sort: {
+    options: [
+      { value: '_score',   label: 'Relevance' },
+      { value: 'title',    label: 'Title' },
+      { value: 'issued',   label: 'Date issued' },
+      { value: 'modified', label: 'Last modified' },
+    ],
+  },
+  filters: [
+    {
+      key: 'ariadneSubject', label: 'Resource type', kind: 'select',
+      options: [
+        '', 'Site/monument', 'Artefact', 'Coin', 'Fieldwork', 'Fieldwork report',
+        'Maritime', 'Monument', 'Inscription', 'Date', 'Fieldwork archive',
+        'Rock Art', 'Building survey', 'E-Publication', 'Scientific analysis',
+        'Not provided', 'Burial',
+      ],
+    },
+    {
+      key: 'derivedSubject', label: 'Getty subject', kind: 'text',
+      placeholder: 'e.g. hillforts',
+      suggestions: [
+        'archaeological sites', 'earthworks (engineering works)', 'monuments',
+        'buildings (structures)', 'ditches', 'enclosures', 'field systems',
+        'farmsteads', 'churches', 'castles', 'roads', 'bridges',
+        'industrial sites', 'burial mounds', 'hillforts',
+      ],
+    },
+    {
+      key: 'nativeSubject', label: 'Native subject', kind: 'text',
+      placeholder: 'e.g. henge',
+      suggestions: [
+        'site', 'building', 'monument', 'find', 'findspot', 'earthwork',
+        'enclosure', 'ditch', 'field system', 'farmstead', 'henge',
+        'stone circle', 'burial mound', 'hillfort', 'church', 'castle',
+      ],
+    },
+    {
+      key: 'country', label: 'Country', kind: 'select',
+      options: [
+        '', 'England', 'Scotland', 'Wales', 'Northern Ireland',
+        'United Kingdom', 'Isle of Man', 'Great Britain', 'Ireland',
+        'Republic of Ireland', 'Channel Islands',
+      ],
+    },
+    {
+      key: 'dataType', label: 'Data type', kind: 'select',
+      options: [
+        '', 'Structured Data', 'Still Image', 'Text', 'Geospatial',
+        'CAD', 'Numeric', '3D', 'Video', 'Other', 'Audio', 'Software',
+      ],
+    },
+    {
+      key: 'temporal', label: 'Period', kind: 'select',
+      options: [
+        '', 'post medieval', 'roman', 'medieval', '19th century', 'bronze age',
+        '20th century', 'early medieval', 'iron age', 'neolithic', 'prehistoric',
+        'second world war', 'mesolithic', 'modern', '18th century',
+        'later prehistoric', 'unknown', 'palaeolithic', 'late iron age',
+        'early bronze age', 'late bronze age',
+      ],
+    },
+    {
+      key: 'contributor', label: 'Contributor', kind: 'select',
+      options: [
+        '', 'Archaeology Data Service', 'Historic England',
+        'Portable Antiquities Scheme', 'Historic Environment Scotland',
+        'Cadw', 'Historic Environment Wales',
+      ],
+    },
   ],
-  resourceTypeOptions: [
-    '', 'Site/monument', 'Artefact', 'Coin', 'Fieldwork', 'Fieldwork report',
-    'Maritime', 'Monument', 'Inscription', 'Date', 'Fieldwork archive',
-    'Rock Art', 'Building survey', 'E-Publication', 'Scientific analysis',
-    'Not provided', 'Burial',
-  ],
-  dataTypeOptions: [
-    '', 'Structured Data', 'Still Image', 'Text', 'Geospatial',
-    'CAD', 'Numeric', '3D', 'Video', 'Other', 'Audio', 'Software',
-  ],
-  countryOptions: [
-    '', 'England', 'Scotland', 'Wales', 'Northern Ireland',
-    'United Kingdom', 'Isle of Man', 'Great Britain', 'Ireland',
-    'Republic of Ireland', 'Channel Islands',
-  ],
-  temporalOptions: [
-    '', 'post medieval', 'roman', 'medieval', '19th century', 'bronze age',
-    '20th century', 'early medieval', 'iron age', 'neolithic', 'prehistoric',
-    'second world war', 'mesolithic', 'modern', '18th century',
-    'later prehistoric', 'unknown', 'palaeolithic', 'late iron age',
-    'early bronze age', 'late bronze age',
-  ],
-  contributorOptions: [
-    '', 'Archaeology Data Service', 'Historic England',
-    'Portable Antiquities Scheme', 'Historic Environment Scotland',
-    'Cadw', 'Historic Environment Wales',
-  ],
-  derivedSubjectSuggestions: [
-    'archaeological sites', 'earthworks (engineering works)', 'monuments',
-    'buildings (structures)', 'ditches', 'enclosures', 'field systems',
-    'farmsteads', 'churches', 'castles', 'roads', 'bridges',
-    'industrial sites', 'burial mounds', 'hillforts',
-  ],
-  nativeSubjectSuggestions: [
-    'site', 'building', 'monument', 'find', 'findspot', 'earthwork',
-    'enclosure', 'ditch', 'field system', 'farmstead', 'henge',
-    'stone circle', 'burial mound', 'hillfort', 'church', 'castle',
-  ],
-  derivedPlaceholder: 'e.g. hillforts',
-  nativePlaceholder:  'e.g. henge',
 }
 
 export function HSDSSearchNode(props: NodeProps) {

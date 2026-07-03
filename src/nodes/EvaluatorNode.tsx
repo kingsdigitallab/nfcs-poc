@@ -19,6 +19,7 @@ import { arcChat } from '../utils/arc'
 import { useStaleResults } from '../hooks/useStaleResults'
 import { formatDuration } from '../utils/formatDuration'
 import { renderTemplate } from '../utils/promptTemplates'
+import { collectLineage, lineageToNarrative } from '../utils/lineage'
 import { EVALUATOR_RECIPES } from './evaluatorRecipes'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
@@ -338,6 +339,10 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
 
     const t0       = performance.now()
     const maxChars = getContentMaxChars(judgeModel)
+    // Lineage is derived once per run, not per record — only when opted in.
+    const lineageNarrative = rubricPrompt.includes('{{_lineage}}')
+      ? lineageToNarrative(collectLineage(id, allNodes, allEdges))
+      : ''
     const enriched: Record<string, unknown>[] = []
     let scoredCnt   = 0
     let skippedCnt  = 0
@@ -374,6 +379,7 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
           ...record,
           __reference: refTrunc,
           __candidate: candTrunc,
+          _lineage:    lineageNarrative,
         }
         const prompt = renderTemplate(rubricPrompt, templateCtx)
 
@@ -456,7 +462,7 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
       const msg = err instanceof Error ? err.message : String(err)
       updateNodeData(id, { status: 'error', statusMessage: `✗ ${msg}` })
     }
-  }, [id, updateNodeData, upstreamRecords, effectiveApiKey, judgeModel, referenceField, candidateField, rubricPrompt, maxTokens])
+  }, [id, updateNodeData, upstreamRecords, allNodes, allEdges, effectiveApiKey, judgeModel, referenceField, candidateField, rubricPrompt, maxTokens])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
@@ -609,8 +615,11 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
         <div style={styles.colField}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span style={styles.label}>Rubric</span>
-            <span style={{ fontSize: 9, color: '#9ca3af', fontFamily: 'monospace' }}>
-              {'{{__reference}} {{__candidate}}'}
+            <span
+              style={{ fontSize: 9, color: '#9ca3af', fontFamily: 'monospace' }}
+              title="{{_lineage}} substitutes a natural-language summary of the upstream pipeline"
+            >
+              {'{{__reference}} {{__candidate}} {{_lineage}}'}
             </span>
           </div>
           <textarea ref={rubricRef} style={{ ...styles.textarea, resize: 'none', overflow: 'hidden', minHeight: 80 }} value={rubricPrompt}
