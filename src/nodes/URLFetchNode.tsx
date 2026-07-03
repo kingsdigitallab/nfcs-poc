@@ -34,7 +34,7 @@ const HEADER_COLOR = '#2b5265'
 const BTN_COLOR    = '#0369a1'
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   running: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
@@ -258,7 +258,7 @@ export function URLFetchNode({ id, data }: NodeProps) {
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
   const status      = (d.status ?? 'idle') as string
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
 
   const storedResults = getNodeResults(id)
   const okCount  = storedResults?.filter(r => r.fetchStatus === 'ok').length ?? 0
@@ -306,7 +306,7 @@ export function URLFetchNode({ id, data }: NodeProps) {
             onChange={e => updateNodeData(id, { renderJs: e.target.checked })}
             style={{ marginRight: 5 }} />
           Wait for JS rendering
-          <span style={{ fontSize: 10, color: '#6b7280', marginLeft: 4 }}>(headless browser)</span>
+          <span style={{ fontSize: 10, color: '#8a8168', marginLeft: 4 }}>(headless browser)</span>
         </label>
 
         {/* Wait strategy — only shown when renderJs is on */}
@@ -345,7 +345,7 @@ export function URLFetchNode({ id, data }: NodeProps) {
             min={2} max={60}
             onChange={e => updateNodeData(id, { timeoutSecs: parseInt(e.target.value, 10) || 10 })}
             className="nodrag" />
-          <span style={{ fontSize: 10, color: '#9ca3af' }}>sec / URL</span>
+          <span style={{ fontSize: 10, color: '#b0a891' }}>sec / URL</span>
         </div>
 
         {/* Progress */}
@@ -388,12 +388,12 @@ export function URLFetchNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 260,
     maxWidth: 300,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -434,7 +434,7 @@ const styles = {
   },
   label: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 60,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -443,7 +443,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 4px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -452,7 +452,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -461,7 +461,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     fontSize: 11,
-    color: '#374151',
+    color: '#33302a',
     cursor: 'pointer',
     userSelect: 'none' as const,
   },
@@ -495,7 +495,7 @@ const styles = {
   },
   note: {
     fontSize: 10,
-    color: '#9ca3af',
+    color: '#b0a891',
     lineHeight: 1.5,
     paddingTop: 2,
   },

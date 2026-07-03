@@ -102,7 +102,7 @@ function InternalCard({ icon, title, desc, onClick }: { icon: string; title: str
 
 const S: Record<string, React.CSSProperties> = {
   trigger: {
-    background: '#f3f4f6', color: '#374151', border: '1px solid #d1d5db',
+    background: '#f3f4f6', color: '#33302a', border: '1px solid #d6ccb5',
     borderRadius: 6, padding: '5px 10px', fontSize: 12, fontWeight: 600, cursor: 'pointer',
   },
   overlay: {
@@ -112,7 +112,7 @@ const S: Record<string, React.CSSProperties> = {
     paddingTop: 60,
   },
   modal: {
-    background: '#fff', borderRadius: 10,
+    background: '#fffdf7', borderRadius: 10,
     boxShadow: '0 16px 48px rgba(0,0,0,0.3)',
     width: '90vw', maxWidth: 900,
     maxHeight: '85vh',
@@ -122,7 +122,7 @@ const S: Record<string, React.CSSProperties> = {
   },
   header: {
     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-    padding: '12px 16px', borderBottom: '1px solid #e5e7eb',
+    padding: '12px 16px', borderBottom: '1px solid #ece3d0',
     flexShrink: 0, background: '#1B2A4A',
   },
   headerTitle: { color: '#fff', fontWeight: 700, fontSize: 14 },
@@ -140,13 +140,13 @@ const S: Record<string, React.CSSProperties> = {
   },
   card: {
     display: 'flex', alignItems: 'flex-start', gap: 14,
-    padding: '16px 18px', border: '1.5px solid #e5e7eb', borderRadius: 8,
-    textDecoration: 'none', color: 'inherit', background: '#f9fafb',
+    padding: '16px 18px', border: '1.5px solid #ece3d0', borderRadius: 8,
+    textDecoration: 'none', color: 'inherit', background: '#faf6ec',
   },
   cardIcon:  { fontSize: 24, flexShrink: 0, lineHeight: 1, marginTop: 2 },
   cardText:  { flex: 1, minWidth: 0 },
-  cardTitle: { fontSize: 15, fontWeight: 700, color: '#111827', marginBottom: 2 },
-  cardDesc:  { fontSize: 12, color: '#6b7280', marginBottom: 4, lineHeight: 1.4 },
-  cardUrl:   { fontSize: 10, color: '#9ca3af', fontFamily: 'monospace', wordBreak: 'break-all' },
-  cardArrow: { fontSize: 18, color: '#9ca3af', flexShrink: 0, alignSelf: 'center' },
+  cardTitle: { fontSize: 15, fontWeight: 700, color: '#2c2a24', marginBottom: 2 },
+  cardDesc:  { fontSize: 12, color: '#8a8168', marginBottom: 4, lineHeight: 1.4 },
+  cardUrl:   { fontSize: 10, color: '#b0a891', fontFamily: 'monospace', wordBreak: 'break-all' },
+  cardArrow: { fontSize: 18, color: '#b0a891', flexShrink: 0, alignSelf: 'center' },
 }

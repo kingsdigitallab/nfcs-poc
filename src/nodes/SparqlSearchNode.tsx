@@ -84,11 +84,11 @@ function handleTop(rowIndex: number) {
 }
 
 const STATUS_BORDER: Record<SparqlStatus, string> = {
-  idle: '#d1d5db', loading: '#3b82f6', success: '#22c55e', error: '#ef4444', cached: '#22c55e',
+  idle: '#d6ccb5', loading: '#3b82f6', success: '#22c55e', error: '#ef4444', cached: '#22c55e',
 }
 
 const STATUS_BADGE: Record<SparqlStatus, string> = {
-  idle: '#9ca3af', loading: '#93c5fd', success: '#86efac', error: '#fca5a5', cached: '#86efac',
+  idle: '#b0a891', loading: '#93c5fd', success: '#86efac', error: '#fca5a5', cached: '#86efac',
 }
 
 const PID_LIST = /^\s*(P\d+\s*(,\s*P\d+\s*)*)?$/i
@@ -206,7 +206,7 @@ function EntityReportRow({ check, onPickAlternate }: {
       <span style={{ ...base, color: '#15803d' }}>
         ✓ {qidLink(check.qid)} {check.actualLabel}
         {check.declaredName && check.declaredName.toLowerCase() !== (check.actualLabel ?? '').toLowerCase()
-          ? <span style={{ color: '#6b7280' }}> (for “{check.declaredName}”)</span> : null}
+          ? <span style={{ color: '#8a8168' }}> (for “{check.declaredName}”)</span> : null}
       </span>
     )
   }
@@ -222,7 +222,7 @@ function EntityReportRow({ check, onPickAlternate }: {
         >
           ⚠ {qidLink(check.qid)}{check.actualLabel ? ` “${check.actualLabel}”` : ' (no such entity)'} → {' '}
           {qidLink(check.activeQid)} {check.replacedWith?.label}
-          {check.declaredName ? <span style={{ color: '#6b7280' }}> (from “{check.declaredName}”)</span> : null}
+          {check.declaredName ? <span style={{ color: '#8a8168' }}> (from “{check.declaredName}”)</span> : null}
           {hasAlternates && <span style={{ opacity: 0.6 }}> ▾</span>}
         </span>
         {open && (
@@ -391,7 +391,7 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
   }, [id, updateNodeData, d.sparqlQuery, d.nlEntityReport])
 
   const status      = d.status ?? 'idle'
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
 
   return (
     <div style={{ ...styles.card, borderColor }}>
@@ -404,8 +404,8 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
           style={{
             ...styles.inputHandle,
             top: handleTop(rowIndex),
-            background: isConnected(handleId) ? '#3b82f6' : '#9ca3af',
-            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#9ca3af'}`,
+            background: isConnected(handleId) ? '#3b82f6' : '#b0a891',
+            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#b0a891'}`,
           }}
         />
       ))}
@@ -413,7 +413,7 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
       <div style={styles.header}>
         <span style={styles.headerTitle}>⚗ SPARQL Search</span>
         {d.statusMessage ? (
-          <span style={{ ...styles.statusBadge, color: STATUS_BADGE[status] ?? '#9ca3af' }}>
+          <span style={{ ...styles.statusBadge, color: STATUS_BADGE[status] ?? '#b0a891' }}>
             {d.statusMessage}
           </span>
         ) : null}
@@ -619,7 +619,7 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
                   <input
                     style={{
                       ...styles.inlineInput,
-                      borderColor: PID_LIST.test(customColumns) ? '#d1d5db' : '#ef4444',
+                      borderColor: PID_LIST.test(customColumns) ? '#d6ccb5' : '#ef4444',
                     }}
                     value={customColumns}
                     onChange={e => regen({ builderCustomColumns: e.target.value })}
@@ -672,7 +672,7 @@ export function SparqlSearchNode({ id, data }: NodeProps) {
         <div style={styles.fixtureControls}>
           <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live WDQS">
             <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
-            <span style={{ color: d.useFixture ? '#6d28d9' : '#9ca3af' }}>📦</span>
+            <span style={{ color: d.useFixture ? '#6d28d9' : '#b0a891' }}>📦</span>
           </label>
           {(status === 'success' || status === 'cached') && (
             <button
@@ -706,12 +706,12 @@ const ACCENT_BORDER = '#ddd6fe'
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 340,
     maxWidth: 400,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -735,13 +735,13 @@ const styles = {
     display: 'flex', flexDirection: 'column' as const, gap: 5,
   },
   row: { display: 'flex', alignItems: 'center', gap: 6, minHeight: ROW_H - 5 },
-  paramLabel: { fontSize: 11, color: '#6b7280', width: 52, flexShrink: 0, fontFamily: 'monospace' },
+  paramLabel: { fontSize: 11, color: '#8a8168', width: 52, flexShrink: 0, fontFamily: 'monospace' },
   inlineInput: {
     flex: 1, fontSize: 11, padding: '2px 5px',
-    border: '1px solid #d1d5db', borderRadius: 4, outline: 'none', minWidth: 0, height: 22,
+    border: '1px solid #d6ccb5', borderRadius: 4, outline: 'none', minWidth: 0, height: 22,
   },
   select: {
-    fontSize: 11, padding: '2px 4px', border: '1px solid #d1d5db', borderRadius: 4,
+    fontSize: 11, padding: '2px 4px', border: '1px solid #d6ccb5', borderRadius: 4,
     outline: 'none', height: 22, background: '#fff', minWidth: 0,
   },
   connectedBadge: { fontSize: 10, color: '#3b82f6', fontStyle: 'italic' as const },
@@ -749,11 +749,11 @@ const styles = {
   tab: {
     flex: 1, fontSize: 11, fontWeight: 600, padding: '3px 8px',
     border: `1px solid ${ACCENT_BORDER}`, borderRadius: 4,
-    background: '#fff', color: '#6b7280', cursor: 'pointer',
+    background: '#fffdf7', color: '#8a8168', cursor: 'pointer',
   },
   tabActive: { background: ACCENT_BG, color: HEADER_COLOR, borderColor: HEADER_COLOR },
   checkLabel: {
-    display: 'flex', alignItems: 'center', fontSize: 10.5, color: '#374151',
+    display: 'flex', alignItems: 'center', fontSize: 10.5, color: '#33302a',
     cursor: 'pointer', userSelect: 'none' as const,
   },
   addBtn: {
@@ -762,7 +762,7 @@ const styles = {
     padding: '2px 8px', cursor: 'pointer', textAlign: 'left' as const,
   },
   removeBtn: {
-    fontSize: 10, color: '#9ca3af', background: 'none', border: 'none',
+    fontSize: 10, color: '#b0a891', background: 'none', border: 'none',
     cursor: 'pointer', padding: '0 2px', flexShrink: 0,
   },
   sectionToggle: {
@@ -780,10 +780,10 @@ const styles = {
     padding: '6px 6px 4px', background: ACCENT_BG, borderRadius: 4,
     border: `1px solid ${ACCENT_BORDER}`,
   },
-  groupLabel: { fontSize: 9, fontWeight: 700, color: '#6b7280', textTransform: 'uppercase' as const, letterSpacing: '0.04em' },
+  groupLabel: { fontSize: 9, fontWeight: 700, color: '#8a8168', textTransform: 'uppercase' as const, letterSpacing: '0.04em' },
   checkGrid: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1px 8px' },
   checkItem: {
-    display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: '#374151',
+    display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: '#33302a',
     cursor: 'pointer', userSelect: 'none' as const,
   },
   sectionLabel: { fontSize: 10, fontWeight: 600, color: HEADER_COLOR, marginTop: 2 },
@@ -805,11 +805,11 @@ const styles = {
   },
   queryArea: {
     fontSize: 10, fontFamily: 'monospace', lineHeight: 1.45,
-    padding: '4px 6px', border: '1px solid #d1d5db', borderRadius: 4,
+    padding: '4px 6px', border: '1px solid #d6ccb5', borderRadius: 4,
     outline: 'none', resize: 'vertical' as const, minHeight: 120, whiteSpace: 'pre' as const,
     overflowX: 'auto' as const,
   },
-  hint: { fontSize: 9, color: '#9ca3af', lineHeight: 1.4 },
+  hint: { fontSize: 9, color: '#b0a891', lineHeight: 1.4 },
   inputHandle: {
     width: 8, height: 8, border: '2px solid #fff',
     position: 'absolute' as const, left: -5, borderRadius: '50%',
@@ -820,7 +820,7 @@ const styles = {
   },
   fixtureControls: { display: 'flex', alignItems: 'center', gap: 4 },
   fixtureToggle: { display: 'flex', alignItems: 'center', gap: 3, cursor: 'pointer', userSelect: 'none' as const, fontSize: 13 },
-  fixtureSaveBtn: { background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: 13, color: '#6b7280', lineHeight: 1 },
+  fixtureSaveBtn: { background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: 13, color: '#8a8168', lineHeight: 1 },
   runBtn: {
     background: RUN_BTN_COLOR, color: '#fff', border: 'none', borderRadius: 5,
     padding: '4px 14px', fontSize: 12, fontWeight: 600, cursor: 'pointer',

@@ -81,11 +81,11 @@ export function ParamNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '1px solid #d1d5db',
+    background: '#fffdf7',
+    border: '1px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 200,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
   },
   header: {
@@ -114,7 +114,7 @@ const styles = {
     gap: 6,
   },
   rowLabel: {
-    color: '#6b7280',
+    color: '#8a8168',
     fontSize: 11,
     width: 36,
     flexShrink: 0,
@@ -123,16 +123,16 @@ const styles = {
     flex: 1,
     fontSize: 12,
     padding: '3px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
-    background: '#f9fafb',
+    background: '#faf6ec',
     outline: 'none',
   },
   valueInput: {
     flex: 1,
     fontSize: 12,
     padding: '3px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
   },

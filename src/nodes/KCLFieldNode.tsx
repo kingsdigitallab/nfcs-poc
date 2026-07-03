@@ -53,7 +53,7 @@ const DEFAULT_PROMPT_PER = 'Summarise the following in 2–3 sentences:\n\n{{val
 const DEFAULT_PROMPT_AGG = 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}'
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   running: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
@@ -405,7 +405,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
   const status      = (d.status ?? 'idle') as string
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
   const canRun      = !!effectiveApiKey && !!selectedModel && !isRunning
 
   return (
@@ -526,7 +526,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
             onChange={e => updateNodeData(id, { outputField: e.target.value })}
             placeholder="kclResponse (default)" className="nodrag" />
         </div>
-        <div style={{ fontSize: 9, color: '#9ca3af', paddingLeft: 4, marginTop: -4 }}>
+        <div style={{ fontSize: 9, color: '#b0a891', paddingLeft: 4, marginTop: -4 }}>
           New column name for the response. Blank → kclResponse only.
         </div>
 
@@ -594,7 +594,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
         <div style={styles.colField}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span style={styles.label}>Prompt</span>
-            <span style={{ fontSize: 9, color: '#9ca3af', fontFamily: 'monospace' }}>
+            <span style={{ fontSize: 9, color: '#b0a891', fontFamily: 'monospace' }}>
               {mode === 'aggregate' ? '{{values}} {{field}} {{count}}' : '{{value}} {{field}}'}
             </span>
           </div>
@@ -659,13 +659,13 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     width: '100%',
     minWidth: 272,
     maxWidth: 312,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -687,12 +687,12 @@ const styles = {
   body: { padding: '10px 12px 6px', display: 'flex', flexDirection: 'column' as const, gap: 7 },
   row: { display: 'flex', alignItems: 'center', gap: 6 },
   colField: { display: 'flex', flexDirection: 'column' as const, gap: 3 },
-  label: { fontSize: 11, color: '#6b7280', width: 44, flexShrink: 0, fontFamily: 'monospace' },
-  select: { flex: 1, fontSize: 11, padding: '2px 4px', border: '1px solid #d1d5db', borderRadius: 4, outline: 'none', height: 22 },
-  input: { flex: 1, fontSize: 11, padding: '2px 5px', border: '1px solid #d1d5db', borderRadius: 4, outline: 'none', height: 22 },
+  label: { fontSize: 11, color: '#8a8168', width: 44, flexShrink: 0, fontFamily: 'monospace' },
+  select: { flex: 1, fontSize: 11, padding: '2px 4px', border: '1px solid #d6ccb5', borderRadius: 4, outline: 'none', height: 22 },
+  input: { flex: 1, fontSize: 11, padding: '2px 5px', border: '1px solid #d6ccb5', borderRadius: 4, outline: 'none', height: 22 },
   eyeBtn: { background: 'none', border: 'none', cursor: 'pointer', fontSize: 12, padding: '0 2px', flexShrink: 0 },
-  textarea: { width: '100%', fontSize: 11, padding: '4px 6px', border: '1px solid #d1d5db', borderRadius: 4, outline: 'none', resize: 'vertical' as const, fontFamily: 'monospace', lineHeight: 1.4, boxSizing: 'border-box' as const },
-  numLabel: { fontSize: 10, color: '#6b7280', width: 28, textAlign: 'right' as const },
+  textarea: { width: '100%', fontSize: 11, padding: '4px 6px', border: '1px solid #d6ccb5', borderRadius: 4, outline: 'none', resize: 'vertical' as const, fontFamily: 'monospace', lineHeight: 1.4, boxSizing: 'border-box' as const },
+  numLabel: { fontSize: 10, color: '#8a8168', width: 28, textAlign: 'right' as const },
   livePreview: { marginTop: 2, background: '#1e1e2e', borderRadius: 4, overflow: 'hidden', border: '1px solid #881337' },
   liveHeader: { fontSize: 10, color: '#fda4af', padding: '3px 6px', background: '#4c0519', fontFamily: 'monospace' },
   liveText: { fontSize: 10, color: '#e2e8f0', padding: '4px 6px', fontFamily: 'monospace', lineHeight: 1.5, maxHeight: 60, overflowY: 'auto' as const, overflowX: 'hidden' as const, whiteSpace: 'pre-wrap' as const, overflowWrap: 'anywhere' as const },

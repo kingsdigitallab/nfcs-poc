@@ -174,7 +174,7 @@ export function CommentNode({ id, data, selected }: NodeProps) {
           >
             {body.trim()
               ? parseFormatted(body)
-              : <span style={{ color: '#d1d5db' }}>Add a comment or note…</span>}
+              : <span style={{ color: '#d6ccb5' }}>Add a comment or note…</span>}
           </div>
         )}
 
@@ -248,7 +248,7 @@ const styles = {
     border:      'none',
     padding:     '7px 10px',
     fontSize:    12,
-    color:       '#374151',
+    color:       '#33302a',
     lineHeight:  1.6,
     resize:      'none' as const,
     outline:     'none',

@@ -248,7 +248,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
               />
             </th>
             {/* Notes column */}
-            <th style={{ ...thStyle, width: NOTES_COL_W, minWidth: NOTES_COL_W, maxWidth: NOTES_COL_W, padding: pad, cursor: 'default', left: CHECKBOX_COL_W, zIndex: 3, borderRight: '2px solid #e5e7eb' }}>
+            <th style={{ ...thStyle, width: NOTES_COL_W, minWidth: NOTES_COL_W, maxWidth: NOTES_COL_W, padding: pad, cursor: 'default', left: CHECKBOX_COL_W, zIndex: 3, borderRight: '2px solid #ece3d0' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
                 <span style={{ fontSize: 9, fontWeight: 700, background: '#fef3c7', color: '#92400e', borderRadius: 3, padding: '1px 4px' }}>
                   notes
@@ -269,7 +269,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
                     ...thStyle, padding: pad,
                     width: w, minWidth: w, maxWidth: w,
                     cursor: 'pointer', userSelect: 'none',
-                    background: isActive ? '#e5e7eb' : isCore ? '#f0fdf4' : '#f3f4f6',
+                    background: isActive ? '#ece3d0' : isCore ? '#f0fdf4' : '#f3f4f6',
                   }}
                   onClick={() => onSort?.(col)}
                   title={title}
@@ -303,7 +303,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
         </thead>
         <tbody>
           {rows.map((rec, i) => {
-            const rowBg = selectedIds.has(rec.id) ? '#eff6ff' : i % 2 === 0 ? '#fff' : '#f9fafb'
+            const rowBg = selectedIds.has(rec.id) ? '#eff6ff' : i % 2 === 0 ? '#fff' : '#faf6ec'
             return (
             <tr
               key={start + i}
@@ -324,7 +324,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
               {/* Notes cell */}
               <td
                 className="nodrag"
-                style={{ ...tdStyle, width: NOTES_COL_W, maxWidth: NOTES_COL_W, padding: '2px 4px', overflow: 'visible', whiteSpace: 'normal', verticalAlign: 'top', position: 'sticky', left: CHECKBOX_COL_W, zIndex: 1, background: rowBg, borderRight: '2px solid #e5e7eb' }}
+                style={{ ...tdStyle, width: NOTES_COL_W, maxWidth: NOTES_COL_W, padding: '2px 4px', overflow: 'visible', whiteSpace: 'normal', verticalAlign: 'top', position: 'sticky', left: CHECKBOX_COL_W, zIndex: 1, background: rowBg, borderRight: '2px solid #ece3d0' }}
                 onClick={() => { if (noteEditId !== rec.id) openNoteEditor(rec.id) }}
               >
                 {noteEditId === rec.id ? (
@@ -352,7 +352,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
                     title={notes[rec.id] ? notes[rec.id] : 'Click to add a note'}
                     style={{
                       minHeight: 18, cursor: 'text',
-                      color: notes[rec.id] ? '#1f2937' : '#d1d5db',
+                      color: notes[rec.id] ? '#1f2937' : '#d6ccb5',
                       fontSize: fs, lineHeight: 1.4,
                       display: '-webkit-box', WebkitBoxOrient: 'vertical' as const,
                       WebkitLineClamp: 3, overflow: 'hidden',
@@ -404,7 +404,7 @@ function RecordTable({ records, columns, page, pageSize, compact = false, sortCo
         >
           {popupFields.map(({ label, val }) => (
             <div key={label} style={{ display: 'flex', gap: 6, borderBottom: '1px solid #2d3348', padding: '2px 0' }}>
-              <span style={{ color: '#6b7280', flexShrink: 0, width: 82, textAlign: 'right', fontFamily: 'monospace', fontSize: 10 }}>
+              <span style={{ color: '#8a8168', flexShrink: 0, width: 82, textAlign: 'right', fontFamily: 'monospace', fontSize: 10 }}>
                 {label}
               </span>
               <span style={{ color: '#e2e8f0', wordBreak: 'break-word', minWidth: 0 }}>
@@ -779,14 +779,14 @@ export function TableOutputNode({ id, data, selected }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '1.5px solid #d1d5db',
+    background: '#fffdf7',
+    border: '1.5px solid #d6ccb5',
     borderRadius: 8,
     width: '100%',
     height: '100%',
     minWidth: 520,
     minHeight: 260,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     overflow: 'hidden',
     display: 'flex',
     flexDirection: 'column' as const,
@@ -810,7 +810,7 @@ const styles = {
   },
   placeholder: {
     padding: '20px 16px',
-    color: '#9ca3af',
+    color: '#b0a891',
     fontSize: 12,
     fontStyle: 'italic' as const,
     textAlign: 'center' as const,
@@ -821,7 +821,7 @@ const styles = {
     justifyContent: 'space-between',
     padding: '5px 10px',
     borderBottom: '1px solid #f0f0f0',
-    background: '#f9fafb',
+    background: '#faf6ec',
   },
   toggleGroup: {
     display: 'flex',
@@ -830,7 +830,7 @@ const styles = {
   },
   toggleLabel: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',
@@ -838,11 +838,11 @@ const styles = {
   },
   colCount: {
     fontSize: 10,
-    color: '#9ca3af',
+    color: '#b0a891',
   },
   pageSizeSelect: {
     fontSize:     11,
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 3,
     padding:      '0 2px',
     background:   '#fff',
@@ -854,16 +854,16 @@ const styles = {
     gap:         4,
     padding:     '4px 8px',
     borderBottom: '1px solid #f0f0f0',
-    background:  '#fff',
+    background:  '#fffdf7',
   },
   filterInput: {
     flex:         1,
     fontSize:     11,
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
     padding:      '3px 7px',
     outline:      'none',
-    color:        '#374151',
+    color:        '#33302a',
   },
   filterClear: {
     border:       'none',
@@ -871,12 +871,12 @@ const styles = {
     cursor:       'pointer' as const,
     fontSize:     15,
     lineHeight:   1,
-    color:        '#9ca3af',
+    color:        '#b0a891',
     padding:      '0 2px',
   },
   filterCount: {
     fontSize:   10,
-    color:      '#6b7280',
+    color:      '#8a8168',
     whiteSpace: 'nowrap' as const,
   },
   tableWrap: {
@@ -892,11 +892,11 @@ const styles = {
     gap: 10,
     padding: '5px 10px',
     borderTop: '1px solid #f0f0f0',
-    background: '#f9fafb',
+    background: '#faf6ec',
   },
   pageBtn: {
-    background: '#fff',
-    border: '1px solid #d1d5db',
+    background: '#fffdf7',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     padding: '2px 8px',
     fontSize: 11,
@@ -904,7 +904,7 @@ const styles = {
   },
   pageInfo: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
   },
   inputHandle: {
     width:     10,
@@ -926,10 +926,10 @@ const styles = {
 
 const thStyle: React.CSSProperties = {
   background:   '#f3f4f6',
-  borderBottom: '2px solid #e5e7eb',
+  borderBottom: '2px solid #ece3d0',
   textAlign:    'left',
   fontWeight:   600,
-  color:        '#374151',
+  color:        '#33302a',
   position:     'sticky',
   top:          0,
   // zIndex: 2 so sticky headers clear frozen body cells (zIndex: 1) on vertical scroll;

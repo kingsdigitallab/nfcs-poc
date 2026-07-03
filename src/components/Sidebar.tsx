@@ -17,7 +17,7 @@ export function Sidebar({ simpleMode }: { simpleMode: boolean }) {
   return (
     <div style={sidebarStyle}>
       {/* Node search — sticky, pinned while the list scrolls */}
-      <div style={{ position: 'sticky', top: 0, zIndex: 1, background: '#fff', paddingBottom: 6 }}>
+      <div style={{ position: 'sticky', top: 0, zIndex: 1, background: '#f8f3e9', paddingBottom: 6 }}>
         <div style={{ position: 'relative' }}>
           <input
             type="text"
@@ -27,7 +27,7 @@ export function Sidebar({ simpleMode }: { simpleMode: boolean }) {
             style={{
               width: '100%', boxSizing: 'border-box',
               padding: '6px 22px 6px 8px', fontSize: 12,
-              border: '1px solid #e5e7eb', borderRadius: 6, outline: 'none',
+              border: '1px solid #ece3d0', borderRadius: 6, outline: 'none',
             }}
           />
           {nodeQuery && (
@@ -38,7 +38,7 @@ export function Sidebar({ simpleMode }: { simpleMode: boolean }) {
               style={{
                 position: 'absolute', right: 4, top: '50%', transform: 'translateY(-50%)',
                 border: 'none', background: 'none', cursor: 'pointer',
-                fontSize: 12, color: '#9ca3af', lineHeight: 1, padding: 2,
+                fontSize: 12, color: '#b0a891', lineHeight: 1, padding: 2,
               }}
             >
               ✕
@@ -75,7 +75,7 @@ export function Sidebar({ simpleMode }: { simpleMode: boolean }) {
               onClick={toggleGroup}
             >
               <span>{isExperimental ? '⚗ Experimental' : group}</span>
-              <span style={{ fontSize: 9, color: '#d1d5db' }}>{isCollapsed ? '▶' : '▼'}</span>
+              <span style={{ fontSize: 9, color: '#d6ccb5' }}>{isCollapsed ? '▶' : '▼'}</span>
             </div>
             {isExperimental && !isCollapsed && (
               <div style={{ fontSize: 9, color: '#d97706', fontStyle: 'italic', padding: '0 4px 4px', lineHeight: 1.4 }}>
@@ -92,11 +92,11 @@ export function Sidebar({ simpleMode }: { simpleMode: boolean }) {
               >
                 <div style={{ ...sidebarDot, background: item.color }} />
                 <div>
-                  <div style={{ fontWeight: 600, fontSize: 12, textDecoration: item.deprecated ? 'line-through' : 'none', color: item.deprecated ? '#9ca3af' : undefined }}>
+                  <div style={{ fontWeight: 600, fontSize: 12, textDecoration: item.deprecated ? 'line-through' : 'none', color: item.deprecated ? '#b0a891' : undefined }}>
                     {item.label}
                     {item.deprecated && <span style={{ marginLeft: 5, fontSize: 9, fontWeight: 700, color: '#ef4444', textDecoration: 'none', verticalAlign: 'middle' }}>DEPRECATED</span>}
                   </div>
-                  <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 2 }}>{item.sub}</div>
+                  <div style={{ fontSize: 10, color: '#b0a891', marginTop: 2 }}>{item.sub}</div>
                 </div>
               </div>
             ))}
@@ -104,7 +104,7 @@ export function Sidebar({ simpleMode }: { simpleMode: boolean }) {
         )
       })}
       <div style={{ flex: 1 }} />
-      <div style={{ fontSize: 10, color: '#d1d5db', padding: '4px', lineHeight: 1.4 }}>
+      <div style={{ fontSize: 10, color: '#d6ccb5', padding: '4px', lineHeight: 1.4 }}>
         Double-click a Table or JSON node to expand it
       </div>
     </div>

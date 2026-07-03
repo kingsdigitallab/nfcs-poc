@@ -31,14 +31,14 @@ function handleTop(rowIndex: number) {
 }
 
 const STATUS_BORDER: Record<ADSLibraryStatus, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
 }
 
 const STATUS_BADGE: Record<ADSLibraryStatus, string> = {
-  idle:    '#9ca3af',
+  idle:    '#b0a891',
   loading: '#93c5fd',
   success: '#86efac',
   error:   '#fca5a5',
@@ -62,7 +62,7 @@ export function ADSLibraryNode({ id, data }: NodeProps) {
     [id, updateNodeData, getNodes, getEdgesSnap],
   )
 
-  const borderColor = STATUS_BORDER[d.status as ADSLibraryStatus] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[d.status as ADSLibraryStatus] ?? '#d6ccb5'
 
   return (
     <div style={{ ...styles.card, borderColor }}>
@@ -75,8 +75,8 @@ export function ADSLibraryNode({ id, data }: NodeProps) {
           style={{
             ...styles.inputHandle,
             top: handleTop(rowIndex),
-            background: isConnected(handleId) ? '#3b82f6' : '#9ca3af',
-            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#9ca3af'}`,
+            background: isConnected(handleId) ? '#3b82f6' : '#b0a891',
+            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#b0a891'}`,
           }}
         />
       ))}
@@ -84,7 +84,7 @@ export function ADSLibraryNode({ id, data }: NodeProps) {
       <div style={{ ...styles.header, background: HEADER_COLOR }}>
         <span style={styles.headerTitle}>ADS Library</span>
         {d.statusMessage ? (
-          <span style={{ ...styles.statusBadge, color: STATUS_BADGE[d.status as ADSLibraryStatus] ?? '#9ca3af' }}>
+          <span style={{ ...styles.statusBadge, color: STATUS_BADGE[d.status as ADSLibraryStatus] ?? '#b0a891' }}>
             {d.statusMessage}
           </span>
         ) : null}
@@ -135,11 +135,11 @@ export function ADSLibraryNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 240,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -182,7 +182,7 @@ const styles = {
   },
   paramLabel: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 40,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -191,7 +191,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     minWidth: 0,

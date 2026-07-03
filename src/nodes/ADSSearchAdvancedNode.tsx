@@ -91,7 +91,7 @@ function handleTop(rowIndex: number) {
 // ── Status colours ────────────────────────────────────────────────────────────
 
 const STATUS_BORDER: Record<ADSAdvStatus, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
@@ -99,7 +99,7 @@ const STATUS_BORDER: Record<ADSAdvStatus, string> = {
 }
 
 const STATUS_BADGE: Record<ADSAdvStatus, string> = {
-  idle:    '#9ca3af',
+  idle:    '#b0a891',
   loading: '#93c5fd',
   success: '#86efac',
   error:   '#fca5a5',
@@ -115,7 +115,7 @@ export function ADSSearchAdvancedNode({ id, data }: NodeProps) {
   const [filtersOpen, setFiltersOpen] = useState(false)
 
   const fetchAll    = d.fetchAll ?? false
-  const borderColor = STATUS_BORDER[d.status as ADSAdvStatus] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[d.status as ADSAdvStatus] ?? '#d6ccb5'
 
   const isConnected = useCallback(
     (handleId: string) => liveEdges.some(e => e.target === id && e.targetHandle === handleId),
@@ -147,8 +147,8 @@ export function ADSSearchAdvancedNode({ id, data }: NodeProps) {
           style={{
             ...styles.inputHandle,
             top: handleTop(rowIndex),
-            background: isConnected(handleId) ? '#3b82f6' : '#9ca3af',
-            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#9ca3af'}`,
+            background: isConnected(handleId) ? '#3b82f6' : '#b0a891',
+            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#b0a891'}`,
           }}
         />
       ))}
@@ -157,7 +157,7 @@ export function ADSSearchAdvancedNode({ id, data }: NodeProps) {
       <div style={styles.header}>
         <span style={styles.headerTitle}>ADS Search (Advanced)</span>
         {d.statusMessage ? (
-          <span style={{ ...styles.statusBadge, color: STATUS_BADGE[d.status as ADSAdvStatus] ?? '#9ca3af' }}>
+          <span style={{ ...styles.statusBadge, color: STATUS_BADGE[d.status as ADSAdvStatus] ?? '#b0a891' }}>
             {d.statusMessage as string}
           </span>
         ) : null}
@@ -323,7 +323,7 @@ export function ADSSearchAdvancedNode({ id, data }: NodeProps) {
       <div style={styles.footer}>
         <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
           <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
-          <span style={{ color: d.useFixture ? '#78350f' : '#9ca3af' }}>📦</span>
+          <span style={{ color: d.useFixture ? '#78350f' : '#b0a891' }}>📦</span>
         </label>
         {(d.status === 'success' || d.status === 'cached') && (
           <button style={styles.fixtureSaveBtn} className="nodrag"
@@ -360,11 +360,11 @@ const RUN_BTN_COLOR = '#92400e'
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 264,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -408,7 +408,7 @@ const styles = {
   },
   paramLabel: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 40,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -417,7 +417,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     minWidth: 0,
@@ -427,7 +427,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 4px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -441,14 +441,14 @@ const styles = {
   },
   disabledHint: {
     fontSize: 10,
-    color: '#9ca3af',
+    color: '#b0a891',
     fontStyle: 'italic' as const,
   },
   checkLabel: {
     display: 'flex',
     alignItems: 'center',
     fontSize: 11,
-    color: '#374151',
+    color: '#33302a',
     cursor: 'pointer',
     userSelect: 'none' as const,
     paddingTop: 2,
@@ -494,7 +494,7 @@ const styles = {
   },
   filterLabel: {
     fontSize: 10,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 74,
     flexShrink: 0,
     fontFamily: 'monospace',

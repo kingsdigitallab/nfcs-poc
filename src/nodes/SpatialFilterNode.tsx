@@ -213,7 +213,7 @@ export function SpatialFilterNode({ id }: { id: string }) {
       ? '#10b981'
       : nodeData?.status === 'error'
         ? '#ef4444'
-        : '#6b7280'
+        : '#8a8168'
 
   return (
     <div className="bg-white border-l-4 rounded shadow-lg" style={{ borderLeftColor: '#2f6673' }}>
@@ -231,7 +231,7 @@ export function SpatialFilterNode({ id }: { id: string }) {
         <div
           ref={mapDivRef}
           className="nodrag nowheel"
-          style={{ width: MAP_W, height: MAP_H, borderBottom: '1px solid #e5e7eb' }}
+          style={{ width: MAP_W, height: MAP_H, borderBottom: '1px solid #ece3d0' }}
         />
 
         {/* Controls */}

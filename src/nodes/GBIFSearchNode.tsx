@@ -59,12 +59,12 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
   )
 
   const borderColor = {
-    idle:    '#d1d5db',
+    idle:    '#d6ccb5',
     loading: '#3b82f6',
     success: '#22c55e',
     cached:  '#22c55e',
     error:   '#ef4444',
-  }[d.status as RunStatus] ?? '#d1d5db'
+  }[d.status as RunStatus] ?? '#d6ccb5'
 
   return (
     <div style={{ ...styles.card, borderColor }}>
@@ -78,8 +78,8 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
           style={{
             ...styles.inputHandle,
             top: handleTop(i),
-            background: isConnected(handleId) ? '#3b82f6' : '#9ca3af',
-            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#9ca3af'}`,
+            background: isConnected(handleId) ? '#3b82f6' : '#b0a891',
+            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#b0a891'}`,
           }}
         />
       ))}
@@ -90,7 +90,7 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
         {d.statusMessage ? (
           <span style={{
             ...styles.statusBadge,
-            color: { idle: '#9ca3af', loading: '#93c5fd', success: '#86efac', error: '#fca5a5', cached: '#86efac' }[d.status as RunStatus] ?? '#9ca3af',
+            color: { idle: '#b0a891', loading: '#93c5fd', success: '#86efac', error: '#fca5a5', cached: '#86efac' }[d.status as RunStatus] ?? '#b0a891',
           }}>
             {d.statusMessage}
           </span>
@@ -127,11 +127,11 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
             title="Fetch all pages (capped at ~12,000 to stay under GBIF rate limits; requests are paced and retried on 429). For large offline demos prefer 📦 fixtures.">
             <input type="checkbox" checked={!!d.fetchAll}
               onChange={e => updateNodeData(id, { fetchAll: e.target.checked })} className="nodrag" />
-            <span style={{ fontSize: 10, color: d.fetchAll ? '#2c5a74' : '#9ca3af', fontWeight: 600 }}>ALL</span>
+            <span style={{ fontSize: 10, color: d.fetchAll ? '#2c5a74' : '#b0a891', fontWeight: 600 }}>ALL</span>
           </label>
           <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
             <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
-            <span style={{ color: d.useFixture ? '#2c5a74' : '#9ca3af' }}>📦</span>
+            <span style={{ color: d.useFixture ? '#2c5a74' : '#b0a891' }}>📦</span>
           </label>
           {(d.status === 'success' || d.status === 'cached') && (
             <button style={styles.fixtureSaveBtn} className="nodrag"
@@ -164,11 +164,11 @@ export function GBIFSearchNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 270,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -212,7 +212,7 @@ const styles = {
   },
   paramLabel: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 108,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -224,7 +224,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     minWidth: 0,
@@ -251,7 +251,7 @@ const styles = {
   },
   fixtureControls: { display: 'flex', alignItems: 'center', gap: 4 },
   fixtureToggle: { display: 'flex', alignItems: 'center', gap: 3, cursor: 'pointer', userSelect: 'none' as const, fontSize: 13 },
-  fixtureSaveBtn: { background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: 13, color: '#6b7280', lineHeight: 1 },
+  fixtureSaveBtn: { background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: 13, color: '#8a8168', lineHeight: 1 },
   runBtn: {
     background: '#2c5a74',
     color: '#fff',

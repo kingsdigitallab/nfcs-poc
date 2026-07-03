@@ -192,13 +192,13 @@ export function ConnectionSuggestions({ x, y, sourceNodeType, onSelect, onClose 
           >
             <div style={{ width: 9, height: 9, borderRadius: '50%', background: s.color, flexShrink: 0 }} />
             <div>
-              <div style={{ fontSize: 12, fontWeight: 600, color: '#111827', lineHeight: 1.3 }}>
+              <div style={{ fontSize: 12, fontWeight: 600, color: '#2c2a24', lineHeight: 1.3 }}>
                 {s.label}
                 {s.targetHandle === null && (
-                  <span style={{ marginLeft: 5, fontSize: 9, color: '#9ca3af', fontWeight: 400 }}>pick handle ›</span>
+                  <span style={{ marginLeft: 5, fontSize: 9, color: '#b0a891', fontWeight: 400 }}>pick handle ›</span>
                 )}
               </div>
-              <div style={{ fontSize: 10, color: '#9ca3af', lineHeight: 1.3 }}>{s.sub}</div>
+              <div style={{ fontSize: 10, color: '#b0a891', lineHeight: 1.3 }}>{s.sub}</div>
             </div>
           </button>
         ))}
@@ -238,7 +238,7 @@ export function HandlePicker({ x, y, handles, onSelect, onClose }: HandlePickerP
             <div style={{ width: 9, height: 9, borderRadius: '50%', background: '#3b82f6', flexShrink: 0 }} />
             <code style={{ fontSize: 12, color: '#4f46e5', fontWeight: 600 }}>{h.id}</code>
             {h.label !== h.id && (
-              <span style={{ fontSize: 10, color: '#9ca3af' }}>{h.label}</span>
+              <span style={{ fontSize: 10, color: '#b0a891' }}>{h.label}</span>
             )}
           </button>
         ))}
@@ -250,8 +250,8 @@ export function HandlePicker({ x, y, handles, onSelect, onClose }: HandlePickerP
 // ── Shared styles ──────────────────────────────────────────────────────────────
 
 const panelStyle: React.CSSProperties = {
-  background:   '#fff',
-  border:       '1px solid #e5e7eb',
+  background:   '#fffdf7',
+  border:       '1px solid #ece3d0',
   borderRadius: 8,
   boxShadow:    '0 4px 20px rgba(0,0,0,0.13)',
   minWidth:     PANEL_W,
@@ -263,7 +263,7 @@ const headerStyle: React.CSSProperties = {
   borderBottom:  '1px solid #f3f4f6',
   fontSize:      11,
   fontWeight:    700,
-  color:         '#6b7280',
+  color:         '#8a8168',
   letterSpacing: '0.04em',
   textTransform: 'uppercase',
 }

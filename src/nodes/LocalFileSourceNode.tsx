@@ -61,7 +61,7 @@ const ACCEPT: Record<string, string> = {
 }
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   loading: '#3b82f6',
   ready:   '#22c55e',
   error:   '#ef4444',
@@ -84,7 +84,7 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
   const fileName    = (d.fileName    as string   | undefined) ?? ''
   const count       = (d.count       as number   | undefined) ?? 0
   const columnNames = (d.columnNames as string[] | undefined) ?? []
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
 
   const processFile = useCallback(async (file: File) => {
     clearNodeResults(id)
@@ -289,11 +289,11 @@ export function LocalFileSourceNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 240,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -334,7 +334,7 @@ const styles = {
   },
   label: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 60,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -342,7 +342,7 @@ const styles = {
   select: {
     fontSize: 11,
     padding: '2px 4px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     flex: 1,
@@ -353,7 +353,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     fontSize: 11,
-    color: '#374151',
+    color: '#33302a',
     cursor: 'pointer',
     userSelect: 'none' as const,
   },
@@ -390,13 +390,13 @@ const styles = {
   },
   colPreview: {
     fontSize: 10,
-    color: '#6b7280',
+    color: '#8a8168',
     lineHeight: 1.5,
     wordBreak: 'break-word' as const,
   },
   colPreviewLabel: {
     fontWeight: 700,
-    color: '#374151',
+    color: '#33302a',
   },
   colPreviewNames: {
     fontFamily: 'monospace',

@@ -52,7 +52,7 @@ const DEFAULT_SYSTEM = 'You are a research assistant helping to analyse humaniti
 const DEFAULT_PROMPT = 'Summarise the key themes and subjects in 3-4 sentences:\n\n{{content}}'
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   running: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
@@ -334,7 +334,7 @@ export function OllamaNode({ id, data }: NodeProps) {
   }, [])
 
   const status      = d.status ?? 'idle'
-  const borderColor = STATUS_BORDER[status as string] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status as string] ?? '#d6ccb5'
 
   return (
     <div style={{ ...styles.card, borderColor }}>
@@ -415,7 +415,7 @@ export function OllamaNode({ id, data }: NodeProps) {
           />
           <span>Vision model</span>
           {visionByName && (
-            <span style={{ fontSize: 10, color: '#6b7280', marginLeft: 4 }}>(auto-detected)</span>
+            <span style={{ fontSize: 10, color: '#8a8168', marginLeft: 4 }}>(auto-detected)</span>
           )}
         </label>
 
@@ -488,7 +488,7 @@ export function OllamaNode({ id, data }: NodeProps) {
             style={{ flex: 1 }}
             className="nodrag"
           />
-          <span style={{ fontSize: 10, color: '#6b7280', width: 28, textAlign: 'right' }}>
+          <span style={{ fontSize: 10, color: '#8a8168', width: 28, textAlign: 'right' }}>
             {(temperature as number).toFixed(2)}
           </span>
         </div>
@@ -563,12 +563,12 @@ export function OllamaNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 280,
     maxWidth: 320,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -624,7 +624,7 @@ const styles = {
   },
   label: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 44,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -633,7 +633,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 4px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -642,7 +642,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -651,7 +651,7 @@ const styles = {
     width: '100%',
     fontSize: 11,
     padding: '4px 6px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     resize: 'vertical' as const,
@@ -677,7 +677,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     fontSize: 11,
-    color: '#374151',
+    color: '#33302a',
     cursor: 'pointer',
     userSelect: 'none' as const,
   },

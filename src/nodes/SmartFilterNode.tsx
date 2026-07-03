@@ -287,7 +287,7 @@ function ConditionPill({ c, logic, first, enabled, onToggle }: ConditionPillProp
         title={enabled ? 'Disable this condition' : 'Enable this condition'}
         style={{
           width: 14, height: 14, borderRadius: 3, flexShrink: 0, marginTop: 3,
-          background: enabled ? '#3b82f6' : '#374151',
+          background: enabled ? '#3b82f6' : '#33302a',
           border: `1px solid ${enabled ? '#60a5fa' : '#4b5563'}`,
           cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}
@@ -296,7 +296,7 @@ function ConditionPill({ c, logic, first, enabled, onToggle }: ConditionPillProp
       </button>
 
       <span style={{
-        fontSize: 9, fontWeight: 700, color: '#6b7280', minWidth: 22, marginTop: 3,
+        fontSize: 9, fontWeight: 700, color: '#8a8168', minWidth: 22, marginTop: 3,
         textTransform: 'uppercase', letterSpacing: '0.04em',
       }}>
         {first ? 'IF' : logic}
@@ -304,7 +304,7 @@ function ConditionPill({ c, logic, first, enabled, onToggle }: ConditionPillProp
 
       <div style={{
         flex: 1, background: '#1f2937', borderRadius: 4, padding: '3px 7px',
-        fontSize: 10, color: '#e5e7eb', lineHeight: 1.5,
+        fontSize: 10, color: '#ece3d0', lineHeight: 1.5,
         textDecoration: enabled ? 'none' : 'line-through',
       }}>
         <span style={{ color: '#93c5fd', fontWeight: 600 }}>{fieldDisplay}</span>
@@ -419,21 +419,21 @@ export function SmartFilterNode({ id, data }: NodeProps) {
   const statusColor = translating ? '#3b82f6'
     : errorMsg       ? '#ef4444'
     : hasFilter      ? '#22c55e'
-    : '#6b7280'
+    : '#8a8168'
 
   return (
     <div style={{
       width: 340,
-      background: '#111827',
+      background: '#2c2a24',
       border: `1px solid ${statusColor}`,
       borderRadius: 6,
       fontFamily: 'sans-serif',
-      color: '#f9fafb',
+      color: '#faf6ec',
       fontSize: 12,
       transition: 'border-color 0.2s',
     }}>
       <Handle type="target" position={Position.Left} id="data"
-        style={{ top: '50%', background: '#6b7280', width: 8, height: 8 }} />
+        style={{ top: '50%', background: '#8a8168', width: 8, height: 8 }} />
 
       {/* Header */}
       <div style={{
@@ -466,8 +466,8 @@ export function SmartFilterNode({ id, data }: NodeProps) {
           disabled={!connected}
           style={{
             width: '100%', boxSizing: 'border-box', resize: 'vertical',
-            background: '#1f2937', border: '1px solid #374151', borderRadius: 3,
-            color: '#f9fafb', fontSize: 11, padding: '5px 7px', marginBottom: 6,
+            background: '#1f2937', border: '1px solid #33302a', borderRadius: 3,
+            color: '#faf6ec', fontSize: 11, padding: '5px 7px', marginBottom: 6,
             fontFamily: 'sans-serif',
           }}
         />
@@ -484,8 +484,8 @@ export function SmartFilterNode({ id, data }: NodeProps) {
         {models.length > 0 ? (
           <select value={model} onChange={e => persistModel(e.target.value)}
             style={{
-              width: '100%', background: '#1f2937', border: '1px solid #374151', borderRadius: 3,
-              color: '#f9fafb', fontSize: 10, padding: '3px 6px', marginBottom: 6,
+              width: '100%', background: '#1f2937', border: '1px solid #33302a', borderRadius: 3,
+              color: '#faf6ec', fontSize: 10, padding: '3px 6px', marginBottom: 6,
             }}>
             {models.map(m => <option key={m} value={m}>{m}</option>)}
           </select>
@@ -494,8 +494,8 @@ export function SmartFilterNode({ id, data }: NodeProps) {
             placeholder="arc:nano"
             style={{
               width: '100%', boxSizing: 'border-box', background: '#1f2937',
-              border: '1px solid #374151', borderRadius: 3,
-              color: '#f9fafb', fontSize: 10, padding: '3px 6px', marginBottom: 6,
+              border: '1px solid #33302a', borderRadius: 3,
+              color: '#faf6ec', fontSize: 10, padding: '3px 6px', marginBottom: 6,
             }}
           />
         )}
@@ -507,8 +507,8 @@ export function SmartFilterNode({ id, data }: NodeProps) {
             disabled={translating || !apiKey || !model || !nlQuery.trim() || !connected}
             style={{
               flex: 1,
-              background: translating ? '#374151' : !apiKey || !nlQuery.trim() || !connected ? '#1f2937' : HEADER_COLOR,
-              color: '#f9fafb', border: 'none', borderRadius: 3,
+              background: translating ? '#33302a' : !apiKey || !nlQuery.trim() || !connected ? '#1f2937' : HEADER_COLOR,
+              color: '#faf6ec', border: 'none', borderRadius: 3,
               fontSize: 11, padding: '5px 0',
               cursor: translating || !apiKey || !nlQuery.trim() || !connected ? 'default' : 'pointer',
               opacity: !apiKey || !nlQuery.trim() || !connected ? 0.5 : 1,
@@ -520,7 +520,7 @@ export function SmartFilterNode({ id, data }: NodeProps) {
             <button onClick={handleClear}
               title="Clear filter — pass all records through"
               style={{
-                background: '#374151', color: '#9ca3af', border: 'none', borderRadius: 3,
+                background: '#33302a', color: '#b0a891', border: 'none', borderRadius: 3,
                 fontSize: 11, padding: '5px 9px', cursor: 'pointer',
               }}>
               ✕
@@ -538,7 +538,7 @@ export function SmartFilterNode({ id, data }: NodeProps) {
         {/* Generated filter display */}
         {hasFilter && (
           <div style={{ borderTop: '1px solid #1f2937', paddingTop: 8 }}>
-            <div style={{ fontSize: 10, color: '#9ca3af', marginBottom: 6, fontStyle: 'italic' }}>
+            <div style={{ fontSize: 10, color: '#b0a891', marginBottom: 6, fontStyle: 'italic' }}>
               {generatedFilter!.explanation}
             </div>
 
@@ -555,7 +555,7 @@ export function SmartFilterNode({ id, data }: NodeProps) {
 
             {/* Match bar */}
             <div style={{ marginTop: 8 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, color: '#6b7280', marginBottom: 3 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, color: '#8a8168', marginBottom: 3 }}>
                 <span>{matchCount.toLocaleString()} of {totalCount.toLocaleString()} records match</span>
                 <span style={{ color: matchCount === 0 ? '#ef4444' : matchPct < 0.1 ? '#f59e0b' : '#22c55e', fontWeight: 600 }}>
                   {totalCount > 0 ? `${Math.round(matchPct * 100)}%` : '—'}
@@ -571,8 +571,8 @@ export function SmartFilterNode({ id, data }: NodeProps) {
               </div>
             </div>
 
-            <div style={{ fontSize: 9, color: '#374151', marginTop: 5, textAlign: 'right' }}>
-              logic: <span style={{ color: '#6b7280', fontWeight: 700 }}>{generatedFilter!.logic}</span>
+            <div style={{ fontSize: 9, color: '#33302a', marginTop: 5, textAlign: 'right' }}>
+              logic: <span style={{ color: '#8a8168', fontWeight: 700 }}>{generatedFilter!.logic}</span>
             </div>
           </div>
         )}
@@ -586,7 +586,7 @@ export function SmartFilterNode({ id, data }: NodeProps) {
       </div>
 
       <Handle type="source" position={Position.Right} id="results"
-        style={{ top: '50%', background: '#6b7280', width: 8, height: 8 }} />
+        style={{ top: '50%', background: '#8a8168', width: 8, height: 8 }} />
     </div>
   )
 }

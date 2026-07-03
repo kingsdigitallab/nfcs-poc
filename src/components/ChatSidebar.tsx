@@ -188,9 +188,9 @@ function MdContent({ children }: { children: string }) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         thead: ({ node, ...p }) => <thead style={{ background: '#f3f4f6' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        th:    ({ node, ...p }) => <th style={{ border: '1px solid #d1d5db', padding: '4px 8px', textAlign: 'left', fontWeight: 600, whiteSpace: 'nowrap' }} {...p} />,
+        th:    ({ node, ...p }) => <th style={{ border: '1px solid #d6ccb5', padding: '4px 8px', textAlign: 'left', fontWeight: 600, whiteSpace: 'nowrap' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        td:    ({ node, ...p }) => <td style={{ border: '1px solid #e5e7eb', padding: '4px 8px', verticalAlign: 'top' }} {...p} />,
+        td:    ({ node, ...p }) => <td style={{ border: '1px solid #ece3d0', padding: '4px 8px', verticalAlign: 'top' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         pre:   ({ node, ...p }) => (
           <InsidePre.Provider value={true}>
@@ -217,17 +217,17 @@ function MdContent({ children }: { children: string }) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         li:    ({ node, ...p }) => <li style={{ margin: '2px 0' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        h1:    ({ node, ...p }) => <h1 style={{ fontSize: 14, fontWeight: 700, margin: '10px 0 4px', color: '#111827' }} {...p} />,
+        h1:    ({ node, ...p }) => <h1 style={{ fontSize: 14, fontWeight: 700, margin: '10px 0 4px', color: '#2c2a24' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        h2:    ({ node, ...p }) => <h2 style={{ fontSize: 13, fontWeight: 700, margin: '8px 0 4px', color: '#111827' }} {...p} />,
+        h2:    ({ node, ...p }) => <h2 style={{ fontSize: 13, fontWeight: 700, margin: '8px 0 4px', color: '#2c2a24' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        h3:    ({ node, ...p }) => <h3 style={{ fontSize: 12, fontWeight: 700, margin: '6px 0 3px', color: '#374151' }} {...p} />,
+        h3:    ({ node, ...p }) => <h3 style={{ fontSize: 12, fontWeight: 700, margin: '6px 0 3px', color: '#33302a' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         a:     ({ node, ...p }) => <a style={{ color: '#2563eb', textDecoration: 'underline' }} target="_blank" rel="noreferrer" {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        hr:    ({ node, ...p }) => <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb', margin: '8px 0' }} {...p} />,
+        hr:    ({ node, ...p }) => <hr style={{ border: 'none', borderTop: '1px solid #ece3d0', margin: '8px 0' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        blockquote: ({ node, ...p }) => <blockquote style={{ borderLeft: '3px solid #d1d5db', paddingLeft: 10, margin: '4px 0', color: '#6b7280' }} {...p} />,
+        blockquote: ({ node, ...p }) => <blockquote style={{ borderLeft: '3px solid #d6ccb5', paddingLeft: 10, margin: '4px 0', color: '#8a8168' }} {...p} />,
       }}
     >
       {children}
@@ -508,7 +508,7 @@ export function ChatSidebar({ isOpen, onToggle, nodes, edges }: Props) {
               </div>
             )}
             {msg.role === 'assistant' ? (
-              <div style={{ ...styles.bubbleText, color: msg.error ? '#dc2626' : '#111827' }}>
+              <div style={{ ...styles.bubbleText, color: msg.error ? '#dc2626' : '#2c2a24' }}>
                 <MdContent>{msg.content}</MdContent>
               </div>
             ) : (
@@ -564,8 +564,8 @@ const styles: Record<string, React.CSSProperties> = {
   sidebar: {
     width: 340,
     flexShrink: 0,
-    borderLeft: '1px solid #e5e7eb',
-    background: '#fff',
+    borderLeft: '1px solid #ece3d0',
+    background: '#f8f3e9',
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
@@ -619,7 +619,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   label: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 44,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -627,7 +627,7 @@ const styles: Record<string, React.CSSProperties> = {
   input: {
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #e5e7eb',
+    border: '1px solid #ece3d0',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -643,7 +643,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   numLabel: {
     fontSize: 10,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 28,
     textAlign: 'right',
   },
@@ -660,7 +660,7 @@ const styles: Record<string, React.CSSProperties> = {
     width: '100%',
     fontSize: 10,
     padding: '4px 6px',
-    border: '1px solid #e5e7eb',
+    border: '1px solid #ece3d0',
     borderRadius: 4,
     outline: 'none',
     resize: 'vertical',
@@ -703,8 +703,8 @@ const styles: Record<string, React.CSSProperties> = {
   },
   assistantBubble: {
     alignSelf: 'flex-start',
-    background: '#f9fafb',
-    border: '1px solid #e5e7eb',
+    background: '#faf6ec',
+    border: '1px solid #ece3d0',
     borderRadius: '2px 12px 12px 12px',
     padding: '8px 12px',
     maxWidth: '95%',
@@ -719,7 +719,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   roleLabel: {
     fontSize: 10,
-    color: '#9ca3af',
+    color: '#b0a891',
     fontWeight: 600,
     textTransform: 'uppercase',
     letterSpacing: '0.05em',
@@ -730,7 +730,7 @@ const styles: Record<string, React.CSSProperties> = {
     cursor: 'pointer',
     fontSize: 12,
     padding: '0 2px',
-    color: '#9ca3af',
+    color: '#b0a891',
     lineHeight: 1,
   },
   bubbleText: {
@@ -746,7 +746,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   inputArea: {
     padding: '8px 10px',
-    borderTop: '1px solid #e5e7eb',
+    borderTop: '1px solid #ece3d0',
     display: 'flex',
     gap: 6,
     alignItems: 'flex-end',
@@ -756,7 +756,7 @@ const styles: Record<string, React.CSSProperties> = {
     flex: 1,
     fontSize: 12,
     padding: '6px 8px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 6,
     outline: 'none',
     resize: 'none',

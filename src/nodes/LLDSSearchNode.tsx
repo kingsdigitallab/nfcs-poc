@@ -40,7 +40,7 @@ export const LLDS_CONFIG: BackboneSearchConfig = {
       cachedLabel: '📦 cached',
       title:       'Reuse the locally cached result if less than 24 h old. Uncheck to force a live request.',
       onColor:     '#92400e',
-      offColor:    '#6b7280',
+      offColor:    '#8a8168',
     },
   },
 }

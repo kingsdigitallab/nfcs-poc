@@ -63,14 +63,14 @@ const toolbarStyle: React.CSSProperties = {
 }
 
 const btnStyle: React.CSSProperties = {
-  background:   '#fff',
-  border:       '1px solid #d1d5db',
+  background:   '#fffdf7',
+  border:       '1px solid #d6ccb5',
   borderRadius: 5,
   cursor:       'pointer',
   fontSize:     15,
   lineHeight:   1,
   padding:      '3px 7px',
-  color:        '#6b7280',
+  color:        '#8a8168',
   boxShadow:    '0 1px 4px rgba(0,0,0,0.12)',
   transition:   'background 0.12s, color 0.12s',
 }

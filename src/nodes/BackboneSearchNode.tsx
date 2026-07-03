@@ -137,7 +137,7 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
   const hasFetchAll = config.fetchAll !== undefined
   const fetchAll    = hasFetchAll && ((d.fetchAll as boolean | undefined) ?? false)
   const status      = d.status as BackboneStatus
-  const borderColor = config.statusColours?.[status] ?? STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = config.statusColours?.[status] ?? STATUS_BORDER[status] ?? '#d6ccb5'
   const filters     = config.filters ?? []
 
   const wirableRows = [
@@ -178,8 +178,8 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
           style={{
             ...styles.inputHandle,
             top: handleTop(rowIndex),
-            background: isConnected(handleId) ? '#3b82f6' : '#9ca3af',
-            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#9ca3af'}`,
+            background: isConnected(handleId) ? '#3b82f6' : '#b0a891',
+            boxShadow: `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#b0a891'}`,
           }}
         />
       ))}
@@ -191,7 +191,7 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
             ...styles.statusBadge,
             color: (config.cappedAmberStatus && d._capped === true)
               ? '#fbbf24'
-              : config.statusBadgeColours?.[status] ?? STATUS_BADGE[status] ?? '#9ca3af',
+              : config.statusBadgeColours?.[status] ?? STATUS_BADGE[status] ?? '#b0a891',
           }}>
             {d.statusMessage as string}
           </span>
@@ -380,7 +380,7 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
               <span style={{
                 color: d[config.footer.extraToggle.key] === true
                   ? (config.footer.extraToggle.onColor ?? config.theme.fixtureIcon)
-                  : (config.footer.extraToggle.offColor ?? '#9ca3af'),
+                  : (config.footer.extraToggle.offColor ?? '#b0a891'),
               }}>
                 {status === 'cached' && config.footer.extraToggle.cachedLabel
                   ? config.footer.extraToggle.cachedLabel
@@ -390,7 +390,7 @@ export function BackboneSearchNode({ id, data, config }: NodeProps & { config: B
           )}
           <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
             <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
-            <span style={{ color: d.useFixture ? config.theme.fixtureIcon : '#9ca3af' }}>📦</span>
+            <span style={{ color: d.useFixture ? config.theme.fixtureIcon : '#b0a891' }}>📦</span>
           </label>
           {(d.status === 'success' || d.status === 'cached') && (
             <button

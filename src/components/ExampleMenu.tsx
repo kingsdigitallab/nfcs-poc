@@ -117,7 +117,7 @@ export function ExampleMenu({ onLoad }: Props) {
 }
 
 const btnStyle: React.CSSProperties = {
-  background: '#f3f4f6', color: '#374151', border: '1px solid #d1d5db',
+  background: '#f3f4f6', color: '#33302a', border: '1px solid #d6ccb5',
   borderRadius: 6, padding: '5px 10px', fontSize: 12, fontWeight: 600, cursor: 'pointer',
 }
 
@@ -150,7 +150,7 @@ const dropHeaderStyle: React.CSSProperties = {
 const hintStyle: React.CSSProperties = {
   padding:  '8px 12px',
   fontSize: 11,
-  color:    '#6b7280',
+  color:    '#8a8168',
   fontStyle: 'italic',
 }
 
@@ -175,7 +175,7 @@ const itemTitleStyle: React.CSSProperties = {
 
 const itemDescStyle: React.CSSProperties = {
   fontSize: 11,
-  color:    '#6b7280',
+  color:    '#8a8168',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
   textOverflow: 'ellipsis',

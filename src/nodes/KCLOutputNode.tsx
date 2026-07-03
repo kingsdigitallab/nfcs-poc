@@ -116,7 +116,7 @@ export function KCLOutputNode({ id }: NodeProps) {
                   <div style={styles.cardTitle} title={String(cardTitle)}>{String(cardTitle)}</div>
                   <div style={styles.cardActions}>
                     <button
-                      style={{ ...styles.actionBtn, color: copied === rec.id ? '#16a34a' : '#6b7280' }}
+                      style={{ ...styles.actionBtn, color: copied === rec.id ? '#16a34a' : '#8a8168' }}
                       onClick={() => copyResponse(rec.id, response)}
                       title="Copy response"
                       className="nodrag"
@@ -169,12 +169,12 @@ export function KCLOutputNode({ id }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '1.5px solid #d1d5db',
+    background: '#fffdf7',
+    border: '1.5px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 380,
     maxWidth: 540,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     overflow: 'hidden',
   },
   header: {
@@ -188,7 +188,7 @@ const styles = {
   title:      { color: '#fff', fontWeight: 700, fontSize: 12 },
   badge:      { color: '#94a3b8', fontSize: 10, fontWeight: 600 },
   copyAllBtn: { fontSize: 10, color: '#cbd5e1', background: 'transparent', border: '1px solid #334155', borderRadius: 4, padding: '1px 7px', cursor: 'pointer' },
-  placeholder: { padding: '20px 16px', color: '#9ca3af', fontSize: 12, fontStyle: 'italic' as const, textAlign: 'center' as const },
+  placeholder: { padding: '20px 16px', color: '#b0a891', fontSize: 12, fontStyle: 'italic' as const, textAlign: 'center' as const },
   cardList:   { display: 'flex', flexDirection: 'column' as const, gap: 0, maxHeight: 480, overflowY: 'auto' as const },
   responseCard: { padding: '10px 12px', borderBottom: '1px solid #f0f0f0', display: 'flex', flexDirection: 'column' as const, gap: 5 },
   cardTop:    { display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 },
@@ -197,7 +197,7 @@ const styles = {
   actionBtn:  { background: 'none', border: 'none', cursor: 'pointer', fontSize: 14, padding: '0 2px', lineHeight: 1 },
   metaRow:    { display: 'flex', flexWrap: 'wrap' as const, gap: 4 },
   metaPill:   { fontSize: 9, fontWeight: 600, padding: '1px 6px', borderRadius: 10, background: '#f1f5f9', color: '#475569' },
-  responseText: { fontSize: 12, color: '#374151', lineHeight: 1.65, whiteSpace: 'pre-wrap' as const, wordBreak: 'break-word' as const },
+  responseText: { fontSize: 12, color: '#33302a', lineHeight: 1.65, whiteSpace: 'pre-wrap' as const, wordBreak: 'break-word' as const },
   expandBtn:  { background: 'none', border: 'none', color: '#be123c', fontSize: 11, cursor: 'pointer', padding: '2px 0', textAlign: 'left' as const },
   inputHandle: { width: 10, height: 10, background: HEADER_COLOR, border: '2px solid #fff', boxShadow: `0 0 0 1px ${HEADER_COLOR}` },
 }

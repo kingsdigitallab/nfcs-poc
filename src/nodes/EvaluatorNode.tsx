@@ -57,7 +57,7 @@ const BTN_COLOR    = '#52525b'
 const DEFAULT_RUBRIC = EVALUATOR_RECIPES.find(r => r.key === 'interpretive-agreement')?.prompt ?? ''
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   running: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
@@ -467,7 +467,7 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
   const status      = (d.status ?? 'idle') as string
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
   const canRun      = !!effectiveApiKey && !!judgeModel && !!referenceField && !!candidateField && !isRunning
 
   const showAgreementArea = status === 'success' || status === 'error'
@@ -587,7 +587,7 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
         {/* Temperature — read-only */}
         <div style={styles.row}>
           <span style={styles.label}>Temp</span>
-          <span style={{ ...styles.input, color: '#6b7280', background: '#f9fafb', userSelect: 'none', fontSize: 10 }}>
+          <span style={{ ...styles.input, color: '#8a8168', background: '#faf6ec', userSelect: 'none', fontSize: 10 }}>
             0 (fixed — ensures repeatability)
           </span>
         </div>
@@ -616,7 +616,7 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span style={styles.label}>Rubric</span>
             <span
-              style={{ fontSize: 9, color: '#9ca3af', fontFamily: 'monospace' }}
+              style={{ fontSize: 9, color: '#b0a891', fontFamily: 'monospace' }}
               title="{{_lineage}} substitutes a natural-language summary of the upstream pipeline"
             >
               {'{{__reference}} {{__candidate}} {{_lineage}}'}
@@ -663,7 +663,7 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
       {/* Score summary strip — mean per criterion, informational only */}
       {scoreSummary && scoreSummary.length > 0 && (
         <div style={styles.summaryStrip}>
-          <span style={{ ...styles.summaryChip, color: '#6b7280', background: 'transparent', paddingLeft: 0 }}>
+          <span style={{ ...styles.summaryChip, color: '#8a8168', background: 'transparent', paddingLeft: 0 }}>
             mean:
           </span>
           {scoreSummary.map(({ criterion, mean }) => (
@@ -733,12 +733,12 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     width: '100%',
     minWidth: 272,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -759,23 +759,23 @@ const styles = {
   body:         { padding: '10px 12px 6px', display: 'flex', flexDirection: 'column' as const, gap: 7 },
   row:          { display: 'flex', alignItems: 'center', gap: 6 },
   colField:     { display: 'flex', flexDirection: 'column' as const, gap: 3 },
-  label:        { fontSize: 11, color: '#6b7280', width: 44, flexShrink: 0, fontFamily: 'monospace' },
-  select:       { flex: 1, fontSize: 11, padding: '2px 4px', border: '1px solid #d1d5db', borderRadius: 4, outline: 'none', height: 22 },
-  input:        { flex: 1, fontSize: 11, padding: '2px 5px', border: '1px solid #d1d5db', borderRadius: 4, outline: 'none', height: 22 },
-  textarea:     { width: '100%', fontSize: 11, padding: '4px 6px', border: '1px solid #d1d5db', borderRadius: 4, outline: 'none', resize: 'vertical' as const, fontFamily: 'monospace', lineHeight: 1.4, boxSizing: 'border-box' as const },
-  fieldHint:    { fontSize: 9, color: '#9ca3af', paddingLeft: 4, marginTop: -4 },
+  label:        { fontSize: 11, color: '#8a8168', width: 44, flexShrink: 0, fontFamily: 'monospace' },
+  select:       { flex: 1, fontSize: 11, padding: '2px 4px', border: '1px solid #d6ccb5', borderRadius: 4, outline: 'none', height: 22 },
+  input:        { flex: 1, fontSize: 11, padding: '2px 5px', border: '1px solid #d6ccb5', borderRadius: 4, outline: 'none', height: 22 },
+  textarea:     { width: '100%', fontSize: 11, padding: '4px 6px', border: '1px solid #d6ccb5', borderRadius: 4, outline: 'none', resize: 'vertical' as const, fontFamily: 'monospace', lineHeight: 1.4, boxSizing: 'border-box' as const },
+  fieldHint:    { fontSize: 9, color: '#b0a891', paddingLeft: 4, marginTop: -4 },
   summaryStrip: { display: 'flex', flexWrap: 'wrap' as const, alignItems: 'center', gap: 4, padding: '4px 12px', borderTop: '1px solid #f3f4f6' },
-  summaryChip:  { fontSize: 10, fontFamily: 'monospace', background: '#f3f4f6', borderRadius: 3, padding: '2px 6px', color: '#374151' },
+  summaryChip:  { fontSize: 10, fontFamily: 'monospace', background: '#f3f4f6', borderRadius: 3, padding: '2px 6px', color: '#33302a' },
   agreementBox: { padding: '8px 12px', borderTop: '1px solid #f3f4f6' },
-  agreementTitle:   { fontSize: 10, fontWeight: 700, color: '#374151', marginBottom: 3 },
-  agreementOverall: { fontSize: 11, color: '#111827', marginBottom: 5 },
+  agreementTitle:   { fontSize: 10, fontWeight: 700, color: '#33302a', marginBottom: 3 },
+  agreementOverall: { fontSize: 11, color: '#2c2a24', marginBottom: 5 },
   agreementGrid:    { display: 'flex', flexDirection: 'column' as const, gap: 3 },
   agreementRow:     { display: 'flex', gap: 5, fontSize: 10, color: '#4b5563', alignItems: 'center' },
   agreementCrit:    { fontFamily: 'monospace', width: 20, flexShrink: 0 },
   agreementBar:     { fontFamily: 'monospace', letterSpacing: -1, color: '#6366f1', fontSize: 9 },
   agreementPct:     { width: 26, textAlign: 'right' as const, fontWeight: 600 },
-  agreementCount:   { color: '#9ca3af' },
-  agreementHint:    { fontSize: 10, color: '#9ca3af', fontStyle: 'italic' as const, lineHeight: 1.5 },
+  agreementCount:   { color: '#b0a891' },
+  agreementHint:    { fontSize: 10, color: '#b0a891', fontStyle: 'italic' as const, lineHeight: 1.5 },
   footer:       { padding: '6px 10px 8px', display: 'flex', justifyContent: 'flex-end' },
   btn:          { color: '#fff', border: 'none', borderRadius: 5, padding: '4px 14px', fontSize: 12, fontWeight: 600, cursor: 'pointer' },
   inputHandle:  { width: 8, height: 8, background: BTN_COLOR, border: '2px solid #fff', boxShadow: `0 0 0 1px ${BTN_COLOR}`, position: 'absolute' as const, left: -5, borderRadius: '50%' },

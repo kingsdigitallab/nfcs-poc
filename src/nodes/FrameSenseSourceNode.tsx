@@ -52,7 +52,7 @@ const HEADER_COLOR = '#29394a'
 const BTN_COLOR    = '#2d4a6a'
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:     '#d1d5db',
+  idle:     '#d6ccb5',
   scanning: '#3b82f6',
   success:  '#22c55e',
   error:    '#ef4444',
@@ -191,7 +191,7 @@ export function FrameSenseSourceNode({ id, data }: NodeProps) {
   const frameFilter  = (d.frameFilter  as FrameFilter | undefined) ?? 'middle'
   const folderName   = (d.folderName   as string      | undefined) ?? ''
   const status       = (d.status       as string      | undefined) ?? 'idle'
-  const borderColor  = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor  = STATUS_BORDER[status] ?? '#d6ccb5'
 
   const doScan = useCallback(async (rootHandle: FileSystemDirectoryHandle) => {
     clearNodeResults(id)
@@ -404,7 +404,7 @@ export function FrameSenseSourceNode({ id, data }: NodeProps) {
       <div style={styles.footer}>
         {HAS_API && dirHandleRef.current && !isScanning && (
           <button
-            style={{ ...styles.btn, background: '#374151', marginRight: 6 }}
+            style={{ ...styles.btn, background: '#33302a', marginRight: 6 }}
             onClick={handleRescan}
             className="nodrag"
           >
@@ -438,12 +438,12 @@ export function FrameSenseSourceNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '2px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     240,
     maxWidth:     280,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
     transition:   'border-color 0.25s',
   },
@@ -484,7 +484,7 @@ const styles = {
   },
   label: {
     fontSize:   11,
-    color:      '#6b7280',
+    color:      '#8a8168',
     width:      42,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -493,7 +493,7 @@ const styles = {
     flex:         1,
     fontSize:     11,
     padding:      '2px 4px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
     outline:      'none',
     height:       22,
@@ -548,11 +548,11 @@ const styles = {
   },
   statLabel: {
     fontSize: 9,
-    color:    '#9ca3af',
+    color:    '#b0a891',
   },
   hint: {
     fontSize:   10,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     lineHeight: 1.5,
   },
   code: {
