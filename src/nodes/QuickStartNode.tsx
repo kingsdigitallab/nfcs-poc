@@ -3,6 +3,7 @@ import { useReactFlow, NodeProps } from '@xyflow/react'
 import type { Node, Edge } from '@xyflow/react'
 import { filterKCLModels, APEX_MODEL, DEFAULT_EUROPEANA_API_KEY } from '../utils/kclConfig'
 import { newId, bumpCounterPast } from '../utils/nodeIdCounter'
+import { TABLE_OUTPUT_SIZE } from '../config/nodeDefaults'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -525,6 +526,8 @@ export function QuickStartNode({ id, data }: NodeProps) {
         id: nodeId, type: spec.type,
         position: { x: base.x + OUTPUT_COL, y: ny },
         data: buildOutputData(spec.type),
+        // tableOutput needs a bounded width or the max-content table balloons
+        ...(spec.type === 'tableOutput' ? { style: { ...TABLE_OUTPUT_SIZE } } : {}),
       } as Node)
 
       const commentId = newId('comment')

@@ -69,6 +69,14 @@ export function findSharedApiKey(nodes: Node[]): string {
   return ''
 }
 
+// ─── Default node sizes ────────────────────────────────────────────────────────
+
+// TableOutput MUST carry an explicit width: the in-node table renders at
+// width:max-content inside an overflow-x:auto wrapper, so an unbounded node
+// balloons to fit every column instead of scrolling. Shared by the factory
+// below, QuickStart instantiation, and the hydrateNodes legacy backfill.
+export const TABLE_OUTPUT_SIZE = { width: 560, height: 380 }
+
 // ─── Node factories ────────────────────────────────────────────────────────────
 
 // The satisfies guard rejects factories for nonexistent node types (typos);
@@ -593,7 +601,7 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   tableOutput: pos => ({
     id: newId('table'), type: 'tableOutput', position: pos,
-    style: { width: 560, height: 380 },
+    style: { ...TABLE_OUTPUT_SIZE },
     data: {},
   }),
   jsonOutput: pos => ({

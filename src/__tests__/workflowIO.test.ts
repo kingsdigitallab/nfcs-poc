@@ -96,6 +96,45 @@ describe('parseWorkflowFile validation', () => {
   })
 })
 
+describe('hydrateNodes tableOutput size backfill', () => {
+  const load = (nodes: unknown[]) =>
+    hydrateNodes(parseWorkflowFile(JSON.stringify({ version: 2, savedAt: 'x', edges: [], nodes })))
+
+  it('backfills the default size when a saved tableOutput has no width', () => {
+    const [table] = load([
+      { id: 'table-1', type: 'tableOutput', position: { x: 0, y: 0 }, data: {} },
+    ])
+    expect(table.style).toEqual({ width: 560, height: 380 })
+  })
+
+  it('leaves an explicit style.width untouched', () => {
+    const [table] = load([
+      {
+        id: 'table-1', type: 'tableOutput', position: { x: 0, y: 0 },
+        data: {}, style: { width: 800, height: 500 },
+      },
+    ])
+    expect(table.style).toEqual({ width: 800, height: 500 })
+    expect(table.width).toBeUndefined()
+  })
+
+  it('leaves a user-resized node (top-level width/height) untouched', () => {
+    const [table] = load([
+      { id: 'table-1', type: 'tableOutput', position: { x: 0, y: 0 }, data: {}, width: 720, height: 400 },
+    ])
+    expect(table.width).toBe(720)
+    expect(table.height).toBe(400)
+    expect(table.style).toBeUndefined()
+  })
+
+  it('does not touch other node types', () => {
+    const [json] = load([
+      { id: 'json-1', type: 'jsonOutput', position: { x: 0, y: 0 }, data: {} },
+    ])
+    expect(json.style).toBeUndefined()
+  })
+})
+
 describe('hydrateNodes group handling', () => {
   it('preserves child opacity styles only inside collapsed groups', () => {
     const file = parseWorkflowFile(JSON.stringify({

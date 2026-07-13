@@ -1,4 +1,5 @@
 import type { CoordinateExtent, Edge, Node } from '@xyflow/react'
+import { TABLE_OUTPUT_SIZE } from '../config/nodeDefaults'
 
 // ─── Schema ──────────────────────────────────────────────────────────────────
 
@@ -181,6 +182,13 @@ export function hydrateNodes(saved: WorkflowFile): Node[] {
         if ('overflow' in clean) delete (clean as any).overflow
       }
       node.style = clean
+    }
+    // Legacy backfill: tableOutput saved without an explicit width (e.g. from
+    // QuickStart instantiation before it set one) balloons to fit every column
+    // instead of scrolling. Leave user-resized nodes untouched.
+    if (n.type === 'tableOutput' && n.width == null && n.style?.width == null) {
+      node.style = { ...node.style, width: TABLE_OUTPUT_SIZE.width }
+      if (n.height == null && n.style?.height == null) node.style.height = TABLE_OUTPUT_SIZE.height
     }
     return node
   })
