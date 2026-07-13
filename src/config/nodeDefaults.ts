@@ -2,11 +2,14 @@ import type { XYPosition, Node } from '@xyflow/react'
 import { newId } from '../utils/nodeIdCounter'
 import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from '../utils/kclConfig'
 import type { AppNode } from '../types/AppNode'
+import type { NodeTypeId } from '../nodes'
 import type { LLDSSearchNodeData }        from '../nodes/LLDSSearchNode'
 import type { ADSSearchAdvancedNodeData }  from '../nodes/ADSSearchAdvancedNode'
 import type { ADSLibraryNodeData }         from '../nodes/ADSLibraryNode'
 import type { ARIADNESearchNodeData }      from '../nodes/ARIADNESearchNode'
 import type { HSDSSearchNodeData }         from '../nodes/HSDSSearchNode'
+import type { SparqlSearchNodeData }       from '../nodes/SparqlSearchNode'
+import { buildSparqlQuery, DEFAULT_BUILDER_STATE } from '../utils/sparqlQueryBuilder'
 import type { BodleianSearchNodeData }     from '../nodes/BodleianSearchNode'
 import type { SMGSearchNodeData }          from '../nodes/SMGSearchNode'
 import type { VASearchNodeData }           from '../nodes/VASearchNode'
@@ -53,7 +56,7 @@ import type { QuickStartNodeData }         from '../nodes/QuickStartNode'
 
 export const KCL_API_KEY_NODES = new Set([
   'kclNode', 'kclField', 'evaluatorNode', 'sourceProfile',
-  'smartFilter', 'smartGeocoder', 'quickStart',
+  'smartFilter', 'smartGeocoder', 'quickStart', 'sparqlSearch',
 ])
 
 export function findSharedApiKey(nodes: Node[]): string {
@@ -66,8 +69,20 @@ export function findSharedApiKey(nodes: Node[]): string {
   return ''
 }
 
+// ─── Default node sizes ────────────────────────────────────────────────────────
+
+// TableOutput MUST carry an explicit width: the in-node table renders at
+// width:max-content inside an overflow-x:auto wrapper, so an unbounded node
+// balloons to fit every column instead of scrolling. Shared by the factory
+// below, QuickStart instantiation, and the hydrateNodes legacy backfill.
+export const TABLE_OUTPUT_SIZE = { width: 560, height: 380 }
+
 // ─── Node factories ────────────────────────────────────────────────────────────
 
+// The satisfies guard rejects factories for nonexistent node types (typos);
+// Partial because a few types (e.g. proxy-only 'group' children) could in
+// principle be created outside the palette. Missing palette factories are
+// caught by the SIDEBAR_ITEMS ↔ NODE_DEFAULTS check in App's drop handler.
 export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   param: pos => ({
     id: newId('param'), type: 'param', position: pos,
@@ -198,12 +213,32 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       delimiter:     'auto',
       hasHeader:     true,
       autoCast:      true,
+      pdfRenderPages: false,
       fileName:      '',
       status:        'idle',
       statusMessage: '',
       count:         0,
       columnNames:   [],
     } satisfies LocalFileSourceNodeData,
+  }),
+  sparqlSearch: pos => ({
+    id: newId('sparql'), type: 'sparqlSearch', position: pos,
+    data: {
+      inlineQuery: '', inlineLimit: '20',
+      apiKey: DEFAULT_KCL_API_KEY, nlQuery: '', nlExplanation: '',
+      // Builder mode by default; the query is generated from the default
+      // builder state (paintings by Turner) so preview and state agree.
+      sparqlQuery: buildSparqlQuery(DEFAULT_BUILDER_STATE),
+      queryMode: 'builder',
+      builderInstanceOf:    DEFAULT_BUILDER_STATE.instanceOf ?? '',
+      builderSubclasses:    false,
+      builderFilters:       DEFAULT_BUILDER_STATE.filters ?? [],
+      builderColumns:       DEFAULT_BUILDER_STATE.columns ?? [],
+      builderCustomColumns: '',
+      builderCustom:        false,
+      useFixture: false,
+      status: 'idle', statusMessage: '', results: undefined, count: 0,
+    } satisfies SparqlSearchNodeData,
   }),
   frameSenseSource: pos => ({
     id: newId('framesense'), type: 'frameSenseSource', position: pos,
@@ -262,6 +297,7 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       xmlCount:        0,
       textCount:       0,
       imageCount:      0,
+      csvCount:        0,
     } satisfies SampleDataSourceNodeData,
   }),
   ollamaNode: pos => ({
@@ -565,7 +601,7 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   tableOutput: pos => ({
     id: newId('table'), type: 'tableOutput', position: pos,
-    style: { width: 560, height: 380 },
+    style: { ...TABLE_OUTPUT_SIZE },
     data: {},
   }),
   jsonOutput: pos => ({
@@ -583,12 +619,12 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   timelineOutput: pos => ({
     id: newId('timeline'), type: 'timelineOutput', position: pos,
-    data: { fitToRange: false } satisfies TimelineOutputNodeData,
+    data: { fitToRange: false, filterStart: null, filterEnd: null } satisfies TimelineOutputNodeData,
     style: { width: 520 },
   }),
   timelineView: pos => ({
     id: newId('timeline'), type: 'timelineView', position: pos,
-    data: { fitToRange: false } satisfies TimelineOutputNodeData,
+    data: { fitToRange: false, filterStart: null, filterEnd: null } satisfies TimelineOutputNodeData,
     style: { width: 520 },
   }),
   ollamaOutput: pos => ({
@@ -624,4 +660,4 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
     style: { width: 400, height: 300 },
     data: { name: 'Group' },
   }),
-}
+} satisfies Partial<Record<NodeTypeId, (pos: XYPosition) => AppNode>>

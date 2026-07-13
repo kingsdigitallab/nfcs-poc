@@ -84,7 +84,7 @@ export function JSONOutputNode({ id }: NodeProps) {
               </button>
             )}
             {records.length <= PREVIEW_RECORDS && (
-              <span style={{ fontSize: 10, color: '#9ca3af' }}>
+              <span style={{ fontSize: 10, color: '#b0a891' }}>
                 {records.length} record{records.length !== 1 ? 's' : ''}
               </span>
             )}
@@ -133,7 +133,7 @@ const styles = {
   },
   placeholder: {
     padding: '20px 16px',
-    color: '#6b7280',
+    color: '#8a8168',
     fontSize: 12,
     fontStyle: 'italic' as const,
     textAlign: 'center' as const,

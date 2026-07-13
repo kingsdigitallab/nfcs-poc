@@ -54,7 +54,7 @@ interface ProxyEdgeInfo {
 /* ─── Constants ─────────────────────────────────────────────────────────── */
 
 const BORDER_COLOR = '#3b82f6'
-const HEADER_BG    = '#3b82f6'
+
 
 // Slot rendering: count is derived per-render from actual proxyEdges, so any
 // number of in/out edges renders correctly. The previous fixed cap of 8 caused
@@ -88,12 +88,6 @@ export function GroupNode({ id, data, selected }: NodeProps) {
 
   /* Read reactive state --------------------------------------------------- */
   const allNodes = getNodes()
-  const allEdges = getEdges()
-  const children = allNodes.filter((n: Node) => n.parentId === id)
-  const childIds = useMemo(
-    () => new Set(children.map((c: Node) => c.id)),
-    [children.map(c => c.id).join(',')]
-  )
 
   /*
    * slotData = which slot each edge occupies (side + slot index).

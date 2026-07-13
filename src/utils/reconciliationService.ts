@@ -60,7 +60,11 @@ export const FIELD_AUTHORITY_MAP: Record<string, AuthorityConfig[]> = {
 }
 
 export function authoritiesForField(fieldName: string): AuthorityConfig[] {
-  const mapped = FIELD_AUTHORITY_MAP[fieldName]
+  // Namespaced fields (e.g. gbif.scientificName) map by their last segment,
+  // so domain fields keep their typed authorities after the move into
+  // service namespaces.
+  const lastSegment = fieldName.includes('.') ? fieldName.slice(fieldName.lastIndexOf('.') + 1) : fieldName
+  const mapped = FIELD_AUTHORITY_MAP[fieldName] ?? FIELD_AUTHORITY_MAP[lastSegment]
   if (!mapped) return FIELD_AUTHORITY_MAP.default
   // Always offer untyped "Wikidata Items" as an escape hatch for fields whose
   // default authority is too narrow (e.g. creator = org rather than person).

@@ -9,9 +9,9 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Handle, Position, NodeProps } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
-import { formatRecordCitation, formatAllCitations, type RecordCitation } from '../utils/citationUtils'
+import { formatAllCitations, type RecordCitation } from '../utils/citationUtils'
 
-const HEADER_COLOR = '#78350f'
+const HEADER_COLOR = '#6f4a25'
 const PAGE_SIZE    = 10
 
 export interface CitationNodeData {
@@ -198,11 +198,11 @@ export function CitationNode({ id }: NodeProps) {
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '2px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '2px solid #d6ccb5',
     borderRadius: 8,
     width:        340,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
   },
   header: {
@@ -236,7 +236,7 @@ const styles = {
   },
   empty: {
     fontSize:  11,
-    color:     '#9ca3af',
+    color:     '#b0a891',
     fontStyle: 'italic',
     lineHeight: 1.5,
     padding:   '4px 0',
@@ -268,7 +268,7 @@ const styles = {
   },
   entryDate: {
     fontSize: 10,
-    color:    '#6b7280',
+    color:    '#8a8168',
   },
   titleLink: {
     fontSize:       11,
@@ -284,7 +284,7 @@ const styles = {
   title: {
     fontSize:   11,
     fontWeight: 600,
-    color:      '#111827',
+    color:      '#2c2a24',
     lineHeight: 1.35,
     display:    '-webkit-box',
     WebkitLineClamp: 2,
@@ -293,7 +293,7 @@ const styles = {
   },
   creator: {
     fontSize:   10,
-    color:      '#374151',
+    color:      '#33302a',
     lineHeight: 1.3,
   },
   pidRow: {
@@ -303,7 +303,7 @@ const styles = {
   },
   metaLabel: {
     fontSize:   9,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     fontFamily: 'monospace',
     width:      20,
     flexShrink: 0,
@@ -320,7 +320,7 @@ const styles = {
   },
   accessed: {
     fontSize: 9,
-    color:    '#9ca3af',
+    color:    '#b0a891',
     marginTop: 1,
   },
   licence: {
@@ -328,7 +328,7 @@ const styles = {
   },
   uncited: {
     fontSize:  10,
-    color:     '#9ca3af',
+    color:     '#b0a891',
     fontStyle: 'italic',
     padding:   '2px 0',
   },
@@ -351,7 +351,7 @@ const styles = {
   },
   pageLabel: {
     fontSize: 10,
-    color:    '#6b7280',
+    color:    '#8a8168',
   },
   footer: {
     padding:        '5px 8px 7px',

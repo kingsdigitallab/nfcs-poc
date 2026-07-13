@@ -4,6 +4,10 @@ export const DEFAULT_EUROPEANA_API_KEY: string = import.meta.env.VITE_EUROPEANA_
 const ALLOWED_MODELS = new Set(['arc:nexus', 'arc:lite', 'arc:nano'])
 export const APEX_MODEL = 'arc:apex'
 
+/** All KCL/ARC model ids, small→large. Static fallback for pickers when the
+ *  live /v1/models list can't be fetched (offline, no key). */
+export const KCL_MODEL_IDS = ['arc:nano', 'arc:lite', 'arc:nexus', 'arc:apex'] as const
+
 const MODEL_CHAR_LIMITS: Record<string, number> = {
   'arc:nano':  12_000,   // small model — keep conservative
   'arc:lite':  32_000,   // mid-tier

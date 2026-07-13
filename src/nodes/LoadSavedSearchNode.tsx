@@ -14,6 +14,7 @@ import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { isNfcsSavedSearch } from '../types/savedSearch'
 import type { NfcsSavedSearchMeta } from '../types/savedSearch'
+import { normaliseRecords } from '../utils/recordNormalise'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 export interface LoadSavedSearchNodeData {
@@ -32,10 +33,10 @@ export interface LoadSavedSearchNodeData {
   [key: string]: unknown
 }
 
-const HEADER_COLOR = '#4c1d95'
+const HEADER_COLOR = '#443a72'
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   loading: '#3b82f6',
   ready:   '#22c55e',
   error:   '#ef4444',
@@ -128,6 +129,10 @@ export function LoadSavedSearchNode({ id, data }: NodeProps) {
             throw new Error('File contains no records.')
           }
 
+          // Saved files may predate schema changes — normalise to the
+          // current UnifiedRecord contract (e.g. flat GBIF fields → gbif.*).
+          records = normaliseRecords(records as unknown as Record<string, unknown>[])
+
           const version = setNodeResults(id, records as unknown as Record<string, unknown>[])
 
           updateNodeData(id, {
@@ -157,7 +162,7 @@ export function LoadSavedSearchNode({ id, data }: NodeProps) {
   )
 
   const status      = (d.status as string | undefined) ?? 'idle'
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
   const hasEnvelope = d.hasEnvelope as boolean | undefined
   const savedAt     = d.savedAt as string | undefined
   const sources     = (d.sources as string[] | undefined) ?? []
@@ -297,12 +302,12 @@ export function LoadSavedSearchNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '2px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     260,
     maxWidth:     320,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
     transition:   'border-color 0.2s',
   },
@@ -339,7 +344,7 @@ const styles = {
   hint: {
     margin:    0,
     fontSize:  11,
-    color:     '#9ca3af',
+    color:     '#b0a891',
     fontStyle: 'italic' as const,
   },
   metaPanel: {
@@ -369,7 +374,7 @@ const styles = {
   },
   metaVal: {
     fontSize: 10,
-    color:    '#374151',
+    color:    '#33302a',
     flex:     1,
   },
   sourceChips: {
@@ -397,7 +402,7 @@ const styles = {
   },
   countStale: {
     fontSize:  10,
-    color:     '#9ca3af',
+    color:     '#b0a891',
     fontStyle: 'italic' as const,
   },
   details: {
@@ -440,7 +445,7 @@ const styles = {
   },
   paramKey: {
     fontSize:   9,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     fontFamily: 'monospace',
     flexShrink: 0,
     minWidth:   60,
@@ -455,10 +460,10 @@ const styles = {
   },
   rawNote: {
     fontSize: 10,
-    color:    '#374151',
+    color:    '#33302a',
   },
   rawLabel: {
-    color:     '#9ca3af',
+    color:     '#b0a891',
     fontStyle: 'italic' as const,
   },
   reloadNote: {

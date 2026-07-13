@@ -15,26 +15,14 @@ import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars, DEFAULT_KCL_API_KEY } from './kclConfig'
 import { arcChat } from './arc'
 import { formatDuration } from './formatDuration'
+import { renderTemplate } from './promptTemplates'
+import { collectLineage, lineageToNarrative } from './lineage'
 
 const EVAL_SYSTEM =
   'You are a rigorous evaluation judge for academic NLP outputs. ' +
   'Return ONLY valid JSON. No prose, no explanation outside the JSON object.'
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
-
-/**
- * Resolve {{word}} tokens against a record.
- * Objects → JSON-stringified; null/undefined → ''.
- * (Mirrors renderTemplate in runKCLNode.ts / runOllamaNode.ts.)
- */
-function renderTemplate(template: string, record: Record<string, unknown>): string {
-  return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
-    const val = record[key]
-    if (val === undefined || val === null) return ''
-    if (typeof val === 'object') return JSON.stringify(val)
-    return String(val)
-  })
-}
 
 /**
  * Strip ```json / ``` fences and attempt JSON.parse.
@@ -140,6 +128,10 @@ export const runEvaluatorNode: NodeRunner = async (nodeId, getNodes, edges, upda
 
   const t0       = performance.now()
   const maxChars = getContentMaxChars(judgeModel)
+  // Lineage is derived once per run, not per record — only when opted in.
+  const lineageNarrative = rubricPrompt.includes('{{_lineage}}')
+    ? lineageToNarrative(collectLineage(nodeId, nodes, edges))
+    : ''
   const enriched: Record<string, unknown>[] = []
   let scoredCnt    = 0
   let skippedCnt   = 0
@@ -177,6 +169,7 @@ export const runEvaluatorNode: NodeRunner = async (nodeId, getNodes, edges, upda
         ...record,
         __reference: refTrunc,
         __candidate: candTrunc,
+        _lineage:    lineageNarrative,
       }
       const prompt = renderTemplate(rubricPrompt, templateCtx)
 

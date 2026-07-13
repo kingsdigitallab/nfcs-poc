@@ -3,6 +3,7 @@ import type { SMGSearchNodeData } from '../nodes/SMGSearchNode'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { addCitation } from './citationUtils'
+import { resolveParamEdge, resolveLimit, finishRunnerSuccess, finishRunnerError } from './runnerHelpers'
 
 // SMG Collections Online API — requires proxy (no CORS from browser Origin)
 const SMG_BASE     = '/smg-proxy'
@@ -89,8 +90,8 @@ function adaptSMGRecord(raw: SMGRawRecord): UnifiedRecord {
     _sourceId:  raw.id,
     _sourceUrl: selfUrl,
     _pid:       accessionNumber,
-    _citation:  [title, museumName, accessionNumber && `Accession no. ${accessionNumber}`, selfUrl]
-      .filter(Boolean).join('. '),
+    // _citation is stamped by addCitation() in the runner — the adapter
+    // must not pre-fill it (the typed shape is an object, not a string).
     title,
     description,
     creator,
@@ -158,18 +159,11 @@ export async function runSMGSearchNode(
   updateNodeData(nodeId, { status: 'loading', statusMessage: 'Loading…', count: 0 })
 
   // Resolve wired or inline query/limit
-  const resolveHandle = (handleId: string, dataKey: keyof SMGSearchNodeData): string => {
-    const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
-    if (edge) {
-      const src = nodes.find(n => n.id === edge.source)
-      return (src?.data as { value?: string } | undefined)?.value ?? ''
-    }
-    return (d[dataKey] as string | undefined) ?? ''
-  }
+  const resolveHandle = (handleId: string, dataKey: keyof SMGSearchNodeData): string =>
+    resolveParamEdge(nodeId, handleId, nodes, edges) ?? (d[dataKey] as string | undefined) ?? ''
 
   const query      = resolveHandle('query', 'inlineQuery')
-  const rawLimit   = parseInt(resolveHandle('limit', 'inlineLimit') || '20', 10)
-  const limit      = isNaN(rawLimit) || rawLimit < 1 ? 20 : Math.min(rawLimit, PAGE_SIZE)
+  const limit      = Math.min(resolveLimit(nodeId, nodes, edges, d.inlineLimit as string | undefined), PAGE_SIZE)
   const fetchAll   = d.fetchAll ?? false
   const searchType = d.searchType || 'objects'
 
@@ -211,31 +205,17 @@ export async function runSMGSearchNode(
       }
 
       const cited   = addCitation(allRecords as Record<string, unknown>[], citationBase)
-      const version = setNodeResults(nodeId, cited)
-      updateNodeData(nodeId, {
-        status: 'success',
-        statusMessage: `✓ ${allRecords.length.toLocaleString()} of ${total.toLocaleString()}`,
-        count: total,
-        resultsVersion: version,
-      })
+      finishRunnerSuccess(nodeId, cited, total, updateNodeData)
     } else {
       const params  = buildParams(query, limit, 0, d)
       const resp    = await fetchSMG(searchType, params)
       const records = (resp.data ?? []).map(adaptSMGRecord)
       const total   = resp.meta?.count?.type?.all ?? records.length
       const cited   = addCitation(records as Record<string, unknown>[], citationBase)
-      const version = setNodeResults(nodeId, cited)
-      updateNodeData(nodeId, {
-        status: 'success',
-        statusMessage: `✓ ${records.length} of ${total.toLocaleString()}`,
-        count: total,
-        resultsVersion: version,
-      })
+      finishRunnerSuccess(nodeId, cited, total, updateNodeData)
     }
   } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err)
-    console.error('[SMG] error', msg)
-    updateNodeData(nodeId, { status: 'error', statusMessage: `✗ ${msg}`, count: 0 })
+    finishRunnerError(nodeId, err, updateNodeData, '[SMG]')
   }
 }
 

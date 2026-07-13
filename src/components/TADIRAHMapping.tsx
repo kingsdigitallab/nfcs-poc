@@ -337,7 +337,7 @@ export function TADIRAHMapping() {
           <>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 12 }}>
               {TADIRAH.map(cat => (
-                <div key={cat.id} style={{ background: '#fff', border: `1.5px solid ${cat.border}`, borderRadius: 8, overflow: 'hidden' }}>
+                <div key={cat.id} style={{ background: '#fffdf7', border: `1.5px solid ${cat.border}`, borderRadius: 8, overflow: 'hidden' }}>
                   <div
                     style={{ background: cat.color, padding: '8px 12px', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}
                     onClick={() => setExpandedCat(expandedCat === cat.id ? null : cat.id)}
@@ -390,7 +390,7 @@ export function TADIRAHMapping() {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
                 {GAPS.map(g => (
-                  <div key={g.category} style={{ display: 'flex', gap: 8, padding: '6px 10px', background: '#fff', border: '1px solid #E0DDD6', borderRadius: 6, fontSize: 11 }}>
+                  <div key={g.category} style={{ display: 'flex', gap: 8, padding: '6px 10px', background: '#fffdf7', border: '1px solid #E0DDD6', borderRadius: 6, fontSize: 11 }}>
                     <span style={{ fontWeight: 600, color: '#4A4640', flexShrink: 0 }}>{g.category}</span>
                     <span style={{ color: '#7A7268' }}>— {g.reason}</span>
                   </div>
@@ -401,7 +401,7 @@ export function TADIRAHMapping() {
         ) : (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 8 }}>
             {nodeList.map(node => (
-              <div key={node.label} style={{ background: '#fff', border: '1px solid #E0DDD6', borderRadius: 6, overflow: 'hidden' }}>
+              <div key={node.label} style={{ background: '#fffdf7', border: '1px solid #E0DDD6', borderRadius: 6, overflow: 'hidden' }}>
                 <div style={{ padding: '7px 10px', borderBottom: '1px solid #EAE8E2' }}>
                   <div style={{ fontWeight: 700, fontSize: 12, color: '#1B2A4A' }}>{node.label}</div>
                   <div style={{ fontSize: 10, color: '#7A7268', marginTop: 2 }}>{node.note}</div>

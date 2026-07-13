@@ -9,6 +9,13 @@ Node-based visual workflow editor for federating UK Arts & Humanities research d
 - **No Service Worker / PWA / workbox**
 - API calls client-side via `fetch()`. GBIF: direct. All others: same-origin proxy.
 
+## Tests & Typecheck
+
+`npx vitest run` (config in `vite.config.ts`, include `src/**/*.test.{ts,tsx}`, jsdom) and `npm run build` (`tsc -b && vite build`) must BOTH stay green — the typecheck was repaired in refactor-v3 after a long period of drift; do not let it rot again. `UnifiedRecord` carries an `[key: string]: unknown` index signature by design (records are open — enrichment nodes add undeclared fields); adapter-output conformance is enforced at runtime by the fixture test, not the compiler. Test suites live in `src/__tests__/`:
+utility unit tests, plus `workflowIO.test.ts` (save/load round-trip), `runWorkflow.test.ts` (Kahn wave ordering + failure
+skipping, mocks `nodeRunners`), and `fixtureConformance.test.ts` — reads every `public/fixtures/*.json` from disk and asserts
+records conform to `UnifiedRecord` (its `ALLOWED_TOP_LEVEL` list must be kept in sync with the interface).
+
 ## Run Modes
 
 | Command | Server | Port |
@@ -39,6 +46,7 @@ Both modes expose identical proxy endpoints and custom middleware — the single
 | `/getty-search-proxy/*` | `https://www.getty.edu/*` |
 | `/nominatim-proxy/*` | `https://nominatim.openstreetmap.org/*` |
 | `/hsds-proxy/*` | `https://hsds.ac.uk/*` |
+| `/wdqs-proxy/*` | `https://query.wikidata.org/*` (SPARQL; proxy adds the descriptive User-Agent WDQS requires + Accept sparql-results+json) |
 | `/url-proxy?url=<encoded>[&js=true][&wait=<strategy>]` | Custom middleware; simple path uses Node `fetch()`; `js=true` uses Puppeteer singleton (auto-reset on `disconnected`). Wait strategies: `networkidle2` (default), `networkidle0`, `domcontentloaded`. |
 | `/ads-library-search?q=<query>&size=<n>` | Custom middleware; two-step JSF session (GET ViewState → POST search) for the ADS Library catalogue. Returns extracted CDATA HTML for client-side parsing. |
 | `/ads-catalogue-search?<qs>` | Custom middleware; Cloudflare bypass via warmed Puppeteer page holding `cf_clearance`. |
@@ -73,7 +81,19 @@ Use `getContentMaxChars(model: string): number` to get the per-model limit. Appl
 
 ```
 src/
-├── App.tsx              # Canvas, collapsible sidebar, Run All, save/load — imports from config/
+├── App.tsx              # Canvas shell + state wiring only (~250 lines) — feature logic lives in hooks/ + components/
+├── components/
+│   ├── TopBar.tsx               # Title, save/load, notes, grouping, mode toggles, Run All (author-mode + example dialog internal)
+│   ├── Sidebar.tsx              # Node palette: search, collapsible TaDiRAH groups, Experimental section
+│   └── …                        # ChatSidebar (takes nodes/edges as props — no ReactFlowProvider
+│                                # exists, so RF hooks don't work there; appends a live CURRENT
+│                                # CANVAS lineage section to the system prompt per send),
+│                                # ConnectionSuggestions, modals, …
+├── hooks/
+│   ├── useWorkflowIO.ts         # save/applyWorkflow/load + workflowId + loadError
+│   ├── useGrouping.ts           # group/ungroup + auto-resize effect (debounce/tolerance comments preserved)
+│   ├── useCanvasConnections.ts  # onConnect/onDrop/onConnectEnd, SINGLETON_TARGET_HANDLES, suggestion + handle-picker popups
+│   └── useUpstreamRecords.ts    # merges records from all data-handle edges
 ├── config/
 │   ├── storageKeys.ts           # STORAGE_KEYS — all localStorage key constants
 │   ├── sidebarItems.ts          # SIDEBAR_ITEMS, SIDEBAR_GROUPS, DEFAULT_COLLAPSED_GROUPS,
@@ -82,11 +102,12 @@ src/
 ├── styles/
 │   └── appStyles.ts             # React.CSSProperties constants for App.tsx layout
 ├── types/
-│   ├── UnifiedRecord.ts         # Canonical inter-node data contract (schema.org annotated)
+│   ├── UnifiedRecord.ts         # Canonical inter-node data contract (schema.org annotated).
+│   │                            # Domain-specific GBIF fields live ONLY under gbif.* — no flat copies.
+│   │                            # periodStart/End/Name stay top-level (cross-service: ADS/ARIADNE/HSDS).
 │   └── AppNode.ts               # AppNode union type + inline *NodeData interfaces
 ├── store/resultsStore.ts        # Out-of-band Map store + version counter
-├── hooks/useUpstreamRecords.ts  # Merges records from all data-handle edges
-├── nodes/               # One file per node + index.ts registry
+├── nodes/               # One file per node + index.ts registry (+ NodeTypeId)
 └── utils/
     ├── nodeRunners.ts           # Registry: nodeType → NodeRunner
     ├── runWorkflow.ts           # Topological executor (Kahn's algorithm)
@@ -117,16 +138,16 @@ and must never be renamed.**
 | Key | Component | CORS |
 |-----|-----------|------|
 | `gbifSearch` | `GBIFSearchNode` | Direct. `https://api.gbif.org/v1/occurrence/search`. Max 300/req. |
-| `lldsSearch` | `LLDSSearchNode` | `/llds-proxy/rest/items?expand=metadata`. No server search — filter client-side. 15s timeout → localStorage cache fallback. |
+| `lldsSearch` | `LLDSSearchNode` | `/llds-proxy/rest/items?expand=metadata`. No server search — filter client-side. 15s timeout → localStorage cache fallback. Thin config over `BackboneSearchNode` (useCache footer toggle). |
 | `ariadneSearch` | `ARIADNESearchNode` | Direct CORS fetch. Pan-European archaeology portal (40+ institutions, 23 countries). Filters: Resource type, Getty AAT subject, Native subject, Country, Data type, Period, Contributor (set Contributor = "Archaeology Data Service" for ADS records). |
 | `hsdsSearch` | `HSDSSearchNode` | Vite proxy, no Cloudflare. Heritage Science Data Service — UK heritage aggregator (Historic England, HES, Cadw). Same filter set as ARIADNESearch plus Country = England/Scotland/Wales/Northern Ireland. `hsds.*` namespace. |
-| `bodleianSearch` | `BodleianSearchNode` | `/bodleian-proxy/*`. Oxford Bodleian Digital Collections. Filters: date range, language, origins, completeness, musical notation. `bodleian.manifest` → feeds ImageView (IIIF mode). Fixture mode supported. |
+| `bodleianSearch` | `BodleianSearchNode` | `/bodleian-proxy/*`. Oxford Bodleian Digital Collections. Filters: date range, language, origins, completeness, musical notation. `bodleian.manifest` → feeds ImageView (IIIF mode). Fixture mode supported. Thin config over `BackboneSearchNode` (single-select sort, fq* filters). |
 | `europeanaSearch` | `EuropeanaSearchNode` | Pre-configured API key (overridable via Param → apiKey handle). Cursor pagination up to 1,000 records. Adds `europeana.thumbnail`, `europeana.shownAt`, `europeana.rights`. |
-| `smgSearch` | `SMGSearchNode` | `/smg-proxy/*`. Science Museum Group collection. `smg.manifest` (IIIF) → ImageView. Fixture mode supported. |
-| `vaSearch` | `VASearchNode` | `/vam-proxy/*`. V&A collection (API v2). Filters: images only, object type, year made from/to. `vam.manifest`, `vam.iiifImageBase`, `vam.thumbnail`. |
+| `smgSearch` | `SMGSearchNode` | `/smg-proxy/*`. Science Museum Group collection. `smg.manifest` (IIIF) → ImageView. Fixture mode supported. Thin config over `BackboneSearchNode` (searchType body row switches endpoint). |
+| `vaSearch` | `VASearchNode` | `/vam-proxy/*`. V&A collection (API v2). Filters: images only, object type, year made from/to. `vam.manifest`, `vam.iiifImageBase`, `vam.thumbnail`. Thin config over `BackboneSearchNode`. |
 | `adsSearchAdvanced` | `ADSSearchAdvancedNode` | **DEPRECATED — blocked by Cloudflare.** Use ARIADNESearch (Contributor = "Archaeology Data Service") or HSDSSearch instead. |
 | `adsLibrarySearch` | `ADSLibraryNode` | **DEPRECATED — blocked by Cloudflare**, same as above. |
-| `mdsSearch` | `MDSSearchNode` | `/mds-proxy`. Two-step HTML scraper. Capped at 200 (amber badge). |
+| `mdsSearch` | `MDSSearchNode` | `/mds-proxy`. Two-step HTML scraper. Capped at 200 (amber status text). Thin config over `BackboneSearchNode`. |
 
 ### Gathering (TaDiRAH: Capture > Gathering)
 | Key | Component | Notes |
@@ -189,6 +210,7 @@ and must never be renamed.**
 ### Experimental (alpha — hidden in Simple mode, collapsed by default)
 | Key | Component | Notes |
 |-----|-----------|-------|
+| `sparqlSearch` | `SparqlSearchNode` | `#4c1d95`. Wikidata SPARQL search via `/wdqs-proxy`. Two modes: **Builder** (instance-of picker with subclasses toggle, property-filter rows over `PROPERTY_GROUPS` — Q-id value → exact triple, text → CONTAINS filter — output-column checkboxes, live read-only query preview; `buildSparqlQuery` in `sparqlQueryBuilder.ts` is the ONLY generator) and **Raw SPARQL** (escape hatch; hand edits set `builderCustom`, any builder change regenerates over them). Keyword row seeds a `wikibase:mwapi` EntitySearch in builder mode AND names fixtures; ✨ NL assist (KCL arc:lite, SmartFilter call pattern, KCL_API_KEY_NODES member) translates plain English → SPARQL, landing in Raw mode with an explanation for review before running; wirable `query`/`limit` handles at the shell contract offsets (51/78); a query without LIMIT gets the limit row appended. Bindings → `sparql.*` namespace; `?item`/`?itemLabel`/`?itemDescription` → id/title/description; `_qid` written for WikidataEnrich/MergeByQID; WKT `Point(lon lat)` → map coordinates. Fixture: `sparqlSearch-default.json` (Turner paintings). |
 | `evaluatorNode` | `EvaluatorNode` | `#3f3f46`. LLM-as-judge, runnable. Scores a `candidateField` against a `referenceField` on the **same record** using an ARC model at **temperature 0** for repeatability. Per-criterion scoring only (never one aggregate score) — built-in rubric presets (Extraction agreement, Interpretive agreement, Rubric-from-note). Template tokens: `{{__reference}}`, `{{__candidate}}`. Writes `record.eval = {scores, reasons, raw, status}` + flat `eval_c*` columns. Shows judge-vs-human agreement readout when a human score field is present. Tolerant JSON parsing — never throws; sets `status: 'parse_error'` on bad output. Requires KCL API key. |
 
 Experimental nodes carry `alpha: true` in `SIDEBAR_ITEMS`. The group renders with an amber left-border
@@ -217,6 +239,11 @@ Experimental nodes carry `alpha: true` in `SIDEBAR_ITEMS`. The group renders wit
 and `⚗` icon in the sidebar. When `simpleMode` is active the entire group is hidden (not just its items).
 
 ## Registration Checklist (new runnable node)
+
+`NodeTypeId` (exported from `src/nodes/index.ts`, derived from `nodeTypes`) links the registries: `nodeRunners`
+and `NODE_DEFAULTS` carry `satisfies Partial<Record<NodeTypeId, …>>` guards and `SidebarItem.type` is `NodeTypeId`,
+so a typo'd or unregistered type string in steps 2/5/6 is a compile error instead of a silently missing facet.
+Register the component (step 4) FIRST — the other registries type-check against it.
 
 1. `src/utils/run<Name>Node.ts` — implement `NodeRunner`
 2. Add to `src/utils/nodeRunners.ts`
@@ -268,8 +295,15 @@ type NodeRunner = (
 - **`allFlatColumns`** in `TableOutputNode` — must include `isReconciledValue(v)` check or `*_reconciled` columns vanish.
 - **`newId(prefix)`** / **`bumpCounterPast(ids[])`** in `nodeIdCounter.ts` — call `bumpCounterPast` after workflow load.
 - **`TRANSIENT_FIELDS`** in `workflowIO.ts` strips `results`, `status`, counts, `resultsVersion`, `_capped`, `_total`, `folderName`, `pdfCount/xmlCount/textCount/imageCount` before save.
+- **`makeSearchRunner(config)`** in `searchRunnerFactory.ts` — builds a NodeRunner for Elasticsearch-style services (`?q&size&page` + `{total:{value},hits}`); ARIADNE and HSDS runners are ~30-line configs over it. Shared pieces (`resolveParamEdge`, `resolveLimit`, `finishRunnerSuccess/Error`) live in `runnerHelpers.ts` and are used by ALL search runners where semantics match exactly; deliberate exceptions — Europeana's limit clamp (its `Math.max(1,…)` maps negatives → 1, not the 20 fallback), the MDS/Europeana success blocks (`⚠ capped` message + `_capped`/`_total` keys), LLDS's cached/error-fallback terminals. Europeana (cursor pagination, `_capped`), Bodleian (dual terminal paths), SMG, VA, GBIF, LLDS, MDS keep bespoke PAGINATION — do NOT force-fit non-page/size services into the factory.
+- **`BackboneSearchNode` config** (`src/nodes/BackboneSearchNode.tsx`) — the shared search-node COMPONENT shell (distinct from the runner factory above; a node can use the shell with a bespoke runner). `BackboneSearchConfig` is declarative: optional `sort` (dual-select by default, `singleSelect` drops the order arrow), optional `fetchAll` (bool or `{label}`), `filters: FilterSpec[]` (`select`/`text`/`checkbox`/`range` — range writes `${key}From`/`${key}To`), `extraBodyRow`, `footer` (caption / `_capped` badge / extra toggle), `statusColours`, `queryDataKey` (default `inlineQuery`). **Handle contract is frozen**: `query` top=51, `limit` top=78, output `results` — pinned by `backboneHandles.test.ts`, which must also assert every newly migrated config's serialised filter keys. Europeana (extra apiKey handle row shifts tops to 93/120) and GBIF (five wirable rows) deliberately stay OFF the shell — their handle layouts differ and the serialised-edge contract must not move.
+- **`renderTemplate` / `renderFieldTemplateAggregate` / `renderFieldTemplatePerRecord`** in `promptTemplates.ts` — the ONLY implementations of `{{token}}` prompt substitution. Do not re-inline them in runners or components. The `{{_lineage}}` token is live in KCLNode/OllamaNode/Evaluator (runner AND component paths — six sites): when the user template contains it, the caller derives `lineageToNarrative(collectLineage(…))` ONCE before the record loop and spreads `_lineage` into the substitution record; templates without the token are byte-identical to before. KCLFieldNode/OllamaFieldNode are not wired (their field-mode token sets are separate — follow-up).
+- **`fetchWithTimeout(url, init?, timeoutMs?)`** in `fetchWithTimeout.ts` — AbortController + 30s default. Use for any new network call in runners/clients; a fetch without a timeout can hang a Run All wave indefinitely.
+- **`normaliseRecord`/`normaliseRecords`** in `recordNormalise.ts` — applied at the two legacy-record entry points (`fixtureUtils` fixture loads, `LoadSavedSearchNode`). Moves stale flat GBIF fields into `gbif.*` and drops Bodleian's old `_service`/`thumbnail` strays. Idempotent. Old fixtures and saved `.nfcs.json` files keep working without rewriting.
 - **`collectUpstreamRecords(nodeId, edges)`** in `upstreamRecords.ts` — shared utility used by all process runners. TYPED_HANDLES (`pdf`, `xml`, `text`, `image`) use partitioned store keys `${sourceId}:${handle}`; all others use plain `sourceId`.
 - **`useUpstreamRecords(nodeId)`** hook — same TYPED_HANDLES logic for reactivity; uses `${type}Count` key from node data.
+- **`collectLineage(nodeId, nodes, edges)`** in `lineage.ts` — derive-on-demand pipeline history (docs/context-accrual.md). Walks the upstream subgraph over `data`/`results` target-handle edges (param handles are config, not data flow), applies `resolveProxyEdges` for collapsed groups, returns a topologically ordered `LineageGraph` with `stripTransient`'d params + counts read from raw data. Pure read — call from runners with `getNodes()`/`edges`, from components with `useNodes()`/`useEdges()` values. The `stale` flag is heuristic: an upstream node that never ran this session, or claims a `resultsVersion` its store no longer holds. **`lineageToNarrative(graph, {maxChars})`** (same file, default 2000 chars) renders it LLM-ready: linear chains as numbered lists, parallel branches as lettered sections with shared ancestors described once, joins under "Then:"; the budget drops earliest steps whole (never mid-sentence) and a stale graph gets an explicit warning prefix.
+- **`describeNode(node)` / `lineageDescribers`** in `lineageDescribers.ts` — per-node-type one-sentence operation summaries for the lineage narrative; `satisfies Partial<Record<NodeTypeId, …>>` guard, generic label+counts fallback. Count keys are deliberately NOT uniform across runners (reconciliation `resolvedCount`/`reviewCount`, geocoding bare `resolved`/`pending`/`failed`, merge `mergedCount`/`unmatchedCount`, search `count`) — the describers pin the real names and `lineageDescribers.test.ts` fails if a runner renames one.
 
 ## Architectural Gotchas
 
@@ -297,3 +331,4 @@ type NodeRunner = (
 22. CommentNode easter egg: click title 5 times within 1.5 seconds to unlock input/output handles for illustrating data-flow gaps.
 23. `runMergeByQIDNode.ts` `extractQIDInfo` must handle **array-valued** `*_reconciled` fields, not just a single `ReconciliationResult | null` — a field can carry multiple candidate reconciliations. Always normalise with `Array.isArray(raw) ? raw : [raw]` before scanning for a resolved/review QID.
 24. `TableOutputNode` column-resize drag handler: never re-read `resizingRef.current` more than once per `mousemove` after the initial null-check — cache it to a local (`const r = resizingRef.current; if (!r) return`) before use. Re-reading it later in the same handler risks a null dereference if the ref is cleared mid-drag (e.g. `mouseup` racing `mousemove`).
+25. GBIF domain fields (`scientificName`, `kingdom`, …, `datasetName`, `eventDate`, `basisOfRecord`, `institutionCode`) exist ONLY under `record.gbif.*` — the adapter stores the raw occurrence wholesale and writes no flat copies. Readers use dot-notation (`gbif.scientificName`); `authoritiesForField` matches namespaced fields by last segment so typed authorities still apply. `periodStart/End/Name` are intentionally top-level — they are cross-service temporal fields written by three adapters, NOT domain-specific.

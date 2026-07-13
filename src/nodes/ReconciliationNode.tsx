@@ -47,13 +47,13 @@ const ROW_H    = 27
 // ─── status colours ───────────────────────────────────────────────────────────
 
 const STATUS_BORDER: Record<ReconciliationStatus, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
 }
 const STATUS_BADGE: Record<ReconciliationStatus, string> = {
-  idle:    '#9ca3af',
+  idle:    '#b0a891',
   loading: '#93c5fd',
   success: '#86efac',
   error:   '#fca5a5',
@@ -103,8 +103,8 @@ export function ReconciliationNode({ id }: NodeProps) {
     [id, getNodes, snap, updateNodeData],
   )
 
-  const borderColor = STATUS_BORDER[d.status] ?? '#d1d5db'
-  const badgeColor  = STATUS_BADGE[d.status]  ?? '#9ca3af'
+  const borderColor = STATUS_BORDER[d.status] ?? '#d6ccb5'
+  const badgeColor  = STATUS_BADGE[d.status]  ?? '#b0a891'
 
   return (
     <div style={{ ...styles.card, borderColor }}>
@@ -246,16 +246,16 @@ export function ReconciliationNode({ id }: NodeProps) {
 
 // ─── styles ───────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR  = '#7c3aed'   // violet-600 — "transform" identity
+const HEADER_COLOR  = '#5a3f7a'   // violet-600 — "transform" identity
 const RUN_BTN_COLOR = '#6d28d9'   // violet-700
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '2px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     260,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
     transition:   'border-color 0.25s',
   },
@@ -299,7 +299,7 @@ const styles = {
   },
   label: {
     fontSize:   11,
-    color:      '#6b7280',
+    color:      '#8a8168',
     width:      60,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -308,9 +308,9 @@ const styles = {
     flex:         1,
     fontSize:     11,
     padding:      '2px 4px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
-    background:   '#f9fafb',
+    background:   '#faf6ec',
     outline:      'none',
     height:       22,
     minWidth:     0,
@@ -325,7 +325,7 @@ const styles = {
   },
   sliderValue: {
     fontSize:   11,
-    color:      '#374151',
+    color:      '#33302a',
     fontFamily: 'monospace',
     width:      32,
     flexShrink: 0,
@@ -339,7 +339,7 @@ const styles = {
   hint: {
     margin:     '3px 0 0 66px',
     fontSize:   9,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     lineHeight: 1.3,
   },
   summary: {

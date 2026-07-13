@@ -23,10 +23,10 @@ export interface SaveSearchNodeData {
   [key: string]: unknown
 }
 
-const HEADER_COLOR = '#1b4332'
+const HEADER_COLOR = '#2f5540'
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:   '#d1d5db',
+  idle:   '#d6ccb5',
   saving: '#3b82f6',
   saved:  '#22c55e',
   error:  '#ef4444',
@@ -176,7 +176,7 @@ export function SaveSearchNode({ id, data }: NodeProps) {
 
   const status     = (d.status as string | undefined) ?? 'idle'
   const canSave    = connected && count > 0
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
 
   return (
     <div style={{ ...styles.card, borderColor }}>
@@ -265,11 +265,11 @@ export function SaveSearchNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '2px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     240,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
     transition:   'border-color 0.2s',
   },
@@ -306,7 +306,7 @@ const styles = {
   hint: {
     margin:     0,
     fontSize:   11,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     fontStyle:  'italic' as const,
   },
   summaryRow: {
@@ -349,13 +349,13 @@ const styles = {
   },
   filenameLabel: {
     fontSize:   9,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     fontFamily: 'monospace',
     flexShrink: 0,
   },
   filename: {
     fontSize:     10,
-    color:        '#374151',
+    color:        '#33302a',
     fontFamily:   'monospace',
     overflow:     'hidden',
     textOverflow: 'ellipsis',
@@ -363,13 +363,13 @@ const styles = {
   },
   metaNote: {
     fontSize:   9,
-    color:      '#6b7280',
+    color:      '#8a8168',
     fontStyle:  'italic' as const,
     lineHeight: 1.4,
     padding:    '3px 6px',
-    background: '#f9fafb',
+    background: '#faf6ec',
     borderRadius: 4,
-    border:     '1px solid #e5e7eb',
+    border:     '1px solid #ece3d0',
   },
   lastSaved: {
     display:    'flex',
@@ -379,7 +379,7 @@ const styles = {
   },
   lastSavedLabel: {
     fontSize:   9,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     flexShrink: 0,
   },
   lastSavedName: {

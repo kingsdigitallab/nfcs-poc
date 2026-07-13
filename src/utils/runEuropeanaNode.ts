@@ -7,6 +7,7 @@ import {
 import type { EuropeanaSearchNodeData } from '../nodes/EuropeanaSearchNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { addCitation } from './citationUtils'
+import { resolveParamEdge, finishRunnerError } from './runnerHelpers'
 
 const EUROPEANA_API = 'https://api.europeana.eu/record/v2/search.json'
 const PAGE_SIZE     = 100   // Europeana hard cap per request
@@ -23,14 +24,8 @@ export async function runEuropeanaNode(
   if (!node) return
   const d = node.data as EuropeanaSearchNodeData
 
-  const resolve = (handleId: string, dataKey: keyof EuropeanaSearchNodeData): string => {
-    const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
-    if (edge) {
-      const src = nodes.find(n => n.id === edge.source)
-      return (src?.data as { value?: string } | undefined)?.value ?? ''
-    }
-    return (d[dataKey] as string | undefined) ?? ''
-  }
+  const resolve = (handleId: string, dataKey: keyof EuropeanaSearchNodeData): string =>
+    resolveParamEdge(nodeId, handleId, nodes, edges) ?? (d[dataKey] as string | undefined) ?? ''
 
   const apiKey = resolve('apiKey', 'apiKey').trim()
   const query  = resolve('query', 'inlineQuery').trim()
@@ -124,8 +119,6 @@ export async function runEuropeanaNode(
       resultsVersion: version,
     })
   } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err)
-    console.error('[Europeana] error', msg)
-    updateNodeData(nodeId, { status: 'error', statusMessage: `✗ ${msg}`, count: 0 })
+    finishRunnerError(nodeId, err, updateNodeData, '[Europeana]')
   }
 }

@@ -120,7 +120,7 @@ export function FixtureReferenceCard({ onPick }: { onPick: (service: string, slu
 
 const styles: Record<string, React.CSSProperties> = {
   trigger: {
-    background: '#f3f4f6', color: '#374151', border: '1px solid #d1d5db', borderRadius: 6,
+    background: '#f3f4f6', color: '#33302a', border: '1px solid #d6ccb5', borderRadius: 6,
     padding: '5px 10px', fontSize: 12, fontWeight: 600, cursor: 'pointer',
   },
   panel: {

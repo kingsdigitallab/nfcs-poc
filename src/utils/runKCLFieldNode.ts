@@ -10,6 +10,7 @@ import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars } from './kclConfig'
 import { formatDuration } from './formatDuration'
+import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from './promptTemplates'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
@@ -120,11 +121,9 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
 
       updateNodeData(nodeId, { statusMessage: 'Sending aggregate prompt…' })
 
-      const prompt = promptTemplate
-        .replace(/\{\{values\}\}/g, values)
-        .replace(/\{\{field\}\}/g,  selectedField)
-        .replace(/\{\{value\}\}/g,  values)
-        .replace(/\{\{count\}\}/g,  String(upstreamRecords.length))
+      const prompt = renderFieldTemplateAggregate(promptTemplate, {
+        values, field: selectedField, count: upstreamRecords.length,
+      })
 
       const callT0 = performance.now()
       const response = await kclChat(apiKey, model, systemPrompt, prompt, temperature, maxTokens)
@@ -167,10 +166,9 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
 
         updateNodeData(nodeId, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
-        const prompt = promptTemplate
-          .replace(/\{\{value\}\}/g, value)
-          .replace(/\{\{field\}\}/g, selectedField)
-          .replace(/\{\{(\w+)\}\}/g, (_, k: string) => String(record[k] ?? ''))
+        const prompt = renderFieldTemplatePerRecord(promptTemplate, {
+          value, field: selectedField, record,
+        })
 
         let response: string
         let inferenceMs = 0

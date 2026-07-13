@@ -137,7 +137,7 @@ function SchemaTreeView({
               width:      12,
               flexShrink: 0,
               cursor:     hasChildren ? 'pointer' : 'default',
-              color:      '#9ca3af',
+              color:      '#b0a891',
               fontSize:   9,
               userSelect: 'none',
             }}
@@ -181,11 +181,11 @@ function SchemaTreeView({
 
 const treeStyles = {
   countBadge: {
-    fontSize: 9, color: '#6b7280',
+    fontSize: 9, color: '#8a8168',
     background: '#f3f4f6', borderRadius: 3, padding: '0 3px',
   },
   textBadge: {
-    fontSize: 9, color: '#6b7280', fontStyle: 'italic' as const,
+    fontSize: 9, color: '#8a8168', fontStyle: 'italic' as const,
   },
   attrBadge: {
     fontSize: 9, color: '#92400e',
@@ -195,11 +195,11 @@ const treeStyles = {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#44403c'
+const HEADER_COLOR = '#4a4640'
 const BTN_COLOR    = '#57534e'
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   running: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
@@ -223,7 +223,7 @@ export function XMLSectionNode({ id, data, selected }: NodeProps) {
   const outputMode = (d.outputMode as string | undefined) ?? 'text'
   const maxLength  = (d.maxLength  as number | undefined) ?? 8000
   const status     = (d.status     as string | undefined) ?? 'idle'
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
 
   // All upstream records that have XML content
   const xmlRecords = (upstream.records ?? []).filter(r => typeof r.content === 'string')
@@ -324,7 +324,7 @@ export function XMLSectionNode({ id, data, selected }: NodeProps) {
                 style={{
                   ...styles.toggleBtn,
                   background: outputMode === m ? BTN_COLOR : '#f3f4f6',
-                  color:      outputMode === m ? '#fff'    : '#374151',
+                  color:      outputMode === m ? '#fff'    : '#33302a',
                 }}
                 onClick={() => updateNodeData(id, { outputMode: m })}
                 className="nodrag"
@@ -398,7 +398,7 @@ export function XMLSectionNode({ id, data, selected }: NodeProps) {
               <span>
                 Element tree
                 {xmlRecords.length > 1 && (
-                  <span style={{ marginLeft: 6, fontWeight: 400, color: '#9ca3af' }}>
+                  <span style={{ marginLeft: 6, fontWeight: 400, color: '#b0a891' }}>
                     (record {safeIdx + 1})
                   </span>
                 )}
@@ -418,7 +418,7 @@ export function XMLSectionNode({ id, data, selected }: NodeProps) {
                     onSelect={x => { updateNodeData(id, { xpath: x }); setShowSchema(false) }}
                   />
                 )
-                : <div style={{ fontSize: 10, color: '#6b7280', padding: '4px 6px' }}>
+                : <div style={{ fontSize: 10, color: '#8a8168', padding: '4px 6px' }}>
                     {xmlText ? 'Could not parse XML' : 'No XML content found upstream'}
                   </div>
               }
@@ -432,7 +432,7 @@ export function XMLSectionNode({ id, data, selected }: NodeProps) {
             <div style={styles.previewLabel}>
               Preview
               {xmlRecords.length > 1 && (
-                <span style={{ marginLeft: 6, fontWeight: 400, color: '#9ca3af' }}>
+                <span style={{ marginLeft: 6, fontWeight: 400, color: '#b0a891' }}>
                   (record {safeIdx + 1})
                 </span>
               )}
@@ -474,14 +474,14 @@ export function XMLSectionNode({ id, data, selected }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     width: '100%',
     height: '100%',
     minWidth: 260,
     minHeight: 200,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
     display: 'flex',
@@ -528,7 +528,7 @@ const styles = {
   },
   label: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 60,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -536,7 +536,7 @@ const styles = {
   textInput: {
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     flex: 1,
@@ -550,7 +550,7 @@ const styles = {
   },
   toggleBtn: {
     flex: 1,
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     padding: '2px 0',
     fontSize: 11,
@@ -560,7 +560,7 @@ const styles = {
   },
   upstreamInfo: {
     fontSize: 10,
-    color: '#9ca3af',
+    color: '#b0a891',
     fontStyle: 'italic' as const,
   },
   recNav: {
@@ -571,17 +571,17 @@ const styles = {
   },
   recNavBtn: {
     background: '#f3f4f6',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 3,
     padding: '1px 7px',
     fontSize: 10,
     cursor: 'pointer',
-    color: '#374151',
+    color: '#33302a',
   },
   recNavLabel: {
     fontSize: 10,
     fontWeight: 600,
-    color: '#374151',
+    color: '#33302a',
     minWidth: 90,
     textAlign: 'center' as const,
   },
@@ -592,12 +592,12 @@ const styles = {
   actionBtn: {
     flex: 1,
     background: '#f3f4f6',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     padding: '3px 0',
     fontSize: 10,
     fontWeight: 600,
-    color: '#374151',
+    color: '#33302a',
     cursor: 'pointer',
   },
   schemaBox: {
@@ -617,7 +617,7 @@ const styles = {
     borderBottom: '1px solid #e7e5e4',
     fontSize: 9,
     fontWeight: 700,
-    color: '#6b7280',
+    color: '#8a8168',
     textTransform: 'uppercase' as const,
     position: 'sticky' as const,
     top: 0,
@@ -628,7 +628,7 @@ const styles = {
     border: 'none',
     cursor: 'pointer',
     fontSize: 10,
-    color: '#9ca3af',
+    color: '#b0a891',
     padding: 0,
   },
   previewBox: {
@@ -640,7 +640,7 @@ const styles = {
   previewLabel: {
     fontSize: 9,
     fontWeight: 700,
-    color: '#9ca3af',
+    color: '#b0a891',
     textTransform: 'uppercase' as const,
     marginBottom: 2,
   },
@@ -663,7 +663,7 @@ const styles = {
   },
   countChip: {
     fontSize: 10,
-    color: '#6b7280',
+    color: '#8a8168',
     fontStyle: 'italic' as const,
   },
   runBtn: {

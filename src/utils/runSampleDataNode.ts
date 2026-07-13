@@ -14,6 +14,7 @@
 import type { Edge, Node } from '@xyflow/react'
 import type { NodeRunner }  from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { fetchWithTimeout } from './fetchWithTimeout'
 import { extractFileContent, type FileRecord } from './fileReaders'
 import { parseDelimited } from './csvParser'
 
@@ -76,7 +77,7 @@ export async function loadSampleFiles(
 
   for (const sf of files) {
     try {
-      const res = await fetch(sf.url)
+      const res = await fetchWithTimeout(sf.url)
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
 
       // CSV/TSV: parse into column-keyed row records, matching LocalFileSourceNode.

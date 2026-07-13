@@ -16,6 +16,7 @@ import { useStaleResults } from '../hooks/useStaleResults'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
+import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from '../utils/promptTemplates'
 
 export interface OllamaFieldNodeData {
   model: string
@@ -36,7 +37,7 @@ export interface OllamaFieldNodeData {
 const OLLAMA_TAGS = '/ollama/api/tags'
 const OLLAMA_CHAT = '/ollama/api/chat'
 
-const HEADER_COLOR = '#1e1b4b'  // very dark indigo — distinct from OllamaNode's #312e81
+const HEADER_COLOR = '#2f2d52'  // very dark indigo — distinct from OllamaNode's #312e81
 const BTN_COLOR    = '#4338ca'
 
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'
@@ -44,7 +45,7 @@ const DEFAULT_PROMPT_PER = 'Summarise the following in 2–3 sentences:\n\n{{val
 const DEFAULT_PROMPT_AGG = 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}'
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   running: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
@@ -229,11 +230,9 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
         setLiveProgress(`Aggregating ${upstreamRecords.length} records…`)
         updateNodeData(id, { statusMessage: 'Sending aggregate prompt…' })
 
-        const prompt = promptTemplate
-          .replace(/\{\{values\}\}/g, values)
-          .replace(/\{\{field\}\}/g,  selectedField)
-          .replace(/\{\{value\}\}/g,  values)
-          .replace(/\{\{count\}\}/g,  String(upstreamRecords.length))
+        const prompt = renderFieldTemplateAggregate(promptTemplate, {
+          values, field: selectedField, count: upstreamRecords.length,
+        })
 
         const response = await streamChat(
           selectedModel, systemPrompt, prompt, temperature, maxTokens, signal,
@@ -276,11 +275,9 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
           setLiveProgress(`${i + 1} / ${upstreamRecords.length}`)
           updateNodeData(id, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
-          // Substitute {{value}}, {{field}}, and any other {{key}} from record
-          const prompt = promptTemplate
-            .replace(/\{\{value\}\}/g, value)
-            .replace(/\{\{field\}\}/g, selectedField)
-            .replace(/\{\{(\w+)\}\}/g, (_, k: string) => String(record[k] ?? ''))
+          const prompt = renderFieldTemplatePerRecord(promptTemplate, {
+            value, field: selectedField, record,
+          })
 
           const response = await streamChat(
             selectedModel, systemPrompt, prompt, temperature, maxTokens, signal,
@@ -327,7 +324,7 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
   const status      = (d.status ?? 'idle') as string
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
 
   return (
     <div style={{ ...styles.card, borderColor }}>
@@ -418,7 +415,7 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
         <div style={styles.colField}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span style={styles.label}>Prompt</span>
-            <span style={{ fontSize: 9, color: '#9ca3af', fontFamily: 'monospace' }}>
+            <span style={{ fontSize: 9, color: '#b0a891', fontFamily: 'monospace' }}>
               {mode === 'aggregate' ? '{{values}} {{field}} {{count}}' : '{{value}} {{field}}'}
             </span>
           </div>
@@ -433,7 +430,7 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
           <input type="range" min={0} max={1} step={0.05} value={temperature}
             onChange={e => updateNodeData(id, { temperature: parseFloat(e.target.value) })}
             style={{ flex: 1 }} className="nodrag" />
-          <span style={{ fontSize: 10, color: '#6b7280', width: 28, textAlign: 'right' }}>
+          <span style={{ fontSize: 10, color: '#8a8168', width: 28, textAlign: 'right' }}>
             {temperature.toFixed(2)}
           </span>
         </div>
@@ -494,12 +491,12 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 272,
     maxWidth: 312,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -563,7 +560,7 @@ const styles = {
   },
   label: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 44,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -572,7 +569,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 4px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -581,7 +578,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -590,7 +587,7 @@ const styles = {
     width: '100%',
     fontSize: 11,
     padding: '4px 6px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     resize: 'vertical' as const,

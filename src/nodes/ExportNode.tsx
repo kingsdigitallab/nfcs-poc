@@ -28,7 +28,7 @@ const FORMAT_META: Record<ExportFormat, { label: string; ext: string; mime: stri
   geojson: { label: 'GeoJSON', ext: 'geojson', mime: 'application/geo+json',  desc: 'FeatureCollection (lat/lon records only)' },
 }
 
-const HEADER_COLOR = '#b45309'   // amber-700 — "output/export" identity
+const HEADER_COLOR = '#8a5a22'   // amber-700 — "output/export" identity
 
 // ─── component ────────────────────────────────────────────────────────────────
 
@@ -137,11 +137,11 @@ export function ExportNode({ id }: NodeProps) {
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '1.5px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '1.5px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     220,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
   },
   header: {
@@ -176,7 +176,7 @@ const styles = {
   },
   label: {
     fontSize:   11,
-    color:      '#6b7280',
+    color:      '#8a8168',
     width:      48,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -185,16 +185,16 @@ const styles = {
     flex:         1,
     fontSize:     11,
     padding:      '2px 4px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
-    background:   '#f9fafb',
+    background:   '#faf6ec',
     outline:      'none',
     height:       22,
   },
   desc: {
     margin:     '0 0 0 54px',
     fontSize:   9,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     lineHeight: 1.3,
   },
   counts: {
@@ -223,11 +223,11 @@ const styles = {
   },
   countMuted: {
     fontSize: 10,
-    color:    '#9ca3af',
+    color:    '#b0a891',
   },
   placeholder: {
     fontSize:   10,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     fontStyle:  'italic' as const,
     marginTop:  2,
   },

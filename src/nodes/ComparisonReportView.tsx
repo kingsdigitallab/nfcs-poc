@@ -390,12 +390,12 @@ export function ComparisonReportView({ records, config, fullscreen = false }: Co
                           {c.diverged}
                         </button>
                       ) : (
-                        <span style={{ color: '#6b7280' }}>0</span>
+                        <span style={{ color: '#8a8168' }}>0</span>
                       )}
                     </td>
                     <td style={cv.td}>
                       {c.unscoredByHuman > 0
-                        ? <span style={{ color: '#9ca3af' }}>{c.unscoredByHuman}</span>
+                        ? <span style={{ color: '#b0a891' }}>{c.unscoredByHuman}</span>
                         : '0'}
                     </td>
                   </tr>
@@ -498,42 +498,42 @@ const REPORT_HEADER = '#3730a3'
 const cs = {
   proseBlock: { marginBottom: 8 },
   proseLabel: {
-    fontSize: 10, fontWeight: 700, color: '#9ca3af', textTransform: 'uppercase' as const,
+    fontSize: 10, fontWeight: 700, color: '#b0a891', textTransform: 'uppercase' as const,
     letterSpacing: '0.05em', marginBottom: 2,
   },
   proseText: {
-    margin: 0, fontSize: 13, lineHeight: 1.65, color: '#111827',
+    margin: 0, fontSize: 13, lineHeight: 1.65, color: '#2c2a24',
     maxWidth: 680, whiteSpace: 'pre-wrap' as const, wordBreak: 'break-word' as const,
   },
-  proseQuiet: { color: '#6b7280' },
+  proseQuiet: { color: '#8a8168' },
   showMoreBtn: {
     background: 'none', border: 'none', color: '#6366f1', fontSize: 11,
     cursor: 'pointer', padding: 0, marginTop: 2,
   },
   scoreStrip: {
-    marginTop: 10, border: '1px solid #e5e7eb', borderRadius: 6, overflow: 'hidden',
+    marginTop: 10, border: '1px solid #ece3d0', borderRadius: 6, overflow: 'hidden',
   },
   scoreStripHeader: {
     display: 'grid', gridTemplateColumns: '80px 1fr 1fr',
-    background: '#f8fafc', padding: '4px 8px', borderBottom: '1px solid #e5e7eb',
+    background: '#f8fafc', padding: '4px 8px', borderBottom: '1px solid #ece3d0',
   },
-  scoreColLabel: { fontSize: 10, fontWeight: 700, color: '#6b7280', textTransform: 'uppercase' as const },
+  scoreColLabel: { fontSize: 10, fontWeight: 700, color: '#8a8168', textTransform: 'uppercase' as const },
   scoreRow: {
     display: 'grid', gridTemplateColumns: '80px 1fr 1fr auto',
     padding: '5px 8px', alignItems: 'center', borderBottom: '1px solid #f3f4f6',
   },
-  scoreRowKey: { fontSize: 11, fontWeight: 600, color: '#374151', fontFamily: 'monospace' },
-  scoreValCell: { fontSize: 13, fontWeight: 700, color: '#374151', fontFamily: 'monospace' },
+  scoreRowKey: { fontSize: 11, fontWeight: 600, color: '#33302a', fontFamily: 'monospace' },
+  scoreValCell: { fontSize: 13, fontWeight: 700, color: '#33302a', fontFamily: 'monospace' },
   scoreAgree:   { color: '#059669' },
   scoreDiverge: { color: '#dc2626' },
-  noScore: { fontSize: 10, color: '#9ca3af', fontWeight: 400, fontFamily: 'system-ui' },
+  noScore: { fontSize: 10, color: '#b0a891', fontWeight: 400, fontFamily: 'system-ui' },
   reasonToggle: {
-    background: 'none', border: 'none', color: '#9ca3af', cursor: 'pointer',
+    background: 'none', border: 'none', color: '#b0a891', cursor: 'pointer',
     fontSize: 11, padding: '0 4px',
   },
   reasonBlock: { background: '#fafafa', padding: '6px 8px', borderBottom: '1px solid #f3f4f6' },
-  reasonRow: { fontSize: 11, color: '#374151', lineHeight: 1.5, marginBottom: 3 },
-  reasonSource: { fontWeight: 700, color: '#6b7280' },
+  reasonRow: { fontSize: 11, color: '#33302a', lineHeight: 1.5, marginBottom: 3 },
+  reasonSource: { fontWeight: 700, color: '#8a8168' },
   cueAgree: {
     fontSize: 10, fontWeight: 600, color: '#059669', background: '#d1fae5',
     padding: '2px 7px', borderRadius: 10, whiteSpace: 'nowrap' as const,
@@ -543,7 +543,7 @@ const cs = {
     padding: '2px 7px', borderRadius: 10, whiteSpace: 'nowrap' as const,
   },
   cueUnscored: {
-    fontSize: 10, fontWeight: 500, color: '#9ca3af', background: '#f3f4f6',
+    fontSize: 10, fontWeight: 500, color: '#b0a891', background: '#f3f4f6',
     padding: '2px 7px', borderRadius: 10, whiteSpace: 'nowrap' as const,
   },
 }
@@ -557,18 +557,18 @@ const cv = {
   },
   rootFullscreen: {},
   empty: {
-    padding: '24px 20px', color: '#9ca3af', fontSize: 12,
+    padding: '24px 20px', color: '#b0a891', fontSize: 12,
     fontStyle: 'italic' as const, textAlign: 'center' as const,
   },
   summaryPanel: {
-    background: '#f8fafc', borderBottom: '2px solid #e5e7eb',
+    background: '#f8fafc', borderBottom: '2px solid #ece3d0',
     padding: '12px 16px', flexShrink: 0,
   },
   summaryHeader: {
     display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10, flexWrap: 'wrap' as const,
   },
   summaryTitle: { fontSize: 13, fontWeight: 700, color: '#1e1b4b' },
-  summaryMeta: { fontSize: 11, color: '#6b7280' },
+  summaryMeta: { fontSize: 11, color: '#8a8168' },
   mismatchWarning: {
     fontSize: 10, fontWeight: 600, color: '#b45309', background: '#fef3c7',
     padding: '2px 7px', borderRadius: 4, cursor: 'help',
@@ -578,10 +578,10 @@ const cv = {
   },
   th: {
     textAlign: 'left' as const, padding: '4px 8px', background: '#f1f5f9',
-    fontWeight: 600, color: '#374151', borderBottom: '1px solid #e5e7eb',
+    fontWeight: 600, color: '#33302a', borderBottom: '1px solid #ece3d0',
     whiteSpace: 'nowrap' as const,
   },
-  td: { padding: '4px 8px', borderBottom: '1px solid #f3f4f6', color: '#374151' },
+  td: { padding: '4px 8px', borderBottom: '1px solid #f3f4f6', color: '#33302a' },
   criterionCode: { fontSize: 10, background: '#ede9fe', color: '#3730a3', padding: '1px 4px', borderRadius: 3 },
   criterionLabel: { marginLeft: 7, fontSize: 11, color: '#475569' },
   divergedBtn: {
@@ -589,34 +589,34 @@ const cv = {
     fontSize: 11, fontWeight: 700, padding: '1px 8px', borderRadius: 4,
     cursor: 'pointer', textDecoration: 'underline',
   },
-  noScoresHint: { fontSize: 11, color: '#9ca3af', fontStyle: 'italic' as const, padding: '4px 0' },
+  noScoresHint: { fontSize: 11, color: '#b0a891', fontStyle: 'italic' as const, padding: '4px 0' },
   filterBar: {
     display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' as const, marginTop: 8,
   },
-  filterLabel: { fontSize: 10, fontWeight: 600, color: '#6b7280', textTransform: 'uppercase' as const },
+  filterLabel: { fontSize: 10, fontWeight: 600, color: '#8a8168', textTransform: 'uppercase' as const },
   filterBtn: {
     fontSize: 11, padding: '3px 10px', borderRadius: 4,
-    border: '1px solid #d1d5db', background: '#fff', color: '#374151',
+    border: '1px solid #d6ccb5', background: '#fffdf7', color: '#33302a',
     cursor: 'pointer',
   },
   filterBtnActive: {
     background: REPORT_HEADER, color: '#fff', borderColor: REPORT_HEADER,
   },
   filterActive: {
-    fontSize: 11, color: '#6b7280', display: 'flex', alignItems: 'center', gap: 4,
+    fontSize: 11, color: '#8a8168', display: 'flex', alignItems: 'center', gap: 4,
   },
   clearFilterBtn: {
-    background: 'none', border: '1px solid #d1d5db', color: '#6b7280',
+    background: 'none', border: '1px solid #d6ccb5', color: '#8a8168',
     fontSize: 10, padding: '1px 6px', borderRadius: 3, cursor: 'pointer', marginLeft: 4,
   },
   preconditionNote: {
-    fontSize: 10, color: '#9ca3af', fontStyle: 'italic' as const,
+    fontSize: 10, color: '#b0a891', fontStyle: 'italic' as const,
     padding: '6px 16px', background: '#fafafa', borderBottom: '1px solid #f1f5f9',
     flexShrink: 0,
   },
   cardStack: { padding: '12px 16px', display: 'flex', flexDirection: 'column' as const, gap: 16 },
   card: {
-    background: '#fff', border: '1.5px solid #e5e7eb', borderRadius: 8,
+    background: '#fffdf7', border: '1.5px solid #ece3d0', borderRadius: 8,
     padding: '14px 16px', boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
   },
   cardTitle: {
@@ -624,10 +624,10 @@ const cv = {
     flexWrap: 'wrap' as const,
   },
   cardIndex: {
-    fontSize: 10, fontWeight: 700, color: '#9ca3af', fontFamily: 'monospace',
+    fontSize: 10, fontWeight: 700, color: '#b0a891', fontFamily: 'monospace',
   },
   cardLabel: {
-    fontSize: 12, fontWeight: 600, color: '#374151', flex: 1,
+    fontSize: 12, fontWeight: 600, color: '#33302a', flex: 1,
     overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const,
   },
 }

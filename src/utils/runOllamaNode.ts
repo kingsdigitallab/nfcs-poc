@@ -11,18 +11,11 @@
 import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
+import { renderTemplate } from './promptTemplates'
+import { collectLineage, lineageToNarrative } from './lineage'
 
 const OLLAMA_CHAT    = '/ollama/api/chat'
 const VISION_MARKERS = ['llava', 'vision', 'bakllava', 'moondream', 'cogvlm']
-
-function renderTemplate(template: string, record: Record<string, unknown>): string {
-  return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
-    const val = record[key]
-    if (val === undefined || val === null) return ''
-    if (typeof val === 'object') return JSON.stringify(val)
-    return String(val)
-  })
-}
 
 /**
  * Stream the Ollama chat response and return the accumulated text.
@@ -120,6 +113,10 @@ export const runOllamaNode: NodeRunner = async (nodeId, getNodes, edges, updateN
 
   const enriched: Record<string, unknown>[] = []
   let errCount = 0
+  // Lineage is derived once per run, not per record — only when opted in.
+  const lineageNarrative = promptTemplate.includes('{{_lineage}}')
+    ? lineageToNarrative(collectLineage(nodeId, nodes, edges))
+    : ''
 
   for (let i = 0; i < upstreamRecords.length; i++) {
     const record = upstreamRecords[i]
@@ -132,7 +129,7 @@ export const runOllamaNode: NodeRunner = async (nodeId, getNodes, edges, updateN
         (record.description  as string | undefined) ??
         JSON.stringify(record)
 
-    const recordForTemplate: Record<string, unknown> = { ...record, content: baseContent }
+    const recordForTemplate: Record<string, unknown> = { ...record, content: baseContent, _lineage: lineageNarrative }
     const renderedPrompt = renderTemplate(promptTemplate, recordForTemplate)
 
     let images: string[] | undefined

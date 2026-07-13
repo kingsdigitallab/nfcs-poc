@@ -23,10 +23,21 @@ interface Props {
 
 const DEFAULT_COLS = [
   '_source', 'title', 'creator', 'date', 'country',
-  'subject', 'language', 'scientificName', 'basisOfRecord', 'institutionCode',
+  'subject', 'language', 'gbif.scientificName', 'gbif.basisOfRecord', 'gbif.institutionCode',
 ] as const
 
 const PAGE_SIZE = 25
+
+/** Resolve a plain or dot-notation column key against a record. */
+function getColValue(rec: UnifiedRecord, col: string): unknown {
+  const dot = col.indexOf('.')
+  if (dot === -1) return rec[col as keyof UnifiedRecord]
+  const nsObj = rec[col.slice(0, dot) as keyof UnifiedRecord]
+  if (nsObj && typeof nsObj === 'object' && !Array.isArray(nsObj)) {
+    return (nsObj as Record<string, unknown>)[col.slice(dot + 1)]
+  }
+  return undefined
+}
 
 function allFlatColumns(records: UnifiedRecord[]): string[] {
   const keys = new Set<string>()
@@ -36,7 +47,11 @@ function allFlatColumns(records: UnifiedRecord[]): string[] {
       if (typeof v !== 'object' || Array.isArray(v) || isReconciledValue(v)) keys.add(k)
     }
   }
-  const ordered = DEFAULT_COLS.filter(c => keys.has(c))
+  // Dot-notation defaults (gbif.*) never appear as flat keys — resolve them
+  // against the records directly.
+  const ordered = DEFAULT_COLS.filter(
+    c => keys.has(c) || (c.includes('.') && records.some(r => getColValue(r, c) != null)),
+  )
   const extras = [...keys]
     .filter(k => !(DEFAULT_COLS as readonly string[]).includes(k))
     .sort()
@@ -163,7 +178,7 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
 
       {/* No data */}
       {!displayRecords && (
-        <div style={{ padding: 24, color: '#9ca3af', textAlign: 'center', fontSize: 13 }}>
+        <div style={{ padding: 24, color: '#b0a891', textAlign: 'center', fontSize: 13 }}>
           Run the upstream node to see results
         </div>
       )}
@@ -173,14 +188,14 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
         <>
           <div style={{
             display: 'flex', alignItems: 'center', gap: 12,
-            padding: '6px 14px', borderBottom: '1px solid #e5e7eb',
-            background: '#f9fafb', flexShrink: 0,
+            padding: '6px 14px', borderBottom: '1px solid #ece3d0',
+            background: '#faf6ec', flexShrink: 0,
           }}>
-            <label style={{ fontSize: 12, color: '#6b7280', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <label style={{ fontSize: 12, color: '#8a8168', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}>
               <input type="checkbox" checked={showAll} onChange={e => { setShowAll(e.target.checked); setPage(0) }} />
               {' '}show all columns
             </label>
-            <span style={{ fontSize: 11, color: '#9ca3af' }}>{columns.length} cols</span>
+            <span style={{ fontSize: 11, color: '#b0a891' }}>{columns.length} cols</span>
           </div>
 
           <div style={{ overflowX: 'auto', overflowY: 'auto', flex: 1 }}>
@@ -194,9 +209,9 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
               </thead>
               <tbody>
                 {pageRows.map((rec, i) => (
-                  <tr key={rec.id} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
+                  <tr key={rec.id} style={{ background: i % 2 === 0 ? '#fff' : '#faf6ec' }}>
                     {columns.map(col => {
-                      const val = rec[col as keyof UnifiedRecord]
+                      const val = getColValue(rec, col)
                       const handleSelect = (result: ReconciliationResult) =>
                         handleSelectCandidate(rec.id, col, result)
                       return (
@@ -214,11 +229,11 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
           {totalPages > 1 && (
             <div style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              gap: 12, padding: '6px 14px', borderTop: '1px solid #e5e7eb',
-              background: '#f9fafb', flexShrink: 0,
+              gap: 12, padding: '6px 14px', borderTop: '1px solid #ece3d0',
+              background: '#faf6ec', flexShrink: 0,
             }}>
               <button style={pageBtnStyle} disabled={page === 0} onClick={() => setPage(p => p - 1)}>‹ Prev</button>
-              <span style={{ fontSize: 12, color: '#6b7280' }}>Page {page + 1} of {totalPages}</span>
+              <span style={{ fontSize: 12, color: '#8a8168' }}>Page {page + 1} of {totalPages}</span>
               <button style={pageBtnStyle} disabled={page === totalPages - 1} onClick={() => setPage(p => p + 1)}>Next ›</button>
             </div>
           )}
@@ -236,7 +251,7 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
           humanScoreField: nodeData.humanScoreField  ?? '',
         }
         return (
-          <div style={{ overflow: 'auto', flex: 1, background: '#fff' }}>
+          <div style={{ overflow: 'auto', flex: 1, background: '#fffdf7' }}>
             <ComparisonReportView records={displayRecords} config={reportConfig} fullscreen />
           </div>
         )
@@ -264,11 +279,11 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
 
 const panelTh: React.CSSProperties = {
   background: '#f3f4f6',
-  borderBottom: '2px solid #e5e7eb',
+  borderBottom: '2px solid #ece3d0',
   padding: '5px 10px',
   textAlign: 'left',
   fontWeight: 600,
-  color: '#374151',
+  color: '#33302a',
   whiteSpace: 'nowrap',
   position: 'sticky',
   top: 0,
@@ -286,8 +301,8 @@ const panelTd: React.CSSProperties = {
 }
 
 const pageBtnStyle: React.CSSProperties = {
-  background: '#fff',
-  border: '1px solid #d1d5db',
+  background: '#fffdf7',
+  border: '1px solid #d6ccb5',
   borderRadius: 4,
   padding: '3px 10px',
   fontSize: 12,

@@ -19,13 +19,13 @@ export interface CommentNodeData {
   [key: string]: unknown
 }
 
-const BORDER_COLOR = '#fbbf24'
-const HEADER_BG    = '#fef3c7'
-const BODY_BG      = '#fffbeb'
+const BORDER_COLOR = '#b3862f'
+const HEADER_BG    = '#f6ecd6'
+const BODY_BG      = '#faf6ec'
 
 // Parse **bold** and *italic* markdown to React elements
-function parseFormatted(text: string): (string | JSX.Element)[] {
-  const parts: (string | JSX.Element)[] = []
+function parseFormatted(text: string): (string | React.JSX.Element)[] {
+  const parts: (string | React.JSX.Element)[] = []
   const regex = /\*\*(.+?)\*\*|\*(.+?)\*/g
   let lastIndex = 0
   let match
@@ -174,7 +174,7 @@ export function CommentNode({ id, data, selected }: NodeProps) {
           >
             {body.trim()
               ? parseFormatted(body)
-              : <span style={{ color: '#d1d5db' }}>Add a comment or note…</span>}
+              : <span style={{ color: '#d6ccb5' }}>Add a comment or note…</span>}
           </div>
         )}
 
@@ -217,7 +217,7 @@ const styles = {
     padding:      '5px 10px',
     fontSize:     12,
     fontWeight:   700,
-    color:        '#92400e',
+    color:        '#6f4a25',
     outline:      'none',
     width:        '100%',
     boxSizing:    'border-box' as const,
@@ -232,10 +232,10 @@ const styles = {
     flexShrink:   0,
   },
   formatBtn: {
-    background:   '#fcd34d',
-    border:       '1px solid #f59e0b',
+    background:   '#e2c98a',
+    border:       '1px solid #b3862f',
     borderRadius: 2,
-    color:        '#92400e',
+    color:        '#6f4a25',
     cursor:       'pointer',
     fontSize:     11,
     fontWeight:   700,
@@ -248,7 +248,7 @@ const styles = {
     border:      'none',
     padding:     '7px 10px',
     fontSize:    12,
-    color:       '#374151',
+    color:       '#33302a',
     lineHeight:  1.6,
     resize:      'none' as const,
     outline:     'none',

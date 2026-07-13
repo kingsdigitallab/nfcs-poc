@@ -14,6 +14,8 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclConfig'
+import { renderTemplate } from '../utils/promptTemplates'
+import { collectLineage, lineageToNarrative } from '../utils/lineage'
 import { useStaleResults } from '../hooks/useStaleResults'
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
@@ -95,28 +97,17 @@ async function buildUserContent(
 const KCL_MODELS = '/kcl-proxy/v1/models'
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 
-const HEADER_COLOR = '#881337'  // rose-900 — KCL red
+const HEADER_COLOR = '#7a2f3a'  // rose-900 — KCL red
 const BTN_COLOR    = '#be123c'  // rose-700
 
 const DEFAULT_SYSTEM = 'You are a research assistant helping to analyse humanities research documents and data.'
 const DEFAULT_PROMPT = 'Summarise the key themes and subjects in 3-4 sentences:\n\n{{content}}'
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   running: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
-}
-
-// ── Template rendering ─────────────────────────────────────────────────────────
-
-function renderTemplate(template: string, record: Record<string, unknown>): string {
-  return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
-    const val = record[key]
-    if (val === undefined || val === null) return ''
-    if (typeof val === 'object') return JSON.stringify(val)
-    return String(val)
-  })
 }
 
 // ── Non-streaming KCL API helper ──────────────────────────────────────────────
@@ -295,6 +286,10 @@ export function KCLNode({ id, data }: NodeProps) {
     })
 
     const enriched: Record<string, unknown>[] = []
+    // Lineage is derived once per run, not per record — only when opted in.
+    const lineageNarrative = promptTemplate.includes('{{_lineage}}')
+      ? lineageToNarrative(collectLineage(id, allNodes, allEdges))
+      : ''
 
     try {
       for (let i = 0; i < upstreamRecords.length; i++) {
@@ -311,7 +306,7 @@ export function KCLNode({ id, data }: NodeProps) {
         const maxChars = getContentMaxChars(selectedModel)
         const baseContent = rawContent.slice(0, maxChars)
 
-        const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent })
+        const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent, _lineage: lineageNarrative })
         const userContent    = visionMode
           ? await buildUserContent(renderedPrompt, record, imageField)
           : renderedPrompt
@@ -349,12 +344,12 @@ export function KCLNode({ id, data }: NodeProps) {
       if (enriched.length > 0) setNodeResults(id, enriched)
       updateNodeData(id, { status: 'error', statusMessage: `✗ ${msg}`, outputCount: enriched.length })
     }
-  }, [id, updateNodeData, upstreamRecords, effectiveApiKey, selectedModel, systemPrompt, promptTemplate, temperature, maxTokens])
+  }, [id, updateNodeData, upstreamRecords, allNodes, allEdges, effectiveApiKey, selectedModel, systemPrompt, promptTemplate, temperature, maxTokens])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
   const status      = (d.status ?? 'idle') as string
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
 
   const noKey    = !effectiveApiKey
   const canRun   = !noKey && !!selectedModel && !isRunning
@@ -477,6 +472,13 @@ export function KCLNode({ id, data }: NodeProps) {
               {availableFields.map(f => (
                 <code key={f} style={styles.fieldChip}>{'{{' + f + '}}'}</code>
               ))}
+              <code
+                key="_lineage"
+                style={styles.fieldChip}
+                title="Pipeline history — a natural-language summary of the upstream workflow (searches, filters, merges) derived at run time"
+              >
+                {'{{_lineage}}'}
+              </code>
             </div>
           )}
           <textarea
@@ -499,7 +501,7 @@ export function KCLNode({ id, data }: NodeProps) {
                   checked={visionMode}
                   onChange={e => updateNodeData(id, { visionMode: e.target.checked })}
                 />
-                <span style={{ fontSize: 11, color: '#6b7280' }}>
+                <span style={{ fontSize: 11, color: '#8a8168' }}>
                   {hasImages ? 'Include image with prompt' : 'Vision mode (no images detected)'}
                 </span>
               </label>
@@ -581,12 +583,12 @@ export function KCLNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 280,
     maxWidth: 320,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -650,7 +652,7 @@ const styles = {
   },
   label: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 44,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -659,7 +661,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 4px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -668,7 +670,7 @@ const styles = {
     flex: 1,
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -685,7 +687,7 @@ const styles = {
     width: '100%',
     fontSize: 11,
     padding: '4px 6px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     resize: 'vertical' as const,
@@ -717,7 +719,7 @@ const styles = {
   },
   numLabel: {
     fontSize: 10,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 28,
     textAlign: 'right' as const,
   },

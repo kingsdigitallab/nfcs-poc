@@ -31,7 +31,7 @@ export interface SourceProfileNodeData {
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 const KCL_MODELS = '/kcl-proxy/v1/models'
 
-const HEADER_COLOR = '#1f2937'
+const HEADER_COLOR = '#2b3340'
 
 const SOURCE_COLORS: Record<string, string> = {
   ariadne:   '#78350f',
@@ -154,11 +154,11 @@ function CompletenessBar({ fetched, total }: { fetched: number; total: number })
   const pctStr = total > 0 ? `${(ratio * 100).toFixed(1)}%` : ''
   return (
     <div style={{ marginBottom: 10 }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: '#9ca3af', marginBottom: 3 }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: '#b0a891', marginBottom: 3 }}>
         <span>{fetched.toLocaleString()} of {total > 0 ? total.toLocaleString() : '?'} retrieved</span>
         <span style={{ color: pctColor(ratio), fontWeight: 600 }}>{pctStr}</span>
       </div>
-      <div style={{ height: 5, background: '#374151', borderRadius: 3, overflow: 'hidden' }}>
+      <div style={{ height: 5, background: '#33302a', borderRadius: 3, overflow: 'hidden' }}>
         <div style={{ height: '100%', width: `${ratio * 100}%`, background: pctColor(ratio), transition: 'width 0.3s' }} />
       </div>
     </div>
@@ -176,8 +176,8 @@ function FieldRow({ field, rate, samples }: { field: FieldProfile; rate: number;
           {pct(rate)}
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <span style={{ fontSize: 11, color: '#e5e7eb', fontWeight: 500 }}>{field.label}</span>
-          <span style={{ fontSize: 10, color: '#6b7280', marginLeft: 4 }}>{field.path}</span>
+          <span style={{ fontSize: 11, color: '#ece3d0', fontWeight: 500 }}>{field.label}</span>
+          <span style={{ fontSize: 10, color: '#8a8168', marginLeft: 4 }}>{field.path}</span>
         </div>
         {field.type === 'iiif' && (
           <span style={{ fontSize: 9, background: '#1e3a5f', color: '#93c5fd', padding: '1px 4px', borderRadius: 2 }}>IIIF</span>
@@ -188,11 +188,11 @@ function FieldRow({ field, rate, samples }: { field: FieldProfile; rate: number;
         <span style={{ fontSize: 10, color: '#4b5563' }}>{open ? '▲' : '▼'}</span>
       </div>
       {open && (
-        <div style={{ marginTop: 4, paddingLeft: 38, fontSize: 10, color: '#9ca3af' }}>
+        <div style={{ marginTop: 4, paddingLeft: 38, fontSize: 10, color: '#b0a891' }}>
           <p style={{ margin: '0 0 3px' }}>{field.description}</p>
           {field.notes && <p style={{ margin: '0 0 3px', color: '#fbbf24' }}>↳ {field.notes}</p>}
           {samples.length > 0 && (
-            <p style={{ margin: 0, fontStyle: 'italic', color: '#6b7280' }}>
+            <p style={{ margin: 0, fontStyle: 'italic', color: '#8a8168' }}>
               e.g. {samples.map((s, i) => <span key={i}>&ldquo;{s}&rdquo;{i < samples.length - 1 ? ', ' : ''}</span>)}
             </p>
           )}
@@ -213,7 +213,7 @@ interface ProfileSectionProps {
 
 function ProfileSection({ profile, sourceRecords, count, fieldStats }: ProfileSectionProps) {
   const [showCorrespondences, setShowCorrespondences] = useState(false)
-  const bannerColor = SOURCE_COLORS[profile.source] ?? '#374151'
+  const bannerColor = SOURCE_COLORS[profile.source] ?? '#33302a'
   const relevantCorrespondences = profile.correspondences.filter(c => {
     const stat = fieldStats.find(fs => fs.field.path === c.field)
     return stat && stat.rate > 0
@@ -222,11 +222,11 @@ function ProfileSection({ profile, sourceRecords, count, fieldStats }: ProfileSe
   return (
     <div style={{ marginBottom: 10 }}>
       <div style={{
-        background: bannerColor, color: '#f9fafb', padding: '6px 10px',
+        background: bannerColor, color: '#faf6ec', padding: '6px 10px',
         borderRadius: 4, marginBottom: 6,
       }}>
         <div style={{ fontWeight: 700, fontSize: 12 }}>{profile.label}</div>
-        <div style={{ fontSize: 10, color: '#d1d5db', marginTop: 2 }}>{profile.coverage.slice(0, 120)}{profile.coverage.length > 120 ? '…' : ''}</div>
+        <div style={{ fontSize: 10, color: '#d6ccb5', marginTop: 2 }}>{profile.coverage.slice(0, 120)}{profile.coverage.length > 120 ? '…' : ''}</div>
       </div>
 
       <CompletenessBar fetched={sourceRecords.length} total={count} />
@@ -237,7 +237,7 @@ function ProfileSection({ profile, sourceRecords, count, fieldStats }: ProfileSe
         </div>
       )}
 
-      <div style={{ fontSize: 10, color: '#6b7280', marginBottom: 4, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+      <div style={{ fontSize: 10, color: '#8a8168', marginBottom: 4, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
         Fields — sorted by population
       </div>
       <div style={{ maxHeight: 220, overflowY: 'auto' }}>
@@ -255,14 +255,14 @@ function ProfileSection({ profile, sourceRecords, count, fieldStats }: ProfileSe
             {showCorrespondences ? '▲' : '▼'} {relevantCorrespondences.length} cross-source correspondence{relevantCorrespondences.length > 1 ? 's' : ''}
           </button>
           {showCorrespondences && (
-            <div style={{ background: '#111827', borderRadius: 3, padding: '4px 6px' }}>
+            <div style={{ background: '#2c2a24', borderRadius: 3, padding: '4px 6px' }}>
               {relevantCorrespondences.map((c, i) => (
-                <div key={i} style={{ fontSize: 10, color: '#9ca3af', marginBottom: 3 }}>
-                  <span style={{ color: '#e5e7eb' }}>{c.field}</span>
+                <div key={i} style={{ fontSize: 10, color: '#b0a891', marginBottom: 3 }}>
+                  <span style={{ color: '#ece3d0' }}>{c.field}</span>
                   {' → '}
                   <span style={{ color: '#93c5fd' }}>{c.otherSource}.{c.otherField}</span>
                   {' '}
-                  <span style={{ color: c.relationship === 'join-candidate' ? '#4ade80' : c.relationship === 'direct' ? '#a78bfa' : '#9ca3af' }}>
+                  <span style={{ color: c.relationship === 'join-candidate' ? '#4ade80' : c.relationship === 'direct' ? '#a78bfa' : '#b0a891' }}>
                     [{c.relationship}]
                   </span>
                   {' — '}{c.notes}
@@ -327,7 +327,6 @@ interface Suggestion { node: string; reason: string; color: string }
 function SuggestedConnections({ records }: { records: Record<string, unknown>[] }) {
   const suggestions = useMemo((): Suggestion[] => {
     const out: Suggestion[] = []
-    const first = records[0] ?? {}
 
     // TableOutput — always useful
     out.push({ node: 'TableOutput', reason: 'browse and filter all records', color: '#0d9488' })
@@ -356,8 +355,8 @@ function SuggestedConnections({ records }: { records: Record<string, unknown>[] 
   }, [records])
 
   return (
-    <div style={{ borderTop: '1px solid #374151', marginTop: 10, paddingTop: 8, marginBottom: 2 }}>
-      <div style={{ fontSize: 10, color: '#6b7280', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>
+    <div style={{ borderTop: '1px solid #33302a', marginTop: 10, paddingTop: 8, marginBottom: 2 }}>
+      <div style={{ fontSize: 10, color: '#8a8168', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>
         Connect output to
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>
@@ -366,7 +365,7 @@ function SuggestedConnections({ records }: { records: Record<string, unknown>[] 
             key={s.node}
             title={s.reason}
             style={{
-              background: s.color, color: '#f9fafb', fontSize: 10, fontWeight: 600,
+              background: s.color, color: '#faf6ec', fontSize: 10, fontWeight: 600,
               padding: '2px 7px', borderRadius: 10, cursor: 'default',
             }}
           >
@@ -537,11 +536,11 @@ export function SourceProfileNode({ id, data }: NodeProps) {
   return (
     <div style={{
       width: 360,
-      background: '#111827',
-      border: '1px solid #374151',
+      background: '#2c2a24',
+      border: '1px solid #33302a',
       borderRadius: 6,
       fontFamily: 'sans-serif',
-      color: '#f9fafb',
+      color: '#faf6ec',
       fontSize: 12,
     }}>
       {/* Input handle */}
@@ -549,7 +548,7 @@ export function SourceProfileNode({ id, data }: NodeProps) {
         type="target"
         position={Position.Left}
         id="data"
-        style={{ top: '50%', background: '#6b7280', width: 8, height: 8 }}
+        style={{ top: '50%', background: '#8a8168', width: 8, height: 8 }}
       />
 
       {/* Header */}
@@ -559,7 +558,7 @@ export function SourceProfileNode({ id, data }: NodeProps) {
         borderRadius: '6px 6px 0 0',
         fontWeight: 700,
         fontSize: 13,
-        color: '#f9fafb',
+        color: '#faf6ec',
       }}>
         Source Profile
       </div>
@@ -568,13 +567,13 @@ export function SourceProfileNode({ id, data }: NodeProps) {
       <div style={{ padding: '8px 10px', maxHeight: 600, overflowY: 'auto' }}>
 
         {!connected && (
-          <div style={{ color: '#6b7280', fontSize: 11, textAlign: 'center', padding: '12px 0' }}>
+          <div style={{ color: '#8a8168', fontSize: 11, textAlign: 'center', padding: '12px 0' }}>
             Connect a source node to inspect its schema and field statistics.
           </div>
         )}
 
         {connected && records.length === 0 && (
-          <div style={{ color: '#6b7280', fontSize: 11, textAlign: 'center', padding: '12px 0' }}>
+          <div style={{ color: '#8a8168', fontSize: 11, textAlign: 'center', padding: '12px 0' }}>
             No records yet — run upstream nodes first.
           </div>
         )}
@@ -593,7 +592,7 @@ export function SourceProfileNode({ id, data }: NodeProps) {
         {sourcesDetected.filter(s => !getSourceProfile(s)).map(s => (
           <div key={s} style={{ color: '#f59e0b', fontSize: 11, padding: '4px 0' }}>
             Source &ldquo;{s}&rdquo; has no authored profile.{' '}
-            <span style={{ color: '#6b7280' }}>Available: {allProfiles.map(p => p.source).join(', ')}</span>
+            <span style={{ color: '#8a8168' }}>Available: {allProfiles.map(p => p.source).join(', ')}</span>
           </div>
         ))}
 
@@ -604,8 +603,8 @@ export function SourceProfileNode({ id, data }: NodeProps) {
 
         {/* KCL narrative section */}
         {profileSections.length > 0 && (
-          <div style={{ borderTop: '1px solid #374151', marginTop: 10, paddingTop: 8 }}>
-            <div style={{ fontSize: 10, color: '#6b7280', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>
+          <div style={{ borderTop: '1px solid #33302a', marginTop: 10, paddingTop: 8 }}>
+            <div style={{ fontSize: 10, color: '#8a8168', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>
               AI Narrative (KCL Inference)
             </div>
 
@@ -617,8 +616,8 @@ export function SourceProfileNode({ id, data }: NodeProps) {
               rows={2}
               style={{
                 width: '100%', boxSizing: 'border-box', resize: 'vertical',
-                background: '#1f2937', border: '1px solid #374151', borderRadius: 3,
-                color: '#f9fafb', fontSize: 10, padding: '4px 6px', marginBottom: 4,
+                background: '#1f2937', border: '1px solid #33302a', borderRadius: 3,
+                color: '#faf6ec', fontSize: 10, padding: '4px 6px', marginBottom: 4,
               }}
             />
 
@@ -636,8 +635,8 @@ export function SourceProfileNode({ id, data }: NodeProps) {
                 value={model}
                 onChange={e => persistModel(e.target.value)}
                 style={{
-                  width: '100%', background: '#1f2937', border: '1px solid #374151', borderRadius: 3,
-                  color: '#f9fafb', fontSize: 10, padding: '3px 6px', marginBottom: 4,
+                  width: '100%', background: '#1f2937', border: '1px solid #33302a', borderRadius: 3,
+                  color: '#faf6ec', fontSize: 10, padding: '3px 6px', marginBottom: 4,
                 }}
               >
                 {models.map(m => <option key={m} value={m}>{m}</option>)}
@@ -651,8 +650,8 @@ export function SourceProfileNode({ id, data }: NodeProps) {
                 placeholder="arc:nano"
                 style={{
                   width: '100%', boxSizing: 'border-box', background: '#1f2937',
-                  border: '1px solid #374151', borderRadius: 3,
-                  color: '#f9fafb', fontSize: 10, padding: '3px 6px', marginBottom: 4,
+                  border: '1px solid #33302a', borderRadius: 3,
+                  color: '#faf6ec', fontSize: 10, padding: '3px 6px', marginBottom: 4,
                 }}
               />
             )}
@@ -666,7 +665,7 @@ export function SourceProfileNode({ id, data }: NodeProps) {
             </button>
             {showAdvanced && (
               <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
-                <label style={{ fontSize: 10, color: '#9ca3af', whiteSpace: 'nowrap' }}>Max tokens</label>
+                <label style={{ fontSize: 10, color: '#b0a891', whiteSpace: 'nowrap' }}>Max tokens</label>
                 <input
                   type="number"
                   value={maxTokens}
@@ -675,8 +674,8 @@ export function SourceProfileNode({ id, data }: NodeProps) {
                   step={1024}
                   onChange={e => persistMaxTokens(Number(e.target.value))}
                   style={{
-                    flex: 1, background: '#1f2937', border: '1px solid #374151', borderRadius: 3,
-                    color: '#f9fafb', fontSize: 10, padding: '3px 6px',
+                    flex: 1, background: '#1f2937', border: '1px solid #33302a', borderRadius: 3,
+                    color: '#faf6ec', fontSize: 10, padding: '3px 6px',
                   }}
                 />
               </div>
@@ -688,8 +687,8 @@ export function SourceProfileNode({ id, data }: NodeProps) {
                 onClick={handleGenerate}
                 disabled={generating || !apiKey || !model}
                 style={{
-                  flex: 1, background: generating ? '#374151' : '#1d4ed8',
-                  color: '#f9fafb', border: 'none', borderRadius: 3,
+                  flex: 1, background: generating ? '#33302a' : '#1d4ed8',
+                  color: '#faf6ec', border: 'none', borderRadius: 3,
                   fontSize: 11, padding: '4px 0', cursor: generating || !apiKey || !model ? 'default' : 'pointer',
                 }}
               >
@@ -706,7 +705,7 @@ export function SourceProfileNode({ id, data }: NodeProps) {
               {narrative && !generating && (
                 <button
                   onClick={handleClearNarrative}
-                  style={{ background: '#374151', color: '#9ca3af', border: 'none', borderRadius: 3, fontSize: 11, padding: '4px 8px', cursor: 'pointer' }}
+                  style={{ background: '#33302a', color: '#b0a891', border: 'none', borderRadius: 3, fontSize: 11, padding: '4px 8px', cursor: 'pointer' }}
                   title="Clear narrative"
                 >
                   ✕
@@ -733,7 +732,7 @@ export function SourceProfileNode({ id, data }: NodeProps) {
         type="source"
         position={Position.Right}
         id="results"
-        style={{ top: '50%', background: '#6b7280', width: 8, height: 8 }}
+        style={{ top: '50%', background: '#8a8168', width: 8, height: 8 }}
       />
     </div>
   )

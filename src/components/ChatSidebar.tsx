@@ -1,15 +1,19 @@
 import { useState, useEffect, useRef, useCallback, createContext, useContext } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import type { Edge, Node } from '@xyflow/react'
 import { filterKCLModels, DEFAULT_KCL_API_KEY } from '../utils/kclConfig'
 import { STORAGE_KEYS } from '../config/storageKeys'
+import { collectLineage, lineageToNarrative } from '../utils/lineage'
+import { describeNode } from '../utils/lineageDescribers'
+import { SIDEBAR_ITEMS } from '../config/sidebarItems'
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
 const KCL_MODELS = '/kcl-proxy/v1/models'
 const KCL_CHAT   = '/kcl-proxy/v1/chat/completions'
 
-const HEADER_COLOR = '#881337'
+const HEADER_COLOR = '#7a2f2f'
 
 // Bump this string whenever DEFAULT_SYSTEM changes — clears stale localStorage copies.
 const SYSTEM_VERSION = '2026-06-29-v3'
@@ -119,6 +123,54 @@ interface Message {
 interface Props {
   isOpen: boolean
   onToggle: () => void
+  /** Live canvas state, passed as props from App (there is no ReactFlowProvider
+   *  above this component, so useReactFlow/useNodes are not available here). */
+  nodes: Node[]
+  edges: Edge[]
+}
+
+// ── Live canvas grounding ──────────────────────────────────────────────────────
+// Appended to the outgoing system message on each send — NOT persisted into the
+// localStorage-cached systemPrompt, so SYSTEM_VERSION needs no bump.
+
+const CANVAS_CONTEXT_BUDGET = 1500
+const DATA_TARGET_HANDLES = new Set(['data', 'results'])
+const LABEL_BY_TYPE = new Map<string, string>(SIDEBAR_ITEMS.map(i => [i.type as string, i.label]))
+const NON_PIPELINE_TYPES = new Set(['comment', 'param', 'group', 'quickStart'])
+
+function buildCanvasContext(nodes: Node[], edges: Edge[]): string {
+  const pipelineNodes = nodes.filter(n => !NON_PIPELINE_TYPES.has(n.type ?? ''))
+  if (pipelineNodes.length === 0) return ''
+
+  const countByLabel = new Map<string, number>()
+  for (const n of pipelineNodes) {
+    const label = LABEL_BY_TYPE.get(n.type ?? '') ?? n.type ?? '?'
+    countByLabel.set(label, (countByLabel.get(label) ?? 0) + 1)
+  }
+  const inventory = [...countByLabel.entries()]
+    .map(([label, count]) => (count > 1 ? `${count}× ${label}` : label))
+    .join(', ')
+
+  // Terminal nodes: receive data but feed nothing further — pipeline endpoints.
+  const dataEdges = edges.filter(e => DATA_TARGET_HANDLES.has(e.targetHandle ?? ''))
+  const sources = new Set(dataEdges.map(e => e.source))
+  const targets = new Set(dataEdges.map(e => e.target))
+  const terminals = pipelineNodes.filter(n => targets.has(n.id) && !sources.has(n.id))
+
+  const blocks = [`CURRENT CANVAS (live workflow state, derived just now):\nNodes: ${inventory}.`]
+  const shown = terminals.slice(0, 3)
+  shown.forEach((t, i) => {
+    const narrative = lineageToNarrative(collectLineage(t.id, nodes, edges), { maxChars: 380 })
+    const label = LABEL_BY_TYPE.get(t.type ?? '') ?? t.type
+    blocks.push(`Pipeline ${i + 1} — ends at ${label} (${describeNode(t)})\n${narrative || '(no upstream steps recorded)'}`)
+  })
+  if (terminals.length > shown.length) {
+    blocks.push(`(+${terminals.length - shown.length} further pipeline endpoints not shown)`)
+  }
+
+  // Budget: drop trailing pipeline blocks whole; the inventory line always stays.
+  while (blocks.join('\n\n').length > CANVAS_CONTEXT_BUDGET && blocks.length > 1) blocks.pop()
+  return `\n\n${blocks.join('\n\n')}`
 }
 
 // ── Markdown renderer ──────────────────────────────────────────────────────────
@@ -136,9 +188,9 @@ function MdContent({ children }: { children: string }) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         thead: ({ node, ...p }) => <thead style={{ background: '#f3f4f6' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        th:    ({ node, ...p }) => <th style={{ border: '1px solid #d1d5db', padding: '4px 8px', textAlign: 'left', fontWeight: 600, whiteSpace: 'nowrap' }} {...p} />,
+        th:    ({ node, ...p }) => <th style={{ border: '1px solid #d6ccb5', padding: '4px 8px', textAlign: 'left', fontWeight: 600, whiteSpace: 'nowrap' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        td:    ({ node, ...p }) => <td style={{ border: '1px solid #e5e7eb', padding: '4px 8px', verticalAlign: 'top' }} {...p} />,
+        td:    ({ node, ...p }) => <td style={{ border: '1px solid #ece3d0', padding: '4px 8px', verticalAlign: 'top' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         pre:   ({ node, ...p }) => (
           <InsidePre.Provider value={true}>
@@ -165,17 +217,17 @@ function MdContent({ children }: { children: string }) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         li:    ({ node, ...p }) => <li style={{ margin: '2px 0' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        h1:    ({ node, ...p }) => <h1 style={{ fontSize: 14, fontWeight: 700, margin: '10px 0 4px', color: '#111827' }} {...p} />,
+        h1:    ({ node, ...p }) => <h1 style={{ fontSize: 14, fontWeight: 700, margin: '10px 0 4px', color: '#2c2a24' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        h2:    ({ node, ...p }) => <h2 style={{ fontSize: 13, fontWeight: 700, margin: '8px 0 4px', color: '#111827' }} {...p} />,
+        h2:    ({ node, ...p }) => <h2 style={{ fontSize: 13, fontWeight: 700, margin: '8px 0 4px', color: '#2c2a24' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        h3:    ({ node, ...p }) => <h3 style={{ fontSize: 12, fontWeight: 700, margin: '6px 0 3px', color: '#374151' }} {...p} />,
+        h3:    ({ node, ...p }) => <h3 style={{ fontSize: 12, fontWeight: 700, margin: '6px 0 3px', color: '#33302a' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         a:     ({ node, ...p }) => <a style={{ color: '#2563eb', textDecoration: 'underline' }} target="_blank" rel="noreferrer" {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        hr:    ({ node, ...p }) => <hr style={{ border: 'none', borderTop: '1px solid #e5e7eb', margin: '8px 0' }} {...p} />,
+        hr:    ({ node, ...p }) => <hr style={{ border: 'none', borderTop: '1px solid #ece3d0', margin: '8px 0' }} {...p} />,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        blockquote: ({ node, ...p }) => <blockquote style={{ borderLeft: '3px solid #d1d5db', paddingLeft: 10, margin: '4px 0', color: '#6b7280' }} {...p} />,
+        blockquote: ({ node, ...p }) => <blockquote style={{ borderLeft: '3px solid #d6ccb5', paddingLeft: 10, margin: '4px 0', color: '#8a8168' }} {...p} />,
       }}
     >
       {children}
@@ -185,7 +237,7 @@ function MdContent({ children }: { children: string }) {
 
 // ── Component ──────────────────────────────────────────────────────────────────
 
-export function ChatSidebar({ isOpen, onToggle }: Props) {
+export function ChatSidebar({ isOpen, onToggle, nodes, edges }: Props) {
   const apiKey                          = DEFAULT_KCL_API_KEY
   const [model, setModel]               = useState(() => localStorage.getItem(STORAGE_KEYS.CHAT_MODEL) ?? '')
   const [systemPrompt, setSystemPrompt] = useState(() => {
@@ -270,7 +322,7 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
           temperature,
           max_tokens:  maxTokens,
           messages: [
-            { role: 'system', content: systemPrompt },
+            { role: 'system', content: systemPrompt + buildCanvasContext(nodes, edges) },
             ...history.map(m => ({ role: m.role, content: m.content })),
           ],
         }),
@@ -335,7 +387,7 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
     } finally {
       setIsLoading(false)
     }
-  }, [inputText, isLoading, apiKey, model, systemPrompt, temperature, maxTokens, messages])
+  }, [inputText, isLoading, apiKey, model, systemPrompt, temperature, maxTokens, messages, nodes, edges])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
@@ -456,7 +508,7 @@ export function ChatSidebar({ isOpen, onToggle }: Props) {
               </div>
             )}
             {msg.role === 'assistant' ? (
-              <div style={{ ...styles.bubbleText, color: msg.error ? '#dc2626' : '#111827' }}>
+              <div style={{ ...styles.bubbleText, color: msg.error ? '#dc2626' : '#2c2a24' }}>
                 <MdContent>{msg.content}</MdContent>
               </div>
             ) : (
@@ -512,8 +564,8 @@ const styles: Record<string, React.CSSProperties> = {
   sidebar: {
     width: 340,
     flexShrink: 0,
-    borderLeft: '1px solid #e5e7eb',
-    background: '#fff',
+    borderLeft: '1px solid #ece3d0',
+    background: '#f8f3e9',
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
@@ -530,8 +582,9 @@ const styles: Record<string, React.CSSProperties> = {
   },
   title: {
     color: '#fff',
-    fontWeight: 700,
+    fontWeight: 600,
     fontSize: 13,
+    fontFamily: "'Spectral', Georgia, 'Times New Roman', serif",
   },
   dot: {
     width: 7,
@@ -566,7 +619,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   label: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 44,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -574,7 +627,7 @@ const styles: Record<string, React.CSSProperties> = {
   input: {
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #e5e7eb',
+    border: '1px solid #ece3d0',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -590,7 +643,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   numLabel: {
     fontSize: 10,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 28,
     textAlign: 'right',
   },
@@ -607,7 +660,7 @@ const styles: Record<string, React.CSSProperties> = {
     width: '100%',
     fontSize: 10,
     padding: '4px 6px',
-    border: '1px solid #e5e7eb',
+    border: '1px solid #ece3d0',
     borderRadius: 4,
     outline: 'none',
     resize: 'vertical',
@@ -634,10 +687,12 @@ const styles: Record<string, React.CSSProperties> = {
   },
   emptyState: {
     fontSize: 12,
-    color: '#9ca3af',
+    color: '#a79f8a',
     textAlign: 'center',
     padding: '24px 16px',
     lineHeight: 1.6,
+    fontFamily: "'Spectral', Georgia, 'Times New Roman', serif",
+    fontStyle: 'italic',
   },
   userBubble: {
     alignSelf: 'flex-end',
@@ -648,8 +703,8 @@ const styles: Record<string, React.CSSProperties> = {
   },
   assistantBubble: {
     alignSelf: 'flex-start',
-    background: '#f9fafb',
-    border: '1px solid #e5e7eb',
+    background: '#faf6ec',
+    border: '1px solid #ece3d0',
     borderRadius: '2px 12px 12px 12px',
     padding: '8px 12px',
     maxWidth: '95%',
@@ -664,7 +719,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   roleLabel: {
     fontSize: 10,
-    color: '#9ca3af',
+    color: '#b0a891',
     fontWeight: 600,
     textTransform: 'uppercase',
     letterSpacing: '0.05em',
@@ -675,7 +730,7 @@ const styles: Record<string, React.CSSProperties> = {
     cursor: 'pointer',
     fontSize: 12,
     padding: '0 2px',
-    color: '#9ca3af',
+    color: '#b0a891',
     lineHeight: 1,
   },
   bubbleText: {
@@ -691,7 +746,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   inputArea: {
     padding: '8px 10px',
-    borderTop: '1px solid #e5e7eb',
+    borderTop: '1px solid #ece3d0',
     display: 'flex',
     gap: 6,
     alignItems: 'flex-end',
@@ -701,7 +756,7 @@ const styles: Record<string, React.CSSProperties> = {
     flex: 1,
     fontSize: 12,
     padding: '6px 8px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 6,
     outline: 'none',
     resize: 'none',

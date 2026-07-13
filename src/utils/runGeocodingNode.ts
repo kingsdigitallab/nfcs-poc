@@ -18,7 +18,7 @@ function applyResolved(
   lat: number,
   lng: number,
   geocoded: 'auto' | 'manual',
-  source: 'tgn' | 'wikidata',
+  source: 'tgn' | 'wikidata' | 'nominatim',
   uri: string,
   candidates: GeoCandidate[],
   confidence: number,

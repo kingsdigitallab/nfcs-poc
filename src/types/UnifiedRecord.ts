@@ -11,10 +11,10 @@
  *    Downstream processing nodes access them there without re-parsing raw responses.
  *
  * Namespace conventions:
- *  - `record.gbif.*` is the canonical home for raw GBIF occurrence fields
- *    (e.g. record.gbif.scientificName, record.gbif.datasetKey). The GBIF adapter
- *    dual-writes domain-specific fields here AND to the top-level normalised fields
- *    for backward compatibility. New code should read from record.gbif.*.
+ *  - `record.gbif.*` is the canonical (and only) home for raw GBIF occurrence
+ *    fields (e.g. record.gbif.scientificName, record.gbif.datasetKey). The
+ *    adapter stores the raw occurrence wholesale; there are no flat top-level
+ *    copies. Legacy records are normalised on load (recordNormalise.ts).
  *  - Similarly, record.llds.*, record.ads.*, etc. hold the raw service payload.
  *
  * Schema.org alignment:
@@ -32,6 +32,16 @@ export interface UnifiedRecord {
    * @see https://schema.org/identifier
    */
   id: string
+
+  /**
+   * Records are OPEN: enrichment nodes add fields not declared here
+   * (kclResponse, ollamaResponse, wd_*, `${field}_reconciled`, human_*,
+   * eval_*, fetchedContent, …). The index signature models that honestly
+   * and lets records interchange with Record<string, unknown> (the results
+   * store's currency) without unsafe double-casts. Contract enforcement
+   * for adapter output happens at runtime in fixtureConformance.test.ts.
+   */
+  [key: string]: unknown
 
   // ── Citation metadata ───────────────────────────────────────────────────────
   /** Populated by source runners; consumed by CitationNode and ExportNode. */
@@ -110,10 +120,10 @@ export interface UnifiedRecord {
    */
   type?: string
   /**
-   * Format, e.g. "text/plain"
+   * Format, e.g. "text/plain" — may be an array (HSDS data-type labels)
    * @see https://schema.org/encodingFormat
    */
-  format?: string
+  format?: string | string[]
   /** Collection name — MDS and other cultural-heritage sources */
   collection?: string
 
@@ -131,23 +141,17 @@ export interface UnifiedRecord {
   /** Named period label, e.g. "Iron Age", "Medieval" */
   periodName?: string | string[]
 
-  // ── Biodiversity-specific (GBIF) ────────────────────────────────────────────
-  scientificName?: string
-  kingdom?: string
-  phylum?: string
-  class?: string
-  order?: string
-  family?: string
-  genus?: string
-  species?: string
-  eventDate?: string
+  // ── Coordinates (cross-service — consumed by MapOutput) ────────────────────
   /** @see https://schema.org/latitude */
   decimalLatitude?: number | null
   /** @see https://schema.org/longitude */
   decimalLongitude?: number | null
-  basisOfRecord?: string
-  institutionCode?: string
-  datasetName?: string
+
+  // Biodiversity-specific fields (scientificName, kingdom, phylum, class,
+  // order, family, genus, species, eventDate, basisOfRecord, institutionCode,
+  // datasetName) live ONLY under record.gbif.* — the adapter stores the raw
+  // occurrence wholesale there. Legacy records with flat copies are
+  // normalised on load (see src/utils/recordNormalise.ts).
 
   // ── Service namespace fields ─────────────────────────────────────────────────
   /** Full raw GBIF occurrence object */
@@ -168,6 +172,19 @@ export interface UnifiedRecord {
   smg?: Record<string, unknown>
   /** Victoria and Albert Museum namespace (objectType, place, manifest, iiifImageBase, thumbnail, …) */
   vam?: Record<string, unknown>
+  /** Heritage Science Data Service namespace (landingPage, contributor, temporal, spatial, subject arrays, …) */
+  hsds?: Record<string, unknown>
+  /** Bodleian Digital Collections namespace (uuid, manifest, thumbnail, shelfmark, origins, …) */
+  bodleian?: Record<string, unknown>
+  /** SmartGeocoder namespace (LLM-extracted place terms and resolution details) */
+  smartGeo?: Record<string, unknown>
+  /** FrameSense namespace (collection, video, clip, shot, frameFile, shotScale, VLM answers) */
+  framesense?: Record<string, unknown>
+  /** SPARQL namespace (raw result-binding values keyed by SELECT variable name) */
+  sparql?: Record<string, unknown>
+  /** Plain Wikidata Q-id. Written by MergeByQID (merged entities) and the
+   *  SPARQL source adapter; read by WikidataEnrich as the preferred QID source. */
+  _qid?: string
 
   // ── Geocoding enrichment ────────────────────────────────────────────────────
   /** Full geocoding result from GeocodingNode */
@@ -202,7 +219,7 @@ export interface GeoCandidate {
 export interface GeoConfirmed {
   lat:    number
   lng:    number
-  source: 'tgn' | 'wikidata'
+  source: 'tgn' | 'wikidata' | 'nominatim'
   uri:    string
   label:  string
 }

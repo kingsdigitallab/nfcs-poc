@@ -3,7 +3,7 @@ import { Handle, Position, useReactFlow, useEdges, NodeProps } from '@xyflow/rea
 import { nodeRunners } from '../utils/nodeRunners'
 import { downloadAsFixture, fixtureFilename, resolveFixtureQuery } from '../utils/fixtureUtils'
 
-export type EuropeanaStatus = 'idle' | 'loading' | 'success' | 'error'
+export type EuropeanaStatus = 'idle' | 'loading' | 'success' | 'error' | 'cached'
 
 export interface EuropeanaSearchNodeData {
   apiKey:      string
@@ -19,7 +19,7 @@ export interface EuropeanaSearchNodeData {
   [key: string]: unknown
 }
 
-const HEADER_COLOR = '#2563eb'
+const HEADER_COLOR = '#3a5896'
 
 const WIRABLE_ROWS = [
   { handleId: 'query', dataKey: 'inlineQuery', label: 'query', placeholder: 'search terms…' },
@@ -38,10 +38,11 @@ function handleTop(rowIndex: number) {
 }
 
 const BORDER: Record<EuropeanaStatus, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   loading: '#3b82f6',
   success: '#22c55e',
   error:   '#ef4444',
+  cached:  '#22c55e',
 }
 
 export function EuropeanaSearchNode({ id, data }: NodeProps) {
@@ -69,8 +70,8 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
         style={{
           ...styles.inputHandle,
           top: HEADER_H + BODY_PAD + 11,
-          background: isConnected('apiKey') ? '#3b82f6' : '#9ca3af',
-          boxShadow:  `0 0 0 1px ${isConnected('apiKey') ? '#3b82f6' : '#9ca3af'}`,
+          background: isConnected('apiKey') ? '#3b82f6' : '#b0a891',
+          boxShadow:  `0 0 0 1px ${isConnected('apiKey') ? '#3b82f6' : '#b0a891'}`,
         }}
       />
       {/* Wirable input handles for query / limit */}
@@ -83,8 +84,8 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
           style={{
             ...styles.inputHandle,
             top: handleTop(i),
-            background: isConnected(handleId) ? '#3b82f6' : '#9ca3af',
-            boxShadow:  `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#9ca3af'}`,
+            background: isConnected(handleId) ? '#3b82f6' : '#b0a891',
+            boxShadow:  `0 0 0 1px ${isConnected(handleId) ? '#3b82f6' : '#b0a891'}`,
           }}
         />
       ))}
@@ -127,7 +128,7 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
               style={{
                 ...styles.input,
                 background: isConnected(handleId) ? '#eff6ff' : '#fff',
-                color:      isConnected(handleId) ? '#1d4ed8' : '#111827',
+                color:      isConnected(handleId) ? '#1d4ed8' : '#2c2a24',
               }}
               value={(d[dataKey] as string) || ''}
               onChange={e => updateNodeData(id, { [dataKey]: e.target.value })}
@@ -196,7 +197,7 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
           ) : null}
           <label style={styles.fixtureToggle} className="nodrag" title="Use pre-baked fixture from public/fixtures/ instead of live API">
             <input type="checkbox" checked={!!d.useFixture} onChange={e => updateNodeData(id, { useFixture: e.target.checked })} className="nodrag" />
-            <span style={{ color: d.useFixture ? HEADER_COLOR : '#9ca3af' }}>📦</span>
+            <span style={{ color: d.useFixture ? HEADER_COLOR : '#b0a891' }}>📦</span>
           </label>
           {(d.status === 'success' || d.status === 'cached') && (
             <button style={styles.fixtureSaveBtn} className="nodrag"
@@ -228,12 +229,12 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '2px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     260,
     maxWidth:     300,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
     transition:   'border-color 0.2s',
   },
@@ -273,7 +274,7 @@ const styles = {
   },
   label: {
     fontSize:   11,
-    color:      '#6b7280',
+    color:      '#8a8168',
     width:      44,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -282,7 +283,7 @@ const styles = {
     flex:         1,
     fontSize:     11,
     padding:      '2px 5px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
     outline:      'none',
     height:       22,
@@ -291,19 +292,19 @@ const styles = {
     flex:         1,
     fontSize:     11,
     padding:      '2px 4px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
     outline:      'none',
     height:       22,
   },
   checkLabel: {
     fontSize: 10,
-    color:    '#374151',
+    color:    '#33302a',
     cursor:   'pointer',
   },
   keyHint: {
     fontSize:   9,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     paddingLeft: 50,
     marginTop:  -2,
   },
@@ -320,11 +321,11 @@ const styles = {
   },
   countBadge: {
     fontSize:  10,
-    color:     '#6b7280',
+    color:     '#8a8168',
   },
   fixtureControls: { display: 'flex', alignItems: 'center', gap: 6, flex: 1 },
   fixtureToggle: { display: 'flex', alignItems: 'center', gap: 3, cursor: 'pointer', userSelect: 'none' as const, fontSize: 13 },
-  fixtureSaveBtn: { background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: 13, color: '#6b7280', lineHeight: 1 },
+  fixtureSaveBtn: { background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: 13, color: '#8a8168', lineHeight: 1 },
   runBtn: {
     background:   HEADER_COLOR,
     color:        '#fff',

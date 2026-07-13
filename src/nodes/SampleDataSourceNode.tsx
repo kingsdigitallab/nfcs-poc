@@ -74,14 +74,14 @@ export interface SampleDataSourceNodeData {
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#1e3a5f'
+const HEADER_COLOR = '#33465f'
 const BTN_COLOR    = '#1d4ed8'
 
 // Must exactly match LocalFolderSourceNode — handle top positions are computed
 // from header height (32) + body padding-top (8) + outputs label (18) + row height (24):
 // results: 32+8+18+12=70, pdf: +24=94, xml: +24=118, text: +24=142, image: +24=166
 const OUTPUT_HANDLES = [
-  { id: 'results', label: 'All',   color: '#6b7280', top: 70  },
+  { id: 'results', label: 'All',   color: '#8a8168', top: 70  },
   { id: 'pdf',     label: 'PDF',   color: '#dc2626', top: 94  },
   { id: 'xml',     label: 'XML',   color: '#d97706', top: 118 },
   { id: 'text',    label: 'Text',  color: '#16a34a', top: 142 },
@@ -90,7 +90,7 @@ const OUTPUT_HANDLES = [
 ]
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:    '#d1d5db',
+  idle:    '#d6ccb5',
   loading: '#3b82f6',
   ready:   '#22c55e',
   error:   '#ef4444',
@@ -158,7 +158,7 @@ export function SampleDataSourceNode({ id, data }: NodeProps) {
   const imageCount      = (d.imageCount      as number   | undefined) ?? 0
   const csvCount        = (d.csvCount        as number   | undefined) ?? 0
 
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
 
   const currentPkg = manifest?.packages.find(p => p.slug === selectedPackage) ?? null
 
@@ -298,7 +298,7 @@ export function SampleDataSourceNode({ id, data }: NodeProps) {
                             className="nodrag"
                           />
                           <span style={styles.fileLabel}>{file.label}</span>
-                          <span style={{ ...styles.typeBadge, background: TYPE_COLOR[file.type] ?? '#6b7280' }}>
+                          <span style={{ ...styles.typeBadge, background: TYPE_COLOR[file.type] ?? '#8a8168' }}>
                             {file.type}
                           </span>
                           {file.sizeBytes != null && (
@@ -372,11 +372,11 @@ export function SampleDataSourceNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '2px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth:     260,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
     transition:   'border-color 0.25s',
   },
@@ -421,7 +421,7 @@ const styles = {
   outputsSectionLabel: {
     fontSize:      10,
     fontWeight:    700,
-    color:         '#9ca3af',
+    color:         '#b0a891',
     textTransform: 'uppercase' as const,
     letterSpacing: '0.05em',
     height:        18,
@@ -455,7 +455,7 @@ const styles = {
   },
   paramLabel: {
     fontSize:   11,
-    color:      '#6b7280',
+    color:      '#8a8168',
     width:      54,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -463,7 +463,7 @@ const styles = {
   select: {
     fontSize:   11,
     padding:    '2px 4px',
-    border:     '1px solid #d1d5db',
+    border:     '1px solid #d6ccb5',
     borderRadius: 4,
     outline:    'none',
     flex:       1,
@@ -472,7 +472,7 @@ const styles = {
   },
   pkgDesc: {
     fontSize:    10,
-    color:       '#6b7280',
+    color:       '#8a8168',
     fontStyle:   'italic' as const,
     lineHeight:  1.4,
   },
@@ -490,12 +490,12 @@ const styles = {
   itemLabel: {
     fontSize:      10,
     fontWeight:    700,
-    color:         '#374151',
+    color:         '#33302a',
     overflow:      'hidden',
     textOverflow:  'ellipsis',
     whiteSpace:    'nowrap' as const,
     paddingBottom: 1,
-    borderBottom:  '1px solid #e5e7eb',
+    borderBottom:  '1px solid #ece3d0',
     marginBottom:  2,
   },
   fileRow: {
@@ -509,7 +509,7 @@ const styles = {
     fontSize:   11,
   },
   fileLabel: {
-    color:        '#374151',
+    color:        '#33302a',
     flex:         1,
     overflow:     'hidden',
     textOverflow: 'ellipsis',
@@ -525,7 +525,7 @@ const styles = {
   },
   sizeLabel: {
     fontSize:   9,
-    color:      '#9ca3af',
+    color:      '#b0a891',
     flexShrink: 0,
     fontFamily: 'monospace',
   },
@@ -544,7 +544,7 @@ const styles = {
   clearBtn: {
     background:   'none',
     border:       'none',
-    color:        '#6b7280',
+    color:        '#8a8168',
     cursor:       'pointer',
     fontSize:     13,
     lineHeight:   1,
@@ -553,7 +553,7 @@ const styles = {
   },
   hintText: {
     fontSize:    10,
-    color:       '#9ca3af',
+    color:       '#b0a891',
     fontStyle:   'italic' as const,
     paddingTop:  2,
   },

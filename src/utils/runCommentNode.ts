@@ -10,7 +10,7 @@ import { collectUpstreamRecords } from './upstreamRecords'
 
 const runCommentNode: NodeRunner = async (
   nodeId,
-  getNodes,
+  _getNodes,
   edges,
   updateNodeData,
 ) => {

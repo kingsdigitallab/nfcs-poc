@@ -95,6 +95,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **MDSSearch** | [museumdata.uk](https://museumdata.uk/) | HTML scraper (no public JSON API). Capped at 200 records; amber ⚠ badge when the total exceeds the cap. |
 | **SMGSearch** | [Science Museum Group](https://collection.sciencemuseumgroup.org.uk/) | Digital collection covering science, technology, medicine, and social history. Records include `smg.manifest` (IIIF) — connect to ImageView for object browsing. Fixture mode supported. |
 | **VASearch** | [Victoria & Albert Museum](https://api.vam.ac.uk/) | V&A Collection API v2. Filters: images only, object type, year made from/to. Records include `vam.manifest`, `vam.iiifImageBase`, `vam.thumbnail`, `vam.place`, `vam.objectType`, `vam.onDisplay`. |
+| **SPARQLSearch** | [Wikidata Query Service](https://query.wikidata.org/) + [Getty Vocabularies](https://vocab.getty.edu/sparql) | *(Experimental)* Structured queries over SPARQL endpoints without writing SPARQL: a **Builder** with live entity/property lookup (type names, pick from Wikidata's own autocomplete), a plain-English **✨ NL assist** with hallucination-proof QID grounding, and a **Raw SPARQL** escape hatch. Endpoint dropdown: Wikidata (full features), Getty AAT/TGN/ULAN (raw mode), British Library BNB (greyed out until BL restores its linked-data service). Results carry `_qid` for **WikidataEnrich**/**MergeByQID** and coordinates for **MapOutput**. See [SPARQL Search](#sparql-search) below. |
 | **LoadSavedSearch** | Local filesystem | Loads a `.nfcs.json` file saved by **SaveSearch**, or any raw `UnifiedRecord[]` JSON array exported by **Export**. Displays full provenance metadata: saved date/time, source breakdown with per-service record counts, and the original search parameters in a collapsible panel. |
 | **LocalFileSource** | Local filesystem | Parses a single CSV, TSV, XML, or image file selected via a standard file picker (all browsers). Auto-detects the delimiter. **Cast numeric strings to numbers** toggle converts coordinate strings to floats. |
 | **LocalFolderSource** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction), XML/TEI, plain text, images, Shapefiles, and GeoJSON. Five typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`, plus a **GIS handle** for Shapefile/GeoJSON layers. Requires Chrome or Edge 86+. |
@@ -280,6 +281,7 @@ Use `{{fieldName}}` placeholders in the user prompt template. Click **▼ fields
 | `{{title}}` | Record title |
 | `{{description}}` | Record description / abstract |
 | `{{anyField}}` | Any field from the record by name |
+| `{{_lineage}}` | The **context accrual** token — a plain-English narrative of the pipeline that produced the records. See [Context accrual](#context-accrual--the-_lineage-token) below. |
 
 ### Vision mode
 
@@ -311,6 +313,41 @@ Both **KingsInference** and **KingsInferenceByField** include a **prompt recipe 
 - *Aggregate:* Thematic summary, List unique entities
 
 To use: select a recipe from the dropdown, click **Apply** to populate the system prompt and template. Click **Save…** to create custom recipes — they persist in localStorage and are available across sessions.
+
+### Context accrual — the `{{_lineage}}` token
+
+Put `{{_lineage}}` anywhere in a **KingsInference**, **Ollama**, or **Evaluator** prompt and, at run time, it is
+replaced with a plain-English narrative of the **upstream pipeline history** — which services were searched with
+what terms, how records were filtered, transformed, reconciled, geocoded, or merged, and how many records flowed
+through each stage. The model sees not just the records but *how they came to be*, which materially improves
+summaries, comparisons, and judgements.
+
+Example substitution for a two-branch workflow:
+
+```
+Branch A:
+  1. Searched ARIADNE (pan-European archaeology portal) for "hillfort" with filters: Country=United Kingdom; retrieved 120 results.
+Branch B:
+  1. Queried Wikidata (SPARQL) — instances of Q744099; retrieved 95 results.
+Then:
+  1. Merged records from multiple sources by shared Wikidata QID: 61 merged entities, 14 unmatched (dropped).
+  2. Filtered records where title contains "Iron Age": 23 of 61 records passed.
+```
+
+How it works (design in [docs/context-accrual.md](docs/context-accrual.md)):
+
+- The lineage is **derived on demand** from the node graph — `collectLineage(nodeId, nodes, edges)` walks the
+  upstream subgraph over data-flow edges (param wires are configuration, not data) and returns a topologically
+  ordered history; `lineageToNarrative(graph)` renders it LLM-ready. Nothing is stamped on records.
+- Record counts are read from the **results store** with pass-through inheritance, so display-only nodes
+  (TableOutput, QuickNote, FieldDistribution) sitting in the chain report the records flowing *through* them
+  rather than breaking the story.
+- Linear chains render as a numbered list; parallel branches as lettered sections with shared ancestors described
+  once; joins (e.g. MergeByQID) and everything after them under **Then:**. A ~2,000-character budget drops the
+  earliest steps whole — never mid-sentence.
+- If an upstream node's settings changed since it last ran, the narrative is prefixed with an explicit staleness
+  warning.
+- Templates without the token are untouched — zero cost unless you opt in.
 
 ---
 
@@ -574,6 +611,85 @@ Tick the properties you want grouped by domain (General, Taxon, Place, Person, H
 ### MergeByQID
 
 Groups records from any number of upstream sources by shared Wikidata QID and emits one merged record per entity. Each merged record contains `_qid`, `_sourceCount`, `_sources`, and all source fields prefixed by service name (e.g. `gbif_scientificName`, `ariadne_title`). Toggle **Keep unmatched records** to pass through records with no reconciled QID unchanged.
+
+---
+
+## SPARQL Search
+
+*(Experimental group — enable Advanced mode to see it.)* Query knowledge graphs over SPARQL without needing to
+know SPARQL — or any entity identifiers. The node solves the two things that normally make SPARQL unusable for
+non-specialists: **finding the right IDs** and **writing the query**.
+
+### Live entity and property lookup
+
+Every place the query needs an identifier is a live, as-you-type search backed by `wbsearchentities` — the same
+API behind Wikidata's own autocomplete (browser-direct, no key needed):
+
+- **find** (instance-of): type `hillfort` → pick **hillfort (Q744099)** from a dropdown showing label, Q-id, and
+  disambiguating description. Curated suggestions appear instantly when the box is empty.
+- **Property filters**: the property box searches Wikidata's *properties* — type `time period` → **P2348**,
+  `artist` → **creator (P170)**. The curated property groups appear as instant seeds.
+- **Filter values**: type a name (`J. M. W. Turner` → **Q159758**) or leave free text for a CONTAINS match.
+- Any Q-id/P-id already in the node shows a **resolved-label chip** (e.g. `Q3305213 → painting`) linking to
+  Wikidata — so you always know what an opaque identifier actually is. A red chip flags a nonexistent entity.
+
+Every builder change regenerates the query into a read-only preview; **✎ Edit as raw SPARQL** is the escape hatch
+(hand edits are kept until a builder control changes).
+
+### ✨ NL assist with QID grounding
+
+Type a research question in plain English (e.g. *"paintings by either J. M. W. Turner or John Constable"*), pick
+an ARC model (arc:nano/lite/nexus/apex), and click **✨**. The generated SPARQL lands in Raw mode for review —
+but first every `wd:Q…` it references is **verified against live Wikidata**:
+
+- The model must declare what each QID it used is meant to be; the app checks the QID exists and that it appears
+  in the live search results for that name (alias-aware — "William Turner" correctly verifies Q159758,
+  label "J. M. W. Turner").
+- **Hallucinated or mismatched QIDs are automatically replaced** with the top live-search hit, and a per-entity
+  report appears under the query: `✓ Q159758 J. M. W. Turner` (verified) / `⚠ Q11436 "aircraft" → Q159758
+  J. M. W. Turner (from "J.M.W. Turner") ▾` (auto-repaired — click for alternates, including one-click restore of
+  the original) / `✗` (no match found). This matters: LLMs routinely emit plausible-looking but wrong QIDs, which
+  produce *syntactically valid queries that silently return zero rows*.
+- Verification is tolerant — if Wikidata is unreachable the query is kept unchanged, never blocked.
+
+### Endpoints
+
+| Endpoint | Status | Features |
+|----------|--------|----------|
+| **Wikidata** (default) | Live | Builder, keyword seed, ✨ NL assist + grounding, entity/property lookup |
+| **Getty Vocabularies (AAT/TGN/ULAN)** | Live | Raw SPARQL only (gvp/xl/luc/skos prefixes built in); switching inserts a working AAT sample query |
+| **British Library BNB** | Offline | Greyed out — the BNB linked-data platform has been down since the BL cyber-incident; the entry and proxy route are ready to enable the day BL restores it |
+
+Old saved workflows carry no endpoint field and load against Wikidata unchanged. Non-Wikidata endpoints force Raw
+mode (the builder and assist are Wikidata-specific and would mislead).
+
+### Wiring and outputs
+
+- Wirable **query** (keyword) and **limit** handles at the standard search-node positions; a query without an
+  explicit `LIMIT` gets the limit row appended (an in-query LIMIT wins).
+- Result bindings land under the `sparql.*` namespace; `?item`/`?itemLabel`/`?itemDescription` map to
+  id/title/description, WKT `Point(lon lat)` values map to `decimalLatitude`/`decimalLongitude` (→ **MapOutput**),
+  and the trailing Q-id of `?item` is written to `_qid` — so results plug straight into **WikidataEnrich** and
+  **MergeByQID** alongside reconciled records from other services.
+- Fixture mode (📦) works as on every search node; error responses are condensed to a readable message
+  (e.g. `Wikidata 400: MalformedQueryException`) instead of a Java stack trace.
+
+### Worked example
+
+*"Paintings by either Turner or Constable"* — builder filters AND together, so "either" needs one raw edit:
+
+1. Keep the default **find: painting**; add filter **creator (P170)** → type `J. M. W. Turner`, pick Q159758.
+2. Click **✎ Edit as raw SPARQL** and change `?item wdt:P170 wd:Q159758 .` to
+   `?item wdt:P170 ?creator . VALUES ?creator { wd:Q159758 wd:Q159297 }`.
+3. Set the limit and **▶ Run** (~1,100 paintings match).
+
+Or just ask the ✨ assist for it — or run two SPARQL nodes (one per artist) into a shared TableOutput, the
+canvas-native way.
+
+> **Data-reality tip:** Wikidata's tagging is uneven — e.g. only ~27 of 4,150 UK hillforts carry a *time period*
+> statement, so a hard `P2348 = Bronze Age` triple discards nearly everything. For period-faceted archaeology,
+> combine sources: pull coordinates from SPARQL, facet periods via **ARIADNESearch**, and merge — that federation
+> is what this workbench is for.
 
 ---
 
@@ -875,6 +991,17 @@ nfcs-poc/
         ├── run<Name>Node.ts            # One runner per runnable node type
         └── *Adapter.ts                 # Service-specific response → UnifiedRecord
 ```
+
+---
+
+## Adding new nodes
+
+Two developer documents cover extension:
+
+- **[docs/federation-baseline.md](docs/federation-baseline.md)** — the checklist that makes an external data service a good federation candidate (open API, CORS, PIDs, licence metadata, pagination, field completeness), with GBIF and Europeana scored as worked reference implementations.
+- **[docs/context-accrual.md](docs/context-accrual.md)** — the design for workflow context accrual: how pipeline history (search terms, services combined, filters, transforms) is derived from the node graph and surfaced to downstream LLM nodes via the `{{_lineage}}` prompt token (implemented — see [Context accrual](#context-accrual--the-_lineage-token)).
+
+The step-by-step registration checklist for a new node lives in `CLAUDE.md`. Adapter output is contract-checked by the fixture conformance test suite (`npx vitest run`); `npm run build` must stay green.
 
 ---
 

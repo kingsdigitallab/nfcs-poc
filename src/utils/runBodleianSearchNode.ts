@@ -2,6 +2,7 @@ import type { Node, Edge } from '@xyflow/react'
 import type { BodleianSearchNodeData } from '../nodes/BodleianSearchNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { addCitation } from './citationUtils'
+import { resolveParamEdge, resolveLimit, finishRunnerSuccess, finishRunnerError } from './runnerHelpers'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 // Trailing slash required — without it the API 301-redirects to HTML
@@ -83,11 +84,9 @@ function adaptMember(member: BodleianMember): UnifiedRecord {
     _source:    'bodleian',
     _sourceId:  uuid || url,
     _sourceUrl: url,
-    _service:   'bodleian',
     title,
     date,
     type:       member.type ?? '',
-    thumbnail,
     bodleian: {
       uuid,
       manifest,
@@ -140,18 +139,11 @@ export async function runBodleianSearchNode(
   clearNodeResults(nodeId)
   updateNodeData(nodeId, { status: 'loading', statusMessage: 'Loading…', count: 0 })
 
-  const resolve = (handleId: string, fallback: string): string => {
-    const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
-    if (edge) {
-      const src = nodes.find(n => n.id === edge.source)
-      return (src?.data as { value?: string } | undefined)?.value ?? ''
-    }
-    return fallback
-  }
+  const resolve = (handleId: string, fallback: string): string =>
+    resolveParamEdge(nodeId, handleId, nodes, edges) ?? fallback
 
   const q          = resolve('query', d.inlineQuery ?? '')
-  const rawLimit   = parseInt(resolve('limit', d.inlineLimit ?? '20'), 10)
-  const limit      = isNaN(rawLimit) || rawLimit < 1 ? 20 : rawLimit
+  const limit      = resolveLimit(nodeId, nodes, edges, d.inlineLimit)
   const sort       = d.sort || 'relevance'
   const fetchAll   = d.fetchAll ?? false
   const fqCompleteness  = d.fqCompleteness  ?? ''
@@ -199,13 +191,7 @@ export async function runBodleianSearchNode(
       }
 
       const cited   = addCitation(allRecords as Record<string, unknown>[], citationBase)
-      const version = setNodeResults(nodeId, cited)
-      updateNodeData(nodeId, {
-        status:         'success',
-        statusMessage:  `✓ ${allRecords.length.toLocaleString()} of ${total.toLocaleString()}`,
-        count:          total,
-        resultsVersion: version,
-      })
+      finishRunnerSuccess(nodeId, cited, total, updateNodeData)
     } else {
       const allRecords: UnifiedRecord[] = firstPage.member.map(adaptMember)
 
@@ -221,17 +207,9 @@ export async function runBodleianSearchNode(
 
       const trimmed = allRecords.slice(0, limit)
       const cited   = addCitation(trimmed as Record<string, unknown>[], citationBase)
-      const version = setNodeResults(nodeId, cited)
-      updateNodeData(nodeId, {
-        status:         'success',
-        statusMessage:  `✓ ${trimmed.length} of ${total.toLocaleString()}`,
-        count:          total,
-        resultsVersion: version,
-      })
+      finishRunnerSuccess(nodeId, cited, total, updateNodeData)
     }
   } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err)
-    console.error('[Bodleian] error', msg)
-    updateNodeData(nodeId, { status: 'error', statusMessage: `✗ ${msg}`, count: 0 })
+    finishRunnerError(nodeId, err, updateNodeData, '[Bodleian]')
   }
 }

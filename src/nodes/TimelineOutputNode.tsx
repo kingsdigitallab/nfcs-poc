@@ -146,7 +146,7 @@ interface HoverState {
 
 export function TimelineViewNode({ id, data, width: measuredWidth, selected }: NodeProps) {
   const { updateNodeData }                            = useReactFlow()
-  const { records, connected, status, sourceCount }  = useUpstreamRecords(id)
+  const { records, connected, status }  = useUpstreamRecords(id)
 
   const [hovered,       setHovered]      = useState<HoverState | null>(null)
   const [dragging,      setDragging]     = useState<'start' | 'end' | null>(null)
@@ -190,7 +190,10 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
         : (r as Record<string, unknown>)[dateField]
       return toYear(raw as string | undefined)
     }
-    return toYear(r.date as string | undefined) ?? toYear(r.eventDate as string | undefined)
+    // gbif.eventDate fallback: the adapter mirrors it into `date`, but records
+    // filtered/transformed upstream may carry only the namespaced original.
+    return toYear(r.date as string | undefined)
+      ?? toYear((r.gbif as Record<string, unknown> | undefined)?.eventDate as string | undefined)
   }, [dateField])
 
   const scheduleHide = useCallback(() => {
@@ -238,7 +241,6 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
   const svgW  = fitToRange
     ? Math.max(plotW, PAD_L + PAD_R + 20)
     : Math.max(plotW, yearRange * autoPxPerYear + PAD_L + PAD_R)
-  const pxPerYear = fitToRange ? (svgW - PAD_L - PAD_R) / yearRange : autoPxPerYear
 
   const maxStack  = Math.max(0, ...Array.from(yearMap.values()).map(v => v.length))
   const stackRows = Math.min(maxStack, MAX_STACK)
@@ -414,15 +416,15 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
           )}
 
           {/* X-axis baseline */}
-          <line x1={PAD_L} y1={axisY} x2={svgW - PAD_R} y2={axisY} stroke="#e5e7eb" strokeWidth={1} />
+          <line x1={PAD_L} y1={axisY} x2={svgW - PAD_R} y2={axisY} stroke="#ece3d0" strokeWidth={1} />
 
           {/* Year ticks + labels */}
           {ticks.map(year => {
             const x = yearToX(year)
             return (
               <g key={year}>
-                <line x1={x} y1={axisY} x2={x} y2={axisY + 5} stroke="#d1d5db" strokeWidth={1} />
-                <text x={x} y={axisY + 16} textAnchor="middle" fontSize={9} fill="#9ca3af">
+                <line x1={x} y1={axisY} x2={x} y2={axisY + 5} stroke="#d6ccb5" strokeWidth={1} />
+                <text x={x} y={axisY + 16} textAnchor="middle" fontSize={9} fill="#b0a891">
                   {year < 0 ? `${-year} BCE` : String(year)}
                 </text>
               </g>
@@ -452,7 +454,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
             const x = Math.round(yearToX(year))
             const y = axisY - DOT_R - MAX_STACK * DOT_GAP - 4
             return (
-              <text key={`ovf-${year}`} x={x} y={y} textAnchor="middle" fontSize={8} fill="#6b7280">
+              <text key={`ovf-${year}`} x={x} y={y} textAnchor="middle" fontSize={8} fill="#8a8168">
                 +{v.length - MAX_STACK}
               </text>
             )
@@ -515,8 +517,9 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
           const tipLeft    = Math.max(4, Math.min(visibleX + 10, visibleW - 224))
           const tipTop     = Math.max(4, hovered.svgY - 72)
           const r          = hovered.record
-          const title      = String(r.title ?? r.scientificName ?? '(no title)').slice(0, 60)
-          const date       = String(r.date ?? r.eventDate ?? '')
+          const g          = r.gbif as Record<string, unknown> | undefined
+          const title      = String(r.title ?? g?.scientificName ?? '(no title)').slice(0, 60)
+          const date       = String(r.date ?? g?.eventDate ?? '')
           const glyph      = SHAPE_GLYPHS[sourceShape(r._source as string | undefined)] ?? '●'
           return (
             <div
@@ -547,7 +550,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
           value={dateField}
           onChange={e => updateNodeData(id, { dateField: e.target.value })}
           className="nodrag"
-          title="Field used as the date source (blank = auto: date / eventDate)"
+          title="Field used as the date source (blank = auto: date / gbif.eventDate)"
         >
           <option value="">date: auto</option>
           {availableFields.map(f => <option key={f} value={f}>{f}</option>)}
@@ -611,7 +614,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
             )
           })}
           {noDateCount > 0 && (
-            <span style={{ ...styles.legendItem, color: '#9ca3af' }}>
+            <span style={{ ...styles.legendItem, color: '#b0a891' }}>
               {noDateCount} undated
             </span>
           )}
@@ -627,14 +630,14 @@ export const TimelineOutputNode = TimelineViewNode
 
 // ─── styles ───────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#1e293b'
+const HEADER_COLOR = '#2b3340'
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '1.5px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '1.5px solid #d6ccb5',
     borderRadius: 8,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     overflow:     'hidden',
   },
   header: {
@@ -687,24 +690,24 @@ const styles = {
     alignItems:     'center',
     gap:            5,
     padding:        '5px 10px',
-    borderTop:      '1px solid #e5e7eb',
+    borderTop:      '1px solid #ece3d0',
     background:     '#f8fafc',
     flexShrink:     0,
   },
   dateSelect: {
     fontSize:     10,
     padding:      '2px 4px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
     height:       22,
-    color:        '#374151',
+    color:        '#33302a',
     background:   '#fff',
     maxWidth:     110,
     cursor:       'pointer',
   },
   filterLabel: {
     fontSize:   10,
-    color:      '#6b7280',
+    color:      '#8a8168',
     fontWeight: 600,
     flexShrink: 0,
   },
@@ -712,7 +715,7 @@ const styles = {
     width:        60,
     fontSize:     11,
     padding:      '2px 5px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
     outline:      'none',
     height:       22,
@@ -721,7 +724,7 @@ const styles = {
   },
   filterSep: {
     fontSize: 11,
-    color:    '#9ca3af',
+    color:    '#b0a891',
   },
   applyBtn: {
     background:   HEADER_COLOR,
@@ -742,8 +745,8 @@ const styles = {
   },
   clearBtn: {
     background:   'transparent',
-    color:        '#9ca3af',
-    border:       '1px solid #e5e7eb',
+    color:        '#b0a891',
+    border:       '1px solid #ece3d0',
     borderRadius: 4,
     padding:      '1px 6px',
     fontSize:     11,
@@ -785,7 +788,7 @@ const styles = {
     gap:        '3px 14px',
     padding:    '5px 10px 6px',
     background: '#f8fafc',
-    borderTop:  '1px solid #e5e7eb',
+    borderTop:  '1px solid #ece3d0',
   },
   legendItem: {
     display:    'flex',

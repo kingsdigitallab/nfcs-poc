@@ -12,7 +12,7 @@ import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 
-const HEADER_COLOR   = '#047857'   // emerald-700
+const HEADER_COLOR   = '#37624a'   // emerald-700
 const BAR_COLOR      = '#34d399'   // emerald-400
 const BAR_ACTIVE     = '#059669'   // emerald-600 — selected
 const BAR_DIM        = '#a7f3d0'   // emerald-200 — non-selected when some selected
@@ -204,7 +204,7 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
                     : anySelected
                       ? (isSelected ? BAR_ACTIVE : BAR_DIM)
                       : BAR_COLOR
-                  const textColor  = (isSelected || isHovered) ? '#047857' : '#374151'
+                  const textColor  = (isSelected || isHovered) ? '#047857' : '#33302a'
                   return (
                     <g
                       key={label}
@@ -237,8 +237,8 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
                           stroke={isSelected ? '#047857' : '#6ee7b7'}
                           strokeWidth={isHovered ? 1.5 : 1} rx={2} />
                       )}
-                      <text x={LABEL_W + barW + 4} y={y + BAR_H * 0.72} fontSize={9} fill="#6b7280">
-                        {count} <tspan fill="#9ca3af">({pct}%)</tspan>
+                      <text x={LABEL_W + barW + 4} y={y + BAR_H * 0.72} fontSize={9} fill="#8a8168">
+                        {count} <tspan fill="#b0a891">({pct}%)</tspan>
                       </text>
                     </g>
                   )
@@ -304,11 +304,11 @@ export function FieldDistributionNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background:   '#fff',
-    border:       '2px solid #d1d5db',
+    background:   '#fffdf7',
+    border:       '2px solid #d6ccb5',
     borderRadius: 8,
     width:        SVG_W + 24,
-    boxShadow:    '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow:    '0 1px 4px rgba(50,42,26,0.10)',
     position:     'relative' as const,
   },
   header: {
@@ -345,7 +345,7 @@ const styles = {
   },
   label: {
     fontSize:   11,
-    color:      '#6b7280',
+    color:      '#8a8168',
     width:      36,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -354,7 +354,7 @@ const styles = {
     flex:         1,
     fontSize:     11,
     padding:      '2px 4px',
-    border:       '1px solid #d1d5db',
+    border:       '1px solid #d6ccb5',
     borderRadius: 4,
     outline:      'none',
     height:       22,
@@ -367,11 +367,11 @@ const styles = {
   },
   checkLabel: {
     fontSize: 10,
-    color:    '#6b7280',
+    color:    '#8a8168',
   },
   placeholder: {
     fontSize:  10,
-    color:     '#9ca3af',
+    color:     '#b0a891',
     fontStyle: 'italic',
   },
   chartWrap: {
@@ -380,12 +380,12 @@ const styles = {
   },
   summary: {
     fontSize:  9,
-    color:     '#9ca3af',
+    color:     '#b0a891',
     marginTop: 2,
   },
   empty: {
     fontSize:  10,
-    color:     '#9ca3af',
+    color:     '#b0a891',
     fontStyle: 'italic',
   },
   inputHandle: {
@@ -423,7 +423,7 @@ const styles = {
   clearBtn: {
     background:   'none',
     border:       'none',
-    color:        '#6b7280',
+    color:        '#8a8168',
     fontSize:     10,
     cursor:       'pointer',
     padding:      '0 2px',

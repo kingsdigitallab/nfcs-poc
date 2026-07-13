@@ -1,136 +1,36 @@
-import type { Node, Edge } from '@xyflow/react'
+/**
+ * ARIADNE portal runner — CORS open, direct browser fetch (no proxy needed).
+ * Built from searchRunnerFactory; only the endpoint, adapter, citation
+ * metadata and filter params are service-specific.
+ */
 import { adaptARIADNEResponse, type ARIADNESearchResponse } from './ariadneAdapter'
-import type { ARIADNESearchNodeData } from '../nodes/ARIADNESearchNode'
-import { setNodeResults, clearNodeResults } from '../store/resultsStore'
-import { addCitation } from './citationUtils'
+import { makeSearchRunner } from './searchRunnerFactory'
 
-// ARIADNE portal API — CORS open, direct browser fetch (no proxy needed)
-const ARIADNE_SEARCH  = 'https://portal.ariadne-infrastructure.eu/api/search'
-const PAGE_SIZE       = 50
-const FETCH_TIMEOUT   = 30_000
-
-async function fetchARIADNE(params: Record<string, string>): Promise<ARIADNESearchResponse> {
-  const qs  = new URLSearchParams(params)
-  const url = `${ARIADNE_SEARCH}?${qs}`
-  const controller = new AbortController()
-  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT)
-  try {
-    console.log('[ARIADNE] GET', url)
-    const res = await fetch(url, { signal: controller.signal })
-    if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
-    const json = await res.json() as ARIADNESearchResponse
-    console.log(`[ARIADNE] page=${params.page ?? 1} size=${params.size} total=${json.total?.value} hits=${json.hits?.length}`)
-    return json
-  } finally {
-    clearTimeout(timer)
-  }
-}
-
-function buildParams(
-  d: ARIADNESearchNodeData,
-  nodes: Node[],
-  edges: Edge[],
-  nodeId: string,
-): Record<string, string> {
-  const resolve = (handleId: string, dataKey: keyof ARIADNESearchNodeData): string => {
-    const edge = edges.find(e => e.target === nodeId && e.targetHandle === handleId)
-    if (edge) {
-      const src = nodes.find(n => n.id === edge.source)
-      return (src?.data as { value?: string } | undefined)?.value ?? ''
-    }
-    return (d[dataKey] as string | undefined) ?? ''
-  }
-
-  const params: Record<string, string> = {
-    sort:  d.sort  || '_score',
-    order: d.order || 'desc',
-  }
-
-  const q = resolve('query', 'inlineQuery')
-  if (q) params.q = q
-
-  if (d.ariadneSubject) params.ariadneSubject = d.ariadneSubject
-  if (d.derivedSubject) params.derivedSubject  = d.derivedSubject
-  if (d.nativeSubject)  params.nativeSubject   = d.nativeSubject
-  if (d.country)        params.country         = d.country
-  if (d.dataType)       params.dataType        = d.dataType
-  if (d.temporal)       params.temporal        = d.temporal
-  if (d.contributor)    params.contributor     = d.contributor
-
-  return params
-}
-
-export async function runARIADNENode(
-  nodeId: string,
-  getNodes: () => Node[],
-  edges: Edge[],
-  updateNodeData: (id: string, data: Record<string, unknown>) => void,
-): Promise<void> {
-  const nodes = getNodes()
-  const node  = nodes.find(n => n.id === nodeId)
-  if (!node) return
-  const d = node.data as ARIADNESearchNodeData
-
-  clearNodeResults(nodeId)
-  updateNodeData(nodeId, { status: 'loading', statusMessage: 'Loading…', count: 0 })
-
-  const baseParams = buildParams(d, nodes, edges, nodeId)
-  const fetchAll   = d.fetchAll ?? false
-
-  const limitEdge = edges.find(e => e.target === nodeId && e.targetHandle === 'limit')
-  const limitSrc  = limitEdge ? nodes.find(n => n.id === limitEdge.source) : null
-  const rawLimit  = parseInt((limitSrc?.data as { value?: string } | undefined)?.value ?? d.inlineLimit ?? '20', 10)
-  const limit     = isNaN(rawLimit) || rawLimit < 1 ? 20 : rawLimit
-
-  const accessDate   = new Date().toISOString()
-  const citationBase = {
-    service:    'ARIADNE',
-    serviceUrl: 'https://portal.ariadne-infrastructure.eu',
-    publisher:  'ARIADNE Research Infrastructure',
-    accessDate,
-    query: Object.entries(baseParams)
-      .filter(([k, v]) => !['sort', 'order', 'size', 'page'].includes(k) && v)
-      .map(([k, v]) => `${k}:${v}`)
-      .join(', '),
-  }
-
-  // Shared paginator — fetches up to `maxRecords` using page=x&size=PAGE_SIZE (1-indexed pages)
-  async function fetchPages(maxRecords: number): Promise<{ records: ReturnType<typeof adaptARIADNEResponse>; total: number }> {
-    const probe     = await fetchARIADNE({ ...baseParams, size: '1', page: '1' })
-    const total     = probe.total?.value ?? 0
-    if (total === 0) return { records: [], total: 0 }
-
-    const needed    = Math.min(maxRecords, total)
-    const pageCount = Math.ceil(needed / PAGE_SIZE)
-    const allRecords: ReturnType<typeof adaptARIADNEResponse> = []
-
-    for (let p = 1; p <= pageCount; p++) {
-      updateNodeData(nodeId, {
-        statusMessage: `Page ${p}/${pageCount} (${allRecords.length} fetched)…`,
-      })
-      const response = await fetchARIADNE({ ...baseParams, size: String(PAGE_SIZE), page: String(p) })
-      const batch    = adaptARIADNEResponse(response)
-      allRecords.push(...batch)
-      if (batch.length < PAGE_SIZE) break
+export const runARIADNENode = makeSearchRunner<ARIADNESearchResponse>({
+  service:    'ARIADNE',
+  serviceUrl: 'https://portal.ariadne-infrastructure.eu',
+  publisher:  'ARIADNE Research Infrastructure',
+  endpoint:   'https://portal.ariadne-infrastructure.eu/api/search',
+  logTag:     '[ARIADNE]',
+  pageSize:   50,
+  adapter:    adaptARIADNEResponse,
+  buildParams: (d, resolve) => {
+    const params: Record<string, string> = {
+      sort:  (d.sort as string)  || '_score',
+      order: (d.order as string) || 'desc',
     }
 
-    // Trim to the requested cap
-    return { records: allRecords.slice(0, needed), total }
-  }
+    const q = resolve('query', 'inlineQuery')
+    if (q) params.q = q
 
-  try {
-    const { records, total } = await fetchPages(fetchAll ? Infinity : limit)
-    const citedRecords = addCitation(records as Record<string, unknown>[], citationBase)
-    const version      = setNodeResults(nodeId, citedRecords)
-    updateNodeData(nodeId, {
-      status:         'success',
-      statusMessage:  `✓ ${records.length.toLocaleString()} of ${total.toLocaleString()}`,
-      count:          total,
-      resultsVersion: version,
-    })
-  } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err)
-    console.error('[ARIADNE] error', msg)
-    updateNodeData(nodeId, { status: 'error', statusMessage: `✗ ${msg}`, count: 0 })
-  }
-}
+    if (d.ariadneSubject) params.ariadneSubject = d.ariadneSubject as string
+    if (d.derivedSubject) params.derivedSubject = d.derivedSubject as string
+    if (d.nativeSubject)  params.nativeSubject  = d.nativeSubject as string
+    if (d.country)        params.country        = d.country as string
+    if (d.dataType)       params.dataType       = d.dataType as string
+    if (d.temporal)       params.temporal       = d.temporal as string
+    if (d.contributor)    params.contributor    = d.contributor as string
+
+    return params
+  },
+})

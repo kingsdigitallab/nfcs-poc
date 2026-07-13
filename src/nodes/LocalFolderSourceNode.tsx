@@ -41,7 +41,7 @@ export interface LocalFolderSourceNodeData {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const HEADER_COLOR = '#14532d'
+const HEADER_COLOR = '#315a3f'
 const BTN_COLOR    = '#15803d'
 
 const FILE_TYPE_OPTIONS = [
@@ -53,7 +53,7 @@ const FILE_TYPE_OPTIONS = [
 
 // Fixed handle positions (px from top of card) — must match the output rows in the body
 const OUTPUT_HANDLES = [
-  { id: 'results', label: 'All',   color: '#6b7280', top: 70  },
+  { id: 'results', label: 'All',   color: '#8a8168', top: 70  },
   { id: 'pdf',     label: 'PDF',   color: '#dc2626', top: 94  },
   { id: 'xml',     label: 'XML',   color: '#d97706', top: 118 },
   { id: 'text',    label: 'Text',  color: '#16a34a', top: 142 },
@@ -61,7 +61,7 @@ const OUTPUT_HANDLES = [
 ]
 
 const STATUS_BORDER: Record<string, string> = {
-  idle:     '#d1d5db',
+  idle:     '#d6ccb5',
   scanning: '#3b82f6',
   ready:    '#22c55e',
   error:    '#ef4444',
@@ -201,7 +201,7 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
   const folderName = (d.folderName as string   | undefined) ?? ''
   const fileTypes  = (d.fileTypes  as string[] | undefined) ?? Object.keys(TYPE_LABEL_MAP)
   const maxFiles   = Number(d.maxFiles) || 50
-  const borderColor = STATUS_BORDER[status] ?? '#d1d5db'
+  const borderColor = STATUS_BORDER[status] ?? '#d6ccb5'
   const count      = (d.count      as number | undefined) ?? 0
   const pdfCount   = (d.pdfCount   as number | undefined) ?? 0
   const xmlCount   = (d.xmlCount   as number | undefined) ?? 0
@@ -333,7 +333,7 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
       <div style={styles.footer}>
         {HAS_API && dirHandleRef.current && status !== 'scanning' && (
           <button
-            style={{ ...styles.btn, background: '#374151', marginRight: 6 }}
+            style={{ ...styles.btn, background: '#33302a', marginRight: 6 }}
             onClick={handleRescan}
             className="nodrag"
           >
@@ -391,11 +391,11 @@ export function LocalFolderSourceNode({ id, data }: NodeProps) {
 
 const styles = {
   card: {
-    background: '#fff',
-    border: '2px solid #d1d5db',
+    background: '#fffdf7',
+    border: '2px solid #d6ccb5',
     borderRadius: 8,
     minWidth: 240,
-    boxShadow: '0 1px 4px rgba(0,0,0,0.08)',
+    boxShadow: '0 1px 4px rgba(50,42,26,0.10)',
     position: 'relative' as const,
     transition: 'border-color 0.25s',
   },
@@ -432,7 +432,7 @@ const styles = {
   outputsSectionLabel: {
     fontSize: 10,
     fontWeight: 700,
-    color: '#9ca3af',
+    color: '#b0a891',
     textTransform: 'uppercase' as const,
     letterSpacing: '0.05em',
     height: 18,
@@ -462,7 +462,7 @@ const styles = {
   sectionLabel: {
     fontSize: 10,
     fontWeight: 700,
-    color: '#6b7280',
+    color: '#8a8168',
     textTransform: 'uppercase' as const,
     letterSpacing: '0.05em',
   },
@@ -475,7 +475,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     fontSize: 11,
-    color: '#374151',
+    color: '#33302a',
     cursor: 'pointer',
     userSelect: 'none' as const,
   },
@@ -486,7 +486,7 @@ const styles = {
   },
   paramLabel: {
     fontSize: 11,
-    color: '#6b7280',
+    color: '#8a8168',
     width: 56,
     flexShrink: 0,
     fontFamily: 'monospace',
@@ -494,7 +494,7 @@ const styles = {
   inlineInput: {
     fontSize: 11,
     padding: '2px 5px',
-    border: '1px solid #d1d5db',
+    border: '1px solid #d6ccb5',
     borderRadius: 4,
     outline: 'none',
     height: 22,
@@ -533,7 +533,7 @@ const styles = {
   },
   scanSummary: {
     fontSize: 10,
-    color: '#6b7280',
+    color: '#8a8168',
     fontStyle: 'italic' as const,
     lineHeight: 1.4,
   },
@@ -592,7 +592,7 @@ const styles = {
   },
   gisHint: {
     fontSize: 9,
-    color: '#6b7280',
+    color: '#8a8168',
     fontStyle: 'italic' as const,
     marginTop: 2,
   },

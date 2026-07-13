@@ -6,7 +6,6 @@
  * text. Records without `fetchedHtml` are passed through unchanged.
  */
 
-import type { Node, Edge } from '@xyflow/react'
 import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'

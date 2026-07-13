@@ -484,6 +484,41 @@ export const PROXY_TABLE = [
       'Accept':     'application/json, text/plain, */*',
     },
   },
+  {
+    // Wikidata Query Service (SPARQL). WDQS policy requires a descriptive
+    // User-Agent; Accept pins the JSON results format.
+    prefix:  '/wdqs-proxy',
+    target:  'https://query.wikidata.org',
+    rewrite: path => path.replace(/^\/wdqs-proxy/, ''),
+    headers: {
+      'User-Agent': 'iDAH-Federation-PoC/1.0 (https://github.com/kingsdigitallab/nfcs-poc)',
+      'Accept':     'application/sparql-results+json',
+    },
+  },
+  {
+    // GBIF occurrence API. Direct browser calls (no User-Agent, browser IP) get
+    // rate-limited (429); routing through the proxy attaches a descriptive
+    // User-Agent and a single server IP, which GBIF's guidance asks for.
+    prefix:  '/gbif-proxy',
+    target:  'https://api.gbif.org',
+    rewrite: path => path.replace(/^\/gbif-proxy/, ''),
+    headers: {
+      'User-Agent': 'iDAH-Federation-PoC/1.0 (https://github.com/kingsdigitallab/nfcs-poc)',
+    },
+  },
+  {
+    // British National Bibliography SPARQL (SparqlSearchNode endpoint option).
+    // The BNB linked-data platform has been OFFLINE since the British Library
+    // cyber-incident (verified July 2026 — DNS resolves, server never answers).
+    // Route kept ready; flip `available` in src/utils/sparqlEndpoints.ts when
+    // BL restores the service.
+    prefix:  '/bnb-proxy',
+    target:  'https://bnb.data.bl.uk',
+    rewrite: path => path.replace(/^\/bnb-proxy/, ''),
+    headers: {
+      'User-Agent': 'iDAH-Federation-PoC/1.0 (https://github.com/kingsdigitallab/nfcs-poc)',
+    },
+  },
 ]
 
 // ── Vite proxy config builder ─────────────────────────────────────────────────
