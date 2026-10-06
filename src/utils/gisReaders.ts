@@ -9,7 +9,7 @@
  */
 
 // shpjs has no bundled TypeScript types
-// @ts-ignore
+// @ts-ignore -- shpjs ships no type declarations
 import { combine, parseShp, parseDbf } from 'shpjs'
 
 export interface GisLayer {

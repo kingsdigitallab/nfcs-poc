@@ -3,8 +3,21 @@ import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { DeduplicateNodeData } from '../nodes/DeduplicateNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
+import { finishRunnerError } from './runnerHelpers'
 
-export const runDeduplicateNode: NodeRunner = async (
+/** Never throws — see NodeRunner contract. Errors become an 'error' status. */
+export const runDeduplicateNode: NodeRunner = async (nodeId, getNodes, edges, updateNodeData) => {
+  // Clear BEFORE any work so a failed run cannot leave the previous run's
+  // records visible to downstream nodes.
+  clearNodeResults(nodeId)
+  try {
+    await runDeduplicateInner(nodeId, getNodes, edges, updateNodeData)
+  } catch (err) {
+    finishRunnerError(nodeId, err, updateNodeData, '[Deduplicate]')
+  }
+}
+
+const runDeduplicateInner: NodeRunner = async (
   nodeId,
   getNodes,
   edges,
@@ -17,7 +30,6 @@ export const runDeduplicateNode: NodeRunner = async (
   const upstream = collectUpstreamRecords(nodeId, edges) as UnifiedRecord[]
 
   if (upstream.length === 0) {
-    clearNodeResults(nodeId)
     updateNodeData(nodeId, {
       status:        'error',
       statusMessage: '✗ No upstream records',
@@ -47,7 +59,6 @@ export const runDeduplicateNode: NodeRunner = async (
     }
   }
 
-  clearNodeResults(nodeId)
   const version = setNodeResults(nodeId, unique)
   const removed = upstream.length - unique.length
 

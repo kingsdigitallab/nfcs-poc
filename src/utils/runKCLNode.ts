@@ -129,6 +129,10 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
   const visionMode     = (d.visionMode     as boolean | undefined) ?? false
   const imageField     = (d.imageField     as string  | undefined) ?? ''
 
+  // Clear before validation: a failed run must not leave stale records for
+  // downstream nodes to read.
+  clearNodeResults(nodeId)
+
   if (!apiKey) {
     updateNodeData(nodeId, { status: 'error', statusMessage: '✗ No API key configured' })
     return
@@ -144,7 +148,6 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
     return
   }
 
-  clearNodeResults(nodeId)
   updateNodeData(nodeId, {
     status:        'running',
     statusMessage: `Processing 0/${upstreamRecords.length}…`,

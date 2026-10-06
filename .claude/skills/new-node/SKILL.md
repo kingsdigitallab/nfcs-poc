@@ -1,6 +1,6 @@
 # /new-node
 
-Scaffold a complete new node for the iDAH Federation workflow editor. Works from a brief description of what the node should do. Covers all registration steps, proxy config for both dev and production, and pushes to both branches.
+Scaffold a complete new node for the iDAH Federation workflow editor. Works from a brief description of what the node should do. Covers all registration steps and proxy config (one `server/proxies.mjs` serves both dev and production).
 
 Before starting, ask the user for (if not already provided):
 - **Node name** (PascalCase, e.g. `PortalSearch`) — used for file and component names
@@ -8,7 +8,7 @@ Before starting, ask the user for (if not already provided):
 - **Node kind**: `data-source` | `process` | `output` | `display-only`
 - **Proxy needed?** If yes: prefix (e.g. `/portal-proxy`) and upstream URL
 - **Has API key?** (should the node be in `KCL_API_KEY_NODES` for auto-population)
-- **Group** for the sidebar (Canvas / Input / Inspection / Data Services / Local Content / Filters and Transforms / Extraction and Enrichment / Output)
+- **Group** for the sidebar (Workflow Planning / Discovering / Gathering / Enriching / Analysing / Visualising / Disseminating / Experimental — see `SIDEBAR_GROUPS` in `src/config/sidebarItems.ts`)
 
 Once confirmed, execute all steps. Run `tsc --noEmit` after each file is created.
 
@@ -91,12 +91,12 @@ Common handle IDs for wirable inputs: `data`, `query`, `limit`, `apiKey`
 
 ## Step 4 — Register in node index (`src/nodes/index.ts`)
 
-Add import and `withDuplicate` entry:
+Add import and `withToolbar` entry:
 
 ```typescript
 import { <Name>Node } from './<Name>Node'
 // … in nodeTypes object:
-<typeKey>: withDuplicate(<Name>Node),
+<typeKey>: withToolbar(<Name>Node),
 ```
 
 ## Step 5 — App.tsx: data type union
@@ -173,35 +173,11 @@ Add to the `proxy` object inside `server`:
 },
 ```
 
-## Step 11 — Proxy: Express production (`server/index.mjs` on deploy branch)
+## Step 11 — Proxy: production (nothing extra to do)
 
 *Skip if no proxy needed.*
 
-**This step must be done on the `deploy/express-server` branch.** After all other steps are committed to `main`:
-
-```
-git checkout deploy/express-server
-git merge main --no-edit
-```
-
-Then add to `server/index.mjs`, before the `app.use(adsLibrarySearchMiddleware)` line:
-
-```js
-app.use('/<prefix>-proxy', createProxyMiddleware({
-  target: 'https://upstream.example.com',
-  changeOrigin: true,
-  pathRewrite: { '^/<prefix>-proxy': '' },
-  on: {
-    proxyReq: (proxyReq) => {
-      stripEncoding(proxyReq)
-      // replicate any custom headers from vite.config.ts:
-      proxyReq.setHeader('User-Agent', DESKTOP_UA)
-      proxyReq.setHeader('Referer', 'https://upstream.example.com/')
-    },
-  },
-}))
-```
-
+**No separate deploy branch exists.** `server/proxies.mjs` is imported by both `vite.config.ts` and `server/index.mjs`, so a `PROXY_TABLE` entry is live in dev and in Docker. Custom middleware is exported from `proxies.mjs` and registered in both consumers (see `urlProxyMiddleware`).
 ## Step 12 — TypeScript check
 
 ```
@@ -210,19 +186,9 @@ npx tsc --noEmit 2>&1 | head -30
 
 Fix all errors before committing.
 
-## Step 13 — Commit and push both branches
+## Step 13 — Commit
 
-```
-git add <all changed files>
-git commit -m "feat: add <Name>Node — <one-line description>"
-git push origin main
-git checkout deploy/express-server
-git merge main --no-edit
-git push origin deploy/express-server
-git checkout main
-```
-
----
+One conventional commit on a feature branch; run `npm run lint`, `npm run typecheck`, `npx vitest run` and `npx vite build` first (CI runs the same four gates).
 
 ## Checklist summary
 
@@ -235,7 +201,6 @@ git checkout main
 - [ ] `src/App.tsx` — SIDEBAR_ITEMS
 - [ ] `src/App.tsx` — KCL_API_KEY_NODES (if apiKey)
 - [ ] `src/components/ConnectionSuggestions.tsx`
-- [ ] `vite.config.ts` (if proxy)
-- [ ] `server/index.mjs` on deploy branch (if proxy)
+- [ ] `PROXY_TABLE` entry in `server/proxies.mjs` (if proxy) — serves dev and Docker
 - [ ] `tsc --noEmit` clean
-- [ ] Committed and pushed to both branches
+- [ ] Committed on a feature branch with all four gates green

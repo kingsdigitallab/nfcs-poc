@@ -38,3 +38,21 @@ export function getNodeResults(nodeId: string): AnyRecord[] | undefined {
 export function clearNodeResults(nodeId: string): void {
   _store.delete(nodeId)
 }
+
+/**
+ * Remove a node's plain results AND every typed partition it owns
+ * (`${nodeId}:pdf`, `${nodeId}:xml`, … — see upstreamRecords.ts TYPED_HANDLES).
+ * Call this when a node is deleted so the store does not leak.
+ */
+export function clearNodeResultsDeep(nodeId: string): void {
+  _store.delete(nodeId)
+  const prefix = `${nodeId}:`
+  for (const key of [..._store.keys()]) {
+    if (key.startsWith(prefix)) _store.delete(key)
+  }
+}
+
+/** Drop everything — used when a whole workflow is replaced (load / example). */
+export function clearAllResults(): void {
+  _store.clear()
+}

@@ -15,9 +15,13 @@ export interface ProxyEntry {
 }
 
 export declare const PROXY_TABLE: ProxyEntry[]
-export declare function makeViteProxyConfig(): Record<string, unknown>
+export declare function makeViteProxyConfig(): Record<string, import('vite').ProxyOptions>
 
-export declare const adsLibrarySearchMiddleware:   ConnectMiddleware
-export declare const adsCatalogueSearchMiddleware: ConnectMiddleware
 export declare const lldsSearchMiddleware:         ConnectMiddleware
 export declare const urlProxyMiddleware:           ConnectMiddleware
+
+/** Subresource policy for the Puppeteer path (exported for tests). */
+export declare function checkSubresource(
+  target: string,
+  dnsMemo?: Map<string, Promise<{ address: string }[] | null>>,
+): Promise<{ ok: boolean; reason?: string }>

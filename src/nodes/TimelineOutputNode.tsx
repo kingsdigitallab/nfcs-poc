@@ -302,7 +302,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
   useEffect(() => { applyRef.current = applyFilterValues }, [applyFilterValues])
 
   // Re-apply active filter when the date field changes so output stays consistent
-  useEffect(() => { applyRef.current(savedStartRef.current, savedEndRef.current) }, [dateField]) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { applyRef.current(savedStartRef.current, savedEndRef.current) }, [dateField])
 
   // Auto-initialise range handles to full data extent when data first arrives.
   // Uses refs (not state) to avoid stale closures; runs only when data range changes.
@@ -310,7 +310,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
     if (items.length > 0 && savedStartRef.current === null && savedEndRef.current === null) {
       applyRef.current(minYear, maxYear)
     }
-  }, [items.length, minYear, maxYear]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [items.length, minYear, maxYear])
 
   // ── global drag listeners ─────────────────────────────────────────────────
   useEffect(() => {

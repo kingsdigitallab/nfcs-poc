@@ -2,8 +2,8 @@
  * server/proxies.mjs — single source of truth for all proxy + middleware logic.
  *
  * Consumed by BOTH:
- *   vite.config.ts   → makeViteProxyConfig() + the 4 exported middleware  (dev)
- *   server/index.mjs → PROXY_TABLE          + the 4 exported middleware  (prod)
+ *   vite.config.ts   → makeViteProxyConfig() + the 3 exported middleware  (dev)
+ *   server/index.mjs → PROXY_TABLE          + the 3 exported middleware  (prod)
  *
  * Adding a new data source:
  *   • Simple reverse-proxy  → add an entry to PROXY_TABLE below
@@ -13,10 +13,79 @@
  * safe to import from either runtime without extra bundling.
  */
 
+import { lookup } from 'node:dns/promises'
+import {
+  WAIT_STRATEGIES,
+  MAX_RESPONSE_BYTES,
+  parseAllowlist,
+  isPrivateHost,
+  isAllowedTarget,
+} from './urlProxyPolicy.mjs'
+
 // ── Timeouts ──────────────────────────────────────────────────────────────────
 
 const PROXY_TIMEOUT_MS   = 30_000   // simple fetch hard limit (ms)
 const BROWSER_TIMEOUT_MS = 45_000   // Puppeteer page-load hard limit (ms)
+const MAX_REDIRECTS      = 5
+
+// ── /url-proxy policy ─────────────────────────────────────────────────────────
+// URL_PROXY_ALLOWLIST: comma-separated host suffixes the proxy may fetch
+// (e.g. "ac.uk,europeana.eu,wikipedia.org"). When unset:
+//   • development  → allow any PUBLIC host (private/loopback always denied)
+//   • production   → deny everything — the deployed app must opt in explicitly.
+// The pure allow/deny rules live in urlProxyPolicy.mjs (unit-tested).
+
+const URL_PROXY_ALLOWLIST = parseAllowlist(process.env.URL_PROXY_ALLOWLIST)
+const URL_PROXY_ALLOW_ALL =
+  URL_PROXY_ALLOWLIST.length === 0 && process.env.NODE_ENV !== 'production'
+
+let _policyLogged = false
+function logPolicyOnce() {
+  if (_policyLogged) return
+  _policyLogged = true
+  if (URL_PROXY_ALLOW_ALL) {
+    console.warn('[url-proxy] No URL_PROXY_ALLOWLIST set — allowing any public host (dev mode).')
+  } else if (URL_PROXY_ALLOWLIST.length === 0) {
+    console.warn('[url-proxy] No URL_PROXY_ALLOWLIST set and NODE_ENV=production — all targets denied.')
+  } else {
+    console.log(`[url-proxy] Allowlist: ${URL_PROXY_ALLOWLIST.join(', ')}`)
+  }
+}
+
+/** Error carrying the HTTP status the middleware should answer with. */
+class ProxyRefused extends Error {
+  constructor(status, message) { super(message); this.status = status }
+}
+
+/** Synchronous policy check (no DNS) — used for redirects inside Puppeteer. */
+function policyDecision(target) {
+  return isAllowedTarget(target, URL_PROXY_ALLOWLIST, { allowAll: URL_PROXY_ALLOW_ALL })
+}
+
+/**
+ * Full check: policy rules, then resolve the hostname and refuse a public name
+ * if ANY of its addresses is private. This is a best-effort guard (resolve,
+ * then fetch resolves again), not a socket pin — the allowlist is the primary
+ * control in production.
+ * @returns {Promise<{ ok: true, url: URL } | { ok: false, reason: string }>}
+ */
+async function checkTarget(target) {
+  const decision = policyDecision(target)
+  if (!decision.ok) return decision
+  const host = decision.url.hostname
+  const isLiteral = /^[\d.]+$/.test(host) || host.includes(':')
+  if (!isLiteral) {
+    try {
+      const answers = await lookup(host, { all: true })
+      if (answers.length === 0 || answers.some(a => isPrivateHost(a.address))) {
+        return { ok: false, reason: `Host resolves to a private address: ${host}` }
+      }
+    } catch {
+      return { ok: false, reason: `DNS lookup failed for ${host}` }
+    }
+  }
+  return decision
+}
 
 // ── Shared User-Agent strings ─────────────────────────────────────────────────
 
@@ -30,24 +99,48 @@ const DESKTOP_UA =
 
 const FATAL_PATTERNS = ['Connection closed', 'Target closed', 'Session closed', 'Protocol error']
 
-// ── ADS constants ─────────────────────────────────────────────────────────────
-
-const ADS_LIB_URL =
-  'https://archaeologydataservice.ac.uk/library/search/searchResults.xhtml'
-const ADS_LIB_UA =
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0'
-const ADS_CAT_ORIGIN = 'https://archaeologydataservice.ac.uk'
-const ADS_CAT_API    = `${ADS_CAT_ORIGIN}/data-catalogue-api/api/search`
-const ADS_CAT_WARMUP = `${ADS_CAT_ORIGIN}/data-catalogue/`
+/**
+ * Policy for everything a rendered page loads other than its main document:
+ * scheme + private-address rules (including DNS) apply, the allowlist does not.
+ * `dnsMemo` (a Map owned by one render) makes each host resolve once per page
+ * — a page can issue dozens of requests to the same CDN, and Node's lookup
+ * goes through the small libuv threadpool with no cache of its own.
+ * (Chromium does not route WebSocket handshakes through request interception,
+ * so ws:/wss: never reach here; the http(s) check is the whole policy.)
+ * Exported for unit tests.
+ * @returns {Promise<{ ok: boolean, reason?: string }>}
+ */
+export async function checkSubresource(target, dnsMemo = new Map()) {
+  let url
+  try { url = new URL(target) } catch { return { ok: false, reason: 'Invalid URL' } }
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') {
+    return { ok: false, reason: `Scheme not allowed: ${url.protocol}` }
+  }
+  const host = url.hostname.toLowerCase()
+  if (isPrivateHost(host)) return { ok: false, reason: `Private or local address not allowed: ${host}` }
+  const isLiteral = /^[\d.]+$/.test(host) || host.includes(':')
+  if (!isLiteral) {
+    let answers = dnsMemo.get(host)
+    if (!answers) {
+      answers = lookup(host, { all: true }).catch(() => null)
+      dnsMemo.set(host, answers)
+    }
+    const resolved = await answers
+    if (!resolved) return { ok: false, reason: `DNS lookup failed for ${host}` }
+    if (resolved.length === 0 || resolved.some(a => isPrivateHost(a.address))) {
+      return { ok: false, reason: `Host resolves to a private address: ${host}` }
+    }
+  }
+  return { ok: true }
+}
 
 // ── Puppeteer browser singleton ───────────────────────────────────────────────
 // The browser is launched once on the first JS-render request and reused for
 // the lifetime of the server process. Each fetch gets its own page (tab) which
-// is closed after use. Both singletons are cleared on disconnect so the next
+// is closed after use. The singleton is cleared on disconnect so the next
 // request triggers a clean relaunch rather than inheriting a broken state.
 
 let _browserPromise = null
-let _adsPagePromise = null
 
 async function getOrLaunchBrowser() {
   if (!_browserPromise) {
@@ -68,13 +161,12 @@ async function getOrLaunchBrowser() {
           '--disable-extensions',
         ],
       })
-      // Reset BOTH singletons when the browser process dies so the next request
+      // Reset the singleton when the browser process dies so the next request
       // gets a clean relaunch rather than an unresolvable broken promise.
       // (CLAUDE.md gotcha #11 — do not remove this handler)
       browser.on('disconnected', () => {
         console.warn('[url-proxy] Browser disconnected — will relaunch on next request')
         _browserPromise = null
-        _adsPagePromise = null
       })
       console.log('[url-proxy] Browser ready.')
       return browser
@@ -85,22 +177,61 @@ async function getOrLaunchBrowser() {
 
 // ── fetch helpers ─────────────────────────────────────────────────────────────
 
-/** Simple fetch path — no JS execution, just the raw HTTP response body. */
+/**
+ * Simple fetch path — no JS execution, just the raw HTTP response body.
+ * Redirects are followed by hand so every hop is re-checked against the
+ * policy (an allowed host must not bounce us to a private one), and the
+ * body is read with a running byte count so an oversized upstream cannot
+ * exhaust memory.
+ */
 async function fetchSimple(target, res) {
-  const upstream = await fetch(target, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (compatible; iDAH-Federation-PoC/1.0)',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*',
-    },
-    signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
-    redirect: 'follow',
-  })
+  const headers = {
+    'User-Agent': 'Mozilla/5.0 (compatible; iDAH-Federation-PoC/1.0)',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*',
+  }
+  let current = target
+  let upstream
+  const signal = AbortSignal.timeout(PROXY_TIMEOUT_MS)   // one deadline for the whole chain
+  for (let hop = 0; ; hop++) {
+    upstream = await fetch(current, { headers, signal, redirect: 'manual' })
+    const location = upstream.headers.get('location')
+    if (upstream.status >= 300 && upstream.status < 400 && location) {
+      // Release the 3xx body so the pooled connection is not held until GC
+      await upstream.body?.cancel().catch(() => {})
+      if (hop >= MAX_REDIRECTS) throw new ProxyRefused(502, 'Too many redirects')
+      const next = new URL(location, current).href
+      const decision = await checkTarget(next)
+      if (!decision.ok) throw new ProxyRefused(403, `Redirect blocked: ${decision.reason}`)
+      current = next
+      continue
+    }
+    break
+  }
+
+  const declared = Number(upstream.headers.get('content-length') ?? 0)
+  if (declared > MAX_RESPONSE_BYTES) throw new ProxyRefused(413, 'Upstream response too large')
+
+  const chunks = []
+  let total = 0
+  if (upstream.body) {
+    const reader = upstream.body.getReader()
+    for (;;) {
+      const { done, value } = await reader.read()
+      if (done) break
+      total += value.byteLength
+      if (total > MAX_RESPONSE_BYTES) {
+        await reader.cancel().catch(() => {})
+        throw new ProxyRefused(413, 'Upstream response too large')
+      }
+      chunks.push(value)
+    }
+  }
+
   res.statusCode = upstream.status
   const ct = upstream.headers.get('content-type')
   if (ct) res.setHeader('Content-Type', ct)
   res.setHeader('Access-Control-Allow-Origin', '*')
-  const body = await upstream.arrayBuffer()
-  res.end(Buffer.from(body))
+  res.end(Buffer.concat(chunks))
 }
 
 /**
@@ -117,14 +248,31 @@ async function fetchWithBrowser(target, res, waitUntil = 'networkidle2') {
     await page.setUserAgent(DESKTOP_UA)
     await page.setDefaultNavigationTimeout(BROWSER_TIMEOUT_MS)
     await page.setRequestInterception(true)
+    // Main-frame navigations (the initial load, HTTP redirects, location.href
+    // changes) go through the same policy + DNS check as the simple path; a
+    // refusal is remembered so the response is a 403 with a reason rather than
+    // an empty 200 from page.content(). Everything else the page loads —
+    // sub-frames, scripts, XHR/fetch, websockets — may reach any PUBLIC host
+    // (third-party assets are how pages render) but never a private one, so
+    // page JavaScript cannot be used to read the Docker network or metadata.
+    let blockedReason = null
+    const mainFrame = page.mainFrame()
+    const dnsMemo = new Map()   // one resolution per host per render
     page.on('request', req => {
       const t = req.resourceType()
-      if (t === 'image' || t === 'font' || t === 'media') req.abort()
-      else req.continue()
+      if (t === 'image' || t === 'font' || t === 'media') { req.abort().catch(() => {}); return }
+      const isMainNavigation = req.isNavigationRequest() && req.frame() === mainFrame
+      const check = isMainNavigation ? checkTarget(req.url()) : checkSubresource(req.url(), dnsMemo)
+      check.then(decision => {
+        if (decision.ok) return req.continue()
+        if (isMainNavigation) blockedReason = blockedReason ?? `${decision.reason} (${req.url()})`
+        return req.abort('blockedbyclient')
+      }).catch(() => req.abort('failed').catch(() => {}))
     })
     try {
       await page.goto(target, { waitUntil })
     } catch (navErr) {
+      if (blockedReason) throw new ProxyRefused(403, `Redirect blocked: ${blockedReason}`)
       const msg = navErr instanceof Error ? navErr.message : String(navErr)
       const isFatal = FATAL_PATTERNS.some(p => msg.includes(p))
       if (isFatal) {
@@ -135,7 +283,9 @@ async function fetchWithBrowser(target, res, waitUntil = 'networkidle2') {
       // Non-fatal (ERR_ABORTED, etc.) — DOM may still have useful content
       console.warn('[url-proxy] Navigation warning (will try page.content()):', msg)
     }
+    if (blockedReason) throw new ProxyRefused(403, `Redirect blocked: ${blockedReason}`)
     const html = await page.content()
+    if (html.length > MAX_RESPONSE_BYTES) throw new ProxyRefused(413, 'Rendered page too large')
     res.statusCode = 200
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
     res.setHeader('Access-Control-Allow-Origin', '*')
@@ -145,178 +295,9 @@ async function fetchWithBrowser(target, res, waitUntil = 'networkidle2') {
   }
 }
 
-/** Long-lived Puppeteer page warmed on the ADS site to hold a cf_clearance cookie. */
-async function getOrWarmADSPage() {
-  if (!_adsPagePromise) {
-    _adsPagePromise = (async () => {
-      const browser = await getOrLaunchBrowser()
-      const page = await browser.newPage()
-      await page.setUserAgent(DESKTOP_UA)
-      await page.setDefaultNavigationTimeout(BROWSER_TIMEOUT_MS)
-      await page.setRequestInterception(true)
-      page.on('request', req => {
-        const t = req.resourceType()
-        if (t === 'image' || t === 'font' || t === 'media') req.abort()
-        else req.continue()
-      })
-      console.log('[ads-catalogue] Warming Puppeteer page for Cloudflare session…')
-      await page.goto(ADS_CAT_WARMUP, { waitUntil: 'networkidle2' })
-      console.log('[ads-catalogue] Page warmed.')
-      return page
-    })()
-  }
-  return _adsPagePromise
-}
-
 // ── Custom middleware (connect-compatible: (req, res, next)) ──────────────────
 // These functions work identically under Vite's server.middlewares.use() (dev)
 // and Express's app.use() (prod) — both accept the connect signature.
-
-/**
- * /ads-library-search?q=<query>&size=<n>
- * Two-step JSF session dance: GET ViewState + POST search → CDATA HTML.
- */
-export async function adsLibrarySearchMiddleware(req, res, next) {
-  if (!req.url?.startsWith('/ads-library-search')) { next(); return }
-
-  const parsed = new URL(req.url, 'http://localhost')
-  const query  = parsed.searchParams.get('q') ?? ''
-  const size   = parsed.searchParams.get('size') ?? '20'
-
-  try {
-    // Step 1 — GET the search page; extract session cookie + ViewState
-    console.log('[ads-library] GET', ADS_LIB_URL)
-    const getRes = await fetch(ADS_LIB_URL, {
-      headers: {
-        'User-Agent': ADS_LIB_UA,
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-GB,en;q=0.9',
-      },
-      signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
-      redirect: 'follow',
-    })
-    if (!getRes.ok) throw new Error(`GET ${getRes.status}: Cloudflare or server block`)
-
-    // Collect Set-Cookie headers (getSetCookie added in Node 18 undici)
-    const hdrs = getRes.headers
-    const rawCookies = hdrs.getSetCookie?.()
-      ?? (getRes.headers.get('set-cookie') ? [getRes.headers.get('set-cookie')] : [])
-    const cookieStr = rawCookies
-      .filter(Boolean)
-      .map(c => c.split(';')[0].trim())
-      .join('; ')
-
-    const pageHtml = await getRes.text()
-
-    // Extract jakarta.faces.ViewState
-    const vsMatch =
-      /name="jakarta\.faces\.ViewState"[^>]*value="([^"]*)"/.exec(pageHtml) ??
-      /value="([^"]*)"[^>]*name="jakarta\.faces\.ViewState"/.exec(pageHtml)
-    if (!vsMatch) {
-      throw new Error('ViewState not found — the page may have been blocked by Cloudflare')
-    }
-    const viewState = vsMatch[1]
-
-    // Extract the submit-button component ID (j_idt44 or equivalent)
-    const btnMatch =
-      /id="(j_idt\d+)"[^>]*type="submit"/.exec(pageHtml) ??
-      /type="submit"[^>]*id="(j_idt\d+)"/.exec(pageHtml)
-    const btnId = btnMatch?.[1] ?? 'j_idt44'
-
-    console.log(`[ads-library] viewState ok, btnId=${btnId}`)
-
-    // Step 2 — POST the search
-    const body = new URLSearchParams({
-      'jakarta.faces.partial.ajax':   'true',
-      'jakarta.faces.source':         btnId,
-      'jakarta.faces.partial.execute': '@all',
-      'jakarta.faces.partial.render': 'searchResultForm',
-      [btnId]:                         btnId,
-      'searchResultForm':              'searchResultForm',
-      'searchFieldSelector':           '',
-      'searchText':                    query,
-      'perPage':                       size,
-      'sortBy':                        '',
-      'perPage2':                      size,
-      'jakarta.faces.ViewState':       viewState,
-    })
-
-    console.log('[ads-library] POST q=', query, 'size=', size)
-    const postRes = await fetch(ADS_LIB_URL, {
-      method: 'POST',
-      headers: {
-        'User-Agent':      ADS_LIB_UA,
-        'Accept':          'application/xml, text/xml, */*; q=0.01',
-        'Accept-Language': 'en-GB,en;q=0.9',
-        'Content-Type':    'application/x-www-form-urlencoded; charset=UTF-8',
-        'Faces-Request':   'partial/ajax',
-        'X-Requested-With': 'XMLHttpRequest',
-        'Origin':          'https://archaeologydataservice.ac.uk',
-        'Referer':         ADS_LIB_URL,
-        ...(cookieStr ? { Cookie: cookieStr } : {}),
-      },
-      body: body.toString(),
-      signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
-    })
-    if (!postRes.ok) throw new Error(`POST ${postRes.status}`)
-
-    const xmlText = await postRes.text()
-    console.log('[ads-library] response length:', xmlText.length)
-
-    // Extract CDATA HTML from JSF partial-response
-    // <update id="searchResultForm"><![CDATA[...HTML...]]></update>
-    const cdataMatch =
-      /<update[^>]*id="searchResultForm[^"]*"[^>]*><!\[CDATA\[([\s\S]*?)\]\]><\/update>/i.exec(xmlText)
-    const html = cdataMatch?.[1] ?? xmlText
-
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'text/html; charset=utf-8')
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    res.end(html)
-  } catch (err) {
-    if (!res.headersSent) {
-      res.statusCode = 502
-      res.end(`ADS Library proxy error: ${err instanceof Error ? err.message : String(err)}`)
-    }
-  }
-}
-
-/**
- * /ads-catalogue-search?<qs>
- * Cloudflare bypass: runs the API fetch inside the warmed Puppeteer page context.
- * On 403 the page singleton is cleared so the next request re-warms.
- */
-export async function adsCatalogueSearchMiddleware(req, res, next) {
-  if (!req.url?.startsWith('/ads-catalogue-search')) { next(); return }
-
-  const parsed = new URL(req.url, 'http://localhost')
-  const qs     = parsed.searchParams.toString()
-  const apiUrl = `${ADS_CAT_API}?${qs}`
-
-  try {
-    const page   = await getOrWarmADSPage()
-    const result = await page.evaluate(async (url) => {
-      const r = await fetch(url, { headers: { Accept: 'application/json' } })
-      return { status: r.status, body: await r.text() }
-    }, apiUrl)
-
-    if (result.status === 403) {
-      _adsPagePromise = null
-      throw new Error('Cloudflare session expired (403) — will re-warm on next request')
-    }
-
-    res.statusCode = result.status
-    res.setHeader('Content-Type', 'application/json')
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    res.end(result.body)
-  } catch (err) {
-    _adsPagePromise = null
-    if (!res.headersSent) {
-      res.statusCode = 502
-      res.end(`ADS catalogue proxy error: ${err instanceof Error ? err.message : String(err)}`)
-    }
-  }
-}
 
 /**
  * /llds-search?q=<query>&rpp=<n>
@@ -361,9 +342,18 @@ export function urlProxyMiddleware(req, res, next) {
     res.end('Missing or invalid url param')
     return
   }
+  if (!WAIT_STRATEGIES.has(waitStrategy)) {
+    res.statusCode = 400
+    res.end(`Invalid wait param — expected one of: ${[...WAIT_STRATEGIES].join(', ')}`)
+    return
+  }
+
+  logPolicyOnce()
 
   ;(async () => {
     try {
+      const decision = await checkTarget(target)
+      if (!decision.ok) throw new ProxyRefused(403, decision.reason)
       if (renderJs) {
         await fetchWithBrowser(target, res, waitStrategy)
       } else {
@@ -371,7 +361,7 @@ export function urlProxyMiddleware(req, res, next) {
       }
     } catch (err) {
       if (!res.headersSent) {
-        res.statusCode = 502
+        res.statusCode = err instanceof ProxyRefused ? err.status : 502
         res.end(`Proxy error: ${err instanceof Error ? err.message : String(err)}`)
       }
     }
@@ -380,7 +370,7 @@ export function urlProxyMiddleware(req, res, next) {
 
 // ── Proxy table ───────────────────────────────────────────────────────────────
 /**
- * All 13 simple reverse-proxy routes, described as data.
+ * All 15 simple reverse-proxy routes, described as data.
  *
  * @property prefix   - Path prefix matched on the incoming request.
  * @property target   - Upstream origin URL.
@@ -405,16 +395,6 @@ export const PROXY_TABLE = [
       'Referer':         'https://llds.ling-phil.ox.ac.uk/',
       'Accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
       'Accept-Language': 'en-GB,en;q=0.9',
-    },
-  },
-  {
-    prefix:  '/ads-proxy',
-    target:  'https://archaeologydataservice.ac.uk',
-    rewrite: path => path.replace(/^\/ads-proxy/, ''),
-    headers: {
-      'User-Agent': DESKTOP_UA,
-      'Referer':    'https://archaeologydataservice.ac.uk/',
-      'Accept':     'application/json, text/plain, */*',
     },
   },
   {

@@ -11,8 +11,12 @@ export const runImageViewNode: NodeRunner = async (nodeId, _getNodes, _edges, up
   const existing = getNodeResults(nodeId)
   if (existing?.length) {
     const version = setNodeResults(nodeId, existing)
-    updateNodeData(nodeId, { imageCount: existing.length, resultsVersion: version })
+    updateNodeData(nodeId, {
+      status: 'success', statusMessage: `✓ ${existing.length} image${existing.length === 1 ? '' : 's'}`,
+      imageCount: existing.length, resultsVersion: version,
+    })
   } else {
-    updateNodeData(nodeId, { imageCount: 0 })
+    // Nothing selected yet is not a failure — but Run All needs a terminal status.
+    updateNodeData(nodeId, { status: 'idle', statusMessage: 'No image selected', imageCount: 0 })
   }
 }

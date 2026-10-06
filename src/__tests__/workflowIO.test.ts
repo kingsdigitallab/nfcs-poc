@@ -160,3 +160,82 @@ describe('hydrateNodes group handling', () => {
     expect('opacity' in (free.style as Record<string, unknown>)).toBe(false)
   })
 })
+
+describe('credentials never persist', () => {
+  it('stripTransient drops apiKey', () => {
+    const out = stripTransient({ apiKey: 'sk-secret-value', model: 'arc:nano' })
+    expect(out).toEqual({ model: 'arc:nano' })
+  })
+
+  it('buildWorkflowPayload output contains no apiKey anywhere', () => {
+    const payload = buildWorkflowPayload(
+      [makeNode('k1', 'kclNode', { apiKey: 'sk-secret-value', model: 'arc:nano' })],
+      [],
+    )
+    expect(payload.nodes[0].data).not.toHaveProperty('apiKey')
+    expect(JSON.stringify(payload)).not.toContain('sk-secret-value')
+  })
+
+  it('blanks a Param value that is wired into an apiKey handle', () => {
+    const payload = buildWorkflowPayload(
+      [
+        makeNode('p1', 'param', { label: 'key', paramType: 'text', value: 'sk-secret-value' }),
+        makeNode('p2', 'param', { label: 'limit', paramType: 'integer', value: '50' }),
+        makeNode('k1', 'kclNode', { model: 'arc:nano' }),
+      ],
+      [
+        { id: 'e1', source: 'p1', target: 'k1', targetHandle: 'apiKey' },
+        { id: 'e2', source: 'p2', target: 'k1', targetHandle: 'limit' },
+      ],
+    )
+    expect(JSON.stringify(payload)).not.toContain('sk-secret-value')
+    expect(payload.nodes.find(n => n.id === 'p1')?.data.value).toBe('')
+    expect(payload.nodes.find(n => n.id === 'p2')?.data.value).toBe('50')
+  })
+})
+
+describe('hydrateNodes re-injects environment credentials', () => {
+  it('gives API-key nodes the build-time default when the saved file has none', async () => {
+    const { DEFAULT_KCL_API_KEY } = await import('../utils/kclConfig')
+    const file = buildWorkflowPayload([makeNode('k1', 'kclNode', { model: 'arc:nano' })], [])
+    const [node] = hydrateNodes(file)
+    expect(node.data).toHaveProperty('apiKey', DEFAULT_KCL_API_KEY)
+  })
+
+  it('leaves nodes without a credential field untouched', () => {
+    const file = buildWorkflowPayload([makeNode('t1', 'tableOutput', { pageSize: 25 })], [])
+    const [node] = hydrateNodes(file)
+    expect(node.data).not.toHaveProperty('apiKey')
+  })
+})
+
+describe('partitionUnknownNodes', () => {
+  const known = new Set(['tableOutput', 'gbifSearch'])
+
+  it('drops nodes whose type is not registered, plus every edge touching them', async () => {
+    const { partitionUnknownNodes } = await import('../utils/workflowIO')
+    const file = buildWorkflowPayload(
+      [
+        makeNode('ads-1',   'adsSearchAdvanced', { inlineQuery: 'x' }),
+        makeNode('gbif-1',  'gbifSearch',        { inlineQ: 'fox' }),
+        makeNode('table-1', 'tableOutput',       {}),
+      ],
+      [
+        { id: 'e1', source: 'ads-1',  target: 'table-1', targetHandle: 'results' },
+        { id: 'e2', source: 'gbif-1', target: 'table-1', targetHandle: 'results' },
+      ],
+    )
+    const { file: cleaned, dropped } = partitionUnknownNodes(file, known)
+    expect(dropped).toEqual([{ id: 'ads-1', type: 'adsSearchAdvanced' }])
+    expect(cleaned.nodes.map(n => n.id)).toEqual(['gbif-1', 'table-1'])
+    expect(cleaned.edges.map(e => e.id)).toEqual(['e2'])
+  })
+
+  it('returns the file untouched when every type is known', async () => {
+    const { partitionUnknownNodes } = await import('../utils/workflowIO')
+    const file = buildWorkflowPayload([makeNode('t', 'tableOutput', {})], [])
+    const { file: cleaned, dropped } = partitionUnknownNodes(file, known)
+    expect(dropped).toEqual([])
+    expect(cleaned).toBe(file)
+  })
+})

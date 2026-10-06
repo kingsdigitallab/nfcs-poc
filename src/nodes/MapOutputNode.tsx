@@ -24,11 +24,11 @@ import {
 } from '@xyflow/react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-// @ts-ignore
+// @ts-ignore -- leaflet.markercluster ships no type declarations
 import 'leaflet.markercluster'
-// @ts-ignore
+// @ts-ignore -- leaflet.markercluster ships no type declarations
 import 'leaflet.markercluster/dist/MarkerCluster.css'
-// @ts-ignore
+// @ts-ignore -- leaflet.markercluster ships no type declarations
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { runMapOutputNode } from '../utils/runMapOutputNode'
@@ -84,7 +84,7 @@ export function MapOutputNode({ id }: NodeProps) {
 
   const nodeData = useMemo(
     () => allNodes.find(n => n.id === id)?.data as MapOutputNodeData | undefined,
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     [allNodes, id],
   )
 
@@ -94,7 +94,7 @@ export function MapOutputNode({ id }: NodeProps) {
       const src = allNodes.find(n => n.id === e.source)
       return (src?.data?.gisLayers as GisLayer[] | undefined) ?? []
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [allEdges, allNodes, id])
 
   const mapDivRef       = useRef<HTMLDivElement>(null)
@@ -236,7 +236,7 @@ export function MapOutputNode({ id }: NodeProps) {
       }
     }
   // nodeData?.bbox included so markers re-dim when bbox changes
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [records, clusteringEnabled, nodeData?.bbox])
 
   // ── render saved bbox rectangle on map ────────────────────────────────────
@@ -259,7 +259,7 @@ export function MapOutputNode({ id }: NodeProps) {
       fillOpacity: 0.12,
       dashArray:   '6, 4',
     }).addTo(mapRef.current)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [nodeData?.bbox])
 
   // ── GIS overlay layers ─────────────────────────────────────────────────────
@@ -431,7 +431,7 @@ export function MapOutputNode({ id }: NodeProps) {
     if (lastRunFpRef.current === fp) return
     lastRunFpRef.current = fp
     runMapOutputNode(id, getNodes, getEdges(), updateNodeData)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [records, count, connected, nodeData?.bbox, id, getNodes, getEdges, updateNodeData])
 
   // ── header badge text ──────────────────────────────────────────────────────

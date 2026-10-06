@@ -7,8 +7,18 @@
 import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
+import { finishRunnerError } from './runnerHelpers'
 
-const runCommentNode: NodeRunner = async (
+/** Never throws — see NodeRunner contract. */
+const runCommentNode: NodeRunner = async (nodeId, getNodes, edges, updateNodeData) => {
+  try {
+    await runCommentInner(nodeId, getNodes, edges, updateNodeData)
+  } catch (err) {
+    finishRunnerError(nodeId, err, updateNodeData, '[Comment]')
+  }
+}
+
+const runCommentInner: NodeRunner = async (
   nodeId,
   _getNodes,
   edges,

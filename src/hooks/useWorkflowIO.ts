@@ -8,10 +8,14 @@ import type { Edge, Node } from '@xyflow/react'
 import { bumpCounterPast } from '../utils/nodeIdCounter'
 import {
   buildWorkflowPayload, downloadWorkflow, parseWorkflowFile, hydrateNodes,
-  type WorkflowFile,
+  partitionUnknownNodes, type WorkflowFile,
 } from '../utils/workflowIO'
+import { nodeTypes } from '../nodes'
 import { exportNotes, importNotes } from '../store/notesStore'
+import { clearAllResults } from '../store/resultsStore'
 import type { AppNode } from '../types/AppNode'
+
+const KNOWN_NODE_TYPES: ReadonlySet<string> = new Set(Object.keys(nodeTypes))
 
 export function useWorkflowIO(
   nodes: AppNode[],
@@ -36,7 +40,13 @@ export function useWorkflowIO(
   }, [nodes, edges])
 
   // Shared workflow application logic — used by both file Load and Example load.
-  const applyWorkflow = useCallback((wf: WorkflowFile) => {
+  const applyWorkflow = useCallback((incoming: WorkflowFile) => {
+    // Nodes of a type this build no longer registers are dropped (with their
+    // edges) and reported, so the rest of the workflow still loads.
+    const { file: wf, dropped } = partitionUnknownNodes(incoming, KNOWN_NODE_TYPES)
+    // The incoming canvas replaces every node; results keyed by the old
+    // node ids would otherwise leak (and could collide with reused ids).
+    clearAllResults()
     const hydrated = hydrateNodes(wf)
     bumpCounterPast(hydrated.map(n => n.id))
     // Adopt the loaded workflow's identity and restore its notes (replacing any
@@ -58,7 +68,12 @@ export function useWorkflowIO(
           !(ed.targetHandle?.startsWith('proxy-in-') && expandedGroupIds.has(ed.target)),
       ),
     )
-    setLoadError(null)
+    if (dropped.length > 0) {
+      const types = [...new Set(dropped.map(d => d.type))].join(', ')
+      setLoadError(`Loaded with ${dropped.length} unsupported node(s) removed: ${types}`)
+    } else {
+      setLoadError(null)
+    }
   }, [setNodes, setEdges])
 
   const handleLoadFile = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {

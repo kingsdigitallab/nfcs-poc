@@ -14,7 +14,9 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run build:deploy
+# Full build = tsc -b + vite build. The typecheck is a release gate, not a
+# dev-only nicety; an image must not ship code that does not typecheck.
+RUN npm run build
 
 # ── Stage 2: runtime ──────────────────────────────────────────────────────────
 FROM node:20-slim AS runtime
@@ -47,6 +49,7 @@ RUN apt-get update && apt-get install -y \
 # Tell Puppeteer to use the system Chromium instead of downloading its own
 ENV PUPPETEER_SKIP_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+ENV NODE_ENV=production
 
 WORKDIR /app
 
@@ -60,6 +63,13 @@ COPY --from=builder /app/dist ./dist
 # Copy Express server
 COPY server/ ./server/
 
+# The server runs as the unprivileged `node` user. The entrypoint starts as
+# root only long enough to chown the writable mounts (/app/data volume,
+# dist/examples bind mount) — which may be root-owned from an earlier image —
+# then drops to `node` with setpriv (util-linux, present in node:*-slim).
+RUN mkdir -p /app/data /app/dist/examples && chown -R node:node /app && chmod +x /app/server/docker-entrypoint.sh
+
 EXPOSE 3001
 
+ENTRYPOINT ["/app/server/docker-entrypoint.sh"]
 CMD ["node", "server/index.mjs"]

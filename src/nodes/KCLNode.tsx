@@ -344,7 +344,7 @@ export function KCLNode({ id, data }: NodeProps) {
       if (enriched.length > 0) setNodeResults(id, enriched)
       updateNodeData(id, { status: 'error', statusMessage: `✗ ${msg}`, outputCount: enriched.length })
     }
-  }, [id, updateNodeData, upstreamRecords, allNodes, allEdges, effectiveApiKey, selectedModel, systemPrompt, promptTemplate, temperature, maxTokens])
+  }, [id, updateNodeData, upstreamRecords, allNodes, allEdges, effectiveApiKey, selectedModel, systemPrompt, promptTemplate, temperature, maxTokens, visionMode, imageField])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 

@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  # Vitest runs under jsdom; the Puppeteer proxy is never exercised in CI,
+  # so skip the ~150 MB Chromium download on every run.
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+
+jobs:
+  quality:
+    name: lint · typecheck · test · build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # gitleaks scans history
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npx vitest run
+      - run: npx vite build
+
+      - name: Secret scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_ENABLE_SUMMARY: 'true'
+          # Organisation repos need a licence for the Action; set
+          # GITLEAKS_LICENSE in repo secrets, or rely on the grep step below.
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+        continue-on-error: true
+
+      - name: Fail on committed API keys (fallback scan)
+        run: |
+          if grep -rnE '(^|[^A-Za-z0-9])sk-[A-Za-z0-9_-]{16,}' public/ src/ --exclude-dir=node_modules; then
+            echo '::error::Committed API key found'; exit 1
+          fi
+          if grep -rnE 'utm_campaign=' public/; then
+            echo '::error::Europeana tracking parameter (carries the API key) found in shipped data'; exit 1
+          fi
+          if grep -rnE '"apiKey":\s*"[^"]+"' public/examples/; then
+            echo '::error::Example workflow carries an apiKey value'; exit 1
+          fi

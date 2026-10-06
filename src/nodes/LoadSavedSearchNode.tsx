@@ -47,8 +47,6 @@ const STATUS_BORDER: Record<string, string> = {
 const NODE_TYPE_LABELS: Record<string, string> = {
   gbifSearch:        'GBIF Search',
   lldsSearch:        'LLDS Search',
-  adsSearchAdvanced: 'ADS Data Catalogue',
-  adsLibrarySearch:  'ADS Library',
   mdsSearch:         'Museum Data Service',
   localFileSource:   'Local CSV File',
   localFolderSource: 'Local Folder',

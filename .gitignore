@@ -16,3 +16,15 @@ dist/
 /europeana.json
 /node_routes.jpg
 /AGENTS.md
+
+# ── Local tooling / scratch (never commit) ─────────────────────────────────
+.claude/settings.local.json
+.claude/worktrees/
+.superpowers/
+.agents/
+Claude outputs/
+temp_data/
+docs/*.zip
+lesson-*.md
+stack.md
+*.tsbuildinfo

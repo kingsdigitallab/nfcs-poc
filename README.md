@@ -20,7 +20,7 @@ Drag nodes onto a canvas, connect them in any order, and run federated searches 
 
 ## Prerequisites
 
-- **Node.js** v18 or later ([nodejs.org](https://nodejs.org))
+- **Node.js** v20 or later ([nodejs.org](https://nodejs.org)) — vitest 4 and jsdom 29 need 20+
 - **npm** v9 or later (bundled with Node)
 - A modern browser — Chrome or Edge 86+ required for the **LocalFolderSourceNode** (File System Access API) and for the native save dialog in **SaveSearchNode** (falls back to an automatic download on Firefox); all other nodes work in Firefox too
 - **KCL Inference API key** — required only for KingsInference nodes; request access from King's Digital Lab
@@ -56,22 +56,18 @@ Click **📂 Load** to restore a saved workflow. The canvas is replaced with the
 
 ## Node types
 
-The sidebar groups nodes into collapsible categories. Click a group heading to collapse or expand it. Drag any node onto the canvas to add it.
+The sidebar groups nodes into collapsible categories named after [TaDiRAH](https://tadirah.info/) activities (Workflow Planning, Discovering, Gathering, Enriching, Analysing, Visualising, Disseminating, Experimental). Click a group heading to collapse or expand it. Drag any node onto the canvas to add it. The tables below use the same names; a few display nodes (QuickView, ImageView, HTMLPreview, MapOutput, TableOutput, TimelineView) sit under **Visualising** in the sidebar.
 
-### Canvas
+### Workflow Planning
 
 | Node | Description |
 |------|-------------|
 | **QuickStart** | AI workflow planner. Describe a research question in plain English; the node calls the KCL inference API (`arc:nexus`) and returns a structured plan listing the most appropriate data service nodes, suggested queries, and commentary on source relevance. Click **Instantiate workflow** to place all recommended nodes on the canvas — search nodes, a **SourceProfile** for each source (or a shared **Deduplicate** → **SourceProfile** chain when multiple nodes of the same type are suggested), and **TableOutput** / **MapOutput** as appropriate. Wiring is created automatically. No handles — this node is a standalone planner. Requires a KCL API key. |
 | **Comment** | A free-floating annotation label. Add a title and body text to document your workflow. No connectors by default. Select the node to reveal resize handles — drag any edge or corner to resize. **Easter egg:** click the title field 5 times within 1.5 seconds to unlock hidden input/output handles — useful for illustrating conceptual workflow gaps (e.g. marking a "data retrieval" step between metadata services and processing nodes). |
 
-### Input
-
-| Node | Description |
-|------|-------------|
 | **Param** | Holds a Text or Integer value. Connect its output handle to any search node input handle to inject a query parameter (e.g. wire a single query string into multiple search nodes at once). |
 
-### Inspection
+### Visualising
 
 | Node | Description |
 |------|-------------|
@@ -80,7 +76,7 @@ The sidebar groups nodes into collapsible categories. Click a group heading to c
 | **HTMLPreview** | Renders `fetchedHtml` from upstream records in a sandboxed iframe with a lightweight readability stylesheet. Click any element in the preview to capture its CSS selector — the selector is sent back to the parent page and can be pasted directly into an HTMLExtract node. Two modes: **Captured** (reads stored `fetchedHtml` from the results store) and **Live** (fetches the URL field of each record in real time). |
 | **SourceProfile** | Displays the authored schema profile for any connected data source, enriched with runtime field statistics computed from the actual upstream records. Shows: source coverage and limitations; a completeness bar (`retrieved / total API results`); a field table sorted by population rate with expandable sample values from real records; cross-source correspondence hints (which fields can be joined or compared across sources). An optional **AI Narrative** section (KCL API key + model required) builds a structured prompt from all schema and completeness data and streams a research-quality assessment — provide a research question for a focused response. Drag the output handle to pass records through to any downstream node. Defaults to `arc:nano`; max tokens configurable (default 16 384) under **Advanced**. |
 
-### Data Services
+### Discovering and Gathering
 
 All active search nodes share a **fixture mode** for offline and workshop use — see [Offline fixtures](#offline-fixtures) below.
 
@@ -102,7 +98,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **FrameSenseSource** | Local filesystem | Reads a folder pre-processed by the [FrameSense](https://github.com/kingsdigitallab/framesense) CLI and emits one record per shot. Each record carries the representative frame as an `imageDataUrl` (base64 JPEG), enabling direct vision inference via **KingsInference**. Existing FrameSense analysis (shot scale classifications from `scale_frames_sssabet`, VLM answers from `answer_frames_vlm`) is surfaced as `framesense.*` fields. See [FrameSense workflows](#framesense-workflows) below. |
 | **SampleDataSource** | Local filesystem + fixtures | Loads pre-packaged collection samples from `public/fixtures/` (e.g. Stonehenge antiquarian texts and modern archaeology papers, LLDS items, etc.). Useful for demonstrations, workshops, and testing without live API access. Emits five typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`. |
 
-### Filters and Transforms
+### Analysing
 
 | Node | Description |
 |------|-------------|
@@ -113,7 +109,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **Deduplicate** | Removes duplicate records based on a chosen field value. First occurrence is kept; subsequent records sharing the same value for that field are discarded. Records missing the chosen field always pass through. The footer shows `N in → M unique (K removed)`. Useful when aggregating results from multiple search nodes that may return overlapping result sets. |
 | **TimelineView** | Resizable SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates. **Filter mode** — drag the date-range handles to restrict the visible window; records outside the range are suppressed on the output handle, making this a pass-through filter node as well as a visualisation. Toggle **⇤⇥ Fit** to compress the full date range into the visible width. Pass-through output handle connects to any downstream node (TableOutput, Export, etc.). |
 
-### Extraction and Enrichment
+### Enriching
 
 | Node | Description |
 |------|-------------|
@@ -130,7 +126,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **Geocoding** | Enriches a chosen place-name field using a two-tier gazetteer: **Getty TGN** (name search servlet → Linked Art JSON for coordinates) and **Wikidata** (`wbsearchentities` + P625 coordinates). Scores candidates using Dice string similarity + tier weight + cross-gazetteer corroboration. Auto-resolves when top score ≥ confidence threshold and gap to second candidate ≥ 20%; ambiguous results surface in an inline **review panel** for manual confirmation. Confirmed choices stored per node and persist in saved workflows. Candidate lists cached 30 days in localStorage; "clear cache" button forces a fresh network query. Adds `decimalLatitude`, `decimalLongitude`, and a `geocoding.*` namespace (geocoded status, source, authority URI, candidates, raw/cleaned place string, confidence). Connect output to **MapOutput** to plot geocoded records on a map. |
 | **SmartGeocoder** | LLM-assisted place extraction and geocoding. Scans upstream records for place-name hints — either from all string fields or a user-selected subset — and calls the KCL inference API (`arc:lite` default) to identify the most likely canonical place name. The extracted place name is then resolved through the same Getty TGN → Wikidata two-tier gazetteer used by the regular Geocoding node, writing `decimalLatitude`, `decimalLongitude`, and a `smartGeo.*` namespace. Designed for records where the place name is embedded in prose (e.g. a manuscript description or an archival summary) rather than held in a dedicated field. Requires a KCL API key. |
 
-### Output
+### Disseminating
 
 | Node | Description |
 |------|-------------|
@@ -733,7 +729,7 @@ Any JSON file produced by **Export** (format: JSON) can also be loaded into **Lo
 
 ## Workshop deployment and retrieving saves
 
-When running the Docker deployment (`deploy/express-server` branch), every time a participant clicks **💾 Save** a copy of their workflow is silently posted to the server and written to `/app/data/workflows/` inside the container, in addition to the usual local browser download. Files are stored in a named Docker volume (`workflow_saves`) so they survive container restarts.
+When running the Docker deployment (`docker compose up`, Express server in `server/index.mjs`), every time a participant clicks **💾 Save** a copy of their workflow is silently posted to the server and written to `/app/data/workflows/` inside the container, in addition to the usual local browser download. Files are stored in a named Docker volume (`workflow_saves`) so they survive container restarts.
 
 ### File naming
 
@@ -826,7 +822,7 @@ The fixture filename derives from the search query (inline or wired from a Param
 | `/url-proxy?url=…` | *any URL* | Vite middleware; sidesteps CORS for arbitrary URL fetching |
 | `/hsds-proxy/…` | `https://hsds.ac.uk/…` | No CORS |
 
-> **Production note:** This proxy is development-only. The `deploy/express-server` branch includes an Express server that replicates all proxy routes for deployed instances.
+> **Production note:** The same proxy table (`server/proxies.mjs`) serves both the Vite dev server and the Express production server (`server/index.mjs`, started by `docker compose up`). `/url-proxy` is allowlist-controlled in production — set `URL_PROXY_ALLOWLIST` (see `.env.example`).
 
 ---
 
@@ -1019,4 +1015,4 @@ The step-by-step registration checklist for a new node lives in `CLAUDE.md`. Ada
 | [react-markdown](https://github.com/remarkjs/react-markdown) + [remark-gfm](https://github.com/remarkjs/remark-gfm) | Markdown + GFM table rendering in the KCL Assistant chat panel |
 | [Ollama](https://ollama.com/) | Local LLM inference (external; hidden from sidebar) |
 
-No backend. No database. No authentication. All API calls are made directly from the browser (or via the Vite dev proxy for services without permissive CORS). For deployed instances, see the `deploy/express-server` branch.
+No database. No authentication. All API calls are made from the browser through a thin same-origin proxy layer (`server/proxies.mjs`, served by Vite in development and by Express in Docker). For the engineering hand-over (findings, backlog, quality gates) see `docs/engineering-review.md` and `CONTRIBUTING.md`.

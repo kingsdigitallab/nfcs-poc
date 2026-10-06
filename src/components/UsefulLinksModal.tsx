@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { TADIRAHMapping } from './TADIRAHMapping'
 
 const REPO_URL   = 'https://github.com/kingsdigitallab/nfcs-poc'
-const PDF_URL    = 'https://github.com/kingsdigitallab/nfcs-poc/blob/main/workshop-scenarios.pdf'
+const PDF_URL    = 'https://github.com/kingsdigitallab/nfcs-poc/blob/main/docs/workshop/workshop-scenarios.pdf'
 const VIDEOS_URL = 'https://media.kcl.ac.uk/playlist/dedicated/1_byz38x11/1_kx4vwr4g'
 
 export function UsefulLinksModal() {

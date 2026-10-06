@@ -1,40 +1,16 @@
 /**
  * NodeRunner for HTMLSectionNode.
  *
- * Reads upstream records that have a `fetchedHtml` field, applies the user's
- * CSS selector via DOMParser, and overwrites `fetchedContent` with the extracted
- * text. Records without `fetchedHtml` are passed through unchanged.
+ * Reads upstream records that have a `fetchedHtml` field, applies the node's
+ * extraction mode (CSS selector / heading section / Readability — see
+ * htmlExtract.ts, shared with the component so Run and Run All agree) and
+ * overwrites `fetchedContent`. Records without `fetchedHtml` pass through.
  */
 
 import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
-
-function extractBySelector(
-  html: string,
-  selector: string,
-  separator: string,
-  preserveHtml: boolean,
-): string {
-  try {
-    const parser = new DOMParser()
-    const doc    = parser.parseFromString(html, 'text/html')
-    const els    = doc.querySelectorAll(selector)
-    if (els.length === 0) return ''
-    if (preserveHtml) {
-      return Array.from(els)
-        .map(el => el.outerHTML)
-        .filter(Boolean)
-        .join(separator)
-    }
-    return Array.from(els)
-      .map(el => (el.textContent ?? '').replace(/\s+/g, ' ').trim())
-      .filter(Boolean)
-      .join(separator)
-  } catch {
-    return ''
-  }
-}
+import { extractHtml } from './htmlExtract'
 
 export const runHTMLSectionNode: NodeRunner = async (
   nodeId,
@@ -47,10 +23,13 @@ export const runHTMLSectionNode: NodeRunner = async (
   if (!self) return
 
   const d            = self.data as Record<string, unknown>
-  const selector     = (d.selector     as string)  || 'main, article'
+  // `??` not `||`: the component treats an explicitly empty selector as
+  // "matches nothing", and Run All must agree with ▶ Run.
+  const selector     = (d.selector     as string | undefined) ?? 'main, article'
   const separator    = (d.separator    as string)  ?? '\n\n'
   const maxLength    = (d.maxLength    as number)  ?? 8000
   const preserveHtml = (d.preserveHtml as boolean) ?? false
+  const extractSection = (d.extractSection as boolean) ?? false
 
   const upstream = collectUpstreamRecords(nodeId, edges)
 
@@ -78,7 +57,7 @@ export const runHTMLSectionNode: NodeRunner = async (
       continue
     }
 
-    let extracted = extractBySelector(html, selector, separator, preserveHtml)
+    let extracted = extractHtml(html, { selector, separator, preserveHtml, extractSection })
     if (!extracted) {
       missCount++
       enriched.push({ ...record, fetchedContent: '', htmlSelector: selector })

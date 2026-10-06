@@ -157,7 +157,7 @@
         "y": 261.39450680581535
       },
       "data": {
-        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "apiKey": "",
         "model": "arc:nano",
         "selectedField": "xmlContent",
         "mode": "aggregate",
@@ -177,7 +177,7 @@
         "y": 1063.3179072692205
       },
       "data": {
-        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "apiKey": "",
         "model": "arc:nano",
         "selectedField": "xmlContent",
         "mode": "per-record",
@@ -279,7 +279,7 @@
         "y": 1380.8922153442595
       },
       "data": {
-        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "apiKey": "",
         "model": "arc:nano",
         "selectedField": "content",
         "mode": "per-record",
@@ -406,7 +406,7 @@
         "y": 1363.7342137592855
       },
       "data": {
-        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "apiKey": "",
         "model": "arc:nano",
         "selectedField": "kclResponse",
         "mode": "aggregate",

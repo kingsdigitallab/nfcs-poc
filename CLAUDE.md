@@ -4,10 +4,12 @@ Node-based visual workflow editor for federating UK Arts & Humanities research d
 
 ## Tech Stack
 
-- **Frontend only**: React 19 + TypeScript + Vite, port **5174**
+- **React SPA + thin proxy layer**: React 19 + TypeScript + Vite (port **5174**) in front of
+  `server/` — plain-ESM Node (`proxies.mjs`, shared by Vite dev and the Express prod server).
 - **Node editor**: `@xyflow/react` (v12+) — import ONLY from `@xyflow/react`
 - **No Service Worker / PWA / workbox**
-- API calls client-side via `fetch()`. GBIF: direct. All others: same-origin proxy.
+- API calls client-side via `fetch()` through same-origin proxies (`/gbif-proxy`, `/kcl-proxy`, …).
+- **Engineering hand-over**: `docs/engineering-review.md` (findings + backlog), `CONTRIBUTING.md` (gates + rules).
 
 ## Tests & Typecheck
 
@@ -34,7 +36,8 @@ Both modes expose identical proxy endpoints and custom middleware — the single
 | Prefix | Target |
 |--------|--------|
 | `/llds-proxy/*` | `https://llds.ling-phil.ox.ac.uk/llds/*` |
-| `/ads-proxy/*` | `https://archaeologydataservice.ac.uk/*` |
+| `/gbif-proxy/*` | `https://api.gbif.org/*` (throttled + 429 backoff client-side in `gbif.ts`) |
+| `/bnb-proxy/*` | `https://bnb.data.bl.uk/*` (British National Bibliography) |
 | `/mds-proxy/*` | `https://museumdata.uk/*` |
 | `/reconcile-proxy/*` | `https://wikidata.reconci.link/*` (307 redirect strips CORS — proxy required) |
 | `/kcl-proxy/*` | `https://api.ai.create.kcl.ac.uk/*` (KCL OpenAI-compatible inference API) |
@@ -47,9 +50,7 @@ Both modes expose identical proxy endpoints and custom middleware — the single
 | `/nominatim-proxy/*` | `https://nominatim.openstreetmap.org/*` |
 | `/hsds-proxy/*` | `https://hsds.ac.uk/*` |
 | `/wdqs-proxy/*` | `https://query.wikidata.org/*` (SPARQL; proxy adds the descriptive User-Agent WDQS requires + Accept sparql-results+json) |
-| `/url-proxy?url=<encoded>[&js=true][&wait=<strategy>]` | Custom middleware; simple path uses Node `fetch()`; `js=true` uses Puppeteer singleton (auto-reset on `disconnected`). Wait strategies: `networkidle2` (default), `networkidle0`, `domcontentloaded`. |
-| `/ads-library-search?q=<query>&size=<n>` | Custom middleware; two-step JSF session (GET ViewState → POST search) for the ADS Library catalogue. Returns extracted CDATA HTML for client-side parsing. |
-| `/ads-catalogue-search?<qs>` | Custom middleware; Cloudflare bypass via warmed Puppeteer page holding `cf_clearance`. |
+| `/url-proxy?url=<encoded>[&js=true][&wait=<strategy>]` | Custom middleware; simple path uses Node `fetch()`; `js=true` uses Puppeteer singleton (auto-reset on `disconnected`). Wait strategies: `networkidle2` (default), `networkidle0`, `domcontentloaded`, `load`. **Policy** (`server/urlProxyPolicy.mjs`, unit-tested): http(s) only, private/loopback/link-local/metadata addresses always denied (also after DNS resolution and on every redirect hop), host must match `URL_PROXY_ALLOWLIST` (comma-separated suffixes) — unset = any public host in dev, deny-all when `NODE_ENV=production`. 10 MB body cap. |
 | `/llds-search?q=<query>&rpp=<n>` | Custom middleware; Puppeteer solves Anubis JS proof-of-work challenge. |
 
 ## KCL Inference Configuration (`src/utils/kclConfig.ts`)
@@ -137,7 +138,7 @@ and must never be renamed.**
 ### Discovering (TaDiRAH: Capture > Discovering)
 | Key | Component | CORS |
 |-----|-----------|------|
-| `gbifSearch` | `GBIFSearchNode` | Direct. `https://api.gbif.org/v1/occurrence/search`. Max 300/req. |
+| `gbifSearch` | `GBIFSearchNode` | `/gbif-proxy/v1/occurrence/search` (throttle + 429 backoff in `gbif.ts`). Max 300/req. |
 | `lldsSearch` | `LLDSSearchNode` | `/llds-proxy/rest/items?expand=metadata`. No server search — filter client-side. 15s timeout → localStorage cache fallback. Thin config over `BackboneSearchNode` (useCache footer toggle). |
 | `ariadneSearch` | `ARIADNESearchNode` | Direct CORS fetch. Pan-European archaeology portal (40+ institutions, 23 countries). Filters: Resource type, Getty AAT subject, Native subject, Country, Data type, Period, Contributor (set Contributor = "Archaeology Data Service" for ADS records). |
 | `hsdsSearch` | `HSDSSearchNode` | Vite proxy, no Cloudflare. Heritage Science Data Service — UK heritage aggregator (Historic England, HES, Cadw). Same filter set as ARIADNESearch plus Country = England/Scotland/Wales/Northern Ireland. `hsds.*` namespace. |
@@ -145,8 +146,7 @@ and must never be renamed.**
 | `europeanaSearch` | `EuropeanaSearchNode` | Pre-configured API key (overridable via Param → apiKey handle). Cursor pagination up to 1,000 records. Adds `europeana.thumbnail`, `europeana.shownAt`, `europeana.rights`. |
 | `smgSearch` | `SMGSearchNode` | `/smg-proxy/*`. Science Museum Group collection. `smg.manifest` (IIIF) → ImageView. Fixture mode supported. Thin config over `BackboneSearchNode` (searchType body row switches endpoint). |
 | `vaSearch` | `VASearchNode` | `/vam-proxy/*`. V&A collection (API v2). Filters: images only, object type, year made from/to. `vam.manifest`, `vam.iiifImageBase`, `vam.thumbnail`. Thin config over `BackboneSearchNode`. |
-| `adsSearchAdvanced` | `ADSSearchAdvancedNode` | **DEPRECATED — blocked by Cloudflare.** Use ARIADNESearch (Contributor = "Archaeology Data Service") or HSDSSearch instead. |
-| `adsLibrarySearch` | `ADSLibraryNode` | **DEPRECATED — blocked by Cloudflare**, same as above. |
+| *(removed)* `adsSearchAdvanced`, `adsLibrarySearch` | — | Removed Oct 2026 (Cloudflare-blocked). ADS records come via ARIADNESearch (Contributor = "Archaeology Data Service"). Old workflows containing them load with a warning; the `ads.*` record namespace is kept. |
 | `mdsSearch` | `MDSSearchNode` | `/mds-proxy`. Two-step HTML scraper. Capped at 200 (amber status text). Thin config over `BackboneSearchNode`. |
 
 ### Gathering (TaDiRAH: Capture > Gathering)
@@ -238,6 +238,27 @@ field the authoring node injects.
 Experimental nodes carry `alpha: true` in `SIDEBAR_ITEMS`. The group renders with an amber left-border
 and `⚗` icon in the sidebar. When `simpleMode` is active the entire group is hidden (not just its items).
 
+## Guardrails (added Oct 2026 — see docs/engineering-review.md)
+
+- **Four gates, all in CI** (`.github/workflows/ci.yml`): `npm run lint` (0 errors; warnings are the backlog),
+  `npm run typecheck`, `npx vitest run`, `npx vite build`. Plus a gitleaks scan and a hard-failing grep for
+  `"apiKey": "sk-` in `public/` and `src/`.
+- **`apiKey` is in `TRANSIENT_FIELDS`** — never serialised, and a Param node wired into an `apiKey` handle has
+  its `value` blanked on save (`CREDENTIAL_HANDLES` in `workflowIO.ts`). `hydrateNodes` re-injects the build-time
+  default for `KCL_API_KEY_NODES` and `europeanaSearch`. `examplesNoSecrets.test.ts` fails on ANY `apiKey` value in
+  an example, on Europeana's `utm_campaign=<wskey>` tracking parameter anywhere under `public/` (the adapter strips
+  it from item URLs — `cleanItemUrl` in `europeanaAdapter.ts`), and on any locally configured `VITE_*_API_KEY`
+  value appearing in shipped data; CI greps `public/` and `src/` the same way.
+- **Unknown node types** in a loaded `.nfcs.json` are dropped with their edges (`partitionUnknownNodes`) and
+  reported through the top-bar `loadError` banner. Retire a node by removing it; never rename a type string.
+- **Runner contract is tested** (`runnerContract.test.ts`): never throw, terminal status, `clearNodeResults`
+  before any validation early-return. Wrap new runners the way `runDeduplicateNode` does.
+- **Results store eviction**: `clearNodeResultsDeep(id)` on node delete (App `onNodesDelete`),
+  `clearAllResults()` when a workflow replaces the canvas.
+- `STATUS_BORDER`/`STATUS_BADGE` treat `running` and `loading` as synonyms — use the theme map, not a private one.
+- Header colours in the tables below are the ORIGINAL Tailwind hexes and are stale; the live values are
+  `NODE_IDENTITY` in `src/styles/theme.ts` (and must match `sidebarItems.ts`).
+
 ## Registration Checklist (new runnable node)
 
 `NodeTypeId` (exported from `src/nodes/index.ts`, derived from `nodeTypes`) links the registries: `nodeRunners`
@@ -253,6 +274,11 @@ Register the component (step 4) FIRST — the other registries type-check agains
 6. Sidebar entry in `SIDEBAR_ITEMS` — **`src/config/sidebarItems.ts`** (not App.tsx)
 7. Data interface + union in `AppNode` — **`src/types/AppNode.ts`** (not App.tsx)
 8. Proxy rule in `server/proxies.mjs` (`PROXY_TABLE`) if needed — applies to both dev and prod automatically
+9. Colour in `NODE_IDENTITY` (`src/styles/theme.ts`) — must match the `sidebarItems.ts` entry
+10. If the node is a data source / process / inference node: add it to the suggestion sets in
+    `src/components/ConnectionSuggestions.tsx` (and `NODE_PARAM_HANDLES` if it has wirable param handles)
+11. A one-line describer in `src/utils/lineageDescribers.ts` (else the generic fallback is used)
+12. If QuickStart should be able to plan it: the type lists in `src/nodes/QuickStartNode.tsx`
 
 **Exceptions:** `localFolderSource` (user gesture) skips 1–2. `quickView`, `imageView`, `comment` (display-only) skip 1–2 and have no handles.
 
@@ -300,7 +326,7 @@ type NodeRunner = (
 - **`renderTemplate` / `renderFieldTemplateAggregate` / `renderFieldTemplatePerRecord`** in `promptTemplates.ts` — the ONLY implementations of `{{token}}` prompt substitution. Do not re-inline them in runners or components. The `{{_lineage}}` token is live in KCLNode/OllamaNode/Evaluator (runner AND component paths — six sites): when the user template contains it, the caller derives `lineageToNarrative(collectLineage(…))` ONCE before the record loop and spreads `_lineage` into the substitution record; templates without the token are byte-identical to before. KCLFieldNode/OllamaFieldNode are not wired (their field-mode token sets are separate — follow-up).
 - **`fetchWithTimeout(url, init?, timeoutMs?)`** in `fetchWithTimeout.ts` — AbortController + 30s default. Use for any new network call in runners/clients; a fetch without a timeout can hang a Run All wave indefinitely.
 - **`normaliseRecord`/`normaliseRecords`** in `recordNormalise.ts` — applied at the two legacy-record entry points (`fixtureUtils` fixture loads, `LoadSavedSearchNode`). Moves stale flat GBIF fields into `gbif.*` and drops Bodleian's old `_service`/`thumbnail` strays. Idempotent. Old fixtures and saved `.nfcs.json` files keep working without rewriting.
-- **`collectUpstreamRecords(nodeId, edges)`** in `upstreamRecords.ts` — shared utility used by all process runners. TYPED_HANDLES (`pdf`, `xml`, `text`, `image`) use partitioned store keys `${sourceId}:${handle}`; all others use plain `sourceId`.
+- **`collectUpstreamRecords(nodeId, edges)`** in `upstreamRecords.ts` — shared utility used by all process runners. TYPED_HANDLES (`pdf`, `xml`, `text`, `image`, `csv`) use partitioned store keys `${sourceId}:${handle}`; all others use plain `sourceId`.
 - **`useUpstreamRecords(nodeId)`** hook — same TYPED_HANDLES logic for reactivity; uses `${type}Count` key from node data.
 - **`collectLineage(nodeId, nodes, edges)`** in `lineage.ts` — derive-on-demand pipeline history (docs/context-accrual.md). Walks the upstream subgraph over `data`/`results` target-handle edges (param handles are config, not data flow), applies `resolveProxyEdges` for collapsed groups, returns a topologically ordered `LineageGraph` with `stripTransient`'d params + counts read from raw data. Pure read — call from runners with `getNodes()`/`edges`, from components with `useNodes()`/`useEdges()` values. The `stale` flag is heuristic: an upstream node that never ran this session, or claims a `resultsVersion` its store no longer holds. **`lineageToNarrative(graph, {maxChars})`** (same file, default 2000 chars) renders it LLM-ready: linear chains as numbered lists, parallel branches as lettered sections with shared ancestors described once, joins under "Then:"; the budget drops earliest steps whole (never mid-sentence) and a stale graph gets an explicit warning prefix.
 - **`describeNode(node)` / `lineageDescribers`** in `lineageDescribers.ts` — per-node-type one-sentence operation summaries for the lineage narrative; `satisfies Partial<Record<NodeTypeId, …>>` guard, generic label+counts fallback. Count keys are deliberately NOT uniform across runners (reconciliation `resolvedCount`/`reviewCount`, geocoding bare `resolved`/`pending`/`failed`, merge `mergedCount`/`unmatchedCount`, search `count`) — the describers pin the real names and `lineageDescribers.test.ts` fails if a runner renames one.
@@ -324,7 +350,7 @@ type NodeRunner = (
 15. `XMLSectionNode` strips default XML namespace (`xmlns="..."`) before `DOMParser`/`document.evaluate` — required for XPath to work on namespaced documents.
 16. `LocalFolderSourceNode` handle positions (top: 70/94/118/142/166) are fixed — the Outputs section must remain FIRST in the body with consistent heights, or handles misalign.
 17. `LocalFolderSourceNode` typed store partitions: clear all 5 keys (`id`, `id:pdf`, `id:xml`, `id:text`, `id:image`) on re-scan.
-18. `upstreamRecords.ts` `TYPED_HANDLES = Set(['pdf','xml','text','image'])` — `results` and `data` are NOT in this set, so they fall through to plain `sourceId` lookup.
+18. `upstreamRecords.ts` `TYPED_HANDLES = Set(['pdf','xml','text','image','csv'])` — `results` and `data` are NOT in this set, so they fall through to plain `sourceId` lookup.
 19. KCL node truncation via `getContentMaxChars(model)` from `kclConfig.ts` — not a hard-coded constant. Per-value truncation in aggregate mode happens BEFORE joining values.
 20. KCLFieldNode streaming returns accumulated full text (not empty string) from `kclChat`. In component `handleRun`, `liveTokens` state must NOT be in the `useCallback` deps array for non-streaming to work (stale closure is expected in that narrow context). Runner path stays non-streaming; partial results via per-record `setNodeResults`.
 21. KCLFieldNode per-record mode: do NOT set `resultsVersion: 0` in the final `updateNodeData` after the loop — partial updates already track version correctly. Setting it to 0 resets reactivity and invisible results to downstream nodes.

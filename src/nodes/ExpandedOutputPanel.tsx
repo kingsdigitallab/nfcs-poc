@@ -82,13 +82,9 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
   const [page, setPage] = useState(0)
   const [showAll, setShowAll] = useState(false)
 
-  if (!node) return null
-  const isTable  = node.type === 'tableOutput'
-  const isReport = node.type === 'comparisonReport'
-  const accentColor = isTable ? '#0d9488' : isReport ? '#3730a3' : '#6d28d9'
-
-  // Read user-overridden selections from the table node's own data (shared with TableOutputNode)
-  const selections = ((node.data as Record<string, unknown>).selections ?? {}) as Record<string, ReconciliationResult>
+  // Read user-overridden selections from the table node's own data (shared with TableOutputNode).
+  // Hooks must run unconditionally, so the missing-node early return comes after useMemo below.
+  const selections = ((node?.data as Record<string, unknown> | undefined)?.selections ?? {}) as Record<string, ReconciliationResult>
 
   // Apply selections to upstream records (same logic as TableOutputNode)
   const effectiveRecords = useMemo<UnifiedRecord[] | null>(() => {
@@ -106,6 +102,11 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
       return Object.keys(patch).length > 0 ? { ...rec, ...patch } as UnifiedRecord : rec
     })
   }, [records, selections])
+
+  if (!node) return null
+  const isTable  = node.type === 'tableOutput'
+  const isReport = node.type === 'comparisonReport'
+  const accentColor = isTable ? '#0d9488' : isReport ? '#3730a3' : '#6d28d9'
 
   // Write selections back to the table node's data so TableOutputNode stays in sync
   function handleSelectCandidate(recordId: string, col: string, result: ReconciliationResult) {
@@ -268,7 +269,6 @@ export function ExpandedOutputPanel({ nodeId, onClose }: Props) {
               color: '#cdd6f4',
               whiteSpace: 'pre',
             }}
-            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: highlight(JSON.stringify(displayRecords, null, 2)) }}
           />
         </div>

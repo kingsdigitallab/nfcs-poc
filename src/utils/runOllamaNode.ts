@@ -92,6 +92,10 @@ export const runOllamaNode: NodeRunner = async (nodeId, getNodes, edges, updateN
   const visionByName   = VISION_MARKERS.some(v => model.toLowerCase().includes(v))
   const isVisionModel  = visionOverride ?? visionByName
 
+  // Clear before validation: a failed run must not leave stale records for
+  // downstream nodes to read.
+  clearNodeResults(nodeId)
+
   if (!model) {
     updateNodeData(nodeId, { status: 'error', statusMessage: '✗ No model configured' })
     return
@@ -103,7 +107,6 @@ export const runOllamaNode: NodeRunner = async (nodeId, getNodes, edges, updateN
     return
   }
 
-  clearNodeResults(nodeId)
   updateNodeData(nodeId, {
     status:        'running',
     statusMessage: `Processing 0/${upstreamRecords.length}…`,

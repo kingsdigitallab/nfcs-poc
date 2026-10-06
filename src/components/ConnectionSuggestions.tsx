@@ -64,7 +64,7 @@ export const NODE_PARAM_HANDLES: Record<string, ParamHandle[]> = {
 // ── Suggestion sets ────────────────────────────────────────────────────────────
 
 const DATA_SOURCES = new Set([
-  'gbifSearch', 'lldsSearch', 'adsSearchAdvanced', 'adsLibrarySearch',
+  'gbifSearch', 'lldsSearch',
   'mdsSearch', 'europeanaSearch', 'ariadneSearch', 'hsdsSearch', 'bodleianSearch',
   'smgSearch', 'vaSearch', 'localFolderSource', 'localFileSource', 'loadSavedSearch',
 ])

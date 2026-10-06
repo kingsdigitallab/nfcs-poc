@@ -16,8 +16,6 @@ import { DEFAULT_EUROPEANA_API_KEY } from '../utils/kclConfig'
 // Each service entry: the runner key, a display label, and any extra node data
 // fields required by that service's runner (e.g. API keys).
 // inlineQ covers GBIF; inlineQuery covers everything else.
-// ADS Search (adsSearchAdvanced) is intentionally excluded — it uses a Puppeteer
-// Cloudflare bypass that is not suitable for programmatic preflight generation.
 const PREFLIGHT_SERVICES = [
   { nodeType: 'gbifSearch',      label: 'GBIF',      extra: {} },
   { nodeType: 'lldsSearch',      label: 'LLDS',      extra: {} },

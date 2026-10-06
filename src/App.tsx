@@ -5,7 +5,7 @@ import { NODE_DEFAULTS } from './config/nodeDefaults'
 import { SIDEBAR_ITEMS } from './config/sidebarItems'
 import type { AppNode } from './types/AppNode'
 import { attributionStyle, debugOuter, debugToggle, debugPre } from './styles/appStyles'
-import { setNodeResults } from './store/resultsStore'
+import { setNodeResults, clearNodeResultsDeep } from './store/resultsStore'
 import {
   ReactFlow,
   Background,
@@ -103,6 +103,12 @@ export default function App() {
     setNodes(nds => [...nds, node])
   }, [rfInstance, setNodes])
 
+  // The results store lives outside React Flow state, so deleting a node
+  // would otherwise leave its records (and typed partitions) behind forever.
+  const onNodesDelete = useCallback((deleted: Node[]) => {
+    for (const n of deleted) clearNodeResultsDeep(n.id)
+  }, [])
+
   const onNodeDoubleClick = useCallback((_: React.MouseEvent, node: Node) => {
     if (node.type === 'tableOutput' || node.type === 'jsonOutput' || node.type === 'comparisonReport') {
       setExpandedNodeId(prev => (prev === node.id ? null : node.id))
@@ -164,6 +170,7 @@ export default function App() {
               onDrop={onDrop}
               onDragOver={onDragOver}
               onNodeDoubleClick={onNodeDoubleClick}
+              onNodesDelete={onNodesDelete}
               onConnectEnd={onConnectEnd}
               selectionOnDrag
               multiSelectionKeyCode="Shift"
@@ -231,7 +238,7 @@ function DebugPanel({ nodes }: { nodes: AppNode[] }) {
 
   const slim = nodes.map(n => {
     const d = n.data as Record<string, unknown>
-    const isSearchNode = n.type === 'gbifSearch' || n.type === 'lldsSearch' || n.type === 'adsSearchAdvanced' || n.type === 'mdsSearch' || n.type === 'adsLibrarySearch' || n.type === 'ariadneSearch' || n.type === 'hsdsSearch'
+    const isSearchNode = n.type === 'gbifSearch' || n.type === 'lldsSearch' || n.type === 'mdsSearch' || n.type === 'ariadneSearch' || n.type === 'hsdsSearch'
     if (isSearchNode && d.results) {
       const recs = d.results as UnifiedRecord[]
       return {

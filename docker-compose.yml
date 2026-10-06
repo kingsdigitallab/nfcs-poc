@@ -12,6 +12,10 @@ services:
       # Points to the ollama service by its Docker Compose service name.
       # Override with OLLAMA_HOST env var if Ollama is running elsewhere.
       - OLLAMA_HOST=${OLLAMA_HOST:-http://ollama:11434}
+      - NODE_ENV=production
+      # See .env.example — empty in production means /url-proxy denies all.
+      - URL_PROXY_ALLOWLIST=${URL_PROXY_ALLOWLIST:-}
+      - ENABLE_EXAMPLE_AUTHORING=${ENABLE_EXAMPLE_AUTHORING:-false}
     volumes:
       - workflow_saves:/app/data
       # Mount host public/fixtures/ over the built dist/fixtures/ so fixture

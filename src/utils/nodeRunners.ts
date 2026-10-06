@@ -10,8 +10,6 @@
 import type { Node, Edge } from '@xyflow/react'
 import { runGBIFNode }            from './runGBIFNode'
 import { runLLDSNode }            from './runLLDSNode'
-import { runADSAdvancedNode }    from './runADSAdvancedNode'
-import { runADSLibraryNode }     from './runADSLibraryNode'
 import { runMDSNode }             from './runMDSNode'
 import { runReconciliationNode }  from './runReconciliationNode'
 import { runFilterTransformNode } from './runFilterTransformNode'
@@ -72,8 +70,6 @@ export const nodeRunners: Record<string, NodeRunner> = {
   hsdsSearch:        withFixture('hsdsSearch', runHSDSNode),
   sparqlSearch:      withFixture('sparqlSearch', runSparqlNode),
   bodleianSearch:    withFixture('bodleianSearch',  runBodleianSearchNode),
-  adsSearchAdvanced: withFixture('adsSearchAdvanced', runADSAdvancedNode),
-  adsLibrarySearch:  runADSLibraryNode,
   reconciliation:    runReconciliationNode,
   filterTransform:   runFilterTransformNode,
   spatialFilter:     runSpatialFilterNode,

@@ -145,7 +145,7 @@
         "y": 442.60010004711376
       },
       "data": {
-        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "apiKey": "",
         "model": "arc:nano",
         "selectedField": "description",
         "outputField": "",
@@ -195,7 +195,7 @@
         "y": 251.7319586825779
       },
       "data": {
-        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "apiKey": "",
         "judgeModel": "arc:lite",
         "referenceField": "_note",
         "candidateField": "kclResponse",
@@ -220,7 +220,7 @@
         "y": 1258.3913198450787
       },
       "data": {
-        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "apiKey": "",
         "model": "arc:lite",
         "selectedField": "description",
         "outputField": "",
@@ -325,7 +325,7 @@
         "y": 2106.7761561168754
       },
       "data": {
-        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "apiKey": "",
         "model": "arc:nexus",
         "selectedField": "description",
         "outputField": "",
@@ -673,7 +673,7 @@
         "y": 3150.0496041934557
       },
       "data": {
-        "apiKey": "sk-C80102foRxkyBAtkrze6-Q",
+        "apiKey": "",
         "model": "arc:apex",
         "selectedField": "description",
         "outputField": "",

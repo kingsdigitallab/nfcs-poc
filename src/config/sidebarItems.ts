@@ -112,8 +112,6 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
   { type: 'frameSenseSource',  label: 'FrameSenseSource',      sub: 'Load pre-processed FrameSense video shots', color: '#29394a', group: 'Experimental', alpha: true },
   { type: 'sparqlSearch',      label: 'SPARQLSearch',          sub: 'Wikidata SPARQL — query builder or raw query', color: '#443a72', group: 'Experimental', alpha: true },
   // ── Hidden (kept registered but not shown in sidebar) ────────────────────────
-  { type: 'adsLibrarySearch',  label: 'ADSLibrary',            sub: 'ADS Library catalogue',                   color: '#33465f', group: 'Disseminating', hidden: true },
-  { type: 'adsSearchAdvanced', label: 'ADSSearch',             sub: 'Archaeology Data Services',               color: '#7c3b2e', group: 'Disseminating', hidden: true },
   { type: 'ollamaNode',        label: 'Ollama',                sub: 'Local LLM — file/content records',        color: '#3a3a6e', group: 'Enriching' },
   { type: 'ollamaField',       label: 'OllamaByField',         sub: 'LLM inference on a chosen field',         color: '#2f2d52', group: 'Enriching' },
   { type: 'ollamaOutput',      label: 'OllamaOutput',          sub: 'Display Ollama inference text',           color: '#202d47', group: 'Disseminating' },
