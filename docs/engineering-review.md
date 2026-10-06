@@ -197,6 +197,7 @@ described syncing to the dead branch and was removed.
 | 14 | `chore(docker)` | typecheck in image build, non-root user |
 | 15 | `docs` | this review, `CONTRIBUTING.md`, `CLAUDE.md`/README corrections |
 | 16 | `fix` | post-review fix pass: mapped-IPv6/NAT64/CGNAT encodings, Puppeteer redirect DNS check + 403, Param-wired keys blanked on save, KCL stale-closure deps, HTMLSection empty-selector parity |
+| 18 | `fix` | third (targeted) review: entrypoint never re-owns files inside the host-mounted examples directory; one DNS resolution per host per rendered page |
 | 17 | `fix` | second review pass: Puppeteer subresources (XHR/fetch/scripts/sub-frames) can no longer reach private hosts and third-party iframes no longer poison the response; credential Params behind collapsed groups are blanked on save and re-filled on load; dropped-node pruning sees through collapsed groups; DNS guard checks every answer; redirect bodies released and one deadline per chain; Docker entrypoint fixes volume ownership before dropping to `node` |
 
 ## 5. Deliberately deferred, with rationale

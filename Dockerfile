@@ -67,7 +67,7 @@ COPY server/ ./server/
 # root only long enough to chown the writable mounts (/app/data volume,
 # dist/examples bind mount) — which may be root-owned from an earlier image —
 # then drops to `node` with setpriv (util-linux, present in node:*-slim).
-RUN mkdir -p /app/data /app/dist/examples && chown -R node:node /app     && chmod +x /app/server/docker-entrypoint.sh
+RUN mkdir -p /app/data /app/dist/examples && chown -R node:node /app && chmod +x /app/server/docker-entrypoint.sh
 
 EXPOSE 3001
 

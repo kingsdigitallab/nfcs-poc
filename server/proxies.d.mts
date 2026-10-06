@@ -19,3 +19,9 @@ export declare function makeViteProxyConfig(): Record<string, import('vite').Pro
 
 export declare const lldsSearchMiddleware:         ConnectMiddleware
 export declare const urlProxyMiddleware:           ConnectMiddleware
+
+/** Subresource policy for the Puppeteer path (exported for tests). */
+export declare function checkSubresource(
+  target: string,
+  dnsMemo?: Map<string, Promise<{ address: string }[] | null>>,
+): Promise<{ ok: boolean; reason?: string }>

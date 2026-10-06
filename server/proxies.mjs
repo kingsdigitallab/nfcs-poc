@@ -102,25 +102,33 @@ const FATAL_PATTERNS = ['Connection closed', 'Target closed', 'Session closed', 
 /**
  * Policy for everything a rendered page loads other than its main document:
  * scheme + private-address rules (including DNS) apply, the allowlist does not.
+ * `dnsMemo` (a Map owned by one render) makes each host resolve once per page
+ * — a page can issue dozens of requests to the same CDN, and Node's lookup
+ * goes through the small libuv threadpool with no cache of its own.
+ * (Chromium does not route WebSocket handshakes through request interception,
+ * so ws:/wss: never reach here; the http(s) check is the whole policy.)
+ * Exported for unit tests.
  * @returns {Promise<{ ok: boolean, reason?: string }>}
  */
-async function checkSubresource(target) {
+export async function checkSubresource(target, dnsMemo = new Map()) {
   let url
   try { url = new URL(target) } catch { return { ok: false, reason: 'Invalid URL' } }
-  if (url.protocol !== 'http:' && url.protocol !== 'https:' && url.protocol !== 'ws:' && url.protocol !== 'wss:') {
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') {
     return { ok: false, reason: `Scheme not allowed: ${url.protocol}` }
   }
   const host = url.hostname.toLowerCase()
   if (isPrivateHost(host)) return { ok: false, reason: `Private or local address not allowed: ${host}` }
   const isLiteral = /^[\d.]+$/.test(host) || host.includes(':')
   if (!isLiteral) {
-    try {
-      const answers = await lookup(host, { all: true })
-      if (answers.length === 0 || answers.some(a => isPrivateHost(a.address))) {
-        return { ok: false, reason: `Host resolves to a private address: ${host}` }
-      }
-    } catch {
-      return { ok: false, reason: `DNS lookup failed for ${host}` }
+    let answers = dnsMemo.get(host)
+    if (!answers) {
+      answers = lookup(host, { all: true }).catch(() => null)
+      dnsMemo.set(host, answers)
+    }
+    const resolved = await answers
+    if (!resolved) return { ok: false, reason: `DNS lookup failed for ${host}` }
+    if (resolved.length === 0 || resolved.some(a => isPrivateHost(a.address))) {
+      return { ok: false, reason: `Host resolves to a private address: ${host}` }
     }
   }
   return { ok: true }
@@ -249,11 +257,12 @@ async function fetchWithBrowser(target, res, waitUntil = 'networkidle2') {
     // page JavaScript cannot be used to read the Docker network or metadata.
     let blockedReason = null
     const mainFrame = page.mainFrame()
+    const dnsMemo = new Map()   // one resolution per host per render
     page.on('request', req => {
       const t = req.resourceType()
       if (t === 'image' || t === 'font' || t === 'media') { req.abort().catch(() => {}); return }
       const isMainNavigation = req.isNavigationRequest() && req.frame() === mainFrame
-      const check = isMainNavigation ? checkTarget(req.url()) : checkSubresource(req.url())
+      const check = isMainNavigation ? checkTarget(req.url()) : checkSubresource(req.url(), dnsMemo)
       check.then(decision => {
         if (decision.ok) return req.continue()
         if (isMainNavigation) blockedReason = blockedReason ?? `${decision.reason} (${req.url()})`

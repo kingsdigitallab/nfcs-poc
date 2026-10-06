@@ -5,11 +5,18 @@
 # volume creation — so an in-place upgrade would otherwise fail every
 # /api/save-workflow write with EACCES.
 set -e
+owned_by_root() { [ "$(stat -c %u "$1" 2>/dev/null)" = "0" ]; }
 if [ "$(id -u)" = "0" ]; then
-  for dir in /app/data /app/dist/examples; do
-    mkdir -p "$dir" 2>/dev/null || true
-    chown -R node:node "$dir" 2>/dev/null || true
-  done
+  # /app/data is a named volume: re-own it (recursively) only when it is
+  # still root-owned, i.e. created by an earlier root-running image.
+  mkdir -p /app/data 2>/dev/null || true
+  if owned_by_root /app/data; then chown -R node:node /app/data 2>/dev/null || true; fi
+  # /app/dist/examples is a HOST bind mount in docker-compose. Never touch the
+  # files inside it — on a Linux host that would rewrite the operator's working
+  # tree to uid 1000 and break `git pull`. Only the directory itself, and only
+  # if it is root-owned (the image default when nothing is mounted).
+  mkdir -p /app/dist/examples 2>/dev/null || true
+  if owned_by_root /app/dist/examples; then chown node:node /app/dist/examples 2>/dev/null || true; fi
   # setpriv keeps the environment, so HOME would stay /root and Puppeteer
   # (which writes ~/.config/puppeteer) would fail with EACCES as `node`.
   export HOME=/home/node
