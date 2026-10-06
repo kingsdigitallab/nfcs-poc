@@ -91,12 +91,12 @@ Common handle IDs for wirable inputs: `data`, `query`, `limit`, `apiKey`
 
 ## Step 4 — Register in node index (`src/nodes/index.ts`)
 
-Add import and `withDuplicate` entry:
+Add import and `withToolbar` entry:
 
 ```typescript
 import { <Name>Node } from './<Name>Node'
 // … in nodeTypes object:
-<typeKey>: withDuplicate(<Name>Node),
+<typeKey>: withToolbar(<Name>Node),
 ```
 
 ## Step 5 — App.tsx: data type union
@@ -173,7 +173,7 @@ Add to the `proxy` object inside `server`:
 },
 ```
 
-## Step 11 — Proxy: Express production (`server/index.mjs` on deploy branch)
+## Step 11 — Proxy: production (nothing extra to do)
 
 *Skip if no proxy needed.*
 
@@ -201,7 +201,6 @@ One conventional commit on a feature branch; run `npm run lint`, `npm run typech
 - [ ] `src/App.tsx` — SIDEBAR_ITEMS
 - [ ] `src/App.tsx` — KCL_API_KEY_NODES (if apiKey)
 - [ ] `src/components/ConnectionSuggestions.tsx`
-- [ ] `vite.config.ts` (if proxy)
-- [ ] `server/index.mjs` on deploy branch (if proxy)
+- [ ] `PROXY_TABLE` entry in `server/proxies.mjs` (if proxy) — serves dev and Docker
 - [ ] `tsc --noEmit` clean
 - [ ] Committed on a feature branch with all four gates green

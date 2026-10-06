@@ -88,7 +88,7 @@ Severity reflects what a user or operator gets if the issue ships, not how hard 
 | S3 | **Unauthenticated write endpoint in production.** `POST /dev/write-example` wrote into a host-mounted volume "protected by obscurity". | Fixed (commit 6): off unless `ENABLE_EXAMPLE_AUTHORING=true`. |
 | S4 | `POST /api/save-workflow` has no auth or rate limit and stores a spoofable `x-forwarded-for`. | Open — workshop feature; needs a product decision (backlog B9). |
 | S5 | `VITE_KCL_API_KEY` / `VITE_EUROPEANA_API_KEY` are baked into the client bundle at build time, so a deployed instance hands its key to every browser. | Open — needs a server-side credential model (backlog B9). |
-| S6 | Container ran as root. | Fixed (commit 14): `USER node`. |
+| S6 | Container ran as root. | Fixed (commits 14, 17): the entrypoint starts as root only to `chown` the writable mounts (named volumes from an earlier image are root-owned) and then drops to `node` with `setpriv`. |
 
 ### 3.2 Correctness (confirmed, each pinned by a test)
 
@@ -197,6 +197,7 @@ described syncing to the dead branch and was removed.
 | 14 | `chore(docker)` | typecheck in image build, non-root user |
 | 15 | `docs` | this review, `CONTRIBUTING.md`, `CLAUDE.md`/README corrections |
 | 16 | `fix` | post-review fix pass: mapped-IPv6/NAT64/CGNAT encodings, Puppeteer redirect DNS check + 403, Param-wired keys blanked on save, KCL stale-closure deps, HTMLSection empty-selector parity |
+| 17 | `fix` | second review pass: Puppeteer subresources (XHR/fetch/scripts/sub-frames) can no longer reach private hosts and third-party iframes no longer poison the response; credential Params behind collapsed groups are blanked on save and re-filled on load; dropped-node pruning sees through collapsed groups; DNS guard checks every answer; redirect bodies released and one deadline per chain; Docker entrypoint fixes volume ownership before dropping to `node` |
 
 ## 5. Deliberately deferred, with rationale
 
@@ -268,8 +269,8 @@ Each item is a branch of its own with the four gates green at every commit.
   a public host (no allowlist configured) and `169.254.169.254`; `POST /dev/write-example`
   is 404 (gated); `/` serves the app. Docker's build linter warns that `VITE_*` keys are
   passed as `ARG`/`ENV` — that is finding S5, unchanged on this branch.
-- A fresh-context review of the whole branch was run after commit 15; its four Important
-  findings were fixed in commit 16 (each with a test that failed first) and its Minor
-  findings are listed in the PR description.
+- Two independent reviews of the whole branch were run (after commits 15 and 16); every
+  Important finding was fixed (commits 16 and 17), each with a test that failed first where
+  a test harness exists. Remaining minors are listed in the PR description.
 - **Not verified here:** the GitHub Actions run — the first push exercises it; treat that
   first CI run as the check.

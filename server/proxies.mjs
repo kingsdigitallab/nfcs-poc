@@ -63,8 +63,10 @@ function policyDecision(target) {
 }
 
 /**
- * Full check: policy rules, then resolve the hostname and make sure a public
- * name does not point at a private address (DNS-rebinding guard).
+ * Full check: policy rules, then resolve the hostname and refuse a public name
+ * if ANY of its addresses is private. This is a best-effort guard (resolve,
+ * then fetch resolves again), not a socket pin — the allowlist is the primary
+ * control in production.
  * @returns {Promise<{ ok: true, url: URL } | { ok: false, reason: string }>}
  */
 async function checkTarget(target) {
@@ -74,8 +76,8 @@ async function checkTarget(target) {
   const isLiteral = /^[\d.]+$/.test(host) || host.includes(':')
   if (!isLiteral) {
     try {
-      const { address } = await lookup(host)
-      if (isPrivateHost(address)) {
+      const answers = await lookup(host, { all: true })
+      if (answers.length === 0 || answers.some(a => isPrivateHost(a.address))) {
         return { ok: false, reason: `Host resolves to a private address: ${host}` }
       }
     } catch {
@@ -96,6 +98,33 @@ const DESKTOP_UA =
 // the singleton so the next request triggers a fresh launch.
 
 const FATAL_PATTERNS = ['Connection closed', 'Target closed', 'Session closed', 'Protocol error']
+
+/**
+ * Policy for everything a rendered page loads other than its main document:
+ * scheme + private-address rules (including DNS) apply, the allowlist does not.
+ * @returns {Promise<{ ok: boolean, reason?: string }>}
+ */
+async function checkSubresource(target) {
+  let url
+  try { url = new URL(target) } catch { return { ok: false, reason: 'Invalid URL' } }
+  if (url.protocol !== 'http:' && url.protocol !== 'https:' && url.protocol !== 'ws:' && url.protocol !== 'wss:') {
+    return { ok: false, reason: `Scheme not allowed: ${url.protocol}` }
+  }
+  const host = url.hostname.toLowerCase()
+  if (isPrivateHost(host)) return { ok: false, reason: `Private or local address not allowed: ${host}` }
+  const isLiteral = /^[\d.]+$/.test(host) || host.includes(':')
+  if (!isLiteral) {
+    try {
+      const answers = await lookup(host, { all: true })
+      if (answers.length === 0 || answers.some(a => isPrivateHost(a.address))) {
+        return { ok: false, reason: `Host resolves to a private address: ${host}` }
+      }
+    } catch {
+      return { ok: false, reason: `DNS lookup failed for ${host}` }
+    }
+  }
+  return { ok: true }
+}
 
 // ── Puppeteer browser singleton ───────────────────────────────────────────────
 // The browser is launched once on the first JS-render request and reused for
@@ -154,14 +183,13 @@ async function fetchSimple(target, res) {
   }
   let current = target
   let upstream
+  const signal = AbortSignal.timeout(PROXY_TIMEOUT_MS)   // one deadline for the whole chain
   for (let hop = 0; ; hop++) {
-    upstream = await fetch(current, {
-      headers,
-      signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
-      redirect: 'manual',
-    })
+    upstream = await fetch(current, { headers, signal, redirect: 'manual' })
     const location = upstream.headers.get('location')
     if (upstream.status >= 300 && upstream.status < 400 && location) {
+      // Release the 3xx body so the pooled connection is not held until GC
+      await upstream.body?.cancel().catch(() => {})
       if (hop >= MAX_REDIRECTS) throw new ProxyRefused(502, 'Too many redirects')
       const next = new URL(location, current).href
       const decision = await checkTarget(next)
@@ -212,23 +240,25 @@ async function fetchWithBrowser(target, res, waitUntil = 'networkidle2') {
     await page.setUserAgent(DESKTOP_UA)
     await page.setDefaultNavigationTimeout(BROWSER_TIMEOUT_MS)
     await page.setRequestInterception(true)
-    // Every top-level document request (the initial load, HTTP redirects,
-    // location.href changes) goes through the same policy + DNS check as the
-    // simple path. A refusal is remembered so the response is a 403 with a
-    // reason rather than an empty 200 from page.content().
+    // Main-frame navigations (the initial load, HTTP redirects, location.href
+    // changes) go through the same policy + DNS check as the simple path; a
+    // refusal is remembered so the response is a 403 with a reason rather than
+    // an empty 200 from page.content(). Everything else the page loads —
+    // sub-frames, scripts, XHR/fetch, websockets — may reach any PUBLIC host
+    // (third-party assets are how pages render) but never a private one, so
+    // page JavaScript cannot be used to read the Docker network or metadata.
     let blockedReason = null
+    const mainFrame = page.mainFrame()
     page.on('request', req => {
       const t = req.resourceType()
       if (t === 'image' || t === 'font' || t === 'media') { req.abort().catch(() => {}); return }
-      if (t === 'document') {
-        checkTarget(req.url()).then(decision => {
-          if (decision.ok) return req.continue()
-          blockedReason = blockedReason ?? `${decision.reason} (${req.url()})`
-          return req.abort('blockedbyclient')
-        }).catch(() => req.abort('failed').catch(() => {}))
-        return
-      }
-      req.continue().catch(() => {})
+      const isMainNavigation = req.isNavigationRequest() && req.frame() === mainFrame
+      const check = isMainNavigation ? checkTarget(req.url()) : checkSubresource(req.url())
+      check.then(decision => {
+        if (decision.ok) return req.continue()
+        if (isMainNavigation) blockedReason = blockedReason ?? `${decision.reason} (${req.url()})`
+        return req.abort('blockedbyclient')
+      }).catch(() => req.abort('failed').catch(() => {}))
     })
     try {
       await page.goto(target, { waitUntil })

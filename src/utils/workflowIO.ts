@@ -87,16 +87,67 @@ export function stripTransient(data: Record<string, unknown>): Record<string, un
  *  holds a secret in `data.value`, which must not be serialised either. */
 const CREDENTIAL_HANDLES = new Set(['apiKey'])
 
+/** Shape GroupNode writes into `data.proxyEdges` when it collapses. */
+interface ProxyEdgeRecord {
+  edgeId: string
+  side: 'in' | 'out'
+  originalSource: string
+  originalTarget: string
+  originalSourceHandle?: string | null
+  originalTargetHandle?: string | null
+}
+
+interface EdgeLike { id: string; source: string; target: string; sourceHandle?: string | null; targetHandle?: string | null }
+interface NodeLike { id: string; type?: string; data: Record<string, unknown> }
+
+function proxyRecordsOf(node: NodeLike | undefined): ProxyEdgeRecord[] {
+  const raw = node?.type === 'group' ? node.data.proxyEdges : undefined
+  return Array.isArray(raw) ? (raw as ProxyEdgeRecord[]) : []
+}
+
+/**
+ * Resolve BOTH ends of edges that a collapsed group rewrote onto its
+ * `proxy-in-N` / `proxy-out-N` handles back to the real child endpoints.
+ * (`resolveProxyEdges` in upstreamRecords.ts only resolves the source side,
+ * which is all runners need; save/load must see the target side too.)
+ */
+function resolveSavedEdges<E extends EdgeLike>(nodes: NodeLike[], edges: E[]): E[] {
+  const byId = new Map(nodes.map(n => [n.id, n]))
+  return edges.map(edge => {
+    let out = edge
+    if (edge.targetHandle?.startsWith('proxy-in-')) {
+      const rec = proxyRecordsOf(byId.get(edge.target)).find(p => p.side === 'in' && p.edgeId === edge.id)
+      if (rec) out = { ...out, target: rec.originalTarget, targetHandle: rec.originalTargetHandle ?? undefined }
+    }
+    if (edge.sourceHandle?.startsWith('proxy-out-')) {
+      const rec = proxyRecordsOf(byId.get(edge.source)).find(p => p.side === 'out' && p.edgeId === edge.id)
+      if (rec) out = { ...out, source: rec.originalSource, sourceHandle: rec.originalSourceHandle ?? undefined }
+    }
+    return out
+  })
+}
+
+/** Param node id → type of the node whose credential handle it feeds. */
+function credentialParams(nodes: NodeLike[], edges: EdgeLike[]): Map<string, string> {
+  const byId = new Map(nodes.map(n => [n.id, n]))
+  const out = new Map<string, string>()
+  for (const e of resolveSavedEdges(nodes, edges)) {
+    if (!CREDENTIAL_HANDLES.has(e.targetHandle ?? '')) continue
+    const src = byId.get(e.source)
+    if (src?.type !== 'param') continue
+    out.set(src.id, byId.get(e.target)?.type ?? '')
+  }
+  return out
+}
+
 export function buildWorkflowPayload(nodes: Node[], edges: Edge[], extras?: WorkflowExtras): WorkflowFile {
-  const credentialParams = new Set(
-    edges.filter(e => CREDENTIAL_HANDLES.has(e.targetHandle ?? '')).map(e => e.source),
-  )
+  const credentialParamIds = credentialParams(nodes as NodeLike[], edges)
   return {
     version: 2,
     savedAt: new Date().toISOString(),
     nodes: nodes.map(n => {
       const data = stripTransient(n.data as Record<string, unknown>)
-      if (n.type === 'param' && credentialParams.has(n.id)) data.value = ''
+      if (credentialParamIds.has(n.id)) data.value = ''
       const saved: SavedNode = {
         id: n.id,
         type: n.type ?? '',
@@ -145,11 +196,24 @@ export function partitionUnknownNodes(
     .map(n => ({ id: n.id, type: n.type }))
   if (dropped.length === 0) return { file, dropped }
   const droppedIds = new Set(dropped.map(d => d.id))
+  // An edge into/out of a collapsed group stands for an edge to a child; judge
+  // it by the child it really connects to, then forget the group's record of it.
+  const resolved = resolveSavedEdges(file.nodes, file.edges)
+  const keptEdgeIds = new Set(
+    resolved.filter(e => !droppedIds.has(e.source) && !droppedIds.has(e.target)).map(e => e.id),
+  )
   return {
     file: {
       ...file,
-      nodes: file.nodes.filter(n => !droppedIds.has(n.id)),
-      edges: file.edges.filter(e => !droppedIds.has(e.source) && !droppedIds.has(e.target)),
+      nodes: file.nodes
+        .filter(n => !droppedIds.has(n.id))
+        .map(n => {
+          const recs = proxyRecordsOf(n)
+          if (recs.length === 0) return n
+          const pruned = recs.filter(p => !droppedIds.has(p.originalSource) && !droppedIds.has(p.originalTarget))
+          return pruned.length === recs.length ? n : { ...n, data: { ...n.data, proxyEdges: pruned } }
+        }),
+      edges: file.edges.filter(e => keptEdgeIds.has(e.id)),
     },
     dropped,
   }
@@ -200,6 +264,10 @@ function defaultCredentialFor(type: string): string | undefined {
 }
 
 export function hydrateNodes(saved: WorkflowFile): Node[] {
+  // Params feeding a credential handle were blanked on save; give them the same
+  // build-time default the target node itself would start with.
+  const credentialParamTargets = credentialParams(saved.nodes, saved.edges)
+
   // Find all collapsed group IDs so we can preserve child opacity when reloading
   const collapsedParents = new Set(
     saved.nodes
@@ -216,6 +284,10 @@ export function hydrateNodes(saved: WorkflowFile): Node[] {
     }
     const credential = defaultCredentialFor(n.type)
     if (credential !== undefined && !node.data.apiKey) node.data.apiKey = credential
+    const feeds = credentialParamTargets.get(n.id)
+    if (feeds !== undefined && !node.data.value) {
+      node.data.value = defaultCredentialFor(feeds) ?? ''
+    }
     if (n.width != null) node.width = n.width
     if (n.height != null) node.height = n.height
     if (n.parentId) node.parentId = n.parentId

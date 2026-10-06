@@ -63,11 +63,13 @@ COPY --from=builder /app/dist ./dist
 # Copy Express server
 COPY server/ ./server/
 
-# Run as the unprivileged node user. /app/data is the workflow-saves volume
-# and dist/examples the example-authoring target; both must be writable.
-RUN mkdir -p /app/data /app/dist/examples && chown -R node:node /app
-USER node
+# The server runs as the unprivileged `node` user. The entrypoint starts as
+# root only long enough to chown the writable mounts (/app/data volume,
+# dist/examples bind mount) — which may be root-owned from an earlier image —
+# then drops to `node` with setpriv (util-linux, present in node:*-slim).
+RUN mkdir -p /app/data /app/dist/examples && chown -R node:node /app     && chmod +x /app/server/docker-entrypoint.sh
 
 EXPOSE 3001
 
+ENTRYPOINT ["/app/server/docker-entrypoint.sh"]
 CMD ["node", "server/index.mjs"]

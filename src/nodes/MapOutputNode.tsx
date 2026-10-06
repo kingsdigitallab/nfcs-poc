@@ -84,7 +84,7 @@ export function MapOutputNode({ id }: NodeProps) {
 
   const nodeData = useMemo(
     () => allNodes.find(n => n.id === id)?.data as MapOutputNodeData | undefined,
-     
+
     [allNodes, id],
   )
 
@@ -94,7 +94,7 @@ export function MapOutputNode({ id }: NodeProps) {
       const src = allNodes.find(n => n.id === e.source)
       return (src?.data?.gisLayers as GisLayer[] | undefined) ?? []
     })
-     
+
   }, [allEdges, allNodes, id])
 
   const mapDivRef       = useRef<HTMLDivElement>(null)
@@ -236,7 +236,7 @@ export function MapOutputNode({ id }: NodeProps) {
       }
     }
   // nodeData?.bbox included so markers re-dim when bbox changes
-   
+
   }, [records, clusteringEnabled, nodeData?.bbox])
 
   // ── render saved bbox rectangle on map ────────────────────────────────────
@@ -259,7 +259,7 @@ export function MapOutputNode({ id }: NodeProps) {
       fillOpacity: 0.12,
       dashArray:   '6, 4',
     }).addTo(mapRef.current)
-   
+
   }, [nodeData?.bbox])
 
   // ── GIS overlay layers ─────────────────────────────────────────────────────
@@ -431,7 +431,7 @@ export function MapOutputNode({ id }: NodeProps) {
     if (lastRunFpRef.current === fp) return
     lastRunFpRef.current = fp
     runMapOutputNode(id, getNodes, getEdges(), updateNodeData)
-   
+
   }, [records, count, connected, nodeData?.bbox, id, getNodes, getEdges, updateNodeData])
 
   // ── header badge text ──────────────────────────────────────────────────────
