@@ -11,6 +11,7 @@ import {
   type WorkflowFile,
 } from '../utils/workflowIO'
 import { exportNotes, importNotes } from '../store/notesStore'
+import { clearAllResults } from '../store/resultsStore'
 import type { AppNode } from '../types/AppNode'
 
 export function useWorkflowIO(
@@ -37,6 +38,9 @@ export function useWorkflowIO(
 
   // Shared workflow application logic — used by both file Load and Example load.
   const applyWorkflow = useCallback((wf: WorkflowFile) => {
+    // The incoming canvas replaces every node; results keyed by the old
+    // node ids would otherwise leak (and could collide with reused ids).
+    clearAllResults()
     const hydrated = hydrateNodes(wf)
     bumpCounterPast(hydrated.map(n => n.id))
     // Adopt the loaded workflow's identity and restore its notes (replacing any

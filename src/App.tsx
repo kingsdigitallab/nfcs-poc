@@ -5,7 +5,7 @@ import { NODE_DEFAULTS } from './config/nodeDefaults'
 import { SIDEBAR_ITEMS } from './config/sidebarItems'
 import type { AppNode } from './types/AppNode'
 import { attributionStyle, debugOuter, debugToggle, debugPre } from './styles/appStyles'
-import { setNodeResults } from './store/resultsStore'
+import { setNodeResults, clearNodeResultsDeep } from './store/resultsStore'
 import {
   ReactFlow,
   Background,
@@ -103,6 +103,12 @@ export default function App() {
     setNodes(nds => [...nds, node])
   }, [rfInstance, setNodes])
 
+  // The results store lives outside React Flow state, so deleting a node
+  // would otherwise leave its records (and typed partitions) behind forever.
+  const onNodesDelete = useCallback((deleted: Node[]) => {
+    for (const n of deleted) clearNodeResultsDeep(n.id)
+  }, [])
+
   const onNodeDoubleClick = useCallback((_: React.MouseEvent, node: Node) => {
     if (node.type === 'tableOutput' || node.type === 'jsonOutput' || node.type === 'comparisonReport') {
       setExpandedNodeId(prev => (prev === node.id ? null : node.id))
@@ -164,6 +170,7 @@ export default function App() {
               onDrop={onDrop}
               onDragOver={onDragOver}
               onNodeDoubleClick={onNodeDoubleClick}
+              onNodesDelete={onNodesDelete}
               onConnectEnd={onConnectEnd}
               selectionOnDrag
               multiSelectionKeyCode="Shift"

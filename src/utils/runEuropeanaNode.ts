@@ -34,6 +34,9 @@ export async function runEuropeanaNode(
     Math.max(1, parseInt(resolve('limit', 'inlineLimit') || '20', 10) || 20),
   )
 
+  // Clear before validation: a failed run must not leave stale records.
+  clearNodeResults(nodeId)
+
   if (!apiKey) {
     updateNodeData(nodeId, { status: 'error', statusMessage: '✗ API key required — register at apis.europeana.eu', count: 0 })
     return
@@ -43,7 +46,6 @@ export async function runEuropeanaNode(
     return
   }
 
-  clearNodeResults(nodeId)
   updateNodeData(nodeId, { status: 'loading', statusMessage: 'Searching Europeana…', count: 0 })
 
   try {

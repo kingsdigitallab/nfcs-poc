@@ -3,6 +3,7 @@ import type { GeoCandidate, GeoConfirmed } from '../types/UnifiedRecord'
 import type { GeocodingNodeData } from '../nodes/GeocodingNode'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
+import { finishRunnerError } from './runnerHelpers'
 import { extractToponym, detectDomain } from './geocodeUtils'
 import { getCached, setCached } from './geocodeCache'
 import { scoreCandidates } from './geocodeScorer'
@@ -41,7 +42,23 @@ function applyResolved(
 
 // ── Runner ────────────────────────────────────────────────────────────────────
 
+/** Never throws — see NodeRunner contract. A thrown error (network, parse)
+ *  used to leave the node stuck in 'loading' with an open console.group. */
 export async function runGeocodingNode(
+  nodeId: string,
+  getNodes: () => Node[],
+  edges: Edge[],
+  updateNodeData: (id: string, data: Record<string, unknown>) => void,
+): Promise<void> {
+  try {
+    await runGeocodingInner(nodeId, getNodes, edges, updateNodeData)
+  } catch (err) {
+    console.groupEnd()
+    finishRunnerError(nodeId, err, updateNodeData, '[Geocoding]')
+  }
+}
+
+async function runGeocodingInner(
   nodeId: string,
   getNodes: () => Node[],
   edges: Edge[],
