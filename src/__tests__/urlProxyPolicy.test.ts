@@ -32,7 +32,17 @@ describe('isPrivateHost', () => {
     expect(isPrivateHost(host)).toBe(true)
   })
 
-  it.each(['8.8.8.8', '172.32.0.1', '172.15.0.1', '193.60.1.1', '2001:db8::1', 'example.org', 'internal.example.org'])(
+  it.each([
+    '::ffff:7f00:1',        // 127.0.0.1 in the hex-mapped form WHATWG URL produces
+    '::ffff:a9fe:a9fe',     // 169.254.169.254
+    '::ffff:ac11:2',        // 172.17.0.2 (Docker bridge)
+    '64:ff9b::7f00:1',      // NAT64 well-known prefix
+    '100.64.0.1', '100.127.255.254', // CGNAT 100.64/10
+  ])('treats %s (alternative private encodings) as private', host => {
+    expect(isPrivateHost(host)).toBe(true)
+  })
+
+  it.each(['8.8.8.8', '172.32.0.1', '172.15.0.1', '193.60.1.1', '2001:db8::1', 'example.org', 'internal.example.org', '100.63.255.255', '100.128.0.1'])(
     'treats %s as public', host => {
       expect(isPrivateHost(host)).toBe(false)
     })
@@ -60,6 +70,9 @@ describe('isAllowedTarget', () => {
     expect(isAllowedTarget('http://169.254.169.254/latest', [], { allowAll: true }).ok).toBe(false)
     expect(isAllowedTarget('http://localhost:11434/api', [], { allowAll: true }).ok).toBe(false)
     expect(isAllowedTarget('http://[::1]/', [], { allowAll: true }).ok).toBe(false)
+    // URL normalises the dotted mapped form to hex — the check must see through it
+    expect(isAllowedTarget('http://[::ffff:127.0.0.1]/', [], { allowAll: true }).ok).toBe(false)
+    expect(isAllowedTarget('http://[::ffff:169.254.169.254]/', [], { allowAll: true }).ok).toBe(false)
   })
 
   it('accepts exact and suffix allowlist matches, case-insensitively', () => {

@@ -243,8 +243,10 @@ and `⚗` icon in the sidebar. When `simpleMode` is active the entire group is h
 - **Four gates, all in CI** (`.github/workflows/ci.yml`): `npm run lint` (0 errors; warnings are the backlog),
   `npm run typecheck`, `npx vitest run`, `npx vite build`. Plus a gitleaks scan and a hard-failing grep for
   `"apiKey": "sk-` in `public/` and `src/`.
-- **`apiKey` is in `TRANSIENT_FIELDS`** — never serialised. `hydrateNodes` re-injects the build-time default
-  for `KCL_API_KEY_NODES` and `europeanaSearch`. `examplesNoSecrets.test.ts` scans `public/examples` on every run.
+- **`apiKey` is in `TRANSIENT_FIELDS`** — never serialised, and a Param node wired into an `apiKey` handle has
+  its `value` blanked on save (`CREDENTIAL_HANDLES` in `workflowIO.ts`). `hydrateNodes` re-injects the build-time
+  default for `KCL_API_KEY_NODES` and `europeanaSearch`. `examplesNoSecrets.test.ts` scans `public/examples` for
+  any `sk-…` string on every run; CI greps `public/` and `src/` the same way.
 - **Unknown node types** in a loaded `.nfcs.json` are dropped with their edges (`partitionUnknownNodes`) and
   reported through the top-bar `loadError` banner. Retire a node by removing it; never rename a type string.
 - **Runner contract is tested** (`runnerContract.test.ts`): never throw, terminal status, `clearNodeResults`

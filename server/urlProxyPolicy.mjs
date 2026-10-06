@@ -45,18 +45,34 @@ function isPrivateIPv4(parts) {
   if (a === 192 && b === 168) return true          // 192.168/16
   if (a === 127) return true                       // loopback
   if (a === 169 && b === 254) return true          // link-local + cloud metadata
+  if (a === 100 && b >= 64 && b <= 127) return true // 100.64/10 carrier-grade NAT
   if (a === 0) return true                         // 0.0.0.0/8
   return false
+}
+
+/** Last two 16-bit groups of an IPv6 address → IPv4 octets (for ::ffff:x:y and 64:ff9b::x:y). */
+function v4FromTrailingGroups(h, prefix) {
+  const m = new RegExp(`^${prefix}([0-9a-f]{1,4}):([0-9a-f]{1,4})$`).exec(h)
+  if (!m) return null
+  const hi = parseInt(m[1], 16), lo = parseInt(m[2], 16)
+  return [hi >> 8, hi & 0xff, lo >> 8, lo & 0xff]
 }
 
 function isPrivateIPv6(host) {
   const h = host.toLowerCase()
   if (h === '::' || h === '::1') return true
+  // IPv4-mapped (::ffff:a.b.c.d) — note `new URL()` normalises the dotted
+  // form to hex groups (::ffff:7f00:1), so both spellings must be handled.
   const mapped = /^::ffff:(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$/.exec(h)
   if (mapped) {
     const v4 = parseIPv4(mapped[1])
     return v4 ? isPrivateIPv4(v4) : true
   }
+  const mappedHex = v4FromTrailingGroups(h, '::ffff:')
+  if (mappedHex) return isPrivateIPv4(mappedHex)
+  // NAT64 well-known prefix 64:ff9b::/96 embeds an IPv4 address the same way
+  const nat64 = v4FromTrailingGroups(h, '64:ff9b::')
+  if (nat64) return isPrivateIPv4(nat64)
   if (/^f[cd][0-9a-f]{2}:/.test(h)) return true   // fc00::/7 unique-local
   if (/^fe[89ab][0-9a-f]:/.test(h)) return true   // fe80::/10 link-local
   return false

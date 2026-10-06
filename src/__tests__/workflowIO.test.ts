@@ -175,6 +175,23 @@ describe('credentials never persist', () => {
     expect(payload.nodes[0].data).not.toHaveProperty('apiKey')
     expect(JSON.stringify(payload)).not.toContain('sk-secret-value')
   })
+
+  it('blanks a Param value that is wired into an apiKey handle', () => {
+    const payload = buildWorkflowPayload(
+      [
+        makeNode('p1', 'param', { label: 'key', paramType: 'text', value: 'sk-secret-value' }),
+        makeNode('p2', 'param', { label: 'limit', paramType: 'integer', value: '50' }),
+        makeNode('k1', 'kclNode', { model: 'arc:nano' }),
+      ],
+      [
+        { id: 'e1', source: 'p1', target: 'k1', targetHandle: 'apiKey' },
+        { id: 'e2', source: 'p2', target: 'k1', targetHandle: 'limit' },
+      ],
+    )
+    expect(JSON.stringify(payload)).not.toContain('sk-secret-value')
+    expect(payload.nodes.find(n => n.id === 'p1')?.data.value).toBe('')
+    expect(payload.nodes.find(n => n.id === 'p2')?.data.value).toBe('50')
+  })
 })
 
 describe('hydrateNodes re-injects environment credentials', () => {

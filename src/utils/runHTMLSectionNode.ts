@@ -23,7 +23,9 @@ export const runHTMLSectionNode: NodeRunner = async (
   if (!self) return
 
   const d            = self.data as Record<string, unknown>
-  const selector     = (d.selector     as string)  || 'main, article'
+  // `??` not `||`: the component treats an explicitly empty selector as
+  // "matches nothing", and Run All must agree with ▶ Run.
+  const selector     = (d.selector     as string | undefined) ?? 'main, article'
   const separator    = (d.separator    as string)  ?? '\n\n'
   const maxLength    = (d.maxLength    as number)  ?? 8000
   const preserveHtml = (d.preserveHtml as boolean) ?? false

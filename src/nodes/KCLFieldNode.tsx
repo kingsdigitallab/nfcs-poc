@@ -400,7 +400,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
       const msg = err instanceof Error ? err.message : String(err)
       updateNodeData(id, { status: 'error', statusMessage: `✗ ${msg}` })
     }
-  }, [id, updateNodeData, upstreamRecords, effectiveApiKey, selectedModel, selectedField, mode, systemPrompt, promptTemplate, temperature, maxTokens])
+  }, [id, updateNodeData, upstreamRecords, effectiveApiKey, selectedModel, selectedField, mode, systemPrompt, promptTemplate, temperature, maxTokens, outputField])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 

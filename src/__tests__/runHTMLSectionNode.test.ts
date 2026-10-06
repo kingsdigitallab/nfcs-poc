@@ -38,6 +38,13 @@ describe('runHTMLSectionNode honours every extraction mode the component offers'
     expect(String(rec?.fetchedContent)).toContain('Alpha text.')
   })
 
+  it('an empty selector behaves like the component (no match), not like the default', async () => {
+    const { nodes, edges, updateNodeData } = setup({ selector: '', separator: ' | ' })
+    await runHTMLSectionNode('h', () => nodes, edges, updateNodeData)
+    const [rec] = getNodeResults('h') ?? []
+    expect(rec?.fetchedContent).toBe('')
+  })
+
   it('plain selector mode is unchanged', async () => {
     const { nodes, edges, updateNodeData } = setup({ selector: 'p', separator: ' | ' })
     await runHTMLSectionNode('h', () => nodes, edges, updateNodeData)

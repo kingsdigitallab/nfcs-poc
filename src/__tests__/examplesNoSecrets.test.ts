@@ -27,5 +27,10 @@ describe('public/examples contain no credentials', () => {
         .map(n => n.id)
       expect(offenders).toEqual([])
     })
+
+    it(`${file} contains no sk-… key anywhere (Param values, prompts, notes)`, () => {
+      const raw = readFileSync(join(EXAMPLES_DIR, file), 'utf8')
+      expect(raw.match(/sk-[A-Za-z0-9_-]{16,}/g) ?? []).toEqual([])
+    })
   }
 })

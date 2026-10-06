@@ -212,16 +212,28 @@ async function fetchWithBrowser(target, res, waitUntil = 'networkidle2') {
     await page.setUserAgent(DESKTOP_UA)
     await page.setDefaultNavigationTimeout(BROWSER_TIMEOUT_MS)
     await page.setRequestInterception(true)
+    // Every top-level document request (the initial load, HTTP redirects,
+    // location.href changes) goes through the same policy + DNS check as the
+    // simple path. A refusal is remembered so the response is a 403 with a
+    // reason rather than an empty 200 from page.content().
+    let blockedReason = null
     page.on('request', req => {
       const t = req.resourceType()
-      if (t === 'image' || t === 'font' || t === 'media') { req.abort(); return }
-      // JS-driven or HTTP redirects to a disallowed host are fenced here too
-      if (t === 'document' && !policyDecision(req.url()).ok) { req.abort('blockedbyclient'); return }
-      req.continue()
+      if (t === 'image' || t === 'font' || t === 'media') { req.abort().catch(() => {}); return }
+      if (t === 'document') {
+        checkTarget(req.url()).then(decision => {
+          if (decision.ok) return req.continue()
+          blockedReason = blockedReason ?? `${decision.reason} (${req.url()})`
+          return req.abort('blockedbyclient')
+        }).catch(() => req.abort('failed').catch(() => {}))
+        return
+      }
+      req.continue().catch(() => {})
     })
     try {
       await page.goto(target, { waitUntil })
     } catch (navErr) {
+      if (blockedReason) throw new ProxyRefused(403, `Redirect blocked: ${blockedReason}`)
       const msg = navErr instanceof Error ? navErr.message : String(navErr)
       const isFatal = FATAL_PATTERNS.some(p => msg.includes(p))
       if (isFatal) {
@@ -232,6 +244,7 @@ async function fetchWithBrowser(target, res, waitUntil = 'networkidle2') {
       // Non-fatal (ERR_ABORTED, etc.) — DOM may still have useful content
       console.warn('[url-proxy] Navigation warning (will try page.content()):', msg)
     }
+    if (blockedReason) throw new ProxyRefused(403, `Redirect blocked: ${blockedReason}`)
     const html = await page.content()
     if (html.length > MAX_RESPONSE_BYTES) throw new ProxyRefused(413, 'Rendered page too large')
     res.statusCode = 200

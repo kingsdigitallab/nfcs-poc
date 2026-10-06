@@ -63,16 +63,16 @@ which use the shared `BackboneSearchNode` shell and `searchRunnerFactory`) → `
 | Metric | Before this branch | After |
 |---|---|---|
 | Source lines (src, TS/TSX) | ~46,800 | ~45,900 |
-| Node component files | 62 | 59 |
-| Files in `src/utils/` | 83 | 77 |
-| Vitest tests | 268 | 352 |
+| Entries in `src/nodes/` (incl. `index.ts`, non-node helpers) | 62 | 59 |
+| Entries in `src/utils/` (top level, incl. `gazetteers/`) | 83 | 77 |
+| Vitest tests | 268 | 366 |
 | `tsc -b` | clean | clean |
-| `npm run lint` | could not run (no ESLint, no config) | 0 errors, 58 warnings |
+| `npm run lint` | could not run (no ESLint, no config) | 0 errors, 56 warnings |
 | CI | none | lint · typecheck · test · build · secret scan |
 | `npm audit` | 25 (1 critical, 17 high, 6 moderate, 1 low) | 12 high, all requiring major upgrades |
 | Committed secrets | 1 KCL API key in 4 example files | 0 (test + CI guard) |
 
-Lint warnings by rule: 25 `no-explicit-any`, 21 `react-hooks/exhaustive-deps`,
+Lint warnings by rule: 25 `no-explicit-any`, 19 `react-hooks/exhaustive-deps`,
 12 `react-refresh/only-export-components`. These are the tracked lint backlog.
 
 ## 3. Findings
@@ -83,8 +83,8 @@ Severity reflects what a user or operator gets if the issue ships, not how hard 
 
 | # | Finding | Status |
 |---|---|---|
-| S1 | **A live KCL API key was committed and pushed** in four `public/examples/*.json` workflows. Root cause: the save path (`TRANSIENT_FIELDS` in `workflowIO.ts`) did not strip `apiKey`, so every save/export/example carried the credential of whoever authored it. | Fixed (commit 2). **The key must be revoked at KCL — git history still contains it.** |
-| S2 | **`/url-proxy` was an open relay.** It accepted any `http(s)` URL, followed redirects, had no size cap and no private-address block; inside Docker it could reach `ollama:11434` and cloud metadata addresses. | Fixed (commit 5): allowlist (`URL_PROXY_ALLOWLIST`), private/loopback/link-local/metadata always denied, DNS-rebinding check, per-hop redirect re-check, 10 MB cap, `wait` validated. Deny-all in production unless configured. |
+| S1 | **A live KCL API key was committed and pushed** in four `public/examples/*.json` workflows. Root cause: the save path (`TRANSIENT_FIELDS` in `workflowIO.ts`) did not strip `apiKey`, so every save/export/example carried the credential of whoever authored it. A Param node wired into an `apiKey` handle carried the key in `data.value` by the same route. | Fixed (commits 2 and 16): `apiKey` stripped, Param values wired to `apiKey` blanked, example files scanned for any `sk-…` string on every test run and in CI. **The key must be revoked at KCL — git history still contains it.** |
+| S2 | **`/url-proxy` was an open relay.** It accepted any `http(s)` URL, followed redirects, had no size cap and no private-address block; inside Docker it could reach `ollama:11434` and cloud metadata addresses. | Fixed (commits 5 and 16): allowlist (`URL_PROXY_ALLOWLIST`), private/loopback/link-local/metadata/CGNAT addresses always denied in every encoding `new URL()` produces (dotted and hex-mapped IPv6, NAT64), DNS check on the initial target and on every redirect hop in both the fetch and Puppeteer paths, 10 MB cap, `wait` validated. Deny-all in production unless configured. The DNS check is best-effort (resolve-then-fetch; it is not a socket pin), which is why the allowlist is the primary control in production. |
 | S3 | **Unauthenticated write endpoint in production.** `POST /dev/write-example` wrote into a host-mounted volume "protected by obscurity". | Fixed (commit 6): off unless `ENABLE_EXAMPLE_AUTHORING=true`. |
 | S4 | `POST /api/save-workflow` has no auth or rate limit and stores a spoofable `x-forwarded-for`. | Open — workshop feature; needs a product decision (backlog B9). |
 | S5 | `VITE_KCL_API_KEY` / `VITE_EUROPEANA_API_KEY` are baked into the client bundle at build time, so a deployed instance hands its key to every browser. | Open — needs a server-side credential model (backlog B9). |
@@ -196,6 +196,7 @@ described syncing to the dead branch and was removed.
 | 13 | `chore(deps)` | `npm audit fix` (non-breaking): 25 → 12 vulnerabilities, 0 critical |
 | 14 | `chore(docker)` | typecheck in image build, non-root user |
 | 15 | `docs` | this review, `CONTRIBUTING.md`, `CLAUDE.md`/README corrections |
+| 16 | `fix` | post-review fix pass: mapped-IPv6/NAT64/CGNAT encodings, Puppeteer redirect DNS check + 403, Param-wired keys blanked on save, KCL stale-closure deps, HTMLSection empty-selector parity |
 
 ## 5. Deliberately deferred, with rationale
 
@@ -257,8 +258,8 @@ Each item is a branch of its own with the four gates green at every commit.
 
 ## 8. Verification performed on this branch
 
-- `npm run lint` → 0 errors, 58 warnings; `npm run typecheck` → clean; `npx vitest run` →
-  352/352; `npx vite build` → ok. All run after every commit.
+- `npm run lint` → 0 errors, 56 warnings; `npm run typecheck` → clean; `npx vitest run` →
+  366/366; `npx vite build` → ok. All run after every commit.
 - Residue scans: no `sk-` keys in `public/` or `src/`; no reference to the removed ADS
   types in `src/`, `server/` or `vite.config.ts`.
 - `npm audit` before/after as in §2.
@@ -267,5 +268,8 @@ Each item is a branch of its own with the four gates green at every commit.
   a public host (no allowlist configured) and `169.254.169.254`; `POST /dev/write-example`
   is 404 (gated); `/` serves the app. Docker's build linter warns that `VITE_*` keys are
   passed as `ARG`/`ENV` — that is finding S5, unchanged on this branch.
+- A fresh-context review of the whole branch was run after commit 15; its four Important
+  findings were fixed in commit 16 (each with a test that failed first) and its Minor
+  findings are listed in the PR description.
 - **Not verified here:** the GitHub Actions run — the first push exercises it; treat that
   first CI run as the check.

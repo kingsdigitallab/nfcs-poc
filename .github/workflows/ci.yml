@@ -45,6 +45,6 @@ jobs:
 
       - name: Fail on committed API keys (fallback scan)
         run: |
-          if grep -rnE '"apiKey":\s*"sk-' public/ src/; then
+          if grep -rnE 'sk-[A-Za-z0-9_-]{16,}' public/ src/ --exclude-dir=node_modules; then
             echo '::error::Committed API key found'; exit 1
           fi

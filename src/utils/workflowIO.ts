@@ -83,16 +83,25 @@ export function stripTransient(data: Record<string, unknown>): Record<string, un
   return out
 }
 
+/** Target handle ids that carry a credential. A Param wired into one of these
+ *  holds a secret in `data.value`, which must not be serialised either. */
+const CREDENTIAL_HANDLES = new Set(['apiKey'])
+
 export function buildWorkflowPayload(nodes: Node[], edges: Edge[], extras?: WorkflowExtras): WorkflowFile {
+  const credentialParams = new Set(
+    edges.filter(e => CREDENTIAL_HANDLES.has(e.targetHandle ?? '')).map(e => e.source),
+  )
   return {
     version: 2,
     savedAt: new Date().toISOString(),
     nodes: nodes.map(n => {
+      const data = stripTransient(n.data as Record<string, unknown>)
+      if (n.type === 'param' && credentialParams.has(n.id)) data.value = ''
       const saved: SavedNode = {
         id: n.id,
         type: n.type ?? '',
         position: n.position,
-        data: stripTransient(n.data as Record<string, unknown>),
+        data,
       }
       if (n.width != null) saved.width = n.width
       if (n.height != null) saved.height = n.height
