@@ -6,3 +6,12 @@ dist/
 .env
 .env.*
 !.env.example
+docs/
+.github/
+.claude/
+.agents/
+.superpowers/
+temp_data/
+Claude outputs/
+*.md
+!README.md
