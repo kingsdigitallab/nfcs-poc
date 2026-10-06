@@ -67,10 +67,15 @@ app.use(urlProxyMiddleware)
 
 // ── Example workflow authoring ────────────────────────────────────────────────
 // POST /dev/write-example — saves a canvas as a named loadable example.
-// Available in production so workshop facilitators can author examples on the
-// deployed instance (protected by obscurity of the author-mode easter egg).
+// Writes into dist/examples (a host-mounted volume in docker-compose), so it
+// is an unauthenticated file-write endpoint. It is therefore OFF unless the
+// deployment opts in with ENABLE_EXAMPLE_AUTHORING=true (e.g. for a workshop
+// facilitator authoring examples on the deployed instance). The Vite dev
+// server has its own always-on copy of this route for local authoring.
 
-app.post('/dev/write-example', express.json({ limit: '10mb' }), (req, res) => {
+if (process.env.ENABLE_EXAMPLE_AUTHORING === 'true') {
+  console.log('[example] Example authoring endpoint enabled (/dev/write-example)')
+  app.post('/dev/write-example', express.json({ limit: '10mb' }), (req, res) => {
   try {
     const { slug, title, description, workflow } = req.body ?? {}
     if (!slug || !/^[\w-]+$/.test(slug)) {
@@ -102,7 +107,8 @@ app.post('/dev/write-example', express.json({ limit: '10mb' }), (req, res) => {
   } catch (e) {
     res.status(500).json({ error: String(e) })
   }
-})
+  })
+}
 
 // ── Workshop workflow saves ────────────────────────────────────────────────────
 
