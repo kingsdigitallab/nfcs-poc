@@ -57,17 +57,19 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev
 
-# Copy built frontend from builder stage
-COPY --from=builder /app/dist ./dist
-
-# Copy Express server
-COPY server/ ./server/
+# Copy built frontend and server, owned by `node` at copy time. Setting
+# ownership here instead of a later `chown -R` matters: on the layered
+# filesystem a recursive chown rewrites every file into a new layer — minutes
+# of build time and a near-doubling of the image. node_modules stays
+# root-owned; the server only reads it.
+COPY --chown=node:node --from=builder /app/dist ./dist
+COPY --chown=node:node server/ ./server/
 
 # The server runs as the unprivileged `node` user. The entrypoint starts as
 # root only long enough to chown the writable mounts (/app/data volume,
 # dist/examples bind mount) — which may be root-owned from an earlier image —
 # then drops to `node` with setpriv (util-linux, present in node:*-slim).
-RUN mkdir -p /app/data /app/dist/examples && chown -R node:node /app && chmod +x /app/server/docker-entrypoint.sh
+RUN mkdir -p /app/data /app/dist/examples     && chown node:node /app /app/data /app/dist/examples     && chmod +x /app/server/docker-entrypoint.sh
 
 EXPOSE 3001
 
