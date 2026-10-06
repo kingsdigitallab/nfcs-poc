@@ -1,5 +1,6 @@
 import type { CoordinateExtent, Edge, Node } from '@xyflow/react'
-import { TABLE_OUTPUT_SIZE } from '../config/nodeDefaults'
+import { TABLE_OUTPUT_SIZE, KCL_API_KEY_NODES } from '../config/nodeDefaults'
+import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from './kclConfig'
 
 // ─── Schema ──────────────────────────────────────────────────────────────────
 
@@ -71,6 +72,7 @@ const TRANSIENT_FIELDS = new Set([
   'proxyInCount',     // runtime-only
   'proxyOutCount',    // runtime-only
   'rowSelections',    // per-run row filter — meaningless without live record IDs
+  'apiKey',           // credential — never persist; re-filled from the build-time default on load
 ])
 
 export function stripTransient(data: Record<string, unknown>): Record<string, unknown> {
@@ -152,6 +154,16 @@ export function parseWorkflowFile(json: string): WorkflowFile {
  * Reconstruct React Flow nodes from a saved workflow, merging in runtime
  * defaults so every node starts idle with no stale result counts.
  */
+/**
+ * Build-time credential a node type should start with when the saved file
+ * carries none (apiKey is stripped on save — see TRANSIENT_FIELDS).
+ */
+function defaultCredentialFor(type: string): string | undefined {
+  if (KCL_API_KEY_NODES.has(type)) return DEFAULT_KCL_API_KEY
+  if (type === 'europeanaSearch') return DEFAULT_EUROPEANA_API_KEY
+  return undefined
+}
+
 export function hydrateNodes(saved: WorkflowFile): Node[] {
   // Find all collapsed group IDs so we can preserve child opacity when reloading
   const collapsedParents = new Set(
@@ -167,6 +179,8 @@ export function hydrateNodes(saved: WorkflowFile): Node[] {
       position: n.position,
       data: { ...RUNTIME_DEFAULTS, ...n.data },
     }
+    const credential = defaultCredentialFor(n.type)
+    if (credential !== undefined && !node.data.apiKey) node.data.apiKey = credential
     if (n.width != null) node.width = n.width
     if (n.height != null) node.height = n.height
     if (n.parentId) node.parentId = n.parentId

@@ -160,3 +160,34 @@ describe('hydrateNodes group handling', () => {
     expect('opacity' in (free.style as Record<string, unknown>)).toBe(false)
   })
 })
+
+describe('credentials never persist', () => {
+  it('stripTransient drops apiKey', () => {
+    const out = stripTransient({ apiKey: 'sk-secret-value', model: 'arc:nano' })
+    expect(out).toEqual({ model: 'arc:nano' })
+  })
+
+  it('buildWorkflowPayload output contains no apiKey anywhere', () => {
+    const payload = buildWorkflowPayload(
+      [makeNode('k1', 'kclNode', { apiKey: 'sk-secret-value', model: 'arc:nano' })],
+      [],
+    )
+    expect(payload.nodes[0].data).not.toHaveProperty('apiKey')
+    expect(JSON.stringify(payload)).not.toContain('sk-secret-value')
+  })
+})
+
+describe('hydrateNodes re-injects environment credentials', () => {
+  it('gives API-key nodes the build-time default when the saved file has none', async () => {
+    const { DEFAULT_KCL_API_KEY } = await import('../utils/kclConfig')
+    const file = buildWorkflowPayload([makeNode('k1', 'kclNode', { model: 'arc:nano' })], [])
+    const [node] = hydrateNodes(file)
+    expect(node.data).toHaveProperty('apiKey', DEFAULT_KCL_API_KEY)
+  })
+
+  it('leaves nodes without a credential field untouched', () => {
+    const file = buildWorkflowPayload([makeNode('t1', 'tableOutput', { pageSize: 25 })], [])
+    const [node] = hydrateNodes(file)
+    expect(node.data).not.toHaveProperty('apiKey')
+  })
+})
