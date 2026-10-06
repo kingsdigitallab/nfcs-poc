@@ -14,7 +14,7 @@
 
 import { useState, useCallback, useMemo, useRef } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
-import { Readability } from '@mozilla/readability'
+import { extractHtml } from '../utils/htmlExtract'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 
 export interface HTMLSectionNodeData {
@@ -126,88 +126,6 @@ function analyseHtml(html: string): StructuralItem[] {
   }
 }
 
-// ── Extraction from selector ──────────────────────────────────────────────────
-
-function extractBySelector(
-  html: string,
-  selector: string,
-  separator: string,
-  preserveHtml: boolean,
-): string {
-  try {
-    const parser = new DOMParser()
-    const doc    = parser.parseFromString(html, 'text/html')
-    const els    = doc.querySelectorAll(selector)
-    if (els.length === 0) return ''
-    if (preserveHtml) {
-      return Array.from(els)
-        .map(el => el.outerHTML)
-        .filter(Boolean)
-        .join(separator)
-    }
-    return Array.from(els)
-      .map(el => (el.textContent ?? '').replace(/\s+/g, ' ').trim())
-      .filter(Boolean)
-      .join(separator)
-  } catch {
-    return ''
-  }
-}
-
-// ── Section-after-heading extraction ─────────────────────────────────────────
-// Finds the first element matching the selector (expected to be a heading),
-// then collects it plus all following siblings until the next heading of equal
-// or higher rank. Works best when the heading and its content are siblings
-// within the same parent container.
-
-function extractSectionFromHeading(
-  html: string,
-  selector: string,
-  separator: string,
-  preserveHtml: boolean,
-): string {
-  try {
-    const doc     = new DOMParser().parseFromString(html, 'text/html')
-    const heading = doc.querySelector(selector)
-    if (!heading) return ''
-
-    const level   = parseInt(heading.tagName[1]) || 0
-    const getText = (el: Element) =>
-      preserveHtml ? el.outerHTML : (el.textContent ?? '').replace(/\s+/g, ' ').trim()
-
-    const parts: string[] = [getText(heading)]
-    let sibling = heading.nextElementSibling
-    while (sibling) {
-      const tag = sibling.tagName.toLowerCase()
-      if (/^h[1-6]$/.test(tag) && parseInt(tag[1]) <= level) break
-      const content = getText(sibling)
-      if (content) parts.push(content)
-      sibling = sibling.nextElementSibling
-    }
-    return parts.filter(Boolean).join(separator)
-  } catch {
-    return ''
-  }
-}
-
-// ── Readability extraction ────────────────────────────────────────────────────
-// Uses Mozilla Readability (same algorithm as Firefox Reader Mode) to extract
-// the main article content from the page. Works best for editorial/article pages;
-// less reliable for data portals or heavily structured UIs.
-
-function extractReadability(html: string, preserveHtml: boolean): string {
-  try {
-    const doc     = new DOMParser().parseFromString(html, 'text/html')
-    const article = new Readability(doc).parse()
-    if (!article) return ''
-    return preserveHtml
-      ? (article.content ?? '')
-      : (article.textContent ?? '').replace(/\s+/g, ' ').trim()
-  } catch {
-    return ''
-  }
-}
-
 // ── Component ─────────────────────────────────────────────────────────────────
 
 export function HTMLSectionNode({ id, data }: NodeProps) {
@@ -251,16 +169,9 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
 
   const livePreview = useMemo(() => {
     if (!firstHtml || !selector) return ''
-    let result: string
-    if (isReadability) {
-      result = extractReadability(firstHtml, preserveHtml)
-    } else if (extractSection) {
-      result = extractSectionFromHeading(firstHtml, selector, separator, preserveHtml)
-    } else {
-      result = extractBySelector(firstHtml, selector, separator, preserveHtml)
-    }
+    const result = extractHtml(firstHtml, { selector, separator, preserveHtml, extractSection })
     return result.slice(0, 300) + (result.length > 300 ? '…' : '')
-  }, [firstHtml, selector, separator, preserveHtml, extractSection, isReadability])
+  }, [firstHtml, selector, separator, preserveHtml, extractSection])
 
   // ── Run handler ──────────────────────────────────────────────────────────
   const handleRun = useCallback(async () => {
@@ -294,11 +205,7 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
         continue
       }
 
-      let extracted = isReadability
-        ? extractReadability(html, preserveHtml)
-        : extractSection
-          ? extractSectionFromHeading(html, selector, separator, preserveHtml)
-          : extractBySelector(html, selector, separator, preserveHtml)
+      let extracted = extractHtml(html, { selector, separator, preserveHtml, extractSection })
       if (!extracted) {
         missCount++
         enriched.push({ ...record, fetchedContent: '', htmlSelector: selector })
@@ -325,7 +232,7 @@ export function HTMLSectionNode({ id, data }: NodeProps) {
       outputCount:    enriched.length,
       resultsVersion: version,
     })
-  }, [id, updateNodeData, upstreamRecords, selector, separator, maxLength, preserveHtml, extractSection, isReadability])
+  }, [id, updateNodeData, upstreamRecords, selector, separator, maxLength, preserveHtml, extractSection])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
