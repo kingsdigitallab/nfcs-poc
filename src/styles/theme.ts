@@ -49,9 +49,12 @@ export const ACCENT = {
 } as const
 
 // ── Status (semantics preserved: blue running / green ok / red error / grey idle) ──
+// 'loading' (search nodes) and 'running' (process nodes) are synonyms for the
+// in-flight state — runners write both, so both must be coloured here.
 export const STATUS_BORDER: Record<string, string> = {
   idle:    '#d6ccb5',
   loading: '#3d6ea3',
+  running: '#3d6ea3',
   success: '#4c7c4f',
   error:   '#a63b37',
   cached:  '#4c7c4f',
@@ -59,6 +62,7 @@ export const STATUS_BORDER: Record<string, string> = {
 export const STATUS_BADGE: Record<string, string> = {
   idle:    '#b0a891',
   loading: '#a9c4e0',
+  running: '#a9c4e0',
   success: '#b7e0bb',
   error:   '#e6b0ac',
   cached:  '#b7e0bb',
