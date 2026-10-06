@@ -12,8 +12,6 @@ import type { HTMLPreviewNodeData }      from '../nodes/HTMLPreviewNode'
 import type { URLFetchNodeData }          from '../nodes/URLFetchNode'
 import type { HTMLSectionNodeData }       from '../nodes/HTMLSectionNode'
 import type { LLDSSearchNodeData }        from '../nodes/LLDSSearchNode'
-import type { ADSSearchAdvancedNodeData }     from '../nodes/ADSSearchAdvancedNode'
-import type { ADSLibraryNodeData }            from '../nodes/ADSLibraryNode'
 import type { MDSSearchNodeData }         from '../nodes/MDSSearchNode'
 import type { ReconciliationNodeData }    from '../nodes/ReconciliationNode'
 import type { FilterTransformNodeData }   from '../nodes/FilterTransformNode'
@@ -72,8 +70,6 @@ export type AppNode =
   | Node<URLFetchNodeData>
   | Node<HTMLSectionNodeData>
   | Node<LLDSSearchNodeData>
-  | Node<ADSSearchAdvancedNodeData>
-  | Node<ADSLibraryNodeData>
   | Node<MDSSearchNodeData>
   | Node<ReconciliationNodeData>
   | Node<FilterTransformNodeData>

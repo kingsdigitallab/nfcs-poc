@@ -4,8 +4,6 @@ import { DEFAULT_KCL_API_KEY, DEFAULT_EUROPEANA_API_KEY } from '../utils/kclConf
 import type { AppNode } from '../types/AppNode'
 import type { NodeTypeId } from '../nodes'
 import type { LLDSSearchNodeData }        from '../nodes/LLDSSearchNode'
-import type { ADSSearchAdvancedNodeData }  from '../nodes/ADSSearchAdvancedNode'
-import type { ADSLibraryNodeData }         from '../nodes/ADSLibraryNode'
 import type { ARIADNESearchNodeData }      from '../nodes/ARIADNESearchNode'
 import type { HSDSSearchNodeData }         from '../nodes/HSDSSearchNode'
 import type { SparqlSearchNodeData }       from '../nodes/SparqlSearchNode'
@@ -104,25 +102,6 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       useCache: false,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies LLDSSearchNodeData,
-  }),
-  adsLibrarySearch: pos => ({
-    id: newId('adslib'), type: 'adsLibrarySearch', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20',
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-      _capped: false, _total: 0,
-    } satisfies ADSLibraryNodeData,
-  }),
-  adsSearchAdvanced: pos => ({
-    id: newId('ads'), type: 'adsSearchAdvanced', position: pos,
-    data: {
-      inlineQuery: '', inlineLimit: '20', fetchAll: false,
-      ariadneSubject: '', derivedSubject: '', nativeSubject: '',
-      country: '', dataType: '', temporal: '',
-      sort: '_score', order: 'desc',
-      useFixture: false,
-      status: 'idle', statusMessage: '', results: undefined, count: 0,
-    } satisfies ADSSearchAdvancedNodeData,
   }),
   ariadneSearch: pos => ({
     id: newId('ariadne'), type: 'ariadneSearch', position: pos,

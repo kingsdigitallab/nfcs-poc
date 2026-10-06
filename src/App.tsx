@@ -238,7 +238,7 @@ function DebugPanel({ nodes }: { nodes: AppNode[] }) {
 
   const slim = nodes.map(n => {
     const d = n.data as Record<string, unknown>
-    const isSearchNode = n.type === 'gbifSearch' || n.type === 'lldsSearch' || n.type === 'adsSearchAdvanced' || n.type === 'mdsSearch' || n.type === 'adsLibrarySearch' || n.type === 'ariadneSearch' || n.type === 'hsdsSearch'
+    const isSearchNode = n.type === 'gbifSearch' || n.type === 'lldsSearch' || n.type === 'mdsSearch' || n.type === 'ariadneSearch' || n.type === 'hsdsSearch'
     if (isSearchNode && d.results) {
       const recs = d.results as UnifiedRecord[]
       return {

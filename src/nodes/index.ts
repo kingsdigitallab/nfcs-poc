@@ -6,8 +6,6 @@ import { URLFetchNode }          from './URLFetchNode'
 import { ParamNode } from './ParamNode'
 import { GBIFSearchNode } from './GBIFSearchNode'
 import { LLDSSearchNode } from './LLDSSearchNode'
-import { ADSSearchAdvancedNode } from './ADSSearchAdvancedNode'
-import { ADSLibraryNode }        from './ADSLibraryNode'
 import { MDSSearchNode }  from './MDSSearchNode'
 import { ReconciliationNode }    from './ReconciliationNode'
 import { FilterTransformNode }  from './FilterTransformNode'
@@ -63,8 +61,6 @@ export const nodeTypes = {
   urlFetch:          withToolbar(URLFetchNode),
   gbifSearch:        withToolbar(GBIFSearchNode),
   lldsSearch:        withToolbar(LLDSSearchNode),
-  adsSearchAdvanced: withToolbar(ADSSearchAdvancedNode),
-  adsLibrarySearch:  withToolbar(ADSLibraryNode),
   mdsSearch:         withToolbar(MDSSearchNode),
   reconciliation:    withToolbar(ReconciliationNode),
   filterTransform:   withToolbar(FilterTransformNode),

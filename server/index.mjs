@@ -17,8 +17,6 @@ import { mkdir, writeFile } from 'fs/promises'
 import { writeFileSync, readFileSync, mkdirSync, readdirSync } from 'fs'
 import {
   PROXY_TABLE,
-  adsLibrarySearchMiddleware,
-  adsCatalogueSearchMiddleware,
   lldsSearchMiddleware,
   urlProxyMiddleware,
 } from './proxies.mjs'
@@ -60,8 +58,6 @@ for (const entry of PROXY_TABLE) {
 // Defined in server/proxies.mjs; connect-compatible so they work here and
 // in Vite's server.middlewares.use() identically.
 
-app.use(adsLibrarySearchMiddleware)
-app.use(adsCatalogueSearchMiddleware)
 app.use(lldsSearchMiddleware)
 app.use(urlProxyMiddleware)
 

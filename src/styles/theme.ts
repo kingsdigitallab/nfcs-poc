@@ -140,8 +140,6 @@ export const NODE_IDENTITY: Record<string, string> = {
   // Experimental / hidden
   frameSenseSource: '#29394a', // deep slate
   sparqlSearch:     '#443a72', // violet
-  adsLibrarySearch: '#33465f', // slate
-  adsSearchAdvanced:'#7c3b2e', // brick
   ollamaNode:       '#3a3a6e', // indigo
   ollamaField:      '#2f2d52', // deep indigo
   ollamaOutput:     '#202d47', // ink navy

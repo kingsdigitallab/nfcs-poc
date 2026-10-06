@@ -2,8 +2,8 @@
  * server/proxies.mjs — single source of truth for all proxy + middleware logic.
  *
  * Consumed by BOTH:
- *   vite.config.ts   → makeViteProxyConfig() + the 4 exported middleware  (dev)
- *   server/index.mjs → PROXY_TABLE          + the 4 exported middleware  (prod)
+ *   vite.config.ts   → makeViteProxyConfig() + the 3 exported middleware  (dev)
+ *   server/index.mjs → PROXY_TABLE          + the 3 exported middleware  (prod)
  *
  * Adding a new data source:
  *   • Simple reverse-proxy  → add an entry to PROXY_TABLE below
@@ -97,24 +97,13 @@ const DESKTOP_UA =
 
 const FATAL_PATTERNS = ['Connection closed', 'Target closed', 'Session closed', 'Protocol error']
 
-// ── ADS constants ─────────────────────────────────────────────────────────────
-
-const ADS_LIB_URL =
-  'https://archaeologydataservice.ac.uk/library/search/searchResults.xhtml'
-const ADS_LIB_UA =
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:149.0) Gecko/20100101 Firefox/149.0'
-const ADS_CAT_ORIGIN = 'https://archaeologydataservice.ac.uk'
-const ADS_CAT_API    = `${ADS_CAT_ORIGIN}/data-catalogue-api/api/search`
-const ADS_CAT_WARMUP = `${ADS_CAT_ORIGIN}/data-catalogue/`
-
 // ── Puppeteer browser singleton ───────────────────────────────────────────────
 // The browser is launched once on the first JS-render request and reused for
 // the lifetime of the server process. Each fetch gets its own page (tab) which
-// is closed after use. Both singletons are cleared on disconnect so the next
+// is closed after use. The singleton is cleared on disconnect so the next
 // request triggers a clean relaunch rather than inheriting a broken state.
 
 let _browserPromise = null
-let _adsPagePromise = null
 
 async function getOrLaunchBrowser() {
   if (!_browserPromise) {
@@ -135,13 +124,12 @@ async function getOrLaunchBrowser() {
           '--disable-extensions',
         ],
       })
-      // Reset BOTH singletons when the browser process dies so the next request
+      // Reset the singleton when the browser process dies so the next request
       // gets a clean relaunch rather than an unresolvable broken promise.
       // (CLAUDE.md gotcha #11 — do not remove this handler)
       browser.on('disconnected', () => {
         console.warn('[url-proxy] Browser disconnected — will relaunch on next request')
         _browserPromise = null
-        _adsPagePromise = null
       })
       console.log('[url-proxy] Browser ready.')
       return browser
@@ -255,178 +243,9 @@ async function fetchWithBrowser(target, res, waitUntil = 'networkidle2') {
   }
 }
 
-/** Long-lived Puppeteer page warmed on the ADS site to hold a cf_clearance cookie. */
-async function getOrWarmADSPage() {
-  if (!_adsPagePromise) {
-    _adsPagePromise = (async () => {
-      const browser = await getOrLaunchBrowser()
-      const page = await browser.newPage()
-      await page.setUserAgent(DESKTOP_UA)
-      await page.setDefaultNavigationTimeout(BROWSER_TIMEOUT_MS)
-      await page.setRequestInterception(true)
-      page.on('request', req => {
-        const t = req.resourceType()
-        if (t === 'image' || t === 'font' || t === 'media') req.abort()
-        else req.continue()
-      })
-      console.log('[ads-catalogue] Warming Puppeteer page for Cloudflare session…')
-      await page.goto(ADS_CAT_WARMUP, { waitUntil: 'networkidle2' })
-      console.log('[ads-catalogue] Page warmed.')
-      return page
-    })()
-  }
-  return _adsPagePromise
-}
-
 // ── Custom middleware (connect-compatible: (req, res, next)) ──────────────────
 // These functions work identically under Vite's server.middlewares.use() (dev)
 // and Express's app.use() (prod) — both accept the connect signature.
-
-/**
- * /ads-library-search?q=<query>&size=<n>
- * Two-step JSF session dance: GET ViewState + POST search → CDATA HTML.
- */
-export async function adsLibrarySearchMiddleware(req, res, next) {
-  if (!req.url?.startsWith('/ads-library-search')) { next(); return }
-
-  const parsed = new URL(req.url, 'http://localhost')
-  const query  = parsed.searchParams.get('q') ?? ''
-  const size   = parsed.searchParams.get('size') ?? '20'
-
-  try {
-    // Step 1 — GET the search page; extract session cookie + ViewState
-    console.log('[ads-library] GET', ADS_LIB_URL)
-    const getRes = await fetch(ADS_LIB_URL, {
-      headers: {
-        'User-Agent': ADS_LIB_UA,
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-GB,en;q=0.9',
-      },
-      signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
-      redirect: 'follow',
-    })
-    if (!getRes.ok) throw new Error(`GET ${getRes.status}: Cloudflare or server block`)
-
-    // Collect Set-Cookie headers (getSetCookie added in Node 18 undici)
-    const hdrs = getRes.headers
-    const rawCookies = hdrs.getSetCookie?.()
-      ?? (getRes.headers.get('set-cookie') ? [getRes.headers.get('set-cookie')] : [])
-    const cookieStr = rawCookies
-      .filter(Boolean)
-      .map(c => c.split(';')[0].trim())
-      .join('; ')
-
-    const pageHtml = await getRes.text()
-
-    // Extract jakarta.faces.ViewState
-    const vsMatch =
-      /name="jakarta\.faces\.ViewState"[^>]*value="([^"]*)"/.exec(pageHtml) ??
-      /value="([^"]*)"[^>]*name="jakarta\.faces\.ViewState"/.exec(pageHtml)
-    if (!vsMatch) {
-      throw new Error('ViewState not found — the page may have been blocked by Cloudflare')
-    }
-    const viewState = vsMatch[1]
-
-    // Extract the submit-button component ID (j_idt44 or equivalent)
-    const btnMatch =
-      /id="(j_idt\d+)"[^>]*type="submit"/.exec(pageHtml) ??
-      /type="submit"[^>]*id="(j_idt\d+)"/.exec(pageHtml)
-    const btnId = btnMatch?.[1] ?? 'j_idt44'
-
-    console.log(`[ads-library] viewState ok, btnId=${btnId}`)
-
-    // Step 2 — POST the search
-    const body = new URLSearchParams({
-      'jakarta.faces.partial.ajax':   'true',
-      'jakarta.faces.source':         btnId,
-      'jakarta.faces.partial.execute': '@all',
-      'jakarta.faces.partial.render': 'searchResultForm',
-      [btnId]:                         btnId,
-      'searchResultForm':              'searchResultForm',
-      'searchFieldSelector':           '',
-      'searchText':                    query,
-      'perPage':                       size,
-      'sortBy':                        '',
-      'perPage2':                      size,
-      'jakarta.faces.ViewState':       viewState,
-    })
-
-    console.log('[ads-library] POST q=', query, 'size=', size)
-    const postRes = await fetch(ADS_LIB_URL, {
-      method: 'POST',
-      headers: {
-        'User-Agent':      ADS_LIB_UA,
-        'Accept':          'application/xml, text/xml, */*; q=0.01',
-        'Accept-Language': 'en-GB,en;q=0.9',
-        'Content-Type':    'application/x-www-form-urlencoded; charset=UTF-8',
-        'Faces-Request':   'partial/ajax',
-        'X-Requested-With': 'XMLHttpRequest',
-        'Origin':          'https://archaeologydataservice.ac.uk',
-        'Referer':         ADS_LIB_URL,
-        ...(cookieStr ? { Cookie: cookieStr } : {}),
-      },
-      body: body.toString(),
-      signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
-    })
-    if (!postRes.ok) throw new Error(`POST ${postRes.status}`)
-
-    const xmlText = await postRes.text()
-    console.log('[ads-library] response length:', xmlText.length)
-
-    // Extract CDATA HTML from JSF partial-response
-    // <update id="searchResultForm"><![CDATA[...HTML...]]></update>
-    const cdataMatch =
-      /<update[^>]*id="searchResultForm[^"]*"[^>]*><!\[CDATA\[([\s\S]*?)\]\]><\/update>/i.exec(xmlText)
-    const html = cdataMatch?.[1] ?? xmlText
-
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'text/html; charset=utf-8')
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    res.end(html)
-  } catch (err) {
-    if (!res.headersSent) {
-      res.statusCode = 502
-      res.end(`ADS Library proxy error: ${err instanceof Error ? err.message : String(err)}`)
-    }
-  }
-}
-
-/**
- * /ads-catalogue-search?<qs>
- * Cloudflare bypass: runs the API fetch inside the warmed Puppeteer page context.
- * On 403 the page singleton is cleared so the next request re-warms.
- */
-export async function adsCatalogueSearchMiddleware(req, res, next) {
-  if (!req.url?.startsWith('/ads-catalogue-search')) { next(); return }
-
-  const parsed = new URL(req.url, 'http://localhost')
-  const qs     = parsed.searchParams.toString()
-  const apiUrl = `${ADS_CAT_API}?${qs}`
-
-  try {
-    const page   = await getOrWarmADSPage()
-    const result = await page.evaluate(async (url) => {
-      const r = await fetch(url, { headers: { Accept: 'application/json' } })
-      return { status: r.status, body: await r.text() }
-    }, apiUrl)
-
-    if (result.status === 403) {
-      _adsPagePromise = null
-      throw new Error('Cloudflare session expired (403) — will re-warm on next request')
-    }
-
-    res.statusCode = result.status
-    res.setHeader('Content-Type', 'application/json')
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    res.end(result.body)
-  } catch (err) {
-    _adsPagePromise = null
-    if (!res.headersSent) {
-      res.statusCode = 502
-      res.end(`ADS catalogue proxy error: ${err instanceof Error ? err.message : String(err)}`)
-    }
-  }
-}
 
 /**
  * /llds-search?q=<query>&rpp=<n>
@@ -499,7 +318,7 @@ export function urlProxyMiddleware(req, res, next) {
 
 // ── Proxy table ───────────────────────────────────────────────────────────────
 /**
- * All 13 simple reverse-proxy routes, described as data.
+ * All 15 simple reverse-proxy routes, described as data.
  *
  * @property prefix   - Path prefix matched on the incoming request.
  * @property target   - Upstream origin URL.
@@ -524,16 +343,6 @@ export const PROXY_TABLE = [
       'Referer':         'https://llds.ling-phil.ox.ac.uk/',
       'Accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
       'Accept-Language': 'en-GB,en;q=0.9',
-    },
-  },
-  {
-    prefix:  '/ads-proxy',
-    target:  'https://archaeologydataservice.ac.uk',
-    rewrite: path => path.replace(/^\/ads-proxy/, ''),
-    headers: {
-      'User-Agent': DESKTOP_UA,
-      'Referer':    'https://archaeologydataservice.ac.uk/',
-      'Accept':     'application/json, text/plain, */*',
     },
   },
   {
