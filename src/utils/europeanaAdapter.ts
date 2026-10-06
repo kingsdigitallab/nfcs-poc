@@ -28,6 +28,25 @@ export interface EuropeanaSearchResponse {
   error?:         string
 }
 
+/**
+ * Europeana returns `guid` as the item page URL with the caller's API key
+ * appended as tracking (`?utm_source=api&utm_medium=api&utm_campaign=<wskey>`).
+ * Records are saved, exported and shipped as fixtures, so the key must never
+ * ride along: keep only the canonical item URL.
+ */
+export function cleanItemUrl(guid: string | undefined): string | undefined {
+  if (!guid) return guid
+  try {
+    const u = new URL(guid)
+    for (const k of [...u.searchParams.keys()]) {
+      if (k.startsWith('utm_')) u.searchParams.delete(k)
+    }
+    return u.toString().replace(/\?$/, '')
+  } catch {
+    return guid.replace(/[?&]utm_[^&#]*/g, '').replace(/\?$/, '')
+  }
+}
+
 export function adaptEuropeanaResponse(items: EuropeanaItem[]): UnifiedRecord[] {
   return items.map(item => {
     const creator = item.dcCreator && item.dcCreator.length > 0 ? item.dcCreator : undefined
@@ -36,7 +55,7 @@ export function adaptEuropeanaResponse(items: EuropeanaItem[]): UnifiedRecord[] 
       id:         `europeana:${item.id}`,
       _source:    'europeana',
       _sourceId:  item.id,
-      _sourceUrl: item.guid,
+      _sourceUrl: cleanItemUrl(item.guid),
 
       title:       item.title?.[0],
       creator,

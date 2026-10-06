@@ -245,8 +245,10 @@ and `⚗` icon in the sidebar. When `simpleMode` is active the entire group is h
   `"apiKey": "sk-` in `public/` and `src/`.
 - **`apiKey` is in `TRANSIENT_FIELDS`** — never serialised, and a Param node wired into an `apiKey` handle has
   its `value` blanked on save (`CREDENTIAL_HANDLES` in `workflowIO.ts`). `hydrateNodes` re-injects the build-time
-  default for `KCL_API_KEY_NODES` and `europeanaSearch`. `examplesNoSecrets.test.ts` scans `public/examples` for
-  any `sk-…` string on every run; CI greps `public/` and `src/` the same way.
+  default for `KCL_API_KEY_NODES` and `europeanaSearch`. `examplesNoSecrets.test.ts` fails on ANY `apiKey` value in
+  an example, on Europeana's `utm_campaign=<wskey>` tracking parameter anywhere under `public/` (the adapter strips
+  it from item URLs — `cleanItemUrl` in `europeanaAdapter.ts`), and on any locally configured `VITE_*_API_KEY`
+  value appearing in shipped data; CI greps `public/` and `src/` the same way.
 - **Unknown node types** in a loaded `.nfcs.json` are dropped with their edges (`partitionUnknownNodes`) and
   reported through the top-bar `loadError` banner. Retire a node by removing it; never rename a type string.
 - **Runner contract is tested** (`runnerContract.test.ts`): never throw, terminal status, `clearNodeResults`

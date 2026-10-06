@@ -45,6 +45,12 @@ jobs:
 
       - name: Fail on committed API keys (fallback scan)
         run: |
-          if grep -rnE 'sk-[A-Za-z0-9_-]{16,}' public/ src/ --exclude-dir=node_modules; then
+          if grep -rnE '(^|[^A-Za-z0-9])sk-[A-Za-z0-9_-]{16,}' public/ src/ --exclude-dir=node_modules; then
             echo '::error::Committed API key found'; exit 1
+          fi
+          if grep -rnE 'utm_campaign=' public/; then
+            echo '::error::Europeana tracking parameter (carries the API key) found in shipped data'; exit 1
+          fi
+          if grep -rnE '"apiKey":\s*"[^"]+"' public/examples/; then
+            echo '::error::Example workflow carries an apiKey value'; exit 1
           fi
