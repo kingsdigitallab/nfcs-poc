@@ -121,6 +121,32 @@ export function downloadWorkflow(nodes: Node[], edges: Edge[], extras?: Workflow
 // ─── Deserialisation ──────────────────────────────────────────────────────────
 
 /**
+ * Remove nodes whose `type` is not registered in this build (e.g. a node that
+ * has since been retired) together with every edge that touches them, so the
+ * rest of a saved workflow still loads. React Flow would otherwise render an
+ * unknown type as a blank default box with no handles. Returns the same object
+ * when nothing was dropped.
+ */
+export function partitionUnknownNodes(
+  file: WorkflowFile,
+  knownTypes: ReadonlySet<string>,
+): { file: WorkflowFile; dropped: { id: string; type: string }[] } {
+  const dropped = file.nodes
+    .filter(n => !knownTypes.has(n.type))
+    .map(n => ({ id: n.id, type: n.type }))
+  if (dropped.length === 0) return { file, dropped }
+  const droppedIds = new Set(dropped.map(d => d.id))
+  return {
+    file: {
+      ...file,
+      nodes: file.nodes.filter(n => !droppedIds.has(n.id)),
+      edges: file.edges.filter(e => !droppedIds.has(e.source) && !droppedIds.has(e.target)),
+    },
+    dropped,
+  }
+}
+
+/**
  * Runtime defaults injected into every node on load so components start in a
  * clean idle state regardless of what was (or wasn't) in the saved file.
  */

@@ -191,3 +191,34 @@ describe('hydrateNodes re-injects environment credentials', () => {
     expect(node.data).not.toHaveProperty('apiKey')
   })
 })
+
+describe('partitionUnknownNodes', () => {
+  const known = new Set(['tableOutput', 'gbifSearch'])
+
+  it('drops nodes whose type is not registered, plus every edge touching them', async () => {
+    const { partitionUnknownNodes } = await import('../utils/workflowIO')
+    const file = buildWorkflowPayload(
+      [
+        makeNode('ads-1',   'adsSearchAdvanced', { inlineQuery: 'x' }),
+        makeNode('gbif-1',  'gbifSearch',        { inlineQ: 'fox' }),
+        makeNode('table-1', 'tableOutput',       {}),
+      ],
+      [
+        { id: 'e1', source: 'ads-1',  target: 'table-1', targetHandle: 'results' },
+        { id: 'e2', source: 'gbif-1', target: 'table-1', targetHandle: 'results' },
+      ],
+    )
+    const { file: cleaned, dropped } = partitionUnknownNodes(file, known)
+    expect(dropped).toEqual([{ id: 'ads-1', type: 'adsSearchAdvanced' }])
+    expect(cleaned.nodes.map(n => n.id)).toEqual(['gbif-1', 'table-1'])
+    expect(cleaned.edges.map(e => e.id)).toEqual(['e2'])
+  })
+
+  it('returns the file untouched when every type is known', async () => {
+    const { partitionUnknownNodes } = await import('../utils/workflowIO')
+    const file = buildWorkflowPayload([makeNode('t', 'tableOutput', {})], [])
+    const { file: cleaned, dropped } = partitionUnknownNodes(file, known)
+    expect(dropped).toEqual([])
+    expect(cleaned).toBe(file)
+  })
+})
