@@ -94,7 +94,6 @@ export function JSONOutputNode({ id }: NodeProps) {
             <pre
               style={styles.pre}
               // Safe: highlight() only produces span tags around escaped content
-              // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{ __html: highlight(json ?? '[]') }}
             />
           </div>
