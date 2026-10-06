@@ -15,7 +15,7 @@ export interface ProxyEntry {
 }
 
 export declare const PROXY_TABLE: ProxyEntry[]
-export declare function makeViteProxyConfig(): Record<string, unknown>
+export declare function makeViteProxyConfig(): Record<string, import('vite').ProxyOptions>
 
 export declare const adsLibrarySearchMiddleware:   ConnectMiddleware
 export declare const adsCatalogueSearchMiddleware: ConnectMiddleware

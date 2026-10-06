@@ -5,9 +5,7 @@ import { writeFileSync, readFileSync, mkdirSync, readdirSync } from 'fs'
 import { join } from 'path'
 // Proxy table + 4 custom middleware — single source of truth shared with
 // server/index.mjs (prod). Add new data sources in server/proxies.mjs.
-// Single-line import: @ts-ignore must cover the module-specifier line
-// (proxies.d.ts cannot pair with a .mjs import — TS would want .d.mts).
-// @ts-ignore — plain ESM module; documented in server/proxies.d.ts
+// Plain ESM module; typed by server/proxies.d.mts
 import { makeViteProxyConfig, adsLibrarySearchMiddleware, adsCatalogueSearchMiddleware, lldsSearchMiddleware, urlProxyMiddleware } from './server/proxies.mjs'
 
 export default defineConfig({

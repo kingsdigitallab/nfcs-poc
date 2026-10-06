@@ -47,6 +47,7 @@ RUN apt-get update && apt-get install -y \
 # Tell Puppeteer to use the system Chromium instead of downloading its own
 ENV PUPPETEER_SKIP_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+ENV NODE_ENV=production
 
 WORKDIR /app
 

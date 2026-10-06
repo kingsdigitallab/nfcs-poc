@@ -13,10 +13,77 @@
  * safe to import from either runtime without extra bundling.
  */
 
+import { lookup } from 'node:dns/promises'
+import {
+  WAIT_STRATEGIES,
+  MAX_RESPONSE_BYTES,
+  parseAllowlist,
+  isPrivateHost,
+  isAllowedTarget,
+} from './urlProxyPolicy.mjs'
+
 // ── Timeouts ──────────────────────────────────────────────────────────────────
 
 const PROXY_TIMEOUT_MS   = 30_000   // simple fetch hard limit (ms)
 const BROWSER_TIMEOUT_MS = 45_000   // Puppeteer page-load hard limit (ms)
+const MAX_REDIRECTS      = 5
+
+// ── /url-proxy policy ─────────────────────────────────────────────────────────
+// URL_PROXY_ALLOWLIST: comma-separated host suffixes the proxy may fetch
+// (e.g. "ac.uk,europeana.eu,wikipedia.org"). When unset:
+//   • development  → allow any PUBLIC host (private/loopback always denied)
+//   • production   → deny everything — the deployed app must opt in explicitly.
+// The pure allow/deny rules live in urlProxyPolicy.mjs (unit-tested).
+
+const URL_PROXY_ALLOWLIST = parseAllowlist(process.env.URL_PROXY_ALLOWLIST)
+const URL_PROXY_ALLOW_ALL =
+  URL_PROXY_ALLOWLIST.length === 0 && process.env.NODE_ENV !== 'production'
+
+let _policyLogged = false
+function logPolicyOnce() {
+  if (_policyLogged) return
+  _policyLogged = true
+  if (URL_PROXY_ALLOW_ALL) {
+    console.warn('[url-proxy] No URL_PROXY_ALLOWLIST set — allowing any public host (dev mode).')
+  } else if (URL_PROXY_ALLOWLIST.length === 0) {
+    console.warn('[url-proxy] No URL_PROXY_ALLOWLIST set and NODE_ENV=production — all targets denied.')
+  } else {
+    console.log(`[url-proxy] Allowlist: ${URL_PROXY_ALLOWLIST.join(', ')}`)
+  }
+}
+
+/** Error carrying the HTTP status the middleware should answer with. */
+class ProxyRefused extends Error {
+  constructor(status, message) { super(message); this.status = status }
+}
+
+/** Synchronous policy check (no DNS) — used for redirects inside Puppeteer. */
+function policyDecision(target) {
+  return isAllowedTarget(target, URL_PROXY_ALLOWLIST, { allowAll: URL_PROXY_ALLOW_ALL })
+}
+
+/**
+ * Full check: policy rules, then resolve the hostname and make sure a public
+ * name does not point at a private address (DNS-rebinding guard).
+ * @returns {Promise<{ ok: true, url: URL } | { ok: false, reason: string }>}
+ */
+async function checkTarget(target) {
+  const decision = policyDecision(target)
+  if (!decision.ok) return decision
+  const host = decision.url.hostname
+  const isLiteral = /^[\d.]+$/.test(host) || host.includes(':')
+  if (!isLiteral) {
+    try {
+      const { address } = await lookup(host)
+      if (isPrivateHost(address)) {
+        return { ok: false, reason: `Host resolves to a private address: ${host}` }
+      }
+    } catch {
+      return { ok: false, reason: `DNS lookup failed for ${host}` }
+    }
+  }
+  return decision
+}
 
 // ── Shared User-Agent strings ─────────────────────────────────────────────────
 
@@ -85,22 +152,62 @@ async function getOrLaunchBrowser() {
 
 // ── fetch helpers ─────────────────────────────────────────────────────────────
 
-/** Simple fetch path — no JS execution, just the raw HTTP response body. */
+/**
+ * Simple fetch path — no JS execution, just the raw HTTP response body.
+ * Redirects are followed by hand so every hop is re-checked against the
+ * policy (an allowed host must not bounce us to a private one), and the
+ * body is read with a running byte count so an oversized upstream cannot
+ * exhaust memory.
+ */
 async function fetchSimple(target, res) {
-  const upstream = await fetch(target, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (compatible; iDAH-Federation-PoC/1.0)',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*',
-    },
-    signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
-    redirect: 'follow',
-  })
+  const headers = {
+    'User-Agent': 'Mozilla/5.0 (compatible; iDAH-Federation-PoC/1.0)',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*',
+  }
+  let current = target
+  let upstream
+  for (let hop = 0; ; hop++) {
+    upstream = await fetch(current, {
+      headers,
+      signal: AbortSignal.timeout(PROXY_TIMEOUT_MS),
+      redirect: 'manual',
+    })
+    const location = upstream.headers.get('location')
+    if (upstream.status >= 300 && upstream.status < 400 && location) {
+      if (hop >= MAX_REDIRECTS) throw new ProxyRefused(502, 'Too many redirects')
+      const next = new URL(location, current).href
+      const decision = await checkTarget(next)
+      if (!decision.ok) throw new ProxyRefused(403, `Redirect blocked: ${decision.reason}`)
+      current = next
+      continue
+    }
+    break
+  }
+
+  const declared = Number(upstream.headers.get('content-length') ?? 0)
+  if (declared > MAX_RESPONSE_BYTES) throw new ProxyRefused(413, 'Upstream response too large')
+
+  const chunks = []
+  let total = 0
+  if (upstream.body) {
+    const reader = upstream.body.getReader()
+    for (;;) {
+      const { done, value } = await reader.read()
+      if (done) break
+      total += value.byteLength
+      if (total > MAX_RESPONSE_BYTES) {
+        await reader.cancel().catch(() => {})
+        throw new ProxyRefused(413, 'Upstream response too large')
+      }
+      chunks.push(value)
+    }
+  }
+
   res.statusCode = upstream.status
   const ct = upstream.headers.get('content-type')
   if (ct) res.setHeader('Content-Type', ct)
   res.setHeader('Access-Control-Allow-Origin', '*')
-  const body = await upstream.arrayBuffer()
-  res.end(Buffer.from(body))
+  res.end(Buffer.concat(chunks))
 }
 
 /**
@@ -119,8 +226,10 @@ async function fetchWithBrowser(target, res, waitUntil = 'networkidle2') {
     await page.setRequestInterception(true)
     page.on('request', req => {
       const t = req.resourceType()
-      if (t === 'image' || t === 'font' || t === 'media') req.abort()
-      else req.continue()
+      if (t === 'image' || t === 'font' || t === 'media') { req.abort(); return }
+      // JS-driven or HTTP redirects to a disallowed host are fenced here too
+      if (t === 'document' && !policyDecision(req.url()).ok) { req.abort('blockedbyclient'); return }
+      req.continue()
     })
     try {
       await page.goto(target, { waitUntil })
@@ -136,6 +245,7 @@ async function fetchWithBrowser(target, res, waitUntil = 'networkidle2') {
       console.warn('[url-proxy] Navigation warning (will try page.content()):', msg)
     }
     const html = await page.content()
+    if (html.length > MAX_RESPONSE_BYTES) throw new ProxyRefused(413, 'Rendered page too large')
     res.statusCode = 200
     res.setHeader('Content-Type', 'text/html; charset=utf-8')
     res.setHeader('Access-Control-Allow-Origin', '*')
@@ -361,9 +471,18 @@ export function urlProxyMiddleware(req, res, next) {
     res.end('Missing or invalid url param')
     return
   }
+  if (!WAIT_STRATEGIES.has(waitStrategy)) {
+    res.statusCode = 400
+    res.end(`Invalid wait param — expected one of: ${[...WAIT_STRATEGIES].join(', ')}`)
+    return
+  }
+
+  logPolicyOnce()
 
   ;(async () => {
     try {
+      const decision = await checkTarget(target)
+      if (!decision.ok) throw new ProxyRefused(403, decision.reason)
       if (renderJs) {
         await fetchWithBrowser(target, res, waitStrategy)
       } else {
@@ -371,7 +490,7 @@ export function urlProxyMiddleware(req, res, next) {
       }
     } catch (err) {
       if (!res.headersSent) {
-        res.statusCode = 502
+        res.statusCode = err instanceof ProxyRefused ? err.status : 502
         res.end(`Proxy error: ${err instanceof Error ? err.message : String(err)}`)
       }
     }
