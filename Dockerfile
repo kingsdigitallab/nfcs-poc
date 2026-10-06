@@ -14,7 +14,9 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run build:deploy
+# Full build = tsc -b + vite build. The typecheck is a release gate, not a
+# dev-only nicety; an image must not ship code that does not typecheck.
+RUN npm run build
 
 # ── Stage 2: runtime ──────────────────────────────────────────────────────────
 FROM node:20-slim AS runtime
@@ -60,6 +62,11 @@ COPY --from=builder /app/dist ./dist
 
 # Copy Express server
 COPY server/ ./server/
+
+# Run as the unprivileged node user. /app/data is the workflow-saves volume
+# and dist/examples the example-authoring target; both must be writable.
+RUN mkdir -p /app/data /app/dist/examples && chown -R node:node /app
+USER node
 
 EXPOSE 3001
 
