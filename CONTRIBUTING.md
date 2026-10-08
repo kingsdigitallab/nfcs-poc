@@ -1,8 +1,8 @@
 # Contributing
 
 This is a React 19 + TypeScript single-page app (Vite) with a thin Node proxy layer
-(`server/`). Read `docs/architecture.md` first: it explains how the system fits together,
-with diagrams. Read `CLAUDE.md` for the node registries and the list of
+(`server/`). Read `docs/engineer-quickstart.md` (five minutes) and then `docs/architecture.md`:
+they explain how the system fits together, with diagrams. Read `CLAUDE.md` for the node registries and the list of
 deliberate-but-surprising decisions ("Architectural Gotchas"). Read
 `docs/engineering-review.md` for the current state of the codebase and the backlog.
 

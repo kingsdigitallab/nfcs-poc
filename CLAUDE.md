@@ -9,7 +9,7 @@ Node-based visual workflow editor for federating UK Arts & Humanities research d
 - **Node editor**: `@xyflow/react` (v12+) — import ONLY from `@xyflow/react`
 - **No Service Worker / PWA / workbox**
 - API calls client-side via `fetch()` through same-origin proxies (`/gbif-proxy`, `/kcl-proxy`, …).
-- **Engineering hand-over**: `docs/architecture.md` (system briefing with diagrams), `docs/engineering-review.md` (findings + backlog), `CONTRIBUTING.md` (gates + rules).
+- **Engineering hand-over**: `docs/engineer-quickstart.md` (one page), `docs/architecture.md` (system briefing with diagrams), `docs/engineering-review.md` (findings + backlog), `CONTRIBUTING.md` (gates + rules).
 
 ## Tests & Typecheck
 

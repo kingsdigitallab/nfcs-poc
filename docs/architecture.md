@@ -10,6 +10,7 @@ It sits alongside three other documents, each with a different job:
 
 | Document | Job | Read it when |
 |---|---|---|
+| `docs/engineer-quickstart.md` | Five-minute version: rationale, the design idea, the stack, how to add a data source | First hour |
 | `docs/architecture.md` (this file) | The shape of the system and why it is shaped that way | Day one |
 | `CONTRIBUTING.md` | The quality gates and the five rules that are not negotiable | Before your first commit |
 | `CLAUDE.md` | Dense reference: every node type, every registry, 25 "architectural gotchas" | When you touch a specific node or utility |
