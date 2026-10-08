@@ -1,7 +1,7 @@
 /**
  * Runner for OllamaNode — processes FileRecord / UnifiedRecord upstream records
- * through a local Ollama model. Uses non-streaming mode (stream: false) since
- * Run All does not display live token previews.
+ * through a local Ollama model. Uses stream: true and accumulates the tokens
+ * (see the note below on why stream: false is unsafe); Run All shows no live preview.
  *
  * Per-record errors are caught individually: one failed record does not abort
  * the rest of the batch. Partial results are written to the store after each

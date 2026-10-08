@@ -35,8 +35,8 @@ Both modes expose identical proxy endpoints and custom middleware — the single
 
 | Prefix | Target |
 |--------|--------|
-| `/llds-proxy/*` | `https://llds.ling-phil.ox.ac.uk/llds/*` |
-| `/gbif-proxy/*` | `https://api.gbif.org/*` (throttled + 429 backoff client-side in `gbif.ts`) |
+| `/llds-proxy/*` | `https://llds.ling-phil.ox.ac.uk/llds/*` (in `PROXY_TABLE` but unused by `src/` — LLDS search goes through `/llds-search`) |
+| `/gbif-proxy/*` | `https://api.gbif.org/*` (`gbif.ts` builds URLs + fetches; the 250 ms page throttle and 429 backoff live in `runGBIFNode.ts`) |
 | `/bnb-proxy/*` | `https://bnb.data.bl.uk/*` (British National Bibliography) |
 | `/mds-proxy/*` | `https://museumdata.uk/*` |
 | `/reconcile-proxy/*` | `https://wikidata.reconci.link/*` (307 redirect strips CORS — proxy required) |
@@ -125,8 +125,8 @@ src/
 ## Node Registry
 
 Sidebar groups follow **TaDiRAH 2.0** terminology (cross-referenced in `src/components/TADIRAHMapping.tsx`).
-Group labels are UI-only — **node `type` strings (e.g. `'gbifSearch'`) are serialised into `.nfcs.json`
-and must never be renamed.**
+Group labels are UI-only — **node `type` strings (e.g. `'gbifSearch'`) are serialised into saved workflow
+files (`workflow-YYYY-MM-DD.json`; `.nfcs.json` is the SaveSearch saved-search format) and must never be renamed.**
 
 ### Workflow Planning (Canvas primitives)
 | Key | Component | Notes |
@@ -138,8 +138,8 @@ and must never be renamed.**
 ### Discovering (TaDiRAH: Capture > Discovering)
 | Key | Component | CORS |
 |-----|-----------|------|
-| `gbifSearch` | `GBIFSearchNode` | `/gbif-proxy/v1/occurrence/search` (throttle + 429 backoff in `gbif.ts`). Max 300/req. |
-| `lldsSearch` | `LLDSSearchNode` | `/llds-proxy/rest/items?expand=metadata`. No server search — filter client-side. 15s timeout → localStorage cache fallback. Thin config over `BackboneSearchNode` (useCache footer toggle). |
+| `gbifSearch` | `GBIFSearchNode` | `/gbif-proxy/v1/occurrence/search` (throttle + 429 backoff in `runGBIFNode.ts`). Max 300/req. |
+| `lldsSearch` | `LLDSSearchNode` | `/llds-search?q=&rpp=` — Puppeteer middleware solves the site's Anubis proof-of-work, `llds.ts` scrapes the DSpace discover page. 15s timeout → localStorage cache fallback (`lldsCache.ts`). Thin config over `BackboneSearchNode` (useCache footer toggle). |
 | `ariadneSearch` | `ARIADNESearchNode` | Direct CORS fetch. Pan-European archaeology portal (40+ institutions, 23 countries). Filters: Resource type, Getty AAT subject, Native subject, Country, Data type, Period, Contributor (set Contributor = "Archaeology Data Service" for ADS records). |
 | `hsdsSearch` | `HSDSSearchNode` | Vite proxy, no Cloudflare. Heritage Science Data Service — UK heritage aggregator (Historic England, HES, Cadw). Same filter set as ARIADNESearch plus Country = England/Scotland/Wales/Northern Ireland. `hsds.*` namespace. |
 | `bodleianSearch` | `BodleianSearchNode` | `/bodleian-proxy/*`. Oxford Bodleian Digital Collections. Filters: date range, language, origins, completeness, musical notation. `bodleian.manifest` → feeds ImageView (IIIF mode). Fixture mode supported. Thin config over `BackboneSearchNode` (single-select sort, fq* filters). |
@@ -155,7 +155,7 @@ and must never be renamed.**
 | `localFolderSource` | `LocalFolderSourceNode` | File System Access API — no runner (user gesture required). `dirHandle` in `useRef`, lost on refresh. 5 typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`; partitioned store keys `${id}:pdf` etc. |
 | `localFileSource` | `LocalFileSourceNode` | No runner. `fileMode: 'csv' \| 'xml' \| 'image'`. CSV → column-keyed rows; xml/image → single `FileRecord` via `extractFileContent`. |
 | `sampleDataSource` | `SampleDataSourceNode` | **Has a runner — participates in Run All** (unlike LocalFolderSource/LocalFileSource). Loads pre-packaged collection files from `public/fixtures/` via a curated manifest (`public/fixtures/collections-manifest.json`). Pick a named package, tick individual files; fetches + extracts as `FileRecord[]`. Same 5 typed output handles as LocalFolderSource. Ideal for offline demos and saved example workflows. |
-| `urlFetch` | `URLFetchNode` | `#0c4a6e`. Adds `fetchedContent`, `fetchedHtml` (cleaned body), `fetchStatus`, `fetchedAt`. AbortController cancel. URL field picker scans namespace sub-objects; runner resolves dot-notation field paths (e.g. `adsLibrary.downloadUrl`). |
+| `urlFetch` | `URLFetchNode` | `#0c4a6e`. Adds `fetchedContent`, `fetchedHtml` (cleaned body), `fetchStatus`, `fetchedAt`. AbortController cancel. URL field picker scans namespace sub-objects; runner resolves dot-notation field paths (e.g. `europeana.shownAt`). |
 | `frameSenseSource` | `FrameSenseSourceNode` | Reads a folder pre-processed by the FrameSense CLI; one record per detected shot (`framesense.*` namespace + `imageDataUrl`). No runner — pick folder manually, skipped by Run All. |
 
 ### Enriching (TaDiRAH: Enrichment)
@@ -235,21 +235,18 @@ placed anywhere in the chain. `notesStore` (`src/store/notesStore.ts`) keys note
 branches stay isolated and downstream nodes inherit a note only via the `_note`
 field the authoring node injects.
 
-Experimental nodes carry `alpha: true` in `SIDEBAR_ITEMS`. The group renders with an amber left-border
-and `⚗` icon in the sidebar. When `simpleMode` is active the entire group is hidden (not just its items).
-
 ## Guardrails (added Oct 2026 — see docs/engineering-review.md)
 
 - **Four gates, all in CI** (`.github/workflows/ci.yml`): `npm run lint` (0 errors; warnings are the backlog),
-  `npm run typecheck`, `npx vitest run`, `npx vite build`. Plus a gitleaks scan and a hard-failing grep for
-  `"apiKey": "sk-` in `public/` and `src/`.
+  `npm run typecheck`, `npx vitest run`, `npx vite build`. Plus a gitleaks scan (soft-fail) and hard-failing greps for
+  `sk-…` key patterns in `public/` and `src/`, `utm_campaign=` under `public/`, and any non-empty `"apiKey"` in `public/examples/`.
 - **`apiKey` is in `TRANSIENT_FIELDS`** — never serialised, and a Param node wired into an `apiKey` handle has
   its `value` blanked on save (`CREDENTIAL_HANDLES` in `workflowIO.ts`). `hydrateNodes` re-injects the build-time
   default for `KCL_API_KEY_NODES` and `europeanaSearch`. `examplesNoSecrets.test.ts` fails on ANY `apiKey` value in
   an example, on Europeana's `utm_campaign=<wskey>` tracking parameter anywhere under `public/` (the adapter strips
   it from item URLs — `cleanItemUrl` in `europeanaAdapter.ts`), and on any locally configured `VITE_*_API_KEY`
   value appearing in shipped data; CI greps `public/` and `src/` the same way.
-- **Unknown node types** in a loaded `.nfcs.json` are dropped with their edges (`partitionUnknownNodes`) and
+- **Unknown node types** in a loaded workflow file are dropped with their edges (`partitionUnknownNodes`) and
   reported through the top-bar `loadError` banner. Retire a node by removing it; never rename a type string.
 - **Runner contract is tested** (`runnerContract.test.ts`): never throw, terminal status, `clearNodeResults`
   before any validation early-return. Wrap new runners the way `runDeduplicateNode` does.
@@ -337,7 +334,7 @@ type NodeRunner = (
 2. `TransformOp` discriminated union — replace entire op on type change; never patch.
 3. `TableOutputNode` fingerprint `useRef` — prevents infinite loop; do not remove.
 4. `allFlatColumns` needs `isReconciledValue` check — else reconciled columns excluded.
-5. MDS capped at 200, ADS server hard-caps at 50 — both by design.
+5. MDS capped at 200 by design. (The ADS nodes and their 50-record cap were removed Oct 2026; ADS records arrive via ARIADNESearch.)
 6. `LocalFolderSourceNode` `dirHandle` in `useRef` — lost on page refresh.
 7. OllamaNode vision: never put base64 data URL in `{{content}}`; use `images:[]` and blank the content substitution.
 8. pdfjs worker must stay on CDN (`unpkg.com/pdfjs-dist@{version}/build/pdf.worker.min.mjs`) — local import breaks Vite.
@@ -358,3 +355,5 @@ type NodeRunner = (
 23. `runMergeByQIDNode.ts` `extractQIDInfo` must handle **array-valued** `*_reconciled` fields, not just a single `ReconciliationResult | null` — a field can carry multiple candidate reconciliations. Always normalise with `Array.isArray(raw) ? raw : [raw]` before scanning for a resolved/review QID.
 24. `TableOutputNode` column-resize drag handler: never re-read `resizingRef.current` more than once per `mousemove` after the initial null-check — cache it to a local (`const r = resizingRef.current; if (!r) return`) before use. Re-reading it later in the same handler risks a null dereference if the ref is cleared mid-drag (e.g. `mouseup` racing `mousemove`).
 25. GBIF domain fields (`scientificName`, `kingdom`, …, `datasetName`, `eventDate`, `basisOfRecord`, `institutionCode`) exist ONLY under `record.gbif.*` — the adapter stores the raw occurrence wholesale and writes no flat copies. Readers use dot-notation (`gbif.scientificName`); `authoritiesForField` matches namespaced fields by last segment so typed authorities still apply. `periodStart/End/Name` are intentionally top-level — they are cross-service temporal fields written by three adapters, NOT domain-specific.
+26. Run All (`runWorkflow.ts`) marks a node *failed* only when its runner throws. A runner that sets `status: 'error'` and returns (the contract) is counted as completed, so dependants still run against empty input. Backlog B13 in `docs/engineering-review.md`.
+27. `resolveProxyEdges` (`upstreamRecords.ts`) restores only the `proxy-out` (source) side of collapsed-group edges. A node inside a collapsed group fed from outside gets no dependency, records or param value during Run All; `resolveSavedEdges` (`workflowIO.ts`) handles both sides for save/load. Backlog B14.

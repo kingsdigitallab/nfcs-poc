@@ -39,8 +39,8 @@ Run them locally before pushing; a red gate on `main` blocks everyone.
 ## Rules that are not negotiable
 
 1. **Never rename a node `type` string** (`'gbifSearch'`, `'kclNode'`, …), a node
-   data key, or a handle id. They are serialised into every saved `.nfcs.json`
-   workflow. Retire a node by removing it (unknown types are dropped on load with a
+   data key, or a handle id. They are serialised into every saved workflow
+   file. Retire a node by removing it (unknown types are dropped on load with a
    warning); never rename one.
 2. **Never put record arrays in node data.** Records live in `src/store/resultsStore.ts`;
    node data carries only `resultsVersion`. See "Results Store — CRITICAL" in `CLAUDE.md`.

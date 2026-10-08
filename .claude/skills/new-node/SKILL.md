@@ -10,7 +10,7 @@ Before starting, ask the user for (if not already provided):
 - **Has API key?** (should the node be in `KCL_API_KEY_NODES` for auto-population)
 - **Group** for the sidebar (Workflow Planning / Discovering / Gathering / Enriching / Analysing / Visualising / Disseminating / Experimental — see `SIDEBAR_GROUPS` in `src/config/sidebarItems.ts`)
 
-Once confirmed, execute all steps. Run `tsc --noEmit` after each file is created.
+Once confirmed, execute all steps. Run `npm run typecheck` after each file is created.
 
 ---
 
@@ -99,7 +99,7 @@ import { <Name>Node } from './<Name>Node'
 <typeKey>: withToolbar(<Name>Node),
 ```
 
-## Step 5 — App.tsx: data type union
+## Step 5 — `src/types/AppNode.ts`: data type union
 
 Find the `AppNode` type union (the block of `| Node<…Data>` lines) and add:
 
@@ -109,9 +109,9 @@ Find the `AppNode` type union (the block of `| Node<…Data>` lines) and add:
 
 Import the data type at the top where other node data types are imported.
 
-## Step 6 — App.tsx: NODE_DEFAULTS factory
+## Step 6 — `src/config/nodeDefaults.ts`: NODE_DEFAULTS factory
 
-Add to the `NODE_DEFAULTS` object with sensible defaults. All fields from the node's data interface must be present:
+Add to the `NODE_DEFAULTS` object (it is checked with `satisfies Partial<Record<NodeTypeId, …>>`, so a typo'd key is a compile error) with sensible defaults. All fields from the node's data interface must be present:
 
 ```typescript
 <typeKey>: pos => ({
@@ -125,17 +125,17 @@ Add to the `NODE_DEFAULTS` object with sensible defaults. All fields from the no
 
 Naming convention for `newId` prefix: short lowercase abbreviation of the node name.
 
-## Step 7 — App.tsx: SIDEBAR_ITEMS
+## Step 7 — `src/config/sidebarItems.ts`: SIDEBAR_ITEMS
 
-Add to `SIDEBAR_ITEMS` in the appropriate group:
+Add to `SIDEBAR_ITEMS` in the appropriate group (the `color` must match the node's `NODE_IDENTITY` entry in `src/styles/theme.ts`):
 
 ```typescript
 { type: '<typeKey>', label: '<Display Name>', sub: '<one-line description>', color: '<header hex>', group: '<Group>' },
 ```
 
-Add `hidden: true` if the node should not appear in the sidebar by default (e.g. legacy/Ollama nodes).
+Add the type to `ADVANCED_TYPES` (same file) if it should be hidden in Simple mode, and set `alpha: true` for Experimental-group nodes.
 
-## Step 8 — App.tsx: KCL_API_KEY_NODES (conditional)
+## Step 8 — `src/config/nodeDefaults.ts`: KCL_API_KEY_NODES (conditional)
 
 If the node has an `apiKey` field, add `'<typeKey>'` to the `KCL_API_KEY_NODES` Set so new instances are pre-populated from any existing key on the canvas.
 
@@ -154,34 +154,37 @@ If the node accepts wired `query` / `limit` / `apiKey` handles from a Param node
 
 If it should appear as a suggestion downstream of data sources or process nodes, add it to `OUTPUT_SUITE` or `ENRICH_SUITE` as appropriate.
 
-## Step 10 — Proxy: Vite dev (`vite.config.ts`)
+## Step 10 — Proxy: `PROXY_TABLE` in `server/proxies.mjs`
 
 *Skip if no proxy needed.*
 
-Add to the `proxy` object inside `server`:
+Add one entry to `PROXY_TABLE`. That file is imported by both `vite.config.ts` (dev) and
+`server/index.mjs` (Docker), so the route is live in both without any further wiring:
 
-```typescript
-'/<prefix>-proxy': {
-  target: 'https://upstream.example.com',
-  changeOrigin: true,
+```javascript
+{
+  prefix:  '/<prefix>-proxy',
+  target:  'https://upstream.example.com',
   rewrite: path => path.replace(/^\/<prefix>-proxy/, ''),
-  // Add headers if needed for User-Agent spoofing or Referer:
-  headers: {
-    'User-Agent': '…',
-    'Referer': 'https://upstream.example.com/',
-  },
+  // Optional — only if the upstream needs a browser-like User-Agent or Referer:
+  headers: { 'User-Agent': DESKTOP_UA, 'Referer': 'https://upstream.example.com/' },
 },
 ```
 
-## Step 11 — Proxy: production (nothing extra to do)
+Do **not** add routes to `vite.config.ts` directly. Custom middleware (anything beyond a
+reverse proxy) is exported from `proxies.mjs` and registered in both consumers — see
+`urlProxyMiddleware`. Then add the row to the proxy table in `CLAUDE.md`.
 
-*Skip if no proxy needed.*
+## Step 11 — Theme, describer, QuickStart
 
-**No separate deploy branch exists.** `server/proxies.mjs` is imported by both `vite.config.ts` and `server/index.mjs`, so a `PROXY_TABLE` entry is live in dev and in Docker. Custom middleware is exported from `proxies.mjs` and registered in both consumers (see `urlProxyMiddleware`).
+- Colour: add the type to `NODE_IDENTITY` in `src/styles/theme.ts` (same hex as the sidebar entry).
+- Lineage: add a one-line describer in `src/utils/lineageDescribers.ts` (else the generic fallback is used).
+- If QuickStart should be able to plan the node: the type lists in `src/nodes/QuickStartNode.tsx`.
+
 ## Step 12 — TypeScript check
 
 ```
-npx tsc --noEmit 2>&1 | head -30
+npm run typecheck
 ```
 
 Fix all errors before committing.
@@ -196,11 +199,12 @@ One conventional commit on a feature branch; run `npm run lint`, `npm run typech
 - [ ] `src/utils/nodeRunners.ts` (runner registered)
 - [ ] `src/nodes/<Name>Node.tsx` (component)
 - [ ] `src/nodes/index.ts` (component registered)
-- [ ] `src/App.tsx` — AppNode union
-- [ ] `src/App.tsx` — NODE_DEFAULTS
-- [ ] `src/App.tsx` — SIDEBAR_ITEMS
-- [ ] `src/App.tsx` — KCL_API_KEY_NODES (if apiKey)
+- [ ] `src/types/AppNode.ts` — AppNode union
+- [ ] `src/config/nodeDefaults.ts` — NODE_DEFAULTS (+ KCL_API_KEY_NODES if apiKey)
+- [ ] `src/config/sidebarItems.ts` — SIDEBAR_ITEMS (+ ADVANCED_TYPES if hidden in Simple mode)
+- [ ] `src/styles/theme.ts` — NODE_IDENTITY colour
+- [ ] `src/utils/lineageDescribers.ts` — describer
 - [ ] `src/components/ConnectionSuggestions.tsx`
 - [ ] `PROXY_TABLE` entry in `server/proxies.mjs` (if proxy) — serves dev and Docker
-- [ ] `tsc --noEmit` clean
+- [ ] `npm run typecheck` clean
 - [ ] Committed on a feature branch with all four gates green

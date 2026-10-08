@@ -4,8 +4,9 @@
  * Wikidata Reconciliation Service API (W3C Reconciliation API v0.2).
  * https://wikidata.reconci.link/en/api
  *
- * The Wikidata reconciliation endpoint supports CORS, so browser fetch works
- * directly without a Vite proxy.  For other authorities (VIAF, GeoNames) only
+ * Requests go through the same-origin `/reconcile-proxy` route (`RECONCILE_API`),
+ * served by both the Vite dev server and the Express production server, because the
+ * endpoint's 307 redirect strips CORS headers.  For other authorities (VIAF, GeoNames) only
  * the config stubs are defined here; the actual fetch is not implemented yet.
  *
  * Batch strategy: unique field values are collected across all records and sent
