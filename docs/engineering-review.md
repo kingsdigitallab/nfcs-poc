@@ -247,6 +247,15 @@ Each item is a branch of its own with the four gates green at every commit.
 - **B12 — Node 22.** CI and the Docker image run Node 20; `pdfjs-dist@5.7` declares
   `engines.node >=22.13` (a warning only — it is bundled for the browser). Move both to
   Node 22 LTS at the next convenient point.
+- **B13 — Runner error status does not stop dependants in Run All.** `runWorkflow` marks a
+  node failed only when its runner *throws*; a runner that sets `status: 'error'` and returns
+  (the contract) is counted as completed, so downstream nodes run against empty input instead
+  of being skipped. Decide whether `failed` should be derived from the terminal status, and
+  pin it in `runWorkflow.test.ts`.
+- **B14 — Collapsed-group inbound edges are not resolved during Run All.** `resolveProxyEdges`
+  (`upstreamRecords.ts`) restores only the `proxy-out` side; a node inside a collapsed group
+  fed from outside gets no dependency, no records and no param value. `resolveSavedEdges`
+  (`workflowIO.ts`) already handles both sides — unify them and add a test.
 
 ## 7. Environment variables
 

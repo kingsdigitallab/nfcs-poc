@@ -8,6 +8,8 @@ Drag nodes onto a canvas, connect them in any order, and run federated searches 
 
 ![National Federated Compute Services PoC — multi-source workflow canvas](images/NFCS_poc.png)
 
+> **For engineers:** start with [`docs/architecture.md`](docs/architecture.md) (how the system fits together, with diagrams), then [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 ---
 
 ## Video tutorials
