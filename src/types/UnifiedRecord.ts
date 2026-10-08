@@ -77,7 +77,7 @@ export interface UnifiedRecord {
   _pid?: string
   /** True when this record was served from a local cache due to service unavailability */
   _cached?: boolean
-  /** Human-authored gold-standard annotation, stored in notesStore (localStorage). */
+  /** Human-authored gold-standard annotation. Lives in notesStore (in memory) and is persisted only via the workflow file's `notes` key. */
   _note?: string
 
   // ── Cross-service normalised fields ─────────────────────────────────────────
