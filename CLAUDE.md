@@ -53,6 +53,8 @@ Both modes expose identical proxy endpoints and custom middleware — the single
 | `/url-proxy?url=<encoded>[&js=true][&wait=<strategy>]` | Custom middleware; simple path uses Node `fetch()`; `js=true` uses Puppeteer singleton (auto-reset on `disconnected`). Wait strategies: `networkidle2` (default), `networkidle0`, `domcontentloaded`, `load`. **Policy** (`server/urlProxyPolicy.mjs`, unit-tested): http(s) only, private/loopback/link-local/metadata addresses always denied (also after DNS resolution and on every redirect hop), host must match `URL_PROXY_ALLOWLIST` (comma-separated suffixes) — unset = any public host in dev, deny-all when `NODE_ENV=production`. 10 MB body cap. |
 | `/llds-search?q=<query>&rpp=<n>` | Custom middleware; Puppeteer solves Anubis JS proof-of-work challenge. |
 
+NHM (`nhmSearch`) is deliberately direct-fetch with no proxy row: the portal's `robots.txt` disallows `/api/` and it asks callers for an identifying User-Agent, which only a server could set. A one-off Node-side capture (Oct 2026) was not challenged by Cloudflare, but do not add a proxy row without clearing both points with the partner (see `docs/handoff-nhm-search-node.md`, open questions).
+
 ## KCL Inference Configuration (`src/utils/kclConfig.ts`)
 
 **Model-dependent content truncation:**
@@ -139,6 +141,7 @@ files (`workflow-YYYY-MM-DD.json`; `.nfcs.json` is the SaveSearch saved-search f
 | Key | Component | CORS |
 |-----|-----------|------|
 | `gbifSearch` | `GBIFSearchNode` | `/gbif-proxy/v1/occurrence/search` (throttle + 429 backoff in `runGBIFNode.ts`). Max 300/req. |
+| `nhmSearch` | `NHMSearchNode` | Direct CORS fetch (POST JSON to `https://data.nhm.ac.uk/api/3/action/datastore_search`); **no proxy — `robots.txt` disallows `/api/`**. Thin config over `BackboneSearchNode` (resource body row Specimens/Index lots, single-select sort, five single-value filters). Runner is bespoke (limit/offset + `result.total`, GBIF-shaped) over `runnerHelpers.ts`; first page doubles as the total probe; 250 ms page pacing; Fetch all capped at 2,000 (`_capped`/`_total` amber convention). `nhm.*` wholesale + derived `nhm.thumbnail`/`nhm.iiifInfo` (no Presentation manifest — ImageView IIIF mode not yet wired for bare info.json; follow-up). `_pid` = `occurrenceID`. Fixtures: `stonehenge` (142), `wordsworth`. |
 | `lldsSearch` | `LLDSSearchNode` | `/llds-search?q=&rpp=` — Puppeteer middleware solves the site's Anubis proof-of-work, `llds.ts` scrapes the DSpace discover page. 15s timeout → localStorage cache fallback (`lldsCache.ts`). Thin config over `BackboneSearchNode` (useCache footer toggle). |
 | `ariadneSearch` | `ARIADNESearchNode` | Direct CORS fetch. Pan-European archaeology portal (40+ institutions, 23 countries). Filters: Resource type, Getty AAT subject, Native subject, Country, Data type, Period, Contributor (set Contributor = "Archaeology Data Service" for ADS records). |
 | `hsdsSearch` | `HSDSSearchNode` | Vite proxy, no Cloudflare. Heritage Science Data Service — UK heritage aggregator (Historic England, HES, Cadw). Same filter set as ARIADNESearch plus Country = England/Scotland/Wales/Northern Ireland. `hsds.*` namespace. |
