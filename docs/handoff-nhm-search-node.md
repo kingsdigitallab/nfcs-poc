@@ -90,7 +90,7 @@ Model on `gbifAdapter.ts` (same vocabulary). Store the raw record wholesale unde
 | `_sourceUrl` | `https://data.nhm.ac.uk/object/${occurrenceID}` | |
 | `_pid` | `occurrenceID` | this is the CETAF stable identifier; set it, unlike the GBIF adapter |
 | `_citation` | service "Natural History Museum Data Portal", publisher "The Trustees of the Natural History Museum, London", service URL `https://data.nhm.ac.uk/` | stamp via the same helper the other runners use |
-| `title` | `scientificName` → `determinationFiledAs` → `catalogNumber` → `NHM specimen ${_id}` | mineralogy and some palaeontology have no `scientificName`, so the `catalogNumber` step matters |
+| `title` | `scientificName` → filed-as determination name → `catalogNumber` → `NHM specimen ${_id}` | mineralogy and some palaeontology have no `scientificName`, so the `catalogNumber` step matters. **Corrected at implementation:** `determinationFiledAs` is a parallel `Yes`/`No` flag array, not a name; the name lives in `determinationNames[i]` where `determinationFiledAs[i] === "Yes"` |
 | `description` | `locality`, with `habitat` appended if present | GBIF flattens this; it is one reason to have the node |
 | `creator` | `recordedBy` (array passes through) | |
 | `date` | compose `year-month-day` with zero-padding, truncating to whatever parts exist (`1882`, `1882-06`, `1882-06-18`) | no `eventDate` field; TimelineView accepts bare years |
@@ -208,3 +208,5 @@ Feature branch `feat/nhm-search-node`. One conventional commit per logical step:
 - The user-agent limitation is recorded in the NHM source profile; `RecordCitation` has no free-text field, so the citation carries the licence facts only.
 - GBIF node has no `datasetKey` filter yet (acceptance step 3 of this brief) — follow-up, one-field change.
 - `docs/federation-baseline.md` carries worked scorecards for GBIF and Europeana only; an NHM scorecard is a follow-up.
+- **Spec correction (found in review):** the title fallback originally named `determinationFiledAs`, which is a `Yes`/`No` flag array parallel to `determinationNames`; three Wordsworth ZOO records were titled "Yes" before the fix. The adapter now uses the name flagged `Yes`.
+- Review also found the runner's early-stop on a short page could silently truncate if the portal caps pages below 100; the loop now advances by the served batch size, stops only on an empty page or the bound, and flags a short-served result amber (`_capped`).

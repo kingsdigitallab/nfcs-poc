@@ -155,6 +155,41 @@ describe('runNHMNode', () => {
     expect(String(l2.statusMessage)).toContain('HTTP 503')
   })
 
+  it('a service that caps pages below 100 still yields every record (offset advances by batch size)', async () => {
+    const all: NHMRecord[] = Array.from({ length: 142 }, (_, i) => ({ _id: i + 1, occurrenceID: `occ-${i + 1}` }))
+    const bodies: Body[] = []
+    vi.stubGlobal('fetch', vi.fn(async (_u: unknown, init?: RequestInit) => {
+      const body = JSON.parse(String(init?.body)) as Body
+      bodies.push(body)
+      const records = all.slice(body.offset, body.offset + Math.min(body.limit, 50))   // server cap 50
+      return new Response(JSON.stringify({ success: true, result: { total: 142, records } }), { status: 200 })
+    }))
+    const { last } = await run({ ...baseData, fetchAll: true })
+    expect(bodies.map(b => b.offset)).toEqual([0, 50, 100])
+    const ids = (getNodeResults('n1') ?? []).map(r => r.id)
+    expect(ids).toHaveLength(142)
+    expect(new Set(ids).size).toBe(142)
+    expect(last).toMatchObject({ status: 'success', count: 142, _capped: false })
+  })
+
+  it('a service that stops returning records short of its own total reports an amber cap, not a clean success', async () => {
+    let calls = 0
+    vi.stubGlobal('fetch', vi.fn(async (_u: unknown, init?: RequestInit) => {
+      const body = JSON.parse(String(init?.body)) as Body
+      calls++
+      const records: NHMRecord[] = body.offset === 0
+        ? Array.from({ length: body.limit }, (_, i) => ({ _id: i + 1, occurrenceID: `occ-${i + 1}` }))
+        : []
+      return new Response(JSON.stringify({ success: true, result: { total: 142, records } }), { status: 200 })
+    }))
+    const { last } = await run({ ...baseData, fetchAll: true })
+    expect(calls).toBe(2)
+    expect((getNodeResults('n1') ?? []).length).toBe(100)
+    expect(last).toMatchObject({ status: 'success', _capped: true, _total: 142 })
+    expect(String(last.statusMessage)).toMatch(/⚠/)
+    expect(String(last.statusMessage)).toContain('100 of 142')
+  })
+
   it('empty result set finishes 0 of 0', async () => {
     vi.stubGlobal('fetch', mockNHM(0).fetchMock)
     const { last } = await run(baseData)

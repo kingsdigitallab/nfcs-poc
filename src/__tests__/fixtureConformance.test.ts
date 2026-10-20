@@ -194,6 +194,13 @@ describe('fixture conformance (public/fixtures/*.json)', () => {
     expect(violations).toEqual([])
   })
 
+  it('manifest.json lists every committed nhmSearch fixture (the 📦 reference card reads it)', () => {
+    const manifest = JSON.parse(readFileSync(join(FIXTURES_DIR, 'manifest.json'), 'utf8')) as Record<string, string[]>
+    const slugs = files.filter(f => f.startsWith('nhmSearch-')).map(f => f.replace(/^nhmSearch-/, '').replace(/\.json$/, '')).sort()
+    expect(slugs.length).toBeGreaterThan(0)
+    expect([...(manifest.nhmSearch ?? [])].sort()).toEqual(slugs)
+  })
+
   it('nhmSearch-stonehenge.json is the mixed-collection set the handoff describes', () => {
     const recs = loadRecords('nhmSearch-stonehenge.json') ?? []
     expect(recs.length).toBeGreaterThanOrEqual(100)   // 142 at capture time; allow growth/shrink

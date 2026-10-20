@@ -26,6 +26,7 @@ const PREFLIGHT_SERVICES = [
   { nodeType: 'smgSearch',       label: 'SMG',       extra: {} },
   { nodeType: 'vaSearch',        label: 'V&A',       extra: {} },
   { nodeType: 'hsdsSearch',      label: 'HSDS',      extra: {} },
+  { nodeType: 'nhmSearch',       label: 'NHM',       extra: {} },
 ] as const
 
 const DEFAULT_TERMS = 'roman coin\nstonehenge\nwordsworth'

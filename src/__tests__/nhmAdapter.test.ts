@@ -46,9 +46,15 @@ describe('nhmTitle fallback chain', () => {
     expect(nhmTitle(BOT)).toBe('Plantago lanceolata L.')
     expect(nhmTitle(MIN)).toBe('Sarsen stone')
   })
-  it('falls back to determinationFiledAs, then catalogNumber, then the _id', () => {
-    expect(nhmTitle({ ...MIN_NO_NAME, determinationFiledAs: 'Dolerite' })).toBe('Dolerite')
-    expect(nhmTitle({ ...MIN_NO_NAME, determinationFiledAs: ['Dolerite', 'Spotted'] })).toBe('Dolerite')
+  it('falls back to the filed-as determination name, then catalogNumber, then the _id', () => {
+    // determinationFiledAs is a Yes/No flag parallel to determinationNames (verified in the
+    // live payload) — the title must come from the name flagged "Yes", never from the flag.
+    expect(nhmTitle({ ...MIN_NO_NAME, determinationNames: ['Spinax sp', 'Centroscymnus'], determinationFiledAs: ['No', 'Yes'] }))
+      .toBe('Centroscymnus')
+    expect(nhmTitle({ ...MIN_NO_NAME, determinationNames: ['Dolerite'], determinationFiledAs: ['Yes'] })).toBe('Dolerite')
+    expect(nhmTitle({ ...MIN_NO_NAME, determinationNames: ['Dolerite', 'Spotted'] })).toBe('Dolerite')
+    expect(nhmTitle({ ...MIN_NO_NAME, determinationNames: 'Dolerite' })).toBe('Dolerite')
+    expect(nhmTitle({ ...MIN_NO_NAME, determinationFiledAs: ['Yes'] })).toBe('BM.1920,124')   // flag alone is NOT a title
     expect(nhmTitle(MIN_NO_NAME)).toBe('BM.1920,124')
     expect(nhmTitle({ _id: 7 })).toBe('NHM specimen 7')
   })

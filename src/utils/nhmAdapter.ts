@@ -31,6 +31,9 @@ export interface NHMRecord {
   _id?: number | string
   occurrenceID?: string
   scientificName?: string
+  /** Parallel arrays: determinationNames[i] is a name, determinationFiledAs[i] is a "Yes"/"No"
+   *  flag saying whether that determination is the one the specimen is filed under. */
+  determinationNames?: string | string[]
   determinationFiledAs?: string | string[]
   catalogNumber?: string
   locality?: string
@@ -79,10 +82,17 @@ export function composeNHMDate(year?: unknown, month?: unknown, day?: unknown): 
   return `${y}-${m.padStart(2, '0')}-${d.padStart(2, '0')}`
 }
 
-/** scientificName → determinationFiledAs → catalogNumber → "NHM specimen {_id}". */
+/** The determination name flagged "Yes" in determinationFiledAs, else the first name, else ''. */
+function filedAsName(rec: NHMRecord): string {
+  const names = Array.isArray(rec.determinationNames) ? rec.determinationNames : rec.determinationNames ? [rec.determinationNames] : []
+  const flags = Array.isArray(rec.determinationFiledAs) ? rec.determinationFiledAs : rec.determinationFiledAs ? [rec.determinationFiledAs] : []
+  const yes = flags.findIndex(f => str(f).toLowerCase() === 'yes')
+  return str(yes >= 0 ? names[yes] : names[0])
+}
+
+/** scientificName → filed-as determination name → catalogNumber → "NHM specimen {_id}". */
 export function nhmTitle(rec: NHMRecord): string {
-  const filedAs = Array.isArray(rec.determinationFiledAs) ? rec.determinationFiledAs[0] : rec.determinationFiledAs
-  return str(rec.scientificName) || str(filedAs) || str(rec.catalogNumber) || `NHM specimen ${rec._id ?? '(unknown)'}`
+  return str(rec.scientificName) || filedAsName(rec) || str(rec.catalogNumber) || `NHM specimen ${rec._id ?? '(unknown)'}`
 }
 
 /** associatedMedia as an array — accepts the array, a JSON-encoded string, or nothing. */

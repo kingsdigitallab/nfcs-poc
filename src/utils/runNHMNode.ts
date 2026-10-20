@@ -141,19 +141,25 @@ export async function runNHMNode(
       const batch = adaptNHMResult(result)
       all.push(...batch)
       page++
-      if (batch.length < pageSize || all.length >= Math.min(target, total)) break
-      offset += pageSize
+      // Stop on an empty page or once the bound is reached. A page SHORTER than
+      // requested is not a stop signal (the portal's max page size is an open
+      // question) — keep going, advancing by what was actually served so no
+      // records are skipped.
+      if (batch.length === 0 || all.length >= Math.min(target, total)) break
+      offset += batch.length
       await sleep(PAGE_DELAY_MS)
     }
 
     const cited = addCitation(all as Record<string, unknown>[], citationBase)
     finishRunnerSuccess(nodeId, cited, total, updateNodeData)
 
-    const withImages = all.filter(hasMedia).length
-    const imgSuffix  = withImages > 0 ? ` · ${withImages.toLocaleString()} with images` : ''
-    const capped     = fetchAll && total > all.length
+    const withImages  = all.filter(hasMedia).length
+    const imgSuffix   = withImages > 0 ? ` · ${withImages.toLocaleString()} with images` : ''
+    const shortServed = all.length < Math.min(target, total)   // portal stopped before our bound
+    const capped      = shortServed || (fetchAll && total > all.length)
+    const reason      = shortServed ? 'service returned fewer than requested' : 'ALL limit'
     updateNodeData(nodeId, capped
-      ? { statusMessage: `⚠ capped at ${all.length.toLocaleString()} of ${total.toLocaleString()} (ALL limit)${imgSuffix}`, _capped: true, _total: total }
+      ? { statusMessage: `⚠ capped at ${all.length.toLocaleString()} of ${total.toLocaleString()} (${reason})${imgSuffix}`, _capped: true, _total: total }
       : { statusMessage: `✓ ${all.length.toLocaleString()} of ${total.toLocaleString()}${imgSuffix}`, _capped: false, _total: total })
   } catch (err) {
     finishRunnerError(nodeId, err, updateNodeData, '[NHM]')

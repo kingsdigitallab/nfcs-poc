@@ -17,6 +17,7 @@ const SERVICE_LABELS: Record<string, string> = {
   hsdsSearch:      'HSDS',
   lldsSearch:      'LLDS',
   mdsSearch:       'MDS',
+  nhmSearch:       'NHM',
   smgSearch:       'SMG',
   vaSearch:        'V&A',
 }
