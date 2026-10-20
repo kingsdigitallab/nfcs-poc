@@ -1,0 +1,602 @@
+[
+  {
+    "id": "nhm:f1b6a2dc-3dcf-4fc0-b289-9f7a5e61010e",
+    "_source": "nhm",
+    "_sourceId": "f1b6a2dc-3dcf-4fc0-b289-9f7a5e61010e",
+    "_sourceUrl": "https://data.nhm.ac.uk/object/f1b6a2dc-3dcf-4fc0-b289-9f7a5e61010e",
+    "_pid": "f1b6a2dc-3dcf-4fc0-b289-9f7a5e61010e",
+    "title": "Yes",
+    "description": "Strait of Magellan",
+    "creator": [
+      "W Wordsworth"
+    ],
+    "subject": [
+      "ZOO",
+      "LS Fish"
+    ],
+    "country": "Chile",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "nhm": {
+      "_id": "3111445",
+      "institutionCode": "NHMUK",
+      "otherCatalogNumbers": "NHMUK:ecatalogue:3111445",
+      "basisOfRecord": "PreservedSpecimen",
+      "collectionCode": "ZOO",
+      "occurrenceStatus": "present",
+      "locality": "Strait of Magellan",
+      "country": "Chile",
+      "waterBody": "Southeast Pacific Ocean, Southeast Pacific Ocean",
+      "continent": "South America",
+      "higherGeography": "South America; Chile",
+      "catalogNumber": "1884.2.6.4",
+      "occurrenceID": "f1b6a2dc-3dcf-4fc0-b289-9f7a5e61010e",
+      "recordedBy": [
+        "W Wordsworth"
+      ],
+      "individualCount": "1",
+      "created": "2003-06-20T13:24:46+00:00",
+      "barcode": "013168899",
+      "subDepartment": "LS Fish",
+      "registrationCode": "RE03",
+      "donorName": "Wharton",
+      "determinationFiledAs": [
+        "Yes"
+      ],
+      "associatedMedia": [
+        {
+          "_id": "3002933",
+          "created": "2003-08-20T10:48:34+00:00",
+          "modified": "2024-05-19T10:30:48+00:00",
+          "assetID": "a3f82fef-ec8d-4555-ab53-46646157910a",
+          "identifier": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a",
+          "title": "Zoology Accessions Register: Reptiles & Fishes: 1878 - 1892: page 152",
+          "category": "Register",
+          "type": "StillImage",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "The Trustees of the Natural History Museum, London",
+          "PixelXDimension": "2748",
+          "PixelYDimension": "2284",
+          "format": "image/jpeg"
+        }
+      ],
+      "associatedMediaCount": 1,
+      "gbifID": "1056269531",
+      "gbifIssue": [
+        "MODIFIED_DATE_INVALID",
+        "TAXON_MATCH_NONE",
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH",
+        "MULTIMEDIA_DATE_INVALID"
+      ],
+      "modified": "2021-02-01T11:18:38+00:00",
+      "thumbnail": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a/thumbnail",
+      "iiifInfo": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a/info.json"
+    },
+    "_citation": {
+      "service": "Natural History Museum Data Portal",
+      "serviceUrl": "https://data.nhm.ac.uk/",
+      "publisher": "The Trustees of the Natural History Museum, London",
+      "licence": "CC0 (specimen metadata); per-image licence and rightsHolder in nhm.associatedMedia",
+      "query": "resource:specimens, q:wordsworth",
+      "accessDate": "2026-10-20T16:53:17.245Z",
+      "recordId": "nhm:f1b6a2dc-3dcf-4fc0-b289-9f7a5e61010e",
+      "title": "Yes",
+      "url": "https://data.nhm.ac.uk/object/f1b6a2dc-3dcf-4fc0-b289-9f7a5e61010e",
+      "pid": "f1b6a2dc-3dcf-4fc0-b289-9f7a5e61010e",
+      "creator": [
+        "W Wordsworth"
+      ]
+    }
+  },
+  {
+    "id": "nhm:08a19859-99e7-46a4-aed3-733c8d3d6d85",
+    "_source": "nhm",
+    "_sourceId": "08a19859-99e7-46a4-aed3-733c8d3d6d85",
+    "_sourceUrl": "https://data.nhm.ac.uk/object/08a19859-99e7-46a4-aed3-733c8d3d6d85",
+    "_pid": "08a19859-99e7-46a4-aed3-733c8d3d6d85",
+    "title": "Centroscymnus macracanthus Regan, 1906",
+    "description": "Strait of Magellan",
+    "creator": [
+      "W Wordsworth"
+    ],
+    "subject": [
+      "ZOO",
+      "LS Fish",
+      "Dalatiidae"
+    ],
+    "country": "Chile",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "nhm": {
+      "_id": "3111447",
+      "institutionCode": "NHMUK",
+      "otherCatalogNumbers": "NHMUK:ecatalogue:3111447",
+      "basisOfRecord": "PreservedSpecimen",
+      "collectionCode": "ZOO",
+      "occurrenceStatus": "present",
+      "locality": "Strait of Magellan",
+      "country": "Chile",
+      "waterBody": "Southeast Pacific Ocean, Southeast Pacific Ocean",
+      "continent": "South America",
+      "higherGeography": "South America; Chile",
+      "catalogNumber": "1884.2.6.7",
+      "occurrenceID": "08a19859-99e7-46a4-aed3-733c8d3d6d85",
+      "recordedBy": [
+        "W Wordsworth"
+      ],
+      "individualCount": "1",
+      "typeStatus": "HOLOTYPE",
+      "scientificName": "Centroscymnus macracanthus Regan, 1906",
+      "scientificNameAuthorship": "Regan, 1906",
+      "class": "Elasmobranchii",
+      "order": "Squaliformes",
+      "family": "Dalatiidae",
+      "genus": "Centroscymnus",
+      "specificEpithet": "macracanthus",
+      "higherClassification": "Elasmobranchii; Squaliformes; Dalatiidae",
+      "created": "2003-06-20T13:24:47+00:00",
+      "barcode": "013168901",
+      "preservative": "IMS 70%",
+      "subDepartment": "LS Fish",
+      "registrationCode": "RE03",
+      "kindOfObject": "Spirit",
+      "donorName": "Wharton",
+      "determinationNames": [
+        "Centroscymnus macracanthus Regan, 1906",
+        "Spinax sp"
+      ],
+      "determinationFiledAs": [
+        "Yes",
+        "No"
+      ],
+      "associatedMedia": [
+        {
+          "_id": "1838722",
+          "created": "2016-12-05T12:36:05+00:00",
+          "modified": "2024-05-19T09:32:41+00:00",
+          "assetID": "3db922a2-1501-4566-a589-52efb8d4dead",
+          "identifier": "https://data.nhm.ac.uk/media/3db922a2-1501-4566-a589-52efb8d4dead",
+          "title": "BMNH 1884.2.6.7, HOLOTYPE, Centroscymnus maracanthus",
+          "creator": "Harry Taylor",
+          "category": "Specimen",
+          "type": "StillImage",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "The Trustees of the Natural History Museum, London",
+          "PixelXDimension": "3484",
+          "PixelYDimension": "5037",
+          "format": "image/tiff"
+        },
+        {
+          "_id": "3002933",
+          "created": "2003-08-20T10:48:34+00:00",
+          "modified": "2024-05-19T10:30:48+00:00",
+          "assetID": "a3f82fef-ec8d-4555-ab53-46646157910a",
+          "identifier": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a",
+          "title": "Zoology Accessions Register: Reptiles & Fishes: 1878 - 1892: page 152",
+          "category": "Register",
+          "type": "StillImage",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "The Trustees of the Natural History Museum, London",
+          "PixelXDimension": "2748",
+          "PixelYDimension": "2284",
+          "format": "image/jpeg"
+        }
+      ],
+      "associatedMediaCount": 2,
+      "gbifID": "1056186433",
+      "gbifIssue": [
+        "MODIFIED_DATE_INVALID",
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH",
+        "MULTIMEDIA_DATE_INVALID"
+      ],
+      "modified": "2021-02-01T11:01:42+00:00",
+      "thumbnail": "https://data.nhm.ac.uk/media/3db922a2-1501-4566-a589-52efb8d4dead/thumbnail",
+      "iiifInfo": "https://data.nhm.ac.uk/media/3db922a2-1501-4566-a589-52efb8d4dead/info.json"
+    },
+    "_citation": {
+      "service": "Natural History Museum Data Portal",
+      "serviceUrl": "https://data.nhm.ac.uk/",
+      "publisher": "The Trustees of the Natural History Museum, London",
+      "licence": "CC0 (specimen metadata); per-image licence and rightsHolder in nhm.associatedMedia",
+      "query": "resource:specimens, q:wordsworth",
+      "accessDate": "2026-10-20T16:53:17.245Z",
+      "recordId": "nhm:08a19859-99e7-46a4-aed3-733c8d3d6d85",
+      "title": "Centroscymnus macracanthus Regan, 1906",
+      "url": "https://data.nhm.ac.uk/object/08a19859-99e7-46a4-aed3-733c8d3d6d85",
+      "pid": "08a19859-99e7-46a4-aed3-733c8d3d6d85",
+      "creator": [
+        "W Wordsworth"
+      ]
+    }
+  },
+  {
+    "id": "nhm:8369c693-175d-4b74-8621-2f17e8d13280",
+    "_source": "nhm",
+    "_sourceId": "8369c693-175d-4b74-8621-2f17e8d13280",
+    "_sourceUrl": "https://data.nhm.ac.uk/object/8369c693-175d-4b74-8621-2f17e8d13280",
+    "_pid": "8369c693-175d-4b74-8621-2f17e8d13280",
+    "title": "Cottoperca trigloides (Forster in Bloch & Schneider, 1801)",
+    "description": "Strait of Magellan",
+    "creator": [
+      "W Wordsworth"
+    ],
+    "subject": [
+      "ZOO",
+      "LS Fish",
+      "Bovichtidae"
+    ],
+    "country": "Chile",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "nhm": {
+      "_id": "3111442",
+      "institutionCode": "NHMUK",
+      "otherCatalogNumbers": "NHMUK:ecatalogue:3111442",
+      "basisOfRecord": "PreservedSpecimen",
+      "collectionCode": "ZOO",
+      "occurrenceStatus": "present",
+      "locality": "Strait of Magellan",
+      "country": "Chile",
+      "waterBody": "Southeast Pacific Ocean, Southeast Pacific Ocean",
+      "continent": "South America",
+      "higherGeography": "South America; Chile",
+      "catalogNumber": "1884.2.6.1",
+      "occurrenceID": "8369c693-175d-4b74-8621-2f17e8d13280",
+      "recordedBy": [
+        "W Wordsworth"
+      ],
+      "individualCount": "1",
+      "identifiedBy": "Dr A. V. Balushkin",
+      "scientificName": "Cottoperca trigloides (Forster in Bloch & Schneider, 1801)",
+      "scientificNameAuthorship": "(Forster in Bloch & Schneider, 1801)",
+      "class": "Actinopterygii",
+      "order": "Perciformes",
+      "family": "Bovichtidae",
+      "genus": "Cottoperca",
+      "specificEpithet": "trigloides",
+      "higherClassification": "Actinopterygii; Perciformes; Notothenioidei; Bovichtidae",
+      "created": "2003-06-20T13:24:45+00:00",
+      "barcode": "013168900",
+      "preservative": "IMS 70%",
+      "subDepartment": "LS Fish",
+      "registrationCode": "RE03",
+      "kindOfObject": "Spirit",
+      "donorName": "Wharton",
+      "determinationNames": [
+        "Cottoperca trigloides (Forster in Bloch & Schneider, 1801)",
+        "Cottoperca macrophthalma Regan, 1913",
+        "Aphritis gobio Günther, 1861",
+        "sp"
+      ],
+      "determinationFiledAs": [
+        "Yes",
+        "No",
+        "No",
+        "No"
+      ],
+      "associatedMedia": [
+        {
+          "_id": "3002933",
+          "created": "2003-08-20T10:48:34+00:00",
+          "modified": "2024-05-19T10:30:48+00:00",
+          "assetID": "a3f82fef-ec8d-4555-ab53-46646157910a",
+          "identifier": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a",
+          "title": "Zoology Accessions Register: Reptiles & Fishes: 1878 - 1892: page 152",
+          "category": "Register",
+          "type": "StillImage",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "The Trustees of the Natural History Museum, London",
+          "PixelXDimension": "2748",
+          "PixelYDimension": "2284",
+          "format": "image/jpeg"
+        }
+      ],
+      "associatedMediaCount": 1,
+      "gbifID": "1056697263",
+      "gbifIssue": [
+        "MODIFIED_DATE_INVALID",
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH",
+        "MULTIMEDIA_DATE_INVALID"
+      ],
+      "modified": "2021-02-01T10:44:24+00:00",
+      "thumbnail": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a/thumbnail",
+      "iiifInfo": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a/info.json"
+    },
+    "_citation": {
+      "service": "Natural History Museum Data Portal",
+      "serviceUrl": "https://data.nhm.ac.uk/",
+      "publisher": "The Trustees of the Natural History Museum, London",
+      "licence": "CC0 (specimen metadata); per-image licence and rightsHolder in nhm.associatedMedia",
+      "query": "resource:specimens, q:wordsworth",
+      "accessDate": "2026-10-20T16:53:17.245Z",
+      "recordId": "nhm:8369c693-175d-4b74-8621-2f17e8d13280",
+      "title": "Cottoperca trigloides (Forster in Bloch & Schneider, 1801)",
+      "url": "https://data.nhm.ac.uk/object/8369c693-175d-4b74-8621-2f17e8d13280",
+      "pid": "8369c693-175d-4b74-8621-2f17e8d13280",
+      "creator": [
+        "W Wordsworth"
+      ]
+    }
+  },
+  {
+    "id": "nhm:c61add52-251c-4280-8d28-7a859e66cd96",
+    "_source": "nhm",
+    "_sourceId": "c61add52-251c-4280-8d28-7a859e66cd96",
+    "_sourceUrl": "https://data.nhm.ac.uk/object/c61add52-251c-4280-8d28-7a859e66cd96",
+    "_pid": "c61add52-251c-4280-8d28-7a859e66cd96",
+    "title": "sp",
+    "description": "Strait of Magellan",
+    "creator": [
+      "W Wordsworth"
+    ],
+    "subject": [
+      "ZOO",
+      "LS Fish",
+      "Triglidae"
+    ],
+    "country": "Chile",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "nhm": {
+      "_id": "3111443",
+      "institutionCode": "NHMUK",
+      "otherCatalogNumbers": "NHMUK:ecatalogue:3111443",
+      "basisOfRecord": "PreservedSpecimen",
+      "collectionCode": "ZOO",
+      "occurrenceStatus": "present",
+      "locality": "Strait of Magellan",
+      "country": "Chile",
+      "waterBody": "Southeast Pacific Ocean, Southeast Pacific Ocean",
+      "continent": "South America",
+      "higherGeography": "South America; Chile",
+      "catalogNumber": "1884.2.6.2",
+      "occurrenceID": "c61add52-251c-4280-8d28-7a859e66cd96",
+      "recordedBy": [
+        "W Wordsworth"
+      ],
+      "individualCount": "1",
+      "scientificName": "sp",
+      "family": "Triglidae",
+      "specificEpithet": "sp",
+      "higherClassification": "Triglidae",
+      "created": "2003-06-20T13:24:46+00:00",
+      "barcode": "013168896",
+      "subDepartment": "LS Fish",
+      "registrationCode": "RE03",
+      "donorName": "Wharton",
+      "determinationNames": [
+        "sp"
+      ],
+      "determinationFiledAs": [
+        "Yes"
+      ],
+      "associatedMedia": [
+        {
+          "_id": "3002933",
+          "created": "2003-08-20T10:48:34+00:00",
+          "modified": "2024-05-19T10:30:48+00:00",
+          "assetID": "a3f82fef-ec8d-4555-ab53-46646157910a",
+          "identifier": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a",
+          "title": "Zoology Accessions Register: Reptiles & Fishes: 1878 - 1892: page 152",
+          "category": "Register",
+          "type": "StillImage",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "The Trustees of the Natural History Museum, London",
+          "PixelXDimension": "2748",
+          "PixelYDimension": "2284",
+          "format": "image/jpeg"
+        }
+      ],
+      "associatedMediaCount": 1,
+      "gbifID": "1056544176",
+      "gbifIssue": [
+        "MODIFIED_DATE_INVALID",
+        "TAXON_MATCH_HIGHERRANK",
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH",
+        "MULTIMEDIA_DATE_INVALID"
+      ],
+      "modified": "2021-02-01T10:09:16+00:00",
+      "thumbnail": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a/thumbnail",
+      "iiifInfo": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a/info.json"
+    },
+    "_citation": {
+      "service": "Natural History Museum Data Portal",
+      "serviceUrl": "https://data.nhm.ac.uk/",
+      "publisher": "The Trustees of the Natural History Museum, London",
+      "licence": "CC0 (specimen metadata); per-image licence and rightsHolder in nhm.associatedMedia",
+      "query": "resource:specimens, q:wordsworth",
+      "accessDate": "2026-10-20T16:53:17.245Z",
+      "recordId": "nhm:c61add52-251c-4280-8d28-7a859e66cd96",
+      "title": "sp",
+      "url": "https://data.nhm.ac.uk/object/c61add52-251c-4280-8d28-7a859e66cd96",
+      "pid": "c61add52-251c-4280-8d28-7a859e66cd96",
+      "creator": [
+        "W Wordsworth"
+      ]
+    }
+  },
+  {
+    "id": "nhm:d7561c6c-a25d-40cc-9fc8-c4bd850fc9d7",
+    "_source": "nhm",
+    "_sourceId": "d7561c6c-a25d-40cc-9fc8-c4bd850fc9d7",
+    "_sourceUrl": "https://data.nhm.ac.uk/object/d7561c6c-a25d-40cc-9fc8-c4bd850fc9d7",
+    "_pid": "d7561c6c-a25d-40cc-9fc8-c4bd850fc9d7",
+    "title": "Yes",
+    "description": "Strait of Magellan",
+    "creator": [
+      "W Wordsworth"
+    ],
+    "subject": [
+      "ZOO",
+      "LS Fish"
+    ],
+    "country": "Chile",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "nhm": {
+      "_id": "3111446",
+      "institutionCode": "NHMUK",
+      "otherCatalogNumbers": "NHMUK:ecatalogue:3111446",
+      "basisOfRecord": "PreservedSpecimen",
+      "collectionCode": "ZOO",
+      "occurrenceStatus": "present",
+      "locality": "Strait of Magellan",
+      "country": "Chile",
+      "waterBody": "Southeast Pacific Ocean, Southeast Pacific Ocean",
+      "continent": "South America",
+      "higherGeography": "South America; Chile",
+      "catalogNumber": "1884.2.6.5-6",
+      "occurrenceID": "d7561c6c-a25d-40cc-9fc8-c4bd850fc9d7",
+      "recordedBy": [
+        "W Wordsworth"
+      ],
+      "individualCount": "2",
+      "created": "2003-06-20T13:24:46+00:00",
+      "barcode": "013168898",
+      "subDepartment": "LS Fish",
+      "registrationCode": "RE03",
+      "donorName": "Wharton",
+      "determinationFiledAs": [
+        "Yes"
+      ],
+      "associatedMedia": [
+        {
+          "_id": "3002933",
+          "created": "2003-08-20T10:48:34+00:00",
+          "modified": "2024-05-19T10:30:48+00:00",
+          "assetID": "a3f82fef-ec8d-4555-ab53-46646157910a",
+          "identifier": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a",
+          "title": "Zoology Accessions Register: Reptiles & Fishes: 1878 - 1892: page 152",
+          "category": "Register",
+          "type": "StillImage",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "The Trustees of the Natural History Museum, London",
+          "PixelXDimension": "2748",
+          "PixelYDimension": "2284",
+          "format": "image/jpeg"
+        }
+      ],
+      "associatedMediaCount": 1,
+      "gbifID": "1056832084",
+      "gbifIssue": [
+        "MODIFIED_DATE_INVALID",
+        "TAXON_MATCH_NONE",
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH",
+        "MULTIMEDIA_DATE_INVALID"
+      ],
+      "modified": "2021-02-01T09:35:35+00:00",
+      "thumbnail": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a/thumbnail",
+      "iiifInfo": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a/info.json"
+    },
+    "_citation": {
+      "service": "Natural History Museum Data Portal",
+      "serviceUrl": "https://data.nhm.ac.uk/",
+      "publisher": "The Trustees of the Natural History Museum, London",
+      "licence": "CC0 (specimen metadata); per-image licence and rightsHolder in nhm.associatedMedia",
+      "query": "resource:specimens, q:wordsworth",
+      "accessDate": "2026-10-20T16:53:17.245Z",
+      "recordId": "nhm:d7561c6c-a25d-40cc-9fc8-c4bd850fc9d7",
+      "title": "Yes",
+      "url": "https://data.nhm.ac.uk/object/d7561c6c-a25d-40cc-9fc8-c4bd850fc9d7",
+      "pid": "d7561c6c-a25d-40cc-9fc8-c4bd850fc9d7",
+      "creator": [
+        "W Wordsworth"
+      ]
+    }
+  },
+  {
+    "id": "nhm:a0900666-4319-492f-b976-6eb6c75f6545",
+    "_source": "nhm",
+    "_sourceId": "a0900666-4319-492f-b976-6eb6c75f6545",
+    "_sourceUrl": "https://data.nhm.ac.uk/object/a0900666-4319-492f-b976-6eb6c75f6545",
+    "_pid": "a0900666-4319-492f-b976-6eb6c75f6545",
+    "title": "Yes",
+    "description": "Strait of Magellan",
+    "creator": [
+      "W Wordsworth"
+    ],
+    "subject": [
+      "ZOO",
+      "LS Fish"
+    ],
+    "country": "Chile",
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "nhm": {
+      "_id": "3111444",
+      "institutionCode": "NHMUK",
+      "otherCatalogNumbers": "NHMUK:ecatalogue:3111444",
+      "basisOfRecord": "PreservedSpecimen",
+      "collectionCode": "ZOO",
+      "occurrenceStatus": "present",
+      "locality": "Strait of Magellan",
+      "country": "Chile",
+      "waterBody": "Southeast Pacific Ocean, Southeast Pacific Ocean",
+      "continent": "South America",
+      "higherGeography": "South America; Chile",
+      "catalogNumber": "1884.2.6.3",
+      "occurrenceID": "a0900666-4319-492f-b976-6eb6c75f6545",
+      "recordedBy": [
+        "W Wordsworth"
+      ],
+      "individualCount": "1",
+      "created": "2003-06-20T13:24:46+00:00",
+      "barcode": "013168897",
+      "subDepartment": "LS Fish",
+      "registrationCode": "RE03",
+      "donorName": "Wharton",
+      "determinationFiledAs": [
+        "Yes"
+      ],
+      "associatedMedia": [
+        {
+          "_id": "3002933",
+          "created": "2003-08-20T10:48:34+00:00",
+          "modified": "2024-05-19T10:30:48+00:00",
+          "assetID": "a3f82fef-ec8d-4555-ab53-46646157910a",
+          "identifier": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a",
+          "title": "Zoology Accessions Register: Reptiles & Fishes: 1878 - 1892: page 152",
+          "category": "Register",
+          "type": "StillImage",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "The Trustees of the Natural History Museum, London",
+          "PixelXDimension": "2748",
+          "PixelYDimension": "2284",
+          "format": "image/jpeg"
+        }
+      ],
+      "associatedMediaCount": 1,
+      "gbifID": "1056694393",
+      "gbifIssue": [
+        "MODIFIED_DATE_INVALID",
+        "TAXON_MATCH_NONE",
+        "INSTITUTION_MATCH_FUZZY",
+        "INSTITUTION_COLLECTION_MISMATCH",
+        "MULTIMEDIA_DATE_INVALID"
+      ],
+      "modified": "2021-02-01T09:35:13+00:00",
+      "thumbnail": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a/thumbnail",
+      "iiifInfo": "https://data.nhm.ac.uk/media/a3f82fef-ec8d-4555-ab53-46646157910a/info.json"
+    },
+    "_citation": {
+      "service": "Natural History Museum Data Portal",
+      "serviceUrl": "https://data.nhm.ac.uk/",
+      "publisher": "The Trustees of the Natural History Museum, London",
+      "licence": "CC0 (specimen metadata); per-image licence and rightsHolder in nhm.associatedMedia",
+      "query": "resource:specimens, q:wordsworth",
+      "accessDate": "2026-10-20T16:53:17.245Z",
+      "recordId": "nhm:a0900666-4319-492f-b976-6eb6c75f6545",
+      "title": "Yes",
+      "url": "https://data.nhm.ac.uk/object/a0900666-4319-492f-b976-6eb6c75f6545",
+      "pid": "a0900666-4319-492f-b976-6eb6c75f6545",
+      "creator": [
+        "W Wordsworth"
+      ]
+    }
+  }
+]

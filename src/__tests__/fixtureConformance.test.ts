@@ -34,7 +34,7 @@ const ALLOWED_TOP_LEVEL = new Set([
   'decimalLatitude', 'decimalLongitude',
   // service namespaces
   'gbif', 'llds', 'ads', 'adsLibrary', 'mds', 'europeana', 'ariadne',
-  'hsds', 'bodleian', 'smg', 'vam', 'sparql',
+  'hsds', 'bodleian', 'smg', 'vam', 'sparql', 'nhm',
   // enrichment namespaces
   'geocoding', 'smartGeo', 'framesense',
 ])
@@ -172,5 +172,33 @@ describe('fixture conformance (public/fixtures/*.json)', () => {
       .map(([f, ks]) => `${f}: ${[...ks].join(', ')}`)
       .join('\n')
     expect(unknownByFile.size, `keys surviving normalisation:\n${report}`).toBe(0)
+  })
+  it('nhmSearch fixtures: nhm: ids, _source, _pid, numeric-or-null coords, raw payload under nhm', () => {
+    const nhmFiles = files.filter(f => f.startsWith('nhmSearch-'))
+    expect(nhmFiles, 'expected committed nhmSearch-*.json fixtures').toContain('nhmSearch-stonehenge.json')
+    const violations: string[] = []
+    for (const file of nhmFiles) {
+      for (const [i, rec] of (loadRecords(file) ?? []).entries()) {
+        if (!String(rec.id).startsWith('nhm:'))        violations.push(`${file}[${i}] id ${String(rec.id)}`)
+        if (rec._source !== 'nhm')                     violations.push(`${file}[${i}] _source ${String(rec._source)}`)
+        if (typeof rec._pid !== 'string' || !rec._pid) violations.push(`${file}[${i}] _pid missing`)
+        if (!rec.nhm || typeof rec.nhm !== 'object')   violations.push(`${file}[${i}] nhm namespace missing`)
+        if (typeof (rec.nhm as AnyRecord | undefined)?.occurrenceID !== 'string')
+          violations.push(`${file}[${i}] nhm.occurrenceID missing`)
+        for (const k of ['decimalLatitude', 'decimalLongitude'])
+          if (k in rec && rec[k] !== null && typeof rec[k] !== 'number') violations.push(`${file}[${i}] ${k} not number|null`)
+        for (const flat of ['scientificName', 'catalogNumber', 'collectionCode', 'gbifID'])
+          if (flat in rec) violations.push(`${file}[${i}] flat ${flat} leaked to top level`)
+      }
+    }
+    expect(violations).toEqual([])
+  })
+
+  it('nhmSearch-stonehenge.json is the mixed-collection set the handoff describes', () => {
+    const recs = loadRecords('nhmSearch-stonehenge.json') ?? []
+    expect(recs.length).toBeGreaterThanOrEqual(100)   // 142 at capture time; allow growth/shrink
+    const codes = new Set(recs.map(r => (r.nhm as AnyRecord).collectionCode))
+    expect(codes.has('MIN')).toBe(true)
+    expect(codes.has('BOT')).toBe(true)
   })
 })
