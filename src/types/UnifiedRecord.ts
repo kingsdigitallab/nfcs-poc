@@ -176,6 +176,8 @@ export interface UnifiedRecord {
   hsds?: Record<string, unknown>
   /** Bodleian Digital Collections namespace (uuid, manifest, thumbnail, shelfmark, origins, …) */
   bodleian?: Record<string, unknown>
+  /** Natural History Museum Data Portal namespace (raw Darwin Core specimen record + derived thumbnail / iiifInfo) */
+  nhm?: Record<string, unknown>
   /** SmartGeocoder namespace (LLM-extracted place terms and resolution details) */
   smartGeo?: Record<string, unknown>
   /** FrameSense namespace (collection, video, clip, shot, frameFile, shotScale, VLM answers) */
