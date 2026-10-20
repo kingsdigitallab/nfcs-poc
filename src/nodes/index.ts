@@ -30,6 +30,7 @@ import { EuropeanaSearchNode }     from './EuropeanaSearchNode'
 import { FieldDistributionNode }   from './FieldDistributionNode'
 import { ARIADNESearchNode }       from './ARIADNESearchNode'
 import { HSDSSearchNode }          from './HSDSSearchNode'
+import { NHMSearchNode }           from './NHMSearchNode'
 import { BodleianSearchNode }      from './BodleianSearchNode'
 import { KCLNode }                  from './KCLNode'
 import { KCLFieldNode }             from './KCLFieldNode'
@@ -86,6 +87,7 @@ export const nodeTypes = {
   fieldDistribution: withToolbar(FieldDistributionNode),
   ariadneSearch:     withToolbar(ARIADNESearchNode),
   hsdsSearch:        withToolbar(HSDSSearchNode),
+  nhmSearch:         withToolbar(NHMSearchNode),
   bodleianSearch:    withToolbar(BodleianSearchNode),
   kclNode:           withToolbar(KCLNode),
   kclField:          withToolbar(KCLFieldNode),

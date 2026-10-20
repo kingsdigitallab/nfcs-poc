@@ -30,6 +30,7 @@ import type { CitationNodeData }           from '../nodes/CitationNode'
 import type { EuropeanaSearchNodeData }    from '../nodes/EuropeanaSearchNode'
 import type { ARIADNESearchNodeData }      from '../nodes/ARIADNESearchNode'
 import type { HSDSSearchNodeData }         from '../nodes/HSDSSearchNode'
+import type { NHMSearchNodeData }          from '../nodes/NHMSearchNode'
 import type { BodleianSearchNodeData }     from '../nodes/BodleianSearchNode'
 import type { FieldDistributionNodeData }  from '../nodes/FieldDistributionNode'
 import type { TimelineOutputNodeData }     from '../nodes/TimelineOutputNode'
@@ -88,6 +89,7 @@ export type AppNode =
   | Node<EuropeanaSearchNodeData>
   | Node<ARIADNESearchNodeData>
   | Node<HSDSSearchNodeData>
+  | Node<NHMSearchNodeData>
   | Node<BodleianSearchNodeData>
   | Node<FieldDistributionNodeData>
   | Node<TimelineOutputNodeData>

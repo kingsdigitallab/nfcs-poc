@@ -66,6 +66,7 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
   { type: 'gbifSearch',        label: 'GBIFSearch',            sub: 'GBIF occurrence search',                  color: '#2c5a74', group: 'Discovering' },
   { type: 'lldsSearch',        label: 'LLDSSearch',            sub: 'Lit. & Linguistic Data',                  color: '#7a4b25', group: 'Discovering' },
   { type: 'mdsSearch',         label: 'MDSSearch',             sub: 'Museum Data Services',                    color: '#34406e', group: 'Discovering' },
+  { type: 'nhmSearch',         label: 'NHMSearch',             sub: 'Natural History Museum specimens (incl. mineralogy)', color: '#5e6b2b', group: 'Discovering' },
   { type: 'smgSearch',         label: 'SMGSearch',             sub: 'Science Museum Group collections',        color: '#5b3560', group: 'Discovering' },
   { type: 'vaSearch',          label: 'VASearch',              sub: 'Victoria and Albert Museum collections',  color: '#7a2f3a', group: 'Discovering' },
   // ── Gathering (TaDiRAH: Capture > Gathering) ──────────────────────────────────

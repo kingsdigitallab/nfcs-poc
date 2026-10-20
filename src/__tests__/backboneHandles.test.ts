@@ -20,6 +20,7 @@ import { LLDS_CONFIG } from '../nodes/LLDSSearchNode'
 import { VA_CONFIG } from '../nodes/VASearchNode'
 import { SMG_CONFIG } from '../nodes/SMGSearchNode'
 import { BODLEIAN_CONFIG } from '../nodes/BodleianSearchNode'
+import { NHM_CONFIG } from '../nodes/NHMSearchNode'
 
 describe('backbone handle contract', () => {
   it('wirable-row offsets are byte-identical to the pre-shell components', () => {
@@ -127,5 +128,24 @@ describe('HSDS config (post-generalisation parity)', () => {
     expect(HSDS_CONFIG.sort?.options.map(o => o.value)).toEqual(['_score', 'title', 'issued', 'modified'])
     expect(HSDS_CONFIG.fetchAll).toBe(true)
     expect(HSDS_CONFIG.nodeType).toBe('hsdsSearch')
+  })
+})
+
+describe('NHM config (new node — pins its serialised surface)', () => {
+  it('writes exactly the agreed filter keys, in order', () => {
+    expect(NHM_CONFIG.nodeType).toBe('nhmSearch')
+    expect(serialisedFilterKeys(NHM_CONFIG)).toEqual([
+      'collectionCode', 'country', 'year', 'typeStatus', 'basisOfRecord',
+    ])
+  })
+  it('resource row, single-select relevance sort, capped fetch-all, amber cap status', () => {
+    expect(NHM_CONFIG.queryDataKey ?? 'inlineQuery').toBe('inlineQuery')
+    expect(NHM_CONFIG.extraBodyRow?.key).toBe('resource')
+    expect(NHM_CONFIG.extraBodyRow?.options.map(o => o.value)).toEqual(['specimens', 'indexlots'])
+    expect(NHM_CONFIG.sort?.singleSelect).toBe(true)
+    expect(NHM_CONFIG.sort?.defaultValue).toBe('relevance')
+    expect(NHM_CONFIG.sort?.options.map(o => o.value)).toEqual(['relevance', 'year asc', 'year desc'])
+    expect(NHM_CONFIG.fetchAll).toEqual({ label: 'Fetch all (up to 2,000)' })
+    expect(NHM_CONFIG.cappedAmberStatus).toBe(true)
   })
 })

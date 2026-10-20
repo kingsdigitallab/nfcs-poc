@@ -95,6 +95,7 @@ export const NODE_IDENTITY: Record<string, string> = {
   gbifSearch:       '#2c5a74', // blue-teal
   lldsSearch:       '#7a4b25', // umber
   mdsSearch:        '#34406e', // indigo
+  nhmSearch:        '#5e6b2b', // olive — natural history, distinct from GBIF blue-teal
   smgSearch:        '#5b3560', // aubergine
   vaSearch:         '#7a2f3a', // oxblood
   // Gathering

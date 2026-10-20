@@ -6,6 +6,7 @@ import type { NodeTypeId } from '../nodes'
 import type { LLDSSearchNodeData }        from '../nodes/LLDSSearchNode'
 import type { ARIADNESearchNodeData }      from '../nodes/ARIADNESearchNode'
 import type { HSDSSearchNodeData }         from '../nodes/HSDSSearchNode'
+import type { NHMSearchNodeData }          from '../nodes/NHMSearchNode'
 import type { SparqlSearchNodeData }       from '../nodes/SparqlSearchNode'
 import { buildSparqlQuery, DEFAULT_BUILDER_STATE } from '../utils/sparqlQueryBuilder'
 import type { BodleianSearchNodeData }     from '../nodes/BodleianSearchNode'
@@ -123,6 +124,16 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       useFixture: false,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     } satisfies HSDSSearchNodeData,
+  }),
+  nhmSearch: pos => ({
+    id: newId('nhm'), type: 'nhmSearch', position: pos,
+    data: {
+      inlineQuery: '', inlineLimit: '20', fetchAll: false,
+      resource: 'specimens', sort: 'relevance',
+      collectionCode: '', country: '', year: '', typeStatus: '', basisOfRecord: '',
+      useFixture: false,
+      status: 'idle', statusMessage: '', results: undefined, count: 0,
+    } satisfies NHMSearchNodeData,
   }),
   bodleianSearch: pos => ({
     id: newId('bodleian'), type: 'bodleianSearch', position: pos,
