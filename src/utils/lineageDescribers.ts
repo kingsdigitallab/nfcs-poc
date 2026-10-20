@@ -76,6 +76,11 @@ const ARIADNE_FACETS: Array<[string, string]> = [
   ['dataType', 'Data type'], ['temporal', 'Period'], ['contributor', 'Contributor'],
 ]
 
+const NHM_FACETS: Array<[string, string]> = [
+  ['collectionCode', 'Collection'], ['country', 'Country'], ['year', 'Year'],
+  ['typeStatus', 'Type status'], ['basisOfRecord', 'Basis of record'],
+]
+
 // ── registry ─────────────────────────────────────────────────────────────────
 
 export const lineageDescribers: Record<string, LineageDescriber> = {
@@ -85,6 +90,9 @@ export const lineageDescribers: Record<string, LineageDescriber> = {
   gbifSearch:      describeSearch('GBIF (biodiversity occurrences)', [
     ['inlineScientificName', 'Scientific name'], ['inlineCountry', 'Country'], ['inlineYear', 'Year'],
   ]),
+  nhmSearch: d => describeSearch(
+    `the NHM Data Portal (${d.resource === 'indexlots' ? 'index lots' : 'specimens'})`, NHM_FACETS,
+  )(d),
   europeanaSearch: describeSearch('Europeana (pan-European cultural heritage)', [
     ['typeFilter', 'Type'], ['reusability', 'Reusability'], ['mediaOnly', 'Media only'],
   ]),

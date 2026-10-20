@@ -63,6 +63,7 @@ const LAYOUT = {
 
 const ID_PREFIX: Record<string, string> = {
   gbifSearch:      'gbif',
+  nhmSearch:       'nhm',
   lldsSearch:      'llds',
   mdsSearch:       'mds',
   europeanaSearch: 'europeana',
@@ -77,7 +78,7 @@ const ID_PREFIX: Record<string, string> = {
 }
 
 const VALID_SEARCH_TYPES = new Set([
-  'gbifSearch', 'lldsSearch', 'mdsSearch',
+  'gbifSearch', 'nhmSearch', 'lldsSearch', 'mdsSearch',
   'europeanaSearch', 'ariadneSearch', 'hsdsSearch', 'bodleianSearch', 'smgSearch', 'vaSearch',
 ])
 
@@ -94,6 +95,12 @@ gbifSearch — Global Biodiversity Information Facility
   Coverage: Global; strong UK/European specimen collections from natural history museums
   Best for: Species distribution, historical specimens, ecological surveys, taxonomic research
   Params: inlineQ (text query), inlineScientificName (Latin species name), inlineCountry (ISO 2-letter code), inlineYear (e.g. "1850,1900" for range), inlineLimit
+
+nhmSearch — Natural History Museum (London) Data Portal
+  Domain: The NHM's own specimen catalogue — botany, zoology, entomology, palaeontology AND mineralogy/petrology (rocks, minerals, meteorites, building stone)
+  Coverage: ~6.3 million specimen records. The ONLY route to NHM mineralogy and petrology — GBIF holds none of it. Keeps locality text, catalogue numbers, sub-department and per-image rights that GBIF flattens. Specimens collected at UK heritage sites (e.g. Stonehenge sarsen and dolerite samples) are findable by place name
+  Best for: Geology, mineral and rock specimens, stone from UK heritage sites and monuments, institution-level specimen detail, comparing the home-institution record with GBIF's aggregator copy (join on nhm.gbifID = gbif.key)
+  Params: inlineQuery (free text across all fields), inlineLimit, collectionCode ("BOT"|"ZOO"|"BMNH(E)"|"PAL"|"MIN"), country (e.g. "United Kingdom"), year (exact year only), basisOfRecord ("PreservedSpecimen"|"FossilSpecimen"|"Occurrence" for minerals and rocks)
 
 lldsSearch — Literary and Linguistic Data Service (Oxford)
   Domain: Language data, linguistic resources, historical corpora, dictionaries
@@ -152,7 +159,7 @@ vaSearch — Victoria and Albert Museum
 
 AVAILABLE OUTPUT NODES:
 - tableOutput — paginated sortable table; always include one
-- mapOutput — geographic map; only include when results are expected to have geographic coordinates (gbifSearch, ariadneSearch, hsdsSearch have coordinates)
+- mapOutput — geographic map; only include when results are expected to have geographic coordinates (gbifSearch, nhmSearch, ariadneSearch, hsdsSearch have coordinates)
 
 REQUIRED JSON SCHEMA — output exactly this structure:
 {
@@ -160,7 +167,7 @@ REQUIRED JSON SCHEMA — output exactly this structure:
   "summary": "<2-3 sentences on what this workflow retrieves and why these sources>",
   "searchNodes": [
     {
-      "type": "<one of the eight search node types above>",
+      "type": "<one of the ten search node types above>",
       "params": { "<paramKey>": "<value>" },
       "comment": { "title": "<service short name>", "body": "<1-2 sentences: why this source for this question>" }
     }
@@ -182,6 +189,7 @@ RULES:
 - Set temporal for ariadneSearch and hsdsSearch when a period is clear (e.g. "roman", "medieval", "bronze age")
 - Prefer hsdsSearch over ariadneSearch for questions specifically about UK built heritage, listed buildings, scheduled monuments, or Historic Environment Records; use both for broader UK archaeology
 - For gbifSearch: prefer inlineScientificName for species-level questions, inlineQ for broader biodiversity queries
+- For questions about geology, minerals, rocks, meteorites or building stone use nhmSearch (GBIF has no NHM mineralogy); for UK natural-history questions use gbifSearch and nhmSearch together so the aggregator and home-institution views can be compared
 - When a question involves multiple distinct terms that work better searched separately than combined (e.g. "Iron Age hillforts in England" → two ariadneSearch nodes with inlineQuery "hillforts" and "England" separately rather than "English hillforts"), output 2 or 3 searchNodes of the same type with different params. Never exceed 3 nodes of any single type. Each must appear in at least one edge.
 - Every searchNode must appear in at least one edge; every outputNode must appear in at least one edge
 - Do not invent param keys not listed above`
@@ -281,6 +289,13 @@ function buildSearchData(spec: SearchNodeSpec): Record<string, unknown> {
       ariadneSubject: '', derivedSubject: '', nativeSubject: '',
       country: '', dataType: '', temporal: '', sort: '_score', order: 'desc',
       contributor: '',
+      status: 'idle', statusMessage: '', results: undefined, count: 0,
+    },
+    nhmSearch: {
+      inlineQuery: '', inlineLimit: '20', fetchAll: false,
+      resource: 'specimens', sort: 'relevance',
+      collectionCode: '', country: '', year: '', typeStatus: '', basisOfRecord: '',
+      useFixture: false,
       status: 'idle', statusMessage: '', results: undefined, count: 0,
     },
     mdsSearch: {

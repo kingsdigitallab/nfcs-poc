@@ -33,6 +33,22 @@ describe('lineageDescribers', () => {
     expect(s).toContain('300 of 5120')
   })
 
+  it('nhmSearch: resource in the service label, facets, capped totals', () => {
+    const s = describeNode(mk('nhmSearch', {
+      inlineQuery: 'stonehenge', resource: 'specimens', collectionCode: 'MIN', year: '1920', count: 103,
+    }))
+    expect(s).toContain('NHM Data Portal (specimens)')
+    expect(s).toContain('"stonehenge"')
+    expect(s).toContain('Collection=MIN')
+    expect(s).toContain('Year=1920')
+    expect(s).toContain('103 results')
+    expect(s).not.toContain('Resource=')
+
+    const t = describeNode(mk('nhmSearch', { inlineQuery: 'x', resource: 'indexlots', count: 2000, _capped: true, _total: 2500 }))
+    expect(t).toContain('(index lots)')
+    expect(t).toContain('2000 of 2500')
+  })
+
   it('filterTransform: ops, combinator, inputCount/outputCount', () => {
     const s = describeNode(mk('filterTransform', {
       filterOps: [
