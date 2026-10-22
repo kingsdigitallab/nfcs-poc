@@ -13,12 +13,12 @@ npm ci
 npm run dev          # http://localhost:5174
 ```
 
-Node 20+. Copy `.env.example` to `.env` if you need a KCL or Europeana key locally.
+Node 24 LTS, 24.22.1 or later (see `.nvmrc`; Node 20 is EOL and unpatched). Copy `.env.example` to `.env` if you need a KCL or Europeana key locally.
 
 ## The four gates
 
 Every pull request must pass all four. CI (`.github/workflows/ci.yml`) runs them on
-Node 20 and additionally scans for committed secrets.
+Node 24 and additionally scans for committed secrets.
 
 ```bash
 npm run lint         # ESLint — 0 errors (warnings are the tracked backlog)
