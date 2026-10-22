@@ -1,5 +1,8 @@
 # ── Stage 1: build React app ──────────────────────────────────────────────────
-FROM node:20-slim AS builder
+# Node 20 is EOL and gets no fix for the Oct 2026 security release (Brotli RCE,
+# TLS/DNS). Stay on Debian *bookworm*: the Chromium apt package list below uses
+# pre-t64 names that a trixie-based `24-slim` would break.
+FROM node:24-bookworm-slim AS builder
 
 # Inject API key at build time — never stored in source control
 ARG VITE_KCL_API_KEY
@@ -19,7 +22,7 @@ COPY . .
 RUN npm run build
 
 # ── Stage 2: runtime ──────────────────────────────────────────────────────────
-FROM node:20-slim AS runtime
+FROM node:24-bookworm-slim AS runtime
 
 # Install system Chromium so Puppeteer doesn't download its own Chrome.
 # This keeps the image smaller and avoids download failures in air-gapped envs.
