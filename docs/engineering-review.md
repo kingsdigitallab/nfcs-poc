@@ -244,9 +244,17 @@ Each item is a branch of its own with the four gates green at every commit.
 - **B10 — Dependency majors**, one per PR, in this order: vitest 5, vite 8 / plugin-react 6,
   TypeScript 7, pdfjs-dist 6, puppeteer 25, http-proxy-middleware 4, express 5.
 - **B11 — Fixture size.** Git LFS or move the LLDS collection files out of `public/`.
-- **B12 — Node 22.** CI and the Docker image run Node 20; `pdfjs-dist@5.7` declares
-  `engines.node >=22.13` (a warning only — it is bundled for the browser). Move both to
-  Node 22 LTS at the next convenient point.
+- **B12 — Node 24. DONE 22 Oct 2026** (`chore/node24-security`). CI and the Docker image
+  (`node:24-bookworm-slim`) moved off EOL Node 20 for the 21 Oct 2026 Node security release
+  (CVE-2026-111497 Brotli RCE plus TLS/DNS fixes; fixed in 22.23.4 / 24.22.1 / 26.12.1).
+  `package.json` `engines` pins the patched floor. The Brotli exposure is `fetchSimple` in
+  `server/proxies.mjs` (undici decodes `Content-Encoding: br` from the target host).
+- **B15 — Remaining `npm audit --omit=dev` highs after the Node patch.** `pdfjs-dist` 5→6
+  (GHSA-hq66-cqwq-w95j, arbitrary JS from a malicious PDF; re-check the CDN worker pin,
+  gotcha 8). `puppeteer` 24→25 (transitive `basic-ftp`/`get-uri`/`proxy-agent`/`extract-zip`;
+  re-verify the singleton `disconnected` reset, gotcha 11). `http-proxy-middleware` →
+  `micromatch`/`braces`: npm proposes a *downgrade* to 0.2.0 — ignore it and look for a 3.x
+  patch release. Folded into B10's dependency-major sequence.
 - **B13 — Runner error status does not stop dependants in Run All.** `runWorkflow` marks a
   node failed only when its runner *throws*; a runner that sets `status: 'error'` and returns
   (the contract) is counted as completed, so downstream nodes run against empty input instead
