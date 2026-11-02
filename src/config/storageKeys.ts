@@ -1,5 +1,8 @@
 /** Centralised localStorage key constants — prevents typo-bugs across the codebase. */
 export const STORAGE_KEYS = {
+  /** Current node-visibility tier: 'basic' | 'intermediate' | 'full' (see config/nodeTiers.ts). */
+  NODE_TIER:              'nfcs_node_tier',
+  /** LEGACY (pre-Nov-2026 Simple/Advanced toggle) — read once to migrate into NODE_TIER, never written. */
   SIMPLE_MODE:            'nfcs_simple_mode',
   AUTHOR_MODE:            'nfcs_author_mode',
   SNAP_GRID:              'nfcs_snap_grid',

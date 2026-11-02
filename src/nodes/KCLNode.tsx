@@ -361,7 +361,7 @@ export function KCLNode({ id, data }: NodeProps) {
 
       {/* Header */}
       <div style={styles.header}>
-        <span style={styles.headerTitle}>KCL Inference</span>
+        <span style={styles.headerTitle}>AI Inference</span>
         {isRunning && <span className="node-spinner" />}
         {!isRunning && isStale && (
           <span style={styles.staleBadge}>⟳ settings changed</span>
@@ -394,7 +394,7 @@ export function KCLNode({ id, data }: NodeProps) {
             background: isApiKeyConnected ? '#eff6ff' : apiKey ? '#f0fdf4' : '#fef2f2',
             userSelect: 'none',
           }}>
-            {isApiKeyConnected ? '(from Param)' : apiKey ? '🔒 Configured' : '⚠ Not set'}
+            {isApiKeyConnected ? '(from Search Parameter)' : apiKey ? '🔒 Configured' : '⚠ Not set'}
           </span>
         </div>
 

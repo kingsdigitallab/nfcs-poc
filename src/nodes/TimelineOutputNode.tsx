@@ -372,7 +372,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
 
       {/* ── Header ── */}
       <div style={styles.header}>
-        <span style={styles.title}>Timeline View</span>
+        <span style={styles.title}>Timeline</span>
         <div style={styles.headerRight}>
           <button
             style={{

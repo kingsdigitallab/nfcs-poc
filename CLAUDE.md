@@ -99,8 +99,10 @@ src/
 │   └── useUpstreamRecords.ts    # merges records from all data-handle edges
 ├── config/
 │   ├── storageKeys.ts           # STORAGE_KEYS — all localStorage key constants
-│   ├── sidebarItems.ts          # SIDEBAR_ITEMS, SIDEBAR_GROUPS, DEFAULT_COLLAPSED_GROUPS,
-│   │                            # ADVANCED_TYPES — single source of truth for the sidebar
+│   ├── sidebarItems.ts          # SIDEBAR_ITEMS (every item has a required `tier`), SIDEBAR_GROUPS,
+│   │                            # DEFAULT_COLLAPSED_GROUPS, visibleSidebarItems(tier), isTypeInTier —
+│   │                            # single source of truth for the palette AND for display labels
+│   ├── nodeTiers.ts             # NodeTier ('basic'|'intermediate'|'full'), tierIncludes, resolveStoredTier (legacy migration)
 │   └── nodeDefaults.ts          # NODE_DEFAULTS factory record, KCL_API_KEY_NODES, findSharedApiKey
 ├── styles/
 │   └── appStyles.ts             # React.CSSProperties constants for App.tsx layout
@@ -135,7 +137,7 @@ files (`workflow-YYYY-MM-DD.json`; `.nfcs.json` is the SaveSearch saved-search f
 |-----|-----------|-------|
 | `quickStart` | `QuickStartNode` | AI workflow planner — describe a research question in plain English, KCL (arc:nexus) proposes search nodes + comments + SourceProfile/TableOutput/MapOutput; "Instantiate workflow" places them all. Requires KCL API key. |
 | `comment` | `CommentNode` | No handles. `NodeResizer`. Factory sets `style: {width:220,height:120}`. |
-| `param` | `ParamNode` | Text or Integer value; connects to search handles. |
+| `param` | `ParamNode` | Display name **Search Parameter** (palette + default header). Text or Integer value; connects to search handles. |
 
 ### Discovering (TaDiRAH: Capture > Discovering)
 | Key | Component | CORS |
@@ -164,8 +166,8 @@ files (`workflow-YYYY-MM-DD.json`; `.nfcs.json` is the SaveSearch saved-search f
 ### Enriching (TaDiRAH: Enrichment)
 | Key | Component | Header |
 |-----|-----------|--------|
-| `kclNode` | `KCLNode` | `#881337`. Per-record KCL inference. Vision-capable. Model-dependent truncation (`getContentMaxChars`). |
-| `kclField` | `KCLFieldNode` | `#881337`. Single-field KCL inference. Per-record (live token preview, stream:true, partial results) or aggregate (per-value truncation). Prompt recipe bar. |
+| `kclNode` | `KCLNode` | `#881337`. Display name **AI Inference**. Per-record KCL inference. Vision-capable. Model-dependent truncation (`getContentMaxChars`). |
+| `kclField` | `KCLFieldNode` | `#881337`. Display name **AI Inference (by field)**. Single-field KCL inference. Per-record (live token preview, stream:true, partial results) or aggregate (per-value truncation). Prompt recipe bar. |
 | `geocoding` | `GeocodingNode` | `#065f46`. Getty TGN + Wikidata place enrichment. Scores candidates: Dice similarity × 0.5 + tier weight × 0.3 + corroboration × 0.2; auto-resolves above threshold, else inline review panel. Candidate lists cached 30 days in localStorage. Adds `decimalLatitude`/`decimalLongitude` + `geocoding.*`. |
 | `smartGeocoder` | `SmartGeocoderNode` | `#1e3a5f`. LLM-assisted place extraction (KCL arc:lite) from prose fields, then resolved via the same Getty TGN → Wikidata gazetteer as Geocoding. Adds `smartGeo.*`. Requires KCL API key. |
 | `reconciliation` | `ReconciliationNode` | `#7c3aed`. Uses `/reconcile-proxy/en/api`. Scores normalised 0–1. |
@@ -180,7 +182,7 @@ files (`workflow-YYYY-MM-DD.json`; `.nfcs.json` is the SaveSearch saved-search f
 ### Analysing (TaDiRAH: Analysis)
 | Key | Component | Notes |
 |-----|-----------|-------|
-| `filterTransform` | `FilterTransformNode` | `#4f46e5`. `TransformOp` is a discriminated union — **always replace full op on type change**. |
+| `filterTransform` | `FilterTransformNode` | `#4f46e5`. Display name **Filter and Transform**. `TransformOp` is a discriminated union — **always replace full op on type change**. |
 | `spatialFilter` | `SpatialFilterNode` | `#0891b2`. Leaflet draw → bbox filter. |
 | `smartFilter` | `SmartFilterNode` | `#0f4c81`. Natural-language → filter records via KCL inference. Requires KCL API key. |
 | `deduplicate` | `DeduplicateNode` | `#0f766e`. Removes duplicate records by a chosen field value. QuickStart auto-inserts this before a shared SourceProfile when a plan has 2–3 nodes of the same search type. |
@@ -192,8 +194,8 @@ files (`workflow-YYYY-MM-DD.json`; `.nfcs.json` is the SaveSearch saved-search f
 |-----|-----------|-------|
 | `tableOutput` | `TableOutputNode` | `#0d9488`. Pass-through output handle `id="results"` at `top:13`. Loop prevention via `useRef` fingerprint. Double-click expands. Toolbar: **show all columns** (default **on**) + **expand namespaces** (flattens one level of namespace objects into dot-notation cols). Page size selector, column sort, live text filter. `NodeResizer` (`selected` prop now destructured — see gotcha 24). |
 | `mapOutput` | `MapOutputNode` | Uses `decimalLatitude`/`decimalLongitude`. |
-| `timelineOutput` | `TimelineOutputNode` | ISO dates, bare years, BCE (`-1199`). |
-| `timelineView` | `TimelineViewNode` | `#1e293b`. Filter records by date range on an interactive timeline; distinct from TimelineOutput (which is display-only). |
+| `timelineView` | `TimelineViewNode` (in `TimelineOutputNode.tsx`) | `#1e293b`. Display name **Timeline** — the only timeline entry in the palette. Interactive year-resolution timeline; drag range handles to filter, pass-through output. ISO dates, bare years, BCE (`-1199`). |
+| `timelineOutput` | alias → same component + runner | Legacy type kept registered (and `hidden: true` in `SIDEBAR_ITEMS`) so old workflows load and minimap/lineage lookups resolve; not offered in the palette. It was never display-only despite older notes. |
 | `htmlPreview` | `HTMLPreviewNode` | `#0c4a6e`. Sandboxed iframe rendering `fetchedHtml`; click any element to capture its CSS selector and pass it back to HTMLSection/HTMLExtract. |
 | `quickView` | `QuickViewNode` | `#1e293b`. No runner. Field inspector: paginates CSV/TSV (50 rows/page), truncates plain text at 50k chars. Redirects image data URLs to ImageViewNode. |
 | `imageView` | `ImageViewNode` | `#1c3144`. No runner. `NodeResizer`. Two modes: **Images** (field picker for upstream records OR `imageDirectUrl` for a public URL — direct URL overrides field, suppresses record nav) and **IIIF** (v2/v3 manifest, zoom-tiered IIIF Image API requests, info.json for dimensions). Info panel: IIIF manifest metadata + image info; Images: EXIF parsed inline from first 64 KB of JPEG data URLs. |
@@ -205,19 +207,44 @@ files (`workflow-YYYY-MM-DD.json`; `.nfcs.json` is the SaveSearch saved-search f
 | `citation` | `CitationNode` | `#78350f`. Paginated bibliography from `_citation` metadata stamped by source runners. Copy all / download `.txt`. |
 | `export` | `ExportNode` | `#b45309`. CSV/JSON/GeoJSON. `flattenRecord` expands `*_reconciled` to `_qid/_label/_confidence/_status` cols. |
 | `jsonOutput` | `JSONOutputNode` | Double-click expands. |
-| `kclOutput` | `KCLOutputNode` | `#3b0764`. Card display of `kclResponse` values with per-card copy buttons. |
+| `kclOutput` | `KCLOutputNode` | `#3b0764`. Display name **AI Inference Output**. Card display of `kclResponse` values with per-card copy buttons. |
 | `ollamaOutput` | `OllamaOutputNode` | `#0f172a`. Reads `ollamaResponse`. No pass-through. |
 | `saveSearch` | `SaveSearchNode` | Save records + metadata to `.nfcs.json`. |
 | `loadSavedSearch` | `LoadSavedSearchNode` | Replay a `.nfcs.json` saved search; shows provenance metadata and per-source record counts. |
 
-### Experimental (alpha — hidden in Simple mode, collapsed by default)
+### Experimental (alpha — collapsed by default; `sparqlSearch` from Intermediate tier, `frameSenseSource` Full only)
 | Key | Component | Notes |
 |-----|-----------|-------|
 | `sparqlSearch` | `SparqlSearchNode` | `#4c1d95`. Wikidata SPARQL search via `/wdqs-proxy`. Two modes: **Builder** (instance-of picker with subclasses toggle, property-filter rows over `PROPERTY_GROUPS` — Q-id value → exact triple, text → CONTAINS filter — output-column checkboxes, live read-only query preview; `buildSparqlQuery` in `sparqlQueryBuilder.ts` is the ONLY generator) and **Raw SPARQL** (escape hatch; hand edits set `builderCustom`, any builder change regenerates over them). Keyword row seeds a `wikibase:mwapi` EntitySearch in builder mode AND names fixtures; ✨ NL assist (KCL arc:lite, SmartFilter call pattern, KCL_API_KEY_NODES member) translates plain English → SPARQL, landing in Raw mode with an explanation for review before running; wirable `query`/`limit` handles at the shell contract offsets (51/78); a query without LIMIT gets the limit row appended. Bindings → `sparql.*` namespace; `?item`/`?itemLabel`/`?itemDescription` → id/title/description; `_qid` written for WikidataEnrich/MergeByQID; WKT `Point(lon lat)` → map coordinates. Fixture: `sparqlSearch-default.json` (Turner paintings). |
 | `evaluatorNode` | `EvaluatorNode` | `#3f3f46`. LLM-as-judge, runnable. Scores a `candidateField` against a `referenceField` on the **same record** using an ARC model at **temperature 0** for repeatability. Per-criterion scoring only (never one aggregate score) — built-in rubric presets (Extraction agreement, Interpretive agreement, Rubric-from-note). Template tokens: `{{__reference}}`, `{{__candidate}}`. Writes `record.eval = {scores, reasons, raw, status}` + flat `eval_c*` columns. Shows judge-vs-human agreement readout when a human score field is present. Tolerant JSON parsing — never throws; sets `status: 'parse_error'` on bad output. Requires KCL API key. |
 
 Experimental nodes carry `alpha: true` in `SIDEBAR_ITEMS`. The group renders with an amber left-border
-and `⚗` icon in the sidebar. When `simpleMode` is active the entire group is hidden (not just its items).
+and `⚗` icon in the sidebar. Like every group, it disappears entirely when none of its items are in the
+current visibility tier (so Basic never shows an Experimental heading).
+
+### Node visibility tiers (Basic / Intermediate / Full)
+
+Replaced the two-state Simple/Advanced toggle in Nov 2026. `src/config/nodeTiers.ts` is pure and unit-tested;
+every `SidebarItem` declares a **required** `tier` (the minimum tier at which it appears — `tsc` fails without it).
+The top-bar segmented control sets `nodeTier` (App state, persisted under `STORAGE_KEYS.NODE_TIER`; the legacy
+`nfcs_simple_mode` boolean is read once by `resolveStoredTier` — Simple → basic, Advanced → full — default basic).
+`visibleSidebarItems(tier)` drives the Sidebar and `isTypeInTier` filters `ConnectionSuggestions`, so a user is
+never offered a node they cannot find in the palette. **`src/__tests__/nodeTiers.test.ts` pins the EXACT type set
+per tier** — when you move or add a node, change the test list and this table together.
+
+| Tier | Contains |
+|---|---|
+| Basic | `param`, `comment`, all ten Discovering sources, `localFileSource`, `sampleDataSource`, `kclNode`, `kclField`, `fieldDistribution`, `sourceProfile`, `tableOutput`, `mapOutput`, `timelineView`, `citation`, `export`, `saveSearch`, `loadSavedSearch` |
+| Intermediate | Basic + `quickStart`, `localFolderSource`, `urlFetch`, `htmlSection`, `xmlSection`, `reconciliation`, `wikidataEnrich`, `filterTransform`, `deduplicate`, `quickView`, `imageView`, `htmlPreview`, `jsonOutput`, `sparqlSearch` |
+| Full | everything: + `geocoding`, `smartGeocoder`, `mergeByQID`, `quickNote`, `ollamaNode`, `ollamaField`, `ollamaOutput`, `smartFilter`, `spatialFilter`, `evaluatorNode`, `kclOutput`, `comparisonReport`, `frameSenseSource` |
+
+**Display names vs type keys.** A few nodes have plain-English labels that differ from their type key:
+`param` → **Search Parameter**, `kclNode` → **AI Inference**, `kclField` → **AI Inference (by field)**,
+`kclOutput` → **AI Inference Output**, `filterTransform` → **Filter and Transform**, `timelineView` → **Timeline**.
+The palette, canvas header titles, `ConnectionSuggestions` (labels looked up from `SIDEBAR_ITEMS`, never
+hardcoded), `TADIRAHMapping`, `SourceProfile` suggestion chips and the Assistant system prompt all use the display
+names. Type keys are serialised and never change. Bump `SYSTEM_VERSION` in `ChatSidebar.tsx` whenever the prompt
+text changes, or users keep the cached copy.
 
 ### Evaluation pipeline (cross-group workflow)
 
@@ -225,7 +252,7 @@ and `⚗` icon in the sidebar. When `simpleMode` is active the entire group is h
 pipeline spanning three TaDiRAH groups:
 
 ```
-source → KingsInference (generates candidate response)
+source → AI Inference (generates candidate response)
        → QuickNote (Note/Structured mode — human writes reference)
        → QuickNote (Score mode — human rates criteria)
        → Evaluator (LLM judge scores candidate vs reference)

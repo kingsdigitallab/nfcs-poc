@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { STORAGE_KEYS } from './config/storageKeys'
 import { NODE_DEFAULTS } from './config/nodeDefaults'
 import { SIDEBAR_ITEMS } from './config/sidebarItems'
+import { resolveStoredTier, type NodeTier } from './config/nodeTiers'
 import type { AppNode } from './types/AppNode'
 import { attributionStyle, debugOuter, debugToggle, debugPre } from './styles/appStyles'
 import { setNodeResults, clearNodeResultsDeep } from './store/resultsStore'
@@ -43,12 +44,17 @@ export default function App() {
   const [runningAll, setRunningAll] = useState(false)
   const [expandedNodeId, setExpandedNodeId] = useState<string | null>(null)
   const [chatOpen, setChatOpen] = useState(false)
-  const [simpleMode, setSimpleMode] = useState(
-    () => (localStorage.getItem(STORAGE_KEYS.SIMPLE_MODE) ?? 'true') === 'true',
+  // Node visibility tier (Basic / Intermediate / Full). The legacy Simple/Advanced
+  // boolean is migrated on first read and never written again.
+  const [nodeTier, setNodeTier] = useState<NodeTier>(
+    () => resolveStoredTier(
+      localStorage.getItem(STORAGE_KEYS.NODE_TIER),
+      localStorage.getItem(STORAGE_KEYS.SIMPLE_MODE),
+    ),
   )
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEYS.SIMPLE_MODE, String(simpleMode))
-  }, [simpleMode])
+    localStorage.setItem(STORAGE_KEYS.NODE_TIER, nodeTier)
+  }, [nodeTier])
 
   const [snapEnabled, setSnapEnabled] = useState(
     () => localStorage.getItem(STORAGE_KEYS.SNAP_GRID) === 'true',
@@ -129,8 +135,8 @@ export default function App() {
         onGroupSelected={handleGroupSelected}
         onUngroup={handleUngroup}
         onPickCachedSearch={instantiateCachedSearch}
-        simpleMode={simpleMode}
-        onToggleSimpleMode={() => setSimpleMode(v => !v)}
+        nodeTier={nodeTier}
+        onSetNodeTier={setNodeTier}
         snapEnabled={snapEnabled}
         onToggleSnap={() => setSnapEnabled(v => !v)}
         chatOpen={chatOpen}
@@ -140,7 +146,7 @@ export default function App() {
       />
 
       <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
-        <Sidebar simpleMode={simpleMode} />
+        <Sidebar nodeTier={nodeTier} />
 
         {/* Canvas */}
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
@@ -212,6 +218,7 @@ export default function App() {
           x={connMenu.x}
           y={connMenu.y}
           sourceNodeType={connMenu.sourceNodeType}
+          nodeTier={nodeTier}
           onSelect={handleSuggestionSelect}
           onClose={() => setConnMenu(null)}
         />

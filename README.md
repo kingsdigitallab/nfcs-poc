@@ -25,8 +25,8 @@ Drag nodes onto a canvas, connect them in any order, and run federated searches 
 - **Node.js** v20 or later ([nodejs.org](https://nodejs.org)) — vitest 4 and jsdom 29 need 20+
 - **npm** v9 or later (bundled with Node)
 - A modern browser — Chrome or Edge 86+ required for the **LocalFolderSourceNode** (File System Access API) and for the native save dialog in **SaveSearchNode** (falls back to an automatic download on Firefox); all other nodes work in Firefox too
-- **KCL Inference API key** — required only for KingsInference nodes; request access from King's Digital Lab
-- **[Ollama](https://ollama.com/)** running locally on port 11434 — required only for Ollama nodes (hidden from sidebar by default; use KingsInference for hosted inference)
+- **KCL Inference API key** — required only for AI Inference nodes; request access from King's Digital Lab
+- **[Ollama](https://ollama.com/)** running locally on port 11434 — required only for Ollama nodes (Full node-visibility tier only; use AI Inference for hosted inference)
 - **Puppeteer** (installed automatically via `npm install`) — required only for the **Wait for JS rendering** option in URLFetchNode; the headless browser runs inside the Vite dev server
 
 ---
@@ -58,7 +58,7 @@ Click **📂 Load** to restore a saved workflow. The canvas is replaced with the
 
 ## Node types
 
-The sidebar groups nodes into collapsible categories named after [TaDiRAH](https://tadirah.info/) activities (Workflow Planning, Discovering, Gathering, Enriching, Analysing, Visualising, Disseminating, Experimental). Click a group heading to collapse or expand it. Drag any node onto the canvas to add it. The tables below use the same names; a few display nodes (QuickView, ImageView, HTMLPreview, MapOutput, TableOutput, TimelineView) sit under **Visualising** in the sidebar.
+The sidebar groups nodes into collapsible categories named after [TaDiRAH](https://tadirah.info/) activities (Workflow Planning, Discovering, Gathering, Enriching, Analysing, Visualising, Disseminating, Experimental). Click a group heading to collapse or expand it. Drag any node onto the canvas to add it. The tables below use the same names; a few display nodes (QuickView, ImageView, HTMLPreview, MapOutput, TableOutput, Timeline) sit under **Visualising** in the sidebar.
 
 ### Workflow Planning
 
@@ -98,7 +98,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **LoadSavedSearch** | Local filesystem | Loads a `.nfcs.json` file saved by **SaveSearch**, or any raw `UnifiedRecord[]` JSON array exported by **Export**. Displays full provenance metadata: saved date/time, source breakdown with per-service record counts, and the original search parameters in a collapsible panel. |
 | **LocalFileSource** | Local filesystem | Parses a single CSV, TSV, XML, or image file selected via a standard file picker (all browsers). Auto-detects the delimiter. **Cast numeric strings to numbers** toggle converts coordinate strings to floats. |
 | **LocalFolderSource** | Local filesystem | Reads files from a user-selected folder via the [File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API). Supports PDF (text extraction), XML/TEI, plain text, images, Shapefiles, and GeoJSON. Five typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`, plus a **GIS handle** for Shapefile/GeoJSON layers. Requires Chrome or Edge 86+. |
-| **FrameSenseSource** | Local filesystem | Reads a folder pre-processed by the [FrameSense](https://github.com/kingsdigitallab/framesense) CLI and emits one record per shot. Each record carries the representative frame as an `imageDataUrl` (base64 JPEG), enabling direct vision inference via **KingsInference**. Existing FrameSense analysis (shot scale classifications from `scale_frames_sssabet`, VLM answers from `answer_frames_vlm`) is surfaced as `framesense.*` fields. See [FrameSense workflows](#framesense-workflows) below. |
+| **FrameSenseSource** | Local filesystem | Reads a folder pre-processed by the [FrameSense](https://github.com/kingsdigitallab/framesense) CLI and emits one record per shot. Each record carries the representative frame as an `imageDataUrl` (base64 JPEG), enabling direct vision inference via **AI Inference**. Existing FrameSense analysis (shot scale classifications from `scale_frames_sssabet`, VLM answers from `answer_frames_vlm`) is surfaced as `framesense.*` fields. See [FrameSense workflows](#framesense-workflows) below. |
 | **SampleDataSource** | Local filesystem + fixtures | Loads pre-packaged collection samples from `public/fixtures/` (e.g. Stonehenge antiquarian texts and modern archaeology papers, LLDS items, etc.). Useful for demonstrations, workshops, and testing without live API access. Emits five typed output handles: `results` (all), `pdf`, `xml`, `text`, `image`. |
 
 ### Analysing
@@ -107,17 +107,17 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 |------|-------------|
 | **FieldDistribution** | Faceted bar chart of value frequencies for any field. Click bars to toggle them as filters — matching records are emitted on the output handle and update live as upstream data changes. Array-valued fields (`subject`, `country`, `creator`) are expanded so each element is tallied individually. Bars sorted by count descending, capped at a configurable Top N. A status bar shows how many records match the current selection with a **✕ clear** button. |
 | **SmartFilter** | Natural language → structured filter. Type a plain-English filter request (e.g. *"Iron Age sites in England with coordinates"*, *"objects made before 1700 with images"*) and click **Translate & apply** (or Ctrl/Cmd+Enter). The KCL inference API receives the actual field names and sample values discovered from your records, then returns a JSON conditions object which is evaluated deterministically — no `eval()`, no code generation. Each condition is displayed as a readable rule (`title contains "Iron Age"`). A match bar shows what proportion of records pass. Without a filter all records pass through unchanged; the **✕** button clears the filter and restores pass-through. Supports: `contains`, `equals`, `startsWith`, `endsWith`, `gt/lt/gte/lte`, `exists/notExists`, `in` — all handle array-valued fields. Requires a KCL API key; defaults to `arc:nano`. |
-| **FilterTransform** | Filters records by condition and/or mutates field values. See [Filter / Transform](#filter--transform) below. |
+| **Filter and Transform** | Filters records by condition and/or mutates field values. See [Filter / Transform](#filter--transform) below. |
 | **SpatialFilter** | Draws a bounding box on an interactive Leaflet map; filters upstream records to those within the bbox. Note: **MapOutput** also includes an integrated spatial bbox filter — for workflows where you want to visualise and filter in a single step, use MapOutput instead. |
 | **Deduplicate** | Removes duplicate records based on a chosen field value. First occurrence is kept; subsequent records sharing the same value for that field are discarded. Records missing the chosen field always pass through. The footer shows `N in → M unique (K removed)`. Useful when aggregating results from multiple search nodes that may return overlapping result sets. |
-| **TimelineView** | Resizable SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates. **Filter mode** — drag the date-range handles to restrict the visible window; records outside the range are suppressed on the output handle, making this a pass-through filter node as well as a visualisation. Toggle **⇤⇥ Fit** to compress the full date range into the visible width. Pass-through output handle connects to any downstream node (TableOutput, Export, etc.). |
+| **Timeline** | Resizable SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates. **Filter mode** — drag the date-range handles to restrict the visible window; records outside the range are suppressed on the output handle, making this a pass-through filter node as well as a visualisation. Toggle **⇤⇥ Fit** to compress the full date range into the visible width. Pass-through output handle connects to any downstream node (TableOutput, Export, etc.). |
 
 ### Enriching
 
 | Node | Description |
 |------|-------------|
-| **KingsInference** | Sends each upstream record to KCL's OpenAI-compatible inference API and enriches the record with the model's response. Requires an API key. Supports **vision mode** — when enabled, image data URLs in records (from LocalFolderSource, ImageView, or IIIF region capture) are sent as multipart image content. Auto-detects `contentType: 'image'` records; or specify a **field** to use a particular image field. Includes a **prompt recipe bar** — save and recall prompt strategies across workflows. See [KCL Inference](#kcl-inference) below. |
-| **KingsInferenceByField** | Lighter-weight KCL inference on a single chosen field. Two modes: **per-record** (enriches each record individually with live token preview) and **aggregate** (collects all values into one prompt for a summary response). Template variables: `{{value}}`, `{{field}}`, `{{count}}`, `{{values}}`. Model-dependent content truncation (arc:nano 12k, arc:lite 32k, arc:nexus 64k chars). Includes **prompt recipe bar**. |
+| **AI Inference** | Sends each upstream record to KCL's OpenAI-compatible inference API and enriches the record with the model's response. Requires an API key. Supports **vision mode** — when enabled, image data URLs in records (from LocalFolderSource, ImageView, or IIIF region capture) are sent as multipart image content. Auto-detects `contentType: 'image'` records; or specify a **field** to use a particular image field. Includes a **prompt recipe bar** — save and recall prompt strategies across workflows. See [KCL Inference](#kcl-inference) below. |
+| **AI Inference (by field)** | Lighter-weight KCL inference on a single chosen field. Two modes: **per-record** (enriches each record individually with live token preview) and **aggregate** (collects all values into one prompt for a summary response). Template variables: `{{value}}`, `{{field}}`, `{{count}}`, `{{values}}`. Model-dependent content truncation (arc:nano 12k, arc:lite 32k, arc:nexus 64k chars). Includes **prompt recipe bar**. |
 | **QuickNote** | Human annotation node — display-only, no runner, pass-through. Three modes selectable via the **Note · Structured · Score** tab bar: **Note** — free-prose textarea writes to `_note` (shared across the workflow via the notes store and surfaced in TableOutput); **Structured** — configure named `{key, label}` fields once, then fill them per record in a clean form; the node assembles the values into a JSON gold-standard and writes it to a target field (default `_note`); **Score** — constrained per-criterion pickers (configurable scale) write `human_score` (+ flat `human_c*` keys and optional prose reasons per criterion). The human counterpart to **Evaluator**. |
 | **Evaluator** | LLM-as-judge node. Scores a `candidateField` against a `referenceField` on the **same record** using an ARC model (temperature 0). Emits **per-criterion** JSON scores — never a single aggregate. Built-in rubric presets: *Extraction agreement*, *Interpretive agreement*, *Rubric-from-note*. Template tokens `{{__reference}}` / `{{__candidate}}`; writes `record.eval` (scores, reasons, raw, status) plus flat `eval_c*` columns. Displays a judge-vs-human agreement readout when a human-score field is present. Tolerant JSON parsing — always recovers; marks failures as `parse_error` status rather than throwing. Requires a KCL API key. |
 | **URLContentFetch** | Follows a URL field in each record, fetches the page (optionally via headless browser for JS-rendered pages), and adds `fetchedContent` (plain text) and `fetchedHtml` (cleaned body HTML). |
@@ -136,7 +136,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **Citation** | Paginated bibliography drawn from `_citation` metadata stamped by source runners. Supports **Copy all** and **Download .txt** for a formatted reference list. |
 | **Export** | Downloads upstream records as **CSV**, **JSON**, or **GeoJSON**. `*_reconciled` objects are expanded to `_qid/_label/_confidence/_status` columns in CSV. |
 | **JSONOutput** | Syntax-highlighted JSON viewer. Double-click to expand to full-screen. |
-| **KingsInferenceOutput** | Card-based display of KCL inference responses. Each record gets an expandable card showing the response, model used, and processing timestamp. Copy button per card. |
+| **AI Inference Output** | Card-based display of KCL inference responses. Each record gets an expandable card showing the response, model used, and processing timestamp. Copy button per card. |
 | **MapOutput** | Leaflet map. Plots records with `decimalLatitude`/`decimalLongitude`. Click a marker for a popup with title, date, and source link. **Integrated spatial filter**: click **Draw bbox**, drag a bounding box on the map, then **Run ▶** — only records within the box are emitted; records outside are dimmed. A coordinate summary shows N/S/E/W bounds. A green **results** output handle pipes the filtered (or all) records to downstream nodes. Also accepts GIS vector layers via the GIS handle from LocalFolderSource. |
 | **TableOutput** | Paginated table. Merges records from multiple upstream nodes. Pass-through output handle for chaining to Map, Export, etc. Double-click to expand to full-screen. Toolbar: **show all columns** + **expand namespaces** (flattens service namespace objects into dot-notation columns). **Page size** selector (10 / 25 / 50 / 100 rows). **Column sort**: click any column header to sort ascending, click again for descending, third click clears the sort. **Text filter**: search box above the table filters across all fields (including namespace sub-objects) live as you type. |
 | **ComparisonReport** | Read-only evaluation report — no runner, skipped by Run All. Map five report roles (*original*, *note / reference*, *response / candidate*, *judge score*, *human score*) to upstream fields via dropdowns. Renders per-record side-by-side cards and an aggregate agreement matrix (counts, means, and percentage-agreement only — no inferential statistics). Divergence counts double as live card filters; click a count to show only divergent records. Double-click the node to open a full-screen projector view for presentations. Agreement is computed over scored records only. |
@@ -162,10 +162,10 @@ ParamNode ─┐
               FilterTransformNode ──────────────────────────────────── ┤
               SpatialFilterNode   ──────────────────────────────────── ┤
               FieldDistributionNode ─────────────────────────────────── ┤  ← click bars to facet-filter
-              TimelineView          ─────────────────────────────────── ┤  ← drag range handles to filter
+              Timeline          ─────────────────────────────────── ┤  ← drag range handles to filter
                                                                        │
-  LocalFolderSource ──► KingsInference ──────────────────────────────── ┤
-  ImageView (IIIF) ──► KingsInferenceByField ─────────────────────────── ┤
+  LocalFolderSource ──► AI Inference ──────────────────────────────── ┤
+  ImageView (IIIF) ──► AI Inference (by field) ─────────────────────────── ┤
                        URLContentFetch ──► HTMLExtract ──────────────── ┤
                        XMLExtract       ──────────────────────────────── ┤
                        Reconciliation ──► WikidataEnrich ──► MergeByQID ┤
@@ -174,7 +174,7 @@ ParamNode ─┐
                                                 Citation
                                                 JSONOutput
                                                 MapOutput ◄── LocalFolderSource (GIS)
-                                                KingsInferenceOutput
+                                                AI Inference Output
                                                 SaveSearch ◄── (any data-handle source)
 ```
 
@@ -250,7 +250,7 @@ bodleian.*    — shelfmark, objectType, dateRange, manifest (IIIF manifest URL)
 fetchedUrl, fetchedContent, fetchedHtml, fetchStatus, fetchedAt  — added by URLContentFetch
 htmlSelector                                                      — added by HTMLExtract
 xmlContent, xmlXPath                                              — added by XMLExtract
-kclModel, kclPrompt, kclResponse, kclProcessedAt                  — added by KingsInference nodes
+kclModel, kclPrompt, kclResponse, kclProcessedAt                  — added by AI Inference nodes
 ollamaModel, ollamaPrompt, ollamaResponse, ollamaProcessedAt      — added by Ollama nodes (hidden)
 
 content, contentType, mimeType  — FileRecord fields (from LocalFolderSource / ImageView)
@@ -262,11 +262,11 @@ After reconciliation, records also carry `${fieldName}_reconciled` keys (see [Re
 
 ## KCL Inference
 
-**KingsInference** and **KingsInferenceByField** connect to KCL's hosted OpenAI-compatible inference API (`https://api.ai.create.kcl.ac.uk/v1`) via the `/kcl-proxy` route. An API key is required.
+**AI Inference** and **AI Inference (by field)** connect to KCL's hosted OpenAI-compatible inference API (`https://api.ai.create.kcl.ac.uk/v1`) via the `/kcl-proxy` route. An API key is required.
 
 ### Setup
 
-1. Drag a **KingsInference** node onto the canvas.
+1. Drag a **AI Inference** node onto the canvas.
 2. Enter your API key in the **API Key** field. The node fetches available models from the API and populates the model dropdown.
 3. Configure the system prompt, user prompt template, temperature, and max tokens.
 
@@ -290,24 +290,24 @@ Tick **Vision** to enable multipart image content. When active, the node automat
 - **Field override**: select a specific field from the dropdown when multiple image fields are present.
 - In vision mode, `{{content}}` resolves to `description` or `title` rather than the raw data URL.
 
-### KingsInferenceByField
+### AI Inference (by field)
 
 Works identically but processes a single chosen field per record. **Per-record mode** enriches each record; **aggregate mode** collects all field values into one prompt for a summary response.
 
 ### Output
 
-Enriched records gain `kclResponse`, `kclModel`, `kclPrompt`, and `kclProcessedAt` fields. Connect a **KingsInferenceOutput** node to display responses as expandable cards, or pass to **TableOutput** or **Export**.
+Enriched records gain `kclResponse`, `kclModel`, `kclPrompt`, and `kclProcessedAt` fields. Connect a **AI Inference Output** node to display responses as expandable cards, or pass to **TableOutput** or **Export**.
 
 ### Prompt recipes
 
-Both **KingsInference** and **KingsInferenceByField** include a **prompt recipe bar** for saving and recalling prompt strategies. Built-in recipes are included (marked with ★):
+Both **AI Inference** and **AI Inference (by field)** include a **prompt recipe bar** for saving and recalling prompt strategies. Built-in recipes are included (marked with ★):
 
-**Standard node recipes** (KingsInference):
+**Standard node recipes** (AI Inference):
 - Extract persons — JSON
 - Extract places — JSON
 - Summarise briefly
 
-**Field node recipes** (KingsInferenceByField):
+**Field node recipes** (AI Inference (by field)):
 - *Per-record:* Extract persons from field — JSON, Extract places from field — JSON, Summarise record field
 - *Aggregate:* Thematic summary, List unique entities
 
@@ -315,7 +315,7 @@ To use: select a recipe from the dropdown, click **Apply** to populate the syste
 
 ### Context accrual — the `{{_lineage}}` token
 
-Put `{{_lineage}}` anywhere in a **KingsInference**, **Ollama**, or **Evaluator** prompt and, at run time, it is
+Put `{{_lineage}}` anywhere in a **AI Inference**, **Ollama**, or **Evaluator** prompt and, at run time, it is
 replaced with a plain-English narrative of the **upstream pipeline history** — which services were searched with
 what terms, how records were filtered, transformed, reconciled, geocoded, or merged, and how many records flowed
 through each stage. The model sees not just the records but *how they came to be*, which materially improves
@@ -392,7 +392,7 @@ The resulting folder structure is:
 
 ### Wiring for vision inference
 
-Connect `FrameSenseSource results` → `KingsInference data`. **KingsInference** auto-detects `imageDataUrl` and shows the **Vision** checkbox — tick it. The image is attached as a multipart message alongside your prompt; `{{imageDataUrl}}` does not need to appear in the template text.
+Connect `FrameSenseSource results` → `AI Inference data`. **AI Inference** auto-detects `imageDataUrl` and shows the **Vision** checkbox — tick it. The image is attached as a multipart message alongside your prompt; `{{imageDataUrl}}` does not need to appear in the template text.
 
 Recommended prompt for a quick functional test:
 
@@ -417,9 +417,9 @@ Analyse this frame. Respond in JSON with these keys:
 
 The `kclResponse` field then contains parseable JSON you can filter on or aggregate.
 
-### Aggregate summary with KingsInferenceByField
+### Aggregate summary with AI Inference (by field)
 
-After per-shot inference, wire a **KingsInferenceByField** node downstream in **aggregate** mode to summarise across a whole video:
+After per-shot inference, wire a **AI Inference (by field)** node downstream in **aggregate** mode to summarise across a whole video:
 
 - **Field**: `kclResponse`
 - **Mode**: Aggregate
@@ -438,18 +438,18 @@ setting of the footage, the range of shot scales used, and whether people featur
 prominently. Then list 3-5 keywords suitable for archival indexing.
 ```
 
-> **Tip — context window management**: if the collection is large, the concatenated shot analyses may approach the model's context limit. Use a **FilterTransform** node upstream of KingsInferenceByField to narrow records to a single `framesense.video` or `framesense.collection` before aggregating.
+> **Tip — context window management**: if the collection is large, the concatenated shot analyses may approach the model's context limit. Use a **Filter and Transform** node upstream of AI Inference (by field) to narrow records to a single `framesense.video` or `framesense.collection` before aggregating.
 
 ### Recommended workflow
 
 ```
 [FrameSenseSource]
        ↓ results
-[FilterTransform]          ← optional: filter by framesense.shotScale or framesense.collection
+[Filter and Transform]          ← optional: filter by framesense.shotScale or framesense.collection
        ↓ results
-[KingsInference]           ← Vision on, per-shot question (JSON prompt recommended)
+[AI Inference]           ← Vision on, per-shot question (JSON prompt recommended)
        ↓ results
-[KingsInferenceByField]    ← aggregate mode, field: kclResponse, video summary
+[AI Inference (by field)]    ← aggregate mode, field: kclResponse, video summary
        ↓ results
 [TableOutput]
 [Export]                   ← CSV/JSON for archival deposit
@@ -464,7 +464,7 @@ Three nodes work together to support rigorous human and model-based evaluation o
 ```
 [Source node]
       ↓ data
-[KingsInference]          ← generate candidate responses (kclResponse)
+[AI Inference]          ← generate candidate responses (kclResponse)
       ↓ results
       ├──────────────────────────────────────────────────────────────────────┐
       ▼                                                                      ▼
@@ -490,7 +490,7 @@ Three nodes work together to support rigorous human and model-based evaluation o
 
 | Role | Node | Field written |
 |------|------|---------------|
-| **Candidate** | KingsInference / KingsInferenceByField | `kclResponse` (or any field) |
+| **Candidate** | AI Inference / AI Inference (by field) | `kclResponse` (or any field) |
 | **Reference / gold standard** | QuickNote (Note or Structured mode) | `_note` or a custom field |
 | **Human score** | QuickNote (Score mode) | `human_score`, `human_c*` |
 | **Judge score** | Evaluator | `eval.scores`, `eval_c*` |
@@ -539,7 +539,7 @@ Once a manifest is loaded, the **region annotator toolbar** appears above the ca
 - Each output record: `{ content: dataUrl, contentType: 'image', mimeType: 'image/jpeg', title, regionIndex, regionBounds, canvasLabel, manifestTitle, ... }`.
 - If no regions are drawn, **Capture** fetches the whole canvas as a single record.
 
-Connect the output handle to **KingsInference** (with Vision enabled) to send annotated IIIF image regions to the inference model. Regions and their labels are saved in the workflow file.
+Connect the output handle to **AI Inference** (with Vision enabled) to send annotated IIIF image regions to the inference model. Regions and their labels are saved in the workflow file.
 
 #### Info panel
 
@@ -549,7 +549,7 @@ Toggle **ℹ Info** to reveal: IIIF manifest metadata (title, date, attribution,
 
 ## Filter / Transform
 
-**FilterTransform** operates in three modes (selectable via tabs):
+**Filter and Transform** operates in three modes (selectable via tabs):
 
 ### Filter mode
 
@@ -615,7 +615,7 @@ Groups records from any number of upstream sources by shared Wikidata QID and em
 
 ## SPARQL Search
 
-*(Experimental group — enable Advanced mode to see it.)* Query knowledge graphs over SPARQL without needing to
+*(Experimental group — shown from the Intermediate node-visibility tier upwards.)* Query knowledge graphs over SPARQL without needing to
 know SPARQL — or any entity identifiers. The node solves the two things that normally make SPARQL unusable for
 non-specialists: **finding the right IDs** and **writing the query**.
 
@@ -846,7 +846,7 @@ The top bar contains a **💬 Assistant** button that toggles a right-hand chat 
 
 ### Setup
 
-A default KCL API key may be pre-configured. If the panel shows an API error, enter a valid key in any **KingsInference** node — the same key is used by the assistant panel. You can also override it directly in the `src/components/ChatSidebar.tsx` `API_KEY` constant.
+A default KCL API key may be pre-configured. If the panel shows an API error, enter a valid key in any **AI Inference** node — the same key is used by the assistant panel. You can also override it directly in the `src/components/ChatSidebar.tsx` `API_KEY` constant.
 
 ---
 
@@ -867,16 +867,16 @@ A default KCL API key may be pre-configured. If the panel shows an API error, en
 4. Navigate to a page of interest using the ‹ / › canvas buttons.
 5. Click **+ Region** and drag boxes around specific areas (a decorated initial, a marginal annotation, a seal).
 6. Click **Capture 3** — each region is fetched as a base64 JPEG via the IIIF Image API.
-7. Connect the **ImageView** output handle to a **KingsInference** node with **Vision** enabled.
+7. Connect the **ImageView** output handle to a **AI Inference** node with **Vision** enabled.
 8. Write a prompt such as *"Describe what you see in this region of a medieval manuscript."*
-9. Click **▶ Run** on KingsInference — each region is analysed individually.
-10. Connect the output to **KingsInferenceOutput** to browse responses as expandable cards.
+9. Click **▶ Run** on AI Inference — each region is analysed individually.
+10. Connect the output to **AI Inference Output** to browse responses as expandable cards.
 
 ### Inference on local images
 
-1. Drag **LocalFolderSource** → **KingsInference** → **KingsInferenceOutput** and connect them.
+1. Drag **LocalFolderSource** → **AI Inference** → **AI Inference Output** and connect them.
 2. Click **📂 Pick Folder** and select a folder of JPEG or PNG images.
-3. On KingsInference, enter your API key, select a vision-capable model, tick **Vision**, and write a prompt using `{{content}}` (or leave it blank to describe the image).
+3. On AI Inference, enter your API key, select a vision-capable model, tick **Vision**, and write a prompt using `{{content}}` (or leave it blank to describe the image).
 4. Click **▶ Run** on LocalFolderSource, then **▶▶ Run All**.
 
 ### Federated search + Wikidata cross-linking
@@ -892,7 +892,7 @@ A default KCL API key may be pre-configured. If the panel shows an API error, en
 1. On each search node, type a query matching a bundled fixture (e.g. `stonehenge`) and tick **📦**.
 2. Click **▶ Load fixture** — results load instantly from the repo with no network calls.
 3. For local text analysis, drag a **LocalFolderSource** onto the canvas and point it at `public/fixtures/LLDS Collections/stonehenge`.
-4. Connect the XML handle to an **XMLExtract** node or the main output to **KingsInference** for AI-assisted analysis.
+4. Connect the XML handle to an **XMLExtract** node or the main output to **AI Inference** for AI-assisted analysis.
 
 ### Web content extraction
 
@@ -900,7 +900,7 @@ A default KCL API key may be pre-configured. If the panel shows an API error, en
 2. Add **URLContentFetch**, select the URL field, and fetch pages.
 3. Add **HTMLPreview** — click any element in the rendered page to capture its CSS selector.
 4. Add **HTMLExtract**, paste the captured selector, and extract the section.
-5. Add **KingsInferenceByField** in **per-record** mode with `fetchedContent` and a targeted extraction prompt.
+5. Add **AI Inference (by field)** in **per-record** mode with `fetchedContent` and a targeted extraction prompt.
 
 ---
 
@@ -948,10 +948,10 @@ nfcs-poc/
     │   ├── FilterTransformNode.tsx
     │   ├── SpatialFilterNode.tsx
     │   ├── FieldDistributionNode.tsx
-    │   ├── TimelineOutputNode.tsx      # TimelineView — filter + timeline visualisation
-    │   ├── KCLNode.tsx                 # KingsInference — per-record, vision-capable
-    │   ├── KCLFieldNode.tsx            # KingsInferenceByField — single-field inference
-    │   ├── KCLOutputNode.tsx           # KingsInferenceOutput — card display
+    │   ├── TimelineOutputNode.tsx      # Timeline — filter + timeline visualisation
+    │   ├── KCLNode.tsx                 # AI Inference — per-record, vision-capable
+    │   ├── KCLFieldNode.tsx            # AI Inference (by field) — single-field inference
+    │   ├── KCLOutputNode.tsx           # AI Inference Output — card display
     │   ├── ReconciliationNode.tsx
     │   ├── WikidataEnrichNode.tsx
     │   ├── MergeByQIDNode.tsx

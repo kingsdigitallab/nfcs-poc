@@ -518,7 +518,7 @@ export function EvaluatorNode({ id, data, selected }: NodeProps) {
             background: isApiKeyConnected ? '#eff6ff' : apiKey ? '#f0fdf4' : '#fef2f2',
             userSelect: 'none',
           }}>
-            {isApiKeyConnected ? '(from Param)' : apiKey ? '🔒 Configured' : '⚠ Not set'}
+            {isApiKeyConnected ? '(from Search Parameter)' : apiKey ? '🔒 Configured' : '⚠ Not set'}
           </span>
         </div>
 

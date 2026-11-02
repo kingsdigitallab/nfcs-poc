@@ -259,6 +259,10 @@ export const lineageDescribers: Record<string, LineageDescriber> = {
   mapOutput: (_d, count) =>
     `Mapped ${count !== undefined ? `${count} record${count === 1 ? '' : 's'}` : 'records'} geographically.`,
 
+  timelineView: (_d, count) =>
+    `Placed ${count !== undefined ? `${count} record${count === 1 ? '' : 's'}` : 'records'} on a timeline.`,
+
+  // `timelineOutput` is the legacy alias of `timelineView` (same component + runner).
   timelineOutput: (_d, count) =>
     `Placed ${count !== undefined ? `${count} record${count === 1 ? '' : 's'}` : 'records'} on a timeline.`,
 

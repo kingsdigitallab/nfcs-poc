@@ -7,6 +7,7 @@
 import { useRef, useState } from 'react'
 import type { Edge } from '@xyflow/react'
 import { STORAGE_KEYS } from '../config/storageKeys'
+import { NODE_TIERS, TIER_LABELS, TIER_HINTS, type NodeTier } from '../config/nodeTiers'
 import { topBarStyle, templateBtnStyle, runAllBtnStyle } from '../styles/appStyles'
 import { buildWorkflowPayload, type WorkflowFile } from '../utils/workflowIO'
 import { clearAllNotes } from '../store/notesStore'
@@ -29,8 +30,8 @@ export interface TopBarProps {
   onGroupSelected: () => void
   onUngroup: () => void
   onPickCachedSearch: (service: string, slug: string) => void
-  simpleMode: boolean
-  onToggleSimpleMode: () => void
+  nodeTier: NodeTier
+  onSetNodeTier: (tier: NodeTier) => void
   snapEnabled: boolean
   onToggleSnap: () => void
   chatOpen: boolean
@@ -39,11 +40,15 @@ export interface TopBarProps {
   onRunAll: () => void
 }
 
+const TIER_BTN_RADIUS = typeof templateBtnStyle.borderRadius === 'number'
+  ? `${templateBtnStyle.borderRadius}px`
+  : String(templateBtnStyle.borderRadius ?? '6px')
+
 export function TopBar({
   nodes, edges, setNodes,
   loadError, setLoadError, applyWorkflow, onSave, onLoadFile,
   onGroupSelected, onUngroup, onPickCachedSearch,
-  simpleMode, onToggleSimpleMode, snapEnabled, onToggleSnap,
+  nodeTier, onSetNodeTier, snapEnabled, onToggleSnap,
   chatOpen, onToggleChat, runningAll, onRunAll,
 }: TopBarProps) {
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -245,15 +250,35 @@ export function TopBar({
       <FixtureReferenceCard onPick={onPickCachedSearch} />
       <UsefulLinksModal />
       {import.meta.env.DEV && <FixturePreflightPanel />}
-      <button
-        style={{ ...templateBtnStyle, background: !simpleMode ? '#2c3d54' : undefined, color: !simpleMode ? '#fff' : undefined, borderColor: !simpleMode ? '#2c3d54' : undefined }}
-        onClick={onToggleSimpleMode}
-        title={simpleMode
-          ? 'Simple mode — specialised/alpha nodes hidden. Click for Advanced.'
-          : 'Advanced mode — all nodes shown. Click for Simple.'}
-      >
-        {simpleMode ? '◐ Simple' : '◑ Advanced'}
-      </button>
+      {/* Node visibility tier — segmented Basic / Intermediate / Full control */}
+      <div role="group" aria-label="Node visibility" style={{ display: 'inline-flex' }}>
+        {NODE_TIERS.map((tier, i) => {
+          const active = tier === nodeTier
+          const first = i === 0
+          const last  = i === NODE_TIERS.length - 1
+          return (
+            <button
+              key={tier}
+              type="button"
+              aria-pressed={active}
+              onClick={() => onSetNodeTier(tier)}
+              title={TIER_HINTS[tier]}
+              style={{
+                ...templateBtnStyle,
+                borderRadius: first ? `${TIER_BTN_RADIUS} 0 0 ${TIER_BTN_RADIUS}` : last ? `0 ${TIER_BTN_RADIUS} ${TIER_BTN_RADIUS} 0` : 0,
+                marginLeft: first ? 0 : -1,
+                position: 'relative',
+                zIndex: active ? 1 : 0,
+                background: active ? '#2c3d54' : undefined,
+                color: active ? '#fff' : undefined,
+                borderColor: active ? '#2c3d54' : undefined,
+              }}
+            >
+              {TIER_LABELS[tier]}
+            </button>
+          )
+        })}
+      </div>
       <button
         style={{ ...templateBtnStyle, background: snapEnabled ? '#2f4a6b' : undefined, color: snapEnabled ? '#fff' : undefined, borderColor: snapEnabled ? '#2f4a6b' : undefined }}
         onClick={onToggleSnap}

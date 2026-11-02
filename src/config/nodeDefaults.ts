@@ -85,7 +85,7 @@ export const TABLE_OUTPUT_SIZE = { width: 560, height: 380 }
 export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   param: pos => ({
     id: newId('param'), type: 'param', position: pos,
-    data: { label: 'Parameter', paramType: 'Text', value: '' },
+    data: { label: 'Search Parameter', paramType: 'Text', value: '' },
   }),
   gbifSearch: pos => ({
     id: newId('gbif'), type: 'gbifSearch', position: pos,

@@ -335,9 +335,9 @@ function SuggestedConnections({ records }: { records: Record<string, unknown>[] 
     const hasCoords = records.some(r => r.decimalLatitude != null && r.decimalLongitude != null)
     if (hasCoords) out.push({ node: 'MapOutput', reason: 'plot records by lat/lon', color: '#14532d' })
 
-    // TimelineView — if date field is populated
+    // Timeline — if date field is populated
     const hasDates = records.some(r => r.date != null && r.date !== '')
-    if (hasDates) out.push({ node: 'TimelineView', reason: 'filter by date range', color: '#1e293b' })
+    if (hasDates) out.push({ node: 'Timeline', reason: 'filter by date range', color: '#1e293b' })
 
     // ImageView (IIIF) — if any manifest field is detected
     const iiifKeys = ['bodleian.manifest', 'smg.manifest', 'vam.manifest', 'europeana.edmIsShownBy']
@@ -349,7 +349,7 @@ function SuggestedConnections({ records }: { records: Record<string, unknown>[] 
 
     // KCLField — if there are text-rich fields worth summarising
     const hasText = records.some(r => typeof r.description === 'string' && (r.description as string).length > 80)
-    if (hasText) out.push({ node: 'KingsInferenceByField', reason: 'run AI analysis on description field', color: '#7f1d1d' })
+    if (hasText) out.push({ node: 'AI Inference (by field)', reason: 'run AI analysis on description field', color: '#7f1d1d' })
 
     return out
   }, [records])
@@ -605,7 +605,7 @@ export function SourceProfileNode({ id, data }: NodeProps) {
         {profileSections.length > 0 && (
           <div style={{ borderTop: '1px solid #33302a', marginTop: 10, paddingTop: 8 }}>
             <div style={{ fontSize: 10, color: '#8a8168', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>
-              AI Narrative (KCL Inference)
+              AI Narrative
             </div>
 
             {/* Research question */}

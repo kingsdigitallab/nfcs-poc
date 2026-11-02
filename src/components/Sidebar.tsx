@@ -1,18 +1,20 @@
 /**
  * Sidebar — the node palette with search, collapsible TaDiRAH groups, and
  * the Experimental section, extracted verbatim from App.tsx (task 5.6).
- * Search text and collapsed-group state are internal — only simpleMode is
- * shared with the rest of the app.
+ * Search text and collapsed-group state are internal — only the node
+ * visibility tier (Basic / Intermediate / Full) is shared with the rest of the app.
  */
 import { useState } from 'react'
 import {
-  SIDEBAR_ITEMS, SIDEBAR_GROUPS, DEFAULT_COLLAPSED_GROUPS, ADVANCED_TYPES,
+  SIDEBAR_GROUPS, DEFAULT_COLLAPSED_GROUPS, visibleSidebarItems,
 } from '../config/sidebarItems'
+import type { NodeTier } from '../config/nodeTiers'
 import { sidebarStyle, sidebarHeading, sidebarItemStyle, sidebarDot } from '../styles/appStyles'
 
-export function Sidebar({ simpleMode }: { simpleMode: boolean }) {
+export function Sidebar({ nodeTier }: { nodeTier: NodeTier }) {
   const [nodeQuery, setNodeQuery] = useState('')
   const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(() => new Set(DEFAULT_COLLAPSED_GROUPS))
+  const tierItems = visibleSidebarItems(nodeTier)
 
   return (
     <div style={sidebarStyle}>
@@ -50,14 +52,15 @@ export function Sidebar({ simpleMode }: { simpleMode: boolean }) {
         const q = nodeQuery.trim().toLowerCase()
         const searching = q.length > 0
         const isExperimental = group === 'Experimental'
-        // Experimental group is entirely hidden in Simple mode
-        if (isExperimental && simpleMode) return null
-        const items = SIDEBAR_ITEMS.filter(
-          i => i.group === group && !i.hidden && (!simpleMode || !ADVANCED_TYPES.has(i.type)) &&
-            (!searching
-              || i.label.toLowerCase().includes(q)
-              || i.sub.toLowerCase().includes(q)
-              || i.type.toLowerCase().includes(q)),
+        // A group with nothing to show at the current tier is hidden entirely
+        // (e.g. Experimental in Basic) rather than rendering an empty heading.
+        const groupItems = tierItems.filter(i => i.group === group)
+        if (groupItems.length === 0) return null
+        const items = groupItems.filter(
+          i => !searching
+            || i.label.toLowerCase().includes(q)
+            || i.sub.toLowerCase().includes(q)
+            || i.type.toLowerCase().includes(q),
         )
         // While searching, hide groups with no matches for a clean list
         if (searching && items.length === 0) return null

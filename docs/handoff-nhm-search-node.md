@@ -93,7 +93,7 @@ Model on `gbifAdapter.ts` (same vocabulary). Store the raw record wholesale unde
 | `title` | `scientificName` → filed-as determination name → `catalogNumber` → `NHM specimen ${_id}` | mineralogy and some palaeontology have no `scientificName`, so the `catalogNumber` step matters. **Corrected at implementation:** `determinationFiledAs` is a parallel `Yes`/`No` flag array, not a name; the name lives in `determinationNames[i]` where `determinationFiledAs[i] === "Yes"` |
 | `description` | `locality`, with `habitat` appended if present | GBIF flattens this; it is one reason to have the node |
 | `creator` | `recordedBy` (array passes through) | |
-| `date` | compose `year-month-day` with zero-padding, truncating to whatever parts exist (`1882`, `1882-06`, `1882-06-18`) | no `eventDate` field; TimelineView accepts bare years |
+| `date` | compose `year-month-day` with zero-padding, truncating to whatever parts exist (`1882`, `1882-06`, `1882-06-18`) | no `eventDate` field; Timeline accepts bare years |
 | `subject` | `[collectionCode, subDepartment, family].filter(Boolean)` | gives FieldDistribution something to facet on |
 | `country` | `country` | |
 | `decimalLatitude` / `decimalLongitude` | `parseFloat`, `null` if NaN | strings in the payload; MapOutput needs numbers |
