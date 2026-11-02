@@ -29,7 +29,7 @@ Code: `src/utils/lineage.ts` (walker + narrative), `src/utils/lineageDescribers.
 
 ## 1. Problem
 
-LLM inference nodes (KingsInference, KingsInferenceByField, Evaluator, SmartFilter,
+LLM inference nodes (AI Inference, AI Inference (by field), Evaluator, SmartFilter,
 SmartGeocoder, the Assistant panel) currently see only the records handed to them and
 whatever the user types into a prompt. They have no awareness of *how those records came
 to be*: which services were queried and with what search terms, which sources were
@@ -59,7 +59,7 @@ Everything needed already exists in some form; the design composes them.
 | `NodeRunner` signature | `src/utils/nodeRunners.ts` — `(nodeId, getNodes, edges, updateNodeData)` | Every runner already receives the full node list and resolved edge list; any node can walk its upstream subgraph at run time. **No signature change needed.** |
 | Recursive upstream walk | `SaveSearchNode.collectSourceParams` (`src/nodes/SaveSearchNode.tsx`) | Proven BFS over `targetHandle === 'data'` edges capturing source-node configs via `stripTransient`. Currently component-local and leaf-sources-only — the generalised walker starts from this pattern. |
 | One-hop record collection | `collectUpstreamRecords` (`src/utils/upstreamRecords.ts`) | The idiomatic home for a new multi-hop `collectLineage` (usable from runners and, via `useReactFlow`, from components). |
-| Per-node "what I did" descriptors | `node.data` after each run | FilterTransform stores `filterOps[]`/`transformOps[]` + in/out counts; SmartFilter stores `generatedFilter.{conditions, explanation}`; Deduplicate stores `dedupeField`/`removedCount`; SpatialFilter stores `bbox`; Reconciliation stores field/authority/threshold/counts; MergeByQID stores merge counts; Geocoding stores config + resolved/pending/failed; KCL/Ollama store model + prompt. Search nodes store their full query config. **The lineage can be derived from what nodes already record.** |
+| Per-node "what I did" descriptors | `node.data` after each run | Filter and Transform stores `filterOps[]`/`transformOps[]` + in/out counts; SmartFilter stores `generatedFilter.{conditions, explanation}`; Deduplicate stores `dedupeField`/`removedCount`; SpatialFilter stores `bbox`; Reconciliation stores field/authority/threshold/counts; MergeByQID stores merge counts; Geocoding stores config + resolved/pending/failed; KCL/Ollama store model + prompt. Search nodes store their full query config. **The lineage can be derived from what nodes already record.** |
 | Per-record citation stamps | `_citation` via `citationUtils.addCitation` | service + serviceUrl + query + accessDate per record; `groupCitationsBySearch` already models "one entry per search run". |
 | Structured-state → narrative | `SourceProfileNode.buildNarrativePrompt` | Working prototype of turning structured pipeline state into an LLM-ready textual summary with a token budget. |
 | Central prompt substitution | `src/utils/promptTemplates.ts` | The single `renderTemplate` implementation used by every LLM node — carries a reserved `TODO(context-accrual): {{_lineage}}` marker as the injection point. |

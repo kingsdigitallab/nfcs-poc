@@ -258,7 +258,7 @@ const profiles: SourceProfile[] = [
     label: 'Literary and Linguistic Data Service (LLDS)',
     url: 'https://llds.ling-phil.ox.ac.uk',
     coverage: 'Oxford-based literary and linguistic data collections. Digitised texts, linguistic corpora, and Oxford Text Archive holdings including TEI-XML encoded primary sources.',
-    researchUse: 'Literary research, text analysis, TEI/XML primary sources. Records often include downloadable text content — good for piping through XMLExtract or KingsInference for text mining.',
+    researchUse: 'Literary research, text analysis, TEI/XML primary sources. Records often include downloadable text content — good for piping through XMLExtract or AI Inference for text mining.',
     limitations: 'Entire collection loaded client-side then filtered — completeness figure reflects the filtered count, not total available. Smaller dataset than other services. 15-second timeout; cache fallback in localStorage.',
     coreFields: ['title', 'description', 'creator', 'date', 'subject', 'language'],
     fields: [
@@ -351,11 +351,11 @@ const profiles: SourceProfile[] = [
     label: 'FrameSense Video Analysis',
     url: 'https://github.com/kingsdigitallab/framesense',
     coverage: 'Pre-processed video shot analysis. One record per detected shot, produced by the FrameSense CLI (make_shots_scenedetect + make_frames_ffmpeg). Hierarchy: collection → video → clip → shot.',
-    researchUse: 'Film and video archival analysis. Use KingsInference (Vision mode) for per-shot description. Use KingsInferenceByField (aggregate, field: kclResponse) for video-level summary. Filter by framesense.shotScale to target specific shot types.',
+    researchUse: 'Film and video archival analysis. Use AI Inference (Vision mode) for per-shot description. Use AI Inference (by field) (aggregate, field: kclResponse) for video-level summary. Filter by framesense.shotScale to target specific shot types.',
     limitations: 'Pre-processing required offline via FrameSense CLI. Folder handle lost on page refresh — must re-pick. imageDataUrl fields are large base64 strings — limit to middle frame per shot for memory efficiency. framesense.shotScale only present if scale_frames_sssabet was run during pre-processing.',
     coreFields: ['title'],
     fields: [
-      { path: 'imageDataUrl',          label: 'Frame Image',    description: 'Base64 JPEG of the representative frame — auto-detected by KingsInference vision mode', type: 'string', notes: 'The primary field for vision inference' },
+      { path: 'imageDataUrl',          label: 'Frame Image',    description: 'Base64 JPEG of the representative frame — auto-detected by AI Inference vision mode', type: 'string', notes: 'The primary field for vision inference' },
       { path: 'framesense.collection', label: 'Collection',     description: 'Collection name (top-level folder)', type: 'string' },
       { path: 'framesense.video',      label: 'Video',          description: 'Video name', type: 'string' },
       { path: 'framesense.clip',       label: 'Clip',           description: 'Clip name (if present in folder hierarchy)', type: 'string' },

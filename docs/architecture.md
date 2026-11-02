@@ -166,7 +166,7 @@ Differences that matter:
 
 ```mermaid
 flowchart TB
-  APP["App.tsx<br/>nodes, edges, rfInstance,<br/>runningAll, expandedNodeId,<br/>simpleMode, snapEnabled, chatOpen"]
+  APP["App.tsx<br/>nodes, edges, rfInstance,<br/>runningAll, expandedNodeId,<br/>nodeTier, snapEnabled, chatOpen"]
   APP --> TB["TopBar<br/>save/load, examples, group,<br/>mode toggles, Run All"]
   APP --> SB["Sidebar<br/>palette by TaDiRAH group"]
   APP --> RF["ReactFlow<br/>nodeTypes, Background,<br/>Controls, MiniMap"]
@@ -220,7 +220,7 @@ The type string is also a **file format**. Saved workflows and the four shipped 
 
 ### 6.2 The 53 node types
 
-Fifty-two appear in the sidebar, grouped by TaDiRAH research-activity vocabulary. The fifty-third, `group`, is created by the Group button. "Runner" means the node participates in Run All (section 7).
+Fifty-one appear in the sidebar, grouped by TaDiRAH research-activity vocabulary (`timelineOutput` is a hidden legacy alias of `timelineView` — same component and runner). The fifty-third, `group`, is created by the Group button. "Runner" means the node participates in Run All (section 7).
 
 | Group | Types | Runner |
 |---|---|---|
@@ -233,7 +233,7 @@ Fifty-two appear in the sidebar, grouped by TaDiRAH research-activity vocabulary
 | Disseminating | `export`, `jsonOutput`, `kclOutput`, `ollamaOutput`, `citation`, `saveSearch`, `loadSavedSearch`, `comparisonReport` | none |
 | Experimental | `sparqlSearch`, `frameSenseSource` | `sparqlSearch` |
 
-Simple mode (the default) hides the Experimental group and six advanced types (`smartFilter`, `smartGeocoder`, `frameSenseSource` and the three Ollama nodes).
+Node visibility has three tiers — **Basic** (default), **Intermediate**, **Full** — chosen with the segmented control in the top bar and persisted under `STORAGE_KEYS.NODE_TIER` (`src/config/nodeTiers.ts`; the legacy `nfcs_simple_mode` boolean is migrated once: Simple → Basic, Advanced → Full). Every `SidebarItem` declares a required `tier`; `visibleSidebarItems(tier)` drives the palette and `isTypeInTier` filters the connection-suggestion popup, so a user is never offered a node they cannot find. A group with no items in the current tier is hidden entirely. The exact per-tier sets are pinned by `src/__tests__/nodeTiers.test.ts` and listed in CLAUDE.md ("Node visibility tiers").
 
 ### 6.3 Anatomy of a node
 

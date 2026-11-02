@@ -58,8 +58,8 @@ const TADIRAH = [
       {
         name: 'Annotating',
         nodes: [
-          { label: 'KingsInference', note: 'Per-record AI analysis, vision-capable' },
-          { label: 'KingsInferenceByField', note: 'Per-field or aggregate AI annotation' },
+          { label: 'AI Inference', note: 'Per-record AI analysis, vision-capable' },
+          { label: 'AI Inference (by field)', note: 'Per-field or aggregate AI annotation' },
         ],
       },
       {
@@ -80,7 +80,7 @@ const TADIRAH = [
       {
         name: 'Cleanup',
         nodes: [
-          { label: 'FilterTransform (Transform)', note: 'Rename, normalise, truncate, extract fields' },
+          { label: 'Filter and Transform (Transform)', note: 'Rename, normalise, truncate, extract fields' },
           { label: 'Deduplicate', note: 'Remove duplicate records by chosen field' },
         ],
       },
@@ -97,7 +97,7 @@ const TADIRAH = [
       {
         name: 'Content Analysis',
         nodes: [
-          { label: 'FilterTransform (Filter)', note: 'Rule-based record filtering' },
+          { label: 'Filter and Transform (Filter)', note: 'Rule-based record filtering' },
           { label: 'SmartFilter', note: 'Natural-language filter — LLM writes the rules' },
           { label: 'SourceProfile', note: 'Schema completeness & field distribution per source' },
         ],
@@ -119,7 +119,7 @@ const TADIRAH = [
       {
         name: 'Thematic Analysis',
         nodes: [
-          { label: 'TimelineView', note: 'Temporal distribution + drag-to-filter range' },
+          { label: 'Timeline', note: 'Temporal distribution + drag-to-filter range' },
           { label: 'FieldDistribution', note: 'Subject / type faceting across result sets' },
         ],
       },
@@ -150,7 +150,7 @@ const TADIRAH = [
         name: 'Contextualizing',
         nodes: [
           { label: 'SourceProfile (AI narrative)', note: 'AI summary of a result set against a stated research question' },
-          { label: 'KingsInferenceByField (aggregate)', note: 'Synthesise across all records in a single prompt' },
+          { label: 'AI Inference (by field) (aggregate)', note: 'Synthesise across all records in a single prompt' },
         ],
       },
       {
@@ -233,7 +233,7 @@ const GAPS = [
   { category: 'Storage → Preservation', reason: 'Long-term digital preservation is infrastructure-layer work addressed by sibling NFCS projects (Projects 10, 16)' },
   { category: 'Dissemination → Crowdsourcing', reason: 'No multi-user annotation or collaborative workspace (see Project 2 for future registry work)' },
   { category: 'Analysis → Network Analysis', reason: 'Graph-based relationship mapping not yet implemented (MergeByQID covers co-occurrence only)' },
-  { category: 'Analysis → Stylistic Analysis', reason: 'Computational stylistics (authorship, register) possible via KingsInference prompts but not a dedicated node' },
+  { category: 'Analysis → Stylistic Analysis', reason: 'Computational stylistics (authorship, register) possible via AI Inference prompts but not a dedicated node' },
 ]
 
 // ── Component ────────────────────────────────────────────────────────────────

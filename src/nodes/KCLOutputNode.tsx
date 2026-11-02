@@ -65,7 +65,7 @@ export function KCLOutputNode({ id }: NodeProps) {
 
       {/* Header */}
       <div style={styles.header}>
-        <span style={styles.title}>KCL Output</span>
+        <span style={styles.title}>AI Inference Output</span>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           {withResponse.length > 0 && (
             <span style={styles.badge}>

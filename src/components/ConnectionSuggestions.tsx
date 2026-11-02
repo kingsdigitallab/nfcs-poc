@@ -6,6 +6,10 @@
  * wirable param handles and the user needs to choose which one to connect to.
  */
 
+import { SIDEBAR_ITEMS, isTypeInTier } from '../config/sidebarItems'
+import type { NodeTier } from '../config/nodeTiers'
+import type { NodeTypeId } from '../nodes'
+
 // ── Types ──────────────────────────────────────────────────────────────────────
 
 export interface Suggestion {
@@ -85,74 +89,82 @@ const INFERENCE_NODES = new Set([
 
 const PASS_THROUGH = new Set(['tableOutput', 'mapOutput', 'fieldDistribution', 'timelineView', 'imageView', 'sourceProfile', 'quickNote'])
 
+// Display labels come from SIDEBAR_ITEMS (single source of truth) so a palette
+// rename cannot drift out of sync with the suggestion popup.
+const LABEL_BY_TYPE = new Map<string, string>(SIDEBAR_ITEMS.map(i => [i.type, i.label]))
+
+/** Build a Suggestion whose label is looked up from the sidebar registry. */
+const S = (type: NodeTypeId, sub: string, color: string, targetHandle: string | null = 'data'): Suggestion =>
+  ({ type, label: LABEL_BY_TYPE.get(type) ?? type, sub, color, targetHandle })
+
 const OUTPUT_SUITE: Suggestion[] = [
-  { type: 'tableOutput',      label: 'TableOutput',           sub: 'Paginated results table',       color: '#0d9488', targetHandle: 'data' },
-  { type: 'mapOutput',        label: 'MapOutput',             sub: 'Geo map (lat/lon)',              color: '#14532d', targetHandle: 'data' },
-  { type: 'timelineView',     label: 'TimelineView',          sub: 'Year-resolution timeline',      color: '#1e293b', targetHandle: 'data' },
-  { type: 'fieldDistribution',label: 'FieldDistribution',     sub: 'Faceted bar chart',             color: '#047857', targetHandle: 'data' },
-  { type: 'export',           label: 'Export',                sub: 'CSV / JSON / GeoJSON',          color: '#b45309', targetHandle: 'data' },
-  { type: 'imageView',        label: 'ImageView',             sub: 'IIIF manifest viewer',          color: '#1c3144', targetHandle: 'data' },
+  S('tableOutput',       'Paginated results table',       '#0d9488'),
+  S('mapOutput',         'Geo map (lat/lon)',             '#14532d'),
+  S('timelineView',      'Year-resolution timeline',      '#1e293b'),
+  S('fieldDistribution', 'Faceted bar chart',             '#047857'),
+  S('export',            'CSV / JSON / GeoJSON',          '#b45309'),
+  S('imageView',         'IIIF manifest viewer',          '#1c3144'),
 ]
 
 const ENRICH_SUITE: Suggestion[] = [
-  { type: 'smartFilter',      label: 'SmartFilter',           sub: 'Natural language filter',       color: '#0f4c81', targetHandle: 'data' },
-  { type: 'filterTransform',  label: 'FilterTransform',       sub: 'Filter + transform records',    color: '#4f46e5', targetHandle: 'data' },
-  { type: 'deduplicate',      label: 'Deduplicate',           sub: 'Remove duplicate records',      color: '#0f766e', targetHandle: 'data' },
-  { type: 'kclNode',          label: 'KingsInference',        sub: 'KCL inference on records',      color: '#881337', targetHandle: 'data' },
-  { type: 'kclField',         label: 'KingsInferenceByField', sub: 'KCL inference on a field',      color: '#7f1d1d', targetHandle: 'data' },
-  { type: 'reconciliation',   label: 'Reconciliation',        sub: 'Wikidata entity matching',       color: '#7c3aed', targetHandle: 'data' },
-  { type: 'urlFetch',         label: 'URLContentFetch',       sub: 'Fetch URL content into records', color: '#0c4a6e', targetHandle: 'data' },
+  S('smartFilter',       'Natural language filter',        '#0f4c81'),
+  S('filterTransform',   'Filter + transform records',     '#4f46e5'),
+  S('deduplicate',       'Remove duplicate records',       '#0f766e'),
+  S('kclNode',           'AI inference on records',        '#881337'),
+  S('kclField',          'AI inference on a field',        '#7f1d1d'),
+  S('reconciliation',    'Wikidata entity matching',       '#7c3aed'),
+  S('urlFetch',          'Fetch URL content into records', '#0c4a6e'),
 ]
 
 const SUGGESTIONS: Record<string, Suggestion[]> = {
   dataSource: [...OUTPUT_SUITE, ...ENRICH_SUITE],
   process:    [...OUTPUT_SUITE, ...ENRICH_SUITE],
   passThrough: [
-    { type: 'tableOutput',      label: 'TableOutput',           sub: 'Paginated results table',                  color: '#0d9488', targetHandle: 'data' },
-    { type: 'mapOutput',        label: 'MapOutput',             sub: 'Geo map (lat/lon)',                        color: '#14532d', targetHandle: 'data' },
-    { type: 'timelineView',     label: 'TimelineView',          sub: 'Year-resolution timeline',                 color: '#1e293b', targetHandle: 'data' },
-    { type: 'imageView',        label: 'ImageView',             sub: 'IIIF manifest viewer',                     color: '#1c3144', targetHandle: 'data' },
-    { type: 'quickNote',        label: 'QuickNote',             sub: 'Read a field and write per-record notes',  color: '#0f766e', targetHandle: 'data' },
-    { type: 'export',           label: 'Export',                sub: 'CSV / JSON / GeoJSON',                     color: '#b45309', targetHandle: 'data' },
-    { type: 'filterTransform',  label: 'FilterTransform',       sub: 'Filter + transform records',               color: '#4f46e5', targetHandle: 'data' },
-    { type: 'deduplicate',      label: 'Deduplicate',           sub: 'Remove duplicate records',                 color: '#0f766e', targetHandle: 'data' },
-    { type: 'kclField',         label: 'KingsInferenceByField', sub: 'KCL inference on a field',                 color: '#7f1d1d', targetHandle: 'data' },
-    { type: 'kclNode',          label: 'KingsInference',        sub: 'KCL inference on records',                 color: '#881337', targetHandle: 'data' },
-    { type: 'jsonOutput',       label: 'JSONOutput',            sub: 'Formatted JSON viewer',                    color: '#6d28d9', targetHandle: 'data' },
+    S('tableOutput',     'Paginated results table',                 '#0d9488'),
+    S('mapOutput',       'Geo map (lat/lon)',                       '#14532d'),
+    S('timelineView',    'Year-resolution timeline',                '#1e293b'),
+    S('imageView',       'IIIF manifest viewer',                    '#1c3144'),
+    S('quickNote',       'Read a field and write per-record notes', '#0f766e'),
+    S('export',          'CSV / JSON / GeoJSON',                    '#b45309'),
+    S('filterTransform', 'Filter + transform records',              '#4f46e5'),
+    S('deduplicate',     'Remove duplicate records',                '#0f766e'),
+    S('kclField',        'AI inference on a field',                 '#7f1d1d'),
+    S('kclNode',         'AI inference on records',                 '#881337'),
+    S('jsonOutput',      'Formatted JSON viewer',                   '#6d28d9'),
   ],
   inference: [
-    { type: 'kclOutput',        label: 'KingsInferenceOutput',  sub: 'Display inference responses', color: '#3b0764', targetHandle: 'data' },
-    { type: 'tableOutput',      label: 'TableOutput',           sub: 'Paginated results table',     color: '#0d9488', targetHandle: 'data' },
-    { type: 'jsonOutput',       label: 'JSONOutput',            sub: 'Formatted JSON viewer',       color: '#6d28d9', targetHandle: 'data' },
-    { type: 'fieldDistribution',label: 'FieldDistribution',     sub: 'Faceted bar chart',           color: '#047857', targetHandle: 'data' },
-    { type: 'export',           label: 'Export',                sub: 'CSV / JSON / GeoJSON',        color: '#b45309', targetHandle: 'data' },
+    S('kclOutput',         'Display inference responses', '#3b0764'),
+    S('tableOutput',       'Paginated results table',     '#0d9488'),
+    S('jsonOutput',        'Formatted JSON viewer',       '#6d28d9'),
+    S('fieldDistribution', 'Faceted bar chart',           '#047857'),
+    S('export',            'CSV / JSON / GeoJSON',        '#b45309'),
   ],
   // Param suggestions: null targetHandle = multiple handles available → show HandlePicker
   param: [
-    { type: 'europeanaSearch',  label: 'EuropeanaSearch',       sub: 'apiKey / query / limit',      color: '#2563eb', targetHandle: null },
-    { type: 'kclNode',          label: 'KingsInference',        sub: 'Connect as API key',          color: '#881337', targetHandle: 'apiKey' },
-    { type: 'kclField',         label: 'KingsInferenceByField', sub: 'Connect as API key',          color: '#7f1d1d', targetHandle: 'apiKey' },
-    { type: 'ariadneSearch',    label: 'ARIADNESearch',         sub: 'query / limit',               color: '#164e63', targetHandle: null },
-    { type: 'hsdsSearch',       label: 'HSDSSearch',            sub: 'query / limit',               color: '#134e4a', targetHandle: null },
-    { type: 'nhmSearch',        label: 'NHMSearch',             sub: 'query / limit',               color: '#5e6b2b', targetHandle: null },
-    { type: 'gbifSearch',       label: 'GBIFSearch',            sub: 'q / scientificName / …',      color: '#0f4c81', targetHandle: null },
-    { type: 'lldsSearch',       label: 'LLDSSearch',            sub: 'query / limit',               color: '#92400e', targetHandle: null },
-    { type: 'mdsSearch',        label: 'MDSSearch',             sub: 'query / limit',               color: '#1e3a8a', targetHandle: null },
-    { type: 'bodleianSearch',   label: 'BodleianSearch',        sub: 'query / limit',               color: '#003865', targetHandle: null },
-    { type: 'smgSearch',        label: 'SMGSearch',             sub: 'query / limit',               color: '#701a75', targetHandle: null },
-    { type: 'vaSearch',         label: 'VASearch',              sub: 'query / limit',               color: '#9f1239', targetHandle: null },
+    S('europeanaSearch', 'apiKey / query / limit',  '#2563eb', null),
+    S('kclNode',         'Connect as API key',      '#881337', 'apiKey'),
+    S('kclField',        'Connect as API key',      '#7f1d1d', 'apiKey'),
+    S('ariadneSearch',   'query / limit',           '#164e63', null),
+    S('hsdsSearch',      'query / limit',           '#134e4a', null),
+    S('nhmSearch',       'query / limit',           '#5e6b2b', null),
+    S('gbifSearch',      'q / scientificName / …',  '#0f4c81', null),
+    S('lldsSearch',      'query / limit',           '#92400e', null),
+    S('mdsSearch',       'query / limit',           '#1e3a8a', null),
+    S('bodleianSearch',  'query / limit',           '#003865', null),
+    S('smgSearch',       'query / limit',           '#701a75', null),
+    S('vaSearch',        'query / limit',           '#9f1239', null),
   ],
 }
 
 const SAMPLE_DATA_SUGGESTIONS: Suggestion[] = [
-  { type: 'tableOutput', label: 'TableOutput', sub: 'Paginated results table',                   color: '#0d9488', targetHandle: 'data' },
-  { type: 'quickView',   label: 'QuickView',   sub: 'Inspect one field in full',                 color: '#1e293b', targetHandle: 'data' },
-  { type: 'quickNote',   label: 'QuickNote',   sub: 'Read a field and write per-record notes',   color: '#0f766e', targetHandle: 'data' },
-  { type: 'xmlSection',  label: 'XMLExtract',  sub: 'Extract XML content by XPath',              color: '#44403c', targetHandle: 'data' },
-  { type: 'imageView',   label: 'ImageView',   sub: 'Image + IIIF manifest viewer',              color: '#1c3144', targetHandle: 'data' },
+  S('tableOutput', 'Paginated results table',                 '#0d9488'),
+  S('quickView',   'Inspect one field in full',               '#1e293b'),
+  S('quickNote',   'Read a field and write per-record notes', '#0f766e'),
+  S('xmlSection',  'Extract XML content by XPath',            '#44403c'),
+  S('imageView',   'Image + IIIF manifest viewer',            '#1c3144'),
 ]
 
-export function getSuggestions(nodeType: string): Suggestion[] {
+function suggestionsFor(nodeType: string): Suggestion[] {
   if (nodeType === 'sampleDataSource') return SAMPLE_DATA_SUGGESTIONS
   if (DATA_SOURCES.has(nodeType))    return SUGGESTIONS.dataSource
   if (PROCESS_NODES.has(nodeType))   return SUGGESTIONS.process
@@ -162,20 +174,30 @@ export function getSuggestions(nodeType: string): Suggestion[] {
   return []
 }
 
+/**
+ * Suggestions for a source node type, restricted to nodes the user can also
+ * find in the palette at the current visibility tier (default: everything).
+ */
+export function getSuggestions(nodeType: string, tier: NodeTier = 'full'): Suggestion[] {
+  return suggestionsFor(nodeType).filter(s => isTypeInTier(s.type, tier))
+}
+
 // ── ConnectionSuggestions component ───────────────────────────────────────────
 
 interface SuggestionsProps {
   x: number
   y: number
   sourceNodeType: string
+  /** Current node visibility tier — suggestions outside it are not offered. */
+  nodeTier?: NodeTier
   onSelect: (s: Suggestion) => void
   onClose: () => void
 }
 
 const PANEL_W = 232
 
-export function ConnectionSuggestions({ x, y, sourceNodeType, onSelect, onClose }: SuggestionsProps) {
-  const suggestions = getSuggestions(sourceNodeType)
+export function ConnectionSuggestions({ x, y, sourceNodeType, nodeTier = 'full', onSelect, onClose }: SuggestionsProps) {
+  const suggestions = getSuggestions(sourceNodeType, nodeTier)
   if (suggestions.length === 0) return null
 
   const panelH = suggestions.length * 42 + 32

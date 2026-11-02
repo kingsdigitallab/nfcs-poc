@@ -5,7 +5,7 @@
  *   csv   — CSV/TSV parsed into column-keyed records
  *   xml   — Raw XML/HTML text passed as a FileRecord (for XMLSectionNode / Ollama)
  *   image — Image read as base64 data URL for vision models
- *   pdf   — PDF text extracted via pdfjs-dist (for KingsInference / Ollama)
+ *   pdf   — PDF text extracted via pdfjs-dist (for AI Inference / Ollama)
  *
  * No runner registered — file selection requires a direct user gesture.
  */

@@ -446,7 +446,7 @@ export function FilterTransformNode({ id }: NodeProps) {
 
       {/* Header */}
       <div style={S.header}>
-        <span style={S.headerTitle}>Filter / Transform</span>
+        <span style={S.headerTitle}>Filter and Transform</span>
         {d.statusMessage && (
           <span style={{ ...S.statusBadge, color: d.status === 'error' ? '#fca5a5' : '#a5f3fc' }}>
             {d.statusMessage}

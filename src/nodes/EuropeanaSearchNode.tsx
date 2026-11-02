@@ -110,7 +110,7 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
             background: isConnected('apiKey') ? '#eff6ff' : d.apiKey ? '#f0fdf4' : '#fef2f2',
             userSelect: 'none',
           }}>
-            {isConnected('apiKey') ? '(from Param)' : d.apiKey ? '🔒 Configured' : '⚠ Not set'}
+            {isConnected('apiKey') ? '(from Search Parameter)' : d.apiKey ? '🔒 Configured' : '⚠ Not set'}
           </span>
         </div>
         <div style={styles.keyHint}>
@@ -132,7 +132,7 @@ export function EuropeanaSearchNode({ id, data }: NodeProps) {
               }}
               value={(d[dataKey] as string) || ''}
               onChange={e => updateNodeData(id, { [dataKey]: e.target.value })}
-              placeholder={isConnected(handleId) ? '(from ParamNode)' : placeholder}
+              placeholder={isConnected(handleId) ? '(from Search Parameter)' : placeholder}
               readOnly={isConnected(handleId)}
               className="nodrag"
             />

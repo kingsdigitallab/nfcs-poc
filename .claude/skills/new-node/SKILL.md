@@ -130,10 +130,10 @@ Naming convention for `newId` prefix: short lowercase abbreviation of the node n
 Add to `SIDEBAR_ITEMS` in the appropriate group (the `color` must match the node's `NODE_IDENTITY` entry in `src/styles/theme.ts`):
 
 ```typescript
-{ type: '<typeKey>', label: '<Display Name>', sub: '<one-line description>', color: '<header hex>', group: '<Group>' },
+{ type: '<typeKey>', label: '<Display Name>', sub: '<one-line description>', color: '<header hex>', group: '<Group>', tier: '<basic | intermediate | full>' },
 ```
 
-Add the type to `ADVANCED_TYPES` (same file) if it should be hidden in Simple mode, and set `alpha: true` for Experimental-group nodes.
+`tier` is REQUIRED (compile error without it): the minimum node-visibility tier at which the node appears — `basic` for fundamentals, `intermediate` for common power tools, `full` for specialised/alpha nodes (see `src/config/nodeTiers.ts`). Then add the type to the matching tier list in `src/__tests__/nodeTiers.test.ts`, which pins the exact set per tier. Set `alpha: true` for Experimental-group nodes.
 
 ## Step 8 — `src/config/nodeDefaults.ts`: KCL_API_KEY_NODES (conditional)
 
@@ -201,7 +201,7 @@ One conventional commit on a feature branch; run `npm run lint`, `npm run typech
 - [ ] `src/nodes/index.ts` (component registered)
 - [ ] `src/types/AppNode.ts` — AppNode union
 - [ ] `src/config/nodeDefaults.ts` — NODE_DEFAULTS (+ KCL_API_KEY_NODES if apiKey)
-- [ ] `src/config/sidebarItems.ts` — SIDEBAR_ITEMS (+ ADVANCED_TYPES if hidden in Simple mode)
+- [ ] `src/config/sidebarItems.ts` — SIDEBAR_ITEMS entry with `tier` (+ the tier list in `src/__tests__/nodeTiers.test.ts`)
 - [ ] `src/styles/theme.ts` — NODE_IDENTITY colour
 - [ ] `src/utils/lineageDescribers.ts` — describer
 - [ ] `src/components/ConnectionSuggestions.tsx`
