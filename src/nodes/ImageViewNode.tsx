@@ -2,6 +2,9 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { Handle, Position, NodeProps, useReactFlow, NodeResizer } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { getFieldByPath } from '../utils/fieldPath'
+import { recordsWithField, collectImageFieldCandidates } from '../utils/imageFields'
+import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 const HEADER_COLOR    = '#29394a'
 const MAX_THUMB_DIM   = 1200
@@ -479,40 +482,12 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const [capturing,    setCapturing]    = useState(false)
   const svgRef = useRef<SVGSVGElement | null>(null)
 
-  const availableFields = useMemo<string[]>(() => {
-    if (!records?.length) return []
-    const keys = new Set<string>()
-    const IMAGE_KEYS = /thumb|image|url|src|href|photo|picture|preview|media|icon/i
-
-    // One representative record per _source ensures namespace fields from every
-    // connected data service appear in the picker, regardless of dataset sizes.
-    const seen = new Set<string>()
-    const representatives: typeof records = []
-    for (const r of records) {
-      const src = (r as Record<string, unknown>)._source as string | undefined ?? ''
-      if (!seen.has(src)) { seen.add(src); representatives.push(r) }
-    }
-
-    for (const r of representatives) {
-      const rec = r as Record<string, unknown>
-      for (const [k, v] of Object.entries(rec)) {
-        if (k.startsWith('_')) continue
-        keys.add(k)
-        // Also surface any field whose value is a data URL (e.g. 'content' from FileRecord)
-        if (typeof v === 'string' && v.startsWith('data:image/')) {
-          keys.add(k)
-        }
-        if (v != null && typeof v === 'object' && !Array.isArray(v)) {
-          for (const [nk, nv] of Object.entries(v as Record<string, unknown>)) {
-            if (IMAGE_KEYS.test(nk) && (typeof nv === 'string' || nv == null)) {
-              keys.add(`${k}.${nk}`)
-            }
-          }
-        }
-      }
-    }
-    return [...keys].sort()
-  }, [records])
+  // Image-looking fields first (with populations), everything else after — see imageFields.ts
+  const { imageFields, otherFields } = useMemo(
+    () => collectImageFieldCandidates((records ?? []) as UnifiedRecord[]),
+    [records],
+  )
+  const hasFields = imageFields.length + otherFields.length > 0
 
   const upstreamManifests = useMemo<ManifestEntry[]>(() => {
     if (!records?.length) return []
@@ -521,6 +496,11 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 
   const selectedField    = (d.selectedField as string | undefined) ?? ''
   const imageDirectUrl   = String(d.imageDirectUrl || '')
+
+  // "Custom…" reveals a free-text input for dot-notation paths the picker didn't discover.
+  const fieldIsListed = imageFields.some(f => f.path === selectedField) || otherFields.includes(selectedField)
+  const [customMode, setCustomMode] = useState(() => !!selectedField && !fieldIsListed)
+  const CUSTOM_OPTION = '__custom'
 
   // Auto-select 'content' when connected records are local images (contentType === 'image')
   // and no field has been chosen yet. Handles LocalFileSourceNode, LocalFolderSourceNode
@@ -531,26 +511,30 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     const hasImageRecords = records.some(
       r => (r as Record<string, unknown>).contentType === 'image'
     )
-    if (hasImageRecords) updateNodeData(id, { selectedField: 'content' })
-  }, [records, selectedField, imageDirectUrl, mode, id, updateNodeData])
-  const safeRecordIndex  = records?.length ? Math.min(recordIndex, records.length - 1) : 0
-  const currentRecord    = (records?.[safeRecordIndex] ?? {}) as Record<string, unknown>
-
-  // Resolve dot-notation field paths (e.g. europeana.thumbnail) from a record
-  function resolveFieldPath(rec: Record<string, unknown>, path: string): unknown {
-    const parts = path.split('.')
-    let val: unknown = rec
-    for (const part of parts) {
-      if (val == null || typeof val !== 'object') return undefined
-      val = (val as Record<string, unknown>)[part]
+    if (hasImageRecords) { updateNodeData(id, { selectedField: 'content' }); return }
+    // Otherwise pick the obvious image field: the only candidate, or one at least
+    // twice as populated as the runner-up. Ties stay unselected so the user chooses.
+    const [top, second] = imageFields
+    if (top && top.count > 0 && (!second || top.count >= second.count * 2)) {
+      updateNodeData(id, { selectedField: top.path })
     }
-    return val
-  }
+  }, [records, imageFields, selectedField, imageDirectUrl, mode, id, updateNodeData])
+  // Navigate only over records that actually have a value in the chosen field —
+  // a mixed V&A + Europeana set with `europeana.thumbnail` selected otherwise shows
+  // a blank canvas for every V&A record. A direct URL bypasses the subset.
+  const upstreamCount = records?.length ?? 0
+  const navRecords = useMemo<UnifiedRecord[]>(() => {
+    const all = (records ?? []) as UnifiedRecord[]
+    return mode === 'images' && !imageDirectUrl && selectedField ? recordsWithField(all, selectedField) : all
+  }, [records, mode, imageDirectUrl, selectedField])
+  const safeRecordIndex  = navRecords.length ? Math.min(recordIndex, navRecords.length - 1) : 0
+  const currentRecord    = (navRecords[safeRecordIndex] ?? {}) as Record<string, unknown>
+  const noMatchingRecords = mode === 'images' && !imageDirectUrl && !!selectedField && upstreamCount > 0 && navRecords.length === 0
 
   // Direct URL overrides field picker; field picker supports dot-notation paths
   const rawSrc           = mode === 'images'
     ? (imageDirectUrl || (() => {
-        const v = resolveFieldPath(currentRecord, selectedField)
+        const v = getFieldByPath(currentRecord, selectedField)
         return typeof v === 'string' && v ? v : null
       })())
     : null
@@ -718,10 +702,10 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   function setMode(m: 'images' | 'iiif') { updateNodeData(id, { mode: m }); setZoom(1) }
 
   const prevItem = () => mode === 'images' ? setRecordIndex(i => Math.max(0, i-1)) : setCanvasIndex(i => Math.max(0, i-1))
-  const nextItem = () => mode === 'images' ? setRecordIndex(i => Math.min((records?.length ?? 1)-1, i+1)) : setCanvasIndex(i => Math.min((canvases?.length ?? 1)-1, i+1))
+  const nextItem = () => mode === 'images' ? setRecordIndex(i => Math.min(Math.max(navRecords.length, 1)-1, i+1)) : setCanvasIndex(i => Math.min((canvases?.length ?? 1)-1, i+1))
   const isFirst = mode === 'images' ? safeRecordIndex === 0 : safeCanvasIndex === 0
-  const isLast  = mode === 'images' ? safeRecordIndex === (records?.length ?? 1)-1 : safeCanvasIndex === (canvases?.length ?? 1)-1
-  const total   = mode === 'images' ? (records?.length ?? 0) : (canvases?.length ?? 0)
+  const isLast  = mode === 'images' ? safeRecordIndex === Math.max(navRecords.length, 1)-1 : safeCanvasIndex === (canvases?.length ?? 1)-1
+  const total   = mode === 'images' ? navRecords.length : (canvases?.length ?? 0)
   const current = mode === 'images' ? safeRecordIndex + 1 : safeCanvasIndex + 1
   // Suppress record navigation when a direct image URL is active — not meaningful
   const showNav = total > 0 && !(mode === 'images' && imageDirectUrl)
@@ -749,23 +733,49 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
         {/* Controls */}
         {mode === 'images' ? (
           <div style={s.toolbarImages}>
-            {/* Row 1: field picker — datalist combobox allows freetyping dot-notation paths */}
+            {/* Row 1: field picker — image fields grouped first with populations; Custom… for dot paths */}
             <div style={s.toolbarRow}>
               <span style={s.srcLabel}>Field</span>
-              {availableFields.length > 0 ? (
+              {hasFields ? (
                 <>
-                  <input
-                    list={`imgfields-${id}`}
-                    style={s.fieldSelect}
-                    value={selectedField}
-                    onChange={e => { updateNodeData(id, { selectedField: e.target.value }); setRecordIndex(0) }}
-                    placeholder="Start typing field name to select…"
+                  <select
+                    style={{ ...s.fieldSelect, fontFamily: 'inherit', ...(customMode ? { flex: '0 0 auto', width: 84 } : {}) }}
+                    value={customMode ? CUSTOM_OPTION : (fieldIsListed ? selectedField : '')}
+                    onChange={e => {
+                      const v = e.target.value
+                      if (v === CUSTOM_OPTION) { setCustomMode(true); return }
+                      setCustomMode(false)
+                      updateNodeData(id, { selectedField: v }); setRecordIndex(0)
+                    }}
                     className="nodrag"
-                    spellCheck={false}
-                  />
-                  <datalist id={`imgfields-${id}`}>
-                    {availableFields.map(f => <option key={f} value={f} />)}
-                  </datalist>
+                    title="Field holding an image URL or data URL for each record"
+                  >
+                    <option value="">— select image field —</option>
+                    {imageFields.length > 0 && (
+                      <optgroup label="Image fields">
+                        {imageFields.map(f => (
+                          <option key={f.path} value={f.path}>{f.path} ({f.count} of {upstreamCount})</option>
+                        ))}
+                      </optgroup>
+                    )}
+                    {otherFields.length > 0 && (
+                      <optgroup label="Other fields">
+                        {otherFields.map(f => <option key={f} value={f}>{f}</option>)}
+                      </optgroup>
+                    )}
+                    <option value={CUSTOM_OPTION}>Custom…</option>
+                  </select>
+                  {customMode && (
+                    <input
+                      style={s.fieldSelect}
+                      value={selectedField}
+                      onChange={e => { updateNodeData(id, { selectedField: e.target.value }); setRecordIndex(0) }}
+                      placeholder="dot.notation.path"
+                      className="nodrag"
+                      spellCheck={false}
+                      autoFocus
+                    />
+                  )}
                 </>
               ) : (
                 <span style={s.hint}>{connected ? 'Run upstream node first' : 'Connect a node'}</span>
@@ -874,7 +884,9 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           <div style={s.navBar}>
             <button style={s.navBtn} onClick={prevItem} disabled={isFirst} className="nodrag">‹</button>
             <span style={s.navLabel} title={displayLabel}>{displayLabel}</span>
-            <span style={s.navCount}>{current}/{total}</span>
+            <span style={s.navCount} title={mode === 'images' && total !== upstreamCount ? `${total} of ${upstreamCount} upstream records have a value in ${selectedField}` : undefined}>
+              {current}/{total}{mode === 'images' && total !== upstreamCount ? ` (${upstreamCount} upstream)` : ''}
+            </span>
             <button style={s.navBtn} onClick={nextItem} disabled={isLast} className="nodrag">›</button>
           </div>
         )}
@@ -888,7 +900,9 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           ) : !displaySrc ? (
             <div style={s.placeholder}>
               {mode === 'images'
-                ? (connected ? 'Select a field containing an image' : 'Connect a node to the input handle')
+                ? (noMatchingRecords
+                    ? `No records have a value in "${selectedField}" — pick another field above`
+                    : connected ? 'Select a field containing an image' : 'Connect a node to the input handle')
                 : (upstreamManifests.length > 0
                     ? 'Select a record above, or enter a manifest URL'
                     : 'Enter a IIIF manifest URL, or click Load example')}
