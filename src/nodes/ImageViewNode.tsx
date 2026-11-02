@@ -3,7 +3,7 @@ import { Handle, Position, NodeProps, useReactFlow, NodeResizer } from '@xyflow/
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { getFieldByPath } from '../utils/fieldPath'
-import { recordsWithField } from '../utils/imageFields'
+import { recordsWithField, collectImageFieldCandidates } from '../utils/imageFields'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 const HEADER_COLOR    = '#29394a'
@@ -482,40 +482,12 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const [capturing,    setCapturing]    = useState(false)
   const svgRef = useRef<SVGSVGElement | null>(null)
 
-  const availableFields = useMemo<string[]>(() => {
-    if (!records?.length) return []
-    const keys = new Set<string>()
-    const IMAGE_KEYS = /thumb|image|url|src|href|photo|picture|preview|media|icon/i
-
-    // One representative record per _source ensures namespace fields from every
-    // connected data service appear in the picker, regardless of dataset sizes.
-    const seen = new Set<string>()
-    const representatives: typeof records = []
-    for (const r of records) {
-      const src = (r as Record<string, unknown>)._source as string | undefined ?? ''
-      if (!seen.has(src)) { seen.add(src); representatives.push(r) }
-    }
-
-    for (const r of representatives) {
-      const rec = r as Record<string, unknown>
-      for (const [k, v] of Object.entries(rec)) {
-        if (k.startsWith('_')) continue
-        keys.add(k)
-        // Also surface any field whose value is a data URL (e.g. 'content' from FileRecord)
-        if (typeof v === 'string' && v.startsWith('data:image/')) {
-          keys.add(k)
-        }
-        if (v != null && typeof v === 'object' && !Array.isArray(v)) {
-          for (const [nk, nv] of Object.entries(v as Record<string, unknown>)) {
-            if (IMAGE_KEYS.test(nk) && (typeof nv === 'string' || nv == null)) {
-              keys.add(`${k}.${nk}`)
-            }
-          }
-        }
-      }
-    }
-    return [...keys].sort()
-  }, [records])
+  // Image-looking fields first (with populations), everything else after — see imageFields.ts
+  const { imageFields, otherFields } = useMemo(
+    () => collectImageFieldCandidates((records ?? []) as UnifiedRecord[]),
+    [records],
+  )
+  const hasFields = imageFields.length + otherFields.length > 0
 
   const upstreamManifests = useMemo<ManifestEntry[]>(() => {
     if (!records?.length) return []
@@ -524,6 +496,11 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 
   const selectedField    = (d.selectedField as string | undefined) ?? ''
   const imageDirectUrl   = String(d.imageDirectUrl || '')
+
+  // "Custom…" reveals a free-text input for dot-notation paths the picker didn't discover.
+  const fieldIsListed = imageFields.some(f => f.path === selectedField) || otherFields.includes(selectedField)
+  const [customMode, setCustomMode] = useState(() => !!selectedField && !fieldIsListed)
+  const CUSTOM_OPTION = '__custom'
 
   // Auto-select 'content' when connected records are local images (contentType === 'image')
   // and no field has been chosen yet. Handles LocalFileSourceNode, LocalFolderSourceNode
@@ -534,8 +511,14 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     const hasImageRecords = records.some(
       r => (r as Record<string, unknown>).contentType === 'image'
     )
-    if (hasImageRecords) updateNodeData(id, { selectedField: 'content' })
-  }, [records, selectedField, imageDirectUrl, mode, id, updateNodeData])
+    if (hasImageRecords) { updateNodeData(id, { selectedField: 'content' }); return }
+    // Otherwise pick the obvious image field: the only candidate, or one at least
+    // twice as populated as the runner-up. Ties stay unselected so the user chooses.
+    const [top, second] = imageFields
+    if (top && top.count > 0 && (!second || top.count >= second.count * 2)) {
+      updateNodeData(id, { selectedField: top.path })
+    }
+  }, [records, imageFields, selectedField, imageDirectUrl, mode, id, updateNodeData])
   // Navigate only over records that actually have a value in the chosen field —
   // a mixed V&A + Europeana set with `europeana.thumbnail` selected otherwise shows
   // a blank canvas for every V&A record. A direct URL bypasses the subset.
@@ -750,23 +733,49 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
         {/* Controls */}
         {mode === 'images' ? (
           <div style={s.toolbarImages}>
-            {/* Row 1: field picker — datalist combobox allows freetyping dot-notation paths */}
+            {/* Row 1: field picker — image fields grouped first with populations; Custom… for dot paths */}
             <div style={s.toolbarRow}>
               <span style={s.srcLabel}>Field</span>
-              {availableFields.length > 0 ? (
+              {hasFields ? (
                 <>
-                  <input
-                    list={`imgfields-${id}`}
-                    style={s.fieldSelect}
-                    value={selectedField}
-                    onChange={e => { updateNodeData(id, { selectedField: e.target.value }); setRecordIndex(0) }}
-                    placeholder="Start typing field name to select…"
+                  <select
+                    style={{ ...s.fieldSelect, fontFamily: 'inherit', ...(customMode ? { flex: '0 0 auto', width: 84 } : {}) }}
+                    value={customMode ? CUSTOM_OPTION : (fieldIsListed ? selectedField : '')}
+                    onChange={e => {
+                      const v = e.target.value
+                      if (v === CUSTOM_OPTION) { setCustomMode(true); return }
+                      setCustomMode(false)
+                      updateNodeData(id, { selectedField: v }); setRecordIndex(0)
+                    }}
                     className="nodrag"
-                    spellCheck={false}
-                  />
-                  <datalist id={`imgfields-${id}`}>
-                    {availableFields.map(f => <option key={f} value={f} />)}
-                  </datalist>
+                    title="Field holding an image URL or data URL for each record"
+                  >
+                    <option value="">— select image field —</option>
+                    {imageFields.length > 0 && (
+                      <optgroup label="Image fields">
+                        {imageFields.map(f => (
+                          <option key={f.path} value={f.path}>{f.path} ({f.count} of {upstreamCount})</option>
+                        ))}
+                      </optgroup>
+                    )}
+                    {otherFields.length > 0 && (
+                      <optgroup label="Other fields">
+                        {otherFields.map(f => <option key={f} value={f}>{f}</option>)}
+                      </optgroup>
+                    )}
+                    <option value={CUSTOM_OPTION}>Custom…</option>
+                  </select>
+                  {customMode && (
+                    <input
+                      style={s.fieldSelect}
+                      value={selectedField}
+                      onChange={e => { updateNodeData(id, { selectedField: e.target.value }); setRecordIndex(0) }}
+                      placeholder="dot.notation.path"
+                      className="nodrag"
+                      spellCheck={false}
+                      autoFocus
+                    />
+                  )}
                 </>
               ) : (
                 <span style={s.hint}>{connected ? 'Run upstream node first' : 'Connect a node'}</span>
