@@ -254,6 +254,7 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
       narrativeStatus: 'idle',
       maxTokens:       16384,
       resultsVersion:  0,
+      minimised:       false,   // palette-dragged profiles open expanded; Quick Start sets true
     } satisfies SourceProfileNodeData,
   }),
   localFolderSource: pos => ({

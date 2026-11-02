@@ -239,3 +239,31 @@ describe('partitionUnknownNodes', () => {
     expect(cleaned).toBe(file)
   })
 })
+
+describe('sourceProfile `minimised` is configuration, not runtime state', () => {
+  // `minimised` is a persisted display preference (Quick Start instantiates profiles closed).
+  // It must survive save → load, and must NOT be confused with the group-only `collapsed` key.
+  const load = (nodes: unknown[]) =>
+    hydrateNodes(parseWorkflowFile(JSON.stringify({ version: 2, savedAt: 'x', edges: [], nodes })))
+
+  it('survives buildWorkflowPayload → hydrateNodes', () => {
+    const payload = buildWorkflowPayload(
+      [makeNode('profile-1', 'sourceProfile', { model: 'arc:nano', minimised: true, resultsVersion: 4 })],
+      [],
+    )
+    const [profile] = hydrateNodes(payload)
+    expect(profile.data.minimised).toBe(true)
+    expect(profile.data.resultsVersion).toBe(0)   // hydrateNodes resets the reactivity counter
+  })
+
+  it('loads expanded when an older save has no `minimised` field', () => {
+    const [profile] = load([
+      { id: 'profile-1', type: 'sourceProfile', position: { x: 0, y: 0 }, data: { model: 'arc:nano' } },
+    ])
+    expect(profile.data.minimised).toBeUndefined()
+  })
+
+  it('is not stripped by stripTransient', () => {
+    expect(stripTransient({ minimised: true, status: 'success' })).toEqual({ minimised: true })
+  })
+})

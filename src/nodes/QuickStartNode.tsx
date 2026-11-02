@@ -55,7 +55,9 @@ const LAYOUT = {
   DEDUP_COL_X:     700,   // expanded: search_end(360+270) + gap(70)
   PROFILE_COL_X_E: 1040,  // expanded: dedup_end(700+264) + gap(76)
   OUTPUT_COL_X_E:  1470,  // expanded: profile_end(1040+360) + gap(70)
-  ROW_SPACING:     480,
+  // An expanded SourceProfile is ≈640px tall (body maxHeight 600 + header), so rows
+  // must be pitched wider than that or adjacent profiles overlap once records arrive.
+  ROW_SPACING:     700,
   COMMENT_H:       120,
   COMMENT_GAP:     10,
   COMMENT_W:       220,
@@ -341,6 +343,7 @@ function buildSourceProfileData(apiKey: string): Record<string, unknown> {
     narrativeStatus: 'idle',
     maxTokens:       16384,
     resultsVersion:  0,
+    minimised:       true,    // most participants won't read the profile; one click opens it
   }
 }
 

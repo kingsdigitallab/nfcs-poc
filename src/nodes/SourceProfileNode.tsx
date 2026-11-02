@@ -23,6 +23,12 @@ export interface SourceProfileNodeData {
   narrativeStatus: 'idle' | 'running' | 'success' | 'error'
   maxTokens: number
   resultsVersion: number
+  /**
+   * Display preference: body hidden behind a one-line summary. Persisted (it is
+   * configuration, not runtime state). Deliberately NOT named `collapsed` — that key
+   * is group-node semantics read by withToolbar / useGrouping / workflowIO.
+   */
+  minimised?: boolean
   [key: string]: unknown
 }
 
@@ -533,6 +539,13 @@ export function SourceProfileNode({ id, data }: NodeProps) {
   const allProfiles = useMemo(() => getAllProfiles(), [])
   const noSourceDetected = connected && records.length > 0 && sourcesDetected.length === 0
 
+  const minimised = d.minimised === true
+  const summaryLine = !connected
+    ? 'Connect a source'
+    : records.length === 0
+      ? 'No records yet'
+      : `${records.length} record${records.length !== 1 ? 's' : ''} · ${sourcesDetected.length} source${sourcesDetected.length !== 1 ? 's' : ''}${narrative ? ' · narrative ready' : ''}`
+
   return (
     <div style={{
       width: 360,
@@ -555,16 +568,38 @@ export function SourceProfileNode({ id, data }: NodeProps) {
       <div style={{
         background: HEADER_COLOR,
         padding: '6px 10px',
-        borderRadius: '6px 6px 0 0',
+        borderRadius: minimised ? 6 : '6px 6px 0 0',
         fontWeight: 700,
         fontSize: 13,
         color: '#faf6ec',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: 8,
       }}>
-        Source Profile
+        <span>Source Profile</span>
+        <button
+          className="nodrag"
+          onClick={e => { e.stopPropagation(); updateNodeData(id, { minimised: !minimised }) }}
+          title={minimised ? 'Expand profile' : 'Minimise profile'}
+          style={{
+            background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px',
+            fontSize: 11, lineHeight: 1, color: '#cbd5e1',
+          }}
+        >
+          {minimised ? '▸' : '▾'}
+        </button>
       </div>
 
-      {/* Body */}
-      <div style={{ padding: '8px 10px', maxHeight: 600, overflowY: 'auto' }}>
+      {/* Minimised: one-line summary so Quick Start layouts stay compact */}
+      {minimised && (
+        <div style={{ padding: '6px 10px', fontSize: 11, color: '#b0a891' }}>
+          {summaryLine}
+        </div>
+      )}
+
+      {/* Body — maxHeight 600 + header ≈ 640px: QuickStartNode LAYOUT.ROW_SPACING must exceed this */}
+      {!minimised && <div style={{ padding: '8px 10px', maxHeight: 600, overflowY: 'auto' }}>
 
         {!connected && (
           <div style={{ color: '#8a8168', fontSize: 11, textAlign: 'center', padding: '12px 0' }}>
@@ -725,7 +760,7 @@ export function SourceProfileNode({ id, data }: NodeProps) {
             )}
           </div>
         )}
-      </div>
+      </div>}
 
       {/* Output handle */}
       <Handle
