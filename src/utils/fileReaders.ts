@@ -6,6 +6,7 @@
  */
 
 import * as pdfjsLib from 'pdfjs-dist'
+import { randomUUID } from './uuid'
 
 // Use CDN worker to avoid Vite bundler issues with the pdfjs worker
 pdfjsLib.GlobalWorkerOptions.workerSrc =
@@ -94,7 +95,7 @@ export async function extractPdfPages(
     const dataUrl = canvas.toDataURL('image/jpeg', 0.85)
 
     const record: FileRecord & Record<string, unknown> = {
-      id:           crypto.randomUUID(),
+      id:           randomUUID(),
       filename:     `${file.name} — page ${i}`,
       path:         file.name,
       contentType:  'image' as ContentType,
@@ -155,7 +156,7 @@ export async function extractFileContent(
   }
 
   return {
-    id: crypto.randomUUID(),
+    id: randomUUID(),
     filename: file.name,
     path: relativePath,
     contentType,

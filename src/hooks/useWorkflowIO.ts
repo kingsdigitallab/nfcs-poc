@@ -14,6 +14,7 @@ import { nodeTypes } from '../nodes'
 import { exportNotes, importNotes } from '../store/notesStore'
 import { clearAllResults } from '../store/resultsStore'
 import type { AppNode } from '../types/AppNode'
+import { randomUUID } from '../utils/uuid'
 
 const KNOWN_NODE_TYPES: ReadonlySet<string> = new Set(Object.keys(nodeTypes))
 
@@ -25,7 +26,7 @@ export function useWorkflowIO(
 ) {
   // Identity for the notes authored in this workflow; saved into the file so a
   // reloaded/loaded workflow restores its notes, while a blank canvas is fresh.
-  const workflowIdRef = useRef<string>(crypto.randomUUID())
+  const workflowIdRef = useRef<string>(randomUUID())
   const [loadError, setLoadError] = useState<string | null>(null)
 
   const handleSave = useCallback(() => {
@@ -51,7 +52,7 @@ export function useWorkflowIO(
     bumpCounterPast(hydrated.map(n => n.id))
     // Adopt the loaded workflow's identity and restore its notes (replacing any
     // notes from the previously-open workflow in this session).
-    workflowIdRef.current = wf.workflowId ?? crypto.randomUUID()
+    workflowIdRef.current = wf.workflowId ?? randomUUID()
     importNotes(wf.notes)
     setNodes(hydrated as AppNode[])
     // Strip edges that reference proxy handles of expanded groups — these are
