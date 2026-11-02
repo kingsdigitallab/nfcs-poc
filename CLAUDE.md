@@ -31,6 +31,44 @@ Both modes expose identical proxy endpoints and custom middleware — the single
 - Simple reverse-proxy → add an entry to `PROXY_TABLE` in `server/proxies.mjs`
 - Custom middleware → export a new connect-style function from `server/proxies.mjs` and wire it into both `vite.config.ts` (under `configureServer`) and `server/index.mjs` (under `app.use`)
 
+## Deployment — READ BEFORE WRITING DEPLOY STEPS
+
+Production is a single small VM: `ubuntu@nfcs-poc`, repo at `~/repos/nfcs-poc`, **9.3 GB root disk**
+(`/dev/vda1`). Only `main` is deployed; `git pull` + `docker compose build` on the host. Secrets live in the
+host's `.env` (never commit; never ask the user to paste it — it holds live keys).
+
+**Disk is the recurring failure.** The app image is ~1.7 GB on disk (Node + system Chromium for Puppeteer) and a
+rebuild needs ~3–4 GB of headroom on top: the builder stage runs `npm ci` with the full dev tree, the runtime
+stage apt-installs Chromium, and BuildKit caches both. With < 3 GB free the build dies mid-`apt-get`/`npm ci`
+with only `failed to execute bake: exit status 1` visible, and `docker compose up -d` then silently keeps
+serving the OLD container. Every deploy plan must therefore start with `df -h /` and include the prune steps.
+
+Canonical sequence (keep the running container up — it is the rollback):
+
+```bash
+df -h /                                   # need ≥ 4 GB free before building
+docker tag nfcs-poc-app:latest nfcs-poc-app:previous   # protect the fallback image
+docker builder prune -af                  # build cache is usually the biggest consumer (≈1–1.5 GB)
+docker container prune -f && docker image prune -f
+# still short? → sudo apt-get clean && sudo apt-get autoremove -y && sudo journalctl --vacuum-size=100M
+#                rm -rf ~/repos/nfcs-poc/node_modules   (host checkout never needs it; .dockerignore excludes it)
+git pull --ff-only origin main
+docker compose build --pull --progress=plain app 2>&1 | tee /tmp/build.log   # plain + tee: `| tail` is silent for minutes
+docker compose up -d app                  # recreates the container on the new image; `--profile tunnel` if Cloudflare is used
+curl -s -o /dev/null -w "%{http_code}\n" http://localhost:3001/              # expect 200
+docker rmi nfcs-poc-app:previous && docker image prune -f && docker builder prune -af && df -h /
+```
+
+- Do NOT `docker stop`/`rm` the container or `rmi` the image before building — it is unnecessary (Compose
+  recreates on image change) and removes the only rollback. Rollback = `docker tag nfcs-poc-app:previous
+  nfcs-poc-app:latest && docker compose up -d --no-build app`.
+- Do NOT `docker system prune --volumes` / `docker volume prune`: `workflow_saves` holds workshop saves,
+  `ollama_data` holds models. Ollama is a separate Compose service; `up -d app` never starts or builds it.
+- Known mitigation not yet applied: set `ENV PUPPETEER_SKIP_DOWNLOAD=true` in the **builder** stage of the
+  Dockerfile too (the runtime stage already has it) — the builder never runs Chrome, and skipping the download
+  cuts peak build disk by a few hundred MB. If the disk keeps biting, the real fix is growing the VM volume
+  (`sudo growpart /dev/vda 1 && sudo resize2fs /dev/vda1`) or building on a laptop and pushing to a registry.
+
 ## Proxy Rules (`server/proxies.mjs`)
 
 | Prefix | Target |
