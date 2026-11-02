@@ -20,6 +20,7 @@
 import { useState, useCallback, useRef } from 'react'
 import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { randomUUID } from '../utils/uuid'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -268,7 +269,7 @@ export function FrameSenseSourceNode({ id, data }: NodeProps) {
             .join(' / ')
 
           records.push({
-            id:           crypto.randomUUID(),
+            id:           randomUUID(),
             _source:      'framesense',
             framesense:   framesenseFields,
             imageDataUrl,
