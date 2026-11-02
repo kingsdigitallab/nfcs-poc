@@ -56,3 +56,25 @@ describe('resolveRecordYear', () => {
     expect(resolveRecordYear(rec({ date: '1066' }), '')).toEqual({ year: 1066, field: 'date' })
   })
 })
+
+describe('resolveRecordYear skips catch-all periods', () => {
+  it('ignores a period wider than MAX_PERIOD_SPAN_YEARS and falls through to date', () => {
+    // ARIADNE "prehistoric" bucket: 500,000 years wide — a classification, not a position
+    const r = rec({ date: '2020-06-08', periodStart: '-500000', periodEnd: '0043', periodName: 'prehistoric' })
+    expect(resolveRecordYear(r)).toEqual({ year: 2020, field: 'date' })
+  })
+  it('keeps a period with no end date', () => {
+    expect(resolveRecordYear(rec({ periodStart: '-2599', date: '2020' }))).toEqual({ year: -2599, field: 'periodStart' })
+  })
+  it('keeps a wide-but-real period just under the threshold', () => {
+    expect(resolveRecordYear(rec({ periodStart: '-12000', periodEnd: '-2000', date: '2020' }))).toEqual({ year: -12000, field: 'periodStart' })
+  })
+  it('still honours an explicit dateField=periodStart regardless of span', () => {
+    const r = rec({ date: '2020', periodStart: '-500000', periodEnd: '0043' })
+    expect(resolveRecordYear(r, 'periodStart')).toEqual({ year: -500000, field: 'periodStart' })
+  })
+  it('exports the threshold', async () => {
+    const m = await import('../utils/dateUtils')
+    expect(m.MAX_PERIOD_SPAN_YEARS).toBe(20_000)
+  })
+})

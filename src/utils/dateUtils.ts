@@ -29,6 +29,16 @@ export function toYear(dateStr: string | undefined | null): number | null {
  */
 export const AUTO_DATE_FIELDS = ['periodStart', 'date', 'gbif.eventDate'] as const
 
+/**
+ * A period wider than this is a classification bucket, not a position —
+ * ARIADNE's "prehistoric" is -500000..43 and "palaeolithic" starts at -1000000.
+ * Fixture census (Nov 2026): 5% of period records; the 95th-percentile span is
+ * 22,000 years, the 90th 1,900. In automatic mode such periods are skipped so
+ * resolution falls through to the catalogue date instead of stretching the
+ * timeline axis over half a million years. An explicit dateField ignores this.
+ */
+export const MAX_PERIOD_SPAN_YEARS = 20_000
+
 export interface ResolvedYear {
   year:  number
   /** The record path the year was read from — shown in the timeline's key. */
@@ -46,7 +56,12 @@ export function resolveRecordYear(r: UnifiedRecord, dateField?: string): Resolve
   }
   for (const field of AUTO_DATE_FIELDS) {
     const year = toYear(getFieldByPath(r, field) as string | undefined)
-    if (year !== null) return { year, field }
+    if (year === null) continue
+    if (field === 'periodStart') {
+      const end = toYear(r.periodEnd as string | undefined)
+      if (end !== null && end - year > MAX_PERIOD_SPAN_YEARS) continue
+    }
+    return { year, field }
   }
   return null
 }

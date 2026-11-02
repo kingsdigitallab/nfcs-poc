@@ -112,6 +112,7 @@ const PAD_BOT    = 38   // extra bottom space for handle knobs + labels
 const DOT_R      = 5
 const DOT_GAP    = 13
 const MAX_STACK  = 10
+const MAX_SVG_W  = 8000   // hard cap on auto-scaled width — see svgW below
 
 // ─── data type ────────────────────────────────────────────────────────────────
 
@@ -222,9 +223,12 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
                       : yearRange <= 800 ? 2
                       : 1
   const plotW = nodeWidth - 20
+  // Auto-scale is capped: a hand-picked field holding a -500000 "prehistoric"
+  // value would otherwise produce a half-million-pixel SVG. Use ⇤⇥ fit or drag
+  // the handles to zoom into a cluster when the cap is hit.
   const svgW  = fitToRange
     ? Math.max(plotW, PAD_L + PAD_R + 20)
-    : Math.max(plotW, yearRange * autoPxPerYear + PAD_L + PAD_R)
+    : Math.min(MAX_SVG_W, Math.max(plotW, yearRange * autoPxPerYear + PAD_L + PAD_R))
 
   const maxStack  = Math.max(0, ...Array.from(yearMap.values()).map(v => v.length))
   const stackRows = Math.min(maxStack, MAX_STACK)
