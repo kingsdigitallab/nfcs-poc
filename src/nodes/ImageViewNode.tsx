@@ -2,6 +2,9 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { Handle, Position, NodeProps, useReactFlow, NodeResizer } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { getFieldByPath } from '../utils/fieldPath'
+import { recordsWithField } from '../utils/imageFields'
+import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 const HEADER_COLOR    = '#29394a'
 const MAX_THUMB_DIM   = 1200
@@ -533,24 +536,22 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     )
     if (hasImageRecords) updateNodeData(id, { selectedField: 'content' })
   }, [records, selectedField, imageDirectUrl, mode, id, updateNodeData])
-  const safeRecordIndex  = records?.length ? Math.min(recordIndex, records.length - 1) : 0
-  const currentRecord    = (records?.[safeRecordIndex] ?? {}) as Record<string, unknown>
-
-  // Resolve dot-notation field paths (e.g. europeana.thumbnail) from a record
-  function resolveFieldPath(rec: Record<string, unknown>, path: string): unknown {
-    const parts = path.split('.')
-    let val: unknown = rec
-    for (const part of parts) {
-      if (val == null || typeof val !== 'object') return undefined
-      val = (val as Record<string, unknown>)[part]
-    }
-    return val
-  }
+  // Navigate only over records that actually have a value in the chosen field —
+  // a mixed V&A + Europeana set with `europeana.thumbnail` selected otherwise shows
+  // a blank canvas for every V&A record. A direct URL bypasses the subset.
+  const upstreamCount = records?.length ?? 0
+  const navRecords = useMemo<UnifiedRecord[]>(() => {
+    const all = (records ?? []) as UnifiedRecord[]
+    return mode === 'images' && !imageDirectUrl && selectedField ? recordsWithField(all, selectedField) : all
+  }, [records, mode, imageDirectUrl, selectedField])
+  const safeRecordIndex  = navRecords.length ? Math.min(recordIndex, navRecords.length - 1) : 0
+  const currentRecord    = (navRecords[safeRecordIndex] ?? {}) as Record<string, unknown>
+  const noMatchingRecords = mode === 'images' && !imageDirectUrl && !!selectedField && upstreamCount > 0 && navRecords.length === 0
 
   // Direct URL overrides field picker; field picker supports dot-notation paths
   const rawSrc           = mode === 'images'
     ? (imageDirectUrl || (() => {
-        const v = resolveFieldPath(currentRecord, selectedField)
+        const v = getFieldByPath(currentRecord, selectedField)
         return typeof v === 'string' && v ? v : null
       })())
     : null
@@ -718,10 +719,10 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   function setMode(m: 'images' | 'iiif') { updateNodeData(id, { mode: m }); setZoom(1) }
 
   const prevItem = () => mode === 'images' ? setRecordIndex(i => Math.max(0, i-1)) : setCanvasIndex(i => Math.max(0, i-1))
-  const nextItem = () => mode === 'images' ? setRecordIndex(i => Math.min((records?.length ?? 1)-1, i+1)) : setCanvasIndex(i => Math.min((canvases?.length ?? 1)-1, i+1))
+  const nextItem = () => mode === 'images' ? setRecordIndex(i => Math.min(Math.max(navRecords.length, 1)-1, i+1)) : setCanvasIndex(i => Math.min((canvases?.length ?? 1)-1, i+1))
   const isFirst = mode === 'images' ? safeRecordIndex === 0 : safeCanvasIndex === 0
-  const isLast  = mode === 'images' ? safeRecordIndex === (records?.length ?? 1)-1 : safeCanvasIndex === (canvases?.length ?? 1)-1
-  const total   = mode === 'images' ? (records?.length ?? 0) : (canvases?.length ?? 0)
+  const isLast  = mode === 'images' ? safeRecordIndex === Math.max(navRecords.length, 1)-1 : safeCanvasIndex === (canvases?.length ?? 1)-1
+  const total   = mode === 'images' ? navRecords.length : (canvases?.length ?? 0)
   const current = mode === 'images' ? safeRecordIndex + 1 : safeCanvasIndex + 1
   // Suppress record navigation when a direct image URL is active — not meaningful
   const showNav = total > 0 && !(mode === 'images' && imageDirectUrl)
@@ -874,7 +875,9 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           <div style={s.navBar}>
             <button style={s.navBtn} onClick={prevItem} disabled={isFirst} className="nodrag">‹</button>
             <span style={s.navLabel} title={displayLabel}>{displayLabel}</span>
-            <span style={s.navCount}>{current}/{total}</span>
+            <span style={s.navCount} title={mode === 'images' && total !== upstreamCount ? `${total} of ${upstreamCount} upstream records have a value in ${selectedField}` : undefined}>
+              {current}/{total}{mode === 'images' && total !== upstreamCount ? ` (${upstreamCount} upstream)` : ''}
+            </span>
             <button style={s.navBtn} onClick={nextItem} disabled={isLast} className="nodrag">›</button>
           </div>
         )}
@@ -888,7 +891,9 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           ) : !displaySrc ? (
             <div style={s.placeholder}>
               {mode === 'images'
-                ? (connected ? 'Select a field containing an image' : 'Connect a node to the input handle')
+                ? (noMatchingRecords
+                    ? `No records have a value in "${selectedField}" — pick another field above`
+                    : connected ? 'Select a field containing an image' : 'Connect a node to the input handle')
                 : (upstreamManifests.length > 0
                     ? 'Select a record above, or enter a manifest URL'
                     : 'Enter a IIIF manifest URL, or click Load example')}
