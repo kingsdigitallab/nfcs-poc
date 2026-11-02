@@ -8,6 +8,8 @@ import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { ReconciliationResult } from '../utils/reconciliationService'
 import { isReconciledValue } from '../utils/reconciliationService'
 import { renderCell }        from './ReconciledCell'
+import { resolveRecordYear, AUTO_DATE_FIELDS } from '../utils/dateUtils'
+import { STATUS_BADGE } from '../styles/theme'
 
 export interface TableOutputNodeData {
   [key: string]: unknown
@@ -474,6 +476,19 @@ export function TableOutputNode({ id, data, selected }: NodeProps) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [effectiveRecords, notesVersion, id])
 
+  // Header hints for the workshop's "if you have lat/long add a Map, if you have
+  // dates add a Timeline" step. Coordinates use MapOutputNode's exact predicate;
+  // dates use the Timeline's automatic resolution. Render-only — no node-data
+  // write, so the fingerprint loop guard below is unaffected.
+  const { withCoords, withDates } = useMemo(() => {
+    let withCoords = 0, withDates = 0
+    for (const r of effectiveRecordsWithNotes ?? []) {
+      if (r.decimalLatitude != null && r.decimalLongitude != null) withCoords++
+      if (resolveRecordYear(r) !== null) withDates++
+    }
+    return { withCoords, withDates }
+  }, [effectiveRecordsWithNotes])
+
   function handleSelectCandidate(recordId: string, col: string, result: ReconciliationResult) {
     updateNodeData(id, {
       selections: { ...selections, [`${recordId}::${col}`]: result },
@@ -630,6 +645,23 @@ export function TableOutputNode({ id, data, selected }: NodeProps) {
             {effectiveRecordsWithNotes.length} rows
             {sourceCount > 1 ? ` · ${sourceCount} sources` : ''}
           </span>
+        )}
+        {connected && effectiveRecordsWithNotes && effectiveRecordsWithNotes.length > 0 && (
+          <>
+            {/* Greyed, never hidden, when 0 — which services lack coordinates/dates is itself information */}
+            <span
+              style={{ ...styles.badge, color: withCoords > 0 ? styles.badge.color : STATUS_BADGE.idle }}
+              title={`${withCoords} of ${effectiveRecordsWithNotes.length} records have coordinates (decimalLatitude / decimalLongitude) — connect a Map output`}
+            >
+              📍 {withCoords}/{effectiveRecordsWithNotes.length}
+            </span>
+            <span
+              style={{ ...styles.badge, color: withDates > 0 ? styles.badge.color : STATUS_BADGE.idle }}
+              title={`${withDates} of ${effectiveRecordsWithNotes.length} records have a plottable date (${AUTO_DATE_FIELDS.join(' / ')}) — connect a Timeline`}
+            >
+              📅 {withDates}/{effectiveRecordsWithNotes.length}
+            </span>
+          </>
         )}
         {selectionCount > 0 && (
           <span style={{ ...styles.badge, color: '#fde68a' }}>

@@ -12,6 +12,8 @@ import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults } from '../store/resultsStore'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { candidateFields } from '../utils/reconciliationService'
+import { resolveRecordYear, AUTO_DATE_FIELDS, type ResolvedYear } from '../utils/dateUtils'
+import { getFieldByPath } from '../utils/fieldPath'
 
 // ─── source appearance ────────────────────────────────────────────────────────
 
@@ -81,20 +83,7 @@ function Marker({ shape, cx, cy, r, color, onMouseEnter, onMouseLeave }: ShapePr
   return <circle {...common} cx={cx} cy={cy} r={r} />
 }
 
-// ─── date → year ──────────────────────────────────────────────────────────────
-
-function toYear(dateStr: string | undefined | null): number | null {
-  if (!dateStr) return null
-  const s = String(dateStr).trim()
-  if (/^-\d+$/.test(s)) return parseInt(s, 10)
-  const bce = /(\d+)\s*(?:BCE|B\.C\.E\.?|BC|B\.C\.)/i.exec(s)
-  if (bce) return -parseInt(bce[1], 10)
-  const m = /\b(\d{4})\b/.exec(s)
-  if (m) { const n = parseInt(m[1], 10); if (n >= 0 && n <= 2200) return n }
-  const m3 = /\b(\d{3})\b/.exec(s)
-  if (m3) return parseInt(m3[1], 10)
-  return null
-}
+// ─── year formatting (year parsing lives in utils/dateUtils.ts, shared with the runner) ──
 
 function fmtYear(y: number): string {
   return y < 0 ? `${-y} BCE` : String(y)
@@ -182,19 +171,12 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
     [records],
   )
 
-  // Resolve year from a record using the selected dateField or default date/eventDate logic
-  const recordYear = useCallback((r: UnifiedRecord): number | null => {
-    if (dateField) {
-      const raw = dateField.includes('.')
-        ? dateField.split('.').reduce<unknown>((o, k) => (o as Record<string, unknown> | undefined)?.[k], r)
-        : (r as Record<string, unknown>)[dateField]
-      return toYear(raw as string | undefined)
-    }
-    // gbif.eventDate fallback: the adapter mirrors it into `date`, but records
-    // filtered/transformed upstream may carry only the namespaced original.
-    return toYear(r.date as string | undefined)
-      ?? toYear((r.gbif as Record<string, unknown> | undefined)?.eventDate as string | undefined)
-  }, [dateField])
+  // Resolve year (and which field it came from) via the shared priority — the
+  // runner uses the same function, so Run All and the live view agree.
+  const recordYear = useCallback(
+    (r: UnifiedRecord): ResolvedYear | null => resolveRecordYear(r, dateField || undefined),
+    [dateField],
+  )
 
   const scheduleHide = useCallback(() => {
     dismissTimer.current = setTimeout(() => setHovered(null), 180)
@@ -204,17 +186,19 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
   }, [])
 
   // ── timeline items & metrics ────────────────────────────────────────────────
-  const { items, minYear, maxYear, yearMap, bySource, noDateCount } = useMemo(() => {
-    const items:    { record: UnifiedRecord; year: number }[] = []
-    const bySource: Record<string, number>                    = {}
+  const { items, minYear, maxYear, yearMap, bySource, byField, noDateCount } = useMemo(() => {
+    const items:    { record: UnifiedRecord; year: number; field: string }[] = []
+    const bySource: Record<string, number>                                   = {}
+    const byField:  Record<string, number>                                   = {}   // key for "where did the year come from"
     let noDateCount = 0
 
     for (const r of records ?? []) {
-      const year = recordYear(r)
-      if (year === null) { noDateCount++; continue }
-      items.push({ record: r, year })
+      const res = recordYear(r)
+      if (res === null) { noDateCount++; continue }
+      items.push({ record: r, year: res.year, field: res.field })
       const src = r._source ?? 'unknown'
       bySource[src] = (bySource[src] ?? 0) + 1
+      byField[res.field] = (byField[res.field] ?? 0) + 1
     }
     items.sort((a, b) => a.year - b.year)
 
@@ -227,7 +211,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
       if (!yearMap.has(item.year)) yearMap.set(item.year, [])
       yearMap.get(item.year)!.push(item)
     }
-    return { items, minYear, maxYear, yearMap, bySource, noDateCount }
+    return { items, minYear, maxYear, yearMap, bySource, byField, noDateCount }
   }, [records, recordYear])
 
   // ── SVG geometry ──────────────────────────────────────────────────────────
@@ -280,7 +264,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
     const filtered = (slo === null && shi === null)
       ? upstream
       : upstream.filter(r => {
-          const year = recordYear(r) ?? null
+          const year = recordYear(r)?.year ?? null
           if (year === null) return false
           if (slo !== null && year < slo) return false
           if (shi !== null && year > shi) return false
@@ -519,7 +503,14 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
           const r          = hovered.record
           const g          = r.gbif as Record<string, unknown> | undefined
           const title      = String(r.title ?? g?.scientificName ?? '(no title)').slice(0, 60)
-          const date       = String(r.date ?? g?.eventDate ?? '')
+          // Name the field the plotted year came from, so a period-dated record is
+          // distinguishable from one plotted by catalogue date.
+          const res        = recordYear(r)
+          const raw        = res ? String(getFieldByPath(r, res.field) ?? '') : ''
+          const periodEnd  = res?.field === 'periodStart' && r.periodEnd ? ` – ${r.periodEnd}` : ''
+          const periodName = res?.field === 'periodStart' && r.periodName
+            ? ` (${Array.isArray(r.periodName) ? r.periodName.join(', ') : r.periodName})` : ''
+          const date       = res ? `${res.field}: ${raw}${periodEnd}${periodName}` : ''
           const glyph      = SHAPE_GLYPHS[sourceShape(r._source as string | undefined)] ?? '●'
           return (
             <div
@@ -550,7 +541,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
           value={dateField}
           onChange={e => updateNodeData(id, { dateField: e.target.value })}
           className="nodrag"
-          title="Field used as the date source (blank = auto: date / gbif.eventDate)"
+          title={`Field used as the date source (blank = auto: ${AUTO_DATE_FIELDS.join(' → ')})`}
         >
           <option value="">date: auto</option>
           {availableFields.map(f => <option key={f} value={f}>{f}</option>)}
@@ -618,6 +609,14 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
               {noDateCount} undated
             </span>
           )}
+          {/* Key: which record field supplied each plotted year */}
+          <span style={{ ...styles.legendItem, color: '#8a8168', flexBasis: '100%' }}
+            title="Automatic order: periodStart, then date, then gbif.eventDate — pick a field above to override">
+            year from:{' '}
+            {Object.entries(byField).sort((a, b) => b[1] - a[1]).map(([f, n], i) => (
+              <span key={f}>{i > 0 ? ' · ' : ''}<code style={{ fontSize: 9 }}>{f}</code> ({n})</span>
+            ))}
+          </span>
         </div>
       )}
     </div>
