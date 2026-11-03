@@ -63,7 +63,7 @@ describe('sidebar tiers', () => {
     'ariadneSearch', 'hsdsSearch', 'bodleianSearch', 'europeanaSearch', 'gbifSearch',
     'lldsSearch', 'mdsSearch', 'nhmSearch', 'smgSearch', 'vaSearch',
     'localFileSource', 'sampleDataSource',
-    'kclNode', 'kclField',
+    'kclNode', 'kclField', 'kclOutput',
     'fieldDistribution', 'sourceProfile',
     'tableOutput', 'mapOutput', 'timelineView',
     'citation', 'export', 'saveSearch', 'loadSavedSearch',
@@ -80,7 +80,7 @@ describe('sidebar tiers', () => {
   const FULL_ADDS = [
     'geocoding', 'smartGeocoder', 'mergeByQID', 'quickNote', 'ollamaNode', 'ollamaField',
     'smartFilter', 'spatialFilter', 'evaluatorNode',
-    'kclOutput', 'comparisonReport', 'ollamaOutput',
+    'comparisonReport', 'ollamaOutput',
     'frameSenseSource',
   ]
   const types = (tier: 'basic' | 'intermediate' | 'full') =>

@@ -272,9 +272,9 @@ per tier** — when you move or add a node, change the test list and this table 
 
 | Tier | Contains |
 |---|---|
-| Basic | `param`, `comment`, all ten Discovering sources, `localFileSource`, `sampleDataSource`, `kclNode`, `kclField`, `fieldDistribution`, `sourceProfile`, `tableOutput`, `mapOutput`, `timelineView`, `citation`, `export`, `saveSearch`, `loadSavedSearch` |
+| Basic | `param`, `comment`, all ten Discovering sources, `localFileSource`, `sampleDataSource`, `kclNode`, `kclField`, `kclOutput`, `fieldDistribution`, `sourceProfile`, `tableOutput`, `mapOutput`, `timelineView`, `citation`, `export`, `saveSearch`, `loadSavedSearch` |
 | Intermediate | Basic + `quickStart`, `localFolderSource`, `urlFetch`, `htmlSection`, `xmlSection`, `reconciliation`, `wikidataEnrich`, `filterTransform`, `deduplicate`, `quickView`, `imageView`, `htmlPreview`, `jsonOutput`, `sparqlSearch` |
-| Full | everything: + `geocoding`, `smartGeocoder`, `mergeByQID`, `quickNote`, `ollamaNode`, `ollamaField`, `ollamaOutput`, `smartFilter`, `spatialFilter`, `evaluatorNode`, `kclOutput`, `comparisonReport`, `frameSenseSource` |
+| Full | everything: + `geocoding`, `smartGeocoder`, `mergeByQID`, `quickNote`, `ollamaNode`, `ollamaField`, `ollamaOutput`, `smartFilter`, `spatialFilter`, `evaluatorNode`, `comparisonReport`, `frameSenseSource` |
 
 **Display names vs type keys.** A few nodes have plain-English labels that differ from their type key:
 `param` → **Search Parameter**, `kclNode` → **AI Inference**, `kclField` → **AI Inference (by field)**,

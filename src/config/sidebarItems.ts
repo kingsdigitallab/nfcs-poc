@@ -105,7 +105,7 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
   { type: 'citation',          label: 'Citation',              sub: 'Data source citations for this workflow stage', color: '#6f4a25', group: 'Disseminating', tier: 'basic' },
   { type: 'export',            label: 'Export',                sub: 'CSV / JSON / GeoJSON',                    color: '#8a5a22', group: 'Disseminating', tier: 'basic' },
   { type: 'jsonOutput',        label: 'JSONOutput',            sub: 'Formatted JSON viewer',                   color: '#4f3f7a', group: 'Disseminating', tier: 'intermediate' },
-  { type: 'kclOutput',         label: 'AI Inference Output',   sub: 'Display AI inference text',               color: '#3d2f5c', group: 'Disseminating', tier: 'full' },
+  { type: 'kclOutput',         label: 'AI Inference Output',   sub: 'Display AI inference text',               color: '#3d2f5c', group: 'Disseminating', tier: 'basic' },
   { type: 'comparisonReport',  label: 'ComparisonReport',      sub: 'Judge-vs-human evaluation cards + agreement summary', color: '#3a3a6e', group: 'Disseminating', tier: 'full' },
   { type: 'saveSearch',        label: 'SaveSearch',            sub: 'Save records + metadata to .nfcs.json',   color: '#2f5540', group: 'Disseminating', tier: 'basic' },
   { type: 'loadSavedSearch',   label: 'LoadSavedSearch',       sub: 'Replay a .nfcs.json saved search',        color: '#443a72', group: 'Disseminating', tier: 'basic' },
