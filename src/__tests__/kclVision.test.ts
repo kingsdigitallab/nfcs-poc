@@ -9,7 +9,7 @@ vi.mock('../utils/imageFetch', () => ({
   IMAGE_MAX_DIM: 1280,
 }))
 
-import { buildUserContent, imagePartFor, isImagePart } from '../utils/kclVision'
+import { buildUserContent, imagePartFor, isImagePart, defaultVisionMode } from '../utils/kclVision'
 import { fetchImageAsDataUrl } from '../utils/imageFetch'
 
 const PNG = 'data:image/png;base64,iVBORw0KGgo='
@@ -60,5 +60,18 @@ describe('imagePartFor', () => {
     expect(await imagePartFor('vam.thumbnail', 'https://x/a.jpg')).toEqual({ type: 'image_url', image_url: { url: 'data:image/jpeg;base64,FETCHED(https://x/a.jpg)', format: 'image/jpeg' } })
     expect(await imagePartFor('x', 'not an image')).toBeNull()
     expect(await imagePartFor('x', undefined)).toBeNull()
+  })
+})
+
+describe('defaultVisionMode', () => {
+  const img = { content: 'data:image/png;base64,AAAA', contentType: 'image' }
+  it('an explicit stored choice always wins', () => {
+    expect(defaultVisionMode([img], false)).toBe(false)
+    expect(defaultVisionMode([{ title: 'text' }], true)).toBe(true)
+  })
+  it('defaults on only when every upstream record is an image', () => {
+    expect(defaultVisionMode([img, img], undefined)).toBe(true)
+    expect(defaultVisionMode([img, { title: 'text' }], undefined)).toBe(false)
+    expect(defaultVisionMode([], undefined)).toBe(false)
   })
 })

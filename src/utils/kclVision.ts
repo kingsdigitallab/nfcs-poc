@@ -116,3 +116,13 @@ export async function collectImageParts(
 export function imageListText(records: Record<string, unknown>[]): string {
   return 'Images:\n' + records.map((r, i) => `${i + 1}. ${recordLabel(r)} (${sourceName(typeof r._source === 'string' ? r._source : undefined)})`).join('\n')
 }
+
+/**
+ * Vision default for AI Inference: an explicit stored choice wins; otherwise
+ * on when every upstream record is an image (Image View captures, local image
+ * files) — the user never has to find the checkbox for the obvious case.
+ */
+export function defaultVisionMode(records: Record<string, unknown>[], stored: boolean | undefined): boolean {
+  if (stored !== undefined) return stored
+  return records.length > 0 && records.every(r => r.contentType === 'image')
+}

@@ -64,3 +64,49 @@ export async function fetchImageAsDataUrl(url: string, { maxDim = IMAGE_MAX_DIM,
     return finish(await attempt(`/image-proxy?url=${encodeURIComponent(url)}`))
   }
 }
+
+// ── IIIF Image API regions ───────────────────────────────────────────────────
+
+export interface RegionBox { x: number; y: number; w: number; h: number }   // 0–1 fractions of the canvas
+
+export interface IiifRegionRequest {
+  /** Fractional box; omitted = the whole image. */
+  region?: RegionBox
+  /** Constrained size tried first (IIIF `!w,h`). */
+  size?:   string
+  /** Long-edge cap applied client-side when the server only gave us `max`; 0 disables (tests). */
+  maxDim?: number
+}
+
+export const DEFAULT_REGION_SIZE = '!1024,1024'
+
+/** `pct:x,y,w,h` with one decimal, or `full`. */
+export function iiifRegionParam(region?: RegionBox): string {
+  if (!region) return 'full'
+  const p = (v: number) => (v * 100).toFixed(1)
+  return `pct:${p(region.x)},${p(region.y)},${p(region.w)},${p(region.h)}`
+}
+
+/**
+ * Fetch one region of a IIIF Image API service as a data URL. The constrained
+ * size is tried first; if the server refuses it (SMG's zoom.* CloudFront 403s
+ * most explicit sizes but serves `max` — gotcha 33) the same region is fetched
+ * at `max` and downscaled here. Throws naming both attempts.
+ */
+export async function fetchIiifRegion(
+  serviceUrl: string,
+  { region, size = DEFAULT_REGION_SIZE, maxDim = 1024 }: IiifRegionRequest = {},
+): Promise<string> {
+  const base = serviceUrl.replace(/\/+$/, '')
+  const url  = (s: string) => `${base}/${iiifRegionParam(region)}/${s}/0/default.jpg`
+  try {
+    return await fetchImageAsDataUrl(url(size), { maxDim: 0 })
+  } catch (sizedErr) {
+    try {
+      return await fetchImageAsDataUrl(url('max'), { maxDim })
+    } catch (maxErr) {
+      const m = (e: unknown) => (e instanceof Error ? e.message : String(e))
+      throw new Error(`sized ${size} → ${m(sizedErr)}; max → ${m(maxErr)}`)
+    }
+  }
+}
