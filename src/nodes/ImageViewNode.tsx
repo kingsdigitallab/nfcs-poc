@@ -4,7 +4,9 @@ import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { getFieldByPath } from '../utils/fieldPath'
 import { recordsWithField, collectImageFieldCandidates } from '../utils/imageFields'
-import { resolveImageSrc, extractServiceBase, iiifSizeParam, iiifSizeLabel } from '../utils/iiifImage'
+import { resolveImageSrc, extractServiceBase, imageServiceUrl, iiifSizeParam, iiifSizeLabel } from '../utils/iiifImage'
+import { collectIiifEntries, type IiifEntry } from '../utils/iiifEntries'
+import { partnerProxyUrl } from '../utils/partnerProxies'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 const HEADER_COLOR    = '#29394a'
@@ -180,17 +182,20 @@ function parseManifest(manifest: Record<string, unknown>, manifestUrl?: string):
   return { canvases, meta }
 }
 
+// Direct fetch first; a partner host with its own proxy (SMG rejects the
+// generic url-proxy user-agent) goes through that; anything else via url-proxy.
 async function fetchManifest(url: string): Promise<Record<string, unknown>> {
   const hdrs = { Accept: 'application/json, application/ld+json' }
-  try {
-    const r = await fetch(url, { headers: hdrs, signal: AbortSignal.timeout(15_000) })
-    if (!r.ok) throw new Error(`HTTP ${r.status}`)
-    return r.json() as Promise<Record<string, unknown>>
-  } catch {
-    const r = await fetch(`/url-proxy?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(15_000) })
-    if (!r.ok) throw new Error(`HTTP ${r.status}`)
-    return JSON.parse(await r.text()) as Record<string, unknown>
+  const attempts = [url, partnerProxyUrl(url), `/url-proxy?url=${encodeURIComponent(url)}`].filter((u): u is string => !!u)
+  let lastErr: unknown = null
+  for (const u of attempts) {
+    try {
+      const r = await fetch(u, { headers: hdrs, signal: AbortSignal.timeout(15_000) })
+      if (!r.ok) throw new Error(`HTTP ${r.status}`)
+      return JSON.parse(await r.text()) as Record<string, unknown>
+    } catch (err) { lastErr = err }
   }
+  throw lastErr instanceof Error ? lastErr : new Error('Failed to load manifest')
 }
 
 async function fetchImageInfo(serviceUrl: string): Promise<IIIFImageInfo | null> {
@@ -338,51 +343,23 @@ function parseTiff(raw: Uint8Array, base: number): ExifData {
   return result
 }
 
-// ── Upstream IIIF manifest scanner ───────────────────────────────────────────
-// Inspects upstream records for any IIIF manifest URL so the node can offer
-// a picker instead of requiring the user to copy-paste URLs manually.
+// ── Upstream IIIF entries ────────────────────────────────────────────────────
+// collectIiifEntries (utils/iiifEntries.ts) finds one manifest OR Image API
+// service per upstream record; IIIF mode navigates over that list.
 
-interface ManifestEntry { url: string; label: string }
+/** Provenance copied from the upstream record onto captured region records. */
+const PROVENANCE_KEYS = ['id', 'title', 'description', 'creator', 'date', '_sourceUrl', '_citation', '_pid', '_sourceId'] as const
 
-function extractManifestEntries(records: Record<string, unknown>[]): ManifestEntry[] {
-  const seen    = new Set<string>()
-  const results: ManifestEntry[] = []
-
-  for (const rec of records) {
-    let url = ''
-
-    // 1. Named namespace — bodleian.manifest, smg.manifest, vam.manifest, and future services
-    const ns = (rec.bodleian ?? rec.smg ?? rec.vam ?? rec.iiif) as Record<string, unknown> | undefined
-    if (typeof ns?.manifest === 'string' && ns.manifest) url = ns.manifest
-
-    // 2. Top-level field names
-    if (!url) {
-      for (const key of ['manifest', 'manifestUrl', 'iiifManifest', 'iiif']) {
-        const v = rec[key]
-        if (typeof v === 'string' && v) { url = v; break }
-      }
-    }
-
-    // 3. Any string field whose value looks like a IIIF manifest URL
-    if (!url) {
-      for (const val of Object.values(rec)) {
-        if (typeof val === 'string' && val.includes('/iiif/manifest/')) { url = val; break }
-      }
-    }
-
-    if (url && !seen.has(url)) {
-      seen.add(url)
-      const label = String(
-        rec.title ||
-        (ns as Record<string, unknown> | undefined)?.shelfmark ||
-        rec._id ||
-        url.split('/').filter(Boolean).at(-1),
-      )
-      results.push({ url, label })
-    }
+function pickProvenance(record: Record<string, unknown> | undefined): Record<string, unknown> {
+  if (!record) return {}
+  const out: Record<string, unknown> = {}
+  for (const k of PROVENANCE_KEYS) if (record[k] !== undefined) out[k] = record[k]
+  // The source namespace object (vam, smg, bodleian, …) travels too
+  for (const [k, v] of Object.entries(record)) {
+    if (!k.startsWith('_') && v != null && typeof v === 'object' && !Array.isArray(v)) out[k] = v
   }
-
-  return results.slice(0, 100)
+  if (typeof record._source === 'string') out._origin = record._source
+  return out
 }
 
 // ── Downsampling hook ─────────────────────────────────────────────────────────
@@ -447,6 +424,11 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const [manifestLoading, setManLoading] = useState(false)
   const [manifestError,   setManError]   = useState('')
   const [localUrl,     setLocalUrl]     = useState(d.manifestUrl || '')
+  const [loadedUrl,    setLoadedUrl]    = useState('')   // what is on screen (entry url or manual manifest)
+  // Same value, readable synchronously: node data (d.manifestUrl) lags local
+  // state by a render, and an effect comparing the two without this ref
+  // ping-ponged between entries (Maximum update depth exceeded).
+  const loadedUrlRef = useRef('')
   const [imageInfo,    setImageInfo]    = useState<IIIFImageInfo | null>(null)
   const [iiifRegions,  setIiifRegions]  = useState<IIIFRegion[]>(() => (d.iiifRegions as IIIFRegion[] | undefined) ?? [])
   const [drawMode,     setDrawMode]     = useState(false)
@@ -461,10 +443,10 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   )
   const hasFields = imageFields.length + otherFields.length > 0
 
-  const upstreamManifests = useMemo<ManifestEntry[]>(() => {
-    if (!records?.length) return []
-    return extractManifestEntries(records as Record<string, unknown>[])
-  }, [records])
+  const iiifEntries = useMemo<IiifEntry[]>(
+    () => collectIiifEntries((records ?? []) as UnifiedRecord[]),
+    [records],
+  )
 
   const selectedField    = (d.selectedField as string | undefined) ?? ''
   const imageDirectUrl   = String(d.imageDirectUrl || '')
@@ -523,6 +505,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 
   const loadManifest = useCallback(async (url: string) => {
     if (!url.trim()) return
+    loadedUrlRef.current = url.trim(); setLoadedUrl(url.trim())
     setManLoading(true); setManError(''); setDrawMode(false); setDrawBox(null)
     try {
       const raw = await fetchManifest(url.trim())
@@ -537,11 +520,44 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     }
   }, [])
 
+  // Load an upstream entry: manifests are fetched; a bare Image API service
+  // becomes a one-canvas view with no fetch (zoom tiers + capture still work).
+  const loadEntry = useCallback((entry: IiifEntry) => {
+    setLocalUrl(entry.url)
+    updateNodeData(id, { manifestUrl: entry.url })
+    if (entry.kind === 'manifest') { loadManifest(entry.url); return }
+    loadedUrlRef.current = entry.url; setLoadedUrl(entry.url)
+    setManError(''); setDrawMode(false); setDrawBox(null)
+    const rec = entry.record as Record<string, unknown>
+    setCanvases([{ label: entry.label, serviceUrl: entry.url, directUrl: imageServiceUrl(entry.url, 'max') }])
+    setManifestMeta({
+      title: String(rec.title ?? entry.label), summary: String(rec.description ?? ''),
+      attribution: entry.source, rights: '', date: String(rec.date ?? ''), provider: entry.source, metadata: [],
+    })
+    setCanvasIndex(0); setImageInfo(null)
+  }, [id, loadManifest, updateNodeData])
+
+  const entryIndex   = iiifEntries.findIndex(e => e.url === loadedUrl)
+  const currentEntry = entryIndex >= 0 ? iiifEntries[entryIndex] : undefined
+
+  // Saved URL (reload / workflow load): load once, as an entry when it is one.
+  // The ref guard stops the select/Load handlers' own load from being repeated
+  // here; keyed on the entry COUNT (not identity) so records arriving later
+  // re-run it without re-running on every render.
   const savedUrl = d.manifestUrl || ''
   useEffect(() => {
-    if (mode === 'iiif' && savedUrl) { setLocalUrl(savedUrl); loadManifest(savedUrl) }
+    if (mode !== 'iiif' || !savedUrl || savedUrl === loadedUrlRef.current) return
+    setLocalUrl(savedUrl)
+    const entry = iiifEntries.find(e => e.url === savedUrl)
+    if (entry) loadEntry(entry); else loadManifest(savedUrl)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [savedUrl, mode])
+  }, [savedUrl, mode, iiifEntries.length])
+
+  // Nothing loaded yet but upstream offers entries → show the first one.
+  useEffect(() => {
+    if (mode === 'iiif' && !savedUrl && !loadedUrlRef.current && iiifEntries.length > 0) loadEntry(iiifEntries[0])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode, savedUrl, iiifEntries.length])
 
   const safeCanvasIndex = canvases ? Math.min(canvasIndex, canvases.length - 1) : 0
   const currentCanvas   = canvases?.[safeCanvasIndex]
@@ -568,6 +584,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           : currentCanvas.directUrl
         const dataUrl = await urlToBase64(regionUrl)
         recs.push({
+          ...pickProvenance(currentEntry?.record as Record<string, unknown> | undefined),
           content:      dataUrl,
           contentType:  'image',
           mimeType:     'image/jpeg',
@@ -588,7 +605,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     } finally {
       setCapturing(false)
     }
-  }, [currentCanvas, iiifRegions, id, manifestMeta, updateNodeData])
+  }, [currentCanvas, currentEntry, iiifRegions, id, manifestMeta, updateNodeData])
 
   const getSvgCoords = useCallback((e: React.PointerEvent<SVGSVGElement>) => {
     const rect = svgRef.current!.getBoundingClientRect()
@@ -635,9 +652,14 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
         : (currentCanvas?.directUrl ?? null))
     : thumb
 
+  // IIIF mode names the source and the record so the user always knows what is
+  // on screen; a manually entered manifest falls back to the canvas label.
   const displayLabel = mode === 'iiif'
-    ? (currentCanvas?.label ?? '')
+    ? (currentEntry ? `${currentEntry.source} · ${currentEntry.label}` : (currentCanvas?.label ?? ''))
     : String(currentRecord.title || currentRecord.filename || currentRecord.id || `Record ${safeRecordIndex + 1}`)
+  const displayTitle = mode === 'iiif'
+    ? String((currentEntry?.record as Record<string, unknown> | undefined)?._sourceUrl ?? loadedUrl ?? '')
+    : displayLabel
 
   // ── Write current image to results store ─────────────────────────────────────
   // Images mode: reacts to rawSrc changing (field selection, record navigation)
@@ -672,14 +694,21 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 
   function setMode(m: 'images' | 'iiif') { updateNodeData(id, { mode: m }); setZoom(1) }
 
-  const prevItem = () => mode === 'images' ? setRecordIndex(i => Math.max(0, i-1)) : setCanvasIndex(i => Math.max(0, i-1))
-  const nextItem = () => mode === 'images' ? setRecordIndex(i => Math.min(Math.max(navRecords.length, 1)-1, i+1)) : setCanvasIndex(i => Math.min((canvases?.length ?? 1)-1, i+1))
-  const isFirst = mode === 'images' ? safeRecordIndex === 0 : safeCanvasIndex === 0
-  const isLast  = mode === 'images' ? safeRecordIndex === Math.max(navRecords.length, 1)-1 : safeCanvasIndex === (canvases?.length ?? 1)-1
-  const total   = mode === 'images' ? navRecords.length : (canvases?.length ?? 0)
-  const current = mode === 'images' ? safeRecordIndex + 1 : safeCanvasIndex + 1
+  // Navigation steps RECORDS in both modes (IIIF: upstream entries, auto-loading
+  // each). Canvases within one manifest have their own stepper in the region bar.
+  const prevItem = () => mode === 'images'
+    ? setRecordIndex(i => Math.max(0, i-1))
+    : (entryIndex > 0 && loadEntry(iiifEntries[entryIndex - 1]))
+  const nextItem = () => mode === 'images'
+    ? setRecordIndex(i => Math.min(Math.max(navRecords.length, 1)-1, i+1))
+    : (entryIndex < iiifEntries.length - 1 && loadEntry(iiifEntries[entryIndex + 1]))
+  const isFirst = mode === 'images' ? safeRecordIndex === 0 : entryIndex <= 0
+  const isLast  = mode === 'images' ? safeRecordIndex === Math.max(navRecords.length, 1)-1 : entryIndex === iiifEntries.length - 1
+  const total   = mode === 'images' ? navRecords.length : iiifEntries.length
+  const current = mode === 'images' ? safeRecordIndex + 1 : entryIndex + 1   // 0 = manual URL
   // Suppress record navigation when a direct image URL is active — not meaningful
   const showNav = total > 0 && !(mode === 'images' && imageDirectUrl)
+  const canvasCount = canvases?.length ?? 0
 
   return (
     <>
@@ -769,24 +798,22 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
         ) : (
           <div style={s.toolbarImages}>
             {/* Upstream picker — only shown when upstream records have IIIF manifests */}
-            {upstreamManifests.length > 0 && (
+            {iiifEntries.length > 0 && (
               <div style={s.toolbarRow}>
                 <span style={s.srcLabel}>From</span>
                 <select
                   style={{ ...s.fieldSelect, fontFamily: 'inherit' }}
-                  value={upstreamManifests.some(m => m.url === localUrl) ? localUrl : ''}
+                  value={currentEntry?.url ?? ''}
                   onChange={e => {
-                    const url = e.target.value
-                    if (!url) return
-                    setLocalUrl(url)
-                    updateNodeData(id, { manifestUrl: url })
-                    loadManifest(url)
+                    const entry = iiifEntries.find(x => x.url === e.target.value)
+                    if (entry) loadEntry(entry)
                   }}
                   className="nodrag"
+                  title="Upstream records with a IIIF manifest or Image API service — ‹ › below steps through them"
                 >
-                  <option value="">— select from upstream ({upstreamManifests.length}) —</option>
-                  {upstreamManifests.map((m, i) => (
-                    <option key={i} value={m.url}>{m.label}</option>
+                  <option value="">— select from upstream ({iiifEntries.length}) —</option>
+                  {iiifEntries.map((m, i) => (
+                    <option key={i} value={m.url}>{m.source} · {m.label}</option>
                   ))}
                 </select>
               </div>
@@ -833,6 +860,13 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             {iiifRegions.length > 0 && (
               <span style={s.regionCount}>{iiifRegions.length} region{iiifRegions.length !== 1 ? 's' : ''}</span>
             )}
+            {canvasCount > 1 && (
+              <span style={s.canvasStepper} title="Canvases within this manifest">
+                <button style={s.regionBtn} onClick={() => setCanvasIndex(i => Math.max(0, i - 1))} disabled={safeCanvasIndex === 0}>‹</button>
+                canvas {safeCanvasIndex + 1}/{canvasCount}
+                <button style={s.regionBtn} onClick={() => setCanvasIndex(i => Math.min(canvasCount - 1, i + 1))} disabled={safeCanvasIndex === canvasCount - 1}>›</button>
+              </span>
+            )}
             <div style={{ flex: 1 }} />
             {iiifRegions.length > 0 && (
               <button style={{ ...s.regionBtn, color: '#b0a891', fontSize: 9 }} onClick={() => saveRegions([])}>
@@ -854,7 +888,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
         {showNav && (
           <div style={s.navBar}>
             <button style={s.navBtn} onClick={prevItem} disabled={isFirst} className="nodrag">‹</button>
-            <span style={s.navLabel} title={displayLabel}>{displayLabel}</span>
+            <span style={s.navLabel} title={displayTitle}>{displayLabel}</span>
             <span style={s.navCount} title={mode === 'images' && total !== upstreamCount ? `${total} of ${upstreamCount} upstream records have a value in ${selectedField}` : undefined}>
               {current}/{total}{mode === 'images' && total !== upstreamCount ? ` (${upstreamCount} upstream)` : ''}
             </span>
@@ -874,7 +908,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
                 ? (noMatchingRecords
                     ? `No records have a value in "${selectedField}" — pick another field above`
                     : connected ? 'Select a field containing an image' : 'Connect a node to the input handle')
-                : (upstreamManifests.length > 0
+                : (iiifEntries.length > 0
                     ? 'Select a record above, or enter a manifest URL'
                     : 'Enter a IIIF manifest URL, or click Load example')}
             </div>
@@ -1122,6 +1156,7 @@ const s = {
     cursor: 'pointer', flexShrink: 0,
   },
   regionCount: { fontSize: 10, color: '#3b82f6', fontWeight: 700, fontFamily: 'monospace' },
+  canvasStepper: { display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: '#b0a891', fontFamily: 'monospace' },
   handle: {
     width: 10, height: 10, background: HEADER_COLOR,
     border: '2px solid #fff', boxShadow: `0 0 0 1px ${HEADER_COLOR}`,
