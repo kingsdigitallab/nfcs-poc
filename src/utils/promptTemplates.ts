@@ -17,6 +17,7 @@
  * (getContentMaxChars in kclConfig.ts) and stays in the runners, applied
  * BEFORE substitution (CLAUDE.md gotcha 19).
  */
+import { getFieldByPath } from './fieldPath'
 
 /**
  * Generic substitution: every {{key}} resolves against the record.
@@ -25,12 +26,24 @@
  * (e.g. {...record, content: baseContent} or {...record, __reference, __candidate}).
  */
 export function renderTemplate(template: string, record: Record<string, unknown>): string {
-  return template.replace(/\{\{(\w+)\}\}/g, (_, key: string) => {
-    const val = record[key]
+  return template.replace(TOKEN, (_, key: string) => {
+    const val = lookup(record, key)
     if (val === undefined || val === null) return ''
     if (typeof val === 'object') return JSON.stringify(val)
     return String(val)
   })
+}
+
+/**
+ * A token is {{key}} or {{ns.key}} — dot paths reach into namespace objects
+ * (`{{gbif.scientificName}}`, `{{europeana.thumbnail}}`). A flat key wins
+ * when the record happens to carry a literal dotted key.
+ */
+const TOKEN = /\{\{([\w.]+)\}\}/g
+
+function lookup(record: Record<string, unknown>, key: string): unknown {
+  if (key in record) return record[key]
+  return key.includes('.') ? getFieldByPath(record, key) : undefined
 }
 
 /**
@@ -63,5 +76,5 @@ export function renderFieldTemplatePerRecord(
   return template
     .replace(/\{\{value\}\}/g, () => ctx.value)
     .replace(/\{\{field\}\}/g, () => ctx.field)
-    .replace(/\{\{(\w+)\}\}/g, (_, k: string) => String(ctx.record[k] ?? ''))
+    .replace(TOKEN, (_, k: string) => String(lookup(ctx.record, k) ?? ''))
 }

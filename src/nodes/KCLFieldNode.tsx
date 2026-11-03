@@ -19,6 +19,9 @@ import { PromptRecipeBar } from '../components/PromptRecipeBar'
 import { SYSTEM_PROMPT_FLAVOURS } from '../utils/promptStarters'
 import { formatDuration } from '../utils/formatDuration'
 import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from '../utils/promptTemplates'
+import { getFieldByPath } from '../utils/fieldPath'
+import { collectFieldPaths, type FieldPathInfo } from '../utils/fieldPaths'
+import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -213,14 +216,18 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
     return out
   }, [allNodes, allEdges, id])
 
-  // Available fields from upstream sample (arrays included, plain objects excluded)
-  const availableFields = useMemo<string[]>(() => {
-    if (upstreamRecords.length === 0) return []
-    const sample = upstreamRecords[0]
-    return Object.entries(sample)
-      .filter(([, v]) => v !== null && v !== undefined && (typeof v !== 'object' || Array.isArray(v)))
-      .map(([k]) => k)
-  }, [upstreamRecords])
+  // Every scalar/array path across all connected sources, one level into
+  // namespaces (vam.objectType, europeana.thumbnail) — see fieldPaths.ts.
+  const fieldPaths = useMemo<FieldPathInfo[]>(() => collectFieldPaths(upstreamRecords as UnifiedRecord[]), [upstreamRecords])
+  const availableFields = useMemo(() => fieldPaths.map(f => f.path), [fieldPaths])
+  const fieldGroups = useMemo(() => {
+    const groups = new Map<string, FieldPathInfo[]>()
+    for (const f of fieldPaths) {
+      const g = f.path.includes('.') ? f.path.split('.')[0] : 'Record fields'
+      groups.set(g, [...(groups.get(g) ?? []), f])
+    }
+    return [...groups.entries()]
+  }, [fieldPaths])
 
   // ── Derived state ─────────────────────────────────────────────────────────────
 
@@ -288,7 +295,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
 
         const values = upstreamRecords
           .map(r => {
-            const v = r[selectedField]
+            const v = getFieldByPath(r, selectedField)
             const str = Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
             return str.length > perValMax ? str.slice(0, perValMax) + '…' : str
           })
@@ -343,7 +350,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
         for (let i = 0; i < upstreamRecords.length; i++) {
           if (signal.aborted) break
           const record = upstreamRecords[i]
-          const rawVal = record[selectedField]
+          const rawVal = getFieldByPath(record, selectedField)
           const value  = (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, maxChars)
 
           setLiveTokens('')
@@ -493,8 +500,18 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
           <span style={styles.label}>Field</span>
           {availableFields.length > 0 ? (
             <select style={styles.select} value={selectedField}
-              onChange={e => updateNodeData(id, { selectedField: e.target.value })} className="nodrag">
-              {availableFields.map(f => <option key={f} value={f}>{f}</option>)}
+              onChange={e => updateNodeData(id, { selectedField: e.target.value })} className="nodrag"
+              title="Top-level fields, then one group per namespace; (n of N) = records with a value">
+              {!availableFields.includes(selectedField) && selectedField && <option value={selectedField}>{selectedField}</option>}
+              {fieldGroups.map(([group, fields]) => (
+                <optgroup key={group} label={group}>
+                  {fields.map(f => (
+                    <option key={f.path} value={f.path}>
+                      {f.path} ({f.count} of {upstreamRecords.length}){f.kind === 'image' ? ' 🖼' : ''}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
             </select>
           ) : (
             <input style={styles.input} value={selectedField}
@@ -595,7 +612,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span style={styles.label}>Prompt</span>
             <span style={{ fontSize: 9, color: '#b0a891', fontFamily: 'monospace' }}>
-              {mode === 'aggregate' ? '{{values}} {{field}} {{count}}' : '{{value}} {{field}}'}
+              {mode === 'aggregate' ? '{{values}} {{field}} {{count}}' : '{{value}} {{field}} {{ns.key}}'}
             </span>
           </div>
           <textarea ref={promptRef} style={{ ...styles.textarea, resize: 'none', overflow: 'hidden', minHeight: 56 }} value={promptTemplate}

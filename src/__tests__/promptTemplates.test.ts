@@ -85,3 +85,20 @@ describe('the {{_lineage}} token (caller-side substitution)', () => {
     expect(withKey).toBe(without)
   })
 })
+
+describe('dot-path tokens (namespaced fields)', () => {
+  const rec = { title: 'x', gbif: { scientificName: 'Vulpes vulpes' }, europeana: { thumbnail: 'https://t/1.jpg', provider: ['A', 'B'] } }
+
+  it('renderTemplate resolves {{ns.key}} by path and JSON-stringifies nested objects/arrays', () => {
+    expect(renderTemplate('{{gbif.scientificName}} / {{europeana.thumbnail}}', rec)).toBe('Vulpes vulpes / https://t/1.jpg')
+    expect(renderTemplate('{{europeana.provider}}', rec)).toBe('["A","B"]')
+    expect(renderTemplate('[{{gbif.missing}}]', rec)).toBe('[]')
+  })
+
+  it('renderFieldTemplatePerRecord resolves {{ns.key}} as a plain string', () => {
+    const out = renderFieldTemplatePerRecord('{{value}} | {{field}} | {{gbif.scientificName}} | {{nope.x}}', {
+      value: 'V', field: 'europeana.thumbnail', record: rec,
+    })
+    expect(out).toBe('V | europeana.thumbnail | Vulpes vulpes | ')
+  })
+})

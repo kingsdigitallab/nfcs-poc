@@ -13,42 +13,10 @@ import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars } from './kclConfig'
 import { formatDuration } from './formatDuration'
 import { renderTemplate } from './promptTemplates'
-import { resizeDataUrl } from './imageFetch'
+import { buildUserContent, type ContentPart } from './kclVision'
 import { collectLineage, lineageToNarrative } from './lineage'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
-
-type ContentPart =
-  | { type: 'text'; text: string }
-  | { type: 'image_url'; image_url: { url: string; format: string } }
-
-async function buildUserContent(
-  textPrompt: string,
-  record: Record<string, unknown>,
-  imageField: string,
-): Promise<string | ContentPart[]> {
-  let imageUrl: string | null = null
-  if (imageField) {
-    const val = record[imageField]
-    if (typeof val === 'string' && val.startsWith('data:image/')) imageUrl = val
-  } else {
-    if (record.contentType === 'image' && typeof record.content === 'string') {
-      imageUrl = record.content as string
-    } else {
-      for (const val of Object.values(record)) {
-        if (typeof val === 'string' && val.startsWith('data:image/')) { imageUrl = val; break }
-      }
-    }
-  }
-  if (!imageUrl) return textPrompt
-  imageUrl = await resizeDataUrl(imageUrl)
-  const mimeMatch = /^data:(image\/[^;]+);base64,/.exec(imageUrl)
-  const format    = mimeMatch?.[1] ?? (record.mimeType as string | undefined) ?? 'image/jpeg'
-  return [
-    { type: 'text',      text:      textPrompt },
-    { type: 'image_url', image_url: { url: imageUrl, format } },
-  ]
-}
 
 async function kclChat(
   apiKey: string,

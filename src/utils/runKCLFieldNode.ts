@@ -11,6 +11,7 @@ import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars } from './kclConfig'
 import { formatDuration } from './formatDuration'
 import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from './promptTemplates'
+import { getFieldByPath } from './fieldPath'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
@@ -111,7 +112,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
 
       const values = upstreamRecords
         .map(r => {
-          const v = r[selectedField]
+          const v = getFieldByPath(r, selectedField)
           const str = Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
           return str.length > perValMax ? str.slice(0, perValMax) + '…' : str
         })
@@ -161,7 +162,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
 
       for (let i = 0; i < upstreamRecords.length; i++) {
         const record = upstreamRecords[i]
-        const rawVal = record[selectedField]
+        const rawVal = getFieldByPath(record, selectedField)
         const value  = (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, maxChars)
 
         updateNodeData(nodeId, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })

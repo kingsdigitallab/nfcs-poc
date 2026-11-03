@@ -15,7 +15,9 @@ import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclConfig'
 import { renderTemplate } from '../utils/promptTemplates'
-import { resizeDataUrl } from '../utils/imageFetch'
+import { buildUserContent, type ContentPart } from '../utils/kclVision'
+import { collectFieldPaths } from '../utils/fieldPaths'
+import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { collectLineage, lineageToNarrative } from '../utils/lineage'
 import { useStaleResults } from '../hooks/useStaleResults'
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
@@ -40,38 +42,7 @@ export interface KCLNodeData {
   [key: string]: unknown
 }
 
-type ContentPart =
-  | { type: 'text'; text: string }
-  | { type: 'image_url'; image_url: { url: string; format: string } }
-
-/** Build the user message content — plain string or multi-part array when a record has an image. */
-async function buildUserContent(
-  textPrompt: string,
-  record: Record<string, unknown>,
-  imageField: string,
-): Promise<string | ContentPart[]> {
-  let imageUrl: string | null = null
-  if (imageField) {
-    const val = record[imageField]
-    if (typeof val === 'string' && val.startsWith('data:image/')) imageUrl = val
-  } else {
-    if (record.contentType === 'image' && typeof record.content === 'string') {
-      imageUrl = record.content as string
-    } else {
-      for (const val of Object.values(record)) {
-        if (typeof val === 'string' && val.startsWith('data:image/')) { imageUrl = val; break }
-      }
-    }
-  }
-  if (!imageUrl) return textPrompt
-  imageUrl = await resizeDataUrl(imageUrl)
-  const mimeMatch = /^data:(image\/[^;]+);base64,/.exec(imageUrl)
-  const format    = mimeMatch?.[1] ?? (record.mimeType as string | undefined) ?? 'image/jpeg'
-  return [
-    { type: 'text',      text:      textPrompt },
-    { type: 'image_url', image_url: { url: imageUrl, format } },
-  ]
-}
+// ContentPart / buildUserContent live in utils/kclVision.ts (shared with the runner).
 
 // ── Constants ──────────────────────────────────────────────────────────────────
 
@@ -212,21 +183,13 @@ export function KCLNode({ id, data }: NodeProps) {
 
   useEffect(() => { setTokenInput(String(maxTokens)) }, [maxTokens])
 
-  const sampleRecord    = upstreamRecords[0]
-  const availableFields = sampleRecord
-    ? Object.keys(sampleRecord).filter(k => {
-        const v = sampleRecord[k]
-        return v !== null && typeof v !== 'object'
-      })
-    : []
+  // Every scalar/array path across all sources, one level into namespaces
+  // (vam.objectType, gbif.scientificName) — usable as {{path}} tokens.
+  const fieldPaths      = useMemo(() => collectFieldPaths(upstreamRecords as UnifiedRecord[]), [upstreamRecords])
+  const availableFields = useMemo(() => fieldPaths.filter(f => f.kind !== 'image').map(f => f.path), [fieldPaths])
 
-  // Fields in upstream records that contain image data URLs
-  const imageFields = useMemo<string[]>(() => {
-    if (!sampleRecord) return []
-    return Object.entries(sampleRecord)
-      .filter(([, v]) => typeof v === 'string' && (v as string).startsWith('data:image/'))
-      .map(([k]) => k)
-  }, [sampleRecord])
+  // Image-valued paths: data URLs, http thumbnails or IIIF services (gotcha 30)
+  const imageFields = useMemo<string[]>(() => fieldPaths.filter(f => f.kind === 'image').map(f => f.path), [fieldPaths])
 
   const hasImages    = imageFields.length > 0
   const visionMode   = (d.visionMode  as boolean | undefined) ?? false
