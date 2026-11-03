@@ -15,7 +15,7 @@ import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclConfig'
 import { renderTemplate } from '../utils/promptTemplates'
-import { buildUserContent, type ContentPart } from '../utils/kclVision'
+import { buildUserContent, defaultVisionMode, type ContentPart } from '../utils/kclVision'
 import { collectFieldPaths } from '../utils/fieldPaths'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { collectLineage, lineageToNarrative } from '../utils/lineage'
@@ -189,10 +189,16 @@ export function KCLNode({ id, data }: NodeProps) {
   const availableFields = useMemo(() => fieldPaths.filter(f => f.kind !== 'image').map(f => f.path), [fieldPaths])
 
   // Image-valued paths: data URLs, http thumbnails or IIIF services (gotcha 30)
-  const imageFields = useMemo<string[]>(() => fieldPaths.filter(f => f.kind === 'image').map(f => f.path), [fieldPaths])
+  // `content` (an Image View capture / local image) first — it is the picture
+  // the user meant, ahead of any parent-record thumbnails that travel as provenance.
+  const imageFields = useMemo<string[]>(() => {
+    const paths = fieldPaths.filter(f => f.kind === 'image').map(f => f.path)
+    return paths.includes('content') ? ['content', ...paths.filter(p => p !== 'content')] : paths
+  }, [fieldPaths])
 
   const hasImages    = imageFields.length > 0
-  const visionMode   = (d.visionMode  as boolean | undefined) ?? false
+  // Explicit choice wins; otherwise on when every upstream record is an image
+  const visionMode   = defaultVisionMode(upstreamRecords as Record<string, unknown>[], d.visionMode as boolean | undefined)
   const imageField   = (d.imageField  as string  | undefined) ?? ''
 
   const isStale = useStaleResults(d.status as string, {
@@ -251,9 +257,16 @@ export function KCLNode({ id, data }: NodeProps) {
         const baseContent = rawContent.slice(0, maxChars)
 
         const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent, _lineage: lineageNarrative })
-        const userContent    = visionMode
-          ? await buildUserContent(renderedPrompt, record, imageField)
-          : renderedPrompt
+        let userContent: string | ContentPart[] = renderedPrompt
+        if (visionMode) {
+          // An image that cannot be loaded marks this record and the run goes on
+          try { userContent = await buildUserContent(renderedPrompt, record, imageField) }
+          catch (err) {
+            enriched.push({ ...record, kclModel: selectedModel, kclPrompt: renderedPrompt,
+              kclResponse: `[error: image: ${err instanceof Error ? err.message : String(err)}]`, kclProcessedAt: new Date().toISOString() })
+            continue
+          }
+        }
 
         const { text: response, resolvedModel } = await kclChat(
           effectiveApiKey, selectedModel, systemPrompt, userContent,
@@ -434,38 +447,39 @@ export function KCLNode({ id, data }: NodeProps) {
           />
         </div>
 
-        {/* Vision mode — shown when upstream records contain image data */}
-        {(hasImages || visionMode) && (
-          <div style={styles.visionSection}>
-            <div style={styles.row}>
-              <span style={styles.label}>Vision</span>
-              <label style={{ display: 'flex', alignItems: 'center', gap: 5, cursor: 'pointer', flex: 1 }} className="nodrag">
-                <input
-                  type="checkbox"
-                  checked={visionMode}
-                  onChange={e => updateNodeData(id, { visionMode: e.target.checked })}
-                />
-                <span style={{ fontSize: 11, color: '#8a8168' }}>
-                  {hasImages ? 'Include image with prompt' : 'Vision mode (no images detected)'}
-                </span>
-              </label>
-            </div>
-            {visionMode && imageFields.length > 1 && (
-              <div style={styles.row}>
-                <span style={styles.label}>Image</span>
-                <select
-                  style={styles.select}
-                  value={imageField}
-                  onChange={e => updateNodeData(id, { imageField: e.target.value })}
-                  className="nodrag"
-                >
-                  <option value="">auto-detect</option>
-                  {imageFields.map(f => <option key={f} value={f}>{f}</option>)}
-                </select>
-              </div>
-            )}
+        {/* Vision mode — always visible so the option is discoverable before any image arrives;
+            defaults on when every upstream record is an image (Image View captures) */}
+        <div style={styles.visionSection}>
+          <div style={styles.row}>
+            <span style={styles.label}>Vision</span>
+            <label style={{ display: 'flex', alignItems: 'center', gap: 5, cursor: 'pointer', flex: 1 }} className="nodrag">
+              <input
+                type="checkbox"
+                checked={visionMode}
+                onChange={e => updateNodeData(id, { visionMode: e.target.checked })}
+              />
+              <span style={{ fontSize: 11, color: '#8a8168' }}>
+                {hasImages
+                  ? 'Include image with prompt'
+                  : 'No image fields upstream yet — connect Image View, a local image, or a source with thumbnails'}
+              </span>
+            </label>
           </div>
-        )}
+          {visionMode && imageFields.length > 1 && (
+            <div style={styles.row}>
+              <span style={styles.label}>Image</span>
+              <select
+                style={styles.select}
+                value={imageField}
+                onChange={e => updateNodeData(id, { imageField: e.target.value })}
+                className="nodrag"
+              >
+                <option value="">auto-detect</option>
+                {imageFields.map(f => <option key={f} value={f}>{f === 'content' ? 'content (captured image)' : f}</option>)}
+              </select>
+            </div>
+          )}
+        </div>
 
         {/* Temperature */}
         <div style={styles.row}>

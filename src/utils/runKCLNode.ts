@@ -13,7 +13,7 @@ import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars } from './kclConfig'
 import { formatDuration } from './formatDuration'
 import { renderTemplate } from './promptTemplates'
-import { buildUserContent, type ContentPart } from './kclVision'
+import { buildUserContent, defaultVisionMode, type ContentPart } from './kclVision'
 import { collectLineage, lineageToNarrative } from './lineage'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
@@ -74,8 +74,8 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
   const promptTemplate = (d.userPromptTemplate as string | undefined) ?? '{{content}}'
   const temperature    = (d.temperature    as number | undefined) ?? 0.7
   const maxTokens      = (d.maxTokens      as number | undefined) ?? 32768
-  const visionMode     = (d.visionMode     as boolean | undefined) ?? false
   const imageField     = (d.imageField     as string  | undefined) ?? ''
+  const storedVision   = d.visionMode      as boolean | undefined
 
   // Clear before validation: a failed run must not leave stale records for
   // downstream nodes to read.
@@ -95,6 +95,8 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
     updateNodeData(nodeId, { status: 'error', statusMessage: '✗ No upstream records' })
     return
   }
+  // Same default as the component: explicit choice wins, else on when every record is an image
+  const visionMode = defaultVisionMode(upstreamRecords, storedVision)
 
   updateNodeData(nodeId, {
     status:        'running',
@@ -124,15 +126,16 @@ export const runKCLNode: NodeRunner = async (nodeId, getNodes, edges, updateNode
     const baseContent = rawContent.slice(0, maxChars)
 
     const renderedPrompt = renderTemplate(promptTemplate, { ...record, content: baseContent, _lineage: lineageNarrative })
-    const userContent    = visionMode
-      ? await buildUserContent(renderedPrompt, record, imageField)
-      : renderedPrompt
 
     let response      = ''
     let resolvedModel = model
     let inferenceMs   = 0
     const callT0 = performance.now()
     try {
+      // Inside the catch: an image that cannot be loaded is this record's error, not the run's
+      const userContent: string | ContentPart[] = visionMode
+        ? await buildUserContent(renderedPrompt, record, imageField)
+        : renderedPrompt
       const result  = await kclChat(apiKey, model, systemPrompt, userContent, temperature, maxTokens)
       response      = result.text
       resolvedModel = result.resolvedModel
