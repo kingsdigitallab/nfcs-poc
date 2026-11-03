@@ -12,6 +12,7 @@ import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { getSourceProfile, getAllProfiles } from '../data/sourceProfiles'
 import { filterKCLModels } from '../utils/kclConfig'
 import type { SourceProfile, FieldProfile } from '../data/sourceProfiles'
+import { sourceIdentity } from '../utils/sourceIdentity'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -39,17 +40,9 @@ const KCL_MODELS = '/kcl-proxy/v1/models'
 
 const HEADER_COLOR = '#2b3340'
 
-const SOURCE_COLORS: Record<string, string> = {
-  ariadne:   '#78350f',
-  gbif:      '#14532d',
-  bodleian:  '#1e3a5f',
-  europeana: '#1e1b4b',
-  smg:       '#164e63',
-  va:        '#3b0764',
-  llds:      '#7f1d1d',
-  mds:       '#713f12',
-  framesense:'#1c2a3a',
-}
+// Banner colours are the dark variant of the shared sourceIdentity table
+// (gotcha 32) — banner text is near-white, so the mid-tone marker colour
+// would fail contrast.
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -219,7 +212,7 @@ interface ProfileSectionProps {
 
 function ProfileSection({ profile, sourceRecords, count, fieldStats }: ProfileSectionProps) {
   const [showCorrespondences, setShowCorrespondences] = useState(false)
-  const bannerColor = SOURCE_COLORS[profile.source] ?? '#33302a'
+  const bannerColor = sourceIdentity(profile.source).banner
   const relevantCorrespondences = profile.correspondences.filter(c => {
     const stat = fieldStats.find(fs => fs.field.path === c.field)
     return stat && stat.rate > 0

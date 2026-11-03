@@ -33,6 +33,7 @@ import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { runMapOutputNode } from '../utils/runMapOutputNode'
 import type { GisLayer } from '../utils/gisReaders'
+import { sourceIdentity } from '../utils/sourceIdentity'
 
 // ─── data interface ───────────────────────────────────────────────────────────
 
@@ -44,19 +45,9 @@ export interface MapOutputNodeData {
   [key: string]: unknown
 }
 
-// ─── source colour palette ────────────────────────────────────────────────────
-
-const SOURCE_COLORS: Record<string, string> = {
-  gbif: '#16a34a',
-  ads:  '#c2410c',
-  mds:  '#1d4ed8',
-  llds: '#b45309',
-}
-const FALLBACK_COLOR = '#6366f1'
-
-function markerColor(source: string | undefined): string {
-  return SOURCE_COLORS[source ?? ''] ?? FALLBACK_COLOR
-}
+// Source colours/names come from the shared sourceIdentity table (gotcha 32).
+// Leaflet circleMarkers carry colour only — the marker SHAPE identity the
+// Timeline uses is not available on the map.
 
 function esc(s: string): string {
   return s
@@ -174,7 +165,8 @@ export function MapOutputNode({ id }: NodeProps) {
     for (const r of mappable) {
       const lat   = r.decimalLatitude  as number
       const lng   = r.decimalLongitude as number
-      const color = markerColor(r._source)
+      const ident = sourceIdentity(r._source)
+      const color = ident.colour
 
       const inBbox = bbox
         ? lat >= bbox.south && lat <= bbox.north && lng >= bbox.west && lng <= bbox.east
@@ -191,7 +183,7 @@ export function MapOutputNode({ id }: NodeProps) {
           <strong style="font-size:12px;line-height:1.4;display:block">${esc(title)}</strong>
           <div style="margin-top:3px;font-size:11px;color:#8a8168;display:flex;align-items:center;gap:4px">
             <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${color};flex-shrink:0"></span>
-            ${esc(r._source ?? '')}${r.date ? ` · ${esc(String(r.date))}` : ''}
+            ${esc(ident.name)}${r.date ? ` · ${esc(String(r.date))}` : ''}
           </div>
           ${desc ? `<div style="margin-top:5px;font-size:11px;color:#33302a;line-height:1.4">${esc(desc)}</div>` : ''}
           ${r._sourceUrl
@@ -534,12 +526,15 @@ export function MapOutputNode({ id }: NodeProps) {
       {/* Legend */}
       {(Object.keys(bySource).length > 0 || gisLayers.length > 0) && (
         <div style={styles.legend}>
-          {Object.entries(bySource).map(([src, n]) => (
-            <span key={src} style={styles.legendItem}>
-              <span style={{ ...styles.legendDot, background: markerColor(src) }} />
-              {src} ({n})
-            </span>
-          ))}
+          {Object.entries(bySource).sort((a, b) => b[1] - a[1]).map(([src, n]) => {
+            const ident = sourceIdentity(src === 'unknown' ? undefined : src)
+            return (
+              <span key={src} style={styles.legendItem} title={`_source: ${src}`}>
+                <span style={{ ...styles.legendDot, background: ident.colour }} />
+                {ident.name} ({n})
+              </span>
+            )
+          })}
           {gisLayers.map((layer, idx) => (
             <span key={`gis-${idx}`} style={styles.legendItem}
               title={layer.noPrj
