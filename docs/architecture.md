@@ -467,6 +467,7 @@ Every search runner is wrapped in `withFixture` (`src/utils/fixtureUtils.ts`). W
 | Nominatim | `nominatim.openstreetmap.org` | `/nominatim-proxy` | SmartGeocoder only |
 | British National Bibliography | `bnb.data.bl.uk` | `/bnb-proxy` | Target has been offline since the British Library incident |
 | Any web page | | `/url-proxy?url=…&js=true&wait=…` | Allowlist policy below |
+| Partner images (SMG `coimages`, V&A framemark, Europeana, Bodleian, NHM, Wellcome, GBIF) | | `/image-proxy?url=…` | Fixed allowlist in `urlProxyPolicy.mjs` (`IMAGE_HOST_ALLOWLIST`), same address guards, `image/*` responses only, 5 MB cap; the browser tries a direct fetch first |
 | OSM tiles, pdf.js worker (unpkg), Google Fonts | | **direct** | Browser-side assets |
 
 The fifteen simple routes are one `PROXY_TABLE` entry each in `server/proxies.mjs`: a prefix, a target, an optional path rewrite and optional headers. Adding a CORS-blocked service is one line there.
@@ -607,7 +608,7 @@ Environment variables, with the full meaning in `docs/engineering-review.md` sec
 | Variable | When | Purpose |
 |---|---|---|
 | `VITE_KCL_API_KEY`, `VITE_EUROPEANA_API_KEY` | build | Default keys compiled into the bundle |
-| `URL_PROXY_ALLOWLIST` | run | Host suffixes `/url-proxy` may fetch; required in production |
+| `URL_PROXY_ALLOWLIST` | run | Host suffixes `/url-proxy` may fetch; required in production. `/image-proxy` does not read it (fixed allowlist in code) |
 | `ENABLE_EXAMPLE_AUTHORING` | run | Expose the unauthenticated example-writing route |
 | `OLLAMA_HOST` | run | Upstream for `/ollama` |
 | `NODE_ENV` | run | `production` selects the deny-all proxy default |
