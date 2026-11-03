@@ -19,6 +19,7 @@ import {
   PROXY_TABLE,
   lldsSearchMiddleware,
   urlProxyMiddleware,
+  imageProxyMiddleware,
 } from './proxies.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -60,6 +61,7 @@ for (const entry of PROXY_TABLE) {
 
 app.use(lldsSearchMiddleware)
 app.use(urlProxyMiddleware)
+app.use(imageProxyMiddleware)
 
 // ── Example workflow authoring ────────────────────────────────────────────────
 // POST /dev/write-example — saves a canvas as a named loadable example.

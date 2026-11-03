@@ -20,6 +20,8 @@ import {
   parseAllowlist,
   isPrivateHost,
   isAllowedTarget,
+  isAllowedImageTarget,
+  MAX_IMAGE_BYTES,
 } from './urlProxyPolicy.mjs'
 
 // ── Timeouts ──────────────────────────────────────────────────────────────────
@@ -69,8 +71,8 @@ function policyDecision(target) {
  * control in production.
  * @returns {Promise<{ ok: true, url: URL } | { ok: false, reason: string }>}
  */
-async function checkTarget(target) {
-  const decision = policyDecision(target)
+async function checkTarget(target, decide = policyDecision) {
+  const decision = decide(target)
   if (!decision.ok) return decision
   const host = decision.url.hostname
   const isLiteral = /^[\d.]+$/.test(host) || host.includes(':')
@@ -184,11 +186,26 @@ async function getOrLaunchBrowser() {
  * body is read with a running byte count so an oversized upstream cannot
  * exhaust memory.
  */
-async function fetchSimple(target, res) {
-  const headers = {
-    'User-Agent': 'Mozilla/5.0 (compatible; iDAH-Federation-PoC/1.0)',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*',
-  }
+/**
+ * Fetch `target` (following up to MAX_REDIRECTS, each hop re-checked) and
+ * relay status, Content-Type and body. `opts` lets /image-proxy reuse it:
+ *   headers       — outbound request headers (default: the url-proxy bot UA)
+ *   check         — async target check applied to every redirect hop
+ *   maxBytes      — body cap (default MAX_RESPONSE_BYTES)
+ *   requireImage  — answer 415 unless the upstream Content-Type is image/*
+ *   cacheControl  — Cache-Control value to set on the relayed response
+ */
+async function fetchSimple(target, res, opts = {}) {
+  const {
+    headers = {
+      'User-Agent': 'Mozilla/5.0 (compatible; iDAH-Federation-PoC/1.0)',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,text/plain;q=0.8,*/*',
+    },
+    check = checkTarget,
+    maxBytes = MAX_RESPONSE_BYTES,
+    requireImage = false,
+    cacheControl = null,
+  } = opts
   let current = target
   let upstream
   const signal = AbortSignal.timeout(PROXY_TIMEOUT_MS)   // one deadline for the whole chain
@@ -200,7 +217,7 @@ async function fetchSimple(target, res) {
       await upstream.body?.cancel().catch(() => {})
       if (hop >= MAX_REDIRECTS) throw new ProxyRefused(502, 'Too many redirects')
       const next = new URL(location, current).href
-      const decision = await checkTarget(next)
+      const decision = await check(next)
       if (!decision.ok) throw new ProxyRefused(403, `Redirect blocked: ${decision.reason}`)
       current = next
       continue
@@ -208,8 +225,14 @@ async function fetchSimple(target, res) {
     break
   }
 
+  const ct = upstream.headers.get('content-type')
+  if (requireImage && upstream.status < 400 && !/^image\//i.test(ct ?? '')) {
+    await upstream.body?.cancel().catch(() => {})
+    throw new ProxyRefused(415, `upstream is not an image (${ct ?? 'no content-type'})`)
+  }
+
   const declared = Number(upstream.headers.get('content-length') ?? 0)
-  if (declared > MAX_RESPONSE_BYTES) throw new ProxyRefused(413, 'Upstream response too large')
+  if (declared > maxBytes) throw new ProxyRefused(413, 'Upstream response too large')
 
   const chunks = []
   let total = 0
@@ -219,7 +242,7 @@ async function fetchSimple(target, res) {
       const { done, value } = await reader.read()
       if (done) break
       total += value.byteLength
-      if (total > MAX_RESPONSE_BYTES) {
+      if (total > maxBytes) {
         await reader.cancel().catch(() => {})
         throw new ProxyRefused(413, 'Upstream response too large')
       }
@@ -228,9 +251,9 @@ async function fetchSimple(target, res) {
   }
 
   res.statusCode = upstream.status
-  const ct = upstream.headers.get('content-type')
   if (ct) res.setHeader('Content-Type', ct)
   res.setHeader('Access-Control-Allow-Origin', '*')
+  if (cacheControl) res.setHeader('Cache-Control', cacheControl)
   res.end(Buffer.concat(chunks))
 }
 
@@ -359,6 +382,47 @@ export function urlProxyMiddleware(req, res, next) {
       } else {
         await fetchSimple(target, res)
       }
+    } catch (err) {
+      if (!res.headersSent) {
+        res.statusCode = err instanceof ProxyRefused ? err.status : 502
+        res.end(`Proxy error: ${err instanceof Error ? err.message : String(err)}`)
+      }
+    }
+  })()
+}
+
+// ── /image-proxy ──────────────────────────────────────────────────────────────
+/**
+ * GET /image-proxy?url=<encoded> — relays an image from a partner collection
+ * host so the browser can READ its bytes (data URL → vision model). Policy is
+ * the fixed IMAGE_HOST_ALLOWLIST in urlProxyPolicy.mjs (not URL_PROXY_ALLOWLIST,
+ * not widened in dev); non-image upstreams are refused with 415; bodies are
+ * capped at MAX_IMAGE_BYTES. Sends a browser UA — SMG's CloudFront 403s the
+ * url-proxy bot string. Used by src/utils/imageFetch.ts.
+ */
+export function imageProxyMiddleware(req, res, next) {
+  if (!req.url?.startsWith('/image-proxy')) { next(); return }
+
+  const parsed = new URL(req.url, 'http://localhost')
+  const target = parsed.searchParams.get('url')
+  if (!target || !/^https?:\/\//.test(target)) {
+    res.statusCode = 400
+    res.end('Missing or invalid url param')
+    return
+  }
+
+  ;(async () => {
+    try {
+      const check = t => checkTarget(t, isAllowedImageTarget)
+      const decision = await check(target)
+      if (!decision.ok) throw new ProxyRefused(403, decision.reason)
+      await fetchSimple(target, res, {
+        headers: { 'User-Agent': DESKTOP_UA, 'Accept': 'image/*,*/*;q=0.5' },
+        check,
+        maxBytes: MAX_IMAGE_BYTES,
+        requireImage: true,
+        cacheControl: 'public, max-age=86400',
+      })
     } catch (err) {
       if (!res.headersSent) {
         res.statusCode = err instanceof ProxyRefused ? err.status : 502

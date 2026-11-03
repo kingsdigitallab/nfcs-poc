@@ -6,7 +6,7 @@ import { join } from 'path'
 // Proxy table + 4 custom middleware — single source of truth shared with
 // server/index.mjs (prod). Add new data sources in server/proxies.mjs.
 // Plain ESM module; typed by server/proxies.d.mts
-import { makeViteProxyConfig, lldsSearchMiddleware, urlProxyMiddleware } from './server/proxies.mjs'
+import { makeViteProxyConfig, lldsSearchMiddleware, urlProxyMiddleware, imageProxyMiddleware } from './server/proxies.mjs'
 
 export default defineConfig({
   test: {
@@ -25,6 +25,7 @@ export default defineConfig({
         // ── Shared proxy middleware (dev + prod) ──────────────────────────────
         server.middlewares.use(lldsSearchMiddleware)
         server.middlewares.use(urlProxyMiddleware)
+        server.middlewares.use(imageProxyMiddleware)
 
         // ── Dev-only: write fixture JSON to public/fixtures/ ──────────────────
         // Used by FixturePreflightPanel to bulk-generate offline fixtures.

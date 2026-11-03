@@ -19,6 +19,7 @@ export declare function makeViteProxyConfig(): Record<string, import('vite').Pro
 
 export declare const lldsSearchMiddleware:         ConnectMiddleware
 export declare const urlProxyMiddleware:           ConnectMiddleware
+export declare const imageProxyMiddleware:         ConnectMiddleware
 
 /** Subresource policy for the Puppeteer path (exported for tests). */
 export declare function checkSubresource(

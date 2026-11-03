@@ -15,6 +15,7 @@ import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclConfig'
 import { renderTemplate } from '../utils/promptTemplates'
+import { resizeDataUrl } from '../utils/imageFetch'
 import { collectLineage, lineageToNarrative } from '../utils/lineage'
 import { useStaleResults } from '../hooks/useStaleResults'
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
@@ -42,26 +43,6 @@ export interface KCLNodeData {
 type ContentPart =
   | { type: 'text'; text: string }
   | { type: 'image_url'; image_url: { url: string; format: string } }
-
-const IMAGE_MAX_DIM = 1280
-
-function resizeDataUrl(dataUrl: string): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const img = new Image()
-    img.onload = () => {
-      const { naturalWidth: w, naturalHeight: h } = img
-      if (w <= IMAGE_MAX_DIM && h <= IMAGE_MAX_DIM) { resolve(dataUrl); return }
-      const scale  = IMAGE_MAX_DIM / Math.max(w, h)
-      const canvas = document.createElement('canvas')
-      canvas.width  = Math.round(w * scale)
-      canvas.height = Math.round(h * scale)
-      canvas.getContext('2d')!.drawImage(img, 0, 0, canvas.width, canvas.height)
-      resolve(canvas.toDataURL('image/jpeg', 0.85))
-    }
-    img.onerror = () => reject(new Error('Image load failed for resize'))
-    img.src = dataUrl
-  })
-}
 
 /** Build the user message content — plain string or multi-part array when a record has an image. */
 async function buildUserContent(

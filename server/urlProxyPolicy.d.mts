@@ -9,3 +9,6 @@ export function isAllowedTarget(
   allowlist: readonly string[],
   opts?: { allowAll?: boolean },
 ): TargetDecision
+export const IMAGE_HOST_ALLOWLIST: readonly string[]
+export const MAX_IMAGE_BYTES: number
+export function isAllowedImageTarget(urlString: string): TargetDecision

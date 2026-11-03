@@ -7,6 +7,7 @@ import { recordsWithField, collectImageFieldCandidates } from '../utils/imageFie
 import { resolveImageSrc, extractServiceBase, imageServiceUrl, iiifSizeParam, iiifSizeLabel } from '../utils/iiifImage'
 import { collectIiifEntries, type IiifEntry } from '../utils/iiifEntries'
 import { partnerProxyUrl } from '../utils/partnerProxies'
+import { fetchImageAsDataUrl } from '../utils/imageFetch'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 const HEADER_COLOR    = '#29394a'
@@ -217,27 +218,6 @@ async function fetchImageInfo(serviceUrl: string): Promise<IIIFImageInfo | null>
 }
 
 // ── Region capture helpers ────────────────────────────────────────────────────
-
-function blobToDataUrl(blob: Blob): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader()
-    reader.onload  = () => resolve(reader.result as string)
-    reader.onerror = () => reject(reader.error)
-    reader.readAsDataURL(blob)
-  })
-}
-
-async function urlToBase64(url: string): Promise<string> {
-  try {
-    const r = await fetch(url, { signal: AbortSignal.timeout(20_000) })
-    if (!r.ok) throw new Error(`HTTP ${r.status}`)
-    return blobToDataUrl(await r.blob())
-  } catch {
-    const r = await fetch(`/url-proxy?url=${encodeURIComponent(url)}`, { signal: AbortSignal.timeout(20_000) })
-    if (!r.ok) throw new Error(`HTTP ${r.status}`)
-    return blobToDataUrl(await r.blob())
-  }
-}
 
 function normalizeBox(box: DrawBox): { x: number; y: number; w: number; h: number } {
   const x = Math.min(box.startX, box.curX)
@@ -582,7 +562,8 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
         const regionUrl = currentCanvas.serviceUrl
           ? `${currentCanvas.serviceUrl}/pct:${(region.x*100).toFixed(1)},${(region.y*100).toFixed(1)},${(region.w*100).toFixed(1)},${(region.h*100).toFixed(1)}/!1024,1024/0/default.jpg`
           : currentCanvas.directUrl
-        const dataUrl = await urlToBase64(regionUrl)
+        // Regions are already requested at !1024,1024 — no client-side resize
+        const dataUrl = await fetchImageAsDataUrl(regionUrl, { maxDim: 0 })
         recs.push({
           ...pickProvenance(currentEntry?.record as Record<string, unknown> | undefined),
           content:      dataUrl,

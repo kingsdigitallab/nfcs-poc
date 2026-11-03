@@ -13,6 +13,7 @@ import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars } from './kclConfig'
 import { formatDuration } from './formatDuration'
 import { renderTemplate } from './promptTemplates'
+import { resizeDataUrl } from './imageFetch'
 import { collectLineage, lineageToNarrative } from './lineage'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
@@ -20,27 +21,6 @@ const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 type ContentPart =
   | { type: 'text'; text: string }
   | { type: 'image_url'; image_url: { url: string; format: string } }
-
-const IMAGE_MAX_DIM = 1280
-
-function resizeDataUrl(dataUrl: string): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const img = new Image()
-    img.onload = () => {
-      const { naturalWidth: w, naturalHeight: h } = img
-      if (w <= IMAGE_MAX_DIM && h <= IMAGE_MAX_DIM) { resolve(dataUrl); return }
-      const scale  = IMAGE_MAX_DIM / Math.max(w, h)
-      const canvas = document.createElement('canvas')
-      canvas.width  = Math.round(w * scale)
-      canvas.height = Math.round(h * scale)
-      const ctx = canvas.getContext('2d')!
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
-      resolve(canvas.toDataURL('image/jpeg', 0.85))
-    }
-    img.onerror = () => reject(new Error('Image load failed for resize'))
-    img.src = dataUrl
-  })
-}
 
 async function buildUserContent(
   textPrompt: string,

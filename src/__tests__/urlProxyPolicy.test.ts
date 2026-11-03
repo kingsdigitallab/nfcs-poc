@@ -5,7 +5,33 @@ import {
   isAllowedTarget,
   WAIT_STRATEGIES,
   MAX_RESPONSE_BYTES,
+  IMAGE_HOST_ALLOWLIST,
+  MAX_IMAGE_BYTES,
+  isAllowedImageTarget,
 } from '../../server/urlProxyPolicy.mjs'
+
+describe('isAllowedImageTarget (/image-proxy — built-in partner allowlist)', () => {
+  it('admits the partner collection image hosts and their sub-domains', () => {
+    expect(IMAGE_HOST_ALLOWLIST).toContain('sciencemuseumgroup.org.uk')
+    expect(isAllowedImageTarget('https://coimages.sciencemuseumgroup.org.uk/534/648/x.jpg').ok).toBe(true)
+    expect(isAllowedImageTarget('https://framemark.vam.ac.uk/collections/2016JG8103/full/!512,512/0/default.jpg').ok).toBe(true)
+    expect(isAllowedImageTarget('https://api.europeana.eu/thumbnail/v2/url.json?uri=x&type=IMAGE').ok).toBe(true)
+    expect(isAllowedImageTarget('https://iiif.bodleian.ox.ac.uk/iiif/image/abc/full/255,/0/default.jpg').ok).toBe(true)
+    expect(isAllowedImageTarget('https://data.nhm.ac.uk/media/abc/thumbnail').ok).toBe(true)
+  })
+  it('refuses any other public host — URL_PROXY_ALLOWLIST and dev allow-all do not apply', () => {
+    const d = isAllowedImageTarget('https://example.com/a.jpg')
+    expect(d.ok).toBe(false)
+    if (!d.ok) expect(d.reason).toMatch(/image proxy/i)
+  })
+  it('still refuses private addresses and bad schemes', () => {
+    expect(isAllowedImageTarget('http://10.0.0.1/a.jpg').ok).toBe(false)
+    expect(isAllowedImageTarget('ftp://coimages.sciencemuseumgroup.org.uk/a.jpg').ok).toBe(false)
+  })
+  it('caps image bodies at 5 MB', () => {
+    expect(MAX_IMAGE_BYTES).toBe(5 * 1024 * 1024)
+  })
+})
 
 describe('parseAllowlist', () => {
   it('splits a comma list, trims whitespace, lowercases, drops empties', () => {

@@ -120,3 +120,37 @@ export function isAllowedTarget(urlString, allowlist, { allowAll = false } = {})
   }
   return { ok: true, url }
 }
+
+// ── /image-proxy — built-in partner allowlist ─────────────────────────────────
+// Thumbnails that the browser must READ (to pass to the vision model) rather
+// than just display: SMG's coimages CDN sends no CORS headers, so the bytes
+// have to come through the server. This list is fixed in code — it does NOT
+// read URL_PROXY_ALLOWLIST and is not widened by the dev allow-all mode — so
+// the route behaves identically on the laptop and on the deployed VM.
+
+/** Host suffixes (exact or dot-suffix match) the image proxy may fetch from. */
+export const IMAGE_HOST_ALLOWLIST = Object.freeze([
+  'sciencemuseumgroup.org.uk',   // coimages.* thumbnails, zoom.* IIIF
+  'vam.ac.uk',                   // framemark.* IIIF
+  'europeana.eu',                // api.europeana.eu/thumbnail
+  'bodleian.ox.ac.uk',           // iiif.bodleian.ox.ac.uk
+  'nhm.ac.uk',                   // data.nhm.ac.uk/media
+  'wellcomecollection.org',      // the Image View's example manifest
+  'gbif.org',                    // occurrence media
+])
+
+/** Hard cap on a proxied image body — thumbnails are tens of KB, a full IIIF request a few MB. */
+export const MAX_IMAGE_BYTES = 5 * 1024 * 1024
+
+/**
+ * Same scheme / credential / private-address rules as /url-proxy, then the
+ * built-in list only.
+ * @returns {{ ok: true, url: URL } | { ok: false, reason: string }}
+ */
+export function isAllowedImageTarget(urlString) {
+  const decision = isAllowedTarget(urlString, IMAGE_HOST_ALLOWLIST, { allowAll: false })
+  if (!decision.ok && /URL_PROXY_ALLOWLIST/.test(decision.reason)) {
+    return { ok: false, reason: decision.reason.replace('URL_PROXY_ALLOWLIST', 'the image proxy allowlist') }
+  }
+  return decision
+}
