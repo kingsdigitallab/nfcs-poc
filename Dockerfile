@@ -13,6 +13,12 @@ ENV VITE_EUROPEANA_API_KEY=$VITE_EUROPEANA_API_KEY
 
 WORKDIR /app
 
+# The builder only compiles the site — it never opens a browser — so do not
+# let Puppeteer's install script download its own Chrome here. Saves a few
+# hundred MB of peak build disk on the 9.3 GB VM (the runtime stage uses the
+# system Chromium and sets the same flag).
+ENV PUPPETEER_SKIP_DOWNLOAD=true
+
 COPY package*.json ./
 RUN npm ci
 

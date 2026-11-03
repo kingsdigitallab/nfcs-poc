@@ -64,10 +64,14 @@ docker rmi nfcs-poc-app:previous && docker image prune -f && docker builder prun
   nfcs-poc-app:latest && docker compose up -d --no-build app`.
 - Do NOT `docker system prune --volumes` / `docker volume prune`: `workflow_saves` holds workshop saves,
   `ollama_data` holds models. Ollama is a separate Compose service; `up -d app` never starts or builds it.
-- Known mitigation not yet applied: set `ENV PUPPETEER_SKIP_DOWNLOAD=true` in the **builder** stage of the
-  Dockerfile too (the runtime stage already has it) — the builder never runs Chrome, and skipping the download
-  cuts peak build disk by a few hundred MB. If the disk keeps biting, the real fix is growing the VM volume
-  (`sudo growpart /dev/vda 1 && sudo resize2fs /dev/vda1`) or building on a laptop and pushing to a registry.
+- Both Dockerfile stages set `ENV PUPPETEER_SKIP_DOWNLOAD=true` (builder since Nov 2026 — it never runs Chrome,
+  and the download cost a few hundred MB of peak build disk). Nov 2026 deploy data point: with 3.2 GB free the
+  build completed and only Compose's metadata write to `/tmp` failed — the image was already named and usable
+  (`docker compose up -d --no-build app` after `docker builder prune -af`). If the disk keeps biting, the real
+  fix is growing the VM volume (`sudo growpart /dev/vda 1 && sudo resize2fs /dev/vda1`) or building on a laptop
+  and pushing to a registry.
+- Ollama is NOT deployed on the VM (Neil, Nov 2026): no image, no models. Its Compose service and `ollama_data`
+  volume are leftovers from local dev; if either shows up on the host it may be removed by name.
 
 ## Proxy Rules (`server/proxies.mjs`)
 
