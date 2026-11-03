@@ -149,7 +149,9 @@ src/
 │   │                            # DEFAULT_COLLAPSED_GROUPS, visibleSidebarItems(tier), isTypeInTier —
 │   │                            # single source of truth for the palette AND for display labels
 │   ├── nodeTiers.ts             # NodeTier ('basic'|'intermediate'|'full'), tierIncludes, resolveStoredTier (legacy migration)
-│   └── nodeDefaults.ts          # NODE_DEFAULTS factory record, KCL_API_KEY_NODES, findSharedApiKey
+│   ├── nodeDefaults.ts          # NODE_DEFAULTS factory record, KCL_API_KEY_NODES, findSharedApiKey
+│   └── assistantPrompt.ts       # DEFAULT_SYSTEM + SYSTEM_VERSION for the Assistant (ChatSidebar) — hand-written,
+│                                # NOT generated from the README; assistantPrompt.test.ts pins it (see Display names)
 ├── styles/
 │   └── appStyles.ts             # React.CSSProperties constants for App.tsx layout
 ├── types/
@@ -289,8 +291,11 @@ per tier** — when you move or add a node, change the test list and this table 
 `kclOutput` → **AI Inference Output**, `filterTransform` → **Filter and Transform**, `timelineView` → **Timeline**.
 The palette, canvas header titles, `ConnectionSuggestions` (labels looked up from `SIDEBAR_ITEMS`, never
 hardcoded), `TADIRAHMapping`, `SourceProfile` suggestion chips and the Assistant system prompt all use the display
-names. Type keys are serialised and never change. Bump `SYSTEM_VERSION` in `ChatSidebar.tsx` whenever the prompt
-text changes, or users keep the cached copy.
+names. Type keys are serialised and never change. The Assistant prompt lives in `src/config/assistantPrompt.ts`
+(hand-written — not built from the README); bump `SYSTEM_VERSION` there whenever the prompt text changes, or users
+keep the localStorage-cached copy. `assistantPrompt.test.ts` fails when a non-hidden `SIDEBAR_ITEMS` label is
+missing from the prompt (as `**label**`), the tiers are not explained, the version has not moved past the previous
+release, or the prompt exceeds 30 k chars — so adding a node means adding its bullet there too.
 
 ### Evaluation pipeline (cross-group workflow)
 

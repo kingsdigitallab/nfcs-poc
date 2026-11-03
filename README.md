@@ -22,12 +22,12 @@ Drag nodes onto a canvas, connect them in any order, and run federated searches 
 
 ## Prerequisites
 
-- **Node.js** v20 or later ([nodejs.org](https://nodejs.org)) — vitest 4 and jsdom 29 need 20+
+- **Node.js** 22.23 / 24.22 or later ([nodejs.org](https://nodejs.org)) — `package.json` `engines` pins the patched 22 / 24 / 26 lines (Oct 2026 security release); CI and the Docker image run Node 24
 - **npm** v9 or later (bundled with Node)
 - A modern browser — Chrome or Edge 86+ required for the **LocalFolderSourceNode** (File System Access API) and for the native save dialog in **SaveSearchNode** (falls back to an automatic download on Firefox); all other nodes work in Firefox too
 - **KCL Inference API key** — required only for AI Inference nodes; request access from King's Digital Lab
 - **[Ollama](https://ollama.com/)** running locally on port 11434 — required only for Ollama nodes (Full node-visibility tier only; use AI Inference for hosted inference)
-- **Puppeteer** (installed automatically via `npm install`) — required only for the **Wait for JS rendering** option in URLFetchNode; the headless browser runs inside the Vite dev server
+- **Puppeteer** (installed automatically via `npm install`) — used by the **Wait for JS rendering** option in URLContentFetch and by **LLDSSearch** (the LLDS site's proof-of-work challenge is solved server-side); the headless browser runs inside the Vite dev server (system Chromium in Docker)
 
 ---
 
@@ -52,13 +52,23 @@ Click **💾 Save** in the top bar to download the current canvas as a `workflow
 
 Click **📂 Load** to restore a saved workflow. The canvas is replaced with the saved nodes and edges. All nodes start in an idle state with no results — run them again to repopulate data.
 
-> **Note:** `LocalFolderSourceNode` folder handles and `LocalFileSourceNode` file handles cannot be serialised. After loading a workflow containing either, re-select the folder or file manually.
+> **Note:** `LocalFolderSource` and `FrameSenseSource` folder handles and `LocalFileSource` file handles cannot be serialised — re-select the folder or file after loading. **ImageView** saves its drawn regions but not the captured images; capture again after a reload.
 
 ---
 
 ## Node types
 
 The sidebar groups nodes into collapsible categories named after [TaDiRAH](https://tadirah.info/) activities (Workflow Planning, Discovering, Gathering, Enriching, Analysing, Visualising, Disseminating, Experimental). Click a group heading to collapse or expand it. Drag any node onto the canvas to add it. The tables below use the same names; a few display nodes (QuickView, ImageView, HTMLPreview, MapOutput, TableOutput, Timeline) sit under **Visualising** in the sidebar.
+
+### Node visibility tiers
+
+The top bar has a segmented **Basic / Intermediate / Full** control. Each tier adds to the one before it, and the connection-suggestion popup only offers nodes visible at the current tier (a saved workflow loads whatever it contains regardless). The choice is remembered per browser; the older Simple / Advanced toggle maps to Basic / Full.
+
+| Tier | Adds |
+|------|------|
+| **Basic** | Search Parameter, Comment, the ten Discovering sources, LocalFileSource, SampleDataSource, AI Inference, AI Inference (by field), AI Inference Output, FieldDistribution, SourceProfile, TableOutput, MapOutput, Timeline, Citation, Export, SaveSearch, LoadSavedSearch |
+| **Intermediate** | QuickStart, LocalFolderSource, URLContentFetch, HTMLExtract, XMLExtract, Reconciliation, WikidataEnrich, Filter and Transform, Deduplicate, QuickView, ImageView, HTMLPreview, JSONOutput, SPARQLSearch |
+| **Full** | Geocoding, SmartGeocoder, MergeByQID, QuickNote, SmartFilter, SpatialFilter, Evaluator, ComparisonReport, FrameSenseSource, Ollama, OllamaByField, OllamaOutput |
 
 ### Workflow Planning
 
@@ -76,7 +86,6 @@ The sidebar groups nodes into collapsible categories named after [TaDiRAH](https
 | **QuickView** | Inspect the full, untruncated value of any field across upstream records. Pick a field from the dropdown; navigate records with ‹ / › buttons. Copy button per record. CSV/TSV values are paginated (50 rows per page). Large plain-text values are truncated at 50 000 chars. |
 | **ImageView** | Resizable image viewer with two modes and a source output handle for piping images to inference nodes. **Images mode** — combobox field picker (type any dot-notation path, e.g. `europeana.thumbnail`; the dropdown suggests fields found in upstream records); a separate **URL** row accepts any public image URL directly (overrides the field picker when set); the nav bar names the institution and record on screen (`V&A · Stonehenge`, hover for the record page) and the ℹ Info panel lists its source, title, ID and record link above the EXIF rows. Image API bases such as `vam.iiifImageBase` are rendered through the IIIF Image API rather than opened bare. **IIIF mode** — lists every upstream record that carries a IIIF manifest (`bodleian.manifest`, `smg.manifest`, `vam.manifest`, …) or an Image API service (`vam.iiifImageBase`, `nhm.iiifInfo`) as `Source · title`; ‹ / › step through those records, a second `‹ canvas n/k ›` stepper appears for multi-page manifests, and a manual manifest URL still works (pre-loaded with a Wellcome Collection example); zoom-tiered resolution requests via IIIF Image API. See [ImageView and IIIF region annotation](#imageview-and-iiif-region-annotation). |
 | **HTMLPreview** | Renders `fetchedHtml` from upstream records in a sandboxed iframe with a lightweight readability stylesheet. Click any element in the preview to capture its CSS selector — the selector is sent back to the parent page and can be pasted directly into an HTMLExtract node. Two modes: **Captured** (reads stored `fetchedHtml` from the results store) and **Live** (fetches the URL field of each record in real time). |
-| **SourceProfile** | Displays the authored schema profile for any connected data source, enriched with runtime field statistics computed from the actual upstream records. Shows: source coverage and limitations; a completeness bar (`retrieved / total API results`); a field table sorted by population rate with expandable sample values from real records; cross-source correspondence hints (which fields can be joined or compared across sources). An optional **AI Narrative** section (KCL API key + model required) builds a structured prompt from all schema and completeness data and streams a research-quality assessment — provide a research question for a focused response. Drag the output handle to pass records through to any downstream node. Defaults to `arc:nano`; max tokens configurable (default 16 384) under **Advanced**. |
 
 ### Discovering and Gathering
 
@@ -111,6 +120,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **SpatialFilter** | Draws a bounding box on an interactive Leaflet map; filters upstream records to those within the bbox. Note: **MapOutput** also includes an integrated spatial bbox filter — for workflows where you want to visualise and filter in a single step, use MapOutput instead. |
 | **Deduplicate** | Removes duplicate records based on a chosen field value. First occurrence is kept; subsequent records sharing the same value for that field are discarded. Records missing the chosen field always pass through. The footer shows `N in → M unique (K removed)`. Useful when aggregating results from multiple search nodes that may return overlapping result sets. |
 | **Timeline** | Resizable SVG horizontal timeline at year resolution. Handles ISO dates, bare years, and BCE dates. **Filter mode** — drag the date-range handles to restrict the visible window; records outside the range are suppressed on the output handle, making this a pass-through filter node as well as a visualisation. Toggle **⇤⇥ Fit** to compress the full date range into the visible width. Each institution has its own marker colour *and* shape (● ■ ▲ ◆), shared with the Map and Source Profile, and the legend and tooltips use institution names. Pass-through output handle connects to any downstream node (TableOutput, Export, etc.). |
+| **SourceProfile** | Displays the authored schema profile for any connected data source, enriched with runtime field statistics computed from the actual upstream records. Shows: source coverage and limitations; a completeness bar (`retrieved / total API results`); a field table sorted by population rate with expandable sample values from real records; cross-source correspondence hints (which fields can be joined or compared across sources). An optional **AI Narrative** section (KCL API key + model required) builds a structured prompt from all schema and completeness data and streams a research-quality assessment — provide a research question for a focused response. The header ▸/▾ button minimises the body to a one-line summary (QuickStart places profiles minimised). Drag the output handle to pass records through to any downstream node. Defaults to `arc:nano`; max tokens configurable (default 16 384) under **Advanced**. |
 
 ### Enriching
 
@@ -136,7 +146,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | **Citation** | Paginated bibliography drawn from `_citation` metadata stamped by source runners. Supports **Copy all** and **Download .txt** for a formatted reference list. |
 | **Export** | Downloads upstream records as **CSV**, **JSON**, or **GeoJSON**. `*_reconciled` objects are expanded to `_qid/_label/_confidence/_status` columns in CSV. |
 | **JSONOutput** | Syntax-highlighted JSON viewer. Double-click to expand to full-screen. |
-| **AI Inference Output** | Card-based display of KCL inference responses. Each record gets an expandable card showing the response, model used, and processing timestamp. Copy button per card. |
+| **AI Inference Output** | Card-based display of KCL inference responses. Each record gets an expandable card showing the response, model used, and processing time. Copy button per card, **Copy all** in the header. A card for an **ImageView** capture shows the crop's thumbnail and its full `Source · title · canvas n/k · Region i` label, and sibling captures of one object get independent cards. |
 | **MapOutput** | Leaflet map. Plots records with `decimalLatitude`/`decimalLongitude`. Click a marker for a popup with title, date, and source link. **Integrated spatial filter**: click **Draw bbox**, drag a bounding box on the map, then **Run ▶** — only records within the box are emitted; records outside are dimmed. A coordinate summary shows N/S/E/W bounds. A green **results** output handle pipes the filtered (or all) records to downstream nodes. Markers, popups and the legend use the same per-institution colours and names as the Timeline. Also accepts GIS vector layers via the GIS handle from LocalFolderSource. |
 | **TableOutput** | Paginated table. Merges records from multiple upstream nodes. Pass-through output handle for chaining to Map, Export, etc. Double-click to expand to full-screen. Toolbar: **show all columns** + **expand namespaces** (flattens service namespace objects into dot-notation columns). **Page size** selector (10 / 25 / 50 / 100 rows). **Column sort**: click any column header to sort ascending, click again for descending, third click clears the sort. **Text filter**: search box above the table filters across all fields (including namespace sub-objects) live as you type. Header badges `📍 n/N`, `📅 n/N` and `🖼 n/N` say how many records have coordinates, a plottable date, or an image (thumbnail, IIIF manifest or image service) — hover for which node to connect next. |
 | **ComparisonReport** | Read-only evaluation report — no runner, skipped by Run All. Map five report roles (*original*, *note / reference*, *response / candidate*, *judge score*, *human score*) to upstream fields via dropdowns. Renders per-record side-by-side cards and an aggregate agreement matrix (counts, means, and percentage-agreement only — no inferential statistics). Divergence counts double as live card filters; click a count to show only divergent records. Double-click the node to open a full-screen projector view for presentations. Agreement is computed over scored records only. |
@@ -156,7 +166,12 @@ ParamNode ─┐
   GBIFSearch          ─────────────────────────────────────────────────┤
   LLDSSearch          ─────────────────────────────────────────────────┤
   MDSSearch           ─────────────────────────────────────────────────┤
+  NHMSearch           ─────────────────────────────────────────────────┤
+  SMGSearch           ─────────────────────────────────────────────────┤
+  VASearch            ─────────────────────────────────────────────────┤
+  SPARQLSearch        ─────────────────────────────────────────────────┤
   LocalFileSource     ─────────────────────────────────────────────────┤
+  SampleDataSource    ─────────────────────────────────────────────────┤
   LoadSavedSearch     ─────────────────────────────────────────────────┤
                        ▼                                              │
               FilterTransformNode ──────────────────────────────────── ┤
@@ -165,7 +180,7 @@ ParamNode ─┐
               Timeline          ─────────────────────────────────── ┤  ← drag range handles to filter
                                                                        │
   LocalFolderSource ──► AI Inference ──────────────────────────────── ┤
-  ImageView (IIIF) ──► AI Inference (by field) ─────────────────────────── ┤
+  ImageView (captures) ──► AI Inference ─────────────────────────────── ┤
                        URLContentFetch ──► HTMLExtract ──────────────── ┤
                        XMLExtract       ──────────────────────────────── ┤
                        Reconciliation ──► WikidataEnrich ──► MergeByQID ┤
@@ -189,7 +204,7 @@ The `useUpstreamRecords` hook merges records from **all** edges connected to a n
 - **▶ Run** (on individual nodes) — execute that node only.
 - **▶▶ Run All** (top bar) — discovers every runnable node, builds a topological order using Kahn's algorithm, and executes nodes wave-by-wave: all source nodes in parallel first, then each processing layer in dependency order. If one node errors, downstream dependants are skipped but unrelated branches continue.
 
-All node types are included in Run All **except** `LocalFolderSource` and `LocalFileSource` (file/folder selection requires a user gesture and cannot be automated). Run those nodes manually before clicking Run All.
+Run All executes every node that has a runner. `LocalFolderSource`, `LocalFileSource` and `FrameSenseSource` are skipped (file/folder selection requires a user gesture) — run them manually first. Display-only nodes (`Comment`, `QuickView`, `ImageView`, `QuickNote`, `ComparisonReport`) have no runner; they simply show whatever is upstream.
 
 ---
 
@@ -224,7 +239,7 @@ Every adapter maps its raw API response to `UnifiedRecord` before writing to the
 
 ```
 id            — globally unique, service-prefixed: "gbif:12345", "ariadne:<hash>", "bodleian:<id>"
-_source       — service identifier: "gbif" | "llds" | "ariadne" | "mds" | "europeana" | "bodleian"
+_source       — service identifier: "gbif" | "llds" | "ariadne" | "hsds" | "mds" | "europeana" | "bodleian" | "nhm" | "smg" | "vam" | "sparql" | "imageView"
 _sourceId     — native record ID within the service
 _sourceUrl    — link back to the record in the service's own UI
 _pid          — persistent identifier (DOI, Handle, ARK) when available
@@ -246,6 +261,12 @@ hsds.*        — HSDS landingPage, contributor, temporal, spatial, ariadneSubje
 mds.*         — MDS field map (condition, materials, dimensions, provenance, …)
 europeana.*   — provider, dataProvider, rights, thumbnail, shownAt, completeness
 bodleian.*    — shelfmark, objectType, dateRange, manifest (IIIF manifest URL)
+nhm.*         — NHM specimen record wholesale + thumbnail, iiifInfo (IIIF Image API service), gbifID
+smg.*         — Science Museum Group object + thumbnail; manifest only for objects with digitised media
+vam.*         — V&A object: manifest, iiifImageBase (IIIF Image API base), thumbnail, place, objectType, onDisplay
+sparql.*      — every SPARQL result binding; _qid holds the item's Wikidata Q-id
+geocoding.*, smartGeo.*  — added by Geocoding / SmartGeocoder alongside decimalLatitude/Longitude
+framesense.*  — shot metadata from FrameSenseSource (+ imageDataUrl)
 
 fetchedUrl, fetchedContent, fetchedHtml, fetchStatus, fetchedAt  — added by URLContentFetch
 htmlSelector                                                      — added by HTMLExtract
@@ -253,7 +274,8 @@ xmlContent, xmlXPath                                              — added by X
 kclModel, kclPrompt, kclResponse, kclProcessedAt                  — added by AI Inference nodes
 ollamaModel, ollamaPrompt, ollamaResponse, ollamaProcessedAt      — added by Ollama nodes (hidden)
 
-content, contentType, mimeType  — FileRecord fields (from LocalFolderSource / ImageView)
+content, contentType, mimeType  — FileRecord fields (LocalFolderSource / SampleDataSource / ImageView)
+description, captureSource, regionBounds, canvasIndex, capturedAt, _captureThumb  — ImageView capture records (see below)
 ```
 
 After reconciliation, records also carry `${fieldName}_reconciled` keys (see [Reconciliation](#reconciliation)).
@@ -280,15 +302,17 @@ Use `{{fieldName}}` placeholders in the user prompt template. Click **▼ fields
 | `{{title}}` | Record title |
 | `{{description}}` | Record description / abstract |
 | `{{anyField}}` | Any field from the record by name |
+| `{{ns.field}}` | Any namespaced field by dot-path — `{{vam.objectType}}`, `{{gbif.scientificName}}`, `{{europeana.rights}}` |
 | `{{_lineage}}` | The **context accrual** token — a plain-English narrative of the pipeline that produced the records. See [Context accrual](#context-accrual--the-_lineage-token) below. |
 
 ### Vision mode
 
-Tick **Vision** to enable multipart image content. When active, the node automatically detects image data URLs in upstream records and sends them alongside the text prompt to any vision-capable model.
+The **Vision** row is always shown; its caption says what to connect when nothing upstream carries an image. It ticks itself when every upstream record is an image (an ImageView capture collection) and can be ticked by hand whenever upstream records have thumbnails, data URLs or IIIF Image API services. When active, the node sends the image alongside the text prompt as multipart content to any vision-capable model.
 
-- **Auto-detect**: first checks for `contentType === 'image'` (records from LocalFolderSource, ImageView), then scans all string fields for `data:image/` prefixes.
-- **Field override**: select a specific field from the dropdown when multiple image fields are present.
-- In vision mode, `{{content}}` resolves to `description` or `title` rather than the raw data URL.
+- **Auto-detect**: the image-valued paths found in the upstream records — data URLs, HTTP image URLs and IIIF Image API services, one level into namespaces (`europeana.thumbnail`, `vam.iiifImageBase`, `nhm.iiifInfo`). `content` (a capture or local image) is always preferred.
+- **Image picker**: shown when more than one image field exists; `content (captured image)` is listed first.
+- A record whose image cannot be fetched gets `[error: image: …]` as its response and the run continues.
+- In vision mode, `{{content}}` resolves to `description` or `title` rather than the raw data URL — for a capture that is its full label (`Source · title · canvas n/k · Region i`).
 
 ### AI Inference (by field)
 
@@ -515,11 +539,12 @@ Criteria are matched by **convention, not code**. The criterion keys in **QuickN
 
 ## ImageView and IIIF region annotation
 
-**ImageView** is a resizable node in the **Inspection** group. It has a source output handle (green, top right) so the currently displayed image can be piped to inference nodes.
+**ImageView** is a resizable node in the **Visualising** group (Intermediate tier). It has a source output handle (green, top right) so the currently displayed image can be piped to inference nodes.
 
 ### Images mode
 
-- **Field picker** — select any field from upstream records that contains an image data URL or remote HTTP image URL.
+- **Field picker** — grouped: **Image fields** first as `path (n of N)` (data URLs, HTTP thumbnails such as `europeana.thumbnail`, and IIIF Image API bases such as `vam.iiifImageBase`, which are rendered through the Image API rather than opened bare), then **Other fields**, then **Custom…** for any dot-notation path. The only or clearly dominant image field is selected automatically.
+- **Navigation** runs over the records that have the chosen field — the counter reads `n/k (N upstream)` — and the nav bar names the institution and record on screen (`V&A · Stonehenge`; hover for the record page). The ℹ Info panel lists source, title, ID and record link above the EXIF rows.
 - **URL row** — paste any public image URL directly; this overrides the field picker when set.
 - The output handle emits a single record: `{ content: dataUrl, contentType: 'image', mimeType, title, ...sourceRecord }`.
 
@@ -527,7 +552,7 @@ Criteria are matched by **convention, not code**. The criterion keys in **QuickN
 
 Accepts IIIF Presentation API v2 or v3 manifest URLs. Upstream records from **BodleianSearch** (and other services that include IIIF manifests) populate a **From upstream** picker automatically — no copy-pasting required.
 
-Zoom requests are served at tiered resolutions via the IIIF Image API (`!600,600` → `!1200,1200` → `!2400,2400` → `max`) to avoid fetching full-resolution masters unnecessarily.
+Zoom requests are served at tiered resolutions via the IIIF Image API (`!600,600` → `!1200,1200` → `!2400,2400` → `max`) to avoid fetching full-resolution masters unnecessarily. A server that refuses a constrained size (Science Museum Group's does, for most sizes) is re-requested at `max` automatically, and the Info panel's *Requesting* row says so.
 
 #### Region annotation
 
@@ -812,11 +837,7 @@ The fixture filename derives from the search query (inline or wired from a Param
 
 ### Bundled fixtures
 
-| Query | ARIADNE | GBIF | LLDS | MDS | Europeana |
-|-------|---------|------|------|-----|-----------|
-| `stonehenge` | ✓ | ✓ | ✓ | ✓ | ✓ |
-| `wordsworth` | ✓ | ✓ | — | ✓ | ✓ |
-| `roman coin` | ✓ | ✓ | — | ✓ | ✓ |
+236 fixture files cover 39 topics across the ten search services (not every topic on every service): ARIADNE 30, MDS 32, Europeana 28, SMG 27, V&A 27, LLDS 26, GBIF 23, Bodleian 22, HSDS 18, NHM 2 (`stonehenge`, `wordsworth`), plus `sparqlSearch-default.json` (Turner paintings). Topics: aesop, amazon, banner, barrow, beeswax, charcoal, crannog, david bowie, donne, galapagos, great barrier reef, hadrians wall, hillfort, jonathan swift, lily, medal, microscope, new forest, piltdown man, pompeii, portrait, radiocarbon vindolanda, rainforest, roman bath, roman coin, rosetta stone, sampler, sermon, shakespeare, silk road, souterrain, stone circle, stonehenge, sundial, sutton hoo, teapot, thames, tyndale, wordsworth. `ls public/fixtures/<nodeType>-*.json` lists what a given node can load.
 
 ### LLDS collection samples
 
@@ -836,6 +857,15 @@ The fixture filename derives from the search query (inline or wired from a Param
 | `/url-proxy?url=…` | *any URL* | Vite middleware; sidesteps CORS for arbitrary URL fetching |
 | `/image-proxy?url=…` | partner image hosts only | Images for the AI nodes / Image View; fixed allowlist in code, image responses only |
 | `/hsds-proxy/…` | `https://hsds.ac.uk/…` | No CORS |
+| `/gbif-proxy/…` | `https://api.gbif.org/…` | Same-origin; the page throttle and 429 backoff live in the runner |
+| `/bodleian-proxy/…` | `https://digital.bodleian.ox.ac.uk/…` | No CORS |
+| `/smg-proxy/…` | `https://collection.sciencemuseumgroup.org.uk/…` | No CORS; also used to fetch `smg.manifest` with the partner's expected headers |
+| `/vam-proxy/…` | `https://api.vam.ac.uk/…` | No CORS |
+| `/bnb-proxy/…` | `https://bnb.data.bl.uk/…` | British National Bibliography — ready for when the BL restores the service |
+| `/tgn-proxy/…`, `/getty-search-proxy/…` | `https://vocab.getty.edu/…`, `https://www.getty.edu/…` | Getty TGN for Geocoding / SmartGeocoder |
+| `/nominatim-proxy/…` | `https://nominatim.openstreetmap.org/…` | SmartGeocoder |
+| `/wdqs-proxy/…` | `https://query.wikidata.org/…` | SPARQL; the proxy adds the descriptive User-Agent WDQS requires |
+| `/llds-search?q=…` | LLDS discover page | Puppeteer solves the site's proof-of-work challenge before scraping |
 
 > **Production note:** The same proxy table (`server/proxies.mjs`) serves both the Vite dev server and the Express production server (`server/index.mjs`, started by `docker compose up`). `/url-proxy` is allowlist-controlled in production — set `URL_PROXY_ALLOWLIST` (see `.env.example`).
 
@@ -845,9 +875,10 @@ The fixture filename derives from the search query (inline or wired from a Param
 
 The top bar contains a **💬 Assistant** button that toggles a right-hand chat panel backed by KCL inference.
 
-- **Model**: `arc:apex` via `/kcl-proxy/v1/chat/completions` (streaming, server-sent events).
+- **Model**: chosen under ⚙ settings from the models the API lists; defaults to `arc:lite`. Calls go through `/kcl-proxy/v1/chat/completions` (streaming, server-sent events).
 - **Rendering**: Responses are rendered as GitHub-Flavoured Markdown — tables, code blocks, and lists display correctly.
-- **Knowledge**: The assistant carries a full built-in node reference (all node types, handles, field names, prompt tokens, and architectural notes) so it can answer questions about the interface without needing any configuration.
+- **Knowledge**: a built-in system prompt (`src/config/assistantPrompt.ts`) carries the full node reference — every palette node, the visibility tiers, handles, field names, prompt tokens and workflow tips — so it works with no configuration. A unit test fails if a palette node is missing from it. The prompt is editable under ⚙ and is reset to the shipped text whenever a release changes it.
+- **Live canvas**: every message also carries a short **CURRENT CANVAS** section derived from the open workflow — the node inventory and a lineage narrative for up to three pipeline endpoints — so it can answer "why is my table empty?" about *your* nodes, not just in general.
 
 ### What you can ask
 
@@ -858,7 +889,7 @@ The top bar contains a **💬 Assistant** button that toggles a right-hand chat 
 
 ### Setup
 
-A default KCL API key may be pre-configured. If the panel shows an API error, enter a valid key in any **AI Inference** node — the same key is used by the assistant panel. You can also override it directly in the `src/components/ChatSidebar.tsx` `API_KEY` constant.
+The panel uses the build-time `VITE_KCL_API_KEY` — the same default key the **AI Inference** nodes start with. If it shows *No API key*, set that variable in `.env` (see `.env.example`) and rebuild; there is no per-panel key field.
 
 ---
 
@@ -878,7 +909,7 @@ A default KCL API key may be pre-configured. If the panel shows an API error, en
 3. Use the **From upstream** picker to select a manuscript — the manifest loads automatically.
 4. Navigate to a page of interest using the ‹ / › canvas buttons.
 5. Click **+ Region** and drag boxes around specific areas (a decorated initial, a marginal annotation, a seal).
-6. Click **Capture 3** — each region is fetched as a base64 JPEG via the IIIF Image API and the toolbar reads `3 captured`. Step to another page, draw and capture again to add to the collection.
+6. Click **Capture 3** — each region is fetched as a base64 JPEG via the IIIF Image API, three tiles appear in the gallery under the image and the status line reads `✓ 3 captured (3 in collection)`. Step to another page, draw and capture again to add to the collection; click any tile to see where it came from.
 7. Connect the **ImageView** output handle to an **AI Inference** node — **Vision** is ticked automatically because every upstream record is an image.
 8. Write a prompt such as *"Describe what you see in this region of a medieval manuscript."*
 9. Click **▶ Run** on AI Inference — each region is analysed individually.
@@ -920,88 +951,26 @@ A default KCL API key may be pre-configured. If the panel shows an API error, en
 
 ```
 nfcs-poc/
-├── CLAUDE.md                   # Architecture notes and API references (dev only)
-├── vite.config.ts              # Dev server + CORS proxy rules + /url-proxy middleware
+├── CLAUDE.md               # Architecture notes, node registry, gotchas, deploy runbook (dev only)
+├── docs/                   # engineer-quickstart, architecture, engineering-review, hand-off notes
+├── server/                 # proxies.mjs (shared by Vite + Express), index.mjs (prod), url-proxy policy
 ├── public/
-│   └── fixtures/               # Pre-baked search results + sample collection material
-│       ├── README.md
-│       ├── *.json              # {nodeType}-{query}.json
-│       └── LLDS Collections/
+│   ├── fixtures/           # {nodeType}-{query}.json + sample collection material
+│   └── examples/           # Example workflows (no secrets — CI greps for keys)
 └── src/
-    ├── App.tsx                 # Canvas, sidebar, Run All, save/load, node factories
-    ├── types/
-    │   ├── UnifiedRecord.ts
-    │   └── savedSearch.ts
-    ├── store/
-    │   └── resultsStore.ts     # Out-of-band record store (avoids React state bloat)
-    ├── hooks/
-    │   └── useUpstreamRecords.ts
-    ├── components/
-    │   ├── ConnectionSuggestions.tsx   # Context-aware node suggestion popup
-    │   └── ChatSidebar.tsx             # KCL Assistant chat panel
-    ├── nodes/
-    │   ├── index.ts
-    │   ├── ParamNode.tsx
-    │   ├── CommentNode.tsx
-    │   ├── ARIADNESearchNode.tsx
-    │   ├── BodleianSearchNode.tsx      # Bodleian Digital Collections
-    │   ├── EuropeanaSearchNode.tsx
-    │   ├── GBIFSearchNode.tsx
-    │   ├── LLDSSearchNode.tsx
-    │   ├── MDSSearchNode.tsx
-    │   ├── GroupNode.tsx               # Group container node
-    │   ├── EvaluatorNode.tsx           # LLM-as-judge evaluation
-    │   ├── QuickNoteNode.tsx           # Human annotation and scoring
-    │   ├── ComparisonReportNode.tsx    # Comparison report output
-    │   ├── LocalFileSourceNode.tsx
-    │   ├── LocalFolderSourceNode.tsx
-    │   ├── SaveSearchNode.tsx
-    │   ├── LoadSavedSearchNode.tsx
-    │   ├── FilterTransformNode.tsx
-    │   ├── SpatialFilterNode.tsx
-    │   ├── FieldDistributionNode.tsx
-    │   ├── TimelineOutputNode.tsx      # Timeline — filter + timeline visualisation
-    │   ├── KCLNode.tsx                 # AI Inference — per-record, vision-capable
-    │   ├── KCLFieldNode.tsx            # AI Inference (by field) — single-field inference
-    │   ├── KCLOutputNode.tsx           # AI Inference Output — card display
-    │   ├── ReconciliationNode.tsx
-    │   ├── WikidataEnrichNode.tsx
-    │   ├── MergeByQIDNode.tsx
-    │   ├── OllamaNode.tsx              # (hidden — local Ollama)
-    │   ├── OllamaFieldNode.tsx         # (hidden — local Ollama)
-    │   ├── OllamaOutputNode.tsx        # (hidden — local Ollama)
-    │   ├── URLFetchNode.tsx
-    │   ├── HTMLSectionNode.tsx
-    │   ├── HTMLPreviewNode.tsx         # WYSIWYG CSS selector capture
-    │   ├── XMLSectionNode.tsx
-    │   ├── QuickViewNode.tsx
-    │   ├── ImageViewNode.tsx           # Images + IIIF + region annotator + output handle
-    │   ├── TableOutputNode.tsx
-    │   ├── JSONOutputNode.tsx
-    │   ├── MapOutputNode.tsx
-    │   ├── CitationNode.tsx
-    │   ├── ExportNode.tsx
-    │   ├── SmartGeocoderNode.tsx       # LLM-assisted place extraction + geocoding
-    │   ├── SmartFilterNode.tsx         # Natural-language → structured filter
-    │   ├── SourceProfileNode.tsx       # Schema inspector + AI narrative
-    │   ├── QuickStartNode.tsx          # AI workflow planner
-    │   ├── ReconciledCell.tsx
-    │   └── ExpandedOutputPanel.tsx
-    └── utils/
-        ├── nodeRunners.ts              # Registry: node type → NodeRunner
-        ├── runWorkflow.ts              # Topological executor (Kahn's algorithm)
-        ├── workflowIO.ts
-        ├── nodeIdCounter.ts
-        ├── upstreamRecords.ts
-        ├── fixtureUtils.ts
-        ├── reconciliationService.ts
-        ├── filterTransformUtils.ts
-        ├── exportUtils.ts
-        ├── fileReaders.ts
-        ├── citationUtils.ts
-        ├── run<Name>Node.ts            # One runner per runnable node type
-        └── *Adapter.ts                 # Service-specific response → UnifiedRecord
+    ├── App.tsx             # Canvas shell + state wiring; feature logic lives in hooks/ + components/
+    ├── components/         # TopBar, Sidebar, ChatSidebar (Assistant), ConnectionSuggestions, modals
+    ├── config/             # sidebarItems, nodeTiers, nodeDefaults, storageKeys, assistantPrompt
+    ├── hooks/              # useWorkflowIO, useGrouping, useCanvasConnections, useUpstreamRecords
+    ├── nodes/              # One file per node + index.ts registry; BackboneSearchNode is the shared search shell
+    ├── store/              # resultsStore (out-of-band records), notesStore
+    ├── styles/             # theme.ts (NODE_IDENTITY colours), appStyles
+    ├── types/              # UnifiedRecord, AppNode, savedSearch
+    ├── utils/              # run<Name>Node.ts runners, *Adapter.ts, runWorkflow, workflowIO, shared helpers
+    └── __tests__/          # vitest suites (unit, fixture conformance, runner contract, handle contracts)
 ```
+
+The file-by-file map, the node registry and the registration checklist live in `CLAUDE.md`; the system briefing with diagrams is `docs/architecture.md`.
 
 ---
 
@@ -1023,11 +992,11 @@ The step-by-step registration checklist for a new node lives in `CLAUDE.md`. Ada
 | [Vite](https://vitejs.dev/) | Dev server, bundler, CORS proxy |
 | [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) | UI framework |
 | [@xyflow/react v12](https://reactflow.dev/) | Node-based canvas |
-| [Leaflet](https://leafletjs.com/) | Map rendering (MapOutput, SpatialFilter) |
+| [Leaflet](https://leafletjs.com/) + [markercluster](https://github.com/Leaflet/Leaflet.markercluster) | Map rendering (MapOutput, SpatialFilter); marker clustering on MapOutput |
 | [pdfjs-dist](https://mozilla.github.io/pdf.js/) | Client-side PDF text extraction |
 | [shpjs](https://github.com/calvinmetcalf/shapefile-js) | Client-side Shapefile parsing |
 | [Puppeteer](https://pptr.dev/) | Headless browser for JS-rendered page fetching |
 | [react-markdown](https://github.com/remarkjs/react-markdown) + [remark-gfm](https://github.com/remarkjs/remark-gfm) | Markdown + GFM table rendering in the KCL Assistant chat panel |
-| [Ollama](https://ollama.com/) | Local LLM inference (external; hidden from sidebar) |
+| [Ollama](https://ollama.com/) | Local LLM inference (external; Ollama nodes appear in the Full tier only) |
 
 No database. No authentication. All API calls are made from the browser through a thin same-origin proxy layer (`server/proxies.mjs`, served by Vite in development and by Express in Docker). For the engineering hand-over (findings, backlog, quality gates) see `docs/engineering-review.md` and `CONTRIBUTING.md`.
