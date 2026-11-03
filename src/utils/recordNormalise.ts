@@ -56,6 +56,20 @@ export function normaliseRecord(rec: AnyRecord): UnifiedRecord {
     delete o[key]
   }
 
+  // SMG stored records (fixtures, saved searches) carry a synthesised
+  // smg.manifest for every object, but SMG's manifest is empty when the object
+  // has no digitised media. The live adapter now omits it; drop it here so the
+  // Image View's IIIF picker never offers a dead entry.
+  if (rec._source === 'smg') {
+    const smg = (rec.smg ?? null) as AnyRecord | null
+    if (smg && typeof smg === 'object' && smg.manifest && !smg.thumbnail) {
+      const o = ensureOut()
+      const { manifest: _dropped, ...rest } = smg
+      void _dropped
+      o.smg = rest
+    }
+  }
+
   return (out ?? rec) as UnifiedRecord
 }
 

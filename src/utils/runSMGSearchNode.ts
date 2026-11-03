@@ -47,7 +47,7 @@ function thumbnailUrl(multimedia: unknown): string | undefined {
     : `https://coimages.sciencemuseumgroup.org.uk/${largeTh.location}`
 }
 
-function adaptSMGRecord(raw: SMGRawRecord): UnifiedRecord {
+export function adaptSMGRecord(raw: SMGRawRecord): UnifiedRecord {
   const a = raw.attributes
 
   const title =
@@ -102,7 +102,9 @@ function adaptSMGRecord(raw: SMGRawRecord): UnifiedRecord {
       museum:          museumName || undefined,
       museumCode:      museumCode || undefined,
       accessionNumber,
-      manifest:        `https://collection.sciencemuseumgroup.org.uk/iiif/objects/${raw.id}`,
+      // SMG publishes a manifest URL for every object but it is EMPTY (canvases: [])
+      // when there is no digitised media — only offer it when a thumbnail exists.
+      manifest:        thumbnail ? `https://collection.sciencemuseumgroup.org.uk/iiif/objects/${raw.id}` : undefined,
       categories:      subject.length > 0 ? subject : undefined,
       makingPlace:     creation?.place?.[0]?.summary?.title,
       thumbnail,

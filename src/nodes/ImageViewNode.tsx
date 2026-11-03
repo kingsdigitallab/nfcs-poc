@@ -527,7 +527,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     try {
       const raw = await fetchManifest(url.trim())
       const { canvases: c, meta } = parseManifest(raw, url.trim())
-      if (!c.length) throw new Error('No images found in manifest')
+      if (!c.length) throw new Error("This record's manifest lists no images — the object has no digitised media")
       setCanvases(c); setManifestMeta(meta); setCanvasIndex(0); setImageInfo(null)
     } catch (err) {
       setManError(err instanceof Error ? err.message : 'Failed to load manifest')

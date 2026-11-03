@@ -55,6 +55,25 @@ describe('normaliseRecord', () => {
     expect((out.bodleian as Record<string, unknown>).thumbnail).toBe('https://iiif.example/thumb.jpg')
   })
 
+  describe('SMG: drops smg.manifest when the object has no media (the manifest is empty)', () => {
+    const MANIFEST = 'https://collection.sciencemuseumgroup.org.uk/iiif/objects/co53933'
+    it('removes the manifest from a stored record without a thumbnail', () => {
+      const out = normaliseRecord({
+        id: 'smg:co53933', _source: 'smg', smg: { museum: 'Science Museum', manifest: MANIFEST },
+      }) as Record<string, unknown>
+      expect((out.smg as Record<string, unknown>).manifest).toBeUndefined()
+      expect((out.smg as Record<string, unknown>).museum).toBe('Science Museum')
+    })
+    it('keeps the manifest when a thumbnail is present', () => {
+      const rec = { id: 'smg:co49346', _source: 'smg', smg: { manifest: MANIFEST, thumbnail: 'https://coimages.sciencemuseumgroup.org.uk/a.jpg' } }
+      expect(normaliseRecord(rec)).toBe(rec)   // untouched, no copy
+    })
+    it('leaves other sources alone even with the same shape', () => {
+      const rec = { id: 'x:1', _source: 'vam', vam: { manifest: 'https://iiif.vam.ac.uk/collections/O1/manifest.json' } }
+      expect(normaliseRecord(rec)).toBe(rec)
+    })
+  })
+
   it('leaves period* and coordinates untouched', () => {
     const rec = {
       id: 'ariadne:1', _source: 'ariadne',
