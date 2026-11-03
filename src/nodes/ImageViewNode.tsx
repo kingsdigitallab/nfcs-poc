@@ -4,6 +4,7 @@ import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { getFieldByPath } from '../utils/fieldPath'
 import { recordsWithField, collectImageFieldCandidates } from '../utils/imageFields'
+import { resolveImageSrc, extractServiceBase, iiifSizeParam, iiifSizeLabel } from '../utils/iiifImage'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 const HEADER_COLOR    = '#29394a'
@@ -91,36 +92,7 @@ function extractLabel(label: unknown, index: number): string {
   return `Canvas ${index + 1}`
 }
 
-// Returns IIIF Image API service base URL (strips any existing /full/... suffix)
-function extractServiceBase(service: unknown): string | null {
-  if (!service) return null
-  if (Array.isArray(service)) {
-    for (const s of service) { const u = extractServiceBase(s); if (u) return u }
-    return null
-  }
-  if (typeof service === 'string') return service.replace(/\/(info\.json|full\/.+)$/, '')
-  if (typeof service === 'object') {
-    const s = service as Record<string, unknown>
-    const id = String(s.id || s['@id'] || '')
-    return id ? id.replace(/\/(info\.json|full\/.+)$/, '') : null
-  }
-  return null
-}
-
-// Tiered size parameter — only fetch full resolution when zoomed far in.
-// IIIF Image API spec: /full/!w,h/0/default.jpg constrains to fit within w×h.
-function iiifSizeParam(zoom: number): string {
-  if (zoom <= 0.75) return '!600,600'
-  if (zoom <= 1.5)  return '!1200,1200'
-  if (zoom <= 3)    return '!2400,2400'
-  return 'max'
-}
-
-function iiifSizeLabel(param: string): string {
-  if (param === 'max') return 'Full resolution'
-  const n = param.replace('!', '').split(',')[0]
-  return `≤ ${n} px (constrained)`
-}
+// extractServiceBase / iiifSizeParam / iiifSizeLabel live in utils/iiifImage.ts.
 
 // Flatten IIIF v2 strings or v3 language maps into a plain string
 function flatten(val: unknown): string {
@@ -531,12 +503,11 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const currentRecord    = (navRecords[safeRecordIndex] ?? {}) as Record<string, unknown>
   const noMatchingRecords = mode === 'images' && !imageDirectUrl && !!selectedField && upstreamCount > 0 && navRecords.length === 0
 
-  // Direct URL overrides field picker; field picker supports dot-notation paths
+  // Direct URL overrides field picker; field picker supports dot-notation paths.
+  // resolveImageSrc completes bare Image API services (vam.iiifImageBase,
+  // nhm.iiifInfo) into a /full/…/default.jpg request — gotcha 30.
   const rawSrc           = mode === 'images'
-    ? (imageDirectUrl || (() => {
-        const v = getFieldByPath(currentRecord, selectedField)
-        return typeof v === 'string' && v ? v : null
-      })())
+    ? (imageDirectUrl || resolveImageSrc(selectedField, getFieldByPath(currentRecord, selectedField)))
     : null
 
   const exifData    = useMemo(() => rawSrc ? parseJpegExif(rawSrc) : null, [rawSrc])

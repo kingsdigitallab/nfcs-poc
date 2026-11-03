@@ -14,8 +14,12 @@ import { getFieldByPath, nonEmptyString } from './fieldPath'
  */
 export const IMAGE_KEYS = /thumb|image|url|src|href|photo|picture|preview|media|icon/i
 
-/** A sample VALUE that is evidently an image, whatever its key is called. */
-const IMAGE_VALUE = /^data:image\/|^https?:\/\/.+\.(?:jpe?g|png|gif|webp|svg|tiff?)(?:[?#].*)?$|^https?:\/\/.+\/iiif\//i
+/**
+ * A sample VALUE that is evidently an image, whatever its key is called:
+ * data URLs, image file extensions, anything under a /iiif/ path, or a bare
+ * Image API info.json (NHM's `nhm.iiifInfo` has no /iiif/ segment).
+ */
+export const IMAGE_VALUE = /^data:image\/|^https?:\/\/.+\.(?:jpe?g|png|gif|webp|svg|tiff?)(?:[?#].*)?$|^https?:\/\/.+\/iiif\/|^https?:\/\/.+\/info\.json$/i
 
 export interface ImageFieldCandidate {
   path:  string

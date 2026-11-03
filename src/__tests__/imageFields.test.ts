@@ -61,6 +61,11 @@ describe('collectImageFieldCandidates', () => {
     expect(collectImageFieldCandidates(web).imageFields.map(f => f.path).sort()).toEqual(['iiif', 'pic'])
   })
 
+  it('treats a bare Image API info.json value as an image field even without /iiif/ in the path (NHM)', () => {
+    const nhm = [R({ id: 'n', _source: 'nhm', nhm: { iiifInfo: 'https://data.nhm.ac.uk/media/5b3f91d5/info.json', occurrenceID: 'x' } })]
+    expect(collectImageFieldCandidates(nhm).imageFields.map(f => f.path)).toEqual(['nhm.iiifInfo'])
+  })
+
   it('returns empty lists for no records', () => {
     expect(collectImageFieldCandidates([])).toEqual({ imageFields: [], otherFields: [] })
   })
