@@ -1033,7 +1033,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
                 </> : null}
                 {currentCanvas?.serviceUrl && (
                   <MRow k="Requesting" v={sizeParam === 'max' && iiifSizeParam(zoom) !== 'max'
-                    ? `Full resolution (server refused ${iiifSizeLabel(iiifSizeParam(zoom))}; captures use ${DEFAULT_REGION_SIZE} then max)`
+                    ? `Full resolution — server refused ${iiifSizeLabel(iiifSizeParam(zoom))}; region captures try ${DEFAULT_REGION_SIZE} then max`
                     : iiifSizeLabel(sizeParam)} />
                 )}
                 {!currentCanvas?.serviceUrl && currentCanvas?.directUrl && (
