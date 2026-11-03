@@ -2,17 +2,19 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { Handle, Position, NodeProps, useReactFlow, NodeResizer } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults, getNodeResults } from '../store/resultsStore'
-import { buildCaptureRecord, appendCaptures, isCaptureRecord } from '../utils/captureRecords'
+import { buildCaptureRecord, appendCaptures, isCaptureRecord, resolveCaptureTarget, removeCapture } from '../utils/captureRecords'
 import { getFieldByPath } from '../utils/fieldPath'
 import { recordsWithField, collectImageFieldCandidates } from '../utils/imageFields'
 import { resolveImageSrc, extractServiceBase, imageServiceUrl, iiifSizeParam, iiifSizeLabel } from '../utils/iiifImage'
 import { collectIiifEntries, sourceName, type IiifEntry } from '../utils/iiifEntries'
 import { partnerProxyUrl } from '../utils/partnerProxies'
-import { fetchImageAsDataUrl, fetchIiifRegion, DEFAULT_REGION_SIZE } from '../utils/imageFetch'
+import { fetchImageAsDataUrl, fetchIiifRegion, resizeDataUrl, DEFAULT_REGION_SIZE, type RegionBox } from '../utils/imageFetch'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 const HEADER_COLOR    = '#29394a'
 const MAX_THUMB_DIM   = 1200
+/** Long edge of the gallery/Output-card thumbnail stored as `_captureThumb` (≈5–15 KB). */
+const CAPTURE_THUMB_DIM = 160
 const EXAMPLE_MANIFEST = 'https://iiif.wellcomecollection.org/presentation/b18035723'
 
 export interface ImageViewNodeData {
@@ -408,6 +410,10 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   // IIIF services that refused a constrained size (SMG's zoom.* 403s !600,600 /
   // !2400,2400 but serves max — gotcha 33): render those at /full/max/ instead.
   const [sizedRefused, setSizedRefused] = useState<Set<string>>(() => new Set())
+  // The capture a gallery tile was clicked for: its region is outlined on the
+  // image while that canvas is on screen. Fractions + two strings — never the
+  // data URL, never node data.
+  const [highlight, setHighlight] = useState<{ id: string; canvasKey: string; region: RegionBox; label: string } | null>(null)
   const svgRef = useRef<SVGSVGElement | null>(null)
 
   // Image-looking fields first (with populations), everything else after — see imageFields.ts
@@ -477,15 +483,20 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     updateNodeData(id, { iiifRegions: regions })
   }, [id, updateNodeData])
 
-  const loadManifest = useCallback(async (url: string) => {
+  // `canvasIndex` lets a gallery tile land on the canvas it was captured from;
+  // it is set in the same batched continuation as the canvases, so there is no
+  // flash of canvas 1.
+  const loadManifest = useCallback(async (url: string, opts?: { canvasIndex?: number }) => {
     if (!url.trim()) return
     loadedUrlRef.current = url.trim(); setLoadedUrl(url.trim())
     setManLoading(true); setManError(''); setDrawMode(false); setDrawBox(null)
     try {
       const raw = await fetchManifest(url.trim())
+      // A slower earlier load must not overwrite the one the user moved on to
+      if (loadedUrlRef.current !== url.trim()) return
       const { canvases: c, meta } = parseManifest(raw, url.trim())
       if (!c.length) throw new Error("This record's manifest lists no images — the object has no digitised media")
-      setCanvases(c); setManifestMeta(meta); setCanvasIndex(0); setImageInfo(null)
+      setCanvases(c); setManifestMeta(meta); setCanvasIndex(opts?.canvasIndex ?? 0); setImageInfo(null)
     } catch (err) {
       setManError(err instanceof Error ? err.message : 'Failed to load manifest')
       setCanvases(null); setManifestMeta(null)
@@ -494,22 +505,28 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     }
   }, [])
 
-  // Load an upstream entry: manifests are fetched; a bare Image API service
-  // becomes a one-canvas view with no fetch (zoom tiers + capture still work).
-  const loadEntry = useCallback((entry: IiifEntry) => {
+  // A bare Image API service becomes a one-canvas view with no fetch (zoom
+  // tiers + capture still work). Shared by upstream entries and gallery tiles
+  // whose record is no longer upstream.
+  const showImageService = useCallback((url: string, label: string, meta: IIIFMeta) => {
+    loadedUrlRef.current = url; setLoadedUrl(url)
+    setManError(''); setDrawMode(false); setDrawBox(null)
+    setCanvases([{ label, serviceUrl: url, directUrl: imageServiceUrl(url, 'max') }])
+    setManifestMeta(meta)
+    setCanvasIndex(0); setImageInfo(null)
+  }, [])
+
+  // Load an upstream entry: manifests are fetched; image services are shown.
+  const loadEntry = useCallback((entry: IiifEntry, opts?: { canvasIndex?: number }) => {
     setLocalUrl(entry.url)
     updateNodeData(id, { manifestUrl: entry.url })
-    if (entry.kind === 'manifest') { loadManifest(entry.url); return }
-    loadedUrlRef.current = entry.url; setLoadedUrl(entry.url)
-    setManError(''); setDrawMode(false); setDrawBox(null)
+    if (entry.kind === 'manifest') { loadManifest(entry.url, opts); return }
     const rec = entry.record as Record<string, unknown>
-    setCanvases([{ label: entry.label, serviceUrl: entry.url, directUrl: imageServiceUrl(entry.url, 'max') }])
-    setManifestMeta({
+    showImageService(entry.url, entry.label, {
       title: String(rec.title ?? entry.label), summary: String(rec.description ?? ''),
       attribution: entry.source, rights: '', date: String(rec.date ?? ''), provider: entry.source, metadata: [],
     })
-    setCanvasIndex(0); setImageInfo(null)
-  }, [id, loadManifest, updateNodeData])
+  }, [id, loadManifest, showImageService, updateNodeData])
 
   const entryIndex   = iiifEntries.findIndex(e => e.url === loadedUrl)
   const currentEntry = entryIndex >= 0 ? iiifEntries[entryIndex] : undefined
@@ -535,6 +552,9 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 
   const safeCanvasIndex = canvases ? Math.min(canvasIndex, canvases.length - 1) : 0
   const currentCanvas   = canvases?.[safeCanvasIndex]
+  // One identity for "which picture is on screen": captures store it as
+  // captureCanvasKey, the highlight is drawn only while it matches.
+  const currentCanvasKey = currentCanvas ? (currentCanvas.serviceUrl || currentCanvas.directUrl) : null
 
   // Fetch info.json whenever the canvas service URL changes
   useEffect(() => {
@@ -557,6 +577,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     const recs: Record<string, unknown>[] = []
     const failures: string[] = []
     const canvasCount = canvases?.length ?? 1
+    const canvasKey   = currentCanvas.serviceUrl || currentCanvas.directUrl
     for (let i = 0; i < toCapture.length; i++) {
       const region = toCapture[i]
       const label  = region.label || `Region ${i + 1}`
@@ -565,6 +586,8 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
         const dataUrl = currentCanvas.serviceUrl
           ? await fetchIiifRegion(currentCanvas.serviceUrl, { region: region.id === 'full' ? undefined : box })
           : await fetchImageAsDataUrl(currentCanvas.directUrl, { maxDim: 1024 })
+        // A thumb failure never fails the capture — the tile falls back to the crop
+        const thumb = await resizeDataUrl(dataUrl, CAPTURE_THUMB_DIM).catch(() => undefined)
         recs.push(buildCaptureRecord(dataUrl, {
           nodeId: id, seq, regionIndex: i, region: box, regionLabel: label,
           canvasLabel: currentCanvas.label, canvasIndex: safeCanvasIndex, canvasCount,
@@ -572,6 +595,8 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           // Same `Source · title` the viewer header shows (displayLabel is declared below)
           sourceLabel: currentEntry ? `${currentEntry.source} · ${currentEntry.label}` : 'Manual URL',
           manifestTitle: manifestMeta?.title, manifestProvider: manifestMeta?.provider,
+          entryUrl: loadedUrl, entryKind: currentEntry?.kind ?? 'manual', canvasKey,
+          thumbDataUrl: thumb,
         }))
       } catch (err) {
         const msg = err instanceof Error ? err.message : String(err)
@@ -584,6 +609,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
       const version = setNodeResults(id, all)
       updateNodeData(id, { resultsVersion: version, imageCount: all.length })
       saveRegions([])   // consumed
+      setHighlight(null)
       setCaptureStatus({
         ok: failures.length === 0,
         text: `✓ ${recs.length} captured (${all.length} in collection)${failures.length ? ` — ✗ ${failures.join('; ')}` : ''}`,
@@ -592,14 +618,57 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
       setCaptureStatus({ ok: false, text: `✗ ${failures.join('; ')}` })
     }
     setCapturing(false)
-  }, [currentCanvas, canvases, safeCanvasIndex, currentEntry, iiifRegions, id, manifestMeta, updateNodeData, saveRegions])
+  }, [currentCanvas, canvases, safeCanvasIndex, currentEntry, iiifRegions, id, loadedUrl, manifestMeta, updateNodeData, saveRegions])
 
   const clearCaptures = useCallback(() => {
     clearNodeResults(id)
     updateNodeData(id, { resultsVersion: 0, imageCount: 0 })
     setCaptureStatus(null)
+    setHighlight(null)
   }, [id, updateNodeData])
-  const captureCount = mode === 'iiif' ? ((d.imageCount as number | undefined) ?? 0) : 0
+
+  // The collection, read from the store (the truth — after a reload it is simply
+  // empty); `resultsVersion` is the reactivity signal, as in URLFetchNode.
+  const captures = useMemo(
+    () => mode === 'iiif' ? (getNodeResults(id) ?? []).filter(r => isCaptureRecord(r as Record<string, unknown>)) as Record<string, unknown>[] : [],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [id, mode, d.resultsVersion],
+  )
+
+  const removeOne = useCallback((captureId: string) => {
+    const next = removeCapture(getNodeResults(id) as Record<string, unknown>[] | undefined, captureId)
+    if (next.length === 0) { clearCaptures(); return }
+    const version = setNodeResults(id, next)
+    updateNodeData(id, { resultsVersion: version, imageCount: next.length })
+    setHighlight(h => (h?.id === captureId ? null : h))
+    setCaptureStatus({ ok: true, text: `✓ removed (${next.length} in collection)` })
+  }, [id, clearCaptures, updateNodeData])
+
+  // Gallery tile click: outline the region and bring its canvas back on screen
+  // (same entry → just the canvas; another entry → load it, landing on that
+  // canvas; a record no longer upstream → rebuilt from the capture's own keys).
+  const locateCapture = useCallback((rec: Record<string, unknown>) => {
+    const t = resolveCaptureTarget(rec, iiifEntries)
+    if (!t) return
+    const captureId = String(rec._id)
+    if (highlight?.id === captureId) { setHighlight(null); return }
+    setHighlight({ id: captureId, canvasKey: t.canvasKey, region: t.region, label: String(rec.title ?? '') })
+    setDrawMode(false); setDrawBox(null)
+    if (t.url === loadedUrlRef.current) { setCanvasIndex(t.canvasIndex); return }
+    if (t.entry) { loadEntry(t.entry, { canvasIndex: t.canvasIndex }); return }
+    // Mirror the Load button so the saved-URL effect sees the url already loaded
+    setLocalUrl(t.url)
+    updateNodeData(id, { manifestUrl: t.url })
+    if (t.kind === 'image') {
+      const source = String(rec.captureSource ?? '')
+      showImageService(t.url, String(rec.canvasLabel ?? rec.captureRecordTitle ?? ''), {
+        title: String(rec.captureRecordTitle ?? rec.manifestTitle ?? ''), summary: String(rec.sourceDescription ?? ''),
+        attribution: source, rights: '', date: String(rec.date ?? ''), provider: source, metadata: [],
+      })
+    } else {
+      loadManifest(t.url, { canvasIndex: t.canvasIndex })
+    }
+  }, [iiifEntries, highlight, id, loadEntry, loadManifest, showImageService, updateNodeData])
 
   const getSvgCoords = useCallback((e: React.PointerEvent<SVGSVGElement>) => {
     const rect = svgRef.current!.getBoundingClientRect()
@@ -695,12 +764,12 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const canvasKeyRef = useRef<string | null>(null)
   useEffect(() => {
     if (mode !== 'iiif') return
-    const key = currentCanvas ? `${currentCanvas.serviceUrl || currentCanvas.directUrl}` : null
+    const key = currentCanvasKey
     const prev = canvasKeyRef.current
     canvasKeyRef.current = key
     if (prev !== null && key !== null && prev !== key && iiifRegions.length > 0) saveRegions([])
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentCanvas, mode])
+  }, [currentCanvasKey, mode])
   useEffect(() => { setSizedRefused(new Set()) }, [canvases])
 
   function setMode(m: 'images' | 'iiif') {
@@ -709,7 +778,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
       clearNodeResults(id)
       updateNodeData(id, { resultsVersion: 0, imageCount: 0 })
     }
-    updateNodeData(id, { mode: m }); setZoom(1)
+    updateNodeData(id, { mode: m }); setZoom(1); setHighlight(null)
   }
 
   // Navigation steps RECORDS in both modes (IIIF: upstream entries, auto-loading
@@ -871,7 +940,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           <div style={s.regionBar} className="nodrag">
             <button
               style={{ ...s.regionBtn, ...(drawMode ? { background: '#f97316', color: '#fff', borderColor: '#f97316' } : {}) }}
-              onClick={() => { setDrawMode(v => !v); setDrawBox(null) }}
+              onClick={() => { if (!drawMode) setHighlight(null); setDrawMode(v => !v); setDrawBox(null) }}
             >
               {drawMode ? '✎ Drawing…' : '+ Region'}
             </button>
@@ -899,17 +968,6 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             >
               {capturing ? 'Capturing…' : iiifRegions.length > 0 ? `Capture ${iiifRegions.length}` : 'Capture'}
             </button>
-            {captureCount > 0 && (
-              <>
-                <span style={s.regionCount} title="Captured crops in this node's collection — each becomes one image record downstream">
-                  {captureCount} captured
-                </span>
-                <button style={{ ...s.regionBtn, color: '#b0a891', fontSize: 9 }} onClick={clearCaptures}
-                  title="Empty the capture collection">
-                  ✕ captures
-                </button>
-              </>
-            )}
           </div>
         )}
         {mode === 'iiif' && captureStatus && (
@@ -982,6 +1040,16 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
                     </g>
                   </g>
                 ))}
+                {highlight && highlight.canvasKey === currentCanvasKey && (
+                  <g style={{ pointerEvents: 'none' }}>
+                    <rect x={highlight.region.x} y={highlight.region.y} width={highlight.region.w} height={highlight.region.h}
+                      fill="rgba(245,158,11,0.12)" stroke="#f59e0b" strokeWidth={0.008} strokeDasharray="0.02 0.012" />
+                    <text x={highlight.region.x + 0.01} y={highlight.region.y + highlight.region.h - 0.015} fontSize="0.04" fill="#b45309"
+                      style={{ fontFamily: 'sans-serif', fontWeight: 700 }}>
+                      {highlight.label}
+                    </text>
+                  </g>
+                )}
                 {drawBox && (() => {
                   const nb = normalizeBox(drawBox)
                   return (
@@ -997,6 +1065,44 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
               style={{ width: `${zoom * 100}%`, maxWidth: 'none', height: 'auto', display: 'block' }} />
           )}
         </div>
+
+        {/* Capture gallery — the collection as tiles; click = revisit + outline, ✕ = drop one */}
+        {mode === 'iiif' && captures.length > 0 && (
+          <div style={s.gallery} className="nodrag nowheel" data-testid="capture-gallery">
+            <div style={s.galleryHeader}>
+              <span style={s.regionCount} title="Captured crops in this node's collection — each becomes one image record downstream">
+                Captures · {captures.length}
+              </span>
+              <span style={s.galleryHint}>click a tile to show where it was captured</span>
+              <div style={{ flex: 1 }} />
+              <button style={{ ...s.regionBtn, color: '#b0a891', fontSize: 9 }} onClick={clearCaptures}
+                title="Empty the capture collection">
+                ✕ captures
+              </button>
+            </div>
+            <div style={s.galleryGrid}>
+              {captures.map((rec, i) => {
+                const captureId  = String(rec._id ?? i)
+                const navigable  = typeof rec.captureEntryUrl === 'string'
+                const isSelected = highlight?.id === captureId
+                const thumb      = typeof rec._captureThumb === 'string' ? rec._captureThumb : String(rec.content ?? '')
+                return (
+                  <button key={captureId} type="button" className="nodrag" data-capture-id={captureId}
+                    style={{ ...s.tile, borderColor: isSelected ? '#f59e0b' : '#d6ccb5', cursor: navigable ? 'pointer' : 'default' }}
+                    title={navigable ? String(rec.description ?? '') : `${rec.description ?? ''} (captured before navigation was recorded — cannot be revisited)`}
+                    onClick={() => navigable && locateCapture(rec)}
+                  >
+                    <img src={thumb} alt={String(rec.title ?? '')} draggable={false}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <span style={s.tileBadge}>#{i + 1}</span>
+                    <span role="button" style={s.tileRemove} title="Remove this capture from the collection"
+                      onClick={e => { e.stopPropagation(); removeOne(captureId) }}>×</span>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Zoom bar */}
         <div style={s.zoomBar} className="nodrag">
@@ -1209,6 +1315,25 @@ const s = {
   regionCount: { fontSize: 10, color: '#3b82f6', fontWeight: 700, fontFamily: 'monospace' },
   captureStatus: { fontSize: 10, padding: '2px 10px 4px', fontFamily: 'monospace', whiteSpace: 'nowrap' as const, overflow: 'hidden', textOverflow: 'ellipsis' },
   canvasStepper: { display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: '#b0a891', fontFamily: 'monospace' },
+  gallery: {
+    flexShrink: 0, borderTop: '1px solid #e2e8f0', background: '#fffdf7',
+    maxHeight: 152, overflowY: 'auto' as const,
+  },
+  galleryHeader: { display: 'flex', alignItems: 'center', gap: 8, padding: '4px 10px 0' },
+  galleryHint:   { fontSize: 9, color: '#b0a891', fontStyle: 'italic' as const, whiteSpace: 'nowrap' as const, overflow: 'hidden', textOverflow: 'ellipsis' },
+  galleryGrid:   { display: 'flex', flexWrap: 'wrap' as const, gap: 4, padding: '4px 10px 6px' },
+  tile: {
+    position: 'relative' as const, width: 64, height: 64, padding: 0, flexShrink: 0,
+    border: '2px solid #d6ccb5', borderRadius: 4, background: '#f8fafc', overflow: 'hidden',
+  },
+  tileBadge: {
+    position: 'absolute' as const, left: 2, bottom: 2, fontSize: 9, fontFamily: 'monospace', fontWeight: 700,
+    color: '#fff', background: 'rgba(41,57,74,0.85)', borderRadius: 3, padding: '0 3px', lineHeight: '13px', pointerEvents: 'none' as const,
+  },
+  tileRemove: {
+    position: 'absolute' as const, top: 1, right: 1, width: 13, height: 13, fontSize: 11, lineHeight: '12px',
+    color: '#fff', background: '#ef4444', borderRadius: 3, textAlign: 'center' as const, cursor: 'pointer',
+  },
   handle: {
     width: 10, height: 10, background: HEADER_COLOR,
     border: '2px solid #fff', boxShadow: `0 0 0 1px ${HEADER_COLOR}`,
