@@ -5,7 +5,7 @@ import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { getFieldByPath } from '../utils/fieldPath'
 import { recordsWithField, collectImageFieldCandidates } from '../utils/imageFields'
 import { resolveImageSrc, extractServiceBase, imageServiceUrl, iiifSizeParam, iiifSizeLabel } from '../utils/iiifImage'
-import { collectIiifEntries, type IiifEntry } from '../utils/iiifEntries'
+import { collectIiifEntries, sourceName, type IiifEntry } from '../utils/iiifEntries'
 import { partnerProxyUrl } from '../utils/partnerProxies'
 import { fetchImageAsDataUrl } from '../utils/imageFetch'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
@@ -633,14 +633,19 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
         : (currentCanvas?.directUrl ?? null))
     : thumb
 
-  // IIIF mode names the source and the record so the user always knows what is
-  // on screen; a manually entered manifest falls back to the canvas label.
+  // Both modes name the source and the record so the user always knows what is
+  // on screen (`Source · title`, record page as tooltip); a manually entered
+  // manifest falls back to the canvas label. `recordTitle` is the bare title —
+  // it is what the captured record and the <img alt> carry, never the prefix.
+  const recordTitle  = String(currentRecord.title || currentRecord.filename || currentRecord.id || `Record ${safeRecordIndex + 1}`)
+  const recordSource = typeof currentRecord._source === 'string' ? currentRecord._source : undefined
+  const recordUrl    = typeof currentRecord._sourceUrl === 'string' ? currentRecord._sourceUrl : ''
   const displayLabel = mode === 'iiif'
     ? (currentEntry ? `${currentEntry.source} · ${currentEntry.label}` : (currentCanvas?.label ?? ''))
-    : String(currentRecord.title || currentRecord.filename || currentRecord.id || `Record ${safeRecordIndex + 1}`)
+    : `${sourceName(recordSource)} · ${recordTitle}`
   const displayTitle = mode === 'iiif'
     ? String((currentEntry?.record as Record<string, unknown> | undefined)?._sourceUrl ?? loadedUrl ?? '')
-    : displayLabel
+    : (recordUrl || displayLabel)
 
   // ── Write current image to results store ─────────────────────────────────────
   // Images mode: reacts to rawSrc changing (field selection, record navigation)
@@ -657,7 +662,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
       content:     rawSrc,
       contentType: 'image',
       mimeType,
-      title:       displayLabel,
+      title:       recordTitle,
       _source:     'imageView',
     }
     const version = setNodeResults(id, [record])
@@ -895,7 +900,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             </div>
           ) : mode === 'iiif' ? (
             <div style={{ position: 'relative', display: 'inline-block', lineHeight: 0, minWidth: 0 }}>
-              <img src={displaySrc} alt={displayLabel}
+              <img src={displaySrc} alt={recordTitle}
                 style={{ width: `${zoom * 100}%`, maxWidth: 'none', height: 'auto', display: 'block' }} />
               <svg
                 ref={svgRef}
@@ -940,7 +945,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
               </svg>
             </div>
           ) : (
-            <img src={displaySrc} alt={displayLabel}
+            <img src={displaySrc} alt={recordTitle}
               style={{ width: `${zoom * 100}%`, maxWidth: 'none', height: 'auto', display: 'block' }} />
           )}
         </div>
@@ -988,7 +993,18 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             )}
             {mode === 'images' && (
               <>
-                {imageDirectUrl && <MRow k="Source" v={imageDirectUrl} />}
+                {imageDirectUrl ? (
+                  <MRow k="Source" v={imageDirectUrl} />
+                ) : rawSrc ? (
+                  <>
+                    {/* Which record is on screen — the same provenance the nav label summarises */}
+                    <MRow k="Source" v={sourceName(recordSource)} />
+                    <MRow k="Title"  v={recordTitle} />
+                    {currentRecord.id != null && <MRow k="ID" v={String(currentRecord.id)} />}
+                    {recordUrl && <MRow k="Record" v={recordUrl} href={recordUrl} />}
+                    {selectedField && <MRow k="Field" v={selectedField} />}
+                  </>
+                ) : null}
                 {origWidth  && <MRow k="Dimensions" v={`${origWidth} × ${origHeight} px`} />}
                 {localSizeKb && <MRow k="Est. size"  v={`≈ ${localSizeKb.toLocaleString()} KB`} />}
                 {exifData?.make        && <MRow k="Camera"   v={[exifData.make, exifData.model].filter(Boolean).join(' ')} />}
@@ -1015,11 +1031,15 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 
 // ── Small presentational component ───────────────────────────────────────────
 
-function MRow({ k, v }: { k: string; v: string }) {
+function MRow({ k, v, href }: { k: string; v: string; href?: string }) {
+  const valueStyle = { fontSize: 10, color: '#2c2a24', flex: 1, wordBreak: 'break-all' as const, paddingTop: 1 }
   return (
     <div style={{ display: 'flex', gap: 6, padding: '2px 10px', borderBottom: '1px solid #f8fafc', minHeight: 20 }}>
       <span style={{ fontSize: 10, color: '#8a8168', fontWeight: 600, flexShrink: 0, width: 72, paddingTop: 1 }}>{k}</span>
-      <span style={{ fontSize: 10, color: '#2c2a24', flex: 1, wordBreak: 'break-all', paddingTop: 1 }} title={v}>{v}</span>
+      {href
+        ? <a href={href} target="_blank" rel="noopener noreferrer" className="nodrag"
+            style={{ ...valueStyle, color: '#1d4ed8', textDecoration: 'underline' }} title={v}>{v}</a>
+        : <span style={valueStyle} title={v}>{v}</span>}
     </div>
   )
 }
