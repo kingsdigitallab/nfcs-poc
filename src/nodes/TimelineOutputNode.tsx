@@ -14,44 +14,16 @@ import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { candidateFields } from '../utils/reconciliationService'
 import { resolveRecordYear, AUTO_DATE_FIELDS, type ResolvedYear } from '../utils/dateUtils'
 import { getFieldByPath } from '../utils/fieldPath'
+// Source appearance (name + colour + shape) is the shared table in
+// sourceIdentity.ts — never add a local SOURCE_COLORS here (gotcha 32).
+import { sourceIdentity, compareBySourceShape, SHAPE_GLYPHS, type MarkerShape } from '../utils/sourceIdentity'
 
-// ─── source appearance ────────────────────────────────────────────────────────
-
-const SOURCE_COLORS: Record<string, string> = {
-  gbif:      '#16a34a',
-  ads:       '#c2410c',
-  llds:      '#b45309',
-  mds:       '#1d4ed8',
-  europeana: '#2563eb',
-}
-const FALLBACK_COLOR = '#6366f1'
-
-const SOURCE_SHAPES: Record<string, string> = {
-  gbif:      'circle',
-  ads:       'square',
-  llds:      'triangle',
-  mds:       'diamond',
-  europeana: 'circle',
-}
-
-const SHAPE_GLYPHS: Record<string, string> = {
-  circle:   '●',
-  square:   '■',
-  triangle: '▲',
-  diamond:  '◆',
-}
-
-function sourceColor(src: string | undefined): string {
-  return SOURCE_COLORS[src ?? ''] ?? FALLBACK_COLOR
-}
-function sourceShape(src: string | undefined): string {
-  return SOURCE_SHAPES[src ?? ''] ?? 'circle'
-}
+const srcOf = (r: Record<string, unknown>) => (typeof r._source === 'string' ? r._source : undefined)
 
 // ─── SVG shape component ──────────────────────────────────────────────────────
 
 interface ShapeProps {
-  shape:        string
+  shape:        MarkerShape
   cx:           number
   cy:           number
   r:            number
@@ -64,20 +36,25 @@ function Marker({ shape, cx, cy, r, color, onMouseEnter, onMouseLeave }: ShapePr
   const common = {
     fill:        color,
     stroke:      '#fff',
-    strokeWidth: 1.5 as number,
+    strokeWidth: 1.25 as number,
     style:       { cursor: 'pointer' } as React.CSSProperties,
     onMouseEnter,
     onMouseLeave,
   }
+  // Per-shape radius factors equalise visual weight: at the same r a square is
+  // ~27% heavier than a circle and a triangle/diamond ~30% lighter.
   if (shape === 'square') {
-    return <rect {...common} x={cx - r} y={cy - r} width={r * 2} height={r * 2} />
+    const s = r * 0.9
+    return <rect {...common} x={cx - s} y={cy - s} width={s * 2} height={s * 2} />
   }
   if (shape === 'triangle') {
-    const pts = `${cx},${cy - r}  ${cx + r * 1.1},${cy + r}  ${cx - r * 1.1},${cy + r}`
+    const t = r * 1.2
+    const pts = `${cx},${cy - t}  ${cx + t * 1.1},${cy + t}  ${cx - t * 1.1},${cy + t}`
     return <polygon {...common} points={pts} />
   }
   if (shape === 'diamond') {
-    const pts = `${cx},${cy - r * 1.2}  ${cx + r},${cy}  ${cx},${cy + r * 1.2}  ${cx - r},${cy}`
+    const d = r * 1.15
+    const pts = `${cx},${cy - d * 1.2}  ${cx + d},${cy}  ${cx},${cy + d * 1.2}  ${cx - d},${cy}`
     return <polygon {...common} points={pts} />
   }
   return <circle {...common} cx={cx} cy={cy} r={r} />
@@ -212,6 +189,9 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
       if (!yearMap.has(item.year)) yearMap.set(item.year, [])
       yearMap.get(item.year)!.push(item)
     }
+    // Same-shape sources cluster within a year's stack, so a column reads as
+    // runs of one institution instead of an interleaved mix.
+    for (const bucket of yearMap.values()) bucket.sort((a, b) => compareBySourceShape(a.record, b.record))
     return { items, minYear, maxYear, yearMap, bySource, byField, noDateCount }
   }, [records, recordYear])
 
@@ -424,12 +404,11 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
             const x = Math.round(yearToX(year))
             return yearItems.slice(0, MAX_STACK).map((item, stackIdx) => {
               const y   = axisY - DOT_R - stackIdx * DOT_GAP
-              const clr = sourceColor(item.record._source as string | undefined)
-              const shp = sourceShape(item.record._source as string | undefined)
+              const ident = sourceIdentity(srcOf(item.record))
               return (
                 <Marker
-                  key={item.record._id as string ?? `${year}-${stackIdx}`}
-                  shape={shp} cx={x} cy={y} r={DOT_R} color={clr}
+                  key={(item.record._id as string | undefined) ?? `${year}-${stackIdx}`}
+                  shape={ident.shape} cx={x} cy={y} r={DOT_R} color={ident.colour}
                   onMouseEnter={() => { cancelHide(); setHovered({ record: item.record, svgX: x, svgY: y }) }}
                   onMouseLeave={scheduleHide}
                 />
@@ -515,7 +494,8 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
           const periodName = res?.field === 'periodStart' && r.periodName
             ? ` (${Array.isArray(r.periodName) ? r.periodName.join(', ') : r.periodName})` : ''
           const date       = res ? `${res.field}: ${raw}${periodEnd}${periodName}` : ''
-          const glyph      = SHAPE_GLYPHS[sourceShape(r._source as string | undefined)] ?? '●'
+          const ident      = sourceIdentity(srcOf(r))
+          const glyph      = SHAPE_GLYPHS[ident.shape]
           return (
             <div
               style={{ ...styles.tooltip, left: tipLeft, top: tipTop }}
@@ -524,7 +504,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
             >
               <div style={styles.tooltipTitle}>{title}{title.length >= 60 ? '…' : ''}</div>
               <div style={styles.tooltipMeta}>
-                <span style={{ color: sourceColor(r._source as string | undefined) }}>{glyph} {r._source ?? ''}</span>
+                <span style={{ color: ident.colour }}>{glyph} {ident.name}</span>
                 {date ? ` · ${date}` : ''}
               </div>
               {r._sourceUrl && (
@@ -599,12 +579,12 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
       {/* ── Legend ── */}
       {Object.keys(bySource).length > 0 && (
         <div style={styles.legend}>
-          {Object.entries(bySource).map(([src, n]) => {
-            const glyph = SHAPE_GLYPHS[sourceShape(src)] ?? '●'
+          {Object.entries(bySource).sort((a, b) => b[1] - a[1]).map(([src, n]) => {
+            const ident = sourceIdentity(src === 'unknown' ? undefined : src)
             return (
-              <span key={src} style={styles.legendItem}>
-                <span style={{ color: sourceColor(src) }}>{glyph}</span>
-                {' '}{src} ({n})
+              <span key={src} style={styles.legendItem} title={`_source: ${src}`}>
+                <span style={{ color: ident.colour }}>{SHAPE_GLYPHS[ident.shape]}</span>
+                {' '}{ident.name} ({n})
               </span>
             )
           })}
