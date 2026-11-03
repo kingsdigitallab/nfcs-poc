@@ -1,13 +1,14 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { Handle, Position, NodeProps, useReactFlow, NodeResizer } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
-import { setNodeResults, clearNodeResults } from '../store/resultsStore'
+import { setNodeResults, clearNodeResults, getNodeResults } from '../store/resultsStore'
+import { buildCaptureRecord, appendCaptures, isCaptureRecord } from '../utils/captureRecords'
 import { getFieldByPath } from '../utils/fieldPath'
 import { recordsWithField, collectImageFieldCandidates } from '../utils/imageFields'
 import { resolveImageSrc, extractServiceBase, imageServiceUrl, iiifSizeParam, iiifSizeLabel } from '../utils/iiifImage'
 import { collectIiifEntries, sourceName, type IiifEntry } from '../utils/iiifEntries'
 import { partnerProxyUrl } from '../utils/partnerProxies'
-import { fetchImageAsDataUrl } from '../utils/imageFetch'
+import { fetchImageAsDataUrl, fetchIiifRegion, DEFAULT_REGION_SIZE } from '../utils/imageFetch'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 const HEADER_COLOR    = '#29394a'
@@ -327,20 +328,9 @@ function parseTiff(raw: Uint8Array, base: number): ExifData {
 // collectIiifEntries (utils/iiifEntries.ts) finds one manifest OR Image API
 // service per upstream record; IIIF mode navigates over that list.
 
-/** Provenance copied from the upstream record onto captured region records. */
-const PROVENANCE_KEYS = ['id', 'title', 'description', 'creator', 'date', '_sourceUrl', '_citation', '_pid', '_sourceId'] as const
-
-function pickProvenance(record: Record<string, unknown> | undefined): Record<string, unknown> {
-  if (!record) return {}
-  const out: Record<string, unknown> = {}
-  for (const k of PROVENANCE_KEYS) if (record[k] !== undefined) out[k] = record[k]
-  // The source namespace object (vam, smg, bodleian, …) travels too
-  for (const [k, v] of Object.entries(record)) {
-    if (!k.startsWith('_') && v != null && typeof v === 'object' && !Array.isArray(v)) out[k] = v
-  }
-  if (typeof record._source === 'string') out._origin = record._source
-  return out
-}
+// Capture record shape + provenance copy live in utils/captureRecords.ts
+// (buildCaptureRecord / appendCaptures) — captures ACCUMULATE across canvases
+// and records until "Clear captures".
 
 // ── Downsampling hook ─────────────────────────────────────────────────────────
 
@@ -414,6 +404,10 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const [drawMode,     setDrawMode]     = useState(false)
   const [drawBox,      setDrawBox]      = useState<DrawBox | null>(null)
   const [capturing,    setCapturing]    = useState(false)
+  const [captureStatus, setCaptureStatus] = useState<{ ok: boolean; text: string } | null>(null)
+  // IIIF services that refused a constrained size (SMG's zoom.* 403s !600,600 /
+  // !2400,2400 but serves max — gotcha 33): render those at /full/max/ instead.
+  const [sizedRefused, setSizedRefused] = useState<Set<string>>(() => new Set())
   const svgRef = useRef<SVGSVGElement | null>(null)
 
   // Image-looking fields first (with populations), everything else after — see imageFields.ts
@@ -548,45 +542,64 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     fetchImageInfo(currentCanvas.serviceUrl).then(setImageInfo)
   }, [currentCanvas?.serviceUrl])
 
+  // Capture APPENDS the current regions (or the whole canvas) to the node's
+  // collection — draw → capture → next canvas/record → draw → capture builds a
+  // curated set of crops, each with its provenance, for the AI nodes. A region
+  // that fails is reported in the status line; the rest still land.
   const captureAndSend = useCallback(async () => {
     if (!currentCanvas) return
     setCapturing(true)
-    clearNodeResults(id)
-    try {
-      const toCapture: IIIFRegion[] = iiifRegions.length > 0
-        ? iiifRegions
-        : [{ id: 'full', x: 0, y: 0, w: 1, h: 1, label: currentCanvas.label || 'Full canvas' }]
-      const recs: Record<string, unknown>[] = []
-      for (let i = 0; i < toCapture.length; i++) {
-        const region = toCapture[i]
-        const regionUrl = currentCanvas.serviceUrl
-          ? `${currentCanvas.serviceUrl}/pct:${(region.x*100).toFixed(1)},${(region.y*100).toFixed(1)},${(region.w*100).toFixed(1)},${(region.h*100).toFixed(1)}/!1024,1024/0/default.jpg`
-          : currentCanvas.directUrl
-        // Regions are already requested at !1024,1024 — no client-side resize
-        const dataUrl = await fetchImageAsDataUrl(regionUrl, { maxDim: 0 })
-        recs.push({
-          ...pickProvenance(currentEntry?.record as Record<string, unknown> | undefined),
-          content:      dataUrl,
-          contentType:  'image',
-          mimeType:     'image/jpeg',
-          title:        region.label || `Region ${i + 1}`,
-          regionIndex:  i,
-          regionBounds: { x: region.x, y: region.y, w: region.w, h: region.h },
-          canvasLabel:  currentCanvas.label,
-          ...(manifestMeta ? { manifestTitle: manifestMeta.title, manifestProvider: manifestMeta.provider } : {}),
-          _source: 'imageView',
-          _id:     `${id}_region_${i}`,
-        })
+    setCaptureStatus(null)
+    const toCapture: IIIFRegion[] = iiifRegions.length > 0
+      ? iiifRegions
+      : [{ id: 'full', x: 0, y: 0, w: 1, h: 1, label: currentCanvas.label || 'Full canvas' }]
+    const seq = Date.now()
+    const recs: Record<string, unknown>[] = []
+    const failures: string[] = []
+    const canvasCount = canvases?.length ?? 1
+    for (let i = 0; i < toCapture.length; i++) {
+      const region = toCapture[i]
+      const label  = region.label || `Region ${i + 1}`
+      try {
+        const box = { x: region.x, y: region.y, w: region.w, h: region.h }
+        const dataUrl = currentCanvas.serviceUrl
+          ? await fetchIiifRegion(currentCanvas.serviceUrl, { region: region.id === 'full' ? undefined : box })
+          : await fetchImageAsDataUrl(currentCanvas.directUrl, { maxDim: 1024 })
+        recs.push(buildCaptureRecord(dataUrl, {
+          nodeId: id, seq, regionIndex: i, region: box, regionLabel: label,
+          canvasLabel: currentCanvas.label, canvasIndex: safeCanvasIndex, canvasCount,
+          sourceRecord: currentEntry?.record as Record<string, unknown> | undefined,
+          // Same `Source · title` the viewer header shows (displayLabel is declared below)
+          sourceLabel: currentEntry ? `${currentEntry.source} · ${currentEntry.label}` : 'Manual URL',
+          manifestTitle: manifestMeta?.title, manifestProvider: manifestMeta?.provider,
+        }))
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err)
+        console.error('IIIF capture failed:', label, err)
+        failures.push(`${label}: ${msg}`)
       }
-      const version = setNodeResults(id, recs)
-      updateNodeData(id, { resultsVersion: version, imageCount: recs.length })
-    } catch (err) {
-      console.error('IIIF capture failed:', err)
-      updateNodeData(id, { imageCount: 0 })
-    } finally {
-      setCapturing(false)
     }
-  }, [currentCanvas, currentEntry, iiifRegions, id, manifestMeta, updateNodeData])
+    if (recs.length > 0) {
+      const all = appendCaptures(getNodeResults(id), recs)
+      const version = setNodeResults(id, all)
+      updateNodeData(id, { resultsVersion: version, imageCount: all.length })
+      saveRegions([])   // consumed
+      setCaptureStatus({
+        ok: failures.length === 0,
+        text: `✓ ${recs.length} captured (${all.length} in collection)${failures.length ? ` — ✗ ${failures.join('; ')}` : ''}`,
+      })
+    } else {
+      setCaptureStatus({ ok: false, text: `✗ ${failures.join('; ')}` })
+    }
+    setCapturing(false)
+  }, [currentCanvas, canvases, safeCanvasIndex, currentEntry, iiifRegions, id, manifestMeta, updateNodeData, saveRegions])
+
+  const clearCaptures = useCallback(() => {
+    clearNodeResults(id)
+    updateNodeData(id, { resultsVersion: 0, imageCount: 0 })
+    setCaptureStatus(null)
+  }, [id, updateNodeData])
+  const captureCount = mode === 'iiif' ? ((d.imageCount as number | undefined) ?? 0) : 0
 
   const getSvgCoords = useCallback((e: React.PointerEvent<SVGSVGElement>) => {
     const rect = svgRef.current!.getBoundingClientRect()
@@ -627,11 +640,16 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 
   // Build display URL: for IIIF Image API services use a zoom-tiered size param
   // rather than /full/max — this is the key efficiency gain.
+  const sizeParam = currentCanvas?.serviceUrl && sizedRefused.has(currentCanvas.serviceUrl) ? 'max' : iiifSizeParam(zoom)
   const displaySrc = mode === 'iiif'
     ? (currentCanvas?.serviceUrl
-        ? `${currentCanvas.serviceUrl}/full/${iiifSizeParam(zoom)}/0/default.jpg`
+        ? `${currentCanvas.serviceUrl}/full/${sizeParam}/0/default.jpg`
         : (currentCanvas?.directUrl ?? null))
     : thumb
+  const onIiifImgError = () => {
+    const svc = currentCanvas?.serviceUrl
+    if (mode === 'iiif' && svc && sizeParam !== 'max') setSizedRefused(prev => new Set(prev).add(svc))
+  }
 
   // Both modes name the source and the record so the user always knows what is
   // on screen (`Source · title`, record page as tooltip); a manually entered
@@ -670,15 +688,29 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rawSrc, mode, id])
 
-  // IIIF mode: clear results on canvas navigation — capture is now explicit via Capture button
+  // IIIF mode: the collection survives canvas/record navigation (captures
+  // accumulate); only UNCAPTURED regions are dropped when the picture changes,
+  // since they are fractions of a different image. Not on first load — regions
+  // restored from a saved workflow must survive the canvas appearing.
+  const canvasKeyRef = useRef<string | null>(null)
   useEffect(() => {
     if (mode !== 'iiif') return
-    clearNodeResults(id)
-    updateNodeData(id, { resultsVersion: 0, imageCount: 0 })
+    const key = currentCanvas ? `${currentCanvas.serviceUrl || currentCanvas.directUrl}` : null
+    const prev = canvasKeyRef.current
+    canvasKeyRef.current = key
+    if (prev !== null && key !== null && prev !== key && iiifRegions.length > 0) saveRegions([])
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentCanvas, mode, id])
+  }, [currentCanvas, mode])
+  useEffect(() => { setSizedRefused(new Set()) }, [canvases])
 
-  function setMode(m: 'images' | 'iiif') { updateNodeData(id, { mode: m }); setZoom(1) }
+  function setMode(m: 'images' | 'iiif') {
+    // A single Images-mode record is not a capture: start IIIF mode with an empty collection
+    if (m === 'iiif' && !(getNodeResults(id) ?? []).every(r => isCaptureRecord(r as Record<string, unknown>))) {
+      clearNodeResults(id)
+      updateNodeData(id, { resultsVersion: 0, imageCount: 0 })
+    }
+    updateNodeData(id, { mode: m }); setZoom(1)
+  }
 
   // Navigation steps RECORDS in both modes (IIIF: upstream entries, auto-loading
   // each). Canvases within one manifest have their own stepper in the region bar.
@@ -867,6 +899,22 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             >
               {capturing ? 'Capturing…' : iiifRegions.length > 0 ? `Capture ${iiifRegions.length}` : 'Capture'}
             </button>
+            {captureCount > 0 && (
+              <>
+                <span style={s.regionCount} title="Captured crops in this node's collection — each becomes one image record downstream">
+                  {captureCount} captured
+                </span>
+                <button style={{ ...s.regionBtn, color: '#b0a891', fontSize: 9 }} onClick={clearCaptures}
+                  title="Empty the capture collection">
+                  ✕ captures
+                </button>
+              </>
+            )}
+          </div>
+        )}
+        {mode === 'iiif' && captureStatus && (
+          <div style={{ ...s.captureStatus, color: captureStatus.ok ? '#15803d' : '#b91c1c' }} title={captureStatus.text}>
+            {captureStatus.text}
           </div>
         )}
 
@@ -900,7 +948,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             </div>
           ) : mode === 'iiif' ? (
             <div style={{ position: 'relative', display: 'inline-block', lineHeight: 0, minWidth: 0 }}>
-              <img src={displaySrc} alt={recordTitle}
+              <img src={displaySrc} alt={recordTitle} onError={onIiifImgError}
                 style={{ width: `${zoom * 100}%`, maxWidth: 'none', height: 'auto', display: 'block' }} />
               <svg
                 ref={svgRef}
@@ -984,7 +1032,9 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
                   {imageInfo.profile && <MRow k="Profile" v={imageInfo.profile} />}
                 </> : null}
                 {currentCanvas?.serviceUrl && (
-                  <MRow k="Requesting" v={iiifSizeLabel(iiifSizeParam(zoom))} />
+                  <MRow k="Requesting" v={sizeParam === 'max' && iiifSizeParam(zoom) !== 'max'
+                    ? `Full resolution (server refused ${iiifSizeLabel(iiifSizeParam(zoom))}; captures use ${DEFAULT_REGION_SIZE} then max)`
+                    : iiifSizeLabel(sizeParam)} />
                 )}
                 {!currentCanvas?.serviceUrl && currentCanvas?.directUrl && (
                   <MRow k="Source" v="Direct URL (no IIIF Image API service)" />
@@ -1157,6 +1207,7 @@ const s = {
     cursor: 'pointer', flexShrink: 0,
   },
   regionCount: { fontSize: 10, color: '#3b82f6', fontWeight: 700, fontFamily: 'monospace' },
+  captureStatus: { fontSize: 10, padding: '2px 10px 4px', fontFamily: 'monospace', whiteSpace: 'nowrap' as const, overflow: 'hidden', textOverflow: 'ellipsis' },
   canvasStepper: { display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: '#b0a891', fontFamily: 'monospace' },
   handle: {
     width: 10, height: 10, background: HEADER_COLOR,
