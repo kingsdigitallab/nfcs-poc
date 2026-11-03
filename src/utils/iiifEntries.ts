@@ -19,27 +19,10 @@ export interface IiifEntry {
   record:      UnifiedRecord
 }
 
-/** Display names for `_source` keys written by the adapters. */
-export const SOURCE_NAMES: Record<string, string> = {
-  ariadne:   'ARIADNE',
-  hsds:      'HSDS',
-  bodleian:  'Bodleian',
-  europeana: 'Europeana',
-  gbif:      'GBIF',
-  llds:      'LLDS',
-  mds:       'MDS',
-  nhm:       'Natural History Museum',
-  smg:       'Science Museum Group',
-  vam:       'V&A',
-  sparql:    'Wikidata SPARQL',
-  imageView: 'Image View',
-  kclField:  'AI Inference',
-}
-
-export function sourceName(src: string | undefined): string {
-  if (!src) return 'Unknown source'
-  return SOURCE_NAMES[src] ?? src.charAt(0).toUpperCase() + src.slice(1)
-}
+// Display names live in sourceIdentity.ts (one table for name + colour + shape);
+// re-exported here so existing imports keep working.
+import { sourceName } from './sourceIdentity'
+export { SOURCE_NAMES, sourceName } from './sourceIdentity'
 
 const MANIFEST_KEYS = ['manifest', 'manifestUrl', 'iiifManifest', 'iiif']
 const str = (v: unknown): string => (typeof v === 'string' ? v.trim() : '')
