@@ -536,17 +536,19 @@ Once a manifest is loaded, the **region annotator toolbar** appears above the ca
 1. Click **+ Region** to enter draw mode (button turns orange).
 2. Drag a rectangle over any area of the displayed image. A blue semi-transparent box is committed and labelled automatically (Region 1, Region 2, …).
 3. Delete any region by clicking the red **×** in its top-right corner.
-4. Click **Capture** (or **Capture N** when regions exist) to fetch each region as a base64-encoded image and write the records to the output handle.
+4. Click **Capture** (or **Capture N** when regions exist) to fetch each region as a base64-encoded image and **add** it to the node's capture collection.
+5. Step to another canvas or record, draw again, capture again — the collection grows (`5 captured`). **✕ captures** empties it.
 
 **How capture works:**
 
-- For IIIF Image API services: each region uses the IIIF `pct:x,y,w,h` parameter to request only the cropped area at up to 1024 × 1024 px (`{serviceUrl}/pct:.../!1024,1024/0/default.jpg`).
+- **Captures accumulate.** Each Capture appends the current regions to the collection the output handle exposes; the drawn regions are consumed. Moving to another canvas drops only regions you have not captured. The status line under the toolbar reports `✓ 2 captured (5 in collection)`, or names any region that could not be fetched and why.
+- For IIIF Image API services: each region uses the IIIF `pct:x,y,w,h` parameter to request only the cropped area at up to 1024 × 1024 px (`{serviceUrl}/pct:.../!1024,1024/0/default.jpg`). If the server refuses that size (Science Museum Group's does), the same region is fetched at `max` and resized in the browser.
 - For direct-URL canvases (no IIIF Image API): the full canvas image is fetched.
 - Direct `fetch` is tried first; falls back to `/image-proxy` for CORS-restricted partner servers.
-- Each output record: `{ content: dataUrl, contentType: 'image', mimeType: 'image/jpeg', title, regionIndex, regionBounds, canvasLabel, manifestTitle, ... }` plus the source record's provenance (`id`, `_sourceUrl`, `_citation`, `_pid`, its namespace object, `_origin`).
+- Each capture is one record: `{ content: dataUrl, contentType: 'image', mimeType, title: 'Region 2', description: 'Science Museum Group · Amazon locomotive · canvas 3/6 · Region 2', captureSource, captureRecordTitle, regionIndex, regionBounds, canvasIndex, canvasLabel, manifestTitle, capturedAt, ... }` plus the source record's provenance (`id`, `_sourceUrl`, `_citation`, `_pid`, its namespace object, `_origin`, and the parent record's text as `sourceDescription`). The `description` is what AI Inference's vision prompt sees as `{{content}}`, so every crop tells the model where it came from.
 - If no regions are drawn, **Capture** fetches the whole canvas as a single record.
 
-Connect the output handle to **AI Inference** (with Vision enabled) to send annotated IIIF image regions to the inference model. Regions and their labels are saved in the workflow file.
+Connect the output handle to **AI Inference**: with a capture collection upstream its **Vision** box ticks itself and each crop is analysed in its own call. To send the **whole collection in one call** (compare regions, find the odd one out), use **AI Inference (by field)** with field `content`, input **Image** and mode **Aggregate** — no special connector is needed, the collection is an ordinary record set. Regions and their labels are saved in the workflow file; the captured images live in memory for the session.
 
 #### Info panel
 
@@ -874,8 +876,8 @@ A default KCL API key may be pre-configured. If the panel shows an API error, en
 3. Use the **From upstream** picker to select a manuscript — the manifest loads automatically.
 4. Navigate to a page of interest using the ‹ / › canvas buttons.
 5. Click **+ Region** and drag boxes around specific areas (a decorated initial, a marginal annotation, a seal).
-6. Click **Capture 3** — each region is fetched as a base64 JPEG via the IIIF Image API.
-7. Connect the **ImageView** output handle to a **AI Inference** node with **Vision** enabled.
+6. Click **Capture 3** — each region is fetched as a base64 JPEG via the IIIF Image API and the toolbar reads `3 captured`. Step to another page, draw and capture again to add to the collection.
+7. Connect the **ImageView** output handle to an **AI Inference** node — **Vision** is ticked automatically because every upstream record is an image.
 8. Write a prompt such as *"Describe what you see in this region of a medieval manuscript."*
 9. Click **▶ Run** on AI Inference — each region is analysed individually.
 10. Connect the output to **AI Inference Output** to browse responses as expandable cards.
