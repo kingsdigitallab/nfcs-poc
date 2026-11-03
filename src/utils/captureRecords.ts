@@ -5,6 +5,9 @@
  * can be sent on to the AI nodes as one record set.
  */
 import type { RegionBox } from './imageFetch'
+import type { IiifEntry } from './iiifEntries'
+
+export type CaptureEntryKind = 'manifest' | 'image' | 'manual'
 
 export interface CaptureMeta {
   nodeId:            string
@@ -22,6 +25,13 @@ export interface CaptureMeta {
   sourceLabel:       string
   manifestTitle?:    string
   manifestProvider?: string
+  /** What was loaded at capture time (`loadedUrl`): manifest URL or Image API service base. */
+  entryUrl:          string
+  entryKind:         CaptureEntryKind
+  /** The canvas the region was drawn on: `serviceUrl || directUrl`. */
+  canvasKey:         string
+  /** Small data URL (≈160 px) for gallery tiles and Output cards. */
+  thumbDataUrl?:     string
 }
 
 /** Provenance copied from the upstream record onto a capture. */
@@ -61,10 +71,49 @@ export function buildCaptureRecord(dataUrl: string, meta: CaptureMeta): Record<s
     canvasLabel:  meta.canvasLabel,
     ...(meta.manifestTitle    !== undefined ? { manifestTitle:    meta.manifestTitle }    : {}),
     ...(meta.manifestProvider !== undefined ? { manifestProvider: meta.manifestProvider } : {}),
+    // Navigation keys: the gallery uses them to return to the source canvas
+    captureEntryUrl:  meta.entryUrl,
+    captureEntryKind: meta.entryKind,
+    captureCanvasKey: meta.canvasKey,
+    // Underscore on purpose: collectFieldPaths / collectImageFieldCandidates skip
+    // `_` keys, so the thumb never shows up as a second image field (gotcha 34).
+    ...(meta.thumbDataUrl ? { _captureThumb: meta.thumbDataUrl } : {}),
     capturedAt:   new Date(meta.seq).toISOString(),
     _source:      'imageView',
     _id:          `${meta.nodeId}_cap_${meta.seq}_${meta.regionIndex}`,
   }
+}
+
+export interface CaptureTarget {
+  /** The upstream entry with this url, when it is still connected. */
+  entry?:      IiifEntry
+  url:         string
+  kind:        CaptureEntryKind
+  canvasIndex: number
+  canvasKey:   string
+  region:      RegionBox
+}
+
+/** Where a capture came from, resolved against the current upstream entries; null for a legacy capture. */
+export function resolveCaptureTarget(capture: Record<string, unknown>, entries: IiifEntry[]): CaptureTarget | null {
+  const url    = capture.captureEntryUrl
+  const region = capture.regionBounds as RegionBox | undefined
+  if (typeof url !== 'string' || !url || !region || typeof region !== 'object') return null
+  const entry = entries.find(e => e.url === url)
+  const storedKind = capture.captureEntryKind
+  const kind: CaptureEntryKind = entry ? entry.kind
+    : (storedKind === 'image' || storedKind === 'manual' ? storedKind : 'manifest')
+  return {
+    entry, url, kind,
+    canvasIndex: typeof capture.canvasIndex === 'number' ? capture.canvasIndex : 0,
+    canvasKey:   typeof capture.captureCanvasKey === 'string' ? capture.captureCanvasKey : '',
+    region:      { x: region.x, y: region.y, w: region.w, h: region.h },
+  }
+}
+
+/** The collection without the capture whose `_id` matches (order kept; unknown id is a no-op). */
+export function removeCapture(existing: Record<string, unknown>[] | undefined, id: string): Record<string, unknown>[] {
+  return (existing ?? []).filter(r => r._id !== id)
 }
 
 export function isCaptureRecord(r: Record<string, unknown> | undefined): boolean {

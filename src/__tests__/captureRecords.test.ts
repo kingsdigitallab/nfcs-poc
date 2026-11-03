@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { buildCaptureRecord, isCaptureRecord, appendCaptures, type CaptureMeta } from '../utils/captureRecords'
+import { buildCaptureRecord, isCaptureRecord, appendCaptures, resolveCaptureTarget, removeCapture, type CaptureMeta } from '../utils/captureRecords'
+import type { IiifEntry } from '../utils/iiifEntries'
 
 const PNG = 'data:image/png;base64,iVBORw0KGgo='
 const smgRecord = {
@@ -11,6 +12,7 @@ const meta: CaptureMeta = {
   nodeId: 'img-1', seq: 1700000000000, regionIndex: 0, region: { x: 0.1, y: 0.1, w: 0.4, h: 0.4 }, regionLabel: 'Region 1',
   canvasLabel: '', canvasIndex: 0, canvasCount: 1, sourceRecord: smgRecord,
   sourceLabel: "Science Museum Group · 'Amazon' open-end drying tumbler", manifestTitle: 'Amazon tumbler', manifestProvider: 'Science Museum Group',
+  entryUrl: smgRecord.smg.manifest, entryKind: 'manifest', canvasKey: 'https://zoom.sciencemuseumgroup.org.uk/iiif/3/534',
 }
 
 describe('buildCaptureRecord', () => {
@@ -42,6 +44,60 @@ describe('buildCaptureRecord', () => {
     const r = buildCaptureRecord(PNG, { ...meta, sourceRecord: undefined, sourceLabel: 'Manual URL' })
     expect(r.description).toBe('Manual URL · canvas 1/1 · Region 1')
     expect(r.id).toBeUndefined()
+  })
+
+  it('records where it came from so the gallery can navigate back', () => {
+    expect(rec).toMatchObject({ captureEntryUrl: smgRecord.smg.manifest, captureEntryKind: 'manifest', captureCanvasKey: meta.canvasKey })
+  })
+
+  it('carries a _captureThumb only when a thumb was made (underscore: the image pickers must skip it)', () => {
+    expect(rec).not.toHaveProperty('_captureThumb')
+    const withThumb = buildCaptureRecord(PNG, { ...meta, thumbDataUrl: 'data:image/jpeg;base64,THUMB' })
+    expect(withThumb._captureThumb).toBe('data:image/jpeg;base64,THUMB')
+    // content is inserted before the thumb so auto-detect still picks the full crop
+    expect(Object.keys(withThumb).indexOf('content')).toBeLessThan(Object.keys(withThumb).indexOf('_captureThumb'))
+  })
+})
+
+describe('resolveCaptureTarget', () => {
+  const rec = buildCaptureRecord(PNG, { ...meta, canvasIndex: 2 })
+  const entry: IiifEntry = { kind: 'manifest', url: smgRecord.smg.manifest, label: 'Amazon', source: 'Science Museum Group', recordIndex: 0, record: smgRecord }
+
+  it('returns the upstream entry (same object) with canvas index, canvas key and region', () => {
+    const t = resolveCaptureTarget(rec, [entry])
+    expect(t).not.toBeNull()
+    expect(t!.entry).toBe(entry)
+    expect(t).toMatchObject({ url: smgRecord.smg.manifest, kind: 'manifest', canvasIndex: 2, canvasKey: meta.canvasKey, region: meta.region })
+  })
+
+  it('falls back to the stored kind when the record is no longer upstream', () => {
+    const t = resolveCaptureTarget(rec, [])
+    expect(t!.entry).toBeUndefined()
+    expect(t!.kind).toBe('manifest')
+    const img = buildCaptureRecord(PNG, { ...meta, entryKind: 'image', entryUrl: 'https://framemark.vam.ac.uk/collections/2016JG8103' })
+    expect(resolveCaptureTarget(img, [])).toMatchObject({ kind: 'image', url: 'https://framemark.vam.ac.uk/collections/2016JG8103' })
+  })
+
+  it('is null for a legacy capture without navigation keys', () => {
+    const legacy = { ...rec }
+    delete legacy.captureEntryUrl
+    expect(resolveCaptureTarget(legacy, [entry])).toBeNull()
+    expect(resolveCaptureTarget({ title: 'not a capture' }, [entry])).toBeNull()
+  })
+})
+
+describe('removeCapture', () => {
+  const a = buildCaptureRecord(PNG, meta)
+  const b = buildCaptureRecord(PNG, { ...meta, seq: 2 })
+  const c = buildCaptureRecord(PNG, { ...meta, seq: 3 })
+
+  it('drops exactly the capture with that _id and keeps the order', () => {
+    expect(removeCapture([a, b, c], String(b._id)).map(r => r._id)).toEqual([a._id, c._id])
+  })
+
+  it('is a no-op for an unknown id or an empty collection', () => {
+    expect(removeCapture([a, b], 'nope')).toHaveLength(2)
+    expect(removeCapture(undefined, String(a._id))).toEqual([])
   })
 })
 
