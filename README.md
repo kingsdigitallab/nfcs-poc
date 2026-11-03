@@ -537,18 +537,20 @@ Once a manifest is loaded, the **region annotator toolbar** appears above the ca
 2. Drag a rectangle over any area of the displayed image. A blue semi-transparent box is committed and labelled automatically (Region 1, Region 2, …).
 3. Delete any region by clicking the red **×** in its top-right corner.
 4. Click **Capture** (or **Capture N** when regions exist) to fetch each region as a base64-encoded image and **add** it to the node's capture collection.
-5. Step to another canvas or record, draw again, capture again — the collection grows (`5 captured`). **✕ captures** empties it.
+5. Step to another canvas or record, draw again, capture again — the collection grows. Every capture appears as a tile in the **capture gallery** beneath the image (`#1`, `#2`, …; hover for its full label).
+6. **Click a tile** to go back to the record and canvas it was cut from — the captured area is outlined in amber on the image. Click it again to clear the outline. The small **×** on a tile drops that one capture; **✕ captures** in the gallery header empties the collection.
 
 **How capture works:**
 
 - **Captures accumulate.** Each Capture appends the current regions to the collection the output handle exposes; the drawn regions are consumed. Moving to another canvas drops only regions you have not captured. The status line under the toolbar reports `✓ 2 captured (5 in collection)`, or names any region that could not be fetched and why.
+- **The gallery remembers where each crop came from.** A capture stores the manifest (or image service) it was cut from, the canvas and the region bounds, plus a small thumbnail; clicking its tile reloads that canvas and outlines the region. The collection lives in memory for the session, so a page reload empties the gallery.
 - For IIIF Image API services: each region uses the IIIF `pct:x,y,w,h` parameter to request only the cropped area at up to 1024 × 1024 px (`{serviceUrl}/pct:.../!1024,1024/0/default.jpg`). If the server refuses that size (Science Museum Group's does), the same region is fetched at `max` and resized in the browser.
 - For direct-URL canvases (no IIIF Image API): the full canvas image is fetched.
 - Direct `fetch` is tried first; falls back to `/image-proxy` for CORS-restricted partner servers.
 - Each capture is one record: `{ content: dataUrl, contentType: 'image', mimeType, title: 'Region 2', description: 'Science Museum Group · Amazon locomotive · canvas 3/6 · Region 2', captureSource, captureRecordTitle, regionIndex, regionBounds, canvasIndex, canvasLabel, manifestTitle, capturedAt, ... }` plus the source record's provenance (`id`, `_sourceUrl`, `_citation`, `_pid`, its namespace object, `_origin`, and the parent record's text as `sourceDescription`). The `description` is what AI Inference's vision prompt sees as `{{content}}`, so every crop tells the model where it came from.
 - If no regions are drawn, **Capture** fetches the whole canvas as a single record.
 
-Connect the output handle to **AI Inference**: with a capture collection upstream its **Vision** box ticks itself and each crop is analysed in its own call. To send the **whole collection in one call** (compare regions, find the odd one out), use **AI Inference (by field)** with field `content`, input **Image** and mode **Aggregate** — no special connector is needed, the collection is an ordinary record set. Regions and their labels are saved in the workflow file; the captured images live in memory for the session.
+Connect the output handle to **AI Inference**: with a capture collection upstream its **Vision** box ticks itself and each crop is analysed in its own call. In **AI Inference Output** each card shows the crop's thumbnail and its full label (`Science Museum Group · Amazon Echo · canvas 1/3 · Region 2`), so a description is never separated from the area it describes. To send the **whole collection in one call** (compare regions, find the odd one out), use **AI Inference (by field)** with field `content`, input **Image** and mode **Aggregate** — no special connector is needed, the collection is an ordinary record set. Regions and their labels are saved in the workflow file; the captured images live in memory for the session.
 
 #### Info panel
 

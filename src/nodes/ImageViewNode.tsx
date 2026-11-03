@@ -553,7 +553,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const safeCanvasIndex = canvases ? Math.min(canvasIndex, canvases.length - 1) : 0
   const currentCanvas   = canvases?.[safeCanvasIndex]
   // One identity for "which picture is on screen": captures store it as
-  // captureCanvasKey, the highlight is drawn only while it matches.
+  // _captureCanvasKey, the highlight is drawn only while it matches.
   const currentCanvasKey = currentCanvas ? (currentCanvas.serviceUrl || currentCanvas.directUrl) : null
 
   // Fetch info.json whenever the canvas service URL changes
@@ -1083,7 +1083,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             <div style={s.galleryGrid}>
               {captures.map((rec, i) => {
                 const captureId  = String(rec._id ?? i)
-                const navigable  = typeof rec.captureEntryUrl === 'string'
+                const navigable  = typeof rec._captureEntryUrl === 'string'
                 const isSelected = highlight?.id === captureId
                 const thumb      = typeof rec._captureThumb === 'string' ? rec._captureThumb : String(rec.content ?? '')
                 return (
@@ -1290,7 +1290,7 @@ const s = {
   },
   zoomLabel:    { fontSize: 10, color: '#33302a', fontFamily: 'monospace', minWidth: 32, textAlign: 'center' as const },
   zoomResetBtn: {
-    background: 'transparent', color: '#8a8168', border: '1px solid #d6ccb5',
+    background: 'transparent', color: '#8a8168', borderWidth: 1, borderStyle: 'solid', borderColor: '#d6ccb5',
     borderRadius: 3, padding: '1px 6px', fontSize: 10, cursor: 'pointer', marginLeft: 2,
   },
   metaPanel: {
@@ -1308,7 +1308,7 @@ const s = {
     borderBottom: '1px solid #f1f5f9', flexShrink: 0, background: '#f8fafc',
   },
   regionBtn: {
-    background: 'transparent', color: '#33302a', border: '1px solid #d6ccb5',
+    background: 'transparent', color: '#33302a', borderWidth: 1, borderStyle: 'solid', borderColor: '#d6ccb5',
     borderRadius: 3, padding: '2px 8px', fontSize: 10, fontWeight: 600,
     cursor: 'pointer', flexShrink: 0,
   },
@@ -1324,7 +1324,8 @@ const s = {
   galleryGrid:   { display: 'flex', flexWrap: 'wrap' as const, gap: 4, padding: '4px 10px 6px' },
   tile: {
     position: 'relative' as const, width: 64, height: 64, padding: 0, flexShrink: 0,
-    border: '2px solid #d6ccb5', borderRadius: 4, background: '#f8fafc', overflow: 'hidden',
+    // borderColor is set per tile (selected = amber) — keep the shorthand out so React does not warn
+    borderWidth: 2, borderStyle: 'solid', borderRadius: 4, background: '#f8fafc', overflow: 'hidden',
   },
   tileBadge: {
     position: 'absolute' as const, left: 2, bottom: 2, fontSize: 9, fontFamily: 'monospace', fontWeight: 700,

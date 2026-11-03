@@ -46,8 +46,9 @@ describe('buildCaptureRecord', () => {
     expect(r.id).toBeUndefined()
   })
 
-  it('records where it came from so the gallery can navigate back', () => {
-    expect(rec).toMatchObject({ captureEntryUrl: smgRecord.smg.manifest, captureEntryKind: 'manifest', captureCanvasKey: meta.canvasKey })
+  it('records where it came from so the gallery can navigate back (underscored: URLs look like image fields)', () => {
+    expect(rec).toMatchObject({ _captureEntryUrl: smgRecord.smg.manifest, _captureEntryKind: 'manifest', _captureCanvasKey: meta.canvasKey })
+    expect(Object.keys(rec).filter(k => /^capture(Entry|Canvas)/.test(k))).toEqual([])
   })
 
   it('carries a _captureThumb only when a thumb was made (underscore: the image pickers must skip it)', () => {
@@ -80,7 +81,7 @@ describe('resolveCaptureTarget', () => {
 
   it('is null for a legacy capture without navigation keys', () => {
     const legacy = { ...rec }
-    delete legacy.captureEntryUrl
+    delete legacy._captureEntryUrl
     expect(resolveCaptureTarget(legacy, [entry])).toBeNull()
     expect(resolveCaptureTarget({ title: 'not a capture' }, [entry])).toBeNull()
   })

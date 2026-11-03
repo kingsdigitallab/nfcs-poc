@@ -71,12 +71,13 @@ export function buildCaptureRecord(dataUrl: string, meta: CaptureMeta): Record<s
     canvasLabel:  meta.canvasLabel,
     ...(meta.manifestTitle    !== undefined ? { manifestTitle:    meta.manifestTitle }    : {}),
     ...(meta.manifestProvider !== undefined ? { manifestProvider: meta.manifestProvider } : {}),
-    // Navigation keys: the gallery uses them to return to the source canvas
-    captureEntryUrl:  meta.entryUrl,
-    captureEntryKind: meta.entryKind,
-    captureCanvasKey: meta.canvasKey,
-    // Underscore on purpose: collectFieldPaths / collectImageFieldCandidates skip
-    // `_` keys, so the thumb never shows up as a second image field (gotcha 34).
+    // Navigation keys (the gallery uses them to return to the source canvas) and
+    // the thumb are `_`-prefixed on purpose: collectFieldPaths /
+    // collectImageFieldCandidates skip `_` keys, so neither the IIIF-looking
+    // URLs nor the small data URL is offered as an image field (gotcha 34).
+    _captureEntryUrl:  meta.entryUrl,
+    _captureEntryKind: meta.entryKind,
+    _captureCanvasKey: meta.canvasKey,
     ...(meta.thumbDataUrl ? { _captureThumb: meta.thumbDataUrl } : {}),
     capturedAt:   new Date(meta.seq).toISOString(),
     _source:      'imageView',
@@ -96,17 +97,17 @@ export interface CaptureTarget {
 
 /** Where a capture came from, resolved against the current upstream entries; null for a legacy capture. */
 export function resolveCaptureTarget(capture: Record<string, unknown>, entries: IiifEntry[]): CaptureTarget | null {
-  const url    = capture.captureEntryUrl
+  const url    = capture._captureEntryUrl
   const region = capture.regionBounds as RegionBox | undefined
   if (typeof url !== 'string' || !url || !region || typeof region !== 'object') return null
   const entry = entries.find(e => e.url === url)
-  const storedKind = capture.captureEntryKind
+  const storedKind = capture._captureEntryKind
   const kind: CaptureEntryKind = entry ? entry.kind
     : (storedKind === 'image' || storedKind === 'manual' ? storedKind : 'manifest')
   return {
     entry, url, kind,
     canvasIndex: typeof capture.canvasIndex === 'number' ? capture.canvasIndex : 0,
-    canvasKey:   typeof capture.captureCanvasKey === 'string' ? capture.captureCanvasKey : '',
+    canvasKey:   typeof capture._captureCanvasKey === 'string' ? capture._captureCanvasKey : '',
     region:      { x: region.x, y: region.y, w: region.w, h: region.h },
   }
 }
