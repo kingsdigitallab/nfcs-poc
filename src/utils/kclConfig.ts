@@ -23,3 +23,13 @@ export function filterKCLModels(ids: string[], includeApex = false): string[] {
   const filtered = ids.filter(id => ALLOWED_MODELS.has(id) || (includeApex && id === APEX_MODEL))
   return filtered.length > 0 ? filtered : ids
 }
+
+// ── Image input (AI Inference by field, inputKind: 'image') ──────────────────
+/** Images sent in ONE aggregate call. vLLM-backed deployments cap multi-image
+ *  prompts (--limit-mm-per-prompt); keep this modest and let the user raise it. */
+export const MAX_IMAGES_PER_CALL = 10
+/** Long edge (px) images are downscaled to before being sent — thumbnails are
+ *  what the by-field node mostly carries, and the model does not need more. */
+export const DEFAULT_IMAGE_SEND_DIM = 512
+/** IIIF size parameter used when the field value is a bare Image API service. */
+export const DEFAULT_IMAGE_SEND_SIZE = '!512,512'

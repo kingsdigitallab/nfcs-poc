@@ -13,6 +13,7 @@
 import { getFieldByPath } from './fieldPath'
 import { resolveImageSrc, DEFAULT_IMAGE_SIZE } from './iiifImage'
 import { fetchImageAsDataUrl, IMAGE_MAX_DIM } from './imageFetch'
+import { sourceName } from './iiifEntries'
 
 export type ImagePart   = { type: 'image_url'; image_url: { url: string; format: string } }
 export type TextPart    = { type: 'text'; text: string }
@@ -67,4 +68,51 @@ export async function buildUserContent(
   }
   if (!part) return textPrompt
   return [{ type: 'text', text: textPrompt }, part]
+}
+
+// ── Batches for AI Inference (by field) image input ──────────────────────────
+
+export const recordLabel = (r: Record<string, unknown>): string => String(r.title || r.id || 'untitled')
+
+export interface ImageBatch {
+  parts:    ImagePart[]
+  /** The records the parts came from, in order (one per part). */
+  records:  Record<string, unknown>[]
+  /** Records with a value at the path that could not be turned into an image, as "label: reason". */
+  failures: string[]
+  /** Records with a value at the path that were not attempted because of `max`. */
+  skipped:  number
+}
+
+/**
+ * Up to `max` image parts from the records that have a value at `path`,
+ * fetched sequentially (the partner CDNs rate-limit bursts). A record whose
+ * image cannot be fetched is reported, not thrown.
+ */
+export async function collectImageParts(
+  records: Record<string, unknown>[],
+  path: string,
+  max: number,
+  opts: ImagePartOptions = {},
+): Promise<ImageBatch> {
+  const withValue = records.filter(r => {
+    const v = getFieldByPath(r, path)
+    return typeof v === 'string' && v.trim().length > 0
+  })
+  const batch: ImageBatch = { parts: [], records: [], failures: [], skipped: Math.max(0, withValue.length - max) }
+  for (const r of withValue.slice(0, max)) {
+    try {
+      const part = await imagePartFor(path, getFieldByPath(r, path), opts)
+      if (!part) { batch.failures.push(`${recordLabel(r)}: not an image`); continue }
+      batch.parts.push(part); batch.records.push(r)
+    } catch (err) {
+      batch.failures.push(`${recordLabel(r)}: ${err instanceof Error ? err.message : String(err)}`)
+    }
+  }
+  return batch
+}
+
+/** "Images:\n1. title (Source)\n2. …" — lets the model refer to images by number. */
+export function imageListText(records: Record<string, unknown>[]): string {
+  return 'Images:\n' + records.map((r, i) => `${i + 1}. ${recordLabel(r)} (${sourceName(typeof r._source === 'string' ? r._source : undefined)})`).join('\n')
 }

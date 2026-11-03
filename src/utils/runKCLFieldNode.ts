@@ -1,17 +1,21 @@
 /**
  * Runner for KCLFieldNode — sends a selected field from upstream records to
- * KCL's OpenAI-compatible inference API. Supports per-record and aggregate modes.
+ * KCL's OpenAI-compatible inference API. Supports per-record and aggregate
+ * modes, and (inputKind: 'image') sends the field's images to the vision
+ * model instead of its text.
  *
- * Non-streaming (stream: false). Results written once at end, not per-record.
+ * Non-streaming (stream: false). Per-record results are written to the store
+ * as each record completes (partial results).
  */
 
 import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
-import { getContentMaxChars } from './kclConfig'
+import { getContentMaxChars, MAX_IMAGES_PER_CALL, DEFAULT_IMAGE_SEND_DIM, DEFAULT_IMAGE_SEND_SIZE } from './kclConfig'
 import { formatDuration } from './formatDuration'
 import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from './promptTemplates'
 import { getFieldByPath } from './fieldPath'
+import { imagePartFor, collectImageParts, imageListText, recordLabel, type ContentPart } from './kclVision'
 
 const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
@@ -23,7 +27,7 @@ async function kclChat(
   apiKey: string,
   model: string,
   systemPrompt: string,
-  userPrompt: string,
+  userContent: string | ContentPart[],
   temperature: number,
   maxTokens: number,
 ): Promise<string> {
@@ -40,7 +44,7 @@ async function kclChat(
       max_tokens:  maxTokens,
       messages: [
         { role: 'system', content: systemPrompt },
-        { role: 'user',   content: userPrompt },
+        { role: 'user',   content: userContent },
       ],
     }),
     signal: AbortSignal.timeout(180_000),
@@ -70,6 +74,9 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
   const selectedField  = (d.selectedField  as string | undefined) ?? ''
   const outputField    = (d.outputField    as string | undefined) ?? ''
   const mode           = (d.mode           as string | undefined) ?? 'per-record'
+  const inputKind      = (d.inputKind      as string | undefined) ?? 'text'
+  const maxImages      = Math.max(1, Number(d.maxImages ?? MAX_IMAGES_PER_CALL) || MAX_IMAGES_PER_CALL)
+  const imageOpts      = { maxDim: DEFAULT_IMAGE_SEND_DIM, size: DEFAULT_IMAGE_SEND_SIZE }
   const systemPrompt   = (d.systemPrompt   as string | undefined) ?? DEFAULT_SYSTEM
   const promptTemplate = (d.userPromptTemplate as string | undefined)
     ?? (mode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER)
@@ -108,26 +115,42 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
   try {
     if (mode === 'aggregate') {
       const maxChars = getContentMaxChars(model)
-      const perValMax = Math.max(500, Math.floor(maxChars / Math.max(upstreamRecords.length, 1)))
+      let userContent: string | ContentPart[]
+      let prompt: string
+      let aggregatedFrom = upstreamRecords.length
+      let imageNote = ''
 
-      const values = upstreamRecords
-        .map(r => {
-          const v = getFieldByPath(r, selectedField)
-          const str = Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
-          return str.length > perValMax ? str.slice(0, perValMax) + '…' : str
-        })
-        .filter(Boolean)
-        .join('\n---\n')
-        .slice(0, maxChars)
+      if (inputKind === 'image') {
+        updateNodeData(nodeId, { statusMessage: `Fetching up to ${maxImages} images…` })
+        const batch = await collectImageParts(upstreamRecords, selectedField, maxImages, imageOpts)
+        if (batch.parts.length === 0) {
+          throw new Error(`No image could be loaded from ${selectedField}${batch.failures.length ? ` (${batch.failures[0]})` : ''}`)
+        }
+        const list = imageListText(batch.records)
+        prompt = renderFieldTemplateAggregate(promptTemplate, { values: list, field: selectedField, count: batch.parts.length })
+        userContent = [{ type: 'text', text: `${prompt}\n\n${list}` }, ...batch.parts]
+        aggregatedFrom = batch.parts.length
+        const available = batch.parts.length + batch.failures.length + batch.skipped
+        imageNote = ` — ${batch.parts.length} of ${available} images sent${batch.failures.length ? `, ${batch.failures.length} failed` : ''}`
+      } else {
+        const perValMax = Math.max(500, Math.floor(maxChars / Math.max(upstreamRecords.length, 1)))
+        const values = upstreamRecords
+          .map(r => {
+            const v = getFieldByPath(r, selectedField)
+            const str = Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
+            return str.length > perValMax ? str.slice(0, perValMax) + '…' : str
+          })
+          .filter(Boolean)
+          .join('\n---\n')
+          .slice(0, maxChars)
+        prompt = renderFieldTemplateAggregate(promptTemplate, { values, field: selectedField, count: upstreamRecords.length })
+        userContent = prompt
+      }
 
       updateNodeData(nodeId, { statusMessage: 'Sending aggregate prompt…' })
 
-      const prompt = renderFieldTemplateAggregate(promptTemplate, {
-        values, field: selectedField, count: upstreamRecords.length,
-      })
-
       const callT0 = performance.now()
-      const response = await kclChat(apiKey, model, systemPrompt, prompt, temperature, maxTokens)
+      const response = await kclChat(apiKey, model, systemPrompt, userContent, temperature, maxTokens)
       const inferenceMs = Math.round(performance.now() - callT0)
 
       const resultRecord = {
@@ -137,7 +160,8 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
         kclModel:          model,
         kclField:          selectedField,
         kclMode:           'aggregate',
-        kclAggregatedFrom: upstreamRecords.length,
+        kclInputKind:      inputKind,
+        kclAggregatedFrom: aggregatedFrom,
         kclPrompt:         prompt,
         kclResponse:       response,
         inferenceMs,
@@ -149,7 +173,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
       const elapsedMs = Math.round(performance.now() - t0)
       updateNodeData(nodeId, {
         status:         'success',
-        statusMessage:  `✓ Aggregate summary (${upstreamRecords.length} records) in ${formatDuration(elapsedMs)}`,
+        statusMessage:  `✓ Aggregate summary (${aggregatedFrom} records) in ${formatDuration(elapsedMs)}${imageNote}`,
         outputCount:    1,
         resultsVersion: version,
         elapsedMs,
@@ -163,7 +187,11 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
       for (let i = 0; i < upstreamRecords.length; i++) {
         const record = upstreamRecords[i]
         const rawVal = getFieldByPath(record, selectedField)
-        const value  = (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, maxChars)
+        // Image input: the prompt talks ABOUT the record, so {{value}} is its
+        // title; the image itself travels as a content part.
+        const value  = inputKind === 'image'
+          ? recordLabel(record)
+          : (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, maxChars)
 
         updateNodeData(nodeId, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
 
@@ -175,13 +203,24 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
         let inferenceMs = 0
         const callT0 = performance.now()
         try {
-          response = await kclChat(apiKey, model, systemPrompt, prompt, temperature, maxTokens)
+          let userContent: string | ContentPart[] = prompt
+          if (inputKind === 'image') {
+            const part = await imagePartFor(selectedField, rawVal, imageOpts)
+            if (!part) throw new ImageUnavailable(`no image in ${selectedField}`)
+            userContent = [{ type: 'text', text: prompt }, part]
+          }
+          response = await kclChat(apiKey, model, systemPrompt, userContent, temperature, maxTokens)
           inferenceMs = Math.round(performance.now() - callT0)
         } catch (err) {
           inferenceMs = Math.round(performance.now() - callT0)
-          errCount++
           const msg = err instanceof Error ? err.message : String(err)
-          response = `[error: ${msg}]`
+          if (inputKind === 'image' && !(err instanceof Error && /^HTTP \d+ /.test(msg))) {
+            // Image could not be loaded — not an API failure, the run goes on
+            response = `[image unavailable: ${msg}]`
+          } else {
+            errCount++
+            response = `[error: ${msg}]`
+          }
         }
 
         const enrichedRecord = {
@@ -189,6 +228,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
           kclModel:       model,
           kclField:       selectedField,
           kclMode:        'per-record',
+          kclInputKind:   inputKind,
           kclPrompt:      prompt,
           kclResponse:    response,
           inferenceMs,
@@ -218,3 +258,5 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
     updateNodeData(nodeId, { status: 'error', statusMessage: `✗ ${msg}` })
   }
 }
+
+class ImageUnavailable extends Error {}

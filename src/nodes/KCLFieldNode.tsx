@@ -12,7 +12,8 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, NodeResizer, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
 import { useAutoGrowTextarea } from '../hooks/useAutoGrowTextarea'
 import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resultsStore'
-import { filterKCLModels, APEX_MODEL, getContentMaxChars } from '../utils/kclConfig'
+import { filterKCLModels, APEX_MODEL, getContentMaxChars, MAX_IMAGES_PER_CALL, DEFAULT_IMAGE_SEND_DIM, DEFAULT_IMAGE_SEND_SIZE } from '../utils/kclConfig'
+import { imagePartFor, collectImageParts, imageListText, recordLabel, type ContentPart } from '../utils/kclVision'
 import { useStaleResults } from '../hooks/useStaleResults'
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
@@ -31,6 +32,10 @@ export interface KCLFieldNodeData {
   selectedField: string
   outputField?: string
   mode: 'per-record' | 'aggregate'
+  /** 'image' sends the field's images (thumbnails, IIIF services, data URLs) to the vision model instead of its text. */
+  inputKind?: 'text' | 'image'
+  /** Aggregate image mode: how many images go into the one call (default MAX_IMAGES_PER_CALL). */
+  maxImages?: number
   systemPrompt: string
   userPromptTemplate: string
   temperature: number
@@ -54,6 +59,7 @@ const BTN_COLOR    = '#be123c'
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'
 const DEFAULT_PROMPT_PER = 'Summarise the following in 2–3 sentences:\n\n{{value}}'
 const DEFAULT_PROMPT_AGG = 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}'
+const imageOpts = { maxDim: DEFAULT_IMAGE_SEND_DIM, size: DEFAULT_IMAGE_SEND_SIZE }
 
 const STATUS_BORDER: Record<string, string> = {
   idle:    '#d6ccb5',
@@ -68,7 +74,7 @@ async function kclChat(
   apiKey: string,
   model: string,
   systemPrompt: string,
-  userPrompt: string,
+  userPrompt: string | ContentPart[],
   temperature: number,
   maxTokens: number,
   signal: AbortSignal,
@@ -236,6 +242,10 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
   const selectedField  = (d.selectedField ?? availableFields[0] ?? '') as string
   const outputField    = (d.outputField  ?? '') as string
   const mode           = (d.mode ?? 'per-record') as 'per-record' | 'aggregate'
+  // Input kind: explicit choice wins; otherwise an image-kind field defaults to image input.
+  const selectedKind   = fieldPaths.find(f => f.path === selectedField)?.kind
+  const inputKind      = ((d.inputKind as string | undefined) ?? (selectedKind === 'image' ? 'image' : 'text')) as 'text' | 'image'
+  const maxImages      = Math.max(1, Number(d.maxImages ?? MAX_IMAGES_PER_CALL) || MAX_IMAGES_PER_CALL)
   const systemPrompt   = (d.systemPrompt  ?? DEFAULT_SYSTEM) as string
   const promptTemplate = (d.userPromptTemplate ?? (mode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER)) as string
   const temperature    = (d.temperature   ?? 0.7) as number
@@ -244,7 +254,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
 
   const isStale = useStaleResults(d.status as string, {
     model: selectedModel, systemPrompt, userPromptTemplate: promptTemplate,
-    temperature, maxTokens, mode, selectedField,
+    temperature, maxTokens, mode, selectedField, inputKind, maxImages,
   })
 
   const { recipes, saveRecipe, deleteRecipe } = usePromptRecipes()
@@ -291,28 +301,47 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
     try {
       if (mode === 'aggregate') {
         const maxChars = getContentMaxChars(selectedModel)
-        const perValMax = Math.max(500, Math.floor(maxChars / Math.max(upstreamRecords.length, 1)))
+        let userContent: string | ContentPart[]
+        let prompt: string
+        let aggregatedFrom = upstreamRecords.length
+        let imageNote = ''
 
-        const values = upstreamRecords
-          .map(r => {
-            const v = getFieldByPath(r, selectedField)
-            const str = Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
-            return str.length > perValMax ? str.slice(0, perValMax) + '…' : str
+        if (inputKind === 'image') {
+          updateNodeData(id, { statusMessage: `Fetching up to ${maxImages} images…` })
+          const batch = await collectImageParts(upstreamRecords, selectedField, maxImages, imageOpts)
+          if (signal.aborted) throw Object.assign(new Error('aborted'), { name: 'AbortError' })
+          if (batch.parts.length === 0) {
+            throw new Error(`No image could be loaded from ${selectedField}${batch.failures.length ? ` (${batch.failures[0]})` : ''}`)
+          }
+          const list = imageListText(batch.records)
+          prompt = renderFieldTemplateAggregate(promptTemplate, { values: list, field: selectedField, count: batch.parts.length })
+          userContent = [{ type: 'text', text: `${prompt}\n\n${list}` }, ...batch.parts]
+          aggregatedFrom = batch.parts.length
+          const available = batch.parts.length + batch.failures.length + batch.skipped
+          imageNote = ` — ${batch.parts.length} of ${available} images sent${batch.failures.length ? `, ${batch.failures.length} failed` : ''}`
+        } else {
+          const perValMax = Math.max(500, Math.floor(maxChars / Math.max(upstreamRecords.length, 1)))
+          const values = upstreamRecords
+            .map(r => {
+              const v = getFieldByPath(r, selectedField)
+              const str = Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
+              return str.length > perValMax ? str.slice(0, perValMax) + '…' : str
+            })
+            .filter(Boolean)
+            .join('\n---\n')
+            .slice(0, maxChars)
+          prompt = renderFieldTemplateAggregate(promptTemplate, {
+            values, field: selectedField, count: upstreamRecords.length,
           })
-          .filter(Boolean)
-          .join('\n---\n')
-          .slice(0, maxChars)
+          userContent = prompt
+        }
 
         setLiveTokens('')
         updateNodeData(id, { statusMessage: 'Sending aggregate prompt…' })
 
-        const prompt = renderFieldTemplateAggregate(promptTemplate, {
-          values, field: selectedField, count: upstreamRecords.length,
-        })
-
         const callT0 = performance.now()
         const response = await kclChat(
-          effectiveApiKey, selectedModel, systemPrompt, prompt,
+          effectiveApiKey, selectedModel, systemPrompt, userContent,
           temperature, maxTokens, signal, (token) => setLiveTokens(t => (t + token).slice(-200))
         )
         const inferenceMs = Math.round(performance.now() - callT0)
@@ -324,7 +353,8 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
           kclModel:            selectedModel,
           kclField:            selectedField,
           kclMode:             'aggregate',
-          kclAggregatedFrom:   upstreamRecords.length,
+          kclInputKind:        inputKind,
+          kclAggregatedFrom:   aggregatedFrom,
           kclPrompt:           prompt,
           kclResponse:         response,
           inferenceMs,
@@ -337,7 +367,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
         setLiveTokens('')
         updateNodeData(id, {
           status:         'success',
-          statusMessage:  `✓ Aggregate summary (${upstreamRecords.length} records) in ${formatDuration(elapsedMs)}`,
+          statusMessage:  `✓ Aggregate summary (${aggregatedFrom} records) in ${formatDuration(elapsedMs)}${imageNote}`,
           outputCount:    1,
           resultsVersion: version,
           elapsedMs,
@@ -351,7 +381,11 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
           if (signal.aborted) break
           const record = upstreamRecords[i]
           const rawVal = getFieldByPath(record, selectedField)
-          const value  = (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, maxChars)
+          // Image input: the prompt talks ABOUT the record, so {{value}} is its
+          // title; the image itself travels as a content part.
+          const value  = inputKind === 'image'
+            ? recordLabel(record)
+            : (Array.isArray(rawVal) ? rawVal.join('; ') : String(rawVal ?? '').trim()).slice(0, maxChars)
 
           setLiveTokens('')
           updateNodeData(id, { statusMessage: `Processing ${i + 1}/${upstreamRecords.length}…` })
@@ -361,10 +395,28 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
           })
 
           const callT0 = performance.now()
-          const response = await kclChat(
-            effectiveApiKey, selectedModel, systemPrompt, prompt,
-            temperature, maxTokens, signal, (token) => setLiveTokens(t => (t + token).slice(-200))
-          )
+          let response: string
+          let userContent: string | ContentPart[] = prompt
+          let imageMissing: string | null = null
+          if (inputKind === 'image') {
+            try {
+              const part = await imagePartFor(selectedField, rawVal, imageOpts)
+              if (!part) imageMissing = `no image in ${selectedField}`
+              else userContent = [{ type: 'text', text: prompt }, part]
+            } catch (err) {
+              imageMissing = err instanceof Error ? err.message : String(err)
+            }
+          }
+          if (signal.aborted) break
+          if (imageMissing) {
+            // Image could not be loaded — not an API failure, the run goes on
+            response = `[image unavailable: ${imageMissing}]`
+          } else {
+            response = await kclChat(
+              effectiveApiKey, selectedModel, systemPrompt, userContent,
+              temperature, maxTokens, signal, (token) => setLiveTokens(t => (t + token).slice(-200))
+            )
+          }
           const inferenceMs = Math.round(performance.now() - callT0)
 
           const enrichedRecord = {
@@ -372,6 +424,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
             kclModel:       selectedModel,
             kclField:       selectedField,
             kclMode:        'per-record',
+            kclInputKind:   inputKind,
             kclPrompt:      prompt,
             kclResponse:    response,
             inferenceMs,
@@ -407,7 +460,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
       const msg = err instanceof Error ? err.message : String(err)
       updateNodeData(id, { status: 'error', statusMessage: `✗ ${msg}` })
     }
-  }, [id, updateNodeData, upstreamRecords, effectiveApiKey, selectedModel, selectedField, mode, systemPrompt, promptTemplate, temperature, maxTokens, outputField])
+  }, [id, updateNodeData, upstreamRecords, effectiveApiKey, selectedModel, selectedField, mode, inputKind, maxImages, systemPrompt, promptTemplate, temperature, maxTokens, outputField])
 
   const handleCancel = useCallback(() => { abortRef.current?.abort() }, [])
 
@@ -535,6 +588,35 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
             <option value="aggregate">Aggregate all</option>
           </select>
         </div>
+
+        {/* Input kind — shown once the field looks like an image, or the user has chosen */}
+        {(selectedKind === 'image' || d.inputKind !== undefined) && (
+          <>
+            <div style={styles.row}>
+              <span style={styles.label}>Input</span>
+              <select style={styles.select} value={inputKind}
+                onChange={e => updateNodeData(id, { inputKind: e.target.value as 'text' | 'image' })}
+                className="nodrag" title="Image: send the field's picture(s) to the vision model; Text: send the field's value as text">
+                <option value="text">Text (field value)</option>
+                <option value="image">Image (send to vision model)</option>
+              </select>
+              {inputKind === 'image' && mode === 'aggregate' && (
+                <>
+                  <span style={{ ...styles.label, width: 'auto', marginLeft: 6 }}>Max</span>
+                  <input type="number" min={1} max={50} style={{ ...styles.input, width: 48, flex: 'none' }} value={maxImages}
+                    onChange={e => updateNodeData(id, { maxImages: Math.max(1, Math.min(50, Number(e.target.value) || MAX_IMAGES_PER_CALL)) })}
+                    className="nodrag" title="Images per call; the first N records with an image are sent" />
+                </>
+              )}
+            </div>
+            {inputKind === 'image' && (
+              <div style={styles.imageNote}>
+                Images are fetched in the browser (partner CDNs via /image-proxy) and sent at ≤{DEFAULT_IMAGE_SEND_DIM}px.
+                {mode === 'aggregate' ? ' One call carries up to “Max” images, numbered in the prompt.' : ' {{value}} is the record title.'}
+              </div>
+            )}
+          </>
+        )}
 
         {/* Output field name */}
         <div style={styles.row}>
@@ -710,6 +792,7 @@ const styles = {
   eyeBtn: { background: 'none', border: 'none', cursor: 'pointer', fontSize: 12, padding: '0 2px', flexShrink: 0 },
   textarea: { width: '100%', fontSize: 11, padding: '4px 6px', border: '1px solid #d6ccb5', borderRadius: 4, outline: 'none', resize: 'vertical' as const, fontFamily: 'monospace', lineHeight: 1.4, boxSizing: 'border-box' as const },
   numLabel: { fontSize: 10, color: '#8a8168', width: 28, textAlign: 'right' as const },
+  imageNote: { fontSize: 9, color: '#8a8168', padding: '0 10px 4px', lineHeight: 1.4 },
   livePreview: { marginTop: 2, background: '#1e1e2e', borderRadius: 4, overflow: 'hidden', border: '1px solid #881337' },
   liveHeader: { fontSize: 10, color: '#fda4af', padding: '3px 6px', background: '#4c0519', fontFamily: 'monospace' },
   liveText: { fontSize: 10, color: '#e2e8f0', padding: '4px 6px', fontFamily: 'monospace', lineHeight: 1.5, maxHeight: 60, overflowY: 'auto' as const, overflowX: 'hidden' as const, whiteSpace: 'pre-wrap' as const, overflowWrap: 'anywhere' as const },
