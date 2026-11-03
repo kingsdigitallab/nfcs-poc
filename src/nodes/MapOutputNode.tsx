@@ -34,6 +34,7 @@ import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { runMapOutputNode } from '../utils/runMapOutputNode'
 import type { GisLayer } from '../utils/gisReaders'
 import { sourceIdentity } from '../utils/sourceIdentity'
+import { hasCoordinates } from '../utils/recordFacets'
 
 // ─── data interface ───────────────────────────────────────────────────────────
 
@@ -103,7 +104,7 @@ export function MapOutputNode({ id }: NodeProps) {
     const bySource: Record<string, number> = {}
     let mappableCount = 0
     for (const r of records ?? []) {
-      if (r.decimalLatitude != null && r.decimalLongitude != null) {
+      if (hasCoordinates(r)) {
         mappableCount++
         const src = r._source ?? 'unknown'
         bySource[src] = (bySource[src] ?? 0) + 1
@@ -149,9 +150,7 @@ export function MapOutputNode({ id }: NodeProps) {
     const clusterGroup = clusterGroupRef.current
     if (!map || !regularLayer || !clusterGroup) return
 
-    const mappable = (records ?? []).filter(
-      r => r.decimalLatitude != null && r.decimalLongitude != null,
-    )
+    const mappable = (records ?? []).filter(hasCoordinates)
 
     regularLayer.clearLayers()
     clusterGroup.clearLayers()

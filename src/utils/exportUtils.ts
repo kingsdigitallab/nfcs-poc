@@ -13,6 +13,7 @@
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { isReconciledValue }  from './reconciliationService'
 import type { ReconciliationResult } from './reconciliationService'
+import { hasCoordinates } from './recordFacets'
 
 // ─── namespace keys excluded from flat exports ────────────────────────────────
 
@@ -81,7 +82,7 @@ export function toJSON(records: UnifiedRecord[]): string {
 
 export function toGeoJSON(records: UnifiedRecord[]): string {
   const features = records
-    .filter(r => r.decimalLatitude != null && r.decimalLongitude != null)
+    .filter(hasCoordinates)
     .map(r => ({
       type:     'Feature' as const,
       geometry: {

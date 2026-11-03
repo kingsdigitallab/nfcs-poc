@@ -8,7 +8,8 @@ import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { ReconciliationResult } from '../utils/reconciliationService'
 import { isReconciledValue } from '../utils/reconciliationService'
 import { renderCell }        from './ReconciledCell'
-import { resolveRecordYear, AUTO_DATE_FIELDS } from '../utils/dateUtils'
+import { AUTO_DATE_FIELDS } from '../utils/dateUtils'
+import { countFacets } from '../utils/recordFacets'
 import { STATUS_BADGE } from '../styles/theme'
 
 export interface TableOutputNodeData {
@@ -477,17 +478,14 @@ export function TableOutputNode({ id, data, selected }: NodeProps) {
   }, [effectiveRecords, notesVersion, id])
 
   // Header hints for the workshop's "if you have lat/long add a Map, if you have
-  // dates add a Timeline" step. Coordinates use MapOutputNode's exact predicate;
-  // dates use the Timeline's automatic resolution. Render-only — no node-data
-  // write, so the fingerprint loop guard below is unaffected.
-  const { withCoords, withDates } = useMemo(() => {
-    let withCoords = 0, withDates = 0
-    for (const r of effectiveRecordsWithNotes ?? []) {
-      if (r.decimalLatitude != null && r.decimalLongitude != null) withCoords++
-      if (resolveRecordYear(r) !== null) withDates++
-    }
-    return { withCoords, withDates }
-  }, [effectiveRecordsWithNotes])
+  // dates add a Timeline, if you have images add an Image View" step. The
+  // predicates live in recordFacets.ts (Map's coordinate test, the Timeline's
+  // automatic year resolution, the AI pickers' image-kind paths). Render-only —
+  // no node-data write, so the fingerprint loop guard below is unaffected.
+  const { coords: withCoords, dates: withDates, images: withImages } = useMemo(
+    () => countFacets(effectiveRecordsWithNotes ?? []),
+    [effectiveRecordsWithNotes],
+  )
 
   function handleSelectCandidate(recordId: string, col: string, result: ReconciliationResult) {
     updateNodeData(id, {
@@ -660,6 +658,12 @@ export function TableOutputNode({ id, data, selected }: NodeProps) {
               title={`${withDates} of ${effectiveRecordsWithNotes.length} records have a plottable date (${AUTO_DATE_FIELDS.join(' / ')}) — connect a Timeline`}
             >
               📅 {withDates}/{effectiveRecordsWithNotes.length}
+            </span>
+            <span
+              style={{ ...styles.badge, color: withImages > 0 ? styles.badge.color : STATUS_BADGE.idle }}
+              title={`${withImages} of ${effectiveRecordsWithNotes.length} records carry an image (thumbnail, IIIF manifest or image service) — connect an Image View, or AI Inference (by field) in image mode`}
+            >
+              🖼 {withImages}/{effectiveRecordsWithNotes.length}
             </span>
           </>
         )}
