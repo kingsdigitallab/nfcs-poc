@@ -22,8 +22,16 @@ interface KCLRecord {
   kclAggregatedFrom?: number
   kclProcessedAt?: string
   inferenceMs?: number
+  /** Set by Image View captures: unique per crop (the inherited `id` is the parent record's). */
+  _id?: string
+  _captureThumb?: string
+  captureSource?: string
+  description?: string
   [key: string]: unknown
 }
+
+/** Card identity: a capture's own `_id`, else the record id (sibling captures share `id`). */
+const cardKey = (r: KCLRecord, i: number) => r._id ?? r.id ?? String(i)
 
 export function KCLOutputNode({ id }: NodeProps) {
   const { records, connected, status } = useUpstreamRecords(id)
@@ -54,7 +62,7 @@ export function KCLOutputNode({ id }: NodeProps) {
 
   function copyAll() {
     const text = withResponse
-      .map(r => `## ${r.title ?? r.id}\n\n${r.kclResponse ?? ''}`)
+      .map(r => `## ${(r.captureSource && r.description) || r.title || r.id}\n\n${r.kclResponse ?? ''}`)
       .join('\n\n---\n\n')
     copyResponse('__all__', text)
   }
@@ -104,24 +112,31 @@ export function KCLOutputNode({ id }: NodeProps) {
       {withResponse.length > 0 && (
         <div style={styles.cardList} className="nodrag nowheel">
           {withResponse.map((rec, i) => {
-            const isExp    = expanded.has(rec.id)
+            const key      = cardKey(rec, i)
+            const isExp    = expanded.has(key)
             const response = rec.kclResponse ?? ''
             const preview  = isExp ? response : response.slice(0, 400)
             const truncated = !isExp && response.length > 400
-            const cardTitle = rec.title ?? (rec.kclField ? `[${rec.kclField}] ${rec.id}` : rec.id)
+            // A capture is titled by its full label (Source · title · canvas · Region n), not the bare region
+            const cardTitle = (rec.captureSource && rec.description)
+              || rec.title || (rec.kclField ? `[${rec.kclField}] ${rec.id}` : rec.id)
+            const thumb = typeof rec._captureThumb === 'string' ? rec._captureThumb : undefined
 
             return (
-              <div key={rec.id ?? i} style={styles.responseCard}>
+              <div key={key} style={styles.responseCard}>
                 <div style={styles.cardTop}>
+                  {thumb && (
+                    <img src={thumb} alt="" title={rec.description} draggable={false} style={styles.cardThumb} />
+                  )}
                   <div style={styles.cardTitle} title={String(cardTitle)}>{String(cardTitle)}</div>
                   <div style={styles.cardActions}>
                     <button
-                      style={{ ...styles.actionBtn, color: copied === rec.id ? '#16a34a' : '#8a8168' }}
-                      onClick={() => copyResponse(rec.id, response)}
+                      style={{ ...styles.actionBtn, color: copied === key ? '#16a34a' : '#8a8168' }}
+                      onClick={() => copyResponse(key, response)}
                       title="Copy response"
                       className="nodrag"
                     >
-                      {copied === rec.id ? '✓' : '⧉'}
+                      {copied === key ? '✓' : '⧉'}
                     </button>
                   </div>
                 </div>
@@ -152,7 +167,7 @@ export function KCLOutputNode({ id }: NodeProps) {
                 </div>
 
                 {response.length > 400 && (
-                  <button style={styles.expandBtn} onClick={() => toggleExpand(rec.id)} className="nodrag">
+                  <button style={styles.expandBtn} onClick={() => toggleExpand(key)} className="nodrag">
                     {isExp ? '▲ Show less' : `▼ Show all (${response.length.toLocaleString()} chars)`}
                   </button>
                 )}
@@ -193,6 +208,7 @@ const styles = {
   responseCard: { padding: '10px 12px', borderBottom: '1px solid #f0f0f0', display: 'flex', flexDirection: 'column' as const, gap: 5 },
   cardTop:    { display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 },
   cardTitle:  { fontSize: 12, fontWeight: 600, color: '#1e293b', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const, flex: 1 },
+  cardThumb:  { width: 44, height: 44, objectFit: 'cover' as const, borderRadius: 3, border: '1px solid #d6ccb5', flexShrink: 0, display: 'block' },
   cardActions: { display: 'flex', gap: 4, flexShrink: 0 },
   actionBtn:  { background: 'none', border: 'none', cursor: 'pointer', fontSize: 14, padding: '0 2px', lineHeight: 1 },
   metaRow:    { display: 'flex', flexWrap: 'wrap' as const, gap: 4 },
