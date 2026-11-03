@@ -1243,7 +1243,7 @@ const s = {
     borderRadius: 4, outline: 'none', height: 24, fontFamily: 'monospace',
   },
   urlInput: {
-    flex: 1, fontSize: 11, padding: '2px 6px', border: '1px solid #d6ccb5',
+    flex: 1, fontSize: 11, padding: '2px 6px', borderWidth: 1, borderStyle: 'solid', borderColor: '#d6ccb5',
     borderRadius: 4, outline: 'none', height: 24, fontFamily: 'monospace', minWidth: 0,
   },
   loadBtn: {
