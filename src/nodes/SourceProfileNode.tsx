@@ -6,13 +6,13 @@
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Handle, Position, useReactFlow, useNodes, useEdges, NodeProps } from '@xyflow/react'
-import { setNodeResults, getNodeResults } from '../store/resultsStore'
+import { setNodeResults } from '../store/resultsStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
-import type { UnifiedRecord } from '../types/UnifiedRecord'
 import { getSourceProfile, getAllProfiles } from '../data/sourceProfiles'
 import { filterKCLModels } from '../utils/kclConfig'
 import type { SourceProfile, FieldProfile } from '../data/sourceProfiles'
 import { sourceIdentity } from '../utils/sourceIdentity'
+import { collectSourceTotals } from '../utils/sourceTotals'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -148,13 +148,16 @@ async function kclChat(
 
 // ── Completeness bar ──────────────────────────────────────────────────────────
 
-function CompletenessBar({ fetched, total }: { fetched: number; total: number }) {
+function CompletenessBar({ fetched, total, searches }: { fetched: number; total: number; searches: number }) {
   const ratio = total > 0 ? Math.min(fetched / total, 1) : 0
   const pctStr = total > 0 ? `${(ratio * 100).toFixed(1)}%` : ''
+  const title = searches > 1
+    ? `Sum of ${searches} searches' totals — overlapping results are not removed, so this is an upper bound`
+    : total > 0 ? 'Total reported by the upstream search' : 'No upstream search reported a total'
   return (
     <div style={{ marginBottom: 10 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, color: '#b0a891', marginBottom: 3 }}>
-        <span>{fetched.toLocaleString()} of {total > 0 ? total.toLocaleString() : '?'} retrieved</span>
+        <span title={title}>{fetched.toLocaleString()} of {total > 0 ? total.toLocaleString() : '?'} retrieved</span>
         <span style={{ color: pctColor(ratio), fontWeight: 600 }}>{pctStr}</span>
       </div>
       <div style={{ height: 5, background: '#33302a', borderRadius: 3, overflow: 'hidden' }}>
@@ -207,10 +210,12 @@ interface ProfileSectionProps {
   profile: SourceProfile
   sourceRecords: Record<string, unknown>[]
   count: number
+  /** Search nodes whose totals were summed into `count` — >1 means an upper bound. */
+  searches: number
   fieldStats: Array<{ field: FieldProfile; rate: number; samples: string[] }>
 }
 
-function ProfileSection({ profile, sourceRecords, count, fieldStats }: ProfileSectionProps) {
+function ProfileSection({ profile, sourceRecords, count, searches, fieldStats }: ProfileSectionProps) {
   const [showCorrespondences, setShowCorrespondences] = useState(false)
   const bannerColor = sourceIdentity(profile.source).banner
   const relevantCorrespondences = profile.correspondences.filter(c => {
@@ -228,7 +233,7 @@ function ProfileSection({ profile, sourceRecords, count, fieldStats }: ProfileSe
         <div style={{ fontSize: 10, color: '#d6ccb5', marginTop: 2 }}>{profile.coverage.slice(0, 120)}{profile.coverage.length > 120 ? '…' : ''}</div>
       </div>
 
-      <CompletenessBar fetched={sourceRecords.length} total={count} />
+      <CompletenessBar fetched={sourceRecords.length} total={count} searches={searches} />
 
       {profile.limitations && (
         <div style={{ fontSize: 10, color: '#fbbf24', background: '#451a03', borderRadius: 3, padding: '3px 6px', marginBottom: 6 }}>
@@ -390,23 +395,10 @@ export function SourceProfileNode({ id, data }: NodeProps) {
   const { records: rawRecords, connected } = useUpstreamRecords(id)
   const records = rawRecords ?? []
 
-  // Per-source API total: read each upstream node's count directly so that
-  // multi-source connections each show their own X of Y, not the summed total.
-  const sourceCountMap = useMemo(() => {
-    const map = new Map<string, number>()
-    const inputEdges = allEdges.filter(e => e.target === id && e.targetHandle === 'data')
-    for (const edge of inputEdges) {
-      const node = allNodes.find(n => n.id === edge.source)
-      if (!node) continue
-      const nd = node.data as Record<string, unknown>
-      const nodeCount = (nd.count as number | undefined) ?? 0
-      const nodeRecords = getNodeResults(edge.source) as UnifiedRecord[] | undefined
-      if (!nodeRecords || nodeRecords.length === 0) continue
-      const src = nodeRecords[0]._source as string | undefined
-      if (src) map.set(src, nodeCount)
-    }
-    return map
-  }, [allNodes, allEdges, id])
+  // Per-source API totals from the ORIGIN search nodes anywhere upstream
+  // (summed per _source), so a Deduplicate / Filter between the searches and
+  // this node does not reduce the figure to "?" — see sourceTotals.ts.
+  const sourceTotals = useMemo(() => collectSourceTotals(id, allNodes, allEdges), [allNodes, allEdges, id])
 
   // Pass-through fingerprint
   const prevFingerprintRef = useRef('')
@@ -450,10 +442,10 @@ export function SourceProfileNode({ id, data }: NodeProps) {
         }
         return { field, rate, samples }
       })
-      const srcCount = sourceCountMap.get(source) ?? 0
-      return [{ profile, sourceRecords, count: srcCount, fieldStats }]
+      const t = sourceTotals.get(source)
+      return [{ profile, sourceRecords, count: t?.total ?? 0, searches: t?.searches ?? 0, fieldStats }]
     })
-  }, [sourcesDetected, records, sourceCountMap])
+  }, [sourcesDetected, records, sourceTotals])
 
   // KCL state
   const apiKey = (d.apiKey as string) || ''
