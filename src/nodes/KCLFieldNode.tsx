@@ -37,7 +37,7 @@ export interface KCLFieldNodeData {
   inputKind?: 'text' | 'image'
   /** Aggregate image mode: how many images go into the one call (default MAX_IMAGES_PER_CALL). */
   maxImages?: number
-  /** Aggregate text mode: head each value with "[n] id · title (Source)" so the model can cite records (default true). */
+  /** Aggregate text mode: head each value with "id: <id> · title (Source)" so the model can cite records (default true). */
   labelValues?: boolean
   systemPrompt: string
   userPromptTemplate: string
@@ -599,7 +599,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
             </div>
             <div style={styles.imageNote}>
               {labelValues
-                ? <>Each value is headed <code>[n] id · title (Source)</code> so the model can cite records — paste the ids into Filter and Transform afterwards. Empty values are skipped; {'{{count}}'} is the number sent.</>
+                ? <>Each value is headed <code>id: &lt;id&gt; · title (Source)</code> so the model can cite records — paste the ids into Filter and Transform afterwards. Empty values are skipped; {'{{count}}'} is the number sent.</>
                 : <>Bare values only — the model can describe the set but cannot name a record. Tick to get citable ids (≈40 chars per record).</>}
             </div>
           </>

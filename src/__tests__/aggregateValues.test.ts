@@ -4,7 +4,7 @@
  *
  * Before Nov 2026 four hand-copied join blocks sent bare values; the model
  * could describe the set but never name a record. Each value is now headed
- * by "[n] id · title (Source)" so answers can cite ids that Filter and
+ * by "id: <id> · title (Source)" so answers can cite ids that Filter and
  * Transform can act on.
  */
 import { describe, it, expect } from 'vitest'
@@ -16,22 +16,25 @@ const rec = (i: number, desc: string | undefined = `Description ${i}`) => ({
 })
 
 describe('recordHeading', () => {
-  it('reads "[n] id · title (Source)"', () => {
-    expect(recordHeading(rec(3), 3)).toBe('[3] vam:3 · Stone Henge 3 (V&A)')
+  it('reads "id: <id> · title (Source)" — the id is named, not numbered, so the model cannot cite a position instead', () => {
+    expect(recordHeading(rec(3))).toBe('id: vam:3 · Stone Henge 3 (V&A)')
   })
   it('omits the title when it is empty or just the id', () => {
-    expect(recordHeading({ id: 'x:1', _source: 'gbif', title: '' }, 1)).toBe('[1] x:1 (GBIF)')
-    expect(recordHeading({ id: 'x:1', _source: 'gbif', title: 'x:1' }, 1)).toBe('[1] x:1 (GBIF)')
+    expect(recordHeading({ id: 'x:1', _source: 'gbif', title: '' })).toBe('id: x:1 (GBIF)')
+    expect(recordHeading({ id: 'x:1', _source: 'gbif', title: 'x:1' })).toBe('id: x:1 (GBIF)')
   })
   it('omits the source bracket when _source is missing', () => {
-    expect(recordHeading({ id: 'x:1', title: 'T' }, 1)).toBe('[1] x:1 · T')
+    expect(recordHeading({ id: 'x:1', title: 'T' })).toBe('id: x:1 · T')
+  })
+  it('never contains a bare bracketed number the model could mistake for the id', () => {
+    expect(recordHeading(rec(8))).not.toMatch(/\[\d+\]/)
   })
 })
 
 describe('aggregateFieldValues', () => {
   it('heads every value with its record heading and joins with ---', () => {
     const r = aggregateFieldValues([rec(1), rec(2)], 'description')
-    expect(r.values).toBe('[1] vam:1 · Stone Henge 1 (V&A)\nDescription 1\n---\n[2] vam:2 · Stone Henge 2 (V&A)\nDescription 2')
+    expect(r.values).toBe('id: vam:1 · Stone Henge 1 (V&A)\nDescription 1\n---\nid: vam:2 · Stone Henge 2 (V&A)\nDescription 2')
     expect(r.included).toBe(2)
     expect(r.total).toBe(2)
   })
@@ -41,9 +44,9 @@ describe('aggregateFieldValues', () => {
     expect(r.values).toBe('Description 1\n---\nDescription 2')
   })
 
-  it('drops empty values before numbering, so headings have no gaps, and counts only what was sent', () => {
+  it('drops empty values and counts only what was sent', () => {
     const r = aggregateFieldValues([rec(1), rec(2, ''), { ...rec(3), description: undefined }, rec(4, '   ')], 'description')
-    expect(r.values).toBe('[1] vam:1 · Stone Henge 1 (V&A)\nDescription 1')
+    expect(r.values).toBe('id: vam:1 · Stone Henge 1 (V&A)\nDescription 1')
     expect(r.included).toBe(1)
     expect(r.total).toBe(4)
   })
@@ -63,14 +66,14 @@ describe('aggregateFieldValues', () => {
     const r = aggregateFieldValues([rec(1, long), rec(2, long)], 'description', { maxChars: 1400 })
     // perValMax = max(500, floor(1400/2)) = 700 → 700 chars + '…'; two such items (734 each + sep)
     // overflow 1400, so only the first survives — and it is cut by perValMax, not by the budget.
-    expect(r.values).toBe('[1] vam:1 · Stone Henge 1 (V&A)\n' + 'a'.repeat(700) + '…')
+    expect(r.values).toBe('id: vam:1 · Stone Henge 1 (V&A)\n' + 'a'.repeat(700) + '…')
     expect(r.included).toBe(1)
   })
 
   it('stops adding whole items at the maxChars budget — a heading is never cut in half', () => {
     const r = aggregateFieldValues([rec(1), rec(2), rec(3)], 'description', { maxChars: 90 })
-    // Item 1 = 46 chars; item 1 + sep + item 2 = 97 > 90 → only item 1 survives
-    expect(r.values).toBe('[1] vam:1 · Stone Henge 1 (V&A)\nDescription 1')
+    // Item 1 = 45 chars; item 1 + sep + item 2 = 95 > 90 → only item 1 survives
+    expect(r.values).toBe('id: vam:1 · Stone Henge 1 (V&A)\nDescription 1')
     expect(r.included).toBe(1)
     expect(r.total).toBe(3)
   })
@@ -82,7 +85,7 @@ describe('aggregateFieldValues', () => {
   })
 
   it('tolerates a record without an id', () => {
-    expect(aggregateFieldValues([{ description: 'D' }], 'description').values).toBe('[1]\nD')
+    expect(aggregateFieldValues([{ description: 'D' }], 'description').values).toBe('id:\nD')
   })
 
   it('exports the shared default aggregate prompt mentioning the headings and ids', () => {

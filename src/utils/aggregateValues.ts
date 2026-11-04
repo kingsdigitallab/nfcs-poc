@@ -3,10 +3,11 @@
  * inference nodes' aggregate mode (AI Inference (by field) and OllamaByField,
  * runner and component paths — four hand-copied join blocks collapsed Nov 2026).
  *
- * Each value is headed by "[n] id · title (Source)" so the model can name
+ * Each value is headed by "id: <id> · title (Source)" so the model can name
  * records in its answer and those ids can be pasted into Filter and Transform.
- * The image-aggregate path does the same with a numbered "title (Source)"
- * line (imageListText in kclVision.ts).
+ * (The image-aggregate path numbers its images instead — imageListText in
+ * kclVision.ts — because there the model answers "by number"; here it must
+ * answer by id, so no number is offered.)
  *
  * Truncation lives here on purpose: per-value truncation happens BEFORE
  * concatenation (CLAUDE.md gotcha 19), and the whole block stops at maxChars
@@ -18,8 +19,8 @@ import { sourceName } from './sourceIdentity'
 
 export const DEFAULT_AGGREGATE_PROMPT =
   'The following are {{field}} values from {{count}} research records. '
-  + 'Each value is headed by a numbered line giving its record id, title and source. '
-  + 'Provide a concise thematic summary of what this collection covers; when you refer to particular records, cite their ids:\n\n{{values}}'
+  + 'Each value is headed by a line beginning "id:" giving its record id, title and source. '
+  + 'Provide a concise thematic summary of what this collection covers; when you refer to particular records, quote the id exactly as given after "id:":\n\n{{values}}'
 
 export interface AggregateOptions {
   /** Head each value with recordHeading — default true. */
@@ -40,13 +41,19 @@ export interface AggregateResult {
 const SEP = '\n---\n'
 const MIN_PER_VALUE = 500
 
-/** "[3] vam:12 · Roman coin (V&A)" — what the model is told to cite. */
-export function recordHeading(r: Record<string, unknown>, n: number): string {
+/**
+ * "id: vam:12 · Roman coin (V&A)" — what the model is told to cite.
+ * Deliberately NOT numbered: a first cut used "[n] id · title" and the model
+ * answered with the bracketed positions ("[8], [21]…") because they were the
+ * shortest id-looking token on the line, especially next to long Europeana
+ * ids. Naming the id and giving it nothing to compete with fixed it.
+ */
+export function recordHeading(r: Record<string, unknown>): string {
   const id    = String(r.id ?? '').trim()
   const title = String(r.title ?? '').trim()
   const src   = typeof r._source === 'string' && r._source ? ` (${sourceName(r._source)})` : ''
   const name  = [id, title && title !== id ? title : ''].filter(Boolean).join(' · ')
-  return `[${n}]${name ? ' ' + name : ''}${src}`
+  return `id:${name ? ' ' + name : ''}${src}`
 }
 
 function readValue(r: Record<string, unknown>, field: string): string {
@@ -71,7 +78,7 @@ export function aggregateFieldValues(
     const raw = readValue(r, field)
     if (!raw) continue
     const value = raw.length > perValMax ? raw.slice(0, perValMax) + '…' : raw
-    items.push(label ? `${recordHeading(r, items.length + 1)}\n${value}` : value)
+    items.push(label ? `${recordHeading(r)}\n${value}` : value)
   }
 
   if (maxChars === undefined) return { values: items.join(SEP), included: items.length, total }

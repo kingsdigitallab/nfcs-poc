@@ -53,13 +53,13 @@ describe('runKCLFieldNode — namespaced (dot-path) fields', () => {
     expect(h.last().status).toBe('success')
   })
 
-  it('aggregate: every path value is headed by "[n] id · title (Source)" so the model can cite records', async () => {
+  it('aggregate: every path value is headed by "id: <id> · title (Source)" so the model can cite records', async () => {
     mockUpstream.mockReturnValue([vam(1), vam(2)])
     const h = harness({ selectedField: 'vam.thumbnail', mode: 'aggregate', userPromptTemplate: '{{count}}:\n{{values}}' })
     await runKCLFieldNode('n', () => h.nodes, h.edges, h.updateNodeData)
     expect(userContent(0)).toBe(
-      '2:\n[1] vam:1 · Stone Henge 1 (V&A)\nhttps://framemark.vam.ac.uk/collections/1/full/!100,100/0/default.jpg'
-      + '\n---\n[2] vam:2 · Stone Henge 2 (V&A)\nhttps://framemark.vam.ac.uk/collections/2/full/!100,100/0/default.jpg')
+      '2:\nid: vam:1 · Stone Henge 1 (V&A)\nhttps://framemark.vam.ac.uk/collections/1/full/!100,100/0/default.jpg'
+      + '\n---\nid: vam:2 · Stone Henge 2 (V&A)\nhttps://framemark.vam.ac.uk/collections/2/full/!100,100/0/default.jpg')
     expect(h.last().statusMessage).toMatch(/✓ Aggregate summary \(2 records\)/)
   })
 
@@ -74,7 +74,7 @@ describe('runKCLFieldNode — namespaced (dot-path) fields', () => {
     mockUpstream.mockReturnValue([vam(1), vam(2, false)])
     const h = harness({ selectedField: 'vam.thumbnail', mode: 'aggregate', userPromptTemplate: '{{count}}:\n{{values}}' })
     await runKCLFieldNode('n', () => h.nodes, h.edges, h.updateNodeData)
-    expect(String(userContent(0)).startsWith('1:\n[1] vam:1')).toBe(true)
+    expect(String(userContent(0)).startsWith('1:\nid: vam:1')).toBe(true)
     expect(h.last().statusMessage).toMatch(/✓ Aggregate summary \(1 of 2 records\)/)
     expect(getNodeResults('n')?.[0]?.kclAggregatedFrom).toBe(1)
   })

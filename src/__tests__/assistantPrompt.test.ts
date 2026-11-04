@@ -12,7 +12,7 @@ import { SIDEBAR_ITEMS } from '../config/sidebarItems'
 import { NODE_TIERS, TIER_LABELS } from '../config/nodeTiers'
 
 /** The last shipped version — any edit must move past it (update this when you bump SYSTEM_VERSION). */
-const PREVIOUS_VERSION = '2026-11-03-v5'
+const PREVIOUS_VERSION = '2026-11-04-v6'
 
 describe('assistant system prompt', () => {
   it('names every node the palette can show, by its display label', () => {

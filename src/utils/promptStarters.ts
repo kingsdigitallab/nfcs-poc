@@ -345,12 +345,12 @@ const AGGREGATE_STARTERS: PromptRecipe[] = [
     systemPrompt:       'You are a research assistant helping to analyse humanities research data.',
     userPromptTemplate:
       'The following are {{field}} values from {{count}} research records. ' +
-      'Each value is headed by a numbered line giving its record id, title and source.\n\n' +
+      'Each value is headed by a line beginning "id:" giving its record id, title and source.\n\n' +
       'First, state in two sentences what this collection is about.\n' +
       'Then list every record that does not belong with the rest — misfiled, off-topic, a different kind of object, ' +
       'or clearly the wrong period or place — one per line as:\n' +
       'id — one-line reason\n' +
-      'Use the record id exactly as given in its heading. If every record belongs, say so.\n' +
+      'Quote the id exactly as it appears after "id:" (it may be long, e.g. europeana:/954/...); never invent a number for a record. If every record belongs, say so.\n' +
       'Finish with a single line "IDS: " followed by the flagged ids, comma-separated (or "IDS: none"), ' +
       'so the list can be pasted into a Filter and Transform condition.\n\n' +
       '{{values}}',
