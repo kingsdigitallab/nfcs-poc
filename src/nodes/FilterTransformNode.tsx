@@ -8,17 +8,21 @@
  *   both      — filter first, then transform
  */
 
-import { useCallback } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
 import { runFilterTransformNode } from '../utils/runFilterTransformNode'
-import { candidateFields } from '../utils/reconciliationService'
+import { filterFieldOptions, parseListValue, type FilterFieldOption } from '../utils/filterTransformUtils'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 
 // ─── types (exported — used by runner and utils) ──────────────────────────────
 
 export type FilterOperator =
-  | 'contains' | 'equals' | 'startsWith'
+  | 'contains' | 'notContains'
+  | 'equals'   | 'notEquals'
+  | 'startsWith' | 'endsWith'
+  | 'in' | 'notIn'          // value = one entry per line or comma (parseListValue); an `IDS:` label is ignored
+  | 'matches'               // case-insensitive regex
   | 'isEmpty'  | 'isNotEmpty'
   | 'greaterThan' | 'lessThan'
 
@@ -58,15 +62,31 @@ export interface FilterTransformNodeData {
 
 // ─── operator / type metadata ─────────────────────────────────────────────────
 
-const OPERATORS: { value: FilterOperator; label: string; noValue?: true }[] = [
+const OPERATORS: { value: FilterOperator; label: string; noValue?: true; list?: true }[] = [
   { value: 'contains',    label: 'contains' },
+  { value: 'notContains', label: 'not contains' },
   { value: 'equals',      label: '=' },
+  { value: 'notEquals',   label: '≠' },
   { value: 'startsWith',  label: 'starts with' },
+  { value: 'endsWith',    label: 'ends with' },
+  { value: 'in',          label: 'in list',     list: true },
+  { value: 'notIn',       label: 'not in list', list: true },
+  { value: 'matches',     label: 'matches regex' },
   { value: 'greaterThan', label: '>' },
   { value: 'lessThan',    label: '<' },
   { value: 'isEmpty',     label: 'is empty',  noValue: true },
   { value: 'isNotEmpty',  label: 'not empty', noValue: true },
 ]
+
+/** 'core' first, then namespaces in first-seen order — for the <optgroup>s. */
+function groupOptions(options: FilterFieldOption[]): { group: string; items: FilterFieldOption[] }[] {
+  const out: { group: string; items: FilterFieldOption[] }[] = []
+  for (const o of options) {
+    const g = out.find(x => x.group === o.group)
+    if (g) g.items.push(o); else out.push({ group: o.group, items: [o] })
+  }
+  return out
+}
 
 const TRANSFORM_TYPES: { value: TransformType; label: string }[] = [
   { value: 'rename',      label: 'Rename field' },
@@ -105,9 +125,11 @@ function defaultTransformOp(type: TransformType = 'rename'): TransformOp {
 
 // ─── FilterRow ────────────────────────────────────────────────────────────────
 
+const CUSTOM_FIELD = '__custom__'
+
 interface FilterRowProps {
   op:                  FilterOp
-  fields:              string[]
+  options:             FilterFieldOption[]
   onChange:            (patch: Partial<FilterOp>) => void
   onDelete:            () => void
   showCombinator:      boolean
@@ -115,38 +137,81 @@ interface FilterRowProps {
   onToggleCombinator:  () => void
 }
 
-function FilterRow({ op, fields, onChange, onDelete, showCombinator, combinator, onToggleCombinator }: FilterRowProps) {
-  const noValue = OPERATORS.find(o => o.value === op.operator)?.noValue
+function FilterRow({ op, options, onChange, onDelete, showCombinator, combinator, onToggleCombinator }: FilterRowProps) {
+  const meta    = OPERATORS.find(o => o.value === op.operator)
+  const noValue = meta?.noValue
+  const isList  = meta?.list
+  // A path typed by hand (or saved before the picker knew it) stays editable as free text
+  const known   = !op.field || options.some(o => o.path === op.field)
+  const [custom, setCustom] = useState(!known)
+  const listCount = isList ? parseListValue(op.value).length : 0
 
   return (
     <div>
       <div style={S.filterRow}>
-        <select
-          value={op.field}
-          onChange={e => onChange({ field: e.target.value })}
-          style={{ ...S.sel, flex: 1, minWidth: 0 }}
-          className="nodrag"
-        >
-          <option value="">— field —</option>
-          {fields.map(f => <option key={f} value={f}>{f}</option>)}
-        </select>
+        {custom ? (
+          <input
+            type="text"
+            value={op.field}
+            onChange={e => onChange({ field: e.target.value })}
+            onBlur={() => { if (!op.field) setCustom(false) }}
+            style={{ ...S.inp, flex: 1, minWidth: 0 }}
+            placeholder="field path, e.g. gbif.year"
+            title="Dot-notation path — leave empty and click away to return to the picker"
+            className="nodrag"
+            autoFocus
+          />
+        ) : (
+          <select
+            value={op.field}
+            onChange={e => {
+              if (e.target.value === CUSTOM_FIELD) { setCustom(true); onChange({ field: '' }); return }
+              onChange({ field: e.target.value })
+            }}
+            style={{ ...S.sel, flex: 1, minWidth: 0 }}
+            className="nodrag"
+          >
+            <option value="">— field —</option>
+            {groupOptions(options).map(g => (
+              <optgroup key={g.group} label={g.group === 'core' ? 'Core fields' : `${g.group}.*`}>
+                {g.items.map(o => (
+                  <option key={o.path} value={o.path}>{o.path} ({o.count} of {o.total})</option>
+                ))}
+              </optgroup>
+            ))}
+            <option value={CUSTOM_FIELD}>Custom path…</option>
+          </select>
+        )}
         <select
           value={op.operator}
           onChange={e => onChange({ operator: e.target.value as FilterOperator })}
-          style={{ ...S.sel, width: 78 }}
+          style={{ ...S.sel, width: 96 }}
           className="nodrag"
         >
           {OPERATORS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
         </select>
-        {!noValue && (
+        {!noValue && !isList && (
           <input
             type="text"
             value={op.value}
             onChange={e => onChange({ value: e.target.value })}
             style={{ ...S.inp, flex: 1, minWidth: 0 }}
-            placeholder="value…"
+            placeholder={op.operator === 'matches' ? 'regex, e.g. ^roman' : 'value…'}
             className="nodrag"
           />
+        )}
+        {isList && (
+          <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <textarea
+              value={op.value}
+              onChange={e => onChange({ value: e.target.value })}
+              rows={Math.min(6, Math.max(2, op.value.split('\n').length))}
+              style={{ ...S.inp, resize: 'vertical', fontFamily: 'monospace', fontSize: 10, lineHeight: 1.3 }}
+              placeholder={'one per line or comma-separated\nan "IDS: a, b, c" line pastes as-is'}
+              className="nodrag nowheel"
+            />
+            <span style={S.listCount}>{listCount} value{listCount === 1 ? '' : 's'} · exact match</span>
+          </div>
         )}
         <button onClick={onDelete} style={S.deleteBtn} className="nodrag">×</button>
       </div>
@@ -386,9 +451,12 @@ export function FilterTransformNode({ id }: NodeProps) {
     ...nodeData,
   }
 
-  const fields = upstreamRecords?.length
-    ? candidateFields(upstreamRecords as unknown as Record<string, unknown>[], true)
-    : []
+  // Every path a condition can target (id, _source, all namespaces, numbers) — see filterFieldOptions.
+  const fieldOptions = useMemo(
+    () => (upstreamRecords?.length ? filterFieldOptions(upstreamRecords as UnifiedRecord[]) : []),
+    [upstreamRecords],
+  )
+  const fields = useMemo(() => fieldOptions.map(o => o.path), [fieldOptions])
 
   // ── op update helpers (read fresh from store each call) ───────────────────
 
@@ -494,12 +562,18 @@ export function FilterTransformNode({ id }: NodeProps) {
             {d.filterOps.length === 0 && (
               <p style={S.emptyHint}>No filters — all records pass through</p>
             )}
+            {d.filterOps.length > 0 && (
+              <p style={S.emptyHint}>
+                Text operators ignore case; =, ≠ and lists are exact. Array fields match if any element matches.
+                Pick <b>id</b> + <b>not in list</b> and paste an <code>IDS:</code> line to drop records the AI flagged.
+              </p>
+            )}
 
             {d.filterOps.map((op, idx) => (
               <FilterRow
                 key={op.id}
                 op={op}
-                fields={fields}
+                options={fieldOptions}
                 onChange={p => updateFilterOp(op.id, p)}
                 onDelete={() => deleteFilterOp(op.id)}
                 showCombinator={idx < d.filterOps.length - 1}
@@ -764,6 +838,11 @@ const S = {
     fontSize:     10,
     padding:      '3px 8px',
     width:        '100%',
+  },
+  listCount: {
+    fontSize:   9,
+    color:      '#8a8168',
+    paddingLeft: 2,
   },
   emptyHint: {
     fontSize:   10,

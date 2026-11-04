@@ -254,3 +254,99 @@ describe('applyTransforms', () => {
     expect(applyTransforms(records, [])).toBe(records)
   })
 })
+
+// ── Nov 2026: negation, lists, regex, deep paths, field options ──────────────
+
+import { parseListValue, filterFieldOptions } from '../utils/filterTransformUtils'
+
+describe('matchFilter — notContains / notEquals / endsWith / matches', () => {
+  it('notContains is the case-insensitive inverse of contains', () => {
+    expect(matchFilter(rec({ title: 'Iron Age' }), filterOp({ operator: 'notContains', value: 'iron' }))).toBe(false)
+    expect(matchFilter(rec({ title: 'Iron Age' }), filterOp({ operator: 'notContains', value: 'bronze' }))).toBe(true)
+  })
+  it('notEquals is exact and case-sensitive like equals', () => {
+    expect(matchFilter(rec({ title: 'Iron Age' }), filterOp({ operator: 'notEquals', value: 'Iron Age' }))).toBe(false)
+    expect(matchFilter(rec({ title: 'Iron Age' }), filterOp({ operator: 'notEquals', value: 'iron age' }))).toBe(true)
+  })
+  it('endsWith ignores case', () => {
+    expect(matchFilter(rec({ title: 'Iron Age' }), filterOp({ operator: 'endsWith', value: 'AGE' }))).toBe(true)
+    expect(matchFilter(rec({ title: 'Iron Age' }), filterOp({ operator: 'endsWith', value: 'Iron' }))).toBe(false)
+  })
+  it('matches applies a case-insensitive regex and never throws on a bad pattern', () => {
+    expect(matchFilter(rec({ title: 'Iron Age' }), filterOp({ operator: 'matches', value: '^iron\\s+age$' }))).toBe(true)
+    expect(matchFilter(rec({ title: 'Iron Age' }), filterOp({ operator: 'matches', value: '^age' }))).toBe(false)
+    expect(matchFilter(rec({ title: 'Iron Age' }), filterOp({ operator: 'matches', value: '(' }))).toBe(false)
+  })
+})
+
+describe('matchFilter — in / notIn lists', () => {
+  const ids = 'IDS: europeana:/954/a, europeana:/883/b'
+  it('in matches when the field equals any listed value (exact, case-sensitive)', () => {
+    expect(matchFilter(rec({ id: 'europeana:/883/b' }), filterOp({ field: 'id', operator: 'in', value: ids }))).toBe(true)
+    expect(matchFilter(rec({ id: 'europeana:/883/B' }), filterOp({ field: 'id', operator: 'in', value: ids }))).toBe(false)
+    expect(matchFilter(rec({ id: 'europeana:/000/z' }), filterOp({ field: 'id', operator: 'in', value: ids }))).toBe(false)
+  })
+  it('notIn is the inverse', () => {
+    expect(matchFilter(rec({ id: 'europeana:/883/b' }), filterOp({ field: 'id', operator: 'notIn', value: ids }))).toBe(false)
+    expect(matchFilter(rec({ id: 'europeana:/000/z' }), filterOp({ field: 'id', operator: 'notIn', value: ids }))).toBe(true)
+  })
+  it('an empty list: in matches nothing, notIn matches everything', () => {
+    expect(matchFilter(rec({ id: 'x' }), filterOp({ field: 'id', operator: 'in', value: '' }))).toBe(false)
+    expect(matchFilter(rec({ id: 'x' }), filterOp({ field: 'id', operator: 'notIn', value: '' }))).toBe(true)
+  })
+  it('array fields match element-wise for equals / notEquals / in / notIn', () => {
+    const r = rec({ subject: ['Bronze Age', 'Barrow'] })
+    expect(matchFilter(r, filterOp({ field: 'subject', operator: 'equals', value: 'Barrow' }))).toBe(true)
+    expect(matchFilter(r, filterOp({ field: 'subject', operator: 'notEquals', value: 'Barrow' }))).toBe(false)
+    expect(matchFilter(r, filterOp({ field: 'subject', operator: 'in', value: 'Barrow\nHillfort' }))).toBe(true)
+    expect(matchFilter(r, filterOp({ field: 'subject', operator: 'notIn', value: 'Barrow\nHillfort' }))).toBe(false)
+  })
+})
+
+describe('parseListValue', () => {
+  it('splits on commas and newlines, trims, drops blanks', () => {
+    expect(parseListValue(' a, b ,\n\nc\n')).toEqual(['a', 'b', 'c'])
+  })
+  it('strips a leading IDS: label so the recipe-3.6 line pastes verbatim', () => {
+    expect(parseListValue('IDS: a, b')).toEqual(['a', 'b'])
+    expect(parseListValue('ids:a')).toEqual(['a'])
+    expect(parseListValue('IDS: none')).toEqual(['none'])
+  })
+  it('returns [] for empty input', () => {
+    expect(parseListValue('')).toEqual([])
+    expect(parseListValue('IDS:')).toEqual([])
+  })
+})
+
+describe('matchFilter — deep dot paths', () => {
+  it('walks more than one level and lets a flat dotted key win', () => {
+    expect(matchFilter(rec({ a: { b: { c: 'deep' } } }), filterOp({ field: 'a.b.c', value: 'deep' }))).toBe(true)
+    expect(matchFilter(rec({ 'a.b': 'flat', a: { b: 'nested' } }), filterOp({ field: 'a.b', operator: 'equals', value: 'flat' }))).toBe(true)
+  })
+})
+
+describe('filterFieldOptions', () => {
+  const records = [
+    rec({ id: 'europeana:1', _source: 'europeana', _pid: 'p', title: 'T', europeana: { rights: 'CC0', year: 1800 } }),
+    rec({ id: 'gbif:2', _source: 'gbif', title: 'U', gbif: { year: 1999, scientificName: 'Felis' }, decimalLatitude: 51.5 }),
+    rec({ id: 'ariadne:3', _source: 'ariadne', ariadne: { contributor: 'ADS' } }),
+  ]
+  const paths = () => filterFieldOptions(records).map(o => o.path)
+
+  it('offers id and _source, every namespace, numeric fields and coordinates', () => {
+    expect(paths()).toEqual(expect.arrayContaining(['id', '_source', 'title', 'europeana.rights', 'europeana.year', 'gbif.year', 'gbif.scientificName', 'ariadne.contributor', 'decimalLatitude']))
+  })
+  it('does not offer other _-prefixed keys', () => {
+    expect(paths()).not.toContain('_pid')
+  })
+  it('groups core fields before namespaces and reports population counts', () => {
+    const opts = filterFieldOptions(records)
+    expect(opts[0]).toMatchObject({ group: 'core', path: 'id', count: 3, total: 3 })
+    expect(opts.find(o => o.path === 'gbif.year')).toMatchObject({ group: 'gbif', count: 1, total: 3 })
+    const groups = [...new Set(opts.map(o => o.group))]
+    expect(groups[0]).toBe('core')
+  })
+  it('returns [] with no records', () => {
+    expect(filterFieldOptions([])).toEqual([])
+  })
+})

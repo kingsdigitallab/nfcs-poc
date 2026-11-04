@@ -49,6 +49,15 @@ describe('lineageDescribers', () => {
     expect(t).toContain('2000 of 2500')
   })
 
+  it('filterTransform: list operators print a value count, not the pasted list', () => {
+    const s = describeNode(mk('filterTransform', {
+      filterOps: [{ id: '1', field: 'id', operator: 'notIn', value: 'IDS: europeana:/954/a, europeana:/883/b, gbif:3' }],
+      filterCombinator: 'AND', transformOps: [], inputCount: 120, outputCount: 117,
+    }))
+    expect(s).toContain('id not in list (3 values)')
+    expect(s).not.toContain('europeana:/954/a')
+  })
+
   it('filterTransform: ops, combinator, inputCount/outputCount', () => {
     const s = describeNode(mk('filterTransform', {
       filterOps: [

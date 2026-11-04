@@ -120,13 +120,30 @@ export const lineageDescribers: Record<string, LineageDescriber> = {
   },
 
   filterTransform: d => {
+    // Readable words for FilterOperator keys (FilterTransformNode.tsx); unknown keys print as-is.
+    const FILTER_OPERATOR_WORDS: Record<string, string> = {
+      contains: 'contains', notContains: 'does not contain',
+      equals: 'equals', notEquals: 'does not equal',
+      startsWith: 'starts with', endsWith: 'ends with',
+      in: 'in list', notIn: 'not in list', matches: 'matches',
+      greaterThan: '>', lessThan: '<',
+      isEmpty: 'is empty', isNotEmpty: 'is not empty',
+    }
     const parts: string[] = []
     const filterOps = Array.isArray(d.filterOps) ? d.filterOps as Array<Record<string, unknown>> : []
     const transformOps = Array.isArray(d.transformOps) ? d.transformOps as Array<Record<string, unknown>> : []
     if (filterOps.length > 0) {
       const combinator = d.filterCombinator === 'OR' ? ' OR ' : ' AND '
       const clauses = filterOps.slice(0, 3)
-        .map(op => `${op.field} ${op.operator} ${op.value !== '' && op.value != null ? `"${op.value}"` : ''}`.trim())
+        .map(op => {
+          const operator = String(op.operator)
+          const word = FILTER_OPERATOR_WORDS[operator] ?? operator
+          if (operator === 'in' || operator === 'notIn') {
+            const n = String(op.value ?? '').replace(/^\s*ids\s*:/i, '').split(/[\n,]/).filter(s => s.trim()).length
+            return `${op.field} ${word} (${n} value${n === 1 ? '' : 's'})`
+          }
+          return `${op.field} ${word} ${op.value !== '' && op.value != null ? `"${op.value}"` : ''}`.trim()
+        })
         .join(combinator)
       parts.push(`Filtered records where ${clauses}${filterOps.length > 3 ? ` (+${filterOps.length - 3} more)` : ''}`)
     }

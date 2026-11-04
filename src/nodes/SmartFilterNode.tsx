@@ -12,32 +12,15 @@ import { Handle, Position, useReactFlow, NodeProps } from '@xyflow/react'
 import { setNodeResults } from '../store/resultsStore'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { filterKCLModels } from '../utils/kclConfig'
+import {
+  applySmartFilter, parseSmartFilterResponse, OP_LABELS,
+  type FilterOp, type FilterCondition, type SmartFilter,
+} from '../utils/smartFilterUtils'
 
 // ── Types ──────────────────────────────────────────────────────────────────────
-
-export type FilterOp =
-  | 'contains' | 'notContains'
-  | 'equals'   | 'notEquals'
-  | 'startsWith' | 'endsWith'
-  | 'gt' | 'lt' | 'gte' | 'lte'
-  | 'exists'   | 'notExists'
-  | 'in'
-
-export interface FilterCondition {
-  /** Single field path. Use `fields` instead for multi-field OR text searches. */
-  field?: string
-  /** Check multiple fields with OR logic — record passes if ANY field satisfies the condition. */
-  fields?: string[]
-  op: FilterOp
-  value?: unknown
-  caseSensitive?: boolean
-}
-
-export interface SmartFilter {
-  logic: 'AND' | 'OR'
-  conditions: FilterCondition[]
-  explanation: string
-}
+// FilterOp / FilterCondition / SmartFilter and the evaluator live in
+// utils/smartFilterUtils.ts (pure, unit-tested); re-exported for existing importers.
+export type { FilterOp, FilterCondition, SmartFilter }
 
 export interface SmartFilterNodeData {
   apiKey: string
@@ -71,8 +54,8 @@ Response schema:
   "conditions": [
     {
       "field": "<single dot.notation.path>",
-      "op": "contains" | "notContains" | "equals" | "notEquals" | "startsWith" | "endsWith" | "gt" | "lt" | "gte" | "lte" | "exists" | "notExists" | "in",
-      "value": <string, number, or string[] for 'in' op>,
+      "op": "contains" | "notContains" | "equals" | "notEquals" | "startsWith" | "endsWith" | "gt" | "lt" | "gte" | "lte" | "exists" | "notExists" | "in" | "notIn",
+      "value": <string, number, or string[] for 'in' / 'notIn' ops>,
       "caseSensitive": false
     }
   ],
@@ -92,6 +75,9 @@ Use single "field" for attribute checks (coordinates present, date range, specif
 Operator rules:
 - exists / notExists: no value needed — checks whether the field is populated
 - in: value must be a string[] — matches if the record field equals any item
+- notIn: value must be a string[] — matches records whose field equals NONE of the items. Use it for "remove / exclude / drop these" requests, e.g.
+  "Remove records with an id in this list: IDS: a, b, c" → {"field": "id", "op": "notIn", "value": ["a", "b", "c"]}
+  Copy every listed id exactly and completely (they can be long, e.g. "europeana:/954/Culturalia_…"); never shorten or paraphrase them
 - contains / notContains: for strings, substring match; for array fields, checks any element
 - gt / lt / gte / lte: numeric or year comparison — use string digits e.g. "1800"
 - Always use exact field paths from the Available Fields list
@@ -129,85 +115,20 @@ function collectPaths(
 function discoverFields(records: Record<string, unknown>[], maxRecords = 30): FieldInfo[] {
   const map = new Map<string, { type: string; samples: Set<string> }>()
   for (const r of records.slice(0, maxRecords)) collectPaths(r, map)
+  // collectPaths skips _-prefixed keys; _source is the one users ask about ("only the V&A records")
+  const sources = new Set(records.map(r => r._source).filter((s): s is string => typeof s === 'string'))
+  if (sources.size) map.set('_source', { type: 'string', samples: new Set([...sources].slice(0, 3)) })
   return [...map.entries()].map(([path, { type, samples }]) => ({
     path, type, samples: [...samples],
   }))
 }
 
-// ── Filter evaluator ──────────────────────────────────────────────────────────
-
-function resolveField(record: Record<string, unknown>, path: string): unknown {
-  const parts = path.split('.')
-  let val: unknown = record
-  for (const part of parts) {
-    if (val == null || typeof val !== 'object') return undefined
-    val = (val as Record<string, unknown>)[part]
-  }
-  return val
-}
-
-function norm(val: unknown, cs: boolean): string {
-  const s = String(val ?? '')
-  return cs ? s : s.toLowerCase()
-}
-
-function testSingleField(record: Record<string, unknown>, field: string, c: FilterCondition): boolean {
-  const raw = resolveField(record, field)
-  const cs  = c.caseSensitive ?? false
-  const cv  = c.value
-
-  const isEmpty = raw == null || raw === '' || (Array.isArray(raw) && (raw as unknown[]).length === 0)
-
-  switch (c.op) {
-    case 'exists':    return !isEmpty
-    case 'notExists': return isEmpty
-  }
-
-  const candidates: unknown[] = Array.isArray(raw) ? raw as unknown[] : [raw]
-
-  switch (c.op) {
-    case 'equals':     return candidates.some(v => norm(v, cs) === norm(cv, cs))
-    case 'notEquals':  return candidates.every(v => norm(v, cs) !== norm(cv, cs))
-    case 'contains':   return candidates.some(v => norm(v, cs).includes(norm(cv as string, cs)))
-    case 'notContains':return candidates.every(v => !norm(v, cs).includes(norm(cv as string, cs)))
-    case 'startsWith': return candidates.some(v => norm(v, cs).startsWith(norm(cv as string, cs)))
-    case 'endsWith':   return candidates.some(v => norm(v, cs).endsWith(norm(cv as string, cs)))
-    case 'gt':  return candidates.some(v => Number(v) >  Number(cv))
-    case 'lt':  return candidates.some(v => Number(v) <  Number(cv))
-    case 'gte': return candidates.some(v => Number(v) >= Number(cv))
-    case 'lte': return candidates.some(v => Number(v) <= Number(cv))
-    case 'in': {
-      const list = (Array.isArray(cv) ? cv : [cv]) as unknown[]
-      return candidates.some(v => list.some(l => norm(v, cs) === norm(l, cs)))
-    }
-    default: return true
-  }
-}
-
-function testCondition(record: Record<string, unknown>, c: FilterCondition): boolean {
-  const fieldsToCheck = c.fields ?? (c.field ? [c.field] : [])
-  if (fieldsToCheck.length === 0) return true
-  // For notContains / notEquals / notExists we need ALL fields to pass (AND semantics across fields)
-  const negativeOp = c.op === 'notContains' || c.op === 'notEquals' || c.op === 'notExists'
-  return negativeOp
-    ? fieldsToCheck.every(f => testSingleField(record, f, c))
-    : fieldsToCheck.some(f  => testSingleField(record, f, c))
-}
-
-function applySmartFilter(
-  records: Record<string, unknown>[],
-  filter: SmartFilter,
-  disabled: boolean[] = [],
-): Record<string, unknown>[] {
-  const active = filter.conditions.filter((_, i) => !disabled[i])
-  if (active.length === 0) return records
-  return records.filter(r => {
-    const results = active.map(c => testCondition(r, c))
-    return filter.logic === 'AND' ? results.every(Boolean) : results.some(Boolean)
-  })
-}
-
 // ── KCL translation ───────────────────────────────────────────────────────────
+
+/** Long id lists need room: a 30-id `notIn` plus the explanation blew the old 1024 cap. */
+const MAX_TOKENS = 4096
+
+interface Translation { filter: SmartFilter; note?: string }
 
 async function translateToFilter(
   apiKey: string,
@@ -215,7 +136,7 @@ async function translateToFilter(
   nlQuery: string,
   fields: FieldInfo[],
   signal: AbortSignal,
-): Promise<SmartFilter> {
+): Promise<Translation> {
   const fieldList = fields
     .slice(0, 50)
     .map(f => `- ${f.path} (${f.type})${f.samples.length > 0 ? ': e.g. ' + f.samples.map(s => `"${s}"`).join(', ') : ''}`)
@@ -223,15 +144,15 @@ async function translateToFilter(
 
   const userPrompt = `Available fields:\n${fieldList}\n\nFilter request: "${nlQuery}"`
 
-  const res = await fetch(KCL_CHAT, {
+  const call = (jsonMode: boolean) => fetch(KCL_CHAT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
     body: JSON.stringify({
       model,
-      stream:          false,
-      temperature:     0.1,
-      max_tokens:      1024,
-      response_format: { type: 'json_object' },
+      stream:      false,
+      temperature: 0.1,
+      max_tokens:  MAX_TOKENS,
+      ...(jsonMode ? { response_format: { type: 'json_object' } } : {}),
       messages: [
         { role: 'system', content: SYSTEM_PROMPT },
         { role: 'user',   content: userPrompt },
@@ -240,27 +161,38 @@ async function translateToFilter(
     signal,
   })
 
-  if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
+  let res = await call(true)
+  let note: string | undefined
+  if (!res.ok) {
+    const body = (await res.text().catch(() => '')).slice(0, 200).replace(/\s+/g, ' ')
+    // response_format is the ONLY way this request differs from the AI Inference
+    // nodes' (which work): on a 4xx that is not auth/rate-limit, retry without it
+    // once before giving up, and say so.
+    const retryable = res.status >= 400 && res.status < 500 && ![401, 403, 429].includes(res.status)
+    if (!retryable) throw new Error(`HTTP ${res.status} ${res.statusText}${body ? ` — ${body}` : ''}`)
+    const first = `HTTP ${res.status} ${res.statusText}${body ? ` — ${body}` : ''}`
+    res = await call(false)
+    if (!res.ok) {
+      const body2 = (await res.text().catch(() => '')).slice(0, 200).replace(/\s+/g, ' ')
+      throw new Error(`${first}; retry without JSON mode: HTTP ${res.status} ${res.statusText}${body2 ? ` — ${body2}` : ''}`)
+    }
+    note = `first attempt failed (${first}); succeeded without JSON response mode`
+  }
 
   const json = await res.json() as {
-    choices?: Array<{ message?: { content?: string }; text?: string }>
+    choices?: Array<{ message?: { content?: string }; text?: string; finish_reason?: string }>
   }
-  const raw = json.choices?.[0]?.message?.content ?? json.choices?.[0]?.text ?? ''
-  // Strip markdown fences some models emit despite response_format
-  const cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/, '').trim()
-  return JSON.parse(cleaned) as SmartFilter
+  const choice = json.choices?.[0]
+  const raw = choice?.message?.content ?? choice?.text ?? ''
+  const parsed = parseSmartFilterResponse(raw)
+  if (!parsed.filter) {
+    const cut = choice?.finish_reason === 'length' ? ` (the reply hit the ${MAX_TOKENS}-token limit)` : ''
+    throw new Error(`Could not use the model's reply: ${parsed.error}${cut}`)
+  }
+  return { filter: parsed.filter, note }
 }
 
 // ── Condition display ─────────────────────────────────────────────────────────
-
-const OP_LABELS: Record<FilterOp, string> = {
-  contains: 'contains', notContains: 'does not contain',
-  equals: '=', notEquals: '≠',
-  startsWith: 'starts with', endsWith: 'ends with',
-  gt: '>', lt: '<', gte: '≥', lte: '≤',
-  exists: 'is present', notExists: 'is absent',
-  in: 'is one of',
-}
 
 interface ConditionPillProps {
   c: FilterCondition
@@ -387,8 +319,8 @@ export function SmartFilterNode({ id, data }: NodeProps) {
     updateNodeData(id, { filterStatus: 'translating', filterMessage: '', generatedFilter: null })
     try {
       const fields  = discoverFields(records as Record<string, unknown>[])
-      const filter  = await translateToFilter(apiKey, model, nlQuery.trim(), fields, ctrl.signal)
-      updateNodeData(id, { generatedFilter: filter, disabledConditions: [], filterStatus: 'applied', filterMessage: '' })
+      const { filter, note } = await translateToFilter(apiKey, model, nlQuery.trim(), fields, ctrl.signal)
+      updateNodeData(id, { generatedFilter: filter, disabledConditions: [], filterStatus: 'applied', filterMessage: note ?? '' })
     } catch (err) {
       if ((err as Error).name !== 'AbortError') {
         const msg = (err as Error).message

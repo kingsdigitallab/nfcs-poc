@@ -5,6 +5,8 @@
 
 import type { UnifiedRecord } from '../types/UnifiedRecord'
 import type { FilterOp, TransformOp } from '../nodes/FilterTransformNode'
+import { getFieldByPath } from './fieldPath'
+import { collectFieldPaths } from './fieldPaths'
 
 // ─── helpers ──────────────────────────────────────────────────────────────────
 
@@ -14,35 +16,118 @@ function toStr(val: unknown): string {
   return String(val)
 }
 
+/** Flat key first (a record may carry a literal dotted key), then a deep dot walk. */
 function resolveField(record: Record<string, unknown>, field: string): unknown {
-  if (field.includes('.')) {
-    const dot = field.indexOf('.')
-    const ns  = field.slice(0, dot)
-    const key = field.slice(dot + 1)
-    const ns_val = record[ns]
-    if (ns_val && typeof ns_val === 'object' && !Array.isArray(ns_val))
-      return (ns_val as Record<string, unknown>)[key]
-    return undefined
-  }
-  return record[field]
+  if (field in record) return record[field]
+  return getFieldByPath(record, field)
+}
+
+/**
+ * The value of an `in` / `notIn` condition: one entry per line or comma,
+ * trimmed, blanks dropped. A leading `IDS:` label is ignored so the last line
+ * of the "Flag misfiled records by id" recipe pastes verbatim.
+ */
+export function parseListValue(value: string): string[] {
+  return value
+    .replace(/^\s*ids\s*:/i, '')
+    .split(/[\n,]/)
+    .map(s => s.trim())
+    .filter(Boolean)
+}
+
+/** The strings an exact-match operator compares: each element of an array field, else the one value. */
+function elements(raw: unknown): string[] {
+  if (raw == null) return ['']
+  return Array.isArray(raw) ? raw.map(v => toStr(v)) : [String(raw)]
+}
+
+function safeRegex(pattern: string): RegExp | null {
+  try { return new RegExp(pattern, 'i') } catch { return null }
 }
 
 // ─── filter ───────────────────────────────────────────────────────────────────
 
 export function matchFilter(record: UnifiedRecord, op: FilterOp): boolean {
-  const str = toStr(resolveField(record as Record<string, unknown>, op.field))
+  const raw = resolveField(record as Record<string, unknown>, op.field)
+  const str = toStr(raw)
   const num = parseFloat(str)
+  const lc  = str.toLowerCase()
+  const val = op.value
+  const vlc = val.toLowerCase()
 
   switch (op.operator) {
-    case 'contains':    return str.toLowerCase().includes(op.value.toLowerCase())
-    case 'equals':      return str === op.value
-    case 'startsWith':  return str.toLowerCase().startsWith(op.value.toLowerCase())
+    case 'contains':    return lc.includes(vlc)
+    case 'notContains': return !lc.includes(vlc)
+    case 'equals':      return elements(raw).some(e => e === val)
+    case 'notEquals':   return elements(raw).every(e => e !== val)
+    case 'startsWith':  return lc.startsWith(vlc)
+    case 'endsWith':    return lc.endsWith(vlc)
+    case 'in': {
+      const list = parseListValue(val)
+      return elements(raw).some(e => list.includes(e.trim()))
+    }
+    case 'notIn': {
+      const list = parseListValue(val)
+      return elements(raw).every(e => !list.includes(e.trim()))
+    }
+    case 'matches': {
+      const re = safeRegex(val)
+      return re ? re.test(str) : false
+    }
     case 'isEmpty':     return str.trim() === ''
     case 'isNotEmpty':  return str.trim() !== ''
-    case 'greaterThan': return !isNaN(num) && num > parseFloat(op.value)
-    case 'lessThan':    return !isNaN(num) && num < parseFloat(op.value)
+    case 'greaterThan': return !isNaN(num) && num > parseFloat(val)
+    case 'lessThan':    return !isNaN(num) && num < parseFloat(val)
     default:            return true
   }
+}
+
+// ─── field picker ─────────────────────────────────────────────────────────────
+
+export interface FilterFieldOption {
+  /** 'core' for top-level fields, else the namespace (`gbif`, `europeana`, …). */
+  group: string
+  path:  string
+  /** Records (within the sample) that carry a value at this path. */
+  count: number
+  total: number
+}
+
+/**
+ * The paths a Filter and Transform condition can target: everything
+ * `collectFieldPaths` finds (all namespaces, numbers and booleans included)
+ * plus `id` and `_source` — the two keys users filter on that the generic
+ * walker leaves out (`_`-prefix rule). Core fields first, then namespaces in
+ * first-seen order. Replaced reconciliationService.candidateFields here
+ * (Nov 2026): that helper excluded `id`, coordinates and every namespace but
+ * gbif/llds/ads/mds, and skipped numbers.
+ */
+export function filterFieldOptions(records: UnifiedRecord[]): FilterFieldOption[] {
+  if (!records.length) return []
+  const total = records.length
+  const infos = collectFieldPaths(records)
+  const has = (path: string) => infos.some(i => i.path === path)
+  const countOf = (path: string) => records.filter(r => {
+    const v = resolveField(r as Record<string, unknown>, path)
+    return v != null && v !== '' && !(Array.isArray(v) && v.length === 0)
+  }).length
+
+  const core: FilterFieldOption[] = []
+  const byNs = new Map<string, FilterFieldOption[]>()
+  const push = (path: string, count: number) => {
+    const dot = path.indexOf('.')
+    if (dot === -1) { core.push({ group: 'core', path, count, total }); return }
+    const ns = path.slice(0, dot)
+    if (!byNs.has(ns)) byNs.set(ns, [])
+    byNs.get(ns)!.push({ group: ns, path, count, total })
+  }
+
+  if (!has('id')) push('id', countOf('id'))
+  push('_source', countOf('_source'))
+  for (const i of infos) push(i.path, i.count)
+  // id is always the first option; the rest keep collectFieldPaths' order
+  core.sort((a, b) => (a.path === 'id' ? -1 : b.path === 'id' ? 1 : 0))
+  return [...core, ...[...byNs.values()].flat()]
 }
 
 export function applyFilters(

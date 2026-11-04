@@ -115,7 +115,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | Node | Description |
 |------|-------------|
 | **FieldDistribution** | Faceted bar chart of value frequencies for any field. Click bars to toggle them as filters — matching records are emitted on the output handle and update live as upstream data changes. Array-valued fields (`subject`, `country`, `creator`) are expanded so each element is tallied individually. Bars sorted by count descending, capped at a configurable Top N. A status bar shows how many records match the current selection with a **✕ clear** button. |
-| **SmartFilter** | Natural language → structured filter. Type a plain-English filter request (e.g. *"Iron Age sites in England with coordinates"*, *"objects made before 1700 with images"*) and click **Translate & apply** (or Ctrl/Cmd+Enter). The KCL inference API receives the actual field names and sample values discovered from your records, then returns a JSON conditions object which is evaluated deterministically — no `eval()`, no code generation. Each condition is displayed as a readable rule (`title contains "Iron Age"`). A match bar shows what proportion of records pass. Without a filter all records pass through unchanged; the **✕** button clears the filter and restores pass-through. Supports: `contains`, `equals`, `startsWith`, `endsWith`, `gt/lt/gte/lte`, `exists/notExists`, `in` — all handle array-valued fields. Requires a KCL API key; defaults to `arc:nano`. |
+| **SmartFilter** | Natural language → structured filter. Type a plain-English filter request (e.g. *"Iron Age sites in England with coordinates"*, *"objects made before 1700 with images"*) and click **Translate & apply** (or Ctrl/Cmd+Enter). The KCL inference API receives the actual field names and sample values discovered from your records, then returns a JSON conditions object which is evaluated deterministically — no `eval()`, no code generation. Each condition is displayed as a readable rule (`title contains "Iron Age"`). A match bar shows what proportion of records pass. Without a filter all records pass through unchanged; the **✕** button clears the filter and restores pass-through. Supports: `contains/notContains`, `equals/notEquals`, `startsWith`, `endsWith`, `gt/lt/gte/lte`, `exists/notExists`, `in/notIn` — all handle array-valued fields. "Remove the records with an id in this list: IDS: a, b, c" becomes `id notIn [a, b, c]`, so the `IDS:` line from the *Flag misfiled records by id* recipe can be pasted straight in (the model is given `_source` too, for "only the V&A records"). The reply is allowed 4,096 tokens; a reply that is still cut off, not JSON, or uses an unknown operator is reported in words rather than as a JSON character position, and an HTTP error shows the first 200 characters of the API's response — a 4xx other than auth/rate-limit is retried once without JSON response mode, and the node says so. Requires a KCL API key; defaults to `arc:nano`. |
 | **Filter and Transform** | Filters records by condition and/or mutates field values. See [Filter / Transform](#filter--transform) below. |
 | **SpatialFilter** | Draws a bounding box on an interactive Leaflet map; filters upstream records to those within the bbox. Note: **MapOutput** also includes an integrated spatial bbox filter — for workflows where you want to visualise and filter in a single step, use MapOutput instead. |
 | **Deduplicate** | Removes duplicate records based on a chosen field value. First occurrence is kept; subsequent records sharing the same value for that field are discarded. Records missing the chosen field always pass through. The footer shows `N in → M unique (K removed)`. Useful when aggregating results from multiple search nodes that may return overlapping result sets. |
@@ -592,9 +592,9 @@ Toggle **ℹ Info** to reveal: IIIF manifest metadata (title, date, attribution,
 ### Filter mode
 
 Add one or more filter rows. Each row specifies:
-- **Field** — any field, including dot-notation namespace fields (e.g. `gbif.stateProvince`, `ariadne.contributor`)
-- **Operator** — `contains`, `=`, `starts with`, `>`, `<`, `is empty`, `not empty`
-- **Value** — text or number
+- **Field** — a picker grouped into *Core fields* and one `namespace.*` group per source, each entry labelled `path (n of N)` with the number of upstream records that carry it. It covers `id`, `_source`, every namespace (`gbif.year`, `europeana.rights`, `ariadne.contributor`, …), numbers and booleans. **Custom path…** at the bottom lets you type any dot-notation path by hand.
+- **Operator** — `contains`, `not contains`, `=`, `≠`, `starts with`, `ends with`, `in list`, `not in list`, `matches regex`, `>`, `<`, `is empty`, `not empty`. Text operators ignore case; `=`, `≠` and the two list operators are exact. On an array field, `=`/`≠`/lists test each element (any element matches); the text operators test the elements joined with `, `.
+- **Value** — text or number. For `in list` / `not in list` the value box is multi-line: one entry per line or comma-separated, and a leading `IDS:` label is ignored, so the last line of the **3.6 Flag misfiled records by id** recipe pastes verbatim (`id` + `not in list` drops the flagged records). A caption shows how many values were parsed.
 
 Multiple rows are combined with an **AND / OR** toggle.
 
@@ -607,6 +607,9 @@ Multiple rows are combined with an **AND / OR** toggle.
 | **Truncate** | Trims a field to a maximum character length and appends `…`. |
 | **Extract** | Slices a substring by start/end index, or captures a regex match. Writes to a new field. |
 | **Concatenate** | Merges two fields into a new key with a configurable separator. |
+| **Split to list** | Turns one text field into an array field: by lines, by a delimiter, or by parsing a JSON array / array of objects (pick the key). |
+| **Drop fields** | Removes the ticked fields from every record. |
+| **Keep fields** | Keeps only the ticked fields (and their `*_reconciled` companions); everything else is removed — tick `id` if downstream nodes need it. |
 
 ### Both mode
 
