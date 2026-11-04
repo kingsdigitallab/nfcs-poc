@@ -204,8 +204,11 @@ interface ConditionPillProps {
 
 function ConditionPill({ c, logic, first, enabled, onToggle }: ConditionPillProps) {
   const hasValue  = c.op !== 'exists' && c.op !== 'notExists'
-  const valueStr  = Array.isArray(c.value)
-    ? (c.value as string[]).map(v => `"${v}"`).join(', ')
+  const list      = Array.isArray(c.value) ? (c.value as unknown[]).map(String) : null
+  // A long id list used to be printed inline and overflowed the node; show a count, expand on demand.
+  const [showList, setShowList] = useState(false)
+  const valueStr  = list
+    ? (list.length <= 3 ? list.map(v => `"${v}"`).join(', ') : `(${list.length} values)`)
     : c.value != null ? `"${c.value}"` : ''
   const fieldDisplay = c.fields
     ? c.fields.join(' | ')
@@ -235,14 +238,31 @@ function ConditionPill({ c, logic, first, enabled, onToggle }: ConditionPillProp
       </span>
 
       <div style={{
-        flex: 1, background: '#1f2937', borderRadius: 4, padding: '3px 7px',
-        fontSize: 10, color: '#ece3d0', lineHeight: 1.5,
+        flex: 1, minWidth: 0, background: '#1f2937', borderRadius: 4, padding: '3px 7px',
+        fontSize: 10, color: '#ece3d0', lineHeight: 1.5, overflowWrap: 'anywhere',
         textDecoration: enabled ? 'none' : 'line-through',
       }}>
         <span style={{ color: '#93c5fd', fontWeight: 600 }}>{fieldDisplay}</span>
         {' '}
         <span style={{ color: '#fbbf24' }}>{OP_LABELS[c.op] ?? c.op}</span>
         {hasValue && <> <span style={{ color: '#86efac' }}>{valueStr}</span></>}
+        {list && list.length > 3 && (
+          <button
+            onClick={() => setShowList(s => !s)}
+            className="nodrag"
+            style={{ marginLeft: 6, fontSize: 9, color: '#93c5fd', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+          >
+            {showList ? 'hide' : 'show'}
+          </button>
+        )}
+        {list && showList && (
+          <div className="nowheel" style={{
+            marginTop: 3, maxHeight: 120, overflowY: 'auto', fontFamily: 'monospace', fontSize: 9,
+            color: '#86efac', lineHeight: 1.4, textDecoration: 'none',
+          }}>
+            {list.map((v, i) => <div key={i}>{v}</div>)}
+          </div>
+        )}
       </div>
     </div>
   )
