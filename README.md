@@ -127,7 +127,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 | Node | Description |
 |------|-------------|
 | **AI Inference** | Sends each upstream record to KCL's OpenAI-compatible inference API and enriches the record with the model's response. Requires an API key. Supports **vision mode** — when enabled, image data URLs in records (from LocalFolderSource, ImageView, or IIIF region capture) are sent as multipart image content. Auto-detects `contentType: 'image'` records; or specify a **field** to use a particular image field. Includes a **prompt recipe bar** — save and recall prompt strategies across workflows. See [KCL Inference](#kcl-inference) below. |
-| **AI Inference (by field)** | Lighter-weight KCL inference on a single chosen field. Two modes: **per-record** (enriches each record individually with live token preview) and **aggregate** (collects all values into one prompt for a summary response). The field picker lists namespaced fields too (`vam.objectType`, `europeana.thumbnail`), grouped by source. Template variables: `{{value}}`, `{{field}}`, `{{count}}`, `{{values}}`, plus any `{{ns.key}}`. **Image input**: pick a thumbnail or IIIF field and the node sends the pictures themselves to the vision model — per record, or a numbered batch of up to *Max* images in one aggregate call ("Which of these show standing stones? Answer by number."). Model-dependent content truncation (arc:nano 12k, arc:lite 32k, arc:nexus 64k chars). Includes **prompt recipe bar**. |
+| **AI Inference (by field)** | Lighter-weight KCL inference on a single chosen field. Two modes: **per-record** (enriches each record individually with live token preview) and **aggregate** (collects all values into one prompt, each headed by `[n] id · title (Source)` so the model can cite records by id). The field picker lists namespaced fields too (`vam.objectType`, `europeana.thumbnail`), grouped by source. Template variables: `{{value}}`, `{{field}}`, `{{count}}`, `{{values}}`, plus any `{{ns.key}}`. **Image input**: pick a thumbnail or IIIF field and the node sends the pictures themselves to the vision model — per record, or a numbered batch of up to *Max* images in one aggregate call ("Which of these show standing stones? Answer by number."). Model-dependent content truncation (arc:nano 12k, arc:lite 32k, arc:nexus 64k chars). Includes **prompt recipe bar**. |
 | **QuickNote** | Human annotation node — display-only, no runner, pass-through. Three modes selectable via the **Note · Structured · Score** tab bar: **Note** — free-prose textarea writes to `_note` (shared across the workflow via the notes store and surfaced in TableOutput); **Structured** — configure named `{key, label}` fields once, then fill them per record in a clean form; the node assembles the values into a JSON gold-standard and writes it to a target field (default `_note`); **Score** — constrained per-criterion pickers (configurable scale) write `human_score` (+ flat `human_c*` keys and optional prose reasons per criterion). The human counterpart to **Evaluator**. |
 | **Evaluator** | LLM-as-judge node. Scores a `candidateField` against a `referenceField` on the **same record** using an ARC model (temperature 0). Emits **per-criterion** JSON scores — never a single aggregate. Built-in rubric presets: *Extraction agreement*, *Interpretive agreement*, *Rubric-from-note*. Template tokens `{{__reference}}` / `{{__candidate}}`; writes `record.eval` (scores, reasons, raw, status) plus flat `eval_c*` columns. Displays a judge-vs-human agreement readout when a human-score field is present. Tolerant JSON parsing — always recovers; marks failures as `parse_error` status rather than throwing. Requires a KCL API key. |
 | **URLContentFetch** | Follows a URL field in each record, fetches the page (optionally via headless browser for JS-rendered pages), and adds `fetchedContent` (plain text) and `fetchedHtml` (cleaned body HTML). |
@@ -318,6 +318,8 @@ The **Vision** row is always shown; its caption says what to connect when nothin
 
 Works identically but processes a single chosen field per record. **Per-record mode** enriches each record; **aggregate mode** collects all field values into one prompt for a summary response.
 
+In aggregate mode each value is headed by a numbered line, `[n] id · title (Source)`, so the model can name records in its answer rather than only describe the set — "which of these are misfiled?", "which two are probably duplicates?", "which five best illustrate the theme?". The **Label values with record id** checkbox (on by default) turns the headings off for a pure summary of a large set. Empty values are skipped, and `{{count}}` is the number of values actually sent; the status line reads `✓ Aggregate summary (126 of 160 records)` when they differ. Aggregate mode substitutes **only** `{{values}}`, `{{field}}` and `{{count}}` — a record field such as `{{_sourceId}}` cannot be resolved because there is no single record, and the node shows an amber warning naming the token that would be sent as literal text. To act on the ids the model cites, paste them into a **Filter and Transform** condition on `id` (the **3.6 Flag misfiled records by id** recipe asks for a final `IDS: …` line for exactly this).
+
 Any field can be chosen, including namespaced ones (`vam.objectType`, `gbif.scientificName`), and `{{ns.key}}` tokens work in the prompt. When the chosen field holds images — a thumbnail URL, a data URL, or a IIIF Image API service such as `vam.iiifImageBase` — an **Input** row appears and defaults to **Image**:
 
 - **Per record**: each call carries the prompt plus that record's image; `{{value}}` is the record's title. A record whose image cannot be fetched gets `[image unavailable: …]` and the run continues.
@@ -339,8 +341,8 @@ Both **AI Inference** and **AI Inference (by field)** include a **prompt recipe 
 - Summarise briefly
 
 **Field node recipes** (AI Inference (by field)):
-- *Per-record:* Extract persons from field — JSON, Extract places from field — JSON, Summarise record field
-- *Aggregate:* Thematic summary, List unique entities
+- *Per-record (2.1–2.12):* Date normalisation, Relevance assessment, Plain language summary, Historical period assignment, Argument or thesis extraction, Named entity extraction, Material extraction, Description gap identification, Research note generation, Subject keyword suggestion, Archaic language clarification, Place name extraction
+- *Aggregate (3.1–3.6):* Thematic synthesis, Fitness for purpose assessment, Comparative analysis across time, Interpret an aggregated extraction, Cross-collection documentation audit, Flag misfiled records by id
 
 To use: select a recipe from the dropdown, click **Apply** to populate the system prompt and template. Click **Save…** to create custom recipes — they persist in localStorage and are available across sessions.
 
@@ -459,8 +461,8 @@ After per-shot inference, wire a **AI Inference (by field)** node downstream in 
 
 **Prompt:**
 ```
-The following are shot-level analyses from a video, one per line. Each contains
-a description, shot scale, setting, and whether people are visible.
+The following are shot-level analyses from a video, each headed by its record id.
+Each contains a description, shot scale, setting, and whether people are visible.
 
 {{values}}
 

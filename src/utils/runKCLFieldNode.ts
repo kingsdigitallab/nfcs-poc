@@ -14,6 +14,7 @@ import { collectUpstreamRecords } from './upstreamRecords'
 import { getContentMaxChars, MAX_IMAGES_PER_CALL, DEFAULT_IMAGE_SEND_DIM, DEFAULT_IMAGE_SEND_SIZE } from './kclConfig'
 import { formatDuration } from './formatDuration'
 import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from './promptTemplates'
+import { aggregateFieldValues, DEFAULT_AGGREGATE_PROMPT } from './aggregateValues'
 import { getFieldByPath } from './fieldPath'
 import { imagePartFor, collectImageParts, imageListText, recordLabel, type ContentPart } from './kclVision'
 
@@ -21,7 +22,6 @@ const KCL_CHAT = '/kcl-proxy/v1/chat/completions'
 
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'
 const DEFAULT_PROMPT_PER = 'Summarise the following in 2–3 sentences:\n\n{{value}}'
-const DEFAULT_PROMPT_AGG = 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}'
 
 async function kclChat(
   apiKey: string,
@@ -76,10 +76,11 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
   const mode           = (d.mode           as string | undefined) ?? 'per-record'
   const inputKind      = (d.inputKind      as string | undefined) ?? 'text'
   const maxImages      = Math.max(1, Number(d.maxImages ?? MAX_IMAGES_PER_CALL) || MAX_IMAGES_PER_CALL)
+  const labelValues    = (d.labelValues    as boolean | undefined) ?? true
   const imageOpts      = { maxDim: DEFAULT_IMAGE_SEND_DIM, size: DEFAULT_IMAGE_SEND_SIZE }
   const systemPrompt   = (d.systemPrompt   as string | undefined) ?? DEFAULT_SYSTEM
   const promptTemplate = (d.userPromptTemplate as string | undefined)
-    ?? (mode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER)
+    ?? (mode === 'aggregate' ? DEFAULT_AGGREGATE_PROMPT : DEFAULT_PROMPT_PER)
   const temperature    = (d.temperature    as number | undefined) ?? 0.7
   const maxTokens      = (d.maxTokens      as number | undefined) ?? 32768
 
@@ -118,6 +119,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
       let userContent: string | ContentPart[]
       let prompt: string
       let aggregatedFrom = upstreamRecords.length
+      let aggregatedOf = ''
       let imageNote = ''
 
       if (inputKind === 'image') {
@@ -133,18 +135,11 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
         const available = batch.parts.length + batch.failures.length + batch.skipped
         imageNote = ` — ${batch.parts.length} of ${available} images sent${batch.failures.length ? `, ${batch.failures.length} failed` : ''}`
       } else {
-        const perValMax = Math.max(500, Math.floor(maxChars / Math.max(upstreamRecords.length, 1)))
-        const values = upstreamRecords
-          .map(r => {
-            const v = getFieldByPath(r, selectedField)
-            const str = Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
-            return str.length > perValMax ? str.slice(0, perValMax) + '…' : str
-          })
-          .filter(Boolean)
-          .join('\n---\n')
-          .slice(0, maxChars)
-        prompt = renderFieldTemplateAggregate(promptTemplate, { values, field: selectedField, count: upstreamRecords.length })
+        const agg = aggregateFieldValues(upstreamRecords, selectedField, { label: labelValues, maxChars })
+        prompt = renderFieldTemplateAggregate(promptTemplate, { values: agg.values, field: selectedField, count: agg.included })
         userContent = prompt
+        aggregatedFrom = agg.included
+        if (agg.included !== agg.total) aggregatedOf = ` of ${agg.total}`
       }
 
       updateNodeData(nodeId, { statusMessage: 'Sending aggregate prompt…' })
@@ -173,7 +168,7 @@ export const runKCLFieldNode: NodeRunner = async (nodeId, getNodes, edges, updat
       const elapsedMs = Math.round(performance.now() - t0)
       updateNodeData(nodeId, {
         status:         'success',
-        statusMessage:  `✓ Aggregate summary (${aggregatedFrom} records) in ${formatDuration(elapsedMs)}${imageNote}`,
+        statusMessage:  `✓ Aggregate summary (${aggregatedFrom}${aggregatedOf} records) in ${formatDuration(elapsedMs)}${imageNote}`,
         outputCount:    1,
         resultsVersion: version,
         elapsedMs,

@@ -17,11 +17,14 @@ import { getNodeResults, setNodeResults, clearNodeResults } from '../store/resul
 import { usePromptRecipes } from '../hooks/usePromptRecipes'
 import { PromptRecipeBar } from '../components/PromptRecipeBar'
 import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from '../utils/promptTemplates'
+import { aggregateFieldValues, DEFAULT_AGGREGATE_PROMPT } from '../utils/aggregateValues'
 
 export interface OllamaFieldNodeData {
   model: string
   selectedField: string
   mode: 'per-record' | 'aggregate'
+  /** Aggregate mode: head each value with "[n] id · title (Source)" so the model can cite records (default true). */
+  labelValues?: boolean
   systemPrompt: string
   userPromptTemplate: string
   temperature: number
@@ -42,7 +45,6 @@ const BTN_COLOR    = '#4338ca'
 
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'
 const DEFAULT_PROMPT_PER = 'Summarise the following in 2–3 sentences:\n\n{{value}}'
-const DEFAULT_PROMPT_AGG = 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}'
 
 const STATUS_BORDER: Record<string, string> = {
   idle:    '#d6ccb5',
@@ -168,8 +170,13 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
   const selectedModel  = d.model || ''
   const selectedField  = d.selectedField || availableFields[0] || ''
   const mode           = (d.mode ?? 'per-record') as 'per-record' | 'aggregate'
+  const labelValues    = (d.labelValues as boolean | undefined) ?? true
   const systemPrompt   = (d.systemPrompt ?? DEFAULT_SYSTEM) as string
-  const promptTemplate = (d.userPromptTemplate ?? (mode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER)) as string
+  const promptTemplate = (d.userPromptTemplate ?? (mode === 'aggregate' ? DEFAULT_AGGREGATE_PROMPT : DEFAULT_PROMPT_PER)) as string
+  // Aggregate mode substitutes only {{values}}/{{value}}/{{field}}/{{count}}; any other token is sent as literal text.
+  const strayAggregateToken = mode === 'aggregate'
+    ? (promptTemplate.match(/\{\{(?!(?:values|value|field|count)\}\})[\w.]+\}\}/)?.[0] ?? null)
+    : null
   const temperature    = (d.temperature ?? 0.7) as number
   const maxTokens      = (d.maxTokens ?? 1024) as number
   const isRunning      = d.status === 'running'
@@ -219,19 +226,14 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
 
     try {
       if (mode === 'aggregate') {
-        const values = upstreamRecords
-          .map(r => {
-            const v = r[selectedField]
-            return Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
-          })
-          .filter(Boolean)
-          .join('\n---\n')
+        const agg = aggregateFieldValues(upstreamRecords, selectedField, { label: labelValues })
+        const aggregatedOf = agg.included !== agg.total ? ` of ${agg.total}` : ''
 
-        setLiveProgress(`Aggregating ${upstreamRecords.length} records…`)
+        setLiveProgress(`Aggregating ${agg.included}${aggregatedOf} records…`)
         updateNodeData(id, { statusMessage: 'Sending aggregate prompt…' })
 
         const prompt = renderFieldTemplateAggregate(promptTemplate, {
-          values, field: selectedField, count: upstreamRecords.length,
+          values: agg.values, field: selectedField, count: agg.included,
         })
 
         const response = await streamChat(
@@ -246,7 +248,7 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
           ollamaModel: selectedModel,
           ollamaField: selectedField,
           ollamaMode: 'aggregate',
-          ollamaAggregatedFrom: upstreamRecords.length,
+          ollamaAggregatedFrom: agg.included,
           ollamaPrompt: prompt,
           ollamaResponse: response,
           ollamaProcessedAt: new Date().toISOString(),
@@ -257,7 +259,7 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
         const version = setNodeResults(id, [resultRecord])
         updateNodeData(id, {
           status:         'success',
-          statusMessage:  `✓ Aggregate summary (${upstreamRecords.length} records)`,
+          statusMessage:  `✓ Aggregate summary (${agg.included}${aggregatedOf} records)`,
           outputCount:    1,
           resultsVersion: version,
         })
@@ -385,13 +387,30 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
               const newMode = e.target.value as 'per-record' | 'aggregate'
               updateNodeData(id, {
                 mode: newMode,
-                userPromptTemplate: newMode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER,
+                userPromptTemplate: newMode === 'aggregate' ? DEFAULT_AGGREGATE_PROMPT : DEFAULT_PROMPT_PER,
               })
             }} className="nodrag">
             <option value="per-record">Per record</option>
             <option value="aggregate">Aggregate all</option>
           </select>
         </div>
+        {mode === 'aggregate' && (
+          <>
+            <div style={styles.row}>
+              <span style={styles.label} />
+              <label style={styles.checkLabel} className="nodrag" title="Head each value with its record id so the model can cite records; untick for a pure summary of a large set">
+                <input type="checkbox" checked={labelValues}
+                  onChange={e => updateNodeData(id, { labelValues: e.target.checked })} />
+                Label values with record id
+              </label>
+            </div>
+            <div style={styles.note}>
+              {labelValues
+                ? <>Each value is headed <code>[n] id · title (Source)</code> so the model can cite records — paste the ids into Filter and Transform afterwards. Empty values are skipped; {'{{count}}'} is the number sent.</>
+                : <>Bare values only — the model can describe the set but cannot name a record. Tick to get citable ids (≈40 chars per record).</>}
+            </div>
+          </>
+        )}
 
         {/* Prompt recipes bar */}
         <PromptRecipeBar
@@ -422,6 +441,12 @@ export function OllamaFieldNode({ id, data }: NodeProps) {
           <textarea style={{ ...styles.textarea, minHeight: 56 }} value={promptTemplate}
             onChange={e => updateNodeData(id, { userPromptTemplate: e.target.value })}
             rows={3} className="nodrag" />
+          {strayAggregateToken && (
+            <div style={styles.tokenWarning}>
+              ⚠ Aggregate mode substitutes only {'{{values}}'}, {'{{field}}'} and {'{{count}}'} — <code>{strayAggregateToken}</code> will be sent as literal text.
+              Record fields need Per record mode; to cite records here, keep “Label values with record id” ticked.
+            </div>
+          )}
         </div>
 
         {/* Temperature */}
@@ -558,6 +583,9 @@ const styles = {
     flexDirection: 'column' as const,
     gap: 3,
   },
+  note: { fontSize: 9, color: '#8a8168', padding: '0 10px 4px', lineHeight: 1.4 },
+  checkLabel: { display: 'flex', alignItems: 'center', gap: 5, fontSize: 10, color: '#4a4a4a', cursor: 'pointer' },
+  tokenWarning: { fontSize: 9, color: '#92400e', background: '#fef3c7', border: '1px solid #fcd34d', borderRadius: 4, padding: '3px 6px', marginTop: 3, lineHeight: 1.4 },
   label: {
     fontSize: 11,
     color: '#8a8168',

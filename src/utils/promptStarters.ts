@@ -3,7 +3,7 @@
  * Sourced from the NFCS-AH PoC prompt-template reference (temp_data/prompt-templates.md).
  *
  * SYSTEM_PROMPT_FLAVOURS — 9 named registers for the "Voice" dropdown.
- * FIELD_STARTERS — 12 per-record + 5 aggregate task templates, each carrying
+ * FIELD_STARTERS — 12 per-record + 6 aggregate task templates, each carrying
  *   a recommended model, temperature, mode, voice and prompt body.
  */
 
@@ -332,6 +332,27 @@ const AGGREGATE_STARTERS: PromptRecipe[] = [
       'Which fields are consistently present across all sources?\n' +
       'Which are absent or inconsistently applied?\n' +
       'What would a researcher lose by relying on any single collection alone?\n\n' +
+      '{{values}}',
+  },
+  {
+    id:                 'builtin-field-flag-misfiled',
+    name:               '3.6 Flag misfiled records by id',
+    nodeFamily:         'field',
+    mode:               'aggregate',
+    builtIn:            true,
+    model:              'arc:nexus',
+    temperature:        0.2,
+    systemPrompt:       'You are a research assistant helping to analyse humanities research data.',
+    userPromptTemplate:
+      'The following are {{field}} values from {{count}} research records. ' +
+      'Each value is headed by a numbered line giving its record id, title and source.\n\n' +
+      'First, state in two sentences what this collection is about.\n' +
+      'Then list every record that does not belong with the rest — misfiled, off-topic, a different kind of object, ' +
+      'or clearly the wrong period or place — one per line as:\n' +
+      'id — one-line reason\n' +
+      'Use the record id exactly as given in its heading. If every record belongs, say so.\n' +
+      'Finish with a single line "IDS: " followed by the flagged ids, comma-separated (or "IDS: none"), ' +
+      'so the list can be pasted into a Filter and Transform condition.\n\n' +
       '{{values}}',
   },
 ]

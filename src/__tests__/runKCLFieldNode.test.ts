@@ -53,11 +53,30 @@ describe('runKCLFieldNode — namespaced (dot-path) fields', () => {
     expect(h.last().status).toBe('success')
   })
 
-  it('aggregate: joins the path values of every record', async () => {
+  it('aggregate: every path value is headed by "[n] id · title (Source)" so the model can cite records', async () => {
     mockUpstream.mockReturnValue([vam(1), vam(2)])
     const h = harness({ selectedField: 'vam.thumbnail', mode: 'aggregate', userPromptTemplate: '{{count}}:\n{{values}}' })
     await runKCLFieldNode('n', () => h.nodes, h.edges, h.updateNodeData)
+    expect(userContent(0)).toBe(
+      '2:\n[1] vam:1 · Stone Henge 1 (V&A)\nhttps://framemark.vam.ac.uk/collections/1/full/!100,100/0/default.jpg'
+      + '\n---\n[2] vam:2 · Stone Henge 2 (V&A)\nhttps://framemark.vam.ac.uk/collections/2/full/!100,100/0/default.jpg')
+    expect(h.last().statusMessage).toMatch(/✓ Aggregate summary \(2 records\)/)
+  })
+
+  it('aggregate: labelValues: false sends the bare values exactly as before', async () => {
+    mockUpstream.mockReturnValue([vam(1), vam(2)])
+    const h = harness({ selectedField: 'vam.thumbnail', mode: 'aggregate', labelValues: false, userPromptTemplate: '{{count}}:\n{{values}}' })
+    await runKCLFieldNode('n', () => h.nodes, h.edges, h.updateNodeData)
     expect(userContent(0)).toBe('2:\nhttps://framemark.vam.ac.uk/collections/1/full/!100,100/0/default.jpg\n---\nhttps://framemark.vam.ac.uk/collections/2/full/!100,100/0/default.jpg')
+  })
+
+  it('aggregate: {{count}}, kclAggregatedFrom and the status line report the values actually sent, not the upstream total', async () => {
+    mockUpstream.mockReturnValue([vam(1), vam(2, false)])
+    const h = harness({ selectedField: 'vam.thumbnail', mode: 'aggregate', userPromptTemplate: '{{count}}:\n{{values}}' })
+    await runKCLFieldNode('n', () => h.nodes, h.edges, h.updateNodeData)
+    expect(String(userContent(0)).startsWith('1:\n[1] vam:1')).toBe(true)
+    expect(h.last().statusMessage).toMatch(/✓ Aggregate summary \(1 of 2 records\)/)
+    expect(getNodeResults('n')?.[0]?.kclAggregatedFrom).toBe(1)
   })
 })
 

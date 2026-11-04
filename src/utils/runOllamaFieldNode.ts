@@ -8,12 +8,12 @@ import type { NodeRunner } from './nodeRunners'
 import { setNodeResults, clearNodeResults } from '../store/resultsStore'
 import { collectUpstreamRecords } from './upstreamRecords'
 import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from './promptTemplates'
+import { aggregateFieldValues, DEFAULT_AGGREGATE_PROMPT } from './aggregateValues'
 
 const OLLAMA_CHAT = '/ollama/api/chat'
 
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'
 const DEFAULT_PROMPT_PER = 'Summarise the following in 2–3 sentences:\n\n{{value}}'
-const DEFAULT_PROMPT_AGG = 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}'
 
 /**
  * Stream the Ollama chat response and return the accumulated text.
@@ -75,9 +75,10 @@ export const runOllamaFieldNode: NodeRunner = async (nodeId, getNodes, edges, up
   const model          = (d.model as string | undefined) ?? ''
   const selectedField  = (d.selectedField as string | undefined) ?? ''
   const mode           = (d.mode as string | undefined) ?? 'per-record'
+  const labelValues    = (d.labelValues as boolean | undefined) ?? true
   const systemPrompt   = (d.systemPrompt as string | undefined) ?? DEFAULT_SYSTEM
   const promptTemplate = (d.userPromptTemplate as string | undefined)
-    ?? (mode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER)
+    ?? (mode === 'aggregate' ? DEFAULT_AGGREGATE_PROMPT : DEFAULT_PROMPT_PER)
   const temperature    = (d.temperature as number | undefined) ?? 0.7
   const maxTokens      = (d.maxTokens   as number | undefined) ?? 1024
 
@@ -106,18 +107,13 @@ export const runOllamaFieldNode: NodeRunner = async (nodeId, getNodes, edges, up
 
   try {
     if (mode === 'aggregate') {
-      const values = upstreamRecords
-        .map(r => {
-          const v = r[selectedField]
-          return Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
-        })
-        .filter(Boolean)
-        .join('\n---\n')
+      const agg = aggregateFieldValues(upstreamRecords, selectedField, { label: labelValues })
+      const aggregatedOf = agg.included !== agg.total ? ` of ${agg.total}` : ''
 
       updateNodeData(nodeId, { statusMessage: 'Sending aggregate prompt…' })
 
       const prompt = renderFieldTemplateAggregate(promptTemplate, {
-        values, field: selectedField, count: upstreamRecords.length,
+        values: agg.values, field: selectedField, count: agg.included,
       })
 
       const response = await ollamaChat(model, systemPrompt, prompt, temperature, maxTokens)
@@ -129,7 +125,7 @@ export const runOllamaFieldNode: NodeRunner = async (nodeId, getNodes, edges, up
         ollamaModel:           model,
         ollamaField:           selectedField,
         ollamaMode:            'aggregate',
-        ollamaAggregatedFrom:  upstreamRecords.length,
+        ollamaAggregatedFrom:  agg.included,
         ollamaPrompt:          prompt,
         ollamaResponse:        response,
         ollamaProcessedAt:     new Date().toISOString(),
@@ -138,7 +134,7 @@ export const runOllamaFieldNode: NodeRunner = async (nodeId, getNodes, edges, up
       const version = setNodeResults(nodeId, [resultRecord])
       updateNodeData(nodeId, {
         status:         'success',
-        statusMessage:  `✓ Aggregate summary (${upstreamRecords.length} records)`,
+        statusMessage:  `✓ Aggregate summary (${agg.included}${aggregatedOf} records)`,
         outputCount:    1,
         resultsVersion: version,
       })

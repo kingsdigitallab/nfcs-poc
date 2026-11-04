@@ -20,6 +20,7 @@ import { PromptRecipeBar } from '../components/PromptRecipeBar'
 import { SYSTEM_PROMPT_FLAVOURS } from '../utils/promptStarters'
 import { formatDuration } from '../utils/formatDuration'
 import { renderFieldTemplateAggregate, renderFieldTemplatePerRecord } from '../utils/promptTemplates'
+import { aggregateFieldValues, DEFAULT_AGGREGATE_PROMPT } from '../utils/aggregateValues'
 import { getFieldByPath } from '../utils/fieldPath'
 import { collectFieldPaths, type FieldPathInfo } from '../utils/fieldPaths'
 import type { UnifiedRecord } from '../types/UnifiedRecord'
@@ -36,6 +37,8 @@ export interface KCLFieldNodeData {
   inputKind?: 'text' | 'image'
   /** Aggregate image mode: how many images go into the one call (default MAX_IMAGES_PER_CALL). */
   maxImages?: number
+  /** Aggregate text mode: head each value with "[n] id · title (Source)" so the model can cite records (default true). */
+  labelValues?: boolean
   systemPrompt: string
   userPromptTemplate: string
   temperature: number
@@ -58,7 +61,6 @@ const BTN_COLOR    = '#be123c'
 
 const DEFAULT_SYSTEM     = 'You are a research assistant helping to analyse humanities research data.'
 const DEFAULT_PROMPT_PER = 'Summarise the following in 2–3 sentences:\n\n{{value}}'
-const DEFAULT_PROMPT_AGG = 'The following are {{field}} values from {{count}} research records. Provide a concise thematic summary of what this collection covers:\n\n{{values}}'
 const imageOpts = { maxDim: DEFAULT_IMAGE_SEND_DIM, size: DEFAULT_IMAGE_SEND_SIZE }
 
 const STATUS_BORDER: Record<string, string> = {
@@ -246,8 +248,13 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
   const selectedKind   = fieldPaths.find(f => f.path === selectedField)?.kind
   const inputKind      = ((d.inputKind as string | undefined) ?? (selectedKind === 'image' ? 'image' : 'text')) as 'text' | 'image'
   const maxImages      = Math.max(1, Number(d.maxImages ?? MAX_IMAGES_PER_CALL) || MAX_IMAGES_PER_CALL)
+  const labelValues    = (d.labelValues as boolean | undefined) ?? true
   const systemPrompt   = (d.systemPrompt  ?? DEFAULT_SYSTEM) as string
-  const promptTemplate = (d.userPromptTemplate ?? (mode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER)) as string
+  const promptTemplate = (d.userPromptTemplate ?? (mode === 'aggregate' ? DEFAULT_AGGREGATE_PROMPT : DEFAULT_PROMPT_PER)) as string
+  // Aggregate mode substitutes only {{values}}/{{value}}/{{field}}/{{count}}; any other token is sent as literal text.
+  const strayAggregateToken = mode === 'aggregate'
+    ? (promptTemplate.match(/\{\{(?!(?:values|value|field|count)\}\})[\w.]+\}\}/)?.[0] ?? null)
+    : null
   const temperature    = (d.temperature   ?? 0.7) as number
   const maxTokens      = (d.maxTokens     ?? 32768) as number
   const isRunning = d.status === 'running'
@@ -304,6 +311,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
         let userContent: string | ContentPart[]
         let prompt: string
         let aggregatedFrom = upstreamRecords.length
+        let aggregatedOf = ''
         let imageNote = ''
 
         if (inputKind === 'image') {
@@ -320,20 +328,11 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
           const available = batch.parts.length + batch.failures.length + batch.skipped
           imageNote = ` — ${batch.parts.length} of ${available} images sent${batch.failures.length ? `, ${batch.failures.length} failed` : ''}`
         } else {
-          const perValMax = Math.max(500, Math.floor(maxChars / Math.max(upstreamRecords.length, 1)))
-          const values = upstreamRecords
-            .map(r => {
-              const v = getFieldByPath(r, selectedField)
-              const str = Array.isArray(v) ? v.join('; ') : String(v ?? '').trim()
-              return str.length > perValMax ? str.slice(0, perValMax) + '…' : str
-            })
-            .filter(Boolean)
-            .join('\n---\n')
-            .slice(0, maxChars)
-          prompt = renderFieldTemplateAggregate(promptTemplate, {
-            values, field: selectedField, count: upstreamRecords.length,
-          })
+          const agg = aggregateFieldValues(upstreamRecords, selectedField, { label: labelValues, maxChars })
+          prompt = renderFieldTemplateAggregate(promptTemplate, { values: agg.values, field: selectedField, count: agg.included })
           userContent = prompt
+          aggregatedFrom = agg.included
+          if (agg.included !== agg.total) aggregatedOf = ` of ${agg.total}`
         }
 
         setLiveTokens('')
@@ -367,7 +366,7 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
         setLiveTokens('')
         updateNodeData(id, {
           status:         'success',
-          statusMessage:  `✓ Aggregate summary (${aggregatedFrom} records) in ${formatDuration(elapsedMs)}${imageNote}`,
+          statusMessage:  `✓ Aggregate summary (${aggregatedFrom}${aggregatedOf} records) in ${formatDuration(elapsedMs)}${imageNote}`,
           outputCount:    1,
           resultsVersion: version,
           elapsedMs,
@@ -581,13 +580,30 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
               const newMode = e.target.value as 'per-record' | 'aggregate'
               updateNodeData(id, {
                 mode: newMode,
-                userPromptTemplate: newMode === 'aggregate' ? DEFAULT_PROMPT_AGG : DEFAULT_PROMPT_PER,
+                userPromptTemplate: newMode === 'aggregate' ? DEFAULT_AGGREGATE_PROMPT : DEFAULT_PROMPT_PER,
               })
             }} className="nodrag">
             <option value="per-record">Per record</option>
             <option value="aggregate">Aggregate all</option>
           </select>
         </div>
+        {mode === 'aggregate' && inputKind !== 'image' && (
+          <>
+            <div style={styles.row}>
+              <span style={styles.label} />
+              <label style={styles.checkLabel} className="nodrag" title="Head each value with its record id so the model can cite records; untick for a pure summary of a large set">
+                <input type="checkbox" checked={labelValues}
+                  onChange={e => updateNodeData(id, { labelValues: e.target.checked })} />
+                Label values with record id
+              </label>
+            </div>
+            <div style={styles.imageNote}>
+              {labelValues
+                ? <>Each value is headed <code>[n] id · title (Source)</code> so the model can cite records — paste the ids into Filter and Transform afterwards. Empty values are skipped; {'{{count}}'} is the number sent.</>
+                : <>Bare values only — the model can describe the set but cannot name a record. Tick to get citable ids (≈40 chars per record).</>}
+            </div>
+          </>
+        )}
 
         {/* Input kind — shown once the field looks like an image, or the user has chosen */}
         {(selectedKind === 'image' || d.inputKind !== undefined) && (
@@ -700,6 +716,12 @@ export function KCLFieldNode({ id, data, selected }: NodeProps) {
           <textarea ref={promptRef} style={{ ...styles.textarea, resize: 'none', overflow: 'hidden', minHeight: 56 }} value={promptTemplate}
             onChange={e => updateNodeData(id, { userPromptTemplate: e.target.value })}
             rows={3} className="nodrag" />
+          {strayAggregateToken && (
+            <div style={styles.tokenWarning}>
+              ⚠ Aggregate mode substitutes only {'{{values}}'}, {'{{field}}'} and {'{{count}}'} — <code>{strayAggregateToken}</code> will be sent as literal text.
+              Record fields need Per record mode; to cite records here, keep “Label values with record id” ticked.
+            </div>
+          )}
         </div>
 
         {/* Temperature */}
@@ -793,6 +815,8 @@ const styles = {
   textarea: { width: '100%', fontSize: 11, padding: '4px 6px', border: '1px solid #d6ccb5', borderRadius: 4, outline: 'none', resize: 'vertical' as const, fontFamily: 'monospace', lineHeight: 1.4, boxSizing: 'border-box' as const },
   numLabel: { fontSize: 10, color: '#8a8168', width: 28, textAlign: 'right' as const },
   imageNote: { fontSize: 9, color: '#8a8168', padding: '0 10px 4px', lineHeight: 1.4 },
+  checkLabel: { display: 'flex', alignItems: 'center', gap: 5, fontSize: 10, color: '#4a4a4a', cursor: 'pointer' },
+  tokenWarning: { fontSize: 9, color: '#92400e', background: '#fef3c7', border: '1px solid #fcd34d', borderRadius: 4, padding: '3px 6px', marginTop: 3, lineHeight: 1.4 },
   livePreview: { marginTop: 2, background: '#1e1e2e', borderRadius: 4, overflow: 'hidden', border: '1px solid #881337' },
   liveHeader: { fontSize: 10, color: '#fda4af', padding: '3px 6px', background: '#4c0519', fontFamily: 'monospace' },
   liveText: { fontSize: 10, color: '#e2e8f0', padding: '4px 6px', fontFamily: 'monospace', lineHeight: 1.5, maxHeight: 60, overflowY: 'auto' as const, overflowX: 'hidden' as const, whiteSpace: 'pre-wrap' as const, overflowWrap: 'anywhere' as const },

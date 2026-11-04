@@ -11,8 +11,8 @@ import { DEFAULT_SYSTEM, SYSTEM_VERSION } from '../config/assistantPrompt'
 import { SIDEBAR_ITEMS } from '../config/sidebarItems'
 import { NODE_TIERS, TIER_LABELS } from '../config/nodeTiers'
 
-/** The version shipped before the Nov 2026 currency pass — any edit must move past it. */
-const PREVIOUS_VERSION = '2026-11-02-v4'
+/** The last shipped version — any edit must move past it (update this when you bump SYSTEM_VERSION). */
+const PREVIOUS_VERSION = '2026-11-03-v5'
 
 describe('assistant system prompt', () => {
   it('names every node the palette can show, by its display label', () => {
