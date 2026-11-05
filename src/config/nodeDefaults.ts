@@ -624,7 +624,7 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   citation: pos => ({
     id: newId('citation'), type: 'citation', position: pos,
-    data: {} satisfies CitationNodeData,
+    data: { citationStyle: 'harvard' } satisfies CitationNodeData,
   }),
   europeanaSearch: pos => ({
     id: newId('europeana'), type: 'europeanaSearch', position: pos,

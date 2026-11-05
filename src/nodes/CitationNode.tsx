@@ -1,27 +1,37 @@
 /**
  * CitationNode — display-only node that renders a paginated bibliography of
- * individual records. Each entry shows title (linked), creator, date, service,
- * persistent identifier / URL, and access date.
+ * individual records in a chosen style (Harvard, APA 7, MLA 9, Chicago
+ * author-date). Each card is the formatted reference with the title linked,
+ * so what is on screen is exactly what Copy all / Download produce.
  *
  * No runner, no output handle. Place anywhere after a source node.
  */
 
 import { useState, useEffect, useMemo } from 'react'
-import { Handle, Position, NodeProps } from '@xyflow/react'
+import { Handle, Position, NodeProps, useReactFlow } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
-import { formatAllCitations, citableRecords, citationFingerprint, type RecordCitation } from '../utils/citationUtils'
+import {
+  formatAllCitations, formatRecordCitationParts, citableRecords, citationFingerprint,
+  CITATION_STYLES, DEFAULT_CITATION_STYLE, isCitationStyle,
+  type RecordCitation, type CitationStyle,
+} from '../utils/citationUtils'
 
 const HEADER_COLOR = '#6f4a25'
 const PAGE_SIZE    = 10
 
 export interface CitationNodeData {
+  /** Bibliography style — persisted with the workflow. */
+  citationStyle?: CitationStyle
   [key: string]: unknown
 }
 
-export function CitationNode({ id }: NodeProps) {
+export function CitationNode({ id, data }: NodeProps) {
   const { records, connected } = useUpstreamRecords(id)
+  const { updateNodeData }     = useReactFlow()
   const [page, setCitePage]    = useState(0)
   const [copied, setCopied]    = useState(false)
+  const d     = data as CitationNodeData
+  const style = isCitationStyle(d.citationStyle) ? d.citationStyle : DEFAULT_CITATION_STYLE
 
   const recs     = (records ?? []) as Record<string, unknown>[]
   const citable  = useMemo(() => citableRecords(recs), [records])  // eslint-disable-line react-hooks/exhaustive-deps
@@ -37,18 +47,18 @@ export function CitationNode({ id }: NodeProps) {
   useEffect(() => { setCitePage(0) }, [fingerprint])
 
   const handleCopyAll = async () => {
-    await navigator.clipboard.writeText(formatAllCitations(recs))
+    await navigator.clipboard.writeText(formatAllCitations(recs, style))
     setCopied(true)
     setTimeout(() => setCopied(false), 1800)
   }
 
   const handleDownload = () => {
-    const text = formatAllCitations(recs)
+    const text = formatAllCitations(recs, style)
     const blob = new Blob([text], { type: 'text/plain' })
     const url  = URL.createObjectURL(blob)
     const a    = document.createElement('a')
     a.href     = url
-    a.download = 'citations.txt'
+    a.download = `citations-${style}.txt`
     a.click()
     URL.revokeObjectURL(url)
   }
@@ -66,6 +76,22 @@ export function CitationNode({ id }: NodeProps) {
         )}
       </div>
 
+      {/* Style selector — the same string drives the cards, Copy all and Download */}
+      <div style={styles.styleRow}>
+        <span style={styles.styleLabel}>style</span>
+        <select
+          style={styles.styleSelect}
+          value={style}
+          onChange={e => updateNodeData(id, { citationStyle: e.target.value as CitationStyle })}
+          className="nodrag"
+          title="Bibliography style for the cards, Copy all and Download"
+        >
+          {(Object.keys(CITATION_STYLES) as CitationStyle[]).map(s => (
+            <option key={s} value={s}>{CITATION_STYLES[s].label}</option>
+          ))}
+        </select>
+      </div>
+
       <div style={styles.body}>
         {!connected && (
           <div style={styles.empty}>Connect a data source to see citations.</div>
@@ -80,9 +106,10 @@ export function CitationNode({ id }: NodeProps) {
         )}
 
         {pageRecs.map((r, i) => {
-          const c        = r._citation as RecordCitation
-          const link     = c.pid || c.url
-          const creators = Array.isArray(c.creator) ? c.creator.join('; ') : c.creator
+          const c     = r._citation as RecordCitation
+          const parts = formatRecordCitationParts(c, style)
+          // The record page when there is one — the reference's own link may be the DOI or service homepage
+          const href  = c.url || (c.pid && /^https?:\/\//.test(c.pid) ? c.pid : undefined)
 
           return (
             <div key={c.recordId ?? String(safePage * PAGE_SIZE + i)} style={styles.entry}>
@@ -91,62 +118,16 @@ export function CitationNode({ id }: NodeProps) {
                 {c.date && <span style={styles.entryDate}>{c.date}</span>}
               </div>
 
-              {c.title ? (
-                link ? (
-                  <a
-                    href={link}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={styles.titleLink}
-                    className="nodrag"
-                    title={c.title}
-                  >
-                    {c.title}
+              <div style={styles.reference} className="nodrag">
+                {parts.before}
+                {href ? (
+                  <a href={href} target="_blank" rel="noreferrer" style={styles.titleLink} title={c.title}>
+                    {parts.title}
                   </a>
                 ) : (
-                  <div style={styles.title} title={c.title}>{c.title}</div>
-                )
-              ) : null}
-
-              {creators && (
-                <div style={styles.creator}>{creators}</div>
-              )}
-
-              {c.pid && (
-                <div style={styles.pidRow}>
-                  <span style={styles.metaLabel}>ID</span>
-                  <a
-                    href={c.pid.startsWith('http') ? c.pid : `https://doi.org/${c.pid.replace(/^doi:/, '')}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={styles.pidLink}
-                    className="nodrag"
-                  >
-                    {c.pid}
-                  </a>
-                </div>
-              )}
-
-              {!c.pid && c.url && (
-                <div style={styles.pidRow}>
-                  <span style={styles.metaLabel}>URL</span>
-                  <a
-                    href={c.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    style={styles.pidLink}
-                    className="nodrag"
-                  >
-                    {c.url}
-                  </a>
-                </div>
-              )}
-
-              <div style={styles.accessed}>
-                Accessed {new Date(c.accessDate).toLocaleDateString('en-GB', {
-                  year: 'numeric', month: 'short', day: 'numeric',
-                })}
-                {c.licence && <span style={styles.licence}> · {c.licence}</span>}
+                  <span style={styles.title}>{parts.title}</span>
+                )}
+                {parts.after}
               </div>
             </div>
           )
@@ -271,61 +252,48 @@ const styles = {
     fontSize: 10,
     color:    '#8a8168',
   },
+  styleRow: {
+    display:      'flex',
+    alignItems:   'center',
+    gap:          6,
+    padding:      '5px 10px',
+    background:   '#faf6ec',
+    borderBottom: '1px solid #ece3d0',
+  },
+  styleLabel: {
+    fontSize:   10,
+    color:      '#8a8168',
+    fontFamily: 'monospace',
+    flexShrink: 0,
+  },
+  styleSelect: {
+    flex:         1,
+    fontSize:     11,
+    padding:      '2px 4px',
+    border:       '1px solid #d6ccb5',
+    borderRadius: 4,
+    background:   '#fffdf7',
+    outline:      'none',
+    height:       22,
+  },
+  // The formatted reference; selectable so a single entry can be copied
+  // (React Flow sets user-select:none on nodes — the card is nodrag).
+  reference: {
+    fontSize:   10.5,
+    color:      '#33302a',
+    lineHeight: 1.45,
+    wordBreak:  'break-word' as const,
+    userSelect: 'text' as const,
+    cursor:     'text',
+  },
   titleLink: {
-    fontSize:       11,
     fontWeight:     600,
     color:          '#1d4ed8',
     textDecoration: 'none',
-    lineHeight:     1.35,
-    display:        '-webkit-box',
-    WebkitLineClamp: 2,
-    WebkitBoxOrient: 'vertical' as const,
-    overflow:       'hidden',
   },
   title: {
-    fontSize:   11,
     fontWeight: 600,
     color:      '#2c2a24',
-    lineHeight: 1.35,
-    display:    '-webkit-box',
-    WebkitLineClamp: 2,
-    WebkitBoxOrient: 'vertical' as const,
-    overflow:   'hidden',
-  },
-  creator: {
-    fontSize:   10,
-    color:      '#33302a',
-    lineHeight: 1.3,
-  },
-  pidRow: {
-    display:    'flex',
-    gap:        5,
-    alignItems: 'flex-start',
-  },
-  metaLabel: {
-    fontSize:   9,
-    color:      '#b0a891',
-    fontFamily: 'monospace',
-    width:      20,
-    flexShrink: 0,
-    paddingTop: 1,
-    textTransform: 'uppercase' as const,
-  },
-  pidLink: {
-    fontSize:       10,
-    color:          '#2563eb',
-    textDecoration: 'none',
-    wordBreak:      'break-all' as const,
-    flex:           1,
-    lineHeight:     1.3,
-  },
-  accessed: {
-    fontSize: 9,
-    color:    '#b0a891',
-    marginTop: 1,
-  },
-  licence: {
-    fontStyle: 'italic',
   },
   uncited: {
     fontSize:  10,

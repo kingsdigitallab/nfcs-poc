@@ -12,6 +12,7 @@
  */
 import type { Node } from '@xyflow/react'
 import type { NodeTypeId } from '../nodes'
+import { CITATION_STYLES, DEFAULT_CITATION_STYLE, isCitationStyle } from './citationUtils'
 import { SIDEBAR_ITEMS } from '../config/sidebarItems'
 
 type NodeData = Record<string, unknown>
@@ -290,6 +291,12 @@ export const lineageDescribers: Record<string, LineageDescriber> = {
     const fmt = str(d.exportFormat) || str(d.format)
     const n = count ?? num(d.count)
     return `Exported ${n !== undefined ? `${n} record${n === 1 ? '' : 's'}` : 'records'}${fmt ? ` as ${fmt.toUpperCase()}` : ''}.`
+  },
+
+  citation: (d, count) => {
+    const style = isCitationStyle(d.citationStyle) ? d.citationStyle : DEFAULT_CITATION_STYLE
+    const n = count ?? num(d.count)
+    return `Listed ${n !== undefined ? `${n} record${n === 1 ? '' : 's'}` : 'records'} as a ${CITATION_STYLES[style].label} bibliography.`
   },
 } satisfies Partial<Record<NodeTypeId, LineageDescriber>>
 

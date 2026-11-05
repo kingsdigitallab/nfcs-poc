@@ -143,7 +143,7 @@ All active search nodes share a **fixture mode** for offline and workshop use �
 
 | Node | Description |
 |------|-------------|
-| **Citation** | Paginated bibliography drawn from `_citation` metadata stamped by source runners. Supports **Copy all** and **Download .txt** for a formatted reference list. |
+| **Citation** | Paginated bibliography drawn from `_citation` metadata stamped by source runners, in a chosen **style** — Harvard, APA 7th, MLA 9th or Chicago (author-date), saved with the workflow. Each card is the formatted reference with the title linked and the text selectable; **Copy all** and **Download .txt** produce exactly the same text. |
 | **Export** | Downloads upstream records as **CSV**, **JSON**, or **GeoJSON**. `*_reconciled` objects are expanded to `_qid/_label/_confidence/_status` columns in CSV. |
 | **JSONOutput** | Syntax-highlighted JSON viewer. Double-click to expand to full-screen. |
 | **AI Inference Output** | Card-based display of KCL inference responses. Each record gets an expandable card showing the response, model used, and processing time. Copy button per card, **Copy all** in the header. A card for an **ImageView** capture shows the crop's thumbnail and its full `Source · title · canvas n/k · Region i` label, and sibling captures of one object get independent cards. |

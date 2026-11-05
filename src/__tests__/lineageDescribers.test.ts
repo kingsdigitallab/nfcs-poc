@@ -166,10 +166,10 @@ describe('lineageDescribers', () => {
   })
 
   it('unknown types fall back to label + counts (from node.data or resolved param)', () => {
-    // citation has no describer → describeGeneric
-    expect(describeNode(mk('citation', { count: 12 }))).toContain('12')
+    // kclOutput has no describer → describeGeneric
+    expect(describeNode(mk('kclOutput', { count: 12 }))).toContain('12')
     // resolved count param wins over node.data for the generic fallback
-    expect(describeNode(mk('citation', { count: 0 }), 9)).toContain('9')
+    expect(describeNode(mk('kclOutput', { count: 0 }), 9)).toContain('9')
   })
 
   it('source/display/viz describers use the resolved store count', () => {
