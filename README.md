@@ -54,6 +54,10 @@ Click **📂 Load** to restore a saved workflow. The canvas is replaced with the
 
 > **Note:** `LocalFolderSource` and `FrameSenseSource` folder handles and `LocalFileSource` file handles cannot be serialised — re-select the folder or file after loading. **ImageView** saves its drawn regions but not the captured images; capture again after a reload.
 
+### Example workflows
+
+**📚 Examples** lists the workflows shipped in `public/examples/`. Ungrouped examples sit at the top; examples saved with a **Group** sit under collapsible sections (open by default, your collapsed set is remembered). To author examples, click the "Proof of Concept" version text five times to enter **author mode** (a ★ appears; five more clicks leaves it): **★ Save as Example** saves the canvas with a title, description and optional group — the same title overwrites the existing example — and a **✕** beside each entry in the menu deletes it after an inline confirm. Both actions regenerate `manifest.json`; commit `public/examples/` to keep the result. On the deployed server they are off unless `ENABLE_EXAMPLE_AUTHORING=true`.
+
 ---
 
 ## Node types

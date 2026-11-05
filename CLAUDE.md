@@ -30,6 +30,7 @@ Both modes expose identical proxy endpoints and custom middleware — the single
 **Adding a new data source:**
 - Simple reverse-proxy → add an entry to `PROXY_TABLE` in `server/proxies.mjs`
 - Custom middleware → export a new connect-style function from `server/proxies.mjs` and wire it into both `vite.config.ts` (under `configureServer`) and `server/index.mjs` (under `app.use`)
+- Example-workflow authoring (`POST /dev/write-example` / `/dev/delete-example`, manifest regeneration) is `server/examples.mjs` — same pattern, one implementation for both servers (it parses its own body so Express needs no `express.json`); always on under Vite, gated by `ENABLE_EXAMPLE_AUTHORING=true` in prod. Unit-tested in `examplesAuthoring.test.ts` against a temp dir.
 
 ## Deployment — READ BEFORE WRITING DEPLOY STEPS
 
@@ -327,6 +328,7 @@ field the authoring node injects.
   an example, on Europeana's `utm_campaign=<wskey>` tracking parameter anywhere under `public/` (the adapter strips
   it from item URLs — `cleanItemUrl` in `europeanaAdapter.ts`), and on any locally configured `VITE_*_API_KEY`
   value appearing in shipped data; CI greps `public/` and `src/` the same way.
+- **`/dev/write-example` and `/dev/delete-example`** are unauthenticated file writes (`server/examples.mjs`); in prod both sit behind `ENABLE_EXAMPLE_AUTHORING=true`. The slug regex + `join(dir, slug + '.json')` is the only path construction — keep it that way. The Examples menu's ✕ uses an inline confirm, never `window.confirm` (it blocks the browser-automation extension used for verification).
 - **Unknown node types** in a loaded workflow file are dropped with their edges (`partitionUnknownNodes`) and
   reported through the top-bar `loadError` banner. Retire a node by removing it; never rename a type string.
 - **Runner contract is tested** (`runnerContract.test.ts`): never throw, terminal status, `clearNodeResults`

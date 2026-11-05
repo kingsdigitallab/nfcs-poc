@@ -4,7 +4,7 @@
  * version-click easter egg, the save-as-example dialog and the hidden file
  * input are internal; workflow-level actions arrive as props.
  */
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { Edge } from '@xyflow/react'
 import { STORAGE_KEYS } from '../config/storageKeys'
 import { NODE_TIERS, TIER_LABELS, TIER_HINTS, type NodeTier } from '../config/nodeTiers'
@@ -12,6 +12,7 @@ import { topBarStyle, templateBtnStyle, runAllBtnStyle } from '../styles/appStyl
 import { buildWorkflowPayload, type WorkflowFile } from '../utils/workflowIO'
 import { clearAllNotes } from '../store/notesStore'
 import { ExampleMenu } from './ExampleMenu'
+import { saveExample, slugify, fetchExamplesManifest, groupExamples } from '../utils/examplesClient'
 import { FixtureReferenceCard } from './FixtureReferenceCard'
 import { FixturePreflightPanel } from './FixturePreflightPanel'
 import { UsefulLinksModal } from './UsefulLinksModal'
@@ -74,21 +75,26 @@ export function TopBar({
   }
 
   // ── Save-as-example dialog ──
-  const [exampleDialog, setExampleDialog] = useState<{ title: string; description: string } | null>(null)
+  const [exampleDialog, setExampleDialog] = useState<{ title: string; description: string; group: string } | null>(null)
+  // Existing group names, offered as <datalist> suggestions so a facilitator files
+  // a new example under a section without retyping (and mistyping) its name.
+  const [groupNames, setGroupNames] = useState<string[]>([])
+  useEffect(() => {
+    if (!exampleDialog) return
+    fetchExamplesManifest()
+      .then(m => setGroupNames(groupExamples(m).groups.map(g => g.name)))
+      .catch(() => setGroupNames([]))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [exampleDialog !== null])
 
   async function handleSaveExample() {
     if (!exampleDialog) return
     const title = exampleDialog.title.trim()
     if (!title) return
-    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    const slug = slugify(title)
     const workflow = buildWorkflowPayload(nodes, edges)
     try {
-      const r = await fetch('/dev/write-example', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slug, title, description: exampleDialog.description.trim(), workflow }),
-      })
-      if (!r.ok) throw new Error(await r.text())
+      await saveExample({ slug, title, description: exampleDialog.description.trim(), group: exampleDialog.group.trim(), workflow })
       setExampleDialog(null)
     } catch (e) {
       alert(`Failed to save example: ${e instanceof Error ? e.message : String(e)}`)
@@ -112,7 +118,7 @@ export function TopBar({
         </span>
       </div>
       <div style={{ flex: 1 }} />
-      <ExampleMenu onLoad={wf => { try { applyWorkflow(wf) } catch (e) { setLoadError(e instanceof Error ? e.message : 'Failed to load example.') } }} />
+      <ExampleMenu authorMode={authorMode} onLoad={wf => { try { applyWorkflow(wf) } catch (e) { setLoadError(e instanceof Error ? e.message : 'Failed to load example.') } }} />
       <button
         style={templateBtnStyle}
         onClick={onSave}
@@ -124,7 +130,7 @@ export function TopBar({
       {authorMode && (
         <button
           style={{ ...templateBtnStyle, background: '#6f4a25', color: '#fef3c7', borderColor: '#6f4a25' }}
-          onClick={() => setExampleDialog({ title: '', description: '' })}
+          onClick={() => setExampleDialog({ title: '', description: '', group: '' })}
           title="Save current workflow as a loadable example (author mode)"
           disabled={nodes.length === 0}
         >
@@ -192,6 +198,23 @@ export function TopBar({
                 style={{ fontSize: 12, padding: '5px 8px', borderRadius: 5, border: '1px solid #4b5563', background: '#2c2a24', color: '#e2e8f0', outline: 'none' }}
                 onKeyDown={e => { if (e.key === 'Escape') setExampleDialog(null) }}
               />
+            </label>
+            <label style={{ fontSize: 12, display: 'flex', flexDirection: 'column', gap: 4 }}>
+              Group
+              <input
+                value={exampleDialog.group}
+                onChange={e => setExampleDialog(d => d ? { ...d, group: e.target.value } : null)}
+                placeholder="optional — e.g. Workshop day 1 (the Examples menu section)"
+                list="example-group-names"
+                style={{ fontSize: 12, padding: '5px 8px', borderRadius: 5, border: '1px solid #4b5563', background: '#2c2a24', color: '#e2e8f0', outline: 'none' }}
+                onKeyDown={e => { if (e.key === 'Enter') handleSaveExample(); if (e.key === 'Escape') setExampleDialog(null) }}
+              />
+              <datalist id="example-group-names">
+                {groupNames.map(g => <option key={g} value={g} />)}
+              </datalist>
+              <span style={{ fontSize: 10, color: '#8a8168' }}>
+                Same title overwrites the existing example. Leave Group blank for the flat list at the top of the menu.
+              </span>
             </label>
             <div style={{ display: 'flex', gap: 8, justifyContent: 'flex-end' }}>
               <button

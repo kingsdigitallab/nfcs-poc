@@ -156,7 +156,7 @@ flowchart TB
 Differences that matter:
 
 - **Saves only persist in production.** The Save button downloads a file *and* posts the workflow to `/api/save-workflow`. The dev server has no such route, and the client ignores the failure. In the container the file lands in `/app/data/workflows/`.
-- **Example authoring is dev-only by default.** Author mode in the top bar (click the version text five times) can write a new example into `public/examples/`. The same route exists on the production server but is off unless `ENABLE_EXAMPLE_AUTHORING=true`, because it has no authentication.
+- **Example authoring is dev-only by default.** Author mode in the top bar (click the version text five times) can save the canvas as an example (title, description and an optional **Group** — the accordion section the Examples menu files it under) and delete one with the ✕ beside each entry (inline confirm). Both routes (`/dev/write-example`, `/dev/delete-example`) live in `server/examples.mjs`, shared by Vite and Express, and regenerate `manifest.json` from the files on disk. They exist on the production server but are off unless `ENABLE_EXAMPLE_AUTHORING=true`, because they have no authentication.
 - **URL fetch is deny-all in production unless configured.** `URL_PROXY_ALLOWLIST` lists the host suffixes `/url-proxy` may reach. Unset means "any public host" in development and "nothing" in production. The deployed instance sets it in `.env`.
 - **Fixtures and examples are bind-mounted** in Compose, so editing them on the host changes the running instance without a rebuild.
 
