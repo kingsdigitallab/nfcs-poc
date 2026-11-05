@@ -50,6 +50,7 @@ export function SpatialFilterNode({ id }: { id: string }) {
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
+      crossOrigin: true,   // same as MapOutput — keeps the browser's tile cache CORS-clean for the map export
     }).addTo(map)
 
     const layerGroup = L.layerGroup().addTo(map)

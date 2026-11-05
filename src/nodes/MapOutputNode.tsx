@@ -30,11 +30,13 @@ import 'leaflet.markercluster'
 import 'leaflet.markercluster/dist/MarkerCluster.css'
 // @ts-ignore -- leaflet.markercluster ships no type declarations
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
+import { toPng, toJpeg } from 'html-to-image'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { runMapOutputNode } from '../utils/runMapOutputNode'
 import type { GisLayer } from '../utils/gisReaders'
 import { sourceIdentity } from '../utils/sourceIdentity'
 import { hasCoordinates } from '../utils/recordFacets'
+import { downloadBlob, dateStamp } from '../utils/exportUtils'
 
 // ─── data interface ───────────────────────────────────────────────────────────
 
@@ -58,6 +60,21 @@ function esc(s: string): string {
     .replace(/"/g, '&quot;')
 }
 
+// ─── image export ─────────────────────────────────────────────────────────────
+
+type ExportFormat = 'png' | 'jpeg'
+
+/**
+ * What the PNG / JPEG snapshot leaves out: the controls row (data-export-exclude)
+ * and Leaflet's zoom buttons. The attribution control stays in — OSM's tile
+ * licence requires the credit on any rendering of its tiles.
+ */
+function exportFilter(node: HTMLElement): boolean {
+  if (!(node instanceof HTMLElement)) return true       // text and SVG nodes pass through
+  if (node.dataset.exportExclude !== undefined) return false
+  return !node.classList.contains('leaflet-control-zoom')
+}
+
 // ─── component ────────────────────────────────────────────────────────────────
 
 const MAP_W = 480
@@ -68,6 +85,9 @@ export function MapOutputNode({ id }: NodeProps) {
   const [clusteringEnabled, setClusteringEnabled] = useState(true)
   const [isDrawing, setIsDrawing] = useState(false)
   const [startLatLng, setStartLatLng] = useState<L.LatLng | null>(null)
+  const [exporting, setExporting] = useState<ExportFormat | null>(null)
+  const [exportError, setExportError] = useState('')
+  const exportRef = useRef<HTMLDivElement>(null)   // map + bbox summary + legend (controls excluded by filter)
 
   const { updateNodeData, getNodes, getEdges } = useReactFlow()
 
@@ -127,6 +147,8 @@ export function MapOutputNode({ id }: NodeProps) {
       attribution:
         '© <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 19,
+      // CORS-loaded tiles can be inlined into the PNG / JPEG snapshot (OSM sends ACAO: *)
+      crossOrigin: true,
     }).addTo(map)
 
     mapRef.current         = map
@@ -412,6 +434,33 @@ export function MapOutputNode({ id }: NodeProps) {
     }
   }, [id, updateNodeData])
 
+  // ── PNG / JPEG export ──────────────────────────────────────────────────────
+  // A DOM snapshot (html-to-image) of the map + legend: SVG circle markers,
+  // cluster divIcons, the bbox rectangle and the attribution all come through,
+  // and the clone is rendered at the element's own size, so the React Flow
+  // viewport zoom does not shrink the result.
+  const handleExport = useCallback(async (format: ExportFormat) => {
+    const el = exportRef.current
+    if (!el || exporting) return
+    setExporting(format)
+    setExportError('')
+    try {
+      const opts = { pixelRatio: 2, filter: exportFilter, cacheBust: false }
+      const dataUrl = format === 'png'
+        ? await toPng(el, opts)
+        : await toJpeg(el, { ...opts, quality: 0.9, backgroundColor: '#ffffff' })
+      const blob = await (await fetch(dataUrl)).blob()
+      downloadBlob(blob, `map-${dateStamp()}.${format === 'png' ? 'png' : 'jpg'}`)
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err)
+      setExportError(/taint|SecurityError|cross-origin/i.test(msg)
+        ? 'Export failed: a map tile was loaded without CORS — reload the page and try again'
+        : `Export failed: ${msg}`)
+    } finally {
+      setExporting(null)
+    }
+  }, [exporting])
+
   // ── auto pass-through / live bbox filter ──────────────────────────────────
   // Runs the node automatically whenever upstream data or the bbox changes so
   // downstream nodes always receive current results without requiring Run click.
@@ -458,6 +507,9 @@ export function MapOutputNode({ id }: NodeProps) {
         <span style={styles.badge}>{headerNote}</span>
       </div>
 
+      {/* Everything inside exportRef is what ⬇ PNG / JPEG snapshots (minus data-export-exclude) */}
+      <div ref={exportRef} style={styles.exportArea}>
+
       {/* Leaflet map — nodrag + nowheel prevent RF from consuming map events */}
       <div
         ref={mapDivRef}
@@ -466,7 +518,7 @@ export function MapOutputNode({ id }: NodeProps) {
       />
 
       {/* Controls */}
-      <div style={styles.controls}>
+      <div style={styles.controls} data-export-exclude="">
         <label style={styles.clusterToggle}>
           <input
             type="checkbox"
@@ -507,6 +559,21 @@ export function MapOutputNode({ id }: NodeProps) {
           Run ▶
         </button>
 
+        <div style={styles.separator} />
+
+        {(['png', 'jpeg'] as ExportFormat[]).map(fmt => (
+          <button
+            key={fmt}
+            className="nodrag"
+            onClick={() => handleExport(fmt)}
+            disabled={!!exporting}
+            title={`Download the map with its pins, legend and attribution as ${fmt.toUpperCase()}`}
+            style={{ ...styles.btn, ...styles.btnClear, ...(exporting ? styles.btnDisabled : {}) }}
+          >
+            {exporting === fmt ? '…' : `⬇ ${fmt.toUpperCase()}`}
+          </button>
+        ))}
+
         {hasRunData && hasBbox && (
           <span style={styles.countBadge}>
             {nodeData!.outputCount} / {nodeData!.inputCount}
@@ -545,6 +612,10 @@ export function MapOutputNode({ id }: NodeProps) {
           ))}
         </div>
       )}
+
+      </div>{/* exportRef */}
+
+      {exportError && <div style={styles.exportError}>{exportError}</div>}
     </div>
   )
 }
@@ -583,6 +654,16 @@ const styles = {
     overflow:     'hidden',
     textOverflow: 'ellipsis',
     whiteSpace:   'nowrap' as const,
+  },
+  exportArea: {
+    background: '#fffdf7',   // explicit, so the PNG has no transparent gutters around the legend
+  },
+  exportError: {
+    fontSize:   10,
+    color:      '#b91c1c',
+    padding:    '3px 10px',
+    background: '#fef2f2',
+    borderTop:  '1px solid #fecaca',
   },
   controls: {
     display:    'flex',

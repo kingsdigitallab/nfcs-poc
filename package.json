@@ -21,6 +21,7 @@
     "@mozilla/readability": "^0.6.0",
     "@xyflow/react": "^12.3.6",
     "express": "^4.21.2",
+    "html-to-image": "1.11.13",
     "http-proxy-middleware": "^3.0.3",
     "leaflet": "^1.9.4",
     "leaflet.markercluster": "^1.5.3",

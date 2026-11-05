@@ -96,14 +96,18 @@ export function toGeoJSON(records: UnifiedRecord[]): string {
 
 // ─── download trigger ─────────────────────────────────────────────────────────
 
-export function downloadFile(content: string, filename: string, mimeType: string) {
-  const blob = new Blob([content], { type: mimeType })
-  const url  = URL.createObjectURL(blob)
-  const a    = document.createElement('a')
+/** Save a Blob through a transient <a download> (the one download trigger — text exports and the map image share it). */
+export function downloadBlob(blob: Blob, filename: string) {
+  const url = URL.createObjectURL(blob)
+  const a   = document.createElement('a')
   a.href     = url
   a.download = filename
   a.click()
   URL.revokeObjectURL(url)
+}
+
+export function downloadFile(content: string, filename: string, mimeType: string) {
+  downloadBlob(new Blob([content], { type: mimeType }), filename)
 }
 
 /** ISO date string suitable for a filename, e.g. "2026-04-13" */
