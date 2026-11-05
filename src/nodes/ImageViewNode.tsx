@@ -811,8 +811,9 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     updateNodeData(id, { mode: m }); setZoom(1); setHighlight(null)
   }
 
-  // Navigation steps RECORDS in both modes (IIIF: upstream entries, auto-loading
-  // each). Canvases within one manifest have their own stepper in the region bar.
+  // The Document / Record row steps RECORDS in both modes (IIIF: upstream entries,
+  // auto-loading each). In IIIF mode a Canvas/Page row sits directly beneath it
+  // and pages within the open document — the hierarchy reads top-down.
   const prevItem = () => mode === 'images'
     ? setRecordIndex(i => Math.max(0, i-1))
     : (entryIndex > 0 && loadEntry(iiifEntries[entryIndex - 1]))
@@ -929,7 +930,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
                     if (entry) loadEntry(entry)
                   }}
                   className="nodrag"
-                  title="Upstream records with a IIIF manifest or Image API service — ‹ › below steps through them"
+                  title="Upstream records with a IIIF manifest or Image API service — the Document ‹ › row below steps through them"
                 >
                   <option value="">— select from upstream ({iiifEntries.length}) —</option>
                   {iiifEntries.map((m, i) => (
@@ -968,7 +969,37 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           </div>
         )}
 
-        {/* Region annotator toolbar — IIIF only */}
+        {/* Navigation — Document (IIIF) / Record (Images) row. Steps the upstream
+            records; in IIIF mode each step loads that record's manifest or service. */}
+        {showNav && (
+          <div style={s.navBar}>
+            <span style={s.navCaption}>{mode === 'iiif' ? 'Document' : 'Record'}</span>
+            <button style={s.navBtn} onClick={prevItem} disabled={isFirst} className="nodrag"
+              title={mode === 'iiif' ? 'Previous document' : 'Previous record'}>‹</button>
+            <span style={s.navLabel} title={displayTitle}>{displayLabel}</span>
+            <span style={s.navCount} title={mode === 'images' && total !== upstreamCount ? `${total} of ${upstreamCount} upstream records have a value in ${selectedField}` : undefined}>
+              {current}/{total}{mode === 'images' && total !== upstreamCount ? ` (${upstreamCount} upstream)` : ''}
+            </span>
+            <button style={s.navBtn} onClick={nextItem} disabled={isLast} className="nodrag"
+              title={mode === 'iiif' ? 'Next document' : 'Next record'}>›</button>
+          </div>
+        )}
+
+        {/* Canvas/Page row — IIIF only, always shown once a document is loaded so the
+            document → page hierarchy is visible even for single-image entries. */}
+        {mode === 'iiif' && canvases && (
+          <div style={s.navSubBar} title="Canvases (pages) within the open IIIF document">
+            <span style={s.navCaption}>Canvas/Page</span>
+            <button style={s.navBtn} onClick={() => setCanvasIndex(i => Math.max(0, i - 1))}
+              disabled={safeCanvasIndex === 0} className="nodrag" title="Previous canvas/page">‹</button>
+            <span style={s.navLabel}>{currentCanvas?.label ?? ''}</span>
+            <span style={s.navCount}>{safeCanvasIndex + 1}/{canvasCount}</span>
+            <button style={s.navBtn} onClick={() => setCanvasIndex(i => Math.min(canvasCount - 1, i + 1))}
+              disabled={safeCanvasIndex === canvasCount - 1} className="nodrag" title="Next canvas/page">›</button>
+          </div>
+        )}
+
+        {/* Region annotator toolbar — IIIF only; capture tools, no navigation */}
         {mode === 'iiif' && canvases && (
           <div style={s.regionBar} className="nodrag">
             <button
@@ -979,13 +1010,6 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
             </button>
             {iiifRegions.length > 0 && (
               <span style={s.regionCount}>{iiifRegions.length} region{iiifRegions.length !== 1 ? 's' : ''}</span>
-            )}
-            {canvasCount > 1 && (
-              <span style={s.canvasStepper} title="Canvases within this manifest">
-                <button style={s.regionBtn} onClick={() => setCanvasIndex(i => Math.max(0, i - 1))} disabled={safeCanvasIndex === 0}>‹</button>
-                canvas {safeCanvasIndex + 1}/{canvasCount}
-                <button style={s.regionBtn} onClick={() => setCanvasIndex(i => Math.min(canvasCount - 1, i + 1))} disabled={safeCanvasIndex === canvasCount - 1}>›</button>
-              </span>
             )}
             <div style={{ flex: 1 }} />
             {iiifRegions.length > 0 && (
@@ -1009,18 +1033,6 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           </div>
         )}
 
-        {/* Navigation */}
-        {showNav && (
-          <div style={s.navBar}>
-            <button style={s.navBtn} onClick={prevItem} disabled={isFirst} className="nodrag">‹</button>
-            <span style={s.navLabel} title={displayTitle}>{displayLabel}</span>
-            <span style={s.navCount} title={mode === 'images' && total !== upstreamCount ? `${total} of ${upstreamCount} upstream records have a value in ${selectedField}` : undefined}>
-              {current}/{total}{mode === 'images' && total !== upstreamCount ? ` (${upstreamCount} upstream)` : ''}
-            </span>
-            <button style={s.navBtn} onClick={nextItem} disabled={isLast} className="nodrag">›</button>
-          </div>
-        )}
-
         {/* Image area */}
         <div style={s.imageWrap} className="nodrag nowheel">
           {manifestError ? (
@@ -1037,7 +1049,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
                     ? `No records have a value in "${selectedField}" — pick another field above`
                     : connected ? 'Select a field containing an image' : 'Connect a node to the input handle')
                 : (iiifEntries.length > 0
-                    ? 'Select a record above, or enter a manifest URL'
+                    ? 'Select a document above, or enter a manifest URL'
                     : 'Enter a IIIF manifest URL, or click Load example')}
             </div>
           ) : mode === 'iiif' ? (
@@ -1303,6 +1315,12 @@ const s = {
     display: 'flex', alignItems: 'center', gap: 4, padding: '3px 10px',
     borderBottom: '1px solid #f1f5f9', flexShrink: 0, minHeight: 26,
   },
+  // Canvas/Page row: same shape as navBar, indented and tinted so it reads as nested inside the Document row
+  navSubBar: {
+    display: 'flex', alignItems: 'center', gap: 4, padding: '3px 10px 3px 18px',
+    borderBottom: '1px solid #f1f5f9', flexShrink: 0, minHeight: 26, background: '#fbfaf7',
+  },
+  navCaption: { fontSize: 10, color: '#b0a891', fontWeight: 600, width: 64, flexShrink: 0 },
   navBtn: {
     background: 'rgba(0,0,0,0.07)', border: 'none', borderRadius: 3,
     width: 18, height: 18, fontSize: 13, cursor: 'pointer', display: 'flex',
@@ -1372,7 +1390,6 @@ const s = {
   },
   regionCount: { fontSize: 10, color: '#3b82f6', fontWeight: 700, fontFamily: 'monospace' },
   captureStatus: { fontSize: 10, padding: '2px 10px 4px', fontFamily: 'monospace', whiteSpace: 'nowrap' as const, overflow: 'hidden', textOverflow: 'ellipsis' },
-  canvasStepper: { display: 'flex', alignItems: 'center', gap: 4, fontSize: 10, color: '#b0a891', fontFamily: 'monospace' },
   gallery: {
     flexShrink: 0, borderTop: '1px solid #e2e8f0', background: '#fffdf7',
     maxHeight: 152, overflowY: 'auto' as const,
