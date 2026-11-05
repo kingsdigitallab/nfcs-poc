@@ -610,12 +610,12 @@ export const NODE_DEFAULTS: Record<string, (pos: XYPosition) => AppNode> = {
   }),
   timelineOutput: pos => ({
     id: newId('timeline'), type: 'timelineOutput', position: pos,
-    data: { fitToRange: false, filterStart: null, filterEnd: null } satisfies TimelineOutputNodeData,
+    data: { fitToRange: true, filterStart: null, filterEnd: null } satisfies TimelineOutputNodeData,
     style: { width: 520 },
   }),
   timelineView: pos => ({
     id: newId('timeline'), type: 'timelineView', position: pos,
-    data: { fitToRange: false, filterStart: null, filterEnd: null } satisfies TimelineOutputNodeData,
+    data: { fitToRange: true, filterStart: null, filterEnd: null } satisfies TimelineOutputNodeData,
     style: { width: 520 },
   }),
   ollamaOutput: pos => ({

@@ -140,7 +140,7 @@ export function TimelineViewNode({ id, data, width: measuredWidth, selected }: N
   useEffect(() => { savedStartRef.current = savedStart }, [savedStart])
   useEffect(() => { savedEndRef.current   = savedEnd   }, [savedEnd])
 
-  const fitToRange = d.fitToRange ?? false
+  const fitToRange = d.fitToRange ?? true
   const nodeWidth  = measuredWidth ?? DEFAULT_W
   const dateField  = (d.dateField ?? '') as string
 
