@@ -407,6 +407,12 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
   const [drawBox,      setDrawBox]      = useState<DrawBox | null>(null)
   const [capturing,    setCapturing]    = useState(false)
   const [captureStatus, setCaptureStatus] = useState<{ ok: boolean; text: string } | null>(null)
+  const [captureProgress, setCaptureProgress] = useState<{ done: number; total: number } | null>(null)
+  // Picture-level feedback: `manifestLoading` only covers the JSON fetch; the
+  // <img> download (and the /max/ fallback it may trigger) used to be silent.
+  const [imgLoading,   setImgLoading]   = useState(false)
+  const [imgError,     setImgError]     = useState('')
+  const imgRef = useRef<HTMLImageElement>(null)
   // IIIF services that refused a constrained size (SMG's zoom.* 403s !600,600 /
   // !2400,2400 but serves max — gotcha 33): render those at /full/max/ instead.
   const [sizedRefused, setSizedRefused] = useState<Set<string>>(() => new Set())
@@ -498,10 +504,12 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
       if (!c.length) throw new Error("This record's manifest lists no images — the object has no digitised media")
       setCanvases(c); setManifestMeta(meta); setCanvasIndex(opts?.canvasIndex ?? 0); setImageInfo(null)
     } catch (err) {
+      if (loadedUrlRef.current !== url.trim()) return
       setManError(err instanceof Error ? err.message : 'Failed to load manifest')
       setCanvases(null); setManifestMeta(null)
     } finally {
-      setManLoading(false)
+      // Only the current load owns the spinner — a stale one finishing late must not clear it
+      if (loadedUrlRef.current === url.trim()) setManLoading(false)
     }
   }, [])
 
@@ -581,6 +589,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     for (let i = 0; i < toCapture.length; i++) {
       const region = toCapture[i]
       const label  = region.label || `Region ${i + 1}`
+      setCaptureProgress({ done: i, total: toCapture.length })
       try {
         const box = { x: region.x, y: region.y, w: region.w, h: region.h }
         const dataUrl = currentCanvas.serviceUrl
@@ -617,6 +626,7 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     } else {
       setCaptureStatus({ ok: false, text: `✗ ${failures.join('; ')}` })
     }
+    setCaptureProgress(null)
     setCapturing(false)
   }, [currentCanvas, canvases, safeCanvasIndex, currentEntry, iiifRegions, id, loadedUrl, manifestMeta, updateNodeData, saveRegions])
 
@@ -717,8 +727,28 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
     : thumb
   const onIiifImgError = () => {
     const svc = currentCanvas?.serviceUrl
-    if (mode === 'iiif' && svc && sizeParam !== 'max') setSizedRefused(prev => new Set(prev).add(svc))
+    if (mode === 'iiif' && svc && sizeParam !== 'max') {
+      // Retry at /full/max/ — that changes displaySrc, which re-arms the spinner below
+      setSizedRefused(prev => new Set(prev).add(svc))
+      return
+    }
+    setImgLoading(false)
+    setImgError(svc
+      ? 'Image failed to load — the IIIF server refused both the sized and the full-size request'
+      : 'Image failed to load')
   }
+  const onIiifImgLoad = () => setImgLoading(false)
+
+  // Arm the picture spinner whenever a new src is requested (new canvas, zoom
+  // tier, or the /max/ fallback); onLoad / onError disarm it. An image the
+  // browser already has (cache hit, load fired before this effect) never arms.
+  useEffect(() => {
+    setImgError('')
+    if (mode !== 'iiif' || !displaySrc) { setImgLoading(false); return }
+    const el = imgRef.current
+    setImgLoading(!(el && el.complete && el.naturalWidth > 0 && el.currentSrc === displaySrc))
+  }, [displaySrc, mode])
+  const pictureBusy = imgLoading || capturing
 
   // Both modes name the source and the record so the user always knows what is
   // on screen (`Source · title`, record page as tooltip); a manually entered
@@ -810,7 +840,10 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
 
         {/* Header */}
         <div style={s.header}>
-          <span style={s.headerTitle}>Image View</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+            <span style={s.headerTitle}>Image View</span>
+            {(manifestLoading || pictureBusy) && <span className="node-spinner" title="Loading…" />}
+          </span>
           <div style={s.modeGroup}>
             <button style={{ ...s.modeBtn, ...(mode==='images' ? s.modeBtnActive : {}) }} onClick={() => setMode('images')} className="nodrag">Images</button>
             <button style={{ ...s.modeBtn, ...(mode==='iiif'   ? s.modeBtnActive : {}) }} onClick={() => setMode('iiif')}   className="nodrag">IIIF</button>
@@ -993,7 +1026,10 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
           {manifestError ? (
             <div style={s.errorMsg}>{manifestError}</div>
           ) : (thumbLoading || (mode === 'iiif' && manifestLoading)) ? (
-            <div style={s.placeholder}>Loading…</div>
+            <div style={{ ...s.placeholder, display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span className="node-spinner node-spinner--dark" />
+              {mode === 'iiif' ? 'Loading manifest…' : 'Loading…'}
+            </div>
           ) : !displaySrc ? (
             <div style={s.placeholder}>
               {mode === 'images'
@@ -1005,9 +1041,21 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
                     : 'Enter a IIIF manifest URL, or click Load example')}
             </div>
           ) : mode === 'iiif' ? (
-            <div style={{ position: 'relative', display: 'inline-block', lineHeight: 0, minWidth: 0 }}>
-              <img src={displaySrc} alt={recordTitle} onError={onIiifImgError}
+            // While the picture has no size yet the wrapper keeps a footprint so the overlay is visible
+            <div style={{ position: 'relative', display: 'inline-block', lineHeight: 0, minWidth: pictureBusy ? 240 : 0, minHeight: pictureBusy ? 120 : 0 }}>
+              <img ref={imgRef} src={displaySrc} alt={recordTitle} onError={onIiifImgError} onLoad={onIiifImgLoad}
                 style={{ width: `${zoom * 100}%`, maxWidth: 'none', height: 'auto', display: 'block' }} />
+              {pictureBusy && (
+                <div style={s.imgOverlay} data-testid="image-loading">
+                  <span className="node-spinner node-spinner--dark" />
+                  <span>
+                    {capturing
+                      ? (captureProgress ? `Capturing region ${captureProgress.done + 1} of ${captureProgress.total}…` : 'Capturing…')
+                      : 'Loading image…'}
+                  </span>
+                </div>
+              )}
+              {imgError && !pictureBusy && <div style={s.imgErrorBanner}>{imgError}</div>}
               <svg
                 ref={svgRef}
                 viewBox="0 0 1 1"
@@ -1278,6 +1326,16 @@ const s = {
   errorMsg: {
     padding: '20px 16px', color: '#dc2626', fontSize: 11,
     textAlign: 'center' as const, alignSelf: 'center' as const,
+  },
+  // Translucent panel over the picture while it downloads or regions are captured
+  imgOverlay: {
+    position: 'absolute' as const, inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+    gap: 8, background: 'rgba(248,250,252,0.72)', color: '#6b6250', fontSize: 11, lineHeight: 1.4,
+    fontStyle: 'italic' as const, pointerEvents: 'none' as const,
+  },
+  imgErrorBanner: {
+    position: 'absolute' as const, left: 0, right: 0, bottom: 0, padding: '4px 8px',
+    background: 'rgba(220,38,38,0.9)', color: '#fff', fontSize: 10, lineHeight: 1.4, textAlign: 'center' as const,
   },
   zoomBar: {
     display: 'flex', alignItems: 'center', gap: 4, padding: '4px 10px',

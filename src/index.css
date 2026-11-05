@@ -92,3 +92,9 @@ html, body, #root {
   color: #b0a891;
 }
 .react-flow__attribution a { color: #8a8168; }
+
+/* Dark variant for light surfaces (Image View's picture area) */
+.node-spinner--dark {
+  border-color: rgba(50, 42, 26, 0.2);
+  border-top-color: #6b6250;
+}
