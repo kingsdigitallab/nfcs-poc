@@ -207,13 +207,16 @@ const styles = {
   cardList:   { display: 'flex', flexDirection: 'column' as const, gap: 0, maxHeight: 480, overflowY: 'auto' as const },
   responseCard: { padding: '10px 12px', borderBottom: '1px solid #f0f0f0', display: 'flex', flexDirection: 'column' as const, gap: 5 },
   cardTop:    { display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 8 },
-  cardTitle:  { fontSize: 12, fontWeight: 600, color: '#1e293b', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const, flex: 1 },
+  cardTitle:  { fontSize: 12, fontWeight: 600, color: '#1e293b', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' as const, flex: 1, userSelect: 'text' as const },
   cardThumb:  { width: 44, height: 44, objectFit: 'cover' as const, borderRadius: 3, border: '1px solid #d6ccb5', flexShrink: 0, display: 'block' },
   cardActions: { display: 'flex', gap: 4, flexShrink: 0 },
   actionBtn:  { background: 'none', border: 'none', cursor: 'pointer', fontSize: 14, padding: '0 2px', lineHeight: 1 },
   metaRow:    { display: 'flex', flexWrap: 'wrap' as const, gap: 4 },
   metaPill:   { fontSize: 9, fontWeight: 600, padding: '1px 6px', borderRadius: 10, background: '#f1f5f9', color: '#475569' },
-  responseText: { fontSize: 12, color: '#33302a', lineHeight: 1.65, whiteSpace: 'pre-wrap' as const, wordBreak: 'break-word' as const },
+  // userSelect: React Flow's stylesheet sets user-select:none on every node; the
+  // list is already nodrag, so re-enabling it here lets a sentence be selected
+  // and copied without moving the node.
+  responseText: { fontSize: 12, color: '#33302a', lineHeight: 1.65, whiteSpace: 'pre-wrap' as const, wordBreak: 'break-word' as const, userSelect: 'text' as const, cursor: 'text' },
   expandBtn:  { background: 'none', border: 'none', color: '#be123c', fontSize: 11, cursor: 'pointer', padding: '2px 0', textAlign: 'left' as const },
   inputHandle: { width: 10, height: 10, background: HEADER_COLOR, border: '2px solid #fff', boxShadow: `0 0 0 1px ${HEADER_COLOR}` },
 }
