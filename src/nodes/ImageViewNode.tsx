@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import { Handle, Position, NodeProps, useReactFlow, NodeResizer } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
 import { setNodeResults, clearNodeResults, getNodeResults } from '../store/resultsStore'
-import { buildCaptureRecord, appendCaptures, isCaptureRecord, resolveCaptureTarget, removeCapture } from '../utils/captureRecords'
+import { buildCaptureRecord, appendCaptures, isCaptureRecord, resolveCaptureTarget, removeCapture, nextRegionNumber } from '../utils/captureRecords'
 import { getFieldByPath } from '../utils/fieldPath'
 import { recordsWithField, collectImageFieldCandidates } from '../utils/imageFields'
 import { resolveImageSrc, extractServiceBase, imageServiceUrl, iiifSizeParam, iiifSizeLabel } from '../utils/iiifImage'
@@ -701,11 +701,11 @@ export function ImageViewNode({ id, data, selected }: NodeProps) {
       const { x, y } = getSvgCoords(e)
       const nb = normalizeBox({ ...drawBox, curX: x, curY: y })
       if (nb.w > 0.02 && nb.h > 0.02) {
-        saveRegions([...iiifRegions, { id: `r${Date.now()}`, ...nb, label: `Region ${iiifRegions.length + 1}` }])
+        saveRegions([...iiifRegions, { id: `r${Date.now()}`, ...nb, label: `Region ${nextRegionNumber(captures, iiifRegions)}` }])
       }
     }
     setDrawBox(null)
-  }, [drawMode, drawBox, getSvgCoords, iiifRegions, saveRegions])
+  }, [drawMode, drawBox, getSvgCoords, iiifRegions, saveRegions, captures])
 
   // Build display URL: for IIIF Image API services use a zoom-tiered size param
   // rather than /full/max — this is the key efficiency gain.

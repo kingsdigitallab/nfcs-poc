@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { buildCaptureRecord, isCaptureRecord, appendCaptures, resolveCaptureTarget, removeCapture, type CaptureMeta } from '../utils/captureRecords'
+import { buildCaptureRecord, isCaptureRecord, appendCaptures, resolveCaptureTarget, removeCapture, nextRegionNumber, type CaptureMeta } from '../utils/captureRecords'
 import type { IiifEntry } from '../utils/iiifEntries'
 
 const PNG = 'data:image/png;base64,iVBORw0KGgo='
@@ -115,5 +115,24 @@ describe('appendCaptures', () => {
     expect(isCaptureRecord(single)).toBe(false)
     expect(appendCaptures([single], [a]).map(r => r._id)).toEqual([a._id])
     expect(appendCaptures(undefined, [a])).toHaveLength(1)
+  })
+})
+
+describe('nextRegionNumber', () => {
+  const cap = (title: string) => buildCaptureRecord(PNG, { ...meta, regionLabel: title })
+
+  it('starts at 1 with no captures and no pending regions', () => {
+    expect(nextRegionNumber([], [])).toBe(1)
+  })
+
+  it('is max + 1 over captures and pending regions, so a removed capture never frees its number', () => {
+    expect(nextRegionNumber([cap('Region 1'), cap('Region 3')], [{ label: 'Region 4' }])).toBe(5)
+    expect(nextRegionNumber([cap('Region 2')], [])).toBe(3)
+    expect(nextRegionNumber([], [{ label: 'Region 1' }, { label: 'Region 2' }])).toBe(3)
+  })
+
+  it('ignores titles that are not Region n (full-canvas captures, renamed regions)', () => {
+    expect(nextRegionNumber([cap('Full canvas'), cap('p. 12')], [{ label: 'Detail' }])).toBe(1)
+    expect(nextRegionNumber([cap('Region 7'), cap('Region seven')], [])).toBe(8)
   })
 })

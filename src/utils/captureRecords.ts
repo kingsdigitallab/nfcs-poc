@@ -129,3 +129,26 @@ export function appendCaptures(
 ): Record<string, unknown>[] {
   return [...(existing ?? []).filter(isCaptureRecord), ...added]
 }
+
+const REGION_LABEL = /^Region (\d+)$/
+
+/**
+ * The number for the next drawn region: max + 1 over the collection's capture
+ * titles AND the regions still pending, never count + 1 — the pending list is
+ * emptied after every capture (which made every capture "Region 1") and a
+ * removed capture must not free its number for a duplicate.
+ */
+export function nextRegionNumber(
+  captures: Record<string, unknown>[],
+  pending: { label: string }[],
+): number {
+  let max = 0
+  const consider = (label: unknown) => {
+    if (typeof label !== 'string') return
+    const m = REGION_LABEL.exec(label)
+    if (m) max = Math.max(max, Number(m[1]))
+  }
+  for (const c of captures) consider(c.title)
+  for (const r of pending) consider(r.label)
+  return max + 1
+}
