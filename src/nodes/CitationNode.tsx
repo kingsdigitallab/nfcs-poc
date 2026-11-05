@@ -9,7 +9,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Handle, Position, NodeProps } from '@xyflow/react'
 import { useUpstreamRecords } from '../hooks/useUpstreamRecords'
-import { formatAllCitations, type RecordCitation } from '../utils/citationUtils'
+import { formatAllCitations, citableRecords, citationFingerprint, type RecordCitation } from '../utils/citationUtils'
 
 const HEADER_COLOR = '#6f4a25'
 const PAGE_SIZE    = 10
@@ -24,16 +24,17 @@ export function CitationNode({ id }: NodeProps) {
   const [copied, setCopied]    = useState(false)
 
   const recs     = (records ?? []) as Record<string, unknown>[]
-  const citable  = useMemo(
-    () => recs.filter(r => r._citation && typeof r._citation === 'object' && !Array.isArray(r._citation)),
-    [recs],
-  )
+  const citable  = useMemo(() => citableRecords(recs), [records])  // eslint-disable-line react-hooks/exhaustive-deps
   const uncited  = recs.length - citable.length
   const pageCount = Math.ceil(citable.length / PAGE_SIZE)
-  const pageRecs  = citable.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
+  // Clamp at render time so a shrinking set never leaves the page past the end
+  const safePage  = Math.min(page, Math.max(0, pageCount - 1))
+  const pageRecs  = citable.slice(safePage * PAGE_SIZE, (safePage + 1) * PAGE_SIZE)
 
-  // Reset to page 0 when upstream records change
-  useEffect(() => { setCitePage(0) }, [records])
+  // Reset to page 0 when the upstream SET changes — keyed on a content
+  // fingerprint, not the array (which is a new reference every render).
+  const fingerprint = citationFingerprint(citable)
+  useEffect(() => { setCitePage(0) }, [fingerprint])
 
   const handleCopyAll = async () => {
     await navigator.clipboard.writeText(formatAllCitations(recs))
@@ -74,7 +75,7 @@ export function CitationNode({ id }: NodeProps) {
         )}
         {connected && citable.length === 0 && recs.length > 0 && (
           <div style={styles.empty}>
-            No citation metadata found. Only records from GBIF, ADS, LLDS, MDS, and ADS Library carry citations.
+            No citation metadata found. Records from the search nodes carry citations; file and folder sources do not.
           </div>
         )}
 
@@ -84,7 +85,7 @@ export function CitationNode({ id }: NodeProps) {
           const creators = Array.isArray(c.creator) ? c.creator.join('; ') : c.creator
 
           return (
-            <div key={c.recordId ?? String(page * PAGE_SIZE + i)} style={styles.entry}>
+            <div key={c.recordId ?? String(safePage * PAGE_SIZE + i)} style={styles.entry}>
               <div style={styles.entryTop}>
                 <span style={styles.badge}>{c.service}</span>
                 {c.date && <span style={styles.entryDate}>{c.date}</span>}
@@ -161,18 +162,18 @@ export function CitationNode({ id }: NodeProps) {
       {pageCount > 1 && (
         <div style={styles.pagination}>
           <button
-            style={{ ...styles.pageBtn, opacity: page === 0 ? 0.35 : 1 }}
-            disabled={page === 0}
-            onClick={() => setCitePage(p => p - 1)}
+            style={{ ...styles.pageBtn, opacity: safePage === 0 ? 0.35 : 1 }}
+            disabled={safePage === 0}
+            onClick={() => setCitePage(safePage - 1)}
             className="nodrag"
           >
             ‹ Prev
           </button>
-          <span style={styles.pageLabel}>{page + 1} / {pageCount}</span>
+          <span style={styles.pageLabel}>{safePage + 1} / {pageCount}</span>
           <button
-            style={{ ...styles.pageBtn, opacity: page >= pageCount - 1 ? 0.35 : 1 }}
-            disabled={page >= pageCount - 1}
-            onClick={() => setCitePage(p => p + 1)}
+            style={{ ...styles.pageBtn, opacity: safePage >= pageCount - 1 ? 0.35 : 1 }}
+            disabled={safePage >= pageCount - 1}
+            onClick={() => setCitePage(safePage + 1)}
             className="nodrag"
           >
             Next ›

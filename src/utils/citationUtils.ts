@@ -47,9 +47,26 @@ export function formatRecordCitation(c: RecordCitation): string {
   return parts.join('. ')
 }
 
+/** The records that carry a `_citation` object (the one filter the node and the formatter share). */
+export function citableRecords<T extends Record<string, unknown>>(records: T[]): T[] {
+  return records.filter(r => !!r._citation && typeof r._citation === 'object' && !Array.isArray(r._citation))
+}
+
+/**
+ * Identity of a citable set for "reset the page when upstream changes":
+ * length + first and last ids. `useUpstreamRecords` rebuilds its array every
+ * render, so keying an effect on the array itself reset the page on every
+ * click (the pagination that never left page 1).
+ */
+export function citationFingerprint(citable: Record<string, unknown>[]): string {
+  const first = citable[0]?.id ?? ''
+  const last  = citable[citable.length - 1]?.id ?? ''
+  return `${citable.length}:${String(first)}:${String(last)}`
+}
+
 /** Format all per-record citations from a record set for copy / download. */
 export function formatAllCitations(records: Record<string, unknown>[]): string {
-  const citable = records.filter(r => r._citation && typeof r._citation === 'object' && !Array.isArray(r._citation))
+  const citable = citableRecords(records)
   if (citable.length === 0) return 'No citation metadata available.'
   return citable
     .map((r, i) => `[${i + 1}] ${formatRecordCitation(r._citation as RecordCitation)}`)
