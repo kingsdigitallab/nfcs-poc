@@ -1,18 +1,7 @@
 import React from 'react'
 import { NodeToolbar, Position, useReactFlow, type NodeProps } from '@xyflow/react'
 import { invokeToggle } from '../utils/groupToggleRegistry'
-import { newId } from '../utils/nodeIdCounter'
-
-// Fields that are runtime-only and should not be copied to the duplicate.
-const RUNTIME_FIELDS = new Set([
-  'results', 'status', 'statusMessage', 'count',
-  'inputCount', 'outputCount', 'removedCount',
-  'resolvedCount', 'reviewCount',
-  'resultsVersion', '_capped', '_total',
-  'folderName', 'fileName', 'columnNames',
-  'pdfCount', 'xmlCount', 'textCount', 'imageCount',
-  'filterCount', 'totalCount',
-])
+import { duplicateNodes } from '../utils/duplicateNodes'
 
 export function withToolbar(Wrapped: React.ComponentType<NodeProps>): React.ComponentType<NodeProps> {
   function ToolbarNode(props: NodeProps) {
@@ -21,90 +10,16 @@ export function withToolbar(Wrapped: React.ComponentType<NodeProps>): React.Comp
     const d = props.data as Record<string, unknown>
     const collapsed = !!d.collapsed
 
+    // Same implementation as Ctrl+D (useDuplicateSelection), for this one node.
+    // The clone set is computed here, outside the updaters, so ids are minted
+    // once even when StrictMode runs an updater twice.
     const handleDuplicate = (e: React.MouseEvent) => {
       e.stopPropagation()
-      const all = getNodes()
-      const edges = getEdges()
-      const node = all.find(n => n.id === props.id)
-      if (!node) return
-
-      const cloneData = (data: object) => Object.fromEntries(
-        Object.entries(structuredClone(data)).filter(([k]) => !RUNTIME_FIELDS.has(k))
-      )
-
-      setNodes(prevNodes => {
-        const base = prevNodes.map(n => ({ ...n, selected: false }))
-
-        if (node.type === 'group') {
-          const children = prevNodes.filter(n => n.parentId === node.id)
-          const childIds = new Set(children.map(c => c.id))
-          const groupId = newId('group')
-          const idMap = new Map([[node.id, groupId]])
-
-          // Drop collapse-related fields from the clone. The original edge
-          // ids stored in proxyEdges would still point at the source group's
-          // edges, so leaving them in place can corrupt the original group
-          // the first time the clone is expanded.
-          const baseData = cloneData(node.data as object)
-          delete (baseData as Record<string, unknown>).collapsed
-          delete (baseData as Record<string, unknown>).proxyEdges
-          delete (baseData as Record<string, unknown>).childPositions
-
-          const newGroup = {
-            ...node,
-            id: groupId,
-            position: { x: node.position.x + 40, y: node.position.y + 40 },
-            selected: true,
-            // Reset the visual pill state in case the source was collapsed
-            style: {
-              ...((node as any).style ?? {}),
-              border: '2px dashed #3b82f6',
-              borderRadius: 10,
-            },
-            data: baseData,
-          }
-
-          const clonedChildren = children.map(child => {
-            const newId_val = newId(child.type ?? 'node')
-            idMap.set(child.id, newId_val)
-            return {
-              ...child,
-              id: newId_val,
-              parentId: groupId,
-              position: { x: child.position.x, y: child.position.y },
-              extent: child.extent,
-              data: cloneData(child.data as object),
-            }
-          })
-
-          const internalEdges = edges.filter(
-            ed => childIds.has(ed.source) && childIds.has(ed.target)
-          )
-
-          const clonedEdges = internalEdges.map(ed => ({
-            ...ed,
-            id: newId('edge'),
-            source: idMap.get(ed.source)!,
-            target: idMap.get(ed.target)!,
-          }))
-
-          if (clonedEdges.length > 0) {
-            setEdges(prevEdges => [...prevEdges, ...clonedEdges])
-          }
-
-          return [...base, newGroup, ...clonedChildren]
-        }
-
-        const newNode = {
-          ...node,
-          id: newId(node.type ?? 'node'),
-          position: { x: node.position.x + 40, y: node.position.y + 40 },
-          selected: true,
-          data: cloneData(node.data as object),
-        }
-
-        return [...base, newNode]
-      })
+      const { nodes: added, edges: addedEdges, skipped } = duplicateNodes(getNodes(), getEdges(), [props.id])
+      if (skipped.length > 0) { invokeToggle(props.id); return }   // collapsed group: expand first, as delete does
+      if (added.length === 0) return
+      setNodes(prev => [...prev.map(n => (n.selected ? { ...n, selected: false } : n)), ...added])
+      if (addedEdges.length > 0) setEdges(prev => [...prev, ...addedEdges])
     }
 
     const handleDelete = (e: React.MouseEvent) => {

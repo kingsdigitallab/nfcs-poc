@@ -227,9 +227,9 @@ Each group has a small toolbar (▼ / ▶) at the top-right corner. Click ▼ to
 
 A group automatically expands its bounding box when a child node is resized or when a new node is dragged inside it (`expandParent`). Groups are also restored to their expanded state when a workflow is reloaded.
 
-### Duplicating groups
+### Duplicating nodes and groups
 
-The ⧉ toolbar button duplicates a group together with all its children and any internal edges. External edges (connecting group children to nodes outside the group) are not duplicated.
+Select any number of nodes (click, Shift+click, or drag a selection box) and press **Ctrl+D** (**Cmd+D** on Mac) to duplicate them all: the copies appear offset by 40 px, selected, with their configuration but none of their results. Edges between duplicated nodes are copied; edges to nodes outside the selection are not. A selected group brings all its children; a collapsed group is expanded first — press again to duplicate it. The ⧉ toolbar button does the same for one node. With nothing selected the key is left to the browser.
 
 ---
 

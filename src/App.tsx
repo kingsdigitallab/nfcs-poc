@@ -28,6 +28,7 @@ import { Sidebar } from './components/Sidebar'
 import { TopBar } from './components/TopBar'
 import { useWorkflowIO } from './hooks/useWorkflowIO'
 import { useGrouping } from './hooks/useGrouping'
+import { useDuplicateSelection } from './hooks/useDuplicateSelection'
 import { useCanvasConnections } from './hooks/useCanvasConnections'
 import { runWorkflow } from './utils/runWorkflow'
 import type { UnifiedRecord } from './types/UnifiedRecord'
@@ -68,6 +69,7 @@ export default function App() {
     useWorkflowIO(nodes, edges, setNodes, setEdges)
 
   const { handleGroupSelected, handleUngroup } = useGrouping(rfInstance, nodes, setNodes)
+  useDuplicateSelection(rfInstance, setNodes, setEdges)   // Ctrl+D / Cmd+D
 
   const {
     connMenu, setConnMenu,
