@@ -75,10 +75,11 @@ COPY --chown=node:node --from=builder /app/dist ./dist
 COPY --chown=node:node server/ ./server/
 
 # The server runs as the unprivileged `node` user. The entrypoint starts as
-# root only long enough to chown the writable mounts (/app/data volume,
-# dist/examples bind mount) — which may be root-owned from an earlier image —
-# then drops to `node` with setpriv (util-linux, present in node:*-slim).
-RUN mkdir -p /app/data /app/dist/examples     && chown node:node /app /app/data /app/dist/examples     && chmod +x /app/server/docker-entrypoint.sh
+# root only long enough to chown the one writable mount (the dist/examples
+# bind mount, which may be root-owned when nothing is mounted over it), then
+# drops to `node` with setpriv (util-linux, present in node:*-slim). There is
+# no data volume: the app persists nothing server-side.
+RUN mkdir -p /app/dist/examples     && chown node:node /app /app/dist/examples     && chmod +x /app/server/docker-entrypoint.sh
 
 EXPOSE 3001
 

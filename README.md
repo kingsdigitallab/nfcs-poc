@@ -775,61 +775,11 @@ Any JSON file produced by **Export** (format: JSON) can also be loaded into **Lo
 
 ---
 
-## Workshop deployment and retrieving saves
+## Saving workflows
 
-When running the Docker deployment (`docker compose up`, Express server in `server/index.mjs`), every time a participant clicks **💾 Save** a copy of their workflow is silently posted to the server and written to `/app/data/workflows/` inside the container, in addition to the usual local browser download. Files are stored in a named Docker volume (`workflow_saves`) so they survive container restarts.
+**💾 Save** downloads the workflow (`workflow-YYYY-MM-DD.json`) to your browser and does nothing else: nothing is sent to or stored on the server, in either run mode. Workshop facilitators who want participants' workflows should ask participants to share the downloaded file.
 
-### File naming
-
-Each file is named by UTC timestamp plus a random suffix to prevent collisions when multiple participants save simultaneously:
-
-```
-2026-05-28T14-30-00-000Z-x3k9mf.json
-```
-
-Files contain the full workflow JSON (nodes, edges, configuration) plus two server-injected fields:
-
-| Field | Description |
-|-------|-------------|
-| `serverReceivedAt` | ISO timestamp of when the server received the save |
-| `remoteIp` | Participant's IP address — useful for grouping saves by participant |
-
-### Listing saves (without extracting)
-
-```bash
-docker compose exec app ls /app/data/workflows/
-```
-
-### Extracting all saves to a local folder
-
-Using Docker Compose v2 (`docker compose cp`):
-
-```bash
-docker compose cp app:/app/data/workflows/ ./workshop-saves/
-```
-
-This creates a `workshop-saves/` directory in your current folder containing all `.json` files.
-
-If you need to use plain `docker cp` instead, first get the container name:
-
-```bash
-docker ps --format '{{.Names}}'
-# e.g. nfcs-poc-app-1
-
-docker cp nfcs-poc-app-1:/app/data/workflows/ ./workshop-saves/
-```
-
-### After extraction
-
-Each file is a standard JSON object you can open in any text editor or analyse with tools like `jq`:
-
-```bash
-# Count saves per participant IP
-jq -r '.remoteIp' workshop-saves/*.json | sort | uniq -c | sort -rn
-
-# List all node types used across all saved workflows
-jq -r '[.[].nodes[].type] | unique[]' workshop-saves/*.json | sort | uniq -c | sort -rn
-```
+The server keeps no copies of user content and records no client identifiers. (A server-side copy of every save, including the client IP address, existed from May to November 2026 and was removed after a data-protection review — see `docs/engineering-review.md`, finding S4. `src/__tests__/noServerSideSaves.test.ts` fails if anything of the kind is reintroduced.)
 
 ---
 

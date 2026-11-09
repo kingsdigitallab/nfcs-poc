@@ -13,7 +13,6 @@ import express from 'express'
 import { createProxyMiddleware } from 'http-proxy-middleware'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
-import { mkdir, writeFile } from 'fs/promises'
 import {
   PROXY_TABLE,
   lldsSearchMiddleware,
@@ -77,35 +76,11 @@ if (process.env.ENABLE_EXAMPLE_AUTHORING === 'true') {
   app.use(exampleAuthoringMiddleware(join(__dirname, '../dist/examples')))
 }
 
-// ── Workshop workflow saves ────────────────────────────────────────────────────
-
-const WORKFLOWS_DIR = join(__dirname, '../data/workflows')
-mkdir(WORKFLOWS_DIR, { recursive: true })
-  .catch(err => console.error('[save] Could not create workflows directory:', err))
-
-app.post('/api/save-workflow', express.json({ limit: '10mb' }), (req, res) => {
-  const body = req.body
-  if (!body || body.version == null || !Array.isArray(body.nodes) || !Array.isArray(body.edges)) {
-    res.status(400).json({ error: 'Invalid workflow payload' })
-    return
-  }
-  const enriched = {
-    ...body,
-    serverReceivedAt: new Date().toISOString(),
-    remoteIp: req.headers['x-forwarded-for'] ?? req.socket.remoteAddress ?? 'unknown',
-  }
-  const random   = Math.random().toString(36).slice(2, 8)
-  const filename = `${new Date().toISOString().replace(/:/g, '-')}-${random}.json`
-  writeFile(join(WORKFLOWS_DIR, filename), JSON.stringify(enriched, null, 2))
-    .then(() => {
-      console.log(`[save] Workflow saved: ${filename}`)
-      res.status(201).json({ saved: filename })
-    })
-    .catch(err => {
-      console.error('[save] Write failed:', err)
-      res.status(500).json({ error: 'Failed to save workflow' })
-    })
-})
+// No other write endpoints. The server must never persist or log user content
+// or client identifiers (IP address, headers) — a server-side copy of every
+// Save was removed in Nov 2026 after a data-protection review
+// (docs/engineering-review.md S4); src/__tests__/noServerSideSaves.test.ts
+// fails if anything of the kind is reintroduced.
 
 // ── Static frontend + SPA fallback ────────────────────────────────────────────
 

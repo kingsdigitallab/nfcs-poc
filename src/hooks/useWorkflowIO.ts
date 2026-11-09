@@ -7,7 +7,7 @@ import type { Dispatch, SetStateAction } from 'react'
 import type { Edge, Node } from '@xyflow/react'
 import { bumpCounterPast } from '../utils/nodeIdCounter'
 import {
-  buildWorkflowPayload, downloadWorkflow, parseWorkflowFile, hydrateNodes,
+  downloadWorkflow, parseWorkflowFile, hydrateNodes,
   partitionUnknownNodes, type WorkflowFile,
 } from '../utils/workflowIO'
 import { nodeTypes } from '../nodes'
@@ -29,15 +29,12 @@ export function useWorkflowIO(
   const workflowIdRef = useRef<string>(randomUUID())
   const [loadError, setLoadError] = useState<string | null>(null)
 
+  // Save is browser-only: the workflow file is downloaded and nothing is sent
+  // to the server. (A server-side copy with the client IP was removed in
+  // Nov 2026 after a data-protection review — see docs/engineering-review.md S4.)
   const handleSave = useCallback(() => {
     const extras = { workflowId: workflowIdRef.current, notes: exportNotes() }
-    const payload = buildWorkflowPayload(nodes, edges, extras)
     downloadWorkflow(nodes, edges, extras)
-    fetch('/api/save-workflow', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    }).catch(() => {})
   }, [nodes, edges])
 
   // Shared workflow application logic — used by both file Load and Example load.
