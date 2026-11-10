@@ -17,7 +17,6 @@ services:
       - URL_PROXY_ALLOWLIST=${URL_PROXY_ALLOWLIST:-}
       - ENABLE_EXAMPLE_AUTHORING=${ENABLE_EXAMPLE_AUTHORING:-false}
     volumes:
-      - workflow_saves:/app/data
       # Mount host public/fixtures/ over the built dist/fixtures/ so fixture
       # updates committed to the repo take effect after git pull + docker
       # compose restart — no image rebuild needed.
@@ -57,5 +56,3 @@ services:
 volumes:
   # Persists downloaded Ollama models across container restarts
   ollama_data:
-  # Persists workshop workflow saves across container restarts
-  workflow_saves:

@@ -35,7 +35,6 @@ flowchart LR
     PX["Proxy layer<br/>Express + server/proxies.mjs"]
     CH["Headless Chromium<br/>(Puppeteer)"]
     OL["Ollama<br/>(optional local LLM)"]
-    VOL[("workflow_saves<br/>volume")]
   end
   subgraph Ext["External services"]
     DS["Heritage data services<br/>GBIF, Europeana, Bodleian, SMG, V&A,<br/>ARIADNE, HSDS, LLDS, MDS"]
@@ -52,8 +51,6 @@ flowchart LR
   PX -->|"/url-proxy, /llds-search"| CH
   CH --> WEB
   CH --> DS
-  SPA -->|"POST /api/save-workflow"| PX
-  PX --> VOL
 ```
 
 Three ideas carry the whole design and come up in every section:
@@ -145,7 +142,6 @@ flowchart TB
   end
   subgraph prod["Production: docker compose up (port 3001)"]
     E["Express server/index.mjs"] --> ST["express.static(dist) + SPA fallback"]
-    E --> SW["POST /api/save-workflow"]
     E --> DE["/dev/write-example<br/>(only if ENABLE_EXAMPLE_AUTHORING=true)"]
   end
   P["server/proxies.mjs<br/>PROXY_TABLE (15 routes)<br/>lldsSearchMiddleware<br/>urlProxyMiddleware"]
@@ -155,7 +151,6 @@ flowchart TB
 
 Differences that matter:
 
-- **Saves only persist in production.** The Save button downloads a file *and* posts the workflow to `/api/save-workflow`. The dev server has no such route, and the client ignores the failure. In the container the file lands in `/app/data/workflows/`.
 - **Example authoring is dev-only by default.** Author mode in the top bar (click the version text five times) can save the canvas as an example (title, description and an optional **Group** — the accordion section the Examples menu files it under) and delete one with the ✕ beside each entry (inline confirm). Both routes (`/dev/write-example`, `/dev/delete-example`) live in `server/examples.mjs`, shared by Vite and Express, and regenerate `manifest.json` from the files on disk. They exist on the production server but are off unless `ENABLE_EXAMPLE_AUTHORING=true`, because they have no authentication.
 - **URL fetch is deny-all in production unless configured.** `URL_PROXY_ALLOWLIST` lists the host suffixes `/url-proxy` may reach. Unset means "any public host" in development and "nothing" in production. The deployed instance sets it in `.env`.
 - **Fixtures and examples are bind-mounted** in Compose, so editing them on the host changes the running instance without a rebuild.
@@ -538,7 +533,6 @@ The `.nfcs.json` extension belongs to a different format: the **saved search** w
 | What | Where | Lifetime |
 |---|---|---|
 | Example workflows | `public/examples/*.json` + `manifest.json` | Shipped with the build; bind-mounted in Compose |
-| Server-side copies of every save | `/app/data/workflows/` (named volume `workflow_saves`) | Until pruned by hand; carries `remoteIp` and `serverReceivedAt` |
 | Per-record notes | `notesStore` (memory) and the `notes` key of the workflow file | Session, or the file |
 | Prompt recipes, UI preferences | localStorage | Browser profile |
 | Geocode candidates, LLDS item cache | localStorage | 30 days / until cleared |
@@ -587,11 +581,11 @@ flowchart TB
     R1["apt: chromium + fonts + libs"] --> R2["npm ci --omit=dev"] --> R3["COPY --chown=node dist/ server/"] --> R4["ENV NODE_ENV=production<br/>PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium"]
   end
   build --> run
-  run --> EP["docker-entrypoint.sh (as root)<br/>repair volume ownership if root-owned,<br/>HOME=/home/node,<br/>setpriv → node"]
+  run --> EP["docker-entrypoint.sh (as root)<br/>re-own dist/examples if root-owned,<br/>HOME=/home/node,<br/>setpriv → node"]
   EP --> CMD["node server/index.mjs :3001"]
 ```
 
-The entrypoint starts as root only so it can fix the ownership of a `workflow_saves` volume created by an older image, then drops to the unprivileged `node` user before Node starts. It never recurses into the bind-mounted examples directory.
+The entrypoint starts as root only so it can fix the ownership of the `dist/examples` mount point when it is root-owned, then drops to the unprivileged `node` user before Node starts. It never recurses into the bind-mounted examples directory. The image has no data volume.
 
 ### 12.3 Compose and the live instance
 
@@ -601,7 +595,7 @@ The entrypoint starts as root only so it can fix the ownership of a `workflow_sa
 | `ollama` | `ollama/ollama` | Optional local LLM; reachable as `http://ollama:11434` from `app` | always, unless you name `app` explicitly |
 | `cloudflared` | `cloudflare/cloudflared` | Named tunnel to the public hostname | `--profile tunnel` |
 
-Volumes: `workflow_saves` → `/app/data`, `ollama_data`, `./public/fixtures` (read-only) and `./public/examples` (read-write) bind-mounted into `dist/`.
+Volumes: `ollama_data` (Ollama only), `./public/fixtures` (read-only) and `./public/examples` (read-write) bind-mounted into `dist/`.
 
 Environment variables, with the full meaning in `docs/engineering-review.md` section 7:
 

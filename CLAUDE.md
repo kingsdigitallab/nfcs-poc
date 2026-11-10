@@ -39,15 +39,16 @@ Production is a single small VM: `ubuntu@nfcs-poc`, repo at `~/repos/nfcs-poc`, 
 host's `.env` (never commit; never ask the user to paste it — it holds live keys).
 
 **Disk is the recurring failure.** The app image is ~1.7 GB on disk (Node + system Chromium for Puppeteer) and a
-rebuild needs ~3–4 GB of headroom on top: the builder stage runs `npm ci` with the full dev tree, the runtime
-stage apt-installs Chromium, and BuildKit caches both. With < 3 GB free the build dies mid-`apt-get`/`npm ci`
+rebuild needs ~3.2 GB of headroom on top (proven Nov 2026; 4 GB is comfortable): the builder stage runs
+`npm ci` with the full dev tree, the runtime stage apt-installs Chromium, and BuildKit caches both. With
+< 3 GB free the build dies mid-`apt-get`/`npm ci`
 with only `failed to execute bake: exit status 1` visible, and `docker compose up -d` then silently keeps
 serving the OLD container. Every deploy plan must therefore start with `df -h /` and include the prune steps.
 
 Canonical sequence (keep the running container up — it is the rollback):
 
 ```bash
-df -h /                                   # need ≥ 4 GB free before building
+df -h /                                   # need ≥ 3.2 GB free before building (Neil, Nov 2026: enough for a successful deploy)
 docker tag nfcs-poc-app:latest nfcs-poc-app:previous   # protect the fallback image
 docker builder prune -af                  # build cache is usually the biggest consumer (≈1–1.5 GB)
 docker container prune -f && docker image prune -f
@@ -63,8 +64,8 @@ docker rmi nfcs-poc-app:previous && docker image prune -f && docker builder prun
 - Do NOT `docker stop`/`rm` the container or `rmi` the image before building — it is unnecessary (Compose
   recreates on image change) and removes the only rollback. Rollback = `docker tag nfcs-poc-app:previous
   nfcs-poc-app:latest && docker compose up -d --no-build app`.
-- Do NOT `docker system prune --volumes` / `docker volume prune`: `workflow_saves` holds workshop saves,
-  `ollama_data` holds models. Ollama is a separate Compose service; `up -d app` never starts or builds it.
+- Do NOT `docker system prune --volumes` / `docker volume prune`: they can remove the `workflow_saves` and
+  `ollama_data` volumes. Ollama is a separate Compose service; `up -d app` never starts or builds it.
 - Both Dockerfile stages set `ENV PUPPETEER_SKIP_DOWNLOAD=true` (builder since Nov 2026 — it never runs Chrome,
   and the download cost a few hundred MB of peak build disk). Nov 2026 deploy data point: with 3.2 GB free the
   build completed and only Compose's metadata write to `/tmp` failed — the image was already named and usable
@@ -328,6 +329,9 @@ field the authoring node injects.
   an example, on Europeana's `utm_campaign=<wskey>` tracking parameter anywhere under `public/` (the adapter strips
   it from item URLs — `cleanItemUrl` in `europeanaAdapter.ts`), and on any locally configured `VITE_*_API_KEY`
   value appearing in shipped data; CI greps `public/` and `src/` the same way.
+- **Personal data:** before building anything that would store, log or transmit user-typed content or an
+  identifier (IP, session id, email), say so explicitly and settle notice, retention and need first — do not
+  leave it to a later review.
 - **`/dev/write-example` and `/dev/delete-example`** are unauthenticated file writes (`server/examples.mjs`); in prod both sit behind `ENABLE_EXAMPLE_AUTHORING=true`. The slug regex + `join(dir, slug + '.json')` is the only path construction — keep it that way. The Examples menu's ✕ uses an inline confirm, never `window.confirm` (it blocks the browser-automation extension used for verification).
 - **Unknown node types** in a loaded workflow file are dropped with their edges (`partitionUnknownNodes`) and
   reported through the top-bar `loadError` banner. Retire a node by removing it; never rename a type string.

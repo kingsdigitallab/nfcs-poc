@@ -1,16 +1,9 @@
 #!/bin/sh
 # Drop privileges to the unprivileged `node` user after fixing ownership of
-# the writable mounts. Named volumes created by an earlier (root-running)
-# image are root-owned, and Docker only copies image ownership on FIRST
-# volume creation — so an in-place upgrade would otherwise fail every
-# /api/save-workflow write with EACCES.
+# the one writable mount (dist/examples).
 set -e
 owned_by_root() { [ "$(stat -c %u "$1" 2>/dev/null)" = "0" ]; }
 if [ "$(id -u)" = "0" ]; then
-  # /app/data is a named volume: re-own it (recursively) only when it is
-  # still root-owned, i.e. created by an earlier root-running image.
-  mkdir -p /app/data 2>/dev/null || true
-  if owned_by_root /app/data; then chown -R node:node /app/data 2>/dev/null || true; fi
   # /app/dist/examples is a HOST bind mount in docker-compose. Never touch the
   # files inside it — on a Linux host that would rewrite the operator's working
   # tree to uid 1000 and break `git pull`. Only the directory itself, and only
