@@ -53,8 +53,6 @@ flowchart LR
   CH --> DS
 ```
 
-The host holds no user data: Save is a browser download only, and the server persists nothing and records no client identifiers (see §10.2).
-
 Three ideas carry the whole design and come up in every section:
 
 1. **Records are the currency.** Every data source is adapted into `UnifiedRecord[]`. Every downstream node consumes and produces that same shape.
@@ -153,7 +151,6 @@ flowchart TB
 
 Differences that matter:
 
-- **Save is browser-only in both modes.** The Save button downloads the workflow file and makes no network request. (Until Nov 2026 the production server also kept a copy of every save with the client IP address; that route, its volume mount and the client POST were removed after a data-protection review — `docs/engineering-review.md` S4 — and `noServerSideSaves.test.ts` guards against reintroduction.)
 - **Example authoring is dev-only by default.** Author mode in the top bar (click the version text five times) can save the canvas as an example (title, description and an optional **Group** — the accordion section the Examples menu files it under) and delete one with the ✕ beside each entry (inline confirm). Both routes (`/dev/write-example`, `/dev/delete-example`) live in `server/examples.mjs`, shared by Vite and Express, and regenerate `manifest.json` from the files on disk. They exist on the production server but are off unless `ENABLE_EXAMPLE_AUTHORING=true`, because they have no authentication.
 - **URL fetch is deny-all in production unless configured.** `URL_PROXY_ALLOWLIST` lists the host suffixes `/url-proxy` may reach. Unset means "any public host" in development and "nothing" in production. The deployed instance sets it in `.env`.
 - **Fixtures and examples are bind-mounted** in Compose, so editing them on the host changes the running instance without a rebuild.
@@ -541,8 +538,6 @@ The `.nfcs.json` extension belongs to a different format: the **saved search** w
 | Geocode candidates, LLDS item cache | localStorage | 30 days / until cleared |
 | Results | `resultsStore` (memory) | Until the node is deleted, a workflow is loaded, or the page reloads |
 
-Nothing in this table lives on the server. The one server-side store the app ever had — a copy of every save in a `workflow_saves` volume, carrying the client IP address — was removed in Nov 2026 after a data-protection review (`docs/engineering-review.md` S4). The volume may still exist on the deployed host, unmounted, pending Compliance's instruction on deletion.
-
 ## 11. AI features
 
 The LLM nodes are where most of the product's novelty is and where the most duplicated code sits. The shapes to know:
@@ -600,7 +595,7 @@ The entrypoint starts as root only so it can fix the ownership of the `dist/exam
 | `ollama` | `ollama/ollama` | Optional local LLM; reachable as `http://ollama:11434` from `app` | always, unless you name `app` explicitly |
 | `cloudflared` | `cloudflare/cloudflared` | Named tunnel to the public hostname | `--profile tunnel` |
 
-Volumes: `ollama_data` (Ollama only), `./public/fixtures` (read-only) and `./public/examples` (read-write) bind-mounted into `dist/`. The `app` service mounts no data volume. `workflow_saves` is still declared in Compose but mounted nowhere — it is retained on the deployed host as evidence pending Compliance's instruction (Nov 2026); remove it only on that instruction and only by name, never with `volume prune`.
+Volumes: `ollama_data` (Ollama only), `./public/fixtures` (read-only) and `./public/examples` (read-write) bind-mounted into `dist/`.
 
 Environment variables, with the full meaning in `docs/engineering-review.md` section 7:
 

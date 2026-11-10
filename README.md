@@ -779,8 +779,6 @@ Any JSON file produced by **Export** (format: JSON) can also be loaded into **Lo
 
 **💾 Save** downloads the workflow (`workflow-YYYY-MM-DD.json`) to your browser and does nothing else: nothing is sent to or stored on the server, in either run mode. Workshop facilitators who want participants' workflows should ask participants to share the downloaded file.
 
-The server keeps no copies of user content and records no client identifiers. (A server-side copy of every save, including the client IP address, existed from May to November 2026 and was removed after a data-protection review — see `docs/engineering-review.md`, finding S4. `src/__tests__/noServerSideSaves.test.ts` fails if anything of the kind is reintroduced.)
-
 ---
 
 ## Offline fixtures

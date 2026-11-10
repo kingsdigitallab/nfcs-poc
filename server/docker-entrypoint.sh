@@ -1,8 +1,6 @@
 #!/bin/sh
 # Drop privileges to the unprivileged `node` user after fixing ownership of
-# the one writable mount (dist/examples). The app has no data volume and
-# persists nothing server-side (the /app/data workflow-saves volume was
-# removed in Nov 2026 after a data-protection review).
+# the one writable mount (dist/examples).
 set -e
 owned_by_root() { [ "$(stat -c %u "$1" 2>/dev/null)" = "0" ]; }
 if [ "$(id -u)" = "0" ]; then

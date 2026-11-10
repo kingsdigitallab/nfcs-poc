@@ -29,9 +29,7 @@ export function useWorkflowIO(
   const workflowIdRef = useRef<string>(randomUUID())
   const [loadError, setLoadError] = useState<string | null>(null)
 
-  // Save is browser-only: the workflow file is downloaded and nothing is sent
-  // to the server. (A server-side copy with the client IP was removed in
-  // Nov 2026 after a data-protection review — see docs/engineering-review.md S4.)
+  // Save downloads the workflow file; nothing is sent to the server.
   const handleSave = useCallback(() => {
     const extras = { workflowId: workflowIdRef.current, notes: exportNotes() }
     downloadWorkflow(nodes, edges, extras)

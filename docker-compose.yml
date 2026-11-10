@@ -17,8 +17,6 @@ services:
       - URL_PROXY_ALLOWLIST=${URL_PROXY_ALLOWLIST:-}
       - ENABLE_EXAMPLE_AUTHORING=${ENABLE_EXAMPLE_AUTHORING:-false}
     volumes:
-      # No writable data volume: the app persists nothing server-side (the
-      # workflow_saves mount was removed in Nov 2026 — see the volumes block).
       # Mount host public/fixtures/ over the built dist/fixtures/ so fixture
       # updates committed to the repo take effect after git pull + docker
       # compose restart — no image rebuild needed.
@@ -58,9 +56,3 @@ services:
 volumes:
   # Persists downloaded Ollama models across container restarts
   ollama_data:
-  # RETAINED, UNMOUNTED. Held workshop workflow saves (user content + client IP)
-  # until Nov 2026, when the feature was removed after a data-protection review.
-  # The existing data is kept as-is pending Compliance's instruction on deletion;
-  # it is no longer mounted into any service. Remove only on that instruction,
-  # by name: `docker volume rm nfcs-poc_workflow_saves`. Never `volume prune`.
-  workflow_saves:

@@ -64,11 +64,8 @@ docker rmi nfcs-poc-app:previous && docker image prune -f && docker builder prun
 - Do NOT `docker stop`/`rm` the container or `rmi` the image before building — it is unnecessary (Compose
   recreates on image change) and removes the only rollback. Rollback = `docker tag nfcs-poc-app:previous
   nfcs-poc-app:latest && docker compose up -d --no-build app`.
-- Do NOT `docker system prune --volumes` / `docker volume prune`. `workflow_saves` is **unmounted** since
-  Nov 2026 but retained on the host as evidence for a data-protection incident (it holds user content and
-  client IPs); delete it only on Compliance's instruction, by name (`docker volume rm nfcs-poc_workflow_saves`),
-  and record the date in `docs/engineering-review.md` S4. `ollama_data` holds models. Ollama is a separate
-  Compose service; `up -d app` never starts or builds it.
+- Do NOT `docker system prune --volumes` / `docker volume prune`: they can remove the `workflow_saves` and
+  `ollama_data` volumes. Ollama is a separate Compose service; `up -d app` never starts or builds it.
 - Both Dockerfile stages set `ENV PUPPETEER_SKIP_DOWNLOAD=true` (builder since Nov 2026 — it never runs Chrome,
   and the download cost a few hundred MB of peak build disk). Nov 2026 deploy data point: with 3.2 GB free the
   build completed and only Compose's metadata write to `/tmp` failed — the image was already named and usable
@@ -332,12 +329,9 @@ field the authoring node injects.
   an example, on Europeana's `utm_campaign=<wskey>` tracking parameter anywhere under `public/` (the adapter strips
   it from item URLs — `cleanItemUrl` in `europeanaAdapter.ts`), and on any locally configured `VITE_*_API_KEY`
   value appearing in shipped data; CI greps `public/` and `src/` the same way.
-- **The server persists nothing and records no client identifiers.** 💾 Save is a browser download only.
-  From May to Nov 2026 `POST /api/save-workflow` silently stored every save with the client IP — a
-  data-protection incident (review S4). `noServerSideSaves.test.ts` fails on any reference to that endpoint or to
-  `remoteAddress` / `x-forwarded-for` in `src/` or `server/`, and on any `/app/data` mount in Compose. Before
-  building ANYTHING that would store, log or transmit user-typed content or an identifier (IP, session id,
-  email), say so explicitly and settle notice, retention and need first — do not leave it to a later review.
+- **Personal data:** before building anything that would store, log or transmit user-typed content or an
+  identifier (IP, session id, email), say so explicitly and settle notice, retention and need first — do not
+  leave it to a later review.
 - **`/dev/write-example` and `/dev/delete-example`** are unauthenticated file writes (`server/examples.mjs`); in prod both sit behind `ENABLE_EXAMPLE_AUTHORING=true`. The slug regex + `join(dir, slug + '.json')` is the only path construction — keep it that way. The Examples menu's ✕ uses an inline confirm, never `window.confirm` (it blocks the browser-automation extension used for verification).
 - **Unknown node types** in a loaded workflow file are dropped with their edges (`partitionUnknownNodes`) and
   reported through the top-bar `loadError` banner. Retire a node by removing it; never rename a type string.

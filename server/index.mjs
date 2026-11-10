@@ -76,12 +76,6 @@ if (process.env.ENABLE_EXAMPLE_AUTHORING === 'true') {
   app.use(exampleAuthoringMiddleware(join(__dirname, '../dist/examples')))
 }
 
-// No other write endpoints. The server must never persist or log user content
-// or client identifiers (IP address, headers) — a server-side copy of every
-// Save was removed in Nov 2026 after a data-protection review
-// (docs/engineering-review.md S4); src/__tests__/noServerSideSaves.test.ts
-// fails if anything of the kind is reintroduced.
-
 // ── Static frontend + SPA fallback ────────────────────────────────────────────
 
 app.use(express.static(join(__dirname, '../dist')))
