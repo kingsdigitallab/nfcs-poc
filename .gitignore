@@ -28,3 +28,6 @@ docs/*.zip
 lesson-*.md
 stack.md
 *.tsbuildinfo
+
+# macOS
+.DS_Store
