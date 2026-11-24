@@ -1,0 +1,50 @@
+{
+  "name": "nfcs-poc",
+  "build": { "dockerfile": "Dockerfile" },
+  "features": {
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
+  "remoteUser": "node",
+  "runArgs": ["--cap-add=NET_ADMIN"],
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/node/.claude",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    // Per-person firewall settings, taken from each user's env vars
+    "FIREWALL_ALLOW_GITHUB": "${localEnv:FIREWALL_ALLOW_GITHUB:0}",
+    // Per-person extra domains (project domains are in allowed-domains.txt)
+    "FIREWALL_EXTRA_DOMAINS": "${localEnv:FIREWALL_EXTRA_DOMAINS}",
+    "PUPPETEER_SKIP_DOWNLOAD": "true",
+    "PUPPETEER_EXECUTABLE_PATH": "/usr/bin/chromium",
+    // VSCode expects IPV4 for port forwarding
+
+    "NODE_OPTIONS": "--dns-result-order=ipv4first" 
+  },
+  // Firewall goes up before anything is installed, and again on every start
+  "postCreateCommand": "sudo /opt/firewall/init-firewall.sh && npm ci && npm install -g opencode-ai",
+  "postStartCommand": "sudo /opt/firewall/init-firewall.sh",
+  "waitFor": "postStartCommand",
+  "mounts": [
+    // Claude login, settings and chats: one volume per project, kept across rebuilds
+    "source=claude-code-config-${devcontainerId},target=/home/node/.claude,type=volume",
+    // Container can't edit its own config
+    "source=${localWorkspaceFolder}/.devcontainer,target=${containerWorkspaceFolder}/.devcontainer,type=bind,readonly"
+  ],
+  "forwardPorts": [5174],
+  "customizations": {
+    "vscode": {
+        "settings": {
+        "json.schemaDownload.enable": false,
+        "telemetry.telemetryLevel": "off",
+        "git.terminalAuthentication": false,
+        "github.gitAuthentication": false
+    },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.vscode-typescript-next"
+      ]
+    }
+  }
+}

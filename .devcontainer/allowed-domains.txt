@@ -1,0 +1,59 @@
+# Domains the app's proxy running in the container needs to reach.
+# Read when the container is built: rebuild the container after editing.
+# Each user can add their own via FIREWALL_EXTRA_DOMAINS in env var before running VSCode with `code .`
+
+# King's College London (internal: needs King's network or VPN)
+api.ai.create.kcl.ac.uk
+
+# British Library
+bnb.data.bl.uk
+www.bl.uk
+
+# Bodleian / Oxford
+digital.bodleian.ox.ac.uk
+iiif.bodleian.ox.ac.uk
+solo.bodleian.ox.ac.uk
+llds.ling-phil.ox.ac.uk
+
+# Victoria and Albert Museum
+api.vam.ac.uk
+collections.vam.ac.uk
+iiif.vam.ac.uk
+framemark.vam.ac.uk
+
+# Science Museum Group
+collection.sciencemuseumgroup.org.uk
+coimages.sciencemuseumgroup.org.uk
+zoom.sciencemuseumgroup.org.uk
+
+# Natural History Museum, Wellcome, GBIF
+data.nhm.ac.uk
+iiif.wellcomecollection.org
+api.gbif.org
+www.gbif.org
+
+# Europeana
+api.europeana.eu
+www.europeana.eu
+
+# Getty vocabularies
+vocab.getty.edu
+www.getty.edu
+
+# Other UK heritage data
+hsds.ac.uk
+museumdata.uk
+
+# Wikidata / Wikimedia
+query.wikidata.org
+www.wikidata.org
+wikidata.reconci.link
+en.wikipedia.org
+upload.wikimedia.org
+commons.wikimedia.org
+
+# Internet Archive
+archive.org
+
+# OpenStreetMap geocoding
+nominatim.openstreetmap.org
