@@ -9,7 +9,7 @@ Node 24 with Claude Code and opencode, behind an outbound firewall.
   the project folder is moved or renamed.
 - **Outbound network access is limited** by `init-firewall.sh`, adapted from Anthropic's
   reference (https://github.com/anthropics/claude-code/tree/main/.devcontainer). Two modes,
-  below. In both, SSH and every non-web port are blocked, DNS goes only to the container's
+  as below. In both, SSH and every non-web port are blocked, DNS goes only to the container's
   resolver, IPv6 is closed, and the Docker host is unreachable.
 - **The firewall fails closed.** If setup fails, the container is left with no network at all.
 - **`sudo` only runs the firewall script.** Nothing in the container can change the firewall.
@@ -46,12 +46,10 @@ Risks you accept in this mode:
 - Use it only once you trust the code in the workspace, and keep live secrets out of the
   checkout.
 
-## Per-person settings
+## Per-user settings
 
 Pass them on the command line when you open VS Code, so they apply to that launch only
-and never sit in your shell. Quit VS Code fully first (Cmd+Q) — otherwise `code .` hands
-over to the running VS Code, which ignores them — then run **Dev Containers: Rebuild
-Container** (a plain restart does not pick them up):
+and never sit in your shell. Quit VS Code fully first then run **Dev Containers: Rebuild Container**:
 
 ```bash
 DEVCONTAINER_FIREWALL_OPEN_WEB=1 code .                  # relaxed mode (see above)
@@ -59,17 +57,30 @@ DEVCONTAINER_FIREWALL_ALLOW_GITHUB=1 code .              # allow GitHub (HTTPS a
 DEVCONTAINER_FIREWALL_EXTRA_DOMAINS="gitlab.com api.openai.com" code .  # extra domains, space- or comma-separated
 ```
 
-Settings you always want (e.g. extra domains) can instead be exported in `~/.zshrc`.
-Opening VS Code from the Dock uses none of them: locked-down mode, the default.
-
-The firewall prints the settings it picked up when the container starts. If it shows
-`OPEN_WEB=0` when you set 1, VS Code was already running — quit it and try again.
-
-`DEVCONTAINER_FIREWALL_ALLOW_GITHUB=1` opens every port to GitHub, including SSH: any key loaded in your
-SSH agent can then push to your repositories from inside the container. Avoid loading SSH keys into 
-the SSH agent that are not strictly needed.
+On Windows PowerShell: `$env:DEVCONTAINER_FIREWALL_OPEN_WEB=1; code .` (applies to that
+terminal session).
 
 Domains the whole project needs belong in `allowed-domains.txt` (rebuild after editing).
+
+## Pushing to GitHub: `DEVCONTAINER_FIREWALL_ALLOW_GITHUB=1`
+
+This opens every port to GitHub, including SSH. The container has no GitHub credentials
+of its own; whatever you give it, code in the container can use. Options, safest first:
+
+1. **Fine-grained token for this repo only** (GitHub → Settings → Developer settings →
+   Fine-grained tokens): one repository, *Contents: read and write*, short expiry. Enter it
+   as the password when `git push` asks. To avoid retyping, keep it in memory only:
+   `git config --global credential.helper 'cache --timeout=3600'` — never `store`, which
+   writes it to disk in plain text.
+2. **SSH deploy key for this repo** (repo → Settings → Deploy keys, write access), loaded
+   into your SSH agent with `ssh-add -c` so each use asks for approval. Needs an SSH remote
+   (`git@github.com:<owner>/<repo>.git`). Avoid your personal key: it usually opens every
+   repository you can access.
+3. **Not recommended:** VS Code's git credential forwarding hands the container your full
+   GitHub login.
+
+Whichever you use, protect `main` on GitHub (require pull requests, block force-pushes),
+so a misused credential can only push branches.
 
 ## SSH agent
 
@@ -82,9 +93,10 @@ every use needs your approval.
 
 ## VPN and DNS
 
-The container's DNS follows the host's network as it was when Docker started. 
-Connecting or disconnecting a VPN while Docker is running can break DNS in the container; reconnect, or run
-`colima restart`. VPN-only hosts (e.g. KCL's inference API) are skipped with a warning if
+With some Docker setups the container's DNS follows the host's network as it was when
+Docker started. Connecting or disconnecting a VPN while Docker is running can then break
+DNS in the container: reconnect, or restart your Docker engine. VPN-only hosts 
+(e.g. KCL's inference API) are skipped with a warning if
 they do not resolve when the container starts.
 
 ## Checks
