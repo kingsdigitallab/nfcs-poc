@@ -20,10 +20,12 @@ trap 'rc=$?; if [ "$rc" -ne 0 ]; then lockdown; fi' EXIT
 container_env() {
     tr '\0' '\n' < /proc/1/environ | sed -n "s/^$1=//p" | head -n 1
 }
-ALLOW_GITHUB=$(container_env FIREWALL_ALLOW_GITHUB)
+ALLOW_GITHUB=$(container_env DEVCONTAINER_FIREWALL_ALLOW_GITHUB)
 ALLOW_GITHUB=${ALLOW_GITHUB:-0}                       # 1 = allow GitHub (HTTPS and SSH)
-EXTRA_DOMAINS=$(container_env FIREWALL_EXTRA_DOMAINS)  # space- or comma-separated
-echo "ALLOW_GITHUB=$ALLOW_GITHUB EXTRA_DOMAINS=${EXTRA_DOMAINS:-none}"
+EXTRA_DOMAINS=$(container_env DEVCONTAINER_FIREWALL_EXTRA_DOMAINS)  # space- or comma-separated
+OPEN_WEB=$(container_env DEVCONTAINER_FIREWALL_OPEN_WEB)
+OPEN_WEB=${OPEN_WEB:-0}                               # 1 = web ports (80/443) to any public address
+echo "ALLOW_GITHUB=$ALLOW_GITHUB OPEN_WEB=$OPEN_WEB EXTRA_DOMAINS=${EXTRA_DOMAINS:-none}"
 
 # Project domains: one per line in .devcontainer/allowed-domains.txt, copied into the
 # image at build time (root-owned). Blank lines and # comments are ignored.
@@ -64,14 +66,16 @@ fi
 # 1. Extract Docker DNS info BEFORE any flushing
 DOCKER_DNS_RULES=$(iptables-save -t nat | grep "127\.0\.0\.11" || true)
 
-# Flush existing rules and delete existing ipsets (policies stay DROP)
+# Flush existing rules (policies stay DROP). The ipsets are NOT destroyed: on a
+# re-run (postCreateCommand then postStartCommand) the kernel can still hold them
+# for a moment after the flush, destroy fails, and create then aborts the script.
+# They are created-if-missing and emptied below instead.
 iptables -F
 iptables -X
 iptables -t nat -F
 iptables -t nat -X
 iptables -t mangle -F
 iptables -t mangle -X
-ipset destroy allowed-domains 2>/dev/null || true
 
 # 2. Selectively restore ONLY internal Docker DNS resolution
 if [ -n "$DOCKER_DNS_RULES" ]; then
@@ -83,19 +87,40 @@ else
     echo "No Docker DNS rules to restore"
 fi
 
-# DNS and localhost
-iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
-iptables -A INPUT -p udp --sport 53 -j ACCEPT
+# Localhost (VS Code port forwarding and the dev server live here)
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A OUTPUT -o lo -j ACCEPT
 
-# Replies to approved traffic, and the allowlist itself. Added BEFORE the set is
+# DNS only to the container's own resolver(s), never to an arbitrary server:
+# open port 53 lets data out inside DNS queries. Replies come back through the
+# ESTABLISHED rule below (no blanket "source port 53" inbound rule).
+RESOLVERS=$(awk '$1 == "nameserver" && $2 ~ /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/ {print $2}' /etc/resolv.conf)
+if [ -z "$RESOLVERS" ]; then
+    echo "ERROR: no IPv4 nameserver in /etc/resolv.conf"
+    exit 1
+fi
+for resolver in $RESOLVERS; do
+    echo "DNS allowed to $resolver"
+    iptables -A OUTPUT -p udp -d "$resolver" --dport 53 -j ACCEPT
+    iptables -A OUTPUT -p tcp -d "$resolver" --dport 53 -j ACCEPT
+done
+
+# Replies to approved traffic, and the allowlists. Added BEFORE the sets are
 # filled so an address becomes reachable the moment it is added (the GitHub meta
 # fetch below depends on this).
-ipset create allowed-domains hash:net
+#   allowed-domains — web ports ONLY (80, 443): no SSH or anything else, even to
+#                     shared CDN addresses that host other services.
+#   github          — every port incl. 22, filled only when DEVCONTAINER_FIREWALL_ALLOW_GITHUB=1.
+#                     With it on, a key loaded in the forwarded SSH agent can push
+#                     to that user's repos — that is the deliberate exception.
+for set in allowed-domains github; do
+    ipset create -exist "$set" hash:net   # no-op if it already exists
+    ipset flush "$set"                    # re-runs start from an empty list
+done
 iptables -A INPUT  -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-iptables -A OUTPUT -m set --match-set allowed-domains dst -j ACCEPT
+iptables -A OUTPUT -p tcp -m multiport --dports 80,443 -m set --match-set allowed-domains dst -j ACCEPT
+iptables -A OUTPUT -m set --match-set github dst -j ACCEPT
 
 # Resolve a domain into the set. Returns 1 (does not exit) when it has no A record.
 add_domain() {
@@ -136,7 +161,7 @@ if [ "$ALLOW_GITHUB" = 1 ]; then
             exit 1
         fi
         echo "Adding GitHub range $cidr"
-        ipset add -exist allowed-domains "$cidr"
+        ipset add -exist github "$cidr"
     done < <(echo "$gh_ranges" | jq -r '(.web + .api + .git)[]' | aggregate -q)
 fi
 
@@ -159,29 +184,65 @@ for domain in \
     fi
 done
 
-# Get host IP from default route
-HOST_IP=$(ip route | grep default | cut -d" " -f3)
-if [ -z "$HOST_IP" ]; then
-    echo "ERROR: Failed to detect host IP"
-    exit 1
+# No host-network rule: nothing here needs the Docker host (VS Code reaches the
+# container through Docker, not the network), and allowing it exposed the Docker
+# VM's SSH server and every other port on it.
+
+# OPEN_WEB=1 (relaxed mode): web ports to ANY public address, so agents can read
+# documentation and package pages. Still blocked: SSH and every other port, DNS to
+# anything but the resolver, IPv6, and web ports on private/local networks (the
+# Docker host, your router, VPN-internal hosts) unless allowlisted above.
+if [ "$OPEN_WEB" = 1 ]; then
+    echo "OPEN_WEB=1: allowing TCP 80/443 to any public address"
+    for private in 0.0.0.0/8 10.0.0.0/8 100.64.0.0/10 127.0.0.0/8 169.254.0.0/16 \
+                   172.16.0.0/12 192.168.0.0/16 224.0.0.0/4 240.0.0.0/4; do
+        iptables -A OUTPUT -d "$private" -j REJECT --reject-with icmp-admin-prohibited
+    done
+    iptables -A OUTPUT -p tcp -m multiport --dports 80,443 -j ACCEPT
 fi
-
-HOST_NETWORK=$(echo "$HOST_IP" | sed "s/\.[0-9]*$/.0\/24/")
-echo "Host network detected as: $HOST_NETWORK"
-
-iptables -A INPUT -s "$HOST_NETWORK" -j ACCEPT
-iptables -A OUTPUT -d "$HOST_NETWORK" -j ACCEPT
 
 # Explicitly REJECT all other outbound traffic for immediate feedback
 iptables -A OUTPUT -j REJECT --reject-with icmp-admin-prohibited
 
 echo "Firewall configuration complete"
 echo "Verifying firewall rules..."
-if curl --connect-timeout 5 https://example.com >/dev/null 2>&1; then
+if [ "$OPEN_WEB" = 1 ]; then
+    if ! curl --connect-timeout 5 https://example.com >/dev/null 2>&1; then
+        echo "ERROR: Firewall verification failed - OPEN_WEB=1 but https://example.com unreachable"
+        exit 1
+    else
+        echo "Firewall verification passed - OPEN_WEB=1, https://example.com reachable"
+    fi
+elif curl --connect-timeout 5 https://example.com >/dev/null 2>&1; then
     echo "ERROR: Firewall verification failed - was able to reach https://example.com"
     exit 1
 else
     echo "Firewall verification passed - unable to reach https://example.com as expected"
+fi
+
+# SSH to an allowlisted address must fail (web ports only)
+if timeout 5 bash -c '</dev/tcp/api.anthropic.com/22' 2>/dev/null; then
+    echo "ERROR: Firewall verification failed - port 22 open to an allowlisted host"
+    exit 1
+else
+    echo "Firewall verification passed - no SSH to allowlisted hosts"
+fi
+
+# The Docker host (default gateway) must not be reachable on SSH
+GATEWAY=$(ip route | awk '/^default/ {print $3; exit}')
+if [ -n "$GATEWAY" ] && timeout 5 bash -c "</dev/tcp/$GATEWAY/22" 2>/dev/null; then
+    echo "ERROR: Firewall verification failed - able to reach $GATEWAY:22 (Docker host)"
+    exit 1
+else
+    echo "Firewall verification passed - Docker host not reachable"
+fi
+
+# DNS must not bypass the container's resolver
+if dig +short +time=2 +tries=1 @1.1.1.1 example.com A 2>/dev/null | grep -qE '^[0-9.]+$'; then
+    echo "ERROR: Firewall verification failed - DNS to 1.1.1.1 was answered"
+    exit 1
+else
+    echo "Firewall verification passed - DNS only via the container's resolver"
 fi
 
 if [ "$ALLOW_GITHUB" = 1 ]; then

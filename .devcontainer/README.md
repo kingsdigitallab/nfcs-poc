@@ -6,29 +6,86 @@ Node 24 with Claude Code and opencode, behind an outbound firewall.
 
 - **Claude login, settings and chats are kept across rebuilds** in a Docker volume named
   `claude-code-config-<id>`, one per project folder. They are lost if the volume is deleted,
-  the project folder is moved or renamed, or Colima is deleted.
-- **Outbound network access is limited to an allowlist**: npm, the Anthropic API
-  and VS Code's marketplace. Outbound SSH is blocked. The firewall is set by
-  `init-firewall.sh`, adapted from Anthropic's reference
-  (https://github.com/anthropics/claude-code/tree/main/.devcontainer).
+  the project folder is moved or renamed.
+- **Outbound network access is limited** by `init-firewall.sh`, adapted from Anthropic's
+  reference (https://github.com/anthropics/claude-code/tree/main/.devcontainer). Two modes,
+  below. In both, SSH and every non-web port are blocked, DNS goes only to the container's
+  resolver, IPv6 is closed, and the Docker host is unreachable.
+- **The firewall fails closed.** If setup fails, the container is left with no network at all.
 - **`sudo` only runs the firewall script.** Nothing in the container can change the firewall.
-- **`.devcontainer/` is read-only inside the container.** Edit it from your Mac, then rebuild.
+- **`.devcontainer/` is read-only inside the container.** Edit it from the host, then rebuild.
+
+## Firewall modes
+
+### Locked down (default)
+
+Web ports (80/443) only, and only to the hosts in `allowed-domains.txt` plus npm, the
+Anthropic API and VS Code's marketplace. Use this for a first audit of code you do not
+yet trust.
+
+What agents can **not** do in this mode:
+
+- **Read web pages.** Claude Code's web *search* still works because it runs on Anthropic's
+  servers and search summaries give some information. But fetching a page — documentation, 
+  changelogs, GitHub issues, package READMEs and so on will not work.
+- **Install packages from anywhere but npm**, or reach APIs not on the list.
+- **Use URL Fetch on arbitrary links** in the app (only allowlisted hosts work).
+
+### Relaxed: `DEVCONTAINER_FIREWALL_OPEN_WEB=1`
+
+Web ports to **any public address**. Agents can read documentation and fetch pages.
+Still blocked: SSH and other ports, DNS bypass, IPv6, and web ports to private and local
+networks (Docker host, your router, VPN-internal hosts) unless they are allowlisted.
+
+Risks you accept in this mode:
+
+- **Data can leave over HTTPS.** Anything an agent can read in the container — the
+  project, a `.env` with live keys, Claude's login — can be sent to any website, for
+  example hidden in a URL. The firewall no longer limits *where*.
+- **Untrusted code can download more code** from anywhere.
+- Use it only once you trust the code in the workspace, and keep live secrets out of the
+  checkout.
 
 ## Per-person settings
 
-Set these on your Mac, for example in `~/.zshrc`, then quit VS Code fully and run
-**Dev Containers: Rebuild Container**:
+Pass them on the command line when you open VS Code, so they apply to that launch only
+and never sit in your shell. Quit VS Code fully first (Cmd+Q) — otherwise `code .` hands
+over to the running VS Code, which ignores them — then run **Dev Containers: Rebuild
+Container** (a plain restart does not pick them up):
 
 ```bash
-export FIREWALL_ALLOW_GITHUB=1                         # allow GitHub (HTTPS and SSH), e.g. to push
-export FIREWALL_EXTRA_DOMAINS="gitlab.com api.openai.com"  # extra domains, space- or comma-separated
+DEVCONTAINER_FIREWALL_OPEN_WEB=1 code .                  # relaxed mode (see above)
+DEVCONTAINER_FIREWALL_ALLOW_GITHUB=1 code .              # allow GitHub (HTTPS and SSH), e.g. to push
+DEVCONTAINER_FIREWALL_EXTRA_DOMAINS="gitlab.com api.openai.com" code .  # extra domains, space- or comma-separated
 ```
 
-The firewall prints the settings it picked up when the container starts. If it shows
-`ALLOW_GITHUB=0` when you set 1, open VS Code from a terminal with `code .`.
+Settings you always want (e.g. extra domains) can instead be exported in `~/.zshrc`.
+Opening VS Code from the Dock uses none of them: locked-down mode, the default.
 
-Domains the whole project needs, such as opencode's model provider, belong in the
-domain list in `init-firewall.sh`.
+The firewall prints the settings it picked up when the container starts. If it shows
+`OPEN_WEB=0` when you set 1, VS Code was already running — quit it and try again.
+
+`DEVCONTAINER_FIREWALL_ALLOW_GITHUB=1` opens every port to GitHub, including SSH: any key loaded in your
+SSH agent can then push to your repositories from inside the container. Avoid loading SSH keys into 
+the SSH agent that are not strictly needed.
+
+Domains the whole project needs belong in `allowed-domains.txt` (rebuild after editing).
+
+## SSH agent
+
+VS Code always forwards the host's SSH agent into the container; there is no setting to
+turn it off (https://github.com/microsoft/vscode-remote-release/issues/11413). The firewall
+stops a loaded key being used to log in anywhere, but code in the container can still use
+it to *sign* things, such as git commits. Keep your agent empty while the container is
+open (`ssh-add -l` should say it has no identities), or add keys with `ssh-add -c` so
+every use needs your approval.
+
+## VPN and DNS
+
+The container's DNS follows the host's network as it was when Docker started. 
+Connecting or disconnecting a VPN while Docker is running can break DNS in the container; reconnect, or run
+`colima restart`. VPN-only hosts (e.g. KCL's inference API) are skipped with a warning if
+they do not resolve when the container starts.
 
 ## Checks
 
@@ -36,8 +93,8 @@ Inside the container:
 
 ```bash
 sudo -l                          # only /opt/firewall/init-firewall.sh
-curl -m 5 https://example.com    # should fail
+curl -m 5 https://example.com    # fails when locked down, works with OPEN_WEB=1
 ```
 
-If npm or Claude starts failing in a long session, the services' addresses may have changed:
+If npm or Claude starts failing in a long session, the service address may have changed:
 run `sudo /opt/firewall/init-firewall.sh` to refresh them.

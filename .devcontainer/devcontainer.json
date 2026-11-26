@@ -11,13 +11,14 @@
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "DISABLE_AUTOUPDATER": "1",
     // Per-person firewall settings, taken from each user's env vars
-    "FIREWALL_ALLOW_GITHUB": "${localEnv:FIREWALL_ALLOW_GITHUB:0}",
+    "DEVCONTAINER_FIREWALL_ALLOW_GITHUB": "${localEnv:DEVCONTAINER_FIREWALL_ALLOW_GITHUB:0}",
+    // 1 = web ports to any public address (relaxed mode, see README)
+    "DEVCONTAINER_FIREWALL_OPEN_WEB": "${localEnv:DEVCONTAINER_FIREWALL_OPEN_WEB:0}",
     // Per-person extra domains (project domains are in allowed-domains.txt)
-    "FIREWALL_EXTRA_DOMAINS": "${localEnv:FIREWALL_EXTRA_DOMAINS}",
+    "DEVCONTAINER_FIREWALL_EXTRA_DOMAINS": "${localEnv:DEVCONTAINER_FIREWALL_EXTRA_DOMAINS}",
     "PUPPETEER_SKIP_DOWNLOAD": "true",
     "PUPPETEER_EXECUTABLE_PATH": "/usr/bin/chromium",
     // VSCode expects IPV4 for port forwarding
-
     "NODE_OPTIONS": "--dns-result-order=ipv4first" 
   },
   // Firewall goes up before anything is installed, and again on every start

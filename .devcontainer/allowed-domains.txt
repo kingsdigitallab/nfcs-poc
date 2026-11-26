@@ -1,6 +1,6 @@
 # Domains the app's proxy running in the container needs to reach.
 # Read when the container is built: rebuild the container after editing.
-# Each user can add their own via FIREWALL_EXTRA_DOMAINS in env var before running VSCode with `code .`
+# Each user can add their own via DEVCONTAINER_FIREWALL_EXTRA_DOMAINS in env var before running VSCode with `code .`
 
 # King's College London (internal: needs King's network or VPN)
 api.ai.create.kcl.ac.uk
