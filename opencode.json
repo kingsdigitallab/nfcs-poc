@@ -1,0 +1,60 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "arcai/agent:code",
+  "share": "disabled",
+  "provider": {
+    "arcai": {
+      "name": "ARC-AI",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://ai.create.kcl.ac.uk/api/v1"
+      },
+      "models": {
+        "agent:code": {
+          "name": "ARC Code",
+          "attachment": true,
+          "tool_call": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "arc:apex": {
+          "name": "ARC Apex",
+          "attachment": false,
+          "tool_call": true,
+          "limit": { "context": 1048576, "output": 128000 },
+          "modalities": { "input": ["text"], "output": ["text"] }
+        },
+        "arc:nexus": {
+          "name": "ARC Nexus",
+          "attachment": true,
+          "tool_call": true,
+          "limit": { "context": 262144, "output": 128000 },
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "arc:lite": {
+          "name": "ARC Lite",
+          "attachment": true,
+          "tool_call": true,
+          "limit": { "context": 262144, "output": 128000 },
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "arc:nano": {
+          "name": "ARC Nano",
+          "attachment": true,
+          "tool_call": true,
+          "limit": { "context": 262144, "output": 128000 },
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        },
+        "arc:chat": {
+          "name": "ARC Chat (experimental)",
+          "attachment": true,
+          "tool_call": true,
+          "limit": { "context": 262144, "output": 128000 },
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
+        }
+      }
+    }
+  }
+}

@@ -15,6 +15,9 @@ RUN chown -R root:root /opt/firewall \
  && echo 'node ALL=(root) NOPASSWD: /opt/firewall/init-firewall.sh ""' > /etc/sudoers.d/node \
  && chmod 0440 /etc/sudoers.d/node
 
-# Claude's config folder must exist and belong to node before the volume is mounted on it
+# Folders that get a volume mounted on them must exist and belong to node first, or
+# Docker creates them owned by root. Parents (.local, .config) too, for the same reason.
 RUN mkdir -p /home/node/.claude \
- && chown -R node:node /home/node/.claude
+             /home/node/.local/share/opencode \
+             /home/node/.config/opencode \
+ && chown -R node:node /home/node/.claude /home/node/.local /home/node/.config

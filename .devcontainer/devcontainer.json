@@ -26,8 +26,11 @@
   "postStartCommand": "sudo /opt/firewall/init-firewall.sh",
   "waitFor": "postStartCommand",
   "mounts": [
-    // Claude login, settings and chats: one volume per project, kept across rebuilds
+    // Claude login, settings and chats
     "source=claude-code-config-${devcontainerId},target=/home/node/.claude,type=volume",
+    // opencode conversations + credentials (auth.json), and settings + plugins
+    "source=opencode-data-${devcontainerId},target=/home/node/.local/share/opencode,type=volume",
+    "source=opencode-config-${devcontainerId},target=/home/node/.config/opencode,type=volume",
     // Container can't edit its own config
     "source=${localWorkspaceFolder}/.devcontainer,target=${containerWorkspaceFolder}/.devcontainer,type=bind,readonly"
   ],

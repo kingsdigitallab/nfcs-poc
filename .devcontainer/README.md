@@ -4,9 +4,10 @@ Node 24 with Claude Code and opencode, behind an outbound firewall.
 
 ## What it does
 
-- **Claude login, settings and chats are kept across rebuilds** in a Docker volume named
-  `claude-code-config-<id>`, one per project folder. They are lost if the volume is deleted,
-  the project folder is moved or renamed.
+- **Claude and opencode logins, settings and chats are kept across rebuilds** in Docker
+  volumes, one set per project folder: `claude-code-config-<id>`, `opencode-data-<id>`
+  (conversations and credentials) and `opencode-config-<id>` (settings and plugins). They
+  are lost if a volume is deleted, or the project folder is moved or renamed.
 - **Outbound network access is limited** by `init-firewall.sh`, adapted from Anthropic's
   reference (https://github.com/anthropics/claude-code/tree/main/.devcontainer). Two modes,
   as below. In both, SSH and every non-web port are blocked, DNS goes only to the container's
@@ -81,6 +82,20 @@ of its own; whatever you give it, code in the container can use. Options, safest
 
 Whichever you use, protect `main` on GitHub (require pull requests, block force-pushes),
 so a misused credential can only push branches.
+
+## opencode
+
+The project's `opencode.json` (repo root) sets up the provider, its models and the default
+model, with no key in it. Each person only adds their own key: run `opencode auth login`,
+choose **Other**, enter the provider ID used in `opencode.json` (`arcai`), and paste the
+key. opencode stores it in plain text in
+`~/.local/share/opencode/auth.json`, on the `opencode-data-<id>` volume: it survives
+rebuilds, is never in the project folder (so cannot be committed), and is removed with the
+volume (`docker volume rm opencode-data-<id>`).
+
+Anything running in the container can read it, agents included. Prefer a key you can
+budget-cap and revoke. Personal opencode settings go in `~/.config/opencode/opencode.jsonc`
+on the config volume; they are merged with the project's `opencode.json`.
 
 ## SSH agent
 
