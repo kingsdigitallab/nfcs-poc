@@ -15,6 +15,13 @@ RUN chown -R root:root /opt/firewall \
  && echo 'node ALL=(root) NOPASSWD: /opt/firewall/init-firewall.sh ""' > /etc/sudoers.d/node \
  && chmod 0440 /etc/sudoers.d/node
 
+# Claude Code policy: highest-precedence settings, root-owned so nothing in the container
+# (agents included) can change them. Turns off the claude.ai connectors (Drive, Gmail,
+# Calendar, Docs) — they run on Anthropic's side, so the firewall cannot stop them.
+COPY managed-settings.json /etc/claude-code/managed-settings.json
+RUN chown root:root /etc/claude-code /etc/claude-code/managed-settings.json \
+ && chmod 755 /etc/claude-code && chmod 644 /etc/claude-code/managed-settings.json
+
 # Folders that get a volume mounted on them must exist and belong to node first, or
 # Docker creates them owned by root. Parents (.local, .config) too, for the same reason.
 RUN mkdir -p /home/node/.claude \

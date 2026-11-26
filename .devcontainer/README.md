@@ -14,6 +14,12 @@ Node 24 with Claude Code and opencode, behind an outbound firewall.
   resolver, IPv6 is closed, and the Docker host is unreachable.
 - **The firewall fails closed.** If setup fails, the container is left with no network at all.
 - **`sudo` only runs the firewall script.** Nothing in the container can change the firewall.
+- **Claude Code's claude.ai connectors are off** (Google Drive, Gmail, Calendar, Claude Docs).
+  They run on Anthropic's servers, so the firewall cannot stop them creating or sharing
+  documents. The policy is `managed-settings.json`, installed root-owned at
+  `/etc/claude-code/` — the highest-precedence settings, which no user or project setting
+  (and no agent) can override. It applies in this container only: to remove the connectors
+  everywhere, disconnect them in your claude.ai account settings.
 - **`.devcontainer/` is read-only inside the container.** Edit it from the host, then rebuild.
 
 ## Firewall modes

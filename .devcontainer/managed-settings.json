@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "disableBypassPermissionsMode": "disable",
+    "blockReadsOutsideWorkingDirectories": true,
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(npm run lint)",
+      "Bash(npm run typecheck)",
+      "Bash(npx vitest run)",
+      "Bash(npx vitest run *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)"
+    ],
+    "deny": [
+      "Read(~/.claude/.credentials.json)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Edit(./.git/hooks/**)",
+      "Edit(./.git/config)",
+      "Bash(git config *)"
+    ]
+  },
+  "allowManagedHooksOnly": true,
+  "allowManagedMcpServersOnly": true,
+  "allowedMcpServers": [],
+  "strictKnownMarketplaces": [],
+  "disableClaudeAiConnectors": true,
+  "cleanupPeriodDays": 99999,
+  "env": {
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  }
+}
